@@ -1,0 +1,395 @@
+# chen20a《Self-Tuning Stochastic Optimization with Curvature-Aware Gradient Filtering》全局推理
+
+> 本文件由 sgd-paper-reading 技能的**全局推理模式**生成:按论文顺序对全部公式做不跳步推导,并解释各节理论结果。
+> 配套深度分析笔记:[chen20a_Self_Tuning_Stochastic_Optimization_with_Curvature_Aware_Gradient_Filtering.md](chen20a_Self_Tuning_Stochastic_Optimization_with_Curvature_Aware_Gradient_Filtering.md)
+> 原文 markdown:[chen20a-4_2081758822601363456.md](../02-markdown/chen20a-4_2081758822601363456.md)
+
+## 0 论文信息
+
+- 标题:Self-Tuning Stochastic Optimization with Curvature-Aware Gradient Filtering
+- 作者:Ricky T. Q. Chen, Dami Choi, Lukas Balles, David Duvenaud, Philipp Hennig
+- 方向:随机优化 / 方差缩减 / 自适应步长。核心思想:把真实梯度 $\nabla f_t$ 看作隐马尔可夫线性高斯系统的隐状态,用 Kalman 滤波在线推断它,得到方差缩减的梯度估计(MEKA),再用同样的滤波框架估计函数值的不确定性来自动选步长(PI 采集函数)。
+
+## 1 推理计划与依赖关系
+
+```
+式(1)(2) 问题设定
+   ↓
+式(3) 观测模型  +  式(4) 动力学模型(一阶 Taylor 展开)
+   ↓ (线性高斯系统 ⇒ 精确贝叶斯推断)
+式(5)(6)(7)(8) Kalman 滤波方程 ── 产出 m_t, P_t
+   ↓                                   ↓
+式(9) ADAMEKA 更新方向          式(10)(11) 函数值滤波与预测分布
+                                        ↓
+                               式(12)(13) PI 步长选择
+式(14) 噪声二次问题 ──(Q_t=0 化简式(6)-(8))→ 式(15) ──归纳求出 P_t=Σ/(t+1)──→ 命题1: E[f-f*] ∈ O(1/t)
+```
+
+## 2 问题设定:式 (1) 与式 (2)
+
+论文中的式 (1):
+
+$$
+\arg \min_{\theta \in \mathbb{R}^d} f(\theta), \qquad f(\theta) = \mathbb{E}_{\xi} [ \tilde{f}(\theta, \xi) ]
+$$
+
+- $\theta \in \mathbb{R}^d$:待优化参数;$\xi$:随机数据样本,服从分布 $p(\xi)$;
+- $\tilde{f}(\theta, \xi)$:单个样本上的损失;$f(\theta)$ 是它对 $\xi$ 的期望,即真实目标(泛化风险)。
+- 关键限制:只能采样 $\xi$,无法直接算 $f$ 或 $\nabla f$。
+
+论文中的式 (2),小批量梯度:
+
+$$
+g_t = \frac{1}{n} \sum_{i=1}^{n} \nabla_{\theta} \tilde{f}(\theta_t, \xi_t^{(i)}), \qquad \xi_t^{(1)}, \ldots, \xi_t^{(n)} \sim p(\xi) \ (iid)
+$$
+
+**无偏性推导**(每步标注依据):
+
+$$
+\mathbb{E}[g_t] = \frac{1}{n} \sum_{i=1}^{n} \mathbb{E} [ \nabla_{\theta} \tilde{f}(\theta_t, \xi_t^{(i)}) ] = \frac{1}{n} \cdot n \cdot \nabla_{\theta} \mathbb{E}_{\xi} [ \tilde{f}(\theta_t, \xi) ] = \nabla f(\theta_t)
+$$
+
+第一步用期望的线性性;第二步用样本同分布 + 期望与梯度交换(需要被积函数可微且可控,标准正则性条件);第三步用式 (1) 的定义。SGD 更新为 $\theta_{t+1} = \theta_t - \alpha_t g_t$。
+
+**方差量级**:由 iid 性,$\mathrm{Cov}(g_t) = \frac{1}{n} \mathrm{Cov}(\nabla \tilde{f}(\theta_t, \xi))$,即批量越大噪声协方差越小,按 $1/n$ 缩小。这解释了后文式 (3) 的高斯假设为何要求"批量足够大"(中心极限定理)。
+
+## 3 观测模型:式 (3)
+
+论文中的式 (3):
+
+$$
+g_t \mid \nabla f_t \sim \mathcal{N}(\nabla f_t, \Sigma_t)
+$$
+
+- 含义:给定真实梯度,观测 $g_t$ 是以真实梯度为均值、协方差为 $\Sigma_t$ 的高斯分布。
+- 依据:式 (2) 中 $g_t$ 是 $n$ 个 iid 项的平均。**中心极限定理**(此步为论文之外的经典结论):iid 随机向量的标准化均值在 $n \to \infty$ 时依分布收敛到高斯。这里的前提是单样本梯度方差有限;$n$ 有限时高斯只是近似。
+- $\Sigma_t$ 不需要手工设定:用逐样本梯度(auto-vectorized 自动微分)算经验协方差即可"直接观测"。实践中(第 4 节)会把它压成标量矩阵 $\sigma_t I$ 并做 EMA 平滑。
+
+## 4 动力学模型:式 (4)
+
+**从 Taylor 展开出发的推导**。对梯度函数 $\nabla f$ 在 $\theta_t$ 处做一阶展开,代入 $\theta_{t-1} = \theta_t - \delta_{t-1}$(定义 $\delta_{t-1} = \theta_t - \theta_{t-1}$):
+
+$$
+\nabla f(\theta_{t-1}) \approx \nabla f(\theta_t) - \nabla^2 f(\theta_t) \delta_{t-1}
+$$
+
+移项得梯度的演化规律:
+
+$$
+\nabla f(\theta_t) \approx \nabla f(\theta_{t-1}) + \nabla^2 f(\theta_t) \delta_{t-1}
+$$
+
+真实 Hessian 不可得,用小批量 Hessian-向量积 $B_t \delta_{t-1}$ 代替,其中 $\mathbb{E}[B_t] = \nabla^2 f(\theta_t)$(小批量 Hessian 无偏,推导同第 2 节的 $g_t$ 无偏性)。把"Taylor 截断误差 + $B_t$ 的随机性"合并建模为高斯噪声,得到论文中的式 (4):
+
+$$
+\nabla f_t \mid \nabla f_{t-1} \sim \mathcal{N}(\nabla f_{t-1} + B_t \delta_{t-1}, Q_t)
+$$
+
+- $Q_t$:$B_t \delta_{t-1}$ 的协方差(逐样本 Hessian-向量积的经验协方差,同样可直接算出)。
+- 注意:这里用 $\theta_t$ 处的 Hessian 而不是 $\theta_{t-1}$ 处,是为了让 $B_t \delta_{t-1}$ 与 $g_t$ 在同一个反向传播批次里一起算出(只多一次反传,不构造整个矩阵)。
+- 特例检验:若 $f$ 恰是二次函数,Taylor 展开无截断误差,$\nabla f_t = \nabla f_{t-1} + H \delta_{t-1}$ 精确成立——这正是第 6 节噪声二次分析中 $Q_t = 0$ 的来源。
+
+## 5 Kalman 滤波方程:式 (5)–(8)
+
+式 (3)(4) 构成**线性高斯状态空间模型**:隐状态 $\nabla f_t$ 的转移是线性的(转移矩阵为单位阵 $I$,控制项 $B_t \delta_{t-1}$),观测也是线性的(观测矩阵为 $I$),噪声均为高斯。此时后验分布保持高斯,可精确递推——这是 Kalman (1960) 的经典结果(综述见 Särkkä 2013)。论文中的式 (5) 定义两组参数:
+
+$$
+\nabla f_t \mid g_{1:t-1}, \delta_{1:t-1} \sim \mathcal{N}(m_t^-, P_t^-), \qquad \nabla f_t \mid g_{1:t}, \delta_{1:t-1} \sim \mathcal{N}(m_t, P_t)
+$$
+
+前者是"看到本轮观测 $g_t$ 之前"的预测分布,后者是"看到 $g_t$ 之后"的后验分布。初始先验 $\nabla f_0 \sim \mathcal{N}(m_0, P_0)$。
+
+### 5.1 预测步(式 6)的推导
+
+已知 $\nabla f_{t-1} \mid g_{1:t-1} \sim \mathcal{N}(m_{t-1}, P_{t-1})$,由式 (4) 有 $\nabla f_t = \nabla f_{t-1} + B_t \delta_{t-1} + w_t$,其中 $w_t \sim \mathcal{N}(0, Q_{t-1})$ 与历史独立。此步用高斯分布的经典性质(论文外知识):**独立高斯向量之和仍是高斯,均值相加、协方差相加**。于是:
+
+$$
+m_t^- = m_{t-1} + B_t \delta_{t-1}, \qquad P_t^- = P_{t-1} + Q_{t-1}
+$$
+
+即论文中的式 (6)。直觉上:均值按曲率方向"搬运"上一轮的梯度估计;协方差增加 $Q_{t-1}$,表示搬运本身带来了额外不确定性。
+
+### 5.2 修正步(式 7、8)的推导
+
+**注意:原 markdown 中式 (7) 的内容被 OCR 丢失,只剩编号"(7)"。** 按 Kalman 滤波的标准形式(且与第 6 节式 (15) 中 $K_t = P_{t-1}(P_{t-1} + \Sigma)^{-1}$ 完全吻合),式 (7) 应为 Kalman 增益:
+
+$$
+K_t = P_t^- (P_t^- + \Sigma_t)^{-1}
+$$
+
+**推导**(高斯先验 × 高斯似然的共轭更新,每步给依据)。先验 $
+abla f_t \sim \mathcal{N}(m_t^-, P_t^-)$,似然由式 (3) 给出 $g_t \mid 
+abla f_t \sim \mathcal{N}(
+abla f_t, \Sigma_t)$。取对数后验(贝叶斯公式,丢掉与 $
+abla f_t$ 无关的常数,记 $x = 
+abla f_t$):
+
+$$
+\log p(x \mid g_t) = -\frac{1}{2}(x - m_t^-)^{\top} (P_t^-)^{-1} (x - m_t^-) - \frac{1}{2}(g_t - x)^{\top} \Sigma_t^{-1} (g_t - x) + c
+$$
+
+对 $x$ 合并二次型:二次项系数为 $(P_t^-)^{-1} + \Sigma_t^{-1}$,一次项系数为 $(P_t^-)^{-1} m_t^- + \Sigma_t^{-1} g_t$。由高斯密度的配方法,后验协方差与均值为:
+
+$$
+P_t = ( (P_t^-)^{-1} + \Sigma_t^{-1} )^{-1}, \qquad m_t = P_t ( (P_t^-)^{-1} m_t^- + \Sigma_t^{-1} g_t )
+$$
+
+再把它化成论文的增益形式。此步用矩阵恒等式(论文外知识,可由两边同乘验证):
+
+$$
+( (P_t^-)^{-1} + \Sigma_t^{-1} )^{-1} = P_t^- - P_t^- (P_t^- + \Sigma_t)^{-1} P_t^- = (I - K_t) P_t^-
+$$
+
+验证第一个等号:令 $A = P_t^-, B = \Sigma_t$,要证 $(A^{-1} + B^{-1})^{-1} = A - A(A+B)^{-1}A$。右边乘 $(A^{-1} + B^{-1})$:
+
+$$
+( A - A(A+B)^{-1}A ) (A^{-1} + B^{-1}) = I + AB^{-1} - A(A+B)^{-1}(I + AB^{-1}) = I + AB^{-1} - A(A+B)^{-1}(B+A)B^{-1} = I
+$$
+
+其中第二步把 $I + AB^{-1}$ 写成 $(B + A)B^{-1}$。均值部分同理可化为:
+
+$$
+m_t = m_t^- + K_t (g_t - m_t^-) = (I - K_t) m_t^- + K_t g_t
+$$
+
+这正是论文中的式 (8) 左半部分。$g_t - m_t^-$ 称为残差:观测与预测的差,增益 $K_t$ 决定采纳多少。
+
+### 5.3 式 (8) 右半部分(Joseph 形式)与标准形式的等价
+
+论文中的式 (8) 协方差用的是 Joseph 形式:
+
+$$
+P_t = (I - K_t) P_t^- (I - K_t)^{\top} + K_t \Sigma_t K_t^{\top}
+$$
+
+**展开验证它等于 $(I - K_t)P_t^-$**(仅当 $K_t$ 取最优增益时成立)。展开:
+
+$$
+P_t = (I - K_t) P_t^- - (I - K_t) P_t^- K_t^{\top} + K_t \Sigma_t K_t^{\top}
+$$
+
+看后两项。由增益定义 $K_t (P_t^- + \Sigma_t) = P_t^-$,得 $K_t \Sigma_t = P_t^- - K_t P_t^- = (I - K_t) P_t^-$。代入第三项:
+
+$$
+K_t \Sigma_t K_t^{\top} = (I - K_t) P_t^- K_t^{\top}
+$$
+
+恰好与第二项抵消,于是 $P_t = (I - K_t) P_t^-$。Joseph 形式的意义:数值上保证 $P_t$ 对称半正定,即使 $K_t$ 有舍入误差也不会破坏协方差性质(论文外的数值滤波常识)。
+
+### 5.4 极限情形检验(建立直觉,只用严格推理)
+
+- $\Sigma_t \to 0$(观测无噪声):$K_t \to I$,$m_t \to g_t$,$P_t \to 0$——完全信观测,退回普通 SGD 梯度。
+- $\Sigma_t \to \infty$(观测极不可靠):$K_t \to 0$,$m_t \to m_t^-$——完全信曲率搬运的预测。
+- $Q_t = 0$ 且 $B_t \delta_{t-1} = 0$(梯度不随时间变):滤波退化为对历史 $g_s$ 的加权平均,方差按 $O(1/t)$ 收缩(见第 9 节)。
+- 与动量法对比:$m_t = (I - K_t)(m_{t-1} + B_t \delta_{t-1}) + K_t g_t$ 形如带曲率修正的 EMA,但"动量系数" $I - K_t$ 不是手工超参,而是由噪声估计自动推断——这是全文"自调节"的核心。
+
+### 第 2 节小结
+
+第 2 节把梯度估计问题转化为线性高斯滤波:假设是式 (3)(4) 的高斯观测/高斯动力学,结论是式 (6)–(8) 的闭式在线更新,产出方差缩减估计 $m_t$ 和不确定性 $P_t$。相比 SVRG/SAGA 不需要有限和结构与周期性全梯度;相比 Arnold et al. (2019) 的隐式梯度搬运,增益(等效动量系数)自动推断。代价是每步多一次反传与逐样本方差估计。
+
+## 6 ADAMEKA 更新方向:式 (9)
+
+论文中的式 (9)(按原 markdown 转录):
+
+$$
+\delta_t = -\alpha_t \frac{m_t}{\sqrt{m_t + \mathrm{diag}(P_t)} + \varepsilon}
+$$
+
+**疑似 OCR/排版问题**:分母中应为 $m_t^2 + \mathrm{diag}(P_t)$(逐元素平方)。理由:ADAM 的分母是二阶矩 $\mathbb{E}[g^2]$ 的平方根,而对任意随机向量逐元素有 $\mathbb{E}[g^2] = (\mathbb{E}[g])^2 + \mathrm{Var}(g)$(方差定义)。滤波框架下 $\nabla f_t$ 的后验均值是 $m_t$、后验方差对角线是 $\mathrm{diag}(P_t)$,故二阶矩的自然估计是 $m_t^2 + \mathrm{diag}(P_t)$。若真是一次幂 $m_t$,则 $m_t$ 可为负、根号无定义,且量纲不匹配(分母应与 $m_t$ 同量纲,才能让 $\delta_t$ 近似逐元素符号方向)。
+
+- 对照 ADAM:ADAM 用两个 EMA 分别估计一阶矩 $m$ 与二阶矩 $v$,更新 $-\alpha m / (\sqrt{v} + \varepsilon)$;这里 $m, v$ 由滤波直接给出,不引入 $\beta_1, \beta_2$。
+- $\varepsilon = 10^{-8}$ 只为数值稳定,不视作超参。
+
+## 7 步长选择的滤波模型:式 (10)(11)
+
+### 7.1 式 (10)
+
+对函数值 $f_t$ 建立与第 2 节同构的线性高斯模型(观测为小批量损失 $y_t$,动力学由二阶 Taylor 展开给出),推导在原文附录 B(本 markdown 未含附录,**此处存在信息缺口,以下按正文口径推理**)。滤波产出后验,即论文中的式 (10):
+
+$$
+f_t \mid y_{1:t}, \delta_{1:t-1} \sim \mathcal{N}(u_t, s_t)
+$$
+
+$u_t$ 是当前函数值的估计,$s_t$ 是其不确定性(标量方差)。
+
+### 7.2 式 (11) 的逐项推导
+
+对 $f(\theta_t + \alpha_t \delta_t)$ 做二阶 Taylor 展开(标准二次近似,论文正文第 3 节开头给出):
+
+$$
+f(\theta_t + \alpha_t \delta_t) - f_t \approx \alpha_t \delta_t^{\top} \nabla f_t + \frac{\alpha_t^2}{2} \delta_t^{\top} \nabla^2 f_t \delta_t
+$$
+
+右边有三处未知量,各自用滤波/估计量代入,并把各自的不确定性作为独立高斯噪声传播(独立性是建模假设):
+
+1. $\nabla f_t$:后验 $\mathcal{N}(m_t, P_t)$。线性变换 $\alpha_t \delta_t^{\top} \nabla f_t$ 的分布(高斯线性变换性质,论文外经典结论:若 $x \sim \mathcal{N}(\mu, C)$ 则 $a^{\top} x \sim \mathcal{N}(a^{\top}\mu, a^{\top} C a)$):均值 $\alpha_t \delta_t^{\top} m_t$,方差 $\alpha_t^2 \delta_t^{\top} P_t \delta_t$。
+2. $\nabla^2 f_t \delta_t$:用观测 $B_t \delta_t$,其协方差为 $Q_t$。故 $\frac{\alpha_t^2}{2} \delta_t^{\top} B_t \delta_t$ 的均值即该式本身,方差为 $\frac{\alpha_t^4}{4} \delta_t^{\top} Q_t \delta_t$(同样用 $a^{\top}x$ 的方差公式,$a = \frac{\alpha_t^2}{2}\delta_t$)。
+3. 函数值本身:$f_{t+1} - f_t$ 中,$f_t$ 的估计不确定性为 $s_t$;$f_{t+1}$ 作为下一时刻的函数值同样带有量级 $s_t$ 的基准不确定性,二者按独立高斯相加贡献 $2 s_t$(**此步细节在附录 B,系数 2 的确切来源按"两次独立的函数值不确定性各贡献 $s_t$"解读,存在跳步,以原文附录为准**)。
+
+三块独立相加(独立高斯之和:均值相加、方差相加),得论文中的式 (11):
+
+$$
+f_{t+1} - f_t \mid y_{1:t}, g_{1:t}, \delta_{1:t} \sim \mathcal{N}\left( \alpha_t \delta_t^{\top} m_t + \frac{\alpha_t^2}{2} \delta_t^{\top} B_t \delta_t, \ 2 s_t + \alpha_t^2 \delta_t^{\top} P_t \delta_t + \frac{\alpha_t^4}{4} \delta_t^{\top} Q_t \delta_t \right)
+$$
+
+**各项数量级比较**(方差随 $\alpha_t$ 的增长速度):常数项 $2 s_t$、二次项 $\alpha_t^2 \delta_t^{\top} P_t \delta_t$(梯度不确定性)、四次项 $\frac{\alpha_t^4}{4}\delta_t^{\top} Q_t \delta_t$(曲率不确定性)。步长越大,曲率不确定性主导——这正是"走得越远越不敢信二次近似"的严格表述,也是后面 PI 步长天然不会取太大的原因。
+
+### 第 3 节小结
+
+第 3 节把确定性的二次法则步长 $\alpha = -\delta^{\top}\nabla f / (\delta^{\top} \nabla^2 f \delta)$ 升级为带不确定性的版本:条件是式 (10)(11) 的高斯模型,结论是无需 damping 常数与缩放因子的自动步长。它替代的是 Martens (2010) 式的手工阻尼。
+
+## 8 PI 采集函数:式 (12)(13)
+
+论文中的式 (12):
+
+$$
+\alpha_{\mathrm{PI}} := \arg \max_{\alpha} \mathbb{P}(f_{t+1} - f_t \le 0 \mid y_{1:t}, g_{1:t})
+$$
+
+即最大化"函数值下降"的概率。记式 (11) 的均值为 $\mu(\alpha)$、标准差为 $\sigma(\alpha)$:
+
+$$
+\mu(\alpha) = \alpha \delta_t^{\top} m_t + \frac{\alpha^2}{2} \delta_t^{\top} B_t \delta_t, \qquad \sigma(\alpha) = \sqrt{2 s_t + \alpha^2 \delta_t^{\top} P_t \delta_t + \frac{\alpha^4}{4} \delta_t^{\top} Q_t \delta_t}
+$$
+
+**推导式 (13)**。对高斯变量 $Z \sim \mathcal{N}(\mu, \sigma^2)$,有 $\mathbb{P}(Z \le 0) = \Phi(-\mu/\sigma)$,其中 $\Phi$ 是标准正态 CDF(论文外经典事实:标准化 $Z$ 后直接得出)。$\Phi$ 严格单调递增,故:
+
+$$
+\arg \max_{\alpha} \Phi\left( \frac{-\mu(\alpha)}{\sigma(\alpha)} \right) = \arg \max_{\alpha} \frac{-\mu(\alpha)}{\sigma(\alpha)} = \arg \min_{\alpha} \frac{\mu(\alpha)}{\sigma(\alpha)}
+$$
+
+即:
+
+$$
+\alpha_{\mathrm{PI}} = \arg \min_{\alpha} \frac{\alpha \delta_t^{\top} m_t + \frac{\alpha^2}{2} \delta_t^{\top} B_t \delta_t}{\sqrt{2 s_t + \alpha^2 \delta_t^{\top} P_t \delta_t + \frac{\alpha^4}{4} \delta_t^{\top} Q_t \delta_t}}
+$$
+
+**与原 markdown 的差异标注**:原文式 (13) 分子写作 $-\alpha \delta_t^{\top} m_t + \frac{\alpha^2}{2}\delta_t^{\top} B_t \delta_t$。按上面的严格推导,argmin 的分子应恰为式 (11) 的均值 $\mu(\alpha)$(不带负号);若分子取 $-\mu$ 再 argmin,方向就反了。两种可能:原文 (11) 与 (13) 采用了不同的符号约定(如把 $\delta$ 的方向符号吸收进去),或此处为排版/OCR 差错。逻辑自洽的版本以本节推导为准。
+
+**边界与极限检验**:
+
+- $s_t, P_t, Q_t \to 0$(无任何不确定性):目标退化为最小化 $\mu(\alpha)$ 本身,一阶条件 $\delta^{\top} m + \alpha \delta^{\top} B \delta = 0$ 给出 $\alpha = -\delta^{\top} m / (\delta^{\top} B \delta)$,精确还原经典二次法则步长——说明 PI 是二次法则的严格推广。
+- $Q_t$ 很大(曲率极不可靠):分母中 $\alpha^4$ 项迅速惩罚大步长,$\alpha_{\mathrm{PI}}$ 被压向 0,自动起到 damping 的作用而无需手工常数。
+- 求解:一维数值 Newton 法,常数均已在手,不需再算 $f$。负曲率场景加三阶修正项保证步长有限为正(附录 B.2,本 markdown 未含)。
+
+### 第 3.1 节小结
+
+PI 无超参、且实验(图 6)显示所得步长"天然量纲正确"(缩放因子 $c = 1$ 最优);期望改进 (EI) 则不然。理论上 PI 在无噪声极限还原二次法则,在高不确定性极限自动收缩步长。
+
+## 9 噪声二次问题:式 (14)(15)
+
+### 9.1 式 (14) 及其导出量
+
+论文中的式 (14):
+
+$$
+f(\theta, \xi) = \frac{1}{2} (\theta - \xi)^{\top} H (\theta - \xi)
+$$
+
+逐一推导正文中给出的性质:
+
+1. **全梯度**。$\nabla_{\theta} f(\theta, \xi) = H(\theta - \xi)$(二次型求导,$H$ 对称)。取期望:$\nabla f(\theta) = \mathbb{E}[H(\theta - \xi)] = H(\theta - \mathbb{E}[\xi])$。
+2. **梯度噪声**。单样本梯度减全梯度:$H(\theta - \xi) - H(\theta - \mathbb{E}[\xi]) = -H(\xi - \mathbb{E}[\xi])$,与 $\theta$ 无关。故噪声协方差为 $\Sigma = H \mathrm{Cov}(\xi) H^{\top}$(线性变换的协方差公式:$\mathrm{Cov}(Ax) = A \mathrm{Cov}(x) A^{\top}$),不随 $\theta$ 变化——加性噪声。
+3. **Hessian 无噪声**。$\nabla^2_{\theta} f(\theta, \xi) = H$ 对一切 $\xi$ 相同,故任何小批量给出的 $B_t = H$ 精确无随机性,于是 $Q_t = 0$,且
+
+$$
+B_t \delta_{t-1} = H(\theta_t - \theta_{t-1}) = H(\theta_t - \mathbb{E}[\xi]) - H(\theta_{t-1} - \mathbb{E}[\xi]) = \nabla f_t - \nabla f_{t-1}
+$$
+
+即动力学模型的"搬运"在此设定下**精确成立、零误差**。这就是选噪声二次问题做理论分析的原因:式 (4) 的近似变成恒等式,滤波模型完全正确。
+
+### 9.2 式 (15) 的化简推导
+
+把 $Q_t = 0$、$\Sigma_t = \Sigma$ 代入式 (6)(7)(8):
+
+- 式 (6):$P_t^- = P_{t-1} + 0 = P_{t-1}$,$m_t^- = m_{t-1} + B_t \delta_{t-1}$;
+- 式 (7):$K_t = P_t^-(P_t^- + \Sigma)^{-1} = P_{t-1}(P_{t-1} + \Sigma)^{-1}$;
+- 式 (8):$m_t = (I - K_t)(m_{t-1} + B_t \delta_{t-1}) + K_t g_t$,$P_t = (I - K_t) P_{t-1}$(用 5.3 节证明的 Joseph 形式化简)。
+
+这正是论文中的式 (15),初始化 $m_0 = g_0, P_0 = \Sigma$。
+
+### 9.3 $P_t = \Sigma / (t+1)$ 的归纳证明(即 $O(1/t)$ 收缩)
+
+**断言**:$P_t = \frac{1}{t+1}\Sigma$ 对一切 $t \ge 0$ 成立。
+
+- 基例:$P_0 = \Sigma = \frac{1}{0+1}\Sigma$。✓
+- 归纳步:设 $P_{t-1} = \frac{1}{t}\Sigma$。则
+
+$$
+K_t = \frac{1}{t}\Sigma \left( \frac{1}{t}\Sigma + \Sigma \right)^{-1} = \frac{1}{t}\Sigma \cdot \frac{t}{t+1}\Sigma^{-1} = \frac{1}{t+1} I
+$$
+
+(第二步:$\frac{1}{t}\Sigma + \Sigma = \frac{t+1}{t}\Sigma$,同一矩阵 $\Sigma$ 的数乘可交换、可逆。)于是
+
+$$
+P_t = \left( I - \frac{1}{t+1} I \right) \frac{1}{t}\Sigma = \frac{t}{t+1} \cdot \frac{1}{t}\Sigma = \frac{1}{t+1}\Sigma
+$$
+
+归纳完成。协方差按 $O(1/t)$ 收缩,滤波器越来越确信自己的梯度估计。
+
+### 9.4 $m_t$ 的显式结构:搬运后求平均
+
+把 $K_t = \frac{1}{t+1}I$ 代回均值更新:
+
+$$
+m_t = \frac{t}{t+1}(m_{t-1} + \nabla f_t - \nabla f_{t-1}) + \frac{1}{t+1} g_t
+$$
+
+(已用 9.1 的恒等式 $B_t\delta_{t-1} = 
+abla f_t - 
+abla f_{t-1}$。)定义"搬运到当前点的历史观测" $\hat{g}_s^t := g_s + H(\theta_t - \theta_s)$。由 $g_s = 
+abla f_s - H(\xi 噪声)$ 的加性结构,每个 $\hat{g}_s^t$ 都是 $
+abla f_t$ 的无偏估计且协方差为 $\Sigma$、彼此独立(不同批次样本独立)。可用归纳法验证:
+
+$$
+m_t = \frac{1}{t+1} \sum_{s=0}^{t} \hat{g}_s^t
+$$
+
+验证归纳步:设该式对 $t-1$ 成立,注意 $\hat{g}_s^t = \hat{g}_s^{t-1} + H(\theta_t - \theta_{t-1})$,则
+
+$$
+\frac{t}{t+1}(m_{t-1} + H\delta_{t-1}) + \frac{g_t}{t+1} = \frac{t}{t+1}\cdot\frac{1}{t}\sum_{s=0}^{t-1}(\hat{g}_s^{t-1} + H\delta_{t-1}) + \frac{\hat{g}_t^t}{t+1} = \frac{1}{t+1}\sum_{s=0}^{t}\hat{g}_s^t
+$$
+
+($\hat{g}_t^t = g_t$。)所以 $m_t$ 恰是 $t+1$ 个独立同协方差无偏估计的算术平均,$\mathrm{Cov}(m_t) = \frac{1}{t+1}\Sigma$,与 9.3 的 $P_t$ 完全一致——滤波器对自身不确定性的账算得分毫不差。这也严格解释了论文所说"MEKA 是 Arnold et al. (2019) 隐式梯度搬运的显式形式"。
+
+### 9.5 命题 1 的证明骨架
+
+**命题 1**:设问题形如式 (14),$H$ 的特征值全部落在 $[\mu, L]$ 内($\mu > 0$,即强凸且 $L$-光滑)。若 $\theta_{t+1} = \theta_t - \alpha m_t$,$\alpha \le 1/L$,$m_t$ 由式 (15) 得到,则 $\mathbb{E}[f(\theta_t) - f_*] \in O(1/t)$。
+
+原文完整证明在附录(本 markdown 未含,**以下是依据 9.3、9.4 可严格支撑的证明骨架,细节存在跳步**):
+
+1. 由 9.4,$m_t = \nabla f_t + e_t$,其中噪声 $e_t$ 均值为零、协方差 $\frac{1}{t+1}\Sigma$;
+2. 更新即"带衰减噪声的梯度下降":$\theta_{t+1} = \theta_t - \alpha \nabla f_t - \alpha e_t$;
+3. 对 $L$-光滑函数用下降引理(经典结论:$f(y) \le f(x) + \nabla f(x)^{\top}(y-x) + \frac{L}{2}\Vert y - x \Vert^2$),取期望后噪声贡献一项 $\frac{\alpha^2 L}{2}\mathbb{E}\Vert e_t \Vert^2 = O(1/t)$;
+4. 强凸性给出确定性部分的线性收缩;把"线性收缩 + 每步 $O(1/t)$ 注入"递推展开,总和为 $O(1/t)$(标准的噪声衰减 SGD 分析,如 Bottou et al. 2018 中的技巧)。
+
+对照:普通 SGD 用常数步长时 $\mathbb{E}\Vert e_t \Vert^2$ 不衰减,只能收敛到 $O(\alpha \sigma^2)$ 的噪声球(diffusion);MEKA 的噪声自动按 $1/t$ 衰减,故常数步长即可 $O(1/t)$ 收敛——这正是图 1、图 4 展示的现象。
+
+### 第 6 节小结
+
+条件:噪声二次问题(Hessian 与样本无关 ⇒ 动力学模型精确、$Q = 0$)+ 强凸光滑 + $\alpha \le 1/L$。结论:常数步长下 $O(1/t)$ 收敛,等价于对搬运后梯度求平均。强在:不需要衰减步长调度、不需要有限和假设;弱在:该设定是滤波模型的"最优主场",不能推广到 Hessian 随样本变化的一般非凸问题(深度学习中论文自己也承认无显著增益)。
+
+## 10 全文证明骨架图与总结
+
+```
+高斯观测假设(3) ─┐
+                  ├→ 线性高斯系统 → Kalman 精确推断(5)-(8) → m_t(方差缩减梯度), P_t(不确定性)
+Taylor 动力学(4) ─┘                                            │
+                                                               ├→ (9) ADAMEKA 方向
+函数值滤波(10) + 二次展开 → 预测分布(11) → PI 步长(12)(13) ←──┘(共用 m_t, P_t, B_t, Q_t)
+二次特例(14):Q=0、动力学精确 → 滤波化简(15) → P_t = Σ/(t+1) → 命题1:O(1/t)
+```
+
+三条主线:**梯度估计**(第 2 节)、**步长选择**(第 3 节)、**理论保证**(第 6 节),全部建立在"滤波参数 $B_t\delta, Q_t, \Sigma_t$ 可以用逐样本自动微分直接观测"这一工程事实上(第 4 节)。实验结论(第 7 节):方差缩减确实成立(估计梯度距真梯度近约 5 倍),PI 步长天然免缩放,但在深度学习上自适应步长会钻进高曲率高方差区域,反而不如 SGD 的"噪声排斥"效应,整体性能只能持平良好调参的基线。
+
+## 11 原文 markdown 疑似排版/OCR 问题清单
+
+1. **式 (7) 内容丢失**,只剩编号;应为 $K_t = P_t^-(P_t^- + \Sigma_t)^{-1}$(与式 (15) 交叉验证一致)。
+2. **式 (9) 分母**:$\sqrt{m_t + \mathrm{diag}(P_t)}$ 应为 $\sqrt{m_t^2 + \mathrm{diag}(P_t)}$(二阶矩 = 均值平方 + 方差;否则根号内可为负)。
+3. **式 (13) 分子符号**:$-\alpha\delta_t^{\top}m_t$ 与式 (11) 的均值 $+\alpha\delta_t^{\top}m_t$ 不一致;按 PI 的严格推导,argmin 的分子应等于 (11) 的均值。
+4. 附录 B(函数值滤波推导、三阶修正)与命题 1 的完整证明不在本 markdown 中,相关步骤已在文中标注"存在跳步"。
+
+---
+
+*本文件推导完毕。可针对任意一步继续提问,或说"回到交互模式"逐个细讲。*

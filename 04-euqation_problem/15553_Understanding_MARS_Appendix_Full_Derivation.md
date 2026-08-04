@@ -1,0 +1,641 @@
+# 15553 MARS 论文附录：全文公式推导流程整理（从头到尾）
+
+> 对应论文：Understanding MARS: When Scaling Momentum Correction Provably Helps（Shulgin, Gadaev, Khirirat, Richtárik, 2026）
+> 本文档整理论文**附录 A–E** 的完整证明链，逐步展开所有"显然""容易验证"的中间步骤。
+> 配套精读笔记见同目录下 `15553_Understanding_MARS_When_Scaling_Momentum_Correction_Provably_Helps.md`（正文逐公式讲解）。
+
+---
+
+## 0. 全景路线图：整篇论文的证明是怎么串起来的
+
+论文所有理论结果的依赖关系如下（从底层到顶层）：
+
+```txt
+假设 1（L-光滑 + 下有界）      假设 2（无偏 + 方差有界 σ²）      定义 1（γ-相似性 δ_γ）
+        │                              │                              │
+        ├──────────────┬───────────────┴──────────────┬───────────────┤
+        │              │                              │               │
+        │        附录 A：引理 1                  附录 B：引理 2        │
+        │        （δ_γ² ≤ γ²δ² + (1-γ)²L²，      （逐点最优 γ*，       │
+        │          最优 γ* = L²/(δ²+L²)）         7.1 节估计公式来源）  │
+        │              │                              │               │
+        │              │                        附录 B.2：Example 1   │
+        │              │                        （上界取等的具体例子）  │
+        │              │                                              │
+        └──────► 附录 C：引理 4（下降引理，全文技术核心）◄──────────────┘
+                 （借助引理 3 的步长条件）
+                        │
+                 附录 D：定理 2（通用 T 步界，望远镜求和）
+                        │
+            ┌───────────┴────────────┐
+     附录 D.1：定理 1          附录 D.3.1：推论 1
+     （给定精度 ε 反解 T，     （给定预算 T，选 β_T
+       得梯度复杂度 (8)）        两次平衡得收敛率 (9)）
+            │
+     附录 E：命题 1（一维凸优化：最小化替代函数 J(γ)）
+            │
+     正文推论 2：MARS 复杂度界严格不超过 MVR（B < Aδ 时）
+```
+
+一句话概括整条链：**先证明"每一步平均下降多少"（引理 4），再把 T 步加起来（定理 2），然后按两种方式收尾——给定精度反解出复杂度（定理 1）、给定预算读出速率（推论 1）——最后对 γ 做一维优化，证明 MARS 的保证严格优于 MVR（命题 1 + 推论 2）。**
+
+---
+
+## 1. 推导前的三块基石（正文回顾，符号约定）
+
+全程用到的记号：
+
+- $f(x) = \mathbb{E}_{\xi}[f_{\xi}(x)]$ ：要最小化的目标（论文式 (1)）；$\Delta := f(x_0) - f_{\inf}$ 是初始"下降预算"。
+- MARS 更新（论文式 (2)(4)）：$x_{t+1} = x_t - \eta g_t$ ，$g_t = (1-\beta)(g_{t-1} + \gamma \Delta_t) + \beta \nabla f_{\xi_t}(x_t)$ ，其中 $\Delta_t = \nabla f_{\xi_t}(x_t) - \nabla f_{\xi_t}(x_{t-1})$ 。
+- **假设 1**：$f$ 下有界且 L-光滑，$\Vert \nabla f(x) - \nabla f(y) \Vert \le L \Vert x - y \Vert$ 。
+- **假设 2**：$\mathbb{E}_{\xi}[\nabla f_{\xi}(x)] = \nabla f(x)$ （无偏），$\mathbb{E}_{\xi} \Vert \nabla f_{\xi}(x) - \nabla f(x) \Vert^2 \le \sigma^2$ （方差有界）。
+- **定义 1（γ-相似性）**：记同样本梯度差 $d_{\xi}(x,y) = \nabla f_{\xi}(x) - \nabla f_{\xi}(y)$ 、真实梯度差 $d(x,y) = \nabla f(x) - \nabla f(y)$ ，则
+
+$$
+\delta_{\gamma}^2 := \sup_{x \ne y} \frac{\mathbb{E}_{\xi} \left[ \Vert \gamma d_{\xi}(x,y) - d(x,y) \Vert^2 \right]}{\Vert x - y \Vert^2}
+$$
+
+等价说法：对一切 $x, y$ 有 $\mathbb{E}_{\xi} \Vert \gamma d_{\xi}(x,y) - d(x,y) \Vert^2 \le \delta_{\gamma}^2 \Vert x - y \Vert^2$ 。这是后面所有噪声控制的入口。
+
+两个端点（正文已证）：$\delta_0 \le L$ （光滑性），$\delta_1 = \delta$ （标准相似性，式 (6)）。
+
+---
+
+## 2. 附录 A：引理 1 的证明（偏差–方差分解）
+
+**要证的三条结论**：① $\delta_{\gamma}^2 \le \gamma^2 \delta^2 + (\gamma-1)^2 L^2$ ；② 右端最小点 $\gamma_\star = L^2/(\delta^2 + L^2) \in [0,1]$ ；③ $\delta_{\gamma_\star}^2 \le \delta^2 L^2/(\delta^2 + L^2)$ 。
+
+### 2.1 第一步：固定点对，做"加零"分解
+
+固定 $x \ne y$ ，简写 $d_{\xi} = d_{\xi}(x,y)$ ，$d = d(x,y)$ 。由假设 2 的无偏性，对梯度差同样成立：
+
+$$
+\mathbb{E}_{\xi}[d_{\xi}] = \mathbb{E}_{\xi}[\nabla f_{\xi}(x)] - \mathbb{E}_{\xi}[\nabla f_{\xi}(y)] = \nabla f(x) - \nabla f(y) = d
+$$
+
+所以 $\mathbb{E}_{\xi}[d_{\xi} - d] = 0$ 。现在把要控制的量"加零"改写（加上又减去 $\gamma d$ ）：
+
+$$
+\gamma d_{\xi} - d = \gamma(d_{\xi} - d) + (\gamma - 1) d
+$$
+
+展开平方范数（用 $\Vert u + v \Vert^2 = \Vert u \Vert^2 + \Vert v \Vert^2 + 2 \langle u, v \rangle$ ）并取期望：
+
+$$
+\mathbb{E}_{\xi} \Vert \gamma d_{\xi} - d \Vert^2 = \gamma^2 \mathbb{E}_{\xi} \Vert d_{\xi} - d \Vert^2 + (\gamma-1)^2 \Vert d \Vert^2 + 2\gamma(\gamma-1) \langle \mathbb{E}_{\xi}[d_{\xi} - d], d \rangle
+$$
+
+第三项（交叉项）里 $\mathbb{E}_{\xi}[d_{\xi} - d] = 0$ ，**整项消失**。这就是经典的偏差–方差分解：
+
+$$
+\mathbb{E}_{\xi} \Vert \gamma d_{\xi} - d \Vert^2 = \gamma^2 \mathbb{E}_{\xi} \Vert d_{\xi} - d \Vert^2 + (\gamma-1)^2 \Vert d \Vert^2
+$$
+
+第一项是"方差费"（随 $\gamma$ 放大），第二项是"欠修正偏差费"（随 $\gamma$ 偏离 1 增大）。
+
+### 2.2 第二步：除以距离平方，取 sup
+
+两边除以 $\Vert x - y \Vert^2$ ：第一项的比值按定义不超过 $\delta^2$ （标准相似性，式 (6)），第二项的比值按光滑性不超过 $L^2$ ，于是每个点对都有
+
+$$
+\frac{\mathbb{E}_{\xi} \Vert \gamma d_{\xi} - d \Vert^2}{\Vert x - y \Vert^2} \le \gamma^2 \delta^2 + (\gamma-1)^2 L^2
+$$
+
+右边是不依赖点对的常数，因此对左边取 $\sup$ 后不等式仍成立（"和的 sup ≤ sup 的和"，见精读笔记定义 1 小节的问答），即结论 ①。
+
+### 2.3 第三步：对 γ 最小化抛物线
+
+记 $q(\gamma) = \gamma^2 \delta^2 + (\gamma-1)^2 L^2$ ，这是开口向上的抛物线。求导：
+
+$$
+q'(\gamma) = 2\gamma \delta^2 + 2(\gamma - 1) L^2
+$$
+
+令 $q'(\gamma) = 0$ ：$\gamma(\delta^2 + L^2) = L^2$ ，解得
+
+$$
+\gamma_\star = \frac{L^2}{\delta^2 + L^2}
+$$
+
+分子分母都非负且分子不超过分母，所以 $\gamma_\star \in [0,1]$ ，结论 ② 成立。代回 $q$ ：
+
+$$
+q(\gamma_\star) = \frac{L^4 \delta^2}{(\delta^2+L^2)^2} + \frac{\delta^4 L^2}{(\delta^2+L^2)^2} = \frac{L^2 \delta^2 (L^2 + \delta^2)}{(\delta^2+L^2)^2} = \frac{L^2 \delta^2}{\delta^2 + L^2}
+$$
+
+（第一步用了 $1 - \gamma_\star = \delta^2/(\delta^2+L^2)$ 。）由 ① 知 $\delta_{\gamma_\star}^2 \le q(\gamma_\star)$ ，即结论 ③——"并联电阻"式的界，严格小于 $\delta^2$ 和 $L^2$ 两者。证毕。
+
+---
+
+## 3. 附录 B：引理 2（逐点最优 γ）与 Example 1 的证明
+
+### 3.1 引理 2：把"最优 γ"精确到每一个点对
+
+引理 1 处理的是全局 sup 之后的上界；引理 2 回到**固定点对** $x, y$ ，研究函数
+
+$$
+h(x, y; \gamma) = \mathbb{E}_{\xi} \Vert \gamma d_{\xi}(x,y) - d(x,y) \Vert^2
+$$
+
+**分解（与 2.1 完全同一招）**：加零、展开、交叉项因无偏性归零，得到**恒等式**（注意这里是等号，不是不等号，因为还没除距离、没取 sup）：
+
+$$
+h(x, y; \gamma) = \gamma^2 \mathbb{E}_{\xi} \Vert d_{\xi} - d \Vert^2 + (\gamma - 1)^2 \Vert d \Vert^2
+$$
+
+下面记方差 $V := \mathbb{E}_{\xi} \Vert d_{\xi} - d \Vert^2$ ，偏差平方 $P := \Vert d \Vert^2$ ，则 $h(\gamma) = \gamma^2 V + (\gamma-1)^2 P$ 。三条性质：
+
+**(1) 凸性**。二阶导 $h''(\gamma) = 2V + 2P \ge 0$ ，故 $h$ 关于 $\gamma$ 是凸函数（一维抛物线）。
+
+**(2) 单调区间**。一阶导 $h'(\gamma) = 2\gamma V + 2(\gamma - 1)P$ 。当 $\gamma < 0$ 时两项都为负，$h' < 0$ ，函数非增；当 $\gamma > 1$ 时两项都为正，$h' > 0$ ，函数非减。**含义：最优的 γ 永远不会跑出 $[0,1]$ 区间**——这为论文只分析 $\gamma \in [0,1]$ 提供了理由。
+
+**(3) 最小点**。设 $\mathbb{E}_{\xi} \Vert d_{\xi} \Vert^2 > 0$ 。令 $h'(\gamma) = 0$ ：$\gamma(V + P) = P$ ，得
+
+$$
+\gamma_\star = \frac{P}{V + P} = \frac{\Vert d \Vert^2}{\mathbb{E}_{\xi} \Vert d_{\xi} - d \Vert^2 + \Vert d \Vert^2}
+$$
+
+再用方差分解 $\mathbb{E}_{\xi} \Vert d_{\xi} \Vert^2 = V + \Vert d \Vert^2$ （随机向量的二阶矩 = 方差 + 均值的平方范数，由 $\mathbb{E}[d_{\xi}] = d$ ），分母正好换成 $\mathbb{E}_{\xi} \Vert d_{\xi} \Vert^2$ ：
+
+$$
+\gamma_\star = \frac{\Vert d(x,y) \Vert^2}{\mathbb{E}_{\xi} \Vert d_{\xi}(x,y) \Vert^2} \in [0, 1]
+$$
+
+**这正是论文 7.1 节 CIFAR-10 实验中估计量 $\hat{\gamma}_t^\star = \Vert d_t \Vert^2 / (\frac{1}{M} \sum_m \Vert d_{B_m,t} \Vert^2)$ 的理论出处**：分子用全梯度差、分母用 $M$ 个 mini-batch 梯度差的平均二阶矩来近似。
+
+最小值验证（代回 $h$ ，用 $1 - \gamma_\star = V/(V+P)$ ）：
+
+$$
+h(\gamma_\star) = \frac{P^2 V}{(V+P)^2} + \frac{V^2 P}{(V+P)^2} = \frac{P V (P + V)}{(V+P)^2} = \frac{PV}{V+P} = \gamma_\star V = (1 - \gamma_\star) P
+$$
+
+又是"并联电阻"结构。退化情形：若 $\mathbb{E}_{\xi} \Vert d_{\xi} \Vert^2 = 0$ ，则 $d_{\xi}$ 几乎必然为零，从而 $d = 0$ ，$h$ 恒为零，任何 $\gamma$ 都是最小点。证毕。
+
+### 3.2 附录 B.2：Example 1 的证明（上界取等的二次函数例子）
+
+**构造**：$f(x) = \frac{1}{n} \sum_{i=1}^n f_i(x)$ ，$f_i(x) = \frac{1}{2} x^{\top} A_i x$ ，$A_i = \hat{L} e_i e_i^{\top}$ ，维度 $d = n$ 。直观：第 $i$ 个样本只在第 $i$ 个坐标上有曲率 $\hat{L}$ ，其余方向完全平坦（精读笔记里已用 $n = 2$ 数值算穿）。
+
+**第一步：梯度差是线性映射**。$\nabla f_i(x) = A_i x$ ，所以 $d_i(x,y) = A_i(x-y)$ ；平均矩阵 $\bar{A} = \frac{1}{n} \sum_i A_i = \frac{\hat{L}}{n} I_n$ ，所以 $d(x,y) = \bar{A}(x-y)$ 。代入定义 1 的分子（记 $h = x - y$ ）：
+
+$$
+\mathbb{E}_i \Vert \gamma d_i - d \Vert^2 = \frac{1}{n} \sum_{i=1}^n \Vert (\gamma A_i - \bar{A}) h \Vert^2 = h^{\top} \left( \frac{1}{n} \sum_{i=1}^n (\gamma A_i - \bar{A})^{\top} (\gamma A_i - \bar{A}) \right) h
+$$
+
+对任意对称半正定矩阵 $M$ 有 $h^{\top} M h \le \lambda_{\max}(M) \Vert h \Vert^2$ ，所以只需算出这个平均矩阵的最大特征值。
+
+**第二步：写出对角矩阵**。$\gamma A_i - \bar{A}$ 是对角阵：第 $i$ 个对角元为 $\gamma \hat{L} - \frac{\hat{L}}{n}$ ，其余对角元都是 $-\frac{\hat{L}}{n}$ 。因此 $(\gamma A_i - \bar{A})^{\top}(\gamma A_i - \bar{A})$ 也是对角阵，对角元是上面各数的平方。
+
+**第三步：对 i 平均**。看任意固定坐标 $j$ ：在 $n$ 个矩阵中，只有 $i = j$ 那一个在坐标 $j$ 上贡献 $(\gamma \hat{L} - \hat{L}/n)^2$ ，其余 $n - 1$ 个都贡献 $\hat{L}^2/n^2$ 。平均后每个坐标的对角元都相同：
+
+$$
+\frac{1}{n} \left[ \left( \gamma \hat{L} - \frac{\hat{L}}{n} \right)^2 + (n-1) \frac{\hat{L}^2}{n^2} \right]
+$$
+
+平均矩阵是单位阵的倍数，最大特征值就是这个数。展开化简（提出 $\hat{L}^2$ ）：
+
+$$
+\left( \gamma - \frac{1}{n} \right)^2 + \frac{n-1}{n^2} = \gamma^2 - \frac{2\gamma}{n} + \frac{1}{n^2} + \frac{n-1}{n^2} = \gamma^2 - \frac{2\gamma}{n} + \frac{1}{n}
+$$
+
+再除以 $n$ 乘 $\hat{L}^2$ ，得
+
+$$
+\delta_{\gamma}^2 = (\gamma^2 n - 2\gamma + 1) \frac{\hat{L}^2}{n^2}
+$$
+
+（此例中逐点比值与 $h$ 无关，所以 sup 直接取到，上式是精确值。）
+
+**第四步：认出各常数**。代 $\gamma = 1$ ：$\delta^2 = (n-1)\hat{L}^2/n^2$ ；代 $\gamma = 0$ ：$L^2 = \hat{L}^2/n^2$ 。直接验证 $\gamma^2 \delta^2 + (\gamma-1)^2 L^2 = [\gamma^2(n-1) + (\gamma-1)^2] \hat{L}^2/n^2 = (\gamma^2 n - 2\gamma + 1)\hat{L}^2/n^2 = \delta_{\gamma}^2$ ——**引理 1 的上界在此例中取等**。最优点 $\gamma_\star = L^2/(\delta^2+L^2) = 1/n$ ，最优值 $\delta_{\gamma_\star}^2 = \frac{n-1}{n} \cdot \frac{\hat{L}^2}{n^2}$ ，改进倍数 $\delta^2/\delta_{\gamma_\star}^2 = n$ ：样本越多，MARS 相对 MVR 的常数改进可以任意大。证毕。
+
+---
+
+## 4. 附录 C：下降引理（引理 3 + 引理 4）——全文技术核心
+
+这一节是整篇论文的发动机。目标：证明**每迭代一步，一个精心设计的"能量" $H_t$ 平均至少下降 $\frac{\eta}{2} \mathbb{E} \Vert \nabla f(x_t) \Vert^2 - \beta \eta \sigma^2$** 。·
+
+### 4.0 预备：引理 3（步长条件的打包工具）
+
+**引理 3**（引自 Richtárik et al. 2021 的 Lemma 5）：设 $a, b > 0$ 。若 $0 < \eta \le \frac{1}{\sqrt{a} + b}$ ，则 $a\eta^2 + b\eta \le 1$ 。
+
+**证明（论文未展开，这里补上）**：由条件 $\eta(\sqrt{a} + b) \le 1$ ，两个单调递增项分别代入：
+
+$$
+a\eta^2 + b\eta \le \frac{a}{(\sqrt{a}+b)^2} + \frac{b}{\sqrt{a}+b} = \frac{a + b(\sqrt{a}+b)}{(\sqrt{a}+b)^2} = \frac{a + b\sqrt{a} + b^2}{a + 2b\sqrt{a} + b^2} \le 1
+$$
+
+最后一步：分子比分母恰好少一个非负项 $b\sqrt{a}$ 。$\square$ 作用：把"二次不等式 $a\eta^2 + b\eta \le 1$ 成立"翻译成一个**显式好写的步长上限** $\eta \le 1/(\sqrt{a}+b)$ 。
+
+### 4.1 引理 4 的表述
+
+设假设 1、2 成立，$\delta_{\gamma}$ 由定义 1 给出。若
+
+$$
+0 < \eta \le \frac{1}{\sqrt{a} + L}, a = \left( \frac{(1-\beta)^3 (1-\gamma)^2}{\beta} L^2 + 2(1-\beta)^2 \delta_{\gamma}^2 \right) \frac{1}{\beta}
+$$
+
+（论文写 $\vert \gamma - 1 \vert^2$ ，本文档取 $\gamma \in [0,1]$ 故写 $(1-\gamma)^2$ ，完全等价），则
+
+$$
+\mathbb{E}[H_{t+1}] \le \mathbb{E}[H_t] - \frac{\eta}{2} \mathbb{E} \Vert \nabla f(x_t) \Vert^2 + \beta \eta \sigma^2
+$$
+
+其中能量函数（Lyapunov 函数）$H_t = f(x_t) - f_{\inf} + \frac{\eta}{2\beta} \Vert e_t \Vert^2$ ，估计误差 $e_t = g_t - \nabla f(x_t)$ 。
+
+**读法**：$H_t$ = "还差多少函数值" + "梯度估计还差多准"（后者带权 $\frac{\eta}{2\beta}$ ）。每一步这个总账平均要减少 $\frac{\eta}{2} \Vert \nabla f \Vert^2$ ，只允许漏掉一个小的噪声地板 $\beta\eta\sigma^2$ 。
+
+证明分三步。先约定条件期望记号：$\mathcal{F}_{t-1}$ 是到 $t-1$ 步为止的全部历史，$\mathbb{E}_t[\cdot] := \mathbb{E}[\cdot \mid \mathcal{F}_{t-1}]$ ，即"固定过去、只对本步新样本 $\xi_t$ 求平均"。
+
+### 4.2 Step 1：误差递推（估计误差如何演化）
+
+记三个量：同样本梯度差 $d_t = \nabla f_{\xi_t}(x_t) - \nabla f_{\xi_t}(x_{t-1})$ 、真实梯度差 $D_t = \nabla f(x_t) - \nabla f(x_{t-1})$ 、新鲜梯度噪声 $z_t = \nabla f_{\xi_t}(x_t) - \nabla f(x_t)$ 。
+
+**(a) 改写更新式**。对 $g_t = (1-\beta)(g_{t-1} + \gamma d_t) + \beta \nabla f_{\xi_t}(x_t)$ 做两次加零：在 $\gamma d_t$ 处加减 $D_t$ ，在 $\beta \nabla f_{\xi_t}(x_t)$ 处拆成 $\beta \nabla f(x_t) + \beta z_t$ ：
+
+$$
+g_t = (1-\beta)(g_{t-1} + \gamma d_t - D_t) + (1-\beta) D_t + \beta \nabla f(x_t) + \beta z_t
+$$
+
+**(b) 两边减 $\nabla f(x_t)$ 得 $e_t$**。关键的抵消：$(1-\beta) D_t = (1-\beta) \nabla f(x_t) - (1-\beta) \nabla f(x_{t-1})$ ，其中 $(1-\beta)\nabla f(x_t) + \beta \nabla f(x_t) - \nabla f(x_t) = 0$ ，剩下的 $-(1-\beta)\nabla f(x_{t-1})$ 与 $(1-\beta) g_{t-1}$ 合成 $(1-\beta) e_{t-1}$ ：
+
+$$
+e_t = (1-\beta) e_{t-1} + w_t, w_t := (1-\beta)(\gamma d_t - D_t) + \beta z_t
+$$
+
+**结构解读**：旧误差每步打折 $(1-\beta)$ （方差缩减的引擎），新注入的扰动 $w_t$ 由两部分组成——**修正误差** $\gamma d_t - D_t$ （MARS 的核心量，正是定义 1 度量的对象）和**新鲜噪声** $\beta z_t$ 。
+
+**(c) 平方取条件期望**。$e_{t-1}$ 属于历史（ $\mathcal{F}_{t-1}$ -可测），可从 $\mathbb{E}_t$ 中当常数提出：
+
+$$
+\mathbb{E}_t \Vert e_t \Vert^2 = (1-\beta)^2 \Vert e_{t-1} \Vert^2 + 2(1-\beta) \langle e_{t-1}, \mathbb{E}_t[w_t] \rangle + \mathbb{E}_t \Vert w_t \Vert^2
+$$
+
+**(d) 算 $\mathbb{E}_t[w_t]$ ——这里出现 MARS 特有的偏差**。由无偏性 $\mathbb{E}_t[d_t] = D_t$ 、$\mathbb{E}_t[z_t] = 0$ ：
+
+$$
+\mathbb{E}_t[w_t] = (1-\beta)(\gamma D_t - D_t) + 0 = (1-\beta)(\gamma - 1) D_t
+$$
+
+当 $\gamma = 1$ （MVR）时这是零向量，交叉项消失；当 $\gamma < 1$ 时**留下一个确定性偏差项**——这就是 MARS 与 MVR 分析的分水岭，也是复杂度 (8) 里第四项 $\epsilon^{-4}$ 的最终来源。
+
+**(e) 处理交叉项：Cauchy–Schwarz + Young**。先用 Cauchy–Schwarz（内积 ≤ 范数之积）：
+
+$$
+2(1-\beta)^2 (1-\gamma) \langle e_{t-1}, D_t \rangle \le 2(1-\beta)^2 (1-\gamma) \Vert e_{t-1} \Vert \Vert D_t \Vert
+$$
+
+再用 Young 不等式 $2ab \le \theta a^2 + \frac{1}{\theta} b^2$ （对任意 $\theta > 0$ 成立，由 $(\sqrt{\theta} a - b/\sqrt{\theta})^2 \ge 0$ 展开即得），取 $a = \Vert e_{t-1} \Vert$ ，$b = (1-\gamma) \Vert D_t \Vert$ ：
+
+$$
+\mathbb{E}_t \Vert e_t \Vert^2 \le (1-\beta)^2 (1+\theta) \Vert e_{t-1} \Vert^2 + \frac{(1-\beta)^2 (1-\gamma)^2}{\theta} \Vert D_t \Vert^2 + \mathbb{E}_t \Vert w_t \Vert^2
+$$
+
+**(f) 控制 $\mathbb{E}_t \Vert w_t \Vert^2$ ——定义 1 与假设 2 双双入场**。用 $\Vert u+v \Vert^2 \le 2\Vert u \Vert^2 + 2\Vert v \Vert^2$ 拆开：
+
+$$
+\mathbb{E}_t \Vert w_t \Vert^2 \le 2(1-\beta)^2 \mathbb{E}_t \Vert \gamma d_t - D_t \Vert^2 + 2\beta^2 \mathbb{E}_t \Vert z_t \Vert^2 \le 2(1-\beta)^2 \delta_{\gamma}^2 \Vert x_t - x_{t-1} \Vert^2 + 2\beta^2 \sigma^2
+$$
+
+第二个不等号：第一项把定义 1 应用在点对 $(x_t, x_{t-1})$ 上（这正是发明 γ-相似性的目的），第二项用假设 2 的方差界。
+
+**(g) 控制 $\Vert D_t \Vert^2$ ——假设 1 入场**。L-光滑性直接给 $\Vert D_t \Vert \le L \Vert x_t - x_{t-1} \Vert$ ，平方即 $\Vert D_t \Vert^2 \le L^2 \Vert x_t - x_{t-1} \Vert^2$ 。
+
+**(h) 选 $\theta$ 收口**。合并 (e)(f)(g)，取全期望（塔性质 $\mathbb{E}[\mathbb{E}_t[\cdot]] = \mathbb{E}[\cdot]$ ），再选 $\theta = \frac{\beta}{1-\beta}$ 。验证两个化简：
+
+$$
+(1-\beta)^2 (1+\theta) = (1-\beta)^2 \cdot \frac{1-\beta+\beta}{1-\beta} = 1-\beta, \frac{(1-\beta)^2}{\theta} = \frac{(1-\beta)^3}{\beta}
+$$
+
+得到误差递推（论文式 (11)）：
+
+$$
+\mathbb{E} \Vert e_t \Vert^2 \le (1-\beta) \mathbb{E} \Vert e_{t-1} \Vert^2 + \left( \frac{(1-\beta)^3 (1-\gamma)^2}{\beta} L^2 + 2(1-\beta)^2 \delta_{\gamma}^2 \right) \mathbb{E} \Vert x_t - x_{t-1} \Vert^2 + 2\beta^2 \sigma^2
+$$
+
+**为什么选这个 $\theta$** ：Young 不等式的 $\theta$ 是自由参数。选大了，$(1+\theta)$ 把收缩系数 $(1-\beta)^2$ 抬回 1 以上，递推爆炸；选小了，$1/\theta$ 把偏差项放得太大。$\theta = \beta/(1-\beta)$ 恰好把收缩系数抬到 $1-\beta$ ——**只吃掉一半的收缩力度**（从 $(1-\beta)^2$ 到 $(1-\beta)$ ），换取偏差系数只付 $1/\beta$ 的代价。这也解释了精读笔记里"偏差比噪声贵一个 $1/\beta$ "的机理在递推层面的体现。
+
+（边界情形 $\beta = 1$ ：$g_t = \nabla f_{\xi_t}(x_t)$ ，$e_t = z_t$ ，直接有 $\mathbb{E} \Vert e_t \Vert^2 \le \sigma^2$ ，后续以 $a = 0$ 照走。）
+
+### 4.3 Step 2：下降不等式（函数值如何演化）
+
+由 L-光滑性的 descent lemma（推导见精读笔记假设 1 小节）：对 $x^{+} = x - \eta g$ ，
+
+$$
+f(x^{+}) \le f(x) + \langle \nabla f(x), x^{+} - x \rangle + \frac{L}{2} \Vert x^{+} - x \Vert^2 = f(x) - \eta \langle \nabla f(x), g \rangle + \frac{L}{2} \Vert x^{+} - x \Vert^2
+$$
+
+对内积项用**极化恒等式**（把 $\Vert g - \nabla f(x) \Vert^2 = \Vert g \Vert^2 - 2\langle g, \nabla f(x) \rangle + \Vert \nabla f(x) \Vert^2$ 移项即得）：
+
+$$
+-\eta \langle \nabla f(x), g \rangle = -\frac{\eta}{2} \Vert \nabla f(x) \Vert^2 - \frac{\eta}{2} \Vert g \Vert^2 + \frac{\eta}{2} \Vert g - \nabla f(x) \Vert^2
+$$
+
+再用 $\Vert x^{+} - x \Vert^2 = \eta^2 \Vert g \Vert^2$ 把 $-\frac{\eta}{2} \Vert g \Vert^2 = -\frac{1}{2\eta} \Vert x^{+} - x \Vert^2$ 并入最后一项，代入 $x = x_t$ ，$g = g_t$ ，$g_t - \nabla f(x_t) = e_t$ ，两边减 $f_{\inf}$ ，得（论文式 (12)）：
+
+$$
+f(x_{t+1}) - f_{\inf} \le f(x_t) - f_{\inf} - \frac{\eta}{2} \Vert \nabla f(x_t) \Vert^2 + \frac{\eta}{2} \Vert e_t \Vert^2 + \left( \frac{L}{2} - \frac{1}{2\eta} \right) \Vert x_{t+1} - x_t \Vert^2
+$$
+
+**读法**：函数值想下降 $\frac{\eta}{2} \Vert \nabla f \Vert^2$ ，但要为"梯度估计不准"付 $\frac{\eta}{2} \Vert e_t \Vert^2$ 的罚款；末项当 $\eta \le 1/L$ 时是负的（帮忙的），后面还要靠它吸收误差递推里的位移项。
+
+### 4.4 Step 3：组装能量函数 + 步长条件
+
+设 $H_t = f(x_t) - f_{\inf} + A \Vert e_t \Vert^2$ ，$A > 0$ 待定。把 (12) 和 (11) 依次代入 $\mathbb{E}[H_{t+1}]$ ：
+
+$$
+\mathbb{E}[H_{t+1}] \le \mathbb{E}[f(x_t) - f_{\inf}] - \frac{\eta}{2} \mathbb{E} \Vert \nabla f(x_t) \Vert^2 + \left( \frac{\eta}{2} + A(1-\beta) \right) \mathbb{E} \Vert e_t \Vert^2 + 2\beta^2 A \sigma^2 + C_x \mathbb{E} \Vert x_{t+1} - x_t \Vert^2
+$$
+
+其中位移项系数 $C_x = \frac{L}{2} - \frac{1}{2\eta} + \left( \frac{(1-\beta)^3 (1-\gamma)^2}{\beta} L^2 + 2(1-\beta)^2 \delta_{\gamma}^2 \right) A$ 。
+
+**选 $A = \frac{\eta}{2\beta}$** ，两个验证：
+
+$$
+\frac{\eta}{2} + A(1-\beta) = \frac{\eta \beta + \eta(1-\beta)}{2\beta} = \frac{\eta}{2\beta} = A, 2\beta^2 A \sigma^2 = 2\beta^2 \cdot \frac{\eta}{2\beta} \sigma^2 = \beta \eta \sigma^2
+$$
+
+第一个验证的含义：误差项的系数经过一步演化后**恰好回到 $A$** ——这样 $\mathbb{E}\Vert e_t \Vert^2$ 项被完整吸收进 $\mathbb{E}[H_t]$ ，不留残渣。这正是 Lyapunov 函数设计的精髓：权重 $\frac{\eta}{2\beta}$ 不是拍脑袋，而是解方程 $\frac{\eta}{2} + A(1-\beta) = A$ 得出的唯一选择。
+
+**步长条件**。只剩位移项需要 $C_x \le 0$ 。代入 $A = \frac{\eta}{2\beta}$ ，两边乘 $2\eta > 0$ 移项，等价于
+
+$$
+\left( \frac{(1-\beta)^3 (1-\gamma)^2}{\beta} L^2 + 2(1-\beta)^2 \delta_{\gamma}^2 \right) \frac{\eta^2}{\beta} + L\eta \le 1
+$$
+
+这正是引理 3 中 $a\eta^2 + b\eta \le 1$ 的形状（ $b = L$ ，$a$ 即引理 4 陈述中的 $a$ ）。由引理 3，$\eta \le \frac{1}{\sqrt{a} + L}$ 就够了。于是
+
+$$
+\mathbb{E}[H_{t+1}] \le \mathbb{E}[H_t] - \frac{\eta}{2} \mathbb{E} \Vert \nabla f(x_t) \Vert^2 + \beta \eta \sigma^2
+$$
+
+**$a$ 的两项各是谁**：第一项 $\frac{(1-\beta)^3(1-\gamma)^2 L^2}{\beta^2}$ 来自欠修正偏差（Young 不等式那条线，分母 $\beta^2$ ——贵）；第二项 $\frac{2(1-\beta)^2 \delta_{\gamma}^2}{\beta}$ 来自修正噪声（定义 1 那条线，分母 $\beta$ ——便宜）。$\gamma = 1$ 时第一项归零，退回 MVR 的步长条件。
+
+---
+
+## 5. 附录 D：收敛定理（定理 2 → 定理 1 → 推论 1）
+
+### 5.1 定理 2：通用 T 步界（望远镜求和）
+
+**表述**：在引理 4 的步长条件下，对任意 $\beta \in (0,1]$ 、$\gamma$ ，输出 $\hat{x}_T$ 从 $\{x_0, \dots, x_{T-1}\}$ 均匀抽取，则（论文式 (13)）
+
+$$
+\mathbb{E} \Vert \nabla f(\hat{x}_T) \Vert^2 \le \frac{2}{\eta T} \left( f(x_0) - f_{\inf} + \frac{\eta}{2\beta} \mathbb{E} \Vert g_0 - \nabla f(x_0) \Vert^2 \right) + 2\beta\sigma^2
+$$
+
+**证明**。引理 4 移项：$\frac{\eta}{2} \mathbb{E} \Vert \nabla f(x_t) \Vert^2 \le \mathbb{E}[H_t] - \mathbb{E}[H_{t+1}] + \beta\eta\sigma^2$ 。对 $t = 0, \dots, T-1$ 求和，中间的 $H_1, \dots, H_{T-1}$ 两两相消（望远镜），除以 $\frac{\eta T}{2}$ ：
+
+$$
+\frac{1}{T} \sum_{t=0}^{T-1} \mathbb{E} \Vert \nabla f(x_t) \Vert^2 \le \frac{2}{\eta T} \left( \mathbb{E}[H_0] - \mathbb{E}[H_T] \right) + 2\beta\sigma^2 \le \frac{2}{\eta T} \mathbb{E}[H_0] + 2\beta\sigma^2
+$$
+
+（末步丢掉 $-\mathbb{E}[H_T] \le 0$ ，因为 $H_T \ge 0$ 。）最后，均匀随机输出恰好把"平均保证"变成"单点保证"：
+
+$$
+\mathbb{E} \Vert \nabla f(\hat{x}_T) \Vert^2 = \frac{1}{T} \sum_{t=0}^{T-1} \mathbb{E} \Vert \nabla f(x_t) \Vert^2
+$$
+
+（对均匀下标先取条件期望再平均——这就是论文 Remark 1 解释的"为什么输出随机迭代点"：不改变界，只是换一种可交付的表述。）代入 $H_0$ 的定义即得 (13)。证毕。
+
+**热启动的作用**：若 $g_0 = \frac{1}{B_{init}} \sum_{j=1}^{B_{init}} \nabla f_{\xi_j}(x_0)$ ，独立样本平均使方差除以批量：$\mathbb{E} \Vert g_0 - \nabla f(x_0) \Vert^2 \le \frac{\sigma^2}{B_{init}}$ 。取 $B_{init} \ge 1/\beta$ 则 $\frac{\sigma^2}{B_{init}} \le \beta\sigma^2$ ，代入 (13) 得干净的三项式（论文式 (14)）：
+
+$$
+\mathbb{E} \Vert \nabla f(\hat{x}_T) \Vert^2 \le \frac{2\Delta}{\eta T} + \frac{\sigma^2}{T} + 2\beta\sigma^2
+$$
+
+三项身份：**优化项**（预算 $\Delta$ 摊到 $T$ 步）、**初始化残留**（热启动误差 $\beta\sigma^2$ 乘权重 $\frac{\eta}{2\beta}$ 再除 $\frac{\eta T}{2}$ ，正好是 $\frac{\sigma^2}{T} \cdot \beta \cdot \frac{1}{\beta} = \frac{\sigma^2}{T}$ 量级）、**噪声地板**（每步漏进来的 $\beta\eta\sigma^2$ 累计）。
+
+### 5.2 附录 D.1：定理 1 的证明（给定精度 ε，反解复杂度）
+
+**第一步：让三项都不超过 $\epsilon^2$ 量级**。在 (14) 中取
+
+$$
+T = \frac{2\Delta}{\eta \epsilon^2} + \frac{\sigma^2}{\epsilon^2}, \beta = \min \left( 1, \frac{\epsilon^2}{\sigma^2} \right)
+$$
+
+逐项验证：$T \ge \frac{2\Delta}{\eta\epsilon^2}$ 给 $\frac{2\Delta}{\eta T} \le \epsilon^2$ ；$T \ge \frac{\sigma^2}{\epsilon^2}$ 给 $\frac{\sigma^2}{T} \le \epsilon^2$ ；$\beta \le \frac{\epsilon^2}{\sigma^2}$ 给 $2\beta\sigma^2 \le 2\epsilon^2$ 。三项合计：
+
+$$
+\mathbb{E} \Vert \nabla f(\hat{x}_T) \Vert^2 \le \epsilon^2 + \epsilon^2 + 2\epsilon^2 = 4\epsilon^2
+$$
+
+**第二步：数梯度次数**。每步用同一样本在两点各算一次梯度，共 $2T$ 次；加上热启动 $B_{init} = \lceil 1/\beta \rceil = \mathcal{O}(\max(1, \sigma^2/\epsilon^2))$ 次。总计
+
+$$
+B_{init} + 2T = \mathcal{O} \left( 1 + \frac{\sigma^2}{\epsilon^2} + \frac{\Delta}{\eta \epsilon^2} \right)
+$$
+
+**第三步：展开 $\frac{1}{\eta}$**。取 $\eta = \frac{1}{L + \sqrt{a}}$ ，则 $\frac{1}{\eta} = L + \sqrt{a}$ 。对 $a$ 的两项用 $\sqrt{u+v} \le \sqrt{u} + \sqrt{v}$ （两边平方后右边多出非负项 $2\sqrt{uv}$ ）：
+
+$$
+\sqrt{a} = \sqrt{\frac{(1-\beta)^3 (1-\gamma)^2}{\beta^2} L^2 + \frac{2(1-\beta)^2}{\beta} \delta_{\gamma}^2} \le \frac{(1-\beta)^{3/2}(1-\gamma)}{\beta} L + \frac{\sqrt{2}(1-\beta)}{\sqrt{\beta}} \delta_{\gamma}
+$$
+
+再粗放地丢掉 $(1-\beta)$ 的各次幂（都 $\le 1$ ），代入 $\beta = \frac{\epsilon^2}{\sigma^2}$ （噪声非零、$\epsilon \le \sigma$ 的主情形），即 $\frac{1}{\beta} = \frac{\sigma^2}{\epsilon^2}$ 、$\frac{1}{\sqrt{\beta}} = \frac{\sigma}{\epsilon}$ ：
+
+$$
+\frac{1}{\eta} \le L + \frac{(1-\gamma) L \sigma^2}{\epsilon^2} + \frac{\sqrt{2} \delta_{\gamma} \sigma}{\epsilon}
+$$
+
+**第四步：三项分别乘 $\frac{\Delta}{\epsilon^2}$** ，合并第二步的 $\frac{\sigma^2}{\epsilon^2}$ ，得论文式 (8)：
+
+$$
+\mathcal{O} \left( \frac{\sigma^2}{\epsilon^2} + \frac{L\Delta}{\epsilon^2} + \frac{\delta_{\gamma} \Delta \sigma}{\epsilon^3} + \frac{(1-\gamma) L \Delta \sigma^2}{\epsilon^4} \right)
+$$
+
+四项账单（详见精读笔记定理 1 小节）：采样下限、确定性下降费、**修正噪声费（ $\delta_{\gamma}$ 可被 γ 压小）**、**欠修正偏差费（γ 偏离 1 的代价）**。后两项的博弈交给附录 E。
+
+### 5.3 附录 D.2：与已有 MVR 界的核对（为什么少了一项 $\delta\Delta/\epsilon^2$ ）
+
+文献（如 Fradin et al. 2026, Thm I.1）常把 MVR 界写成 $\mathcal{O}(\frac{\sigma^2}{\epsilon^2} + \frac{(L+\delta)\Delta}{\epsilon^2} + \frac{\delta\Delta\sigma}{\epsilon^3})$ ，比 (8) 在 $\gamma = 1$ 时多一项 $\frac{\delta\Delta}{\epsilon^2}$ 。论文解释这**不是速率差异，只是同一步长表达式的两种放缩**：若用统一上界 $\frac{1}{\sqrt{\beta}} = \max(1, \frac{\sigma}{\epsilon}) \le 1 + \frac{\sigma}{\epsilon}$ 展开，$\frac{1}{\eta}$ 里就会多出一个不带 $\frac{\sigma}{\epsilon}$ 的 $\delta_{\gamma}$ 项，从而复杂度多出 $\frac{\delta_{\gamma}\Delta}{\epsilon^2}$ 。而在方差缩减真正起作用的区域 $\epsilon \le \sigma$ 中，$\frac{\sigma}{\epsilon} \ge 1$ ，该项总被 $\frac{\delta_{\gamma}\Delta\sigma}{\epsilon^3}$ 吸收——所以主文把它省了。**核对结论：$\gamma = 1$ 时 (8) 与文献 MVR 界一致（至常数）**，这是定理的回归测试。
+
+### 5.4 附录 D.3.1：推论 1 的证明（给定预算 T，两次平衡）
+
+**第一步：粗化 $a$ ，让 $\eta$ 好写**。用 $(1-\beta_T) \le 1$ ：
+
+$$
+a \le \frac{(1-\gamma)^2 L^2}{\beta_T^2} + \frac{2\delta_{\gamma}^2}{\beta_T} \Rightarrow \sqrt{a} \le \frac{(1-\gamma) L}{\beta_T} + \frac{\sqrt{2} \delta_{\gamma}}{\sqrt{\beta_T}}
+$$
+
+所以推论 1 中的 $\eta = \frac{1}{L + \frac{(1-\gamma)L}{\beta_T} + \frac{\sqrt{2}\delta_{\gamma}}{\sqrt{\beta_T}}}$ 满足 $\eta \le \frac{1}{L+\sqrt{a}}$ ，定理 2 适用。代入 (14)：
+
+$$
+\mathbb{E} \Vert \nabla f(\hat{x}_T) \Vert^2 \le \frac{2L\Delta}{T} + \frac{2(1-\gamma)L\Delta}{T\beta_T} + \frac{2\sqrt{2}\delta_{\gamma}\Delta}{T\sqrt{\beta_T}} + \frac{\sigma^2}{T} + 2\beta_T \sigma^2
+$$
+
+**第二步：两个"随 β 递减的项"分别与"随 β 递增的项"平衡**。取 $\beta_T = \beta_A + \beta_B$ ：
+
+$$
+\beta_A = \sqrt{\frac{(1-\gamma) L \Delta}{\sigma^2 T}}, \beta_B = 2^{-1/3} \left( \frac{\delta_{\gamma} \Delta}{\sigma^2 T} \right)^{2/3}
+$$
+
+"取和"技巧的合法性：递减项 $\frac{1}{\beta_T} \le \frac{1}{\beta_A}$ 且 $\frac{1}{\sqrt{\beta_T}} \le \frac{1}{\sqrt{\beta_B}}$ （分母取更大的和只会更小）；递增项 $2\beta_T\sigma^2 = 2\beta_A\sigma^2 + 2\beta_B\sigma^2$ 精确拆成两份。四块两两配对：
+
+**配对一**（偏差项 + 半份噪声地板），代入 $\beta_A$ 逐步算：
+
+$$
+\frac{2(1-\gamma)L\Delta}{T\beta_A} = \frac{2(1-\gamma)L\Delta}{T} \cdot \sqrt{\frac{\sigma^2 T}{(1-\gamma)L\Delta}} = \frac{2\sigma\sqrt{(1-\gamma)L\Delta}}{\sqrt{T}}, 2\sigma^2 \beta_A = \frac{2\sigma\sqrt{(1-\gamma)L\Delta}}{\sqrt{T}}
+$$
+
+两份相等（这正是"平衡"的定义——$\beta_A$ 就是解方程"两项相等"得到的），合计 $\frac{4\sigma\sqrt{(1-\gamma)L\Delta}}{\sqrt{T}}$ 。
+
+**配对二**（相似性项 + 另半份噪声地板），代入 $\beta_B$ ：
+
+$$
+\frac{2\sqrt{2}\delta_{\gamma}\Delta}{T\sqrt{\beta_B}} = \frac{2\sqrt{2}\delta_{\gamma}\Delta}{T} \cdot 2^{1/6} \left( \frac{\sigma^2 T}{\delta_{\gamma}\Delta} \right)^{1/3} = 2^{5/3} \frac{(\delta_{\gamma}\Delta\sigma)^{2/3}}{T^{2/3}}, 2\sigma^2 \beta_B = 2^{2/3} \frac{(\delta_{\gamma}\Delta\sigma)^{2/3}}{T^{2/3}}
+$$
+
+（第一式的指数账：$2 \cdot 2^{1/2} \cdot 2^{1/6} = 2^{1 + 1/2 + 1/6} = 2^{5/3}$ ；幂次账：$\delta_{\gamma}\Delta$ 的 $1 - \frac{1}{3} = \frac{2}{3}$ 次方、$\sigma$ 的 $\frac{2}{3}$ 次方、$T$ 的 $-1 + \frac{1}{3} = -\frac{2}{3}$ 次方。）合计系数 $2^{5/3} + 2^{2/3} = 2^{2/3}(2 + 1) = 3 \cdot 2^{2/3}$ 。
+
+**第三步：汇总**得论文式 (9)：
+
+$$
+\mathbb{E} \Vert \nabla f(\hat{x}_T) \Vert^2 \le \frac{2L\Delta}{T} + \frac{4\sigma\sqrt{(1-\gamma)L\Delta}}{\sqrt{T}} + \frac{3 \cdot 2^{2/3} (\delta_{\gamma}\Delta\sigma)^{2/3}}{T^{2/3}} + \frac{\sigma^2}{T}
+$$
+
+条件 $\beta_A + \beta_B \le 1$ 只是保证 $\beta_T$ 是合法动量参数，$T$ 足够大时自动满足。速率读法：$\gamma = 1$ 时 $\frac{1}{\sqrt{T}}$ 项消失、主导 $T^{-2/3}$ （MVR）；$\gamma = 0$ 时 $\delta_0 \le L$ 、主导 $T^{-1/2}$ （SGD+动量）。
+
+---
+
+## 6. 附录 E：MARS 严格优于 MVR（命题 1 → 推论 2）
+
+### 6.1 E.1：为什么必须用"二次替代函数"而不是更简单的线性界
+
+比较 MARS 与 MVR 的界，公共项（ $\frac{\sigma^2}{\epsilon^2}$ 与 $\frac{L\Delta}{\epsilon^2}$ ）相同，只需比较非公共部分。记
+
+$$
+A = \frac{\Delta\sigma}{\epsilon^3}, B = \frac{L\Delta\sigma^2}{\epsilon^4}
+$$
+
+非公共部分是 $A\delta_{\gamma} + B(1-\gamma)$ ，MVR 基线（ $\gamma = 1$ ）是 $A\delta$ 。
+
+**天真做法**：引理 1 有个更粗的线性推论 $\delta_{\gamma} \le \gamma\delta + (1-\gamma)L$ （对 $\sqrt{\gamma^2\delta^2 + (1-\gamma)^2 L^2} \le \gamma\delta + (1-\gamma)L$ ，两边平方多出交叉项即证）。代入得
+
+$$
+A\delta_{\gamma} + B(1-\gamma) \le A\gamma\delta + \left( AL + B \right)(1-\gamma) = A \left[ \gamma\delta + L \left( 1 + \frac{\sigma}{\epsilon} \right)(1-\gamma) \right]
+$$
+
+（末步用 $B = AL\frac{\sigma}{\epsilon}$ ，可直接由 $A, B$ 定义验证：$\frac{B}{A} = \frac{L\sigma^2/\epsilon^4}{\sigma/\epsilon^3} = \frac{L\sigma}{\epsilon}$ 。）要这个上界不超过 $A\delta$ ，移项后等价于
+
+$$
+(1-\gamma) \left( L \left( 1 + \frac{\sigma}{\epsilon} \right) - \delta \right) \le 0
+$$
+
+即除非 $\delta \ge L(1+\frac{\sigma}{\epsilon})$ （异质性大到离谱），线性界**证明不了任何改进**。原因：线性放缩在 $\gamma$ 接近 1 处太松，把二次函数在最低点附近的"平坦红利"全丢了。所以必须保留引理 1 的原始二次形，定义**替代函数**
+
+$$
+J(\gamma) = A\sqrt{\gamma^2\delta^2 + (1-\gamma)^2 L^2} + B(1-\gamma)
+$$
+
+（"替代"指：真实的非公共项 $A\delta_{\gamma} + B(1-\gamma) \le J(\gamma)$ ，我们对可计算的 $J$ 做优化。）
+
+### 6.2 E.2 / E.3：命题 1 及其证明（一维凸优化）
+
+**命题 1**：设 $A, B, \delta, L > 0$ ，$D := \delta^2 + L^2$ ，$\gamma_\star$ 是 $J$ 在 $[0,1]$ 上的最小点。则：
+
+- 若 $B \ge A\delta$ ：最小点在边界 $\gamma_\star = 1$ ，$J(\gamma_\star) = A\delta$ （MARS 的保证不优于 MVR）。
+- 若 $B < A\delta$ ：最小点在内部，
+
+$$
+\gamma_\star = \frac{L^2}{D} + \frac{BL\delta}{D\sqrt{A^2 D - B^2}}, J(\gamma_\star) = \frac{\delta \left( L\sqrt{A^2 D - B^2} + B\delta \right)}{D} \le A\delta
+$$
+
+**证明分四步。**
+
+**第 1 步：凸性**。$r(\gamma) := \sqrt{\gamma^2\delta^2 + (1-\gamma)^2 L^2}$ 是把 $\gamma$ 映到 $(\gamma\delta, (1-\gamma)L)$ 的仿射映射与欧氏范数的复合：范数是凸函数，凸函数套仿射映射仍凸，所以 $r$ 凸；$B(1-\gamma)$ 是线性项；两者之和 $J$ 凸。凸性保证：导数为零的点就是全局最小点，且可以只看端点导数判断最小点位置。
+
+**第 2 步：边界判据**。求导（对根号用链式法则）：
+
+$$
+J'(\gamma) = A \cdot \frac{\gamma\delta^2 - (1-\gamma)L^2}{r(\gamma)} - B
+$$
+
+在 $\gamma = 1$ 处：$r(1) = \delta$ ，所以 $J'(1) = A\delta - B$ 。凸函数在右端点取最小 ⇔ 端点导数 $\le 0$ ⇔ $B \ge A\delta$ 。此时 $J(1) = A\delta$ ，MVR 就是替代界下的最优选择。
+
+**这个判据的物理含义**：$\frac{B}{A\delta} = \frac{L\sigma}{\epsilon\delta}$ 。当噪声 $\sigma$ 或曲率 $L$ 相对于精度 $\epsilon$ 和异质性 $\delta$ 太大时，"偏离 $\gamma = 1$ 的偏差罚款"压过"压缩 $\delta_{\gamma}$ 的收益"，MARS 无利可图——这正是论文图 1/图 7 中"对角分界线由 $L\sigma/(\epsilon\delta)$ 决定"的来源。
+
+**第 3 步：内部解**。设 $B < A\delta$ 。则 $J'(1) = A\delta - B > 0$ （右端不是最小），$J'(0) = -AL - B < 0$ （左端也不是最小），凸性保证唯一驻点在 $(0,1)$ 内。驻点方程 $A\frac{\gamma\delta^2 - (1-\gamma)L^2}{r(\gamma)} = B$ 。
+
+**换元**：令 $s = \gamma\delta^2 - (1-\gamma)L^2 = D\gamma - L^2$ （即 $\gamma = \frac{L^2+s}{D}$ ）。先验证一个恒等式 $D \cdot r(\gamma)^2 = s^2 + L^2\delta^2$ ——展开左边：
+
+$$
+(\delta^2+L^2)(\gamma^2\delta^2 + (1-\gamma)^2 L^2) = \gamma^2\delta^4 + (1-\gamma)^2 L^4 + \gamma^2\delta^2 L^2 + (1-\gamma)^2 L^2\delta^2
+$$
+
+展开右边：$s^2 = \gamma^2\delta^4 - 2\gamma(1-\gamma)\delta^2 L^2 + (1-\gamma)^2 L^4$ ，于是
+
+$$
+s^2 + L^2\delta^2 - D r^2 = L^2\delta^2 \left( 1 - 2\gamma(1-\gamma) - \gamma^2 - (1-\gamma)^2 \right) = L^2\delta^2 \left( 1 - (\gamma + 1 - \gamma)^2 \right) = 0
+$$
+
+恒等式成立。驻点方程两边平方并代入：$A^2 s^2 = B^2 r^2 = \frac{B^2(s^2 + L^2\delta^2)}{D}$ ，整理成
+
+$$
+(A^2 D - B^2) s^2 = B^2 L^2 \delta^2
+$$
+
+由 $B < A\delta$ 知 $A^2 D - B^2 > A^2 D - A^2\delta^2 = A^2 L^2 > 0$ ，可开方；又驻点处 $\frac{As}{r} = B > 0$ 要求 $s > 0$ ，取正根：
+
+$$
+s = \frac{BL\delta}{\sqrt{A^2 D - B^2}} \Rightarrow \gamma_\star = \frac{L^2 + s}{D} = \frac{L^2}{D} + \frac{BL\delta}{D\sqrt{A^2 D - B^2}}
+$$
+
+范围检查：$\gamma_\star > 0$ 显然；由 $\sqrt{A^2 D - B^2} > AL$ 得 $s < \frac{BL\delta}{AL} = \frac{B\delta}{A} < \delta^2$ （末步再用 $B < A\delta$ ），故 $\gamma_\star < \frac{L^2 + \delta^2}{D} = 1$ 。✔ 注意结构：$\gamma_\star = \frac{L^2}{D} + s/D$ ，即**引理 1 的最优点 $\frac{L^2}{D}$ 加上一个由偏差罚款 $B$ 推高的修正**——罚款越重，最优 γ 越被推回 1 的方向。
+
+**第 4 步：最优值与不等式**。先算 $r(\gamma_\star)$ （用恒等式）：
+
+$$
+r(\gamma_\star)^2 = \frac{s^2 + L^2\delta^2}{D} = \frac{L^2\delta^2}{D} \left( \frac{B^2}{A^2 D - B^2} + 1 \right) = \frac{L^2\delta^2 A^2}{A^2 D - B^2} \Rightarrow r(\gamma_\star) = \frac{AL\delta}{\sqrt{A^2 D - B^2}}
+$$
+
+再算 $1 - \gamma_\star = \frac{\delta^2 - s}{D}$ ，代入 $J$ ：
+
+$$
+J(\gamma_\star) = \frac{A^2 L\delta}{\sqrt{A^2 D - B^2}} + \frac{B\delta^2}{D} - \frac{B^2 L\delta}{D\sqrt{A^2 D - B^2}} = \frac{L\delta(A^2 D - B^2)}{D\sqrt{A^2 D - B^2}} + \frac{B\delta^2}{D} = \frac{\delta \left( L\sqrt{A^2 D - B^2} + B\delta \right)}{D}
+$$
+
+（第二步把前后两个含根号分母的项通分合并。）最后证 $J(\gamma_\star) \le A\delta$ ：两边乘 $\frac{D}{\delta}$ ，等价于
+
+$$
+L\sqrt{A^2 D - B^2} + B\delta \le AD
+$$
+
+对向量 $u = (L, \delta)$ 与 $v = (\sqrt{A^2 D - B^2}, B)$ 用 Cauchy–Schwarz：
+
+$$
+\langle u, v \rangle \le \Vert u \Vert \Vert v \Vert = \sqrt{L^2 + \delta^2} \cdot \sqrt{A^2 D - B^2 + B^2} = \sqrt{D} \cdot A\sqrt{D} = AD
+$$
+
+且 Cauchy–Schwarz 取等要求两向量平行，一般不成立，所以典型情形下是**严格**不等——MARS 的保证严格更优。
+
+### 6.3 回到正文推论 2
+
+把命题 1 装回复杂度语境：在定理 1 的界 (8) 中，用引理 1 把 $\delta_{\gamma}$ 替换成上界 $\sqrt{\gamma^2\delta^2 + (1-\gamma)^2 L^2}$ ，非公共部分被 $J(\gamma)$ 控制。命题 1 说：只要
+
+$$
+B < A\delta \Leftrightarrow \frac{L\Delta\sigma^2}{\epsilon^4} < \frac{\Delta\sigma}{\epsilon^3} \delta \Leftrightarrow \frac{L\sigma}{\epsilon} < \delta
+$$
+
+（即目标精度不太高、异质性足够大），就存在显式的 $\gamma_\star \in [0,1)$ 使 $J(\gamma_\star) \le J(1) = A\delta$ ，从而 **MARS 的复杂度上界表达式不超过（典型情形严格小于）MVR 的对应表达式**。这就是推论 2。注意论文的严谨措辞：比较的是"所展示的上界表达式"（理论担保），不是断言 MVR 算法本身一定更慢（那由第 7 节实验支持）——三层含义详见精读笔记定理 1 小节问答 2。
+
+---
+
+## 7. 全链条总结：一张表看懂每个环节
+
+| 环节 | 输入 | 核心操作 | 输出 | 关键常数 |
+|---|---|---|---|---|
+| 引理 1（附录 A） | 定义 1 + 假设 1/2 | 偏差–方差分解 + 抛物线求最小 | $\delta_{\gamma}^2 \le \gamma^2\delta^2 + (1-\gamma)^2 L^2$ | $\gamma_\star = \frac{L^2}{\delta^2+L^2}$ |
+| 引理 2（附录 B） | 同上（固定点对） | 同一分解的逐点精确版 | 逐点最优 $\gamma_\star = \frac{\Vert d \Vert^2}{\mathbb{E}_{\xi} \Vert d_{\xi} \Vert^2}$ | 7.1 节估计公式的来源 |
+| Example 1（B.2） | 对角二次函数构造 | 逐坐标算特征值 | 引理 1 上界取等，改进倍数 $= n$ | $\gamma_\star = \frac{1}{n}$ |
+| 引理 4（附录 C） | 引理 3 + 假设 1/2 + 定义 1 | 误差递推 + descent lemma + Lyapunov 组装 | 单步下降 $\mathbb{E}[H_{t+1}] \le \mathbb{E}[H_t] - \frac{\eta}{2}\mathbb{E}\Vert \nabla f \Vert^2 + \beta\eta\sigma^2$ | $H_t$ 权重 $\frac{\eta}{2\beta}$ ，$\theta = \frac{\beta}{1-\beta}$ |
+| 定理 2（附录 D） | 引理 4 | 求和望远镜相消 + 热启动 | $T$ 步平均界 (14) | $B_{init} \ge \frac{1}{\beta}$ |
+| 定理 1（D.1） | 定理 2 | 给定 $\epsilon$ 反解 $T$ 、展开 $\frac{1}{\eta}$ | 复杂度 (8)，四项账单 | $\beta = \min(1, \frac{\epsilon^2}{\sigma^2})$ |
+| 推论 1（D.3.1） | 定理 2 | 给定 $T$ ，两次平衡取 $\beta_T = \beta_A + \beta_B$ | 速率 (9)：$T^{-1/2}$ 与 $T^{-2/3}$ 项 | 系数 $4$ 与 $3 \cdot 2^{2/3}$ |
+| 命题 1（附录 E） | 引理 1 的二次上界 | 一维凸优化：端点导数判据 + 换元 $s$ + Cauchy–Schwarz | $J(\gamma_\star) \le J(1) = A\delta$ | 改进条件 $\frac{L\sigma}{\epsilon} < \delta$ |
+| 推论 2（正文） | 定理 1 + 命题 1 | 替换 $\delta_{\gamma}$ 为替代上界后比较非公共项 | MARS 上界表达式 $\le$ MVR 上界表达式 | $\gamma_\star = \frac{L^2}{D} + \frac{BL\delta}{D\sqrt{A^2D-B^2}}$ |
+
+**三个反复出现的母题**（记住它们就记住了整篇论文的证明风格）：
+
+1. **加零分解 + 无偏性杀交叉项**：附录 A、B、C 的第一步全是同一招——把目标量拆成"零均值噪声 + 确定性偏差"，交叉项因无偏性归零，噪声与偏差从此分账处理（噪声按方差相加、便宜；偏差按幅度相加再平方、贵 $\frac{1}{\beta}$ ）。
+2. **自由参数解方程**：Young 的 $\theta$ 、Lyapunov 权重 $A$ 、动量 $\beta_A, \beta_B$ 、步长 $\eta$ ——每个"神来之笔"的参数都是解一个"让两项相等/让系数闭合"的方程得出的，没有魔法。
+3. **凸性 + 端点导数**：引理 1、引理 2、命题 1 对 γ 的优化全是一维凸函数，最优点由导数置零（或端点导数符号）唯一确定，最优值回代必出"并联电阻"型表达式。
+
+**还未覆盖的附录内容**（非推导性材料）：附录 F（CIFAR-10 实验细节，其中估计量 $\hat{\gamma}_t^\star$ 、$\hat{h}_t(\gamma)$ 、$\hat{\delta}_{\gamma,t}^2$ 都是引理 2 各量的经验版本）、附录 G（LLM 预训练配置与结果讨论）、附录 H（图 7 的替代函数可视化，数学内容与 6.1–6.2 节完全相同）。这三节没有新的推导，只有实验设置与图表解读。
