@@ -23,6 +23,7 @@ import paper_config  # noqa: E402
 import sync_indexes  # noqa: E402
 import fetch_pdfs  # noqa: E402
 import collect  # noqa: E402
+import localize_markdown_images as lmi  # noqa: E402
 
 
 CONFIG = {
@@ -288,7 +289,54 @@ class SyncIndexesTests(unittest.TestCase):
         self.assertEqual(updated, 'before\n<!-- INDEX:BEGIN -->\nnew\n<!-- INDEX:END -->\nafter\n')
 
 
+class LocalizeImagesTests(unittest.TestCase):
+    def test_detect_extension_by_magic_bytes(self):
+        self.assertEqual(lmi.detect_extension(b'\xff\xd8\xff\xe0' + b'x' * 200, 'a.jpg'), '.jpg')
+        self.assertEqual(lmi.detect_extension(b'\x89PNG\r\n\x1a\n' + b'x' * 200, 'a.jpg'), '.png')
+        self.assertEqual(lmi.detect_extension(b'GIF89a' + b'x' * 200, 'a.gif'), '.gif')
+        # 魔数不可识别时回落到 URL 后缀
+        self.assertEqual(lmi.detect_extension(b'no-magic' + b'x' * 200, 'a.webp'), '.webp')
+
+    def test_allowed_host(self):
+        hosts = ['cdn-mineru.openxlab.org.cn']
+        self.assertTrue(lmi.allowed_host('https://cdn-mineru.openxlab.org.cn/result/a/b.jpg', hosts))
+        self.assertFalse(lmi.allowed_host('https://evil.example.com/a/b.jpg', hosts))
+        self.assertFalse(lmi.allowed_host('https://cdn-mineru.openxlab.org.cn.evil.com/a.jpg', hosts))
+
+    def test_dry_run_leaves_file_untouched(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            workspace = Path(tmp)
+            md = workspace / '02-markdown' / '2026-09' / 'Paper_A.md'
+            touch(md, '![image](https://cdn-mineru.openxlab.org.cn/result/x/y.jpg)\n')
+            before = md.read_text(encoding='utf-8')
+            report = lmi.localize_file(md, ['cdn-mineru.openxlab.org.cn'], timeout=5,
+                                       force=False, dry_run=True)
+            self.assertEqual(report['total'], 1)
+            self.assertEqual(report['downloaded'], 1)
+            self.assertEqual(md.read_text(encoding='utf-8'), before)
+            self.assertFalse((md.parent / 'images').exists())
+
+    def test_non_allowlisted_host_is_ignored(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            md = Path(tmp) / '02-markdown' / '2026-09' / 'Paper_A.md'
+            touch(md, '![image](https://example.com/a.jpg)\n')
+            report = lmi.localize_file(md, ['cdn-mineru.openxlab.org.cn'], timeout=5,
+                                       force=False, dry_run=False)
+            self.assertEqual(report['ignored'], 1)
+            self.assertEqual(report['downloaded'], 0)
+
+
 class CheckLinksTests(unittest.TestCase):
+    def test_inline_code_examples_are_not_links(self):
+        """文档里的 `![说明](images/<论文标题>/fig1.jpg)` 是示例，不算悬空链接。"""
+        with tempfile.TemporaryDirectory() as tmp:
+            workspace = Path(tmp)
+            touch(workspace / 'README.md',
+                  '引用写法：`![说明](images/<论文标题>/fig1.jpg)` 与 `[PDF](01-raw/YYYY-MM/x.pdf)`\n')
+            result = sync_indexes.check_links(workspace, CONFIG)
+            self.assertEqual(result['dangling'], [])
+
+
     def test_dangling_link_and_missing_readme_are_reported(self):
         with tempfile.TemporaryDirectory() as tmp:
             workspace = Path(tmp)

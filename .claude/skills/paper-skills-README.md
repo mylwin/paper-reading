@@ -77,6 +77,7 @@
 │       ├── render_note.py           # 按主题分组渲染日报（链接相对日报文件）
 │       ├── write_note.py            # 日报/顶会推荐落盘到 08-daily/<日期>/
 │       ├── sync_indexes.py          # 四份根索引 + 月份 README 表格 + --check-links（共享）
+│       ├── localize_markdown_images.py  # 解析插图本地化到 02-markdown/YYYY-MM/images/
 │       ├── scan_existing_notes.py   # 已有论文笔记关键词索引（默认 03-notes）
 │       ├── link_keywords.py         # 关键词 → 标准 Markdown 链接
 │       ├── common_words.py
@@ -214,6 +215,9 @@ python .claude/skills/paper-daily/scripts/render_note.py \
 python .claude/skills/paper-daily/scripts/write_note.py --date 2026-09-16 \
   --papers-json "$WORKSPACE/08-daily/2026-09-16/search_result.json" --stdin-file note.md
 
+# 4a. 解析插图本地化（MinerU CDN -> 02-markdown/YYYY-MM/images/<论文标题>/）
+python .claude/skills/paper-daily/scripts/localize_markdown_images.py --replace-failed
+
 # 4b. 刷新索引与状态清单，并校验链接（0 问题通过）
 python .claude/skills/paper-daily/scripts/sync_indexes.py
 python .claude/skills/paper-daily/scripts/sync_indexes.py --check-links
@@ -244,9 +248,9 @@ cd .claude/skills && python -m unittest discover -s tests -v
 ```text
 .agents/skills   -> ../.claude/skills  # Codex 项目级发现入口
 .dsh/skills      -> ../.claude/skills  # dsh 项目级发现入口
-.pencode/skills  -> ../.claude/skills  # pencode（按需创建）
-.qoder/skills    -> ../.claude/skills  # qoder（按需创建）
-.trae/skills     -> ../.claude/skills  # trae（按需创建）
+.pencode/skills  -> ../.claude/skills  # pencode 项目级发现入口
+.qoder/skills    -> ../.claude/skills  # qoder 项目级发现入口
+.trae/skills     -> ../.claude/skills  # trae 项目级发现入口
 ```
 
 论文资料目录（`01-raw` ~ `08-reading`）内不得出现任何符号链接。

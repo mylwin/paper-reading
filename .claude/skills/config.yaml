@@ -31,6 +31,11 @@ layout:
     - "<!-- INDEX:BEGIN -->"
     - "<!-- INDEX:END -->"
 
+# 解析结果（02-markdown）中允许本地化的远程图片主机
+# （见 02-markdown/README.md 与 localize_markdown_images.py）
+image_localize_hosts:
+  - "cdn-mineru.openxlab.org.cn"
+
 # 论文工作区根目录；留空时自动识别当前项目根目录。
 # 也可用 PAPER_WORKSPACE_PATH 或命令行 --workspace 临时覆盖。
 workspace_path: ""
