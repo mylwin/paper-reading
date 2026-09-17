@@ -16,9 +16,41 @@ import yaml
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from paper_config import (  # noqa: E402
     load_config,
+    month_of,
+    paper_dir,
+    paper_path,
+    rel_link,
     resolve_workspace_path,
+    resolve_workspace_subdir,
     sanitize_paper_title,
 )
+
+
+def workspace_dirs(config: dict, workspace: Path):
+    """返回 (papers_dir, notes_dir)：01-raw / 03-notes 的实际路径（支持月份目录）。"""
+    return (resolve_workspace_subdir(config, 'papers_dir', '01-raw', workspace),
+            resolve_workspace_subdir(config, 'notes_dir', '03-notes', workspace))
+
+
+def daily_note_dir(config: dict, workspace: Path, date: str) -> Path:
+    """日报所在目录：<daily_dir>/<日期>/。"""
+    return resolve_workspace_subdir(config, 'daily_dir', '08-daily', workspace) / str(date)
+
+
+def local_pdf(papers_dir: Path, stem: str):
+    """按主干定位已归档 PDF（月份目录优先），找不到返回 None。"""
+    return paper_path(papers_dir, stem, '.pdf') if stem else None
+
+
+def local_note(notes_dir: Path, stem: str):
+    """按主干定位精读笔记（月份目录优先），找不到返回 None。"""
+    if not stem:
+        return None
+    folder = paper_dir(notes_dir, stem)
+    if not folder:
+        return None
+    note = folder / '精读.md'
+    return note if note.is_file() else None
 
 
 def load_json(path: Path) -> dict:
@@ -83,25 +115,30 @@ def subdomain_for(paper: dict, config: dict) -> str:
     return non_category[0] if non_category else '未细分'
 
 
-def access_links(paper: dict, stem: str = '', workspace: Path = None) -> str:
+def access_links(paper: dict, stem: str = '', workspace: Path = None,
+                 config: dict = None, note_dir: Path = None) -> str:
+    """访问链接：本地 PDF 使用**相对日报文件**的路径，未归档才给远程原文。"""
     links = []
     if paper.get('pdf_url'):
-        local_pdf = workspace / '01-raw' / f'{stem}.pdf' if workspace and stem else None
         remote_pdf = str(paper['pdf_url'])
         if remote_pdf.startswith('/'):
             remote_pdf = f'https://openreview.net{remote_pdf}'
-        links.append(
-            f'[PDF](01-raw/{stem}.pdf)'
-            if local_pdf and local_pdf.is_file()
-            else f'[PDF原文]({remote_pdf})'
-        )
+        local = None
+        if workspace and config and stem:
+            papers_dir, _ = workspace_dirs(config, workspace)
+            local = local_pdf(papers_dir, stem)
+        if local and note_dir:
+            links.append(f'[PDF]({rel_link(local, note_dir)})')
+        else:
+            links.append(f'[PDF原文]({remote_pdf})')
     if paper.get('url'):
         links.append(f'[原文]({paper["url"]})')
     return ' | '.join(links) or '--'
 
 
-def table_access_links(paper: dict, stem: str = '', workspace: Path = None) -> str:
-    return access_links(paper, stem, workspace).replace(' | ', '<br>')
+def table_access_links(paper: dict, stem: str = '', workspace: Path = None,
+                       config: dict = None, note_dir: Path = None) -> str:
+    return access_links(paper, stem, workspace, config, note_dir).replace(' | ', '<br>')
 
 
 def render_overview(data: dict, config: dict, editorial: dict) -> None:
@@ -156,7 +193,7 @@ def render_overview(data: dict, config: dict, editorial: dict) -> None:
         print()
 
 
-def render_appendix(data: dict, config: dict, workspace: Path) -> None:
+def render_appendix(data: dict, config: dict, workspace: Path, note_dir: Path) -> None:
     domains = list((config.get('research_domains') or {}).keys())
     papers = data.get('all_papers') or []
     by_domain = {}
@@ -181,21 +218,30 @@ def render_appendix(data: dict, config: dict, workspace: Path) -> None:
                 f"| {row_number} | {cell(paper.get('title'))} | {cell(paper.get('source'))} | "
                 f"{score(paper.get('score'))} | {status(paper)} | {cell(paper.get('matched_domain'))} | "
                 f"{cell(subdomain_for(paper, config))} | {related_title(paper)} | "
-                f"{table_access_links(paper, stem, workspace)} |"
+                f"{table_access_links(paper, stem, workspace, config, note_dir)} |"
             )
             row_number += 1
         print()
 
 
-def related_link(item: dict, workspace: Path) -> str:
+def related_link(item: dict, workspace: Path, config: dict = None, note_dir: Path = None) -> str:
+    """相关论文链接：优先本地精读笔记，其次本地 PDF，最后历史日报。
+
+    所有本地路径都相对于日报文件所在目录（`note_dir`），保证在任意 Markdown
+    渲染器中都能解析。
+    """
     title = item.get('title') or '--'
     stem = paper_link_stem(title)
-    note = workspace / '03-notes' / stem / '精读.md'
-    if note.is_file():
-        return f'[{title}](03-notes/{stem}/精读.md)'
-    pdf = workspace / '01-raw' / f'{stem}.pdf'
-    if pdf.is_file():
-        return f'[{title}](01-raw/{stem}.pdf)'
+    papers_dir, notes_dir = workspace_dirs(config, workspace) if config else (
+        workspace / '01-raw', workspace / '03-notes')
+    base = note_dir or workspace
+
+    note = local_note(notes_dir, stem)
+    if note:
+        return f'[{title}]({rel_link(note, base)})'
+    pdf = local_pdf(papers_dir, stem)
+    if pdf:
+        return f'[{title}]({rel_link(pdf, base)})'
     source_path = Path(item.get('path') or '')
     try:
         relative_source = source_path.relative_to(workspace) if source_path.is_file() else None
@@ -205,14 +251,13 @@ def related_link(item: dict, workspace: Path) -> str:
         if source_path.name == 'search_result.json':
             daily_note = source_path.parent / '今日检索.md'
             if daily_note.is_file():
-                rel = daily_note.relative_to(workspace).as_posix()
-                return f'[{title}]({rel})'
+                return f'[{title}]({rel_link(daily_note, base)})'
         else:
-            return f'[{title}]({relative_source.as_posix()})'
+            return f'[{title}]({rel_link(source_path, base)})'
     return ''
 
 
-def render_top_papers(data: dict, config: dict, editorial: dict, workspace: Path) -> None:
+def render_top_papers(data: dict, config: dict, editorial: dict, workspace: Path, note_dir: Path) -> None:
     print('## 今日推荐论文\n')
     top = data.get('top_papers') or []
     analyses = editorial.get('top_papers') or {}
@@ -239,7 +284,7 @@ def render_top_papers(data: dict, config: dict, editorial: dict, workspace: Path
         rendered = set()
         for item in paper.get('related_papers') or []:
             title = item.get('title') or '--'
-            link = related_link(item, workspace)
+            link = related_link(item, workspace, config, note_dir)
             if not link:
                 continue
             shared = ', '.join(item.get('shared') or item.get('shared_terms') or []) or '--'
@@ -254,11 +299,11 @@ def render_top_papers(data: dict, config: dict, editorial: dict, workspace: Path
             rendered.add(title)
         if not rendered:
             print('  - 当前工作区没有可核验的相关论文资产；未生成未经核验的文献。')
-        print(f"- **访问链接**：{access_links(paper, stem, workspace)}")
+        print(f"- **访问链接**：{access_links(paper, stem, workspace, config, note_dir)}")
         print()
 
 
-def render_rest(data: dict, config: dict, workspace: Path) -> None:
+def render_rest(data: dict, config: dict, workspace: Path, note_dir: Path) -> None:
     print('## 其余 7 篇推荐\n')
     print('| # | 题目 | 评分 | 主题 | 细分领域 | 一句话总结 | 访问链接 |')
     print('|---|---|---|---|---|---|---|')
@@ -268,23 +313,32 @@ def render_rest(data: dict, config: dict, workspace: Path) -> None:
             f"| {number} | {cell(paper.get('title'))} | "
             f"{score((paper.get('scores') or {}).get('recommendation'))} | "
             f"{cell(paper.get('matched_domain'))} | {cell(subdomain_for(paper, config))} | "
-            f"{table_access_links(paper, stem, workspace)} |"
+            f"{table_access_links(paper, stem, workspace, config, note_dir)} |"
         )
     print()
 
 
-def render_files(data: dict, date: str, workspace: Path) -> None:
+def render_files(data: dict, date: str, workspace: Path, config: dict, note_dir: Path) -> None:
     print('## 今日落盘\n')
     print('| 类型 | 路径 | 状态 |')
     print('|---|---|---|')
+    papers_dir, _ = workspace_dirs(config, workspace)
     for paper in (data.get('top_papers') or [])[:3]:
         stem = paper.get('paper_stem') or paper.get('note_filename') or paper_link_stem(paper.get('title'))
-        path = workspace / '01-raw' / f'{stem}.pdf'
-        state = '已存在跳过' if path.exists() else '待归档'
-        print(f'| PDF | 01-raw/{stem}.pdf | {state} |')
-    print(f'| 检索结果 | 08-daily/{date}/search_result.json | 本次生成 |')
-    print(f'| 日报 | 08-daily/{date}/今日检索.md | 本次生成 |')
-    print(f'| 索引 | 08-daily/{date}/_index.json | 随日报生成 |')
+        path = local_pdf(papers_dir, stem)
+        if path:
+            state = '已存在跳过'
+            shown = rel_link(path, note_dir)
+        else:
+            state = '待归档'
+            month = month_of(date)
+            shown = rel_link(papers_dir / month / f'{stem}.pdf', note_dir)
+        print(f'| PDF | {shown} | {state} |')
+    daily_dir = daily_note_dir(config, workspace, date)
+    print(f'| 检索结果 | {rel_link(daily_dir / "search_result.json", note_dir)} | 本次生成 |')
+    print(f'| 日报 | {rel_link(daily_dir / "今日检索.md", note_dir)} | 本次生成 |')
+    print(f'| 索引 | {rel_link(daily_dir / "_index.json", note_dir)} | 随日报生成 |')
+    print(f'| 编辑稿 | {rel_link(daily_dir / "daily-editorial.json", note_dir)} | 可选保留，便于重渲染 |')
 
 
 def main() -> int:
@@ -293,6 +347,8 @@ def main() -> int:
     parser.add_argument('--date', required=True, help='Target date, YYYY-MM-DD')
     parser.add_argument('--config', default=None, help='Path to shared config.yaml')
     parser.add_argument('--workspace', default=None, help='Paper workspace root')
+    parser.add_argument('--daily-dir', default=None,
+                        help='Override the daily directory (default: config daily_dir)')
     parser.add_argument('--editorial-json', default=None, help='Optional human-written overview/top-paper JSON')
     args = parser.parse_args()
 
@@ -300,11 +356,16 @@ def main() -> int:
     workspace = resolve_workspace_path(config, args.workspace)
     data = load_json(Path(args.papers_json))
     editorial = load_json(Path(args.editorial_json)) if args.editorial_json else {}
+    if args.daily_dir:
+        base = Path(args.daily_dir).expanduser()
+        note_dir = (base if base.is_absolute() else workspace / base) / args.date
+    else:
+        note_dir = daily_note_dir(config, workspace, args.date)
     render_overview(data, config, editorial)
-    render_top_papers(data, config, editorial, workspace)
-    render_rest(data, config, workspace)
-    render_files(data, args.date, workspace)
-    render_appendix(data, config, workspace)
+    render_top_papers(data, config, editorial, workspace, note_dir)
+    render_rest(data, config, workspace, note_dir)
+    render_files(data, args.date, workspace, config, note_dir)
+    render_appendix(data, config, workspace, note_dir)
     return 0
 
 

@@ -1,17 +1,35 @@
 # 论文 skills 共享配置
 #
 # 面向 paper-reading 论文工作区（目录规范见工作区 .AGENT.md）：
-#   01-raw/            原始 PDF            <- paper-daily 落盘
-#   02-markdown/       PDF 解析结果        <- 用户流程
-#   03-notes/<标题>/   精读笔记            <- 用户流程
-#   04-equation_problem/<标题>/  公式推理    <- sgd-paper-reading 产出，agent 不读
-#   06-translation/<标题>/       翻译产物    <- 用户流程
-#   07-research/       周期调研报告        <- paper-weekly
-#   08-daily/<日期>/   每日检索日报        <- paper-daily
+#   01-raw/YYYY-MM/            原始 PDF        <- paper-daily 落盘（按入库月份分层）
+#   02-markdown/YYYY-MM/       PDF 解析结果     <- 用户流程（按入库月份分层）
+#   03-notes/YYYY-MM/<标题>/   精读笔记         <- 用户流程（按入库月份分层）
+#   04-equation_problem/<标题>/  公式推理       <- sgd-paper-reading 产出（不月份化）
+#   06-translation/YYYY-MM/<标题>/  翻译产物    <- 用户流程（按入库月份分层）
+#   07-research/               周期调研报告     <- paper-weekly
+#   08-daily/<日期>/           每日检索日报     <- paper-daily / paper-conf
+#   08-reading/<标题>/         精读过程材料     <- paper-sgd-reading（不月份化）
 #
+# 月份口径：论文首次进入 01-raw 的日期所在月；同一篇论文在四个阶段月份与主干必须一致。
 # 三个 skill 共用这一份；改研究主题请用 paper-interests，不要手改。
 
 language: zh
+
+# --- 月份分层与索引（见工作区 .AGENT.md）---
+layout:
+  # 按 YYYY-MM/ 分层的目录（其余目录只按论文标题建目录）
+  month_dirs:
+    - "01-raw"
+    - "02-markdown"
+    - "03-notes"
+    - "06-translation"
+  month_pattern: "YYYY-MM"
+  readme_name: "README.md"
+  index_name: "index.md"
+  # 索引/月份 README 中由脚本维护的表格区间
+  index_markers:
+    - "<!-- INDEX:BEGIN -->"
+    - "<!-- INDEX:END -->"
 
 # 论文工作区根目录；留空时自动识别当前项目根目录。
 # 也可用 PAPER_WORKSPACE_PATH 或命令行 --workspace 临时覆盖。

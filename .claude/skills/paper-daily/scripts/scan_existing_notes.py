@@ -1,7 +1,10 @@
 #!/usr/bin/env python3
 """
 扫描现有笔记构建索引
-用于 start-my-day skill，扫描 workspace 中的现有笔记并构建关键词到笔记路径的映射表
+用于 paper-daily / paper-conf，扫描工作区中的现有笔记并构建关键词到笔记路径的映射表。
+
+默认扫描 `notes_dir`（03-notes，含 `YYYY-MM/` 月份目录），也可用 `--notes-dir`
+或旧参数 `--papers-dir` 指定其他目录；路径一律以 workspace 为基准。
 """
 
 import os
@@ -101,16 +104,19 @@ def _is_auxiliary_note(md_file: Path) -> bool:
     return False
 
 
-def scan_notes_directory(papers_dir: Path) -> List[Dict]:
-    """扫描 Papers 目录下的所有论文笔记。
+def scan_notes_directory(papers_dir: Path, workspace: Path = None) -> List[Dict]:
+    """扫描目录下的所有论文笔记（`YYYY-MM/` 月份目录会被自动递归）。
 
     Args:
-        papers_dir: Papers 目录路径
+        papers_dir: 笔记目录路径
+        workspace: 用于计算相对路径的基准目录（默认取 papers_dir 的上两级）
 
     Returns:
         笔记列表
     """
     notes = []
+    if workspace is None:
+        workspace = papers_dir
 
     # 递归查找所有 .md 文件。
     # 跳过 images/ 目录下的图片索引（index.md 等）——它们不是论文笔记，
@@ -126,8 +132,11 @@ def scan_notes_directory(papers_dir: Path) -> List[Dict]:
             frontmatter = parse_frontmatter(content)
 
             # 提取信息
-            # 计算相对于workspace的路径（使用正斜杠）
-            rel_path = md_file.relative_to(papers_dir.parent.parent)
+            # 计算相对于 workspace 的路径（使用正斜杠）
+            try:
+                rel_path = md_file.relative_to(workspace)
+            except ValueError:
+                rel_path = md_file
             note_info = {
                 'path': str(rel_path).replace('\\', '/'),  # 使用正斜杠
                 'filename': md_file.name,
@@ -214,9 +223,12 @@ def main():
                         help='Path to Markdown workspace (or set PAPER_WORKSPACE_PATH env var)')
     parser.add_argument('--output', type=str, default='existing_notes_index.json',
                         help='Output JSON file path')
+    parser.add_argument('--notes-dir', type=str,
+                        default=None,
+                        help='Relative path to notes directory (default: config notes_dir = 03-notes)')
     parser.add_argument('--papers-dir', type=str,
                         default=None,
-                        help='Relative path to Papers directory (default: config papers_dir)')
+                        help='[兼容] 同 --notes-dir；指定后优先使用')
 
     args = parser.parse_args()
 
@@ -227,36 +239,38 @@ def main():
         stream=sys.stderr,
     )
 
+    target_dir = args.papers_dir or args.notes_dir
+
     # 未指定时回落到配置文件
-    if not args.workspace or not args.papers_dir:
+    if not args.workspace or not target_dir:
         try:
             sys.path.insert(0, str(Path(__file__).resolve().parent))
             from paper_config import load_config, resolve_workspace_path
 
             config = load_config(None)
-            if not args.papers_dir:
-                args.papers_dir = config.get('papers_dir') or '20_Research/Papers'
+            if not target_dir:
+                target_dir = config.get('notes_dir') or '03-notes'
             if not args.workspace:
                 args.workspace = str(resolve_workspace_path(config, None))
         except Exception as e:
             logger.warning("配置读取失败，回落到默认值：%s", e)
-            args.papers_dir = args.papers_dir or '20_Research/Papers'
+            target_dir = target_dir or '03-notes'
 
     if not args.workspace:
         logger.error("未指定 workspace 路径。请通过 --workspace 参数或 PAPER_WORKSPACE_PATH 环境变量设置。")
         sys.exit(1)
 
     workspace_path = Path(args.workspace)
-    papers_dir = workspace_path / args.papers_dir
+    papers_dir = workspace_path / target_dir
 
     if not papers_dir.exists():
-        logger.error("Papers directory not found: %s", papers_dir)
+        logger.error("Notes directory not found: %s", papers_dir)
         logger.error("Using workspace path: %s", workspace_path)
         sys.exit(1)
 
     logger.info("Scanning notes in: %s", papers_dir)
 
-    notes = scan_notes_directory(papers_dir)
+    notes = scan_notes_directory(papers_dir, workspace_path)
     logger.info("Found %d notes", len(notes))
 
     keyword_index = build_keyword_index(notes)

@@ -39,6 +39,10 @@ SKILL_ROOT = Path(__file__).resolve().parents[1]   # <skill-dir>
 PAPER_SKILLS_ROOT = SKILL_ROOT.parent              # <project>/.claude/skills
 WORKSPACE_MARKERS = ('01-raw', '02-markdown', '03-notes', '04-equation_problem')
 
+# 月份目录（见工作区 .AGENT.md）：01-raw / 02-markdown / 03-notes / 06-translation
+MONTH_RE = re.compile(r'^\d{4}-(0[1-9]|1[0-2])$')
+MONTH_DIRS = ('01-raw', '02-markdown', '03-notes', '06-translation')
+
 DEFAULT_DIRS = {
     'equation_dir': '04-equation_problem',
     'translation_dir': '06-translation',
@@ -159,6 +163,55 @@ def resolve_workspace_subdir(config, key, workspace):
 
 
 # ---------------------------------------------------------------------------
+# 月份目录支持（自包含实现，保持可独立安装）
+# ---------------------------------------------------------------------------
+
+def is_month_dir(name) -> bool:
+    return bool(MONTH_RE.match(str(name).strip()))
+
+
+def iter_month_dirs(root: Path, descending: bool = True):
+    root = Path(root)
+    if not root.is_dir():
+        return []
+    return sorted(
+        (p for p in root.iterdir() if p.is_dir() and is_month_dir(p.name)),
+        key=lambda p: p.name,
+        reverse=descending,
+    )
+
+
+def find_paper_dir(root, stem: str):
+    """定位论文目录：`<root>/YYYY-MM/<stem>/` 优先，`<root>/<stem>/` 回落。"""
+    root = Path(root)
+    for month_dir in iter_month_dirs(root):
+        candidate = month_dir / stem
+        if candidate.is_dir():
+            return candidate
+    flat = root / stem
+    return flat if flat.is_dir() else None
+
+
+def find_paper_file(root, stem: str, suffix: str):
+    """定位论文文件：`<root>/YYYY-MM/<stem><suffix>` 优先，`<root>/<stem><suffix>` 回落。"""
+    root = Path(root)
+    for month_dir in iter_month_dirs(root):
+        candidate = month_dir / (stem + suffix)
+        if candidate.is_file():
+            return candidate
+    flat = root / (stem + suffix)
+    return flat if flat.is_file() else None
+
+
+def rel_link(target, origin_dir) -> str:
+    try:
+        rel = os.path.relpath(Path(target), Path(origin_dir))
+    except ValueError:
+        return Path(target).as_posix()
+    return rel.replace('\\', '/')
+
+
+# ---------------------------------------------------------------------------
 # 目标解析与写盘
 # ---------------------------------------------------------------------------
 
@@ -220,13 +273,17 @@ def append(targets, mode, text):
 
 
 def collect_assets(config, workspace, title):
-    """找出这篇论文在各目录下的资产（04 定稿 / 06 翻译 / 08-reading 过程 / 03-notes 精读）。"""
+    """找出这篇论文在各目录下的资产（04 定稿 / 06 翻译 / 08-reading 过程 / 03-notes 精读）。
+
+    06 与 03 按 `YYYY-MM/<论文标题>/` 月份目录组织，04 与 08-reading 只按论文目录。
+    """
     stem = sanitize_paper_title(title)
     found = {}
     for key, label in (('equation_dir', '公式推理'), ('translation_dir', '翻译'),
                        ('reading_dir', '思考过程'), ('notes_dir', '精读笔记')):
-        folder = resolve_workspace_subdir(config, key, workspace) / stem
-        if not folder.is_dir():
+        base = resolve_workspace_subdir(config, key, workspace)
+        folder = find_paper_dir(base, stem)
+        if not folder:
             continue
         # 跳过 .gitkeep 等占位/隐藏文件
         files = sorted(p for p in folder.rglob('*')
@@ -250,11 +307,7 @@ def emit_asset_links(config, workspace, title, from_path=None):
             continue
         links = []
         for f in item['files']:
-            try:
-                rel = os.path.relpath(f, origin).replace('\\', '/')
-            except ValueError:
-                rel = f.as_posix()
-            links.append('[%s](%s)' % (f.name, rel))
+            links.append('[%s](%s)' % (f.name, rel_link(f, origin)))
         lines.append('- **%s**：%s' % (item['label'], '、'.join(links)))
     lines.append('')
     return '\n'.join(lines), stem

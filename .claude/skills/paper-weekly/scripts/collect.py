@@ -27,6 +27,7 @@ import re
 import shutil
 import subprocess
 import sys
+import tempfile
 from datetime import date, datetime, timedelta
 from pathlib import Path
 
@@ -34,11 +35,16 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[2] / 'paper-daily' / 'sc
 
 from paper_config import (  # noqa: E402
     clean_stem,
+    is_month_dir,
     find_config_path,
     load_config,
     resolve_workspace_path,
     resolve_workspace_subdir,
 )
+
+# 论文资料目录中使用 `YYYY-MM/` 月份分层的根目录（见工作区 .AGENT.md）
+MONTH_ROOTS = ('01-raw', '02-markdown', '03-notes', '06-translation')
+PAPER_DIR_ROOTS = ('03-notes', '04-equation_problem', '06-translation', '08-reading')
 
 
 def _force_utf8_stdio():
@@ -133,15 +139,30 @@ def _parse_date(value: str):
 def stem_from_repo_path(line: str) -> str:
     """从 git 给出的仓库相对路径求论文主干。
 
-    与 `_paper_stem` 同一套规则：`01-raw/<标题>.pdf` 用文件名，
-    `03-notes/<标题>/<任意笔记>.md` 用**文件夹名**（否则 `精读.md` 会被当成一篇论文）。
+    与 `_paper_stem` 同一套规则：
+      * `01-raw[/YYYY-MM]/<标题>.pdf`、`02-markdown[/YYYY-MM]/<标题>.md` 用文件名；
+      * `03-notes[/YYYY-MM]/<标题>/<任意笔记>.md` 等论文目录结构用**文件夹名**
+        （否则 `精读.md` 会被当成一篇论文）；
+      * 月份目录段（`YYYY-MM`）先跳过。
     """
     parts = Path(line).parts
     if not parts:
         return ''
-    if len(parts) >= 3 and parts[0] in ('03-notes', '04-equation_problem', '06-translation'):
-        return clean_stem(parts[1])
+    root = parts[0]
+    rest = list(parts[1:])
+    if root in MONTH_ROOTS + PAPER_DIR_ROOTS and rest and is_month_dir(rest[0]):
+        rest = rest[1:]
+    if root in PAPER_DIR_ROOTS:
+        return clean_stem(rest[0]) if rest else ''
     return clean_stem(Path(parts[-1]).stem)
+
+
+def month_from_repo_path(line: str) -> str:
+    """从仓库相对路径取月份目录名（没有月份段时返回空串）。"""
+    parts = Path(line).parts
+    if len(parts) >= 2 and parts[0] in MONTH_ROOTS and is_month_dir(parts[1]):
+        return parts[1]
+    return ''
 
 
 def git_added_papers(workspace: Path, since: date, until: date):
@@ -202,7 +223,7 @@ def git_added_papers(workspace: Path, since: date, until: date):
         # 只关心论文相关的真实文件
         if not line.lower().endswith(('.pdf', '.md', '.markdown')):
             continue
-        if '/images/' in line or Path(line).name.upper() == 'README.MD':
+        if '/images/' in line or Path(line).name.upper() in ('README.MD', 'INDEX.MD'):
             continue
         top = Path(line).parts[0] if Path(line).parts else ''
         if top not in ('01-raw', '02-markdown', '03-notes'):
@@ -213,13 +234,19 @@ def git_added_papers(workspace: Path, since: date, until: date):
         key = stem_from_repo_path(line)
         if not key:
             continue
+        # 已被改名/删除的旧路径不算"本周新增论文"（否则重命名会留下幽灵条目）
+        if not (workspace / line).is_file():
+            continue
         entry = seen.setdefault(key, {
             'stem': key,
             'files': [],
             'first_commit_date': commit_date,
             'commit_subject': commit_subject,
+            'month': '',
         })
         entry['files'].append({'path': line, 'root': top})
+        if not entry['month']:
+            entry['month'] = month_from_repo_path(line)
         result['roots'][top] = result['roots'].get(top, 0) + 1
 
     result['files'] = sorted(seen.values(), key=lambda x: x['first_commit_date'] or '')
@@ -260,22 +287,53 @@ def _recent_files(directory: Path, since: date, until: date, tolerance_days: int
 
 
 def _paper_stem(path: Path, root: Path) -> str:
-    """求文件所属论文的稳定主干。
+    """求文件所属论文的稳定主干（兼容 `YYYY-MM/` 月份目录）。
 
-    `03-notes` 的约定是 `03-notes/<论文标题>/<任意笔记>.md`，所以当文件位于
-    论文子目录内时，主干取**文件夹名**，否则取文件自己的名字。
-    这样 `02-markdown/<标题>.md` 与 `03-notes/<标题>/精读.md` 才能归到同一篇。
+    `03-notes` 的约定是 `03-notes[/YYYY-MM]/<论文标题>/<任意笔记>.md`，所以当文件
+    位于论文子目录内时，主干取**文件夹名**，否则取文件自己的名字。
+    这样 `02-markdown/2026-09/<标题>.md` 与 `03-notes/2026-09/<标题>/精读.md`
+    才能归到同一篇。
     """
     try:
         rel = path.relative_to(root)
     except ValueError:
         return clean_stem(path.stem)
 
-    parts = rel.parts
+    parts = list(rel.parts)
+    if parts and is_month_dir(parts[0]):
+        parts = parts[1:]
     if len(parts) >= 2:
-        # 位于某个论文子目录内 -> 用子目录名（相对 root 的第一层）
+        # 位于某个论文子目录内 -> 用子目录名
         return clean_stem(parts[0])
+    if parts:
+        return clean_stem(Path(parts[0]).stem)
     return clean_stem(path.stem)
+
+
+def _paper_month(path: Path, root: Path) -> str:
+    """取文件所在的月份目录名（没有月份段返回空串）。"""
+    try:
+        parts = path.relative_to(root).parts
+    except (ValueError, AttributeError):
+        return ''
+    return parts[0] if parts and is_month_dir(parts[0]) else ''
+
+
+def _paper_dirs(directory: Path) -> list:
+    """列出目录下的论文子目录（月份布局 `YYYY-MM/<论文>/` 与旧平铺并存）。"""
+    if not directory.is_dir():
+        return []
+    children = []
+    flat = []
+    for child in sorted(directory.iterdir()):
+        if not child.is_dir() or child.name.startswith('.'):
+            continue
+        if is_month_dir(child.name):
+            children.extend(sorted(grand for grand in child.iterdir()
+                                   if grand.is_dir() and not grand.name.startswith('.')))
+        else:
+            flat.append(child)
+    return children + flat
 
 
 DAILY_INPUT = '08-daily'
@@ -409,9 +467,7 @@ def scan_context_assets(workspace: Path, config: dict, stems):
         directory = resolve_workspace_subdir(config, rel, rel, workspace)
         if not directory.is_dir():
             continue
-        for child in sorted(directory.iterdir()):
-            if not child.is_dir():
-                continue
+        for child in _paper_dirs(directory):
             stem = clean_stem(child.name)
             if wanted and stem not in wanted:
                 continue
@@ -469,13 +525,15 @@ def collect_materials(config: dict, workspace: Path, since: date, until: date, h
             if not stem:
                 continue
             entry = matched.setdefault(stem, {
-                'stem': stem, 'files': [], 'mtime': '',
+                'stem': stem, 'files': [], 'mtime': '', 'month': '',
                 'roots': [], 'priority': len(inputs) + 1,
             })
             entry['files'].append({
                 'path': str(path), 'kind': path.suffix.lstrip('.'), 'root': rel,
             })
             entry['mtime'] = max(entry['mtime'], mtime.isoformat())
+            if not entry.get('month'):
+                entry['month'] = _paper_month(path, directory)
             if rel not in entry['roots']:
                 entry['roots'].append(rel)
             entry['priority'] = min(entry['priority'], order + 1)
@@ -488,11 +546,13 @@ def collect_materials(config: dict, workspace: Path, since: date, until: date, h
         for item in git_info.get('files', []):
             stem = item['stem']
             entry = matched.setdefault(stem, {
-                'stem': stem, 'files': [], 'mtime': '', 'roots': [],
+                'stem': stem, 'files': [], 'mtime': '', 'month': '', 'roots': [],
                 'priority': len(inputs) + 1,
             })
             entry['git_added'] = item['first_commit_date']
             entry['git_subject'] = item['commit_subject']
+            if item.get('month') and not entry.get('month'):
+                entry['month'] = item['month']
             for f in item['files']:
                 entry['files'].append({'path': f['path'], 'kind': 'git', 'root': f['root'],
                                        'git_added': item['first_commit_date']})
@@ -605,7 +665,8 @@ def main():
     parser.add_argument('--date', type=str, default=None, help='基准日期 YYYY-MM-DD（默认今天）')
     parser.add_argument('--force', action='store_true', help='忽略间隔，直接收集')
     parser.add_argument('--mark-run', action='store_true', help='分析完成后写回 start_date / last_run')
-    parser.add_argument('--output', type=str, default='weekly_manifest.json')
+    parser.add_argument('--output', type=str, default=None,
+                        help='素材清单输出路径；缺省写到系统临时目录，避免污染工作区')
     parser.add_argument('--json', action='store_true', help='只输出 JSON')
 
     args = parser.parse_args()
@@ -683,7 +744,12 @@ def main():
         **materials,
     }
 
-    out_path = Path(args.output)
+    # 清单默认写到系统临时目录：工作区内不得残留过程文件（见工作区 .AGENT.md）
+    if args.output:
+        out_path = Path(args.output).expanduser()
+    else:
+        out_path = Path(tempfile.gettempdir()) / 'paper-weekly' / ('%s-weekly_manifest.json' % today.isoformat())
+    out_path.parent.mkdir(parents=True, exist_ok=True)
     out_path.write_text(json.dumps(manifest, ensure_ascii=False, indent=2, default=str), encoding='utf-8')
 
     if args.json:

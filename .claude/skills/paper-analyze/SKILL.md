@@ -18,20 +18,22 @@ allowed-tools: Read, Write, Bash, WebFetch
 
 ## 输出位置
 
-不再依赖任何 workspace 路径或环境变量。默认输出到当前工作目录下的 `paper-notes/` 文件夹，用户可通过 `--output-dir` 自定义。
+默认输出到**工作区内的笔记根目录** `<notes_dir>/<YYYY-MM>/<论文主干>/精读.md`：`notes_dir` 取自工作区配置（默认 `03-notes`），`YYYY-MM` 是该论文的入库月份，`<论文主干>` 与 `01-raw/YYYY-MM/<论文主干>.pdf` 完全一致。图片放在同一论文目录的 `images/` 下：
 
-```
-paper-notes/
-└── [domain]/
-    ├── [paper-title].md            # 笔记正文
-    └── [paper-title]/
-        └── images/
-            ├── fig1.png
-            ├── fig2.png
-            └── ...
+```text
+03-notes/
+└── YYYY-MM/
+    └── <论文主干>/
+        ├── 精读.md
+        └── images/fig1.png ...
 ```
 
-笔记与其 `images/` 文件夹应保持相对路径关系，这样整个 `[paper-title]/` 连同 `.md` 文件一起复制/分享到任何地方，图片依然能正常显示。
+- **月份口径**：`YYYY-MM` = 论文**首次进入 `01-raw` 的日期所在月**，与 `.AGENT.md` 一致；同一篇论文在 `01-raw`、`02-markdown`、`03-notes`、`06-translation` 四处的月份与主干必须相同。
+- `generate_note.py` 会**自动从 `01-raw/YYYY-MM/` 中同名 PDF 所在月份目录推断**该月份，找不到时用当前月份兜底；也可以用 `--month` 显式指定。
+- `--domain` 只写入笔记 frontmatter（用于检索/分类标注），**不再用于目录分组**。
+- `--output-dir` 仍保留，用于覆盖**笔记根目录**（即 `notes_dir`）；默认从工作区配置读取（`03-notes`）。已不再有 `PAPER_NOTES_DIR` 环境变量或 `./paper-notes` 默认值。
+
+笔记与其 `images/` 文件夹应保持相对路径关系，这样整个 `<论文主干>/` 连同 `精读.md` 一起复制/分享到任何地方，图片依然能正常显示。
 
 ---
 
@@ -41,10 +43,11 @@ paper-notes/
 
 ```bash
 mkdir -p /tmp/paper_analysis
-cd /tmp/paper_analysis
+cd /tmp/paper_analysis     # 仅用于下载 PDF 与提取图片的临时目录
 
-OUTPUT_DIR="${OUTPUT_DIR:-./paper-notes}"   # 用户可通过 --output-dir 覆盖
-mkdir -p "$OUTPUT_DIR"
+# 笔记落盘位置由 generate_note.py 自行解析（向上识别工作区 → 读 notes_dir），
+# 因此不需要在这里拼路径；若当前目录不在工作区内，显式传 --workspace <工作区根> 即可。
+# 目标：<工作区>/<notes_dir>/<YYYY-MM>/<论文主干>/{精读.md, images/}
 ```
 
 ### Step 1：识别论文
@@ -55,7 +58,7 @@ mkdir -p "$OUTPUT_DIR"
 - 论文 URL（arXiv / OpenReview / Hugging Face Papers 等）
 - 本地 PDF 文件路径（用户已上传）
 
-**检查是否已分析过**：在 `$OUTPUT_DIR` 下按 arXiv ID 或标题搜索已有笔记，若找到则直接读取返回，避免重复分析（除非用户要求重新分析）。
+**检查是否已分析过**：在笔记根目录 `$NOTES_DIR` 的 `YYYY-MM/` 月份目录下按 arXiv ID 或标题搜索已有 `精读.md`，若找到则直接读取返回，避免重复分析（除非用户要求重新分析）。
 
 ### Step 2：获取论文内容
 
@@ -83,8 +86,8 @@ curl -L "https://arxiv.org/pdf/[PAPER_ID]" -o /tmp/paper_analysis/[PAPER_ID].pdf
 使用 `pdf` / `pdf-reading` skill 从 PDF 中提取插图（架构图、方法图、实验结果图等），保存为标准图片格式：
 
 ```bash
-# 示例：将图片保存到笔记对应的 images 目录
-NOTE_IMAGES_DIR="$OUTPUT_DIR/[domain]/[paper-title]/images"
+# 示例：将图片保存到笔记对应的 images 目录（月份须与 01-raw 中该论文的月份一致）
+NOTE_IMAGES_DIR="$NOTES_DIR/YYYY-MM/[paper-title]/images"
 mkdir -p "$NOTE_IMAGES_DIR"
 # 提取出的图片统一重命名为 fig1.png, fig2.png, ... 并保存到此目录
 ```
@@ -179,7 +182,8 @@ tar -xzf /tmp/paper_analysis/[PAPER_ID].tar.gz -C /tmp/paper_analysis/
 
 **内部引用/相关论文**
 - 不使用双中括号链接语法。
-- 如果相关论文也生成了本地笔记，用标准 Markdown 相对链接：`[论文标题](../其他领域/其他论文.md)`。
+- 如果相关论文也生成了本地笔记，用标准 Markdown 相对链接，指向对方论文目录下的 `精读.md`：
+  例如同月论文用 `[论文标题](../其他论文主干/精读.md)`，跨月论文用 `[论文标题](../../2026-07/其他论文主干/精读.md)`（相对当前 `精读.md` 所在位置换算）。
 - 如果没有对应的本地笔记，直接用加粗文字标出标题即可：`**相关论文标题**（作者, 年份）`。
 
 **提示/警告**
@@ -204,23 +208,29 @@ python3 scripts/generate_note.py \
   --paper-id "[PAPER_ID]" \
   --title "[标题]" \
   --authors "[作者]" \
-  --domain "[领域]" \
-  --output-dir "$OUTPUT_DIR" \
-  --language "$LANGUAGE"
+  --domain "LLM" \
+  --language zh
+# 可选：--workspace、--notes-dir、--month、--output-dir（覆盖根目录）、--force
 ```
+
+默认写入 `<notes_dir>/<YYYY-MM>/<论文主干>/精读.md` 并同时建好同目录的 `images/`；**已存在的 `精读.md` 默认不覆盖**（会提示"已存在精读笔记，未覆盖"），确实需要重写时加 `--force`。
 
 脚本会生成带占位符的标准 Markdown 骨架，之后需要把分析内容逐节填入，并将 Step 2.3 提取的图片路径正确插入到对应小节。
 
-**领域推断规则（用于分目录整理，纯本地文件夹分类，无特殊含义）**：
-- 提到 agent / swarm / multi-agent / orchestration → `Agent`
-- 提到 vision / visual / image / video → `Multimodal`
-- 提到 reinforcement learning / RL → `RL`
-- 提到 language model / LLM / MoE → `LLM`
-- 否则 → `Other`
+**月份推断规则（用于确定 `<YYYY-MM>` 目录，本身无特殊含义）**：
+- 月份 = 该论文**首次进入 `01-raw` 的日期所在月**，即 `01-raw/YYYY-MM/` 中同名 PDF 所在的月份目录。
+- 脚本在 `01-raw/` 下按 `YYYY-MM/` 逐月查找与该论文主干匹配的 PDF，取所在月份；**找不到同名 PDF 时用当前月份**。
+- 也可以用 `--month "2026-09"` 显式指定，覆盖自动推断。
+- `--domain` 只写入 frontmatter，**不再用于目录分组**。取值仍可按内容粗略判断（仅影响 frontmatter 标注）：
+  - 提到 agent / swarm / multi-agent / orchestration → `Agent`
+  - 提到 vision / visual / image / video → `Multimodal`
+  - 提到 reinforcement learning / RL → `RL`
+  - 提到 language model / LLM / MoE → `LLM`
+  - 否则 → `Other`
 
 ### Step 6：输出分析摘要
 
-分析完成后，向用户展示简要摘要（评分、亮点、优劣势、相关论文、笔记文件路径），并提示笔记文件已生成在 `$OUTPUT_DIR` 下，可以直接下载 / 用任意 Markdown 工具打开。
+分析完成后，向用户展示简要摘要（评分、亮点、优劣势、相关论文、笔记文件路径），并提示笔记文件已生成在 `<notes_dir>/<YYYY-MM>/<论文主干>/精读.md`（脚本运行时会把工作区、入库月份、笔记路径与图片目录打印出来），可以直接用任意 Markdown 工具打开。
 
 ---
 

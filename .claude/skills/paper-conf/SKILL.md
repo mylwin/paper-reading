@@ -62,7 +62,7 @@ python "../paper-daily/scripts/scan_existing_notes.py" \
   --output existing_notes_index.json
 ```
 
-（路径是相对本 skill 目录的写法；也可传绝对路径。脚本会跳过 `images/` 下的图片索引。）
+（路径是相对本 skill 目录的写法；也可传绝对路径。脚本默认扫描 `notes_dir`（`03-notes`，自动递归 `YYYY-MM/` 月份目录），会跳过 `README.md`、`index.md` 与 `images/` 下的图片索引。）
 
 ## 步骤3：搜索顶会论文
 
@@ -109,10 +109,18 @@ python scripts/search_conf_papers.py \
 
 ### 5.1 笔记文件
 
-- 路径：**`<daily_dir>/<年份>-顶会论文推荐.md`**
+- 路径：**`<daily_dir>/<运行日期>/顶会论文推荐.md`**
   - `daily_dir` 取 `.claude/skills/config.yaml` 的 `daily_dir`（默认 `08-daily`）
-  - 例如 `08-daily/2025-顶会论文推荐.md`
-  - 顶会推荐是按年检索的周期产物，与每日检索的 `<日期>/` 文件夹并列存放，不占用日期目录
+  - 例如 `08-daily/2026-09-18/顶会论文推荐.md`；`<运行日期>` 是本次检索的日期（`YYYY-MM-DD`）
+  - 与 `今日检索.md` 同构放在日期目录下，便于复用 `write_note.py` 落盘，并让文件相对链接（`../../01-raw/YYYY-MM/…`）保持有效
+  - 落盘命令：
+
+```bash
+python "../paper-daily/scripts/write_note.py" \
+  --date "<运行日期>" \
+  --filename 顶会论文推荐.md \
+  --stdin-file conf_note.md
+```
 - frontmatter：
 
 ```yaml
@@ -122,8 +130,14 @@ tags: ["llm-generated", "conf-paper-recommend"]
 ---
 ```
 
-**排版约定**：目标工作区 paper-reading 不是 Markdown（见工作区 `.AGENT.md`"不依赖特定笔记软件语法"）。
-所以链接用标准 Markdown 相对路径（`[PDF](01-raw/<论文标题>.pdf)`），
+**排版约定**：本工作区使用标准 Markdown（见工作区 `.AGENT.md`）。
+链接使用**相对本笔记文件**的路径，笔记位于 `08-daily/<运行日期>/` 下，因此本地资产需要 `../../`：
+
+```markdown
+[PDF](../../01-raw/2026-09/<论文标题>.pdf)
+[精读](../../03-notes/2026-09/<论文标题>/精读.md)
+```
+
 **不要**使用特定笔记软件的双中括号链接或图片语法；无数据用 `--` 而不是 `---`。
 
 ### 5.2 概览部分
@@ -151,8 +165,8 @@ tags: ["llm-generated", "conf-paper-recommend"]
 - **机构**：[机构名称] 或 --
 - **会议**：{CVPR/ICLR/...} {年份}
 - **引用**：{citationCount} (influential: {influentialCitationCount})
-- **链接**：[DBLP](链接) | [arXiv](链接) | [PDF](01-raw/{论文标题}.pdf)
-- **笔记**：[精读](03-notes/{论文标题}/精读.md) 或 --
+- **链接**：[DBLP](链接) | [arXiv](链接) | [PDF](../../01-raw/YYYY-MM/{论文标题}.pdf)
+- **笔记**：[精读](../../03-notes/YYYY-MM/{论文标题}/精读.md) 或 --
 
 **一句话总结**：[一句话概括论文的核心贡献]
 
@@ -172,7 +186,7 @@ tags: ["llm-generated", "conf-paper-recommend"]
 - 有 arXiv ID：给 arXiv 和 PDF 链接
 - 无 arXiv ID：只给 DBLP（或 DOI）链接，并标注"无 arXiv 版本"
 - 有 DOI：额外给 DOI 链接
-- 本地 PDF / 精读笔记用**标准 Markdown 相对路径**指向 `01-raw`、`03-notes`
+- 本地 PDF / 精读笔记用**相对本笔记文件**的标准 Markdown 相对路径指向 `01-raw/<YYYY-MM>/`、`03-notes/<YYYY-MM>/`
 
 **格式规则**：
 - 用标准 Markdown 相对链接（`[文字](相对路径)`），不依赖特定笔记软件语法。
@@ -183,11 +197,25 @@ tags: ["llm-generated", "conf-paper-recommend"]
 
 对评分最高的 3 篇：
 
-1. **查重**：按论文主干（`paper_stem` / `<论文标题>`）在 `papers_dir`、`notes_dir`、`08-daily` 历史中匹配。已有笔记则引用，**不重复生成**。
-2. **有 arXiv ID 且未归档**：若 `papers_dir` 中还没有该论文的 PDF，按 `paper-daily` 的规则下载到 `01-raw/<论文标题>.pdf`（已存在即停）；在列表里给出 `[PDF](01-raw/<论文标题>.pdf)` 相对链接。
+1. **查重**：按论文主干（`paper_stem` / `<论文标题>`）在 `papers_dir`（含 `YYYY-MM/`）、`notes_dir`（含 `YYYY-MM/`）、`08-daily` 历史中匹配。已有笔记则引用，**不重复生成**。
+2. **有 arXiv ID 且未归档**：用 `paper-daily` 的归档脚本下载，**不要手写目标路径**（脚本会按入库月份落到 `01-raw/<YYYY-MM>/` 并刷新索引）：
+
+```bash
+python "../paper-daily/scripts/fetch_pdfs.py" \
+  --papers-json <本次检索结果>.json --date "<运行日期>"
+```
+
+   随后在列表里给出 `[PDF](../../01-raw/<YYYY-MM>/<论文标题>.pdf)` 相对链接。
 3. **无 arXiv ID 且未归档**：标注"无 arXiv 版本，无法自动获取 PDF 与图片"，只给 DBLP/DOI 链接供手动查阅，**不伪造 arXiv 字段**。
 
-精读笔记（`03-notes/<论文标题>/精读.md`）由用户自己的流程生成，本 skill 不代做。
+精读笔记（`03-notes/<YYYY-MM>/<论文标题>/精读.md`）由用户自己的流程生成，本 skill 不代做。
+
+写完后刷新索引与状态清单：
+
+```bash
+python "../paper-daily/scripts/sync_indexes.py"
+python "../paper-daily/scripts/sync_indexes.py" --check-links
+```
 
 # 重要规则
 

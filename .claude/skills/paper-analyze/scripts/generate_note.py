@@ -18,21 +18,98 @@ import re
 import argparse
 import logging
 from datetime import datetime
+from pathlib import Path
 
 logger = logging.getLogger(__name__)
 
 
-def get_output_dir(cli_output_dir=None):
-    """获取笔记输出根目录，默认当前目录下的 paper-notes/"""
-    if cli_output_dir:
-        return cli_output_dir
-    env_path = os.environ.get('PAPER_NOTES_DIR')
+def find_workspace(cli_workspace=None):
+    """定位论文工作区根目录：--workspace → $PAPER_WORKSPACE_PATH → 向上查找标记目录。"""
+    candidates = []
+    if cli_workspace:
+        candidates.append(Path(cli_workspace).expanduser())
+    env_path = os.environ.get('PAPER_WORKSPACE_PATH')
     if env_path:
-        return env_path
-    return os.path.join(os.getcwd(), "paper-notes")
+        candidates.append(Path(env_path).expanduser())
+    here = Path.cwd().resolve()
+    candidates.extend([here, *here.parents])
+    markers = ('01-raw', '02-markdown', '03-notes')
+    for candidate in candidates:
+        try:
+            if sum((candidate / marker).is_dir() for marker in markers) >= 2:
+                return candidate.resolve()
+        except OSError:
+            continue
+    return here
 
 
-def generate_note_content(paper_id, title, authors, domain, date, language="zh"):
+def read_workspace_config_value(workspace, key):
+    """从 `<workspace>/.claude/skills/config.yaml` 读取单个目录配置（yaml 缺失时用正则兜底）。"""
+    config_path = Path(workspace) / '.claude' / 'skills' / 'config.yaml'
+    if not config_path.is_file():
+        return None
+    try:
+        text = config_path.read_text(encoding='utf-8-sig')
+    except OSError:
+        return None
+    try:
+        import yaml
+        data = yaml.safe_load(text) or {}
+        value = data.get(key)
+        if value:
+            return str(value).strip()
+    except Exception:
+        pass
+    match = re.search(r'^%s:\s*["\']?([^"\'\n#]+)' % re.escape(key), text, re.MULTILINE)
+    return match.group(1).strip() if match else None
+
+
+def resolve_notes_root(workspace, output_dir=None):
+    """精读笔记根目录：--output-dir 覆盖 → 配置 notes_dir（默认 03-notes）。"""
+    if output_dir:
+        path = Path(output_dir).expanduser()
+        return path if path.is_absolute() else (Path.cwd() / path)
+    configured = read_workspace_config_value(workspace, 'notes_dir') or '03-notes'
+    path = Path(configured)
+    return path if path.is_absolute() else Path(workspace) / path
+
+
+def normalize_stem(text):
+    return re.sub(r'[^a-z0-9\u4e00-\u9fff]+', '', str(text or '').lower())
+
+
+def month_of(value):
+    """把日期字符串归一为 `YYYY-MM`。"""
+    match = re.match(r'^(\d{4})[-/.](\d{1,2})', str(value or '').strip())
+    if match:
+        month = int(match.group(2))
+        return '%04d-%02d' % (int(match.group(1)), month) if 1 <= month <= 12 else ''
+    return ''
+
+
+def infer_archive_month(workspace, title, fallback_date):
+    """推断论文的入库月份：01-raw 中同名 PDF 所在月份 → 兜底用给定日期所在月。
+
+    月份口径见工作区 .AGENT.md：论文首次进入 01-raw 的日期所在月。
+    """
+    papers_dir_name = read_workspace_config_value(workspace, 'papers_dir') or '01-raw'
+    papers_dir = Path(papers_dir_name)
+    if not papers_dir.is_absolute():
+        papers_dir = Path(workspace) / papers_dir
+    target = normalize_stem(title)
+    if papers_dir.is_dir() and target:
+        month_dirs = sorted(
+            (p for p in papers_dir.iterdir()
+             if p.is_dir() and re.match(r'^\d{4}-(0[1-9]|1[0-2])$', p.name)),
+            key=lambda p: p.name, reverse=True)
+        for month_dir in month_dirs:
+            for pdf in sorted(month_dir.glob('*.pdf')):
+                if normalize_stem(pdf.stem) == target:
+                    return month_dir.name
+    return month_of(fallback_date) or datetime.now().strftime('%Y-%m')
+
+
+def generate_note_content(paper_id, title, authors, domain, date, language="zh", archive_month=""):
     """生成笔记的标准 Markdown 内容（含 frontmatter，可选，仅作普通元数据）"""
 
     if language == "zh":
@@ -47,6 +124,7 @@ def generate_note_content(paper_id, title, authors, domain, date, language="zh")
 
         return f'''---
 date: "{date}"
+archive_month: "{archive_month}"
 paper_id: "{paper_id}"
 title: "{title}"
 authors: "{authors}"
@@ -275,6 +353,7 @@ $$
 
         return f'''---
 date: "{date}"
+archive_month: "{archive_month}"
 paper_id: "{paper_id}"
 title: "{title}"
 authors: "{authors}"
@@ -501,29 +580,51 @@ def main():
     parser.add_argument('--paper-id', type=str, default='[PAPER_ID]', help='论文 arXiv ID / Paper arXiv ID')
     parser.add_argument('--title', type=str, default='[论文标题]', help='论文标题 / Paper title')
     parser.add_argument('--authors', type=str, default='[Authors]', help='论文作者 / Paper authors')
-    parser.add_argument('--domain', type=str, default='Other', help='论文领域，用于本地分目录 / Paper domain, used for local folder grouping')
-    parser.add_argument('--output-dir', type=str, default=None, help='笔记输出根目录，默认 ./paper-notes / Output root dir, defaults to ./paper-notes')
+    parser.add_argument('--domain', type=str, default='Other', help='论文领域，仅写入 frontmatter / Paper domain (frontmatter only)')
+    parser.add_argument('--workspace', type=str, default=None,
+                        help='论文工作区根目录（默认自动向上识别，也可用 PAPER_WORKSPACE_PATH）')
+    parser.add_argument('--notes-dir', type=str, default=None,
+                        help='精读笔记根目录（默认取工作区配置 notes_dir = 03-notes）')
+    parser.add_argument('--month', type=str, default=None,
+                        help='入库月份 YYYY-MM（默认按 01-raw 中同名 PDF 所在月份推断）')
+    parser.add_argument('--output-dir', type=str, default=None,
+                        help='覆盖笔记根目录（等价于 --notes-dir，供独立使用）')
     parser.add_argument('--language', type=str, default='zh', choices=['zh', 'en'], help='语言 / Language: zh (中文) or en (English)')
+    parser.add_argument('--force', action='store_true',
+                        help='已存在 精读.md 时覆盖（默认不覆盖用户已有笔记）')
     args = parser.parse_args()
 
-    output_root = get_output_dir(args.output_dir)
+    workspace = find_workspace(args.workspace)
+    output_root = resolve_notes_root(workspace, args.output_dir or args.notes_dir)
     date = datetime.now().strftime("%Y-%m-%d")
 
-    # 清理文件名中的非法字符
-    paper_title_safe = re.sub(r'[ /\\:*?"<>|]+', '_', args.title).strip('_')
+    # 论文主干：与 01-raw / 02-markdown 等其他阶段的命名规则一致
+    paper_title_safe = re.sub(r'[ /\\:*?"<>|\t]+', '_', args.title)
+    paper_title_safe = re.sub(r'[,\u3001;；]+', '_', paper_title_safe)
+    paper_title_safe = re.sub(r'[\s\-]+', '_', paper_title_safe)
+    paper_title_safe = re.sub(r'_{2,}', '_', paper_title_safe).strip(' ._')
 
-    # 校验域名，防止路径穿越
+    # 校验域名，防止路径穿越（仅用于 frontmatter）
     domain = args.domain.strip('/\\').replace('..', '')
     if not domain:
         domain = 'Other'
 
-    note_dir = os.path.join(output_root, domain)
-    images_dir = os.path.join(note_dir, paper_title_safe, "images")
-    os.makedirs(note_dir, exist_ok=True)
-    os.makedirs(images_dir, exist_ok=True)
+    month = (args.month or '').strip() or infer_archive_month(workspace, args.title, date)
 
-    note_path = os.path.join(note_dir, f"{paper_title_safe}.md")
-    content = generate_note_content(args.paper_id, args.title, args.authors, domain, date, args.language)
+    # 落盘位置：<notes_dir>/<YYYY-MM>/<论文主干>/{精读.md, images/}
+    note_dir = os.path.join(str(output_root), month, paper_title_safe)
+    images_dir = os.path.join(note_dir, "images")
+    note_path = os.path.join(note_dir, "精读.md")
+
+    if os.path.exists(note_path) and not args.force:
+        logger.info("已存在精读笔记，未覆盖：%s", note_path)
+        print(f"已存在精读笔记，未覆盖：{note_path}（如需重写请加 --force）")
+        print(f"图片目录：{images_dir}")
+        return
+
+    os.makedirs(images_dir, exist_ok=True)
+    content = generate_note_content(args.paper_id, args.title, args.authors, domain, date,
+                                    args.language, archive_month=month)
 
     try:
         with open(note_path, 'w', encoding='utf-8') as f:
@@ -533,10 +634,14 @@ def main():
         sys.exit(1)
 
     if args.language == 'zh':
+        print(f"工作区：{workspace}")
+        print(f"入库月份：{month}")
         print(f"笔记已生成: {note_path}")
         print(f"图片目录: {images_dir}（把提取到的论文插图放到这里，命名为 fig1.png, fig2.png ...）")
         print("请手动编辑笔记内容，替换占位符为实际分析结果")
     else:
+        print(f"Workspace: {workspace}")
+        print(f"Archive month: {month}")
         print(f"Note generated: {note_path}")
         print(f"Images dir: {images_dir} (place extracted figures here as fig1.png, fig2.png, ...)")
         print("Please manually edit the note content and replace placeholders with actual analysis.")

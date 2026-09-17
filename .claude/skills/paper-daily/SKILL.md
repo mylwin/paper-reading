@@ -1,30 +1,32 @@
 ---
 name: paper-daily
-description: 多源检索每日论文推荐，把前几篇原文 PDF 归档到 01-raw，并在 08-daily/<日期>/ 写出今日检索日报。Use when the user asks to start the day, create today's paper brief, or generate paper recommendations for a specified date.
+description: 多源检索每日论文推荐，把前几篇原文 PDF 归档到 01-raw/YYYY-MM，并在 08-daily/<日期>/ 写出今日检索日报。Use when the user asks to start the day, create today's paper brief, or generate paper recommendations for a specified date.
 ---
 
 # 目标
 
-每天为 paper-reading 论文工作区完成三件事：
+每天为论文工作区完成三件事：
 
 1. **检索**：多源（arXiv + OpenReview）拉取最近一个月的新论文 + 过去一年高影响力论文
 2. **推荐**：四维评分排序，排除知识库里已有的论文
-3. **落盘**：前 K 篇（默认 3）原始 PDF 存到 `01-raw/`，日报写到 `08-daily/<日期>/今日检索.md`
+3. **落盘**：前 K 篇（默认 3）原始 PDF 存到 `01-raw/<YYYY-MM>/`（入库月份目录），日报写到 `08-daily/<日期>/今日检索.md`
 
 **不负责**：`02-markdown` 解析结果与 `03-notes` 精读笔记由用户自己的流程负责，本 skill 只读它们用于去重。
 
-# 工作区结构（paper-reading）
+# 工作区结构
 
 ```text
-01-raw/            原始 PDF              <- 本 skill 落盘
-02-markdown/       PDF 解析结果          <- 用户流程
-03-notes/<标题>/   精读等笔记            <- 用户流程
-07-research/       周期调研报告          <- paper-weekly
-08-daily/<日期>/   每日检索日报          <- 本 skill
+01-raw/YYYY-MM/          原始 PDF        <- 本 skill 落盘（YYYY-MM = 入库月份）
+02-markdown/YYYY-MM/     PDF 解析结果    <- 用户流程
+03-notes/YYYY-MM/<标题>/ 精读等笔记       <- 用户流程
+04-equation_problem/<标题>/ 公式解读      <- paper-sgd-reading（不月份化）
+06-translation/YYYY-MM/<标题>/ 翻译结果   <- 用户流程
+07-research/             周期调研报告    <- paper-weekly（不月份化）
+08-daily/<日期>/         每日检索日报    <- 本 skill
+08-reading/<标题>/       精读过程材料    <- paper-sgd-reading（不月份化）
 ```
 
-论文稳定主干 `<论文标题>` 的规则见工作区 `.AGENT.md`：不带扩展名、可安全用作文件名与文件夹名。
-**同一篇论文在 `01-raw`、`02-markdown`、`03-notes` 必须使用相同主干**——本 skill 的 PDF 文件名由 `paper_config.sanitize_paper_title()` 生成，替换 `[ /\\:*?"<>|]` 与逗号分隔符为 `_`、压缩连续空白、长度上限 120 字符。
+论文稳定主干 `<论文标题>` 与月份规则见工作区 `.AGENT.md`：主干不带扩展名、不带日期、可安全用作文件名与文件夹名；**同一篇论文在 `01-raw`、`02-markdown`、`03-notes`、`06-translation` 必须使用相同月份与相同主干**。本 skill 的 PDF 文件名由 `paper_config.sanitize_paper_title()` 生成（替换 `[ /\\:*?"<>|]` 与逗号分隔符为 `_`、压缩连续空白、长度上限 120 字符），入库月份取 `--date` 所在月。
 
 # 配置
 
@@ -48,9 +50,10 @@ workspace 路径：命令行 `--workspace` → `PAPER_WORKSPACE_PATH` → 配置
 
 | 配置 | 默认 | 作用 |
 |---|---|---|
-| `papers_dir` | `01-raw` | PDF 落盘 + 已存在扫描 |
-| `notes_dir` | `03-notes` | 已精读论文扫描 |
+| `papers_dir` | `01-raw` | PDF 落盘 + 已存在扫描（自动使用其下 `YYYY-MM/` 月份目录） |
+| `notes_dir` | `03-notes` | 已精读论文扫描（递归 `YYYY-MM/`） |
 | `daily_dir` | `08-daily` | 日报目录，按日期再分层 |
+| `layout.month_dirs` | `01-raw,02-markdown,03-notes,06-translation` | 需要按月份分层的目录 |
 | `daily_note_name` | `今日检索` | 日报文件名（日期已在文件夹名上，故文件名不再带日期） |
 | `pdf_top_k` | `3` | 前几篇下载 PDF |
 | `top_n` | `10` | 推荐篇数 |
@@ -83,8 +86,8 @@ python scripts/search_arxiv.py \
 
 **去重（A 方案）**：脚本扫描三处判断论文是否已在知识库：
 
-1. `papers_dir`（`01-raw/*.pdf`）
-2. `notes_dir`（`03-notes/*/` 文件夹名）
+1. `papers_dir`（`01-raw/**/*.pdf`，含 `YYYY-MM/` 月份目录）
+2. `notes_dir`（`03-notes/**/` 论文文件夹名，含 `YYYY-MM/` 月份目录）
 3. `daily_dir` 历史（`08-daily/*/search_result.json` 里的推荐记录）
 
 结果分两层：
@@ -94,21 +97,24 @@ python scripts/search_arxiv.py \
 
 输出 JSON 关键字段：`sources_searched`、`source_counts`、`papers_by_source`、`total_unique`、`total_known`、`total_candidates`、`all_papers`、`top_papers`。每篇含 `paper_stem`（稳定主干）、`scores`、`matched_domain`、`already_known`。
 
-## 步骤2：PDF 归档到 01-raw
+## 步骤2：PDF 归档到 `01-raw/<YYYY-MM>/`
 
 ```bash
 python scripts/fetch_pdfs.py --papers-json 08-daily/<日期>/search_result.json --date "<日期>"
 ```
 
+- 落盘路径：`01-raw/<YYYY-MM>/<论文标题>.pdf`，其中 `<YYYY-MM>` = `--date`（入库日期）所在月；可用 `--month` 显式指定。
+- 同一篇论文的月份与主干必须与后续 `02-markdown/`、`03-notes/`、`06-translation/` 阶段一致，**下载后不要在文档里写别的月份**。
+
 **硬性规则**：
 
-- **目标文件已存在 → 立即停止**：不下载、不覆盖、不改名顶替，状态记 `exists`
+- **目标文件已存在 → 立即停止**：不下载、不覆盖、不改名顶替，状态记 `exists`（已存在判断跨所有月份目录，按主干归一化比对）
 - 只接受真 PDF（校验 `%PDF` 魔术字）；不合法就删掉临时文件、记 `failed`
 - 先写 `.part` 再原子改名，不留半截文件
 - 下载失败的论文**照常出现在日报里**并标注失败原因，不静默丢弃
-- 顺手维护 `01-raw/index.md`（只记题目 + 落盘日期，已有条目跳过）
+- 归档后自动更新 `01-raw/<YYYY-MM>/README.md`（入库日期权威记录）与四份根索引：`01-raw/index.md`、`02-markdown/index.md`、`03-notes/index.md`、`06-translation/index.md`
 
-输出 JSON：`downloaded` / `skipped_existing` / `failed` / `archived[]`（每项含 `status`、`detail`、`path`）。
+输出 JSON：`downloaded` / `skipped_existing` / `failed` / `month` / `month_dir` / `index_updated` / `archived[]`（每项含 `status`、`detail`、`path`）。
 
 `--dry-run` 只报告不下载。
 
@@ -123,20 +129,22 @@ python scripts/write_note.py --date "<日期>" --papers-json 08-daily/<日期>/s
 
 `--dry-run` 只解析路径。
 
-日报的固定布局也可以用渲染脚本生成，避免手工漏掉主题分组或全量列表：
+日报的固定布局也可以用渲染脚本生成，避免手工漏掉主题分组或全量列表（渲染出的链接是**相对日报文件**的 `../../01-raw/<YYYY-MM>/…`、`../../03-notes/<YYYY-MM>/…`）：
 
 ```bash
 python scripts/render_note.py \
   --date "<日期>" \
   --papers-json 08-daily/<日期>/search_result.json \
-  --editorial-json <本次概览与前 3 篇分析>.json > note.md
+  --editorial-json 08-daily/<日期>/daily-editorial.json > note.md
 python scripts/write_note.py \
   --date "<日期>" \
   --papers-json 08-daily/<日期>/search_result.json \
   --stdin-file note.md
 ```
 
-`--editorial-json` 为可选项；结构如下，键名使用论文标题：
+**请把本次概览与前 3 篇分析保存为 `08-daily/<日期>/daily-editorial.json`**（即 `--editorial-json` 的输入），这样日后目录或链接调整时可以重新渲染日报而不丢正文。
+
+`--editorial-json` 结构如下，键名使用论文标题：
 
 ```json
 {
@@ -177,7 +185,7 @@ python scripts/write_note.py \
 4. `今日落盘`：列出检索结果、PDF、日报和索引的真实状态。
 5. `附录：本次检索列表`：放在全文最后，按大方向分节，包含题目、来源、评分、状态、研究大方向、具体细分领域、同脉络和访问链接。
 
-相关论文必须先核验真实资产：优先链接 `03-notes/<论文主干>/精读.md`，其次链接真实存在的 `01-raw/<论文主干>.pdf`，再次链接实际存在且包含该论文的历史日报。三处都不存在时写“暂无”，不得根据标题相似度捏造文献或链接。
+相关论文必须先核验真实资产：优先链接 `03-notes/<YYYY-MM>/<论文主干>/精读.md`，其次链接真实存在的 `01-raw/<YYYY-MM>/<论文主干>.pdf`，再次链接实际存在且包含该论文的历史日报。三处都不存在时写“暂无”，不得根据标题相似度捏造文献或链接。月份取自该论文的 `01-raw` 入库月份。
 
 ### 渲染器使用的编辑 JSON
 
@@ -232,7 +240,7 @@ python scripts/write_note.py \
 
 ### 1. {论文标题} — 8.85
 
-- **来源**：arXiv `2609.xxxxx` | [PDF](01-raw/{论文标题}.pdf) | [原文](https://arxiv.org/abs/…)
+- **来源**：arXiv `2609.xxxxx` | [PDF](../../01-raw/YYYY-MM/{论文标题}.pdf) | [原文](https://arxiv.org/abs/…)
 - **作者**：… | **领域**：…
 - **一句话总结**：…
 - **核心贡献**：
@@ -240,7 +248,7 @@ python scripts/write_note.py \
 - **方法思路**：…
 - **主要结果**：…
 - **相关已有文献**（来自 `related_papers`；`--` 表示库里还没有同脉络的论文）：
-  - [已有论文标题](03-notes/<已有论文标题>/精读.md) — 共同点：`shared_terms`；与本文的关系（继承 / 改进 / 互补 / 冲突）
+  - [已有论文标题](../../03-notes/YYYY-MM/<已有论文标题>/精读.md) — 共同点：`shared_terms`；与本文的关系（继承 / 改进 / 互补 / 冲突）
   - …
 
 ## 其余论文速览
@@ -252,7 +260,7 @@ python scripts/write_note.py \
 
 | 类型 | 路径 | 状态 |
 |---|---|---|
-| PDF | 01-raw/{标题}.pdf | 新下载 / 已存在跳过 / 下载失败 |
+| PDF | 01-raw/YYYY-MM/{标题}.pdf | 新下载 / 已存在跳过 / 下载失败 |
 | 日报 | 08-daily/<日期>/今日检索.md | 本次生成 |
 ```
 
@@ -260,13 +268,26 @@ python scripts/write_note.py \
 
 ### 格式规则（paper-reading 使用标准 Markdown）
 
-- **链接一律用标准 Markdown 相对路径**：`[PDF](01-raw/{标题}.pdf)`、`[精读](03-notes/{标题}/精读.md)`
+- **链接一律用相对日报文件的标准 Markdown 相对路径**：`[PDF](../../01-raw/YYYY-MM/{标题}.pdf)`、`[精读](../../03-notes/YYYY-MM/{标题}/精读.md)`（日报在 `08-daily/<日期>/` 下，需要 `../../`）
 - **只使用标准 Markdown**：图片用 `![说明](相对路径)`，链接用 `[文字](相对路径)`，不依赖特定笔记软件语法。
 - 图片用标准语法 `![说明](相对路径)`
 - 无数据用 `--`，不要用 `---`（会被当分隔线）
 - 不伪造 arXiv 字段：OpenReview 来源没有 arXiv ID 就不写 arXiv 链接
 
-## 步骤4（可选）：关键词索引
+## 步骤4：刷新索引与状态清单（必做）
+
+日报写完后刷新四份根索引与各月份 README 表格，让未解析/未精读/未翻译状态与磁盘一致：
+
+```bash
+python scripts/sync_indexes.py               # 幂等：重复运行不产生多余改动
+python scripts/sync_indexes.py --check-links # 校验悬空链接、月份一致性、缺失 README（0 问题通过）
+```
+
+- `sync_indexes.py` 是索引与状态清单的**唯一写入口**：`01-raw/index.md`（统一登记表）、`02-markdown/index.md`、`03-notes/index.md`、`06-translation/index.md`，以及各 `<目录>/YYYY-MM/README.md` 的 `<!-- INDEX:BEGIN -->` 表格区。
+- 人工填写的 `来源`、`失败原因`、`优先级`、`精读中/翻译中` 会在刷新时按主干保留，不会被清空。
+- 新增论文后必须能在 `02-markdown` / `03-notes` / `06-translation` 的索引里看到它被登记为 `未解析` / `未精读` / `未翻译`。
+
+## 步骤5（可选）：关键词索引
 
 需要对已有论文笔记建「关键词 → 笔记」索引时：
 
@@ -275,27 +296,28 @@ python scripts/scan_existing_notes.py --workspace "$PAPER_WORKSPACE_PATH" --outp
 python scripts/link_keywords.py --index existing_notes_index.json --input <笔记> --output <笔记>
 ```
 
-会跳过 `index.md` 与 `images/` 下的图片索引。`link_keywords.py` 会把唯一匹配的关键词转换为相对于输出文件的标准 Markdown 链接。
+`scan_existing_notes.py` 默认扫描 `notes_dir`（`03-notes`，自动递归 `YYYY-MM/` 月份目录），可用 `--notes-dir` 换目录；会跳过 `index.md`、`README.md` 与 `images/` 下的图片索引。`link_keywords.py` 会把唯一匹配的关键词转换为相对于输出文件的标准 Markdown 链接。
 
 # 重要规则
 
-- **日期隔离**：日报只写在 `08-daily/<YYYY-MM-DD>/` 下
+- **日期隔离**：日报只写在 `08-daily/<YYYY-MM-DD>/` 下（文件名不带日期）
+- **月份一致**：PDF 进 `01-raw/<YYYY-MM>/`，该月即入库月份；后续 `02-markdown` / `03-notes` / `06-translation` 必须用同一月份与同一主干
 - **不碰用户资产**：`02-markdown` / `03-notes` / 已有 PDF 只读，绝不覆盖
 - **已存在即停**：任何写入前先判存在，存在就跳过并如实报告
 - **按主题组织日报**：`本次检索列表` 按 `research_domains` 顺序分节，每节内按 `score`
   从高到低；`top_papers` 的前 3 篇和其余速览仍沿用全局推荐分数顺序
-- **相关论文必须可核验**：只引用实际存在于 `03-notes/<主干>/精读.md`、
-  `01-raw/<主干>.pdf` 或历史日报中的论文；本地精读链接必须指向 `精读.md`，
+- **相关论文必须可核验**：只引用实际存在于 `03-notes/<YYYY-MM>/<主干>/精读.md`、
+  `01-raw/<YYYY-MM>/<主干>.pdf` 或历史日报中的论文；本地精读链接必须指向 `精读.md`，
   三处都不存在时写 `--`，不得根据标题相似度捏造文献
-- **访问链接不得断链**：PDF 已落盘才使用 `01-raw` 相对链接，否则使用真实的远程
-  `pdf_url`；原文链接使用记录中的 `url`
+- **访问链接不得断链**：PDF 已落盘才使用指向 `01-raw/<YYYY-MM>/` 的相对链接（相对日报文件，即 `../../01-raw/...`），
+  否则使用真实的远程 `pdf_url`；原文链接使用记录中的 `url`
 - **不需要大模型 API key**：脚本只做 HTTP 检索、评分与落盘；概览、总结、贡献点由当前 agent 撰写
 
 # 依赖项
 
 - Python 3.8+，`PyYAML`、`requests`（可选，缺失回退 urllib）
 - 网络：`export.arxiv.org`、`api2.openreview.net`、`api.semanticscholar.org`
-- workspace 中存在 `01-raw` / `02-markdown` / `03-notes` / `08-daily` 目录
+- workspace 中存在 `01-raw` / `02-markdown` / `03-notes` / `08-daily` 目录，且 `01-raw`、`02-markdown`、`03-notes`、`06-translation` 按 `YYYY-MM/` 分层
 
 # 常见问题
 

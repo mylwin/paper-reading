@@ -85,14 +85,24 @@ python scripts/collect.py --output weekly_manifest.json
   },
   "daily_dirs": [{"date": "2026-09-16", "search_result": "...", "titles": ["..."]}],
   "papers": [
-    {"stem": "...", "mtime": "...", "priority": 1, "roots": ["03-notes", "02-markdown"],
+    {"stem": "...", "month": "2026-09", "mtime": "...", "priority": 1,
+     "roots": ["03-notes", "02-markdown"],
      "git_added": "2026-09-15", "git_subject": "docs(paper): ...",
      "assets": {"04-equation_problem": ["全局推理.md"], "06-translation": ["双栏对比.pdf"]},
-     "files": [{"path": "...", "kind": "md", "root": "03-notes"}]}
+     "files": [{"path": "03-notes/2026-09/<标题>/精读.md", "kind": "md", "root": "03-notes"},
+               {"path": "02-markdown/2026-09/<标题>.md", "kind": "md", "root": "02-markdown"}]}
   ],
   "papers_total": 12
 }
 ```
+
+**月份目录会被递归识别**：
+
+- `01-raw`、`02-markdown`、`03-notes`、`06-translation` 按 `YYYY-MM/` 分层（月份 = 论文首次进入 `01-raw` 的日期所在月），同一篇论文在这四个阶段**月份与主干一致**。
+- `collect.py` 已支持跳过 `YYYY-MM` 段识别论文主干：`02-markdown/2026-09/<标题>.md` 取文件名主干，`03-notes/2026-09/<标题>/精读.md` 取论文目录名主干，因此两者能归并成同一篇；`03-notes` 的 `files[].path` 因此是 `03-notes/<YYYY-MM>/<标题>/精读.md` 这样的月份路径。
+- `06-translation` 的资产扫描会**先遍历月份、再遍历论文目录**（`YYYY-MM/<论文标题>/`），所以翻译资产同样按月份归属。
+- 每周新增论文的月份可直接从 manifest 的 `papers[].month` 字段读取；周报里引用论文时请统一使用 `01-raw/<month>/…`、`02-markdown/<month>/…`、`03-notes/<month>/…`、`06-translation/<month>/…` 形式，不要写成平铺的 `01-raw/<标题>.pdf`。
+- `04-equation_problem/<论文标题>/` 与 `08-reading/<论文标题>/` **不按月份分层**，清单里的 `assets` 键仍是目录名。
 
 **`git_added` 就是"本周具体提交了哪些论文"的权威答案**：按 `git log --diff-filter=A` 取新增文件，所以批量解析、clone、同步都不会污染结果；每篇带 `first_commit_date` 与提交信息，可以直接写"本周提交了 X"。
 
@@ -245,7 +255,7 @@ tags: [weekly-review, research-status]
 - **针对性一节不许空转**：如果本周没有任何 04 疑问或 08-reading 问答记录，就写
   "本周没有互动式精读记录"，**不要编造卡点**。
 - **多维度不能硬凑**：某一维度本周确实没有素材就写 `--`。
-- **同一篇论文只算一次**：`02-markdown/<标题>.md` 与 `03-notes/<标题>/精读.md` 属于同一篇（清单已按主干归并）。
+- **同一篇论文只算一次**：`02-markdown/<YYYY-MM>/<标题>.md` 与 `03-notes/<YYYY-MM>/<标题>/精读.md` 属于同一篇（清单已按主干归并，可用 `month` 字段定位月份）。
 
 ## 步骤4：推进周期
 

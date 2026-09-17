@@ -2,16 +2,18 @@
 """
 paper-daily PDF 归档脚本
 
-把每日推荐的前 N 篇论文的原始 PDF 保存到 `papers_dir`（默认 01-raw），
-文件名使用稳定主干 `<论文标题>`（规则见 paperread 工作区 AGENT.md）。
+把每日推荐的前 N 篇论文的原始 PDF 保存到 `papers_dir`（默认 01-raw）的**入库月份目录**：
+`01-raw/YYYY-MM/<论文标题>.pdf`（规则见工作区 .AGENT.md）。
 
 硬性规则：
   * **目标文件已存在 -> 立即停止**，不下载、不覆盖、不改名覆盖
   * 下载内容必须是真 PDF（校验 %PDF 魔术字），否则删除临时文件并记为失败
-  * 只写 `papers_dir` 与其中的 `index.md`，不碰 02-markdown / 03-notes（用户自己的流程负责）
+  * 只写 `papers_dir`、其月份目录 README 与 `index.md`，不碰 02-markdown / 03-notes（用户自己的流程负责）
+  * 入库月份 = `--date`（入库日期）所在月；同一篇论文四个阶段月份保持一致
 
 用法：
     python fetch_pdfs.py --papers-json search_result.json --date 2026-09-16 --top-k 3
+    python fetch_pdfs.py --papers-json search_result.json --date 2026-09-16 --month 2026-09
     python fetch_pdfs.py --papers-json search_result.json --dry-run
 """
 
@@ -27,12 +29,16 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from paper_config import (  # noqa: E402
     clean_stem,
-    find_config_path,
     load_config,
+    month_of,
+    month_paper_path,
     resolve_workspace_path,
     resolve_workspace_subdir,
     sanitize_paper_title,
+    scan_paper_entries,
 )
+
+from sync_indexes import refresh  # noqa: E402
 
 USER_AGENT = "paper-skills/0.1 (paper-daily; +local research workspace)"
 TIMEOUT = 120
@@ -40,19 +46,17 @@ PDF_MAGIC = b"%PDF"
 
 
 def index_existing_pdfs(papers_dir: Path) -> dict:
-    """建立"规范化主干 -> 实际文件"索引。
+    """建立"规范化主干 -> 实际文件"索引（递归月份目录 + 根部平铺）。
 
     手工命名的历史论文与自动生成的名称可能只差大小写、连字符或下划线
     （例如 `lp-norm` vs `lp_norm`），按字符串精确比较会误判为"不存在"从而重复下载。
     这里统一按 `clean_stem()` 归一化后比对。
     """
     index = {}
-    if not papers_dir.is_dir():
-        return index
-    for path in papers_dir.glob('*.pdf'):
-        key = clean_stem(path.stem)
+    for entry in scan_paper_entries(papers_dir, kind='file', suffix='.pdf'):
+        key = clean_stem(entry['stem'])
         if key:
-            index.setdefault(key, path)
+            index.setdefault(key, entry['path'])
     return index
 
 
@@ -99,48 +103,18 @@ def download_pdf(url: str, dest: Path, timeout: int = TIMEOUT) -> tuple:
     return True, "%.1f KB" % (size / 1024.0)
 
 
-def update_index(index_path: Path, entries: list, date: str):
-    """维护 `papers_dir/index.md`：只记录题目（+ 落盘日期），已存在的条目不重复写。"""
-    existing = index_path.read_text(encoding='utf-8') if index_path.is_file() else ''
-    existing_lines = existing.splitlines()
-
-    def already(title: str) -> bool:
-        return any(title in line for line in existing_lines)
-
-    new_lines = []
-    for entry in entries:
-        if already(entry['title']):
-            continue
-        suffix = '（已存在）' if entry['status'] == 'exists' else ''
-        new_lines.append("- %s —— %s%s" % (entry['title'], date, suffix))
-
-    if not new_lines:
-        return False
-
-    if not existing:
-        header = [
-            "# 论文原文索引",
-            "",
-            "本目录保存原始论文 PDF，文件名主干 `<论文标题>` 与 `02-markdown`、`03-notes` 一致。",
-            "",
-        ]
-        existing_lines = header
-
-    content = '\n'.join(existing_lines).rstrip('\n') + '\n' + '\n'.join(new_lines) + '\n'
-    index_path.write_text(content, encoding='utf-8')
-    return True
-
-
 def main():
     _force_utf8_stdio()
 
-    parser = argparse.ArgumentParser(description='Archive recommended paper PDFs into papers_dir')
+    parser = argparse.ArgumentParser(description='Archive recommended paper PDFs into papers_dir/YYYY-MM/')
     parser.add_argument('--config', type=str, default=None)
     parser.add_argument('--workspace', type=str, default=None)
     parser.add_argument('--papers-json', type=str, required=True,
                         help='search_arxiv.py output JSON')
     parser.add_argument('--date', type=str, default=None,
-                        help='Date for the index entry (default: target_date in JSON or today)')
+                        help='入库日期 YYYY-MM-DD（默认取 JSON 的 target_date 或今天）')
+    parser.add_argument('--month', type=str, default=None,
+                        help='入库月份 YYYY-MM（默认取 --date 所在月）')
     parser.add_argument('--top-k', type=int, default=None,
                         help='How many top papers to archive (default: paper_daily.pdf_top_k or 3)')
     parser.add_argument('--dry-run', action='store_true',
@@ -169,14 +143,21 @@ def main():
         return 1
 
     date = args.date or data.get('target_date') or datetime.now().strftime('%Y-%m-%d')
+    month = args.month or month_of(date)
+    if not month:
+        print("ERROR: 无法从 --date/--month 解析入库月份（需要 YYYY-MM-DD 或 YYYY-MM）：%s" % date,
+              file=sys.stderr)
+        return 1
+
     top_papers = data.get('top_papers') or []
     if not top_papers:
-        print(json.dumps({'papers_dir': str(papers_dir), 'date': date, 'archived': [],
+        print(json.dumps({'papers_dir': str(papers_dir), 'month': month, 'date': date, 'archived': [],
                           'skipped': 0, 'failed': 0, 'note': 'top_papers 为空'},
                          ensure_ascii=False, indent=2))
         return 0
 
-    # 已归档索引：按主干归一化，避免命名变体导致重复下载
+    month_dir = papers_dir / month
+    # 已归档索引：按主干归一化、递归月份目录，避免命名变体导致重复下载
     existing_index = index_existing_pdfs(papers_dir)
 
     results = []
@@ -184,11 +165,13 @@ def main():
         title = paper.get('title', '')
         stem = paper.get('paper_stem') or sanitize_paper_title(title)
         pdf_url = paper.get('pdf_url') or ''
+        dest = month_paper_path(papers_dir, month, stem, '.pdf') if stem else None
         entry = {
             'title': title,
             'paper_stem': stem,
+            'month': month,
             'pdf_url': pdf_url,
-            'path': str(papers_dir / (stem + '.pdf')),
+            'path': str(dest) if dest else '',
             'status': '',
             'detail': '',
         }
@@ -202,16 +185,15 @@ def main():
             results.append(entry)
             continue
 
-        dest = papers_dir / (stem + '.pdf')
         # 已存在就停止：不下载、不覆盖。
         # 用主干归一化后的索引判断，避免因命名变体（大小写/连字符/下划线）重复下载。
         existing = existing_index.get(clean_stem(stem))
         if existing is not None:
             entry.update(status='exists', path=str(existing),
-                         detail='已存在，跳过下载：%s' % existing.name)
+                         detail='已存在，跳过下载：%s' % existing.relative_to(papers_dir))
             results.append(entry)
             if not args.json:
-                print("[跳过] 已存在：%s" % existing.name, file=sys.stderr)
+                print("[跳过] 已存在：%s" % existing.relative_to(papers_dir), file=sys.stderr)
             continue
 
         if args.dry_run:
@@ -219,29 +201,32 @@ def main():
             results.append(entry)
             continue
 
-        papers_dir.mkdir(parents=True, exist_ok=True)
+        month_dir.mkdir(parents=True, exist_ok=True)
         ok, message = download_pdf(pdf_url, dest)
-        if ok:
-            entry.update(status='downloaded', detail=message)
-        else:
-            entry.update(status='failed', detail=message)
+        entry.update(status='downloaded' if ok else 'failed', detail=message)
         if not args.json:
-            print("[%s] %s —— %s" % (entry['status'], dest.name, message), file=sys.stderr)
+            print("[%s] %s —— %s" % (entry['status'], dest.relative_to(papers_dir), message),
+                  file=sys.stderr)
         results.append(entry)
 
     archived = [r for r in results if r['status'] == 'downloaded']
     existed = [r for r in results if r['status'] == 'exists']
     failed = [r for r in results if r['status'] == 'failed']
 
-    index_updated = False
-    if archived or existed:
-        if args.dry_run:
-            index_updated = False
-        else:
-            index_updated = update_index(papers_dir / 'index.md', results, date)
+    # 刷新索引：新下载的论文把入库日期/来源写进登记表（01-raw/YYYY-MM/README.md 为权威记录）
+    overrides = {}
+    for item in archived:
+        overrides[item['paper_stem']] = {'date': date, 'month': month,
+                                         'title': item['title'], 'source': item.get('source') or '--'}
+    index_updated = []
+    if (archived or existed) and not args.dry_run:
+        report = refresh(workspace, config, overrides=overrides)
+        index_updated = report['changed']
 
     summary = {
         'papers_dir': str(papers_dir),
+        'month_dir': str(month_dir),
+        'month': month,
         'date': date,
         'requested': len(top_papers[:top_k]),
         'downloaded': len(archived),
