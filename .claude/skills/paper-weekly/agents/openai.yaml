@@ -1,4 +1,4 @@
 interface:
   display_name: "paper-weekly"
-  short_description: "Review the last week's papers and propose multi-dimensional improvement directions"
+  short_description: "Synthesize weekly evidence into research gaps and falsifiable next steps"
   default_prompt: "Use $paper-weekly to review this week's papers and write a research status report."

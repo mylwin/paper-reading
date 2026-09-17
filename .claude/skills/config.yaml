@@ -274,7 +274,9 @@ research_domains:
       - loss spike
       - hyperparameter transfer
       - muP
-      - scaling law
+      - neural scaling law
+      - language model scaling law
+      - compute scaling law
     arxiv_categories:
       - cs.LG
       - cs.CL
@@ -322,12 +324,13 @@ research_domains:
         keywords:
           - training stability
           - loss spike
-          - scaling law
+          - neural scaling law
+          - language model scaling law
+          - compute scaling law
 
 # 命中这些关键词的论文直接排除
 excluded_keywords:
   - workshop
-  - survey
 
 # 关键词自动链接时额外忽略的词（可选）
 # extra_common_words:

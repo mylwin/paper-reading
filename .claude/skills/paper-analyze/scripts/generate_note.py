@@ -130,7 +130,8 @@ title: "{title}"
 authors: "{authors}"
 domain: "{domain}"
 tags: [{tags_yaml}]
-quality_score: "[SCORE]/10"
+research_value_score: "[SCORE]/10"
+assessment_confidence: "[高/中/低]"
 status: "analyzed"
 ---
 
@@ -268,11 +269,21 @@ $$
 - [局限2]
 - [局限3]
 
+### 致命问题与非致命局限
+- **致命问题**：[若成立会推翻核心主张的问题；没有明确证据则写 --]
+- **非致命局限**：[限制外推范围但不推翻核心结论的问题]
+
 ### 适用场景
 - [场景1]
 - [场景2]
 
-## 与相关论文对比
+## 主张-证据-限制矩阵
+
+| 主要主张 | 证据位置 | 证据是否充分 | 替代解释/风险 | 置信度 |
+|---|---|---|---|---|
+| [主张1] | [定理/表/图/附录] | [判断] | [风险] | [高/中/低] |
+
+## 与最接近工作对比
 
 ### **[相关论文1标题]**（[作者], [年份]）
 - **关系类型**：[改进 / 扩展 / 对比 / 跟随]
@@ -290,23 +301,30 @@ $$
 
 本文属于[技术路线]，主要关注[具体子方向]。
 
-## 未来工作建议
+## 可证伪的后续研究机会
 
-1. [作者建议1]
-2. [作者建议2]
-3. [基于分析的延伸建议]
+| 假设 | 最小验证 | 指标 | 资源成本 | 停止条件 |
+|---|---|---|---|---|
+| [具体假设] | [对照/证明/实验] | [判据] | [低/中/高] | [何时放弃] |
 
 ## 我的综合评价
 
-| 维度 | 分数 | 理由 |
-|---|---|---|
-| 创新性 | [X]/10 | [理由] |
-| 技术质量 | [X]/10 | [理由] |
-| 实验充分性 | [X]/10 | [理由] |
-| 写作质量 | [X]/10 | [理由] |
-| 实用性 | [X]/10 | [理由] |
+| 维度 | 分数（1-5/N/A） | 证据位置 | 理由 | 置信度 |
+|---|---:|---|---|---|
+| 问题重要性与界定 | [X] | [...] | [...] | [...] |
+| 原创性与净增量 | [X] | [...] | [...] | [...] |
+| 技术正确性与严谨性 | [X] | [...] | [...] | [...] |
+| 证据强度与替代解释 | [X] | [...] | [...] | [...] |
+| 可复现性与透明度 | [X] | [...] | [...] | [...] |
+| 外推边界与稳健性 | [X] | [...] | [...] | [...] |
+| 研究生成力 | [X] | [...] | [...] | [...] |
+| 当前课题契合度 | [X] | [...] | [...] | [...] |
 
-**总体评分**：[X.X]/10 — [评分理由简述]
+**学术价值分**：[X.X]/10 — [说明权重与证据]
+
+**当前课题优先级**：[必读/精读/选读/跟踪/略读] — [具体用途]
+
+**评价置信度**：[高/中/低]；**待核验**：[缺失信息]
 
 ### 突出亮点
 - [亮点1]
@@ -359,7 +377,8 @@ title: "{title}"
 authors: "{authors}"
 domain: "{domain}"
 tags: [{tags_yaml}]
-quality_score: "[SCORE]/10"
+research_value_score: "[SCORE]/10"
+assessment_confidence: "[high/medium/low]"
 status: "analyzed"
 ---
 
@@ -494,11 +513,21 @@ $$
 - [Limitation 2]
 - [Limitation 3]
 
+### Fatal Issues vs Non-fatal Limitations
+- **Fatal issues**: [Issues that would invalidate the central claim, or --]
+- **Non-fatal limitations**: [Issues that bound generalization]
+
 ### Applicable Scenarios
 - [Scenario 1]
 - [Scenario 2]
 
-## Comparison with Related Work
+## Claim-Evidence-Limitation Matrix
+
+| Main claim | Evidence location | Sufficiency | Alternative explanation/risk | Confidence |
+|---|---|---|---|---|
+| [Claim 1] | [Theorem/table/figure/appendix] | [Assessment] | [Risk] | [High/medium/low] |
+
+## Comparison with Closest Work
 
 ### **[Related Paper 1 Title]** ([Authors], [Year])
 - **Relationship**: [Improves / Extends / Compares / Follows]
@@ -516,23 +545,30 @@ $$
 
 This paper belongs to [technical track], focusing on [specific sub-direction].
 
-## Future Work
+## Falsifiable Research Opportunities
 
-1. [Author's suggestion 1]
-2. [Author's suggestion 2]
-3. [Extension based on this analysis]
+| Hypothesis | Minimum validation | Metric | Resource cost | Stop condition |
+|---|---|---|---|---|
+| [Specific hypothesis] | [Control/proof/experiment] | [Criterion] | [Low/medium/high] | [When to stop] |
 
 ## Assessment
 
-| Dimension | Score | Rationale |
-|---|---|---|
-| Innovation | [X]/10 | [Rationale] |
-| Technical Quality | [X]/10 | [Rationale] |
-| Experimental Thoroughness | [X]/10 | [Rationale] |
-| Writing Quality | [X]/10 | [Rationale] |
-| Practicality | [X]/10 | [Rationale] |
+| Dimension | Score (1-5/N/A) | Evidence location | Rationale | Confidence |
+|---|---:|---|---|---|
+| Problem importance and framing | [X] | [...] | [...] | [...] |
+| Originality and net contribution | [X] | [...] | [...] | [...] |
+| Technical soundness and rigor | [X] | [...] | [...] | [...] |
+| Evidence and alternative explanations | [X] | [...] | [...] | [...] |
+| Reproducibility and transparency | [X] | [...] | [...] | [...] |
+| Generalization boundaries and robustness | [X] | [...] | [...] | [...] |
+| Research generativity | [X] | [...] | [...] | [...] |
+| Fit to current research agenda | [X] | [...] | [...] | [...] |
 
-**Overall Score**: [X.X]/10 — [Brief rationale]
+**Academic value**: [X.X]/10 — [Weights and evidence]
+
+**Current-project priority**: [Must read/deep read/selective read/watch/skip] — [Specific use]
+
+**Assessment confidence**: [High/medium/low]; **To verify**: [Missing information]
 
 ### Highlights
 - [Highlight 1]

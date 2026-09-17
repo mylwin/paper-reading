@@ -10,6 +10,7 @@ import os
 import sys
 import tempfile
 import unittest
+from datetime import datetime
 from pathlib import Path
 
 SKILLS_ROOT = Path(__file__).resolve().parents[1]
@@ -24,6 +25,7 @@ import sync_indexes  # noqa: E402
 import fetch_pdfs  # noqa: E402
 import collect  # noqa: E402
 import localize_markdown_images as lmi  # noqa: E402
+import search_arxiv  # noqa: E402
 
 
 CONFIG = {
@@ -147,6 +149,65 @@ class FetchPdfsTests(unittest.TestCase):
             self.assertIn(paper_config.clean_stem('lp-norm_Paper'), index)
             self.assertIn(paper_config.clean_stem('lp_norm_Paper'), index)
             self.assertIn(paper_config.clean_stem('Legacy_Paper'), index)
+
+
+class ResearchPriorityScoringTests(unittest.TestCase):
+    def test_hype_words_do_not_count_as_research_evidence(self):
+        hype = ('We introduce a novel, pioneering, state-of-the-art and first '
+                'breakthrough method.')
+        substantiated = (
+            'We study stochastic optimization and present an algorithm. '
+            'Compared with a baseline, it improves error by 12%. '
+            'We prove a convergence rate and release open-source code.'
+        )
+        self.assertEqual(search_arxiv.calculate_abstract_evidence_score(hype), 0.0)
+        self.assertGreater(
+            search_arxiv.calculate_abstract_evidence_score(substantiated),
+            search_arxiv.calculate_abstract_evidence_score(hype),
+        )
+
+    def test_recent_paper_does_not_receive_fabricated_impact(self):
+        papers = [{
+            'title': 'SGD under realistic noise',
+            'summary': 'We study stochastic optimization and present an algorithm.',
+            'categories': [],
+            'published_date': datetime.now(),
+        }]
+        config = {
+            'research_domains': {
+                'optimization': {
+                    'keywords': ['SGD'],
+                    'arxiv_categories': [],
+                    'priority': 5,
+                },
+            },
+            'excluded_keywords': [],
+        }
+        [paper] = search_arxiv.filter_and_score_papers(papers, config)
+        self.assertEqual(paper['scores']['impact'], 0.0)
+        self.assertEqual(paper['scores']['popularity'], 0.0)
+        self.assertEqual(paper['screening_rank'], 1)
+        self.assertEqual(paper['assessment_scope'], 'metadata_and_abstract')
+
+    def test_relevance_remains_primary_screening_signal(self):
+        high_relevance = search_arxiv.calculate_recommendation_score(3, 0, 0, 0)
+        low_relevance_with_other_signals = search_arxiv.calculate_recommendation_score(
+            1, 0, 3, 3)
+        self.assertGreater(high_relevance, low_relevance_with_other_signals)
+
+    def test_focus_relevance_is_capped_to_scoring_scale(self):
+        paper = {
+            'title': 'SGD Adam momentum optimizer',
+            'summary': '',
+            'categories': [],
+        }
+        score, _, _ = search_arxiv.calculate_relevance_score(
+            paper,
+            {'optimization': {'keywords': ['optimizer'], 'priority': 5}},
+            [],
+            focus_keywords=['SGD', 'Adam', 'momentum'],
+        )
+        self.assertEqual(score, search_arxiv.SCORE_MAX)
 
 
 class WeeklyStemTests(unittest.TestCase):

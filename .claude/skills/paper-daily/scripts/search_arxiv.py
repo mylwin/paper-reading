@@ -1,14 +1,14 @@
 #!/usr/bin/env python3
 """
 多源 + Semantic Scholar 混合架构论文搜索脚本
-用于 paper-daily skill，搜索最近一个月和最近一年的极火、极热门、极优质论文。
+用于 paper-daily skill，搜索最近一个月的新论文和最近一年的高影响力论文。
 
 支持的数据源（--sources，逗号分隔）：
   arxiv       arXiv API，按日期区间/关键词检索预印本
   openreview  OpenReview API，检索 ICLR/NeurIPS/ICML 等计算机顶会论文（无需 API key）
 
 新增数据源只需在 SOURCE_REGISTRY 中注册一个 fetcher 函数，其余流程
-（筛选、四维评分、去重、排序、输出）完全复用。
+（筛选、四维研究优先级预筛、去重、排序、输出）完全复用。
 """
 
 import xml.etree.ElementTree as ET
@@ -170,23 +170,23 @@ RECENCY_THRESHOLDS = [
 ]
 RECENCY_DEFAULT = 0.0
 
-# 热门度：高影响力引用数归一化到 0-SCORE_MAX
+# 影响力信号：高影响力引用数归一化到 0-SCORE_MAX
 # 含义：达到此引用数时视为满分
 POPULARITY_INFLUENTIAL_CITATION_FULL_SCORE = 100
 
-# 综合推荐评分权重（普通论文）
+# 研究优先级权重。元数据排序只用于预筛，不代表全文质量。
 WEIGHTS_NORMAL = {
-    'relevance': 0.40,
-    'recency': 0.20,
-    'popularity': 0.30,
-    'quality': 0.10,
+    'relevance': 0.55,
+    'recency': 0.15,
+    'impact': 0.10,
+    'evidence': 0.20,
 }
-# 综合推荐评分权重（高影响力论文：提高热门度，降低新近性）
+# 高影响力候选仍以研究相关性为主，引用信号不得主导。
 WEIGHTS_HOT = {
-    'relevance': 0.35,
-    'recency': 0.10,
-    'popularity': 0.45,
-    'quality': 0.10,
+    'relevance': 0.50,
+    'recency': 0.05,
+    'impact': 0.25,
+    'evidence': 0.20,
 }
 
 # Semantic Scholar 速率限制等待时间（秒）
@@ -1168,7 +1168,7 @@ def calculate_relevance_score(
         all_matched = domain_matched_keywords
         matched_domain = best_domain
 
-    return total_score, matched_domain, all_matched
+    return min(total_score, SCORE_MAX), matched_domain, all_matched
 
 
 def calculate_recency_score(published_date: Optional[datetime]) -> float:
@@ -1193,94 +1193,96 @@ def calculate_recency_score(published_date: Optional[datetime]) -> float:
     return RECENCY_DEFAULT
 
 
-def calculate_quality_score(summary: str) -> float:
+def calculate_abstract_evidence_score(summary: str) -> float:
     """
-    从摘要推断质量评分
+    评估摘要是否报告了可核验的研究信息，而不是推断论文质量。
 
-    采用更细粒度的指标：强创新词权重高于弱创新词，
-    量化结果和对比实验也加分。
+    这是检索阶段的预筛信号。`novel`、`SOTA`、`first` 等作者自我评价
+    不加分；只有问题、方法、证据、边界或可复核性信息才加分。
 
     Args:
         summary: 论文摘要
 
     Returns:
-        质量评分 (0-3)
+        摘要证据充分度 (0-3)
     """
     if not summary:
         return 0.0
     score = 0.0
     summary_lower = summary.lower()
 
-    strong_innovation = [
-        'state-of-the-art', 'sota', 'breakthrough', 'first',
-        'surpass', 'outperform', 'pioneering'
-    ]
-    weak_innovation = [
-        'novel', 'propose', 'introduce', 'new approach',
-        'new method', 'innovative'
+    problem_indicators = [
+        'we study', 'we investigate', 'we address', 'we consider',
+        'research question', 'problem of', 'challenge of', 'objective'
     ]
     method_indicators = [
-        'framework', 'architecture', 'algorithm', 'mechanism',
-        'pipeline', 'end-to-end'
+        'algorithm', 'estimator', 'optimizer', 'architecture', 'framework',
+        'mechanism', 'dataset', 'benchmark', 'theorem', 'analysis'
     ]
-    quantitative_indicators = [
-        'outperforms', 'improves by', 'achieves', 'accuracy',
-        'f1', 'bleu', 'rouge', 'beats', 'surpasses'
+    comparison_indicators = [
+        'baseline', 'comparison', 'compared with', 'compared to',
+        'ablation', 'versus', 'outperform', 'improve over'
     ]
-    experiment_indicators = [
-        'experiment', 'evaluation', 'benchmark', 'ablation',
-        'baseline', 'comparison'
+    rigor_indicators = [
+        'we prove', 'we show that', 'convergence rate', 'sample complexity',
+        'upper bound', 'lower bound', 'regret bound', 'confidence interval',
+        'statistically significant', 'multiple seeds', 'robustness'
+    ]
+    transparency_indicators = [
+        'code is available', 'open-source', 'open source', 'we release',
+        'limitations', 'failure case', 'computational cost'
     ]
 
-    strong_count = sum(1 for ind in strong_innovation if ind in summary_lower)
-    if strong_count >= 2:
-        score += 1.0
-    elif strong_count == 1:
-        score += 0.7
-    else:
-        weak_count = sum(1 for ind in weak_innovation if ind in summary_lower)
-        if weak_count > 0:
-            score += 0.3
-
-    if any(ind in summary_lower for ind in method_indicators):
+    if any(ind in summary_lower for ind in problem_indicators):
         score += 0.5
-
-    if any(ind in summary_lower for ind in quantitative_indicators):
-        score += 0.8
-    elif any(ind in summary_lower for ind in experiment_indicators):
+    if any(ind in summary_lower for ind in method_indicators):
+        score += 0.6
+    if any(ind in summary_lower for ind in comparison_indicators):
+        score += 0.6
+    if re.search(r'(?<!\w)\d+(?:\.\d+)?\s*%|\b\d+(?:\.\d+)?x\b', summary_lower):
         score += 0.4
+    if any(ind in summary_lower for ind in rigor_indicators):
+        score += 0.8
+    if any(ind in summary_lower for ind in transparency_indicators):
+        score += 0.3
 
     return min(score, SCORE_MAX)
+
+
+def calculate_quality_score(summary: str) -> float:
+    """兼容旧调用；返回的是摘要证据充分度，不是全文质量。"""
+    return calculate_abstract_evidence_score(summary)
 
 
 def calculate_recommendation_score(
     relevance_score: float,
     recency_score: float,
-    popularity_score: float,
-    quality_score: float,
+    impact_score: float,
+    evidence_score: float,
     is_hot_paper: bool = False
 ) -> float:
     """
-    计算综合推荐评分
+    计算检索阶段的研究优先级分。
 
     权重定义在模块顶部常量 WEIGHTS_NORMAL / WEIGHTS_HOT 中。
-    对于高影响力论文（来自 Semantic Scholar），使用 WEIGHTS_HOT 提高热门度权重。
+    它只决定候选阅读顺序，不能解释为全文质量。对于高影响力候选，
+    使用 WEIGHTS_HOT 适度提高影响力信号，但相关性仍占主导。
 
     Args:
         relevance_score: 相关性评分 (0-SCORE_MAX)
         recency_score: 新近性评分 (0-SCORE_MAX)
-        popularity_score: 热门度评分 (0-SCORE_MAX)
-        quality_score: 质量评分 (0-SCORE_MAX)
+        impact_score: 引用影响力信号 (0-SCORE_MAX)
+        evidence_score: 摘要证据充分度 (0-SCORE_MAX)
         is_hot_paper: 是否是高影响力论文
 
     Returns:
-        综合推荐评分 (0-10)
+        研究优先级预筛分 (0-10)
     """
     scores = {
         'relevance': relevance_score,
         'recency': recency_score,
-        'popularity': popularity_score,
-        'quality': quality_score,
+        'impact': impact_score,
+        'evidence': evidence_score,
     }
     # 归一化到 0-10 分
     normalized = {k: (v / SCORE_MAX) * 10 for k, v in scores.items()}
@@ -1343,57 +1345,50 @@ def filter_and_score_papers(
             else:
                 recency = 0
 
-        # 计算热门度
+        # 计算引用影响力信号。缺少引用数据时保持 0，不用新近性伪造热度，
+        # 避免 recency 在综合分中被重复计算。
         if is_hot_paper_batch:
             # 高影响力论文：使用 influentialCitationCount
             inf_cit = paper.get('influentialCitationCount', 0)
-            popularity = min(
+            impact = min(
                 inf_cit / (POPULARITY_INFLUENTIAL_CITATION_FULL_SCORE / SCORE_MAX),
                 SCORE_MAX,
             )
         else:
-            # 普通论文（无引用数据）：基于新近性给一个中间热门度
-            # 最近7天的新论文可能有更高的"潜在热度"
-            if 'published_date' in paper and paper['published_date']:
-                pub = paper['published_date']
-                now = datetime.now(pub.tzinfo) if pub.tzinfo else datetime.now()
-                days_old = (now - pub).days
-                if days_old <= 7:
-                    popularity = 2.0  # 非常新的论文有潜在热度
-                elif days_old <= 14:
-                    popularity = 1.5
-                elif days_old <= 30:
-                    popularity = 1.0
-                else:
-                    popularity = 0.5
-            else:
-                popularity = 0.5  # 无日期信息时给一个保守值
+            impact = 0.0
 
-        # 计算质量
+        # 摘要只能评估证据报告是否充分，不能评估全文质量。
         summary = paper.get('summary', '') if 'summary' in paper else paper.get('abstract', '')
-        quality = calculate_quality_score(summary)
+        evidence = calculate_abstract_evidence_score(summary)
 
-        # 计算综合推荐评分
+        # 计算研究优先级预筛分
         recommendation_score = calculate_recommendation_score(
-            relevance, recency, popularity, quality, is_hot_paper_batch
+            relevance, recency, impact, evidence, is_hot_paper_batch
         )
 
         # 添加评分信息
         paper['scores'] = {
             'relevance': round(relevance, 2),
             'recency': round(recency, 2),
-            'popularity': round(popularity, 2),
-            'quality': round(quality, 2),
+            'impact': round(impact, 2),
+            'evidence': round(evidence, 2),
+            # 历史 JSON 兼容字段；新代码与报告应使用 impact/evidence。
+            'popularity': round(impact, 2),
+            'quality': round(evidence, 2),
             'recommendation': recommendation_score
         }
         paper['matched_domain'] = matched_domain
         paper['matched_keywords'] = matched_keywords
         paper['is_hot_paper'] = is_hot_paper_batch
+        paper['score_type'] = 'research_priority_screening'
+        paper['assessment_scope'] = 'metadata_and_abstract'
 
         scored_papers.append(paper)
 
-    # 按推荐评分排序
+    # 按研究优先级排序
     scored_papers.sort(key=lambda x: x['scores']['recommendation'], reverse=True)
+    for rank, paper in enumerate(scored_papers, 1):
+        paper['screening_rank'] = rank
 
     return scored_papers
 
@@ -1643,7 +1638,7 @@ def main():
     logger.info("Step 3: Merging and ranking results")
     logger.info("=" * 70)
     
-    # 按推荐评分排序
+    # 按研究优先级排序
     all_scored_papers.sort(key=lambda x: x['scores']['recommendation'], reverse=True)
     
     # 去重（优先 arXiv ID，其次标题 normalize）。

@@ -46,7 +46,7 @@ if _PAPER_DAILY_SCRIPTS not in sys.path:
 
 from search_arxiv import (
     calculate_relevance_score,
-    calculate_quality_score,
+    calculate_abstract_evidence_score,
     SCORE_MAX,
     RELEVANCE_TITLE_KEYWORD_BOOST,
     RELEVANCE_SUMMARY_KEYWORD_BOOST,
@@ -108,11 +108,12 @@ VENUE_TO_CATEGORIES = {
     "EMNLP": ["cs.CL"],
 }
 
-# 评分权重（去掉新近性维度，因为年份由用户指定）
+# 顶会候选预筛权重（去掉新近性维度，因为年份由用户指定）。
+# 引用只是滞后的影响力信号，不能主导研究阅读决策。
 WEIGHTS_CONF = {
-    'relevance': 0.40,
-    'popularity': 0.40,
-    'quality': 0.20,
+    'relevance': 0.55,
+    'impact': 0.15,
+    'evidence': 0.30,
 }
 
 # 热门度：高影响力引用满分基准
@@ -598,7 +599,7 @@ def calculate_popularity_score(paper: Dict) -> float:
         paper: 论文信息
 
     Returns:
-        热门度评分 (0-SCORE_MAX)
+        引用影响力信号 (0-SCORE_MAX)
     """
     inf_cit = paper.get('influentialCitationCount', 0)
     cit = paper.get('citationCount', 0)
@@ -617,7 +618,8 @@ def calculate_popularity_score(paper: Dict) -> float:
 
 def filter_and_score_papers(papers: List[Dict], cp_config: Dict, top_n: int = 10) -> List[Dict]:
     """
-    对论文进行完整的三维评分（相关性+热门度+质量），排序取 top N
+    对论文做三维候选预筛（相关性+影响力信号+摘要证据充分度），排序取 top N。
+    该分数不是全文质量评价。
     使用 conf-papers.yaml 的关键词构建虚拟 domain 用于评分
 
     Args:
@@ -658,35 +660,42 @@ def filter_and_score_papers(papers: List[Dict], cp_config: Dict, top_n: int = 10
         if relevance == 0:
             continue
 
-        # 计算热门度
-        popularity = calculate_popularity_score(paper)
+        # 计算引用影响力信号
+        impact = calculate_popularity_score(paper)
 
-        # 计算质量
+        # 摘要证据充分度，不是全文质量
         summary = paper.get('summary', '') or paper.get('abstract', '') or ''
-        quality = calculate_quality_score(summary)
+        evidence = calculate_abstract_evidence_score(summary)
 
         # 计算综合评分（三维度）
         normalized = {
             'relevance': (relevance / SCORE_MAX) * 10,
-            'popularity': (popularity / SCORE_MAX) * 10,
-            'quality': (quality / SCORE_MAX) * 10,
+            'impact': (impact / SCORE_MAX) * 10,
+            'evidence': (evidence / SCORE_MAX) * 10,
         }
         final_score = sum(normalized[k] * WEIGHTS_CONF[k] for k in WEIGHTS_CONF)
         final_score = round(final_score, 2)
 
         paper['scores'] = {
             'relevance': round(relevance, 2),
-            'popularity': round(popularity, 2),
-            'quality': round(quality, 2),
+            'impact': round(impact, 2),
+            'evidence': round(evidence, 2),
+            # 历史 JSON 兼容字段；新代码与报告应使用 impact/evidence。
+            'popularity': round(impact, 2),
+            'quality': round(evidence, 2),
             'recommendation': final_score,
         }
         paper['matched_domain'] = matched_domain
         paper['matched_keywords'] = matched_keywords
+        paper['score_type'] = 'research_priority_screening'
+        paper['assessment_scope'] = 'metadata_and_abstract'
 
         scored_papers.append(paper)
 
-    # 按推荐评分排序
+    # 按研究优先级排序
     scored_papers.sort(key=lambda x: x['scores']['recommendation'], reverse=True)
+    for rank, paper in enumerate(scored_papers, 1):
+        paper['screening_rank'] = rank
 
     logger.info("[Score] %d papers scored, returning top %d", len(scored_papers), top_n)
     return scored_papers[:top_n]

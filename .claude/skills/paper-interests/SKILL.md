@@ -5,7 +5,7 @@ description: 对话式维护论文推荐的研究主题——询问用户最近�
 
 # paper-interests —— 研究主题维护
 
-本 skill 只做一件事：**把用户口头描述的研究兴趣，变成配置文件里可用的检索关键词。**
+本 skill 只做一件事：**把用户的研究议程变成配置文件里可用、可区分的检索主题。** 对研究人员而言，“关注大模型”不是足够的议程；至少要知道正在解决的问题、方法边界和不想要的噪声方向。
 
 它不搜索论文、不生成推荐笔记。检索由 `paper-daily` / `paper-conf` 负责，周期分析由 `paper-weekly` 负责——**它们三者的研究主题全部来自同一份 `config.yaml` 的 `research_domains`**，所以改这里就等于同时改变了每日推荐、顶会推荐和周报的分析骨架。
 
@@ -37,11 +37,11 @@ python -c "import sys,yaml; d=yaml.safe_load(open(r'<config_path>',encoding='utf
 
 ### 第 1 步：询问用户
 
-用一句话提问，不要一次抛多个问题：
+优先问研究问题，而不是只问宽泛领域。用一句话提问，不要一次抛多个问题：
 
-> 你最近关注的研究领域是什么？（可以说得口语化，比如"具身智能的抓取"、"扩散模型加速"）
+> 你最近最想解决的研究问题是什么？可以同时说对象、约束和希望改进的指标，例如“7B 模型预训练中，在相同显存下改进 Adam 的稳定性”。
 
-如果用户已经在上文说清楚了自己的方向（例如"我最近在看世界模型"），就**不要再问**，直接进入第 2 步。
+如果用户只给出“大模型优化”“世界模型”这类宽泛名词，追加一次短追问，确认其更关心理论、算法、系统、数据/评测中的哪一类贡献，以及明确不想召回什么。用户已经给出问题、对象和约束时，不重复询问。
 
 ### 第 2 步：扩散补充
 
@@ -51,6 +51,7 @@ python -c "import sys,yaml; d=yaml.safe_load(open(r'<config_path>',encoding='utf
 - **keywords**：英文检索关键词，8-15 个
 - **arxiv_categories**：1-5 个 arXiv 分类
 - **priority**：1-10（默认 5）
+- **研究问题覆盖**：说明每组关键词对应问题定义、方法机制、理论性质、评测指标中的哪一层
 
 关键词的写法要求：
 
@@ -61,6 +62,9 @@ python -c "import sys,yaml; d=yaml.safe_load(open(r'<config_path>',encoding='utf
 5. **只写英文**：arXiv / DBLP / OpenReview 的检索都是英文匹配，中文关键词几乎不命中。
 6. **避免过于宽泛的词**：`learning`、`model`、`network` 这类词会引入大量无关论文；确实需要时，用更具体的限定形式（`world model` 而不是 `model`）。
 7. 不要在 keywords 里放排除词——排除词走 `excluded_keywords`。
+8. **同时覆盖问题词与机制词**：只放方法名会追着热点跑，只放大领域词会召回过宽；例如同时包含 `optimizer stability`、`loss spike`、`adaptive preconditioning`。
+9. **加入能区分贡献类型的词**：理论方向加入 `convergence rate`、`lower bound`、`PL condition` 等；系统方向加入 `memory footprint`、`throughput`、`communication cost` 等。
+10. **避免把实现手段误作研究目标**：`LoRA`、`Adam`、`ZeRO` 等应与具体问题或指标共同出现，不能单独定义整个研究议程。
 
 如果用户的方向能自然拆成多个独立领域（例如"具身智能"和"世界模型"），拆开成 2-3 条分别给关键词，比揉成一条更准。
 
@@ -75,6 +79,8 @@ python -c "import sys,yaml; d=yaml.safe_load(open(r'<config_path>',encoding='utf
 - **关键词**（{n} 个）：{keyword1}、{keyword2}、...
 - **arXiv 分类**：{cs.XX, cs.YY}
 - **优先级**：{priority}
+- **研究问题覆盖**：{问题 / 机制 / 理论性质 / 指标}
+- **刻意排除**：{不希望召回的相邻方向；没有则 --}
 
 {一句话说明这个领域会捞到什么类型的论文、为什么这么拆}
 

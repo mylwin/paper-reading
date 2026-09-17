@@ -218,14 +218,14 @@ def render_appendix(data: dict, config: dict, workspace: Path, note_dir: Path) -
         group.sort(key=lambda item: item.get('score') if item.get('score') is not None else -1, reverse=True)
 
     print('## 附录：本次检索列表\n')
-    print('按研究大方向分节；每节内部按推荐评分从高到低。序号跨主题连续。\n')
+    print('按研究大方向分节；每节内部按研究优先级从高到低。该分数用于候选预筛，不代表全文质量。序号跨主题连续。\n')
     row_number = 1
     for domain in domains + ['未分类']:
         group = by_domain.get(domain, [])
         if not group:
             continue
         print(f'### {domain}（{len(group)} 篇）\n')
-        print('| # | 题目 | 来源 | 评分 | 状态 | 研究大方向 | 具体细分领域 | 同脉络 | 访问链接 |')
+        print('| # | 题目 | 来源 | 研究优先级 | 状态 | 研究大方向 | 具体细分领域 | 同脉络 | 访问链接 |')
         print('|---|---|---|---|---|---|---|---|---|')
         for paper in group:
             stem = paper.get('paper_stem') or paper.get('note_filename') or paper_link_stem(paper.get('title'))
@@ -280,7 +280,7 @@ def render_top_papers(data: dict, config: dict, editorial: dict, workspace: Path
         title = paper.get('title') or '--'
         analysis = analyses.get(title) or {}
         stem = paper.get('paper_stem') or paper.get('note_filename') or paper_link_stem(title)
-        print(f'### {number}. {title} — {score((paper.get("scores") or {}).get("recommendation"))}\n')
+        print(f'### {number}. {title} — 研究优先级 {score((paper.get("scores") or {}).get("recommendation"))}\n')
         print(f"- **来源**：{paper.get('source') or '--'}")
         print(f"- **主题（大方向）**：{cell(paper.get('matched_domain'))}")
         print(f"- **细分领域**：{cell(subdomain_for(paper, config))}")
@@ -289,12 +289,15 @@ def render_top_papers(data: dict, config: dict, editorial: dict, workspace: Path
         print(f"- **英文摘要**：{cell(paper.get('summary'))}")
         print(f"- **中文摘要**：{analysis.get('abstract_zh') or '--'}")
         print(f"- **一句话总结**：{analysis.get('summary') or cell(paper.get('summary'))}")
-        print('- **核心贡献**：')
+        print('- **摘要声称的核心贡献**：')
         contributions = analysis.get('contributions') or []
         for item in contributions or ['--']:
             print(f'  - {item}')
         print(f"- **方法思路**：{analysis.get('method') or '--'}")
-        print(f"- **主要的实验成果**：{analysis.get('result') or '--'}")
+        print(f"- **摘要报告的主要结果**：{analysis.get('result') or '--'}")
+        print(f"- **选择理由**：{analysis.get('selection_reason') or '--'}")
+        print(f"- **证据边界与待核验**：{analysis.get('evidence_limit') or '当前仅按题目与摘要初评，待全文核验。'}")
+        print(f"- **阅读决策**：{analysis.get('reading_decision') or '跟踪'}")
         print('- **相关论文**：')
         rendered = set()
         for item in paper.get('related_papers') or []:
@@ -318,16 +321,19 @@ def render_top_papers(data: dict, config: dict, editorial: dict, workspace: Path
         print()
 
 
-def render_rest(data: dict, config: dict, workspace: Path, note_dir: Path) -> None:
+def render_rest(data: dict, config: dict, editorial: dict, workspace: Path, note_dir: Path) -> None:
     print('## 其余 7 篇推荐\n')
-    print('| # | 题目 | 评分 | 主题 | 细分领域 | 一句话总结 | 访问链接 |')
+    print('| # | 题目 | 研究优先级 | 主题 | 细分领域 | 一句话初评 | 访问链接 |')
     print('|---|---|---|---|---|---|---|')
+    analyses = editorial.get('top_papers') or {}
     for number, paper in enumerate((data.get('top_papers') or [])[3:], 4):
         stem = paper.get('paper_stem') or paper.get('note_filename') or paper_link_stem(paper.get('title'))
+        analysis = analyses.get(paper.get('title') or '') or {}
         print(
             f"| {number} | {cell(paper.get('title'))} | "
             f"{score((paper.get('scores') or {}).get('recommendation'))} | "
             f"{cell(paper.get('matched_domain'))} | {cell(subdomain_for(paper, config))} | "
+            f"{cell(analysis.get('summary') or paper.get('summary'))} | "
             f"{table_access_links(paper, stem, workspace, config, note_dir)} |"
         )
     print()
@@ -378,7 +384,7 @@ def main() -> int:
         note_dir = daily_note_dir(config, workspace, args.date)
     render_overview(data, config, editorial)
     render_top_papers(data, config, editorial, workspace, note_dir)
-    render_rest(data, config, workspace, note_dir)
+    render_rest(data, config, editorial, workspace, note_dir)
     render_files(data, args.date, workspace, config, note_dir)
     render_appendix(data, config, workspace, note_dir)
     return 0

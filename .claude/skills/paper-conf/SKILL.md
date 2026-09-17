@@ -1,6 +1,6 @@
 ---
 name: paper-conf
-description: 通过 DBLP 与 Semantic Scholar 搜索 CVPR、ICCV、ECCV、ICLR、AAAI、NeurIPS、ICML 等顶会论文，评分后生成年度推荐笔记。Use when the user asks for a conference/year paper list, top-conference recommendations, or papers filtered by venue.
+description: 通过 DBLP 与 Semantic Scholar 搜索 CVPR、ICCV、ECCV、ICLR、AAAI、NeurIPS、ICML 等顶会论文，经候选预筛和研究人员语义复排后生成年度推荐笔记。Use when the user asks for a conference/year paper list, top-conference recommendations, or papers filtered by venue.
 ---
 
 # 目标
@@ -11,7 +11,9 @@ description: 通过 DBLP 与 Semantic Scholar 搜索 CVPR、ICCV、ECCV、ICLR�
 
 ## 工作流程概述
 
-使用 DBLP API 搜索指定会议和年份的论文列表，用 Semantic Scholar 补充引用数与摘要，再按相关性、热门度、质量三维评分排序，生成推荐笔记。
+使用 DBLP API 搜索指定会议和年份的论文列表，用 Semantic Scholar 补充引用数与摘要，再按相关性、影响力信号、摘要证据充分度做候选预筛，并由研究人员视角进行语义复排，生成推荐笔记。
+
+开始工作前读取 `../research-evaluation-rubric.md`。会议名和引用量只能帮助发现候选，不能代替对内容的判断。
 
 ## 配置说明
 
@@ -25,7 +27,6 @@ conf:
 
   excluded_keywords:      # 标题命中即丢弃
     - "workshop"
-    - "survey"
 
   default_year: 2025              # 默认年份（--year 可覆盖）
   default_conferences:            # 默认会议（--conferences 可覆盖）
@@ -80,16 +81,18 @@ python scripts/search_conf_papers.py \
 1. **DBLP 搜索**：调用 DBLP API 获取指定会议和年份的论文（toc 查询，ECCV/EMNLP/MICCAI 走 venue+year 备选查询）
 2. **轻量过滤**：凭标题关键词匹配研究兴趣，大幅缩小范围
 3. **S2 补充**：仅对过滤后的论文查询 Semantic Scholar，获取摘要、引用数与 arXiv ID
-4. **三维评分**：相关性 40% + 热门度 40% + 质量 20%，排序取 top N
+4. **三维预筛**：相关性 55% + 影响力信号 15% + 摘要证据充分度 30%，排序取 top N
 
-**评分说明**（与 `paper-daily` 的区别：无新近性维度，年份由用户指定）：
+**预筛说明**（与 `paper-daily` 的区别：无新近性维度，年份由用户指定）：
 
 ```yaml
-推荐评分 =
-  相关性评分: 40%   # 与研究兴趣的匹配程度
-  热门度评分: 40%   # 基于引用数（优先 influentialCitationCount）
-  质量评分: 20%     # 从摘要推断创新性与实验质量
+研究优先级 =
+  相关性: 55%          # 与当前研究问题的匹配程度
+  影响力信号: 15%      # 引用的滞后信号，不代表正确性或质量
+  摘要证据充分度: 30%  # 是否报告可核验的问题、方法、比较和结果
 ```
+
+该分数不能跨年份直接比较，也不能解释成录用质量或学术价值。`novel`、`SOTA`、`first` 等宣传词不构成创新证据。新论文引用少不扣“质量分”，因为这里根本不做全文质量评分。
 
 ## 步骤4：读取筛选结果
 
@@ -101,7 +104,7 @@ python scripts/search_conf_papers.py \
   - `title` / `authors` / `conference` / `year`
   - `dblp_url`、`arxiv_id`（如有）
   - `abstract`、`citationCount`、`influentialCitationCount`
-  - `scores`（relevance / popularity / quality / recommendation）
+  - `scores`（relevance / impact / evidence / recommendation；旧字段 popularity / quality 仅为兼容别名）
   - `matched_domain` / `matched_keywords`
   - `note_filename`：**生成 Markdown 相对链接时用这个字段**
 
@@ -157,18 +160,23 @@ tags: ["llm-generated", "conf-paper-recommend"]
 - **阅读建议**：{给出阅读顺序建议}
 ```
 
-### 5.3 论文列表（统一格式，按评分排序）
+### 5.3 研究人员语义复排与论文列表
+
+先对脚本返回候选逐篇读题目与摘要，再按“与当前问题的直接性、相对已有知识的新增信息、可核验性、阅读成本与组合多样性”调整顺序。至少包含一篇直接竞争工作或最强近邻，不要让高引用综述或热门大模型论文挤占全部名额。
+
+只有摘要时，贡献与结果一律标“摘要声称”，并列出待全文核验项。复排时保留 `screening_rank` 和原分数，给最终候选补 `semantic_rank`，不要篡改脚本分数。最终列表按复排后的研究优先级组织，而不是机械照抄引用排序。
 
 ```markdown
 ### {论文标题}
 - **作者**：[作者列表]
 - **机构**：[机构名称] 或 --
 - **会议**：{CVPR/ICLR/...} {年份}
-- **引用**：{citationCount} (influential: {influentialCitationCount})
+- **研究优先级**：{recommendation}/10（元数据预筛，不是质量分）
+- **引用信号**：{citationCount} (influential: {influentialCitationCount})
 - **链接**：[DBLP](链接) | [arXiv](链接) | [PDF](../../01-raw/YYYY-MM/{论文标题}.pdf)
 - **笔记**：[精读](../../03-notes/YYYY-MM/{论文标题}/精读.md) 或 --
 
-**一句话总结**：[一句话概括论文的核心贡献]
+**摘要声称的核心贡献**：[一句话概括；待全文核验]
 
 **核心贡献/观点**：
 - [贡献点1]
@@ -176,6 +184,12 @@ tags: ["llm-generated", "conf-paper-recommend"]
 - [贡献点3]
 
 **关键结果**：[从摘要中提取的最重要结果]
+
+**选择理由**：[它对当前研究问题提供什么新增信息]
+
+**待核验**：[最关键的理论/实验/复现问题]
+
+**阅读决策**：精读 / 选读 / 跟踪
 
 ---
 ```
@@ -195,7 +209,7 @@ tags: ["llm-generated", "conf-paper-recommend"]
 
 ### 5.4 前 3 篇特殊处理
 
-对评分最高的 3 篇：
+对语义复排后优先级最高的 3 篇：
 
 1. **查重**：按论文主干（`paper_stem` / `<论文标题>`）在 `papers_dir`（含 `YYYY-MM/`）、`notes_dir`（含 `YYYY-MM/`）、`08-daily` 历史中匹配。已有笔记则引用，**不重复生成**。
 2. **有 arXiv ID 且未归档**：用 `paper-daily` 的归档脚本下载，**不要手写目标路径**（脚本会按入库月份落到 `01-raw/<YYYY-MM>/` 并刷新索引）：
@@ -220,9 +234,9 @@ python "../paper-daily/scripts/sync_indexes.py" --check-links
 # 重要规则
 
 - **年份必填**：命令行 `--year` 或配置 `conf.default_year`，都没有则报错退出
-- **按评分排序**：所有论文按 `scores.recommendation` 从高到低
+- **预筛后复排**：先按 `scores.recommendation` 形成候选池，再按研究问题、新增信息和证据可核验性做语义复排
 - **前 3 篇**：有 arXiv ID 的才做图片与详细报告；其余论文只写基本信息
-- **不需要大模型 API key**：脚本只做 HTTP 检索、补充与评分；概览、总结、贡献点由当前 agent 撰写
+- **不需要大模型 API key**：脚本只做 HTTP 检索、补充与候选预筛；概览、研究判断与复排理由由当前 agent 撰写
 - **DBLP 限流**：脚本内置重试；一次搜多个会议会明显变慢，建议先指定 1-2 个会议
 
 # 依赖项
@@ -237,7 +251,7 @@ python "../paper-daily/scripts/sync_indexes.py" --check-links
 双年会议（ICCV/ECCV）在非举办年份无数据；另外 DBLP 的 toc 命名对 ECCV/EMNLP/MICCAI 不稳定，脚本已走备选查询，仍可能失败。
 
 **S2 补充全失败？**
-匿名访问容易 429。在 `.claude/skills/config.yaml` 里填 `semantic_scholar_api_key`，或加 `--skip-enrichment` 先只看 DBLP 标题与评分。
+匿名访问容易 429。在 `.claude/skills/config.yaml` 里填 `semantic_scholar_api_key`，或加 `--skip-enrichment` 先只看 DBLP 标题与研究相关性预筛。
 
 **关键词太少导致过滤后没有论文？**
 说明 `research_domains` 的英文关键词偏窄。用 `paper-interests` 补充该方向的关键词。

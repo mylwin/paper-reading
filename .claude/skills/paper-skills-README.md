@@ -2,16 +2,18 @@
 
 论文推荐 + 周期分析 skill 集合（Claude Code / OpenAI Codex / dsh / pencode / qoder / trae 通用），面向本论文工作区（目录规范见工作区 `.AGENT.md`，本文件中的一切路径都以它为准）。
 
-**不需要任何大模型 API key**——脚本只做 HTTP 检索、评分与落盘；写概览、总结、贡献点、周度分析这些语义工作由当前 agent（宿主模型）完成。
+**不需要任何大模型 API key**——脚本只做 HTTP 检索、候选预筛与落盘；写概览、研究评价、主张-证据审计和周度综合这些语义工作由当前 agent（宿主模型）完成。
+
+所有论文评价共用 [`research-evaluation-rubric.md`](research-evaluation-rubric.md)：元数据阶段只给研究优先级，读过正文后才按论文类型做证据化学术评价。会议、引用和摘要宣传词都不能替代全文判断。
 
 ## 六个 skill
 
 | Skill | 作用 | 产出位置 |
 |---|---|---|
 | `paper-analyze` | 对单篇论文进行深度分析，生成可在通用 Markdown 工具中阅读的标准笔记 | `03-notes/<YYYY-MM>/<论文标题>/精读.md` 及同目录 `images/` |
-| `paper-daily` | 多源检索（arXiv + OpenReview）→ 四维评分 → 前 K 篇 PDF 归档 → 今日检索日报 | `01-raw/<YYYY-MM>/<论文标题>.pdf`、`08-daily/<日期>/今日检索.md` |
-| `paper-conf` | 按会议+年份检索顶会论文（DBLP + Semantic Scholar，三维评分） | `08-daily/<运行日期>/顶会论文推荐.md` |
-| `paper-weekly` | 每 7 天一次：先宏观看研究主题发展（08-daily 题目全景 + 03-notes），再看你不理解的地方（04 疑问 + 08-reading 问答），给出优化方向与下一步 | `07-research/<周起始日>-第N周周报.md` |
+| `paper-daily` | 多源检索（arXiv + OpenReview）→ 四维预筛 + 研究人员复排 → 前 K 篇 PDF 归档 → 今日检索日报 | `01-raw/<YYYY-MM>/<论文标题>.pdf`、`08-daily/<日期>/今日检索.md` |
+| `paper-conf` | 按会议+年份检索顶会论文（DBLP + Semantic Scholar，三维预筛 + 语义复排） | `08-daily/<运行日期>/顶会论文推荐.md` |
+| `paper-weekly` | 每 7 天一次：建立问题与证据地图，综合共识/冲突/空白，再结合个人卡点形成可证伪的研究机会与计划 | `07-research/<周起始日>-第N周周报.md` |
 | `paper-interests` | 对话式维护研究主题：询问 → 扩散关键词 → 确认 → 写配置 | `.claude/skills/config.yaml` |
 | `paper-sgd-reading` | 随机梯度类理论论文的**交互式精读家教**：逐个公式讲、不跳步、禁生活类比；问答过程落盘，定稿进公式目录 | 过程：`08-reading/<标题>/`；定稿：`04-equation_problem/<标题>/全局推理.md` 等 |
 
@@ -65,6 +67,7 @@
 ```
 .claude/skills/
 ├── config.yaml                      # 共享配置：研究领域、目录映射、周期设置
+├── research-evaluation-rubric.md    # 博士/博士后视角的统一证据化评审准则
 ├── paper-analyze/
 │   ├── SKILL.md                     # 单篇论文分析与标准 Markdown 笔记
 │   └── scripts/generate_note.py
@@ -72,7 +75,7 @@
 │   ├── SKILL.md
 │   ├── agents/openai.yaml
 │   └── scripts/
-│       ├── search_arxiv.py          # 多源检索 + 四维评分 + 去重标记
+│       ├── search_arxiv.py          # 多源检索 + 四维研究优先级预筛 + 去重标记
 │       ├── fetch_pdfs.py            # PDF 归档到 01-raw/<YYYY-MM>/（已存在即停）
 │       ├── render_note.py           # 按主题分组渲染日报（链接相对日报文件）
 │       ├── write_note.py            # 日报/顶会推荐落盘到 08-daily/<日期>/
@@ -260,16 +263,18 @@ cd .claude/skills && python -m unittest discover -s tests -v
 ```powershell
 # Codex
 Copy-Item -Recurse .claude\skills\paper-analyze, .claude\skills\paper-daily, .claude\skills\paper-conf, .claude\skills\paper-interests, .claude\skills\paper-weekly, .claude\skills\paper-sgd-reading "$env:USERPROFILE\.agents\skills\"
-# Claude Code：同样六个目录复制到 $env:USERPROFILE\.claude\skills\
+Copy-Item .claude\skills\config.yaml, .claude\skills\research-evaluation-rubric.md "$env:USERPROFILE\.agents\skills\"
+# Claude Code：同样六个目录、config.yaml 与研究评价准则复制到 $env:USERPROFILE\.claude\skills\
 # 项目内安装（本仓库用法）：
 Copy-Item -Recurse .claude\skills\* "<论文工作区>\.claude\skills\"   # 路径按实际调整
 ```
 
 安装约束分两类：
 
-- `paper-daily` / `paper-conf` / `paper-interests` / `paper-weekly` 必须放在**同一父目录**，共享的 `config.yaml` 放父目录（它们从 `../paper-daily/scripts` 复用配置解析、月份路径解析、索引刷新与评分函数）
-- **`paper-analyze` 自包含**：`scripts/generate_note.py` 不 import 其他 skill 的代码，自行向上识别工作区、从共享配置读取 `notes_dir`（读不到就回落 `03-notes`）
-- **`paper-sgd-reading` 自包含**：`scripts/outputs.py` 不 import 其他 skill 的代码，可单独安装。配置按 `--config` → `$PAPER_SKILLS_CONFIG` → `$PAPER_READING_CONFIG` → `<skill 同级>/config.yaml` → 由 `$PAPER_WORKSPACE_PATH` 查找 `<workspace>/.claude/skills/config.yaml` → 从工作目录向上查找 的顺序定位
+- 所有涉及评价的 skill 都读取父目录的 `research-evaluation-rubric.md`；复制 skill 时必须一并复制该文件
+- `paper-daily` / `paper-conf` / `paper-interests` / `paper-weekly` 必须放在**同一父目录**，共享的 `config.yaml` 放父目录（它们从 `../paper-daily/scripts` 复用配置解析、月份路径解析、索引刷新与预筛函数）
+- **`paper-analyze` 代码自包含**：`scripts/generate_note.py` 不 import 其他 skill 的代码，自行向上识别工作区、从共享配置读取 `notes_dir`（读不到就回落 `03-notes`）；提示词评价仍需父目录的共享准则
+- **`paper-sgd-reading` 代码自包含**：`scripts/outputs.py` 不 import 其他 skill 的代码，可单独安装；提示词评价仍需父目录的共享准则。配置按 `--config` → `$PAPER_SKILLS_CONFIG` → `$PAPER_READING_CONFIG` → `<skill 同级>/config.yaml` → 由 `$PAPER_WORKSPACE_PATH` 查找 `<workspace>/.claude/skills/config.yaml` → 从工作目录向上查找 的顺序定位
 
 ## 环境搭建（Conda）
 

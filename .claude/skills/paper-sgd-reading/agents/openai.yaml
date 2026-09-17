@@ -1,4 +1,4 @@
 interface:
   display_name: "paper-sgd-reading"
-  short_description: "Step-by-step interactive derivation tutor for stochastic-gradient theory papers"
+  short_description: "Derive and research-audit stochastic-gradient theory papers step by step"
   default_prompt: "Use $paper-sgd-reading to walk me through this paper's formulas one at a time."

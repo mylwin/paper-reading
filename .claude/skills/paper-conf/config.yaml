@@ -13,8 +13,6 @@ conf:
   excluded_keywords:
     - "workshop"
     - "tutorial"
-    - "survey"
-    - "review"
 
   # 默认搜索年份（命令行 --year 可覆盖）
   default_year: 2025

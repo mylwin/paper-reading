@@ -1,4 +1,4 @@
 interface:
   display_name: "paper-interests"
-  short_description: "Update what papers get recommended by maintaining the research topic config"
+  short_description: "Turn a research agenda into precise paper-discovery topics"
   default_prompt: "Use $paper-interests to update the research topics used for paper recommendations."

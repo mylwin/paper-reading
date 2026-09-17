@@ -1,6 +1,6 @@
 ---
 name: paper-daily
-description: 多源检索每日论文推荐，把前几篇原文 PDF 归档到 01-raw/YYYY-MM，并在 08-daily/<日期>/ 写出今日检索日报。Use when the user asks to start the day, create today's paper brief, or generate paper recommendations for a specified date.
+description: 多源检索每日论文，按研究相关性与摘要证据做候选预筛，再从博士/博士后视角语义复排；归档优先论文 PDF 并写出带选择理由和待核验项的日报。Use when the user asks to start the day, create today's paper brief, or generate research-grade paper recommendations for a specified date.
 ---
 
 # 目标
@@ -8,7 +8,7 @@ description: 多源检索每日论文推荐，把前几篇原文 PDF 归档到 0
 每天为论文工作区完成三件事：
 
 1. **检索**：多源（arXiv + OpenReview）拉取最近一个月的新论文 + 过去一年高影响力论文
-2. **推荐**：四维评分排序，排除知识库里已有的论文
+2. **推荐**：四维元数据预筛 + 研究人员语义复排，排除知识库里已有的论文
 3. **落盘**：前 K 篇（默认 3）原始 PDF 存到 `01-raw/<YYYY-MM>/`（入库月份目录），日报写到 `08-daily/<日期>/今日检索.md`
 
 **不负责**：`02-markdown` 解析结果与 `03-notes` 精读笔记由用户自己的流程负责，本 skill 只读它们用于去重。
@@ -73,6 +73,8 @@ Semantic Scholar 作为补充源始终参与（引用数、高影响力论文）
 
 # 工作流程
 
+开始工作前读取 `../research-evaluation-rubric.md`。日报脚本的分数只表示“进入阅读队列的优先级”，不得称为论文质量分；前三篇的研究判断必须遵守共享准则中的证据边界。
+
 ## 步骤1：检索
 
 ```bash
@@ -93,9 +95,34 @@ python scripts/search_arxiv.py \
 结果分两层：
 
 - `all_papers`：**全量检索结果**，含 `already_known` 标记 → 日报的「本次检索列表」用它
-- `top_papers`：**排除历史命中后的推荐**，按评分排序取 `top_n` → 日报的「前 3 篇 / 其余论文」用它
+- `top_papers`：**排除历史命中后的推荐**，按研究优先级预筛取 `top_n` → 再做语义复排
 
-输出 JSON 关键字段：`sources_searched`、`source_counts`、`papers_by_source`、`total_unique`、`total_known`、`total_candidates`、`all_papers`、`top_papers`。每篇含 `paper_stem`（稳定主干）、`scores`、`matched_domain`、`already_known`。
+输出 JSON 关键字段：`sources_searched`、`source_counts`、`papers_by_source`、`total_unique`、`total_known`、`total_candidates`、`all_papers`、`top_papers`。每篇含 `paper_stem`（稳定主干）、`scores`、`matched_domain`、`already_known`，以及明确声明边界的 `score_type: research_priority_screening`、`assessment_scope: metadata_and_abstract`。
+
+### 预筛分的正确解释
+
+脚本使用以下四个**候选筛选信号**，不是全文评审：
+
+| 信号 | 普通候选 | 高影响力候选 | 含义 |
+|---|---:|---:|---|
+| 研究相关性 | 55% | 50% | 与当前研究主题和今日 focus 的直接匹配 |
+| 新近性 | 15% | 5% | 时间敏感性，不代表质量 |
+| 影响力信号 | 10% | 25% | 高影响力引用的滞后信号；缺数据记 0，不惩罚新论文 |
+| 摘要证据充分度 | 20% | 20% | 摘要是否报告问题、方法、比较、量化/理论证据和边界 |
+
+`scores.evidence` 不会因 `novel`、`SOTA`、`first` 等宣传词加分。历史 JSON 为兼容可能同时保留 `quality` / `popularity`，它们分别只是 `evidence` / `impact` 的旧别名，报告中不要使用旧称。
+
+### 研究人员语义复排（写日报前必做）
+
+脚本只是生成候选池。对前 10 篇逐篇读题目与摘要，再按以下顺序决定前三篇，可调整脚本顺序：
+
+1. 是否直接命中当前研究问题，而不只是共享宽泛关键词。
+2. 相对知识库已有论文预计带来多少**新增信息**：新假设、新定理区域、新机制、新证据或反例。
+3. 核心主张是否有可核验线索；只有宣传语的论文降级为“跟踪”。
+4. 阅读或复现成本是否与预期信息增益匹配。
+5. 是否能形成研究组合：基础/代表工作、直接竞争工作、高风险新方向，避免前三篇全是同质热点。
+
+复排时保留每篇的 `screening_rank`，只调整 `top_papers` 数组顺序，并补充 `semantic_rank`；不要改写脚本分数。随后 PDF 归档和日报渲染都使用复排后的前三篇。把复排理由写入 `daily-editorial.json`；只拿到摘要时使用“初步判断 / 待全文核验”，不得写成确定的创新性或技术正确性结论。
 
 ## 步骤2：PDF 归档到 `01-raw/<YYYY-MM>/`
 
@@ -165,7 +192,10 @@ python scripts/write_note.py \
       "abstract_zh": "中文摘要",
       "contributions": ["核心贡献"],
       "method": "方法思路",
-      "result": "主要结果"
+      "result": "主要结果",
+      "selection_reason": "为什么对当前研究值得优先读",
+      "evidence_limit": "当前判断依据与待全文核验项",
+      "reading_decision": "精读|选读|跟踪"
     }
   }
 }
@@ -180,10 +210,10 @@ python scripts/write_note.py \
 执行时严格按以下顺序组织日报：
 
 1. `今日概览`：先写用户在 `research_domains` 定义的大方向，再逐个给出该方向的论文数量、推荐数量、方向总结和具体细分领域汇总。细分领域由共享配置中对应主题的 `subdomains` 按命中关键词归类。
-2. `今日推荐论文`：按全局评分取前 3 篇。标题格式为“英文题目 — 评分”，正文依次包含来源、主题（大方向）、细分领域、题目中文翻译、作者、英文摘要、中文摘要、一句话总结、核心贡献、方法思路、主要的实验成果、相关论文、访问链接。
-3. `其余 7 篇推荐`：给出题目、评分、主题、细分领域、一句话总结和访问链接。
+2. `今日推荐论文`：从预筛前 10 篇做研究人员语义复排后取 3 篇。标题中的分数标为“研究优先级”，正文依次包含来源、主题、细分领域、题目翻译、作者、摘要、核心主张、已报告证据、选择理由、待核验项、阅读决策、相关论文和访问链接。
+3. `其余 7 篇推荐`：给出题目、研究优先级、主题、细分领域、一句话初评和访问链接。
 4. `今日落盘`：列出检索结果、PDF、日报和索引的真实状态。
-5. `附录：本次检索列表`：放在全文最后，按大方向分节，包含题目、来源、评分、状态、研究大方向、具体细分领域、同脉络和访问链接。
+5. `附录：本次检索列表`：放在全文最后，按大方向分节，包含题目、来源、研究优先级、状态、研究大方向、具体细分领域、同脉络和访问链接。
 
 相关论文必须先核验真实资产：优先链接 `03-notes/<YYYY-MM>/<论文主干>/精读.md`，其次链接真实存在的 `01-raw/<YYYY-MM>/<论文主干>.pdf`，再次链接实际存在且包含该论文的历史日报。三处都不存在时写“暂无”，不得根据标题相似度捏造文献或链接。月份取自该论文的 `01-raw` 入库月份。
 
@@ -208,7 +238,7 @@ python scripts/write_note.py \
 
 ## 本次检索列表
 
-按 `config.yaml` 中 `research_domains` 的顺序分节；每个主题内按推荐评分从高到低排列。
+按 `config.yaml` 中 `research_domains` 的顺序分节；每个主题内按研究优先级从高到低排列。
 未命中主题的论文统一放到最后的「未分类」节。`all_papers` 中的每篇论文必须且只能
 出现一次，序号跨主题连续，便于回到全量检索结果核对。
 
@@ -304,14 +334,14 @@ python scripts/link_keywords.py --index existing_notes_index.json --input <笔�
 - **月份一致**：PDF 进 `01-raw/<YYYY-MM>/`，该月即入库月份；后续 `02-markdown` / `03-notes` / `06-translation` 必须用同一月份与同一主干
 - **不碰用户资产**：`02-markdown` / `03-notes` / 已有 PDF 只读，绝不覆盖
 - **已存在即停**：任何写入前先判存在，存在就跳过并如实报告
-- **按主题组织日报**：`本次检索列表` 按 `research_domains` 顺序分节，每节内按 `score`
-  从高到低；`top_papers` 的前 3 篇和其余速览仍沿用全局推荐分数顺序
+- **按主题组织日报**：`本次检索列表` 按 `research_domains` 顺序分节，每节内按研究优先级从高到低；候选池先由脚本排序，前三篇必须做研究人员语义复排
+- **预筛不等于评审**：标题中的分数必须称“研究优先级”；不能从摘要宣传词、会议或引用量推出全文质量。前三篇应完成语义复排并记录选择理由与待核验项
 - **相关论文必须可核验**：只引用实际存在于 `03-notes/<YYYY-MM>/<主干>/精读.md`、
   `01-raw/<YYYY-MM>/<主干>.pdf` 或历史日报中的论文；本地精读链接必须指向 `精读.md`，
   三处都不存在时写 `--`，不得根据标题相似度捏造文献
 - **访问链接不得断链**：PDF 已落盘才使用指向 `01-raw/<YYYY-MM>/` 的相对链接（相对日报文件，即 `../../01-raw/...`），
   否则使用真实的远程 `pdf_url`；原文链接使用记录中的 `url`
-- **不需要大模型 API key**：脚本只做 HTTP 检索、评分与落盘；概览、总结、贡献点由当前 agent 撰写
+- **不需要大模型 API key**：脚本只做 HTTP 检索、候选预筛与落盘；概览、研究判断和复排理由由当前 agent 撰写
 
 # 依赖项
 
