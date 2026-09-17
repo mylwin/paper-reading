@@ -225,8 +225,35 @@ def _normalize_suffix(suffix: str) -> str:
     return text if text.startswith('.') else '.' + text
 
 
+def _fuzzy_candidates(root: Path, stem: str, suffix: str, want_dir: bool):
+    """按规范化主干（忽略大小写、连字符、下划线、空格差异）在月份目录与根部查找。
+
+    用于容错：论文标题里的 `-` 会被 `sanitize_paper_title()` 转成 `_`
+    （例如 `Meta-Black-Box` vs `Meta_Black_Box`），精确匹配会漏。
+    """
+    key = clean_stem(stem)
+    if not key:
+        return None
+    for month_dir in iter_month_dirs(root, descending=True):
+        for child in sorted(month_dir.iterdir()):
+            if want_dir and child.is_dir() and clean_stem(child.name) == key:
+                return child
+            if not want_dir and child.is_file() and child.name.lower().endswith(suffix.lower()) \
+                    and clean_stem(child.name[: -len(suffix)] if suffix else child.name) == key:
+                return child
+    for child in sorted(root.iterdir()):
+        if is_month_dir(child.name) or child.name.startswith('.'):
+            continue
+        if want_dir and child.is_dir() and clean_stem(child.name) == key:
+            return child
+        if not want_dir and child.is_file() and child.name.lower().endswith(suffix.lower()) \
+                and clean_stem(child.name[: -len(suffix)] if suffix else child.name) == key:
+            return child
+    return None
+
+
 def paper_path(root, stem: str, suffix: str = ''):
-    """定位某论文在 root 下的真实文件：月份目录优先，根部平铺作迁移期回落。"""
+    """定位某论文在 root 下的真实文件：月份目录优先，根部平铺回落，最后按主干模糊匹配。"""
     stem = str(stem or '').strip()
     if not stem:
         return None
@@ -237,11 +264,13 @@ def paper_path(root, stem: str, suffix: str = ''):
         if candidate.is_file():
             return candidate
     flat = root / (stem + suffix)
-    return flat if flat.is_file() else None
+    if flat.is_file():
+        return flat
+    return _fuzzy_candidates(root, stem, suffix, want_dir=False) if root.is_dir() else None
 
 
 def paper_dir(root, stem: str):
-    """定位某论文在 root 下的真实目录：月份目录优先，根部平铺作回落。"""
+    """定位某论文在 root 下的真实目录：月份目录优先，根部平铺回落，最后按主干模糊匹配。"""
     stem = str(stem or '').strip()
     if not stem:
         return None
@@ -251,7 +280,9 @@ def paper_dir(root, stem: str):
         if candidate.is_dir():
             return candidate
     flat = root / stem
-    return flat if flat.is_dir() else None
+    if flat.is_dir():
+        return flat
+    return _fuzzy_candidates(root, stem, '', want_dir=True) if root.is_dir() else None
 
 
 def month_paper_path(root, month: str, stem: str, suffix: str = '') -> Path:

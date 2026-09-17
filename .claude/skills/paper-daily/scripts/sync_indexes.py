@@ -651,6 +651,11 @@ LINK_RE = re.compile(r'!?\[[^\]]*\]\(([^)\s]+)(?:\s+"[^"]*")?\)')
 SKIP_DIRS = {'.git', '.claude', '.agents', '.dsh', '.pencode', '.qoder', '.trae', 'node_modules'}
 
 
+def _strip_inline_code(line: str) -> str:
+    """去掉行内代码 `...`：文档里的示例路径不应被当成真实链接。"""
+    return re.sub(r'`+[^`]*`+', '', line)
+
+
 def _iter_markdown(workspace: Path):
     for path in sorted(workspace.rglob('*.md')):
         parts = set(path.relative_to(workspace).parts[:-1])
@@ -675,7 +680,7 @@ def check_links(workspace: Path, config: dict) -> dict:
                 continue
             if in_fence:
                 continue
-            for match in LINK_RE.finditer(line):
+            for match in LINK_RE.finditer(_strip_inline_code(line)):
                 target = match.group(1).strip().strip('<>')
                 if not target or target.startswith(('http://', 'https://', 'mailto:', '#', 'data:')):
                     continue

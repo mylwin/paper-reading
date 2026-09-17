@@ -72,11 +72,26 @@ def authors(paper: dict) -> str:
     return ', '.join(name for name in names if name) or '--'
 
 
-def related_title(paper: dict) -> str:
-    items = paper.get('related_papers') or []
-    for item in items:
-        path = item.get('path')
-        if path and Path(path).is_file():
+def related_available(item: dict, workspace: Path, config: dict = None) -> bool:
+    """相关论文是否可核验：按主干在当前目录结构里能找到笔记/PDF，或记录路径仍存在。
+
+    不直接信任 `search_result.json` 里记录的历史路径——目录结构变更后它会过期，
+    因此先按主干做月份感知查找，再回落到记录路径。
+    """
+    if not item:
+        return False
+    stem = paper_link_stem(item.get('title') or '')
+    papers_dir, notes_dir = workspace_dirs(config, workspace) if config else (
+        workspace / '01-raw', workspace / '03-notes')
+    if local_note(notes_dir, stem) or local_pdf(papers_dir, stem):
+        return True
+    path = Path(item.get('path') or '')
+    return bool(path.is_file())
+
+
+def related_title(paper: dict, workspace: Path = None, config: dict = None) -> str:
+    for item in paper.get('related_papers') or []:
+        if workspace is None or related_available(item, workspace, config):
             return cell(item.get('title'))
     return '--'
 
@@ -217,7 +232,7 @@ def render_appendix(data: dict, config: dict, workspace: Path, note_dir: Path) -
             print(
                 f"| {row_number} | {cell(paper.get('title'))} | {cell(paper.get('source'))} | "
                 f"{score(paper.get('score'))} | {status(paper)} | {cell(paper.get('matched_domain'))} | "
-                f"{cell(subdomain_for(paper, config))} | {related_title(paper)} | "
+                f"{cell(subdomain_for(paper, config))} | {related_title(paper, workspace, config)} | "
                 f"{table_access_links(paper, stem, workspace, config, note_dir)} |"
             )
             row_number += 1

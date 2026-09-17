@@ -181,26 +181,47 @@ def iter_month_dirs(root: Path, descending: bool = True):
     )
 
 
+def _norm(text) -> str:
+    return re.sub(r'[^a-z0-9\u4e00-\u9fff]+', '', str(text or '').lower())
+
+
 def find_paper_dir(root, stem: str):
-    """定位论文目录：`<root>/YYYY-MM/<stem>/` 优先，`<root>/<stem>/` 回落。"""
+    """定位论文目录：月份目录优先、根部平铺回落，最后按规范化主干模糊匹配。"""
     root = Path(root)
     for month_dir in iter_month_dirs(root):
         candidate = month_dir / stem
         if candidate.is_dir():
             return candidate
     flat = root / stem
-    return flat if flat.is_dir() else None
+    if flat.is_dir():
+        return flat
+    key = _norm(stem)
+    if key and root.is_dir():
+        for month_dir in list(iter_month_dirs(root)) + [root]:
+            for child in sorted(month_dir.iterdir()):
+                if child.is_dir() and not child.name.startswith('.') and _norm(child.name) == key:
+                    return child
+    return None
 
 
 def find_paper_file(root, stem: str, suffix: str):
-    """定位论文文件：`<root>/YYYY-MM/<stem><suffix>` 优先，`<root>/<stem><suffix>` 回落。"""
+    """定位论文文件：月份目录优先、根部平铺回落，最后按规范化主干模糊匹配。"""
     root = Path(root)
     for month_dir in iter_month_dirs(root):
         candidate = month_dir / (stem + suffix)
         if candidate.is_file():
             return candidate
     flat = root / (stem + suffix)
-    return flat if flat.is_file() else None
+    if flat.is_file():
+        return flat
+    key = _norm(stem)
+    if key and root.is_dir():
+        for month_dir in list(iter_month_dirs(root)) + [root]:
+            for child in sorted(month_dir.iterdir()):
+                if child.is_file() and child.name.lower().endswith(suffix.lower()) \
+                        and _norm(child.name[: -len(suffix)]) == key:
+                    return child
+    return None
 
 
 def rel_link(target, origin_dir) -> str:
