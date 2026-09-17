@@ -229,42 +229,42 @@ Setting: In this section, we validate our theory for Polyak stepsize and Inexact
 
 Results: We show the results in Fig. 1. The results indicate that gradient descent converges slowly when $L _ { 1 }$ is large, whereas Polyak stepsize and clipped gradient descent does not depend on $L _ { 1 }$ . These observations are consistent with those discussed in Sec. 3, which shows that the convergence rate of Polyak stepsize is asymptotically independent of L as in clipped gradient descent. By comparing DecSPS, AdaSPS, and Inexact Polyak Stepsize, which are parameter-free methods, the convergence rates of DecSPS and AdaSPS degrade as $L _ { 1 }$ increases. Thus, DecSPS and AdaSPS lose the favorable property of asymptotic independence of L under $( L _ { 0 } , L _ { 1 } )$ -smoothness. In contrast, the convergence behavior of Inexact Polyak Stepsize does not depend on $L _ { 1 } ,$ which is consistent with Theorem $^ { 5 , }$ and Inexact Polyak Stepsize successfully inherits the Polyak stepsize under $( L _ { 0 } , L _ { 1 } )$ -smoothness. 
 
-![image](https://cdn-mineru.openxlab.org.cn/result/2026-09-10/9d78ec41-a695-40d9-8a6b-4b383f5b3d04/403cc40d8e6836f8b8f7aefa5d864faf25a5d3d8c2279ae68be125060d221344.jpg)
+![image](images/Parameter_Free_Clipped_Gradient_Descent_Meets_Polyak/fig1.jpg)
 
 
 
 (a) Gradient Descent
 
 
-![image](https://cdn-mineru.openxlab.org.cn/result/2026-09-10/9d78ec41-a695-40d9-8a6b-4b383f5b3d04/16d33830bf7b4f541bfcd51dfc207089a777a007e58f9eb0a565ac2e2f7d8f06.jpg)
+![image](images/Parameter_Free_Clipped_Gradient_Descent_Meets_Polyak/fig2.jpg)
 
 
 
 (b) Clipped Gradient Descent
 
 
-![image](https://cdn-mineru.openxlab.org.cn/result/2026-09-10/9d78ec41-a695-40d9-8a6b-4b383f5b3d04/3712b39806f0a19bcaddc826a832652e1d2ab9dd55e82964edfba2c144b141d5.jpg)
+![image](images/Parameter_Free_Clipped_Gradient_Descent_Meets_Polyak/fig3.jpg)
 
 
 
 (c) Polyak Stepsize
 
 
-![image](https://cdn-mineru.openxlab.org.cn/result/2026-09-10/9d78ec41-a695-40d9-8a6b-4b383f5b3d04/f87dd40e42fdc9d552b53c6c4fd1a02642f372d88fe39dbf4967e960898e58a9.jpg)
+![image](images/Parameter_Free_Clipped_Gradient_Descent_Meets_Polyak/fig4.jpg)
 
 
 
 (d) DecSPS (Orvieto et al., 2022)
 
 
-![image](https://cdn-mineru.openxlab.org.cn/result/2026-09-10/9d78ec41-a695-40d9-8a6b-4b383f5b3d04/ccfb5f659a06769fee3d9930fd606fc0c82eb33bfd144129832e1b996ed719c3.jpg)
+![image](images/Parameter_Free_Clipped_Gradient_Descent_Meets_Polyak/fig5.jpg)
 
 
 
 (e) AdaSPS (Jiang and Stich, 2023)
 
 
-![image](https://cdn-mineru.openxlab.org.cn/result/2026-09-10/9d78ec41-a695-40d9-8a6b-4b383f5b3d04/e139dac3ee10303d0f6b7d3d5ae4c38c3137b2459eeac900c95ae056564b11ee.jpg)
+![image](images/Parameter_Free_Clipped_Gradient_Descent_Meets_Polyak/fig6.jpg)
 
 
 
@@ -275,21 +275,21 @@ Results: We show the results in Fig. 1. The results indicate that gradient desce
 Figure 1: Convergence behaviors of various methods with the synthetic function.
 
 
-![image](https://cdn-mineru.openxlab.org.cn/result/2026-09-10/9d78ec41-a695-40d9-8a6b-4b383f5b3d04/95dda6fe37f41d44de86c9d9b65988d6333a3b779a8a1604bc36799f926b4059.jpg)
+![image](images/Parameter_Free_Clipped_Gradient_Descent_Meets_Polyak/fig7.jpg)
 
 
 
 (a) LSTM
 
 
-![image](https://cdn-mineru.openxlab.org.cn/result/2026-09-10/9d78ec41-a695-40d9-8a6b-4b383f5b3d04/d0bc5d7116e61ebea2c65c8b2eef31ae109919f4ab6abb971f52f34331e3e11a.jpg)
+![image](images/Parameter_Free_Clipped_Gradient_Descent_Meets_Polyak/fig8.jpg)
 
 
 
 (b) Nano-GPT
 
 
-![image](https://cdn-mineru.openxlab.org.cn/result/2026-09-10/9d78ec41-a695-40d9-8a6b-4b383f5b3d04/e9f4c3f7f3e3fc42d9ff0753420e62b1b6d45435554f880ec0ceb57dd110d291.jpg)
+![image](images/Parameter_Free_Clipped_Gradient_Descent_Meets_Polyak/fig9.jpg)
 
 
 
@@ -306,30 +306,30 @@ Setting: Next, we evaluated Inexact Polyak Stepsize using LSTM, Nano-GPT<sup>2</
 
 Results: Figure 4 shows the loss curves, and Fig. 2 shows the final test losses for various hyperparameters. The results indicate that Inexact Polyak Stepsize consistently outperform DecSPS and AdaSPS for all neural network architectures. Although DoG performed the best for LSTM among the parameter-free methods, the training behavior of DoG was very unstable for Nano-GPT, and the loss values were much higher than those of the other methods. Similar to DoG, Polyak stepsize outperformed all parameter-free methods for T5, but the loss values of Polyak stepsize diverged for LSTM and Nano-GPT. Thus, Inexact Polyak Stepsize can consistently succeed in training models for all neural network architectures. 
 
-![image](https://cdn-mineru.openxlab.org.cn/result/2026-09-10/9d78ec41-a695-40d9-8a6b-4b383f5b3d04/f2597aa58428ac60252f4871c3cf135e8c21672c14b4aadfa24d3e703c8a7f69.jpg)
+![image](images/Parameter_Free_Clipped_Gradient_Descent_Meets_Polyak/fig10.jpg)
 
 
-![image](https://cdn-mineru.openxlab.org.cn/result/2026-09-10/9d78ec41-a695-40d9-8a6b-4b383f5b3d04/016ef6637485a65e7dba956723ee9da9fa93d2dd3cd74a21d149973428d9708f.jpg)
+![image](images/Parameter_Free_Clipped_Gradient_Descent_Meets_Polyak/fig11.jpg)
 
 
 
 (a) LSTM
 
 
-![image](https://cdn-mineru.openxlab.org.cn/result/2026-09-10/9d78ec41-a695-40d9-8a6b-4b383f5b3d04/05f96a585c6eb276f1b69d508e5120e4fc27f077c7ccb4c45acff87924398a85.jpg)
+![image](images/Parameter_Free_Clipped_Gradient_Descent_Meets_Polyak/fig12.jpg)
 
 
-![image](https://cdn-mineru.openxlab.org.cn/result/2026-09-10/9d78ec41-a695-40d9-8a6b-4b383f5b3d04/a73f1de67551e73e7334cdf755f8632b71262a09eea89d7cedd7623861567763.jpg)
+![image](images/Parameter_Free_Clipped_Gradient_Descent_Meets_Polyak/fig13.jpg)
 
 
 
 (b) Nano-GPT
 
 
-![image](https://cdn-mineru.openxlab.org.cn/result/2026-09-10/9d78ec41-a695-40d9-8a6b-4b383f5b3d04/4c91367716ff090a631b785df730f60e416f24456943c95bf58f16779799c077.jpg)
+![image](images/Parameter_Free_Clipped_Gradient_Descent_Meets_Polyak/fig14.jpg)
 
 
-![image](https://cdn-mineru.openxlab.org.cn/result/2026-09-10/9d78ec41-a695-40d9-8a6b-4b383f5b3d04/f1fbc1123e933c6b5a4a7bcc937ec1215d2c648b6754112cb64f6b8150944648.jpg)
+![image](images/Parameter_Free_Clipped_Gradient_Descent_Meets_Polyak/fig15.jpg)
 
 
 
@@ -894,20 +894,20 @@ Table 7: Hyperparameters selected by grid search. Three values correspond to the
 
 ## E Additional numerical evaluation
 
-![image](https://cdn-mineru.openxlab.org.cn/result/2026-09-10/9d78ec41-a695-40d9-8a6b-4b383f5b3d04/e7437904cc3e9f0f6ae631ad35761c573b64961602abd7341da89dab9f809e5f.jpg)
+![image](images/Parameter_Free_Clipped_Gradient_Descent_Meets_Polyak/fig16.jpg)
 
 
-![image](https://cdn-mineru.openxlab.org.cn/result/2026-09-10/9d78ec41-a695-40d9-8a6b-4b383f5b3d04/e75886ff857f33f6659cd1df6be6711873efeb6815efb7acfb49ebd76c933127.jpg)
+![image](images/Parameter_Free_Clipped_Gradient_Descent_Meets_Polyak/fig17.jpg)
 
 
 
 (a) LSTM
 
 
-![image](https://cdn-mineru.openxlab.org.cn/result/2026-09-10/9d78ec41-a695-40d9-8a6b-4b383f5b3d04/e9d6f80f12e85c062360d0ff5216d266a4d26455772eddae938ebc339aa3ffb4.jpg)
+![image](images/Parameter_Free_Clipped_Gradient_Descent_Meets_Polyak/fig18.jpg)
 
 
-![image](https://cdn-mineru.openxlab.org.cn/result/2026-09-10/9d78ec41-a695-40d9-8a6b-4b383f5b3d04/ea4e0d80f730433239c8fa8e25b8d2947cceedd5ca1e7108bc9271675a1a1bce.jpg)
+![image](images/Parameter_Free_Clipped_Gradient_Descent_Meets_Polyak/fig19.jpg)
 
 
 
@@ -920,20 +920,20 @@ Figure 4: Loss curves for LSTM and Nano-GPT. We plotted the training loss per 10
 
 Clipped SGD SGD DoG AdaSPS DecSPS Inexact Polyak Stepsize 
 
-![image](https://cdn-mineru.openxlab.org.cn/result/2026-09-10/9d78ec41-a695-40d9-8a6b-4b383f5b3d04/43b0bae97307e9038de5bd5cdd06821f2cdfdc382e229f7be269eb0d8bd61031.jpg)
+![image](images/Parameter_Free_Clipped_Gradient_Descent_Meets_Polyak/fig20.jpg)
 
 
-![image](https://cdn-mineru.openxlab.org.cn/result/2026-09-10/9d78ec41-a695-40d9-8a6b-4b383f5b3d04/4e1b8b9bb75084daffbbad0f5a2df70e2dd71322ac22bd51e1795969d877d50f.jpg)
+![image](images/Parameter_Free_Clipped_Gradient_Descent_Meets_Polyak/fig21.jpg)
 
 
 
 (a) $T = 2 5 0 0$
 
 
-![image](https://cdn-mineru.openxlab.org.cn/result/2026-09-10/9d78ec41-a695-40d9-8a6b-4b383f5b3d04/a4e3299b378026ad986fb93494e989baec8ac6b162385042cc6316b095faf137.jpg)
+![image](images/Parameter_Free_Clipped_Gradient_Descent_Meets_Polyak/fig22.jpg)
 
 
-![image](https://cdn-mineru.openxlab.org.cn/result/2026-09-10/9d78ec41-a695-40d9-8a6b-4b383f5b3d04/cce4d2cb2186f0cce77ad874a2c6cec6ac50edba61f95cbec2bfcd0ea8a2bf24.jpg)
+![image](images/Parameter_Free_Clipped_Gradient_Descent_Meets_Polyak/fig23.jpg)
 
 
 

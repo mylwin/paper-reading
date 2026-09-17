@@ -267,7 +267,7 @@ $$
 
 is upper-bounded by $A \sqrt { \gamma ^ { 2 } \delta ^ { 2 } + ( 1 - \gamma ) ^ { 2 } L ^ { 2 } } + B ( 1 - \gamma ) =$ $J ( \gamma )$ . Proposition 1 gives $J ( \gamma _ { \star } ) \leq J ( 1 ) = A \delta$ whenever 
 
-![image](https://cdn-mineru.openxlab.org.cn/result/2026-07-24/8eaad0b6-8cb4-4ca8-8ebc-ad8b2b31742c/130a2a5f244b63c23a3e942c5f7e69b8488abf93180560e06bcf46d8621165cc.jpg)
+*（插图未本地化：解析服务原链接已失效 HTTP 403）*
 
 
 
@@ -298,7 +298,7 @@ To illustrate the magnitude of the complexity improvement offered by MARS over M
 
 In Figure 1, three patterns emerge. First, speedup grows toward larger ϵ and δ: the upper-right of each panel is bright, reflecting regimes where the $( 1 - \gamma )$ -penalty becomes negligible relative to the baseline cost. The $\gamma _ { \star }$ contours shift toward smaller values in this region, indicating that the surrogate increasingly prefers $\gamma _ { \star } ~ < ~ 1$ . Second, a diagonal transition separates improvement from no-improvement, governed by the ratio $L \sigma / ( \epsilon \delta )$ : improvement emerges when ϵδ is sufficiently large relative to $L \sigma$ . Third, increasing L (top to bottom) or σ (left to right) shifts the improvement region outward. Overall, MARS yields the largest gains in moderate-accuracy, high-heterogeneity regimes, while harder problems (large Lσ) require proportionally larger ϵδ to benefit. 
 
-![image](https://cdn-mineru.openxlab.org.cn/result/2026-07-24/8eaad0b6-8cb4-4ca8-8ebc-ad8b2b31742c/a5ef791e8d1079bf9d1fb208fad50e094b3dfdfe7e3a40ec5266a573fb8dda5a.jpg)
+*（插图未本地化：解析服务原链接已失效 HTTP 403）*
 
 
 ## 7. Experiments
@@ -321,20 +321,20 @@ $$
 
 which is the empirical analogue of the minimizer suggested by Lemma 1. We also compute the grid minimizer of the corresponding local correction proxy over the tested γ values. 
 
-![image](https://cdn-mineru.openxlab.org.cn/result/2026-07-24/8eaad0b6-8cb4-4ca8-8ebc-ad8b2b31742c/db0ed8612d40ad008f8ba1baeebceb026b9998012738aacb524ddd7c83457831.jpg)
+*（插图未本地化：解析服务原链接已失效 HTTP 403）*
 
 
 
 Figure 2. CIFAR-10 probe of the MARS correction scale. Left: checkpoint-level predicted scale $\begin{array} { r } { \widehat { \gamma } _ { t } ^ { \star } = \| d _ { t } \| ^ { 2 } / ( \frac { 1 } { M } \sum _ { m } \| d _ { B _ { m } , t } \| ^ { 2 } ) } \end{array}$ and the grid minimizer of the local correction proxy. Both remain below the MVR value $\gamma = 1$ and vary during training. Right: fixed-γ sweep in the same vanilla two-gradient $\gamma { \mathrm { - } } \mathbf { M } \mathbf { V } \mathbf { R }$ setup. Final training loss is minimized at $\gamma < 1$ , while the MVR setting $\gamma = 1$ is worse under the same hyperparameters.
 
 
-![image](https://cdn-mineru.openxlab.org.cn/result/2026-07-24/8eaad0b6-8cb4-4ca8-8ebc-ad8b2b31742c/1089e39217f8558da4d00b0ae3159f3d0c02e7054d02256e21b8a34309d669ea.jpg)
+*（插图未本地化：解析服务原链接已失效 HTTP 403）*
 
 
-![image](https://cdn-mineru.openxlab.org.cn/result/2026-07-24/8eaad0b6-8cb4-4ca8-8ebc-ad8b2b31742c/3285d73d5f0c47cbdaad5c1c0a6a6737dbcca4c3c012c7902bc196878f7e129b.jpg)
+*（插图未本地化：解析服务原链接已失效 HTTP 403）*
 
 
-![image](https://cdn-mineru.openxlab.org.cn/result/2026-07-24/8eaad0b6-8cb4-4ca8-8ebc-ad8b2b31742c/427b5608f6624424c7c029858c3bfa4234ecd6a205b9327a36be6b8545dbad7d.jpg)
+*（插图未本地化：解析服务原链接已失效 HTTP 403）*
 
 
 
@@ -1455,7 +1455,7 @@ The final training loss is minimized at $\gamma = 0 . 2 5$ with final training l
 Local correction proxy
 
 
-![image](https://cdn-mineru.openxlab.org.cn/result/2026-07-24/8eaad0b6-8cb4-4ca8-8ebc-ad8b2b31742c/6c7c6113127877fe85dcdd5d25bb6dd293edba7f31c7edf8d99e8932a2971b23.jpg)
+*（插图未本地化：解析服务原链接已失效 HTTP 403）*
 
 
 
@@ -1478,21 +1478,21 @@ Table 2. 124M LLM pretraining configuration (fixed across the sweep). We follow 
 Results. We report validation loss as a function of processed tokens in Figure 6.
 
 
-![image](https://cdn-mineru.openxlab.org.cn/result/2026-07-24/8eaad0b6-8cb4-4ca8-8ebc-ad8b2b31742c/09e4f64f13af46745eb5ff1c22c9c6d76bf02df8203db7fe59292c126b082442.jpg)
+*（插图未本地化：解析服务原链接已失效 HTTP 403）*
 
 
 
 (a) Full training run.
 
 
-![image](https://cdn-mineru.openxlab.org.cn/result/2026-07-24/8eaad0b6-8cb4-4ca8-8ebc-ad8b2b31742c/eed0e829599aa42e30370ef514ec7acb07396c60f2e90abe776b5b59ef7af39d.jpg)
+*（插图未本地化：解析服务原链接已失效 HTTP 403）*
 
 
 
 (b) Early training.
 
 
-![image](https://cdn-mineru.openxlab.org.cn/result/2026-07-24/8eaad0b6-8cb4-4ca8-8ebc-ad8b2b31742c/d7f1a735d0d0778fe4bcd0bea86515e704bb825c4892f690025a6f920e00329e.jpg)
+*（插图未本地化：解析服务原链接已失效 HTTP 403）*
 
 
 
@@ -1519,7 +1519,7 @@ To summarize the main observations more directly: (i) small γ values can outper
 
 • The classic MVR setting $( \gamma = 1 )$ is unstable under the fixed hyperparameters (Figure 6a), suggesting that $\gamma = 1$ can be hyperparameter-sensitive and may require dedicated tuning. 
 
-![image](https://cdn-mineru.openxlab.org.cn/result/2026-07-24/8eaad0b6-8cb4-4ca8-8ebc-ad8b2b31742c/4bcf06daccd31105397f0934c3e6831dfdbda9291cb85e803c38f2fa68081f69.jpg)
+*（插图未本地化：解析服务原链接已失效 HTTP 403）*
 
 
 

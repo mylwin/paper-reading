@@ -14,7 +14,7 @@ Evolutionary computation (EC), including evolutionary algorithms (EAs) and swarm
 
 Given this, a natural question arises: can we automatically design effective BBO algorithms while minimizing the dependence on expert input? A recently emerging research topic, known as meta-black-box-optimization (MetaBBO) [32], has shown possibility of leveraging the generalization strength of Meta-learning [33] to enhance the optimization performance of BBO algorithms in the minimal expertise cost. MetaBBO follows a bi-level paradigm: the meta level typically maintains a policy that takes the low-level optimization information as input and then automatically dictates desired algorithm design for the low-level BBO optimizer. The low-level BBO process evaluates the suggested algorithm design and returns a feedback signal to the meta-level policy regarding the performance gain. The metaobjective of MetaBBO is to meta-learn a policy that maximizes the performance of the low-level BBO process, over a problem distribution. Once the training completes, the learned meta-level policy can be directly applied to address unseen optimization problems, hence reducing the need for expert knowledge to adapt BBO algorithms. 
 
-![image](https://cdn-mineru.openxlab.org.cn/result/2026-08-24/6b545bf0-522d-434d-96ce-1bdf0851c700/cfe5ef0f0f7112e26b6351d45d521f016e7aa10082c2022358c95aeb05705d6b.jpg)
+![image](images/Toward_Automated_Algorithm_Design_A_Survey_and_Practical_Guide_to_Meta-Black-Box-Optimization/fig1.jpg)
 
 
 
@@ -39,7 +39,7 @@ MetaBBO [32] is derived from the Meta-learning paradigm [33], [68]. One of the r
 
 We begin with the low-level BBO process. A key component at this level is the low-level optimizer . represents a August 19,2026 at 06:05:58 UTC from IEEE Xplore. Restrictions apply. 
 
-![image](https://cdn-mineru.openxlab.org.cn/result/2026-08-24/6b545bf0-522d-434d-96ce-1bdf0851c700/4975973d0ed3a604706303891c4369d1cb4710fffa5ae426f97b23638fcefbd0.jpg)
+![image](images/Toward_Automated_Algorithm_Design_A_Survey_and_Practical_Guide_to_Meta-Black-Box-Optimization/fig2.jpg)
 
 
 
@@ -84,7 +84,7 @@ $$
 J (\theta) \approx \frac {1}{N} \sum_ {i = 1} ^ {N} \sum_ {t = 1} ^ {T} \operatorname{perf} \left(\mathcal {A} \left[ \omega_ {i} ^ {t} \right], f _ {i}\right).\tag{2}
 $$
 
-![image](https://cdn-mineru.openxlab.org.cn/result/2026-08-24/6b545bf0-522d-434d-96ce-1bdf0851c700/ba2984f8cb262507288e60e99f29ecbe754185922d7d9c44d4dc44a4624af6fd.jpg)
+![image](images/Toward_Automated_Algorithm_Design_A_Survey_and_Practical_Guide_to_Meta-Black-Box-Optimization/fig3.jpg)
 
 
 
@@ -107,7 +107,7 @@ AC is a key task in optimization, since almost all BBO algorithms possess hyperp
 
 1) Formulation: As shown in Fig. 4, MetaBBO overcomes the limitations of manual AC techniques by using metalearning to develop a meta-level configuration policy. This policy dynamically adjusts a BBO algorithm throughout the August 19,2026 at 06:05:58 UTC from IEEE Xplore. Restrictions apply. 
 
-![image](https://cdn-mineru.openxlab.org.cn/result/2026-08-24/6b545bf0-522d-434d-96ce-1bdf0851c700/4baad46b9fb9cb84901a454e4af476057ceb30043f49ad80757b4b2b014fc531.jpg)
+![image](images/Toward_Automated_Algorithm_Design_A_Survey_and_Practical_Guide_to_Meta-Black-Box-Optimization/fig4.jpg)
 
 
 
@@ -140,7 +140,7 @@ Despite adapting F and Cr, the control of population size is considered in Q-LSH
 
 c) Hybrid control: Some MetaBBO works explore other AC perspectives [116], [120]. In particular, the combination of HPO and AOS has gained significant attention [35], [88], [98], [102], [111], [112], since learning a meta-level policy in <sub>HPO+AOS</sub> would probably result in a better AC policy than learning them separately. Nevertheless, this poses a significant challenge as learning from an expanded algorithm design space necessitates more intricate learning strategies. 
 
-![image](https://cdn-mineru.openxlab.org.cn/result/2026-08-24/6b545bf0-522d-434d-96ce-1bdf0851c700/1ddb966ab0da7ffb9df29302d60390bf8f083139757ee3fbafef3b4798d7801e.jpg)
+![image](images/Toward_Automated_Algorithm_Design_A_Survey_and_Practical_Guide_to_Meta-Black-Box-Optimization/fig5.jpg)
 
 
 
@@ -177,7 +177,7 @@ With the emergence of LLMs, their ability to understand the reasoning in natural
 
 3) Challenges: As a novel direction, MetaBBO for SM is promising due to the end-to-end manner. However, several technical challenges remain. a) Approaches like RNN-Opt directly learn to manipulate candidate solutions without following a specific algorithm structure. While this provides flexibility, these methods often lack transparency and clear understanding of their inner workings. b) In contrast, methods like LGA closely mimic the structure and components of existing EAs, making the process more transparent. However, because these methods resemble existing algorithms, their performance might be inherently constrained by the limits of the original ones. c) MetaBBO approaches that use LLMs, while reducing the need for manual algorithm design, face significant computational overhead. The iterative interactions with LLMs generate large volumes of tokens, leading to inefficiencies in both time and cost. d) Finally, MetaBBO for SM treats the policy itself as the optimizer, targeting at learning the optimal mapping from current landscape to next candidate positions. However, this remains a highly challenging task for continuous BBO tasks. The possible landscapes are diverse and infinite. As a result, so far, it is very challenging to build and train a model that can effectively handle these complexities in practice. 
 
-![image](https://cdn-mineru.openxlab.org.cn/result/2026-08-24/6b545bf0-522d-434d-96ce-1bdf0851c700/6394018325dc05bac08166e62577f91fa5e06c750297a95cd012820dd0cf6366.jpg)
+![image](images/Toward_Automated_Algorithm_Design_A_Survey_and_Practical_Guide_to_Meta-Black-Box-Optimization/fig6.jpg)
 
 
 
@@ -262,7 +262,7 @@ For the SM task, OPRO [127] introduces optimization via iterative prompting. In 
 
 For the AG task, the core idea is using LLMs to understand and evolve optimizer programs. Note that evolving programs is not a novel concept. This topic traces back to GP method, which performs evolution of computer program within the code space in a self-referential way: evolve evolution algorithms. Leveraging the semantic reasoning ability of CodeLLMs for program evolution, initial works, such as Funsearch [192] and EUREKA [193], discover competitive heuristic program and reward design, respectively. Following August 19,2026 at 06:05:58 UTC from IEEE Xplore. Restrictions apply. 
 
-![image](https://cdn-mineru.openxlab.org.cn/result/2026-08-24/6b545bf0-522d-434d-96ce-1bdf0851c700/449d34fc45c635220b11a76b00b4ddb482a0979e8aa2cf1ad0eabb8b31fb283e.jpg)
+![image](images/Toward_Automated_Algorithm_Design_A_Survey_and_Practical_Guide_to_Meta-Black-Box-Optimization/fig7.jpg)
 
 
 
@@ -313,7 +313,7 @@ A key component for MetaBBO’s generalization across diverse optimization probl
 
 1) Problem Identification Features: To identify the target optimization problem, the ELA framework [208] is widely used for single-objective optimization problems. ELA includes six groups of metrics, such as local search, skewness of the objective space, and approximated curvature (both first and second-order), which provide a comprehensive summary of the problem’s landscape properties. To compute ELA features, a large number of points are sampled from the BBO problem and used to compute the features. For example, linear and quadratic models are fitted to the sampled points and their objective values, and the resulting model parameters have been shown to be useful for differentiating different problems. For multiobjective optimization, the features can be obtained by decomposing the problem into single-objective subproblems and conducting single-objective feature analysis techniques [147]. 
 
-![image](https://cdn-mineru.openxlab.org.cn/result/2026-08-24/6b545bf0-522d-434d-96ce-1bdf0851c700/d3a87ca460708f0126e76aa566bbe2a45f550737f1e7e4d160d456c0475089e5.jpg)
+![image](images/Toward_Automated_Algorithm_Design_A_Survey_and_Practical_Guide_to_Meta-Black-Box-Optimization/fig8.jpg)
 
 
 
@@ -328,7 +328,7 @@ Fig. 8. Workflow of different neural networks used in existing MetaBBO works: ML
 
 The training problem set is crucial for learning a generalizable meta-level policy, with diversity being a key factor. Early works like RNN-OI [44] were trained on a limited set of instances from the CoCo-BBOB test suite. As shown in Fig. 7, a narrow training set leads to poor generalization. To enhance the diversity of the training set, two main methodologies are commonly used in existing MetaBBO approaches. 
 
-![image](https://cdn-mineru.openxlab.org.cn/result/2026-08-24/6b545bf0-522d-434d-96ce-1bdf0851c700/ad2ee6e7369eb22171948271e46a7c7be8cfc199861f72bfd11b3a4f6f055960.jpg)
+![image](images/Toward_Automated_Algorithm_Design_A_Survey_and_Practical_Guide_to_Meta-Black-Box-Optimization/fig9.jpg)
 
 
 
@@ -1755,7 +1755,7 @@ Our review begins with the mathematical definition of MetaBBO, clarifying its bi
 
 
 
-![image](https://cdn-mineru.openxlab.org.cn/result/2026-08-24/6b545bf0-522d-434d-96ce-1bdf0851c700/8ea21763aca840b2bbb416d8df8165963ae1753600305d04ac64d18ae04260f3.jpg)
+![image](images/Toward_Automated_Algorithm_Design_A_Survey_and_Practical_Guide_to_Meta-Black-Box-Optimization/fig10.jpg)
 
 
 
@@ -1766,7 +1766,7 @@ Zeyuan Ma received the B.Eng. degree from the School of Computer Science and Eng
 He is working at the intersection of machine learning and optimization. In particular, his research interests include deep reinforcement learning, blackbox optimization, and meta-black-box optimization.
 
 
-![image](https://cdn-mineru.openxlab.org.cn/result/2026-08-24/6b545bf0-522d-434d-96ce-1bdf0851c700/00e3e3158c31514e3a6fe8e4294e69cd1cd0852ef2ef7fa5ef6212c10ea6b3ad.jpg)
+![image](images/Toward_Automated_Algorithm_Design_A_Survey_and_Practical_Guide_to_Meta-Black-Box-Optimization/fig11.jpg)
 
 
 
@@ -1775,7 +1775,7 @@ Hongshu Guo received the B.Eng. degree from the School of Computer Science and E
 
 His research interests include deep reinforcement learning and evolutionary computing. 
 
-![image](https://cdn-mineru.openxlab.org.cn/result/2026-08-24/6b545bf0-522d-434d-96ce-1bdf0851c700/bce16c2614f21ce19b4bdb2d740053b04c705e4e4f6a9d146adb788c2c4766d8.jpg)
+![image](images/Toward_Automated_Algorithm_Design_A_Survey_and_Practical_Guide_to_Meta-Black-Box-Optimization/fig12.jpg)
 
 
 
@@ -1790,7 +1790,7 @@ methods based on swarm intelligence, deep learning, reinforcement learning, and 
 
 Dr. Gong was awarded the Pearl River Young Scholar by the Guangdong Education Department in 2017 and the Guangdong Natural Science Funds for Distinguished Young Scholars in 2022. She currently serves as an Associate Editor for IEEE TRANSACTIONS ON EVOLUTIONARY COMPUTATION. 
 
-![image](https://cdn-mineru.openxlab.org.cn/result/2026-08-24/6b545bf0-522d-434d-96ce-1bdf0851c700/fcca0bb0a40f5e53bc49968c601fc3c6023ea82d7b8f2bedf4b9853d78fd6c78.jpg)
+![image](images/Toward_Automated_Algorithm_Design_A_Survey_and_Practical_Guide_to_Meta-Black-Box-Optimization/fig13.jpg)
 
 
 Jun Zhang (Fellow, IEEE) received the Ph.D. degree in electrical engineering from the City University of Hong Kong, Hong Kong, in 2002. 
@@ -1801,7 +1801,7 @@ Prof. Zhang is a Clarivate Highly Cited Researcher rank in the top 1% for field 
 
 Science, and was awarded the Outstanding Young Scientist Fund by NSFC in 2011, and was appointed as a Changjiang Chair Professor in 2013. He currently serves as an Associate Editor for IEEE TRANSACTIONS ON ARTIFICIAL INTELLIGENCE and IEEE TRANSACTIONS ON CYBERNETICS. 
 
-![image](https://cdn-mineru.openxlab.org.cn/result/2026-08-24/6b545bf0-522d-434d-96ce-1bdf0851c700/95cc7b5a84846e67fae0d0a74e2a54a300b1a3e3eacebd5416a682005d97122f.jpg)
+![image](images/Toward_Automated_Algorithm_Design_A_Survey_and_Practical_Guide_to_Meta-Black-Box-Optimization/fig14.jpg)
 
 
 Kay Chen Tan (Fellow, IEEE) received the B.Eng. degree (First-Class Hons.) and the Ph.D. degree from the University of Glasgow, Glasgow, U.K., in 1994 and 1997, respectively. 
