@@ -1,0 +1,31 @@
+# paper-conf 配置（放在本 skill 文件夹内）
+#
+# 解耦原则：研究主题只有一处真相源 —— paper-skills/config.yaml 的 research_domains。
+# 顶会检索默认就复用那份关键词，所以换研究主题**不需要改这个文件**。
+# 只有当你确实想让「顶会搜索」用另一套关键词时，才在下面配置 conf.keywords 覆盖。
+
+conf:
+  # 覆盖关键词（注释掉 = 使用共享 config.yaml 的 research_domains 关键词）
+  # keywords:
+  #   - "your keyword here"
+
+  # 排除关键词：标题命中即丢弃（与主题无关的通用过滤）
+  excluded_keywords:
+    - "workshop"
+    - "tutorial"
+    - "survey"
+    - "review"
+
+  # 默认搜索年份（命令行 --year 可覆盖）
+  default_year: 2025
+
+  # 默认搜索的会议（命令行 --conferences 可覆盖，大小写均可）
+  # 可选: CVPR, ICCV, ECCV, ICLR, AAAI, NeurIPS, ICML, MICCAI, ACL, EMNLP
+  default_conferences:
+    - ICLR
+    - NeurIPS
+    - ICML
+    - CVPR
+
+  # 返回论文数量
+  top_n: 10
