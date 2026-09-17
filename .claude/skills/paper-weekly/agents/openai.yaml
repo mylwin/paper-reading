@@ -1,4 +1,4 @@
 interface:
-  display_name: "Weekly Research Review"
+  display_name: "paper-weekly"
   short_description: "Review the last week's papers and propose multi-dimensional improvement directions"
   default_prompt: "Use $paper-weekly to review this week's papers and write a research status report."
