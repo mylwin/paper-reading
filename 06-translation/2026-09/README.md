@@ -8,7 +8,7 @@
 <!-- INDEX:BEGIN -->
 | 翻译状态 | 论文标题 | paper_stem | 翻译形式 | 完成日期 | 目录 |
 |---|---|---|---|---|---|
-| 已翻译 | Parameter-free Clipped Gradient Descent Meets Polyak | Parameter_Free_Clipped_Gradient_Descent_Meets_Polyak | 双栏对比 | 2026-09-16 | [目录](Parameter_Free_Clipped_Gradient_Descent_Meets_Polyak) |
+| 已翻译 | Parameter-free Clipped Gradient Descent Meets Polyak | Parameter_Free_Clipped_Gradient_Descent_Meets_Polyak | 双栏对比 | 2026-09-17 | [目录](Parameter_Free_Clipped_Gradient_Descent_Meets_Polyak) |
 | 未翻译 | PowerStep Memory Efficient Adaptive Optimization via lp Norm Steepest Descent | PowerStep_Memory_Efficient_Adaptive_Optimization_via_lp_Norm_Steepest_Descent | -- | -- | -- |
 | 未翻译 | Rethinking 3D Convolution in lp-norm Space | Rethinking_3D_Convolution_in_lp-norm_Space | -- | -- | -- |
 | 未翻译 | Adaptive Phase-Switching for Communication-Efficient Federated LoRA Fine-Tuning | Adaptive_Phase_Switching_for_Communication_Efficient_Federated_LoRA_Fine_Tuning | -- | -- | -- |
