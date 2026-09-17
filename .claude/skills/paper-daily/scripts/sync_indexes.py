@@ -521,7 +521,7 @@ def render_translation_month_rows(papers: list, origin_dir: Path) -> str:
 
 
 def render_root_index(root_name: str, registry: list, stage: str, origin_dir: Path) -> str:
-    now = datetime.now().strftime('%Y-%m-%d %H:%M')
+    # 不写时间戳：内容只依赖磁盘状态，才能保证重复运行零改动（幂等、不反复弄脏 git）
     if stage == 'raw':
         title = '# 论文原文索引（统一论文登记表）'
         intro = (
@@ -558,8 +558,8 @@ def render_root_index(root_name: str, registry: list, stage: str, origin_dir: Pa
 
     block = '\n'.join([header, rows]).rstrip('\n')
     return (
-        '%s\n\n%s\n<!-- 本文件由 sync_indexes.py 生成，最后更新：%s -->\n\n%s\n%s\n%s\n\n%s'
-        % (title, intro, now, INDEX_BEGIN, block, INDEX_END, summary_lines(registry, stage))
+        '%s\n\n%s\n<!-- 本文件由 sync_indexes.py 生成，请勿手工编辑表格区 -->\n\n%s\n%s\n%s\n\n%s'
+        % (title, intro, INDEX_BEGIN, block, INDEX_END, summary_lines(registry, stage))
     )
 
 

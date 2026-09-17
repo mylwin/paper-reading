@@ -250,6 +250,15 @@ class SyncIndexesTests(unittest.TestCase):
             # 索引内的 PDF 链接必须相对索引文件本身
             self.assertIn('(2026-09/Paper_One.pdf)', raw_index)
 
+    def test_generated_index_has_no_timestamp(self):
+        """索引内容必须只依赖磁盘状态，否则每次刷新都会弄脏 git。"""
+        with tempfile.TemporaryDirectory() as tmp:
+            workspace = self._fixture(tmp)
+            sync_indexes.refresh(workspace, CONFIG)
+            text = (workspace / '01-raw/index.md').read_text(encoding='utf-8')
+            self.assertNotIn('最后更新', text)
+            self.assertIn('请勿手工编辑表格区', text)
+
     def test_refresh_is_idempotent(self):
         with tempfile.TemporaryDirectory() as tmp:
             workspace = self._fixture(tmp)

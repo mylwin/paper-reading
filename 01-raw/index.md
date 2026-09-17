@@ -3,7 +3,7 @@
 本目录保存原始论文 PDF，按**首次入库月份**分目录：`01-raw/YYYY-MM/<论文标题>.pdf`。
 本表是跨阶段统一登记表：月份与入库日期由 `01-raw/YYYY-MM/README.md` 维护，解析/精读/翻译状态由 `sync_indexes.py` 依据磁盘实际文件生成。
 
-<!-- 本文件由 sync_indexes.py 生成，最后更新：2026-09-17 20:16 -->
+<!-- 本文件由 sync_indexes.py 生成，请勿手工编辑表格区 -->
 
 <!-- INDEX:BEGIN -->
 | 月份 | 入库日期 | 论文标题 | paper_stem | 来源 | PDF | 解析 | 精读 | 翻译 |
