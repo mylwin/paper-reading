@@ -253,9 +253,9 @@ def build_registry(workspace: Path, config: dict, overrides: dict = None) -> lis
         if item['notes_path']:
             note_date = frontmatter_date(item['notes_path'] / '精读.md')
             first, last = _git_commit_range(item['notes_path'], workspace)
-            # 开始日期：git 首次提交 → 笔记 frontmatter 日期 → 文件时间
-            item['reading_start'] = first or note_date or _mtime_date(item['notes_path'], 'dir')
-            # 完成日期：已精读时取笔记 frontmatter 的 date（最贴近实际完成时间），否则 git 最后一次提交
+            # 日期口径：笔记 frontmatter 的 date 最贴近实际（笔记生成日），
+            # 其次才是 git 历史与文件时间——避免目录迁移的提交日期被误当成精读日期。
+            item['reading_start'] = note_date or first or _mtime_date(item['notes_path'], 'dir')
             item['reading_finish'] = (note_date or last) if item['reading_status'] == '已精读' else ''
         # 脚本推不出日期时，保留上一版人工填写的开始/完成日期（例如标记为「精读中」的论文）
         prev_start = table_cell(prev_note_row, '精读开始')
