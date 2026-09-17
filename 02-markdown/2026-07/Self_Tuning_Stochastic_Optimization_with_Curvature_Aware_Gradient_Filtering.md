@@ -14,14 +14,14 @@ Based on these intuitions, we investigate the use of efficient curvature and var
 
 Our method is enabled by evaluations of exact persample gradients and Hessian-vector products. With recent improvements in automatic differentiation tooling (e.g., Bradbury et al., 2018; Agarwal and Ganichev, 2019; Dangel et al., 2020), this matches the asymptotic time cost of minibatch gradient and Hessian-vector product evaluations. 
 
-![image](https://cdn-mineru.openxlab.org.cn/result/2026-07-27/e5a1e9f0-0ad2-40f9-bc9e-43d13f521b11/24227d451289c0475254f2f9864d2de4bb6c94893aeb1508c30204194a266acd.jpg)
+*（插图未本地化：解析服务原链接已失效 HTTP 403；本篇已提取插图见 [03-notes 图片](../../03-notes/2026-07/Self_Tuning_Stochastic_Optimization_with_Curvature_Aware_Gradient_Filtering/images)）*
 
 
 
 Figure 1: Stochastic gradient eventually goes into diffusion and does not converge. Our filtered gradients offer smooth convergence and complements adaptive step sizes.
 
 
-![image](https://cdn-mineru.openxlab.org.cn/result/2026-07-27/e5a1e9f0-0ad2-40f9-bc9e-43d13f521b11/6d42661a90472a5bc1f3a178b994d19db5fb5895c77f13695206d4a747bfb814.jpg)
+*（插图未本地化：解析服务原链接已失效 HTTP 403；本篇已提取插图见 [03-notes 图片](../../03-notes/2026-07/Self_Tuning_Stochastic_Optimization_with_Curvature_Aware_Gradient_Filtering/images)）*
 
 
 
@@ -134,10 +134,10 @@ Contrasting this with the simple quadratic approximation, the main difference is
 
 Computing the optimal step size in the context of a long but finite sequence of optimization steps is intractable in general, but many reasonable heuristics have been developed. These heuristics usually balance immediate progress against information gathering likely to be useful for later steps. 
 
-![image](https://cdn-mineru.openxlab.org.cn/result/2026-07-27/e5a1e9f0-0ad2-40f9-bc9e-43d13f521b11/f091de8d189185c2a8fc01c52deb436b17680a88668191b54d11a8587e53e3d5.jpg)
+*（插图未本地化：解析服务原链接已失效 HTTP 403；本篇已提取插图见 [03-notes 图片](../../03-notes/2026-07/Self_Tuning_Stochastic_Optimization_with_Curvature_Aware_Gradient_Filtering/images)）*
 
 
-![image](https://cdn-mineru.openxlab.org.cn/result/2026-07-27/e5a1e9f0-0ad2-40f9-bc9e-43d13f521b11/fb11efbc23905d2539cfea1e91ed4cfdd3e5cd98972aeca4cf1fa8bf1e924958.jpg)
+*（插图未本地化：解析服务原链接已失效 HTTP 403；本篇已提取插图见 [03-notes 图片](../../03-notes/2026-07/Self_Tuning_Stochastic_Optimization_with_Curvature_Aware_Gradient_Filtering/images)）*
 
 
 
@@ -196,7 +196,7 @@ $$
 
 i.e., a mixture of quadratic functions with identical Hessian but varying location determined by the $\vec { \bf \Phi } ^ { 6 } \mathrm { d a t a } ^ { 3 } \ \xi .$ The full gradient is $\nabla f ( \theta ) ~ = ~ H ( \theta - \mathbf { \bar { \mathbb { E } } } [ \xi ] )$ and perexample gradients evaluate to $\nabla f ( { \boldsymbol { \theta } } , { \boldsymbol { \xi } } ) = \mathbf { \bar { \cal H } } ( { \boldsymbol { \theta } } - { \boldsymbol { \xi } } ) =$ $\nabla f ( { \dot { \theta } } ) - \mathbf { \bar { \theta } } H ( \xi - \mathbb { E } [ \xi ] )$ . Hence, we have additive gradient noise with covariance $\begin{array} { r } { \Sigma = H \mathbf { C o v } | \xi | H ^ { T } } \end{array}$ independent of θ. Moreover, since the Hessian $\nabla ^ { 2 } { \bar { f } } ( \theta , \xi ) = { \bar { \cal H } }$ is independent of $\xi ,$ we have that $B _ { t } \delta _ { t - 1 } \equiv \nabla f _ { t } - \nabla f _ { t - 1 }$ . The covariance $Q _ { t }$ is zero and the filter equations simplify to 
 
-![image](https://cdn-mineru.openxlab.org.cn/result/2026-07-27/e5a1e9f0-0ad2-40f9-bc9e-43d13f521b11/351eb281202ca01548f463195be341455e014fe14853c2db986721422a392787.jpg)
+*（插图未本地化：解析服务原链接已失效 HTTP 403；本篇已提取插图见 [03-notes 图片](../../03-notes/2026-07/Self_Tuning_Stochastic_Optimization_with_Curvature_Aware_Gradient_Filtering/images)）*
 
 
 $$
@@ -213,7 +213,7 @@ Proposition 1. Assume a problem of the form (14) with $\mu I \preceq H \preceq L
 
 Figure 4 shows experimental results for such a noisy quadratic problem of dimension $d = 2 0$ with a randomly-generated Hessian (with condition number $> 1 0 0 0 )$ and $\xi \sim \mathcal { N } ( 0 , I )$ . Using SGD with a high learning rate simply results in diffusion, and setting the learning rate smaller results in slow convergence. Gradient descent (GD) converges nicely with the high learning rate, and using adaptive steps sizes leads to a better convergence rate. The filtered gradients from MEKA converge almost as well as gradient descent, and adaptive step sizes provide an improvement. On the other hand, SGD produces unreliable gradient directions and does not work well with adaptive step sizes. We note that the stochastic gradient has a full covariance matrix and does not match our modeling assumptions, as our model uses a diagonal covariance for efficiency. Even so, the training loss of MEKA follows that of gradient descent very closely after just a few iterations. 
 
-![image](https://cdn-mineru.openxlab.org.cn/result/2026-07-27/e5a1e9f0-0ad2-40f9-bc9e-43d13f521b11/f634422e2ebf7ca490c8f1d8eae62228cfc9b301716d185d10a716edfd1f4e5b.jpg)
+*（插图未本地化：解析服务原链接已失效 HTTP 403；本篇已提取插图见 [03-notes 图片](../../03-notes/2026-07/Self_Tuning_Stochastic_Optimization_with_Curvature_Aware_Gradient_Filtering/images)）*
 
 
 
@@ -228,14 +228,14 @@ Online Variance Reduction We test whether the filtering procedure is correctly a
 
 Adaptive Step Sizes are Appropriately Scaled Without uncertainty quantification, the quadratic minimum step size scheme tends to result in step sizes too large. As such, one may include a scaling factor such that the update is modified as $\theta _ { t + 1 } = \theta _ { t } - c \alpha _ { t } \delta _ { t }$ . In contrast, we find that the adaptive step sizes based on probability of improvement (PI) are already correctly scaled in the sense that a c different from 1.0 will generally result in worse performance. Figure 6 shows a comparison of different values for c for the quadratic and PI (12) adaptive schemes. We plot expected improvement in Appendix D, which performs poorly and requires non-unit scaling factors. 
 
-![image](https://cdn-mineru.openxlab.org.cn/result/2026-07-27/e5a1e9f0-0ad2-40f9-bc9e-43d13f521b11/fe5d9fbe83e8edcc9ed028412c64e35fc187927ef231145125e5bb6478e1198d.jpg)
+*（插图未本地化：解析服务原链接已失效 HTTP 403；本篇已提取插图见 [03-notes 图片](../../03-notes/2026-07/Self_Tuning_Stochastic_Optimization_with_Curvature_Aware_Gradient_Filtering/images)）*
 
 
 
 Figure 5: MEKA’s estimated gradients are closer to the true full-batch gradient in $L _ { 2 }$ norm than stochastically observed gradients by a factor of around 5.
 
 
-![image](https://cdn-mineru.openxlab.org.cn/result/2026-07-27/e5a1e9f0-0ad2-40f9-bc9e-43d13f521b11/d762469f3adf46d4ffc55bbb9f17ad4036706c4fa6a01236539bd3cbc48e5f59.jpg)
+*（插图未本地化：解析服务原链接已失效 HTTP 403；本篇已提取插图见 [03-notes 图片](../../03-notes/2026-07/Self_Tuning_Stochastic_Optimization_with_Curvature_Aware_Gradient_Filtering/images)）*
 
 
 

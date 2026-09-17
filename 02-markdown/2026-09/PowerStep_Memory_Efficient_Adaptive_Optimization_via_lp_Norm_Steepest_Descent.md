@@ -58,7 +58,7 @@ $$
 
 Updating the parameters directly along this direction in a Euclidean manifold leads to $\ell _ { p }$ -norm steepest descent, also known as the Powerball method [Yuan et al., 2019]. 
 
-![image](https://cdn-mineru.openxlab.org.cn/result/2026-09-15/7b46da74-4d1a-4fd9-bdda-5f8b69f250ca/00316063fc5f5002e084d34fcebb0883aa89e0947c5677bd795c6d7694e4026b.jpg)
+![image](images/PowerStep_Memory_Efficient_Adaptive_Optimization_via_lp_Norm_Steepest_Descent/fig1.jpg)
 
 
 
@@ -261,42 +261,42 @@ Infrastructure. All experiments are conducted on Huawei Ascend 910C NPU clusters
 
 We evaluate PowerStep against AdamW, AdamS, pbSGDM and SignSGD on small-scale models, ranging from 124M to 8B parameters. Figure 2 reports training loss trajectories. Across all model scales, PowerStep matches the convergence speed of AdamW. In contrast, the related memoryefficient optimizers, pbSGDM, SignSGD and AdamS, exhibit slower convergence or, for the larger models, catastrophic training instability. The validation loss can be found in Appendix D. 
 
-![image](https://cdn-mineru.openxlab.org.cn/result/2026-09-15/7b46da74-4d1a-4fd9-bdda-5f8b69f250ca/0f3c3790e2d2dc8a5d085c3eb01994aa492edd9d41522b653892a4e60832a4c0.jpg)
+![image](images/PowerStep_Memory_Efficient_Adaptive_Optimization_via_lp_Norm_Steepest_Descent/fig2.jpg)
 
 
 
 (a) GPT-2-Small (124M)
 
 
-![image](https://cdn-mineru.openxlab.org.cn/result/2026-09-15/7b46da74-4d1a-4fd9-bdda-5f8b69f250ca/8d9602c8b00c4501887eb4fd9d31e78672cd9c4f226e25bf3f9e20c02d8b4f2a.jpg)
+![image](images/PowerStep_Memory_Efficient_Adaptive_Optimization_via_lp_Norm_Steepest_Descent/fig3.jpg)
 
 
 
 (b) GPT-2-Medium (350M)
 
 
-![image](https://cdn-mineru.openxlab.org.cn/result/2026-09-15/7b46da74-4d1a-4fd9-bdda-5f8b69f250ca/d56f797462dce54597395bcce07eeccf75f177b89585f8ff8a52976657426c0e.jpg)
+![image](images/PowerStep_Memory_Efficient_Adaptive_Optimization_via_lp_Norm_Steepest_Descent/fig4.jpg)
 
 
 
 (c) Qwen3-0.6B
 
 
-![image](https://cdn-mineru.openxlab.org.cn/result/2026-09-15/7b46da74-4d1a-4fd9-bdda-5f8b69f250ca/e1cfe95aa707461495eb19dbc1e9ca76cad899543ea702a18e3231be4012cf51.jpg)
+![image](images/PowerStep_Memory_Efficient_Adaptive_Optimization_via_lp_Norm_Steepest_Descent/fig5.jpg)
 
 
 
 (d) Qwen3-1.7B
 
 
-![image](https://cdn-mineru.openxlab.org.cn/result/2026-09-15/7b46da74-4d1a-4fd9-bdda-5f8b69f250ca/e9d08708619ee28c81bfff245eea4c3b967d92db5d26ab15dc58cf46f1542bff.jpg)
+![image](images/PowerStep_Memory_Efficient_Adaptive_Optimization_via_lp_Norm_Steepest_Descent/fig6.jpg)
 
 
 
 (e) Qwen3-4B
 
 
-![image](https://cdn-mineru.openxlab.org.cn/result/2026-09-15/7b46da74-4d1a-4fd9-bdda-5f8b69f250ca/8ab4870c1d0d3f3ad207f0650d5e18baaf0bc68ce8f23ec452fbcaeb4553b493.jpg)
+![image](images/PowerStep_Memory_Efficient_Adaptive_Optimization_via_lp_Norm_Steepest_Descent/fig7.jpg)
 
 
 
@@ -311,14 +311,14 @@ Figure 2: Training loss comparison across model scales. PowerStep matches the co
 
 We analyze the sensitivity of PowerStep to its two key hyperparameters: power exponent $\beta$ and momentum coefficient γ. We conduct an ablation on GPT-2-Medium (350M), varying $\bar { \beta } \in \{ 0 , 0 . 1 , 0 . 2 \}$ and $\gamma \in \{ 0 . 8 5 , 0 . 9 , 0 . 9 5 \}$ . Figure 3(a) shows that $\beta = 0 . 1$ provides the best trade-off. A value of $\beta = 0 . 0$ (equivalent to SignSGD with momentum) leads to initial rapid progress but ultimately collapses, underscoring the necessity of retaining some magnitude information. Conversely, $\beta = 0 . \dot { 2 }$ converges more slowly due to insufficient nonlinearity. As shown in Figure 3(b), the method is robust to the momentum coefficient $\gamma$ in the range [0.85, 0.95]. We also provide an ablation study on learning rates in Appendix B. 
 
-![image](https://cdn-mineru.openxlab.org.cn/result/2026-09-15/7b46da74-4d1a-4fd9-bdda-5f8b69f250ca/453be8a103cbe64dea953a40da5c607b8b7158f8d86dbefab76ed7bf54ea1799.jpg)
+![image](images/PowerStep_Memory_Efficient_Adaptive_Optimization_via_lp_Norm_Steepest_Descent/fig8.jpg)
 
 
 
 (a) Varying power exponent β
 
 
-![image](https://cdn-mineru.openxlab.org.cn/result/2026-09-15/7b46da74-4d1a-4fd9-bdda-5f8b69f250ca/36e5b32c4a8d3f6ebb66c7a00c7cd50597ee8b0a5437a232f74e330c4f25aa95.jpg)
+![image](images/PowerStep_Memory_Efficient_Adaptive_Optimization_via_lp_Norm_Steepest_Descent/fig9.jpg)
 
 
 
@@ -333,14 +333,14 @@ Figure 3: Hyperparameter sensitivity on GPT-2-Medium (350M). (a) Power exponent 
 
 A key advantage of PowerStep’s single-buffer design is its amenability to aggressive quantization. We compare AdamW and PowerStep under a naive int8 quantization of optimizer states on GPT-2-Small and GPT-2-Medium with blockwise dynamic quantization [Dettmers et al., 2022] of block size 128, without sophisticated techniques such as stochastic rounding, for all layers (including embedding). As shown in Figure 4, AdamW training collapses immediately under the int8 quantization, a known failure mode caused by the catastrophic accumulation of quantization error in the second-moment estimator [Li et al., 2024a; Han et al., 2025; Tang et al., 2026]. In contrast, PowerStep maintains stability and convergence speed, matching its full-precision counterpart (see Appendix E for further analysis). 
 
-![image](https://cdn-mineru.openxlab.org.cn/result/2026-09-15/7b46da74-4d1a-4fd9-bdda-5f8b69f250ca/1f6c0c2d0ac2c2a5240f5b001a03e1b3d16ac688888dfbacf59b2c4218e60250.jpg)
+![image](images/PowerStep_Memory_Efficient_Adaptive_Optimization_via_lp_Norm_Steepest_Descent/fig10.jpg)
 
 
 
 (a) GPT-2-Small
 
 
-![image](https://cdn-mineru.openxlab.org.cn/result/2026-09-15/7b46da74-4d1a-4fd9-bdda-5f8b69f250ca/02337b6913286ea978fce525bca791ebf4e48fd29f41eb3add6eb8d67a2c848c.jpg)
+![image](images/PowerStep_Memory_Efficient_Adaptive_Optimization_via_lp_Norm_Steepest_Descent/fig11.jpg)
 
 
 
@@ -355,28 +355,28 @@ Figure 4: Training loss under int8 optimizer state quantization. AdamW diverges 
 
 Finally, we evaluate PowerStep on large-scale models to verify its scalability. We train DeepSeek-V2-Lite (16B), Qwen3-30B-A3B, Qwen3-32B and Qwen3-235B-A22B, spanning both dense and MoE architectures, and compare full-precision AdamW against PowerStep with int8 quantization. Figure 5 reports training loss trajectories. Across all four models, PowerStep (int8) matches the convergence of AdamW (fp32) without divergence or degradation. We do not observe noticeable wall-clock time or throughput differences between PowerStep and AdamW, since all additional operations (sign, power, and quantization) are elementwise and contribute negligible overhead. Table 1 reports optimizer state memory per NPU. PowerStep reduces the optimizer memory footprint by approximately 8× relative to full-precision AdamW. Table 6 in Appendix D reports final validation loss, confirming that PowerStep with int8 quantization matches full-precision AdamW with negligible difference in validation performance. 
 
-![image](https://cdn-mineru.openxlab.org.cn/result/2026-09-15/7b46da74-4d1a-4fd9-bdda-5f8b69f250ca/54b53593fe7cdf7d85b2273f8b02d517e35f4c135a645bad5e42a4ad880c88f0.jpg)
+![image](images/PowerStep_Memory_Efficient_Adaptive_Optimization_via_lp_Norm_Steepest_Descent/fig12.jpg)
 
 
 
 (a) DeepSeek-V2-Lite (16B)
 
 
-![image](https://cdn-mineru.openxlab.org.cn/result/2026-09-15/7b46da74-4d1a-4fd9-bdda-5f8b69f250ca/8ea751830473e98aed3c5770a6e021c33e9d3b6095d48e1ab875725c6e610baa.jpg)
+![image](images/PowerStep_Memory_Efficient_Adaptive_Optimization_via_lp_Norm_Steepest_Descent/fig13.jpg)
 
 
 
 (b) Qwen3-30B-A3B
 
 
-![image](https://cdn-mineru.openxlab.org.cn/result/2026-09-15/7b46da74-4d1a-4fd9-bdda-5f8b69f250ca/2f62ab5f80230b5cafbd60cfe837e3ab16f8c959f7a621fee7f52e268c20bda6.jpg)
+![image](images/PowerStep_Memory_Efficient_Adaptive_Optimization_via_lp_Norm_Steepest_Descent/fig14.jpg)
 
 
 
 (c) Qwen3-32B
 
 
-![image](https://cdn-mineru.openxlab.org.cn/result/2026-09-15/7b46da74-4d1a-4fd9-bdda-5f8b69f250ca/88b0b4ee70d6fbc9784da3cad0b543ddff3bc845d3443006cc0c57b28ac3a67b.jpg)
+![image](images/PowerStep_Memory_Efficient_Adaptive_Optimization_via_lp_Norm_Steepest_Descent/fig15.jpg)
 
 
 
@@ -749,14 +749,14 @@ A persistent concern in optimizer evaluation is whether reported performance par
 
 Figure 6 reports the resulting training loss. PowerStep’s sensitivity profile closely mirrors AdamW’s across the full range, with no sign of the systematic divergence or instability that would signal an unfair comparison. Notably, both optimizers converge faster at larger learning rates, indicating that the learning rates used in our main experiments are not biased in favor of either method. These results support the conclusion that PowerStep achieves AdamW-style adaptivity without requiring a second-moment buffer. 
 
-![image](https://cdn-mineru.openxlab.org.cn/result/2026-09-15/7b46da74-4d1a-4fd9-bdda-5f8b69f250ca/171bd06676a223d2cb61fa1b615e5f4102334f66fd90f6c0f30ab30994e74cb1.jpg)
+![image](images/PowerStep_Memory_Efficient_Adaptive_Optimization_via_lp_Norm_Steepest_Descent/fig16.jpg)
 
 
 
 (a) AdamW
 
 
-![image](https://cdn-mineru.openxlab.org.cn/result/2026-09-15/7b46da74-4d1a-4fd9-bdda-5f8b69f250ca/03005c5fda358424324500c2fa3a520f06249b5a23c2812cec2f3a9ed02d7764.jpg)
+![image](images/PowerStep_Memory_Efficient_Adaptive_Optimization_via_lp_Norm_Steepest_Descent/fig17.jpg)
 
 
 
@@ -771,14 +771,14 @@ Figure 6: Training loss on GPT-2-Small (124M)
 
 PowerStep can be viewed as a simplified, memory-efficient variant of Stacey- $\cdot ( p , 2 )$ [Luo et al., 2025] that removes the primal-dual auxiliary variables and the ϵ-stabilization term and employs heavy-ball momentum. To assess whether these simplifications incur any performance cost, we conduct a direct comparison between the two optimizers on GPT-2-Small (124M) and GPT-2-Medium (350M). For $\mathrm { S t a c e y } { - } ( p , 2 )$ , we adopt the hyperparameters from [Luo et al., 2025]: $\alpha = 0 . 1 , \beta _ { 1 } = 0 . 9 .$ $\beta _ { 2 } = 0 . 9 9 , \tau = 0 . 0 0 1$ , and $\epsilon = 1 \times 1 0 ^ { - 8 }$ . We set $p = 1 1$ , corresponding to $\beta = 1 / ( p - 1 ) = 0 . 1$ which matches PowerStep’s power exponent for a controlled comparison; lower values of p lead to slower convergence for Stacey. For learning rates, we evaluate $\eta _ { \mathrm { m a x } } \in \{ 6 \times 1 0 ^ { - 4 } , 1 \times 1 0 ^ { - 3 } \}$ with $\eta _ { \mathrm { m i n } } = 0 . 1 \cdot \eta _ { \mathrm { m a x } }$ across both optimizers. All other settings follow Section 5.2. Figure 7 reports the training loss trajectories. PowerStep converges faster in the early stages of training. Both optimizers ultimately reach comparable final loss values. 
 
-![image](https://cdn-mineru.openxlab.org.cn/result/2026-09-15/7b46da74-4d1a-4fd9-bdda-5f8b69f250ca/b64dff8e6999363240f205a4fc8797360f404962ce248c2418468716374bc3a0.jpg)
+![image](images/PowerStep_Memory_Efficient_Adaptive_Optimization_via_lp_Norm_Steepest_Descent/fig18.jpg)
 
 
 
 (a) GPT-2-Small (124M)
 
 
-![image](https://cdn-mineru.openxlab.org.cn/result/2026-09-15/7b46da74-4d1a-4fd9-bdda-5f8b69f250ca/a1eeca831abdc2f6b40ed7eb8ac8254754847a0e4d9579de75af5cec3cb4ac98.jpg)
+![image](images/PowerStep_Memory_Efficient_Adaptive_Optimization_via_lp_Norm_Steepest_Descent/fig19.jpg)
 
 
 

@@ -1223,19 +1223,19 @@ Figures 6.3, 6.4, and 6.5 show the data profiles for the 30-, 100- and 200- dime
 | Subspace dimension $q$ | — | 5 | — |
 | Interpolation set capacity | — | 2q | — |
 
-![Figure 6.1](https://cdn-mineru.openxlab.org.cn/result/2026-09-17/bbcf8205-f525-44f1-b045-6cce953a6f01/be4b14033448f48d87e811b4ed01c8106e0e8d3fe71d3a65a77dc7da216a6ef9.jpg)
+![Figure 6.1](images/Powell_Style_Model_Based_Derivative_Free_Optimization_with_Complexity_Guarantees/fig1.jpg)
 
 > Figure 6.1: Data profiles for the low-dimensional test suite: $2 \leq n \leq 5 .$
 
-![Figure 6.2](https://cdn-mineru.openxlab.org.cn/result/2026-09-17/bbcf8205-f525-44f1-b045-6cce953a6f01/5fbcf7e93237168be387b9c018330c7159b2d6339c39148a1a9d2a13f97d43f5.jpg)
+![Figure 6.2](images/Powell_Style_Model_Based_Derivative_Free_Optimization_with_Complexity_Guarantees/fig2.jpg)
 
 > Figure 6.2: Data profiles comparing the hedge model with each solver’s default fitting procedure.
 
-![Figure 6.3](https://cdn-mineru.openxlab.org.cn/result/2026-09-17/bbcf8205-f525-44f1-b045-6cce953a6f01/494c33de4172e7ab97ccea7136998969b84a34e6a52ef90c5b86de05d560928a.jpg)
+![Figure 6.3](images/Powell_Style_Model_Based_Derivative_Free_Optimization_with_Complexity_Guarantees/fig3.jpg)
 
 > Figure 6.3: Data profiles for the test suite $n = 30$.
 
-![Figure 6.4](https://cdn-mineru.openxlab.org.cn/result/2026-09-17/bbcf8205-f525-44f1-b045-6cce953a6f01/b18a78623a649dbca31596d800bea64c9885e60ff82d3f9604cd1388ae1817b2.jpg)
+![Figure 6.4](images/Powell_Style_Model_Based_Derivative_Free_Optimization_with_Complexity_Guarantees/fig4.jpg)
 
 > Figure 6.4: Data profiles for the test suite $n = 100$.
 
@@ -1247,11 +1247,11 @@ Finally, we observe that GC-YZ-LIN is closely competitive with NEWUOA across dim
 
 Results in subspaces. Figure 6.6 compares the performance of the random subspace method against GC-YZ-LIN. The subspace method sets q = 5, patience parameters equal to 1, and draws a fresh coordinate stencil on every subspace redraw. A maximum of 2q + 1 points is used in the sample. We remark that varying choices of patience parameter, subspace dimension, re-draw strategy, and maximum number of allowed sample points were tested, and we opt to present the best performing combination found in dimension 30 and 100. It is evident that the subspace method does not perform as well as a full space solver and its performance deteriorates as tolerances get smaller. While theory suggests that as dimension increases, the competitiveness of subspace methods should as well, this is not something that is immediately evident. A plausible explanation for the discrepancy between theory and practice is as follows. The random subspace method needs at least $\mathcal O ( q )$ points for each subspace redraw and the bound on the number of subspace redraws is not loose. Thus we arrive at the worst case complexity of order q without fail. However, in the full space solvers, we rarely need more than a few consecutive geometry correcting steps to achieve good geometry, hence in practice we are typically far from actually attaining the worst-case behavior described in the complexity bound. Another explanation is that subspace methods ultimately lose the advantage of quadratic approximation in the whole space, so may only be competitive where full space quadratic approximation is prohibitive or useless. A future implementation which initiates any sample set with as few as two sample points may improve performance of subspace methods. In addition reusing sample points from other subspaces can be beneficial. In conclusion, our contribution in terms of subspace TR method in this paper is mainly theoretical while practical approaches require further investigation. We would like to point the reader to the extensive empirical study carried out in [8].
 
-![Figure 6.5](https://cdn-mineru.openxlab.org.cn/result/2026-09-17/bbcf8205-f525-44f1-b045-6cce953a6f01/54f1598cd40ef08f6676e4fb64cea370f7cf179d556d27276abaf5cfc036e434.jpg)
+![Figure 6.5](images/Powell_Style_Model_Based_Derivative_Free_Optimization_with_Complexity_Guarantees/fig5.jpg)
 
 > Figure 6.5: Data profiles for the test suite $n = 200$.
 
-![Figure 6.6](https://cdn-mineru.openxlab.org.cn/result/2026-09-17/bbcf8205-f525-44f1-b045-6cce953a6f01/e2cfeabcc71fde484c2a44fe6193fb5932bf9919f39e3f84110a322ae1e1de73.jpg)
+![Figure 6.6](images/Powell_Style_Model_Based_Derivative_Free_Optimization_with_Complexity_Guarantees/fig6.jpg)
 
 > Figure 6.6: Data profiles for the random subspace implementation compared against GC-YZ-LIN for $n = 30, 100$.
 
