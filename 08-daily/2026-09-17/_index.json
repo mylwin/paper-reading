@@ -1,0 +1,117 @@
+{
+  "date": "2026-09-17",
+  "note_file": "今日检索.md",
+  "generated_at": "2026-09-17T12:44:28",
+  "skill": "paper-daily",
+  "sources_searched": [
+    "arxiv",
+    "openreview"
+  ],
+  "source_counts": {
+    "arxiv": 100,
+    "openreview": 2
+  },
+  "date_windows": {
+    "recent_30d": {
+      "start": "2026-08-18",
+      "end": "2026-09-17"
+    },
+    "past_year": {
+      "start": "2025-09-17",
+      "end": "2026-08-17"
+    }
+  },
+  "total_unique": 92,
+  "top_papers": [
+    {
+      "title": "Rank-Efficient LoRA via Joint Tangent-Space Optimization under Isotropic Curvature",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2609.12123v1",
+      "note_filename": "Rank_Efficient_LoRA_via_Joint_Tangent_Space_Optimization_under_Isotropic_Curvature",
+      "matched_domain": "随机梯度与优化理论",
+      "score": 8.0
+    },
+    {
+      "title": "Adaptive Phase-Switching for Communication-Efficient Federated LoRA Fine-Tuning",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2609.13512v1",
+      "note_filename": "Adaptive_Phase_Switching_for_Communication_Efficient_Federated_LoRA_Fine_Tuning",
+      "matched_domain": "大模型训练优化",
+      "score": 7.59
+    },
+    {
+      "title": "TaRA: Training-Aware Low-Rank Adaptation Initialization",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2609.02639v1",
+      "note_filename": "TaRA_Training_Aware_Low_Rank_Adaptation_Initialization",
+      "matched_domain": "大模型训练优化",
+      "score": 7.09
+    },
+    {
+      "title": "Second-Order Smooth Planning with Optimal-Transport Bellman Smoothing",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2609.06484v1",
+      "note_filename": "Second_Order_Smooth_Planning_with_Optimal_Transport_Bellman_Smoothing",
+      "matched_domain": "随机梯度与优化理论",
+      "score": 6.8
+    },
+    {
+      "title": "LoRA-TSD: Tangent-Space Spectral Descent for LoRA via Muon-Style Updates",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2609.02734v1",
+      "note_filename": "LoRA_TSD_Tangent_Space_Spectral_Descent_for_LoRA_via_Muon_Style_Updates",
+      "matched_domain": "大模型训练优化",
+      "score": 6.66
+    },
+    {
+      "title": "Behavior Quotient Learning for Low-Rank Adaptation of LLM Agents",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2609.12896v1",
+      "note_filename": "Behavior_Quotient_Learning_for_Low_Rank_Adaptation_of_LLM_Agents",
+      "matched_domain": "大模型训练优化",
+      "score": 6.45
+    },
+    {
+      "title": "Clustering-Based Balanced Sampling and Allocation with Data Parallelism for High-Performance Fine-Tuning",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2609.12584v1",
+      "note_filename": "Clustering_Based_Balanced_Sampling_and_Allocation_with_Data_Parallelism_for_High_Performance_Fine_Tuning",
+      "matched_domain": "大模型训练优化",
+      "score": 6.45
+    },
+    {
+      "title": "Amortized Low-Rank Adaptation for Model-Based Reinforcement Learning",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2609.12278v1",
+      "note_filename": "Amortized_Low_Rank_Adaptation_for_Model_Based_Reinforcement_Learning",
+      "matched_domain": "大模型训练优化",
+      "score": 6.42
+    },
+    {
+      "title": "LoRA-RC: Reservoir Computing with Low-Rank Adaptation",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2609.12327v1",
+      "note_filename": "LoRA_RC_Reservoir_Computing_with_Low_Rank_Adaptation",
+      "matched_domain": "大模型训练优化",
+      "score": 6.37
+    },
+    {
+      "title": "The Noise Geometry of Stochastic Gradient Descent",
+      "source": "openreview",
+      "arxiv_id": "",
+      "url": "https://openreview.net/forum?id=F6wmIilZXG",
+      "note_filename": "The_Noise_Geometry_of_Stochastic_Gradient_Descent",
+      "matched_domain": "随机梯度与优化理论",
+      "score": 6.37
+    }
+  ]
+}
