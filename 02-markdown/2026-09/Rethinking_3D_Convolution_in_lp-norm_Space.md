@@ -37,11 +37,11 @@ From the theoretical standpoint, we prove the universal approximation theorem of
 
 From the practical standpoint, we first discuss the performance of different $\ell_p$-norms in actual execution. 3D convolution in $\ell_\infty$-norm space tends to lose multiple useful pieces of information since only the maximum absolute value is reserved. The $\ell_2$-norm measure is inherently a linear transformation of the traditional convolution (details can be found in Sec. A). In contrast, the $\ell_1$-norm has
 
-![Figure 1(a): Unit balls of different $\ell_p$-norms](../03-notes/Rethinking_3D_Convolution_in_lp-norm_Space/images/fig1a.jpg)
+![Figure 1(a): Unit balls of different $\ell_p$-norms](../../03-notes/2026-09/Rethinking_3D_Convolution_in_lp-norm_Space/images/fig1a.jpg)
 
 
 
-![Figure 1(b): Manhattan distance-based $\ell_1$-norm measure](../03-notes/Rethinking_3D_Convolution_in_lp-norm_Space/images/fig1b.jpg)
+![Figure 1(b): Manhattan distance-based $\ell_1$-norm measure](../../03-notes/2026-09/Rethinking_3D_Convolution_in_lp-norm_Space/images/fig1b.jpg)
 
 
 
@@ -129,10 +129,10 @@ Note that although Theorem 1 guarantees universal approximation capability, it d
 
 Assume the input data follows a Gaussian distribution, with $G$ being the standard Gaussian matrix. For $\ell_p$-norm-based convolution, when $p$ is greater than or equal to 3, the distribution of the output data becomes very close to that for $p = \infty$. We present the simulation results in Fig. 2. It is clear that as $p$ becomes larger, the distribution of $\|G\|_p$ gradually overlaps with the distribution of $\|G\|_\infty$.
 
-![Figure 2 (left): Distributions of $\|G\|_p$](../03-notes/Rethinking_3D_Convolution_in_lp-norm_Space/images/fig2a.jpg)
+![Figure 2 (left): Distributions of $\|G\|_p$](../../03-notes/2026-09/Rethinking_3D_Convolution_in_lp-norm_Space/images/fig2a.jpg)
 
 
-![Figure 2 (right): Distributions of $\|G\|_p$ for larger $p$](../03-notes/Rethinking_3D_Convolution_in_lp-norm_Space/images/fig2b.jpg)
+![Figure 2 (right): Distributions of $\|G\|_p$ for larger $p$](../../03-notes/2026-09/Rethinking_3D_Convolution_in_lp-norm_Space/images/fig2b.jpg)
 
 
 
@@ -205,7 +205,7 @@ $$
 
 Actually, as discussed above, $\ell_2$-norm-based convolution is a linear transform of inner-product convolution. Therefore, the gradient of the $\ell_2$-norm Net has an appropriate scale. The mixed strategy dynamically adjusts $\frac{\partial Y(P_t, K)}{\partial K(i, j)}$ during training, guided by a parameter $0 < \lambda < 1$ and the training step $k$. The mixed gradient strategy is expressed as:
 
-![Figure 3: Gradient magnitudes in the two networks](../03-notes/Rethinking_3D_Convolution_in_lp-norm_Space/images/fig3.jpg)
+![Figure 3: Gradient magnitudes in the two networks](../../03-notes/2026-09/Rethinking_3D_Convolution_in_lp-norm_Space/images/fig3.jpg)
 
 
 
@@ -313,7 +313,7 @@ Following the training and test strategies used in [51], we first divide the poi
 
 <table><tr><td>Model</td><td>Mean IoU (%)</td><td>Overall Accuracy (%)</td><td>Energy (μj)</td></tr><tr><td>PointNet</td><td>47.7</td><td>78.6</td><td>7.981</td></tr><tr><td>$\ell_1$-PointNet</td><td>47.6</td><td>77.9</td><td>3.471</td></tr><tr><td>PointNet++</td><td>53.5</td><td>83.0</td><td>3.395</td></tr><tr><td>$\ell_1$-PointNet++</td><td>53.9</td><td>82.9</td><td>1.328</td></tr></table>
 
-![Figure 4: Qualitative semantic-segmentation results](../03-notes/Rethinking_3D_Convolution_in_lp-norm_Space/images/fig4.jpg)
+![Figure 4: Qualitative semantic-segmentation results](../../03-notes/2026-09/Rethinking_3D_Convolution_in_lp-norm_Space/images/fig4.jpg)
 
 
 
