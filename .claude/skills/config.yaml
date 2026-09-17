@@ -62,7 +62,7 @@ semantic_scholar_api_key: ""
 
 # arXiv 请求参数
 arxiv_request_timeout: 120
-arxiv_max_keywords: 0    # 0 = 不限制参与查询的关键词数量
+arxiv_max_keywords: 0    # 0 = 保留全部关键词，由脚本按批次查询
 
 # ===========================================================================
 # paper-weekly：周期分析
@@ -165,6 +165,56 @@ research_domains:
       - cs.LG
       - cs.NA
     priority: 5
+    subdomains:
+      随机梯度与收敛性:
+        keywords:
+          - stochastic gradient descent
+          - SGD
+          - stochastic optimization
+          - stochastic approximation
+          - mini-batch
+          - variance reduction
+          - SVRG
+          - SAGA
+          - SARAH
+          - STORM
+          - convergence rate
+          - convergence analysis
+          - nonconvex optimization
+          - Polyak-Lojasiewicz
+          - PL condition
+          - strong convexity
+          - smoothness
+          - lower bound
+          - regret bound
+      动量、裁剪与加速:
+        keywords:
+          - momentum
+          - heavy ball
+          - Nesterov acceleration
+          - accelerated gradient
+          - gradient descent
+          - clipped gradient
+          - gradient clipping
+      自适应与二阶优化:
+        keywords:
+          - adaptive learning rate
+          - adaptive step size
+          - Adam
+          - AdaGrad
+          - RMSProp
+          - signSGD
+          - normalized gradient
+          - polyak step size
+          - parameter-free
+          - curvature
+          - preconditioning
+          - Newton method
+          - quasi-Newton
+          - Hessian
+          - second-order
+          - steepest descent
+          - lp-norm
 
   大模型训练优化:
     keywords:
@@ -208,6 +258,48 @@ research_domains:
       - cs.DC
       - math.OC
     priority: 4
+    subdomains:
+      LoRA 与参数高效微调:
+        keywords:
+          - low-rank adaptation
+          - LoRA
+      优化器与训练策略:
+        keywords:
+          - large language model training
+          - LLM training
+          - training optimization
+          - optimizer design
+          - optimizer
+          - learning rate schedule
+          - warmup
+          - weight decay
+          - batch size scaling
+          - gradient noise scale
+          - hyperparameter transfer
+          - muP
+      内存与数值效率:
+        keywords:
+          - memory-efficient training
+          - memory-efficient optimizer
+          - ZeRO
+          - gradient checkpointing
+          - activation memory
+          - mixed precision training
+          - 8-bit optimizer
+          - quantized optimizer
+      分布式与通信效率:
+        keywords:
+          - distributed training
+          - data parallelism
+          - tensor parallelism
+          - sharded optimizer
+          - gradient compression
+          - communication efficiency
+      训练稳定性与缩放:
+        keywords:
+          - training stability
+          - loss spike
+          - scaling law
 
 # 命中这些关键词的论文直接排除
 excluded_keywords:

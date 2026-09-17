@@ -67,6 +67,7 @@ paper-reading/
 │   └── scripts/
 │       ├── search_arxiv.py          # 多源检索 + 四维评分 + 去重标记
 │       ├── fetch_pdfs.py            # PDF 归档到 01-raw（已存在即停）
+│       ├── render_note.py           # 按主题分组渲染日报 Markdown
 │       ├── write_note.py            # 日报落盘到 08-daily/<日期>/
 │       ├── scan_existing_notes.py   # 已有论文笔记关键词索引
 │       ├── link_keywords.py         # 关键词 → 标准 Markdown 链接
@@ -153,6 +154,8 @@ weekly:
 research_domains:                   # 用 paper-interests 维护
   随机梯度与优化理论:
     keywords: [stochastic gradient descent, momentum, polyak step size, ...]
+    subdomains:                         # 日报按命中关键词归类的细分领域
+      随机梯度与收敛性: {keywords: [SGD, convergence analysis, ...]}
     arxiv_categories: [math.OC, stat.ML, cs.LG]
     priority: 5
   大模型训练优化:
@@ -180,16 +183,22 @@ python .claude/skills/paper-daily/scripts/search_arxiv.py --output "$WORKSPACE/0
 # 2. 前 3 篇 PDF 归档到 01-raw（已存在即停）
 python .claude/skills/paper-daily/scripts/fetch_pdfs.py --papers-json "$WORKSPACE/08-daily/2026-09-16/search_result.json" --date 2026-09-16
 
-# 3. 日报落盘到 08-daily/2026-09-16/今日检索.md
+# 3. 生成按主题分组的日报 Markdown
+python .claude/skills/paper-daily/scripts/render_note.py \
+  --date 2026-09-16 \
+  --papers-json "$WORKSPACE/08-daily/2026-09-16/search_result.json" \
+  --editorial-json daily-editorial.json > note.md
+
+# 4. 日报落盘到 08-daily/2026-09-16/今日检索.md
 python .claude/skills/paper-daily/scripts/write_note.py --date 2026-09-16 \
   --papers-json "$WORKSPACE/08-daily/2026-09-16/search_result.json" --stdin-file note.md
 
-# 4. 周期分析：先看是否到期 + 收集素材
+# 5. 周期分析：先看是否到期 + 收集素材
 python .claude/skills/paper-weekly/scripts/collect.py --output weekly_manifest.json
 #    ... 读完清单里的素材、写出 07-research/<日期>-<主题>.md 之后 ...
 python .claude/skills/paper-weekly/scripts/collect.py --mark-run
 
-# 5. 改研究主题
+# 6. 改研究主题
 python .claude/skills/paper-interests/scripts/merge_interests.py --preview --payload payload.json
 python .claude/skills/paper-interests/scripts/merge_interests.py --apply   --payload payload.json
 

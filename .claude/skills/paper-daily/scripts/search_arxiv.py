@@ -441,7 +441,7 @@ def fetch_for_source(source: str, **kwargs):
 def fetch_with_paper_config(source: str, **kwargs):
     """按配置调整检索规模后调用数据源 fetcher。
 
-    - 关掉 arXiv 关键词裁剪（配置的关键词应当全部参与检索）
+    - 保留全部 arXiv 关键词，由查询函数自动分批，避免超长 OR 查询
     - 用配置的 arxiv_request_timeout 覆盖默认超时
 
     通过包装函数实现，脚本内的自动测试与 paper_config 缺失场景也能正常工作。
@@ -626,7 +626,7 @@ def search_arxiv_by_date_range(
     return []
 
 
-def search_arxiv_by_keywords(
+def _search_arxiv_by_keywords_single(
     keywords: List[str],
     start_date: datetime,
     end_date: datetime,
@@ -704,6 +704,53 @@ def search_arxiv_by_keywords(
                 return []
 
     return []
+
+
+def search_arxiv_by_keywords(
+    keywords: List[str],
+    start_date: datetime,
+    end_date: datetime,
+    max_results: int = 100,
+    max_retries: int = 3,
+    max_keywords: int = 0,
+    timeout: int = 120,
+) -> List[Dict]:
+    """分批查询 arXiv，避免研究主题过多导致单个 OR 请求过长。"""
+    keywords = [kw.strip() for kw in keywords if str(kw).strip()]
+    if max_keywords and len(keywords) > max_keywords:
+        logger.info("[arXiv] Using first %d of %d keywords", max_keywords, len(keywords))
+        keywords = keywords[:max_keywords]
+    if not keywords:
+        return []
+
+    # 0 表示保留全部关键词；每批 20 个可避免 API 对超长查询返回 400。
+    query_batch_size = 20
+    keyword_batches = [
+        keywords[index:index + query_batch_size]
+        for index in range(0, len(keywords), query_batch_size)
+    ]
+    batch_max_results = max(1, (max_results + len(keyword_batches) - 1) // len(keyword_batches))
+    all_papers: List[Dict] = []
+
+    for batch_number, keyword_batch in enumerate(keyword_batches, 1):
+        logger.info(
+            "[arXiv] Keyword search batch %d/%d (%d keywords)",
+            batch_number, len(keyword_batches), len(keyword_batch),
+        )
+        all_papers.extend(_search_arxiv_by_keywords_single(
+            keywords=keyword_batch,
+            start_date=start_date,
+            end_date=end_date,
+            max_results=batch_max_results,
+            max_retries=max_retries,
+            max_keywords=0,
+            timeout=timeout,
+        ))
+        if batch_number < len(keyword_batches):
+            time.sleep(1)
+
+    logger.info("[arXiv] Keyword search found %d papers across all batches", len(all_papers))
+    return all_papers
 
 
 def search_semantic_scholar_hot_papers(
@@ -1729,6 +1776,7 @@ def main():
                 'authors': p.get('authors', []),
                 'paper_stem': p.get('paper_stem', ''),
                 'matched_domain': p.get('matched_domain', ''),
+                'matched_keywords': p.get('matched_keywords', []),
                 'already_known': p.get('already_known', False),
                 'kb_source': p.get('kb_source', ''),
                 'related_papers': p.get('related_papers', []),
@@ -1745,6 +1793,7 @@ def main():
         sys.stdout.write(json_str)
         sys.stdout.write('\n')
     else:
+        Path(args.output).expanduser().parent.mkdir(parents=True, exist_ok=True)
         with open(args.output, 'w', encoding='utf-8') as f:
             f.write(json_str)
         logger.info("Results saved to: %s", args.output)

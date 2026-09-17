@@ -123,7 +123,69 @@ python scripts/write_note.py --date "<日期>" --papers-json 08-daily/<日期>/s
 
 `--dry-run` 只解析路径。
 
-### 日报结构
+日报的固定布局也可以用渲染脚本生成，避免手工漏掉主题分组或全量列表：
+
+```bash
+python scripts/render_note.py \
+  --date "<日期>" \
+  --papers-json 08-daily/<日期>/search_result.json \
+  --editorial-json <本次概览与前 3 篇分析>.json > note.md
+python scripts/write_note.py \
+  --date "<日期>" \
+  --papers-json 08-daily/<日期>/search_result.json \
+  --stdin-file note.md
+```
+
+`--editorial-json` 为可选项；结构如下，键名使用论文标题：
+
+```json
+{
+  "overview": {
+    "trend": "总体趋势",
+    "hotspots": [{"title": "热点名称", "text": "热点说明"}]
+  },
+  "domain_summaries": {
+    "研究大方向": {
+      "summary": "该大方向的今日汇总",
+      "subfields": {"具体细分领域": "该细分领域的汇总"}
+    }
+  },
+  "top_papers": {
+    "论文标题": {
+      "title_zh": "题目中文翻译",
+      "summary": "一句话总结",
+      "abstract_zh": "中文摘要",
+      "contributions": ["核心贡献"],
+      "method": "方法思路",
+      "result": "主要结果"
+    }
+  }
+}
+```
+
+渲染脚本读取 `config.yaml` 的 `research_domains` 决定主题节顺序，
+读取 `all_papers` 生成完整列表，读取 `top_papers` 生成前 3 篇和速览；
+缺少编辑内容时会保留字段并以 `--` 或摘要作为占位，不会编造分析。
+
+### 当前日报结构
+
+执行时严格按以下顺序组织日报：
+
+1. `今日概览`：先写用户在 `research_domains` 定义的大方向，再逐个给出该方向的论文数量、推荐数量、方向总结和具体细分领域汇总。细分领域由共享配置中对应主题的 `subdomains` 按命中关键词归类。
+2. `今日推荐论文`：按全局评分取前 3 篇。标题格式为“英文题目 — 评分”，正文依次包含来源、主题（大方向）、细分领域、题目中文翻译、作者、英文摘要、中文摘要、一句话总结、核心贡献、方法思路、主要的实验成果、相关论文、访问链接。
+3. `其余 7 篇推荐`：给出题目、评分、主题、细分领域、一句话总结和访问链接。
+4. `今日落盘`：列出检索结果、PDF、日报和索引的真实状态。
+5. `附录：本次检索列表`：放在全文最后，按大方向分节，包含题目、来源、评分、状态、研究大方向、具体细分领域、同脉络和访问链接。
+
+相关论文必须先核验真实资产：优先链接 `03-notes/<论文主干>/精读.md`，其次链接真实存在的 `01-raw/<论文主干>.pdf`，再次链接实际存在且包含该论文的历史日报。三处都不存在时写“暂无”，不得根据标题相似度捏造文献或链接。
+
+### 渲染器使用的编辑 JSON
+
+`render_note.py` 负责固定布局和数据字段；人工撰写的概览、细分领域总结、标题翻译、中文摘要和前三篇分析放在 `--editorial-json` 中。除 `overview`、`domain_summaries` 和 `top_papers` 外，其他内容不应由渲染器自行编造。
+
+旧版示例保留在下方，仅用于识别历史格式，不再作为执行标准。
+
+### 历史日报结构（不再使用）
 
 ```markdown
 ## 今日概览
@@ -222,6 +284,11 @@ python scripts/link_keywords.py --index existing_notes_index.json --input <笔�
 - **已存在即停**：任何写入前先判存在，存在就跳过并如实报告
 - **按主题组织日报**：`本次检索列表` 按 `research_domains` 顺序分节，每节内按 `score`
   从高到低；`top_papers` 的前 3 篇和其余速览仍沿用全局推荐分数顺序
+- **相关论文必须可核验**：只引用实际存在于 `03-notes/<主干>/精读.md`、
+  `01-raw/<主干>.pdf` 或历史日报中的论文；本地精读链接必须指向 `精读.md`，
+  三处都不存在时写 `--`，不得根据标题相似度捏造文献
+- **访问链接不得断链**：PDF 已落盘才使用 `01-raw` 相对链接，否则使用真实的远程
+  `pdf_url`；原文链接使用记录中的 `url`
 - **不需要大模型 API key**：脚本只做 HTTP 检索、评分与落盘；概览、总结、贡献点由当前 agent 撰写
 
 # 依赖项

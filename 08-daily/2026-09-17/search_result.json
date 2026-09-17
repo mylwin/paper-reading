@@ -1,0 +1,3812 @@
+{
+  "target_date": "2026-09-17",
+  "date_windows": {
+    "recent_30d": {
+      "start": "2026-08-18",
+      "end": "2026-09-17"
+    },
+    "past_year": {
+      "start": "2025-09-17",
+      "end": "2026-08-17"
+    }
+  },
+  "sources_searched": [
+    "arxiv",
+    "openreview"
+  ],
+  "source_counts": {
+    "arxiv": 100,
+    "openreview": 2
+  },
+  "papers_by_source": {
+    "arxiv": 90,
+    "openreview": 2
+  },
+  "known_dirs": {
+    "papers": "/Users/myl/Documents/paper/01-raw",
+    "notes": "/Users/myl/Documents/paper/03-notes",
+    "daily": "/Users/myl/Documents/paper/08-daily"
+  },
+  "total_recent": 102,
+  "total_hot": 0,
+  "total_unique": 92,
+  "total_known": 10,
+  "total_candidates": 82,
+  "all_papers": [
+    {
+      "title": "Affinity-Aware Sharding for Delayed Tensor Parallelism",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "venue": "",
+      "url": "http://arxiv.org/abs/2609.13846v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.13846v1",
+      "published": "2026-09-12T10:01:32Z",
+      "authors": [
+        "Eloi de Reynal"
+      ],
+      "paper_stem": "Affinity_Aware_Sharding_for_Delayed_Tensor_Parallelism",
+      "matched_domain": "大模型训练优化",
+      "already_known": true,
+      "kb_source": "daily",
+      "related_papers": [
+        {
+          "title": "Affinity-Aware Sharding for Delayed Tensor Parallelism",
+          "stem": "affinityawareshardingfordelayedtensorparallelism",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-17/search_result.json",
+          "shared_terms": [
+            "affinity-aware",
+            "delayed",
+            "parallelism",
+            "sharding",
+            "tensor"
+          ],
+          "shared_count": 5
+        },
+        {
+          "title": "4D Parallelism Unlocks Exascale Bayesian Neural Networks for High-Fidelity Atmospheric Modeling",
+          "stem": "4dparallelismunlocksexascalebayesianneuralnetworksforhighfidelityatmosphericmodeling",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-17/search_result.json",
+          "shared_terms": [
+            "parallelism"
+          ],
+          "shared_count": 1
+        }
+      ],
+      "score": 8.4
+    },
+    {
+      "title": "Beyond Quadratic Loss: The Stability Phase Diagram of Adam",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "venue": "",
+      "url": "http://arxiv.org/abs/2609.18314v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.18314v1",
+      "published": "2026-09-16T08:34:24Z",
+      "authors": [
+        "Gaoxiang Tang",
+        "Huanran Chen",
+        "Ziming Liu"
+      ],
+      "paper_stem": "Beyond_Quadratic_Loss_The_Stability_Phase_Diagram_of_Adam",
+      "matched_domain": "随机梯度与优化理论",
+      "already_known": true,
+      "kb_source": "daily",
+      "related_papers": [
+        {
+          "title": "Beyond Quadratic Loss: The Stability Phase Diagram of Adam",
+          "stem": "beyondquadraticlossthestabilityphasediagramofadam",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-17/search_result.json",
+          "shared_terms": [
+            "adam",
+            "beyond",
+            "diagram",
+            "loss",
+            "phase",
+            "quadratic",
+            "stability"
+          ],
+          "shared_count": 7
+        }
+      ],
+      "score": 8.17
+    },
+    {
+      "title": "Rank-Efficient LoRA via Joint Tangent-Space Optimization under Isotropic Curvature",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "venue": "",
+      "url": "http://arxiv.org/abs/2609.12123v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.12123v1",
+      "published": "2026-09-10T18:50:17Z",
+      "authors": [
+        "Zihan Zhu",
+        "Zhehang Du",
+        "Xuyang Chen",
+        "Tim Tsz-Kit Lau",
+        "Jiayuan Wu",
+        "X. Y. Han",
+        "Qi Long",
+        "Weijie Su"
+      ],
+      "paper_stem": "Rank_Efficient_LoRA_via_Joint_Tangent_Space_Optimization_under_Isotropic_Curvature",
+      "matched_domain": "随机梯度与优化理论",
+      "already_known": false,
+      "kb_source": "",
+      "related_papers": [
+        {
+          "title": "Self Tuning Stochastic Optimization with Curvature Aware Gradient Filtering",
+          "stem": "selftuningstochasticoptimizationwithcurvatureawaregradientfiltering",
+          "source": "pdf",
+          "path": "/Users/myl/Documents/paper/01-raw/Self_Tuning_Stochastic_Optimization_with_Curvature_Aware_Gradient_Filtering.pdf",
+          "shared_terms": [
+            "curvature"
+          ],
+          "shared_count": 1
+        }
+      ],
+      "score": 8.0
+    },
+    {
+      "title": "Adaptive Phase-Switching for Communication-Efficient Federated LoRA Fine-Tuning",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "venue": "",
+      "url": "http://arxiv.org/abs/2609.13512v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.13512v1",
+      "published": "2026-09-11T20:24:39Z",
+      "authors": [
+        "Jerry Adams Franklin"
+      ],
+      "paper_stem": "Adaptive_Phase_Switching_for_Communication_Efficient_Federated_LoRA_Fine_Tuning",
+      "matched_domain": "大模型训练优化",
+      "already_known": false,
+      "kb_source": "",
+      "related_papers": [
+        {
+          "title": "EMMI: Edge Multi-Modal Intelligence for Communication-Efficient MLLM Inference via Fused Representation Compression",
+          "stem": "emmiedgemultimodalintelligenceforcommunicationefficientmllminferenceviafusedrepresentationcompression",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-17/search_result.json",
+          "shared_terms": [
+            "communication-efficient"
+          ],
+          "shared_count": 1
+        },
+        {
+          "title": "PowerStep Memory Efficient Adaptive Optimization via lp Norm Steepest Descent",
+          "stem": "powerstepmemoryefficientadaptiveoptimizationvialpnormsteepestdescent",
+          "source": "pdf",
+          "path": "/Users/myl/Documents/paper/01-raw/PowerStep_Memory_Efficient_Adaptive_Optimization_via_lp_Norm_Steepest_Descent.pdf",
+          "shared_terms": [
+            "adaptive"
+          ],
+          "shared_count": 1
+        }
+      ],
+      "score": 7.59
+    },
+    {
+      "title": "TaRA: Training-Aware Low-Rank Adaptation Initialization",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "venue": "",
+      "url": "http://arxiv.org/abs/2609.02639v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.02639v1",
+      "published": "2026-09-02T14:15:22Z",
+      "authors": [
+        "Taehyeon Kim",
+        "Eunhyeok Park"
+      ],
+      "paper_stem": "TaRA_Training_Aware_Low_Rank_Adaptation_Initialization",
+      "matched_domain": "大模型训练优化",
+      "already_known": false,
+      "kb_source": "",
+      "related_papers": [],
+      "score": 7.09
+    },
+    {
+      "title": "SGD in Multiclass Logistic Regression: Sequential Learning and Scaling Laws",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "venue": "",
+      "url": "http://arxiv.org/abs/2609.07868v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.07868v1",
+      "published": "2026-09-07T18:30:09Z",
+      "authors": [
+        "Konstantinos Christopher Tsiolis",
+        "Denny Wu",
+        "Christos Thrampoulidis",
+        "Murat A. Erdogdu"
+      ],
+      "paper_stem": "SGD_in_Multiclass_Logistic_Regression_Sequential_Learning_and_Scaling_Laws",
+      "matched_domain": "随机梯度与优化理论",
+      "already_known": true,
+      "kb_source": "daily",
+      "related_papers": [
+        {
+          "title": "SGD in Multiclass Logistic Regression: Sequential Learning and Scaling Laws",
+          "stem": "sgdinmulticlasslogisticregressionsequentiallearningandscalinglaws",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-17/search_result.json",
+          "shared_terms": [
+            "laws",
+            "logistic",
+            "multiclass",
+            "regression",
+            "sequential",
+            "sgd"
+          ],
+          "shared_count": 6
+        },
+        {
+          "title": "Hyperparameter Scaling Laws Across MoE Sparsity",
+          "stem": "hyperparameterscalinglawsacrossmoesparsity",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-17/search_result.json",
+          "shared_terms": [
+            "laws"
+          ],
+          "shared_count": 1
+        },
+        {
+          "title": "On the Recall Scaling Laws in Mamba: A Theoretical and Mechanistic Study via Hashing",
+          "stem": "ontherecallscalinglawsinmambaatheoreticalandmechanisticstudyviahashing",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-17/search_result.json",
+          "shared_terms": [
+            "laws"
+          ],
+          "shared_count": 1
+        }
+      ],
+      "score": 7.07
+    },
+    {
+      "title": "Musec: MomentUm SpEctral Clipping for Stable Muon-type Training",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "venue": "",
+      "url": "http://arxiv.org/abs/2609.11655v2",
+      "pdf_url": "https://arxiv.org/pdf/2609.11655v2",
+      "published": "2026-09-10T15:00:01Z",
+      "authors": [
+        "Zhuanghua Liu",
+        "Menglian Wang",
+        "Luo Luo"
+      ],
+      "paper_stem": "Musec_MomentUm_SpEctral_Clipping_for_Stable_Muon_type_Training",
+      "matched_domain": "随机梯度与优化理论",
+      "already_known": true,
+      "kb_source": "daily",
+      "related_papers": [
+        {
+          "title": "Musec: MomentUm SpEctral Clipping for Stable Muon-type Training",
+          "stem": "musecmomentumspectralclippingforstablemuontypetraining",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-17/search_result.json",
+          "shared_terms": [
+            "clipping",
+            "momentum",
+            "muon-type",
+            "musec",
+            "spectral",
+            "stable",
+            "training"
+          ],
+          "shared_count": 7
+        },
+        {
+          "title": "Understanding MARS When Scaling Momentum Correction Provably Helps",
+          "stem": "understandingmarswhenscalingmomentumcorrectionprovablyhelps",
+          "source": "pdf",
+          "path": "/Users/myl/Documents/paper/01-raw/Understanding_MARS_When_Scaling_Momentum_Correction_Provably_Helps.pdf",
+          "shared_terms": [
+            "momentum"
+          ],
+          "shared_count": 1
+        }
+      ],
+      "score": 7.07
+    },
+    {
+      "title": "vidax: A Unified JAX Framework for Video Generative Models on Accelerator Meshes",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "venue": "",
+      "url": "http://arxiv.org/abs/2609.18077v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.18077v1",
+      "published": "2026-09-16T03:26:45Z",
+      "authors": [
+        "Congyue Deng"
+      ],
+      "paper_stem": "vidax_A_Unified_JAX_Framework_for_Video_Generative_Models_on_Accelerator_Meshes",
+      "matched_domain": "大模型训练优化",
+      "already_known": true,
+      "kb_source": "daily",
+      "related_papers": [
+        {
+          "title": "vidax: A Unified JAX Framework for Video Generative Models on Accelerator Meshes",
+          "stem": "vidaxaunifiedjaxframeworkforvideogenerativemodelsonacceleratormeshes",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-17/search_result.json",
+          "shared_terms": [
+            "accelerator",
+            "framework",
+            "generative",
+            "jax",
+            "meshes",
+            "vidax",
+            "video"
+          ],
+          "shared_count": 7
+        }
+      ],
+      "score": 7.07
+    },
+    {
+      "title": "Hyperparameter Scaling Laws Across MoE Sparsity",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "venue": "",
+      "url": "http://arxiv.org/abs/2609.08690v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.08690v1",
+      "published": "2026-09-08T12:57:20Z",
+      "authors": [
+        "Changxin Tian",
+        "Kunlong Chen",
+        "Jia Liu",
+        "Ziqi Liu",
+        "Zhiqiang Zhang",
+        "Jun Zhou"
+      ],
+      "paper_stem": "Hyperparameter_Scaling_Laws_Across_MoE_Sparsity",
+      "matched_domain": "大模型训练优化",
+      "already_known": true,
+      "kb_source": "daily",
+      "related_papers": [
+        {
+          "title": "Hyperparameter Scaling Laws Across MoE Sparsity",
+          "stem": "hyperparameterscalinglawsacrossmoesparsity",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-17/search_result.json",
+          "shared_terms": [
+            "across",
+            "hyperparameter",
+            "laws",
+            "moe",
+            "sparsity"
+          ],
+          "shared_count": 5
+        },
+        {
+          "title": "Let's Scale Step by Step: Compute-Efficient Hyperparameter Transfer for Large-Scale Mixture-of-Experts",
+          "stem": "letsscalestepbystepcomputeefficienthyperparametertransferforlargescalemixtureofexperts",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-17/search_result.json",
+          "shared_terms": [
+            "hyperparameter"
+          ],
+          "shared_count": 1
+        },
+        {
+          "title": "On the Recall Scaling Laws in Mamba: A Theoretical and Mechanistic Study via Hashing",
+          "stem": "ontherecallscalinglawsinmambaatheoreticalandmechanisticstudyviahashing",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-17/search_result.json",
+          "shared_terms": [
+            "laws"
+          ],
+          "shared_count": 1
+        }
+      ],
+      "score": 6.99
+    },
+    {
+      "title": "Let's Scale Step by Step: Compute-Efficient Hyperparameter Transfer for Large-Scale Mixture-of-Experts",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "venue": "",
+      "url": "http://arxiv.org/abs/2608.20061v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.20061v1",
+      "published": "2026-08-20T13:57:43Z",
+      "authors": [
+        "Nayeon Kim",
+        "Hojin Lee",
+        "Yunju Bak",
+        "Jaesun Park",
+        "Boseop Kim"
+      ],
+      "paper_stem": "Let's_Scale_Step_by_Step_Compute_Efficient_Hyperparameter_Transfer_for_Large_Scale_Mixture_of_Experts",
+      "matched_domain": "大模型训练优化",
+      "already_known": true,
+      "kb_source": "daily",
+      "related_papers": [
+        {
+          "title": "Let's Scale Step by Step: Compute-Efficient Hyperparameter Transfer for Large-Scale Mixture-of-Experts",
+          "stem": "letsscalestepbystepcomputeefficienthyperparametertransferforlargescalemixtureofexperts",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-17/search_result.json",
+          "shared_terms": [
+            "compute-efficient",
+            "hyperparameter",
+            "large-scale",
+            "let's",
+            "mixture-of-experts",
+            "scale",
+            "step",
+            "transfer"
+          ],
+          "shared_count": 8
+        },
+        {
+          "title": "Hyperparameter Scaling Laws Across MoE Sparsity",
+          "stem": "hyperparameterscalinglawsacrossmoesparsity",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-17/search_result.json",
+          "shared_terms": [
+            "hyperparameter"
+          ],
+          "shared_count": 1
+        }
+      ],
+      "score": 6.84
+    },
+    {
+      "title": "Second-Order Smooth Planning with Optimal-Transport Bellman Smoothing",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "venue": "",
+      "url": "http://arxiv.org/abs/2609.06484v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.06484v1",
+      "published": "2026-09-06T08:58:57Z",
+      "authors": [
+        "Tuan Dam"
+      ],
+      "paper_stem": "Second_Order_Smooth_Planning_with_Optimal_Transport_Bellman_Smoothing",
+      "matched_domain": "随机梯度与优化理论",
+      "already_known": false,
+      "kb_source": "",
+      "related_papers": [],
+      "score": 6.8
+    },
+    {
+      "title": "4D Parallelism Unlocks Exascale Bayesian Neural Networks for High-Fidelity Atmospheric Modeling",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "venue": "",
+      "url": "http://arxiv.org/abs/2609.12815v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.12815v1",
+      "published": "2026-09-11T13:08:17Z",
+      "authors": [
+        "Deifilia Kieckhefen",
+        "Juan Pedro Gutiérrez Hermosillo Muriedas",
+        "Lars Helge Heyen",
+        "Mathis Bode",
+        "Iida Hakulinen",
+        "Andreas Herten",
+        "Chelsea Maria John",
+        "Thorsten Kurth",
+        "Anni Moisala",
+        "Asena Karolin Özdemir",
+        "Kaleb Phipps",
+        "Oskar Taubert",
+        "Arvid Weyrauch",
+        "Markus Götz",
+        "Charlotte Debus"
+      ],
+      "paper_stem": "4D_Parallelism_Unlocks_Exascale_Bayesian_Neural_Networks_for_High_Fidelity_Atmospheric_Modeling",
+      "matched_domain": "大模型训练优化",
+      "already_known": true,
+      "kb_source": "daily",
+      "related_papers": [
+        {
+          "title": "4D Parallelism Unlocks Exascale Bayesian Neural Networks for High-Fidelity Atmospheric Modeling",
+          "stem": "4dparallelismunlocksexascalebayesianneuralnetworksforhighfidelityatmosphericmodeling",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-17/search_result.json",
+          "shared_terms": [
+            "atmospheric",
+            "bayesian",
+            "exascale",
+            "high-fidelity",
+            "modeling",
+            "networks",
+            "neural",
+            "parallelism",
+            "unlocks"
+          ],
+          "shared_count": 9
+        },
+        {
+          "title": "Affinity-Aware Sharding for Delayed Tensor Parallelism",
+          "stem": "affinityawareshardingfordelayedtensorparallelism",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-17/search_result.json",
+          "shared_terms": [
+            "parallelism"
+          ],
+          "shared_count": 1
+        }
+      ],
+      "score": 6.73
+    },
+    {
+      "title": "LoRA-TSD: Tangent-Space Spectral Descent for LoRA via Muon-Style Updates",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "venue": "",
+      "url": "http://arxiv.org/abs/2609.02734v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.02734v1",
+      "published": "2026-09-02T15:41:45Z",
+      "authors": [
+        "Dmitrii Andriianov",
+        "Andrey Veprikov",
+        "Aleksandr Beznosikov"
+      ],
+      "paper_stem": "LoRA_TSD_Tangent_Space_Spectral_Descent_for_LoRA_via_Muon_Style_Updates",
+      "matched_domain": "大模型训练优化",
+      "already_known": false,
+      "kb_source": "",
+      "related_papers": [
+        {
+          "title": "Musec: MomentUm SpEctral Clipping for Stable Muon-type Training",
+          "stem": "musecmomentumspectralclippingforstablemuontypetraining",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-17/search_result.json",
+          "shared_terms": [
+            "spectral"
+          ],
+          "shared_count": 1
+        },
+        {
+          "title": "Parameter Free Clipped Gradient Descent Meets Polyak",
+          "stem": "parameterfreeclippedgradientdescentmeetspolyak",
+          "source": "pdf",
+          "path": "/Users/myl/Documents/paper/01-raw/Parameter_Free_Clipped_Gradient_Descent_Meets_Polyak.pdf",
+          "shared_terms": [
+            "descent"
+          ],
+          "shared_count": 1
+        },
+        {
+          "title": "PowerStep Memory Efficient Adaptive Optimization via lp Norm Steepest Descent",
+          "stem": "powerstepmemoryefficientadaptiveoptimizationvialpnormsteepestdescent",
+          "source": "pdf",
+          "path": "/Users/myl/Documents/paper/01-raw/PowerStep_Memory_Efficient_Adaptive_Optimization_via_lp_Norm_Steepest_Descent.pdf",
+          "shared_terms": [
+            "descent"
+          ],
+          "shared_count": 1
+        }
+      ],
+      "score": 6.66
+    },
+    {
+      "title": "EMMI: Edge Multi-Modal Intelligence for Communication-Efficient MLLM Inference via Fused Representation Compression",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "venue": "",
+      "url": "http://arxiv.org/abs/2609.11058v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.11058v1",
+      "published": "2026-09-10T04:04:25Z",
+      "authors": [
+        "Motahare Mounesan",
+        "Irfan Khan"
+      ],
+      "paper_stem": "EMMI_Edge_Multi_Modal_Intelligence_for_Communication_Efficient_MLLM_Inference_via_Fused_Representation_Compression",
+      "matched_domain": "大模型训练优化",
+      "already_known": true,
+      "kb_source": "daily",
+      "related_papers": [
+        {
+          "title": "EMMI: Edge Multi-Modal Intelligence for Communication-Efficient MLLM Inference via Fused Representation Compression",
+          "stem": "emmiedgemultimodalintelligenceforcommunicationefficientmllminferenceviafusedrepresentationcompression",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-17/search_result.json",
+          "shared_terms": [
+            "communication-efficient",
+            "compression",
+            "edge",
+            "emmi",
+            "fused",
+            "inference",
+            "intelligence",
+            "mllm",
+            "multi-modal",
+            "representation"
+          ],
+          "shared_count": 10
+        }
+      ],
+      "score": 6.57
+    },
+    {
+      "title": "On the Recall Scaling Laws in Mamba: A Theoretical and Mechanistic Study via Hashing",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "venue": "",
+      "url": "http://arxiv.org/abs/2609.07681v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.07681v1",
+      "published": "2026-09-07T16:05:24Z",
+      "authors": [
+        "Yuval Koren",
+        "Assaf Ben-Kish",
+        "Raja Giryes",
+        "Lior Wolf",
+        "Itamar Zimerman"
+      ],
+      "paper_stem": "On_the_Recall_Scaling_Laws_in_Mamba_A_Theoretical_and_Mechanistic_Study_via_Hashing",
+      "matched_domain": "大模型训练优化",
+      "already_known": true,
+      "kb_source": "daily",
+      "related_papers": [
+        {
+          "title": "On the Recall Scaling Laws in Mamba: A Theoretical and Mechanistic Study via Hashing",
+          "stem": "ontherecallscalinglawsinmambaatheoreticalandmechanisticstudyviahashing",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-17/search_result.json",
+          "shared_terms": [
+            "hashing",
+            "laws",
+            "mamba",
+            "mechanistic",
+            "recall",
+            "theoretical"
+          ],
+          "shared_count": 6
+        },
+        {
+          "title": "Hyperparameter Scaling Laws Across MoE Sparsity",
+          "stem": "hyperparameterscalinglawsacrossmoesparsity",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-17/search_result.json",
+          "shared_terms": [
+            "laws"
+          ],
+          "shared_count": 1
+        },
+        {
+          "title": "SGD in Multiclass Logistic Regression: Sequential Learning and Scaling Laws",
+          "stem": "sgdinmulticlasslogisticregressionsequentiallearningandscalinglaws",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-17/search_result.json",
+          "shared_terms": [
+            "laws"
+          ],
+          "shared_count": 1
+        }
+      ],
+      "score": 6.47
+    },
+    {
+      "title": "Behavior Quotient Learning for Low-Rank Adaptation of LLM Agents",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "venue": "",
+      "url": "http://arxiv.org/abs/2609.12896v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.12896v1",
+      "published": "2026-09-11T14:23:43Z",
+      "authors": [
+        "Pengyang Zhou",
+        "Xiaobin Tu",
+        "Zhengxi Liu",
+        "Rongkun Xue",
+        "Haochen Li",
+        "Miancan Liu",
+        "Ziyuan Chen",
+        "Yinggui Wang",
+        "Jinkui Ren",
+        "Xiantao Zhang"
+      ],
+      "paper_stem": "Behavior_Quotient_Learning_for_Low_Rank_Adaptation_of_LLM_Agents",
+      "matched_domain": "大模型训练优化",
+      "already_known": false,
+      "kb_source": "",
+      "related_papers": [],
+      "score": 6.45
+    },
+    {
+      "title": "Clustering-Based Balanced Sampling and Allocation with Data Parallelism for High-Performance Fine-Tuning",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "venue": "",
+      "url": "http://arxiv.org/abs/2609.12584v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.12584v1",
+      "published": "2026-09-11T08:36:57Z",
+      "authors": [
+        "Hyunjin Kim",
+        "Youngeun Nam",
+        "Jaemin Han",
+        "Wonhyeok Choi",
+        "Jae-Gil Lee"
+      ],
+      "paper_stem": "Clustering_Based_Balanced_Sampling_and_Allocation_with_Data_Parallelism_for_High_Performance_Fine_Tuning",
+      "matched_domain": "大模型训练优化",
+      "already_known": false,
+      "kb_source": "",
+      "related_papers": [
+        {
+          "title": "4D Parallelism Unlocks Exascale Bayesian Neural Networks for High-Fidelity Atmospheric Modeling",
+          "stem": "4dparallelismunlocksexascalebayesianneuralnetworksforhighfidelityatmosphericmodeling",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-17/search_result.json",
+          "shared_terms": [
+            "parallelism"
+          ],
+          "shared_count": 1
+        },
+        {
+          "title": "Affinity-Aware Sharding for Delayed Tensor Parallelism",
+          "stem": "affinityawareshardingfordelayedtensorparallelism",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-17/search_result.json",
+          "shared_terms": [
+            "parallelism"
+          ],
+          "shared_count": 1
+        }
+      ],
+      "score": 6.45
+    },
+    {
+      "title": "Amortized Low-Rank Adaptation for Model-Based Reinforcement Learning",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "venue": "",
+      "url": "http://arxiv.org/abs/2609.12278v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.12278v1",
+      "published": "2026-09-10T23:16:40Z",
+      "authors": [
+        "Fernando Palafox",
+        "David Fridovich-Keil"
+      ],
+      "paper_stem": "Amortized_Low_Rank_Adaptation_for_Model_Based_Reinforcement_Learning",
+      "matched_domain": "大模型训练优化",
+      "already_known": false,
+      "kb_source": "",
+      "related_papers": [],
+      "score": 6.42
+    },
+    {
+      "title": "LoRA-RC: Reservoir Computing with Low-Rank Adaptation",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "venue": "",
+      "url": "http://arxiv.org/abs/2609.12327v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.12327v1",
+      "published": "2026-09-11T01:19:48Z",
+      "authors": [
+        "Wenbin Wan"
+      ],
+      "paper_stem": "LoRA_RC_Reservoir_Computing_with_Low_Rank_Adaptation",
+      "matched_domain": "大模型训练优化",
+      "already_known": false,
+      "kb_source": "",
+      "related_papers": [],
+      "score": 6.37
+    },
+    {
+      "title": "The Noise Geometry of Stochastic Gradient Descent",
+      "source": "openreview",
+      "arxiv_id": "",
+      "venue": "Accepted by TMLR",
+      "url": "https://openreview.net/forum?id=F6wmIilZXG",
+      "pdf_url": "/pdf/2d54fce2897836a53d11e467dbabfa42a9126175.pdf",
+      "published": "2026-09-15T02:29:33.622000",
+      "authors": [
+        "Mingze Wang",
+        "Lei Wu"
+      ],
+      "paper_stem": "The_Noise_Geometry_of_Stochastic_Gradient_Descent",
+      "matched_domain": "随机梯度与优化理论",
+      "already_known": false,
+      "kb_source": "",
+      "related_papers": [
+        {
+          "title": "Parameter Free Clipped Gradient Descent Meets Polyak",
+          "stem": "parameterfreeclippedgradientdescentmeetspolyak",
+          "source": "pdf",
+          "path": "/Users/myl/Documents/paper/01-raw/Parameter_Free_Clipped_Gradient_Descent_Meets_Polyak.pdf",
+          "shared_terms": [
+            "descent",
+            "gradient"
+          ],
+          "shared_count": 2
+        },
+        {
+          "title": "Self Tuning Stochastic Optimization with Curvature Aware Gradient Filtering",
+          "stem": "selftuningstochasticoptimizationwithcurvatureawaregradientfiltering",
+          "source": "pdf",
+          "path": "/Users/myl/Documents/paper/01-raw/Self_Tuning_Stochastic_Optimization_with_Curvature_Aware_Gradient_Filtering.pdf",
+          "shared_terms": [
+            "gradient",
+            "stochastic"
+          ],
+          "shared_count": 2
+        },
+        {
+          "title": "PowerStep Memory Efficient Adaptive Optimization via lp Norm Steepest Descent",
+          "stem": "powerstepmemoryefficientadaptiveoptimizationvialpnormsteepestdescent",
+          "source": "pdf",
+          "path": "/Users/myl/Documents/paper/01-raw/PowerStep_Memory_Efficient_Adaptive_Optimization_via_lp_Norm_Steepest_Descent.pdf",
+          "shared_terms": [
+            "descent"
+          ],
+          "shared_count": 1
+        }
+      ],
+      "score": 6.37
+    },
+    {
+      "title": "How Much Rank Does LoRA Need? Rank-Error Bounds for Transformer Attention",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "venue": "",
+      "url": "http://arxiv.org/abs/2608.26052v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.26052v1",
+      "published": "2026-08-26T17:25:03Z",
+      "authors": [
+        "Gerard Conangla Planes"
+      ],
+      "paper_stem": "How_Much_Rank_Does_LoRA_Need_Rank_Error_Bounds_for_Transformer_Attention",
+      "matched_domain": "大模型训练优化",
+      "already_known": false,
+      "kb_source": "",
+      "related_papers": [],
+      "score": 6.31
+    },
+    {
+      "title": "Federated LoRA Adaptation of BiomedCLIP Across Four International Chest X-Ray Cohorts",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "venue": "",
+      "url": "http://arxiv.org/abs/2609.02101v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.02101v1",
+      "published": "2026-09-02T04:40:05Z",
+      "authors": [
+        "Sanjaya Poudel",
+        "Nirajan Kunwor",
+        "Manish Dhakal",
+        "Debesh Jha",
+        "Sunil Kumar Gaire"
+      ],
+      "paper_stem": "Federated_LoRA_Adaptation_of_BiomedCLIP_Across_Four_International_Chest_X_Ray_Cohorts",
+      "matched_domain": "大模型训练优化",
+      "already_known": false,
+      "kb_source": "",
+      "related_papers": [
+        {
+          "title": "Hyperparameter Scaling Laws Across MoE Sparsity",
+          "stem": "hyperparameterscalinglawsacrossmoesparsity",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-17/search_result.json",
+          "shared_terms": [
+            "across"
+          ],
+          "shared_count": 1
+        }
+      ],
+      "score": 6.29
+    },
+    {
+      "title": "Routing Is Not Enough: Diagnosing Intra-Adapter Subspace Contention in MoE+LoRA Fine-Tuning",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "venue": "",
+      "url": "http://arxiv.org/abs/2609.03150v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.03150v1",
+      "published": "2026-09-02T20:32:58Z",
+      "authors": [
+        "Mehreen Hossain Chowdhury",
+        "Nowshin Mahjabin",
+        "Ahmed Shafin Ruhan",
+        "Md Azam Hossain",
+        "Abu Raihan Mostofa Kamal",
+        "Md Tahmid Rahman Laskar"
+      ],
+      "paper_stem": "Routing_Is_Not_Enough_Diagnosing_Intra_Adapter_Subspace_Contention_in_MoE+LoRA_Fine_Tuning",
+      "matched_domain": "大模型训练优化",
+      "already_known": false,
+      "kb_source": "",
+      "related_papers": [
+        {
+          "title": "Hyperparameter Scaling Laws Across MoE Sparsity",
+          "stem": "hyperparameterscalinglawsacrossmoesparsity",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-17/search_result.json",
+          "shared_terms": [
+            "moe"
+          ],
+          "shared_count": 1
+        }
+      ],
+      "score": 6.27
+    },
+    {
+      "title": "Distributed Training using an Intelligent Network",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "venue": "",
+      "url": "http://arxiv.org/abs/2608.26453v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.26453v1",
+      "published": "2026-08-26T22:58:24Z",
+      "authors": [
+        "Nihar Shah",
+        "Ben Blier"
+      ],
+      "paper_stem": "Distributed_Training_using_an_Intelligent_Network",
+      "matched_domain": "大模型训练优化",
+      "already_known": false,
+      "kb_source": "",
+      "related_papers": [
+        {
+          "title": "Musec: MomentUm SpEctral Clipping for Stable Muon-type Training",
+          "stem": "musecmomentumspectralclippingforstablemuontypetraining",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-17/search_result.json",
+          "shared_terms": [
+            "training"
+          ],
+          "shared_count": 1
+        }
+      ],
+      "score": 6.25
+    },
+    {
+      "title": "Right Tool, Right Job: Native-Language Evaluation, Tokenizer Sensitivity, and Methodological Findings from a French-Only BabyLM",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "venue": "",
+      "url": "http://arxiv.org/abs/2609.17435v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.17435v1",
+      "published": "2026-09-15T16:43:32Z",
+      "authors": [
+        "Adam Zachary Wasserman",
+        "David Beauchemin"
+      ],
+      "paper_stem": "Right_Tool_Right_Job_Native_Language_Evaluation_Tokenizer_Sensitivity_and_Methodological_Findings_from_a_French_Only_Bab",
+      "matched_domain": "大模型训练优化",
+      "already_known": false,
+      "kb_source": "",
+      "related_papers": [],
+      "score": 6.16
+    },
+    {
+      "title": "When Does Online Adaptation Pay on the Edge? A Leakage-Free Evaluation of Warmup, Learning-Rate Selection, and Resource Trade-offs for Time-Series Forecasting",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "venue": "",
+      "url": "http://arxiv.org/abs/2609.01126v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.01126v1",
+      "published": "2026-09-01T12:04:08Z",
+      "authors": [
+        "Takumi Fujimoto",
+        "Hiroaki Nishi"
+      ],
+      "paper_stem": "When_Does_Online_Adaptation_Pay_on_the_Edge_A_Leakage_Free_Evaluation_of_Warmup_Learning_Rate_Selection_and_Resource_Tra",
+      "matched_domain": "随机梯度与优化理论",
+      "already_known": false,
+      "kb_source": "",
+      "related_papers": [
+        {
+          "title": "EMMI: Edge Multi-Modal Intelligence for Communication-Efficient MLLM Inference via Fused Representation Compression",
+          "stem": "emmiedgemultimodalintelligenceforcommunicationefficientmllminferenceviafusedrepresentationcompression",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-17/search_result.json",
+          "shared_terms": [
+            "edge"
+          ],
+          "shared_count": 1
+        },
+        {
+          "title": "Understanding MARS When Scaling Momentum Correction Provably Helps",
+          "stem": "understandingmarswhenscalingmomentumcorrectionprovablyhelps",
+          "source": "pdf",
+          "path": "/Users/myl/Documents/paper/01-raw/Understanding_MARS_When_Scaling_Momentum_Correction_Provably_Helps.pdf",
+          "shared_terms": [
+            "when"
+          ],
+          "shared_count": 1
+        }
+      ],
+      "score": 6.13
+    },
+    {
+      "title": "Optimizer Memory Schedules for Outscaling the Overtraining Axis",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "venue": "",
+      "url": "http://arxiv.org/abs/2609.04577v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.04577v1",
+      "published": "2026-09-04T00:15:53Z",
+      "authors": [
+        "Katie Everett",
+        "Shikai Qiu"
+      ],
+      "paper_stem": "Optimizer_Memory_Schedules_for_Outscaling_the_Overtraining_Axis",
+      "matched_domain": "大模型训练优化",
+      "already_known": false,
+      "kb_source": "",
+      "related_papers": [
+        {
+          "title": "PowerStep Memory Efficient Adaptive Optimization via lp Norm Steepest Descent",
+          "stem": "powerstepmemoryefficientadaptiveoptimizationvialpnormsteepestdescent",
+          "source": "pdf",
+          "path": "/Users/myl/Documents/paper/01-raw/PowerStep_Memory_Efficient_Adaptive_Optimization_via_lp_Norm_Steepest_Descent.pdf",
+          "shared_terms": [
+            "memory"
+          ],
+          "shared_count": 1
+        }
+      ],
+      "score": 6.11
+    },
+    {
+      "title": "Principal-timestep Restricted Init via Sparse Matrix-decomposition in Flow-matching",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "venue": "",
+      "url": "http://arxiv.org/abs/2609.15643v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.15643v1",
+      "published": "2026-09-14T14:30:54Z",
+      "authors": [
+        "Jiayang Gu",
+        "Zheng Fang",
+        "Lichaun Xiang",
+        "Fanghui Liu",
+        "Xu Cai",
+        "Hongkai Wen"
+      ],
+      "paper_stem": "Principal_timestep_Restricted_Init_via_Sparse_Matrix_decomposition_in_Flow_matching",
+      "matched_domain": "大模型训练优化",
+      "already_known": false,
+      "kb_source": "",
+      "related_papers": [],
+      "score": 6.11
+    },
+    {
+      "title": "PRICE: A Systematic Study of LLM Adaptation Choices for Bitcoin Price Forecasting",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "venue": "",
+      "url": "http://arxiv.org/abs/2609.05235v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.05235v1",
+      "published": "2026-09-04T15:01:38Z",
+      "authors": [
+        "Maryam Fakhari",
+        "Mehran Safayani"
+      ],
+      "paper_stem": "PRICE_A_Systematic_Study_of_LLM_Adaptation_Choices_for_Bitcoin_Price_Forecasting",
+      "matched_domain": "大模型训练优化",
+      "already_known": false,
+      "kb_source": "",
+      "related_papers": [],
+      "score": 6.03
+    },
+    {
+      "title": "Convergence of Stochastic Gradient Methods under Heavy-Tailed Noise and Holder Smoothness",
+      "source": "openreview",
+      "arxiv_id": "",
+      "venue": "Under review for TMLR",
+      "url": "https://openreview.net/forum?id=luBL1wZtIl",
+      "pdf_url": "/pdf/315a4dc99d1fd513b291461f45bde6e033b7f71b.pdf",
+      "published": "2026-09-06T04:26:45.352000",
+      "authors": [],
+      "paper_stem": "Convergence_of_Stochastic_Gradient_Methods_under_Heavy_Tailed_Noise_and_Holder_Smoothness",
+      "matched_domain": "随机梯度与优化理论",
+      "already_known": false,
+      "kb_source": "",
+      "related_papers": [
+        {
+          "title": "Self Tuning Stochastic Optimization with Curvature Aware Gradient Filtering",
+          "stem": "selftuningstochasticoptimizationwithcurvatureawaregradientfiltering",
+          "source": "pdf",
+          "path": "/Users/myl/Documents/paper/01-raw/Self_Tuning_Stochastic_Optimization_with_Curvature_Aware_Gradient_Filtering.pdf",
+          "shared_terms": [
+            "gradient",
+            "stochastic"
+          ],
+          "shared_count": 2
+        },
+        {
+          "title": "Parameter Free Clipped Gradient Descent Meets Polyak",
+          "stem": "parameterfreeclippedgradientdescentmeetspolyak",
+          "source": "pdf",
+          "path": "/Users/myl/Documents/paper/01-raw/Parameter_Free_Clipped_Gradient_Descent_Meets_Polyak.pdf",
+          "shared_terms": [
+            "gradient"
+          ],
+          "shared_count": 1
+        }
+      ],
+      "score": 6.0
+    },
+    {
+      "title": "On the Design of Qwen3.8-Next Architecture: Evaluation, Efficiency, and Training Stability",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "venue": "",
+      "url": "http://arxiv.org/abs/2608.30320v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.30320v1",
+      "published": "2026-08-31T06:35:07Z",
+      "authors": [
+        "Zihan Qiu",
+        "Zekun Wang",
+        "Xiao Li",
+        "Yanpeng Li",
+        "Yang Xu",
+        "Yixuan Wang",
+        "Huaqing Zhang",
+        "Rui Men",
+        "Bochao Mao",
+        "Chengruidong Zhang",
+        "Fan Zhou",
+        "Hao Luo",
+        "Haofeng Huang",
+        "Haoran Lian",
+        "Haoyan Huang",
+        "Hongqing Chen",
+        "Jianwei Zhang",
+        "Jing Xu",
+        "Junjie Wang",
+        "Langshi Chen",
+        "Liangyu Wang",
+        "Linlang Jiang",
+        "Man Yuan",
+        "Minmin Sun",
+        "Peng Jin",
+        "Siqi Zhang",
+        "Siyu Wang",
+        "Xingzhang Ren",
+        "Yakai Wang",
+        "Yi Zhang",
+        "Yiming Dong",
+        "Yizhong Cao",
+        "Yubo Ma",
+        "Yunfei Mao",
+        "Bo Zheng",
+        "Dayiheng Liu"
+      ],
+      "paper_stem": "On_the_Design_of_Qwen3.8_Next_Architecture_Evaluation_Efficiency_and_Training_Stability",
+      "matched_domain": "大模型训练优化",
+      "already_known": false,
+      "kb_source": "",
+      "related_papers": [
+        {
+          "title": "Beyond Quadratic Loss: The Stability Phase Diagram of Adam",
+          "stem": "beyondquadraticlossthestabilityphasediagramofadam",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-17/search_result.json",
+          "shared_terms": [
+            "stability"
+          ],
+          "shared_count": 1
+        },
+        {
+          "title": "Musec: MomentUm SpEctral Clipping for Stable Muon-type Training",
+          "stem": "musecmomentumspectralclippingforstablemuontypetraining",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-17/search_result.json",
+          "shared_terms": [
+            "training"
+          ],
+          "shared_count": 1
+        },
+        {
+          "title": "Toward Automated Algorithm Design A Survey and Practical Guide to Meta-Black-Box-Optimization",
+          "stem": "towardautomatedalgorithmdesignasurveyandpracticalguidetometablackboxoptimization",
+          "source": "pdf",
+          "path": "/Users/myl/Documents/paper/01-raw/Toward_Automated_Algorithm_Design_A_Survey_and_Practical_Guide_to_Meta-Black-Box-Optimization.pdf",
+          "shared_terms": [
+            "design"
+          ],
+          "shared_count": 1
+        }
+      ],
+      "score": 5.99
+    },
+    {
+      "title": "Resilient Decentralized Wireless Federated Learning via Gradient Tracking with AdamW",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "venue": "",
+      "url": "http://arxiv.org/abs/2608.25535v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.25535v1",
+      "published": "2026-08-26T08:46:46Z",
+      "authors": [
+        "Nguyen Van Thieu",
+        "Ti Ti Nguyen",
+        "Ons Aouedi",
+        "Vu Nguyen Ha",
+        "Symeon Chatzinotas"
+      ],
+      "paper_stem": "Resilient_Decentralized_Wireless_Federated_Learning_via_Gradient_Tracking_with_AdamW",
+      "matched_domain": "大模型训练优化",
+      "already_known": false,
+      "kb_source": "",
+      "related_papers": [
+        {
+          "title": "Parameter Free Clipped Gradient Descent Meets Polyak",
+          "stem": "parameterfreeclippedgradientdescentmeetspolyak",
+          "source": "pdf",
+          "path": "/Users/myl/Documents/paper/01-raw/Parameter_Free_Clipped_Gradient_Descent_Meets_Polyak.pdf",
+          "shared_terms": [
+            "gradient"
+          ],
+          "shared_count": 1
+        },
+        {
+          "title": "Self Tuning Stochastic Optimization with Curvature Aware Gradient Filtering",
+          "stem": "selftuningstochasticoptimizationwithcurvatureawaregradientfiltering",
+          "source": "pdf",
+          "path": "/Users/myl/Documents/paper/01-raw/Self_Tuning_Stochastic_Optimization_with_Curvature_Aware_Gradient_Filtering.pdf",
+          "shared_terms": [
+            "gradient"
+          ],
+          "shared_count": 1
+        }
+      ],
+      "score": 5.99
+    },
+    {
+      "title": "Deriving Scaling Laws for OpenEuroLLM Models: Learning Rate, Batch Size and Loss",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "venue": "",
+      "url": "http://arxiv.org/abs/2608.28308v2",
+      "pdf_url": "https://arxiv.org/pdf/2608.28308v2",
+      "published": "2026-08-28T13:16:56Z",
+      "authors": [
+        "Niccolò Ajroldi",
+        "Diana Alexandra Onutu",
+        "Haider Al-Tahan",
+        "Jörg Franke",
+        "Sampo Pyysalo",
+        "Jenia Jitsev",
+        "Aaron Klein"
+      ],
+      "paper_stem": "Deriving_Scaling_Laws_for_OpenEuroLLM_Models_Learning_Rate_Batch_Size_and_Loss",
+      "matched_domain": "大模型训练优化",
+      "already_known": false,
+      "kb_source": "",
+      "related_papers": [
+        {
+          "title": "Beyond Quadratic Loss: The Stability Phase Diagram of Adam",
+          "stem": "beyondquadraticlossthestabilityphasediagramofadam",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-17/search_result.json",
+          "shared_terms": [
+            "loss"
+          ],
+          "shared_count": 1
+        },
+        {
+          "title": "Hyperparameter Scaling Laws Across MoE Sparsity",
+          "stem": "hyperparameterscalinglawsacrossmoesparsity",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-17/search_result.json",
+          "shared_terms": [
+            "laws"
+          ],
+          "shared_count": 1
+        },
+        {
+          "title": "On the Recall Scaling Laws in Mamba: A Theoretical and Mechanistic Study via Hashing",
+          "stem": "ontherecallscalinglawsinmambaatheoreticalandmechanisticstudyviahashing",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-17/search_result.json",
+          "shared_terms": [
+            "laws"
+          ],
+          "shared_count": 1
+        }
+      ],
+      "score": 5.93
+    },
+    {
+      "title": "CD-LoRA: Consistency-Driven Low-Rank Adaptation for Multi-Task Fine-Tuning",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "venue": "",
+      "url": "http://arxiv.org/abs/2608.21909v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.21909v1",
+      "published": "2026-08-22T10:45:48Z",
+      "authors": [
+        "Qian Zha",
+        "Jinda Liu",
+        "Yuan Wu",
+        "Yi Chang"
+      ],
+      "paper_stem": "CD_LoRA_Consistency_Driven_Low_Rank_Adaptation_for_Multi_Task_Fine_Tuning",
+      "matched_domain": "大模型训练优化",
+      "already_known": false,
+      "kb_source": "",
+      "related_papers": [],
+      "score": 5.9
+    },
+    {
+      "title": "Communication-efficient ADMM over Hierarchical Networks",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "venue": "",
+      "url": "http://arxiv.org/abs/2609.09361v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.09361v1",
+      "published": "2026-09-08T18:52:35Z",
+      "authors": [
+        "Binh Nguyen",
+        "Shuangqing Wei",
+        "Truong X. Nghiem"
+      ],
+      "paper_stem": "Communication_efficient_ADMM_over_Hierarchical_Networks",
+      "matched_domain": "随机梯度与优化理论",
+      "already_known": false,
+      "kb_source": "",
+      "related_papers": [
+        {
+          "title": "4D Parallelism Unlocks Exascale Bayesian Neural Networks for High-Fidelity Atmospheric Modeling",
+          "stem": "4dparallelismunlocksexascalebayesianneuralnetworksforhighfidelityatmosphericmodeling",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-17/search_result.json",
+          "shared_terms": [
+            "networks"
+          ],
+          "shared_count": 1
+        },
+        {
+          "title": "EMMI: Edge Multi-Modal Intelligence for Communication-Efficient MLLM Inference via Fused Representation Compression",
+          "stem": "emmiedgemultimodalintelligenceforcommunicationefficientmllminferenceviafusedrepresentationcompression",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-17/search_result.json",
+          "shared_terms": [
+            "communication-efficient"
+          ],
+          "shared_count": 1
+        }
+      ],
+      "score": 5.9
+    },
+    {
+      "title": "Scaling Laws for Physics-Aware ACOPF Surrogate Learning",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "venue": "",
+      "url": "http://arxiv.org/abs/2609.16282v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.16282v1",
+      "published": "2026-09-14T19:39:17Z",
+      "authors": [
+        "Yijiang Li",
+        "Emon Dey",
+        "Stefano Fenu",
+        "Massimiliano Lupo Pasini",
+        "Teja Kuruganti",
+        "Kibaek Kim"
+      ],
+      "paper_stem": "Scaling_Laws_for_Physics_Aware_ACOPF_Surrogate_Learning",
+      "matched_domain": "大模型训练优化",
+      "already_known": false,
+      "kb_source": "",
+      "related_papers": [
+        {
+          "title": "Hyperparameter Scaling Laws Across MoE Sparsity",
+          "stem": "hyperparameterscalinglawsacrossmoesparsity",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-17/search_result.json",
+          "shared_terms": [
+            "laws"
+          ],
+          "shared_count": 1
+        },
+        {
+          "title": "On the Recall Scaling Laws in Mamba: A Theoretical and Mechanistic Study via Hashing",
+          "stem": "ontherecallscalinglawsinmambaatheoreticalandmechanisticstudyviahashing",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-17/search_result.json",
+          "shared_terms": [
+            "laws"
+          ],
+          "shared_count": 1
+        },
+        {
+          "title": "SGD in Multiclass Logistic Regression: Sequential Learning and Scaling Laws",
+          "stem": "sgdinmulticlasslogisticregressionsequentiallearningandscalinglaws",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-17/search_result.json",
+          "shared_terms": [
+            "laws"
+          ],
+          "shared_count": 1
+        }
+      ],
+      "score": 5.87
+    },
+    {
+      "title": "Beyond Dense Adam States: Adaptive Log-Space Quantization for Memory-Efficient Optimizers",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "venue": "",
+      "url": "http://arxiv.org/abs/2608.22322v3",
+      "pdf_url": "https://arxiv.org/pdf/2608.22322v3",
+      "published": "2026-08-23T09:36:56Z",
+      "authors": [
+        "Yan Wang"
+      ],
+      "paper_stem": "Beyond_Dense_Adam_States_Adaptive_Log_Space_Quantization_for_Memory_Efficient_Optimizers",
+      "matched_domain": "大模型训练优化",
+      "already_known": false,
+      "kb_source": "",
+      "related_papers": [
+        {
+          "title": "Beyond Quadratic Loss: The Stability Phase Diagram of Adam",
+          "stem": "beyondquadraticlossthestabilityphasediagramofadam",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-17/search_result.json",
+          "shared_terms": [
+            "adam",
+            "beyond"
+          ],
+          "shared_count": 2
+        },
+        {
+          "title": "PowerStep Memory Efficient Adaptive Optimization via lp Norm Steepest Descent",
+          "stem": "powerstepmemoryefficientadaptiveoptimizationvialpnormsteepestdescent",
+          "source": "pdf",
+          "path": "/Users/myl/Documents/paper/01-raw/PowerStep_Memory_Efficient_Adaptive_Optimization_via_lp_Norm_Steepest_Descent.pdf",
+          "shared_terms": [
+            "adaptive"
+          ],
+          "shared_count": 1
+        }
+      ],
+      "score": 5.85
+    },
+    {
+      "title": "Playing log(N)-Questions over Wikipedia Abstracts: Communication Efficiency Between Paired Frontier Models",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "venue": "",
+      "url": "http://arxiv.org/abs/2609.19113v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.19113v1",
+      "published": "2026-09-16T17:41:12Z",
+      "authors": [
+        "Peter Potash"
+      ],
+      "paper_stem": "Playing_log(N)_Questions_over_Wikipedia_Abstracts_Communication_Efficiency_Between_Paired_Frontier_Models",
+      "matched_domain": "大模型训练优化",
+      "already_known": false,
+      "kb_source": "",
+      "related_papers": [],
+      "score": 5.83
+    },
+    {
+      "title": "When Does Scale-Invariant Optimization Become Unstable? An Exact Schedule Law with Weight Decay",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "venue": "",
+      "url": "http://arxiv.org/abs/2609.09116v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.09116v1",
+      "published": "2026-09-08T17:46:17Z",
+      "authors": [
+        "Hasan Amin",
+        "Wei-Kai Chang",
+        "Rajiv Khanna"
+      ],
+      "paper_stem": "When_Does_Scale_Invariant_Optimization_Become_Unstable_An_Exact_Schedule_Law_with_Weight_Decay",
+      "matched_domain": "大模型训练优化",
+      "already_known": false,
+      "kb_source": "",
+      "related_papers": [
+        {
+          "title": "Understanding MARS When Scaling Momentum Correction Provably Helps",
+          "stem": "understandingmarswhenscalingmomentumcorrectionprovablyhelps",
+          "source": "pdf",
+          "path": "/Users/myl/Documents/paper/01-raw/Understanding_MARS_When_Scaling_Momentum_Correction_Provably_Helps.pdf",
+          "shared_terms": [
+            "when"
+          ],
+          "shared_count": 1
+        }
+      ],
+      "score": 5.82
+    },
+    {
+      "title": "Quantum-Assisted Memory-Efficient Training for Parameter-Intensive Wi-Fi-Based Human Activity Recognition",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "venue": "",
+      "url": "http://arxiv.org/abs/2609.04271v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.04271v1",
+      "published": "2026-09-02T19:31:22Z",
+      "authors": [
+        "To Truong An",
+        "Jie Zhang",
+        "Guolin Yin",
+        "Junqing Zhang",
+        "Yanjiao Li",
+        "Trung Q. Duong",
+        "Simon L. Cotton"
+      ],
+      "paper_stem": "Quantum_Assisted_Memory_Efficient_Training_for_Parameter_Intensive_Wi_Fi_Based_Human_Activity_Recognition",
+      "matched_domain": "大模型训练优化",
+      "already_known": false,
+      "kb_source": "",
+      "related_papers": [
+        {
+          "title": "Musec: MomentUm SpEctral Clipping for Stable Muon-type Training",
+          "stem": "musecmomentumspectralclippingforstablemuontypetraining",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-17/search_result.json",
+          "shared_terms": [
+            "training"
+          ],
+          "shared_count": 1
+        }
+      ],
+      "score": 5.77
+    },
+    {
+      "title": "Preventing Model Collapse: A Fisher-Rao Perspective on the Dynamics of Training with Synthetic Data",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "venue": "",
+      "url": "http://arxiv.org/abs/2609.18878v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.18878v1",
+      "published": "2026-09-16T16:14:02Z",
+      "authors": [
+        "Matteo Marchi",
+        "João Pedro Silvestre",
+        "Bahman Gharesifard",
+        "Paulo Tabuada"
+      ],
+      "paper_stem": "Preventing_Model_Collapse_A_Fisher_Rao_Perspective_on_the_Dynamics_of_Training_with_Synthetic_Data",
+      "matched_domain": "随机梯度与优化理论",
+      "already_known": false,
+      "kb_source": "",
+      "related_papers": [
+        {
+          "title": "Musec: MomentUm SpEctral Clipping for Stable Muon-type Training",
+          "stem": "musecmomentumspectralclippingforstablemuontypetraining",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-17/search_result.json",
+          "shared_terms": [
+            "training"
+          ],
+          "shared_count": 1
+        }
+      ],
+      "score": 5.73
+    },
+    {
+      "title": "LoRA-GA$^2$: Low Rank Adaptation with Multi-step Gradient Adaptive Alignment",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "venue": "",
+      "url": "http://arxiv.org/abs/2608.19800v2",
+      "pdf_url": "https://arxiv.org/pdf/2608.19800v2",
+      "published": "2026-08-20T08:55:05Z",
+      "authors": [
+        "Haonan He",
+        "Xinyue Fan"
+      ],
+      "paper_stem": "LoRA_GA$^2$_Low_Rank_Adaptation_with_Multi_step_Gradient_Adaptive_Alignment",
+      "matched_domain": "大模型训练优化",
+      "already_known": false,
+      "kb_source": "",
+      "related_papers": [
+        {
+          "title": "Parameter Free Clipped Gradient Descent Meets Polyak",
+          "stem": "parameterfreeclippedgradientdescentmeetspolyak",
+          "source": "pdf",
+          "path": "/Users/myl/Documents/paper/01-raw/Parameter_Free_Clipped_Gradient_Descent_Meets_Polyak.pdf",
+          "shared_terms": [
+            "gradient"
+          ],
+          "shared_count": 1
+        },
+        {
+          "title": "PowerStep Memory Efficient Adaptive Optimization via lp Norm Steepest Descent",
+          "stem": "powerstepmemoryefficientadaptiveoptimizationvialpnormsteepestdescent",
+          "source": "pdf",
+          "path": "/Users/myl/Documents/paper/01-raw/PowerStep_Memory_Efficient_Adaptive_Optimization_via_lp_Norm_Steepest_Descent.pdf",
+          "shared_terms": [
+            "adaptive"
+          ],
+          "shared_count": 1
+        },
+        {
+          "title": "Self Tuning Stochastic Optimization with Curvature Aware Gradient Filtering",
+          "stem": "selftuningstochasticoptimizationwithcurvatureawaregradientfiltering",
+          "source": "pdf",
+          "path": "/Users/myl/Documents/paper/01-raw/Self_Tuning_Stochastic_Optimization_with_Curvature_Aware_Gradient_Filtering.pdf",
+          "shared_terms": [
+            "gradient"
+          ],
+          "shared_count": 1
+        }
+      ],
+      "score": 5.69
+    },
+    {
+      "title": "Breaking the Structural Identity: Personalized Federated LoRA Fine-tuning under Rank Heterogeneity",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "venue": "",
+      "url": "http://arxiv.org/abs/2609.00632v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.00632v1",
+      "published": "2026-09-01T03:09:20Z",
+      "authors": [
+        "Lei Wang",
+        "Jieming Bian",
+        "Letian Zhang",
+        "Jie Xu"
+      ],
+      "paper_stem": "Breaking_the_Structural_Identity_Personalized_Federated_LoRA_Fine_tuning_under_Rank_Heterogeneity",
+      "matched_domain": "大模型训练优化",
+      "already_known": false,
+      "kb_source": "",
+      "related_papers": [],
+      "score": 5.69
+    },
+    {
+      "title": "Normalized Low-Rank Adaptation",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "venue": "",
+      "url": "http://arxiv.org/abs/2608.31036v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.31036v1",
+      "published": "2026-08-31T16:15:36Z",
+      "authors": [
+        "Jiale Kang",
+        "Ziyin Yue",
+        "Zheng Zhan",
+        "Yangyi Huang",
+        "Weiyang Liu"
+      ],
+      "paper_stem": "Normalized_Low_Rank_Adaptation",
+      "matched_domain": "大模型训练优化",
+      "already_known": false,
+      "kb_source": "",
+      "related_papers": [],
+      "score": 5.66
+    },
+    {
+      "title": "One Rate Is Not Enough: Adaptive Anisotropic Learning Rates for LoRA Fine-Tuning",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "venue": "",
+      "url": "http://arxiv.org/abs/2609.05885v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.05885v1",
+      "published": "2026-09-05T05:14:04Z",
+      "authors": [
+        "Huiyi Wang",
+        "Daijiao Liu",
+        "Lina Yao",
+        "Dong Gong"
+      ],
+      "paper_stem": "One_Rate_Is_Not_Enough_Adaptive_Anisotropic_Learning_Rates_for_LoRA_Fine_Tuning",
+      "matched_domain": "大模型训练优化",
+      "already_known": false,
+      "kb_source": "",
+      "related_papers": [
+        {
+          "title": "PowerStep Memory Efficient Adaptive Optimization via lp Norm Steepest Descent",
+          "stem": "powerstepmemoryefficientadaptiveoptimizationvialpnormsteepestdescent",
+          "source": "pdf",
+          "path": "/Users/myl/Documents/paper/01-raw/PowerStep_Memory_Efficient_Adaptive_Optimization_via_lp_Norm_Steepest_Descent.pdf",
+          "shared_terms": [
+            "adaptive"
+          ],
+          "shared_count": 1
+        }
+      ],
+      "score": 5.65
+    },
+    {
+      "title": "Communication-Efficient LLM Adaptation over Decentralized GPU Meshes",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "venue": "",
+      "url": "http://arxiv.org/abs/2609.14339v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.14339v1",
+      "published": "2026-09-13T06:56:50Z",
+      "authors": [
+        "Sameera Ramasinghe",
+        "Shamane Siriwardhana",
+        "Thalaiyasingam Ajanthan",
+        "Hadi Mohaghegh Dolatabadi",
+        "Chamin P Hewa Koneputugodage",
+        "Gil Avraham",
+        "Violetta Shevchenko",
+        "James Snewin",
+        "Karol Pajak",
+        "Harry Xi",
+        "Alexander Long"
+      ],
+      "paper_stem": "Communication_Efficient_LLM_Adaptation_over_Decentralized_GPU_Meshes",
+      "matched_domain": "大模型训练优化",
+      "already_known": false,
+      "kb_source": "",
+      "related_papers": [
+        {
+          "title": "EMMI: Edge Multi-Modal Intelligence for Communication-Efficient MLLM Inference via Fused Representation Compression",
+          "stem": "emmiedgemultimodalintelligenceforcommunicationefficientmllminferenceviafusedrepresentationcompression",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-17/search_result.json",
+          "shared_terms": [
+            "communication-efficient"
+          ],
+          "shared_count": 1
+        },
+        {
+          "title": "vidax: A Unified JAX Framework for Video Generative Models on Accelerator Meshes",
+          "stem": "vidaxaunifiedjaxframeworkforvideogenerativemodelsonacceleratormeshes",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-17/search_result.json",
+          "shared_terms": [
+            "meshes"
+          ],
+          "shared_count": 1
+        }
+      ],
+      "score": 5.65
+    },
+    {
+      "title": "OPEN-1B: A Fully Auditable Training Run",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "venue": "",
+      "url": "http://arxiv.org/abs/2609.17380v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.17380v1",
+      "published": "2026-09-15T16:23:08Z",
+      "authors": [
+        "John Donaghy",
+        "Brian Wilcox",
+        "Oğuzhan Ersoy",
+        "Shikhar Rastogi",
+        "Adam St Arnaud",
+        "Alexey Titov",
+        "Jordan Greenberg",
+        "Ben Fielding",
+        "Harry Grieve"
+      ],
+      "paper_stem": "OPEN_1B_A_Fully_Auditable_Training_Run",
+      "matched_domain": "大模型训练优化",
+      "already_known": false,
+      "kb_source": "",
+      "related_papers": [
+        {
+          "title": "Musec: MomentUm SpEctral Clipping for Stable Muon-type Training",
+          "stem": "musecmomentumspectralclippingforstablemuontypetraining",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-17/search_result.json",
+          "shared_terms": [
+            "training"
+          ],
+          "shared_count": 1
+        }
+      ],
+      "score": 5.65
+    },
+    {
+      "title": "FedSubMuon: Communication-Efficient Federated LLM Fine-Tuning via Structured Subspace Muon",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "venue": "",
+      "url": "http://arxiv.org/abs/2609.06073v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.06073v1",
+      "published": "2026-09-05T13:07:13Z",
+      "authors": [
+        "Shaolong Chen",
+        "Youming Tao",
+        "Shuzhen Chen",
+        "Falko Dressler",
+        "Qingqing Ye",
+        "Di Wang"
+      ],
+      "paper_stem": "FedSubMuon_Communication_Efficient_Federated_LLM_Fine_Tuning_via_Structured_Subspace_Muon",
+      "matched_domain": "随机梯度与优化理论",
+      "already_known": false,
+      "kb_source": "",
+      "related_papers": [
+        {
+          "title": "EMMI: Edge Multi-Modal Intelligence for Communication-Efficient MLLM Inference via Fused Representation Compression",
+          "stem": "emmiedgemultimodalintelligenceforcommunicationefficientmllminferenceviafusedrepresentationcompression",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-17/search_result.json",
+          "shared_terms": [
+            "communication-efficient"
+          ],
+          "shared_count": 1
+        }
+      ],
+      "score": 5.6
+    },
+    {
+      "title": "AQLoRA: A Zero-Search Recipe for Fast Quantized LoRA Fine-Tuning",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "venue": "",
+      "url": "http://arxiv.org/abs/2608.23816v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.23816v1",
+      "published": "2026-08-24T20:47:40Z",
+      "authors": [
+        "Md Romyull Islam"
+      ],
+      "paper_stem": "AQLoRA_A_Zero_Search_Recipe_for_Fast_Quantized_LoRA_Fine_Tuning",
+      "matched_domain": "大模型训练优化",
+      "already_known": false,
+      "kb_source": "",
+      "related_papers": [],
+      "score": 5.57
+    },
+    {
+      "title": "Lightweight Adaptation of EEG Foundation Models for Stroke Motor Imagery Decoding: Domain Shift and Subject-Level Robustness",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "venue": "",
+      "url": "http://arxiv.org/abs/2609.00282v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.00282v1",
+      "published": "2026-08-31T19:26:41Z",
+      "authors": [
+        "Anh T. Nguyen",
+        "Zihua Sun",
+        "Michelle J. Johnson"
+      ],
+      "paper_stem": "Lightweight_Adaptation_of_EEG_Foundation_Models_for_Stroke_Motor_Imagery_Decoding_Domain_Shift_and_Subject_Level_Robustn",
+      "matched_domain": "大模型训练优化",
+      "already_known": false,
+      "kb_source": "",
+      "related_papers": [],
+      "score": 5.53
+    },
+    {
+      "title": "HyperTransfer: Understanding the Equivalence between Base Optimizer and Hyperball",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "venue": "",
+      "url": "http://arxiv.org/abs/2609.07017v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.07017v1",
+      "published": "2026-09-07T04:12:07Z",
+      "authors": [
+        "Jinghui Yuan",
+        "Hongtao Zhang",
+        "Jade Zou",
+        "Tianyu Li",
+        "Wenjie Zhou",
+        "Tianyu He",
+        "Wei Chen"
+      ],
+      "paper_stem": "HyperTransfer_Understanding_the_Equivalence_between_Base_Optimizer_and_Hyperball",
+      "matched_domain": "大模型训练优化",
+      "already_known": false,
+      "kb_source": "",
+      "related_papers": [],
+      "score": 5.5
+    },
+    {
+      "title": "Amortizing Scaling Law Construction Costs",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "venue": "",
+      "url": "http://arxiv.org/abs/2609.05016v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.05016v1",
+      "published": "2026-09-04T11:25:41Z",
+      "authors": [
+        "Abhash Kumar Jha",
+        "Diana Alexandra Onuţu",
+        "Neeratyoy Mallik",
+        "Swagatam Haldar",
+        "Sam Laing",
+        "Niccolò Ajroldi",
+        "Shiwei Liu",
+        "Joaquin Vanschoren",
+        "Aaron Klein"
+      ],
+      "paper_stem": "Amortizing_Scaling_Law_Construction_Costs",
+      "matched_domain": "大模型训练优化",
+      "already_known": false,
+      "kb_source": "",
+      "related_papers": [],
+      "score": 5.5
+    },
+    {
+      "title": "Communication-Efficient Personalized Federated Learning via Layer-Wise Multi-Threshold Random Sketching",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "venue": "",
+      "url": "http://arxiv.org/abs/2609.04830v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.04830v1",
+      "published": "2026-09-04T07:35:24Z",
+      "authors": [
+        "Xu Zhang",
+        "Xingyu Hou",
+        "Jiacheng Cheng",
+        "Kaiyuan Feng",
+        "Maoguo Gong"
+      ],
+      "paper_stem": "Communication_Efficient_Personalized_Federated_Learning_via_Layer_Wise_Multi_Threshold_Random_Sketching",
+      "matched_domain": "随机梯度与优化理论",
+      "already_known": false,
+      "kb_source": "",
+      "related_papers": [
+        {
+          "title": "EMMI: Edge Multi-Modal Intelligence for Communication-Efficient MLLM Inference via Fused Representation Compression",
+          "stem": "emmiedgemultimodalintelligenceforcommunicationefficientmllminferenceviafusedrepresentationcompression",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-17/search_result.json",
+          "shared_terms": [
+            "communication-efficient"
+          ],
+          "shared_count": 1
+        }
+      ],
+      "score": 5.5
+    },
+    {
+      "title": "Coupled Scaling: A Representational Accessibility Framework for Neural Scaling Laws",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "venue": "",
+      "url": "http://arxiv.org/abs/2609.03533v2",
+      "pdf_url": "https://arxiv.org/pdf/2609.03533v2",
+      "published": "2026-09-03T08:32:46Z",
+      "authors": [
+        "Jie Wang"
+      ],
+      "paper_stem": "Coupled_Scaling_A_Representational_Accessibility_Framework_for_Neural_Scaling_Laws",
+      "matched_domain": "大模型训练优化",
+      "already_known": false,
+      "kb_source": "",
+      "related_papers": [
+        {
+          "title": "4D Parallelism Unlocks Exascale Bayesian Neural Networks for High-Fidelity Atmospheric Modeling",
+          "stem": "4dparallelismunlocksexascalebayesianneuralnetworksforhighfidelityatmosphericmodeling",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-17/search_result.json",
+          "shared_terms": [
+            "neural"
+          ],
+          "shared_count": 1
+        },
+        {
+          "title": "Hyperparameter Scaling Laws Across MoE Sparsity",
+          "stem": "hyperparameterscalinglawsacrossmoesparsity",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-17/search_result.json",
+          "shared_terms": [
+            "laws"
+          ],
+          "shared_count": 1
+        },
+        {
+          "title": "On the Recall Scaling Laws in Mamba: A Theoretical and Mechanistic Study via Hashing",
+          "stem": "ontherecallscalinglawsinmambaatheoreticalandmechanisticstudyviahashing",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-17/search_result.json",
+          "shared_terms": [
+            "laws"
+          ],
+          "shared_count": 1
+        }
+      ],
+      "score": 5.5
+    },
+    {
+      "title": "Don't Drop Dropout: Optimizing Layer Sparsity for Efficient LLM Training and Inference",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "venue": "",
+      "url": "http://arxiv.org/abs/2609.05275v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.05275v1",
+      "published": "2026-09-04T15:30:47Z",
+      "authors": [
+        "Mostafa Elhoushi",
+        "Alex Pretko",
+        "Nolan Dey",
+        "Bin Claire Zhang",
+        "Gavia Gray",
+        "Gurpreet Gosal",
+        "Abdulrahman Mahmoud",
+        "Shane Bergsma",
+        "Joel Hestness"
+      ],
+      "paper_stem": "Don't_Drop_Dropout_Optimizing_Layer_Sparsity_for_Efficient_LLM_Training_and_Inference",
+      "matched_domain": "大模型训练优化",
+      "already_known": false,
+      "kb_source": "",
+      "related_papers": [
+        {
+          "title": "EMMI: Edge Multi-Modal Intelligence for Communication-Efficient MLLM Inference via Fused Representation Compression",
+          "stem": "emmiedgemultimodalintelligenceforcommunicationefficientmllminferenceviafusedrepresentationcompression",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-17/search_result.json",
+          "shared_terms": [
+            "inference"
+          ],
+          "shared_count": 1
+        },
+        {
+          "title": "Hyperparameter Scaling Laws Across MoE Sparsity",
+          "stem": "hyperparameterscalinglawsacrossmoesparsity",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-17/search_result.json",
+          "shared_terms": [
+            "sparsity"
+          ],
+          "shared_count": 1
+        },
+        {
+          "title": "Musec: MomentUm SpEctral Clipping for Stable Muon-type Training",
+          "stem": "musecmomentumspectralclippingforstablemuontypetraining",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-17/search_result.json",
+          "shared_terms": [
+            "training"
+          ],
+          "shared_count": 1
+        }
+      ],
+      "score": 5.49
+    },
+    {
+      "title": "TrainSDC: Characterizing and Mitigating Silent Data Corruption in Large Language Model Training",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "venue": "",
+      "url": "http://arxiv.org/abs/2608.30769v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.30769v1",
+      "published": "2026-08-31T13:33:26Z",
+      "authors": [
+        "Zhipeng Xia",
+        "Haotian Xu",
+        "Siyu Yun",
+        "Liqi Lin",
+        "Hu Liu",
+        "Yu Li",
+        "Cheng Zhuo"
+      ],
+      "paper_stem": "TrainSDC_Characterizing_and_Mitigating_Silent_Data_Corruption_in_Large_Language_Model_Training",
+      "matched_domain": "大模型训练优化",
+      "already_known": false,
+      "kb_source": "",
+      "related_papers": [
+        {
+          "title": "Musec: MomentUm SpEctral Clipping for Stable Muon-type Training",
+          "stem": "musecmomentumspectralclippingforstablemuontypetraining",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-17/search_result.json",
+          "shared_terms": [
+            "training"
+          ],
+          "shared_count": 1
+        }
+      ],
+      "score": 5.45
+    },
+    {
+      "title": "Behaviorally Effective LoRA Writes Are Sparse and Structured",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "venue": "",
+      "url": "http://arxiv.org/abs/2609.01374v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.01374v1",
+      "published": "2026-09-01T15:09:43Z",
+      "authors": [
+        "Haruto Sato",
+        "Yuki Tanaka",
+        "Ren Nakamura",
+        "Aoi Kobayashi",
+        "Mei Ito"
+      ],
+      "paper_stem": "Behaviorally_Effective_LoRA_Writes_Are_Sparse_and_Structured",
+      "matched_domain": "大模型训练优化",
+      "already_known": false,
+      "kb_source": "",
+      "related_papers": [],
+      "score": 5.42
+    },
+    {
+      "title": "Multimodal Foundation Models Adaptation based on Domain-Aware Relaxed Orthogonal Subspace for Remote Sensing",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "venue": "",
+      "url": "http://arxiv.org/abs/2609.13654v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.13654v1",
+      "published": "2026-09-12T02:19:11Z",
+      "authors": [
+        "Han Luo",
+        "Ruoyu Yang",
+        "Yinhe Liu",
+        "Yanfei Zhong"
+      ],
+      "paper_stem": "Multimodal_Foundation_Models_Adaptation_based_on_Domain_Aware_Relaxed_Orthogonal_Subspace_for_Remote_Sensing",
+      "matched_domain": "大模型训练优化",
+      "already_known": false,
+      "kb_source": "",
+      "related_papers": [],
+      "score": 5.41
+    },
+    {
+      "title": "Scaling Laws, Tabular Data and Actuarial Ratemaking Models",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "venue": "",
+      "url": "http://arxiv.org/abs/2609.03106v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.03106v1",
+      "published": "2026-09-02T19:40:36Z",
+      "authors": [
+        "Ronald Richman"
+      ],
+      "paper_stem": "Scaling_Laws_Tabular_Data_and_Actuarial_Ratemaking_Models",
+      "matched_domain": "大模型训练优化",
+      "already_known": false,
+      "kb_source": "",
+      "related_papers": [
+        {
+          "title": "Hyperparameter Scaling Laws Across MoE Sparsity",
+          "stem": "hyperparameterscalinglawsacrossmoesparsity",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-17/search_result.json",
+          "shared_terms": [
+            "laws"
+          ],
+          "shared_count": 1
+        },
+        {
+          "title": "On the Recall Scaling Laws in Mamba: A Theoretical and Mechanistic Study via Hashing",
+          "stem": "ontherecallscalinglawsinmambaatheoreticalandmechanisticstudyviahashing",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-17/search_result.json",
+          "shared_terms": [
+            "laws"
+          ],
+          "shared_count": 1
+        },
+        {
+          "title": "SGD in Multiclass Logistic Regression: Sequential Learning and Scaling Laws",
+          "stem": "sgdinmulticlasslogisticregressionsequentiallearningandscalinglaws",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-17/search_result.json",
+          "shared_terms": [
+            "laws"
+          ],
+          "shared_count": 1
+        }
+      ],
+      "score": 5.4
+    },
+    {
+      "title": "Cooperative LEO-Terrestrial Multistatic ISAC: CRLB Analysis, Scaling Laws, and Satellite Selection",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "venue": "",
+      "url": "http://arxiv.org/abs/2609.09784v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.09784v1",
+      "published": "2026-09-09T06:32:50Z",
+      "authors": [
+        "Yunhui Li",
+        "Kaitao Meng",
+        "Emad Alsusa",
+        "Kaiting You"
+      ],
+      "paper_stem": "Cooperative_LEO_Terrestrial_Multistatic_ISAC_CRLB_Analysis_Scaling_Laws_and_Satellite_Selection",
+      "matched_domain": "随机梯度与优化理论",
+      "already_known": false,
+      "kb_source": "",
+      "related_papers": [
+        {
+          "title": "Hyperparameter Scaling Laws Across MoE Sparsity",
+          "stem": "hyperparameterscalinglawsacrossmoesparsity",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-17/search_result.json",
+          "shared_terms": [
+            "laws"
+          ],
+          "shared_count": 1
+        },
+        {
+          "title": "On the Recall Scaling Laws in Mamba: A Theoretical and Mechanistic Study via Hashing",
+          "stem": "ontherecallscalinglawsinmambaatheoreticalandmechanisticstudyviahashing",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-17/search_result.json",
+          "shared_terms": [
+            "laws"
+          ],
+          "shared_count": 1
+        },
+        {
+          "title": "SGD in Multiclass Logistic Regression: Sequential Learning and Scaling Laws",
+          "stem": "sgdinmulticlasslogisticregressionsequentiallearningandscalinglaws",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-17/search_result.json",
+          "shared_terms": [
+            "laws"
+          ],
+          "shared_count": 1
+        }
+      ],
+      "score": 5.4
+    },
+    {
+      "title": "Pre-carved Niches: The Formation Dynamics of Modular Task Partitions in Early LLM Training",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "venue": "",
+      "url": "http://arxiv.org/abs/2609.01170v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.01170v1",
+      "published": "2026-09-01T12:47:09Z",
+      "authors": [
+        "Guangqi Li",
+        "Yongxin Li"
+      ],
+      "paper_stem": "Pre_carved_Niches_The_Formation_Dynamics_of_Modular_Task_Partitions_in_Early_LLM_Training",
+      "matched_domain": "大模型训练优化",
+      "already_known": false,
+      "kb_source": "",
+      "related_papers": [
+        {
+          "title": "Musec: MomentUm SpEctral Clipping for Stable Muon-type Training",
+          "stem": "musecmomentumspectralclippingforstablemuontypetraining",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-17/search_result.json",
+          "shared_terms": [
+            "training"
+          ],
+          "shared_count": 1
+        }
+      ],
+      "score": 5.27
+    },
+    {
+      "title": "Efficiently Estimating Optimal Hyperparameter Scaling Laws through Power-Law Entropy Search",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "venue": "",
+      "url": "http://arxiv.org/abs/2609.01431v2",
+      "pdf_url": "https://arxiv.org/pdf/2609.01431v2",
+      "published": "2026-09-01T15:41:59Z",
+      "authors": [
+        "Zhiliang Chen",
+        "Sebastian Ament",
+        "David Eriksson",
+        "Maximilian Balandat",
+        "Bryan Kian Hsiang Low",
+        "Eytan Bakshy",
+        "Jihao Andreas Lin"
+      ],
+      "paper_stem": "Efficiently_Estimating_Optimal_Hyperparameter_Scaling_Laws_through_Power_Law_Entropy_Search",
+      "matched_domain": "大模型训练优化",
+      "already_known": false,
+      "kb_source": "",
+      "related_papers": [
+        {
+          "title": "Hyperparameter Scaling Laws Across MoE Sparsity",
+          "stem": "hyperparameterscalinglawsacrossmoesparsity",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-17/search_result.json",
+          "shared_terms": [
+            "hyperparameter",
+            "laws"
+          ],
+          "shared_count": 2
+        },
+        {
+          "title": "Let's Scale Step by Step: Compute-Efficient Hyperparameter Transfer for Large-Scale Mixture-of-Experts",
+          "stem": "letsscalestepbystepcomputeefficienthyperparametertransferforlargescalemixtureofexperts",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-17/search_result.json",
+          "shared_terms": [
+            "hyperparameter"
+          ],
+          "shared_count": 1
+        },
+        {
+          "title": "On the Recall Scaling Laws in Mamba: A Theoretical and Mechanistic Study via Hashing",
+          "stem": "ontherecallscalinglawsinmambaatheoreticalandmechanisticstudyviahashing",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-17/search_result.json",
+          "shared_terms": [
+            "laws"
+          ],
+          "shared_count": 1
+        }
+      ],
+      "score": 5.15
+    },
+    {
+      "title": "Second-Order Asymptotics for the Gaussian MAC on the Relative Interior of the Sum-Rate Face",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "venue": "",
+      "url": "http://arxiv.org/abs/2609.18013v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.18013v1",
+      "published": "2026-09-16T02:03:36Z",
+      "authors": [
+        "Vincent Y. F. Tan"
+      ],
+      "paper_stem": "Second_Order_Asymptotics_for_the_Gaussian_MAC_on_the_Relative_Interior_of_the_Sum_Rate_Face",
+      "matched_domain": "随机梯度与优化理论",
+      "already_known": false,
+      "kb_source": "",
+      "related_papers": [],
+      "score": 5.07
+    },
+    {
+      "title": "Data Mixing as Mixture Experiment: Response Surface Methodology and Optimal Design for Large Language Model Pretraining",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "venue": "",
+      "url": "http://arxiv.org/abs/2608.23922v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.23922v1",
+      "published": "2026-08-24T23:56:38Z",
+      "authors": [
+        "Yicheng Mao",
+        "Hongru Du"
+      ],
+      "paper_stem": "Data_Mixing_as_Mixture_Experiment_Response_Surface_Methodology_and_Optimal_Design_for_Large_Language_Model_Pretraining",
+      "matched_domain": "随机梯度与优化理论",
+      "already_known": false,
+      "kb_source": "",
+      "related_papers": [
+        {
+          "title": "Toward Automated Algorithm Design A Survey and Practical Guide to Meta-Black-Box-Optimization",
+          "stem": "towardautomatedalgorithmdesignasurveyandpracticalguidetometablackboxoptimization",
+          "source": "pdf",
+          "path": "/Users/myl/Documents/paper/01-raw/Toward_Automated_Algorithm_Design_A_Survey_and_Practical_Guide_to_Meta-Black-Box-Optimization.pdf",
+          "shared_terms": [
+            "design"
+          ],
+          "shared_count": 1
+        }
+      ],
+      "score": 5.03
+    },
+    {
+      "title": "Explainable Diabetic Retinopathy Classification Using Vision Foundation Models",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "venue": "",
+      "url": "http://arxiv.org/abs/2608.28207v2",
+      "pdf_url": "https://arxiv.org/pdf/2608.28207v2",
+      "published": "2026-08-28T11:26:43Z",
+      "authors": [
+        "Abhishek Verma",
+        "Anila Krishna",
+        "Abhishek Gajanan Bankar",
+        "Juan Miguel Lopez Alcaraz"
+      ],
+      "paper_stem": "Explainable_Diabetic_Retinopathy_Classification_Using_Vision_Foundation_Models",
+      "matched_domain": "大模型训练优化",
+      "already_known": false,
+      "kb_source": "",
+      "related_papers": [],
+      "score": 5.01
+    },
+    {
+      "title": "ShardMeter: Sharded and Geo-Distributed Training Without the Guesswork",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "venue": "",
+      "url": "http://arxiv.org/abs/2608.23840v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.23840v1",
+      "published": "2026-08-24T21:27:55Z",
+      "authors": [
+        "Tim Beringer",
+        "Patrick Diem",
+        "Felix Wolf",
+        "Arya Mazaheri"
+      ],
+      "paper_stem": "ShardMeter_Sharded_and_Geo_Distributed_Training_Without_the_Guesswork",
+      "matched_domain": "大模型训练优化",
+      "already_known": false,
+      "kb_source": "",
+      "related_papers": [
+        {
+          "title": "Musec: MomentUm SpEctral Clipping for Stable Muon-type Training",
+          "stem": "musecmomentumspectralclippingforstablemuontypetraining",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-17/search_result.json",
+          "shared_terms": [
+            "training"
+          ],
+          "shared_count": 1
+        }
+      ],
+      "score": 5.0
+    },
+    {
+      "title": "RW-LoRA: Communication-Efficient Decentralized LoRA Fine-Tuning via Random Walks",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "venue": "",
+      "url": "http://arxiv.org/abs/2609.00078v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.00078v1",
+      "published": "2026-08-31T08:24:24Z",
+      "authors": [
+        "Xingran Chen",
+        "Rohit Bhagat",
+        "Ghadir Ayache",
+        "Rawad Bitar",
+        "Yanmin Gong",
+        "Salim El Rouayheb"
+      ],
+      "paper_stem": "RW_LoRA_Communication_Efficient_Decentralized_LoRA_Fine_Tuning_via_Random_Walks",
+      "matched_domain": "大模型训练优化",
+      "already_known": false,
+      "kb_source": "",
+      "related_papers": [
+        {
+          "title": "EMMI: Edge Multi-Modal Intelligence for Communication-Efficient MLLM Inference via Fused Representation Compression",
+          "stem": "emmiedgemultimodalintelligenceforcommunicationefficientmllminferenceviafusedrepresentationcompression",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-17/search_result.json",
+          "shared_terms": [
+            "communication-efficient"
+          ],
+          "shared_count": 1
+        }
+      ],
+      "score": 4.97
+    },
+    {
+      "title": "SMELT: Scaling Laws for Compute-Matched MoE Looped Transformers",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "venue": "",
+      "url": "http://arxiv.org/abs/2609.01343v3",
+      "pdf_url": "https://arxiv.org/pdf/2609.01343v3",
+      "published": "2026-09-01T14:52:57Z",
+      "authors": [
+        "Shaowen Wang",
+        "Ge Zhang",
+        "Kairong Luo",
+        "Yuhao Wu",
+        "Shaofan Liu",
+        "Jiaheng Liu",
+        "Wenhao Huang",
+        "Shen Yan",
+        "Jian Li"
+      ],
+      "paper_stem": "SMELT_Scaling_Laws_for_Compute_Matched_MoE_Looped_Transformers",
+      "matched_domain": "大模型训练优化",
+      "already_known": false,
+      "kb_source": "",
+      "related_papers": [
+        {
+          "title": "Hyperparameter Scaling Laws Across MoE Sparsity",
+          "stem": "hyperparameterscalinglawsacrossmoesparsity",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-17/search_result.json",
+          "shared_terms": [
+            "laws",
+            "moe"
+          ],
+          "shared_count": 2
+        },
+        {
+          "title": "On the Recall Scaling Laws in Mamba: A Theoretical and Mechanistic Study via Hashing",
+          "stem": "ontherecallscalinglawsinmambaatheoreticalandmechanisticstudyviahashing",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-17/search_result.json",
+          "shared_terms": [
+            "laws"
+          ],
+          "shared_count": 1
+        },
+        {
+          "title": "SGD in Multiclass Logistic Regression: Sequential Learning and Scaling Laws",
+          "stem": "sgdinmulticlasslogisticregressionsequentiallearningandscalinglaws",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-17/search_result.json",
+          "shared_terms": [
+            "laws"
+          ],
+          "shared_count": 1
+        }
+      ],
+      "score": 4.9
+    },
+    {
+      "title": "BrachistoneLR: A Brachistochrone-Inspired Learning-Rate Schedule and a Controlled Benchmark of Scheduling Policies",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "venue": "",
+      "url": "http://arxiv.org/abs/2609.08069v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.08069v1",
+      "published": "2026-09-08T00:24:59Z",
+      "authors": [
+        "Md. Sadekur Rahman Roni",
+        "Md. Jalal uddin Chowdhury",
+        "Moutusi Dash Nimi"
+      ],
+      "paper_stem": "BrachistoneLR_A_Brachistochrone_Inspired_Learning_Rate_Schedule_and_a_Controlled_Benchmark_of_Scheduling_Policies",
+      "matched_domain": "大模型训练优化",
+      "already_known": false,
+      "kb_source": "",
+      "related_papers": [],
+      "score": 4.89
+    },
+    {
+      "title": "Geo-LoRA: Geometry-Aware Subspace Evolution for Low-Rank Adaptation in Continual Learning",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "venue": "",
+      "url": "http://arxiv.org/abs/2608.26960v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.26960v1",
+      "published": "2026-08-27T11:00:50Z",
+      "authors": [
+        "Yibo Feng"
+      ],
+      "paper_stem": "Geo_LoRA_Geometry_Aware_Subspace_Evolution_for_Low_Rank_Adaptation_in_Continual_Learning",
+      "matched_domain": "大模型训练优化",
+      "already_known": false,
+      "kb_source": "",
+      "related_papers": [],
+      "score": 4.73
+    },
+    {
+      "title": "Second-Order Expansion of Privacy Amplification Under f-Divergence Criteria",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "venue": "",
+      "url": "http://arxiv.org/abs/2609.11794v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.11794v1",
+      "published": "2026-09-10T16:47:22Z",
+      "authors": [
+        "Mario Berta",
+        "Hao-Chung Cheng",
+        "Marco Tomamichel"
+      ],
+      "paper_stem": "Second_Order_Expansion_of_Privacy_Amplification_Under_f_Divergence_Criteria",
+      "matched_domain": "随机梯度与优化理论",
+      "already_known": false,
+      "kb_source": "",
+      "related_papers": [],
+      "score": 4.67
+    },
+    {
+      "title": "CST: Collaborative Selective Transmission for Communication-Efficient Multimodal Edge Inference",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "venue": "",
+      "url": "http://arxiv.org/abs/2608.22115v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.22115v1",
+      "published": "2026-08-22T21:59:06Z",
+      "authors": [
+        "Hai Chi",
+        "Junrui Zhang",
+        "Rui Ning",
+        "Chonggang Wang",
+        "Robert Gazda",
+        "Huanrui Yang",
+        "Hongyi Wu"
+      ],
+      "paper_stem": "CST_Collaborative_Selective_Transmission_for_Communication_Efficient_Multimodal_Edge_Inference",
+      "matched_domain": "随机梯度与优化理论",
+      "already_known": false,
+      "kb_source": "",
+      "related_papers": [
+        {
+          "title": "EMMI: Edge Multi-Modal Intelligence for Communication-Efficient MLLM Inference via Fused Representation Compression",
+          "stem": "emmiedgemultimodalintelligenceforcommunicationefficientmllminferenceviafusedrepresentationcompression",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-17/search_result.json",
+          "shared_terms": [
+            "communication-efficient",
+            "edge",
+            "inference"
+          ],
+          "shared_count": 3
+        }
+      ],
+      "score": 4.63
+    },
+    {
+      "title": "Task-disentangled Low-Rank Adaptation for Versatile Audio-visual Multi-modal Learning Tasks within a Unified Framework",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "venue": "",
+      "url": "http://arxiv.org/abs/2608.24209v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.24209v1",
+      "published": "2026-08-25T08:19:01Z",
+      "authors": [
+        "Hanyu Xuan",
+        "Mengqi Zhang",
+        "Junjun Mao",
+        "Fei Wang",
+        "Kun Li",
+        "Guanghui Yue",
+        "Zhiliang Wu",
+        "Hehe Fan"
+      ],
+      "paper_stem": "Task_disentangled_Low_Rank_Adaptation_for_Versatile_Audio_visual_Multi_modal_Learning_Tasks_within_a_Unified_Framework",
+      "matched_domain": "大模型训练优化",
+      "already_known": false,
+      "kb_source": "",
+      "related_papers": [
+        {
+          "title": "EMMI: Edge Multi-Modal Intelligence for Communication-Efficient MLLM Inference via Fused Representation Compression",
+          "stem": "emmiedgemultimodalintelligenceforcommunicationefficientmllminferenceviafusedrepresentationcompression",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-17/search_result.json",
+          "shared_terms": [
+            "multi-modal"
+          ],
+          "shared_count": 1
+        },
+        {
+          "title": "vidax: A Unified JAX Framework for Video Generative Models on Accelerator Meshes",
+          "stem": "vidaxaunifiedjaxframeworkforvideogenerativemodelsonacceleratormeshes",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-17/search_result.json",
+          "shared_terms": [
+            "framework"
+          ],
+          "shared_count": 1
+        }
+      ],
+      "score": 4.62
+    },
+    {
+      "title": "Mapping-based exact-integral formulation of skin-friction transformations for zero-pressure-gradient compressible turbulent boundary layers",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "venue": "",
+      "url": "http://arxiv.org/abs/2609.02650v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.02650v1",
+      "published": "2026-09-02T14:25:41Z",
+      "authors": [
+        "Xuke Zhu",
+        "Xiaoshuo Yang",
+        "Yongchao Ji",
+        "Shiyi Chen",
+        "Zhenhua Xia"
+      ],
+      "paper_stem": "Mapping_based_exact_integral_formulation_of_skin_friction_transformations_for_zero_pressure_gradient_compressible_turbul",
+      "matched_domain": "大模型训练优化",
+      "already_known": false,
+      "kb_source": "",
+      "related_papers": [],
+      "score": 4.53
+    },
+    {
+      "title": "Exact Scaling Laws and Non-Hermitian Topological Phase Transitions of Active Continuum on Hyperbolic Manifolds",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "venue": "",
+      "url": "http://arxiv.org/abs/2609.03500v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.03500v1",
+      "published": "2026-09-03T08:02:56Z",
+      "authors": [
+        "Yu-Xin Xie"
+      ],
+      "paper_stem": "Exact_Scaling_Laws_and_Non_Hermitian_Topological_Phase_Transitions_of_Active_Continuum_on_Hyperbolic_Manifolds",
+      "matched_domain": "大模型训练优化",
+      "already_known": false,
+      "kb_source": "",
+      "related_papers": [
+        {
+          "title": "Beyond Quadratic Loss: The Stability Phase Diagram of Adam",
+          "stem": "beyondquadraticlossthestabilityphasediagramofadam",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-17/search_result.json",
+          "shared_terms": [
+            "phase"
+          ],
+          "shared_count": 1
+        },
+        {
+          "title": "Hyperparameter Scaling Laws Across MoE Sparsity",
+          "stem": "hyperparameterscalinglawsacrossmoesparsity",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-17/search_result.json",
+          "shared_terms": [
+            "laws"
+          ],
+          "shared_count": 1
+        },
+        {
+          "title": "On the Recall Scaling Laws in Mamba: A Theoretical and Mechanistic Study via Hashing",
+          "stem": "ontherecallscalinglawsinmambaatheoreticalandmechanisticstudyviahashing",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-17/search_result.json",
+          "shared_terms": [
+            "laws"
+          ],
+          "shared_count": 1
+        }
+      ],
+      "score": 4.52
+    },
+    {
+      "title": "SAM3-LoRA: Parameter-Efficient Adaptation of a Concept-Promptable Foundation Model for Multi-Class Structural Defect Segmentation",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "venue": "",
+      "url": "http://arxiv.org/abs/2609.00469v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.00469v1",
+      "published": "2026-08-31T23:19:59Z",
+      "authors": [
+        "P. Malaisree",
+        "S. Youwai",
+        "S. Janrungautai",
+        "D. Amorndechaphon",
+        "P. Rojanavasu",
+        "W. Songkitti"
+      ],
+      "paper_stem": "SAM3_LoRA_Parameter_Efficient_Adaptation_of_a_Concept_Promptable_Foundation_Model_for_Multi_Class_Structural_Defect_Segm",
+      "matched_domain": "大模型训练优化",
+      "already_known": false,
+      "kb_source": "",
+      "related_papers": [],
+      "score": 4.41
+    },
+    {
+      "title": "Reasoning-Oriented Post-Training and Inference-Time LoRA Rescaling for Audio-Dependent Question Answering",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "venue": "",
+      "url": "http://arxiv.org/abs/2608.23092v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.23092v1",
+      "published": "2026-08-24T10:57:12Z",
+      "authors": [
+        "Weiteng Hu",
+        "Yin Cao",
+        "Jun Yang"
+      ],
+      "paper_stem": "Reasoning_Oriented_Post_Training_and_Inference_Time_LoRA_Rescaling_for_Audio_Dependent_Question_Answering",
+      "matched_domain": "大模型训练优化",
+      "already_known": false,
+      "kb_source": "",
+      "related_papers": [],
+      "score": 4.39
+    },
+    {
+      "title": "Differential Privacy in Feature Reconstruction Aided Federated Learning for Agent's Semantic Communication Model Update",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "venue": "",
+      "url": "http://arxiv.org/abs/2608.19649v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.19649v1",
+      "published": "2026-08-20T05:35:16Z",
+      "authors": [
+        "Yoon Huh",
+        "Bumjun Kim",
+        "Wan Choi"
+      ],
+      "paper_stem": "Differential_Privacy_in_Feature_Reconstruction_Aided_Federated_Learning_for_Agent's_Semantic_Communication_Model_Update",
+      "matched_domain": "大模型训练优化",
+      "already_known": false,
+      "kb_source": "",
+      "related_papers": [],
+      "score": 4.31
+    },
+    {
+      "title": "Gaussian Core LoRA: Distribution-Aware Dynamic Adaptation for Broad Concept Erasure",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "venue": "",
+      "url": "http://arxiv.org/abs/2609.01433v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.01433v1",
+      "published": "2026-09-01T15:42:11Z",
+      "authors": [
+        "Qinghui Gong",
+        "Xunlei Chen",
+        "Yu-Xuan Zhang",
+        "Hua Meng",
+        "Zhengchun Zhou"
+      ],
+      "paper_stem": "Gaussian_Core_LoRA_Distribution_Aware_Dynamic_Adaptation_for_Broad_Concept_Erasure",
+      "matched_domain": "大模型训练优化",
+      "already_known": false,
+      "kb_source": "",
+      "related_papers": [],
+      "score": 4.25
+    },
+    {
+      "title": "LiST: Local-Simplex Test-Time LoRA Fusion",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "venue": "",
+      "url": "http://arxiv.org/abs/2608.22370v2",
+      "pdf_url": "https://arxiv.org/pdf/2608.22370v2",
+      "published": "2026-08-23T11:24:28Z",
+      "authors": [
+        "Yihua Shao",
+        "Jia Li",
+        "Siyu Chen",
+        "Xinyu Luo",
+        "Yang Liu",
+        "Kecheng Chen",
+        "Xinwei Long",
+        "Lingyu Zhu",
+        "Fanhu Zeng",
+        "Maolin Wang",
+        "Ziyang Yan",
+        "Jingcai Guo",
+        "Hao Tang",
+        "Nicu Sebe",
+        "Zhenyi Wang"
+      ],
+      "paper_stem": "LiST_Local_Simplex_Test_Time_LoRA_Fusion",
+      "matched_domain": "大模型训练优化",
+      "already_known": false,
+      "kb_source": "",
+      "related_papers": [],
+      "score": 4.2
+    },
+    {
+      "title": "A Few Cases Are All You Need: An Empirical Study of Annotation-Efficient LoRA Fine-Tuning of MedSAM3",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "venue": "",
+      "url": "http://arxiv.org/abs/2608.18731v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.18731v1",
+      "published": "2026-08-19T09:34:34Z",
+      "authors": [
+        "Sachin Dudda Nagaraju",
+        "Bendik Skarre Abrahamsen",
+        "Ashkan Moradi",
+        "Mattijs Elschot"
+      ],
+      "paper_stem": "A_Few_Cases_Are_All_You_Need_An_Empirical_Study_of_Annotation_Efficient_LoRA_Fine_Tuning_of_MedSAM3",
+      "matched_domain": "大模型训练优化",
+      "already_known": false,
+      "kb_source": "",
+      "related_papers": [],
+      "score": 4.17
+    },
+    {
+      "title": "CLEAR: Continuous Latent Adapter Routing for Utility-Preserving LLM Safety Alignment",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "venue": "",
+      "url": "http://arxiv.org/abs/2608.21278v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.21278v1",
+      "published": "2026-08-21T16:36:10Z",
+      "authors": [
+        "Chengxiao Wang",
+        "Enyi Jiang",
+        "Xiaojing Liao",
+        "Sanmi Koyejo"
+      ],
+      "paper_stem": "CLEAR_Continuous_Latent_Adapter_Routing_for_Utility_Preserving_LLM_Safety_Alignment",
+      "matched_domain": "大模型训练优化",
+      "already_known": false,
+      "kb_source": "",
+      "related_papers": [],
+      "score": 4.17
+    },
+    {
+      "title": "Edge energy fluctuation: A unified theory of friction scaling laws in twisted layered material interfaces",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "venue": "",
+      "url": "http://arxiv.org/abs/2609.08063v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.08063v1",
+      "published": "2026-09-08T00:08:58Z",
+      "authors": [
+        "Ze Liu"
+      ],
+      "paper_stem": "Edge_energy_fluctuation_A_unified_theory_of_friction_scaling_laws_in_twisted_layered_material_interfaces",
+      "matched_domain": "大模型训练优化",
+      "already_known": false,
+      "kb_source": "",
+      "related_papers": [
+        {
+          "title": "EMMI: Edge Multi-Modal Intelligence for Communication-Efficient MLLM Inference via Fused Representation Compression",
+          "stem": "emmiedgemultimodalintelligenceforcommunicationefficientmllminferenceviafusedrepresentationcompression",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-17/search_result.json",
+          "shared_terms": [
+            "edge"
+          ],
+          "shared_count": 1
+        },
+        {
+          "title": "Hyperparameter Scaling Laws Across MoE Sparsity",
+          "stem": "hyperparameterscalinglawsacrossmoesparsity",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-17/search_result.json",
+          "shared_terms": [
+            "laws"
+          ],
+          "shared_count": 1
+        },
+        {
+          "title": "On the Recall Scaling Laws in Mamba: A Theoretical and Mechanistic Study via Hashing",
+          "stem": "ontherecallscalinglawsinmambaatheoreticalandmechanisticstudyviahashing",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-17/search_result.json",
+          "shared_terms": [
+            "laws"
+          ],
+          "shared_count": 1
+        }
+      ],
+      "score": 4.13
+    },
+    {
+      "title": "Universal fingerprint of topological defect cores",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "venue": "",
+      "url": "http://arxiv.org/abs/2609.02521v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.02521v1",
+      "published": "2026-09-02T12:27:42Z",
+      "authors": [
+        "Zi-Qiang Zhao",
+        "Nayun Jia",
+        "Zhang-Yu Nie",
+        "Hua-Bi Zeng",
+        "Jing-Fei Zhang",
+        "Xin Zhang"
+      ],
+      "paper_stem": "Universal_fingerprint_of_topological_defect_cores",
+      "matched_domain": "大模型训练优化",
+      "already_known": false,
+      "kb_source": "",
+      "related_papers": [],
+      "score": 3.99
+    },
+    {
+      "title": "Energy scaling laws for thin elastic sheets with topological defects",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "venue": "",
+      "url": "http://arxiv.org/abs/2608.23134v2",
+      "pdf_url": "https://arxiv.org/pdf/2608.23134v2",
+      "published": "2026-08-24T11:40:12Z",
+      "authors": [
+        "Raz Kupferman",
+        "Cy Maor",
+        "David Padilla-Garza"
+      ],
+      "paper_stem": "Energy_scaling_laws_for_thin_elastic_sheets_with_topological_defects",
+      "matched_domain": "大模型训练优化",
+      "already_known": false,
+      "kb_source": "",
+      "related_papers": [
+        {
+          "title": "Hyperparameter Scaling Laws Across MoE Sparsity",
+          "stem": "hyperparameterscalinglawsacrossmoesparsity",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-17/search_result.json",
+          "shared_terms": [
+            "laws"
+          ],
+          "shared_count": 1
+        },
+        {
+          "title": "On the Recall Scaling Laws in Mamba: A Theoretical and Mechanistic Study via Hashing",
+          "stem": "ontherecallscalinglawsinmambaatheoreticalandmechanisticstudyviahashing",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-17/search_result.json",
+          "shared_terms": [
+            "laws"
+          ],
+          "shared_count": 1
+        },
+        {
+          "title": "SGD in Multiclass Logistic Regression: Sequential Learning and Scaling Laws",
+          "stem": "sgdinmulticlasslogisticregressionsequentiallearningandscalinglaws",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-17/search_result.json",
+          "shared_terms": [
+            "laws"
+          ],
+          "shared_count": 1
+        }
+      ],
+      "score": 3.93
+    },
+    {
+      "title": "Online Permutation Embedding: Optimal Stopping and Scaling Laws",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "venue": "",
+      "url": "http://arxiv.org/abs/2608.19050v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.19050v1",
+      "published": "2026-08-19T15:42:18Z",
+      "authors": [
+        "Dylan J. Altschuler",
+        "Quentin Dubroff",
+        "Konstantin Tikhomirov"
+      ],
+      "paper_stem": "Online_Permutation_Embedding_Optimal_Stopping_and_Scaling_Laws",
+      "matched_domain": "大模型训练优化",
+      "already_known": false,
+      "kb_source": "",
+      "related_papers": [
+        {
+          "title": "Hyperparameter Scaling Laws Across MoE Sparsity",
+          "stem": "hyperparameterscalinglawsacrossmoesparsity",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-17/search_result.json",
+          "shared_terms": [
+            "laws"
+          ],
+          "shared_count": 1
+        },
+        {
+          "title": "On the Recall Scaling Laws in Mamba: A Theoretical and Mechanistic Study via Hashing",
+          "stem": "ontherecallscalinglawsinmambaatheoreticalandmechanisticstudyviahashing",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-17/search_result.json",
+          "shared_terms": [
+            "laws"
+          ],
+          "shared_count": 1
+        },
+        {
+          "title": "SGD in Multiclass Logistic Regression: Sequential Learning and Scaling Laws",
+          "stem": "sgdinmulticlasslogisticregressionsequentiallearningandscalinglaws",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-17/search_result.json",
+          "shared_terms": [
+            "laws"
+          ],
+          "shared_count": 1
+        }
+      ],
+      "score": 3.93
+    },
+    {
+      "title": "More GPUs or a Smaller Cache? Tensor Parallelism versus KV Compression for Memory-Bound LLM Serving",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "venue": "",
+      "url": "http://arxiv.org/abs/2608.23962v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.23962v1",
+      "published": "2026-08-25T01:42:08Z",
+      "authors": [
+        "Srikanta Datta Tumkur",
+        "Mehar Simhadri",
+        "Anshu Bansal",
+        "Jay Iyer",
+        "Sai Pavan Kumar",
+        "Sai Kapil Kumar",
+        "Ramesh Nampelly",
+        "Raj Dandekar"
+      ],
+      "paper_stem": "More_GPUs_or_a_Smaller_Cache_Tensor_Parallelism_versus_KV_Compression_for_Memory_Bound_LLM_Serving",
+      "matched_domain": "大模型训练优化",
+      "already_known": false,
+      "kb_source": "",
+      "related_papers": [
+        {
+          "title": "Affinity-Aware Sharding for Delayed Tensor Parallelism",
+          "stem": "affinityawareshardingfordelayedtensorparallelism",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-17/search_result.json",
+          "shared_terms": [
+            "parallelism",
+            "tensor"
+          ],
+          "shared_count": 2
+        },
+        {
+          "title": "4D Parallelism Unlocks Exascale Bayesian Neural Networks for High-Fidelity Atmospheric Modeling",
+          "stem": "4dparallelismunlocksexascalebayesianneuralnetworksforhighfidelityatmosphericmodeling",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-17/search_result.json",
+          "shared_terms": [
+            "parallelism"
+          ],
+          "shared_count": 1
+        },
+        {
+          "title": "EMMI: Edge Multi-Modal Intelligence for Communication-Efficient MLLM Inference via Fused Representation Compression",
+          "stem": "emmiedgemultimodalintelligenceforcommunicationefficientmllminferenceviafusedrepresentationcompression",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-17/search_result.json",
+          "shared_terms": [
+            "compression"
+          ],
+          "shared_count": 1
+        }
+      ],
+      "score": 3.7
+    },
+    {
+      "title": "Magnetic Heating Across the Sun and Solar-like Stars: Universal Scaling Laws from Chromospheres to Coronae",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "venue": "",
+      "url": "http://arxiv.org/abs/2608.24999v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.24999v1",
+      "published": "2026-08-25T18:00:03Z",
+      "authors": [
+        "Shin Toriumi",
+        "Kosuke Namekata",
+        "Yuta Notsu",
+        "Mai Yamashita",
+        "Vladimir S. Airapetian"
+      ],
+      "paper_stem": "Magnetic_Heating_Across_the_Sun_and_Solar_like_Stars_Universal_Scaling_Laws_from_Chromospheres_to_Coronae",
+      "matched_domain": "大模型训练优化",
+      "already_known": false,
+      "kb_source": "",
+      "related_papers": [
+        {
+          "title": "Hyperparameter Scaling Laws Across MoE Sparsity",
+          "stem": "hyperparameterscalinglawsacrossmoesparsity",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-17/search_result.json",
+          "shared_terms": [
+            "across",
+            "laws"
+          ],
+          "shared_count": 2
+        },
+        {
+          "title": "On the Recall Scaling Laws in Mamba: A Theoretical and Mechanistic Study via Hashing",
+          "stem": "ontherecallscalinglawsinmambaatheoreticalandmechanisticstudyviahashing",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-17/search_result.json",
+          "shared_terms": [
+            "laws"
+          ],
+          "shared_count": 1
+        },
+        {
+          "title": "SGD in Multiclass Logistic Regression: Sequential Learning and Scaling Laws",
+          "stem": "sgdinmulticlasslogisticregressionsequentiallearningandscalinglaws",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-17/search_result.json",
+          "shared_terms": [
+            "laws"
+          ],
+          "shared_count": 1
+        }
+      ],
+      "score": 3.7
+    },
+    {
+      "title": "Thermal scaling laws for open-water swimming",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "venue": "",
+      "url": "http://arxiv.org/abs/2608.20719v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.20719v1",
+      "published": "2026-08-21T03:53:28Z",
+      "authors": [
+        "Henry van den Bedem",
+        "Ellen Kuhl"
+      ],
+      "paper_stem": "Thermal_scaling_laws_for_open_water_swimming",
+      "matched_domain": "大模型训练优化",
+      "already_known": false,
+      "kb_source": "",
+      "related_papers": [
+        {
+          "title": "Hyperparameter Scaling Laws Across MoE Sparsity",
+          "stem": "hyperparameterscalinglawsacrossmoesparsity",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-17/search_result.json",
+          "shared_terms": [
+            "laws"
+          ],
+          "shared_count": 1
+        },
+        {
+          "title": "On the Recall Scaling Laws in Mamba: A Theoretical and Mechanistic Study via Hashing",
+          "stem": "ontherecallscalinglawsinmambaatheoreticalandmechanisticstudyviahashing",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-17/search_result.json",
+          "shared_terms": [
+            "laws"
+          ],
+          "shared_count": 1
+        },
+        {
+          "title": "SGD in Multiclass Logistic Regression: Sequential Learning and Scaling Laws",
+          "stem": "sgdinmulticlasslogisticregressionsequentiallearningandscalinglaws",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-17/search_result.json",
+          "shared_terms": [
+            "laws"
+          ],
+          "shared_count": 1
+        }
+      ],
+      "score": 3.53
+    },
+    {
+      "title": "Quantum transport and unified scaling law in graphene with polyadic Cantor electrostatic barriers",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "venue": "",
+      "url": "http://arxiv.org/abs/2608.28398v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.28398v1",
+      "published": "2026-08-28T14:51:41Z",
+      "authors": [
+        "Sudhanshu Shekhar",
+        "Mohammad Umar",
+        "Bhabani Prasad Mandal"
+      ],
+      "paper_stem": "Quantum_transport_and_unified_scaling_law_in_graphene_with_polyadic_Cantor_electrostatic_barriers",
+      "matched_domain": "大模型训练优化",
+      "already_known": false,
+      "kb_source": "",
+      "related_papers": [],
+      "score": 3.53
+    },
+    {
+      "title": "How Far Can 5,500 Hours of Driving Take You? A Scaling Law Analysis of Video Diffusion Models",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "venue": "",
+      "url": "http://arxiv.org/abs/2608.28404v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.28404v1",
+      "published": "2026-08-28T14:56:01Z",
+      "authors": [
+        "Victor Besnier",
+        "Anh-Quan Cao",
+        "Elias Ramzi",
+        "Spyros Gidaris",
+        "Tuan-Hung Vu",
+        "Andrei Bursuc",
+        "Eloi Zablocki",
+        "Matthieu Cord"
+      ],
+      "paper_stem": "How_Far_Can_5_500_Hours_of_Driving_Take_You_A_Scaling_Law_Analysis_of_Video_Diffusion_Models",
+      "matched_domain": "大模型训练优化",
+      "already_known": false,
+      "kb_source": "",
+      "related_papers": [
+        {
+          "title": "vidax: A Unified JAX Framework for Video Generative Models on Accelerator Meshes",
+          "stem": "vidaxaunifiedjaxframeworkforvideogenerativemodelsonacceleratormeshes",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-17/search_result.json",
+          "shared_terms": [
+            "video"
+          ],
+          "shared_count": 1
+        }
+      ],
+      "score": 3.53
+    },
+    {
+      "title": "Removing Population Size, World Cities Leave on Land a Footprint of Wealth",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "venue": "",
+      "url": "http://arxiv.org/abs/2608.18792v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.18792v1",
+      "published": "2026-08-19T10:47:50Z",
+      "authors": [
+        "Victor Vignolles",
+        "Rémi Lemoy"
+      ],
+      "paper_stem": "Removing_Population_Size_World_Cities_Leave_on_Land_a_Footprint_of_Wealth",
+      "matched_domain": "大模型训练优化",
+      "already_known": false,
+      "kb_source": "",
+      "related_papers": [],
+      "score": 3.32
+    }
+  ],
+  "top_papers": [
+    {
+      "id": "http://arxiv.org/abs/2609.12123v1",
+      "title": "Rank-Efficient LoRA via Joint Tangent-Space Optimization under Isotropic Curvature",
+      "summary": "Low-Rank Adaptation (LoRA) is an effective approach for adapting large pretrained models by learning low-rank weight updates. In practice, the LoRA rank is used to control an adapter's parameter budget and representational capacity. We show that this view is incomplete: while the nominal rank determines the representational capacity, the optimizer shapes how much of that capacity is used in the induced weight-space updates. In a case study of GPT-2 adaptation with LoRA, we observe a strong rank-dependent optimizer effect. Despite using the same nominal rank, AdamW often produces per-step updates with concentrated singular spectra and low effective rank, whereas Muon uses a richer set of directions and benefits more consistently from increasing LoRA rank. These observations motivate ISO-LoRA, an optimizer that couples the LoRA factor updates through spectral descent on the induced tangent perturbation in weight space. ISO-LoRA promotes updates that distribute energy more evenly across singular directions, improving rank utilization while preserving compatibility with the LoRA parameterization. We complement this design with theoretical guarantees showing that ISO-LoRA can achieve higher effective rank than standard factor-wise optimizers through a one-step analysis under a stylized spiked-gradient model. We validate this design on language-model adaptation across 0.1B-7B-parameter models, where ISO-LoRA improves effective rank and downstream performance, with the strongest gains at moderate-to-large LoRA ranks. Our results highlight rank utilization as a key factor in LoRA optimization and suggest that optimizer design offers an important path toward stronger parameter-efficient adaptation.",
+      "authors": [
+        "Zihan Zhu",
+        "Zhehang Du",
+        "Xuyang Chen",
+        "Tim Tsz-Kit Lau",
+        "Jiayuan Wu",
+        "X. Y. Han",
+        "Qi Long",
+        "Weijie Su"
+      ],
+      "affiliations": [],
+      "published": "2026-09-10T18:50:17Z",
+      "published_date": "2026-09-10 18:50:17+00:00",
+      "updated": "2026-09-10T18:50:17Z",
+      "categories": [
+        "cs.LG",
+        "math.OC",
+        "stat.ML"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2609.12123v1",
+      "url": "http://arxiv.org/abs/2609.12123v1",
+      "source": "arxiv",
+      "scores": {
+        "relevance": 3.0,
+        "recency": 3.0,
+        "popularity": 2.0,
+        "quality": 0.0,
+        "recommendation": 8.0
+      },
+      "matched_domain": "随机梯度与优化理论",
+      "matched_keywords": [
+        "Adam",
+        "curvature",
+        "math.OC",
+        "stat.ML",
+        "cs.LG"
+      ],
+      "is_hot_paper": false,
+      "paper_stem": "Rank_Efficient_LoRA_via_Joint_Tangent_Space_Optimization_under_Isotropic_Curvature",
+      "already_known": false,
+      "related_papers": [
+        {
+          "title": "Self Tuning Stochastic Optimization with Curvature Aware Gradient Filtering",
+          "stem": "selftuningstochasticoptimizationwithcurvatureawaregradientfiltering",
+          "source": "pdf",
+          "path": "/Users/myl/Documents/paper/01-raw/Self_Tuning_Stochastic_Optimization_with_Curvature_Aware_Gradient_Filtering.pdf",
+          "shared_terms": [
+            "curvature"
+          ],
+          "shared_count": 1
+        }
+      ],
+      "note_filename": "Rank_Efficient_LoRA_via_Joint_Tangent_Space_Optimization_under_Isotropic_Curvature"
+    },
+    {
+      "id": "http://arxiv.org/abs/2609.13512v1",
+      "title": "Adaptive Phase-Switching for Communication-Efficient Federated LoRA Fine-Tuning",
+      "summary": "Federated fine-tuning of large language models with low-rank adaptation reduces per-client trainable parameters, but client-to-server communication remains the dominant cost. Existing accounting for federated LoRA protocols omits the asymmetric transition round when a protocol changes aggregation mode, and reports savings that ignore grouped-query attention shapes. This paper measures per-round upload and download bytes for a bidirectional B-only federated LoRA protocol and places five methods, three from prior work, on a single communication-quality frontier. The frontier has a knee, which an adaptive phase-switching aggregator, ReverseAdaptive, locates by monitoring the relative improvement in global training loss against a dimensionless threshold rather than by fixing a phase boundary in advance. On TinyLlama-1.1B-Chat with Alpaca, ReverseAdaptive attains 40.5 percent measured round-trip savings over FLoRA at a held-out instruction-following loss cost of 0.0063. It outperforms FFA-LoRA, which freezes the first of the two LoRA factors at initialization, by 0.0182 in held-out loss, more than twenty times the largest per-method seed standard deviation on that metric, so learning that factor before freezing it produces better adapters. The same threshold transfers across model scales without retuning, and the quality cost of the transition is stable across the two datasets tested.",
+      "authors": [
+        "Jerry Adams Franklin"
+      ],
+      "affiliations": [],
+      "published": "2026-09-11T20:24:39Z",
+      "published_date": "2026-09-11 20:24:39+00:00",
+      "updated": "2026-09-11T20:24:39Z",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.DC"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2609.13512v1",
+      "url": "http://arxiv.org/abs/2609.13512v1",
+      "source": "arxiv",
+      "scores": {
+        "relevance": 2.24,
+        "recency": 3.0,
+        "popularity": 2.0,
+        "quality": 1.8,
+        "recommendation": 7.59
+      },
+      "matched_domain": "大模型训练优化",
+      "matched_keywords": [
+        "low-rank adaptation",
+        "LoRA",
+        "cs.LG",
+        "cs.DC"
+      ],
+      "is_hot_paper": false,
+      "paper_stem": "Adaptive_Phase_Switching_for_Communication_Efficient_Federated_LoRA_Fine_Tuning",
+      "already_known": false,
+      "related_papers": [
+        {
+          "title": "EMMI: Edge Multi-Modal Intelligence for Communication-Efficient MLLM Inference via Fused Representation Compression",
+          "stem": "emmiedgemultimodalintelligenceforcommunicationefficientmllminferenceviafusedrepresentationcompression",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-17/search_result.json",
+          "shared_terms": [
+            "communication-efficient"
+          ],
+          "shared_count": 1
+        },
+        {
+          "title": "PowerStep Memory Efficient Adaptive Optimization via lp Norm Steepest Descent",
+          "stem": "powerstepmemoryefficientadaptiveoptimizationvialpnormsteepestdescent",
+          "source": "pdf",
+          "path": "/Users/myl/Documents/paper/01-raw/PowerStep_Memory_Efficient_Adaptive_Optimization_via_lp_Norm_Steepest_Descent.pdf",
+          "shared_terms": [
+            "adaptive"
+          ],
+          "shared_count": 1
+        }
+      ],
+      "note_filename": "Adaptive_Phase_Switching_for_Communication_Efficient_Federated_LoRA_Fine_Tuning"
+    },
+    {
+      "id": "http://arxiv.org/abs/2609.02639v1",
+      "title": "TaRA: Training-Aware Low-Rank Adaptation Initialization",
+      "summary": "Low-Rank Adaptation (LoRA) has become a de facto standard for parameter-efficient fine-tuning (PEFT), yet its performance is highly sensitive to initialization due to the information bottleneck imposed by low-rank decomposition. Existing approaches attempt to construct high-quality LoRA initializations by exploiting principal components of pretrained weights, activations, or gradients. However, these methods do not directly account for the training dynamics of the full-rank model. In this paper, we propose Training-aware Low-Rank Adaptation Initialization (TaRA), a method that initializes LoRA such that the gradients induced by the low-rank factors closely approximate the gradient of the corresponding full-rank weight matrix. Derived from a mathematical formulation, TaRA improves gradient fidelity at the start of training while introducing negligible computational overhead. Across diverse and challenging fine-tuning tasks, TaRA consistently outperforms prior state-of-the-art methods, establishing a simple, robust, and scalable solution for effective LoRA initialization.",
+      "authors": [
+        "Taehyeon Kim",
+        "Eunhyeok Park"
+      ],
+      "affiliations": [],
+      "published": "2026-09-02T14:15:22Z",
+      "published_date": "2026-09-02 14:15:22+00:00",
+      "updated": "2026-09-02T14:15:22Z",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2609.02639v1",
+      "url": "http://arxiv.org/abs/2609.02639v1",
+      "source": "arxiv",
+      "scores": {
+        "relevance": 2.24,
+        "recency": 3.0,
+        "popularity": 1.5,
+        "quality": 1.8,
+        "recommendation": 7.09
+      },
+      "matched_domain": "大模型训练优化",
+      "matched_keywords": [
+        "low-rank adaptation",
+        "LoRA",
+        "cs.LG",
+        "cs.CL"
+      ],
+      "is_hot_paper": false,
+      "paper_stem": "TaRA_Training_Aware_Low_Rank_Adaptation_Initialization",
+      "already_known": false,
+      "note_filename": "TaRA_Training_Aware_Low_Rank_Adaptation_Initialization"
+    },
+    {
+      "id": "http://arxiv.org/abs/2609.06484v1",
+      "title": "Second-Order Smooth Planning with Optimal-Transport Bellman Smoothing",
+      "summary": "Planning with a generative model aims to estimate the value of a state using as few simulator calls as possible. SmoothCruiser achieves problem-independent complexity $\\widetilde O(\\varepsilon^{-4})$ by exploiting the smoothness of the entropy-regularized Bellman backup, but its estimator is only first-order. We show that the sample-complexity exponent of SmoothCruiser-type planners is governed by the order $β$ of the local Taylor remainder, giving oracle complexity $\\widetilde O(\\varepsilon^{-(2+2/(β-1))})$: the first-order case $β=2$ recovers SmoothCruiser, while a second-order/cubic remainder $β=3$ yields $\\widetilde O(\\varepsilon^{-3})$. We reach this regime with an optimal-transport-smoothed Bellman backup over action distributions, which has a closed form, a policy gradient, and a Lipschitz Hessian, and whose quadratic correction admits an unbiased cross-product estimator. The resulting SecondOrderSmoothCruiser achieves $\\widetilde O(\\varepsilon^{-3})$ oracle complexity for fixed OT parameters, and we relate the OT, entropy-regularized, and unregularized objectives through explicit regularization-bias bounds.",
+      "authors": [
+        "Tuan Dam"
+      ],
+      "affiliations": [],
+      "published": "2026-09-06T08:58:57Z",
+      "published_date": "2026-09-06 08:58:57+00:00",
+      "updated": "2026-09-06T08:58:57Z",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2609.06484v1",
+      "url": "http://arxiv.org/abs/2609.06484v1",
+      "source": "arxiv",
+      "scores": {
+        "relevance": 2.1,
+        "recency": 3.0,
+        "popularity": 1.5,
+        "quality": 1.5,
+        "recommendation": 6.8
+      },
+      "matched_domain": "随机梯度与优化理论",
+      "matched_keywords": [
+        "smoothness",
+        "Hessian",
+        "second-order",
+        "cs.LG"
+      ],
+      "is_hot_paper": false,
+      "paper_stem": "Second_Order_Smooth_Planning_with_Optimal_Transport_Bellman_Smoothing",
+      "already_known": false,
+      "note_filename": "Second_Order_Smooth_Planning_with_Optimal_Transport_Bellman_Smoothing"
+    },
+    {
+      "id": "http://arxiv.org/abs/2609.02734v1",
+      "title": "LoRA-TSD: Tangent-Space Spectral Descent for LoRA via Muon-Style Updates",
+      "summary": "Low-rank adaptation (LoRA) is the standard way to fine-tune large models, yet when its two factors are trained independently, the update ignores the geometry of the low-rank weight change it induces. We introduce LoRA-TSD, an optimizer that treats every LoRA step as a tangent vector of the fixed-rank matrix manifold and takes the spectral-norm steepest-descent step of Muon inside that tangent space, mapping the result back to the factors through a retraction native to the LoRA parametrization. The step avoids expensive operations on full weight matrices, and its retraction is up to $2.8\\times$ cheaper than the truncated-SVD retraction used by prior manifold methods. We prove that the Frobenius-norm version of our surrogate recovers LoRA-Pro, and we identify the tangent-projected gradient, the Riemannian gradient of the manifold, as the stationarity measure natural to LoRA training and computable from the factor gradients alone. Under this measure we give the first global convergence guarantees for both LoRA-Pro and LoRA-TSD, with rates that drive the factor-gradient norms to zero. Across six commonsense and natural-language-inference benchmarks with Llama-3.2-1B, Llama-3.1-8B and Qwen3-32B, LoRA-TSD outperforms every competing LoRA optimizer and stays robust to the adapter rank. Code is available at https://github.com/brain-lab-research/LoRA-TSD.",
+      "authors": [
+        "Dmitrii Andriianov",
+        "Andrey Veprikov",
+        "Aleksandr Beznosikov"
+      ],
+      "affiliations": [],
+      "published": "2026-09-02T15:41:45Z",
+      "published_date": "2026-09-02 15:41:45+00:00",
+      "updated": "2026-09-02T15:41:45Z",
+      "categories": [
+        "cs.LG"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2609.02734v1",
+      "url": "http://arxiv.org/abs/2609.02734v1",
+      "source": "arxiv",
+      "scores": {
+        "relevance": 1.92,
+        "recency": 3.0,
+        "popularity": 1.5,
+        "quality": 1.8,
+        "recommendation": 6.66
+      },
+      "matched_domain": "大模型训练优化",
+      "matched_keywords": [
+        "optimizer",
+        "low-rank adaptation",
+        "LoRA",
+        "ZeRO",
+        "cs.LG"
+      ],
+      "is_hot_paper": false,
+      "paper_stem": "LoRA_TSD_Tangent_Space_Spectral_Descent_for_LoRA_via_Muon_Style_Updates",
+      "already_known": false,
+      "related_papers": [
+        {
+          "title": "Musec: MomentUm SpEctral Clipping for Stable Muon-type Training",
+          "stem": "musecmomentumspectralclippingforstablemuontypetraining",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-17/search_result.json",
+          "shared_terms": [
+            "spectral"
+          ],
+          "shared_count": 1
+        },
+        {
+          "title": "Parameter Free Clipped Gradient Descent Meets Polyak",
+          "stem": "parameterfreeclippedgradientdescentmeetspolyak",
+          "source": "pdf",
+          "path": "/Users/myl/Documents/paper/01-raw/Parameter_Free_Clipped_Gradient_Descent_Meets_Polyak.pdf",
+          "shared_terms": [
+            "descent"
+          ],
+          "shared_count": 1
+        },
+        {
+          "title": "PowerStep Memory Efficient Adaptive Optimization via lp Norm Steepest Descent",
+          "stem": "powerstepmemoryefficientadaptiveoptimizationvialpnormsteepestdescent",
+          "source": "pdf",
+          "path": "/Users/myl/Documents/paper/01-raw/PowerStep_Memory_Efficient_Adaptive_Optimization_via_lp_Norm_Steepest_Descent.pdf",
+          "shared_terms": [
+            "descent"
+          ],
+          "shared_count": 1
+        }
+      ],
+      "note_filename": "LoRA_TSD_Tangent_Space_Spectral_Descent_for_LoRA_via_Muon_Style_Updates"
+    },
+    {
+      "id": "http://arxiv.org/abs/2609.12896v1",
+      "title": "Behavior Quotient Learning for Low-Rank Adaptation of LLM Agents",
+      "summary": "LLM-based agents rely on heterogeneous interaction capabilities to accomplish complex tasks. Existing approaches often distribute these capabilities across multiple LoRA adapters, which increases adapter storage requirements and introduces routing overhead during inference. A single LoRA avoids this overhead, but learning from diverse agent trajectories under a fixed rank budget presents two challenges. First, trajectories with different interaction traces and parameter gradients can induce equivalent changes in decision distributions, causing repeated updates to overemphasize redundant behavioral changes. Second, an aggregated update may exceed the rank budget of the adapter, and approximating it in weight space can distort the decision changes that it is intended to produce. We propose BQ-LoRA, a low-rank adaptation framework that organizes trajectory updates through a local behavior quotient manifold. It contains two modules, i.e., behavior quotient balancing (BQB) and decision preserving compression (DPC). BQB constructs the quotient manifold from decision distributions and reweights trajectory update directions according to their local density in the quotient tangent space. DPC projects the balanced gradient onto the intrinsic fixed rank tangent space and refactorizes the resulting target by jointly controlling effective weight error and distortion of decision distributions. Experiments on AppWorld and BrowseComp-Plus compare BQ-LoRA with standard LoRA and recent low-rank adaptation methods, while separate ablations evaluate the complementary contributions of both components.",
+      "authors": [
+        "Pengyang Zhou",
+        "Xiaobin Tu",
+        "Zhengxi Liu",
+        "Rongkun Xue",
+        "Haochen Li",
+        "Miancan Liu",
+        "Ziyuan Chen",
+        "Yinggui Wang",
+        "Jinkui Ren",
+        "Xiantao Zhang"
+      ],
+      "affiliations": [],
+      "published": "2026-09-11T14:23:43Z",
+      "published_date": "2026-09-11 14:23:43+00:00",
+      "updated": "2026-09-11T14:23:43Z",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2609.12896v1",
+      "url": "http://arxiv.org/abs/2609.12896v1",
+      "source": "arxiv",
+      "scores": {
+        "relevance": 1.44,
+        "recency": 3.0,
+        "popularity": 2.0,
+        "quality": 1.6,
+        "recommendation": 6.45
+      },
+      "matched_domain": "大模型训练优化",
+      "matched_keywords": [
+        "low-rank adaptation",
+        "LoRA",
+        "cs.LG"
+      ],
+      "is_hot_paper": false,
+      "paper_stem": "Behavior_Quotient_Learning_for_Low_Rank_Adaptation_of_LLM_Agents",
+      "already_known": false,
+      "note_filename": "Behavior_Quotient_Learning_for_Low_Rank_Adaptation_of_LLM_Agents"
+    },
+    {
+      "id": "http://arxiv.org/abs/2609.12584v1",
+      "title": "Clustering-Based Balanced Sampling and Allocation with Data Parallelism for High-Performance Fine-Tuning",
+      "summary": "Instruction-tuning datasets for large language models (LLMs) are often large, redundant, and imbalanced, limiting efficient adaptation. Naive large-batch fine-tuning repeatedly includes overrepresented sample groups while weakly covering underrepresented but informative ones, especially under data parallelism (DP) across multiple GPUs. We propose CluSTER, a Cluster-aware balanced Sampling framework for Training Efficient data Reduction in DP instruction tuning. CluSTER curates a representative reduced dataset through gradient-space clustering and DP-aware balanced allocation, ensuring dual-level coverage across clusters and workers, while preserving the original data distribution by weighted update. As a result, CluSTER reduces redundant computation and improves training stability without compromising model quality. Across multiple instruction-tuning datasets, CluSTER reduces training time by up to 69.6% with almost no accuracy loss compared to prior sampling and data reduction methods. Code is available at https://github.com/kaist-dmlab/CluSTER.",
+      "authors": [
+        "Hyunjin Kim",
+        "Youngeun Nam",
+        "Jaemin Han",
+        "Wonhyeok Choi",
+        "Jae-Gil Lee"
+      ],
+      "affiliations": [],
+      "published": "2026-09-11T08:36:57Z",
+      "published_date": "2026-09-11 08:36:57+00:00",
+      "updated": "2026-09-11T08:36:57Z",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2609.12584v1",
+      "url": "http://arxiv.org/abs/2609.12584v1",
+      "source": "arxiv",
+      "scores": {
+        "relevance": 1.44,
+        "recency": 3.0,
+        "popularity": 2.0,
+        "quality": 1.6,
+        "recommendation": 6.45
+      },
+      "matched_domain": "大模型训练优化",
+      "matched_keywords": [
+        "data parallelism",
+        "training stability",
+        "cs.LG"
+      ],
+      "is_hot_paper": false,
+      "paper_stem": "Clustering_Based_Balanced_Sampling_and_Allocation_with_Data_Parallelism_for_High_Performance_Fine_Tuning",
+      "already_known": false,
+      "related_papers": [
+        {
+          "title": "4D Parallelism Unlocks Exascale Bayesian Neural Networks for High-Fidelity Atmospheric Modeling",
+          "stem": "4dparallelismunlocksexascalebayesianneuralnetworksforhighfidelityatmosphericmodeling",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-17/search_result.json",
+          "shared_terms": [
+            "parallelism"
+          ],
+          "shared_count": 1
+        },
+        {
+          "title": "Affinity-Aware Sharding for Delayed Tensor Parallelism",
+          "stem": "affinityawareshardingfordelayedtensorparallelism",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-17/search_result.json",
+          "shared_terms": [
+            "parallelism"
+          ],
+          "shared_count": 1
+        }
+      ],
+      "note_filename": "Clustering_Based_Balanced_Sampling_and_Allocation_with_Data_Parallelism_for_High_Performance_Fine_Tuning"
+    },
+    {
+      "id": "http://arxiv.org/abs/2609.12278v1",
+      "title": "Amortized Low-Rank Adaptation for Model-Based Reinforcement Learning",
+      "summary": "World models let agents plan by predicting the consequences of their actions, but changes in the environment can make them inaccurate. We study the problem of adapting a world model to an unknown test-time environment, drawn from a known environment family, using only a few episodes of interaction. Existing approaches trade off computational cost against expressivity, i.e., the range of models a method can produce. For example, in-context learning is computationally cheap but limited in expressivity, and gradient-based adaptation is expressive but computationally expensive. We present CLAW (Context-conditioned Low-rank Adaptation of World models), which addresses this tradeoff by using a hypernetwork to generate low-rank (LoRA) adapters at test time. During pretraining, we simulate adaptation to a variety of environments and jointly train the hypernetwork and base world model. At test time, we freeze the base model and use a forward pass of the hypernetwork to generate adapters from a small batch of test-time transitions. We evaluate CLAW in locomotion and manipulation environment families that vary in dynamics, embodiment, and reward. We show that, using only seconds of test-time data, CLAW outperforms gradient-based adaptation and in-context learning during online adaptation. We also show that CLAW avoids overfitting in data-scarce regimes, that its advantage comes from the expressive adapters rather than context conditioning, and that pretraining the hypernetwork jointly with the base model outperforms training it post hoc.",
+      "authors": [
+        "Fernando Palafox",
+        "David Fridovich-Keil"
+      ],
+      "affiliations": [],
+      "published": "2026-09-10T23:16:40Z",
+      "published_date": "2026-09-10 23:16:40+00:00",
+      "updated": "2026-09-10T23:16:40Z",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.RO"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2609.12278v1",
+      "url": "http://arxiv.org/abs/2609.12278v1",
+      "source": "arxiv",
+      "scores": {
+        "relevance": 1.44,
+        "recency": 3.0,
+        "popularity": 2.0,
+        "quality": 1.5,
+        "recommendation": 6.42
+      },
+      "matched_domain": "大模型训练优化",
+      "matched_keywords": [
+        "low-rank adaptation",
+        "LoRA",
+        "cs.LG"
+      ],
+      "is_hot_paper": false,
+      "paper_stem": "Amortized_Low_Rank_Adaptation_for_Model_Based_Reinforcement_Learning",
+      "already_known": false,
+      "note_filename": "Amortized_Low_Rank_Adaptation_for_Model_Based_Reinforcement_Learning"
+    },
+    {
+      "id": "http://arxiv.org/abs/2609.12327v1",
+      "title": "LoRA-RC: Reservoir Computing with Low-Rank Adaptation",
+      "summary": "Reservoir computing (RC) trains only a linear readout over a fixed recurrent layer, making it fast and data-efficient for online prediction. However, a static reservoir degrades under system drift, readout-only adaptation is then insufficient, and unconstrained reservoir adaptation can destroy the echo-state and incremental stability properties that make RC reliable. This paper proposes LoRA-RC, which adapts the recurrent matrix through a low-rank correction driven by streaming prediction errors. The base reservoir and adaptation bases are fixed offline; a small core matrix is adapted online, projected onto a spectral-norm ball, and low-pass filtered at each step. The projection guarantees that every applied recurrent matrix remains within a certified contraction set, and an incremental input-to-state stability bound is established for the reservoir along each online adaptation path, with path-independent rate and gain. On a Lorenz system with an abrupt parameter drift, LoRA-RC cuts post-drift prediction error by 56% versus a fixed RC and 51% versus readout-only adaptation; ablations over 20 seeds show that removing the projection inflates this error by more than a factor of 40.",
+      "authors": [
+        "Wenbin Wan"
+      ],
+      "affiliations": [],
+      "published": "2026-09-11T01:19:48Z",
+      "published_date": "2026-09-11 01:19:48+00:00",
+      "updated": "2026-09-11T01:19:48Z",
+      "categories": [
+        "cs.AI",
+        "cs.LG",
+        "eess.SY",
+        "math.DS"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2609.12327v1",
+      "url": "http://arxiv.org/abs/2609.12327v1",
+      "source": "arxiv",
+      "scores": {
+        "relevance": 1.6,
+        "recency": 3.0,
+        "popularity": 2.0,
+        "quality": 0.7,
+        "recommendation": 6.37
+      },
+      "matched_domain": "大模型训练优化",
+      "matched_keywords": [
+        "low-rank adaptation",
+        "LoRA",
+        "cs.LG"
+      ],
+      "is_hot_paper": false,
+      "paper_stem": "LoRA_RC_Reservoir_Computing_with_Low_Rank_Adaptation",
+      "already_known": false,
+      "note_filename": "LoRA_RC_Reservoir_Computing_with_Low_Rank_Adaptation"
+    },
+    {
+      "id": "F6wmIilZXG",
+      "source": "openreview",
+      "title": "The Noise Geometry of Stochastic Gradient Descent",
+      "summary": "In this paper, we present a comprehensive analysis of the heterogeneous structure of minibatch noise, focusing on its favorable *alignment* with the landscape's local geometry (Wu et al., 2022). Specifically, we propose two metrics, derived from analyzing the influence of the noise structure on the loss and subspace projection dynamics separately, to quantify the alignment property. To showcase the practical relevance of our noise geometry characterization, we  revisit the convergence analysis of stochastic gradient descent (SGD), revealing that the favorable noise geometry  is crucial for ensuring benign convergence of SGD in high-dimensional settings. We also examine the noise geometry's influence on  how SGD escapes from sharp minima. It is demonstrated that, unlike gradient descent (GD), which escapes sharp regions along the sharpest directions, SGD tends to escape through flatter directions. To support our theoretical findings, both synthetic and real-dataset experiments are provided.",
+      "authors": [
+        "Mingze Wang",
+        "Lei Wu"
+      ],
+      "affiliations": [],
+      "categories": [],
+      "venue": "Accepted by TMLR",
+      "pdf_url": "/pdf/2d54fce2897836a53d11e467dbabfa42a9126175.pdf",
+      "url": "https://openreview.net/forum?id=F6wmIilZXG",
+      "published": "2026-09-15T02:29:33.622000",
+      "published_date": "2026-09-15 02:29:33.622000",
+      "scores": {
+        "relevance": 1.6,
+        "recency": 3.0,
+        "popularity": 2.0,
+        "quality": 0.7,
+        "recommendation": 6.37
+      },
+      "matched_domain": "随机梯度与优化理论",
+      "matched_keywords": [
+        "stochastic gradient descent",
+        "SGD",
+        "gradient descent",
+        "convergence analysis"
+      ],
+      "is_hot_paper": false,
+      "paper_stem": "The_Noise_Geometry_of_Stochastic_Gradient_Descent",
+      "already_known": false,
+      "related_papers": [
+        {
+          "title": "Parameter Free Clipped Gradient Descent Meets Polyak",
+          "stem": "parameterfreeclippedgradientdescentmeetspolyak",
+          "source": "pdf",
+          "path": "/Users/myl/Documents/paper/01-raw/Parameter_Free_Clipped_Gradient_Descent_Meets_Polyak.pdf",
+          "shared_terms": [
+            "descent",
+            "gradient"
+          ],
+          "shared_count": 2
+        },
+        {
+          "title": "Self Tuning Stochastic Optimization with Curvature Aware Gradient Filtering",
+          "stem": "selftuningstochasticoptimizationwithcurvatureawaregradientfiltering",
+          "source": "pdf",
+          "path": "/Users/myl/Documents/paper/01-raw/Self_Tuning_Stochastic_Optimization_with_Curvature_Aware_Gradient_Filtering.pdf",
+          "shared_terms": [
+            "gradient",
+            "stochastic"
+          ],
+          "shared_count": 2
+        },
+        {
+          "title": "PowerStep Memory Efficient Adaptive Optimization via lp Norm Steepest Descent",
+          "stem": "powerstepmemoryefficientadaptiveoptimizationvialpnormsteepestdescent",
+          "source": "pdf",
+          "path": "/Users/myl/Documents/paper/01-raw/PowerStep_Memory_Efficient_Adaptive_Optimization_via_lp_Norm_Steepest_Descent.pdf",
+          "shared_terms": [
+            "descent"
+          ],
+          "shared_count": 1
+        }
+      ],
+      "note_filename": "The_Noise_Geometry_of_Stochastic_Gradient_Descent"
+    }
+  ]
+}
