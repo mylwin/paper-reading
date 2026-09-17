@@ -335,7 +335,7 @@ def load_conf_papers_config(config_path: str) -> Dict:
     关键词来源优先级：
       1. 本 skill 的 conf.keywords（paper-conf 专属覆盖）
       2. 配置顶层 keywords（旧版 conf-papers.yaml 格式，向后兼容）
-      3. paper-skills 共享 config.yaml 中所有研究域的 keywords（默认，与 paper-daily 同源）
+      3. 共享 config.yaml 中所有研究域的 keywords（默认，与 paper-daily 同源）
 
     Args:
         config_path: 配置文件路径

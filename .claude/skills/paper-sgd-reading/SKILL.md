@@ -22,7 +22,7 @@ description: 交互式、逐个讲解随机梯度类（SGD 及其变体：动量
 
 ## 路径与配置（解耦约定）
 
-**不要在本文件或脚本里写死任何路径。** 目录名一律从 `paper-skills/config.yaml` 读取：
+**不要在本文件或脚本里写死任何路径。** 目录名一律从共享配置文件读取：
 
 - `reading_dir`（默认 `08-reading`）：过程材料
 - `equation_dir`（默认 `04-equation_problem`）：定稿
@@ -228,6 +228,6 @@ python scripts/outputs.py --title "<论文标题>" --emit-asset-links \
 - **自包含**：`scripts/outputs.py` 不依赖其他 skill 的代码，可单独复制到任意 skills 目录运行
 - 无需任何大模型 API key（讲解与推导由当前 agent 完成）
 
-配置查找顺序（第一个存在的生效）：`--config` → `$PAPER_SKILLS_CONFIG` → `$PAPER_READING_CONFIG` → **`<skill 同级>/config.yaml`**（本项目为 `paper-skills/config.yaml`）→ `<skill 目录>/config.yaml` → 由 `$PAPER_WORKSPACE_PATH` 反推 `<workspace>/../paper-skills/config.yaml` → 从当前工作目录逐级向上找。
+配置查找顺序（第一个存在的生效）：`--config` → `$PAPER_SKILLS_CONFIG` → `$PAPER_READING_CONFIG` → **`<skill 同级>/config.yaml`**（本项目为 `.claude/skills/config.yaml`）→ `<skill 目录>/config.yaml` → 由 `$PAPER_WORKSPACE_PATH` 查找 `<workspace>/.claude/skills/config.yaml` → 从当前工作目录逐级向上找。
 
-所以即使只把 `paper-sgd-reading/` 单独装进 skills 目录，只要 `$PAPER_WORKSPACE_PATH` 指向论文工作区、且配置放在其同级 `paper-skills/config.yaml`，就能正常工作；也可以直接用 `--config` 指定。
+所以即使只把 `paper-sgd-reading/` 单独装进 skills 目录，只要 `$PAPER_WORKSPACE_PATH` 指向论文工作区、且配置放在 `.claude/skills/config.yaml`，就能正常工作；也可以直接用 `--config` 指定。

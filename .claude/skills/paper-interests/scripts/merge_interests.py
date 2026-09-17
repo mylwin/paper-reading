@@ -37,7 +37,7 @@ import sys
 from datetime import datetime
 from pathlib import Path
 
-# paper-interests/scripts -> paper-skills -> paper-daily/scripts
+# paper-interests/scripts -> .claude/skills -> paper-daily/scripts
 sys.path.insert(0, str(Path(__file__).resolve().parents[2] / 'paper-daily' / 'scripts'))
 
 from paper_config import find_config_path, load_config  # noqa: E402

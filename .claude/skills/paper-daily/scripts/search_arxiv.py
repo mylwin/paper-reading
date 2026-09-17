@@ -493,7 +493,7 @@ def load_research_config(config_path: str) -> Dict:
     从 YAML 文件加载研究兴趣配置
 
     未显式给出路径时，使用 paper_config 的查找顺序（skill 自带 config.yaml →
-    paper-skills 共享 config.yaml）。读取失败时打印明确错误并回退到内置默认配置。
+    共享 config.yaml）。读取失败时打印明确错误并回退到内置默认配置。
 
     Args:
         config_path: 配置文件路径

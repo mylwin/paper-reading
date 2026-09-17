@@ -39,7 +39,7 @@ conf:
 **关键词来源优先级**：
 
 1. 本 skill `config.yaml` 的 `conf.keywords`
-2. `paper-skills/config.yaml` 的 `research_domains` 里所有关键词（默认走这条，与 `paper-daily` 同源）
+2. `.claude/skills/config.yaml` 的 `research_domains` 里所有关键词（默认走这条，与 `paper-daily` 同源）
 3. 配置顶层 `keywords`（旧版 `conf-papers.yaml` 格式，向后兼容）
 
 也就是说：**默认情况下顶会检索与每日推荐用同一套研究兴趣**。只有当顶会想用不同关键词时，才在 `conf.keywords` 里覆盖。修改研究兴趣请用 `paper-interests` skill。
@@ -110,7 +110,7 @@ python scripts/search_conf_papers.py \
 ### 5.1 笔记文件
 
 - 路径：**`<daily_dir>/<年份>-顶会论文推荐.md`**
-  - `daily_dir` 取 `paper-skills/config.yaml` 的 `daily_dir`（默认 `08-daily`）
+  - `daily_dir` 取 `.claude/skills/config.yaml` 的 `daily_dir`（默认 `08-daily`）
   - 例如 `08-daily/2025-顶会论文推荐.md`
   - 顶会推荐是按年检索的周期产物，与每日检索的 `<日期>/` 文件夹并列存放，不占用日期目录
 - frontmatter：
@@ -209,7 +209,7 @@ tags: ["llm-generated", "conf-paper-recommend"]
 双年会议（ICCV/ECCV）在非举办年份无数据；另外 DBLP 的 toc 命名对 ECCV/EMNLP/MICCAI 不稳定，脚本已走备选查询，仍可能失败。
 
 **S2 补充全失败？**
-匿名访问容易 429。在 `paper-skills/config.yaml` 里填 `semantic_scholar_api_key`，或加 `--skip-enrichment` 先只看 DBLP 标题与评分。
+匿名访问容易 429。在 `.claude/skills/config.yaml` 里填 `semantic_scholar_api_key`，或加 `--skip-enrichment` 先只看 DBLP 标题与评分。
 
 **关键词太少导致过滤后没有论文？**
 说明 `research_domains` 的英文关键词偏窄。用 `paper-interests` 补充该方向的关键词。

@@ -22,7 +22,7 @@ description: 周期性（默认每 7 天）回顾近一周新增的论文解析�
 
 # 周期与配置
 
-配置在共享的 `paper-skills/config.yaml` 的 `weekly` 段：
+配置在共享的 `.claude/skills/config.yaml` 的 `weekly` 段：
 
 ```yaml
 weekly:

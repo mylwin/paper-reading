@@ -12,7 +12,7 @@
 | `paper-daily` | 多源检索（arXiv + OpenReview）→ 四维评分 → 前 K 篇 PDF 归档 → 今日检索日报 | `01-raw/*.pdf`、`08-daily/<日期>/今日检索.md` |
 | `paper-conf` | 按会议+年份检索顶会论文（DBLP + Semantic Scholar，三维评分） | `08-daily/<年份>-顶会论文推荐.md` |
 | `paper-weekly` | 每 7 天一次：先宏观看研究主题发展（08-daily 题目全景 + 03-notes），再看你不理解的地方（04 疑问 + 08-reading 问答），给出优化方向与下一步 | `07-research/<周起始日>-第N周周报.md` |
-| `paper-interests` | 对话式维护研究主题：询问 → 扩散关键词 → 确认 → 写配置 | `paper-skills/config.yaml` |
+| `paper-interests` | 对话式维护研究主题：询问 → 扩散关键词 → 确认 → 写配置 | `.claude/skills/config.yaml` |
 | `paper-sgd-reading` | 随机梯度类理论论文的**交互式精读家教**：逐个公式讲、不跳步、禁生活类比；问答过程落盘，定稿进公式目录 | 过程：`08-reading/<标题>/`；定稿：`04-equation_problem/<标题>/全局推理.md` 等 |
 
 **不属于本套 skill 的**：`02-markdown` 的 PDF 解析、`03-notes` 的精读笔记 —— 由用户自己的流程负责，本套 skill 只读它们用于去重与周期分析。
@@ -56,7 +56,7 @@ paper-reading/
 ## 目录结构
 
 ```
-paper-skills/
+.claude/skills/
 ├── config.yaml                      # 共享配置：研究领域、目录映射、周期设置
 ├── paper-analyze/
 │   ├── SKILL.md                     # 单篇论文分析与标准 Markdown 笔记
@@ -174,24 +174,24 @@ research_domains:                   # 用 paper-interests 维护
 WORKSPACE="${PAPER_WORKSPACE_PATH:-$PWD}"
 
 # 1. 检索（全量 all_papers + 过滤后的 top_papers）
-python paper-daily/scripts/search_arxiv.py --output "$WORKSPACE/08-daily/2026-09-16/search_result.json" \
+python .claude/skills/paper-daily/scripts/search_arxiv.py --output "$WORKSPACE/08-daily/2026-09-16/search_result.json" \
   --target-date 2026-09-16 --exclude-known
 
 # 2. 前 3 篇 PDF 归档到 01-raw（已存在即停）
-python paper-daily/scripts/fetch_pdfs.py --papers-json "$WORKSPACE/08-daily/2026-09-16/search_result.json" --date 2026-09-16
+python .claude/skills/paper-daily/scripts/fetch_pdfs.py --papers-json "$WORKSPACE/08-daily/2026-09-16/search_result.json" --date 2026-09-16
 
 # 3. 日报落盘到 08-daily/2026-09-16/今日检索.md
-python paper-daily/scripts/write_note.py --date 2026-09-16 \
+python .claude/skills/paper-daily/scripts/write_note.py --date 2026-09-16 \
   --papers-json "$WORKSPACE/08-daily/2026-09-16/search_result.json" --stdin-file note.md
 
 # 4. 周期分析：先看是否到期 + 收集素材
-python paper-weekly/scripts/collect.py --output weekly_manifest.json
+python .claude/skills/paper-weekly/scripts/collect.py --output weekly_manifest.json
 #    ... 读完清单里的素材、写出 07-research/<日期>-<主题>.md 之后 ...
-python paper-weekly/scripts/collect.py --mark-run
+python .claude/skills/paper-weekly/scripts/collect.py --mark-run
 
 # 5. 改研究主题
-python paper-interests/scripts/merge_interests.py --preview --payload payload.json
-python paper-interests/scripts/merge_interests.py --apply   --payload payload.json
+python .claude/skills/paper-interests/scripts/merge_interests.py --preview --payload payload.json
+python .claude/skills/paper-interests/scripts/merge_interests.py --apply   --payload payload.json
 
 # 测试
 python -m unittest discover -s tests -v
@@ -201,27 +201,26 @@ python -m unittest discover -s tests -v
 
 ## 安装
 
-本项目把全部论文 skills 的实体文件统一放在根目录 `paper-skills/`。为兼容不同宿主，以下两个入口均指向该目录：
+本项目把全部论文 skills 的实体文件统一放在 `.claude/skills/`。为兼容 Codex，额外提供以下入口：
 
 ```text
-.agents/skills  -> ../paper-skills   # Codex 项目级发现入口
-.claude/skills  -> ../paper-skills   # Claude Code 项目级发现入口
+.agents/skills  -> ../.claude/skills  # Codex 项目级发现入口
 ```
 
-`paper-skills/` 下的每个 skill 仍然是直接子目录，并直接包含 `SKILL.md`；不要再增加一层集合目录，否则 Codex 不会递归发现这些 skill。
+`.claude/skills/` 下的每个 skill 仍然是直接子目录，并直接包含 `SKILL.md`；不要再增加一层集合目录，否则 Codex 不会递归发现这些 skill。
 
 ```powershell
 # Codex
-Copy-Item -Recurse paper-skills\paper-analyze, paper-skills\paper-daily, paper-skills\paper-conf, paper-skills\paper-interests, paper-skills\paper-weekly, paper-skills\paper-sgd-reading "$env:USERPROFILE\.agents\skills\"
+Copy-Item -Recurse .claude\skills\paper-analyze, .claude\skills\paper-daily, .claude\skills\paper-conf, .claude\skills\paper-interests, .claude\skills\paper-weekly, .claude\skills\paper-sgd-reading "$env:USERPROFILE\.agents\skills\"
 # Claude Code：同样六个目录复制到 $env:USERPROFILE\.claude\skills\
 # 项目内安装（本仓库用法）：
-Copy-Item -Recurse paper-skills\* "$env:USERPROFILE\..\paper-reading\.claude\skills\"   # 路径按实际调整
+Copy-Item -Recurse .claude\skills\* "$env:USERPROFILE\..\paper-reading\.claude\skills\"   # 路径按实际调整
 ```
 
 安装约束分两类：
 
 - `paper-daily` / `paper-conf` / `paper-interests` / `paper-weekly` 必须放在**同一父目录**，共享的 `config.yaml` 放父目录（它们从 `../paper-daily/scripts` 复用配置解析与评分函数）
-- **`paper-sgd-reading` 自包含**：`scripts/outputs.py` 不 import 其他 skill 的代码，可单独安装。配置按 `--config` → `$PAPER_SKILLS_CONFIG` → `$PAPER_READING_CONFIG` → `<skill 同级>/config.yaml` → 由 `$PAPER_WORKSPACE_PATH` 反推 `<workspace>/../paper-skills/config.yaml` → 从工作目录向上查找 的顺序定位
+- **`paper-sgd-reading` 自包含**：`scripts/outputs.py` 不 import 其他 skill 的代码，可单独安装。配置按 `--config` → `$PAPER_SKILLS_CONFIG` → `$PAPER_READING_CONFIG` → `<skill 同级>/config.yaml` → 由 `$PAPER_WORKSPACE_PATH` 查找 `<workspace>/.claude/skills/config.yaml` → 从工作目录向上查找 的顺序定位
 
 ## 环境搭建（Conda）
 
@@ -248,7 +247,7 @@ conda activate paper-skills
 例如，从项目根目录运行每日检索：
 
 ```bash
-python paper-skills/paper-daily/scripts/search_arxiv.py \
+python .claude/skills/paper-daily/scripts/search_arxiv.py \
   --output "$PWD/08-daily/$(date +%F)/search_result.json" \
   --target-date "$(date +%F)" \
   --exclude-known

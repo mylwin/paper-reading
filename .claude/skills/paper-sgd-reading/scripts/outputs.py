@@ -14,8 +14,8 @@ paper-sgd-reading 的路径解析与笔记落盘
   2. `$PAPER_SKILLS_CONFIG`
   3. `$PAPER_READING_CONFIG`
   4. `<skill 目录>/config.yaml`
-  5. 从 `$PAPER_WORKSPACE_PATH` 反推 `<workspace>/../paper-skills/config.yaml`
-  6. 从当前工作目录逐级向上找 `paper-skills/config.yaml`
+  5. 从 `$PAPER_WORKSPACE_PATH` 查找 `<workspace>/.claude/skills/config.yaml`
+  6. 从当前工作目录逐级向上找 `.claude/skills/config.yaml`
 
 workspace 路径：`--workspace` -> `$PAPER_WORKSPACE_PATH` -> 配置的 `workspace_path`
 -> 自动识别当前项目根目录。
@@ -36,7 +36,7 @@ from datetime import datetime
 from pathlib import Path
 
 SKILL_ROOT = Path(__file__).resolve().parents[1]   # <skill-dir>
-PAPER_SKILLS_ROOT = SKILL_ROOT.parent              # <project>/paper-skills
+PAPER_SKILLS_ROOT = SKILL_ROOT.parent              # <project>/.claude/skills
 WORKSPACE_MARKERS = ('01-raw', '02-markdown', '03-notes', '04-equation_problem')
 
 DEFAULT_DIRS = {
@@ -77,7 +77,7 @@ def _config_candidates(explicit=None):
     """按优先级列出候选配置。
 
     顺序要点：**眼下安装位置旁边的配置优先于靠 workspace 反推的配置**，
-    这样 skill 放在 `paper-skills/` 时会用 `paper-skills/config.yaml`，
+    这样 skill 放在 `.claude/skills/` 时会用 `.claude/skills/config.yaml`，
     而不会去命中机器上别处的另一份副本。
     """
     candidates = []
@@ -88,20 +88,20 @@ def _config_candidates(explicit=None):
         if value:
             candidates.append(Path(value).expanduser())
 
-    # 1) 配置与 skill 同级（推荐安装形态：paper-skills/config.yaml）
+    # 1) 配置与 skill 同级（推荐安装形态：.claude/skills/config.yaml）
     candidates.append(SKILL_ROOT.parent / 'config.yaml')
     # 2) skill 目录内自带配置
     candidates.append(SKILL_ROOT / 'config.yaml')
 
-    # 3) 由 workspace 反推：<workspace>/../paper-skills/config.yaml
+    # 3) 从 workspace 查找：<workspace>/.claude/skills/config.yaml
     workspace_env = os.environ.get('PAPER_WORKSPACE_PATH')
     if workspace_env:
-        candidates.append(Path(workspace_env).expanduser().parent / 'paper-skills' / 'config.yaml')
+        candidates.append(Path(workspace_env).expanduser() / '.claude' / 'skills' / 'config.yaml')
 
     # 4) 从当前工作目录逐级向上找
     here = Path.cwd()
     for parent in [here, *here.parents]:
-        candidates.append(parent / 'paper-skills' / 'config.yaml')
+        candidates.append(parent / '.claude' / 'skills' / 'config.yaml')
     return candidates
 
 

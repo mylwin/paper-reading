@@ -28,7 +28,7 @@ description: 多源检索每日论文推荐，把前几篇原文 PDF 归档到 0
 
 # 配置
 
-配置查找顺序：`--config` → `$PAPER_SKILLS_CONFIG` → `paper-daily/config.yaml` → `paper-skills/config.yaml`。
+配置查找顺序：`--config` → `$PAPER_SKILLS_CONFIG` → `paper-daily/config.yaml` → `.claude/skills/config.yaml`。
 
 workspace 路径：命令行 `--workspace` → `PAPER_WORKSPACE_PATH` → 配置的 `workspace_path` → 自动识别当前项目根目录。
 
@@ -138,12 +138,33 @@ python scripts/write_note.py --date "<日期>" --papers-json 08-daily/<日期>/s
 
 ## 本次检索列表
 
+按 `config.yaml` 中 `research_domains` 的顺序分节；每个主题内按推荐评分从高到低排列。
+未命中主题的论文统一放到最后的「未分类」节。`all_papers` 中的每篇论文必须且只能
+出现一次，序号跨主题连续，便于回到全量检索结果核对。
+
+### 随机梯度与优化理论（N 篇）
+
 | # | 题目 | 来源 | 领域 | 评分 | 状态 | 同脉络 |
 |---|---|---|---|---|---|---|
 | 1 | … | arXiv | 随机梯度与优化理论 | 8.85 | 推荐 | Clipped Gradient Descent |
-| 2 | … | arXiv | 扩散模型 | 8.13 | 已推荐过 | -- |
+| 2 | … | arXiv | 随机梯度与优化理论 | 8.13 | 已推荐过 | -- |
 
-（用 `all_papers`，全量列出；`already_known` 为 true 的标「已在库」，并在状态里注明 `kb_source`：`pdf`=已有 PDF、`note`=已精读、`daily`=历史推荐过。`related_papers` 取第一条标题填「同脉络」）
+### 大模型训练优化（N 篇）
+
+| # | 题目 | 来源 | 领域 | 评分 | 状态 | 同脉络 |
+|---|---|---|---|---|---|---|
+| 3 | … | OpenReview | 大模型训练优化 | 8.02 | 推荐 | -- |
+
+### 未分类（N 篇，如有）
+
+| # | 题目 | 来源 | 领域 | 评分 | 状态 | 同脉络 |
+|---|---|---|---|---|---|---|
+| 4 | … | arXiv | -- | 7.57 | 推荐 | -- |
+
+（用 `all_papers`，全量列出；`matched_domain` 为空时归入「未分类」。
+`already_known` 为 true 的标「已在库」，并在状态里注明 `kb_source`：`pdf`=已有 PDF、
+`note`=已精读、`daily`=历史推荐过。`related_papers` 取第一条标题填「同脉络」。
+主题节可以省略空节，但不能省略包含论文的主题。）
 
 ## 前 3 篇
 
@@ -199,7 +220,8 @@ python scripts/link_keywords.py --index existing_notes_index.json --input <笔�
 - **日期隔离**：日报只写在 `08-daily/<YYYY-MM-DD>/` 下
 - **不碰用户资产**：`02-markdown` / `03-notes` / 已有 PDF 只读，绝不覆盖
 - **已存在即停**：任何写入前先判存在，存在就跳过并如实报告
-- **按评分排序**：`top_papers` 已排好，不要自己重排
+- **按主题组织日报**：`本次检索列表` 按 `research_domains` 顺序分节，每节内按 `score`
+  从高到低；`top_papers` 的前 3 篇和其余速览仍沿用全局推荐分数顺序
 - **不需要大模型 API key**：脚本只做 HTTP 检索、评分与落盘；概览、总结、贡献点由当前 agent 撰写
 
 # 依赖项

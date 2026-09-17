@@ -6,7 +6,7 @@ paper_config —— paper-daily / paper-conf / paper-interests 共享的配置�
   1. 显式传入的 config_path（命令行 --config）
   2. 环境变量 PAPER_SKILLS_CONFIG
   3. <skill 目录>/config.yaml          （skill 自带的默认配置）
-  4. <paper-skills 根目录>/config.yaml （共享配置）
+  4. <skills 根目录>/config.yaml （共享配置）
 
 workspace 路径解析顺序：
   1. 显式传入的 workspace（命令行 --workspace）
@@ -20,8 +20,8 @@ import os
 from pathlib import Path
 from typing import Optional
 
-SKILL_ROOT = Path(__file__).resolve().parents[1]          # 如 .../paper-skills/paper-daily
-PAPER_SKILLS_ROOT = SKILL_ROOT.parent                      # 如 .../paper-skills
+SKILL_ROOT = Path(__file__).resolve().parents[1]          # 如 .../.claude/skills/paper-daily
+PAPER_SKILLS_ROOT = SKILL_ROOT.parent                      # 如 .../.claude/skills
 WORKSPACE_MARKERS = ('01-raw', '02-markdown', '03-notes', '04-equation_problem')
 
 
