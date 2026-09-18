@@ -329,30 +329,6 @@ research_domains:
           - compute scaling law
 
 # 命中这些关键词的论文直接排除
-  无梯度大模型优化:
-    keywords:
-      - gradient-free optimization
-      - zeroth-order optimization
-      - derivative-free optimization
-      - zeroth-order gradient estimation
-      - randomized smoothing
-      - two-point estimator
-      - ZO-SGD
-      - SPSA
-      - MeZO
-      - evolution strategies
-      - optimizer design
-      - large language model training
-      - memory-efficient training
-      - on-device training
-      - query complexity
-    arxiv_categories:
-      - cs.LG
-      - cs.AI
-      - math.OC
-      - cs.AR
-    priority: 10
-
 excluded_keywords:
   - workshop
 
