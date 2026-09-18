@@ -15,12 +15,15 @@
 | 已解析 | Powell-Style Model-Based Derivative-Free Optimization with Complexity Guarantees | Powell_Style_Model_Based_Derivative_Free_Optimization_with_Complexity_Guarantees | [解析文件](Powell_Style_Model_Based_Derivative_Free_Optimization_with_Complexity_Guarantees.md) | 2026-09-17 | -- |
 | 未解析 | Rank-Efficient LoRA via Joint Tangent-Space Optimization under Isotropic Curvature | Rank_Efficient_LoRA_via_Joint_Tangent_Space_Optimization_under_Isotropic_Curvature | -- | 2026-09-17 | -- |
 | 未解析 | TaRA: Training-Aware Low-Rank Adaptation Initialization | TaRA_Training_Aware_Low_Rank_Adaptation_Initialization | -- | 2026-09-17 | -- |
+| 未解析 | Adaptively Incorporating Directional Hints into Zeroth-Order Optimization | Adaptively_Incorporating_Directional_Hints_into_Zeroth_Order_Optimization | -- | 2026-09-18 | -- |
+| 未解析 | Gradient-Free Optimization for Matrix functions | Gradient_Free_Optimization_for_Matrix_functions | -- | 2026-09-18 | -- |
+| 未解析 | MpSub: A Momentum $p$-Dimensional Subspace Trust-Region Method for Derivative-Free Fine-Tuning of Large Language Models | MpSub_A_Momentum_$p$_Dimensional_Subspace_Trust_Region_Method_for_Derivative_Free_Fine_Tuning_of_Large_Language_Models | -- | 2026-09-18 | -- |
 
 ## 汇总
 
-- 论文总数：7 篇（2026-09 7 篇）
-- 解析状态：已解析 4 / 未解析 3 / 解析失败 0
-- **未解析论文**（需补解析）：Adaptive_Phase_Switching_for_Communication_Efficient_Federated_LoRA_Fine_Tuning、Rank_Efficient_LoRA_via_Joint_Tangent_Space_Optimization_under_Isotropic_Curvature、TaRA_Training_Aware_Low_Rank_Adaptation_Initialization
+- 论文总数：10 篇（2026-09 10 篇）
+- 解析状态：已解析 4 / 未解析 6 / 解析失败 0
+- **未解析论文**（需补解析）：Adaptive_Phase_Switching_for_Communication_Efficient_Federated_LoRA_Fine_Tuning、Rank_Efficient_LoRA_via_Joint_Tangent_Space_Optimization_under_Isotropic_Curvature、TaRA_Training_Aware_Low_Rank_Adaptation_Initialization、Adaptively_Incorporating_Directional_Hints_into_Zeroth_Order_Optimization、Gradient_Free_Optimization_for_Matrix_functions、MpSub_A_Momentum_$p$_Dimensional_Subspace_Trust_Region_Method_for_Derivative_Free_Fine_Tuning_of_Large_Language_Models
 <!-- INDEX:END -->
 
 ## 说明

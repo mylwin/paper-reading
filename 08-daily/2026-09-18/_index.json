@@ -1,0 +1,99 @@
+{
+  "date": "2026-09-18",
+  "note_file": "今日检索.md",
+  "generated_at": "2026-09-18T10:23:25",
+  "skill": "paper-daily",
+  "sources_searched": [
+    "arxiv",
+    "openreview"
+  ],
+  "source_counts": {
+    "arxiv": 8,
+    "openreview": 0
+  },
+  "date_windows": {
+    "recent_30d": {
+      "start": "2026-08-19",
+      "end": "2026-09-18"
+    },
+    "past_year": {
+      "start": "2025-09-18",
+      "end": "2026-08-18"
+    }
+  },
+  "total_unique": 8,
+  "top_papers": [
+    {
+      "title": "MpSub: A Momentum $p$-Dimensional Subspace Trust-Region Method for Derivative-Free Fine-Tuning of Large Language Models",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2609.07666v1",
+      "note_filename": "MpSub_A_Momentum_$p$_Dimensional_Subspace_Trust_Region_Method_for_Derivative_Free_Fine_Tuning_of_Large_Language_Models",
+      "matched_domain": "无梯度大模型优化",
+      "score": 7.15
+    },
+    {
+      "title": "Gradient-Free Optimization for Matrix functions",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2609.03170v1",
+      "note_filename": "Gradient_Free_Optimization_for_Matrix_functions",
+      "matched_domain": "无梯度大模型优化",
+      "score": 8.28
+    },
+    {
+      "title": "Adaptively Incorporating Directional Hints into Zeroth-Order Optimization",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2609.08277v1",
+      "note_filename": "Adaptively_Incorporating_Directional_Hints_into_Zeroth_Order_Optimization",
+      "matched_domain": "无梯度大模型优化",
+      "score": 8.08
+    },
+    {
+      "title": "Opinion Dynamics-based Coalition Formation for Federated Learning in Heterogeneous IoT Systems",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2609.19695v1",
+      "note_filename": "Opinion_Dynamics_based_Coalition_Formation_for_Federated_Learning_in_Heterogeneous_IoT_Systems",
+      "matched_domain": "无梯度大模型优化",
+      "score": 6.16
+    },
+    {
+      "title": "Zeroth-Order Nonsmooth Nonconvex Optimization with Convex Liftings and Its Application to State-Feedback $H_\\infty$ Policy Optimization",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2608.23178v1",
+      "note_filename": "Zeroth_Order_Nonsmooth_Nonconvex_Optimization_with_Convex_Liftings_and_Its_Application_to_State_Feedback_$H_infty$_Polic",
+      "matched_domain": "无梯度大模型优化",
+      "score": 5.5
+    },
+    {
+      "title": "Scalable Lindblad Noise Learning via Stochastic Tensor-Network Simulation",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2608.24668v2",
+      "note_filename": "Scalable_Lindblad_Noise_Learning_via_Stochastic_Tensor_Network_Simulation",
+      "matched_domain": "无梯度大模型优化",
+      "score": 4.06
+    },
+    {
+      "title": "Escaping Low-Dimensional Overlap: Multi-Task Model Merging via High-Dimensional Sparse Disentanglement",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2608.25354v1",
+      "note_filename": "Escaping_Low_Dimensional_Overlap_Multi_Task_Model_Merging_via_High_Dimensional_Sparse_Disentanglement",
+      "matched_domain": "无梯度大模型优化",
+      "score": 3.95
+    },
+    {
+      "title": "FedSubMuon: Communication-Efficient Federated LLM Fine-Tuning via Structured Subspace Muon",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2609.06073v1",
+      "note_filename": "FedSubMuon_Communication_Efficient_Federated_LLM_Fine_Tuning_via_Structured_Subspace_Muon",
+      "matched_domain": "无梯度大模型优化",
+      "score": 3.95
+    }
+  ]
+}
