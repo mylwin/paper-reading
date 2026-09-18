@@ -1,0 +1,770 @@
+{
+  "target_date": "2026-09-18",
+  "date_windows": {
+    "recent_30d": {
+      "start": "2026-08-19",
+      "end": "2026-09-18"
+    },
+    "past_year": {
+      "start": "2025-09-18",
+      "end": "2026-08-18"
+    }
+  },
+  "sources_searched": [
+    "arxiv",
+    "openreview"
+  ],
+  "source_counts": {
+    "arxiv": 8,
+    "openreview": 0
+  },
+  "papers_by_source": {
+    "arxiv": 8
+  },
+  "known_dirs": {
+    "papers": "/Users/myl/Documents/paper/01-raw",
+    "notes": "/Users/myl/Documents/paper/03-notes",
+    "daily": "/Users/myl/Documents/paper/08-daily"
+  },
+  "total_recent": 8,
+  "total_hot": 0,
+  "total_unique": 8,
+  "total_known": 0,
+  "total_candidates": 8,
+  "all_papers": [
+    {
+      "title": "Gradient-Free Optimization for Matrix functions",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "venue": "",
+      "url": "http://arxiv.org/abs/2609.03170v1",
+      "pdf_url": "https://export.arxiv.org/pdf/2609.03170",
+      "published": "2026-09-02T21:13:07Z",
+      "authors": [
+        "Sawyer Allen",
+        "Cash Cherry",
+        "Aidan Eck",
+        "Stephen Becker",
+        "Daniel McKenzie"
+      ],
+      "paper_stem": "Gradient_Free_Optimization_for_Matrix_functions",
+      "matched_domain": "无梯度大模型优化",
+      "matched_keywords": [
+        "gradient-free optimization",
+        "math.OC"
+      ],
+      "already_known": false,
+      "kb_source": "",
+      "related_papers": [],
+      "score": 8.28
+    },
+    {
+      "title": "Adaptively Incorporating Directional Hints into Zeroth-Order Optimization",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "venue": "",
+      "url": "http://arxiv.org/abs/2609.08277v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.08277v1",
+      "published": "2026-09-08T05:42:02Z",
+      "authors": [
+        "Alexander Ryabchenko",
+        "Jian Qian",
+        "Wenlong Mou"
+      ],
+      "paper_stem": "Adaptively_Incorporating_Directional_Hints_into_Zeroth_Order_Optimization",
+      "matched_domain": "无梯度大模型优化",
+      "matched_keywords": [
+        "zeroth-order optimization",
+        "cs.LG",
+        "math.OC"
+      ],
+      "already_known": false,
+      "kb_source": "",
+      "related_papers": [],
+      "score": 8.08
+    },
+    {
+      "title": "MpSub: A Momentum $p$-Dimensional Subspace Trust-Region Method for Derivative-Free Fine-Tuning of Large Language Models",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "venue": "",
+      "url": "http://arxiv.org/abs/2609.07666v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.07666v1",
+      "published": "2026-09-07T15:51:11Z",
+      "authors": [
+        "Yuyang Wang",
+        "Haoyu Yao",
+        "Pengcheng Xie"
+      ],
+      "paper_stem": "MpSub_A_Momentum_$p$_Dimensional_Subspace_Trust_Region_Method_for_Derivative_Free_Fine_Tuning_of_Large_Language_Models",
+      "matched_domain": "无梯度大模型优化",
+      "matched_keywords": [
+        "zeroth-order optimization",
+        "MeZO",
+        "cs.LG",
+        "math.OC"
+      ],
+      "already_known": false,
+      "kb_source": "",
+      "related_papers": [
+        {
+          "title": "Clustering-Based Balanced Sampling and Allocation with Data Parallelism for High-Performance Fine-Tuning",
+          "stem": "clusteringbasedbalancedsamplingandallocationwithdataparallelismforhighperformancefinetuning",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-17/search_result.json",
+          "shared_terms": [
+            "fine-tuning"
+          ],
+          "shared_count": 1
+        },
+        {
+          "title": "Understanding MARS When Scaling Momentum Correction Provably Helps",
+          "stem": "understandingmarswhenscalingmomentumcorrectionprovablyhelps",
+          "source": "pdf",
+          "path": "/Users/myl/Documents/paper/01-raw/2026-07/Understanding_MARS_When_Scaling_Momentum_Correction_Provably_Helps.pdf",
+          "shared_terms": [
+            "momentum"
+          ],
+          "shared_count": 1
+        }
+      ],
+      "score": 7.15
+    },
+    {
+      "title": "Opinion Dynamics-based Coalition Formation for Federated Learning in Heterogeneous IoT Systems",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "venue": "",
+      "url": "http://arxiv.org/abs/2609.19695v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.19695v1",
+      "published": "2026-09-17T04:44:06Z",
+      "authors": [
+        "Mohammed El Hanjri",
+        "Anas Abouaomar",
+        "Hamidou Tembine",
+        "Abdellatif Kobbane"
+      ],
+      "paper_stem": "Opinion_Dynamics_based_Coalition_Formation_for_Federated_Learning_in_Heterogeneous_IoT_Systems",
+      "matched_domain": "无梯度大模型优化",
+      "matched_keywords": [
+        "on-device training",
+        "cs.LG"
+      ],
+      "already_known": false,
+      "kb_source": "",
+      "related_papers": [
+        {
+          "title": "Adaptive Phase Switching for Communication Efficient Federated LoRA Fine Tuning",
+          "stem": "adaptivephaseswitchingforcommunicationefficientfederatedlorafinetuning",
+          "source": "pdf",
+          "path": "/Users/myl/Documents/paper/01-raw/2026-09/Adaptive_Phase_Switching_for_Communication_Efficient_Federated_LoRA_Fine_Tuning.pdf",
+          "shared_terms": [
+            "federated"
+          ],
+          "shared_count": 1
+        }
+      ],
+      "score": 6.16
+    },
+    {
+      "title": "Zeroth-Order Nonsmooth Nonconvex Optimization with Convex Liftings and Its Application to State-Feedback $H_\\infty$ Policy Optimization",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "venue": "",
+      "url": "http://arxiv.org/abs/2608.23178v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.23178v1",
+      "published": "2026-08-24T12:26:32Z",
+      "authors": [
+        "Xuhao Wang",
+        "Yujie Tang"
+      ],
+      "paper_stem": "Zeroth_Order_Nonsmooth_Nonconvex_Optimization_with_Convex_Liftings_and_Its_Application_to_State_Feedback_$H_infty$_Polic",
+      "matched_domain": "无梯度大模型优化",
+      "matched_keywords": [
+        "zeroth-order optimization",
+        "math.OC"
+      ],
+      "already_known": false,
+      "kb_source": "",
+      "related_papers": [],
+      "score": 5.5
+    },
+    {
+      "title": "Scalable Lindblad Noise Learning via Stochastic Tensor-Network Simulation",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "venue": "",
+      "url": "http://arxiv.org/abs/2608.24668v2",
+      "pdf_url": "https://arxiv.org/pdf/2608.24668v2",
+      "published": "2026-08-25T15:07:11Z",
+      "authors": [
+        "Alejandro R. Ramos Ramos",
+        "Maximilian Fröhlich",
+        "Aaron Sander",
+        "Robert Wille",
+        "Martin Eigel",
+        "Patrick Gelß",
+        "Sebastian Pokutta"
+      ],
+      "paper_stem": "Scalable_Lindblad_Noise_Learning_via_Stochastic_Tensor_Network_Simulation",
+      "matched_domain": "无梯度大模型优化",
+      "matched_keywords": [
+        "gradient-free optimization"
+      ],
+      "already_known": false,
+      "kb_source": "",
+      "related_papers": [
+        {
+          "title": "The Noise Geometry of Stochastic Gradient Descent",
+          "stem": "thenoisegeometryofstochasticgradientdescent",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-17/search_result.json",
+          "shared_terms": [
+            "noise",
+            "stochastic"
+          ],
+          "shared_count": 2
+        },
+        {
+          "title": "Self Tuning Stochastic Optimization with Curvature Aware Gradient Filtering",
+          "stem": "selftuningstochasticoptimizationwithcurvatureawaregradientfiltering",
+          "source": "pdf",
+          "path": "/Users/myl/Documents/paper/01-raw/2026-07/Self_Tuning_Stochastic_Optimization_with_Curvature_Aware_Gradient_Filtering.pdf",
+          "shared_terms": [
+            "stochastic"
+          ],
+          "shared_count": 1
+        }
+      ],
+      "score": 4.06
+    },
+    {
+      "title": "Escaping Low-Dimensional Overlap: Multi-Task Model Merging via High-Dimensional Sparse Disentanglement",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "venue": "",
+      "url": "http://arxiv.org/abs/2608.25354v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.25354v1",
+      "published": "2026-08-26T04:16:31Z",
+      "authors": [
+        "Yihang Zhang",
+        "Shengke Sun",
+        "Junjie Wen",
+        "Feng Zeng"
+      ],
+      "paper_stem": "Escaping_Low_Dimensional_Overlap_Multi_Task_Model_Merging_via_High_Dimensional_Sparse_Disentanglement",
+      "matched_domain": "无梯度大模型优化",
+      "matched_keywords": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "already_known": false,
+      "kb_source": "",
+      "related_papers": [],
+      "score": 3.95
+    },
+    {
+      "title": "FedSubMuon: Communication-Efficient Federated LLM Fine-Tuning via Structured Subspace Muon",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "venue": "",
+      "url": "http://arxiv.org/abs/2609.06073v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.06073v1",
+      "published": "2026-09-05T13:07:13Z",
+      "authors": [
+        "Shaolong Chen",
+        "Youming Tao",
+        "Shuzhen Chen",
+        "Falko Dressler",
+        "Qingqing Ye",
+        "Di Wang"
+      ],
+      "paper_stem": "FedSubMuon_Communication_Efficient_Federated_LLM_Fine_Tuning_via_Structured_Subspace_Muon",
+      "matched_domain": "无梯度大模型优化",
+      "matched_keywords": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "already_known": false,
+      "kb_source": "",
+      "related_papers": [
+        {
+          "title": "Adaptive Phase Switching for Communication Efficient Federated LoRA Fine Tuning",
+          "stem": "adaptivephaseswitchingforcommunicationefficientfederatedlorafinetuning",
+          "source": "pdf",
+          "path": "/Users/myl/Documents/paper/01-raw/2026-09/Adaptive_Phase_Switching_for_Communication_Efficient_Federated_LoRA_Fine_Tuning.pdf",
+          "shared_terms": [
+            "federated"
+          ],
+          "shared_count": 1
+        },
+        {
+          "title": "Behavior Quotient Learning for Low-Rank Adaptation of LLM Agents",
+          "stem": "behaviorquotientlearningforlowrankadaptationofllmagents",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-17/search_result.json",
+          "shared_terms": [
+            "llm"
+          ],
+          "shared_count": 1
+        },
+        {
+          "title": "Clustering-Based Balanced Sampling and Allocation with Data Parallelism for High-Performance Fine-Tuning",
+          "stem": "clusteringbasedbalancedsamplingandallocationwithdataparallelismforhighperformancefinetuning",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-17/search_result.json",
+          "shared_terms": [
+            "fine-tuning"
+          ],
+          "shared_count": 1
+        }
+      ],
+      "score": 3.95
+    }
+  ],
+  "top_papers": [
+    {
+      "id": "http://arxiv.org/abs/2609.07666v1",
+      "title": "MpSub: A Momentum $p$-Dimensional Subspace Trust-Region Method for Derivative-Free Fine-Tuning of Large Language Models",
+      "summary": "Full-parameter fine-tuning of large language models has substantial memory costs because backpropagation stores activations and gradients. Zeroth-order optimization avoids this by estimating update directions from loss evaluations, but existing methods require tuning a sensitive learning rate for each model and task. We propose the momentum $p$-dimensional subspace trust-region method (MpSub). At each iteration, MpSub searches within a $p$-dimensional subspace: one direction preserves historical momentum from the most recent accepted step, while the remaining directions explore via fresh random sampling. The subspace gradient is estimated by central differences, a trial step is computed from a linear trust-region model, and the trust-region radius adapts according to the agreement between predicted and observed loss reduction, eliminating the learning rate. For LLM fine-tuning, evaluations within an iteration share a minibatch, and directions are regenerated in place from seeds, using forward passes alone. For smooth deterministic objectives under unorthogonalized Gaussian directions, we bound the finite-difference error, quantify gradient energy captured by the subspace, and prove that $\\lim_{k\\to\\infty} \\|\\nabla f(x_k)\\|_2 = 0$ almost surely under a safeguarded radius update. Under a matched budget of 8,400 training-objective forward passes, we fine-tune OPT-125M and OPT-350M on CommitmentBank. With the same preset parameters at both model sizes, MpSub attains mean test accuracies of 0.673 and 0.690 over three seeds, matching tuned MeZO (0.685) without any learning-rate search.",
+      "authors": [
+        "Yuyang Wang",
+        "Haoyu Yao",
+        "Pengcheng Xie"
+      ],
+      "affiliations": [],
+      "published": "2026-09-07T15:51:11Z",
+      "published_date": "2026-09-07 15:51:11+00:00",
+      "updated": "2026-09-07T15:51:11Z",
+      "categories": [
+        "cs.LG",
+        "math.OC"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2609.07666v1",
+      "url": "http://arxiv.org/abs/2609.07666v1",
+      "source": "arxiv",
+      "scores": {
+        "relevance": 2.9,
+        "recency": 3.0,
+        "impact": 0.0,
+        "evidence": 0.5,
+        "popularity": 0.0,
+        "quality": 0.5,
+        "recommendation": 7.15
+      },
+      "matched_domain": "无梯度大模型优化",
+      "matched_keywords": [
+        "zeroth-order optimization",
+        "MeZO",
+        "cs.LG",
+        "math.OC"
+      ],
+      "is_hot_paper": false,
+      "score_type": "research_priority_screening",
+      "assessment_scope": "metadata_and_abstract",
+      "screening_rank": 3,
+      "paper_stem": "MpSub_A_Momentum_$p$_Dimensional_Subspace_Trust_Region_Method_for_Derivative_Free_Fine_Tuning_of_Large_Language_Models",
+      "already_known": false,
+      "related_papers": [
+        {
+          "title": "Clustering-Based Balanced Sampling and Allocation with Data Parallelism for High-Performance Fine-Tuning",
+          "stem": "clusteringbasedbalancedsamplingandallocationwithdataparallelismforhighperformancefinetuning",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-17/search_result.json",
+          "shared_terms": [
+            "fine-tuning"
+          ],
+          "shared_count": 1
+        },
+        {
+          "title": "Understanding MARS When Scaling Momentum Correction Provably Helps",
+          "stem": "understandingmarswhenscalingmomentumcorrectionprovablyhelps",
+          "source": "pdf",
+          "path": "/Users/myl/Documents/paper/01-raw/2026-07/Understanding_MARS_When_Scaling_Momentum_Correction_Provably_Helps.pdf",
+          "shared_terms": [
+            "momentum"
+          ],
+          "shared_count": 1
+        }
+      ],
+      "note_filename": "MpSub_A_Momentum_$p$_Dimensional_Subspace_Trust_Region_Method_for_Derivative_Free_Fine_Tuning_of_Large_Language_Models",
+      "semantic_rank": 1
+    },
+    {
+      "id": "http://arxiv.org/abs/2609.03170v1",
+      "title": "Gradient-Free Optimization for Matrix functions",
+      "summary": "We consider the task of optimizing smooth, possibly non-convex functions of a matrix variable given access only to directional derivatives rather than full gradients. This setting arises when fine-tuning large neural networks on consumer-grade hardware: the network's weights are matrices, memory constraints rule out backward-mode automatic differentiation, but directional derivatives remain available through forward mode.\n  We frame gradient estimation in this setting as a structured recovery problem, in the spirit of signal processing. From this perspective we provide three contributions. First, we introduce an alternative to the standard random gradient estimator; the difference corresponds to replacing the adjoint of the sampling operator with its pseudoinverse. Second, when the gradient satisfies an approximate low-rank condition, techniques from matrix sensing yield a family of highly accurate gradient estimators that drop into any first-order method. Third, we note that while the computational cost of such estimators is high, this can be amortized by combining them with a matrix-aware optimizer such as spectral descent. Specifically, the gradient estimator computes a factorization of the gradient, allowing for the projection step of spectral descent to be done at no extra cost.\n  We demonstrate our findings with two careful numerical experiments on synthetic functions with approximately low-rank gradients. We show that by exploiting this low-rank property one obtains much faster convergence to good approximate solutions.",
+      "authors": [
+        "Sawyer Allen",
+        "Cash Cherry",
+        "Aidan Eck",
+        "Stephen Becker",
+        "Daniel McKenzie"
+      ],
+      "affiliations": [],
+      "published": "2026-09-02T21:13:07Z",
+      "published_date": "2026-09-02 21:13:07+00:00",
+      "updated": "2026-09-02T21:13:07Z",
+      "categories": [
+        "math.OC"
+      ],
+      "pdf_url": "https://export.arxiv.org/pdf/2609.03170",
+      "url": "http://arxiv.org/abs/2609.03170v1",
+      "source": "arxiv",
+      "scores": {
+        "relevance": 2.9,
+        "recency": 3.0,
+        "impact": 0.0,
+        "evidence": 2.2,
+        "popularity": 0.0,
+        "quality": 2.2,
+        "recommendation": 8.28
+      },
+      "matched_domain": "无梯度大模型优化",
+      "matched_keywords": [
+        "gradient-free optimization",
+        "math.OC"
+      ],
+      "is_hot_paper": false,
+      "score_type": "research_priority_screening",
+      "assessment_scope": "metadata_and_abstract",
+      "screening_rank": 1,
+      "paper_stem": "Gradient_Free_Optimization_for_Matrix_functions",
+      "already_known": false,
+      "note_filename": "Gradient_Free_Optimization_for_Matrix_functions",
+      "semantic_rank": 2
+    },
+    {
+      "id": "http://arxiv.org/abs/2609.08277v1",
+      "title": "Adaptively Incorporating Directional Hints into Zeroth-Order Optimization",
+      "summary": "We study zeroth-order optimization of non-convex functions with the aid of directional hints, which are cheap but potentially inaccurate approximations of the true gradient direction, given by linear subspaces at each iteration. To leverage these hints adaptively while maintaining robustness to their quality, we introduce Control-Variate Zeroth-Order Descent (CV-ZOD), a new framework that refines the classical zeroth-order gradient estimator with a control variate that can be set based on the directional hints. We first show that the oracle algorithm that optimally sets the reference vector and step size at each iteration achieves a convergence rate that interpolates between the first-order $O(1/T)$ rate and the zeroth-order $O(d/T)$ rate, depending on the quality of the hints along the trajectory. We then develop a practical variant of CV-ZOD that achieves the same oracle guarantee up to logarithmic factors, without any prior knowledge of the hint quality. We validate the method empirically on simulation-based scientific optimization tasks, demonstrating sustained progress on non-convex landscapes where zeroth-order descent is slower and existing guided methods stall as guidance deteriorates.",
+      "authors": [
+        "Alexander Ryabchenko",
+        "Jian Qian",
+        "Wenlong Mou"
+      ],
+      "affiliations": [],
+      "published": "2026-09-08T05:42:02Z",
+      "published_date": "2026-09-08 05:42:02+00:00",
+      "updated": "2026-09-08T05:42:02Z",
+      "categories": [
+        "cs.LG",
+        "math.OC"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2609.08277v1",
+      "url": "http://arxiv.org/abs/2609.08277v1",
+      "source": "arxiv",
+      "scores": {
+        "relevance": 2.9,
+        "recency": 3.0,
+        "impact": 0.0,
+        "evidence": 1.9,
+        "popularity": 0.0,
+        "quality": 1.9,
+        "recommendation": 8.08
+      },
+      "matched_domain": "无梯度大模型优化",
+      "matched_keywords": [
+        "zeroth-order optimization",
+        "cs.LG",
+        "math.OC"
+      ],
+      "is_hot_paper": false,
+      "score_type": "research_priority_screening",
+      "assessment_scope": "metadata_and_abstract",
+      "screening_rank": 2,
+      "paper_stem": "Adaptively_Incorporating_Directional_Hints_into_Zeroth_Order_Optimization",
+      "already_known": false,
+      "note_filename": "Adaptively_Incorporating_Directional_Hints_into_Zeroth_Order_Optimization",
+      "semantic_rank": 3
+    },
+    {
+      "id": "http://arxiv.org/abs/2609.19695v1",
+      "title": "Opinion Dynamics-based Coalition Formation for Federated Learning in Heterogeneous IoT Systems",
+      "summary": "Federated learning (FL) enables privacy-preserving, on-device training across heterogeneous Internet-of-Things (IoT) deployments such as smart-city water-metering networks, where each smart meter observes a household-specific consumption time series. Under such statistical heterogeneity, the standard Federated Averaging (FedAvg) aggregation averages dissimilar local models into a single global model that may fail to capture client-specific patterns. We address this by forming client coalitions directly in the local-weight space and aggregating at the coalition level. Extending a prior weight-driven coalition-formation scheme, we model coalition formation as a Hegselmann-Krause (HK) bounded-confidence opinion-dynamics process acting on the local weights, and develop variants of the HK interaction based on Euclidean-distance and cosine-similarity confidence criteria. The framework is applied to short-term water-consumption forecasting with local Long Short-Term Memory (LSTM) models and evaluated against FedAvg, Per-FedAvg, FedProx, and FedAvg with Euclidean-distance or cosine-similarity coalition formation. Experiments on a real smart-metering dataset of water consumption show that the proposed HK-based coalition formation produces stable, endogenous coalition structures within at most ten inner iterations, incurs no additional client-side computation or communication compared to FedAvg, and reduces the average MAE by up to 54% relative to FedAvg, 39% relative to FedProx, and 24% relative to Per-FedAvg, while achieving the highest global accuracy (83-85%).",
+      "authors": [
+        "Mohammed El Hanjri",
+        "Anas Abouaomar",
+        "Hamidou Tembine",
+        "Abdellatif Kobbane"
+      ],
+      "affiliations": [],
+      "published": "2026-09-17T04:44:06Z",
+      "published_date": "2026-09-17 04:44:06+00:00",
+      "updated": "2026-09-17T04:44:06Z",
+      "categories": [
+        "cs.LG"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2609.19695v1",
+      "url": "http://arxiv.org/abs/2609.19695v1",
+      "source": "arxiv",
+      "scores": {
+        "relevance": 1.78,
+        "recency": 3.0,
+        "impact": 0.0,
+        "evidence": 2.1,
+        "popularity": 0.0,
+        "quality": 2.1,
+        "recommendation": 6.16
+      },
+      "matched_domain": "无梯度大模型优化",
+      "matched_keywords": [
+        "on-device training",
+        "cs.LG"
+      ],
+      "is_hot_paper": false,
+      "score_type": "research_priority_screening",
+      "assessment_scope": "metadata_and_abstract",
+      "screening_rank": 4,
+      "paper_stem": "Opinion_Dynamics_based_Coalition_Formation_for_Federated_Learning_in_Heterogeneous_IoT_Systems",
+      "already_known": false,
+      "related_papers": [
+        {
+          "title": "Adaptive Phase Switching for Communication Efficient Federated LoRA Fine Tuning",
+          "stem": "adaptivephaseswitchingforcommunicationefficientfederatedlorafinetuning",
+          "source": "pdf",
+          "path": "/Users/myl/Documents/paper/01-raw/2026-09/Adaptive_Phase_Switching_for_Communication_Efficient_Federated_LoRA_Fine_Tuning.pdf",
+          "shared_terms": [
+            "federated"
+          ],
+          "shared_count": 1
+        }
+      ],
+      "note_filename": "Opinion_Dynamics_based_Coalition_Formation_for_Federated_Learning_in_Heterogeneous_IoT_Systems",
+      "semantic_rank": 4
+    },
+    {
+      "id": "http://arxiv.org/abs/2608.23178v1",
+      "title": "Zeroth-Order Nonsmooth Nonconvex Optimization with Convex Liftings and Its Application to State-Feedback $H_\\infty$ Policy Optimization",
+      "summary": "Direct policy optimization is widely used in reinforcement learning and control, but generally leads to nonconvex optimization problems. For state-feedback $H_\\infty$ control, the policy objective is also nonsmooth, despite possessing a benign landscape whose hidden convexity can be revealed by the recently developed extended convex lifting framework. Motivated by recent advances in hidden convex optimization, we study zeroth-order optimization of nonsmooth, nonconvex problems admitting a convex lifting. We propose a zeroth-order proximal point algorithm: An inexact proximal-point outer loop constructs strongly convex subproblems, while an inner loop approximately solves each subproblem using only function evaluations. With probability at least $1-δ$, our proposed algorithm returns an $ε$-optimal solution using $\\widetilde{O}\\left(dε^{-3}\\right)$ function evaluations, while all iterates remain feasible without explicit projection. Finally, we verify that the assumptions underlying our analysis hold for discrete-time state-feedback $H_\\infty$ policy optimization, yielding an oracle complexity of $\\widetilde{O}\\left(n_u n_xε^{-3}\\right)$ for attaining a prescribed objective value gap, where $n_u\\times n_x$ is the dimension of the feedback gain to be optimized over.",
+      "authors": [
+        "Xuhao Wang",
+        "Yujie Tang"
+      ],
+      "affiliations": [],
+      "published": "2026-08-24T12:26:32Z",
+      "published_date": "2026-08-24 12:26:32+00:00",
+      "updated": "2026-08-24T12:26:32Z",
+      "categories": [
+        "math.OC",
+        "eess.SY"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2608.23178v1",
+      "url": "http://arxiv.org/abs/2608.23178v1",
+      "source": "arxiv",
+      "scores": {
+        "relevance": 1.78,
+        "recency": 3.0,
+        "impact": 0.0,
+        "evidence": 1.1,
+        "popularity": 0.0,
+        "quality": 1.1,
+        "recommendation": 5.5
+      },
+      "matched_domain": "无梯度大模型优化",
+      "matched_keywords": [
+        "zeroth-order optimization",
+        "math.OC"
+      ],
+      "is_hot_paper": false,
+      "score_type": "research_priority_screening",
+      "assessment_scope": "metadata_and_abstract",
+      "screening_rank": 5,
+      "paper_stem": "Zeroth_Order_Nonsmooth_Nonconvex_Optimization_with_Convex_Liftings_and_Its_Application_to_State_Feedback_$H_infty$_Polic",
+      "already_known": false,
+      "note_filename": "Zeroth_Order_Nonsmooth_Nonconvex_Optimization_with_Convex_Liftings_and_Its_Application_to_State_Feedback_$H_infty$_Polic",
+      "semantic_rank": 5
+    },
+    {
+      "id": "http://arxiv.org/abs/2608.24668v2",
+      "title": "Scalable Lindblad Noise Learning via Stochastic Tensor-Network Simulation",
+      "summary": "Learning dissipation rates in large-scale open quantum systems is a major obstacle for near-term quantum technologies, as existing Lindblad estimation methods are typically limited to small system sizes due to the computational complexity of repeatedly solving the Lindblad equation during optimization. Here, we propose a scalable noise-learning framework for Lindblad dissipation rates that combines a stochastic simulation method, the Tensor Jump Method (TJM), with gradient-free optimization of a least-squares cost-function defined on time series of local-observable expectation values. We demonstrate the approach on two noise models in the Ising model: a site-resolved (local) model, in which independent dissipation rates are learned for each site up to $N_{\\mathrm{site}}=16$, and a spatially homogeneous (global) model with only seven parameters, scaled to $N_{\\mathrm{site}}=160$ sites.We complement these numerical results with a series of exact, provable guarantees: the Frobenius variance of the TJM density-matrix estimator is shown to equal $(1-\\mathrm{Tr}[ρ^2])/N_{\\mathrm{traj}}$, an exact purity-based characterization of the stochastic estimation error; the corresponding purity evolution is proven to be monotonically non-increasing for Hermitian jump operators; and, under a finite covariance distance assumption, the standard deviation of the cost-function is shown to decrease with system size, so that fewer trajectories are needed to reach a fixed target accuracy as the system grows. Together, this combination of scalable numerics and rigorous theoretical guarantees positions TJM-based noise learning as a practical foundation for characterizing dissipation in large quantum devices and for guiding future work on error mitigation and quantum error correction.",
+      "authors": [
+        "Alejandro R. Ramos Ramos",
+        "Maximilian Fröhlich",
+        "Aaron Sander",
+        "Robert Wille",
+        "Martin Eigel",
+        "Patrick Gelß",
+        "Sebastian Pokutta"
+      ],
+      "affiliations": [],
+      "published": "2026-08-25T15:07:11Z",
+      "published_date": "2026-08-25 15:07:11+00:00",
+      "updated": "2026-08-26T13:06:05Z",
+      "categories": [
+        "quant-ph"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2608.24668v2",
+      "url": "http://arxiv.org/abs/2608.24668v2",
+      "source": "arxiv",
+      "scores": {
+        "relevance": 1.18,
+        "recency": 3.0,
+        "impact": 0.0,
+        "evidence": 0.6,
+        "popularity": 0.0,
+        "quality": 0.6,
+        "recommendation": 4.06
+      },
+      "matched_domain": "无梯度大模型优化",
+      "matched_keywords": [
+        "gradient-free optimization"
+      ],
+      "is_hot_paper": false,
+      "score_type": "research_priority_screening",
+      "assessment_scope": "metadata_and_abstract",
+      "screening_rank": 6,
+      "paper_stem": "Scalable_Lindblad_Noise_Learning_via_Stochastic_Tensor_Network_Simulation",
+      "already_known": false,
+      "related_papers": [
+        {
+          "title": "The Noise Geometry of Stochastic Gradient Descent",
+          "stem": "thenoisegeometryofstochasticgradientdescent",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-17/search_result.json",
+          "shared_terms": [
+            "noise",
+            "stochastic"
+          ],
+          "shared_count": 2
+        },
+        {
+          "title": "Self Tuning Stochastic Optimization with Curvature Aware Gradient Filtering",
+          "stem": "selftuningstochasticoptimizationwithcurvatureawaregradientfiltering",
+          "source": "pdf",
+          "path": "/Users/myl/Documents/paper/01-raw/2026-07/Self_Tuning_Stochastic_Optimization_with_Curvature_Aware_Gradient_Filtering.pdf",
+          "shared_terms": [
+            "stochastic"
+          ],
+          "shared_count": 1
+        }
+      ],
+      "note_filename": "Scalable_Lindblad_Noise_Learning_via_Stochastic_Tensor_Network_Simulation",
+      "semantic_rank": 6
+    },
+    {
+      "id": "http://arxiv.org/abs/2608.25354v1",
+      "title": "Escaping Low-Dimensional Overlap: Multi-Task Model Merging via High-Dimensional Sparse Disentanglement",
+      "summary": "Model merging provides an efficient way to construct multi-task generalist models without additional training, but its performance often degrades under severe task interference. Task interference in model merging primarily stems from \\textit{superposition}, where task-specific features become entangled within the parameter space. This entanglement renders conventional decomposition methods insufficient for effectively isolating useful task directions from interfering components. In this paper, we propose a sparse-representation-based merging framework that uses Sparse Autoencoders (SAEs) to project task vectors into a high-dimensional sparse feature space, enabling feature-level disentanglement before fusion. To reduce computational overhead, we further introduce a lightweight Group-Ranked Zeroth-Order Optimizer (GR-ZOO) to identify task-critical layers for selective merging. Experiments on both Qwen2.5-1.5B and Qwen2.5-7B demonstrate that our method consistently outperforms representative baselines, including Task Arithmetic, TIES-Merge, DARE, Fisher-Merge,and several recent training-free merging methods, across mathematical reasoning, code generation, instruction following, and general knowledge tasks. In a highly conflicting four-task setting on Qwen2.5-1.5B, our method further achieves a 2.78\\% improvement over the strongest baseline.",
+      "authors": [
+        "Yihang Zhang",
+        "Shengke Sun",
+        "Junjie Wen",
+        "Feng Zeng"
+      ],
+      "affiliations": [],
+      "published": "2026-08-26T04:16:31Z",
+      "published_date": "2026-08-26 04:16:31+00:00",
+      "updated": "2026-08-26T04:16:31Z",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.CL"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2608.25354v1",
+      "url": "http://arxiv.org/abs/2608.25354v1",
+      "source": "arxiv",
+      "scores": {
+        "relevance": 0.9,
+        "recency": 3.0,
+        "impact": 0.0,
+        "evidence": 1.2,
+        "popularity": 0.0,
+        "quality": 1.2,
+        "recommendation": 3.95
+      },
+      "matched_domain": "无梯度大模型优化",
+      "matched_keywords": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "is_hot_paper": false,
+      "score_type": "research_priority_screening",
+      "assessment_scope": "metadata_and_abstract",
+      "screening_rank": 7,
+      "paper_stem": "Escaping_Low_Dimensional_Overlap_Multi_Task_Model_Merging_via_High_Dimensional_Sparse_Disentanglement",
+      "already_known": false,
+      "note_filename": "Escaping_Low_Dimensional_Overlap_Multi_Task_Model_Merging_via_High_Dimensional_Sparse_Disentanglement",
+      "semantic_rank": 7
+    },
+    {
+      "id": "http://arxiv.org/abs/2609.06073v1",
+      "title": "FedSubMuon: Communication-Efficient Federated LLM Fine-Tuning via Structured Subspace Muon",
+      "summary": "Federated fine-tuning adapts large language models (LLMs) to decentralized client data, but its scalability in cross-device training is often limited by the high communication cost. Muon is an optimizer that improves optimization performance by orthogonalizing momentum for matrix-valued parameters. Existing federated Muon methods demonstrate the benefit of matrix-aware optimization in federated learning, but still require transmitting full layer-size updates and optimizer state. A natural way to reduce communication is to directly apply Muon to LoRA factors, but this changes the optimized object and weakens Muon's matrix-aware update geometry. We propose FedSubMuon, a communication-efficient federated Muon fine-tuning method that optimizes compact coefficient matrices within shared structured subspaces. This design keeps Muon on a single matrix-valued trainable object, while reducing the client upload to compact coefficient matrices. We further introduce FedSubMuon-GT, an accuracy-oriented extension that uses projected gradients to adapt tracked subspace bases toward task-relevant gradient directions. Experiments on instruction tuning and mathematical reasoning show that FedSubMuon-GT achieves the best overall accuracy on four of five dataset-model pairs, while FedSubMuon performs best under all matched communication budgets. On Dolly-15K, the closest communication baseline requires 5.5 times and 1.4 times more total communication on Llama-1B and Qwen-4B, respectively.",
+      "authors": [
+        "Shaolong Chen",
+        "Youming Tao",
+        "Shuzhen Chen",
+        "Falko Dressler",
+        "Qingqing Ye",
+        "Di Wang"
+      ],
+      "affiliations": [],
+      "published": "2026-09-05T13:07:13Z",
+      "published_date": "2026-09-05 13:07:13+00:00",
+      "updated": "2026-09-05T13:07:13Z",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2609.06073v1",
+      "url": "http://arxiv.org/abs/2609.06073v1",
+      "source": "arxiv",
+      "scores": {
+        "relevance": 0.9,
+        "recency": 3.0,
+        "impact": 0.0,
+        "evidence": 1.2,
+        "popularity": 0.0,
+        "quality": 1.2,
+        "recommendation": 3.95
+      },
+      "matched_domain": "无梯度大模型优化",
+      "matched_keywords": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "is_hot_paper": false,
+      "score_type": "research_priority_screening",
+      "assessment_scope": "metadata_and_abstract",
+      "screening_rank": 8,
+      "paper_stem": "FedSubMuon_Communication_Efficient_Federated_LLM_Fine_Tuning_via_Structured_Subspace_Muon",
+      "already_known": false,
+      "related_papers": [
+        {
+          "title": "Adaptive Phase Switching for Communication Efficient Federated LoRA Fine Tuning",
+          "stem": "adaptivephaseswitchingforcommunicationefficientfederatedlorafinetuning",
+          "source": "pdf",
+          "path": "/Users/myl/Documents/paper/01-raw/2026-09/Adaptive_Phase_Switching_for_Communication_Efficient_Federated_LoRA_Fine_Tuning.pdf",
+          "shared_terms": [
+            "federated"
+          ],
+          "shared_count": 1
+        },
+        {
+          "title": "Behavior Quotient Learning for Low-Rank Adaptation of LLM Agents",
+          "stem": "behaviorquotientlearningforlowrankadaptationofllmagents",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-17/search_result.json",
+          "shared_terms": [
+            "llm"
+          ],
+          "shared_count": 1
+        },
+        {
+          "title": "Clustering-Based Balanced Sampling and Allocation with Data Parallelism for High-Performance Fine-Tuning",
+          "stem": "clusteringbasedbalancedsamplingandallocationwithdataparallelismforhighperformancefinetuning",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-17/search_result.json",
+          "shared_terms": [
+            "fine-tuning"
+          ],
+          "shared_count": 1
+        }
+      ],
+      "note_filename": "FedSubMuon_Communication_Efficient_Federated_LLM_Fine_Tuning_via_Structured_Subspace_Muon",
+      "semantic_rank": 8
+    }
+  ]
+}

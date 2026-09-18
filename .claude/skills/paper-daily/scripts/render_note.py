@@ -322,7 +322,8 @@ def render_top_papers(data: dict, config: dict, editorial: dict, workspace: Path
 
 
 def render_rest(data: dict, config: dict, editorial: dict, workspace: Path, note_dir: Path) -> None:
-    print('## 其余 7 篇推荐\n')
+    remaining = max(0, len(data.get('top_papers') or []) - 3)
+    print(f'## 其余 {remaining} 篇推荐\n')
     print('| # | 题目 | 研究优先级 | 主题 | 细分领域 | 一句话初评 | 访问链接 |')
     print('|---|---|---|---|---|---|---|')
     analyses = editorial.get('top_papers') or {}

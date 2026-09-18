@@ -14,12 +14,15 @@
 | 已精读 | Powell-Style Model-Based Derivative-Free Optimization with Complexity Guarantees | Powell_Style_Model_Based_Derivative_Free_Optimization_with_Complexity_Guarantees | 2026-09-17 | 2026-09-17 | -- | [精读.md](Powell_Style_Model_Based_Derivative_Free_Optimization_with_Complexity_Guarantees/精读.md) |
 | 未精读 | Rank-Efficient LoRA via Joint Tangent-Space Optimization under Isotropic Curvature | Rank_Efficient_LoRA_via_Joint_Tangent_Space_Optimization_under_Isotropic_Curvature | -- | -- | -- | -- |
 | 未精读 | TaRA: Training-Aware Low-Rank Adaptation Initialization | TaRA_Training_Aware_Low_Rank_Adaptation_Initialization | -- | -- | -- | -- |
+| 未精读 | Adaptively Incorporating Directional Hints into Zeroth-Order Optimization | Adaptively_Incorporating_Directional_Hints_into_Zeroth_Order_Optimization | -- | -- | -- | -- |
+| 未精读 | Gradient-Free Optimization for Matrix functions | Gradient_Free_Optimization_for_Matrix_functions | -- | -- | -- | -- |
+| 未精读 | MpSub: A Momentum $p$-Dimensional Subspace Trust-Region Method for Derivative-Free Fine-Tuning of Large Language Models | MpSub_A_Momentum_$p$_Dimensional_Subspace_Trust_Region_Method_for_Derivative_Free_Fine_Tuning_of_Large_Language_Models | -- | -- | -- | -- |
 
 ## 汇总
 
-- 论文总数：7 篇（2026-09 7 篇）
-- 精读状态：已精读 4 / 精读中 0 / 未精读 3
-- **未精读论文**：Adaptive_Phase_Switching_for_Communication_Efficient_Federated_LoRA_Fine_Tuning、Rank_Efficient_LoRA_via_Joint_Tangent_Space_Optimization_under_Isotropic_Curvature、TaRA_Training_Aware_Low_Rank_Adaptation_Initialization
+- 论文总数：10 篇（2026-09 10 篇）
+- 精读状态：已精读 4 / 精读中 0 / 未精读 6
+- **未精读论文**：Adaptive_Phase_Switching_for_Communication_Efficient_Federated_LoRA_Fine_Tuning、Rank_Efficient_LoRA_via_Joint_Tangent_Space_Optimization_under_Isotropic_Curvature、TaRA_Training_Aware_Low_Rank_Adaptation_Initialization、Adaptively_Incorporating_Directional_Hints_into_Zeroth_Order_Optimization、Gradient_Free_Optimization_for_Matrix_functions、MpSub_A_Momentum_$p$_Dimensional_Subspace_Trust_Region_Method_for_Derivative_Free_Fine_Tuning_of_Large_Language_Models
 <!-- INDEX:END -->
 
 ## 说明
