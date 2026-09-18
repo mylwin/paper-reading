@@ -20,11 +20,11 @@
 | 2026-09 | TaRA: Training-Aware Low-Rank Adaptation Initialization | TaRA_Training_Aware_Low_Rank_Adaptation_Initialization | 未精读 | -- | -- | -- | -- |
 | 2026-09 | Adaptively Incorporating Directional Hints into Zeroth-Order Optimization | Adaptively_Incorporating_Directional_Hints_into_Zeroth_Order_Optimization | 未精读 | -- | -- | -- | -- |
 | 2026-09 | Gradient-Free Optimization for Matrix functions | Gradient_Free_Optimization_for_Matrix_functions | 未精读 | -- | -- | -- | -- |
-| 2026-09 | MpSub: A Momentum $p$-Dimensional Subspace Trust-Region Method for Derivative-Free Fine-Tuning of Large Language Models | MpSub_A_Momentum_$p$_Dimensional_Subspace_Trust_Region_Method_for_Derivative_Free_Fine_Tuning_of_Large_Language_Models | 未精读 | -- | -- | -- | -- |
+| 2026-09 | MpSub: A Momentum $p$-Dimensional Subspace Trust-Region Method for Derivative-Free Fine-Tuning of Large Language Models | MpSub_A_Momentum_$p$_Dimensional_Subspace_Trust_Region_Method_for_Derivative_Free_Fine_Tuning_of_Large_Language_Models | 已精读 | 2026-09-18 | 2026-09-18 | -- | [精读.md](2026-09/MpSub_A_Momentum_$p$_Dimensional_Subspace_Trust_Region_Method_for_Derivative_Free_Fine_Tuning_of_Large_Language_Models/精读.md) |
 <!-- INDEX:END -->
 
 ## 汇总
 
 - 论文总数：13 篇（2026-07 2 篇、2026-08 1 篇、2026-09 10 篇）
-- 精读状态：已精读 7 / 精读中 0 / 未精读 6
-- **未精读论文**：Adaptive_Phase_Switching_for_Communication_Efficient_Federated_LoRA_Fine_Tuning、Rank_Efficient_LoRA_via_Joint_Tangent_Space_Optimization_under_Isotropic_Curvature、TaRA_Training_Aware_Low_Rank_Adaptation_Initialization、Adaptively_Incorporating_Directional_Hints_into_Zeroth_Order_Optimization、Gradient_Free_Optimization_for_Matrix_functions、MpSub_A_Momentum_$p$_Dimensional_Subspace_Trust_Region_Method_for_Derivative_Free_Fine_Tuning_of_Large_Language_Models
+- 精读状态：已精读 8 / 精读中 0 / 未精读 5
+- **未精读论文**：Adaptive_Phase_Switching_for_Communication_Efficient_Federated_LoRA_Fine_Tuning、Rank_Efficient_LoRA_via_Joint_Tangent_Space_Optimization_under_Isotropic_Curvature、TaRA_Training_Aware_Low_Rank_Adaptation_Initialization、Adaptively_Incorporating_Directional_Hints_into_Zeroth_Order_Optimization、Gradient_Free_Optimization_for_Matrix_functions
