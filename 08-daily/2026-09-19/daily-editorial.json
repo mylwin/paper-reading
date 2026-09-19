@@ -1,0 +1,123 @@
+{
+  "overview": {
+    "trend": "今日 193 篇唯一候选全部来自 arXiv（最近 30 天窗口 2026-08-20 到 2026-09-19），OpenReview 返回 0 篇，Semantic Scholar 高影响力补充今日返回 0 篇（total_hot=0，匿名接口未取到过去一年样本），因此今日判断只覆盖新论文，不能据此认为无梯度方向缺少代表性旧作。最强信号集中在低秩与种群型无梯度训练：EGGROLL 给出秩一扰动的几何刻画、预解式偏差与方差膨胀比，并用留一估计器把每方向两次评估压到一次；另一篇系统比较 ES 与 GRPO，把 ES 的优势落到 Pass@K 多样性、稀疏功能更新和“模型越大种群越小”的超参规律。理论主线今天提供三个可迁移工具：用批处理换取 SGD 高概率末点界、用多块单探针估计器在部分探测下维护被跟踪量、以及在 Stiefel 流形上证明一步 Newton-Schulz 近似的 retraction 配合自适应步长仍保持全局与局部线性收敛。需要注意召回质量：无梯度大模型优化域的 110 篇里，64 篇只由 arXiv 分类命中而无任何关键词命中，31 篇由 query complexity 命中且绝大多数是量子查询复杂度与组合搜索，域内噪声显著；该域在配置里也没有 subdomains，建议后续用 paper-interests 收紧关键词并补齐细分领域。",
+    "hotspots": [
+      {
+        "title": "低秩 ES 的理论审计",
+        "text": "EGGROLL 证明有限秩扰动产生的预解式可能引入非保守分量并反转最优点的局部稳定性，同时给出秩一相对稠密高斯的方差膨胀只随维度倒数增长；这是给“低维子空间/低秩扰动”路线加上的失效警告，也是给 MpSub、矩阵感知梯度估计器等同脉络工作提供的对照定理。"
+      },
+      {
+        "title": "无梯度与反向传播的优势边界",
+        "text": "ES 相对 GRPO 的收益被具体化为 verifier 投影的 Jensen-Shannon 多样性与更高的 Pass@K，同时报告参数大幅漂移但功能改变稀疏、且不必然导致灾难性遗忘；这把“省显存的替代优化器”问题转成了探索覆盖与遗忘风险的权衡问题。"
+      },
+      {
+        "title": "收敛性证明的去复杂化",
+        "text": "Batched SGD 用 epoch 内一次低方差更新替代辅助序列和有界性假设，Stiefel 方法用一步 Newton-Schulz 替代精确 retraction，二者都以更小的机制换取同量级速率，属于可直接搬到自己的分析框架里的证明技巧。"
+      }
+    ]
+  },
+  "domain_summaries": {
+    "无梯度大模型优化": {
+      "summary": "该域今日命中 110 篇，但真正与该域关键词强相关的只有约 8 篇：evolution strategies 3 篇（其中 2 篇进入今日推荐）、derivative-free optimization 3 篇（Powell-Style 已在库，新增 non-monotone direct-search 与 NomadBBO）、large language model training 2 篇；另有 4 篇（zeroth-order optimization 3 篇与 gradient-free optimization 1 篇）已在库、今日无新增。其余 98 篇基本是噪声：64 篇仅由 arXiv 分类命中、31 篇由 query complexity 命中且主要是量子查询复杂度与组合搜索、1 篇 randomized smoothing 是 KAN 对抗鲁棒性、1 篇 memory-efficient training 是 Wi-Fi 信道模型、1 篇 optimizer design 是博客式综述。今天值得推进的问题是把结构化低维扰动的偏差与方差显式量化，并检验它在端到端 LLM 训练里是否仍能保住收益。",
+      "subfields": {
+        "evolution strategies": "本域今日最高质量命中。EGGROLL, Unrolled 给出有限秩平均更新场、局部稳定性反转与 LOO-ROLL 留一估计器；Understanding Evolution Strategies for LLM Reasoning 给出 ES 相对 GRPO 的多样性与 Pass@K 理论加实验；Integer Natural Evolution Strategies 属连续控制侧支，研究优先级仅 4.67。",
+        "zeroth-order optimization": "全部已在库（MpSub、CV-ZOD、带凸提升的非光滑非凸零阶优化），今日无新增机制，说明该细分已进入自我跟进阶段。",
+        "gradient-free optimization": "只有矩阵函数的无梯度优化 1 篇，已在库（方向导数与低秩矩阵感知估计器）。",
+        "derivative-free optimization": "Powell-Style 已在库并正在精读；新增 Non-monotone direct-search methods（确定性与时随机 DFO 的非单调化）与 NomadBBO（约束混合变量黑盒搜索框架），与正在做的复杂度和算法骨架对照最相关。",
+        "large language model training": "TrainSDC 研究大模型训练中的静默数据损坏，Musec 用动量谱裁剪稳定 Muon 型训练（研究优先级 7.07 未进推荐，但与裁剪与稳定性主线直接相关）。",
+        "memory-efficient training": "命中的是参数密集的 Wi-Fi 信道模型训练，不涉及大模型训练显存。",
+        "optimizer design": "只有 Blog: Survey of Optimizers，属博客式综述而非带证明或对照实验的论文。",
+        "query complexity": "本域最大噪声源：量子查询复杂度、单调子模最大化、机制设计激励相容检验、决策树信息复杂度等，与零阶优化的查询复杂度语义不同，建议把关键词收紧为零阶/无梯度的 oracle 查询复杂度。",
+        "randomized smoothing": "只有 KAN-Robust-Bench，命中来自对抗防御中的随机平滑，与大模型无梯度训练无关，判为误召回。",
+        "未细分": "只命中 arXiv 分类、未命中任何关键词，主体是 LoRA 与联邦 LoRA（秩-误差界、随机游走通信压缩、MoE+LoRA 子空间竞争）、Muon 变体、以及带隐私约束的非凸有限和与重球随机调度等旁支理论。该域在配置里没有 subdomains，所以这些论文全部落到“未细分”，是配置缺口而非论文本身的问题。今日推荐里的 Deriving Scaling Laws for OpenEuroLLM Models 也落在这里，说明分类命中会把大模型训练缩放律误挂到无梯度域。"
+      }
+    },
+    "随机梯度与优化理论": {
+      "summary": "64 篇命中，是今日理论主线的主战场，进入今日推荐的有 6 篇。今天的共同取向是用更少的结构假设换同等速率：批处理换高概率末点界、部分探测下的方差缩减换 FCCO 样本复杂度、单步 Newton-Schulz 换自适应步长的流形收敛、h-凸性换掉曲率下界。另外三篇落在阈值之外但与库内已精读的 Adam/裁剪方向直接相关：Adam 稳定性相图（7.73）、Adam 停滞的 loss landscape 特征（7.62）、梯度下降 Edge of Stability 的多时间尺度扰动分析（7.73），建议按需要回捞。",
+      "subfields": {
+        "随机梯度与收敛性": "核心命中：High-Probability Convergence of SGD via Batched Updates（强凸与非凸的近似最优高概率速率，并推广到联邦）、Solving Finite-sum Coupled Compositional Optimization via MSVR（非凸/凸/强凸/PL 的样本复杂度改进）、Sparse Data Augmentation（固定稀疏增广把 group-SGD 的 O(1/ε⁴) 变换查询降到 O((log|G|+log(1/δ))/ε²)）、以及流形上的自适应步长收敛分析。",
+        "自适应与二阶优化": "SS-ESOAP 在 SOAP 式 Kronecker 预条件上加入标量割线能量修正与基变更后的方差态降尺度；其余包含 Adam 停滞的景观特征（7.62）与 Hessian 流形上的信息几何等价性。",
+        "动量、裁剪与加速": "Beyond Quadratic Loss 给出 Adam 在超出二次损失时的稳定性相图，另有 Heavy-Ball 在随机调度下的表现、加速 sketch-and-project Newton 推断，以及带隐式 Hessian 阻尼的惯性原始-对偶动力学。"
+      }
+    },
+    "大模型训练优化": {
+      "summary": "19 篇命中，整体偏系统与微调结构。本域最高研究优先级只有 7.57（Affinity-Aware Sharding），整体低于今日 8.13 的推荐线，因此 0 篇进入推荐；真正该优先看的反而是被误挂到无梯度域“未细分”的 Deriving Scaling Laws for OpenEuroLLM Models（学习率/批大小缩放律与 WSD 退火迁移）。本域“训练稳定性与缩放”细分今日 0 命中，LoRA 一组 8 篇全部集中在结构调整与多模态适配而非优化器机制，集群规模系统工作的复现成本也远超本地 6GB 与单机 V100，因此按信息增益与复现成本匹配度降级为按需定点阅读。",
+      "subfields": {
+        "优化器与训练策略": "只有 BASP（批感知序列并行，5.83）、Qwen3.8-Next 架构的评测/效率/训练稳定性设计（5.82）与 BrachistoneLR（最速降线启发的学习率调度，3.95）。其中 BrachistoneLR 带受控对照基准，与学习率策略主线最相关，但分数远低于推荐线。",
+        "LoRA 与参数高效微调": "本组最高只有 5.90，8 篇全部落在结构调整与多模态适配：MoE+LoRA 层内子空间竞争诊断、行为有效的 LoRA 写入是稀疏且结构化的、面向概念擦除的 Gaussian Core LoRA、SAM3-LoRA、音频依赖 QA 的推理导向后训练与推理期 LoRA 重缩放、音视频多任务解耦 LoRA、持续学习中的几何感知子空间演化 Geo-LoRA，以及域感知松弛正交子空间适配。与库内 Rank-Efficient LoRA、TaRA 同脉络，但没有一篇改动优化器更新规则本身。",
+        "分布式与通信效率": "本域分数最高的一组：延迟张量并行的亲和性感知分片（7.57）、面向边缘设备协作微调的异构感知张量并行 Xronos（4.57）、成对 LLM 之间的 log(N) 次提问通信效率（3.70）、特征重建辅助联邦学习的差分隐私（3.18）。收益是否依赖特殊硬件与并行策略、端侧协作的实测口径需全文核验。",
+        "内存与数值效率": "包含 vidax 视频生成模型的 JAX 加速网格框架（6.31）与 Distributed Training using an Intelligent Network（6.01），另有两篇流体力学边界层变换与 p-Laplace 特征值 p-flux 估计的数学论文（2.83、2.81）纯属误召回；真正关于训练显存与数值精度的内容只有间接涉及。"
+      }
+    }
+  },
+  "top_papers": {
+    "EGGROLL, Unrolled: Understanding and Improving Low-Rank Evolution Strategies at Scale": {
+      "title_zh": "EGGROLL 展开：理解并改进大规模低秩进化策略",
+      "summary": "论文把 EGGROLL 的低秩（常为秩一）ES 扰动展开成可分析的更新场，指出有限秩预解式可能引入非保守分量并反转最优点局部稳定性，同时证明秩一带来的梯度估计方差膨胀只按维度倒数增长，并给出每方向只需一次评估的留一估计器 LOO-ROLL。",
+      "abstract_zh": "EGGROLL 用低秩高斯乘积（常常是秩一）替代稠密高斯权重扰动，从而使进化策略（ES）在大语言模型上变得可行。这一选择在计算上很有吸引力，但在几何上非常苛刻：每个秩一扰动尽管具有单位协方差，却落在所在矩阵空间的零体积子集内。作者刻画了有限秩、非零扰动半径下 EGGROLL 的平均更新场，随后分析其有限种群估计器的误差。该总体场可由一个显式预解式（resolvent）作用在被扰动平滑后的目标梯度上得到。作者证明这个预解式可能引入非保守分量，并且可能反转最优点的局部稳定性。尽管如此，EGGROLL 在任意秩与任意半径下对每个二次目标都是精确的。对光滑目标，其第一个局部有限秩修正为 $O(\\sigma^2/r)$，并在光滑性假设下用非渐近界控制由此产生的场误差。在局部仿射模型下，相比稠密高斯 ES，秩一扰动只把梯度估计器的方差提高 $\\frac{2(m+n+1)}{mn+1}$，对 $4096\\times4096$ 矩阵即 $0.098\\%$。随后作者提出 LOO-ROLL，一种留一（leave-one-out）估计器，它在保留有限秩总体场的同时，把 EGGROLL 每个方向上的两次对偶（antithetic）评估替换为一次。在相同评估代价下，LOO-ROLL 在 transformer 模块中把估计器 MSE 减半。在十个后训练设置、模型规模至多 8B 参数、按相同壁钟时间比较下，LOO-ROLL 在逐项配对检验中改善了七项结果，且没有显著退步。在 GSM8K 测试集上，0.6B 模型的准确率从 $38.1\\%$ 提升到 $63.0\\%$，8B 模型从 $65.9\\%$ 提升到 $80.0\\%$。transformer 上的测量复现了预测的有限秩方差，而秩之间的比较显示秩八相对秩一没有可复现的、基于奖励的优势。",
+      "contributions": [
+        "在有限秩与非零扰动半径下显式刻画 EGGROLL 的平均更新场，并指出该场的预解式可能带来非保守分量、可能反转最优点的局部稳定性。",
+        "证明 EGGROLL 对任意二次目标在任意秩与半径下精确，并给出光滑目标上首个局部有限秩修正 $O(\\sigma^2/r)$ 及光滑性假设下的非渐近场误差界。",
+        "在局部仿射模型下给出秩一扰动相对稠密高斯 ES 的方差膨胀比 $\\frac{2(m+n+1)}{mn+1}$，$4096\\times4096$ 时约 $0.098\\%$。",
+        "提出保持有限秩总体场、每方向只需一次评估的留一估计器 LOO-ROLL，并在十个后训练设置、至多 8B 模型上做等壁钟时间比较；同时报告秩八相对秩一无可复现优势这一负面结果。"
+      ],
+      "method": "把秩一扰动写成显式预解式作用于扰动平滑后的梯度，得到平均更新场；随后对该场的有限种群估计器做偏差与方差分析，用留一（leave-one-out）技巧把 EGGROLL 每方向两次对偶评估替换为一次，从而在相同评估预算下半减估计器 MSE，并在 transformer 模块与多个后训练任务上做配对比较。",
+      "result": "摘要报告：等评估代价下 LOO-ROLL 在 transformer 模块把估计器 MSE 减半；等壁钟时间下十个后训练设置里七项改善且无显著退步；GSM8K 上 0.6B 从 38.1% 到 63.0%、8B 从 65.9% 到 80.0%；实测复现了预测的有限秩方差，且秩八相对秩一没有可复现的奖励优势。",
+      "selection_reason": "它同时命中当前两条主线：一是无梯度/低秩扰动的优化器机制，二是方差缩减估计器（留一结构本质上就是 ES 版本的方差缩减）。相对库内已有资产它带来的是新定理区域而非同质增量：MpSub 的 p 维子空间与矩阵函数论文的梯度感知估计器都假设低维扰动可行，而本文给出该假设失效的机制（预解式的非保守分量、局部稳定性反转）以及量化的代价（方差膨胀比、$O(\\sigma^2/r)$ 修正）。这直接可用于校准正在做的端侧无梯度微调设计，也提供可在 0.6B 规模上复核的最小验证路径。",
+      "evidence_limit": "当前只有摘要，判断为低置信度。需全文核验：局部仿射模型与光滑性假设在真实 transformer 损失上的成立程度；方差膨胀比是否只在局部、单步成立而不覆盖多步累积漂移；稳定性反转结论是否有构造性反例还是只存在性；GSM8K 从 38.1% 到 63.0% 的大幅提升是否来自同一初始模型、同等调参预算与是否报告随机种子方差；等壁钟时间比较里基线的实现效率是否可比。8B 规模超本地 6GB 与单机 V100 算力，只能复现 0.6B 量级，规模外推需另行核验。",
+      "reading_decision": "精读"
+    },
+    "Understanding Evolution Strategies for LLM Reasoning: Broader Reasoning Coverage than GRPO": {
+      "title_zh": "理解面向大模型推理的进化策略：比 GRPO 更宽的推理覆盖",
+      "summary": "论文从动态与机制两个层面系统比较 ES 与 GRPO，主张 ES 的优势在于维持种群多样性、从而在 Pass@K 上覆盖更多推理路径，并给出“更大模型用更小种群”的超参结论与功能稀疏性证据。",
+      "abstract_zh": "进化策略（ES）近来作为一种内存高效的大语言模型推理后训练范式出现。然而 ES 的优化行为仍缺乏研究，这使得难以界定它相对主流后训练范式（例如群相对策略优化 GRPO）的优势范围。通过系统研究 ES 的动态与机制，本文首先识别出 ES 相对 GRPO 的性能优势，从理论与实验两方面说明 ES 能带来更宽的推理覆盖，从而更好地挖掘预训练 LLM 已有的推理能力。理论上，作者证明跨越 ES 种群、经 verifier 投影的 Jensen-Shannon 多样性有助于更高的 Pass@K 表现。实验上，与出现熵坍缩（entropy collapse）的 GRPO 不同，ES 在提升 Pass@1 的同时取得高于 GRPO 的 Pass@K。作者进一步提出串行的 GRPO-ES 训练策略，把 GRPO 在 Pass@1 上的长处与 ES 在 Pass@K 上的收益结合起来。其次，作者发现尽管整模型参数漂移很大，ES 的任务性能增益只由幅度较大的更新构成的稀疏子集贡献。这种功能稀疏性说明大幅参数移动不必意味着广泛的功能改变，留出（held-out）评估进一步显示它不必然导致灾难性遗忘。最后，作者研究超参数设计如何影响 ES 的有效性，并证明在更大的 LLM 上 ES 需要更小的种群规模。这些发现把 ES 定位为一种独立的推理后训练范式，而不是效果较差、仅胜在内存高效的 GRPO 替代品。",
+      "contributions": [
+        "给出 verifier 投影的 Jensen-Shannon 种群多样性与 Pass@K 表现之间的关系，用以解释 ES 相对 GRPO 的推理覆盖优势。",
+        "报告 GRPO 出现熵坍缩而 ES 同时改善 Pass@1 与 Pass@K 的对照实验，并提出串行 GRPO-ES 训练策略。",
+        "发现 ES 的性能增益来自大幅更新的稀疏子集，整模型参数漂移大但留出评估上不必然灾难性遗忘。",
+        "给出种群规模随模型规模变化的超参设计结论：更大的 LLM 需要更小的种群。"
+      ],
+      "method": "把 ES 视为种群型后训练方法，先在理论上把种群多样性（经奖励 verifier 投影后的 JS 散度）与 Pass@K 联系起来，再用同题对照实验跟踪 GRPO 的熵坍缩与 ES 的多样性保持；随后用大幅更新子集的消融与留出任务评估功能稀疏性和遗忘风险，最后扫描种群规模与模型规模的匹配关系，并提出先 GRPO 后 ES 的串行训练流程。",
+      "result": "摘要报告：ES 在 Pass@K 上高于 GRPO 且改善 Pass@1，GRPO 出现熵坍缩；串行 GRPO-ES 结合两者优势；ES 的增益集中在稀疏的大幅更新子集，留出评估显示不必然灾难性遗忘；更大的 LLM 需要更小的种群规模。摘要未给出具体模型规模、任务套件与数值。",
+      "selection_reason": "它回答的是当前课题的边界问题而非又一个优化器变体：如果 ES 的真实优势在探索覆盖而非收敛速度，那么端侧无梯度训练的目标函数与评价协议都应从 Pass@1 改写为 Pass@K/多样性；同时“模型越大种群越小”若成立，会直接改变在小显存下安排种群预算的方式。与 EGGROLL 形成互补：后者解释低秩扰动的偏差与方差，前者解释种群行为的收益来源，两篇合起来构成 ES 路线的机制层证据。",
+      "evidence_limit": "当前只有摘要，属低置信度初评。需全文核验：多样性与 Pass@K 的理论关系用了什么假设与哪种 verifier 投影，Pass@K 提升幅度与统计显著性，GRPO 基线是否同等调参（熵坍缩是否可用熵正则等常规手段避免，从而削弱结论的排他性），稀疏更新子集的判定阈值如何选择，以及“更大模型更小种群”的模型规模区间是否覆盖本地可跑的 7B 以下量级。摘要未给出任何具体数字，主张的强度暂不能核实。",
+      "reading_decision": "精读"
+    },
+    "High-Probability Convergence of SGD via Batched Updates": {
+      "title_zh": "通过批更新获得 SGD 的高概率收敛",
+      "summary": "Batched SGD 把在线样本分成 epoch、每 epoch 用一次精化的低方差梯度估计更新，从而在不加有界性假设、不引入辅助序列的情况下得到强凸与非凸的近似最优高概率速率，并把该技巧推广到联邦学习。",
+      "abstract_zh": "随机梯度下降（SGD）是大规模优化的主力算法。虽然其迭代点的平均行为（通常用均方误差界刻画）已被充分理解，但为最后一个迭代点（last iterate）建立高概率保证仍然困难。此前对该问题的处理要么施加限制性假设（例如有界区域或有界梯度），要么依赖包含辅助序列的复杂证明。本文提出 Batched SGD，一个简单变体：把在线样本划分为若干 epoch，并在每个 epoch 使用精化后的低方差梯度估计执行一次更新。作者的主要贡献表明，这一批处理机制带来了一个出人意料地简单的高概率分析，既不需要限制性假设，也不需要辅助序列。在标准光滑性与范数 sub-Gaussian 噪声假设下，作者对强凸目标与非凸目标都建立了近似最优速率。此外，作者说明该批处理思想可以自然推广到联邦学习（FL），给出了 FL 的首批高概率保证，取得对数级通信复杂度、随智能体数量线性加速，并对数据异构性具有鲁棒性。",
+      "contributions": [
+        "提出 Batched SGD：按 epoch 划分在线样本，每 epoch 用精化的低方差梯度估计做一次更新。",
+        "在标准光滑性与 norm-sub-Gaussian 噪声假设下，为强凸与非凸目标给出末迭代点的高概率、近似最优速率，且不使用有界区域/有界梯度假设或辅助序列。",
+        "把该批处理分析推广到联邦学习，摘要称给出 FL 的首批高概率保证，含对数级通信复杂度、随智能体数线性加速与对数据异构的鲁棒性。"
+      ],
+      "method": "在 epoch 内累积样本形成方差更低的梯度估计，仅在 epoch 边界执行一次更新；由于单个更新自身的噪声被批平均压低，可以直接对末迭代点做高概率集中论证，从而绕开通常需要的辅助势函数与有界性假设。联邦版本把同样的 epoch 结构用于本地计算与聚合，以控制通信轮数。",
+      "result": "摘要报告：在标准光滑 + norm-sub-Gaussian 假设下，强凸与非凸两类目标都得到近似最优的高概率速率；联邦设定下报告对数级通信复杂度与随智能体数量的线性加速，并称对数据异构鲁棒。摘要未给出与已有高概率下界的匹配常数，也未列出实验设置。",
+      "selection_reason": "它对应的是当前理论主线里最实用的一块：末迭代点高概率界。库内已精读的 Polyak 裁剪梯度下降与 MARS/动量修正工作多以期望或均方界陈述，若批处理这一“把辅助序列换成 epoch 平均”的技巧成立，可以作为自己分析里的简化模板，也直接对应无梯度方法里种群规模这一同源旋钮（批越大、噪声越低、单轮代价越高）。阅读成本低、可迁移性高，适合与前两篇组成“理论 + 机制”的组合。",
+      "evidence_limit": "当前只有摘要。需核验：近似最优中的对数因子与维度依赖，norm-sub-Gaussian 噪声假设相对重尾噪声（Adam/裁剪文献关心的场景）的强弱，epoch 内样本是否要求独立同分布（若要求则与“在线样本划分”表述需对齐），以及 FL 部分的数据异构鲁棒性是靠假设还是靠聚合机制。联邦与高概率结论未附带实验细节，数值证据覆盖度待全文确认。",
+      "reading_decision": "选读"
+    },
+    "Solving Finite-sum Coupled Compositional Optimization via Multi-block-Single-probe Estimator": {
+      "summary": "MSVR 估计器在每轮只能探测 O(1) 个块的条件下追踪 m 块复合映射 g(w)，为 FCCO 在非凸/凸/强凸/PL 下改进样本复杂度——与子空间无梯度方法“每轮只探 p 个方向”的部分探测结构同型，值得作为方差缩减工具箱对照。"
+    },
+    "An Inexact Riemannian Gradient Descent Algorithm on the Stiefel Manifold with One Newton-Schulz Iteration": {
+      "summary": "证明一步 Newton-Schulz 作为不精确 retraction 就足以得到全局与局部线性收敛，且自适应步长、局部速率仅取决于 Riemannian Hessian 条件数；对 Muon 类正交化更新的“迭代次数是否影响收敛率”给出直接可用的理论答案。"
+    },
+    "Deriving Scaling Laws for OpenEuroLLM Models: Learning Rate, Batch Size and Loss": {
+      "summary": "报告学习率与批大小随模型容量和数据规模的边缘演化、WSD 调度下退火增益，以及稳定段与衰减段最优超参是否互相迁移，并开源全部预训练运行；属于可查表的经验缩放律，复现受集群算力限制。"
+    },
+    "Sparse Data Augmentation for Optimization with Provable Guarantees": {
+      "summary": "优化前固定少量变换、之后复用，可在高概率下用 O((log|G|+log(1/δ))/ε²) 次群变换查询达到全增广目标的 ε-驻点，优于每轮重采样的 group-SGD 的 O(1/ε⁴)；查询复杂度技巧可迁移到扰动查询预算设计。"
+    },
+    "SS-ESOAP: Self-Scaled Adaptive Preconditioning for Physics-Informed Learning": {
+      "summary": "在 SOAP 式 Kronecker 预条件上加标量割线能量修正、自适应基更新与方差态降尺度，在八个 PDE 基准上六个取得最低残差（Boussinesq 4.1 小时达到 1e-5，Adam 14 小时未达到），并坦承在 Gray-Scott 与 Ginzburg-Landau 上 SOAP 家族更好。"
+    },
+    "Curvature-Independent Regret Bounds for Distributed Online Optimization on Hadamard Manifolds": {
+      "summary": "把分布式在线 Riemannian 优化的分析从 g-凸放宽到 h-凸，得到与曲率无关的 O(√T) 与 O(log T) 静态遗憾，网络依赖只由谱隙控制；与当前 SGD 与端侧 LLM 课题交集有限，作为流形优化背景跟踪。"
+    },
+    "KAN-Robust-Bench: A Benchmark for Evaluating the Robustness of Kolmogorov-Arnold Networks": {
+      "summary": "KAN 在 FGSM/PGD/C&W 与随机平滑、区间界传播下的对抗鲁棒性基准，只因 randomized smoothing 关键词命中进入候选，与无梯度大模型优化无关，判为误召回并降级为跟踪。"
+    }
+  }
+}

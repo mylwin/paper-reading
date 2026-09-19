@@ -18,10 +18,10 @@
 | 2026-09-18 | Adaptively Incorporating Directional Hints into Zeroth-Order Optimization | Adaptively_Incorporating_Directional_Hints_into_Zeroth_Order_Optimization | -- | [PDF](Adaptively_Incorporating_Directional_Hints_into_Zeroth_Order_Optimization.pdf) |
 | 2026-09-18 | Gradient-Free Optimization for Matrix functions | Gradient_Free_Optimization_for_Matrix_functions | -- | [PDF](Gradient_Free_Optimization_for_Matrix_functions.pdf) |
 | 2026-09-18 | MpSub: A Momentum $p$-Dimensional Subspace Trust-Region Method for Derivative-Free Fine-Tuning of Large Language Models | MpSub_A_Momentum_$p$_Dimensional_Subspace_Trust_Region_Method_for_Derivative_Free_Fine_Tuning_of_Large_Language_Models | -- | [PDF](MpSub_A_Momentum_$p$_Dimensional_Subspace_Trust_Region_Method_for_Derivative_Free_Fine_Tuning_of_Large_Language_Models.pdf) |
-| 2026-09-19 | EGGROLL, Unrolled: Understanding and Improving Low-Rank Evolution Strategies at Scale | EGGROLL_Unrolled_Understanding_and_Improving_Low_Rank_Evolution_Strategies_at_Scale | -- | [PDF](EGGROLL_Unrolled_Understanding_and_Improving_Low_Rank_Evolution_Strategies_at_Scale.pdf) |
-| 2026-09-19 | High-Probability Convergence of SGD via Batched Updates | High_Probability_Convergence_of_SGD_via_Batched_Updates | -- | [PDF](High_Probability_Convergence_of_SGD_via_Batched_Updates.pdf) |
+| 2026-09-19 | EGGROLL, Unrolled: Understanding and Improving Low-Rank Evolution Strategies at Scale | EGGROLL_Unrolled_Understanding_and_Improving_Low_Rank_Evolution_Strategies_at_Scale | arxiv | [PDF](EGGROLL_Unrolled_Understanding_and_Improving_Low_Rank_Evolution_Strategies_at_Scale.pdf) |
+| 2026-09-19 | High-Probability Convergence of SGD via Batched Updates | High_Probability_Convergence_of_SGD_via_Batched_Updates | arxiv | [PDF](High_Probability_Convergence_of_SGD_via_Batched_Updates.pdf) |
 | 2026-09-19 | Softmax is 1/2-Lipschitz: A tight bound across all ℓ_p norms | Softmax_is_1_2_Lipschitz_A_tight_bound_across_all_lp_norms | openreview | [PDF](Softmax_is_1_2_Lipschitz_A_tight_bound_across_all_lp_norms.pdf) |
-| 2026-09-19 | Understanding Evolution Strategies for LLM Reasoning: Broader Reasoning Coverage than GRPO | Understanding_Evolution_Strategies_for_LLM_Reasoning_Broader_Reasoning_Coverage_than_GRPO | -- | [PDF](Understanding_Evolution_Strategies_for_LLM_Reasoning_Broader_Reasoning_Coverage_than_GRPO.pdf) |
+| 2026-09-19 | Understanding Evolution Strategies for LLM Reasoning: Broader Reasoning Coverage than GRPO | Understanding_Evolution_Strategies_for_LLM_Reasoning_Broader_Reasoning_Coverage_than_GRPO | arxiv | [PDF](Understanding_Evolution_Strategies_for_LLM_Reasoning_Broader_Reasoning_Coverage_than_GRPO.pdf) |
 
 ## 汇总
 
