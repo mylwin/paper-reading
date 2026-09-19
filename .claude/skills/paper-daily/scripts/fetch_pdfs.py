@@ -170,6 +170,7 @@ def main():
             'title': title,
             'paper_stem': stem,
             'month': month,
+            'source': paper.get('source') or '',
             'pdf_url': pdf_url,
             'path': str(dest) if dest else '',
             'status': '',
