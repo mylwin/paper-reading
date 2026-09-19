@@ -19,14 +19,14 @@
 | 已精读 | MpSub: A Momentum $p$-Dimensional Subspace Trust-Region Method for Derivative-Free Fine-Tuning of Large Language Models | MpSub_A_Momentum_$p$_Dimensional_Subspace_Trust_Region_Method_for_Derivative_Free_Fine_Tuning_of_Large_Language_Models | 2026-09-18 | 2026-09-18 | -- | [精读.md](MpSub_A_Momentum_$p$_Dimensional_Subspace_Trust_Region_Method_for_Derivative_Free_Fine_Tuning_of_Large_Language_Models/精读.md) |
 | 未精读 | EGGROLL, Unrolled: Understanding and Improving Low-Rank Evolution Strategies at Scale | EGGROLL_Unrolled_Understanding_and_Improving_Low_Rank_Evolution_Strategies_at_Scale | -- | -- | -- | -- |
 | 未精读 | High-Probability Convergence of SGD via Batched Updates | High_Probability_Convergence_of_SGD_via_Batched_Updates | -- | -- | -- | -- |
-| 未精读 | Softmax is 1/2-Lipschitz: A tight bound across all ℓ_p norms | Softmax_is_1_2_Lipschitz_A_tight_bound_across_all_lp_norms | -- | -- | -- | -- |
+| 已精读 | Softmax is 1/2-Lipschitz: A tight bound across all ℓ_p norms | Softmax_is_1_2_Lipschitz_A_tight_bound_across_all_lp_norms | 2026-09-19 | 2026-09-19 | -- | [精读.md](Softmax_is_1_2_Lipschitz_A_tight_bound_across_all_lp_norms/精读.md) |
 | 未精读 | Understanding Evolution Strategies for LLM Reasoning: Broader Reasoning Coverage than GRPO | Understanding_Evolution_Strategies_for_LLM_Reasoning_Broader_Reasoning_Coverage_than_GRPO | -- | -- | -- | -- |
 
 ## 汇总
 
 - 论文总数：14 篇（2026-09 14 篇）
-- 精读状态：已精读 5 / 精读中 0 / 未精读 9
-- **未精读论文**：Adaptive_Phase_Switching_for_Communication_Efficient_Federated_LoRA_Fine_Tuning、Rank_Efficient_LoRA_via_Joint_Tangent_Space_Optimization_under_Isotropic_Curvature、TaRA_Training_Aware_Low_Rank_Adaptation_Initialization、Adaptively_Incorporating_Directional_Hints_into_Zeroth_Order_Optimization、Gradient_Free_Optimization_for_Matrix_functions、EGGROLL_Unrolled_Understanding_and_Improving_Low_Rank_Evolution_Strategies_at_Scale、High_Probability_Convergence_of_SGD_via_Batched_Updates、Softmax_is_1_2_Lipschitz_A_tight_bound_across_all_lp_norms、Understanding_Evolution_Strategies_for_LLM_Reasoning_Broader_Reasoning_Coverage_than_GRPO
+- 精读状态：已精读 6 / 精读中 0 / 未精读 8
+- **未精读论文**：Adaptive_Phase_Switching_for_Communication_Efficient_Federated_LoRA_Fine_Tuning、Rank_Efficient_LoRA_via_Joint_Tangent_Space_Optimization_under_Isotropic_Curvature、TaRA_Training_Aware_Low_Rank_Adaptation_Initialization、Adaptively_Incorporating_Directional_Hints_into_Zeroth_Order_Optimization、Gradient_Free_Optimization_for_Matrix_functions、EGGROLL_Unrolled_Understanding_and_Improving_Low_Rank_Evolution_Strategies_at_Scale、High_Probability_Convergence_of_SGD_via_Batched_Updates、Understanding_Evolution_Strategies_for_LLM_Reasoning_Broader_Reasoning_Coverage_than_GRPO
 <!-- INDEX:END -->
 
 ## 说明
