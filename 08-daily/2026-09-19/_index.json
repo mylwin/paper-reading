@@ -1,0 +1,117 @@
+{
+  "date": "2026-09-19",
+  "note_file": "今日检索.md",
+  "generated_at": "2026-09-19T15:30:51",
+  "skill": "paper-daily",
+  "sources_searched": [
+    "arxiv",
+    "openreview"
+  ],
+  "source_counts": {
+    "arxiv": 200,
+    "openreview": 0
+  },
+  "date_windows": {
+    "recent_30d": {
+      "start": "2026-08-20",
+      "end": "2026-09-19"
+    },
+    "past_year": {
+      "start": "2025-09-19",
+      "end": "2026-08-19"
+    }
+  },
+  "total_unique": 193,
+  "top_papers": [
+    {
+      "title": "EGGROLL, Unrolled: Understanding and Improving Low-Rank Evolution Strategies at Scale",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2609.10980v1",
+      "note_filename": "EGGROLL_Unrolled_Understanding_and_Improving_Low_Rank_Evolution_Strategies_at_Scale",
+      "matched_domain": "无梯度大模型优化",
+      "score": 8.67
+    },
+    {
+      "title": "Understanding Evolution Strategies for LLM Reasoning: Broader Reasoning Coverage than GRPO",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2608.27351v2",
+      "note_filename": "Understanding_Evolution_Strategies_for_LLM_Reasoning_Broader_Reasoning_Coverage_than_GRPO",
+      "matched_domain": "无梯度大模型优化",
+      "score": 8.67
+    },
+    {
+      "title": "High-Probability Convergence of SGD via Batched Updates",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2609.12765v1",
+      "note_filename": "High_Probability_Convergence_of_SGD_via_Batched_Updates",
+      "matched_domain": "随机梯度与优化理论",
+      "score": 8.27
+    },
+    {
+      "title": "Solving Finite-sum Coupled Compositional Optimization via Multi-block-Single-probe Estimator",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2609.15723v1",
+      "note_filename": "Solving_Finite_sum_Coupled_Compositional_Optimization_via_Multi_block_Single_probe_Estimator",
+      "matched_domain": "随机梯度与优化理论",
+      "score": 8.27
+    },
+    {
+      "title": "An Inexact Riemannian Gradient Descent Algorithm on the Stiefel Manifold with One Newton-Schulz Iteration",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2608.22774v1",
+      "note_filename": "An_Inexact_Riemannian_Gradient_Descent_Algorithm_on_the_Stiefel_Manifold_with_One_Newton_Schulz_Iteration",
+      "matched_domain": "随机梯度与优化理论",
+      "score": 8.33
+    },
+    {
+      "title": "Deriving Scaling Laws for OpenEuroLLM Models: Learning Rate, Batch Size and Loss",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2608.28308v2",
+      "note_filename": "Deriving_Scaling_Laws_for_OpenEuroLLM_Models_Learning_Rate_Batch_Size_and_Loss",
+      "matched_domain": "无梯度大模型优化",
+      "score": 8.33
+    },
+    {
+      "title": "Sparse Data Augmentation for Optimization with Provable Guarantees",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2609.08133v2",
+      "note_filename": "Sparse_Data_Augmentation_for_Optimization_with_Provable_Guarantees",
+      "matched_domain": "随机梯度与优化理论",
+      "score": 8.27
+    },
+    {
+      "title": "SS-ESOAP: Self-Scaled Adaptive Preconditioning for Physics-Informed Learning",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2608.29448v1",
+      "note_filename": "SS_ESOAP_Self_Scaled_Adaptive_Preconditioning_for_Physics_Informed_Learning",
+      "matched_domain": "随机梯度与优化理论",
+      "score": 8.13
+    },
+    {
+      "title": "Curvature-Independent Regret Bounds for Distributed Online Optimization on Hadamard Manifolds",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2609.13646v1",
+      "note_filename": "Curvature_Independent_Regret_Bounds_for_Distributed_Online_Optimization_on_Hadamard_Manifolds",
+      "matched_domain": "随机梯度与优化理论",
+      "score": 8.27
+    },
+    {
+      "title": "KAN-Robust-Bench: A Benchmark for Evaluating the Robustness of Kolmogorov-Arnold Networks",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2608.21488v1",
+      "note_filename": "KAN_Robust_Bench_A_Benchmark_for_Evaluating_the_Robustness_of_Kolmogorov_Arnold_Networks",
+      "matched_domain": "无梯度大模型优化",
+      "score": 8.27
+    }
+  ]
+}
