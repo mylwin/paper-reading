@@ -18,16 +18,30 @@
 | 未解析 | Adaptively Incorporating Directional Hints into Zeroth-Order Optimization | Adaptively_Incorporating_Directional_Hints_into_Zeroth_Order_Optimization | -- | 2026-09-18 | -- |
 | 未解析 | Gradient-Free Optimization for Matrix functions | Gradient_Free_Optimization_for_Matrix_functions | -- | 2026-09-18 | -- |
 | 已解析 | MpSub: A Momentum $p$-Dimensional Subspace Trust-Region Method for Derivative-Free Fine-Tuning of Large Language Models | MpSub_A_Momentum_$p$_Dimensional_Subspace_Trust_Region_Method_for_Derivative_Free_Fine_Tuning_of_Large_Language_Models | [解析文件](MpSub_A_Momentum_$p$_Dimensional_Subspace_Trust_Region_Method_for_Derivative_Free_Fine_Tuning_of_Large_Language_Models.md) | 2026-09-18 | -- |
+| 未解析 | ConMeZO: Adaptive Descent-Direction Sampling for Gradient-Free Finetuning of Large Language Models | ConMeZO_Adaptive_Descent_Direction_Sampling_for_Gradient_Free_Finetuning_of_Large_Language_Models | -- | 2026-09-19 | -- |
 | 未解析 | EGGROLL, Unrolled: Understanding and Improving Low-Rank Evolution Strategies at Scale | EGGROLL_Unrolled_Understanding_and_Improving_Low_Rank_Evolution_Strategies_at_Scale | -- | 2026-09-19 | -- |
+| 未解析 | Enhancing Zeroth-order Fine-tuning for Language Models with Low-rank Structures | Enhancing_Zeroth_order_Fine_tuning_for_Language_Models_with_Low_rank_Structures | -- | 2026-09-19 | -- |
+| 未解析 | FZOO: Fast Zeroth-Order Optimizer for Fine-Tuning Large Language Models towards Adam-Scale Speed | FZOO_Fast_Zeroth_Order_Optimizer_for_Fine_Tuning_Large_Language_Models_towards_Adam_Scale_Speed | -- | 2026-09-19 | -- |
+| 未解析 | Fine-Tuning Language Models with Just Forward Passes | Fine_Tuning_Language_Models_with_Just_Forward_Passes | -- | 2026-09-19 | -- |
+| 未解析 | HELENE: Hessian Layer-wise Clipping and Gradient Annealing for Accelerating Fine-tuning LLM with Zeroth-order Optimization | HELENE_Hessian_Layer_wise_Clipping_and_Gradient_Annealing_for_Accelerating_Fine_tuning_LLM_with_Zeroth_order_Optimizatio | -- | 2026-09-19 | -- |
+| 未解析 | Harmony in Divergence: Towards Fast, Accurate, and Memory-efficient Zeroth-order LLM Fine-tuning | Harmony_in_Divergence_Towards_Fast_Accurate_and_Memory_efficient_Zeroth_order_LLM_Fine_tuning | -- | 2026-09-19 | -- |
 | 未解析 | High-Probability Convergence of SGD via Batched Updates | High_Probability_Convergence_of_SGD_via_Batched_Updates | -- | 2026-09-19 | -- |
+| 未解析 | Low-Rank Curvature for Zeroth-Order Optimization in LLM Fine-Tuning | Low_Rank_Curvature_for_Zeroth_Order_Optimization_in_LLM_Fine_Tuning | -- | 2026-09-19 | -- |
+| 未解析 | PaZO: Preconditioned Accelerated Zeroth-Order Optimization for Fine-Tuning LLMs | PaZO_Preconditioned_Accelerated_Zeroth_Order_Optimization_for_Fine_Tuning_LLMs | -- | 2026-09-19 | -- |
+| 未解析 | Refining Adaptive Zeroth-Order Optimization at Ease | Refining_Adaptive_Zeroth_Order_Optimization_at_Ease | -- | 2026-09-19 | -- |
+| 未解析 | Revisiting Zeroth-Order Optimization for Memory-Efficient LLM Fine-Tuning: A Benchmark | Revisiting_Zeroth_Order_Optimization_for_Memory_Efficient_LLM_Fine_Tuning_A_Benchmark | -- | 2026-09-19 | -- |
 | 已解析 | Softmax is 1/2-Lipschitz: A tight bound across all ℓ_p norms | Softmax_is_1_2_Lipschitz_A_tight_bound_across_all_lp_norms | [解析文件](Softmax_is_1_2_Lipschitz_A_tight_bound_across_all_lp_norms.md) | 2026-09-19 | -- |
+| 未解析 | Sparse MeZO: Less Parameters for Better Performance in Zeroth-Order LLM Fine-Tuning | Sparse_MeZO_Less_Parameters_for_Better_Performance_in_Zeroth_Order_LLM_Fine_Tuning | -- | 2026-09-19 | -- |
 | 未解析 | Understanding Evolution Strategies for LLM Reasoning: Broader Reasoning Coverage than GRPO | Understanding_Evolution_Strategies_for_LLM_Reasoning_Broader_Reasoning_Coverage_than_GRPO | -- | 2026-09-19 | -- |
+| 未解析 | Variance-reduced Zeroth-Order Methods for Fine-Tuning Language Models | Variance_reduced_Zeroth_Order_Methods_for_Fine_Tuning_Language_Models | -- | 2026-09-19 | -- |
+| 未解析 | Zeroth-Order Fine-Tuning of LLMs in Random Subspaces | Zeroth_Order_Fine_Tuning_of_LLMs_in_Random_Subspaces | -- | 2026-09-19 | -- |
+| 未解析 | Zeroth-Order Kronecker Optimization for Pretraining Language Models | Zeroth_Order_Kronecker_Optimization_for_Pretraining_Language_Models | -- | 2026-09-19 | -- |
 
 ## 汇总
 
-- 论文总数：14 篇（2026-09 14 篇）
-- 解析状态：已解析 6 / 未解析 8 / 解析失败 0
-- **未解析论文**（需补解析）：Adaptive_Phase_Switching_for_Communication_Efficient_Federated_LoRA_Fine_Tuning、Rank_Efficient_LoRA_via_Joint_Tangent_Space_Optimization_under_Isotropic_Curvature、TaRA_Training_Aware_Low_Rank_Adaptation_Initialization、Adaptively_Incorporating_Directional_Hints_into_Zeroth_Order_Optimization、Gradient_Free_Optimization_for_Matrix_functions、EGGROLL_Unrolled_Understanding_and_Improving_Low_Rank_Evolution_Strategies_at_Scale、High_Probability_Convergence_of_SGD_via_Batched_Updates、Understanding_Evolution_Strategies_for_LLM_Reasoning_Broader_Reasoning_Coverage_than_GRPO
+- 论文总数：28 篇（2026-09 28 篇）
+- 解析状态：已解析 6 / 未解析 22 / 解析失败 0
+- **未解析论文**（需补解析）：Adaptive_Phase_Switching_for_Communication_Efficient_Federated_LoRA_Fine_Tuning、Rank_Efficient_LoRA_via_Joint_Tangent_Space_Optimization_under_Isotropic_Curvature、TaRA_Training_Aware_Low_Rank_Adaptation_Initialization、Adaptively_Incorporating_Directional_Hints_into_Zeroth_Order_Optimization、Gradient_Free_Optimization_for_Matrix_functions、ConMeZO_Adaptive_Descent_Direction_Sampling_for_Gradient_Free_Finetuning_of_Large_Language_Models、EGGROLL_Unrolled_Understanding_and_Improving_Low_Rank_Evolution_Strategies_at_Scale、Enhancing_Zeroth_order_Fine_tuning_for_Language_Models_with_Low_rank_Structures、FZOO_Fast_Zeroth_Order_Optimizer_for_Fine_Tuning_Large_Language_Models_towards_Adam_Scale_Speed、Fine_Tuning_Language_Models_with_Just_Forward_Passes、HELENE_Hessian_Layer_wise_Clipping_and_Gradient_Annealing_for_Accelerating_Fine_tuning_LLM_with_Zeroth_order_Optimizatio、Harmony_in_Divergence_Towards_Fast_Accurate_and_Memory_efficient_Zeroth_order_LLM_Fine_tuning、High_Probability_Convergence_of_SGD_via_Batched_Updates、Low_Rank_Curvature_for_Zeroth_Order_Optimization_in_LLM_Fine_Tuning、PaZO_Preconditioned_Accelerated_Zeroth_Order_Optimization_for_Fine_Tuning_LLMs、Refining_Adaptive_Zeroth_Order_Optimization_at_Ease、Revisiting_Zeroth_Order_Optimization_for_Memory_Efficient_LLM_Fine_Tuning_A_Benchmark、Sparse_MeZO_Less_Parameters_for_Better_Performance_in_Zeroth_Order_LLM_Fine_Tuning、Understanding_Evolution_Strategies_for_LLM_Reasoning_Broader_Reasoning_Coverage_than_GRPO、Variance_reduced_Zeroth_Order_Methods_for_Fine_Tuning_Language_Models、Zeroth_Order_Fine_Tuning_of_LLMs_in_Random_Subspaces、Zeroth_Order_Kronecker_Optimization_for_Pretraining_Language_Models
 <!-- INDEX:END -->
 
 ## 说明
