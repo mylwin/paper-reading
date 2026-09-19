@@ -1,7 +1,7 @@
 # 2026-09 解析结果
 
-本目录保存 **2026-09** 入库论文的 PDF 解析 Markdown，共 7 篇。
-文件名主干与 `01-raw/2026-09/` 中对应 PDF 完全一致。
+本目录保存 **2026-09** 入库论文的 PDF 解析 Markdown，共 6 篇（本月入库 14 篇，其余 8 篇登记为未解析）。
+文件名主干与 `01-raw/2026-09/` 中对应 PDF 完全一致；解析插图一律本地化到 `images/<论文标题>/`（溯源见同目录 `_sources.md`），本目录当前已无远程图片链接。
 
 ## 清单
 
@@ -18,12 +18,16 @@
 | 未解析 | Adaptively Incorporating Directional Hints into Zeroth-Order Optimization | Adaptively_Incorporating_Directional_Hints_into_Zeroth_Order_Optimization | -- | 2026-09-18 | -- |
 | 未解析 | Gradient-Free Optimization for Matrix functions | Gradient_Free_Optimization_for_Matrix_functions | -- | 2026-09-18 | -- |
 | 已解析 | MpSub: A Momentum $p$-Dimensional Subspace Trust-Region Method for Derivative-Free Fine-Tuning of Large Language Models | MpSub_A_Momentum_$p$_Dimensional_Subspace_Trust_Region_Method_for_Derivative_Free_Fine_Tuning_of_Large_Language_Models | [解析文件](MpSub_A_Momentum_$p$_Dimensional_Subspace_Trust_Region_Method_for_Derivative_Free_Fine_Tuning_of_Large_Language_Models.md) | 2026-09-18 | -- |
+| 未解析 | EGGROLL, Unrolled: Understanding and Improving Low-Rank Evolution Strategies at Scale | EGGROLL_Unrolled_Understanding_and_Improving_Low_Rank_Evolution_Strategies_at_Scale | -- | 2026-09-19 | -- |
+| 未解析 | High-Probability Convergence of SGD via Batched Updates | High_Probability_Convergence_of_SGD_via_Batched_Updates | -- | 2026-09-19 | -- |
+| 已解析 | Softmax is 1/2-Lipschitz: A tight bound across all ℓ_p norms | Softmax_is_1_2_Lipschitz_A_tight_bound_across_all_lp_norms | [解析文件](Softmax_is_1_2_Lipschitz_A_tight_bound_across_all_lp_norms.md) | 2026-09-19 | -- |
+| 未解析 | Understanding Evolution Strategies for LLM Reasoning: Broader Reasoning Coverage than GRPO | Understanding_Evolution_Strategies_for_LLM_Reasoning_Broader_Reasoning_Coverage_than_GRPO | -- | 2026-09-19 | -- |
 
 ## 汇总
 
-- 论文总数：10 篇（2026-09 10 篇）
-- 解析状态：已解析 5 / 未解析 5 / 解析失败 0
-- **未解析论文**（需补解析）：Adaptive_Phase_Switching_for_Communication_Efficient_Federated_LoRA_Fine_Tuning、Rank_Efficient_LoRA_via_Joint_Tangent_Space_Optimization_under_Isotropic_Curvature、TaRA_Training_Aware_Low_Rank_Adaptation_Initialization、Adaptively_Incorporating_Directional_Hints_into_Zeroth_Order_Optimization、Gradient_Free_Optimization_for_Matrix_functions
+- 论文总数：14 篇（2026-09 14 篇）
+- 解析状态：已解析 6 / 未解析 8 / 解析失败 0
+- **未解析论文**（需补解析）：Adaptive_Phase_Switching_for_Communication_Efficient_Federated_LoRA_Fine_Tuning、Rank_Efficient_LoRA_via_Joint_Tangent_Space_Optimization_under_Isotropic_Curvature、TaRA_Training_Aware_Low_Rank_Adaptation_Initialization、Adaptively_Incorporating_Directional_Hints_into_Zeroth_Order_Optimization、Gradient_Free_Optimization_for_Matrix_functions、EGGROLL_Unrolled_Understanding_and_Improving_Low_Rank_Evolution_Strategies_at_Scale、High_Probability_Convergence_of_SGD_via_Batched_Updates、Understanding_Evolution_Strategies_for_LLM_Reasoning_Broader_Reasoning_Coverage_than_GRPO
 <!-- INDEX:END -->
 
 ## 说明

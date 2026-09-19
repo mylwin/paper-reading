@@ -21,10 +21,14 @@
 | 2026-09 | Adaptively Incorporating Directional Hints into Zeroth-Order Optimization | Adaptively_Incorporating_Directional_Hints_into_Zeroth_Order_Optimization | 未解析 | -- | 2026-09-18 | -- |
 | 2026-09 | Gradient-Free Optimization for Matrix functions | Gradient_Free_Optimization_for_Matrix_functions | 未解析 | -- | 2026-09-18 | -- |
 | 2026-09 | MpSub: A Momentum $p$-Dimensional Subspace Trust-Region Method for Derivative-Free Fine-Tuning of Large Language Models | MpSub_A_Momentum_$p$_Dimensional_Subspace_Trust_Region_Method_for_Derivative_Free_Fine_Tuning_of_Large_Language_Models | 已解析 | [解析文件](2026-09/MpSub_A_Momentum_$p$_Dimensional_Subspace_Trust_Region_Method_for_Derivative_Free_Fine_Tuning_of_Large_Language_Models.md) | 2026-09-18 | -- |
+| 2026-09 | EGGROLL, Unrolled: Understanding and Improving Low-Rank Evolution Strategies at Scale | EGGROLL_Unrolled_Understanding_and_Improving_Low_Rank_Evolution_Strategies_at_Scale | 未解析 | -- | 2026-09-19 | -- |
+| 2026-09 | High-Probability Convergence of SGD via Batched Updates | High_Probability_Convergence_of_SGD_via_Batched_Updates | 未解析 | -- | 2026-09-19 | -- |
+| 2026-09 | Softmax is 1/2-Lipschitz: A tight bound across all ℓ_p norms | Softmax_is_1_2_Lipschitz_A_tight_bound_across_all_lp_norms | 已解析 | [解析文件](2026-09/Softmax_is_1_2_Lipschitz_A_tight_bound_across_all_lp_norms.md) | 2026-09-19 | -- |
+| 2026-09 | Understanding Evolution Strategies for LLM Reasoning: Broader Reasoning Coverage than GRPO | Understanding_Evolution_Strategies_for_LLM_Reasoning_Broader_Reasoning_Coverage_than_GRPO | 未解析 | -- | 2026-09-19 | -- |
 <!-- INDEX:END -->
 
 ## 汇总
 
-- 论文总数：13 篇（2026-07 2 篇、2026-08 1 篇、2026-09 10 篇）
-- 解析状态：已解析 8 / 未解析 5 / 解析失败 0
-- **未解析论文**（需补解析）：Adaptive_Phase_Switching_for_Communication_Efficient_Federated_LoRA_Fine_Tuning、Rank_Efficient_LoRA_via_Joint_Tangent_Space_Optimization_under_Isotropic_Curvature、TaRA_Training_Aware_Low_Rank_Adaptation_Initialization、Adaptively_Incorporating_Directional_Hints_into_Zeroth_Order_Optimization、Gradient_Free_Optimization_for_Matrix_functions
+- 论文总数：17 篇（2026-07 2 篇、2026-08 1 篇、2026-09 14 篇）
+- 解析状态：已解析 9 / 未解析 8 / 解析失败 0
+- **未解析论文**（需补解析）：Adaptive_Phase_Switching_for_Communication_Efficient_Federated_LoRA_Fine_Tuning、Rank_Efficient_LoRA_via_Joint_Tangent_Space_Optimization_under_Isotropic_Curvature、TaRA_Training_Aware_Low_Rank_Adaptation_Initialization、Adaptively_Incorporating_Directional_Hints_into_Zeroth_Order_Optimization、Gradient_Free_Optimization_for_Matrix_functions、EGGROLL_Unrolled_Understanding_and_Improving_Low_Rank_Evolution_Strategies_at_Scale、High_Probability_Convergence_of_SGD_via_Batched_Updates、Understanding_Evolution_Strategies_for_LLM_Reasoning_Broader_Reasoning_Coverage_than_GRPO
