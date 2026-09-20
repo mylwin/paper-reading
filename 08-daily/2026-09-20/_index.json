@@ -1,0 +1,117 @@
+{
+  "date": "2026-09-20",
+  "note_file": "今日检索.md",
+  "generated_at": "2026-09-20T12:31:31",
+  "skill": "paper-daily",
+  "sources_searched": [
+    "arxiv",
+    "openreview"
+  ],
+  "source_counts": {
+    "arxiv": 200,
+    "openreview": 132
+  },
+  "date_windows": {
+    "recent_30d": {
+      "start": "2025-09-20",
+      "end": "2026-09-20"
+    },
+    "past_year": {
+      "start": "2025-09-20",
+      "end": "2025-09-19"
+    }
+  },
+  "total_unique": 290,
+  "top_papers": [
+    {
+      "title": "SubZero+: Efficient Zeroth-Order LLM Fine-Tuning via Large Learning Rates",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2608.15665v1",
+      "note_filename": "SubZero+_Efficient_Zeroth_Order_LLM_Fine_Tuning_via_Large_Learning_Rates",
+      "matched_domain": "无梯度大模型优化",
+      "score": 6.57
+    },
+    {
+      "title": "Robust and Efficient Zeroth-Order LLM Fine-Tuning via Adaptive Bayesian Subspace Optimizer",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2601.01452v4",
+      "note_filename": "Robust_and_Efficient_Zeroth_Order_LLM_Fine_Tuning_via_Adaptive_Bayesian_Subspace_Optimizer",
+      "matched_domain": "无梯度大模型优化",
+      "score": 6.65
+    },
+    {
+      "title": "Hyper-ES: Effective Evolution Strategies for LLM Reasoning via Descent Direction Merging",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2608.05541v1",
+      "note_filename": "Hyper_ES_Effective_Evolution_Strategies_for_LLM_Reasoning_via_Descent_Direction_Merging",
+      "matched_domain": "无梯度大模型优化",
+      "score": 7.38
+    },
+    {
+      "title": "GRZO: Group-Relative Zeroth-Order Optimization for Large Language Model Fine-Tuning",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2606.02857v2",
+      "note_filename": "GRZO_Group_Relative_Zeroth_Order_Optimization_for_Large_Language_Model_Fine_Tuning",
+      "matched_domain": "无梯度大模型优化",
+      "score": 6.93
+    },
+    {
+      "title": "KerZOO: Kernel Function Informed Zeroth-Order Optimization for Accurate and Accelerated LLM Fine-Tuning",
+      "source": "openreview",
+      "arxiv_id": "",
+      "url": "https://openreview.net/forum?id=g7EiwjHboW",
+      "note_filename": "KerZOO_Kernel_Function_Informed_Zeroth_Order_Optimization_for_Accurate_and_Accelerated_LLM_Fine_Tuning",
+      "matched_domain": "无梯度大模型优化",
+      "score": 7.1
+    },
+    {
+      "title": "AdaMeZO: Adam-style Zeroth-Order Optimizer for LLM Fine-tuning Without Maintaining the Moments",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2605.00650v1",
+      "note_filename": "AdaMeZO_Adam_style_Zeroth_Order_Optimizer_for_LLM_Fine_tuning_Without_Maintaining_the_Moments",
+      "matched_domain": "无梯度大模型优化",
+      "score": 6.62
+    },
+    {
+      "title": "CurvZO: Adaptive Curvature-Guided Sparse Zeroth-Order Optimization for Efficient LLM Fine-Tuning",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2603.21725v1",
+      "note_filename": "CurvZO_Adaptive_Curvature_Guided_Sparse_Zeroth_Order_Optimization_for_Efficient_LLM_Fine_Tuning",
+      "matched_domain": "无梯度大模型优化",
+      "score": 6.62
+    },
+    {
+      "title": "TeZO: Empowering the Low-Rankness on the Temporal Dimension in the Zeroth-Order Optimization for Fine-tuning LLMs",
+      "source": "openreview",
+      "arxiv_id": "",
+      "url": "https://openreview.net/forum?id=vycvHlBzGP",
+      "note_filename": "TeZO_Empowering_the_Low_Rankness_on_the_Temporal_Dimension_in_the_Zeroth_Order_Optimization_for_Fine_tuning_LLMs",
+      "matched_domain": "无梯度大模型优化",
+      "score": 6.5
+    },
+    {
+      "title": "AGZO: Activation-Guided Zeroth-Order Optimization for LLM Fine-Tuning",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2601.17261v4",
+      "note_filename": "AGZO_Activation_Guided_Zeroth_Order_Optimization_for_LLM_Fine_Tuning",
+      "matched_domain": "无梯度大模型优化",
+      "score": 6.45
+    },
+    {
+      "title": "Learning Dynamics of Zeroth-Order Optimization: A Kernel Perspective",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2605.03373v1",
+      "note_filename": "Learning_Dynamics_of_Zeroth_Order_Optimization_A_Kernel_Perspective",
+      "matched_domain": "无梯度大模型优化",
+      "score": 7.15
+    }
+  ]
+}

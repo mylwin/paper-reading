@@ -1,0 +1,113 @@
+{
+  "overview": {
+    "trend": "今日与课题最相关的工作，明显从各向同性随机扰动转向结构化低维搜索：一类在分层低秩子空间中增加查询并引入 Adam 式自适应统计，另一类通过贝叶斯滤波、群相对归一化、核函数或曲率信号降低零阶估计的方差与偏差。研究重点不再只是节省反向传播显存，而是同时追求更宽的稳定学习率区间、低精度鲁棒性和接近一阶方法的收敛表现。",
+    "hotspots": [
+      {
+        "title": "子空间自适应优化器",
+        "text": "SubZero+ 与 BSZO 都把多方向信息限制在低维子空间内，但分别采用子空间 Adam 与贝叶斯后验更新，值得比较其状态开销、噪声假设和尺度扩展能力。"
+      },
+      {
+        "title": "估计器方差与偏差控制",
+        "text": "GRZO、KerZOO、CurvZO 和 AGZO 分别利用批内群相对归一化、核函数、曲率信号和激活子空间改善零阶方向质量，构成一组可直接对照的估计器设计路线。"
+      },
+      {
+        "title": "演化策略的大模型化",
+        "text": "Hyper-ES 不在全参数空间盲目采样，而是在少量下降方向张成的紧凑空间中用 CMA-ES 搜索合并系数，显示演化策略正与梯度预热、模型合并和推理后训练结合。"
+      }
+    ]
+  },
+  "domain_summaries": {
+    "随机梯度与优化理论": {
+      "summary": "该组主要提供零阶估计器、随机近似、方差控制和收敛分析的理论背景；对当前课题的价值在于解释无梯度更新为何能在高维模型中工作，以及哪些维度依赖可以被子空间结构替代。",
+      "subfields": {
+        "随机梯度与收敛性": "关注随机估计、非凸收敛和噪声条件，可用于审计零阶优化器声称的维度依赖、查询复杂度与方差界。",
+        "自适应与二阶优化": "关注自适应矩估计、曲率、预条件与低维结构，为设计 Adam 式或曲率引导的无梯度优化器提供参照。"
+      }
+    },
+    "大模型训练优化": {
+      "summary": "该组覆盖大模型微调的显存、数值精度、训练稳定性和参数高效适配；今日应优先读取其中能明确改变优化器状态、扰动子空间或学习率稳定性的工作。",
+      "subfields": {
+        "优化器与训练策略": "重点比较学习率范围、批内估计、Adam 式状态和模型规模扩展，不把单纯任务精度提升等同于优化器改进。",
+        "内存与数值效率": "关注推理级显存、fp16/bf16 鲁棒性、低秩状态与额外前向次数之间的真实权衡。",
+        "训练稳定性与缩放": "关注 1B 到 30B 级模型上的稳定区间、跨模型迁移和是否仍需要依赖特定子空间或梯度预热。"
+      }
+    },
+    "无梯度大模型优化": {
+      "summary": "这是今日主线。候选集中最有信息增益的工作围绕低维子空间、多查询估计、贝叶斯或 Adam 式自适应、曲率/激活引导和演化策略展开；推荐顺序强调优化器机制与大模型训练证据，而非单纯标题命中。",
+      "subfields": {
+        "zeroth-order optimization": "主要讨论只用函数值或前向传播构造更新方向，包括子空间、稀疏坐标、批内多方向与核校正等设计。",
+        "gradient-free optimization": "覆盖不依赖反向传播的训练或搜索方法，需进一步区分真正的模型参数优化与外层黑盒任务搜索。",
+        "derivative-free optimization": "以信赖域、模型式 DFO 和噪声环境为主，对 LLM 的直接迁移价值取决于是否能控制高维查询成本。",
+        "evolution strategies": "集中于低秩或语义化搜索方向、CMA-ES 和模型合并系数优化，适合与 MeZO 类有限差分方法做机制对照。"
+      }
+    }
+  },
+  "top_papers": {
+    "SubZero+: Efficient Zeroth-Order LLM Fine-Tuning via Large Learning Rates": {
+      "title_zh": "SubZero+：通过大学习率实现高效的零阶大语言模型微调",
+      "summary": "SubZero+ 把分层低秩子空间中的多查询估计、子空间 Adam 和 QR 符号校正组合起来，目标是在几乎不增加显存的前提下扩大零阶微调的稳定学习率区间。",
+      "abstract_zh": "零阶（ZO）优化能够在无需反向传播的情况下微调大语言模型，但现有 ZO 方法受高方差梯度估计器影响，导致收敛不稳定且对学习率高度敏感。我们提出 SubZero+，这是一个改进的 SubZero 框架，通过三种互补方式提高稳定性：(i) 在逐层的低秩子空间内进行多查询梯度估计，以降低方差，同时不出现多查询悖论；(ii) 使用子空间内的多查询梯度统计量执行自适应更新的子空间 Adam 优化器；以及 (iii) 对基于 QR 的子空间构造进行符号校正，以确保投影矩阵服从 Haar 分布，从而消除依赖具体实现的方向歧义。在 SuperGLUE 上针对 1.3B 到 32B 的模型开展实验，并同时考察全参数微调和 LoRA。结果表明，SubZero+ 持续优于以往的 ZO 基线，扩大了稳定学习率范围，以极小的额外内存开销缩小了与一阶方法之间的差距。",
+      "contributions": [
+        "在逐层低秩子空间中使用多查询估计，旨在降低高方差且避免摘要所称的多查询悖论。",
+        "提出基于子空间内多查询统计量的 Adam 式自适应更新。",
+        "修正 QR 子空间构造的符号，使投影矩阵满足 Haar 分布并消除实现相关的方向歧义。"
+      ],
+      "method": "每层先构造低秩随机子空间，在其中用多次函数查询形成梯度统计，再由子空间 Adam 更新；同时规范 QR 分解的符号选择，使随机投影的分布性质不受实现细节影响。",
+      "result": "摘要报告在 SuperGLUE、1.3B 至 32B 模型、全参数与 LoRA 两种设置下持续优于既有 ZO 基线，并扩大稳定学习率范围，且只增加很少的内存。",
+      "selection_reason": "直接命中“无梯度大模型训练优化器”，同时把学习率稳定性、估计器方差、Adam 式自适应和 32B 规模验证放在同一框架中；这些因素与优化器设计和大模型扩展最相关。",
+      "evidence_limit": "当前依据仅为摘要。需全文核验多查询悖论的定义与对照、各模型上的绝对指标与方差、额外前向查询带来的墙钟时间，以及子空间 Adam 状态量是否在层数和秩增大时仍保持低开销。",
+      "reading_decision": "精读"
+    },
+    "Robust and Efficient Zeroth-Order LLM Fine-Tuning via Adaptive Bayesian Subspace Optimizer": {
+      "title_zh": "通过自适应贝叶斯子空间优化器实现稳健高效的零阶大语言模型微调",
+      "summary": "BSZO 将多个扰动方向的有限差信息视为带噪观测，用 Kalman 滤波维护子空间投影梯度的后验，重点解决低精度训练下的一维更新退化与噪声变化。",
+      "abstract_zh": "使用零阶（ZO）优化微调大语言模型（LLM），可以通过函数评估近似梯度来降低内存占用。然而，现有方法本质上在一维空间中执行更新，并且在低精度训练下会发生崩溃或显著的性能下降。我们提出 BSZO，一种自适应贝叶斯子空间零阶优化器（Bayesian Subspace Zeroth-Order Optimizer）。该方法应用 Kalman 滤波，在一个子空间内结合来自多个扰动方向的有限差信息。BSZO 将每次有限差分测量视为带噪观测，为子空间投影梯度构建后验分布，并通过贝叶斯推断更新该分布；同时，它使用基于残差的自适应机制来适应噪声变化。理论分析表明，与标准 ZO 方法相比，BSZO 将收敛率提高了 $k/\\gamma$ 倍。在 RoBERTa、Mistral 和 OPT 模型上的实验表明，BSZO 在多种任务上优于基线；在 OPT-13B 上，平均绝对性能提升最高达到 6.67%，同时在 fp16/bf16 精度下保持稳健，并将内存使用量维持在接近仅推理基线的水平，即 MeZO 的 1.00 倍至 1.08 倍。",
+      "contributions": [
+        "把多方向有限差分建模为带噪观测，并以 Kalman 滤波融合为子空间梯度后验。",
+        "用残差驱动的自适应机制跟踪噪声变化，针对 fp16/bf16 下的退化问题。",
+        "摘要声称给出相对标准 ZO 的 $k/\\gamma$ 收敛率改进，并在 OPT-13B 上验证。"
+      ],
+      "method": "在选定子空间中采集多个扰动方向的有限差分，将其输入递推贝叶斯估计器；Kalman 更新融合历史与当前观测，残差机制动态调整噪声相关参数，再用后验投影梯度更新模型。",
+      "result": "摘要报告在 RoBERTa、Mistral 和 OPT 上优于基线，OPT-13B 平均绝对提升最高 6.67%，fp16/bf16 下保持稳健，内存为 MeZO 的 1.00 至 1.08 倍。",
+      "selection_reason": "它是少数同时明确讨论优化器状态估计、低精度数值鲁棒性、理论收敛因子和 13B 规模实验的候选，适合与 SubZero+ 的 Adam 式方案做直接机制比较。",
+      "evidence_limit": "当前仅有摘要。需核验 $k/\\gamma$ 中 $k$ 与 $\\gamma$ 的定义、改进是否隐藏额外查询或条件数依赖、Kalman 协方差的存储复杂度，以及 6.67% 是哪些任务和何种基线上的平均。",
+      "reading_decision": "精读"
+    },
+    "Hyper-ES: Effective Evolution Strategies for LLM Reasoning via Descent Direction Merging": {
+      "title_zh": "Hyper-ES：通过下降方向合并实现面向大语言模型推理的有效演化策略",
+      "summary": "Hyper-ES 先用少量梯度微调得到有意义的下降方向，再让 CMA-ES 在这些方向张成的低维空间中搜索分层 DARE-TIES 合并系数，以避免全参数随机扰动近乎正交的问题。",
+      "abstract_zh": "演化策略（ES）是资源受限条件下对大语言模型（LLM）推理进行基于梯度微调的一种有前景替代方案。然而，将 ES 直接应用于十亿参数规模的 LLM 非常低效。在这种高维参数空间中，大多数随机扰动几乎都与有用的更新方向正交，从而导致优化不稳定。我们提出 Hyper-ES，这是一种基于子空间的 ES 框架，既避免 ES 在全参数搜索中的弱点，又利用其在低维优化中的优势。Hyper-ES 不要求 ES 从 LLM 参数空间的随机扰动中发现有用方向，而是首先执行少量低成本的基于梯度的微调运行，以获得下降方向。虽然每个方向本身可能只带来有限改进，但它们的张成空间形成了一个紧凑的适配子空间，能够捕获有用的推理更新。随后，Hyper-ES 在该子空间内应用 CMA-ES，优化逐层 DARE-TIES 合并系数，使 ES 搜索有意义下降方向的组合，而不是任意的全模型扰动。我们在六个数学推理数据集上，使用三个 Qwen2.5-Instruct 和 DeepSeek-R1-Distill 骨干模型评估 Hyper-ES。结果表明，Hyper-ES 持续比 GRPO-LoRA 高 1%，同时所需的占用空间的梯度更新减少 10%。代码位于 https://github.com/kuangrepi/Hyper-ES。",
+      "contributions": [
+        "把 ES 的搜索空间从全模型随机扰动改为少量梯度下降方向张成的紧凑子空间。",
+        "使用 CMA-ES 优化逐层 DARE-TIES 合并系数，将演化搜索与模型合并结合。",
+        "摘要报告在多个推理骨干和六个数学数据集上相对 GRPO-LoRA 的精度与梯度更新优势。"
+      ],
+      "method": "先进行少量梯度微调获得多个下降方向，把这些方向视作适配基向量；再用 CMA-ES 搜索每层 DARE-TIES 的合并系数，从而只在具有任务语义的低维空间中进行演化优化。",
+      "result": "摘要报告在三个 Qwen2.5-Instruct 和 DeepSeek-R1-Distill 骨干、六个数学推理数据集上，比 GRPO-LoRA 持续高 1%，并减少 10% 的占空间梯度更新。",
+      "selection_reason": "它代表与有限差分 ZO 不同的优化器路线：利用少量梯度预热构造搜索基，再由 CMA-ES 完成无梯度组合优化。该设计能帮助判断“完全无梯度”与“少量梯度换取高质量搜索方向”之间的实际权衡。",
+      "evidence_limit": "该方法并非严格全程无梯度，因为子空间来自少量梯度微调。需全文核验 1% 的指标口径、总训练算力与墙钟时间、梯度预热成本、模型合并超参数，以及与纯 ES、MeZO 和同预算 GRPO-LoRA 的公平性。",
+      "reading_decision": "精读"
+    },
+    "GRZO: Group-Relative Zeroth-Order Optimization for Large Language Model Fine-Tuning": {
+      "summary": "GRZO 为每个 mini-batch 样本分配伪独立扰动并做群相对归一化，在不增加前向次数的前提下把有效方向数提升到 batch size。"
+    },
+    "KerZOO: Kernel Function Informed Zeroth-Order Optimization for Accurate and Accelerated LLM Fine-Tuning": {
+      "summary": "KerZOO 从零阶估计的低阶偏差出发引入核函数校正，摘要报告在 OPT-2.7B 上减少训练 GPU 小时并提升相对 MeZO 的准确率。"
+    },
+    "AdaMeZO: Adam-style Zeroth-Order Optimizer for LLM Fine-tuning Without Maintaining the Moments": {
+      "summary": "AdaMeZO 试图在不显式保存一、二阶矩状态的情况下复现 Adam 式地形自适应，摘要报告相对 MeZO 最多减少 70% 前向次数。"
+    },
+    "CurvZO: Adaptive Curvature-Guided Sparse Zeroth-Order Optimization for Efficient LLM Fine-Tuning": {
+      "summary": "CurvZO 从标量零阶反馈在线追踪曲率，用参数级采样分布和动态扰动预算聚焦稀疏更新。"
+    },
+    "TeZO: Empowering the Low-Rankness on the Temporal Dimension in the Zeroth-Order Optimization for Fine-tuning LLMs": {
+      "summary": "TeZO 同时利用模型维度与时间维度的低秩性，通过 CP 分解生成低秩扰动，并提供低内存 Adam 扩展。"
+    },
+    "AGZO: Activation-Guided Zeroth-Order Optimization for LLM Fine-Tuning": {
+      "summary": "AGZO 用前向激活张成的低秩子空间约束扰动，目标是提高零阶方向与真实梯度的余弦相似度。"
+    },
+    "Learning Dynamics of Zeroth-Order Optimization: A Kernel Perspective": {
+      "summary": "该文用经验神经切线核解释 ZO-SGD 的学习动力学，主张近似误差主要由输出维度和扰动数控制，而非参数总维度。"
+    }
+  }
+}
