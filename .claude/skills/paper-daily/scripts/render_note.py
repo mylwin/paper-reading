@@ -349,8 +349,11 @@ def render_files(data: dict, date: str, workspace: Path, config: dict, note_dir:
         stem = paper.get('paper_stem') or paper.get('note_filename') or paper_link_stem(paper.get('title'))
         path = local_pdf(papers_dir, stem)
         if path:
-            state = '已存在跳过'
+            state = '新下载' if paper.get('archive_status') == 'downloaded' else '已存在跳过'
             shown = rel_link(path, note_dir)
+        elif paper.get('archive_status') == 'failed':
+            state = f"下载失败：{paper.get('archive_detail') or '原因未记录'}"
+            shown = paper.get('pdf_url') or '--'
         else:
             state = '待归档'
             month = month_of(date)
