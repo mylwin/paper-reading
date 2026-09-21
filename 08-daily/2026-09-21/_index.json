@@ -1,0 +1,117 @@
+{
+  "date": "2026-09-21",
+  "note_file": "今日检索.md",
+  "generated_at": "2026-09-21T11:38:32",
+  "skill": "paper-daily",
+  "sources_searched": [
+    "arxiv",
+    "openreview"
+  ],
+  "source_counts": {
+    "arxiv": 100,
+    "openreview": 26
+  },
+  "date_windows": {
+    "recent_30d": {
+      "start": "2026-08-22",
+      "end": "2026-09-21"
+    },
+    "past_year": {
+      "start": "2025-09-21",
+      "end": "2026-08-21"
+    }
+  },
+  "total_unique": 100,
+  "top_papers": [
+    {
+      "title": "Muon with Finite Newton-Schulz: The Smoothing Benefit in Nonsmooth Nonconvex Optimization",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2608.26288v1",
+      "note_filename": "Muon_with_Finite_Newton_Schulz_The_Smoothing_Benefit_in_Nonsmooth_Nonconvex_Optimization",
+      "matched_domain": "随机梯度与优化理论",
+      "score": 7.93
+    },
+    {
+      "title": "Dense Weak Hiding: Closing Complexity Gaps in Nonconvex and PL Finite-Sum Optimization under Individual Smoothness",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2609.00045v2",
+      "note_filename": "Dense_Weak_Hiding_Closing_Complexity_Gaps_in_Nonconvex_and_PL_Finite_Sum_Optimization_under_Individual_Smoothness",
+      "matched_domain": "无梯度大模型优化",
+      "score": 7.93
+    },
+    {
+      "title": "The Exact Time-Uniform Rate Frontier for Stochastic Gradient Descent on Smooth Convex Objectives",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2609.08537v1",
+      "note_filename": "The_Exact_Time_Uniform_Rate_Frontier_for_Stochastic_Gradient_Descent_on_Smooth_Convex_Objectives",
+      "matched_domain": "随机梯度与优化理论",
+      "score": 7.87
+    },
+    {
+      "title": "Quantile-based Loss Filtering for Outlier-Robust Stochastic Gradient Descent",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2609.13040v1",
+      "note_filename": "Quantile_based_Loss_Filtering_for_Outlier_Robust_Stochastic_Gradient_Descent",
+      "matched_domain": "随机梯度与优化理论",
+      "score": 7.93
+    },
+    {
+      "title": "Almost Sure Convergence Analysis of Stochastic Gradient Methods with Clipping and Additive Noise",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2609.12119v2",
+      "note_filename": "Almost_Sure_Convergence_Analysis_of_Stochastic_Gradient_Methods_with_Clipping_and_Additive_Noise",
+      "matched_domain": "随机梯度与优化理论",
+      "score": 7.93
+    },
+    {
+      "title": "Stochastic Gradient Descent over P2",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2609.13343v2",
+      "note_filename": "Stochastic_Gradient_Descent_over_P2",
+      "matched_domain": "随机梯度与优化理论",
+      "score": 7.87
+    },
+    {
+      "title": "Stochastic gradient descent with initial regularization",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2608.22953v1",
+      "note_filename": "Stochastic_gradient_descent_with_initial_regularization",
+      "matched_domain": "随机梯度与优化理论",
+      "score": 7.93
+    },
+    {
+      "title": "How Much Rank Does LoRA Need? Rank-Error Bounds for Transformer Attention",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2608.26052v1",
+      "note_filename": "How_Much_Rank_Does_LoRA_Need_Rank_Error_Bounds_for_Transformer_Attention",
+      "matched_domain": "无梯度大模型优化",
+      "score": 7.93
+    },
+    {
+      "title": "Non-monotone direct-search methods for deterministic and stochastic derivative-free optimization",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2609.11567v1",
+      "note_filename": "Non_monotone_direct_search_methods_for_deterministic_and_stochastic_derivative_free_optimization",
+      "matched_domain": "无梯度大模型优化",
+      "score": 8.13
+    },
+    {
+      "title": "Subspace Levenberg Marquardt Algorithms in Training Neural Networks",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2609.00789v1",
+      "note_filename": "Subspace_Levenberg_Marquardt_Algorithms_in_Training_Neural_Networks",
+      "matched_domain": "随机梯度与优化理论",
+      "score": 7.93
+    }
+  ]
+}
