@@ -15,7 +15,7 @@
 | 2026-09 | PowerStep Memory Efficient Adaptive Optimization via lp Norm Steepest Descent | PowerStep_Memory_Efficient_Adaptive_Optimization_via_lp_Norm_Steepest_Descent | 未翻译 | -- | -- | -- |
 | 2026-09 | Rethinking 3D Convolution in lp-norm Space | Rethinking_3D_Convolution_in_lp-norm_Space | 未翻译 | -- | -- | -- |
 | 2026-09 | Adaptive Phase-Switching for Communication-Efficient Federated LoRA Fine-Tuning | Adaptive_Phase_Switching_for_Communication_Efficient_Federated_LoRA_Fine_Tuning | 未翻译 | -- | -- | -- |
-| 2026-09 | Powell-Style Model-Based Derivative-Free Optimization with Complexity Guarantees | Powell_Style_Model_Based_Derivative_Free_Optimization_with_Complexity_Guarantees | 已翻译 | 双栏对比 | 2026-09-17 | [目录](2026-09/Powell_Style_Model_Based_Derivative_Free_Optimization_with_Complexity_Guarantees) |
+| 2026-09 | Powell-Style Model-Based Derivative-Free Optimization with Complexity Guarantees | Powell_Style_Model_Based_Derivative_Free_Optimization_with_Complexity_Guarantees | 已翻译 | 双栏对比 | 2026-09-21 | [目录](2026-09/Powell_Style_Model_Based_Derivative_Free_Optimization_with_Complexity_Guarantees) |
 | 2026-09 | Rank-Efficient LoRA via Joint Tangent-Space Optimization under Isotropic Curvature | Rank_Efficient_LoRA_via_Joint_Tangent_Space_Optimization_under_Isotropic_Curvature | 未翻译 | -- | -- | -- |
 | 2026-09 | TaRA: Training-Aware Low-Rank Adaptation Initialization | TaRA_Training_Aware_Low_Rank_Adaptation_Initialization | 未翻译 | -- | -- | -- |
 | 2026-09 | Adaptively Incorporating Directional Hints into Zeroth-Order Optimization | Adaptively_Incorporating_Directional_Hints_into_Zeroth_Order_Optimization | 未翻译 | -- | -- | -- |
