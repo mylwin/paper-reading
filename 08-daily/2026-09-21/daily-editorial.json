@@ -1,0 +1,116 @@
+{
+  "overview": {
+    "trend": "今日控制在 100 篇去重论文后，候选呈现两条清晰主线：一条继续追问 SGD、PAGE/SPIDER 等随机一阶方法在有限和、PL 条件和时间一致概率保证下的精确复杂度边界；另一条把 Muon、LoRA、子空间与无梯度方法中的结构性近似视为可分析的优化机制。最值得优先阅读的工作不是单纯报告更高指标，而是明确给出上下界、适用条件或近似为何有益的机制解释。Semantic Scholar 的过去一年高影响力补充检索因匿名接口返回 429 而未获得结果，因此本日报的影响力信号为空，不应据此比较论文影响力。",
+    "hotspots": [
+      {
+        "title": "有限和优化的紧复杂度边界",
+        "text": "Dense Weak Hiding 补上个体光滑条件下非凸有限和复杂度下界缺失的 √n 因子，并给出小条件数 PL 区域的新速率与匹配算法。"
+      },
+      {
+        "title": "优化器近似的正向作用",
+        "text": "Muon 的有限步 Newton-Schulz 不再只被视为逼近误差；摘要提出其对极分解映射的平滑作用正是非光滑非凸收敛分析所需的结构。"
+      },
+      {
+        "title": "SGD 的路径级概率保证",
+        "text": "时间一致收敛前沿与带裁剪、加噪声的几乎必然收敛工作，都从单一期望界转向整条优化轨迹可成立的概率保证。"
+      }
+    ]
+  },
+  "domain_summaries": {
+    "随机梯度与优化理论": {
+      "summary": "100 篇中有 41 篇归入该方向。今日新增信息主要来自有限和 IFO 下界、PL 区域复杂度、时间一致概率界、裁剪与加噪声的几乎必然收敛，以及异常值鲁棒的损失过滤机制。",
+      "subfields": {
+        "随机梯度与收敛性": "重点是 PAGE/SPIDER 的紧下界、SGD 原始迭代点的时间一致速率、Wasserstein 空间上的扩散近似和带污染分量的鲁棒更新。",
+        "动量、裁剪与加速": "带裁剪和高斯加噪声的 SGD 及其 heavy-ball、Nesterov 扩展给出路径级稳定性线索，但摘要尚不足以核验步长条件和噪声假设是否宽松。",
+        "自适应与二阶优化": "Muon 与有限步 Newton-Schulz 的分析把谱映射平滑性和在线到非凸转换连接起来，适合与精确极分解更新做机制对照。"
+      }
+    },
+    "大模型训练优化": {
+      "summary": "100 篇中有 9 篇直接归入该方向，数量不多但包含 Muon 与 LoRA 秩选择等结构性问题。当前最有价值的是能把模型训练实践中的有限迭代、低秩约束或子空间近似转化为可验证理论对象的工作。",
+      "subfields": {
+        "LoRA 与参数高效微调": "LoRA 秩误差界把经验选秩问题表述为下游分布加权的谱尾能量控制，并讨论 softmax 饱和对所需秩的影响。",
+        "优化器与训练策略": "Muon 的有限 Newton-Schulz 深度直接关联实际预训练优化器实现，后续需核验理论目标与大模型训练损失之间的对应关系。",
+        "内存与数值效率": "子空间 Levenberg-Marquardt 与低秩适配候选涉及状态和计算开销，但摘要提供的规模与墙钟证据有限。",
+        "分布式与通信效率": "今日高优先候选中缺少直接给出通信复杂度和端到端训练吞吐的新增工作。",
+        "训练稳定性与缩放": "有限谱迭代带来的平滑性可能解释部分稳定性，但其对不同模型规模、精度格式和批量大小的外推仍待全文验证。"
+      }
+    },
+    "无梯度大模型优化": {
+      "summary": "100 篇中有 50 篇被高优先级的无梯度主题规则吸收，其中相当一部分是一般 DFO、LoRA 或有限和理论，并非直接针对 LLM。今日保留该组作为方法储备，但语义复排主动降低了只共享宽泛关键词、缺少大模型训练证据的论文。",
+      "subfields": {
+        "zeroth-order optimization": "关注函数值估计、查询复杂度和方向结构；今日前十中没有比已有 MeZO/子空间工作带来更直接新增证据的候选。",
+        "gradient-free optimization": "一般无梯度理论可提供噪声和复杂度工具，但需要额外论证才能迁移到十亿参数模型。",
+        "derivative-free optimization": "非单调直接搜索给出确定性和随机情形的 O(ε^{-2}) 复杂度，机制清晰，但与当前 LLM 优化课题的直接性低于前三篇。",
+        "evolution strategies": "本轮高优先新候选缺少同时提供大模型规模、查询预算与稳定性对照的演化策略工作。"
+      }
+    }
+  },
+  "top_papers": {
+    "Muon with Finite Newton-Schulz: The Smoothing Benefit in Nonsmooth Nonconvex Optimization": {
+      "title_zh": "有限步 Newton-Schulz 的 Muon：非光滑非凸优化中的平滑化收益",
+      "summary": "该文主张 Muon 实际使用的有限步 Newton-Schulz 不只是有损近似，而会把不连续的极映射平滑为 Lipschitz 谱映射，从而支持非光滑非凸问题的驻点收敛保证。",
+      "abstract_zh": "Muon 已成为大语言模型预训练中矩阵值参数的一种强力优化器，它通过少量 Newton-Schulz 迭代对动量做近似正交化。现有理论要么用其所逼近的精确极因子替代该迭代，要么把有限深度视为逼近误差，因此在这些理论中，Muon 实际运行的迭代只会损害保证。我们证明，有限步 Newton-Schulz 反而能够有益于非光滑非凸优化。为此，我们通过在线到非凸转换分析 Muon；该转换把更新规则视为在线学习器，并将其遗憾界转换为驻点保证。有限步 Newton-Schulz 迭代把不连续的极映射平滑为关于奇异值的 Lipschitz 映射，而采用有限步 Newton-Schulz 的 Muon 可以被视为具有平滑谱势函数的在线学习器。这种平滑化恰好是该转换所需要的：我们证明，只需让 Newton-Schulz 深度随目标精度按对数增长，就足以保证在非光滑非凸优化中收敛到驻点；相比之下，采用精确极更新的 Muon 可能无法收敛。所得样本复杂度界与非光滑非凸优化的当前最佳已知保证相匹配，并且对于光滑非凸优化，除与问题相关的因子外是最优的。该论证还能从 Newton-Schulz 推广到具有相同平滑性质的一般谱映射。",
+      "contributions": [
+        "把有限步 Newton-Schulz 从单纯逼近误差重新解释为对不连续极映射的谱平滑。",
+        "通过在线到非凸转换，把在线学习器的遗憾界转化为非光滑非凸问题的驻点保证。",
+        "摘要声称对数级 Newton-Schulz 深度即可收敛，并给出与已知最佳非光滑界匹配、在光滑情形近最优的样本复杂度。"
+      ],
+      "method": "将 Muon 更新写成具有平滑谱势函数的在线学习器，分析有限 Newton-Schulz 产生的 Lipschitz 奇异值映射，再借助在线到非凸转换从遗憾界推出驻点复杂度。",
+      "result": "摘要报告：Newton-Schulz 深度只需随目标精度对数增长；有限步版本可在非光滑非凸问题上收敛，而精确极更新可能失败；复杂度匹配非光滑非凸的最佳已知保证，并在光滑非凸情形达到除问题因子外的最优阶。",
+      "selection_reason": "它直接连接当前大模型预训练优化器与非凸理论，并给出反直觉的机制增量：实现中的近似可能是保证成立的原因，而不是需要被消掉的误差。",
+      "evidence_limit": "当前仅依据摘要。需全文核验在线到非凸转换的具体假设、驻点定义、样本复杂度中的问题相关因子、Newton-Schulz 数值稳定性，以及理论是否覆盖实际 Muon 的动量、权重衰减与矩阵分组实现。",
+      "reading_decision": "精读"
+    },
+    "Dense Weak Hiding: Closing Complexity Gaps in Nonconvex and PL Finite-Sum Optimization under Individual Smoothness": {
+      "title_zh": "稠密弱隐藏：弥合个体光滑条件下非凸与 PL 有限和优化的复杂度缺口",
+      "summary": "该文用稠密弱隐藏构造补齐非凸有限和 IFO 下界缺失的 √n 因子，并在此前未覆盖的小 κ_max PL 区域给出新下界和近匹配的 Restarted PAGE。",
+      "abstract_zh": "在个体光滑条件下，非凸有限和优化的最优增量一阶预言机（IFO）复杂度仍是一个开放问题。已知算法使用 $O(n+\\sqrt n\\,ΔL_{\\max}/\\varepsilon^2)$ 次调用，而现有下界在第二项中缺少因子 $\\sqrt n$。我们对随机化 IFO 算法证明了匹配下界 $Ω(n+\\sqrt n\\,ΔL_{\\max}/\\varepsilon^2)$，其中也包括那些能够从此前全部历史中选择分量索引和查询点的算法。因此，在个体光滑和均方光滑条件下，PAGE 与 SPIDER 在相差通用常数的意义下是极小极大最优的。\n\n在全局 Polyak--Lojasiewicz（PL）条件下，我们使用类似思想，对较大的 $κ_{\\max}$ 得到下界 $Ω(n+κ_{\\max}\\sqrt n\\log(Δ/\\varepsilon))$。现有 PL 下界只关注相对较大的 $κ$。对于此前未被研究的 $κ_{\\max}<\\sqrt n$ 区域，我们发现一个新速率：$Ω(n+n\\log(Δ/\\varepsilon)/(1+\\log(\\sqrt n/κ_{\\max})))$。该下界促使我们提出 Restarted PAGE 算法；它的上界在较小 $κ_{\\max}$ 时与新速率匹配，并在较大 $κ_{\\max}$ 时恢复标准 PAGE 速率，说明上下界在两种情形下都近乎紧致。\n\n我们的下界采用所提出的稠密弱隐藏构造。它把每个隐藏方向分散到所有分量上，使一次单独的 IFO 查询只能揭示微弱信息，而完整平均仍然保留该方向。即使查询点可以任意选择，尚未揭示的阶段也保持不活跃，从而迫使算法进行许多次调用才能暴露一个阶段。通过在这种揭示成本与个体光滑性允许的阶段数量之间取得平衡，便得到缺失的 $\\sqrt n$ 因子。",
+      "contributions": [
+        "证明个体光滑下非凸有限和优化的匹配 IFO 下界，补齐第二项缺失的 √n 因子。",
+        "给出小 $κ_{\\max}$ PL 区域的新复杂度速率，并用 Restarted PAGE 提供近匹配上界。",
+        "提出稠密弱隐藏构造，使任意历史自适应查询仍需付出足够的方向揭示成本。"
+      ],
+      "method": "把隐藏方向稠密分散到全部分量，使单分量查询只泄露弱信息，并通过阶段式失活结构限制任意查询点的进展；再平衡每阶段揭示成本与光滑性允许的阶段数，构造非凸与 PL 下界。",
+      "result": "摘要报告非凸下界为 $Ω(n+\\sqrt n\\,ΔL_{\\max}/\\varepsilon^2)$；大 $κ_{\\max}$ 的 PL 下界为 $Ω(n+κ_{\\max}\\sqrt n\\log(Δ/\\varepsilon))$；小 $κ_{\\max}$ 出现新的分母含 $1+\\log(\\sqrt n/κ_{\\max})$ 的速率，并由 Restarted PAGE 近匹配。",
+      "selection_reason": "它直接落在用户的随机梯度、方差缩减和 PL 条件理论主线上，同时可能改变对 PAGE/SPIDER 最优性边界以及小条件数区域算法设计的判断。",
+      "evidence_limit": "当前仅依据摘要。需全文核验 IFO 模型、个体与均方光滑的精确定义、参数可行区间、隐藏构造是否依赖高维度，以及上下界之间剩余的对数项和通用常数。",
+      "reading_decision": "精读"
+    },
+    "The Exact Time-Uniform Rate Frontier for Stochastic Gradient Descent on Smooth Convex Objectives": {
+      "title_zh": "光滑凸目标上随机梯度下降的精确时间一致速率前沿",
+      "summary": "该文刻画标准 SGD 原始迭代点可同时对所有时刻成立的收敛速率边界：速率能任意逼近 $\\sqrt{\\log n/n}$，但不能达到该边界。",
+      "abstract_zh": "我们研究标准随机梯度下降（SGD）在无约束光滑凸目标上的原始迭代点之时间一致收敛性。我们证明，在标准噪声假设下，时间一致收敛速率可以任意接近 $\\sqrt{\\log n/n}$，但永远无法达到它。更具体地，对每个正的、最终非递减且满足 $h(n)=o(\\sqrt n)$ 的序列 $h$，当且仅当\n\n$\\sum_{j=1}^{\\infty} 1/h(2^j)^2 < \\infty$\n\n时，才存在一个 $h(n)/\\sqrt n$ 阶的界，该界以至少 $1-\\alpha$ 的概率对所有 $n$ 同时成立，并且在问题类上是一致的。构造性的充分性结果来自一个二进制分段、无需预知时域的调度以及一个可加的条件重启不等式。必要性结果适用于每个确定性的非负调度，并且即使对于带高斯噪声的一维解析光滑凸目标也成立。",
+      "contributions": [
+        "给出 SGD 原始迭代点时间一致收敛速率的充要条件，而非单一终止时刻的上界。",
+        "以序列求和条件刻画可达的 $h(n)/\\sqrt n$ 速率，并证明 $\\sqrt{\\log n/n}$ 只能被逼近、不能达到。",
+        "充分性使用无需预知时域的二进制分段调度，必要性覆盖所有确定性非负调度。"
+      ],
+      "method": "构造二进制分段的 horizon-free 步长调度，结合可加条件重启不等式得到同时覆盖全部时刻的上界；再用一维解析光滑凸目标和高斯噪声建立普适必要性反例。",
+      "result": "摘要给出可达性充要条件 $\\sum_j 1/h(2^j)^2<\\infty$，并据此确定标准噪声下时间一致速率可无限逼近但不能达到 $\\sqrt{\\log n/n}$。",
+      "selection_reason": "它提供的是精确前沿而非松的充分条件，对分析 anytime SGD、停止规则和整条轨迹的高概率保证有直接基础价值。",
+      "evidence_limit": "当前仅依据摘要。需全文核验标准噪声假设、原始迭代点使用的步长类、概率界对置信度 $\\alpha$ 的常数依赖，以及结论能否扩展到受约束、强凸、非凸或自适应步长情形。",
+      "reading_decision": "精读"
+    },
+    "Quantile-based Loss Filtering for Outlier-Robust Stochastic Gradient Descent": {
+      "summary": "QkL-SGD 从每步抽取的 k 个分量损失中，在较低经验 q 分位集合内均匀选取更新，旨在避免标准 SGD 受污染梯度影响以及 min-k 反复选择近乎已解分量的问题。"
+    },
+    "Almost Sure Convergence Analysis of Stochastic Gradient Methods with Clipping and Additive Noise": {
+      "summary": "该文在光滑性、随机梯度噪声一致有界和衰减步长条件下，讨论带裁剪与高斯加噪声 SGD 及 heavy-ball、Nesterov 变体的几乎必然收敛。"
+    },
+    "Stochastic Gradient Descent over P2": {
+      "summary": "该文用 Lions 可微性把 Wasserstein 空间 $P_2$ 上的随机优化提升到 Hilbert 空间，并构造匹配均值与协方差的高斯随机场以获得二阶弱精度近似。"
+    },
+    "Stochastic gradient descent with initial regularization": {
+      "summary": "SGDIR 在平方损失下给出无维度期望超额风险界，并在特定源条件、容量参数区域报告近 $m^{-2}$ 或 $m^{-3+\\varepsilon}$ 的速率以及与岭回归的实例级比较。"
+    },
+    "How Much Rank Does LoRA Need? Rank-Error Bounds for Transformer Attention": {
+      "summary": "该文把 Transformer 注意力中的 LoRA 选秩问题转化为下游分布加权谱尾能量的上下界，并区分匹配注意力概率与匹配有限 logits 所需的秩。"
+    },
+    "Non-monotone direct-search methods for deterministic and stochastic derivative-free optimization": {
+      "summary": "max-M 非单调直接搜索允许相对最近 M 个不同迭代点的最大目标值暂时上升，并在确定性、概率下降和随机估计三种设置下报告 $O(\\varepsilon^{-2})$ 迭代复杂度。"
+    },
+    "Subspace Levenberg Marquardt Algorithms in Training Neural Networks": {
+      "summary": "该文比较 Krylov 与混合子空间 Levenberg-Marquardt、经典 LM、SGD 和 Adam，但摘要尚未给出模型规模、计算预算或量化结果，当前只适合跟踪。"
+    }
+  }
+}
