@@ -1,7 +1,7 @@
 # MpSub 全局推理：过程稿
 
 > **本文件由全局推理模式生成**（用户指令："帮我全局推理该文献中的公式、定理、假设和算法等"）。
-> 内容为推导草稿、跳步补证记录与量级审计，**不作教材使用**。定稿见 [全局推理.md](../../../04-equation_problem/MpSub_A_Momentum_p_Dimensional_Subspace_Trust_Region_Method_for_Derivative_Free_Fine_Tuning_of_Large_Language_Models/全局推理.md)。
+> 内容为推导草稿、跳步补证记录与量级审计，**不作教材使用**。定稿见 [全局推理.md](../../04-equation_problem/MpSub_A_Momentum_p_Dimensional_Subspace_Trust_Region_Method_for_Derivative_Free_Fine_Tuning_of_Large_Language_Models/全局推理.md)。
 > 配套交互问答笔记：[MpSub_..._精读笔记.md](MpSub_A_Momentum_p_Dimensional_Subspace_Trust_Region_Method_for_Derivative_Free_Fine_Tuning_of_Large_Language_Models_精读笔记.md)（本次为全局推理模式，该文件未被写入）。
 
 ## 0. 论文信息与编号还原
