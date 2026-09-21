@@ -94,8 +94,8 @@ weekly:
   enabled: true
   interval_days: 7            # 距上次分析满 7 天才再次运行（从首次调用日起算）
   window_days: 7              # 每次分析读取最近 N 天内的新增素材
-  start_date: ""              # 首次调用时由脚本自动写入，不要手改
-  last_run: ""                # 上次成功运行的日期，由脚本维护
+  start_date: "2026-09-21"
+  last_run: "2026-09-21"
   history_size: 40            # 送入分析的论文数量上限
   # 周报文件名：<周起始日>-第N周周报.md（N 从 start_date 起算）
   note_pattern: "{week_start}-第{week_no}周周报.md"
