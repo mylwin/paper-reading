@@ -1,0 +1,117 @@
+{
+  "date": "2026-09-22",
+  "note_file": "今日检索.md",
+  "generated_at": "2026-09-22T15:57:56",
+  "skill": "paper-daily",
+  "sources_searched": [
+    "arxiv",
+    "openreview"
+  ],
+  "source_counts": {
+    "arxiv": 10,
+    "openreview": 49
+  },
+  "date_windows": {
+    "recent_30d": {
+      "start": "2026-08-23",
+      "end": "2026-09-22"
+    },
+    "past_year": {
+      "start": "2025-09-22",
+      "end": "2026-08-22"
+    }
+  },
+  "total_unique": 27,
+  "top_papers": [
+    {
+      "title": "Efficient Fine-Tuning of Large Language Models with Zeroth-Order Model Parallelism",
+      "source": "openreview",
+      "arxiv_id": "",
+      "url": "https://openreview.net/forum?id=9wpm4fbBJI",
+      "note_filename": "Efficient_Fine_Tuning_of_Large_Language_Models_with_Zeroth_Order_Model_Parallelism",
+      "matched_domain": "大模型训练优化",
+      "score": 3.65
+    },
+    {
+      "title": "Low-Rank Geometry for Zeroth-Order Fine-Tuning of Black-Box Large Language Models",
+      "source": "openreview",
+      "arxiv_id": "",
+      "url": "https://openreview.net/forum?id=BClq0UuYzL",
+      "note_filename": "Low_Rank_Geometry_for_Zeroth_Order_Fine_Tuning_of_Black_Box_Large_Language_Models",
+      "matched_domain": "大模型训练优化",
+      "score": 4.82
+    },
+    {
+      "title": "Global Convergence of Sampling-Based Nonconvex Optimization through Diffusion-Style Smoothing",
+      "source": "openreview",
+      "arxiv_id": "",
+      "url": "https://openreview.net/forum?id=8Nx1ZjfEhd",
+      "note_filename": "Global_Convergence_of_Sampling_Based_Nonconvex_Optimization_through_Diffusion_Style_Smoothing",
+      "matched_domain": "随机梯度与优化理论",
+      "score": 5.07
+    },
+    {
+      "title": "Curvature-Aware Zeroth-Order Optimization for Memory-Efficient Test-Time Adaptation",
+      "source": "openreview",
+      "arxiv_id": "",
+      "url": "https://openreview.net/forum?id=Is8zPGxEyr",
+      "note_filename": "Curvature_Aware_Zeroth_Order_Optimization_for_Memory_Efficient_Test_Time_Adaptation",
+      "matched_domain": "无梯度大模型优化",
+      "score": 6.32
+    },
+    {
+      "title": "FOZO: Forward-Only Zeroth-Order Prompt Optimization for Test-Time Adaptation",
+      "source": "openreview",
+      "arxiv_id": "",
+      "url": "https://openreview.net/forum?id=P27TV5dzwB",
+      "note_filename": "FOZO_Forward_Only_Zeroth_Order_Prompt_Optimization_for_Test_Time_Adaptation",
+      "matched_domain": "无梯度大模型优化",
+      "score": 5.19
+    },
+    {
+      "title": "Spatially-Grounded Text-to-Video Generation via Inference-Time Gradient-Free Optimization",
+      "source": "openreview",
+      "arxiv_id": "",
+      "url": "https://openreview.net/forum?id=cjPdbt4RE9",
+      "note_filename": "Spatially_Grounded_Text_to_Video_Generation_via_Inference_Time_Gradient_Free_Optimization",
+      "matched_domain": "无梯度大模型优化",
+      "score": 6.52
+    },
+    {
+      "title": "ZOO-Prune: Training-Free Token Pruning via Zeroth-Order Gradient Estimation in Vision-Language Models",
+      "source": "openreview",
+      "arxiv_id": "",
+      "url": "https://openreview.net/forum?id=yTMAGdtYRi",
+      "note_filename": "ZOO_Prune_Training_Free_Token_Pruning_via_Zeroth_Order_Gradient_Estimation_in_Vision_Language_Models",
+      "matched_domain": "无梯度大模型优化",
+      "score": 3.85
+    },
+    {
+      "title": "NomadBBO: A direct-search framework for constrained mixed-variable blackbox optimization in Python",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2609.19333v1",
+      "note_filename": "NomadBBO_A_direct_search_framework_for_constrained_mixed_variable_blackbox_optimization_in_Python",
+      "matched_domain": "无梯度大模型优化",
+      "score": 5.5
+    },
+    {
+      "title": "Reinforcement learning to choose optimizers",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2609.01811v1",
+      "note_filename": "Reinforcement_learning_to_choose_optimizers",
+      "matched_domain": "无梯度大模型优化",
+      "score": 3.95
+    },
+    {
+      "title": "FedAdamom: Adaptive Momentum for Improved Generalization in Federated Optimization",
+      "source": "openreview",
+      "arxiv_id": "",
+      "url": "https://openreview.net/forum?id=rK5bKRkh5f",
+      "note_filename": "FedAdamom_Adaptive_Momentum_for_Improved_Generalization_in_Federated_Optimization",
+      "matched_domain": "随机梯度与优化理论",
+      "score": 3.51
+    }
+  ]
+}

@@ -1,0 +1,2108 @@
+{
+  "target_date": "2026-09-22",
+  "date_windows": {
+    "recent_30d": {
+      "start": "2026-08-23",
+      "end": "2026-09-22"
+    },
+    "past_year": {
+      "start": "2025-09-22",
+      "end": "2026-08-22"
+    }
+  },
+  "sources_searched": [
+    "arxiv",
+    "openreview"
+  ],
+  "source_counts": {
+    "arxiv": 10,
+    "openreview": 49
+  },
+  "papers_by_source": {
+    "arxiv": 10,
+    "openreview": 17
+  },
+  "known_dirs": {
+    "papers": "/Users/myl/Documents/paper/01-raw",
+    "notes": "/Users/myl/Documents/paper/03-notes",
+    "daily": "/Users/myl/Documents/paper/08-daily"
+  },
+  "total_recent": 59,
+  "total_hot": 0,
+  "total_unique": 27,
+  "total_known": 8,
+  "total_candidates": 19,
+  "all_papers": [
+    {
+      "title": "Gradient-Free Optimization for Matrix functions",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "venue": "",
+      "url": "http://arxiv.org/abs/2609.03170v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.03170v1",
+      "published": "2026-09-02T21:13:07Z",
+      "authors": [
+        "Sawyer Allen",
+        "Cash Cherry",
+        "Aidan Eck",
+        "Stephen Becker",
+        "Daniel McKenzie"
+      ],
+      "paper_stem": "Gradient_Free_Optimization_for_Matrix_functions",
+      "matched_domain": "无梯度大模型优化",
+      "matched_keywords": [
+        "gradient-free optimization",
+        "math.OC"
+      ],
+      "already_known": true,
+      "kb_source": "pdf",
+      "related_papers": [
+        {
+          "title": "Gradient Free Optimization for Matrix functions",
+          "stem": "gradientfreeoptimizationformatrixfunctions",
+          "source": "pdf",
+          "path": "/Users/myl/Documents/paper/01-raw/2026-09/Gradient_Free_Optimization_for_Matrix_functions.pdf",
+          "shared_terms": [
+            "functions",
+            "matrix"
+          ],
+          "shared_count": 2
+        }
+      ],
+      "score": 8.28
+    },
+    {
+      "title": "Adaptively Incorporating Directional Hints into Zeroth-Order Optimization",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "venue": "",
+      "url": "http://arxiv.org/abs/2609.08277v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.08277v1",
+      "published": "2026-09-08T05:42:02Z",
+      "authors": [
+        "Alexander Ryabchenko",
+        "Jian Qian",
+        "Wenlong Mou"
+      ],
+      "paper_stem": "Adaptively_Incorporating_Directional_Hints_into_Zeroth_Order_Optimization",
+      "matched_domain": "无梯度大模型优化",
+      "matched_keywords": [
+        "zeroth-order optimization",
+        "cs.LG",
+        "math.OC"
+      ],
+      "already_known": true,
+      "kb_source": "pdf",
+      "related_papers": [
+        {
+          "title": "Adaptively Incorporating Directional Hints into Zeroth Order Optimization",
+          "stem": "adaptivelyincorporatingdirectionalhintsintozerothorderoptimization",
+          "source": "pdf",
+          "path": "/Users/myl/Documents/paper/01-raw/2026-09/Adaptively_Incorporating_Directional_Hints_into_Zeroth_Order_Optimization.pdf",
+          "shared_terms": [
+            "adaptively",
+            "directional",
+            "hints",
+            "incorporating",
+            "into"
+          ],
+          "shared_count": 5
+        },
+        {
+          "title": "AdaMeZO: Adam-style Zeroth-Order Optimizer for LLM Fine-tuning Without Maintaining the Moments",
+          "stem": "adamezoadamstylezerothorderoptimizerforllmfinetuningwithoutmaintainingthemoments",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-20/search_result.json",
+          "shared_terms": [
+            "zeroth-order"
+          ],
+          "shared_count": 1
+        },
+        {
+          "title": "AGZO: Activation-Guided Zeroth-Order Optimization for LLM Fine-Tuning",
+          "stem": "agzoactivationguidedzerothorderoptimizationforllmfinetuning",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-20/search_result.json",
+          "shared_terms": [
+            "zeroth-order"
+          ],
+          "shared_count": 1
+        }
+      ],
+      "score": 8.08
+    },
+    {
+      "title": "Non-monotone direct-search methods for deterministic and stochastic derivative-free optimization",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "venue": "",
+      "url": "http://arxiv.org/abs/2609.11567v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.11567v1",
+      "published": "2026-09-10T13:59:55Z",
+      "authors": [
+        "Anjie Ding",
+        "Trang H. Tran",
+        "Luis Nunes Vicente"
+      ],
+      "paper_stem": "Non_monotone_direct_search_methods_for_deterministic_and_stochastic_derivative_free_optimization",
+      "matched_domain": "无梯度大模型优化",
+      "matched_keywords": [
+        "derivative-free optimization",
+        "math.OC"
+      ],
+      "already_known": true,
+      "kb_source": "daily",
+      "related_papers": [
+        {
+          "title": "Non-monotone direct-search methods for deterministic and stochastic derivative-free optimization",
+          "stem": "nonmonotonedirectsearchmethodsfordeterministicandstochasticderivativefreeoptimization",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-21/search_result.json",
+          "shared_terms": [
+            "derivative-free",
+            "deterministic",
+            "direct-search",
+            "non-monotone",
+            "stochastic"
+          ],
+          "shared_count": 5
+        },
+        {
+          "title": "Almost Sure Convergence Analysis of Stochastic Gradient Methods with Clipping and Additive Noise",
+          "stem": "almostsureconvergenceanalysisofstochasticgradientmethodswithclippingandadditivenoise",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-21/search_result.json",
+          "shared_terms": [
+            "stochastic"
+          ],
+          "shared_count": 1
+        },
+        {
+          "title": "MpSub: A Momentum $p$-Dimensional Subspace Trust-Region Method for Derivative-Free Fine-Tuning of Large Language Models",
+          "stem": "mpsubamomentumpdimensionalsubspacetrustregionmethodforderivativefreefinetuningoflargelanguagemodels",
+          "source": "pdf",
+          "path": "/Users/myl/Documents/paper/01-raw/2026-09/MpSub_A_Momentum_$p$_Dimensional_Subspace_Trust_Region_Method_for_Derivative_Free_Fine_Tuning_of_Large_Language_Models.pdf",
+          "shared_terms": [
+            "derivative-free"
+          ],
+          "shared_count": 1
+        }
+      ],
+      "score": 7.95
+    },
+    {
+      "title": "Powell-Style Model-Based Derivative-Free Optimization with Complexity Guarantees",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "venue": "",
+      "url": "http://arxiv.org/abs/2609.09441v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.09441v1",
+      "published": "2026-09-08T20:50:18Z",
+      "authors": [
+        "Abraar Chaudhry",
+        "Katya Scheinberg",
+        "Scholar Sun"
+      ],
+      "paper_stem": "Powell_Style_Model_Based_Derivative_Free_Optimization_with_Complexity_Guarantees",
+      "matched_domain": "无梯度大模型优化",
+      "matched_keywords": [
+        "derivative-free optimization",
+        "math.OC"
+      ],
+      "already_known": true,
+      "kb_source": "pdf",
+      "related_papers": [
+        {
+          "title": "Powell Style Model Based Derivative Free Optimization with Complexity Guarantees",
+          "stem": "powellstylemodelbasedderivativefreeoptimizationwithcomplexityguarantees",
+          "source": "pdf",
+          "path": "/Users/myl/Documents/paper/01-raw/2026-09/Powell_Style_Model_Based_Derivative_Free_Optimization_with_Complexity_Guarantees.pdf",
+          "shared_terms": [
+            "complexity",
+            "guarantees"
+          ],
+          "shared_count": 2
+        },
+        {
+          "title": "Amortized Low-Rank Adaptation for Model-Based Reinforcement Learning",
+          "stem": "amortizedlowrankadaptationformodelbasedreinforcementlearning",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-17/search_result.json",
+          "shared_terms": [
+            "model-based"
+          ],
+          "shared_count": 1
+        },
+        {
+          "title": "Dense Weak Hiding: Closing Complexity Gaps in Nonconvex and PL Finite-Sum Optimization under Individual Smoothness",
+          "stem": "denseweakhidingclosingcomplexitygapsinnonconvexandplfinitesumoptimizationunderindividualsmoothness",
+          "source": "pdf",
+          "path": "/Users/myl/Documents/paper/01-raw/2026-09/Dense_Weak_Hiding_Closing_Complexity_Gaps_in_Nonconvex_and_PL_Finite_Sum_Optimization_under_Individual_Smoothness.pdf",
+          "shared_terms": [
+            "complexity"
+          ],
+          "shared_count": 1
+        }
+      ],
+      "score": 7.62
+    },
+    {
+      "title": "Spatially-Grounded Text-to-Video Generation via Inference-Time Gradient-Free Optimization",
+      "source": "openreview",
+      "arxiv_id": "",
+      "venue": "MUCG",
+      "url": "https://openreview.net/forum?id=cjPdbt4RE9",
+      "pdf_url": "https://openreview.net/pdf/7549c671e5f1d0459e505df3e6574e7c17e8ce40.pdf",
+      "published": "2026-09-04T23:57:59.823000",
+      "authors": [
+        "Guillaume Jeanneret",
+        "Mathis Koroglu",
+        "Hugo Caselles-Dupré",
+        "Arnaud Dapogny",
+        "Matthieu Cord"
+      ],
+      "paper_stem": "Spatially_Grounded_Text_to_Video_Generation_via_Inference_Time_Gradient_Free_Optimization",
+      "matched_domain": "无梯度大模型优化",
+      "matched_keywords": [
+        "gradient-free optimization"
+      ],
+      "already_known": false,
+      "kb_source": "",
+      "related_papers": [],
+      "score": 6.52
+    },
+    {
+      "title": "Curvature-Aware Zeroth-Order Optimization for Memory-Efficient Test-Time Adaptation",
+      "source": "openreview",
+      "arxiv_id": "",
+      "venue": "CVPR 2026",
+      "url": "https://openreview.net/forum?id=Is8zPGxEyr",
+      "pdf_url": "https://openaccess.thecvf.com/content/CVPR2026/papers/Zhang_Curvature-Aware_Zeroth-Order_Optimization_for_Memory-Efficient_Test-Time_Adaptation_CVPR_2026_paper.pdf",
+      "published": "2026-09-17T22:47:17.028000",
+      "authors": [
+        "Junming Zhang",
+        "Shuyu Yin",
+        "Peilin Liu",
+        "Rendong Ying",
+        "Fei Wen"
+      ],
+      "paper_stem": "Curvature_Aware_Zeroth_Order_Optimization_for_Memory_Efficient_Test_Time_Adaptation",
+      "matched_domain": "无梯度大模型优化",
+      "matched_keywords": [
+        "zeroth-order optimization"
+      ],
+      "already_known": false,
+      "kb_source": "",
+      "related_papers": [
+        {
+          "title": "AdaMeZO: Adam-style Zeroth-Order Optimizer for LLM Fine-tuning Without Maintaining the Moments",
+          "stem": "adamezoadamstylezerothorderoptimizerforllmfinetuningwithoutmaintainingthemoments",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-20/search_result.json",
+          "shared_terms": [
+            "zeroth-order"
+          ],
+          "shared_count": 1
+        },
+        {
+          "title": "AGZO: Activation-Guided Zeroth-Order Optimization for LLM Fine-Tuning",
+          "stem": "agzoactivationguidedzerothorderoptimizationforllmfinetuning",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-20/search_result.json",
+          "shared_terms": [
+            "zeroth-order"
+          ],
+          "shared_count": 1
+        },
+        {
+          "title": "Amortized Low-Rank Adaptation for Model-Based Reinforcement Learning",
+          "stem": "amortizedlowrankadaptationformodelbasedreinforcementlearning",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-17/search_result.json",
+          "shared_terms": [
+            "adaptation"
+          ],
+          "shared_count": 1
+        }
+      ],
+      "score": 6.32
+    },
+    {
+      "title": "Zeroth-Order Nonsmooth Nonconvex Optimization with Convex Liftings and Its Application to State-Feedback $H_\\infty$ Policy Optimization",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "venue": "",
+      "url": "http://arxiv.org/abs/2608.23178v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.23178v1",
+      "published": "2026-08-24T12:26:32Z",
+      "authors": [
+        "Xuhao Wang",
+        "Yujie Tang"
+      ],
+      "paper_stem": "Zeroth_Order_Nonsmooth_Nonconvex_Optimization_with_Convex_Liftings_and_Its_Application_to_State_Feedback_$H_infty$_Polic",
+      "matched_domain": "无梯度大模型优化",
+      "matched_keywords": [
+        "zeroth-order optimization",
+        "math.OC"
+      ],
+      "already_known": true,
+      "kb_source": "daily",
+      "related_papers": [
+        {
+          "title": "Zeroth-Order Nonsmooth Nonconvex Optimization with Convex Liftings and Its Application to State-Feedback $H_\\infty$ Policy Optimization",
+          "stem": "inftypolicyoptimization",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-18/search_result.json",
+          "shared_terms": [
+            "application",
+            "convex",
+            "infty",
+            "liftings",
+            "nonconvex",
+            "nonsmooth",
+            "policy",
+            "state-feedback",
+            "zeroth-order"
+          ],
+          "shared_count": 9
+        },
+        {
+          "title": "Muon with Finite Newton-Schulz: The Smoothing Benefit in Nonsmooth Nonconvex Optimization",
+          "stem": "muonwithfinitenewtonschulzthesmoothingbenefitinnonsmoothnonconvexoptimization",
+          "source": "pdf",
+          "path": "/Users/myl/Documents/paper/01-raw/2026-09/Muon_with_Finite_Newton_Schulz_The_Smoothing_Benefit_in_Nonsmooth_Nonconvex_Optimization.pdf",
+          "shared_terms": [
+            "nonconvex",
+            "nonsmooth"
+          ],
+          "shared_count": 2
+        }
+      ],
+      "score": 5.5
+    },
+    {
+      "title": "NomadBBO: A direct-search framework for constrained mixed-variable blackbox optimization in Python",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "venue": "",
+      "url": "http://arxiv.org/abs/2609.19333v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.19333v1",
+      "published": "2026-09-16T19:01:10Z",
+      "authors": [
+        "Edward Hallé-Hannan",
+        "Christophe Tribes"
+      ],
+      "paper_stem": "NomadBBO_A_direct_search_framework_for_constrained_mixed_variable_blackbox_optimization_in_Python",
+      "matched_domain": "无梯度大模型优化",
+      "matched_keywords": [
+        "derivative-free optimization",
+        "math.OC"
+      ],
+      "already_known": false,
+      "kb_source": "",
+      "related_papers": [
+        {
+          "title": "Non-monotone direct-search methods for deterministic and stochastic derivative-free optimization",
+          "stem": "nonmonotonedirectsearchmethodsfordeterministicandstochasticderivativefreeoptimization",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-21/search_result.json",
+          "shared_terms": [
+            "direct-search"
+          ],
+          "shared_count": 1
+        }
+      ],
+      "score": 5.5
+    },
+    {
+      "title": "MpSub: A Momentum $p$-Dimensional Subspace Trust-Region Method for Derivative-Free Fine-Tuning of Large Language Models",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "venue": "",
+      "url": "http://arxiv.org/abs/2609.07666v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.07666v1",
+      "published": "2026-09-07T15:51:11Z",
+      "authors": [
+        "Yuyang Wang",
+        "Haoyu Yao",
+        "Pengcheng Xie"
+      ],
+      "paper_stem": "MpSub_A_Momentum_$p$_Dimensional_Subspace_Trust_Region_Method_for_Derivative_Free_Fine_Tuning_of_Large_Language_Models",
+      "matched_domain": "无梯度大模型优化",
+      "matched_keywords": [
+        "zeroth-order optimization",
+        "MeZO",
+        "cs.LG",
+        "math.OC"
+      ],
+      "already_known": true,
+      "kb_source": "pdf",
+      "related_papers": [
+        {
+          "title": "MpSub: A Momentum $p$-Dimensional Subspace Trust-Region Method for Derivative-Free Fine-Tuning of Large Language Models",
+          "stem": "mpsubamomentumpdimensionalsubspacetrustregionmethodforderivativefreefinetuningoflargelanguagemodels",
+          "source": "pdf",
+          "path": "/Users/myl/Documents/paper/01-raw/2026-09/MpSub_A_Momentum_$p$_Dimensional_Subspace_Trust_Region_Method_for_Derivative_Free_Fine_Tuning_of_Large_Language_Models.pdf",
+          "shared_terms": [
+            "derivative-free",
+            "dimensional",
+            "fine-tuning",
+            "language",
+            "large",
+            "momentum",
+            "mpsub",
+            "subspace",
+            "trust-region"
+          ],
+          "shared_count": 9
+        },
+        {
+          "title": "GRZO: Group-Relative Zeroth-Order Optimization for Large Language Model Fine-Tuning",
+          "stem": "grzogrouprelativezerothorderoptimizationforlargelanguagemodelfinetuning",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-20/search_result.json",
+          "shared_terms": [
+            "fine-tuning",
+            "language",
+            "large"
+          ],
+          "shared_count": 3
+        },
+        {
+          "title": "ConMeZO Adaptive Descent Direction Sampling for Gradient Free Finetuning of Large Language Models",
+          "stem": "conmezoadaptivedescentdirectionsamplingforgradientfreefinetuningoflargelanguagemodels",
+          "source": "pdf",
+          "path": "/Users/myl/Documents/paper/01-raw/2026-09/ConMeZO_Adaptive_Descent_Direction_Sampling_for_Gradient_Free_Finetuning_of_Large_Language_Models.pdf",
+          "shared_terms": [
+            "language",
+            "large"
+          ],
+          "shared_count": 2
+        }
+      ],
+      "score": 5.32
+    },
+    {
+      "title": "FOZO: Forward-Only Zeroth-Order Prompt Optimization for Test-Time Adaptation",
+      "source": "openreview",
+      "arxiv_id": "",
+      "venue": "CVPR 2026",
+      "url": "https://openreview.net/forum?id=P27TV5dzwB",
+      "pdf_url": "https://openaccess.thecvf.com/content/CVPR2026/papers/Wang_FOZO_Forward-Only_Zeroth-Order_Prompt_Optimization_for_Test-Time_Adaptation_CVPR_2026_paper.pdf",
+      "published": "2026-09-17T22:47:17.347000",
+      "authors": [
+        "Xingyu Wang",
+        "Tao Wang"
+      ],
+      "paper_stem": "FOZO_Forward_Only_Zeroth_Order_Prompt_Optimization_for_Test_Time_Adaptation",
+      "matched_domain": "无梯度大模型优化",
+      "matched_keywords": [
+        "zeroth-order optimization",
+        "zeroth-order gradient estimation"
+      ],
+      "already_known": false,
+      "kb_source": "",
+      "related_papers": [
+        {
+          "title": "AdaMeZO: Adam-style Zeroth-Order Optimizer for LLM Fine-tuning Without Maintaining the Moments",
+          "stem": "adamezoadamstylezerothorderoptimizerforllmfinetuningwithoutmaintainingthemoments",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-20/search_result.json",
+          "shared_terms": [
+            "zeroth-order"
+          ],
+          "shared_count": 1
+        },
+        {
+          "title": "AGZO: Activation-Guided Zeroth-Order Optimization for LLM Fine-Tuning",
+          "stem": "agzoactivationguidedzerothorderoptimizationforllmfinetuning",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-20/search_result.json",
+          "shared_terms": [
+            "zeroth-order"
+          ],
+          "shared_count": 1
+        },
+        {
+          "title": "Amortized Low-Rank Adaptation for Model-Based Reinforcement Learning",
+          "stem": "amortizedlowrankadaptationformodelbasedreinforcementlearning",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-17/search_result.json",
+          "shared_terms": [
+            "adaptation"
+          ],
+          "shared_count": 1
+        }
+      ],
+      "score": 5.19
+    },
+    {
+      "title": "Global Convergence of Sampling-Based Nonconvex Optimization through Diffusion-Style Smoothing",
+      "source": "openreview",
+      "arxiv_id": "",
+      "venue": "Accepted by TMLR",
+      "url": "https://openreview.net/forum?id=8Nx1ZjfEhd",
+      "pdf_url": "https://openreview.net/pdf/b050c7f3bd69ba649f01fb0b8398a95dc82ff1ac.pdf",
+      "published": "2026-09-07T20:23:28.007000",
+      "authors": [
+        "Zeji Yi",
+        "Chaoyi Pan",
+        "Guanya Shi",
+        "Guannan Qu"
+      ],
+      "paper_stem": "Global_Convergence_of_Sampling_Based_Nonconvex_Optimization_through_Diffusion_Style_Smoothing",
+      "matched_domain": "随机梯度与优化理论",
+      "matched_keywords": [
+        "gradient-free optimization",
+        "gradient descent",
+        "convergence analysis",
+        "nonconvex optimization"
+      ],
+      "already_known": false,
+      "kb_source": "",
+      "related_papers": [
+        {
+          "title": "Muon with Finite Newton-Schulz: The Smoothing Benefit in Nonsmooth Nonconvex Optimization",
+          "stem": "muonwithfinitenewtonschulzthesmoothingbenefitinnonsmoothnonconvexoptimization",
+          "source": "pdf",
+          "path": "/Users/myl/Documents/paper/01-raw/2026-09/Muon_with_Finite_Newton_Schulz_The_Smoothing_Benefit_in_Nonsmooth_Nonconvex_Optimization.pdf",
+          "shared_terms": [
+            "nonconvex",
+            "smoothing"
+          ],
+          "shared_count": 2
+        },
+        {
+          "title": "Almost Sure Convergence Analysis of Stochastic Gradient Methods with Clipping and Additive Noise",
+          "stem": "almostsureconvergenceanalysisofstochasticgradientmethodswithclippingandadditivenoise",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-21/search_result.json",
+          "shared_terms": [
+            "convergence"
+          ],
+          "shared_count": 1
+        },
+        {
+          "title": "Dense Weak Hiding: Closing Complexity Gaps in Nonconvex and PL Finite-Sum Optimization under Individual Smoothness",
+          "stem": "denseweakhidingclosingcomplexitygapsinnonconvexandplfinitesumoptimizationunderindividualsmoothness",
+          "source": "pdf",
+          "path": "/Users/myl/Documents/paper/01-raw/2026-09/Dense_Weak_Hiding_Closing_Complexity_Gaps_in_Nonconvex_and_PL_Finite_Sum_Optimization_under_Individual_Smoothness.pdf",
+          "shared_terms": [
+            "nonconvex"
+          ],
+          "shared_count": 1
+        }
+      ],
+      "score": 5.07
+    },
+    {
+      "title": "Low-Rank Geometry for Zeroth-Order Fine-Tuning of Black-Box Large Language Models",
+      "source": "openreview",
+      "arxiv_id": "",
+      "venue": "Accepted by TMLR",
+      "url": "https://openreview.net/forum?id=BClq0UuYzL",
+      "pdf_url": "https://openreview.net/pdf/9fc7f705e38a402ac342631668ada59a34d1ba19.pdf",
+      "published": "2026-09-15T21:56:59.677000",
+      "authors": [
+        "Zichen Song",
+        "Weijia Li"
+      ],
+      "paper_stem": "Low_Rank_Geometry_for_Zeroth_Order_Fine_Tuning_of_Black_Box_Large_Language_Models",
+      "matched_domain": "大模型训练优化",
+      "matched_keywords": [
+        "zeroth-order optimization",
+        "optimizer",
+        "LoRA",
+        "ZeRO"
+      ],
+      "already_known": false,
+      "kb_source": "",
+      "related_papers": [
+        {
+          "title": "GRZO: Group-Relative Zeroth-Order Optimization for Large Language Model Fine-Tuning",
+          "stem": "grzogrouprelativezerothorderoptimizationforlargelanguagemodelfinetuning",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-20/search_result.json",
+          "shared_terms": [
+            "fine-tuning",
+            "language",
+            "large",
+            "zeroth-order"
+          ],
+          "shared_count": 4
+        },
+        {
+          "title": "MpSub: A Momentum $p$-Dimensional Subspace Trust-Region Method for Derivative-Free Fine-Tuning of Large Language Models",
+          "stem": "mpsubamomentumpdimensionalsubspacetrustregionmethodforderivativefreefinetuningoflargelanguagemodels",
+          "source": "pdf",
+          "path": "/Users/myl/Documents/paper/01-raw/2026-09/MpSub_A_Momentum_$p$_Dimensional_Subspace_Trust_Region_Method_for_Derivative_Free_Fine_Tuning_of_Large_Language_Models.pdf",
+          "shared_terms": [
+            "fine-tuning",
+            "language",
+            "large"
+          ],
+          "shared_count": 3
+        },
+        {
+          "title": "SubZero+: Efficient Zeroth-Order LLM Fine-Tuning via Large Learning Rates",
+          "stem": "subzeroefficientzerothorderllmfinetuningvialargelearningrates",
+          "source": "pdf",
+          "path": "/Users/myl/Documents/paper/01-raw/2026-09/SubZero+_Efficient_Zeroth_Order_LLM_Fine_Tuning_via_Large_Learning_Rates.pdf",
+          "shared_terms": [
+            "fine-tuning",
+            "large",
+            "zeroth-order"
+          ],
+          "shared_count": 3
+        }
+      ],
+      "score": 4.82
+    },
+    {
+      "title": "Scalable Lindblad Noise Learning via Stochastic Tensor-Network Simulation",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "venue": "",
+      "url": "http://arxiv.org/abs/2608.24668v2",
+      "pdf_url": "https://arxiv.org/pdf/2608.24668v2",
+      "published": "2026-08-25T15:07:11Z",
+      "authors": [
+        "Alejandro R. Ramos Ramos",
+        "Maximilian Fröhlich",
+        "Aaron Sander",
+        "Robert Wille",
+        "Martin Eigel",
+        "Patrick Gelß",
+        "Sebastian Pokutta"
+      ],
+      "paper_stem": "Scalable_Lindblad_Noise_Learning_via_Stochastic_Tensor_Network_Simulation",
+      "matched_domain": "无梯度大模型优化",
+      "matched_keywords": [
+        "gradient-free optimization"
+      ],
+      "already_known": true,
+      "kb_source": "daily",
+      "related_papers": [
+        {
+          "title": "Scalable Lindblad Noise Learning via Stochastic Tensor-Network Simulation",
+          "stem": "scalablelindbladnoiselearningviastochastictensornetworksimulation",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-18/search_result.json",
+          "shared_terms": [
+            "lindblad",
+            "noise",
+            "scalable",
+            "simulation",
+            "stochastic",
+            "tensor-network"
+          ],
+          "shared_count": 6
+        },
+        {
+          "title": "Almost Sure Convergence Analysis of Stochastic Gradient Methods with Clipping and Additive Noise",
+          "stem": "almostsureconvergenceanalysisofstochasticgradientmethodswithclippingandadditivenoise",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-21/search_result.json",
+          "shared_terms": [
+            "noise",
+            "stochastic"
+          ],
+          "shared_count": 2
+        },
+        {
+          "title": "The Noise Geometry of Stochastic Gradient Descent",
+          "stem": "thenoisegeometryofstochasticgradientdescent",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-17/search_result.json",
+          "shared_terms": [
+            "noise",
+            "stochastic"
+          ],
+          "shared_count": 2
+        }
+      ],
+      "score": 4.06
+    },
+    {
+      "title": "Escaping Low-Dimensional Overlap: Multi-Task Model Merging via High-Dimensional Sparse Disentanglement",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "venue": "",
+      "url": "http://arxiv.org/abs/2608.25354v1",
+      "pdf_url": "https://arxiv.org/pdf/2608.25354v1",
+      "published": "2026-08-26T04:16:31Z",
+      "authors": [
+        "Yihang Zhang",
+        "Shengke Sun",
+        "Junjie Wen",
+        "Feng Zeng"
+      ],
+      "paper_stem": "Escaping_Low_Dimensional_Overlap_Multi_Task_Model_Merging_via_High_Dimensional_Sparse_Disentanglement",
+      "matched_domain": "无梯度大模型优化",
+      "matched_keywords": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "already_known": true,
+      "kb_source": "daily",
+      "related_papers": [
+        {
+          "title": "Escaping Low-Dimensional Overlap: Multi-Task Model Merging via High-Dimensional Sparse Disentanglement",
+          "stem": "escapinglowdimensionaloverlapmultitaskmodelmergingviahighdimensionalsparsedisentanglement",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-18/search_result.json",
+          "shared_terms": [
+            "disentanglement",
+            "escaping",
+            "high-dimensional",
+            "low-dimensional",
+            "merging",
+            "multi-task",
+            "overlap",
+            "sparse"
+          ],
+          "shared_count": 8
+        },
+        {
+          "title": "CurvZO: Adaptive Curvature-Guided Sparse Zeroth-Order Optimization for Efficient LLM Fine-Tuning",
+          "stem": "curvzoadaptivecurvatureguidedsparsezerothorderoptimizationforefficientllmfinetuning",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-20/search_result.json",
+          "shared_terms": [
+            "sparse"
+          ],
+          "shared_count": 1
+        },
+        {
+          "title": "Hyper-ES: Effective Evolution Strategies for LLM Reasoning via Descent Direction Merging",
+          "stem": "hypereseffectiveevolutionstrategiesforllmreasoningviadescentdirectionmerging",
+          "source": "pdf",
+          "path": "/Users/myl/Documents/paper/01-raw/2026-09/Hyper_ES_Effective_Evolution_Strategies_for_LLM_Reasoning_via_Descent_Direction_Merging.pdf",
+          "shared_terms": [
+            "merging"
+          ],
+          "shared_count": 1
+        }
+      ],
+      "score": 3.95
+    },
+    {
+      "title": "Reinforcement learning to choose optimizers",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "venue": "",
+      "url": "http://arxiv.org/abs/2609.01811v1",
+      "pdf_url": "https://arxiv.org/pdf/2609.01811v1",
+      "published": "2026-09-01T19:35:31Z",
+      "authors": [
+        "Martin van der Schelling",
+        "Deepesh Toshniwal",
+        "Miguel A. Bessa"
+      ],
+      "paper_stem": "Reinforcement_learning_to_choose_optimizers",
+      "matched_domain": "无梯度大模型优化",
+      "matched_keywords": [
+        "cs.LG",
+        "math.OC"
+      ],
+      "already_known": false,
+      "kb_source": "",
+      "related_papers": [
+        {
+          "title": "Amortized Low-Rank Adaptation for Model-Based Reinforcement Learning",
+          "stem": "amortizedlowrankadaptationformodelbasedreinforcementlearning",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-17/search_result.json",
+          "shared_terms": [
+            "reinforcement"
+          ],
+          "shared_count": 1
+        }
+      ],
+      "score": 3.95
+    },
+    {
+      "title": "ZOO-Prune: Training-Free Token Pruning via Zeroth-Order Gradient Estimation in Vision-Language Models",
+      "source": "openreview",
+      "arxiv_id": "",
+      "venue": "CVPR 2026",
+      "url": "https://openreview.net/forum?id=yTMAGdtYRi",
+      "pdf_url": "https://openaccess.thecvf.com/content/CVPR2026/papers/Kim_ZOO-Prune_Training-Free_Token_Pruning_via_Zeroth-Order_Gradient_Estimation_in_Vision-Language_CVPR_2026_paper.pdf",
+      "published": "2026-09-17T22:47:18.859000",
+      "authors": [
+        "Youngeun Kim",
+        "Youjia Zhang",
+        "Huiling Liu",
+        "Aecheon Jung",
+        "Sunwoo Lee",
+        "Sungeun Hong"
+      ],
+      "paper_stem": "ZOO_Prune_Training_Free_Token_Pruning_via_Zeroth_Order_Gradient_Estimation_in_Vision_Language_Models",
+      "matched_domain": "无梯度大模型优化",
+      "matched_keywords": [
+        "zeroth-order gradient estimation"
+      ],
+      "already_known": false,
+      "kb_source": "",
+      "related_papers": [
+        {
+          "title": "AdaMeZO: Adam-style Zeroth-Order Optimizer for LLM Fine-tuning Without Maintaining the Moments",
+          "stem": "adamezoadamstylezerothorderoptimizerforllmfinetuningwithoutmaintainingthemoments",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-20/search_result.json",
+          "shared_terms": [
+            "zeroth-order"
+          ],
+          "shared_count": 1
+        },
+        {
+          "title": "AGZO: Activation-Guided Zeroth-Order Optimization for LLM Fine-Tuning",
+          "stem": "agzoactivationguidedzerothorderoptimizationforllmfinetuning",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-20/search_result.json",
+          "shared_terms": [
+            "zeroth-order"
+          ],
+          "shared_count": 1
+        },
+        {
+          "title": "Almost Sure Convergence Analysis of Stochastic Gradient Methods with Clipping and Additive Noise",
+          "stem": "almostsureconvergenceanalysisofstochasticgradientmethodswithclippingandadditivenoise",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-21/search_result.json",
+          "shared_terms": [
+            "gradient"
+          ],
+          "shared_count": 1
+        }
+      ],
+      "score": 3.85
+    },
+    {
+      "title": "Efficient Fine-Tuning of Large Language Models with Zeroth-Order Model Parallelism",
+      "source": "openreview",
+      "arxiv_id": "",
+      "venue": "Accepted by TMLR",
+      "url": "https://openreview.net/forum?id=9wpm4fbBJI",
+      "pdf_url": "https://openreview.net/pdf/b9e8d266659cfa23e8f1eb74293676ec4e9ec61f.pdf",
+      "published": "2026-08-25T23:22:05.324000",
+      "authors": [
+        "Zhe Li",
+        "Bicheng Ying",
+        "Zidong Liu",
+        "Julie Huang",
+        "Haibo Yang"
+      ],
+      "paper_stem": "Efficient_Fine_Tuning_of_Large_Language_Models_with_Zeroth_Order_Model_Parallelism",
+      "matched_domain": "大模型训练优化",
+      "matched_keywords": [
+        "ZeRO"
+      ],
+      "already_known": false,
+      "kb_source": "",
+      "related_papers": [
+        {
+          "title": "GRZO: Group-Relative Zeroth-Order Optimization for Large Language Model Fine-Tuning",
+          "stem": "grzogrouprelativezerothorderoptimizationforlargelanguagemodelfinetuning",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-20/search_result.json",
+          "shared_terms": [
+            "fine-tuning",
+            "language",
+            "large",
+            "zeroth-order"
+          ],
+          "shared_count": 4
+        },
+        {
+          "title": "MpSub: A Momentum $p$-Dimensional Subspace Trust-Region Method for Derivative-Free Fine-Tuning of Large Language Models",
+          "stem": "mpsubamomentumpdimensionalsubspacetrustregionmethodforderivativefreefinetuningoflargelanguagemodels",
+          "source": "pdf",
+          "path": "/Users/myl/Documents/paper/01-raw/2026-09/MpSub_A_Momentum_$p$_Dimensional_Subspace_Trust_Region_Method_for_Derivative_Free_Fine_Tuning_of_Large_Language_Models.pdf",
+          "shared_terms": [
+            "fine-tuning",
+            "language",
+            "large"
+          ],
+          "shared_count": 3
+        },
+        {
+          "title": "SubZero+: Efficient Zeroth-Order LLM Fine-Tuning via Large Learning Rates",
+          "stem": "subzeroefficientzerothorderllmfinetuningvialargelearningrates",
+          "source": "pdf",
+          "path": "/Users/myl/Documents/paper/01-raw/2026-09/SubZero+_Efficient_Zeroth_Order_LLM_Fine_Tuning_via_Large_Learning_Rates.pdf",
+          "shared_terms": [
+            "fine-tuning",
+            "large",
+            "zeroth-order"
+          ],
+          "shared_count": 3
+        }
+      ],
+      "score": 3.65
+    },
+    {
+      "title": "FedAdamom: Adaptive Momentum for Improved Generalization in Federated Optimization",
+      "source": "openreview",
+      "arxiv_id": "",
+      "venue": "CVPR 2026",
+      "url": "https://openreview.net/forum?id=rK5bKRkh5f",
+      "pdf_url": "https://openaccess.thecvf.com/content/CVPR2026/papers/Hou_FedAdamom_Adaptive_Momentum_for_Improved_Generalization_in_Federated_Optimization_CVPR_2026_paper.pdf",
+      "published": "2026-09-17T22:47:18.721000",
+      "authors": [
+        "Wenjie Hou",
+        "Tianxiang Chen",
+        "Feng Wang",
+        "Tiantong Wu",
+        "Zhiming Zheng",
+        "Shaoting Tang",
+        "Wei Yang Bryan Lim"
+      ],
+      "paper_stem": "FedAdamom_Adaptive_Momentum_for_Improved_Generalization_in_Federated_Optimization",
+      "matched_domain": "随机梯度与优化理论",
+      "matched_keywords": [
+        "SGD",
+        "momentum",
+        "adaptive learning rate",
+        "Adam"
+      ],
+      "already_known": false,
+      "kb_source": "",
+      "related_papers": [
+        {
+          "title": "Adaptive Phase Switching for Communication Efficient Federated LoRA Fine Tuning",
+          "stem": "adaptivephaseswitchingforcommunicationefficientfederatedlorafinetuning",
+          "source": "pdf",
+          "path": "/Users/myl/Documents/paper/01-raw/2026-09/Adaptive_Phase_Switching_for_Communication_Efficient_Federated_LoRA_Fine_Tuning.pdf",
+          "shared_terms": [
+            "adaptive",
+            "federated"
+          ],
+          "shared_count": 2
+        },
+        {
+          "title": "ConMeZO Adaptive Descent Direction Sampling for Gradient Free Finetuning of Large Language Models",
+          "stem": "conmezoadaptivedescentdirectionsamplingforgradientfreefinetuningoflargelanguagemodels",
+          "source": "pdf",
+          "path": "/Users/myl/Documents/paper/01-raw/2026-09/ConMeZO_Adaptive_Descent_Direction_Sampling_for_Gradient_Free_Finetuning_of_Large_Language_Models.pdf",
+          "shared_terms": [
+            "adaptive"
+          ],
+          "shared_count": 1
+        },
+        {
+          "title": "CurvZO: Adaptive Curvature-Guided Sparse Zeroth-Order Optimization for Efficient LLM Fine-Tuning",
+          "stem": "curvzoadaptivecurvatureguidedsparsezerothorderoptimizationforefficientllmfinetuning",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-20/search_result.json",
+          "shared_terms": [
+            "adaptive"
+          ],
+          "shared_count": 1
+        }
+      ],
+      "score": 3.51
+    },
+    {
+      "title": "Generalized-CVO: Fast and Correspondence-Free Local Point Cloud Registration with Second Order Riemannian Optimization",
+      "source": "openreview",
+      "arxiv_id": "",
+      "venue": "CVPR 2026",
+      "url": "https://openreview.net/forum?id=UEbjgHicWH",
+      "pdf_url": "https://openaccess.thecvf.com/content/CVPR2026/papers/Zhang_Generalized-CVO_Fast_and_Correspondence-Free_Local_Point_Cloud_Registration_with_Second_CVPR_2026_paper.pdf",
+      "published": "2026-09-17T22:47:17.125000",
+      "authors": [
+        "Ray Zhang",
+        "Marcus Greiff",
+        "Thomas Lew",
+        "John Subosits"
+      ],
+      "paper_stem": "Generalized_CVO_Fast_and_Correspondence_Free_Local_Point_Cloud_Registration_with_Second_Order_Riemannian_Optimization",
+      "matched_domain": "随机梯度与优化理论",
+      "matched_keywords": [
+        "Hessian",
+        "second-order"
+      ],
+      "already_known": false,
+      "kb_source": "",
+      "related_papers": [
+        {
+          "title": "Adaptively Incorporating Directional Hints into Zeroth Order Optimization",
+          "stem": "adaptivelyincorporatingdirectionalhintsintozerothorderoptimization",
+          "source": "pdf",
+          "path": "/Users/myl/Documents/paper/01-raw/2026-09/Adaptively_Incorporating_Directional_Hints_into_Zeroth_Order_Optimization.pdf",
+          "shared_terms": [
+            "order"
+          ],
+          "shared_count": 1
+        },
+        {
+          "title": "An Inexact Riemannian Gradient Descent Algorithm on the Stiefel Manifold with One Newton-Schulz Iteration",
+          "stem": "aninexactriemanniangradientdescentalgorithmonthestiefelmanifoldwithonenewtonschulziteration",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-19/search_result.json",
+          "shared_terms": [
+            "riemannian"
+          ],
+          "shared_count": 1
+        },
+        {
+          "title": "Enhancing Zeroth order Fine tuning for Language Models with Low rank Structures",
+          "stem": "enhancingzerothorderfinetuningforlanguagemodelswithlowrankstructures",
+          "source": "pdf",
+          "path": "/Users/myl/Documents/paper/01-raw/2026-09/Enhancing_Zeroth_order_Fine_tuning_for_Language_Models_with_Low_rank_Structures.pdf",
+          "shared_terms": [
+            "order"
+          ],
+          "shared_count": 1
+        }
+      ],
+      "score": 3.03
+    },
+    {
+      "title": "Bi-Level Optimization for Single Domain Generalization",
+      "source": "openreview",
+      "arxiv_id": "",
+      "venue": "CVPR 2026 Findings",
+      "url": "https://openreview.net/forum?id=jKkxbb9kre",
+      "pdf_url": "https://openaccess.thecvf.com/content/CVPR2026F/papers/Heidari_Bi-Level_Optimization_for_Single_Domain_Generalization_CVPRF_2026_paper.pdf",
+      "published": "2026-09-22T02:50:08.358000",
+      "authors": [
+        "Marzi Heidari",
+        "Hanping Zhang",
+        "Hao Yan",
+        "Yuhong Guo"
+      ],
+      "paper_stem": "Bi_Level_Optimization_for_Single_Domain_Generalization",
+      "matched_domain": "随机梯度与优化理论",
+      "matched_keywords": [
+        "SGD",
+        "second-order"
+      ],
+      "already_known": false,
+      "kb_source": "",
+      "related_papers": [],
+      "score": 2.96
+    },
+    {
+      "title": "Coupled Natural Gradient for Cross-Party-Aware Second-Order Vertical Federated Learning",
+      "source": "openreview",
+      "arxiv_id": "",
+      "venue": "Under review for TMLR",
+      "url": "https://openreview.net/forum?id=lmKC2ndCR5",
+      "pdf_url": "https://openreview.net/pdf/5c0a752d60ea6fea4ff71a9d03eac33df9f99d5a.pdf",
+      "published": "2026-09-08T06:12:35.881000",
+      "authors": [],
+      "paper_stem": "Coupled_Natural_Gradient_for_Cross_Party_Aware_Second_Order_Vertical_Federated_Learning",
+      "matched_domain": "随机梯度与优化理论",
+      "matched_keywords": [
+        "curvature",
+        "second-order"
+      ],
+      "already_known": false,
+      "kb_source": "",
+      "related_papers": [
+        {
+          "title": "Adaptive Phase Switching for Communication Efficient Federated LoRA Fine Tuning",
+          "stem": "adaptivephaseswitchingforcommunicationefficientfederatedlorafinetuning",
+          "source": "pdf",
+          "path": "/Users/myl/Documents/paper/01-raw/2026-09/Adaptive_Phase_Switching_for_Communication_Efficient_Federated_LoRA_Fine_Tuning.pdf",
+          "shared_terms": [
+            "federated"
+          ],
+          "shared_count": 1
+        },
+        {
+          "title": "Almost Sure Convergence Analysis of Stochastic Gradient Methods with Clipping and Additive Noise",
+          "stem": "almostsureconvergenceanalysisofstochasticgradientmethodswithclippingandadditivenoise",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-21/search_result.json",
+          "shared_terms": [
+            "gradient"
+          ],
+          "shared_count": 1
+        },
+        {
+          "title": "An Inexact Riemannian Gradient Descent Algorithm on the Stiefel Manifold with One Newton-Schulz Iteration",
+          "stem": "aninexactriemanniangradientdescentalgorithmonthestiefelmanifoldwithonenewtonschulziteration",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-19/search_result.json",
+          "shared_terms": [
+            "gradient"
+          ],
+          "shared_count": 1
+        }
+      ],
+      "score": 2.87
+    },
+    {
+      "title": "FreeForm: Reduced-Order Deformable Simulation from Particle-Based Skinning Eigenmodes",
+      "source": "openreview",
+      "arxiv_id": "",
+      "venue": "CVPR 2026",
+      "url": "https://openreview.net/forum?id=v1syURlIqG",
+      "pdf_url": "https://openaccess.thecvf.com/content/CVPR2026/papers/Xiang_FreeForm_Reduced-Order_Deformable_Simulation_from_Particle-Based_Skinning_Eigenmodes_CVPR_2026_paper.pdf",
+      "published": "2026-09-17T22:47:18.455000",
+      "authors": [
+        "Donglai Xiang",
+        "Vismay Modi",
+        "Rishit Dagli",
+        "Ty Trusty",
+        "Gilles Daviet",
+        "Anka He Chen",
+        "Nicholas Sharp",
+        "David I.W. Levin"
+      ],
+      "paper_stem": "FreeForm_Reduced_Order_Deformable_Simulation_from_Particle_Based_Skinning_Eigenmodes",
+      "matched_domain": "随机梯度与优化理论",
+      "matched_keywords": [
+        "Hessian"
+      ],
+      "already_known": false,
+      "kb_source": "",
+      "related_papers": [
+        {
+          "title": "Scalable Lindblad Noise Learning via Stochastic Tensor-Network Simulation",
+          "stem": "scalablelindbladnoiselearningviastochastictensornetworksimulation",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-18/search_result.json",
+          "shared_terms": [
+            "simulation"
+          ],
+          "shared_count": 1
+        }
+      ],
+      "score": 2.33
+    },
+    {
+      "title": "Immunizing Models Against Harmful Long-Horizon Fine-Tuning via Contractive Optimization Dynamics",
+      "source": "openreview",
+      "arxiv_id": "",
+      "venue": "CVPR 2026",
+      "url": "https://openreview.net/forum?id=ToH1Jv19Hh",
+      "pdf_url": "https://openaccess.thecvf.com/content/CVPR2026/papers/Sarker_Immunizing_Models_Against_Harmful_Long-Horizon_Fine-Tuning_via_Contractive_Optimization_Dynamics_CVPR_2026_paper.pdf",
+      "published": "2026-09-17T22:47:18.577000",
+      "authors": [
+        "Najibul Haque Sarker",
+        "Zaber Ibn Abdul Hakim",
+        "Ali Asgarov",
+        "Chia-Wei Tang",
+        "Alvi Md Ishmam",
+        "Chris Thomas"
+      ],
+      "paper_stem": "Immunizing_Models_Against_Harmful_Long_Horizon_Fine_Tuning_via_Contractive_Optimization_Dynamics",
+      "matched_domain": "随机梯度与优化理论",
+      "matched_keywords": [
+        "curvature",
+        "Hessian"
+      ],
+      "already_known": false,
+      "kb_source": "",
+      "related_papers": [
+        {
+          "title": "AdaMeZO: Adam-style Zeroth-Order Optimizer for LLM Fine-tuning Without Maintaining the Moments",
+          "stem": "adamezoadamstylezerothorderoptimizerforllmfinetuningwithoutmaintainingthemoments",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-20/search_result.json",
+          "shared_terms": [
+            "fine-tuning"
+          ],
+          "shared_count": 1
+        },
+        {
+          "title": "AGZO: Activation-Guided Zeroth-Order Optimization for LLM Fine-Tuning",
+          "stem": "agzoactivationguidedzerothorderoptimizationforllmfinetuning",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-20/search_result.json",
+          "shared_terms": [
+            "fine-tuning"
+          ],
+          "shared_count": 1
+        },
+        {
+          "title": "Clustering-Based Balanced Sampling and Allocation with Data Parallelism for High-Performance Fine-Tuning",
+          "stem": "clusteringbasedbalancedsamplingandallocationwithdataparallelismforhighperformancefinetuning",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-17/search_result.json",
+          "shared_terms": [
+            "fine-tuning"
+          ],
+          "shared_count": 1
+        }
+      ],
+      "score": 2.16
+    },
+    {
+      "title": "HamiPose: Hamiltonian Optimization for Unsupervised Domain Adaptive Pose Estimation",
+      "source": "openreview",
+      "arxiv_id": "",
+      "venue": "CVPR 2026",
+      "url": "https://openreview.net/forum?id=o9DEuu0A5U",
+      "pdf_url": "https://openaccess.thecvf.com/content/CVPR2026/papers/Li_HamiPose_Hamiltonian_Optimization_for_Unsupervised_Domain_Adaptive_Pose_Estimation_CVPR_2026_paper.pdf",
+      "published": "2026-09-17T22:47:17.605000",
+      "authors": [
+        "Jiawen Li",
+        "Fei Jiang",
+        "Dandan Zhu",
+        "Aimin Zhou"
+      ],
+      "paper_stem": "HamiPose_Hamiltonian_Optimization_for_Unsupervised_Domain_Adaptive_Pose_Estimation",
+      "matched_domain": "随机梯度与优化理论",
+      "matched_keywords": [
+        "momentum"
+      ],
+      "already_known": false,
+      "kb_source": "",
+      "related_papers": [
+        {
+          "title": "Adaptive Phase Switching for Communication Efficient Federated LoRA Fine Tuning",
+          "stem": "adaptivephaseswitchingforcommunicationefficientfederatedlorafinetuning",
+          "source": "pdf",
+          "path": "/Users/myl/Documents/paper/01-raw/2026-09/Adaptive_Phase_Switching_for_Communication_Efficient_Federated_LoRA_Fine_Tuning.pdf",
+          "shared_terms": [
+            "adaptive"
+          ],
+          "shared_count": 1
+        },
+        {
+          "title": "ConMeZO Adaptive Descent Direction Sampling for Gradient Free Finetuning of Large Language Models",
+          "stem": "conmezoadaptivedescentdirectionsamplingforgradientfreefinetuningoflargelanguagemodels",
+          "source": "pdf",
+          "path": "/Users/myl/Documents/paper/01-raw/2026-09/ConMeZO_Adaptive_Descent_Direction_Sampling_for_Gradient_Free_Finetuning_of_Large_Language_Models.pdf",
+          "shared_terms": [
+            "adaptive"
+          ],
+          "shared_count": 1
+        },
+        {
+          "title": "CurvZO: Adaptive Curvature-Guided Sparse Zeroth-Order Optimization for Efficient LLM Fine-Tuning",
+          "stem": "curvzoadaptivecurvatureguidedsparsezerothorderoptimizationforefficientllmfinetuning",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-20/search_result.json",
+          "shared_terms": [
+            "adaptive"
+          ],
+          "shared_count": 1
+        }
+      ],
+      "score": 2.06
+    },
+    {
+      "title": "PhySe-RPO: Physics and Semantics Guided Relative Policy Optimization for Diffusion-Based Surgical Smoke Removal",
+      "source": "openreview",
+      "arxiv_id": "",
+      "venue": "CVPR 2026 Findings",
+      "url": "https://openreview.net/forum?id=jegxohcurL",
+      "pdf_url": "https://openaccess.thecvf.com/content/CVPR2026F/papers/Fang_PhySe-RPO_Physics_and_Semantics_Guided_Relative_Policy_Optimization_for_Diffusion-Based_CVPRF_2026_paper.pdf",
+      "published": "2026-09-22T02:50:08.309000",
+      "authors": [
+        "Zining Fang",
+        "Cheng Xue",
+        "Chunhui Liu",
+        "Bin Xu",
+        "Ming Chen",
+        "Xiaowei Hu"
+      ],
+      "paper_stem": "PhySe_RPO_Physics_and_Semantics_Guided_Relative_Policy_Optimization_for_Diffusion_Based_Surgical_Smoke_Removal",
+      "matched_domain": "大模型训练优化",
+      "matched_keywords": [
+        "LoRA"
+      ],
+      "already_known": false,
+      "kb_source": "",
+      "related_papers": [
+        {
+          "title": "Zeroth-Order Nonsmooth Nonconvex Optimization with Convex Liftings and Its Application to State-Feedback $H_\\infty$ Policy Optimization",
+          "stem": "inftypolicyoptimization",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-18/search_result.json",
+          "shared_terms": [
+            "policy"
+          ],
+          "shared_count": 1
+        }
+      ],
+      "score": 2.03
+    },
+    {
+      "title": "NEAF: Natural Image Editing with Attention Fusion for Generalizable Test-time Optimization in Text-Guided Image Editing",
+      "source": "openreview",
+      "arxiv_id": "",
+      "venue": "CVPR 2026",
+      "url": "https://openreview.net/forum?id=XW9WK63tVd",
+      "pdf_url": "https://openaccess.thecvf.com/content/CVPR2026/papers/Kim_NEAF_Natural_Image_Editing_with_Attention_Fusion_for_Generalizable_Test-time_CVPR_2026_paper.pdf",
+      "published": "2026-09-17T22:47:18.018000",
+      "authors": [
+        "Jisoo Kim",
+        "Heeseok Oh"
+      ],
+      "paper_stem": "NEAF_Natural_Image_Editing_with_Attention_Fusion_for_Generalizable_Test_time_Optimization_in_Text_Guided_Image_Editing",
+      "matched_domain": "大模型训练优化",
+      "matched_keywords": [
+        "ZeRO"
+      ],
+      "already_known": false,
+      "kb_source": "",
+      "related_papers": [
+        {
+          "title": "How Much Rank Does LoRA Need? Rank-Error Bounds for Transformer Attention",
+          "stem": "howmuchrankdoesloraneedrankerrorboundsfortransformerattention",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-21/search_result.json",
+          "shared_terms": [
+            "attention"
+          ],
+          "shared_count": 1
+        }
+      ],
+      "score": 2.03
+    },
+    {
+      "title": "BAGEL: Adversarially Constrained Online Convex Optimization under Separation Oracle Access",
+      "source": "openreview",
+      "arxiv_id": "",
+      "venue": "Under review for TMLR",
+      "url": "https://openreview.net/forum?id=GM49RgKzIG",
+      "pdf_url": "https://openreview.net/pdf/d42b556499876e4103b41084f9268ec9b7fb997a.pdf",
+      "published": "2026-08-25T07:40:09.905000",
+      "authors": [],
+      "paper_stem": "BAGEL_Adversarially_Constrained_Online_Convex_Optimization_under_Separation_Oracle_Access",
+      "matched_domain": "随机梯度与优化理论",
+      "matched_keywords": [
+        "gradient descent"
+      ],
+      "already_known": false,
+      "kb_source": "",
+      "related_papers": [
+        {
+          "title": "Curvature-Independent Regret Bounds for Distributed Online Optimization on Hadamard Manifolds",
+          "stem": "curvatureindependentregretboundsfordistributedonlineoptimizationonhadamardmanifolds",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-19/search_result.json",
+          "shared_terms": [
+            "online"
+          ],
+          "shared_count": 1
+        },
+        {
+          "title": "Dense Weak Hiding: Closing Complexity Gaps in Nonconvex and PL Finite-Sum Optimization under Individual Smoothness",
+          "stem": "denseweakhidingclosingcomplexitygapsinnonconvexandplfinitesumoptimizationunderindividualsmoothness",
+          "source": "pdf",
+          "path": "/Users/myl/Documents/paper/01-raw/2026-09/Dense_Weak_Hiding_Closing_Complexity_Gaps_in_Nonconvex_and_PL_Finite_Sum_Optimization_under_Individual_Smoothness.pdf",
+          "shared_terms": [
+            "under"
+          ],
+          "shared_count": 1
+        },
+        {
+          "title": "Zeroth-Order Nonsmooth Nonconvex Optimization with Convex Liftings and Its Application to State-Feedback $H_\\infty$ Policy Optimization",
+          "stem": "inftypolicyoptimization",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-18/search_result.json",
+          "shared_terms": [
+            "convex"
+          ],
+          "shared_count": 1
+        }
+      ],
+      "score": 1.67
+    }
+  ],
+  "top_papers": [
+    {
+      "id": "9wpm4fbBJI",
+      "source": "openreview",
+      "title": "Efficient Fine-Tuning of Large Language Models with Zeroth-Order Model Parallelism",
+      "summary": "Model parallelism (MP) is a widely adopted paradigm for scaling large language model (LLM) training across multiple nodes. Yet, existing methods mainly rely on first-order optimization, which suffer from two key bottlenecks: high communication overhead due to frequent transmission of activations and gradients, and substantial memory consumption caused by caching these intermediate states. Zeroth-order (ZO) optimization offers a compelling alternative by eliminating explicit gradient computation and storage, naturally reducing communication and memory costs. Despite these advantages, ZO methods remain largely unexplored in the context of MP for LLM fine-tuning. In this work, we first investigate  activation sparsity patterns induced by common activation functions (e.g., ReLU, GELU, SwiGLU) during LLM fine-tuning. Motivated by these key observations, we propose SparQ, a ZO-based MP framework that exploits quantization-induced activation sparsity to reduce memory footprint and communication overhead. SparQ consists of three key components: (1) using the gradient-free nature of ZO optimization to eliminate gradients; (2) applying activation quantization to induce sparsity that enables efficient sparse encoding; and (3) strategically placing split layers at sparsity-rich regions and transmitting activations in sparse form, significantly reducing communication cost with minimal impact on model performance. We theoretically establish that SparQ achieves a sublinear convergence rate for non-convex objectives. Extensive experiments show that SparQ reduces GPU memory usage by over 3× and communication cost by 50%+ compared to state-of-the-art MP baselines, while maintaining comparable LLM fine-tuning performance across multiple tasks.",
+      "authors": [
+        "Zhe Li",
+        "Bicheng Ying",
+        "Zidong Liu",
+        "Julie Huang",
+        "Haibo Yang"
+      ],
+      "affiliations": [],
+      "categories": [],
+      "venue": "Accepted by TMLR",
+      "pdf_url": "https://openreview.net/pdf?id=9wpm4fbBJI",
+      "url": "https://openreview.net/forum?id=9wpm4fbBJI",
+      "published": "2026-08-25T23:22:05.324000",
+      "published_date": "2026-08-25 23:22:05.324000",
+      "scores": {
+        "relevance": 0.12,
+        "recency": 3.0,
+        "impact": 0.0,
+        "evidence": 2.9,
+        "popularity": 0.0,
+        "quality": 2.9,
+        "recommendation": 3.65
+      },
+      "matched_domain": "大模型训练优化",
+      "matched_keywords": [
+        "ZeRO"
+      ],
+      "is_hot_paper": false,
+      "score_type": "research_priority_screening",
+      "assessment_scope": "metadata_and_abstract",
+      "screening_rank": 17,
+      "paper_stem": "Efficient_Fine_Tuning_of_Large_Language_Models_with_Zeroth_Order_Model_Parallelism",
+      "already_known": false,
+      "related_papers": [
+        {
+          "title": "GRZO: Group-Relative Zeroth-Order Optimization for Large Language Model Fine-Tuning",
+          "stem": "grzogrouprelativezerothorderoptimizationforlargelanguagemodelfinetuning",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-20/search_result.json",
+          "shared_terms": [
+            "fine-tuning",
+            "language",
+            "large",
+            "zeroth-order"
+          ],
+          "shared_count": 4
+        },
+        {
+          "title": "MpSub: A Momentum $p$-Dimensional Subspace Trust-Region Method for Derivative-Free Fine-Tuning of Large Language Models",
+          "stem": "mpsubamomentumpdimensionalsubspacetrustregionmethodforderivativefreefinetuningoflargelanguagemodels",
+          "source": "pdf",
+          "path": "/Users/myl/Documents/paper/01-raw/2026-09/MpSub_A_Momentum_$p$_Dimensional_Subspace_Trust_Region_Method_for_Derivative_Free_Fine_Tuning_of_Large_Language_Models.pdf",
+          "shared_terms": [
+            "fine-tuning",
+            "language",
+            "large"
+          ],
+          "shared_count": 3
+        },
+        {
+          "title": "SubZero+: Efficient Zeroth-Order LLM Fine-Tuning via Large Learning Rates",
+          "stem": "subzeroefficientzerothorderllmfinetuningvialargelearningrates",
+          "source": "pdf",
+          "path": "/Users/myl/Documents/paper/01-raw/2026-09/SubZero+_Efficient_Zeroth_Order_LLM_Fine_Tuning_via_Large_Learning_Rates.pdf",
+          "shared_terms": [
+            "fine-tuning",
+            "large",
+            "zeroth-order"
+          ],
+          "shared_count": 3
+        }
+      ],
+      "note_filename": "Efficient_Fine_Tuning_of_Large_Language_Models_with_Zeroth_Order_Model_Parallelism",
+      "semantic_rank": 1,
+      "archive_status": "failed",
+      "archive_detail": "OpenReview PDF 下载返回 HTTP 403（哈希地址与 forum-id 地址均失败）"
+    },
+    {
+      "id": "BClq0UuYzL",
+      "source": "openreview",
+      "title": "Low-Rank Geometry for Zeroth-Order Fine-Tuning of Black-Box Large Language Models",
+      "summary": "Large language models (LLMs) have achieved remarkable success across a wide range of tasks, yet fine-tuning them efficiently under black-box or memory-constrained settings remains challenging. Parameter-efficient fine-tuning (PEFT) techniques such as LoRA alleviate memory usage by restricting updates to low-rank adapters, while zeroth-order (ZO) optimization further avoids back-propagation by estimating gradients from function evaluations. Recent work, such as LOZO, leverages random low-rank perturbations to reduce the variance of ZO estimates, but it overlooks the intrinsic geometric structure of LoRA adapters and suffers from unstable convergence and limited integration with adaptive optimizers. To address these limitations, we propose \\textbf{RoZO}, a Riemannian zeroth-order optimization framework that constrains updates to the tangent space of the LoRA manifold. By exploiting geometry-aware updates with parallel transport, adaptive preconditioning, and trust-region control, RoZO achieves more stable convergence, tighter variance bounds, and superior performance compared to existing ZO methods.",
+      "authors": [
+        "Zichen Song",
+        "Weijia Li"
+      ],
+      "affiliations": [],
+      "categories": [],
+      "venue": "Accepted by TMLR",
+      "pdf_url": "https://openreview.net/pdf?id=BClq0UuYzL",
+      "url": "https://openreview.net/forum?id=BClq0UuYzL",
+      "published": "2026-09-15T21:56:59.677000",
+      "published_date": "2026-09-15 21:56:59.677000",
+      "scores": {
+        "relevance": 1.26,
+        "recency": 3.0,
+        "impact": 0.0,
+        "evidence": 1.5,
+        "popularity": 0.0,
+        "quality": 1.5,
+        "recommendation": 4.82
+      },
+      "matched_domain": "大模型训练优化",
+      "matched_keywords": [
+        "zeroth-order optimization",
+        "optimizer",
+        "LoRA",
+        "ZeRO"
+      ],
+      "is_hot_paper": false,
+      "score_type": "research_priority_screening",
+      "assessment_scope": "metadata_and_abstract",
+      "screening_rank": 12,
+      "paper_stem": "Low_Rank_Geometry_for_Zeroth_Order_Fine_Tuning_of_Black_Box_Large_Language_Models",
+      "already_known": false,
+      "related_papers": [
+        {
+          "title": "GRZO: Group-Relative Zeroth-Order Optimization for Large Language Model Fine-Tuning",
+          "stem": "grzogrouprelativezerothorderoptimizationforlargelanguagemodelfinetuning",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-20/search_result.json",
+          "shared_terms": [
+            "fine-tuning",
+            "language",
+            "large",
+            "zeroth-order"
+          ],
+          "shared_count": 4
+        },
+        {
+          "title": "MpSub: A Momentum $p$-Dimensional Subspace Trust-Region Method for Derivative-Free Fine-Tuning of Large Language Models",
+          "stem": "mpsubamomentumpdimensionalsubspacetrustregionmethodforderivativefreefinetuningoflargelanguagemodels",
+          "source": "pdf",
+          "path": "/Users/myl/Documents/paper/01-raw/2026-09/MpSub_A_Momentum_$p$_Dimensional_Subspace_Trust_Region_Method_for_Derivative_Free_Fine_Tuning_of_Large_Language_Models.pdf",
+          "shared_terms": [
+            "fine-tuning",
+            "language",
+            "large"
+          ],
+          "shared_count": 3
+        },
+        {
+          "title": "SubZero+: Efficient Zeroth-Order LLM Fine-Tuning via Large Learning Rates",
+          "stem": "subzeroefficientzerothorderllmfinetuningvialargelearningrates",
+          "source": "pdf",
+          "path": "/Users/myl/Documents/paper/01-raw/2026-09/SubZero+_Efficient_Zeroth_Order_LLM_Fine_Tuning_via_Large_Learning_Rates.pdf",
+          "shared_terms": [
+            "fine-tuning",
+            "large",
+            "zeroth-order"
+          ],
+          "shared_count": 3
+        }
+      ],
+      "note_filename": "Low_Rank_Geometry_for_Zeroth_Order_Fine_Tuning_of_Black_Box_Large_Language_Models",
+      "semantic_rank": 2,
+      "archive_status": "failed",
+      "archive_detail": "OpenReview PDF 下载返回 HTTP 403（哈希地址与 forum-id 地址均失败）"
+    },
+    {
+      "id": "8Nx1ZjfEhd",
+      "source": "openreview",
+      "title": "Global Convergence of Sampling-Based Nonconvex Optimization through Diffusion-Style Smoothing",
+      "summary": "Sampling-based optimization (SBO), like cross-entropy method and evolutionary algorithms, has achieved many successes in solving non-convex problems without gradients, yet its convergence is poorly understood. In this paper, we establish a non-asymptotic convergence analysis for SBO through the lens of smoothing. Specifically, we recast SBO as gradient descent on a smoothed objective, mirroring noise‑conditioned score ascent in diffusion models. Our first contribution is a landscape analysis of the smoothed objective, demonstrating how smoothing helps escape local minima and uncovering a fundamental coverage–optimality trade-off: smoothing renders the landscape more benign by enlarging the locally convex region around the global minimizer, but at the cost of introducing an optimality gap. Building on this insight, we establish non-asymptotic convergence guarantees for SBO algorithms to a neighborhood of the global minimizer. Furthermore, we propose an annealed SBO algorithm, Diffusion-Inspired-Dual-Annealing (DIDA), which is provably convergent to the global optimum. We conduct extensive numerical experiments to verify our landscape results and also demonstrate the compelling performance of DIDA compared to other gradient-free optimization methods. Lastly, we discuss implications of our results for diffusion models.",
+      "authors": [
+        "Zeji Yi",
+        "Chaoyi Pan",
+        "Guanya Shi",
+        "Guannan Qu"
+      ],
+      "affiliations": [],
+      "categories": [],
+      "venue": "Accepted by TMLR",
+      "pdf_url": "https://openreview.net/pdf?id=8Nx1ZjfEhd",
+      "url": "https://openreview.net/forum?id=8Nx1ZjfEhd",
+      "published": "2026-09-07T20:23:28.007000",
+      "published_date": "2026-09-07 20:23:28.007000",
+      "scores": {
+        "relevance": 1.33,
+        "recency": 3.0,
+        "impact": 0.0,
+        "evidence": 1.7,
+        "popularity": 0.0,
+        "quality": 1.7,
+        "recommendation": 5.07
+      },
+      "matched_domain": "随机梯度与优化理论",
+      "matched_keywords": [
+        "gradient-free optimization",
+        "gradient descent",
+        "convergence analysis",
+        "nonconvex optimization"
+      ],
+      "is_hot_paper": false,
+      "score_type": "research_priority_screening",
+      "assessment_scope": "metadata_and_abstract",
+      "screening_rank": 11,
+      "paper_stem": "Global_Convergence_of_Sampling_Based_Nonconvex_Optimization_through_Diffusion_Style_Smoothing",
+      "already_known": false,
+      "related_papers": [
+        {
+          "title": "Muon with Finite Newton-Schulz: The Smoothing Benefit in Nonsmooth Nonconvex Optimization",
+          "stem": "muonwithfinitenewtonschulzthesmoothingbenefitinnonsmoothnonconvexoptimization",
+          "source": "pdf",
+          "path": "/Users/myl/Documents/paper/01-raw/2026-09/Muon_with_Finite_Newton_Schulz_The_Smoothing_Benefit_in_Nonsmooth_Nonconvex_Optimization.pdf",
+          "shared_terms": [
+            "nonconvex",
+            "smoothing"
+          ],
+          "shared_count": 2
+        },
+        {
+          "title": "Almost Sure Convergence Analysis of Stochastic Gradient Methods with Clipping and Additive Noise",
+          "stem": "almostsureconvergenceanalysisofstochasticgradientmethodswithclippingandadditivenoise",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-21/search_result.json",
+          "shared_terms": [
+            "convergence"
+          ],
+          "shared_count": 1
+        },
+        {
+          "title": "Dense Weak Hiding: Closing Complexity Gaps in Nonconvex and PL Finite-Sum Optimization under Individual Smoothness",
+          "stem": "denseweakhidingclosingcomplexitygapsinnonconvexandplfinitesumoptimizationunderindividualsmoothness",
+          "source": "pdf",
+          "path": "/Users/myl/Documents/paper/01-raw/2026-09/Dense_Weak_Hiding_Closing_Complexity_Gaps_in_Nonconvex_and_PL_Finite_Sum_Optimization_under_Individual_Smoothness.pdf",
+          "shared_terms": [
+            "nonconvex"
+          ],
+          "shared_count": 1
+        }
+      ],
+      "note_filename": "Global_Convergence_of_Sampling_Based_Nonconvex_Optimization_through_Diffusion_Style_Smoothing",
+      "semantic_rank": 3,
+      "archive_status": "failed",
+      "archive_detail": "OpenReview PDF 下载返回 HTTP 403（哈希地址与 forum-id 地址均失败）"
+    },
+    {
+      "id": "Is8zPGxEyr",
+      "source": "openreview",
+      "title": "Curvature-Aware Zeroth-Order Optimization for Memory-Efficient Test-Time Adaptation",
+      "summary": "Test-time adaptation (TTA) aims to enhance the cross-domain performance of pre-trained models by adapting to unlabeled test data.While most existing TTA methods rely on backpropagation (BP) for finetuning, BP-free methods such as zeroth-order (ZO) methods are more desired in practical on-device scenarios. ZO methods rely only on forward computation, which can largely reduce the complexity and memory overhead of on-device deployment.However, ZO methods suffer from much higher variance compared with first-order methods in estimating the gradient.To address this, we propose an improved ZO method to substantially boost the performance of ZO optimization based TTA.First, we provide an observation to reveal the persistent low-rank Hessian structure of the loss during the adaptation process. Based on this insight, we then propose a loss-landscape curvature-aware zeroth-order (CAZO) method, which leverages a sliding-average estimation of the diagonal Hessian to construct a covariance matrix for anisotropic‌ perturbation sampling. CAZO operates by freezing pretrained weights and optimizing minimal adapter parameters via forward-only passes based gradient estimation, which can substantially reduce the memory overhead compared to BP-based methods. Extensive experiments demonstrate that CAZO significantly outperforms existing TTA methods, achieving state-of-the-art performance while maintaining an excellent balance between accuracy and memory efficiency. Code is available at \\url{https://github.com/Hollyming/CAZO}.",
+      "authors": [
+        "Junming Zhang",
+        "Shuyu Yin",
+        "Peilin Liu",
+        "Rendong Ying",
+        "Fei Wen"
+      ],
+      "affiliations": [],
+      "categories": [],
+      "venue": "CVPR 2026",
+      "pdf_url": "https://openreview.net/pdf?id=Is8zPGxEyr",
+      "url": "https://openreview.net/forum?id=Is8zPGxEyr",
+      "published": "2026-09-17T22:47:17.028000",
+      "published_date": "2026-09-17 22:47:17.028000",
+      "scores": {
+        "relevance": 2.3,
+        "recency": 3.0,
+        "impact": 0.0,
+        "evidence": 0.9,
+        "popularity": 0.0,
+        "quality": 0.9,
+        "recommendation": 6.32
+      },
+      "matched_domain": "无梯度大模型优化",
+      "matched_keywords": [
+        "zeroth-order optimization"
+      ],
+      "is_hot_paper": false,
+      "score_type": "research_priority_screening",
+      "assessment_scope": "metadata_and_abstract",
+      "screening_rank": 6,
+      "paper_stem": "Curvature_Aware_Zeroth_Order_Optimization_for_Memory_Efficient_Test_Time_Adaptation",
+      "already_known": false,
+      "related_papers": [
+        {
+          "title": "AdaMeZO: Adam-style Zeroth-Order Optimizer for LLM Fine-tuning Without Maintaining the Moments",
+          "stem": "adamezoadamstylezerothorderoptimizerforllmfinetuningwithoutmaintainingthemoments",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-20/search_result.json",
+          "shared_terms": [
+            "zeroth-order"
+          ],
+          "shared_count": 1
+        },
+        {
+          "title": "AGZO: Activation-Guided Zeroth-Order Optimization for LLM Fine-Tuning",
+          "stem": "agzoactivationguidedzerothorderoptimizationforllmfinetuning",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-20/search_result.json",
+          "shared_terms": [
+            "zeroth-order"
+          ],
+          "shared_count": 1
+        },
+        {
+          "title": "Amortized Low-Rank Adaptation for Model-Based Reinforcement Learning",
+          "stem": "amortizedlowrankadaptationformodelbasedreinforcementlearning",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-17/search_result.json",
+          "shared_terms": [
+            "adaptation"
+          ],
+          "shared_count": 1
+        }
+      ],
+      "note_filename": "Curvature_Aware_Zeroth_Order_Optimization_for_Memory_Efficient_Test_Time_Adaptation",
+      "semantic_rank": 4
+    },
+    {
+      "id": "P27TV5dzwB",
+      "source": "openreview",
+      "title": "FOZO: Forward-Only Zeroth-Order Prompt Optimization for Test-Time Adaptation",
+      "summary": "Test-Time Adaptation (TTA) is essential for enabling deep learning models to handle real-world data distribution shifts. However, current approaches face significant limitations: backpropagation-based methods are not suitable for low-end deployment devices, due to their high computation and memory requirements, as well as their tendency to modify model weights during adaptation; while traditional backpropagation-free techniques exhibit constrained adaptation capabilities. In this work, we propose Forward-Only Zeroth-Order Optimization (FOZO), a novel and practical backpropagation-free paradigm for TTA. FOZO leverages a memory-efficient zeroth-order prompt optimization, which is led by objectives optimizing both intermediate feature statistics and prediction entropy. To ensure efficient and stable adaptation over the out-of-distribution data stream, we introduce a dynamically decaying perturbation scale during zeroth-order gradient estimation and theoretically prove its convergence under the TTA data stream assumption. Extensive continual adaptation experiments on ImageNet-C, ImageNet-R, and ImageNet-Sketch demonstrate FOZO's superior performance, achieving 59.52% Top-1 accuracy on ImageNet-C (5K, level 5) and outperforming main gradient-based methods and SOTA forward-only FOA (58.13%). Furthermore, FOZO exhibits strong generalization on quantized (INT8) models. These findings demonstrate that FOZO is a highly competitive solution for TTA deployment in resource-limited scenarios. Code: https://github.com/eVI-group-SCU/FOZO",
+      "authors": [
+        "Xingyu Wang",
+        "Tao Wang"
+      ],
+      "affiliations": [],
+      "categories": [],
+      "venue": "CVPR 2026",
+      "pdf_url": "https://openreview.net/pdf?id=P27TV5dzwB",
+      "url": "https://openreview.net/forum?id=P27TV5dzwB",
+      "published": "2026-09-17T22:47:17.347000",
+      "published_date": "2026-09-17 22:47:17.347000",
+      "scores": {
+        "relevance": 1.36,
+        "recency": 3.0,
+        "impact": 0.0,
+        "evidence": 1.8,
+        "popularity": 0.0,
+        "quality": 1.8,
+        "recommendation": 5.19
+      },
+      "matched_domain": "无梯度大模型优化",
+      "matched_keywords": [
+        "zeroth-order optimization",
+        "zeroth-order gradient estimation"
+      ],
+      "is_hot_paper": false,
+      "score_type": "research_priority_screening",
+      "assessment_scope": "metadata_and_abstract",
+      "screening_rank": 10,
+      "paper_stem": "FOZO_Forward_Only_Zeroth_Order_Prompt_Optimization_for_Test_Time_Adaptation",
+      "already_known": false,
+      "related_papers": [
+        {
+          "title": "AdaMeZO: Adam-style Zeroth-Order Optimizer for LLM Fine-tuning Without Maintaining the Moments",
+          "stem": "adamezoadamstylezerothorderoptimizerforllmfinetuningwithoutmaintainingthemoments",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-20/search_result.json",
+          "shared_terms": [
+            "zeroth-order"
+          ],
+          "shared_count": 1
+        },
+        {
+          "title": "AGZO: Activation-Guided Zeroth-Order Optimization for LLM Fine-Tuning",
+          "stem": "agzoactivationguidedzerothorderoptimizationforllmfinetuning",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-20/search_result.json",
+          "shared_terms": [
+            "zeroth-order"
+          ],
+          "shared_count": 1
+        },
+        {
+          "title": "Amortized Low-Rank Adaptation for Model-Based Reinforcement Learning",
+          "stem": "amortizedlowrankadaptationformodelbasedreinforcementlearning",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-17/search_result.json",
+          "shared_terms": [
+            "adaptation"
+          ],
+          "shared_count": 1
+        }
+      ],
+      "note_filename": "FOZO_Forward_Only_Zeroth_Order_Prompt_Optimization_for_Test_Time_Adaptation",
+      "semantic_rank": 5
+    },
+    {
+      "id": "cjPdbt4RE9",
+      "source": "openreview",
+      "title": "Spatially-Grounded Text-to-Video Generation via Inference-Time Gradient-Free Optimization",
+      "summary": "Diffusion Transformer Text-to-Video models have achieved remarkable synthesis quality, yet fine-grained spatial controllability remains a significant challenge. While existing training-free methods produce solid overall results in spatially grounded generation, \\ie, placing a specific object in a designated location, they rely on gradient-based optimization techniques that incur prohibitive computational overhead, a bottleneck amplified in modern large-scale architectures. To address this limitation, we present Gradient-free Analytical Trajectory Optimization Video Generation (GATO-Vid), a novel training-free and gradient-free approach for precise spatial guidance. Rather than relying on costly backward passes, we introduce an alternative cross-attention score and solve it analytically to obtain an exact, closed-form solution. To use our analytical solution, we propose an on-the-fly injection mechanism tailored to the topological manifold of the transformer's latent space. Our experiments demonstrate that GATO-Vid significantly outperforms existing baselines in localization accuracy while introducing minimal computational overhead.",
+      "authors": [
+        "Guillaume Jeanneret",
+        "Mathis Koroglu",
+        "Hugo Caselles-Dupré",
+        "Arnaud Dapogny",
+        "Matthieu Cord"
+      ],
+      "affiliations": [],
+      "categories": [],
+      "venue": "MUCG",
+      "pdf_url": "https://openreview.net/pdf?id=cjPdbt4RE9",
+      "url": "https://openreview.net/forum?id=cjPdbt4RE9",
+      "published": "2026-09-04T23:57:59.823000",
+      "published_date": "2026-09-04 23:57:59.823000",
+      "scores": {
+        "relevance": 2.3,
+        "recency": 3.0,
+        "impact": 0.0,
+        "evidence": 1.2,
+        "popularity": 0.0,
+        "quality": 1.2,
+        "recommendation": 6.52
+      },
+      "matched_domain": "无梯度大模型优化",
+      "matched_keywords": [
+        "gradient-free optimization"
+      ],
+      "is_hot_paper": false,
+      "score_type": "research_priority_screening",
+      "assessment_scope": "metadata_and_abstract",
+      "screening_rank": 5,
+      "paper_stem": "Spatially_Grounded_Text_to_Video_Generation_via_Inference_Time_Gradient_Free_Optimization",
+      "already_known": false,
+      "note_filename": "Spatially_Grounded_Text_to_Video_Generation_via_Inference_Time_Gradient_Free_Optimization",
+      "semantic_rank": 6
+    },
+    {
+      "id": "yTMAGdtYRi",
+      "source": "openreview",
+      "title": "ZOO-Prune: Training-Free Token Pruning via Zeroth-Order Gradient Estimation in Vision-Language Models",
+      "summary": "Large Vision–Language Models (VLMs) enable strong multimodal reasoning but incur heavy inference costs from redundant visual tokens. Token pruning alleviates this issue, yet existing approaches face limitations. Attention-based methods rely on raw attention scores, which are often unstable across layers and heads and can lead to redundant selections. Diversity-based methods improve robustness by selecting tokens far apart in feature space, but risk dropping regions needed for accurate prediction. We propose ZOO-Prune, a training-free framework built on the intuition that highly sensitive tokens have a stronger influence on the model's output and capture complementary visual cues rather than redundant ones. To achieve this, we estimate token sensitivity using zeroth-order perturbations at the lightweight projection layer. This measures how small random perturbations affect the projected features and enables efficient approximation of each token’s influence without backpropagation. Extensive experiments across multiple VLMs and benchmarks show that ZOO-Prune consistently outperforms prior methods while pruning up to 94.4% of tokens without sacrificing accuracy. Our method also improves efficiency, reaching up to 2.30x faster end-to-end inference compared to the baseline. Code is available at https://aim-skku.github.io/ZOO-Prune.",
+      "authors": [
+        "Youngeun Kim",
+        "Youjia Zhang",
+        "Huiling Liu",
+        "Aecheon Jung",
+        "Sunwoo Lee",
+        "Sungeun Hong"
+      ],
+      "affiliations": [],
+      "categories": [],
+      "venue": "CVPR 2026",
+      "pdf_url": "https://openreview.net/pdf?id=yTMAGdtYRi",
+      "url": "https://openreview.net/forum?id=yTMAGdtYRi",
+      "published": "2026-09-17T22:47:18.859000",
+      "published_date": "2026-09-17 22:47:18.859000",
+      "scores": {
+        "relevance": 0.3,
+        "recency": 3.0,
+        "impact": 0.0,
+        "evidence": 2.7,
+        "popularity": 0.0,
+        "quality": 2.7,
+        "recommendation": 3.85
+      },
+      "matched_domain": "无梯度大模型优化",
+      "matched_keywords": [
+        "zeroth-order gradient estimation"
+      ],
+      "is_hot_paper": false,
+      "score_type": "research_priority_screening",
+      "assessment_scope": "metadata_and_abstract",
+      "screening_rank": 16,
+      "paper_stem": "ZOO_Prune_Training_Free_Token_Pruning_via_Zeroth_Order_Gradient_Estimation_in_Vision_Language_Models",
+      "already_known": false,
+      "related_papers": [
+        {
+          "title": "AdaMeZO: Adam-style Zeroth-Order Optimizer for LLM Fine-tuning Without Maintaining the Moments",
+          "stem": "adamezoadamstylezerothorderoptimizerforllmfinetuningwithoutmaintainingthemoments",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-20/search_result.json",
+          "shared_terms": [
+            "zeroth-order"
+          ],
+          "shared_count": 1
+        },
+        {
+          "title": "AGZO: Activation-Guided Zeroth-Order Optimization for LLM Fine-Tuning",
+          "stem": "agzoactivationguidedzerothorderoptimizationforllmfinetuning",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-20/search_result.json",
+          "shared_terms": [
+            "zeroth-order"
+          ],
+          "shared_count": 1
+        },
+        {
+          "title": "Almost Sure Convergence Analysis of Stochastic Gradient Methods with Clipping and Additive Noise",
+          "stem": "almostsureconvergenceanalysisofstochasticgradientmethodswithclippingandadditivenoise",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-21/search_result.json",
+          "shared_terms": [
+            "gradient"
+          ],
+          "shared_count": 1
+        }
+      ],
+      "note_filename": "ZOO_Prune_Training_Free_Token_Pruning_via_Zeroth_Order_Gradient_Estimation_in_Vision_Language_Models",
+      "semantic_rank": 7
+    },
+    {
+      "id": "http://arxiv.org/abs/2609.19333v1",
+      "title": "NomadBBO: A direct-search framework for constrained mixed-variable blackbox optimization in Python",
+      "summary": "Mixed-variable blackbox optimization arises in simulation-based engineering and machine learning, where objective and constraint functions are expensive to evaluate and variables may be continuous, integer, binary, or categorical. Several software libraries are available for derivative-free optimization, but few combine ease of use, computational efficiency, flexibility, and theoretical convergence guarantees. This work presents NomadBBO, a user-friendly Python library for inequality-constrained mixed-variable blackbox optimization built around Nomad. Its core optimization framework is CatADS, a new direct-search method that extends Adaptive Direct Search (ADS) to mixed-variable problems. CatADS combines the mechanisms of ADS for quantitative variables with neighborhoods for handling categorical variables. These neighborhoods use Gaussian process-based or empirical Wasserstein distances derived from available data. Inequality constraints are handled through the progressive barrier. The mixed-variable and surrogate-based mechanisms are implemented in Python and connected to the efficient C++ backend of Nomad via Cython. This integration allows Nomad to handle categorical variables. It also enables the use of external libraries and hybrid optimization strategies, including Gaussian process models from SMT 2.0 and Bayesian optimization. Numerical experiments compare NomadBBO with other solvers on constrained and unconstrained mixed-variable problems from the Cat-Suite benchmark collection. The beta release is available at https://test.pypi.org/project/NomadBBO/",
+      "authors": [
+        "Edward Hallé-Hannan",
+        "Christophe Tribes"
+      ],
+      "affiliations": [],
+      "published": "2026-09-16T19:01:10Z",
+      "published_date": "2026-09-16 19:01:10+00:00",
+      "updated": "2026-09-16T19:01:10Z",
+      "categories": [
+        "math.OC"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2609.19333v1",
+      "url": "http://arxiv.org/abs/2609.19333v1",
+      "source": "arxiv",
+      "scores": {
+        "relevance": 1.78,
+        "recency": 3.0,
+        "impact": 0.0,
+        "evidence": 1.1,
+        "popularity": 0.0,
+        "quality": 1.1,
+        "recommendation": 5.5
+      },
+      "matched_domain": "无梯度大模型优化",
+      "matched_keywords": [
+        "derivative-free optimization",
+        "math.OC"
+      ],
+      "is_hot_paper": false,
+      "score_type": "research_priority_screening",
+      "assessment_scope": "metadata_and_abstract",
+      "screening_rank": 8,
+      "paper_stem": "NomadBBO_A_direct_search_framework_for_constrained_mixed_variable_blackbox_optimization_in_Python",
+      "already_known": false,
+      "related_papers": [
+        {
+          "title": "Non-monotone direct-search methods for deterministic and stochastic derivative-free optimization",
+          "stem": "nonmonotonedirectsearchmethodsfordeterministicandstochasticderivativefreeoptimization",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-21/search_result.json",
+          "shared_terms": [
+            "direct-search"
+          ],
+          "shared_count": 1
+        }
+      ],
+      "note_filename": "NomadBBO_A_direct_search_framework_for_constrained_mixed_variable_blackbox_optimization_in_Python",
+      "semantic_rank": 8
+    },
+    {
+      "id": "http://arxiv.org/abs/2609.01811v1",
+      "title": "Reinforcement learning to choose optimizers",
+      "summary": "No single optimization method is uniformly best for all problems, and the most suitable optimizer choice can change during a run. Existing approaches that change optimizer during execution typically predetermine part of the strategy: the portfolio is restricted to one algorithm class, the switch occurs once at a fixed time, or the frequency of decisions is treated as a hyperparameter rather than a learned one. We introduce \"Reinforcement Learning to Choose Optimizers\", which formulates the optimization algorithm choice as a sequential decision-making problem. At each decision, a recurrent policy reads the current run state and decides both which optimizer should be used next and for how long. The portfolio includes both gradient-based and derivative-free optimizers, and each switch passes on the current best solution and a representative step size. A context proxy conditions a gating network over expert heads, and training employs a decoupled actor-critic whose return is expressed in the same empirical runtime distribution metric used at evaluation. Training tasks and portfolio are designed jointly so that no optimizer dominates. On unseen problems, the learned policy outperforms every portfolio optimizer at all but the smallest budgets, and it remains robust under distribution shift.",
+      "authors": [
+        "Martin van der Schelling",
+        "Deepesh Toshniwal",
+        "Miguel A. Bessa"
+      ],
+      "affiliations": [],
+      "published": "2026-09-01T19:35:31Z",
+      "published_date": "2026-09-01 19:35:31+00:00",
+      "updated": "2026-09-01T19:35:31Z",
+      "categories": [
+        "cs.NE",
+        "cs.LG",
+        "math.OC"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2609.01811v1",
+      "url": "http://arxiv.org/abs/2609.01811v1",
+      "source": "arxiv",
+      "scores": {
+        "relevance": 0.9,
+        "recency": 3.0,
+        "impact": 0.0,
+        "evidence": 1.2,
+        "popularity": 0.0,
+        "quality": 1.2,
+        "recommendation": 3.95
+      },
+      "matched_domain": "无梯度大模型优化",
+      "matched_keywords": [
+        "cs.LG",
+        "math.OC"
+      ],
+      "is_hot_paper": false,
+      "score_type": "research_priority_screening",
+      "assessment_scope": "metadata_and_abstract",
+      "screening_rank": 15,
+      "paper_stem": "Reinforcement_learning_to_choose_optimizers",
+      "already_known": false,
+      "related_papers": [
+        {
+          "title": "Amortized Low-Rank Adaptation for Model-Based Reinforcement Learning",
+          "stem": "amortizedlowrankadaptationformodelbasedreinforcementlearning",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-17/search_result.json",
+          "shared_terms": [
+            "reinforcement"
+          ],
+          "shared_count": 1
+        }
+      ],
+      "note_filename": "Reinforcement_learning_to_choose_optimizers",
+      "semantic_rank": 9
+    },
+    {
+      "id": "rK5bKRkh5f",
+      "source": "openreview",
+      "title": "FedAdamom: Adaptive Momentum for Improved Generalization in Federated Optimization",
+      "summary": "Federated learning (FL) has emerged as a widely adopted training paradigm for privacy-preserving machine learning. Despite the past success of SGD-based methods, they still suffer from severe data heterogeneity and the lack of adaptivity in practical applications. While several adaptive federated optimization methods (such as FedAdam) have been proposed and demonstrated to achieve faster convergence, they fail to show significant improvements in generalization performance under highly heterogeneous data distributions, and their optimization and generalization mechanisms remain insufficiently understood. To fill this gap, we introduce diffusion theory into the adaptive federated optimization framework and analyze the distinct effects of adaptive learning rate and global momentum from the perspectives of saddle-point escaping and flat-minima selection. Theoretical results show that although FedAdam outperforms FedAvg/FedAvgM in escaping saddle points, the latter escapes sharp minima more efficiently. The root cause lies in that adaptive learning rates, while enhancing saddle-point escape, weaken the preference for flat minima. Motivated by these insights, we propose FedAdamom, a new adaptive federated optimization algorithm that adapts the momentum hyperparameter rather than the learning rate. FedAdamom maintains strong saddle-point escaping capability while enhancing flat-minima selection. We further establish its convergence guarantees under non-convex objectives. Extensive experiments demonstrate that FedAdamom significantly outperforms existing adaptive federated optimization methods in terms of convergence speed, generalization performance, and preference for flat minima.",
+      "authors": [
+        "Wenjie Hou",
+        "Tianxiang Chen",
+        "Feng Wang",
+        "Tiantong Wu",
+        "Zhiming Zheng",
+        "Shaoting Tang",
+        "Wei Yang Bryan Lim"
+      ],
+      "affiliations": [],
+      "categories": [],
+      "venue": "CVPR 2026",
+      "pdf_url": "https://openreview.net/pdf?id=rK5bKRkh5f",
+      "url": "https://openreview.net/forum?id=rK5bKRkh5f",
+      "published": "2026-09-17T22:47:18.721000",
+      "published_date": "2026-09-17 22:47:18.721000",
+      "scores": {
+        "relevance": 0.48,
+        "recency": 3.0,
+        "impact": 0.0,
+        "evidence": 1.7,
+        "popularity": 0.0,
+        "quality": 1.7,
+        "recommendation": 3.51
+      },
+      "matched_domain": "随机梯度与优化理论",
+      "matched_keywords": [
+        "SGD",
+        "momentum",
+        "adaptive learning rate",
+        "Adam"
+      ],
+      "is_hot_paper": false,
+      "score_type": "research_priority_screening",
+      "assessment_scope": "metadata_and_abstract",
+      "screening_rank": 18,
+      "paper_stem": "FedAdamom_Adaptive_Momentum_for_Improved_Generalization_in_Federated_Optimization",
+      "already_known": false,
+      "related_papers": [
+        {
+          "title": "Adaptive Phase Switching for Communication Efficient Federated LoRA Fine Tuning",
+          "stem": "adaptivephaseswitchingforcommunicationefficientfederatedlorafinetuning",
+          "source": "pdf",
+          "path": "/Users/myl/Documents/paper/01-raw/2026-09/Adaptive_Phase_Switching_for_Communication_Efficient_Federated_LoRA_Fine_Tuning.pdf",
+          "shared_terms": [
+            "adaptive",
+            "federated"
+          ],
+          "shared_count": 2
+        },
+        {
+          "title": "ConMeZO Adaptive Descent Direction Sampling for Gradient Free Finetuning of Large Language Models",
+          "stem": "conmezoadaptivedescentdirectionsamplingforgradientfreefinetuningoflargelanguagemodels",
+          "source": "pdf",
+          "path": "/Users/myl/Documents/paper/01-raw/2026-09/ConMeZO_Adaptive_Descent_Direction_Sampling_for_Gradient_Free_Finetuning_of_Large_Language_Models.pdf",
+          "shared_terms": [
+            "adaptive"
+          ],
+          "shared_count": 1
+        },
+        {
+          "title": "CurvZO: Adaptive Curvature-Guided Sparse Zeroth-Order Optimization for Efficient LLM Fine-Tuning",
+          "stem": "curvzoadaptivecurvatureguidedsparsezerothorderoptimizationforefficientllmfinetuning",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-20/search_result.json",
+          "shared_terms": [
+            "adaptive"
+          ],
+          "shared_count": 1
+        }
+      ],
+      "note_filename": "FedAdamom_Adaptive_Momentum_for_Improved_Generalization_in_Federated_Optimization",
+      "semantic_rank": 10
+    }
+  ],
+  "result_limit": 100,
+  "focus_keywords": [
+    "gradient-free optimization",
+    "zeroth-order optimization",
+    "derivative-free optimization"
+  ]
+}
