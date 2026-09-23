@@ -127,60 +127,11 @@ weekly:
 # priority 1-10，越大越优先（参与域选择加权）
 #
 # 真实研究定位（2026-09）：
-#   主要方向 —— 大模型优化器设计：免调参、梯度裁剪、符号与范数几何、
-#               自适应更新、优化器状态内存及训练实证
-#   持续方向 —— 随机梯度与优化理论：收敛界、下界、平滑性与算子性质
+#   理论主线 —— 随机梯度方法及其收敛性理论（SGD 变体、动量/加速、自适应学习率、
+#               方差缩减、非凸与 PL 条件收敛分析）
+#   应用侧重 —— 大模型训练优化，聚焦 7B 级别中小模型的训练框架调整与优化器创新
 # ===========================================================================
 research_domains:
-  大模型优化器设计:
-    keywords:
-      - large language model optimizer
-      - LLM optimizer
-      - optimizer design
-      - memory-efficient optimizer
-      - optimizer state memory
-      - adaptive optimization
-      - sign-based optimization
-      - SignSGD
-      - Muon
-      - PowerStep
-      - gradient clipping
-      - parameter-free optimization
-      - Polyak stepsize
-      - lp-norm steepest descent
-      - AdamW
-    arxiv_categories:
-      - cs.LG
-      - cs.CL
-      - math.OC
-      - stat.ML
-    priority: 10
-    subdomains:
-      符号与范数几何优化:
-        keywords:
-          - sign-based optimization
-          - SignSGD
-          - Muon
-          - PowerStep
-          - lp-norm steepest descent
-      免调参与梯度裁剪:
-        keywords:
-          - gradient clipping
-          - parameter-free optimization
-          - Polyak stepsize
-      自适应与状态内存:
-        keywords:
-          - memory-efficient optimizer
-          - optimizer state memory
-          - adaptive optimization
-          - PowerStep
-          - AdamW
-      大模型训练与优化器设计:
-        keywords:
-          - large language model optimizer
-          - LLM optimizer
-          - optimizer design
-
   随机梯度与优化理论:
     keywords:
       # === 基础方法与变体 ===
@@ -231,17 +182,12 @@ research_domains:
       - second-order
       - steepest descent
       - lp-norm
-      - generalized smoothness
-      - coordinate-wise noise
-      - l1-norm stationarity
-      - softmax operator
-      - Lipschitz constant
     arxiv_categories:
       - math.OC
       - stat.ML
       - cs.LG
       - cs.NA
-    priority: 7
+    priority: 5
     subdomains:
       随机梯度与收敛性:
         keywords:
@@ -292,14 +238,120 @@ research_domains:
           - second-order
           - steepest descent
           - lp-norm
-      算子与范数几何:
+
+  大模型训练优化:
+    keywords:
+      # === 训练优化器（应用侧重）===
+      - large language model training
+      - LLM training
+      - training optimization
+      - optimizer design
+      - optimizer
+      - learning rate schedule
+      - warmup
+      - weight decay
+      - batch size scaling
+      - gradient noise scale
+      # === 内存与效率 ===
+      - memory-efficient training
+      - memory-efficient optimizer
+      - low-rank adaptation
+      - LoRA
+      - ZeRO
+      - gradient checkpointing
+      - activation memory
+      - mixed precision training
+      - 8-bit optimizer
+      - quantized optimizer
+      # === 分布式与稳定性 ===
+      - distributed training
+      - data parallelism
+      - tensor parallelism
+      - sharded optimizer
+      - gradient compression
+      - communication efficiency
+      - training stability
+      - loss spike
+      - hyperparameter transfer
+      - muP
+      - neural scaling law
+      - language model scaling law
+      - compute scaling law
+    arxiv_categories:
+      - cs.LG
+      - cs.CL
+      - cs.DC
+      - math.OC
+    priority: 4
+    subdomains:
+      LoRA 与参数高效微调:
         keywords:
-          - lp-norm
-          - generalized smoothness
-          - coordinate-wise noise
-          - l1-norm stationarity
-          - softmax operator
-          - Lipschitz constant
+          - low-rank adaptation
+          - LoRA
+      优化器与训练策略:
+        keywords:
+          - large language model training
+          - LLM training
+          - training optimization
+          - optimizer design
+          - optimizer
+          - learning rate schedule
+          - warmup
+          - weight decay
+          - batch size scaling
+          - gradient noise scale
+          - hyperparameter transfer
+          - muP
+      内存与数值效率:
+        keywords:
+          - memory-efficient training
+          - memory-efficient optimizer
+          - ZeRO
+          - gradient checkpointing
+          - activation memory
+          - mixed precision training
+          - 8-bit optimizer
+          - quantized optimizer
+      分布式与通信效率:
+        keywords:
+          - distributed training
+          - data parallelism
+          - tensor parallelism
+          - sharded optimizer
+          - gradient compression
+          - communication efficiency
+      训练稳定性与缩放:
+        keywords:
+          - training stability
+          - loss spike
+          - neural scaling law
+          - language model scaling law
+          - compute scaling law
+
+# 命中这些关键词的论文直接排除
+  无梯度大模型优化:
+    keywords:
+      - gradient-free optimization
+      - zeroth-order optimization
+      - derivative-free optimization
+      - zeroth-order gradient estimation
+      - randomized smoothing
+      - two-point estimator
+      - ZO-SGD
+      - SPSA
+      - MeZO
+      - evolution strategies
+      - optimizer design
+      - large language model training
+      - memory-efficient training
+      - on-device training
+      - query complexity
+    arxiv_categories:
+      - cs.LG
+      - cs.AI
+      - math.OC
+      - cs.AR
+    priority: 10
 
 excluded_keywords:
   - workshop
