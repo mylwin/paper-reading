@@ -1,0 +1,115 @@
+{
+  "date": "2026-09-23",
+  "note_file": "今日检索.md",
+  "generated_at": "2026-09-23T13:37:30",
+  "skill": "paper-daily",
+  "sources_searched": [
+    "arxiv"
+  ],
+  "source_counts": {
+    "arxiv": 120
+  },
+  "date_windows": {
+    "recent_30d": {
+      "start": "2026-08-24",
+      "end": "2026-09-23"
+    },
+    "past_year": {
+      "start": "2025-09-23",
+      "end": "2026-08-23"
+    }
+  },
+  "total_unique": 100,
+  "top_papers": [
+    {
+      "title": "Beyond Optimal Rates in Stochastic Optimization: Trajectory-Adaptive Stopping Rules",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2608.25551v1",
+      "note_filename": "Beyond_Optimal_Rates_in_Stochastic_Optimization_Trajectory_Adaptive_Stopping_Rules",
+      "matched_domain": "随机梯度与优化理论",
+      "score": 7.73
+    },
+    {
+      "title": "Convergence rates for the RMSprop optimizer with full control of the hyperparameters",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2608.30382v1",
+      "note_filename": "Convergence_rates_for_the_RMSprop_optimizer_with_full_control_of_the_hyperparameters",
+      "matched_domain": "随机梯度与优化理论",
+      "score": 7.73
+    },
+    {
+      "title": "Beyond Quadratic Loss: The Stability Phase Diagram of Adam",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2609.18314v1",
+      "note_filename": "Beyond_Quadratic_Loss_The_Stability_Phase_Diagram_of_Adam",
+      "matched_domain": "随机梯度与优化理论",
+      "score": 7.73
+    },
+    {
+      "title": "The Exponential Price of Determinism in Nonsmooth Nonconvex Optimization",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2609.23837v1",
+      "note_filename": "The_Exponential_Price_of_Determinism_in_Nonsmooth_Nonconvex_Optimization",
+      "matched_domain": "无梯度大模型优化",
+      "score": 8.27
+    },
+    {
+      "title": "Generalization as a robust performance property of learning-enabled dynamical systems",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2608.30431v1",
+      "note_filename": "Generalization_as_a_robust_performance_property_of_learning_enabled_dynamical_systems",
+      "matched_domain": "无梯度大模型优化",
+      "score": 7.93
+    },
+    {
+      "title": "Improved Gradient Descent Lower Bounds Beyond Nesterov",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2609.02855v2",
+      "note_filename": "Improved_Gradient_Descent_Lower_Bounds_Beyond_Nesterov",
+      "matched_domain": "随机梯度与优化理论",
+      "score": 7.87
+    },
+    {
+      "title": "Curvature Cryptanalysis of Smooth Transformer Feed-Forward Networks",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2608.28843v2",
+      "note_filename": "Curvature_Cryptanalysis_of_Smooth_Transformer_Feed_Forward_Networks",
+      "matched_domain": "无梯度大模型优化",
+      "score": 7.8
+    },
+    {
+      "title": "Percolation Dynamics in Optimization : Variance Cascades and Discrete Scale Invariance",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2609.02373v1",
+      "note_filename": "Percolation_Dynamics_in_Optimization_Variance_Cascades_and_Discrete_Scale_Invariance",
+      "matched_domain": "无梯度大模型优化",
+      "score": 7.73
+    },
+    {
+      "title": "Affinity-Aware Sharding for Delayed Tensor Parallelism",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2609.13846v1",
+      "note_filename": "Affinity_Aware_Sharding_for_Delayed_Tensor_Parallelism",
+      "matched_domain": "大模型训练优化",
+      "score": 7.57
+    },
+    {
+      "title": "The Role of Gradient Modification in Heavy-Tailed Nonconvex Stochastic Min-Max Optimization",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2609.06064v1",
+      "note_filename": "The_Role_of_Gradient_Modification_in_Heavy_Tailed_Nonconvex_Stochastic_Min_Max_Optimization",
+      "matched_domain": "随机梯度与优化理论",
+      "score": 7.4
+    }
+  ]
+}
