@@ -1,0 +1,927 @@
+{
+  "date": "2026-09-24",
+  "note_file": "今日检索.md",
+  "generated_at": "2026-09-24T14:44:51",
+  "skill": "paper-daily",
+  "sources_searched": [
+    "arxiv",
+    "openreview"
+  ],
+  "source_counts": {
+    "arxiv": 252,
+    "openreview": 0
+  },
+  "date_windows": {
+    "recent_30d": {
+      "start": "2026-08-25",
+      "end": "2026-09-24"
+    },
+    "past_year": {
+      "start": "2025-09-24",
+      "end": "2026-08-24"
+    }
+  },
+  "total_unique": 234,
+  "top_papers": [
+    {
+      "title": "Spectral Allocation: Why Muon Outperforms Adam, and How to Improve Muon",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2608.25990v1",
+      "note_filename": "Spectral_Allocation_Why_Muon_Outperforms_Adam_and_How_to_Improve_Muon",
+      "matched_domain": "大模型优化器设计",
+      "score": 8.93
+    },
+    {
+      "title": "Stiefel-AdamW: Geometry-Aware AdamW for Linear Factorization Blocks",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2609.21039v1",
+      "note_filename": "Stiefel_AdamW_Geometry_Aware_AdamW_for_Linear_Factorization_Blocks",
+      "matched_domain": "大模型优化器设计",
+      "score": 8.33
+    },
+    {
+      "title": "The Bias of Nonlinear Two-Time-scale Stochastic Approximation under Constant Step-Sizes",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2609.20409v1",
+      "note_filename": "The_Bias_of_Nonlinear_Two_Time_scale_Stochastic_Approximation_under_Constant_Step_Sizes",
+      "matched_domain": "大模型优化器设计",
+      "score": 8.27
+    },
+    {
+      "title": "Resource-Adaptive Stochastic Gradient Descent for Online Linear Programming without Re-solving",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2609.28263v1",
+      "note_filename": "Resource_Adaptive_Stochastic_Gradient_Descent_for_Online_Linear_Programming_without_Re_solving",
+      "matched_domain": "大模型优化器设计",
+      "score": 8.67
+    },
+    {
+      "title": "Resilient Decentralized Wireless Federated Learning via Gradient Tracking with AdamW",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2608.25535v1",
+      "note_filename": "Resilient_Decentralized_Wireless_Federated_Learning_via_Gradient_Tracking_with_AdamW",
+      "matched_domain": "大模型优化器设计",
+      "score": 8.33
+    },
+    {
+      "title": "Muon-C: Operator-Aligned Muon for Convolutional Kernels",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2609.09676v1",
+      "note_filename": "Muon_C_Operator_Aligned_Muon_for_Convolutional_Kernels",
+      "matched_domain": "大模型优化器设计",
+      "score": 8.33
+    },
+    {
+      "title": "Spectral Deflation for Factorization-Free Matrix Filtering in Muon and Semidefinite Programming",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2609.21102v1",
+      "note_filename": "Spectral_Deflation_for_Factorization_Free_Matrix_Filtering_in_Muon_and_Semidefinite_Programming",
+      "matched_domain": "大模型优化器设计",
+      "score": 8.33
+    },
+    {
+      "title": "High-Dimensional Learning Dynamics of Attention-Indexed Models",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2609.03858v1",
+      "note_filename": "High_Dimensional_Learning_Dynamics_of_Attention_Indexed_Models",
+      "matched_domain": "大模型优化器设计",
+      "score": 8.27
+    },
+    {
+      "title": "Generalization Analysis of Distributed Kernel-based Robust Gradient Descent Algorithms",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2609.11712v1",
+      "note_filename": "Generalization_Analysis_of_Distributed_Kernel_based_Robust_Gradient_Descent_Algorithms",
+      "matched_domain": "大模型优化器设计",
+      "score": 8.27
+    },
+    {
+      "title": "Gradient Descent with Stochastic Subspaces via Persistence of Memory",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2609.18416v1",
+      "note_filename": "Gradient_Descent_with_Stochastic_Subspaces_via_Persistence_of_Memory",
+      "matched_domain": "大模型优化器设计",
+      "score": 8.27
+    },
+    {
+      "title": "Complexities of Weak Proximal Oracle Methods for Composite Convex Optimization",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2609.24423v1",
+      "note_filename": "Complexities_of_Weak_Proximal_Oracle_Methods_for_Composite_Convex_Optimization",
+      "matched_domain": "大模型优化器设计",
+      "score": 8.27
+    },
+    {
+      "title": "Same Flow, Different Paths: Variance Reduction in Flow Matching",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2609.17287v1",
+      "note_filename": "Same_Flow_Different_Paths_Variance_Reduction_in_Flow_Matching",
+      "matched_domain": "大模型优化器设计",
+      "score": 8.27
+    },
+    {
+      "title": "Tight Regret Bound for Online Inverse Linear Optimization via Multiscale Matrix Weights",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2609.26978v1",
+      "note_filename": "Tight_Regret_Bound_for_Online_Inverse_Linear_Optimization_via_Multiscale_Matrix_Weights",
+      "matched_domain": "大模型优化器设计",
+      "score": 8.27
+    },
+    {
+      "title": "Posterior Tempering Explains Variance Inflation in Linear and Generalized Linear Thompson Sampling",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2609.01999v1",
+      "note_filename": "Posterior_Tempering_Explains_Variance_Inflation_in_Linear_and_Generalized_Linear_Thompson_Sampling",
+      "matched_domain": "大模型优化器设计",
+      "score": 8.27
+    },
+    {
+      "title": "Stability-Constrained Approximation in Spline KANs: Exact Layer Balancing and Budget-Compatible Saturation",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2609.17619v1",
+      "note_filename": "Stability_Constrained_Approximation_in_Spline_KANs_Exact_Layer_Balancing_and_Budget_Compatible_Saturation",
+      "matched_domain": "大模型优化器设计",
+      "score": 8.27
+    },
+    {
+      "title": "Optimizers for Diffusion Models: A Controlled Benchmark",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2609.23055v1",
+      "note_filename": "Optimizers_for_Diffusion_Models_A_Controlled_Benchmark",
+      "matched_domain": "大模型优化器设计",
+      "score": 8.13
+    },
+    {
+      "title": "Mini-batch Sampling Strategies for Long-Tailed Image Classification: An Empirical Study on CIFAR-100-LT",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2609.16365v1",
+      "note_filename": "Mini_batch_Sampling_Strategies_for_Long_Tailed_Image_Classification_An_Empirical_Study_on_CIFAR_100_LT",
+      "matched_domain": "大模型优化器设计",
+      "score": 8.07
+    },
+    {
+      "title": "Optimizer Memory Schedules for Outscaling the Overtraining Axis",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2609.04577v1",
+      "note_filename": "Optimizer_Memory_Schedules_for_Outscaling_the_Overtraining_Axis",
+      "matched_domain": "大模型优化器设计",
+      "score": 8.0
+    },
+    {
+      "title": "Optimizer as Detector: Stochastic Gradient Descent for Latent Mixture Models",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2609.07003v1",
+      "note_filename": "Optimizer_as_Detector_Stochastic_Gradient_Descent_for_Latent_Mixture_Models",
+      "matched_domain": "随机梯度与优化理论",
+      "score": 7.93
+    },
+    {
+      "title": "Continuous Delayed-Memory Stochastic Gradient Descent and Continuous-Time Reinforcement Learning from History of Astrophysical Time Series Studies",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2609.20906v2",
+      "note_filename": "Continuous_Delayed_Memory_Stochastic_Gradient_Descent_and_Continuous_Time_Reinforcement_Learning_from_History_of_Astroph",
+      "matched_domain": "随机梯度与优化理论",
+      "score": 7.93
+    },
+    {
+      "title": "When Muon Meets Task Interference: A Spectral Perspective on Continual Learning and Model Merging",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2608.27518v1",
+      "note_filename": "When_Muon_Meets_Task_Interference_A_Spectral_Perspective_on_Continual_Learning_and_Model_Merging",
+      "matched_domain": "大模型优化器设计",
+      "score": 7.93
+    },
+    {
+      "title": "Locally Private Inference for Riemannian Stochastic Optimization",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2609.22642v2",
+      "note_filename": "Locally_Private_Inference_for_Riemannian_Stochastic_Optimization",
+      "matched_domain": "大模型优化器设计",
+      "score": 7.93
+    },
+    {
+      "title": "Early stopping of stochastic variance reduced gradient for linear inverse problems by the discrepancy principle",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2609.12396v1",
+      "note_filename": "Early_stopping_of_stochastic_variance_reduced_gradient_for_linear_inverse_problems_by_the_discrepancy_principle",
+      "matched_domain": "随机梯度与优化理论",
+      "score": 7.93
+    },
+    {
+      "title": "AdamX: Cosine similarity meets gradient descent",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2609.11867v1",
+      "note_filename": "AdamX_Cosine_similarity_meets_gradient_descent",
+      "matched_domain": "大模型优化器设计",
+      "score": 7.93
+    },
+    {
+      "title": "Inference for Newton Methods with Accelerated Sketch-and-Project via Random Scaling",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2609.12421v1",
+      "note_filename": "Inference_for_Newton_Methods_with_Accelerated_Sketch_and_Project_via_Random_Scaling",
+      "matched_domain": "大模型优化器设计",
+      "score": 7.93
+    },
+    {
+      "title": "Matching Multi-Loop Complexities with a Single Loop: Optimal Optimization Stationarity and Best-Known Game Stationarity in Nonconvex--Concave Minimax Optimization",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2609.17973v1",
+      "note_filename": "Matching_Multi_Loop_Complexities_with_a_Single_Loop_Optimal_Optimization_Stationarity_and_Best_Known_Game_Stationarity_i",
+      "matched_domain": "大模型优化器设计",
+      "score": 7.93
+    },
+    {
+      "title": "Convergence of a Randomized Newton Method in Nonconvex Optimization",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2609.10465v1",
+      "note_filename": "Convergence_of_a_Randomized_Newton_Method_in_Nonconvex_Optimization",
+      "matched_domain": "随机梯度与优化理论",
+      "score": 7.9
+    },
+    {
+      "title": "REAL-Q: E2E LLM Quantization via Dynamic Gradient Descent",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2609.00049v2",
+      "note_filename": "REAL_Q_E2E_LLM_Quantization_via_Dynamic_Gradient_Descent",
+      "matched_domain": "随机梯度与优化理论",
+      "score": 7.89
+    },
+    {
+      "title": "Convergence of Stochastic Gradient Methods under Heavy-Tailed Noise and Hölder Smoothness",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2609.12785v1",
+      "note_filename": "Convergence_of_Stochastic_Gradient_Methods_under_Heavy_Tailed_Noise_and_Hölder_Smoothness",
+      "matched_domain": "大模型优化器设计",
+      "score": 7.87
+    },
+    {
+      "title": "Centered Permutation Prefixes for SGD with Random Reshuffling: Sharp Rates, Hölder Geometry, and Composite Proximal Extensions",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2609.04578v1",
+      "note_filename": "Centered_Permutation_Prefixes_for_SGD_with_Random_Reshuffling_Sharp_Rates_Hölder_Geometry_and_Composite_Proximal_Extensi",
+      "matched_domain": "大模型优化器设计",
+      "score": 7.87
+    },
+    {
+      "title": "Stronger Lower Bounds for (Non-)Anytime Acceleration of Gradient Descent",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2609.04032v2",
+      "note_filename": "Stronger_Lower_Bounds_for_(Non_)Anytime_Acceleration_of_Gradient_Descent",
+      "matched_domain": "随机梯度与优化理论",
+      "score": 7.87
+    },
+    {
+      "title": "Silver Rate Is (Almost) Optimal for Gradient Descent",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2609.09152v2",
+      "note_filename": "Silver_Rate_Is_(Almost)_Optimal_for_Gradient_Descent",
+      "matched_domain": "大模型优化器设计",
+      "score": 7.87
+    },
+    {
+      "title": "Stochastic Nonconvex Bilevel Optimization: Improved Rates Without Rare-Visit Assumption",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2609.06580v1",
+      "note_filename": "Stochastic_Nonconvex_Bilevel_Optimization_Improved_Rates_Without_Rare_Visit_Assumption",
+      "matched_domain": "大模型优化器设计",
+      "score": 7.87
+    },
+    {
+      "title": "Second-Order Stationarity with Common Random Losses: Matching Tolerance Bounds",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2609.28238v1",
+      "note_filename": "Second_Order_Stationarity_with_Common_Random_Losses_Matching_Tolerance_Bounds",
+      "matched_domain": "随机梯度与优化理论",
+      "score": 7.87
+    },
+    {
+      "title": "Minimax Lower Bound for Estimating Diffusion-based Local Intrinsic Dimension",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2609.04822v1",
+      "note_filename": "Minimax_Lower_Bound_for_Estimating_Diffusion_based_Local_Intrinsic_Dimension",
+      "matched_domain": "大模型优化器设计",
+      "score": 7.87
+    },
+    {
+      "title": "Linear convergence rate analysis of Proximal-Tracking for nonsmooth distributed optimization",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2609.27400v1",
+      "note_filename": "Linear_convergence_rate_analysis_of_Proximal_Tracking_for_nonsmooth_distributed_optimization",
+      "matched_domain": "随机梯度与优化理论",
+      "score": 7.82
+    },
+    {
+      "title": "The Complexity of Finding Stationary Points in Nonsmooth Nonconvex Optimization",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2609.17780v1",
+      "note_filename": "The_Complexity_of_Finding_Stationary_Points_in_Nonsmooth_Nonconvex_Optimization",
+      "matched_domain": "随机梯度与优化理论",
+      "score": 7.82
+    },
+    {
+      "title": "Musec: MomentUm SpEctral Clipping for Stable Muon-type Training",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2609.11655v2",
+      "note_filename": "Musec_MomentUm_SpEctral_Clipping_for_Stable_Muon_type_Training",
+      "matched_domain": "大模型优化器设计",
+      "score": 7.8
+    },
+    {
+      "title": "Stochastic Gradient Methods with Online Scaling",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2609.11751v2",
+      "note_filename": "Stochastic_Gradient_Methods_with_Online_Scaling",
+      "matched_domain": "随机梯度与优化理论",
+      "score": 7.8
+    },
+    {
+      "title": "A Tight Surrogate-Based Adaptive Step Size for the Multiobjective Conditional Gradient Method",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2609.21831v1",
+      "note_filename": "A_Tight_Surrogate_Based_Adaptive_Step_Size_for_the_Multiobjective_Conditional_Gradient_Method",
+      "matched_domain": "随机梯度与优化理论",
+      "score": 7.79
+    },
+    {
+      "title": "Minimax-Optimal Early Stopping for Continuous-Time SGD via the Discrepancy Principle",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2609.11273v1",
+      "note_filename": "Minimax_Optimal_Early_Stopping_for_Continuous_Time_SGD_via_the_Discrepancy_Principle",
+      "matched_domain": "随机梯度与优化理论",
+      "score": 7.76
+    },
+    {
+      "title": "The Multiple Timescales of Gradient Descent on the Edge of Stability: A Perturbative Derivation of the Central Flow",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2609.01034v1",
+      "note_filename": "The_Multiple_Timescales_of_Gradient_Descent_on_the_Edge_of_Stability_A_Perturbative_Derivation_of_the_Central_Flow",
+      "matched_domain": "大模型优化器设计",
+      "score": 7.73
+    },
+    {
+      "title": "Exact-Form Regret for Gradient Descent, Mirror Descent and Follow-the-Regularized-Leader",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2609.09466v2",
+      "note_filename": "Exact_Form_Regret_for_Gradient_Descent_Mirror_Descent_and_Follow_the_Regularized_Leader",
+      "matched_domain": "大模型优化器设计",
+      "score": 7.73
+    },
+    {
+      "title": "Compute-Optimal Pretrain--Fine-tune in Ridge Gradient Descent",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2609.16262v1",
+      "note_filename": "Compute_Optimal_Pretrain_Fine_tune_in_Ridge_Gradient_Descent",
+      "matched_domain": "大模型优化器设计",
+      "score": 7.73
+    },
+    {
+      "title": "A Theoretical Analysis of Generalization Dynamics in Neural Networks under Gradient Descent with Weight Decay",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2609.07755v1",
+      "note_filename": "A_Theoretical_Analysis_of_Generalization_Dynamics_in_Neural_Networks_under_Gradient_Descent_with_Weight_Decay",
+      "matched_domain": "大模型优化器设计",
+      "score": 7.73
+    },
+    {
+      "title": "Localize, Restart, Accelerate: Stochastic Optimization under Generalized Smoothness",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2609.06555v1",
+      "note_filename": "Localize_Restart_Accelerate_Stochastic_Optimization_under_Generalized_Smoothness",
+      "matched_domain": "随机梯度与优化理论",
+      "score": 7.73
+    },
+    {
+      "title": "A Closed-Form Formula for Consistent Lipschitz Regression on Metric Spaces with Sparse Neural Network Realizations",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2609.03129v1",
+      "note_filename": "A_Closed_Form_Formula_for_Consistent_Lipschitz_Regression_on_Metric_Spaces_with_Sparse_Neural_Network_Realizations",
+      "matched_domain": "大模型优化器设计",
+      "score": 7.73
+    },
+    {
+      "title": "UGM: A Unified Framework and New Perspectives for Accelerated Gradient Methods in Smooth and Strongly Convex Optimization",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2608.27368v1",
+      "note_filename": "UGM_A_Unified_Framework_and_New_Perspectives_for_Accelerated_Gradient_Methods_in_Smooth_and_Strongly_Convex_Optimization",
+      "matched_domain": "随机梯度与优化理论",
+      "score": 7.69
+    },
+    {
+      "title": "Curvature-Conditioned Multiscale Momentum with Sphere Constraints for LLM Pretraining",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2608.28442v1",
+      "note_filename": "Curvature_Conditioned_Multiscale_Momentum_with_Sphere_Constraints_for_LLM_Pretraining",
+      "matched_domain": "大模型优化器设计",
+      "score": 7.6
+    },
+    {
+      "title": "Revisiting Distributed Sign-Based Variance Reduction",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2609.18656v1",
+      "note_filename": "Revisiting_Distributed_Sign_Based_Variance_Reduction",
+      "matched_domain": "大模型优化器设计",
+      "score": 7.53
+    },
+    {
+      "title": "Certified Residual Quasi-Newton Methods for Distributed Variational Inequalities",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2609.22481v1",
+      "note_filename": "Certified_Residual_Quasi_Newton_Methods_for_Distributed_Variational_Inequalities",
+      "matched_domain": "随机梯度与优化理论",
+      "score": 7.53
+    },
+    {
+      "title": "Estimating Population-Risk Curves Along Nonconvex Gradient Flows from the Training Sample",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2608.30261v1",
+      "note_filename": "Estimating_Population_Risk_Curves_Along_Nonconvex_Gradient_Flows_from_the_Training_Sample",
+      "matched_domain": "大模型优化器设计",
+      "score": 7.53
+    },
+    {
+      "title": "Preconditioned Hyperbolic Smoothing Modified L-BFGS Algorithms for Finite Minimax Problems",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2608.29300v5",
+      "note_filename": "Preconditioned_Hyperbolic_Smoothing_Modified_L_BFGS_Algorithms_for_Finite_Minimax_Problems",
+      "matched_domain": "随机梯度与优化理论",
+      "score": 7.51
+    },
+    {
+      "title": "Blog: Survey of Optimizers",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2608.28557v1",
+      "note_filename": "Blog_Survey_of_Optimizers",
+      "matched_domain": "大模型优化器设计",
+      "score": 7.4
+    },
+    {
+      "title": "Muon Can Outperform Dedicated Continual Learning Methods",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2609.24678v1",
+      "note_filename": "Muon_Can_Outperform_Dedicated_Continual_Learning_Methods",
+      "matched_domain": "大模型优化器设计",
+      "score": 7.4
+    },
+    {
+      "title": "Speed Limit for Information Acquisition in Stochastic Learning Dynamics",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2609.08219v1",
+      "note_filename": "Speed_Limit_for_Information_Acquisition_in_Stochastic_Learning_Dynamics",
+      "matched_domain": "大模型优化器设计",
+      "score": 7.4
+    },
+    {
+      "title": "Steady-State Convergence of Stochastic Approximation",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2609.14922v1",
+      "note_filename": "Steady_State_Convergence_of_Stochastic_Approximation",
+      "matched_domain": "大模型优化器设计",
+      "score": 7.4
+    },
+    {
+      "title": "Derivative-Free Structured Updates for Muon",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2609.17759v1",
+      "note_filename": "Derivative_Free_Structured_Updates_for_Muon",
+      "matched_domain": "大模型优化器设计",
+      "score": 7.4
+    },
+    {
+      "title": "Continuous Optimization for p-adic Models",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2609.25501v1",
+      "note_filename": "Continuous_Optimization_for_p_adic_Models",
+      "matched_domain": "大模型优化器设计",
+      "score": 7.4
+    },
+    {
+      "title": "Scalable Incremental Robustness Analysis of Neural Network Feedback Systems",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2609.22576v1",
+      "note_filename": "Scalable_Incremental_Robustness_Analysis_of_Neural_Network_Feedback_Systems",
+      "matched_domain": "大模型优化器设计",
+      "score": 7.4
+    },
+    {
+      "title": "Effective curvature dimension in smooth DC optimization",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2609.28319v1",
+      "note_filename": "Effective_curvature_dimension_in_smooth_DC_optimization",
+      "matched_domain": "随机梯度与优化理论",
+      "score": 7.39
+    },
+    {
+      "title": "A Novel Fractional-Order Accelerated Gradient Descent Method for Nonlinear Optimization with Application to Posture Recognition",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2608.24766v1",
+      "note_filename": "A_Novel_Fractional_Order_Accelerated_Gradient_Descent_Method_for_Nonlinear_Optimization_with_Application_to_Posture_Reco",
+      "matched_domain": "随机梯度与优化理论",
+      "score": 7.33
+    },
+    {
+      "title": "A Lower Bound for the Heavy-Ball Method on Smooth Convex Functions",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2609.08656v1",
+      "note_filename": "A_Lower_Bound_for_the_Heavy_Ball_Method_on_Smooth_Convex_Functions",
+      "matched_domain": "大模型优化器设计",
+      "score": 7.33
+    },
+    {
+      "title": "Convergence of Rotation-based Matrix Optimizers: A Unified Analysis of SOAP, Conda, and SPlus",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2609.24522v1",
+      "note_filename": "Convergence_of_Rotation_based_Matrix_Optimizers_A_Unified_Analysis_of_SOAP_Conda_and_SPlus",
+      "matched_domain": "随机梯度与优化理论",
+      "score": 7.31
+    },
+    {
+      "title": "Feature Suppression and Differential Privacy for Residential Traffic Classification: A Two-Home Federated Study",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2609.23521v1",
+      "note_filename": "Feature_Suppression_and_Differential_Privacy_for_Residential_Traffic_Classification_A_Two_Home_Federated_Study",
+      "matched_domain": "随机梯度与优化理论",
+      "score": 7.11
+    },
+    {
+      "title": "Revisiting the Provable-Auditable Privacy Gap of DP-SGD",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2608.28934v1",
+      "note_filename": "Revisiting_the_Provable_Auditable_Privacy_Gap_of_DP_SGD",
+      "matched_domain": "随机梯度与优化理论",
+      "score": 7.05
+    },
+    {
+      "title": "Geometry of learning dynamics: Gradient descent versus natural gradient on the ridge of optimization",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2609.16805v2",
+      "note_filename": "Geometry_of_learning_dynamics_Gradient_descent_versus_natural_gradient_on_the_ridge_of_optimization",
+      "matched_domain": "随机梯度与优化理论",
+      "score": 7.05
+    },
+    {
+      "title": "Stochastic Augmented Lagrangian Framework with Second-Order Convergence Guarantees for Nonconvex Expectation-Constrained Optimization",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2609.27329v1",
+      "note_filename": "Stochastic_Augmented_Lagrangian_Framework_with_Second_Order_Convergence_Guarantees_for_Nonconvex_Expectation_Constrained",
+      "matched_domain": "随机梯度与优化理论",
+      "score": 7.05
+    },
+    {
+      "title": "Primal-Dual Inexact Newton-MR for Nonconvex Optimization with Equality Constraints",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2609.09683v1",
+      "note_filename": "Primal_Dual_Inexact_Newton_MR_for_Nonconvex_Optimization_with_Equality_Constraints",
+      "matched_domain": "随机梯度与优化理论",
+      "score": 7.0
+    },
+    {
+      "title": "Silver Rate Is (Almost) Optimal for Gradient Descent: The Strongly Convex Case",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2609.26873v1",
+      "note_filename": "Silver_Rate_Is_(Almost)_Optimal_for_Gradient_Descent_The_Strongly_Convex_Case",
+      "matched_domain": "随机梯度与优化理论",
+      "score": 6.99
+    },
+    {
+      "title": "Preconditioned Three-Term Conjugate Gradient Framework for Nonconvex Finite Minimax Problems",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2609.13754v1",
+      "note_filename": "Preconditioned_Three_Term_Conjugate_Gradient_Framework_for_Nonconvex_Finite_Minimax_Problems",
+      "matched_domain": "随机梯度与优化理论",
+      "score": 6.94
+    },
+    {
+      "title": "Heavy-Ball Method under Randomized Schedules",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2609.09743v1",
+      "note_filename": "Heavy_Ball_Method_under_Randomized_Schedules",
+      "matched_domain": "随机梯度与优化理论",
+      "score": 6.87
+    },
+    {
+      "title": "An Inexact Augmented Lagrangian Method for $(L_0, L_1)$-Smooth Convex Optimization",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2609.00261v1",
+      "note_filename": "An_Inexact_Augmented_Lagrangian_Method_for_$(L_0_L_1)$_Smooth_Convex_Optimization",
+      "matched_domain": "随机梯度与优化理论",
+      "score": 6.87
+    },
+    {
+      "title": "An Adaptive Linesearch-free Method for Monotone Variational Inequalities under Local Lipschitz Continuity",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2609.15936v1",
+      "note_filename": "An_Adaptive_Linesearch_free_Method_for_Monotone_Variational_Inequalities_under_Local_Lipschitz_Continuity",
+      "matched_domain": "随机梯度与优化理论",
+      "score": 6.87
+    },
+    {
+      "title": "Near-Optimal Higher-Order Oracle Complexity for Convex--Concave Minimax Optimization",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2609.28246v1",
+      "note_filename": "Near_Optimal_Higher_Order_Oracle_Complexity_for_Convex_Concave_Minimax_Optimization",
+      "matched_domain": "随机梯度与优化理论",
+      "score": 6.87
+    },
+    {
+      "title": "Sample average approximation of multiobjective stochastic optimization problems with application in insurance",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2609.18159v1",
+      "note_filename": "Sample_average_approximation_of_multiobjective_stochastic_optimization_problems_with_application_in_insurance",
+      "matched_domain": "随机梯度与优化理论",
+      "score": 6.85
+    },
+    {
+      "title": "Accelerated Gradient Flow with Endogenous Gradient-Memory Anchor: Selection and Restoring Damping",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2608.25312v1",
+      "note_filename": "Accelerated_Gradient_Flow_with_Endogenous_Gradient_Memory_Anchor_Selection_and_Restoring_Damping",
+      "matched_domain": "随机梯度与优化理论",
+      "score": 6.85
+    },
+    {
+      "title": "Robust Broad Learning System with Wave Loss for Classification under Data Uncertainty",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2608.29983v1",
+      "note_filename": "Robust_Broad_Learning_System_with_Wave_Loss_for_Classification_under_Data_Uncertainty",
+      "matched_domain": "大模型优化器设计",
+      "score": 6.83
+    },
+    {
+      "title": "SAUSS: Stochastic Approximation with Unbiased Simulated Scores for Limited Dependent Variable Models",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2608.25304v1",
+      "note_filename": "SAUSS_Stochastic_Approximation_with_Unbiased_Simulated_Scores_for_Limited_Dependent_Variable_Models",
+      "matched_domain": "随机梯度与优化理论",
+      "score": 6.79
+    },
+    {
+      "title": "Joint Structure Identification and Newton Acceleration via Proximal Line Search for Nonconvex Optimization",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2609.18021v1",
+      "note_filename": "Joint_Structure_Identification_and_Newton_Acceleration_via_Proximal_Line_Search_for_Nonconvex_Optimization",
+      "matched_domain": "随机梯度与优化理论",
+      "score": 6.73
+    },
+    {
+      "title": "Physics-Informed Neural Networks for Biot's Model via Fixed-Stress Splitting and Energy Natural Gradient Descent",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2608.26303v1",
+      "note_filename": "Physics_Informed_Neural_Networks_for_Biot's_Model_via_Fixed_Stress_Splitting_and_Energy_Natural_Gradient_Descent",
+      "matched_domain": "随机梯度与优化理论",
+      "score": 6.68
+    },
+    {
+      "title": "Matrix AdaGrad: Row-wise and Column-wise Adaptive Subgradient Methods",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2609.21815v1",
+      "note_filename": "Matrix_AdaGrad_Row_wise_and_Column_wise_Adaptive_Subgradient_Methods",
+      "matched_domain": "大模型优化器设计",
+      "score": 6.67
+    },
+    {
+      "title": "A Parameter-Free Adaptive Reflected Gradient Method for Monotone Variational Inequalities",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2609.18355v1",
+      "note_filename": "A_Parameter_Free_Adaptive_Reflected_Gradient_Method_for_Monotone_Variational_Inequalities",
+      "matched_domain": "随机梯度与优化理论",
+      "score": 6.65
+    },
+    {
+      "title": "Randomized Quasi-Gauss--Newton Methods for Solving General Nonlinear Equations",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2608.27084v1",
+      "note_filename": "Randomized_Quasi_Gauss_Newton_Methods_for_Solving_General_Nonlinear_Equations",
+      "matched_domain": "随机梯度与优化理论",
+      "score": 6.65
+    },
+    {
+      "title": "Transform before linearizing: robust Newton methods for singular $p$-Laplace and $p$-Stokes equations",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2609.12241v1",
+      "note_filename": "Transform_before_linearizing_robust_Newton_methods_for_singular_$p$_Laplace_and_$p$_Stokes_equations",
+      "matched_domain": "随机梯度与优化理论",
+      "score": 6.65
+    },
+    {
+      "title": "Mini-Batch Risk-Averse Deep Q-Learning: A Robot Navigation Case Study",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2609.07998v1",
+      "note_filename": "Mini_Batch_Risk_Averse_Deep_Q_Learning_A_Robot_Navigation_Case_Study",
+      "matched_domain": "随机梯度与优化理论",
+      "score": 6.62
+    },
+    {
+      "title": "Doubly exponential convergence of the cyclic steepest descent method for strictly convex quadratics in arbitrary dimensions",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2609.25800v1",
+      "note_filename": "Doubly_exponential_convergence_of_the_cyclic_steepest_descent_method_for_strictly_convex_quadratics_in_arbitrary_dimensi",
+      "matched_domain": "随机梯度与优化理论",
+      "score": 6.62
+    },
+    {
+      "title": "Lower Bounds for Nonconvex-Concave Minimax Optimization",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2609.14233v1",
+      "note_filename": "Lower_Bounds_for_Nonconvex_Concave_Minimax_Optimization",
+      "matched_domain": "随机梯度与优化理论",
+      "score": 6.62
+    },
+    {
+      "title": "Near-Optimal Quantum Lower Bounds for Convex Optimization via Fourier Rank",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2609.09035v1",
+      "note_filename": "Near_Optimal_Quantum_Lower_Bounds_for_Convex_Optimization_via_Fourier_Rank",
+      "matched_domain": "随机梯度与优化理论",
+      "score": 6.62
+    },
+    {
+      "title": "Tight Lower Bounds for State Tomography with Limited Entanglement",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2609.05718v1",
+      "note_filename": "Tight_Lower_Bounds_for_State_Tomography_with_Limited_Entanglement",
+      "matched_domain": "随机梯度与优化理论",
+      "score": 6.62
+    },
+    {
+      "title": "Parameterized Complexity of $L_p$-Lipschitz Constants for Input Convex Neural Networks and $L_p$-Norm Maximization over Zonotopes",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2608.24865v1",
+      "note_filename": "Parameterized_Complexity_of_$L_p$_Lipschitz_Constants_for_Input_Convex_Neural_Networks_and_$L_p$_Norm_Maximization_over",
+      "matched_domain": "随机梯度与优化理论",
+      "score": 6.62
+    },
+    {
+      "title": "Operator Splitting Methods with Online Scaling",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2609.10732v1",
+      "note_filename": "Operator_Splitting_Methods_with_Online_Scaling",
+      "matched_domain": "随机梯度与优化理论",
+      "score": 6.54
+    },
+    {
+      "title": "Computation of Strong Solutions to Stochastic Variational Inequalities",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2609.04188v2",
+      "note_filename": "Computation_of_Strong_Solutions_to_Stochastic_Variational_Inequalities",
+      "matched_domain": "随机梯度与优化理论",
+      "score": 6.54
+    },
+    {
+      "title": "Lie bracket approximations of RMSprop for Extremum Seeking Control",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2609.06505v1",
+      "note_filename": "Lie_bracket_approximations_of_RMSprop_for_Extremum_Seeking_Control",
+      "matched_domain": "随机梯度与优化理论",
+      "score": 6.52
+    },
+    {
+      "title": "A unified continuous-discrete framework for Nesterov acceleration: transitions between convex and strongly convex regimes",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2608.26014v1",
+      "note_filename": "A_unified_continuous_discrete_framework_for_Nesterov_acceleration_transitions_between_convex_and_strongly_convex_regimes",
+      "matched_domain": "随机梯度与优化理论",
+      "score": 6.52
+    },
+    {
+      "title": "Heavy-Tailed First-Order Optimization for Polyak-Łojasiewicz Condition: High-Dimensional Minimax Bounds, High-Probability Guarantee, and Fixed-Dimensional Improvements",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2609.03990v1",
+      "note_filename": "Heavy_Tailed_First_Order_Optimization_for_Polyak_Łojasiewicz_Condition_High_Dimensional_Minimax_Bounds_High_Probability",
+      "matched_domain": "随机梯度与优化理论",
+      "score": 6.47
+    },
+    {
+      "title": "Stability Analysis of Generalized Multi-Source Weber Problems",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2609.16703v1",
+      "note_filename": "Stability_Analysis_of_Generalized_Multi_Source_Weber_Problems",
+      "matched_domain": "大模型优化器设计",
+      "score": 6.43
+    },
+    {
+      "title": "A sequential smoothing majorant stochastic approximation method for nonconvex nonconcave minimax problems",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2609.11171v1",
+      "note_filename": "A_sequential_smoothing_majorant_stochastic_approximation_method_for_nonconvex_nonconcave_minimax_problems",
+      "matched_domain": "随机梯度与优化理论",
+      "score": 6.28
+    },
+    {
+      "title": "Optimal Recursive Composition and Dyadic Phase Laws for Gradient Descent with Predetermined Stepsizes",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2609.11788v1",
+      "note_filename": "Optimal_Recursive_Composition_and_Dyadic_Phase_Laws_for_Gradient_Descent_with_Predetermined_Stepsizes",
+      "matched_domain": "随机梯度与优化理论",
+      "score": 6.28
+    },
+    {
+      "title": "A Horizon-Independent Regret Bound for Optimistic Hedge in General-Sum Games",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2609.22839v1",
+      "note_filename": "A_Horizon_Independent_Regret_Bound_for_Optimistic_Hedge_in_General_Sum_Games",
+      "matched_domain": "随机梯度与优化理论",
+      "score": 6.28
+    }
+  ]
+}

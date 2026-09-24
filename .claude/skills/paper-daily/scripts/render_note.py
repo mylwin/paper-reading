@@ -8,6 +8,7 @@ overview and top-paper analysis can be supplied through ``--editorial-json``.
 
 import argparse
 import json
+import re
 import sys
 from pathlib import Path
 
@@ -59,6 +60,12 @@ def load_json(path: Path) -> dict:
 
 def cell(value) -> str:
     return str(value or '--').replace('|', '\\|').replace('\n', ' ')
+
+
+def abstract_first_sentence(value: str) -> str:
+    """Use a source excerpt when an editorial one-line assessment is absent."""
+    text = ' '.join(str(value or '').split())
+    return re.split(r'(?<=[.!?])\s+(?=[A-Z\"“(])', text, maxsplit=1)[0] if text else '--'
 
 
 def score(value) -> str:
@@ -324,17 +331,18 @@ def render_top_papers(data: dict, config: dict, editorial: dict, workspace: Path
 def render_rest(data: dict, config: dict, editorial: dict, workspace: Path, note_dir: Path) -> None:
     remaining = max(0, len(data.get('top_papers') or []) - 3)
     print(f'## 其余 {remaining} 篇推荐\n')
-    print('| # | 题目 | 研究优先级 | 主题 | 细分领域 | 一句话初评 | 访问链接 |')
+    print('| # | 题目 | 研究优先级 | 主题 | 细分领域 | 一句话初评或摘要首句 | 访问链接 |')
     print('|---|---|---|---|---|---|---|')
     analyses = editorial.get('top_papers') or {}
     for number, paper in enumerate((data.get('top_papers') or [])[3:], 4):
         stem = paper.get('paper_stem') or paper.get('note_filename') or paper_link_stem(paper.get('title'))
         analysis = analyses.get(paper.get('title') or '') or {}
+        initial = analysis.get('summary') or '摘要首句（原文）：' + abstract_first_sentence(paper.get('summary'))
         print(
             f"| {number} | {cell(paper.get('title'))} | "
             f"{score((paper.get('scores') or {}).get('recommendation'))} | "
             f"{cell(paper.get('matched_domain'))} | {cell(subdomain_for(paper, config))} | "
-            f"{cell(analysis.get('summary') or paper.get('summary'))} | "
+            f"{cell(initial)} | "
             f"{table_access_links(paper, stem, workspace, config, note_dir)} |"
         )
     print()
