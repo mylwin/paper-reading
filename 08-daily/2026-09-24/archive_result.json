@@ -1,0 +1,52 @@
+{
+  "papers_dir": "/Users/myl/Documents/paper/01-raw",
+  "month_dir": "/Users/myl/Documents/paper/01-raw/2026-09",
+  "month": "2026-09",
+  "date": "2026-09-24",
+  "requested": 3,
+  "downloaded": 3,
+  "skipped_existing": 0,
+  "failed": 0,
+  "index_updated": [
+    "/Users/myl/Documents/paper/01-raw/index.md",
+    "/Users/myl/Documents/paper/01-raw/2026-09/README.md",
+    "/Users/myl/Documents/paper/02-markdown/index.md",
+    "/Users/myl/Documents/paper/02-markdown/2026-09/README.md",
+    "/Users/myl/Documents/paper/03-notes/index.md",
+    "/Users/myl/Documents/paper/03-notes/2026-09/README.md",
+    "/Users/myl/Documents/paper/06-translation/index.md",
+    "/Users/myl/Documents/paper/06-translation/2026-09/README.md"
+  ],
+  "archived": [
+    {
+      "title": "Spectral Allocation: Why Muon Outperforms Adam, and How to Improve Muon",
+      "paper_stem": "Spectral_Allocation_Why_Muon_Outperforms_Adam_and_How_to_Improve_Muon",
+      "month": "2026-09",
+      "source": "arxiv",
+      "pdf_url": "https://arxiv.org/pdf/2608.25990v1",
+      "path": "/Users/myl/Documents/paper/01-raw/2026-09/Spectral_Allocation_Why_Muon_Outperforms_Adam_and_How_to_Improve_Muon.pdf",
+      "status": "downloaded",
+      "detail": "1003.5 KB"
+    },
+    {
+      "title": "Stiefel-AdamW: Geometry-Aware AdamW for Linear Factorization Blocks",
+      "paper_stem": "Stiefel_AdamW_Geometry_Aware_AdamW_for_Linear_Factorization_Blocks",
+      "month": "2026-09",
+      "source": "arxiv",
+      "pdf_url": "https://arxiv.org/pdf/2609.21039v1",
+      "path": "/Users/myl/Documents/paper/01-raw/2026-09/Stiefel_AdamW_Geometry_Aware_AdamW_for_Linear_Factorization_Blocks.pdf",
+      "status": "downloaded",
+      "detail": "727.0 KB"
+    },
+    {
+      "title": "The Bias of Nonlinear Two-Time-scale Stochastic Approximation under Constant Step-Sizes",
+      "paper_stem": "The_Bias_of_Nonlinear_Two_Time_scale_Stochastic_Approximation_under_Constant_Step_Sizes",
+      "month": "2026-09",
+      "source": "arxiv",
+      "pdf_url": "https://arxiv.org/pdf/2609.20409v1",
+      "path": "/Users/myl/Documents/paper/01-raw/2026-09/The_Bias_of_Nonlinear_Two_Time_scale_Stochastic_Approximation_under_Constant_Step_Sizes.pdf",
+      "status": "downloaded",
+      "detail": "3341.5 KB"
+    }
+  ]
+}
