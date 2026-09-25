@@ -1,0 +1,115 @@
+{
+  "date": "2026-09-25",
+  "note_file": "今日检索.md",
+  "generated_at": "2026-09-25T11:20:59",
+  "skill": "paper-daily",
+  "sources_searched": [
+    "arxiv via OpenAlex"
+  ],
+  "source_counts": {
+    "arxiv_via_openalex": 600
+  },
+  "date_windows": {
+    "recent_30d": {
+      "start": "2026-08-26",
+      "end": "2026-09-25"
+    },
+    "past_year": {
+      "start": "2025-09-25",
+      "end": "2026-08-25"
+    }
+  },
+  "total_unique": 100,
+  "top_papers": [
+    {
+      "title": "Nonsmooth Optimization via Orthogonalized Momentum",
+      "source": "arxiv",
+      "arxiv_id": "2609.13677",
+      "url": "https://arxiv.org/abs/2609.13677",
+      "note_filename": "Nonsmooth_Optimization_via_Orthogonalized_Momentum",
+      "matched_domain": "随机梯度与优化理论",
+      "score": 5.59
+    },
+    {
+      "title": "Beyond Client Averaging: A Client-Independent Second-Order Stationary-Bias Component in Stochastic SCAFFOLD",
+      "source": "arxiv",
+      "arxiv_id": "2608.26765",
+      "url": "https://arxiv.org/abs/2608.26765",
+      "note_filename": "Beyond_Client_Averaging_A_Client_Independent_Second_Order_Stationary_Bias_Component_in_Stochastic_SCAFFOLD",
+      "matched_domain": "随机梯度与优化理论",
+      "score": 4.82
+    },
+    {
+      "title": "A pullback-corrected scalar auxiliary variable optimizer with momentum and adaptive mobility",
+      "source": "arxiv",
+      "arxiv_id": "2609.13569",
+      "url": "https://arxiv.org/abs/2609.13569",
+      "note_filename": "A_pullback_corrected_scalar_auxiliary_variable_optimizer_with_momentum_and_adaptive_mobility",
+      "matched_domain": "随机梯度与优化理论",
+      "score": 5.72
+    },
+    {
+      "title": "A Stochastic Riemannian Alternating Descent Ascent Method for Nonsmooth Composite Expectation Optimization on Riemannian Manifolds",
+      "source": "arxiv",
+      "arxiv_id": "2609.04116",
+      "url": "https://arxiv.org/abs/2609.04116",
+      "note_filename": "A_Stochastic_Riemannian_Alternating_Descent_Ascent_Method_for_Nonsmooth_Composite_Expectation_Optimization_on_Riemannian",
+      "matched_domain": "随机梯度与优化理论",
+      "score": 6.62
+    },
+    {
+      "title": "Anytime-Feasible Gradient Descent for Constrained Optimization Under Gradient Uncertainty",
+      "source": "arxiv",
+      "arxiv_id": "2609.23848",
+      "url": "https://arxiv.org/abs/2609.23848",
+      "note_filename": "Anytime_Feasible_Gradient_Descent_for_Constrained_Optimization_Under_Gradient_Uncertainty",
+      "matched_domain": "随机梯度与优化理论",
+      "score": 6.36
+    },
+    {
+      "title": "Asymptotic Anytime-Valid Quantile Inference under Local Differential Privacy",
+      "source": "arxiv",
+      "arxiv_id": "2609.21338",
+      "url": "https://arxiv.org/abs/2609.21338",
+      "note_filename": "Asymptotic_Anytime_Valid_Quantile_Inference_under_Local_Differential_Privacy",
+      "matched_domain": "随机梯度与优化理论",
+      "score": 5.51
+    },
+    {
+      "title": "One Step, One Lead: Mitigating Higher-Order Interference in Multi-Domain Reinforcement Learning via Cross-Step Control",
+      "source": "arxiv",
+      "arxiv_id": "2609.06469",
+      "url": "https://arxiv.org/abs/2609.06469",
+      "note_filename": "One_Step_One_Lead_Mitigating_Higher_Order_Interference_in_Multi_Domain_Reinforcement_Learning_via_Cross_Step_Control",
+      "matched_domain": "随机梯度与优化理论",
+      "score": 5.41
+    },
+    {
+      "title": "Scalable Statistical Inference in Stochastic Gradient Descent",
+      "source": "arxiv",
+      "arxiv_id": "2608.30845",
+      "url": "https://arxiv.org/abs/2608.30845",
+      "note_filename": "Scalable_Statistical_Inference_in_Stochastic_Gradient_Descent",
+      "matched_domain": "随机梯度与优化理论",
+      "score": 5.24
+    },
+    {
+      "title": "Accelerated Plug-and-Play Davis-Yin Splitting for Nonconvex Image Reconstruction",
+      "source": "arxiv",
+      "arxiv_id": "2609.23840",
+      "url": "https://arxiv.org/abs/2609.23840",
+      "note_filename": "Accelerated_Plug_and_Play_Davis_Yin_Splitting_for_Nonconvex_Image_Reconstruction",
+      "matched_domain": "随机梯度与优化理论",
+      "score": 5.08
+    },
+    {
+      "title": "Resolution-Independent Analysis of Encoder--Decoder Operator Learning via Limiting Kernels",
+      "source": "arxiv",
+      "arxiv_id": "2609.13798",
+      "url": "https://arxiv.org/abs/2609.13798",
+      "note_filename": "Resolution_Independent_Analysis_of_Encoder_Decoder_Operator_Learning_via_Limiting_Kernels",
+      "matched_domain": "随机梯度与优化理论",
+      "score": 4.74
+    }
+  ]
+}

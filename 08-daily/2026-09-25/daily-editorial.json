@@ -1,0 +1,101 @@
+{
+  "overview": {
+    "trend": "本次从 OpenAlex 的 arXiv 索引中按 2026-08-26 至 2026-09-25 的时间窗抽取并预筛 100 篇。arXiv 官方 API 返回 503/429，OpenReview 与 Semantic Scholar 的当日补充未完成，因此这里只能描述本次样本：Muon 的更新几何、随机优化的收敛与稳态偏差均有可核验线索。分数仅表示阅读优先级。",
+    "hotspots": [
+      {
+        "title": "Muon 的适用边界",
+        "text": "非光滑目标上的固定动量反例与自适应动量修正，提供了比单纯比较训练曲线更具体的研究问题。"
+      },
+      {
+        "title": "随机优化偏差与稳定性",
+        "text": "恒定步长、客户端平均和噪声的相互作用进入二阶偏差项；应对照假设与余项范围阅读。"
+      },
+      {
+        "title": "结构化目标的优化器设计",
+        "text": "分量损失的低秩曲率修正和自适应 mobility 是一个探索性机制，迁移到大模型训练仍待验证。"
+      }
+    ]
+  },
+  "domain_summaries": {
+    "大模型优化器设计": {
+      "summary": "本次样本以 Muon 和矩阵更新几何为主；关键词匹配不能代替对训练任务、预算及基线的检查。",
+      "subfields": {
+        "符号与范数几何优化": "集中讨论 Muon、正交化与矩阵几何；重点核验收益来自更新方向、尺度还是额外训练资源。",
+        "自适应与状态内存": "样本较少；关注状态开销、预条件方式和训练精度之间的实际权衡。"
+      }
+    },
+    "随机梯度与优化理论": {
+      "summary": "覆盖收敛率、稳态偏差、非光滑性及二阶修正；优先比较假设、复杂度口径和结论适用范围。",
+      "subfields": {
+        "随机梯度与收敛性": "检查目标类别、噪声模型、oracle 口径和上下界能否对应。",
+        "自适应与二阶优化": "关注低秩修正或二阶信息的计算代价，以及保证是否依赖固定参数。",
+        "动量、裁剪与加速": "重点追踪固定动量反例、可变动量收敛条件和裁剪引入的偏差。"
+      }
+    }
+  },
+  "top_papers": {
+    "Nonsmooth Optimization via Orthogonalized Momentum": {
+      "title_zh": "通过正交化动量进行非光滑优化",
+      "summary": "给出 Muon 在非光滑凸目标上固定动量的失效例子，并以自适应动量及 MAGD 分析修复条件。",
+      "abstract_zh": "现代真实应用问题包含矩阵值参数，但传统优化器将它们视为向量，因此催生了利用输入—输出几何的矩阵感知方法，例如在参数更新前对动量矩阵做正交化的 Muon。它在经验上的成功引出一个概念性问题：正交化动量在光滑优化之外是否仍然有效？本文使用与反向传播兼容的广义导数框架，研究局部 Lipschitz 函数上的这一问题。我们的第一项贡献是指出一个关键局限：对于每个固定动量系数 $β\\in[0,1)$，当步长根据完整梯度历史自适应变化时，Muon 从几乎所有初始化出发，都可能无法趋近某个凸 Lipschitz 目标的全局最优解。即使迭代点有界，也可能出现这种失效。我们的例子受到 Parshakova 等人的例子启发，而后者只覆盖 $β\\in[0,\\frac{1}{2})$。接着，我们表明障碍在于固定动量，而非正交化本身。具体来说，当动量系数自适应地趋近 1、步长同时趋近 0 时，在有界性与正则性条件下，Muon 对非凸非光滑优化重新获得渐近收敛性。此外，我们提出 MAGD：按照正交化动量和梯度各自的相对进展，对两者加权组合。MAGD 在非凸情形下保持渐近收敛，在凸情形下达到 $O(\\min\\{m,n\\}ε^{-2})$ 的速率。一个下界表明其维度依赖是最优的。在合成问题、图像分类和大语言模型预训练上的实验表明，MAGD 是 Muon 的一种简单且实用的替代方法。总之，我们的结果刻画了正交化动量在缺少光滑性时何时失效，以及如何使其可靠；我们希望这一分析也能在更广范围内发挥作用。",
+      "contributions": [
+        "摘要声称构造覆盖所有固定 $β\\in[0,1)$ 的非光滑凸反例，并允许有界迭代点。",
+        "给出自适应动量的渐近收敛条件，提出 MAGD 并报告凸情形速率与维度下界。"
+      ],
+      "method": "在广义导数框架下分析正交化动量；用逐步趋近 1 的动量系数与消失步长避免固定动量障碍，MAGD 再按相对进展混合正交化动量和梯度。",
+      "result": "摘要报告非凸情形的渐近收敛、凸情形 $O(\\min\\{m,n\\}ε^{-2})$ 速率及匹配维度下界，并在合成问题、图像分类和 LLM 预训练中测试。",
+      "selection_reason": "直接命中当前 Muon 优化器设计问题，提供明确的失效边界与修复条件；原始预筛位次 27，因研究问题直接性提升至语义第 1。",
+      "evidence_limit": "当前仅据摘要初评。需全文核验反例的步长规则是否对应真实训练、正则性与有界性条件、MAGD 权重的可实现性、凸情形复杂度口径及 LLM 训练基线预算。",
+      "reading_decision": "精读"
+    },
+    "Beyond Client Averaging: A Client-Independent Second-Order Stationary-Bias Component in Stochastic SCAFFOLD": {
+      "title_zh": "超越客户端平均：随机 SCAFFOLD 中不随客户端数消失的二阶稳态偏差项",
+      "summary": "在一维同质客户端模型中，显式分离随机 SCAFFOLD 的 $O(γ/N)$ 偏差和不会随客户端数增加而消失的 $O(γ^2)$ 项。",
+      "abstract_zh": "对恒定步长随机 SCAFFOLD 的已有分析识别了主导的 $O(γ/N)$ 稳态均值偏差，并表明在客户端数量增加时，更高阶偏差仍可能存在，但尚未在系数层面确定第一个不依赖客户端数量的贡献。对于全参与、具有一维同质客户端、固定本地步数 $H$ 和有界加性梯度噪声的随机 SCAFFOLD，我们证明，对于所有 $N\\ge2$ 一致地成立：$$\\begin{aligned}\\mathbb{E}_{π_{γ,N,H}}[x]-x^\\star ={}& -\\frac{f'''(x^\\star)σ^2}{4f''(x^\\star)^2}\\fracγ{N}\\\\ &- \\frac{f'''(x^\\star)σ^2}{12f''(x^\\star)} \\frac{(H-1)(5H-1)}{H}γ^2 +O_H\\!\\left(\\frac{γ^2}{N}+γ^3\\right).\\end{aligned}$$ 因此，客户端平均会抑制主导的 $O(γ/N)$ 偏差，但当其系数非零时，并不会消除与客户端数量无关的 $O(γ^2)$ 分量。其机制是间接的：尽管控制变量在全局线性平均中的直接贡献沿每条路径相互抵消，它们仍会改变轮次内的本地轨迹及其二阶矩。因此，新鲜的梯度噪声与持续的控制变量波动会产生本地二阶矩修正，非二次曲率再将其转化为稳态均值偏差。对于二次目标，该系数消失。数值实验与预测系数、它在客户端数量增加时仍然存在，以及所述联合余项相一致。该结果限于一维同质、固定 $H$ 的设定。",
+      "contributions": [
+        "摘要声称给出全参与随机 SCAFFOLD 在一维同质设定下稳态均值偏差的显式二阶展开。",
+        "指出控制变量即使在全局平均中直接抵消，也可通过本地二阶矩和非二次曲率留下客户端数无关的偏差。"
+      ],
+      "method": "在固定本地步数与有界加性噪声下，对不变分布均值作小步长展开，并跟踪控制变量对本地轨迹二阶矩的影响。",
+      "result": "摘要给出 $O(γ/N)$ 主项、$O(γ^2)$ 客户端数无关项和 $O_H(γ^2/N+γ^3)$ 余项；二次目标时二阶系数消失。数值结果据称与系数及余项一致。",
+      "selection_reason": "与已有恒定步长随机逼近研究可形成直接对照，提供可检验的系数级偏差机制；原始预筛位次 50，因新增理论信息提升至语义第 2。",
+      "evidence_limit": "当前仅据摘要初评。需核验不变分布存在性、对 $N\\ge2$ 的一致性证明、$O_H$ 余项对 $H$ 的依赖、非二次条件以及向异质/高维客户端外推的边界。",
+      "reading_decision": "选读"
+    },
+    "A pullback-corrected scalar auxiliary variable optimizer with momentum and adaptive mobility": {
+      "title_zh": "带动量与自适应迁移率的回拉修正标量辅助变量优化器",
+      "summary": "把多分量目标构造的低秩曲率修正放入单次隐式更新，并分析自适应迁移率下的能量律和局部稳定性。",
+      "abstract_zh": "科学机器学习中的目标函数通常被规定为若干项之和，例如物理信息神经网络的残差损失、边界损失、初始条件损失和数据损失。在回拉修正标量辅助变量（PB--SAV）方法中，一个标量跟踪平移后的目标值，而各分量梯度构造一个半正定的曲率修正，其秩至多等于分量数。我们将这一修正引入带动量和自适应迁移率（mobility）的优化器，在一次隐式求解中同时将它用于梯度和保存的动量。若迁移率在 Loewner 序下不增，则可得到精确的修正能量律，覆盖欧氏形式和 AMSGrad 类选择；相应地，若动量在求解之后才附加，其恒等式会出现符号不定的交叉项。对于固定迁移率，我们给出驻点处局部稳定的充要条件，它取决于 Hessian 减去两倍的修正；并表明该条件对任意标量松弛序列也给出局部几何收敛。隐式求解可化为一个阶数等于分量数的稠密系统。在前向 Burgers 方程比较中，使用四个分量、在相同学习率和动量设置下，相比单个分量使尾段目标均值降低 64.7%，最终解误差降低 50.2%。",
+      "contributions": [
+        "摘要声称把分量梯度形成的低秩曲率修正与动量、自适应 mobility 合并为一次隐式求解。",
+        "给出 Loewner 单调 mobility 下的修正能量律、固定 mobility 的局部稳定充要条件及几何收敛结论。"
+      ],
+      "method": "用一个辅助标量跟踪平移目标，以分量梯度形成秩至多为分量数的正半定修正，再对梯度与动量联合做隐式更新。",
+      "result": "摘要报告四分量 Burgers 设置相对单分量在同等学习率与动量下，尾段目标均值降低 64.7%，最终解误差降低 50.2%；理论结论有 mobility 条件限制。",
+      "selection_reason": "提供不同于 Muon 正交化的优化器机制，可作为结构化目标的探索性方向；原始预筛位次 26，因迁移到 LLM 训练尚不明朗列为语义第 3。",
+      "evidence_limit": "当前仅据摘要初评。需全文核验能量律的目标/步长条件、隐式系统成本、稳定性充要条件的局部性、Burgers 对照的调参公平性及对大模型目标的可迁移性。",
+      "reading_decision": "跟踪"
+    },
+    "A Stochastic Riemannian Alternating Descent Ascent Method for Nonsmooth Composite Expectation Optimization on Riemannian Manifolds": {
+      "summary": "针对流形上的非光滑复合期望问题，提出递归动量的随机黎曼交替下降上升法，并在摘要中报告 $O(ε^{-3})$ 的迭代与 SFO 复杂度。"
+    },
+    "Anytime-Feasible Gradient Descent for Constrained Optimization Under Gradient Uncertainty": {
+      "summary": "在目标与约束梯度存在有界误差时，用二阶锥规划方向和保护性回溯保持每步严格可行，并给出收敛保证。"
+    },
+    "Asymptotic Anytime-Valid Quantile Inference under Local Differential Privacy": {
+      "summary": "结合随机响应和并行 SGD 构造本地差分隐私下的序贯分位数推断与渐近置信序列。"
+    },
+    "One Step, One Lead: Mitigating Higher-Order Interference in Multi-Domain Reinforcement Learning via Cross-Step Control": {
+      "summary": "通过相邻检查点的 token 对数概率变化定位多领域强化学习的跨步干扰，并在 GRPO 更新中加入校正。"
+    },
+    "Scalable Statistical Inference in Stochastic Gradient Descent": {
+      "summary": "用边际统计量、wild bootstrap 和 copula 近似绕开高维 SGD 置信区域构造中的批次协方差矩阵求逆。"
+    },
+    "Accelerated Plug-and-Play Davis-Yin Splitting for Nonconvex Image Reconstruction": {
+      "summary": "分析非凸图像重建中的 Davis–Yin 分裂及加速、线搜索和 PnP 变体，并报告重建实验。"
+    },
+    "Resolution-Independent Analysis of Encoder--Decoder Operator Learning via Limiting Kernels": {
+      "summary": "用极限核分离算子学习中的编码误差与正则化 SGD 优化误差，并给出相应上下界。"
+    }
+  }
+}
