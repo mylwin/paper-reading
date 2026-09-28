@@ -337,7 +337,8 @@ def rel_link(target, origin_dir) -> str:
         rel = os.path.relpath(target, origin_dir)
     except ValueError:
         return target.as_posix()
-    return rel.replace('\\', '/')
+    # Markdown 的括号会截断普通链接目标；仅编码它们以保持路径可读。
+    return rel.replace('\\', '/').replace('(', '%28').replace(')', '%29')
 
 
 # ---------------------------------------------------------------------------

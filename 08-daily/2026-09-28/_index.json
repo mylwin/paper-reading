@@ -1,0 +1,115 @@
+{
+  "date": "2026-09-28",
+  "note_file": "今日检索.md",
+  "generated_at": "2026-09-28T14:58:53",
+  "skill": "paper-daily",
+  "sources_searched": [
+    "arxiv via OpenAlex"
+  ],
+  "source_counts": {
+    "arxiv_via_openalex": 800
+  },
+  "date_windows": {
+    "recent_30d": {
+      "start": "2026-08-29",
+      "end": "2026-09-28"
+    },
+    "past_year": {
+      "start": "2025-09-28",
+      "end": "2026-08-28"
+    }
+  },
+  "total_unique": 100,
+  "top_papers": [
+    {
+      "title": "Beyond the Matrix Sign: Quadratic Spectral Descent",
+      "source": "arxiv",
+      "arxiv_id": "2609.07597",
+      "url": "https://arxiv.org/abs/2609.07597",
+      "note_filename": "Beyond_the_Matrix_Sign_Quadratic_Spectral_Descent",
+      "matched_domain": "随机梯度与优化理论",
+      "score": 4.31
+    },
+    {
+      "title": "COREM: Cosine-Relation Momentum Reshaping with Stateful Writeback",
+      "source": "arxiv",
+      "arxiv_id": "2609.22487",
+      "url": "https://arxiv.org/abs/2609.22487",
+      "note_filename": "COREM_Cosine_Relation_Momentum_Reshaping_with_Stateful_Writeback",
+      "matched_domain": "随机梯度与优化理论",
+      "score": 4.18
+    },
+    {
+      "title": "An $Ω(κ_y^8ε^{-6})$ Lower Bound for Stochastic NC-SC Bilevel Optimization with First-order Oracles",
+      "source": "arxiv",
+      "arxiv_id": "2609.21905",
+      "url": "https://arxiv.org/abs/2609.21905",
+      "note_filename": "An_$Ω(κ_y^8ε^{_6})$_Lower_Bound_for_Stochastic_NC_SC_Bilevel_Optimization_with_First_order_Oracles",
+      "matched_domain": "随机梯度与优化理论",
+      "score": 4.05
+    },
+    {
+      "title": "Preservation of Log-Concavity and Convergence of Wasserstein-Fisher-Rao Gradient Flows",
+      "source": "arxiv",
+      "arxiv_id": "2609.18118",
+      "url": "https://arxiv.org/abs/2609.18118",
+      "note_filename": "Preservation_of_Log_Concavity_and_Convergence_of_Wasserstein_Fisher_Rao_Gradient_Flows",
+      "matched_domain": "随机梯度与优化理论",
+      "score": 4.31
+    },
+    {
+      "title": "Personalized Federated Reinforcement Learning via Model-Agnostic Meta-Learning: Convergence of Exact and Hessian-Free Meta-Policy Gradients",
+      "source": "arxiv",
+      "arxiv_id": "2609.22833",
+      "url": "https://arxiv.org/abs/2609.22833",
+      "note_filename": "Personalized_Federated_Reinforcement_Learning_via_Model_Agnostic_Meta_Learning_Convergence_of_Exact_and_Hessian_Free_Met",
+      "matched_domain": "随机梯度与优化理论",
+      "score": 4.29
+    },
+    {
+      "title": "Large Distant Gradients Need Not Be Reliable: reliability-weighted credit assignment for long-horizon autoregressive forecasting",
+      "source": "arxiv",
+      "arxiv_id": "2609.12890",
+      "url": "https://arxiv.org/abs/2609.12890",
+      "note_filename": "Large_Distant_Gradients_Need_Not_Be_Reliable_reliability_weighted_credit_assignment_for_long_horizon_autoregressive_fore",
+      "matched_domain": "大模型优化器设计",
+      "score": 4.2
+    },
+    {
+      "title": "Stochastic optimization algorithms for problems with controllable biased oracles",
+      "source": "arxiv",
+      "arxiv_id": "2306.07810",
+      "url": "https://arxiv.org/abs/2306.07810",
+      "note_filename": "Stochastic_optimization_algorithms_for_problems_with_controllable_biased_oracles",
+      "matched_domain": "随机梯度与优化理论",
+      "score": 4.05
+    },
+    {
+      "title": "Projected Gradient Method on Hadamard Manifolds",
+      "source": "arxiv",
+      "arxiv_id": "2609.00540",
+      "url": "https://arxiv.org/abs/2609.00540",
+      "note_filename": "Projected_Gradient_Method_on_Hadamard_Manifolds",
+      "matched_domain": "随机梯度与优化理论",
+      "score": 4.05
+    },
+    {
+      "title": "Robust, randomized preconditioning for kernel ridge regression",
+      "source": "arxiv",
+      "arxiv_id": "2304.12465",
+      "url": "https://arxiv.org/abs/2304.12465",
+      "note_filename": "Robust_randomized_preconditioning_for_kernel_ridge_regression",
+      "matched_domain": "随机梯度与优化理论",
+      "score": 4.05
+    },
+    {
+      "title": "Single-Loop Gradient Algorithms for Pessimistic Bilevel Optimization Problems",
+      "source": "arxiv",
+      "arxiv_id": "2609.11183",
+      "url": "https://arxiv.org/abs/2609.11183",
+      "note_filename": "Single_Loop_Gradient_Algorithms_for_Pessimistic_Bilevel_Optimization_Problems",
+      "matched_domain": "随机梯度与优化理论",
+      "score": 3.97
+    }
+  ]
+}

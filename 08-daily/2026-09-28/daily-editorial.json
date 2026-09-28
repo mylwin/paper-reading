@@ -1,0 +1,104 @@
+{
+  "overview": {
+    "trend": "本次从 OpenAlex 的 arXiv 来源索引拉取 800 条检索记录，按主题过滤、去重并预筛保留 100 篇：近 30 天 96 篇，过去一年窗口 4 篇；60 篇已在知识库，40 篇为新候选。arXiv API 返回 406，OpenReview 未返回论文，Semantic Scholar 遇到 429；以下趋势仅针对本次 arXiv 索引样本。候选分数只表示阅读优先级。 时间窗依据 OpenAlex publication_date，并非 arXiv 首次提交日期；旧 arXiv 编号可能是后续发表记录。",
+    "hotspots": [
+      {
+        "title": "矩阵优化器的更新几何",
+        "text": "有工作从 Muon 的矩阵符号更新出发，把局部曲率或动量状态关系纳入更新；摘要报告了训练效果，成本与公平基线仍需全文核验。"
+      },
+      {
+        "title": "随机优化的复杂度边界",
+        "text": "分布式通信轮数、随机双层问题的 oracle 下界和有偏 oracle 成本构成可比较的理论问题，但假设与复杂度口径各不相同。"
+      },
+      {
+        "title": "优化器作用于多目标训练",
+        "text": "部分工作指出梯度手术方向经动量或预条件变换后可能失去预期性质，值得审查更新层面的约束。"
+      }
+    ]
+  },
+  "domain_summaries": {
+    "大模型优化器设计": {
+      "summary": "自动主题标签在此方向仅标出 8 篇；Muon 曲率更新与 COREM 虽被预筛器归入优化理论，按摘要看更直接服务于大模型优化器设计。需重点核对相同训练预算、状态内存和端到端耗时。",
+      "subfields": {
+        "符号与范数几何优化": "关注矩阵符号更新加入曲率后，奇异方向、奇异值和约束是否发生实质变化。",
+        "免调参与梯度裁剪": "关注步长、裁剪与噪声假设的适用区间；本次前三篇未以免调参为核心。",
+        "自适应与状态内存": "COREM 的动量状态回写提供具体机制；需核验状态占用、额外计算和跨模型规模效果。",
+        "大模型训练与优化器设计": "QSD 报告 GPT 预训练验证损失和等损失耗时；需核验比较设置与规模外推。"
+      }
+    },
+    "随机梯度与优化理论": {
+      "summary": "自动标签下有 92 篇，覆盖随机/分布式优化、双层问题和几何梯度法；宽泛关键词也带来邻近领域论文，适宜逐篇按当前问题筛选。",
+      "subfields": {
+        "随机梯度与收敛性": "优先比较噪声模型、目标类别、oracle 定义与复杂度的量词范围。",
+        "动量、裁剪与加速": "关注动量状态如何改变实际更新，及其证明或实验是否覆盖非光滑与有限预算情形。",
+        "自适应与二阶优化": "局部 Hessian 近似与曲率统计的收益需连同通信、内存和计算代价衡量。",
+        "算子与范数几何": "矩阵谱范数约束与奇异方向变化提供可检验的更新几何问题。"
+      }
+    }
+  },
+  "top_papers": {
+    "Beyond the Matrix Sign: Quadratic Spectral Descent": {
+      "title_zh": "超越矩阵符号：二次谱下降",
+      "summary": "在 Muon 的谱范数约束下把线性局部模型换为二次模型，并用 Kronecker 分解曲率近似与少量 Frank–Wolfe 步求解。",
+      "abstract_zh": "Muon 可以解释为在谱范数球上优化一个线性局部目标。这会得到矩阵符号更新：它保留梯度的奇异方向，并给所有活跃奇异模态分配相同的幅值。我们提出的问题是：计入局部曲率后，这两个性质是否仍然最优？为回答这个问题，我们保持 Muon 的谱范数约束不变，将线性局部模型替换为二次模型。我们把所得方法称为 Quadratic Spectral Descent（QSD）。我们证明，曲率可以同时改变最优更新的奇异值和奇异方向。为使 QSD 可实际使用，我们用 Kronecker 分解统计量近似曲率，并以少量 Frank–Wolfe 步求解带约束二次问题；其中每一步都有一个闭式的矩阵符号子问题。我们还给出最优性证书、在同一个二次替代目标下与 Muon 的比较，以及内层求解器的 $O(1/K)$ 收敛率。GPT 预训练实验表明，QSD 相比 Muon 及近期 Muon 变体持续改善验证损失，并在匹配验证损失时将训练墙钟时间最多缩短 $8.49\\%$。",
+      "contributions": [
+        "摘要声称在保持 Muon 谱范数约束的条件下，以二次局部模型说明曲率可改变最优矩阵更新的奇异值和奇异方向。",
+        "提出 Kronecker 分解曲率近似和少量 Frank–Wolfe 内迭代，并报告最优性证书及 $O(1/K)$ 内层收敛率。"
+      ],
+      "method": "用曲率近似构造带谱范数约束的二次子问题；每个 Frank–Wolfe 内步求解闭式矩阵符号子问题，再形成整体更新。",
+      "result": "摘要报告 GPT 预训练中相对 Muon 及近期变体更低的验证损失，在匹配验证损失时最多节省 8.49% 墙钟训练时间。",
+      "selection_reason": "直接命中当前 Muon 与范数几何优化器问题；预筛第 48 位，但相对已有矩阵符号更新提供可检验的曲率机制，语义复排为第 1。",
+      "evidence_limit": "仅根据摘要作初步判断。待全文核验 Kronecker 曲率估计的计算与状态成本、最优性证书的条件、内层收敛率对应的目标、GPT 训练规模、调参预算和等损失耗时口径。",
+      "reading_decision": "精读"
+    },
+    "COREM: Cosine-Relation Momentum Reshaping with Stateful Writeback": {
+      "title_zh": "COREM：带状态回写的余弦关系动量重塑",
+      "summary": "利用矩阵动量单元之间的余弦关系重塑动量，并把变换后的状态写回优化器，以影响后续更新。",
+      "abstract_zh": "矩阵值优化器状态可能包含把各元素独立处理时无法捕获的关系结构。我们研究能否利用矩阵值优化器状态内部的关系来改善优化。为此，我们引入一个单元关系变换的抽象，并将其实例化为 COREM，即一种带状态回写的余弦关系动量重塑方法。COREM 将动量状态划分为更新单元，计算这些单元之间的余弦关系，利用这些关系重塑动量，然后把变换后的状态写回优化器。这种有状态机制使重塑后的动量不仅影响当前更新，也影响未来的优化动态。我们在使用 MLP 的 CIFAR-10 任务和使用 Transformer 的 enwik8 任务上评估 COREM。与 Muon 相比，COREM 在训练早期的单步效率较低，但在中后期改善更明显：它在 CIFAR-10 上取得更好的最终验证表现，在 enwik8 上取得相近的最终表现。enwik8 的谱诊断显示，COREM 持续提高熵有效秩，降低奇异能量在主导模态上的集中程度，同时保留各向异性谱。对于方阵更新，COREM 所需的变换 FLOPs 约为进行五次 Newton–Schulz 迭代的 Muon 的 13.3%。",
+      "contributions": [
+        "摘要提出矩阵动量状态的单元关系变换，并以余弦关系及状态回写实现 COREM。",
+        "报告 CIFAR-10 与 enwik8 上的阶段性训练表现、谱诊断和方阵更新变换 FLOPs 对照。"
+      ],
+      "method": "把矩阵动量划成更新单元，用单元间余弦关系重塑动量并回写状态，使关系变换延续到后续步骤。",
+      "result": "摘要称其早期单步效率低于 Muon，中后期改善更强；CIFAR-10 最终验证表现更好、enwik8 相近，方阵变换 FLOPs 约为五次 Newton–Schulz Muon 的 13.3%。",
+      "selection_reason": "与 QSD 形成直接竞争机制对照：一个改变局部曲率模型，一个重塑动量状态；预筛第 53 位，语义复排第 2。",
+      "evidence_limit": "仅根据摘要作初步判断。待全文核验更新单元划分、状态写回稳定性、完整优化器总 FLOPs 与显存、CIFAR-10/enwik8 的基线公平性，以及向更大模型迁移的证据。",
+      "reading_decision": "选读"
+    },
+    "An $Ω(κ_y^8ε^{-6})$ Lower Bound for Stochastic NC-SC Bilevel Optimization with First-order Oracles": {
+      "title_zh": "一阶 oracle 下随机非凸—强凸双层优化的 $Ω(κ_y^8ε^{-6})$ 下界",
+      "summary": "在无偏且方差有界的一阶随机 oracle 下，给出随机非凸—强凸双层优化的查询复杂度下界。",
+      "abstract_zh": "我们研究在上层目标非凸、下层问题强凸的光滑双层优化问题中，寻找 $ε$-平稳点所需的 oracle 复杂度。我们考虑一种随机一阶 oracle，它返回上层和下层目标的无偏随机梯度，且方差由 $σ^2$ 上界控制。我们证明：对于任意初始最优性间隙 $Δ>0$ 以及所有足够小的 $ε>0$，每一种自适应随机一阶算法都至少需要 $Ω\\!\\left(Δκ_y^2 ε^{-2}\\max\\{1,σ^2κ_y^6ε^{-4}\\}\\right)$ 次 oracle 查询，才能找到其超目标函数的一个 $ε$-平稳点，其中 $κ_y$ 表示下层问题的条件数。特别地，在噪声主导区间，该下界为 $Ω\\!\\left(Δσ^2κ_y^8ε^{-6}\\right)$。这表明当前最优的一阶随机方法所达到的 $ε^{-6}$ 依赖是最优的。",
+      "contributions": [
+        "摘要声称给出对所有自适应随机一阶算法成立的双层优化 oracle 查询下界。",
+        "在噪声主导区间确定 $ε^{-6}$ 依赖，并与已有一阶随机方法的上界对应。"
+      ],
+      "method": "针对光滑非凸上层与强凸下层问题，在无偏且方差受控的上下层随机梯度 oracle 模型中建立下界。",
+      "result": "摘要给出一般下界 $Ω(Δκ_y^2 ε^{-2}\\max\\{1,σ^2κ_y^6ε^{-4}\\})$；噪声主导区间为 $Ω(Δσ^2κ_y^8ε^{-6})$。",
+      "selection_reason": "提供与优化器方法论文互补的理论边界，有助于判断随机优化复杂度改进能否成立；预筛第 57 位，语义复排第 3。",
+      "evidence_limit": "仅根据摘要作初步判断。待全文核验下界实例构造、算法量词、$κ_y$ 和 $Δ$ 依赖是否紧、oracle 噪声条件，以及与已知上界的假设是否一致。",
+      "reading_decision": "选读"
+    },
+    "Preservation of Log-Concavity and Convergence of Wasserstein-Fisher-Rao Gradient Flows": {
+      "summary": "在附加曲率条件下分析 WFR 梯度流的强对数凹保持与对称 KL 散度的非渐近收敛率；与当前优化器问题距离较远。"
+    },
+    "Personalized Federated Reinforcement Learning via Model-Agnostic Meta-Learning: Convergence of Exact and Hessian-Free Meta-Policy Gradients": {
+      "summary": "分析个性化联邦策略梯度的通信复杂度及无 Hessian 元梯度偏差，需关注其对当前随机优化问题的可迁移性。"
+    },
+    "Large Distant Gradients Need Not Be Reliable: reliability-weighted credit assignment for long-horizon autoregressive forecasting": {
+      "summary": "对长时序预测中的远端梯度按可靠性加权，摘要报告与 BPTT、裁剪及正则化方法的比较；应用场景较窄。"
+    },
+    "Stochastic optimization algorithms for problems with controllable biased oracles": {
+      "summary": "针对偏差可通过额外计算或采样降低的随机 oracle，提出迭代中调整偏差控制参数的算法并分析复杂度。"
+    },
+    "Projected Gradient Method on Hadamard Manifolds": {
+      "summary": "在 Hadamard 流形的测地凸可行集上分析固定步长和回溯线搜索的投影梯度法。"
+    },
+    "Robust, randomized preconditioning for kernel ridge regression": {
+      "summary": "为全数据和受限核岭回归分别分析两类随机预条件器，并报告不同谱衰减假设下的运算量。"
+    },
+    "Single-Loop Gradient Algorithms for Pessimistic Bilevel Optimization Problems": {
+      "summary": "对悲观双层优化构造平滑近似与确定性、随机单循环一阶算法，并报告非渐近收敛率。"
+    }
+  }
+}

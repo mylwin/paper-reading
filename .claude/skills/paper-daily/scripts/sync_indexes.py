@@ -28,6 +28,7 @@ import json
 import os
 import re
 import sys
+import urllib.parse
 from datetime import datetime
 from pathlib import Path
 
@@ -687,7 +688,7 @@ def check_links(workspace: Path, config: dict) -> dict:
                 target = target.split('#', 1)[0]
                 if not target:
                     continue
-                if not (path.parent / target).exists():
+                if not (path.parent / urllib.parse.unquote(target)).exists():
                     dangling.append({
                         'file': str(path.relative_to(workspace)),
                         'line': number,
