@@ -1,0 +1,117 @@
+{
+  "date": "2026-09-29",
+  "note_file": "今日检索.md",
+  "generated_at": "2026-09-29T12:50:25",
+  "skill": "paper-daily",
+  "sources_searched": [
+    "arxiv",
+    "openreview"
+  ],
+  "source_counts": {
+    "arxiv": 181,
+    "openreview": 0
+  },
+  "date_windows": {
+    "recent_30d": {
+      "start": "2026-08-30",
+      "end": "2026-09-29"
+    },
+    "past_year": {
+      "start": "2025-09-29",
+      "end": "2026-08-29"
+    }
+  },
+  "total_unique": 170,
+  "top_papers": [
+    {
+      "title": "LionMuon: Alternating Spectral and Sign Descent for Efficient Training",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2609.35297v1",
+      "note_filename": "LionMuon_Alternating_Spectral_and_Sign_Descent_for_Efficient_Training",
+      "matched_domain": "大模型优化器设计",
+      "score": 7.93
+    },
+    {
+      "title": "Ordinary Nonconvex SGD under Distance-Dependent Moments: Finite-Horizon Stationarity and Nagaev Bounds",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2609.30499v1",
+      "note_filename": "Ordinary_Nonconvex_SGD_under_Distance_Dependent_Moments_Finite_Horizon_Stationarity_and_Nagaev_Bounds",
+      "matched_domain": "大模型优化器设计",
+      "score": 8.27
+    },
+    {
+      "title": "Optimal Parameter-Free Second-order Acceleration with Inexact Hessians under Generalized Smoothness",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2609.32977v1",
+      "note_filename": "Optimal_Parameter_Free_Second_order_Acceleration_with_Inexact_Hessians_under_Generalized_Smoothness",
+      "matched_domain": "随机梯度与优化理论",
+      "score": 8.27
+    },
+    {
+      "title": "Constrained Nonconvex Stochastic Optimization with One Projection",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2609.34099v1",
+      "note_filename": "Constrained_Nonconvex_Stochastic_Optimization_with_One_Projection",
+      "matched_domain": "随机梯度与优化理论",
+      "score": 8.27
+    },
+    {
+      "title": "Asymptotic Lower Bounds for Continuous Optimization",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2609.34303v1",
+      "note_filename": "Asymptotic_Lower_Bounds_for_Continuous_Optimization",
+      "matched_domain": "随机梯度与优化理论",
+      "score": 7.93
+    },
+    {
+      "title": "TR-SSQP: A Trust-Region Method for Constrained Stochastic Optimization under Heavy-Tailed Noise",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2609.30732v1",
+      "note_filename": "TR_SSQP_A_Trust_Region_Method_for_Constrained_Stochastic_Optimization_under_Heavy_Tailed_Noise",
+      "matched_domain": "大模型优化器设计",
+      "score": 8.13
+    },
+    {
+      "title": "A Riemannian Inertial Adaptive Gradient Method with Momentum Restart",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2609.32997v1",
+      "note_filename": "A_Riemannian_Inertial_Adaptive_Gradient_Method_with_Momentum_Restart",
+      "matched_domain": "随机梯度与优化理论",
+      "score": 7.93
+    },
+    {
+      "title": "Finite-Time Concentration and Convergence Rates for Projected Two-Time-Scale Stochastic Approximation with Markov Noise",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2609.34791v1",
+      "note_filename": "Finite_Time_Concentration_and_Convergence_Rates_for_Projected_Two_Time_Scale_Stochastic_Approximation_with_Markov_Noise",
+      "matched_domain": "大模型优化器设计",
+      "score": 8.27
+    },
+    {
+      "title": "Learned Preconditioning for a Primal-Dual Interior-Point Method",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2609.35665v1",
+      "note_filename": "Learned_Preconditioning_for_a_Primal_Dual_Interior_Point_Method",
+      "matched_domain": "大模型优化器设计",
+      "score": 8.07
+    },
+    {
+      "title": "Symmetry-quotient Flatness and Generalization",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2609.31634v1",
+      "note_filename": "Symmetry_quotient_Flatness_and_Generalization",
+      "matched_domain": "大模型优化器设计",
+      "score": 7.93
+    }
+  ]
+}
