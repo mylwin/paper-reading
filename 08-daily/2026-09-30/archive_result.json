@@ -1,0 +1,52 @@
+{
+  "papers_dir": "/Users/myl/Documents/paper/01-raw",
+  "month_dir": "/Users/myl/Documents/paper/01-raw/2026-09",
+  "month": "2026-09",
+  "date": "2026-09-30",
+  "requested": 3,
+  "downloaded": 3,
+  "skipped_existing": 0,
+  "failed": 0,
+  "index_updated": [
+    "/Users/myl/Documents/paper/01-raw/index.md",
+    "/Users/myl/Documents/paper/01-raw/2026-09/README.md",
+    "/Users/myl/Documents/paper/02-markdown/index.md",
+    "/Users/myl/Documents/paper/02-markdown/2026-09/README.md",
+    "/Users/myl/Documents/paper/03-notes/index.md",
+    "/Users/myl/Documents/paper/03-notes/2026-09/README.md",
+    "/Users/myl/Documents/paper/06-translation/index.md",
+    "/Users/myl/Documents/paper/06-translation/2026-09/README.md"
+  ],
+  "archived": [
+    {
+      "title": "Backpropagated Output Momentum: Relocating Optimizer History from Parameters to Task Space",
+      "paper_stem": "Backpropagated_Output_Momentum_Relocating_Optimizer_History_from_Parameters_to_Task_Space",
+      "month": "2026-09",
+      "source": "arxiv",
+      "pdf_url": "https://arxiv.org/pdf/2609.36738",
+      "path": "/Users/myl/Documents/paper/01-raw/2026-09/Backpropagated_Output_Momentum_Relocating_Optimizer_History_from_Parameters_to_Task_Space.pdf",
+      "status": "downloaded",
+      "detail": "575.3 KB"
+    },
+    {
+      "title": "Adam under Generalized Smoothness with Second-Moment-Type Stochastic Gradients",
+      "paper_stem": "Adam_under_Generalized_Smoothness_with_Second_Moment_Type_Stochastic_Gradients",
+      "month": "2026-09",
+      "source": "arxiv",
+      "pdf_url": "https://arxiv.org/pdf/2609.37787",
+      "path": "/Users/myl/Documents/paper/01-raw/2026-09/Adam_under_Generalized_Smoothness_with_Second_Moment_Type_Stochastic_Gradients.pdf",
+      "status": "downloaded",
+      "detail": "607.3 KB"
+    },
+    {
+      "title": "Stochastic Heavy Ball with Polyak Step Size and Armijo Line Search: A General Convergence Analysis",
+      "paper_stem": "Stochastic_Heavy_Ball_with_Polyak_Step_Size_and_Armijo_Line_Search_A_General_Convergence_Analysis",
+      "month": "2026-09",
+      "source": "arxiv",
+      "pdf_url": "https://arxiv.org/pdf/2609.36668",
+      "path": "/Users/myl/Documents/paper/01-raw/2026-09/Stochastic_Heavy_Ball_with_Polyak_Step_Size_and_Armijo_Line_Search_A_General_Convergence_Analysis.pdf",
+      "status": "downloaded",
+      "detail": "876.8 KB"
+    }
+  ]
+}

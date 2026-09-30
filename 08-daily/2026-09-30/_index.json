@@ -1,0 +1,119 @@
+{
+  "date": "2026-09-30",
+  "note_file": "今日检索.md",
+  "generated_at": "2026-09-30T11:59:48",
+  "skill": "paper-daily",
+  "sources_searched": [
+    "arxiv",
+    "openreview",
+    "semantic_scholar"
+  ],
+  "source_counts": {
+    "arxiv": 77,
+    "openreview": 0,
+    "semantic_scholar": 5
+  },
+  "date_windows": {
+    "recent_30d": {
+      "start": "2026-08-31",
+      "end": "2026-09-30"
+    },
+    "past_year": {
+      "start": "2025-09-30",
+      "end": "2026-08-30"
+    }
+  },
+  "total_unique": 82,
+  "top_papers": [
+    {
+      "title": "Backpropagated Output Momentum: Relocating Optimizer History from Parameters to Task Space",
+      "source": "arxiv",
+      "arxiv_id": "2609.36738",
+      "url": "https://arxiv.org/abs/2609.36738",
+      "note_filename": "Backpropagated_Output_Momentum_Relocating_Optimizer_History_from_Parameters_to_Task_Space",
+      "matched_domain": "大模型优化器设计",
+      "score": 8.07
+    },
+    {
+      "title": "Adam under Generalized Smoothness with Second-Moment-Type Stochastic Gradients",
+      "source": "arxiv",
+      "arxiv_id": "2609.37787",
+      "url": "https://arxiv.org/abs/2609.37787",
+      "note_filename": "Adam_under_Generalized_Smoothness_with_Second_Moment_Type_Stochastic_Gradients",
+      "matched_domain": "随机梯度与优化理论",
+      "score": 8.16
+    },
+    {
+      "title": "Stochastic Heavy Ball with Polyak Step Size and Armijo Line Search: A General Convergence Analysis",
+      "source": "arxiv",
+      "arxiv_id": "2609.36668",
+      "url": "https://arxiv.org/abs/2609.36668",
+      "note_filename": "Stochastic_Heavy_Ball_with_Polyak_Step_Size_and_Armijo_Line_Search_A_General_Convergence_Analysis",
+      "matched_domain": "大模型优化器设计",
+      "score": 8.27
+    },
+    {
+      "title": "Overfitting of Spectral Gradient Descent: How Matrix Geometry shapes Generalization and Implicit Bias",
+      "source": "arxiv",
+      "arxiv_id": "2609.32270",
+      "url": "https://arxiv.org/abs/2609.32270",
+      "note_filename": "Overfitting_of_Spectral_Gradient_Descent_How_Matrix_Geometry_shapes_Generalization_and_Implicit_Bias",
+      "matched_domain": "大模型优化器设计",
+      "score": 8.27
+    },
+    {
+      "title": "Probe-Space Preconditioning for Fast and Stable Zero-Order Training",
+      "source": "arxiv",
+      "arxiv_id": "2609.38095",
+      "url": "https://arxiv.org/abs/2609.38095",
+      "note_filename": "Probe_Space_Preconditioning_for_Fast_and_Stable_Zero_Order_Training",
+      "matched_domain": "随机梯度与优化理论",
+      "score": 8.6
+    },
+    {
+      "title": "Tensor-Train Compressed Separable PINNs: A Curvature-Aware Optimization Framework for Parametric PDEs in High Dimensions",
+      "source": "arxiv",
+      "arxiv_id": "2609.36165",
+      "url": "https://arxiv.org/abs/2609.36165",
+      "note_filename": "Tensor_Train_Compressed_Separable_PINNs_A_Curvature_Aware_Optimization_Framework_for_Parametric_PDEs_in_High_Dimensions",
+      "matched_domain": "大模型优化器设计",
+      "score": 8.67
+    },
+    {
+      "title": "Primal Methods for Constrained Variational Inequalities: Optimal Rates, Feasibility Trade-offs, and Lower Bounds",
+      "source": "arxiv",
+      "arxiv_id": "2609.32981",
+      "url": "https://arxiv.org/abs/2609.32981",
+      "note_filename": "Primal_Methods_for_Constrained_Variational_Inequalities_Optimal_Rates_Feasibility_Trade_offs_and_Lower_Bounds",
+      "matched_domain": "随机梯度与优化理论",
+      "score": 7.93
+    },
+    {
+      "title": "Fine-Tuning on Self-Generated and Reward-Weighted Data: Learning Dynamics, Convergence Rates, and Benefits of Off-Policyness",
+      "source": "arxiv",
+      "arxiv_id": "2609.36945",
+      "url": "https://arxiv.org/abs/2609.36945",
+      "note_filename": "Fine_Tuning_on_Self_Generated_and_Reward_Weighted_Data_Learning_Dynamics_Convergence_Rates_and_Benefits_of_Off_Policynes",
+      "matched_domain": "大模型优化器设计",
+      "score": 8.27
+    },
+    {
+      "title": "Uniform Race: Parameter-Free Approximate Rejection Sampling",
+      "source": "arxiv",
+      "arxiv_id": "2609.34639",
+      "url": "https://arxiv.org/abs/2609.34639",
+      "note_filename": "Uniform_Race_Parameter_Free_Approximate_Rejection_Sampling",
+      "matched_domain": "大模型优化器设计",
+      "score": 8.67
+    },
+    {
+      "title": "LOCO-AdaMP: Built-in LOCO Inference for Adaptive Minipatch Ensembles with Enhanced Prediction",
+      "source": "arxiv",
+      "arxiv_id": "2609.36396",
+      "url": "https://arxiv.org/abs/2609.36396",
+      "note_filename": "LOCO_AdaMP_Built_in_LOCO_Inference_for_Adaptive_Minipatch_Ensembles_with_Enhanced_Prediction",
+      "matched_domain": "大模型优化器设计",
+      "score": 8.27
+    }
+  ]
+}
