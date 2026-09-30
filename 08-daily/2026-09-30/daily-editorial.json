@@ -1,0 +1,190 @@
+{
+  "overview": {
+    "trend": "本次在可访问候选中观察到三个值得优先核验的方向：把动量历史从参数空间迁到输出空间、在广义平滑条件下放宽 Adam 的噪声尾假设，以及把 Polyak/Armijo 自适应步长与随机重球动量统一分析。前三篇组成“状态内存—稳定性理论—自适应步长”阅读组合。以下均为题目与摘要支持的低置信度初评，尚未进行全文评审。arXiv API 连续返回 429，本次改读五个官方分类的 recent 列表（每类至多 250 条），按配置关键词筛题目、再核验官方摘要，并重新核验 20 个昨日未推荐候选及补充发现；因此只部分覆盖所设 30 天窗口，不能视为完整的月度普查。OpenReview 的前六关键词联合 AND 查询返回 0，不代表该平台没有相关论文。Semantic Scholar 的优化器主题查询返回 429，随机梯度主题查询成功取得过去一年窗口的 5 篇高影响力候选。",
+    "hotspots": [
+      {
+        "title": "优化器状态放在哪里",
+        "text": "BOM 声称用输出预测误差的紧凑历史替代参数形状的一阶动量；优先区分参数状态降幅、总显存降幅与额外回传成本。"
+      },
+      {
+        "title": "自适应方法的噪声与平滑边界",
+        "text": "Adam 的新分析声称只需二阶矩信息即可覆盖 p<2 的广义平滑区域；重点是置信度依赖、轨迹控制及下界适用类别。"
+      },
+      {
+        "title": "步长与动量的历史依赖",
+        "text": "SHB 的 Polyak/Armijo 分析提供无插值条件下的理论候选；标准步长的期望结论与递减步长的精确渐近结论必须分别核验。"
+      }
+    ]
+  },
+  "domain_summaries": {
+    "大模型优化器设计": {
+      "summary": "自动归类 39 篇，预筛前十与复排后的推荐池共 7 篇。最直接的新增信息来自 BOM 的状态迁移和 Adam 的稳定性假设；谱下降泛化及新零阶预条件器作为定点选读。部分条目仅因宽泛分类或关键词命中，不能据此推断已在大模型上验证。",
+      "subfields": {
+        "符号与范数几何优化": "包含 Muon 的有限 Newton–Schulz 实现、谱估计与谱下降泛化等候选；先分清数值近似、训练损失和泛化是否回答同一个问题。",
+        "免调参与梯度裁剪": "包括 Polyak/Armijo 随机重球法，也含“parameter-free”采样类误命中；免阈值采样不等于免调参优化器。",
+        "自适应与状态内存": "BOM 和 Adam 分别关注历史存储位置与弱噪声假设；按摘要报告的具体状态口径和条件判断用途。",
+        "大模型训练与优化器设计": "BOM 的输出空间历史与 1.5-SPSA 的探针空间预条件化值得比较，但后者须按总前向次数而非优化步数核算成本。",
+        "未细分": "不少论文只是 arXiv 分类命中；PINN、数值 PDE、特征重要性等对当前优化器课题的直接性较低，不能按自动归类优先阅读。"
+      }
+    },
+    "随机梯度与优化理论": {
+      "summary": "自动归类 43 篇，今日推荐池中 3 篇。覆盖谱几何与泛化、随机动量、约束变分不等式及随机预条件化等问题。过去一年 5 篇 Semantic Scholar 候选提供影响力线索，引用不构成正确性证据；理论对象与 LLM 训练之间的迁移条件仍需核验。",
+      "subfields": {
+        "随机梯度与收敛性": "区分渐近/有限时域、期望/高概率/几乎必然及最后迭代点结论；抽象问题的良好速率不能直接代替大模型训练实证。",
+        "动量、裁剪与加速": "检验历史依赖如何被解耦，裁剪改变的偏差项，以及步长策略与噪声条件是否配套。",
+        "自适应与二阶优化": "包括 Adam、AdaGrad、曲率预条件器与信赖域；逐项核对额外 oracle、回溯和线性代数开销。",
+        "算子与范数几何": "约束 VI、谱方向与矩阵几何为工具候选；最优性缺口、约束违反量与训练泛化应分别对照。",
+        "未细分": "保留未落入配置细分关键词的条目，并在附录展示原始归类；不补写不存在的技术定位。"
+      }
+    }
+  },
+  "top_papers": {
+    "Backpropagated Output Momentum: Relocating Optimizer History from Parameters to Task Space": {
+      "title_zh": "反向传播输出动量：将优化器历史从参数空间迁移到任务空间",
+      "summary": "BOM 把一阶动量历史存成输出预测误差的紧凑均值，再通过当前网络回传，尝试减少参数形状的优化器状态。",
+      "abstract_zh": "优化器动量通常存储为与参数等大的历史梯度移动平均，这使历史信息的存储成本高昂，并将每个过去的信号固定在计算它时所用的坐标系中。我们提出 Backpropagated Output Momentum（BOM，反向传播输出动量）：它改为在模型输出端存储预测误差的紧凑移动平均，并在每一步通过当前网络重新投影这段历史。批次层面的分析刻画了这种迁移保留和遗漏的信息，同时其实现保留当前监督梯度，并能替换若干自适应优化器的一阶矩组件。作为基于动量的优化器的插件，包括已经压缩其状态的优化器，BOM 在三种组合中将参数形状的优化器状态减少了 49.7–99.8%，并在三个语言模型骨干上平均将配对比较的单步耗时减少了 4.0%。它还提高了语言和视觉微调中的平均验证性能，在主要的五任务比较中提高了 1.42 个点。语言和视觉预训练研究，以及匹配的机制对照，进一步在不同输出空间和模型规模下检验了这一构造。",
+      "contributions": [
+        "作者提出将历史从参数梯度坐标迁移到输出预测误差坐标、并通过当前网络重新投影的 BOM 机制。",
+        "摘要声称有批次层面的信息保留/丢失分析，并可替换多个自适应优化器的一阶矩组件。",
+        "摘要报告跨三种组合的参数状态节省及语言、视觉任务的验证表现，提供可查证的实验线索。"
+      ],
+      "method": "在输出端维护紧凑预测误差移动平均，把该历史通过当前网络重新投影；当前监督梯度保留，历史部分作为动量插件参与更新。摘要未提供完整递推式和实现图，须查正文。",
+      "result": "摘要报告三种组合的参数形状优化器状态减少 49.7–99.8%，三个语言骨干上的配对单步时间平均减少 4.0%，主要五任务比较的平均验证表现提高 1.42 个点。这些口径不能直接读成总显存降低 99.8% 或普遍端到端加速。",
+      "selection_reason": "预筛第 9 位升至语义第 1 位。直接命中优化器状态内存和动量机制，新增信息是“历史存储坐标”的改变，与库中 PowerStep 减少/量化参数状态形成可核验的设计对照。先核查算法图、显存分解和机制消融，成本与预期信息增益相称。",
+      "evidence_limit": "仅依据官方题目与摘要，初步判断、待全文核验。检查状态百分比的分母、紧凑输出历史如何适配变长序列及不同批次、额外回传/重投影成本、是否丢失参数历史信息、基线调参与算力预算、随机种子和任务平均方式。1.42 个点不能解释为相对提升 1.42%，单步时间也不等于达到同一质量的总训练时间。",
+      "reading_decision": "精读"
+    },
+    "Adam under Generalized Smoothness with Second-Moment-Type Stochastic Gradients": {
+      "title_zh": "二阶矩型随机梯度下、广义平滑条件中的 Adam",
+      "summary": "作者声称 Adam 在广义平滑条件下无需有界或次高斯梯度尾，只用二阶矩型条件即可得到 p<2 的高概率收敛保证。",
+      "abstract_zh": "人们广泛观察到，即使目标函数显著偏离全局平滑性，Adam 仍能保持稳定。然而，在广义平滑框架下，现有分析依赖对随机梯度的强尾部假设，例如几乎必然有界性或次高斯性。仅凭随机梯度的二阶矩信息、而不采用这些集中性假设时，Adam 是否能在广义平滑目标上收敛，被 Li 等人（2023）列为一个重要的开放研究方向。本文在相当一般的条件下给出肯定回答：这些尾部假设并非必要。基于 Jin 等人（2026）为经典平滑性和有界方差建立的 Adam 自归一化框架，我们将停时与去预条件化策略推广到 $L_0$–$L_p$ 广义平滑条件及广义二阶矩 ABC 条件。即使随机梯度条件仅提供可能沿轨迹增长的二阶矩信息，Adam 的随机轨迹仍保持在局部性质良好的平滑区域内；在有界方差和全局平滑条件下，其尾部以拉伸指数形式衰减。因此，我们在整个 $p<2$ 范围内建立高概率收敛速率保证，置信度依赖的阶为 $\\delta^{-1/2}$，而步长前因子对 $\\delta$ 的依赖仅通过一个对数因子。我们进一步构造了一个困难实例，表明仅有二阶矩信息时，这种 $\\delta^{-1/2}$ 型置信度依赖是紧的。最后，在 $p<1$ 的区域，我们将轨迹控制与罕见事件上的多项式增长估计结合，获得期望意义下的收敛速率保证。",
+      "contributions": [
+        "摘要声称将 Adam 的自归一化、停时和去预条件化分析扩展至 $L_0$–$L_p$ 广义平滑及二阶矩 ABC 条件。",
+        "声称在 p<2 获得高概率速率，并构造只给定二阶矩信息时的置信度依赖下界实例。",
+        "在更窄的 p<1 区域，摘要声称进一步得到期望收敛速率。"
+      ],
+      "method": "利用 Adam 的自归一化结构，通过停时/去预条件化控制轨迹所在区域；再对罕见事件估计增长，将局部控制转为高概率或期望保证。",
+      "result": "摘要报告 p<2 的高概率结论、$\\delta^{-1/2}$ 阶的置信度依赖及步长前因子的单对数依赖；p<1 才报告期望保证。摘要没有列出完整的迭代复杂度、常数或语言模型实验。",
+      "selection_reason": "预筛第 8 位升至语义第 2 位。直接回答自适应更新在广义平滑、弱噪声尾条件下是否稳定的问题，能为优化器理论设计提供假设基线；与 BOM 的实证状态设计互补。先读假设、主定理和困难实例，判断是否真正放宽当前采用的噪声条件。",
+      "evidence_limit": "仅依据官方题目与摘要，初步判断、待全文核验。检查 ABC 条件允许哪些轨迹增长，Adam 的 β 参数、ε、学习率/时域选择是否依赖未知量，δ 依赖同时出现于结果与算法参数时如何解释，困难实例是否属于同一 oracle 类。拉伸指数尾只在摘要指定的有界方差与全局平滑子情形报告，不能推广到所有广义平滑情形。高概率驻点保证不直接证明 LLM 训练收益。",
+      "reading_decision": "精读"
+    },
+    "Stochastic Heavy Ball with Polyak Step Size and Armijo Line Search: A General Convergence Analysis": {
+      "title_zh": "使用 Polyak 步长与 Armijo 线搜索的随机重球法：一般收敛分析",
+      "summary": "作者用动量历史解耦与修改的 Armijo 规则分析 SHB 的自适应步长，并分别给出标准和递减变体的收敛结论。",
+      "abstract_zh": "Polyak 步长（PS）和 Armijo 线搜索（ALS）在随机优化中受到越来越多关注，并表现出令人鼓舞的经验性能与理论保证。然而，它们用于随机重球（SHB）方法时的收敛理论仍然有限。在这项工作中，我们为配备 PS 和 ALS 的 SHB 建立统一的收敛分析。为此，我们引入一种与 Polyak 步长紧密对应的修改版 Armijo 规则，并提出一种解耦分析，以隔离动量引起的历史依赖。对于采用标准 PS 和 ALS 的 SHB，我们在不要求插值条件或对动量参数施加限制性条件的情况下，为强凸、凸和非凸目标建立期望意义下的收敛结论。在插值或强增长条件下，我们进一步将结果加强为几乎必然速率和最后迭代点收敛。此外，对于超出插值条件的一般情形，我们证明：使用递减版 PS 和 ALS 的 SHB 几乎必然收敛到精确最优解或驻点。这些结果为随机重球方法中 Polyak 步长和 Armijo 线搜索的理解提供了更全面的理论视角。",
+      "contributions": [
+        "作者提出与 Polyak 步长对应的修改版 Armijo 规则，以及隔离动量历史依赖的解耦分析。",
+        "摘要声称标准 PS/ALS 的 SHB 在强凸、凸及非凸下有期望结论，无需插值或限制性动量条件。",
+        "区分插值/强增长下的几乎必然速率与最后迭代点结论，以及一般情形中递减 PS/ALS 的精确最优或驻点收敛。"
+      ],
+      "method": "将自适应步长与动量的历史依赖分离分析，用与 PS 平行的 Armijo 规则建立统一框架，并单独处理递减步长变体。",
+      "result": "摘要只报告结论类别，未给出具体速率阶或复杂度公式。标准 PS/ALS 的期望收敛，不能与一般情形下递减变体的精确几乎必然收敛合并为同一个无条件结果。",
+      "selection_reason": "预筛第 5 位升至语义第 3 位。直接命中免调参/Polyak 步长与动量两个问题，可和已精读的 Parameter-free Clipped Gradient Descent Meets Polyak 对照：重点看随机性与动量加入后哪些条件和代价改变。先查假设表和步长规则，再决定是否需要完整复现。",
+      "evidence_limit": "仅依据官方题目与摘要，初步判断、待全文核验。核对“expected convergence”的目标是否包含误差邻域、PS 是否要知道最优值/样本最优值或下界、ALS 是否复用样本及其前向开销、修改规则与标准规则的关系、动量参数可行区间、递减机制是否仍需人工常数。摘要并未声称大模型实证或完全免调参。",
+      "reading_decision": "精读"
+    },
+    "Overfitting of Spectral Gradient Descent: How Matrix Geometry shapes Generalization and Implicit Bias": {
+      "summary": "谱下降的泛化会因捷径奇异方向几何而反转，且继续训练可能降低泛化；适合作为谱优化器设计的反例选读。",
+      "evidence_limit": "题目与摘要初评，待全文核验。",
+      "reading_decision": "选读"
+    },
+    "Probe-Space Preconditioning for Fast and Stable Zero-Order Training": {
+      "summary": "1.5-SPSA 用额外干净前向构造探针空间对角预条件器；70 步对 100000 步的主张须按探针数、总前向与算力审计。",
+      "evidence_limit": "题目与摘要初评，待全文核验。",
+      "reading_decision": "选读"
+    },
+    "Tensor-Train Compressed Separable PINNs: A Curvature-Aware Optimization Framework for Parametric PDEs in High Dimensions": {
+      "summary": "坐标可分网络及可分线性/线性化算子下压缩 Gauss–Newton 步，降低高维 PINN 的张量网格计算成本；迁移依赖结构假设。",
+      "evidence_limit": "题目与摘要初评，待全文核验。",
+      "reading_decision": "选读"
+    },
+    "Primal Methods for Constrained Variational Inequalities: Optimal Rates, Feasibility Trade-offs, and Lower Bounds": {
+      "summary": "局部线性约束 oracle 的原始 VI 方法同时研究速率和可行性代价；部分最优性保证容许非零渐近约束违反。",
+      "evidence_limit": "题目与摘要初评，待全文核验。",
+      "reading_decision": "选读"
+    },
+    "Fine-Tuning on Self-Generated and Reward-Weighted Data: Learning Dynamics, Convergence Rates, and Benefits of Off-Policyness": {
+      "summary": "在 softmax 多臂 bandit 中分析每 S 步更新 rollout 的 RE(S)，声称渐近 Θ(1/T)，S 主要改变预热及弱策略绕行。",
+      "evidence_limit": "题目与摘要初评，待全文核验。",
+      "reading_decision": "选读"
+    },
+    "Uniform Race: Parameter-Free Approximate Rejection Sampling": {
+      "summary": "Uniform Race 用重要性权重除以独立均匀随机变量，免选择拒绝采样阈值；属于采样机制，优化器相关性较低。",
+      "evidence_limit": "题目与摘要初评，待全文核验。",
+      "reading_decision": "跟踪"
+    },
+    "LOCO-AdaMP: Built-in LOCO Inference for Adaptive Minipatch Ensembles with Enhanced Prediction": {
+      "summary": "LOCO-AdaMP 结合自适应特征抽样与特征重要性推断；主问题是统计解释，当前优化器课题仅间接相关。",
+      "evidence_limit": "题目与摘要初评，待全文核验。",
+      "reading_decision": "跟踪"
+    }
+  },
+  "semantic_reranking": {
+    "assessment_scope": "title_and_abstract_only",
+    "candidate_pool": "original screening top 10; no outside candidate promoted",
+    "score_policy": "script scores unchanged; top_papers array reordered; screening_rank preserved",
+    "decisions": [
+      {
+        "title": "Backpropagated Output Momentum: Relocating Optimizer History from Parameters to Task Space",
+        "screening_rank": 9,
+        "semantic_rank": 1,
+        "reason": "预筛第 9 位升至语义第 1 位。直接命中优化器状态内存和动量机制，新增信息是“历史存储坐标”的改变，与库中 PowerStep 减少/量化参数状态形成可核验的设计对照。先核查算法图、显存分解和机制消融，成本与预期信息增益相称。"
+      },
+      {
+        "title": "Adam under Generalized Smoothness with Second-Moment-Type Stochastic Gradients",
+        "screening_rank": 8,
+        "semantic_rank": 2,
+        "reason": "预筛第 8 位升至语义第 2 位。直接回答自适应更新在广义平滑、弱噪声尾条件下是否稳定的问题，能为优化器理论设计提供假设基线；与 BOM 的实证状态设计互补。先读假设、主定理和困难实例，判断是否真正放宽当前采用的噪声条件。"
+      },
+      {
+        "title": "Stochastic Heavy Ball with Polyak Step Size and Armijo Line Search: A General Convergence Analysis",
+        "screening_rank": 5,
+        "semantic_rank": 3,
+        "reason": "预筛第 5 位升至语义第 3 位。直接命中免调参/Polyak 步长与动量两个问题，可和已精读的 Parameter-free Clipped Gradient Descent Meets Polyak 对照：重点看随机性与动量加入后哪些条件和代价改变。先查假设表和步长规则，再决定是否需要完整复现。"
+      },
+      {
+        "title": "Overfitting of Spectral Gradient Descent: How Matrix Geometry shapes Generalization and Implicit Bias",
+        "screening_rank": 7,
+        "semantic_rank": 4,
+        "reason": "对符号与范数几何有明确新增信息，但模型是带污染标签的过参数矩阵分类，迁移到 LLM 尚需核验。"
+      },
+      {
+        "title": "Probe-Space Preconditioning for Fast and Stable Zero-Order Training",
+        "screening_rank": 3,
+        "semantic_rank": 5,
+        "reason": "直接涉及训练内存与预条件化，但库中零阶优化材料已多，且摘要的大幅步数优势需要公平预算核验。"
+      },
+      {
+        "title": "Tensor-Train Compressed Separable PINNs: A Curvature-Aware Optimization Framework for Parametric PDEs in High Dimensions",
+        "screening_rank": 1,
+        "semantic_rank": 6,
+        "reason": "预筛高分来自曲率和二阶词命中；主要对象是 PINN/PDE，与当前 LLM 优化器的直接性较弱。"
+      },
+      {
+        "title": "Primal Methods for Constrained Variational Inequalities: Optimal Rates, Feasibility Trade-offs, and Lower Bounds",
+        "screening_rank": 10,
+        "semantic_rank": 7,
+        "reason": "提供可复用下界与约束优化工具，但当前主课题没有直接的 VI 约束需求。"
+      },
+      {
+        "title": "Fine-Tuning on Self-Generated and Reward-Weighted Data: Learning Dynamics, Convergence Rates, and Benefits of Off-Policyness",
+        "screening_rank": 4,
+        "semantic_rank": 8,
+        "reason": "分析对象是奖励加权自训练及策略分布，而非优化器本体，适合对后训练有需要时选读。"
+      },
+      {
+        "title": "Uniform Race: Parameter-Free Approximate Rejection Sampling",
+        "screening_rank": 2,
+        "semantic_rank": 9,
+        "reason": "“parameter-free”在这里指拒绝采样阈值；不是当前研究的学习率或裁剪阈值。"
+      },
+      {
+        "title": "LOCO-AdaMP: Built-in LOCO Inference for Adaptive Minipatch Ensembles with Enhanced Prediction",
+        "screening_rank": 6,
+        "semantic_rank": 10,
+        "reason": "自适应、采样等宽泛词造成预筛命中；不应与自适应梯度优化混为一谈。"
+      }
+    ]
+  }
+}
