@@ -1,0 +1,181 @@
+{
+  "overview": {
+    "trend": "本次有限覆盖的候选可串成“实际正交化与动量的收敛边界—局部步长选择—重尾噪声下裁剪是否必要”这条研究线索。前三篇判断来自题目和完整摘要，属于待全文核验的阅读优先级，不是质量评审。检索覆盖：arXiv API 四批全部遭遇429/503，以公开 optimizer 搜索网页和逐篇原始摘要页补检；其他5个关键词网页返回406。OpenReview 单独关键词查询成功；Semantic Scholar 两个年度引用查询429，因此过去一年高影响力筛选未完成，引用缺失记0。本次58篇不是完整一个月的主题总体，不能据此推断领域热度。",
+    "hotspots": [
+      {
+        "title": "有限正交化、预条件与动量",
+        "text": "将 Muon 的实现细节放到可证明参数区域中讨论；需要区别渐近收敛、随机驻点率与实际吞吐。"
+      },
+      {
+        "title": "Polyak 型局部步长",
+        "text": "从距离上界或方向局部模型出发，关注是否消除了未知量，及随机公共解条件的失效。"
+      },
+      {
+        "title": "重尾与裁剪区域",
+        "text": "联合噪声矩和 Hölder 光滑指数决定普通 SGD 与裁剪方法的适用区域；指数比较应先统一评价指标。"
+      }
+    ]
+  },
+  "domain_summaries": {
+    "大模型优化器设计": {
+      "summary": "自动主题分组50篇、推荐9篇；其中23篇“未细分”主要由宽泛关键词或分类命中，包含采样、决策聚焦和RL方法，不能全当作优化器设计贡献。优先读取直接机制与假设边界，其余按预期信息增益区分选读和跟踪。",
+      "subfields": {
+        "符号与范数几何优化": "22篇，覆盖Muon有限正交化、预条件、谱学习与压缩等机制；前三篇优先Muon参数区域，其他新实现留在全量列表，避免越过前10预筛池临时替换。",
+        "免调参与梯度裁剪": "5篇，优先联合重尾噪声和Hölder光滑性的裁剪区域；理论收益仍需核验阈值先验与统一驻点指标。",
+        "未细分": "23篇包括Polyak求根和方向步长分离，也包含间接相关的扩散采样及策略优化；此栏保留脚本分类，不把相同关键词当作课题直接契合。"
+      }
+    },
+    "随机梯度与优化理论": {
+      "summary": "自动分组8篇、推荐1篇。主要为随机收敛、裁剪和隐私优化；部分直接理论论文被脚本宽泛地分到第一大方向，应结合摘要看实际问题，不依据分组数量判断方向活跃度。",
+      "subfields": {
+        "随机梯度与收敛性": "7篇，包括高概率重尾界、次梯度失败指数、裁剪偏差与隐私方法；本次推荐的CA-DPSGD摘要缺少定量结果，先跟踪。",
+        "自适应与二阶优化": "1篇为低秩摩擦自适应机制；连续时间强凸理论与离散Transformer预训练之间的桥接需定点核验。"
+      }
+    }
+  },
+  "top_papers": {
+    "Convergence guarantees for Muon: New parameter regimes and generalizations": {
+      "title_zh": "Muon 的收敛保证：新的参数区域与推广",
+      "summary": "将 Newton–Schulz 中的隐式正则化解释为有界预条件，分析 Muon 与 Nesterov 变体 Muesterov 的渐近收敛。",
+      "abstract_zh": "本文通过一种比通常的矩阵符号函数更准确的 Newton-Schultz 迭代代理，建立 Muon 算法的首个渐近收敛保证。我们证明，在适当选择超参数时，迭代点满足 $\\lim_{k\\to\\infty}\\|\\nabla f(x_k)\\|=0$；并且，在全局 Polyak–Łojasiewicz 条件下，函数值序列线性收敛。关键认识是，Muon 的 Newton–Schulz 实现中隐含的正则化会诱导一个有界预条件器，从而揭示 Muon 是一种带预条件的 Polyak 重球方法，并使经典 Lyapunov 分析成为可能。这一观察自然地促使我们将相同的预条件结构用于 Nesterov 梯度求值。我们通过引入 Muesterov——一种基于 Nesterov 的 Muon 变体——将该想法形式化，并证明它具有相同的收敛保证，从而把理论框架扩展到重球设置之外。标量交叉熵问题上的数值实验支持该理论，并阐明学习率和 Newton–Schulz 正则项在控制收敛方面的共同作用。在 nanoGPT 数据集上进行训练的初步数值模拟，为本文观察与实际应用的相关性提供了直观认识。",
+      "contributions": [
+        "作者主张以更准确的 Newton–Schulz 代理刻画实际正交化，建立梯度趋零与全局 PL 条件下的线性收敛。",
+        "作者将有界预条件与 Polyak 重球、Lyapunov 分析联系起来，并提出 Muesterov 推广。"
+      ],
+      "method": "从隐式正则化推出有界预条件器，用重球动力学的 Lyapunov 工具分析，再将预条件结构迁移到 Nesterov 梯度求值。这里是摘要中的方法路线，尚未审计代理与真实实现的一致性。",
+      "result": "摘要报告渐近梯度趋零及全局 PL 条件下函数值线性收敛；实验为标量交叉熵和初步 nanoGPT 模拟，未报告大规模训练收益或具体加速百分比。",
+      "selection_reason": "直接命中符号与范数几何优化，并可与库中 Muon 有限 Newton–Schulz、谱分配和非光滑正交动量工作对读。预计新增信息在于有限实现中的正则化、可证明参数区域及动量变体，而非又一个训练榜单；小规模动力学实验的验证成本较低。",
+      "evidence_limit": "仅依据原始题目与完整摘要，置信度低，待全文核验：代理是否保留实际多项式系数与有限迭代行为；参数区域是否覆盖常用学习率与动量；PL 假设、预条件上下界及隐藏条件数是否可验证；nanoGPT 证据仍属初步模拟。摘要“首个”为作者主张，应与 Convergence of Practical Muon 等近邻逐项比较后再判断。",
+      "reading_decision": "精读",
+      "abstract_license": "https://creativecommons.org/licenses/by-nc-sa/4.0/"
+    },
+    "Polyak-Type Extragradient Methods for Monotone Root-Finding Problems": {
+      "title_zh": "用于单调求根问题的 Polyak 型外梯度方法",
+      "summary": "用距离上界统一解释 Polyak 外梯度步长，并明确随机分量不共享解时的失效与递减步长修复。",
+      "abstract_zh": "我们研究用于求解确定性和随机单调求根问题的外梯度方法中的 Polyak 型步长选择。我们表明，确定性外梯度方法中已知的投影型校正，可以通过最小化到某个解的距离上界得到，这与经典 Polyak 步长的构造相对应。利用这一视角，我们给出 Polyak 型外梯度方法（PolyakEG）的统一确定性分析，其基础是一个控制算子 $F$ 沿外推方向变化的局部临界条件。该分析不要求全局 Lipschitz 连续性，并在同一个框架中涵盖更广泛条件下的次线性收敛，例如 Hölder 连续性或 $(L_0,L_1)$-Lipschitz 性，以及额外强单调性条件下的线性收敛。随后，我们研究这一方法的随机扩展。首先，当所有随机分量算子共享一个公共解时，我们证明直接随机变体 PolyakSEG 的收敛性。我们还表明，没有这一条件时，采用不趋于零步长的 PolyakSEG 可能无法收敛到平均算子的零点。为解决这一局限，我们提出 DecPolyakSEG，将递减步长与 Polyak 型更新相结合，并在不要求分量算子共享公共解的情况下，建立一个关于残差的次线性收敛结果。这些结果与凸最小化文献中随机 Polyak 步长的近期进展相呼应，并在更广泛的求根场景中确立了一条相应的研究路径。",
+      "contributions": [
+        "用同一局部算子变化条件统一覆盖非全局 Lipschitz 的确定性收敛分析。",
+        "给出随机 PolyakSEG 对公共解假设的依赖和失效边界，提出 DecPolyakSEG 的递减步长修复。"
+      ],
+      "method": "把步长选择写为到解距离上界的最小化，用沿外推方向的局部临界条件替代全局 Lipschitz 常数，再区分共享公共解与一般随机分量的分析。",
+      "result": "摘要报告 Hölder 或广义 Lipschitz 条件下的次线性收敛、强单调条件下的线性收敛，以及无公共解条件下 DecPolyakSEG 的次线性残差收敛；未给出具体阶或实验规模，不能自行补齐。",
+      "selection_reason": "延续用户对 Polyak 步长和免调参的关注，但把对象从最小化扩展到单调求根。最值得带回当前课题的是“公共解/插值条件能否替代未知参数”的假设审计及反例，能与已有免调参二阶工作形成互补；迁移到大模型训练仍需另做验证。",
+      "evidence_limit": "仅按完整摘要初评，置信度低，待全文核验：是否要访问未知解相关量；局部条件能否在线检测；步长是否仍依赖先验常数；随机 oracle 的独立性与方差条件；递减步长的实际调参成本和残差阶。求根结果不能直接当作一般非凸 LLM 训练保证。",
+      "reading_decision": "精读",
+      "abstract_license": "https://creativecommons.org/licenses/by/4.0/"
+    },
+    "Convergence of Stochastic Gradient Methods under Heavy-Tailed Noise and H\\\"{o}lder Smoothness": {
+      "title_zh": "重尾噪声与 Hölder 光滑性下随机梯度方法的收敛性",
+      "summary": "联合放宽光滑性和噪声矩假设，区分普通 SGD、正则化裁剪与标准裁剪可覆盖的参数区域。",
+      "abstract_zh": "随机梯度方法的经典收敛保证通常假设目标具有 Lipschitz 光滑性，且梯度噪声的方差有限，而这两项假设在实践中都经常不成立。与之不同，我们在同时放宽这两项假设的情况下研究非凸随机优化：目标函数的梯度具有 $(L,s)$-Hölder 连续性，其中 $s\\in(0,1]$；梯度噪声仅满足有界的 $\\alpha$ 阶矩条件，其中 $\\alpha\\in(1,2]$。我们建立了三个收敛结果。第一，只要 $\\alpha\\ge1+s$，标准 SGD 就以 $O(T^{-s/(1+s)})$ 的速率收敛，同时将经典的非凸 SGD 速率推广到重尾噪声和 Hölder 光滑性。第二，我们分析 $\\delta$ 正则化梯度裁剪（$\\delta$-GClip）——一种用于宽且深网络、具有证明保证的训练方法——并在相同条件下建立 $O(T^{-2s(\\alpha-1)/[(1+s)(2\\alpha-1)]})$ 的驻点性速率。第三，我们分析标准梯度裁剪（G-Clip），表明它在 $\\alpha\\ge1+s$ 时恢复上述速率；而在重尾程度非常强的区域 $\\alpha<1+s$，它具有 $O(T^{-2s(\\alpha-1)/[(\\alpha-1)+s(2\\alpha-1)]})$ 的收敛速率——这是这一参数区域内针对任意基于随机梯度的方法给出的首个收敛保证。",
+      "contributions": [
+        "联合研究 Hölder 梯度与仅有有限 α 阶矩的噪声，明确 α 与 1+s 的分界。",
+        "比较 SGD、δ-GClip 与 G-Clip 的不同速率，并主张标准裁剪能够覆盖 α<1+s 的区域。"
+      ],
+      "method": "分别分析未经裁剪的随机更新、δ 正则化裁剪和标准裁剪，在同一光滑指数 s 与矩指数 α 下比较驻点性界。具体裁剪阈值、偏差控制与证明技术摘要未说明。",
+      "result": "摘要报告：$\\alpha\\ge1+s$ 时 SGD 为 $O(T^{-s/(1+s)})$，δ-GClip 和 G-Clip 为 $O(T^{-2s(\\alpha-1)/[(1+s)(2\\alpha-1)]})$；$\\alpha<1+s$ 时 G-Clip 为 $O(T^{-2s(\\alpha-1)/[(\\alpha-1)+s(2\\alpha-1)]})$。速率的驻点指标、常数和 oracle 口径需读定理确认。",
+      "selection_reason": "裁剪是否有必要取决于噪声矩与光滑性共同决定的区域；这篇提供可直接用来设计合成噪声实验的分界条件。它与库中普通非凸 SGD 的距离依赖矩工作构成互补，适合检验“重尾就必须裁剪”这一过宽判断，避免只读 Muon 同类机制。",
+      "evidence_limit": "仅依据题目和摘要，置信度低，待全文核验：驻点性度量是否相同；是期望界还是高概率界；阈值和步长是否需要已知 α、s 或噪声常数；边界 α=1+s 的连续性；δ 正则项与网络训练假设；“首个”及“可证明训练宽深网络”均为作者主张，尚未独立验证。不可跨论文直接用指数判算法优劣。",
+      "reading_decision": "精读",
+      "abstract_license": "https://creativecommons.org/licenses/by-nc-sa/4.0/"
+    },
+    "Convergence of Practical Muon": {
+      "summary": "选读：把实际 Newton–Schulz 系数与解耦权重衰减纳入随机非凸分析；应先核对与首篇的实现口径和维度比较假设。",
+      "reading_decision": "选读"
+    },
+    "Trust the Direction, Search the Step: Zero-and-First-Order Methods for LLM Fine-Tuning": {
+      "summary": "选读：以一阶方向加两次零阶目标评估选择曲率感知步长；优先核算端到端开销与驻点邻域大小，摘要未给定量收益。",
+      "reading_decision": "选读"
+    },
+    "Curvature-Aware Clipping: Mitigating Bias in DPSGD via Approximate Second-Order Information": {
+      "summary": "跟踪：曲率空间裁剪与各向异性噪声用于 DP-SGD；摘要缺少明确实验数值，应核验隐私会计及公平基线。",
+      "reading_decision": "跟踪"
+    },
+    "CARM: Cancellation-Aware Response Masking for LLM Reinforcement Learning": {
+      "summary": "跟踪：针对 RL 后训练的响应级离策略掩码，较优化器本体间接；重点看双向概率漂移控制是否改善梯度可靠性。",
+      "reading_decision": "跟踪"
+    },
+    "The Curvature of Regret in Contextual Linear Optimization": {
+      "summary": "跟踪：分析决策聚焦线性优化的平均后曲率；对当前 LLM 优化器课题迁移成本较高。",
+      "reading_decision": "跟踪"
+    },
+    "Sample complexity bounds for categorical Markov random fields via Discrete Diffusions": {
+      "summary": "跟踪：离散扩散采样的样本复杂度与分数学习有理论线索，但当前优化器机制研究的信息增益较低。",
+      "reading_decision": "跟踪"
+    },
+    "FERPO: Forward Entropy-Regularized Policy Optimization": {
+      "summary": "跟踪：连续控制策略优化通过前向 KL 拟合目标分布；与 LLM 优化器设计仅间接相关，暂不作为优先精读。",
+      "reading_decision": "跟踪"
+    }
+  },
+  "semantic_rerank": [
+    {
+      "title": "Convergence guarantees for Muon: New parameter regimes and generalizations",
+      "screening_rank": 7,
+      "semantic_rank": 1,
+      "reason": "直接命中符号与范数几何优化，并可与库中 Muon 有限 Newton–Schulz、谱分配和非光滑正交动量工作对读。预计新增信息在于有限实现中的正则化、可证明参数区域及动量变体，而非又一个训练榜单；小规模动力学实验的验证成本较低。"
+    },
+    {
+      "title": "Polyak-Type Extragradient Methods for Monotone Root-Finding Problems",
+      "screening_rank": 3,
+      "semantic_rank": 2,
+      "reason": "延续用户对 Polyak 步长和免调参的关注，但把对象从最小化扩展到单调求根。最值得带回当前课题的是“公共解/插值条件能否替代未知参数”的假设审计及反例，能与已有免调参二阶工作形成互补；迁移到大模型训练仍需另做验证。"
+    },
+    {
+      "title": "Convergence of Stochastic Gradient Methods under Heavy-Tailed Noise and H\\\"{o}lder Smoothness",
+      "screening_rank": 9,
+      "semantic_rank": 3,
+      "reason": "裁剪是否有必要取决于噪声矩与光滑性共同决定的区域；这篇提供可直接用来设计合成噪声实验的分界条件。它与库中普通非凸 SGD 的距离依赖矩工作构成互补，适合检验“重尾就必须裁剪”这一过宽判断，避免只读 Muon 同类机制。"
+    },
+    {
+      "title": "Convergence of Practical Muon",
+      "screening_rank": 8,
+      "semantic_rank": 4,
+      "reason": "选读：把实际 Newton–Schulz 系数与解耦权重衰减纳入随机非凸分析；应先核对与首篇的实现口径和维度比较假设。"
+    },
+    {
+      "title": "Trust the Direction, Search the Step: Zero-and-First-Order Methods for LLM Fine-Tuning",
+      "screening_rank": 6,
+      "semantic_rank": 5,
+      "reason": "选读：以一阶方向加两次零阶目标评估选择曲率感知步长；优先核算端到端开销与驻点邻域大小，摘要未给定量收益。"
+    },
+    {
+      "title": "Curvature-Aware Clipping: Mitigating Bias in DPSGD via Approximate Second-Order Information",
+      "screening_rank": 10,
+      "semantic_rank": 6,
+      "reason": "跟踪：曲率空间裁剪与各向异性噪声用于 DP-SGD；摘要缺少明确实验数值，应核验隐私会计及公平基线。"
+    },
+    {
+      "title": "CARM: Cancellation-Aware Response Masking for LLM Reinforcement Learning",
+      "screening_rank": 2,
+      "semantic_rank": 7,
+      "reason": "跟踪：针对 RL 后训练的响应级离策略掩码，较优化器本体间接；重点看双向概率漂移控制是否改善梯度可靠性。"
+    },
+    {
+      "title": "The Curvature of Regret in Contextual Linear Optimization",
+      "screening_rank": 4,
+      "semantic_rank": 8,
+      "reason": "跟踪：分析决策聚焦线性优化的平均后曲率；对当前 LLM 优化器课题迁移成本较高。"
+    },
+    {
+      "title": "Sample complexity bounds for categorical Markov random fields via Discrete Diffusions",
+      "screening_rank": 1,
+      "semantic_rank": 9,
+      "reason": "跟踪：离散扩散采样的样本复杂度与分数学习有理论线索，但当前优化器机制研究的信息增益较低。"
+    },
+    {
+      "title": "FERPO: Forward Entropy-Regularized Policy Optimization",
+      "screening_rank": 5,
+      "semantic_rank": 10,
+      "reason": "跟踪：连续控制策略优化通过前向 KL 拟合目标分布；与 LLM 优化器设计仅间接相关，暂不作为优先精读。"
+    }
+  ],
+  "translation_audit": {
+    "scope": "前三篇逐项对照原始英文摘要，保留所有问题、方法、限定条件、实验设置、数字与公式；均为单段摘要对应单段译文。",
+    "checks": [
+      "Muon: 渐近梯度趋零、全局PL线性收敛、有界预条件、Muesterov、标量交叉熵、nanoGPT初步模拟均保留。",
+      "Polyak: 无全局Lipschitz、Hölder、(L0,L1)、强单调、公共解、非消失步长失效、DecPolyakSEG残差界均保留。",
+      "重尾: s与α区间、α=1+s分界、三个完整速率、δ-GClip及G-Clip适用范围均保留。"
+    ]
+  }
+}
