@@ -1,0 +1,119 @@
+{
+  "date": "2026-10-02",
+  "note_file": "今日检索.md",
+  "generated_at": "2026-10-02T12:03:38",
+  "skill": "paper-daily",
+  "sources_searched": [
+    "arxiv",
+    "openreview",
+    "semantic_scholar"
+  ],
+  "source_counts": {
+    "arxiv": 38,
+    "openreview": 20,
+    "semantic_scholar": 0
+  },
+  "date_windows": {
+    "recent_30d": {
+      "start": "2026-09-02",
+      "end": "2026-10-02"
+    },
+    "past_year": {
+      "start": "2025-10-02",
+      "end": "2026-09-01"
+    }
+  },
+  "total_unique": 58,
+  "top_papers": [
+    {
+      "title": "Convergence guarantees for Muon: New parameter regimes and generalizations",
+      "source": "arxiv",
+      "arxiv_id": "2609.30546",
+      "url": "https://arxiv.org/abs/2609.30546",
+      "note_filename": "Convergence_guarantees_for_Muon_New_parameter_regimes_and_generalizations",
+      "matched_domain": "大模型优化器设计",
+      "score": 7.93
+    },
+    {
+      "title": "Polyak-Type Extragradient Methods for Monotone Root-Finding Problems",
+      "source": "arxiv",
+      "arxiv_id": "2609.26581",
+      "url": "https://arxiv.org/abs/2609.26581",
+      "note_filename": "Polyak_Type_Extragradient_Methods_for_Monotone_Root_Finding_Problems",
+      "matched_domain": "大模型优化器设计",
+      "score": 8.27
+    },
+    {
+      "title": "Convergence of Stochastic Gradient Methods under Heavy-Tailed Noise and H\\\"{o}lder Smoothness",
+      "source": "arxiv",
+      "arxiv_id": "2609.12785",
+      "url": "https://arxiv.org/abs/2609.12785",
+      "note_filename": "Convergence_of_Stochastic_Gradient_Methods_under_Heavy_Tailed_Noise_and_H_{o}lder_Smoothness",
+      "matched_domain": "大模型优化器设计",
+      "score": 7.87
+    },
+    {
+      "title": "Convergence of Practical Muon",
+      "source": "arxiv",
+      "arxiv_id": "2609.33152",
+      "url": "https://arxiv.org/abs/2609.33152",
+      "note_filename": "Convergence_of_Practical_Muon",
+      "matched_domain": "大模型优化器设计",
+      "score": 7.87
+    },
+    {
+      "title": "Trust the Direction, Search the Step: Zero-and-First-Order Methods for LLM Fine-Tuning",
+      "source": "arxiv",
+      "arxiv_id": "2610.02190",
+      "url": "https://arxiv.org/abs/2610.02190",
+      "note_filename": "Trust_the_Direction_Search_the_Step_Zero_and_First_Order_Methods_for_LLM_Fine_Tuning",
+      "matched_domain": "大模型优化器设计",
+      "score": 8.13
+    },
+    {
+      "title": "Curvature-Aware Clipping: Mitigating Bias in DPSGD via Approximate Second-Order Information",
+      "source": "openreview",
+      "arxiv_id": "",
+      "url": "https://openreview.net/forum?id=daPUJXQxky",
+      "note_filename": "Curvature_Aware_Clipping_Mitigating_Bias_in_DPSGD_via_Approximate_Second_Order_Information",
+      "matched_domain": "随机梯度与优化理论",
+      "score": 7.8
+    },
+    {
+      "title": "CARM: Cancellation-Aware Response Masking for LLM Reinforcement Learning",
+      "source": "arxiv",
+      "arxiv_id": "2610.02039",
+      "url": "https://arxiv.org/abs/2610.02039",
+      "note_filename": "CARM_Cancellation_Aware_Response_Masking_for_LLM_Reinforcement_Learning",
+      "matched_domain": "大模型优化器设计",
+      "score": 8.33
+    },
+    {
+      "title": "The Curvature of Regret in Contextual Linear Optimization",
+      "source": "arxiv",
+      "arxiv_id": "2610.01980",
+      "url": "https://arxiv.org/abs/2610.01980",
+      "note_filename": "The_Curvature_of_Regret_in_Contextual_Linear_Optimization",
+      "matched_domain": "大模型优化器设计",
+      "score": 8.2
+    },
+    {
+      "title": "Sample complexity bounds for categorical Markov random fields via Discrete Diffusions",
+      "source": "arxiv",
+      "arxiv_id": "2610.02128",
+      "url": "https://arxiv.org/abs/2610.02128",
+      "note_filename": "Sample_complexity_bounds_for_categorical_Markov_random_fields_via_Discrete_Diffusions",
+      "matched_domain": "大模型优化器设计",
+      "score": 8.47
+    },
+    {
+      "title": "FERPO: Forward Entropy-Regularized Policy Optimization",
+      "source": "arxiv",
+      "arxiv_id": "2610.02198",
+      "url": "https://arxiv.org/abs/2610.02198",
+      "note_filename": "FERPO_Forward_Entropy_Regularized_Policy_Optimization",
+      "matched_domain": "大模型优化器设计",
+      "score": 8.13
+    }
+  ]
+}
