@@ -10,12 +10,15 @@
 | 未精读 | Convergence guarantees for Muon: New parameter regimes and generalizations | Convergence_guarantees_for_Muon_New_parameter_regimes_and_generalizations | -- | -- | -- | -- |
 | 未精读 | Convergence of Stochastic Gradient Methods under Heavy-Tailed Noise and H\"{o}lder Smoothness | Convergence_of_Stochastic_Gradient_Methods_under_Heavy_Tailed_Noise_and_H_{o}lder_Smoothness | -- | -- | -- | -- |
 | 未精读 | Polyak-Type Extragradient Methods for Monotone Root-Finding Problems | Polyak_Type_Extragradient_Methods_for_Monotone_Root_Finding_Problems | -- | -- | -- | -- |
+| 未精读 | ABrA-GD: Adaptive Bregman Accelerated Gradient Descent for Relatively Smooth and (Strongly-)Convex Optimization | ABrA_GD_Adaptive_Bregman_Accelerated_Gradient_Descent_for_Relatively_Smooth_and_(Strongly_)Convex_Optimization | -- | -- | -- | -- |
+| 未精读 | Convergence Analysis of STORM Under Different Geometries | Convergence_Analysis_of_STORM_Under_Different_Geometries | -- | -- | -- | -- |
+| 未精读 | Is Weight Tying Still Beneficial for Decoder-Only LLMs in Private Settings Under DP-SGD? | Is_Weight_Tying_Still_Beneficial_for_Decoder_Only_LLMs_in_Private_Settings_Under_DP_SGD | -- | -- | -- | -- |
 
 ## 汇总
 
-- 论文总数：3 篇（2026-10 3 篇）
-- 精读状态：已精读 0 / 精读中 0 / 未精读 3
-- **未精读论文**：Convergence_guarantees_for_Muon_New_parameter_regimes_and_generalizations、Convergence_of_Stochastic_Gradient_Methods_under_Heavy_Tailed_Noise_and_H_{o}lder_Smoothness、Polyak_Type_Extragradient_Methods_for_Monotone_Root_Finding_Problems
+- 论文总数：6 篇（2026-10 6 篇）
+- 精读状态：已精读 0 / 精读中 0 / 未精读 6
+- **未精读论文**：Convergence_guarantees_for_Muon_New_parameter_regimes_and_generalizations、Convergence_of_Stochastic_Gradient_Methods_under_Heavy_Tailed_Noise_and_H_{o}lder_Smoothness、Polyak_Type_Extragradient_Methods_for_Monotone_Root_Finding_Problems、ABrA_GD_Adaptive_Bregman_Accelerated_Gradient_Descent_for_Relatively_Smooth_and_(Strongly_)Convex_Optimization、Convergence_Analysis_of_STORM_Under_Different_Geometries、Is_Weight_Tying_Still_Beneficial_for_Decoder_Only_LLMs_in_Private_Settings_Under_DP_SGD
 <!-- INDEX:END -->
 
 ## 说明

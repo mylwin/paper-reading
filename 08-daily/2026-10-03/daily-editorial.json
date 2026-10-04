@@ -1,0 +1,263 @@
+{
+  "overview": {
+    "trend": "今日候选把优化器几何分解、随机动量的假设边界和 oracle 下界放到同一个阅读队列。前三篇选择 STORM 的随机理论、ABrA-GD 的确定性几何和 DP-SGD 的架构/裁剪实现，形成可分别核验定理与显存收益的组合；NormPre 与大模型优化器主题最直接，列为下一轮优先选读。所有判断只基于题目、摘要与元数据，置信度低，待全文核验。检索目标日为 2026-10-03，补做与实际入库日为 2026-10-04；近期窗口 2026-09-03 至 2026-10-03，年度窗口 2025-10-03 至 2026-09-02。arXiv 四批取回 182 条，OpenReview 三个独立查询取回 21 条但关键词覆盖不完整；合并筛选去重得 189 篇。Semantic Scholar 返回 HTTP 429，年度高影响力筛选未完成，0 篇年度返回不能解释为不存在相关论文；引用信号缺失不能推导质量低。主题分组为自动关键词标签，“未细分”较多，分类名称不替代摘要内容判断。",
+    "hotspots": [
+      {
+        "title": "先区分尺度与交互几何",
+        "text": "NormPre 的分层矩阵更新和 ABrA-GD 的几何自适应分别提供实证与凸理论线索；两者的目标函数、随机性和算力模型不同，不能互当证明。"
+      },
+      {
+        "title": "方差缩减收益取决于假设",
+        "text": "STORM 把平均光滑性与标准光滑性下的速率分开；minimax 下界进一步提醒，允许方差缩减仍有 oracle 障碍。"
+      },
+      {
+        "title": "优化实现与架构耦合",
+        "text": "DP-SGD 的共享 embedding 会影响 ghost clipping；报告的准确率和显存收益需要在一致隐私预算、模型规模与批量下复核。"
+      }
+    ]
+  },
+  "domain_summaries": {
+    "大模型优化器设计": {
+      "summary": "83 篇自动归入本域，推荐 5 篇。直接关注 NormPre 的矩阵更新与 AdamW/Muon 对照；STORM 和下界候选提供训练算法边界。宽泛类别命中可能把一般优化理论归入本域，不能视为均完成大模型验证。",
+      "subfields": {
+        "未细分": "47 篇主要靠宽泛分类命中；逐篇核对目标函数和训练场景，STORM 应优先读假设与 oracle 定义。",
+        "符号与范数几何优化": "26 篇；NormPre 是直接竞争机制，需核对归一化、谱预条件与近似误差各自的增量。",
+        "免调参与梯度裁剪": "9 篇；关注调参依赖与裁剪引入的偏差，分清隐私裁剪、稳定训练与参数自适应。",
+        "自适应与状态内存": "1 篇；检验状态大小是否转化为端到端显存或训练成本改善。"
+      }
+    },
+    "随机梯度与优化理论": {
+      "summary": "106 篇，推荐 5 篇。ABrA-GD 的可计算证书、随机一阶/零阶下界与 DP-SGD 场景提供互补信息；比较结论前统一目标精度、oracle 与假设。",
+      "subfields": {
+        "随机梯度与收敛性": "76 篇；自动标签包含确定性凸优化及下界，需区分期望界、高概率界和末迭代/平均输出。",
+        "自适应与二阶优化": "15 篇；重点辨别是否调用 Hessian、额外曲率信息或昂贵子问题，避免仅按迭代数比较。",
+        "算子与范数几何": "8 篇；先定位 Bregman 几何、范数约束与对偶结构，再比较常数和维度依赖。",
+        "动量、裁剪与加速": "7 篇；核验动量递推、裁剪偏差和加速所需正则性条件，避免把不同 oracle 的速率直接排序。"
+      }
+    }
+  },
+  "top_papers": {
+    "Convergence Analysis of STORM Under Different Geometries": {
+      "title_zh": "不同几何条件下 STORM 的收敛分析",
+      "summary": "作者尝试用同一 STORM 递推覆盖多种目标，并量化放弃平均光滑性后的收敛速率变化。",
+      "abstract_zh": "随机递归动量（STORM）通过方差缩减效应实现非凸优化的快速收敛，但现有分析依赖较强的平均光滑性假设。本文研究不要求平均光滑性时，STORM 对不同目标函数的收敛性。我们首先重新考察平均光滑性下的结果：对于非凸目标得到 $O(T^{-1/3})$ 界，并在 $μ$-Polyak–Łojasiewicz（PL）条件下，对末迭代输出得到 $O(σ^2/(μT))$ 界。在没有平均光滑性的情况下，我们设计一个辅助序列，并在分析中将 STORM 更新与该序列进行比较。借助这一序列，我们证明 STORM 仍能达到非凸目标的 $O(T^{-1/4})$ 速率，这在标准光滑性下是最优的。对于凸目标和 $λ$-强凸目标，我们进一步证明平均输出与末迭代的界，分别具有最优的 $O(σR/\\sqrt T)$ 和 $O(σ^2/(λT))$ 速率。所有所得结果均使用相同的 STORM 递推，但采用不同的超参数选择。",
+      "contributions": [
+        "摘要声称放弃平均光滑性后仍能分析 STORM；新增辅助序列是关键证明线索。",
+        "把非凸、PL、凸和强凸场景分别报告，保留同一递推与不同调参的区别。"
+      ],
+      "method": "理论算法论文；通过辅助序列比较递推行为。先读算法与假设表，定位比较误差如何累积，再核对输出选择。",
+      "result": "摘要在平均光滑性下报告非凸 T^{-1/3} 与 PL 末迭代 σ²/(μT)；无该假设时报告非凸 T^{-1/4}、凸 σR/√T、强凸末迭代 σ²/(λT)。",
+      "selection_reason": "直接补充随机动量/方差缩减的适用假设，阅读定理的成本较低；可与库存中的 SGD 和裁剪工作对照“放宽何种条件”。",
+      "evidence_limit": "当前只读摘要，低置信度，未核验证明。“最优”须核对同一 oracle 和误差指标的下界；T 是迭代数还是梯度调用数、R 定义、噪声条件、参数是否依赖未知常数、瞬态项均待核验。",
+      "reading_decision": "精读（优先定理与证明；待全文核验）"
+    },
+    "ABrA-GD: Adaptive Bregman Accelerated Gradient Descent for Relatively Smooth and (Strongly-)Convex Optimization": {
+      "title_zh": "ABrA-GD：用于相对光滑凸及强凸优化的自适应 Bregman 加速梯度下降",
+      "summary": "用可计算的原始—对偶证书适应相对光滑性与几何，并把加速结论绑定到局部对偶 BLDF 有界条件。",
+      "abstract_zh": "我们提出 ABrA-GD（自适应 Bregman 加速梯度下降），这是一种用于相对光滑凸优化的自适应算法。该算法由一个可计算的原始—对偶证书推导而来；该证书通过比较目标函数值与某个正则化目标最小值的下界，保证算法取得进展。该证书使算法能够同时适应光滑性和几何，并仅使用相对强凸性常数作为依赖具体问题的输入。我们引入对偶 Bregman 长度畸变因子（BLDF），用来衡量在锚点平移或缩放时，对偶 Bregman 长度如何变化。在局部对偶 BLDF 有界的条件下，ABrA-GD 对凸目标达到加速的 $O(1/k^2)$ 速率，对相对强凸目标达到加速的线性速率。",
+      "contributions": [
+        "可计算证书提供自适应进展判据。",
+        "提出局部对偶 BLDF，将加速的几何限制显式化。"
+      ],
+      "method": "确定性理论算法；比较正则化原问题的下界与当前目标值。应先核对证书的构造代价、Bregman 子问题可解性，再阅读 BLDF 条件。",
+      "result": "摘要报告有界局部对偶 BLDF 下，凸情形 O(1/k²)、相对强凸情形加速线性率；没有声称任意相对光滑问题均可无条件加速。",
+      "selection_reason": "为自适应优化提供与矩阵预条件不同的几何证书，适合寻找能迁移的条件或反例；与 STORM 构成确定性/随机性对照。",
+      "evidence_limit": "低置信度摘要初评，待全文核验。相对强凸常数作为输入，不能称完全免调参；需检验 BLDF 在非欧几何实例中是否易满足、有界常数与线性率的依赖、回溯和子问题成本、最近加速 Bregman 工作的真实净增量。",
+      "reading_decision": "精读（先证书、BLDF 实例与复杂度；待全文核验）"
+    },
+    "Is Weight Tying Still Beneficial for Decoder-Only LLMs in Private Settings Under DP-SGD?": {
+      "title_zh": "在 DP-SGD 私有训练中，权重共享对仅解码器大语言模型仍然有益吗？",
+      "summary": "作者报告解除输入/输出 embedding 共享在小型 decoder 模型 DP-SGD 微调中提高准确率，并恢复 ghost clipping 的显存收益。",
+      "abstract_zh": "差分隐私随机梯度下降（DP-SGD）是对大语言模型（LLM）进行隐私保护微调的主要方法之一。许多仅解码器 LLM 在输入与输出嵌入之间采用权重共享；这一设计最初是为了在非隐私场景中提高参数效率和语言建模性能。然而，权重共享对差分隐私训练的影响仍在很大程度上尚未得到探索。本文以 GPT2 和 DistilGPT2 作为代表性的仅解码器架构，研究权重共享在差分隐私（DP）场景中的作用。我们发现，在 DP-SGD 下，不共享权重的嵌入模型持续优于权重共享模型，在 SST-2、QNLI 和 QQP 上的准确率提升最高达到 4.74 个百分点。除提高效用之外，解除嵌入权重共享还使 DP-SGD 能够使用节省显存的 ghost clipping。相比之下，权重共享引入了共享参数之间的交互，使标准 ghost norm 的计算复杂化，并在很大程度上抵消了其计算优势。因此，不共享权重的模型在保留 ghost clipping 优势的同时，显存使用量降低超过 60%。我们的结果表明，不共享权重的嵌入为仅解码器 LLM 的差分隐私训练提供了更有效且更易扩展的设计，并凸显了重新审视隐私保护场景中标准 LLM 架构选择的必要性。",
+      "contributions": [
+        "摘要给出架构选择与 per-example norm/ghost clipping 实现耦合的可核验机制。",
+        "报告任务准确率与显存收益，提供小预算复核入口。"
+      ],
+      "method": "实证方法与工程混合型；比较 GPT2/DistilGPT2 的共享与不共享嵌入，并考察 DP-SGD 的 ghost clipping 实现。",
+      "result": "摘要报告 SST-2/QNLI/QQP 准确率最高提升 4.74 个百分点、显存使用量降低超过 60%；不代表每个任务均提升 4.74，也不证明大规模预训练同样成立。",
+      "selection_reason": "把“裁剪算法之外的结构约束”引入优化器研究，可复核共享参数的每样本范数计算；作为前三篇中唯一实证实现工作，与两篇几何/收敛理论互补。",
+      "evidence_limit": "低置信度摘要初评，待全文核验。必须核对一致的 ε/δ、噪声倍率、裁剪阈值、批量与训练步数、调参预算、随机种子和硬件；解除共享增加参数，收益是否来自容量变化或 clipping 实现差异须靠对照；尚未外推到大模型预训练。",
+      "reading_decision": "选读（范数计算、显存计量与公平对照；待全文核验）"
+    },
+    "Normalize-Then-Precondition: A Hierarchical Approach to Marginal Scale and Interaction Geometry for LLM Training": {
+      "summary": "NormPre 直接命中大模型矩阵优化器；选读几何分解、谱近似消融与 AdamW/Muon 同预算对照，简化理论不能替代实际训练验证。",
+      "selection_reason": "直接竞争机制，优先核验预条件近似成本与公平训练预算；本轮理论/实现组合后紧接选读。",
+      "evidence_limit": "仅摘要初评，低置信度，待全文核验。",
+      "reading_decision": "选读"
+    },
+    "Matching Lower Bounds for Randomized First-Order Methods in Hessian-Lipschitz Nonconvex Optimization": {
+      "summary": "随机一阶 Hessian-Lipschitz 下界主张高维最坏情形随机化无阶数收益；核对维度最大化、参数区间与精确 oracle，不能推出固定低维也无收益。",
+      "selection_reason": "明确算法模型和成功概率，适合界定加速研究可达区域；先读定理范围。",
+      "evidence_limit": "仅摘要初评，低置信度，待全文核验。",
+      "reading_decision": "选读"
+    },
+    "Exact information accounting for SGD methods": {
+      "summary": "信息论恒等式尝试统一 SGD 变体，同时报告网络尺度的泛化证书可能空泛；跟踪恒等式与关键映射，逐项审查假设和负面结果。",
+      "selection_reason": "统一框架覆盖广，潜在信息增益高，但核验成本高；先检查恒等式及可证伪实例。",
+      "evidence_limit": "仅摘要初评，低置信度，待全文核验。",
+      "reading_decision": "跟踪"
+    },
+    "Lower Bounds for Stochastic First-Order Algorithms with Variance Reduction in Nonconvex--Concave Minimax Optimization": {
+      "summary": "允许方差缩减的 minimax 下界仍限制于 zero-respecting 类；选读 Moreau 驻点定义与 oracle，不能推广为所有随机一阶算法的障碍。",
+      "selection_reason": "与 STORM 的方差缩减假设形成对照，minimax 场景迁移成本较高。",
+      "evidence_limit": "仅摘要初评，低置信度，待全文核验。",
+      "reading_decision": "选读"
+    },
+    "Lower Bounds For Gradient-Free Convex Optimization And Convex-Concave Saddle-Point Problems": {
+      "summary": "精确标量查询的凸下界把维度与精度联合计入；选读自适应后验论证，不能与有噪声 oracle 或随机梯度成本混比。",
+      "selection_reason": "零阶方向的信息下界可作预算参照，但目标类别更窄。",
+      "evidence_limit": "仅摘要初评，低置信度，待全文核验。",
+      "reading_decision": "选读"
+    },
+    "Joint Lower Bounds for Zeroth-Order Nonconvex Optimization on Euclidean Balls": {
+      "summary": "零阶非凸下界允许保留并重复查询样本；需保留局部 gap、构造球半径与 Goldstein 目标，固定共同半径的刻画仍未解决。",
+      "selection_reason": "样本复用障碍有新增信息，证明阅读成本较高，先定点核验开放边界。",
+      "evidence_limit": "仅摘要初评，低置信度，待全文核验。",
+      "reading_decision": "选读"
+    },
+    "Robustifying Asynchronous SGD via Soft Throttling": {
+      "summary": "Throttle 通过降低快客户端权重缓解异步 Byzantine 风险；跟踪速度异质性与攻击协议对照，良性收益需核验端到端成本。",
+      "selection_reason": "分布式安全场景相对当前优化几何方向较远，先核对模型假设。",
+      "evidence_limit": "仅摘要初评，低置信度，待全文核验。",
+      "reading_decision": "跟踪"
+    }
+  },
+  "semantic_rerank": [
+    {
+      "title": "Convergence Analysis of STORM Under Different Geometries",
+      "screening_rank": 13,
+      "semantic_rank": 1,
+      "reason": "直接补充随机动量/方差缩减的适用假设，阅读定理的成本较低；可与库存中的 SGD 和裁剪工作对照“放宽何种条件”。",
+      "assessment_scope": "metadata_and_abstract",
+      "confidence": "低"
+    },
+    {
+      "title": "ABrA-GD: Adaptive Bregman Accelerated Gradient Descent for Relatively Smooth and (Strongly-)Convex Optimization",
+      "screening_rank": 12,
+      "semantic_rank": 2,
+      "reason": "为自适应优化提供与矩阵预条件不同的几何证书，适合寻找能迁移的条件或反例；与 STORM 构成确定性/随机性对照。",
+      "assessment_scope": "metadata_and_abstract",
+      "confidence": "低"
+    },
+    {
+      "title": "Is Weight Tying Still Beneficial for Decoder-Only LLMs in Private Settings Under DP-SGD?",
+      "screening_rank": 4,
+      "semantic_rank": 3,
+      "reason": "把“裁剪算法之外的结构约束”引入优化器研究，可复核共享参数的每样本范数计算；作为前三篇中唯一实证实现工作，与两篇几何/收敛理论互补。",
+      "assessment_scope": "metadata_and_abstract",
+      "confidence": "低"
+    },
+    {
+      "title": "Normalize-Then-Precondition: A Hierarchical Approach to Marginal Scale and Interaction Geometry for LLM Training",
+      "screening_rank": 34,
+      "semantic_rank": 4,
+      "reason": "直接竞争机制，优先核验预条件近似成本与公平训练预算；本轮理论/实现组合后紧接选读。",
+      "assessment_scope": "metadata_and_abstract",
+      "confidence": "低"
+    },
+    {
+      "title": "Matching Lower Bounds for Randomized First-Order Methods in Hessian-Lipschitz Nonconvex Optimization",
+      "screening_rank": 46,
+      "semantic_rank": 5,
+      "reason": "明确算法模型和成功概率，适合界定加速研究可达区域；先读定理范围。",
+      "assessment_scope": "metadata_and_abstract",
+      "confidence": "低"
+    },
+    {
+      "title": "Exact information accounting for SGD methods",
+      "screening_rank": 5,
+      "semantic_rank": 6,
+      "reason": "统一框架覆盖广，潜在信息增益高，但核验成本高；先检查恒等式及可证伪实例。",
+      "assessment_scope": "metadata_and_abstract",
+      "confidence": "低"
+    },
+    {
+      "title": "Lower Bounds for Stochastic First-Order Algorithms with Variance Reduction in Nonconvex--Concave Minimax Optimization",
+      "screening_rank": 16,
+      "semantic_rank": 7,
+      "reason": "与 STORM 的方差缩减假设形成对照，minimax 场景迁移成本较高。",
+      "assessment_scope": "metadata_and_abstract",
+      "confidence": "低"
+    },
+    {
+      "title": "Lower Bounds For Gradient-Free Convex Optimization And Convex-Concave Saddle-Point Problems",
+      "screening_rank": 27,
+      "semantic_rank": 8,
+      "reason": "零阶方向的信息下界可作预算参照，但目标类别更窄。",
+      "assessment_scope": "metadata_and_abstract",
+      "confidence": "低"
+    },
+    {
+      "title": "Joint Lower Bounds for Zeroth-Order Nonconvex Optimization on Euclidean Balls",
+      "screening_rank": 51,
+      "semantic_rank": 9,
+      "reason": "样本复用障碍有新增信息，证明阅读成本较高，先定点核验开放边界。",
+      "assessment_scope": "metadata_and_abstract",
+      "confidence": "低"
+    },
+    {
+      "title": "Robustifying Asynchronous SGD via Soft Throttling",
+      "screening_rank": 38,
+      "semantic_rank": 10,
+      "reason": "分布式安全场景相对当前优化几何方向较远，先核对模型假设。",
+      "assessment_scope": "metadata_and_abstract",
+      "confidence": "低"
+    }
+  ],
+  "license_attribution": [
+    {
+      "title": "Convergence Analysis of STORM Under Different Geometries",
+      "authors": [
+        "Wei Jiang",
+        "Yibo Wang",
+        "Wenhao Yang",
+        "Rui Yan",
+        "Lijun Zhang",
+        "Zechao Li"
+      ],
+      "source": "http://arxiv.org/abs/2610.01599v1",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "changes": "中文摘要为完整翻译；英文摘要保留 API 原文，排版统一。"
+    },
+    {
+      "title": "ABrA-GD: Adaptive Bregman Accelerated Gradient Descent for Relatively Smooth and (Strongly-)Convex Optimization",
+      "authors": [
+        "Damien Scieur"
+      ],
+      "source": "http://arxiv.org/abs/2609.38741v1",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "changes": "中文摘要为完整翻译；英文摘要保留 API 原文，排版统一。"
+    },
+    {
+      "title": "Is Weight Tying Still Beneficial for Decoder-Only LLMs in Private Settings Under DP-SGD?",
+      "authors": [
+        "Razan El Mais",
+        "Ali Chehab",
+        "Ibrahim Issa",
+        "Razane Tajeddine"
+      ],
+      "source": "http://arxiv.org/abs/2609.40335v1",
+      "license": "http://creativecommons.org/licenses/by/4.0/",
+      "changes": "中文摘要为完整翻译；英文摘要保留 API 原文，排版统一。"
+    }
+  ],
+  "translation_audit": {
+    "status": "manually_checked",
+    "items": [
+      "STORM 全部速率、平均光滑性与标准光滑性区别、输出与调参限制",
+      "ABrA-GD 正则化最小值下界、相对强凸输入、有界局部对偶 BLDF",
+      "DP-SGD 模型名、三个数据集、4.74 个百分点与超过 60% 显存、共享参数机制"
+    ],
+    "original_paragraphs": [
+      1,
+      1,
+      1
+    ],
+    "translated_paragraphs": [
+      1,
+      1,
+      1
+    ]
+  },
+  "local_asset_note": "本次新增归档统计仅包括上述三篇。工作区并行整理的其他论文资产不计入日报推荐与本次提交。"
+}

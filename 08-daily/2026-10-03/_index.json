@@ -1,0 +1,118 @@
+{
+  "date": "2026-10-03",
+  "note_file": "今日检索.md",
+  "generated_at": "2026-10-04T11:16:12",
+  "skill": "paper-daily",
+  "sources_searched": [
+    "arxiv",
+    "openreview",
+    "semantic_scholar"
+  ],
+  "source_counts": {
+    "arxiv": 182,
+    "openreview": 21
+  },
+  "date_windows": {
+    "recent_30d": {
+      "start": "2026-09-03",
+      "end": "2026-10-03"
+    },
+    "past_year": {
+      "start": "2025-10-03",
+      "end": "2026-09-02"
+    }
+  },
+  "total_unique": 189,
+  "top_papers": [
+    {
+      "title": "Convergence Analysis of STORM Under Different Geometries",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2610.01599v1",
+      "note_filename": "Convergence_Analysis_of_STORM_Under_Different_Geometries",
+      "matched_domain": "大模型优化器设计",
+      "score": 8.27
+    },
+    {
+      "title": "ABrA-GD: Adaptive Bregman Accelerated Gradient Descent for Relatively Smooth and (Strongly-)Convex Optimization",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2609.38741v1",
+      "note_filename": "ABrA_GD_Adaptive_Bregman_Accelerated_Gradient_Descent_for_Relatively_Smooth_and_(Strongly_)Convex_Optimization",
+      "matched_domain": "随机梯度与优化理论",
+      "score": 8.27
+    },
+    {
+      "title": "Is Weight Tying Still Beneficial for Decoder-Only LLMs in Private Settings Under DP-SGD?",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2609.40335v1",
+      "note_filename": "Is_Weight_Tying_Still_Beneficial_for_Decoder_Only_LLMs_in_Private_Settings_Under_DP_SGD",
+      "matched_domain": "随机梯度与优化理论",
+      "score": 8.29
+    },
+    {
+      "title": "Normalize-Then-Precondition: A Hierarchical Approach to Marginal Scale and Interaction Geometry for LLM Training",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2609.36692v1",
+      "note_filename": "Normalize_Then_Precondition_A_Hierarchical_Approach_to_Marginal_Scale_and_Interaction_Geometry_for_LLM_Training",
+      "matched_domain": "大模型优化器设计",
+      "score": 8.0
+    },
+    {
+      "title": "Matching Lower Bounds for Randomized First-Order Methods in Hessian-Lipschitz Nonconvex Optimization",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2610.00245v1",
+      "note_filename": "Matching_Lower_Bounds_for_Randomized_First_Order_Methods_in_Hessian_Lipschitz_Nonconvex_Optimization",
+      "matched_domain": "随机梯度与优化理论",
+      "score": 7.93
+    },
+    {
+      "title": "Exact information accounting for SGD methods",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2610.00446v1",
+      "note_filename": "Exact_information_accounting_for_SGD_methods",
+      "matched_domain": "大模型优化器设计",
+      "score": 8.27
+    },
+    {
+      "title": "Lower Bounds for Stochastic First-Order Algorithms with Variance Reduction in Nonconvex--Concave Minimax Optimization",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2610.01662v1",
+      "note_filename": "Lower_Bounds_for_Stochastic_First_Order_Algorithms_with_Variance_Reduction_in_Nonconvex_Concave_Minimax_Optimization",
+      "matched_domain": "大模型优化器设计",
+      "score": 8.27
+    },
+    {
+      "title": "Lower Bounds For Gradient-Free Convex Optimization And Convex-Concave Saddle-Point Problems",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2610.00345v1",
+      "note_filename": "Lower_Bounds_For_Gradient_Free_Convex_Optimization_And_Convex_Concave_Saddle_Point_Problems",
+      "matched_domain": "随机梯度与优化理论",
+      "score": 8.16
+    },
+    {
+      "title": "Joint Lower Bounds for Zeroth-Order Nonconvex Optimization on Euclidean Balls",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2610.00275v1",
+      "note_filename": "Joint_Lower_Bounds_for_Zeroth_Order_Nonconvex_Optimization_on_Euclidean_Balls",
+      "matched_domain": "随机梯度与优化理论",
+      "score": 7.9
+    },
+    {
+      "title": "Robustifying Asynchronous SGD via Soft Throttling",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2609.39357v1",
+      "note_filename": "Robustifying_Asynchronous_SGD_via_Soft_Throttling",
+      "matched_domain": "大模型优化器设计",
+      "score": 7.93
+    }
+  ]
+}
