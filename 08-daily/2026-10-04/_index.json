@@ -1,0 +1,119 @@
+{
+  "date": "2026-10-04",
+  "note_file": "今日检索.md",
+  "generated_at": "2026-10-04T15:50:37",
+  "skill": "paper-daily",
+  "sources_searched": [
+    "arxiv",
+    "openreview",
+    "semantic_scholar"
+  ],
+  "source_counts": {
+    "arxiv": 171,
+    "openreview": 200,
+    "supplemental_arxiv": 3
+  },
+  "date_windows": {
+    "recent_30d": {
+      "start": "2026-09-04",
+      "end": "2026-10-04"
+    },
+    "past_year": {
+      "start": "2025-10-04",
+      "end": "2026-09-03"
+    }
+  },
+  "total_unique": 303,
+  "top_papers": [
+    {
+      "title": "TACO: Ternary Absolute-max Column-wise One-sparse Optimizer for LLM Fine-Tuning",
+      "source": "arxiv",
+      "arxiv_id": "2610.02199",
+      "url": "https://arxiv.org/abs/2610.02199v1",
+      "note_filename": "TACO_Ternary_Absolute_max_Column_wise_One_sparse_Optimizer_for_LLM_Fine_Tuning",
+      "matched_domain": "大模型优化器设计",
+      "score": 7.22
+    },
+    {
+      "title": "MeqMuon: Matrix-Equilibrating Muon for LLM Pretraining",
+      "source": "arxiv",
+      "arxiv_id": "2609.35701",
+      "url": "https://arxiv.org/abs/2609.35701v1",
+      "note_filename": "MeqMuon_Matrix_Equilibrating_Muon_for_LLM_Pretraining",
+      "matched_domain": "大模型优化器设计",
+      "score": 7.8
+    },
+    {
+      "title": "TUON: A Tensor-Aware Optimizer Utilizing Tensor-SVD and Polarization for Large Language Model Pretraining",
+      "source": "openreview",
+      "arxiv_id": "",
+      "url": "https://openreview.net/forum?id=yQkW7xpEbG",
+      "note_filename": "TUON_A_Tensor_Aware_Optimizer_Utilizing_Tensor_SVD_and_Polarization_for_Large_Language_Model_Pretraining",
+      "matched_domain": "大模型优化器设计",
+      "score": 8.33
+    },
+    {
+      "title": "Rethinking Memory-Efficient Optimizers for LLM Pre-Training",
+      "source": "openreview",
+      "arxiv_id": "",
+      "url": "https://openreview.net/forum?id=N6KiGSOYfX",
+      "note_filename": "Rethinking_Memory_Efficient_Optimizers_for_LLM_Pre_Training",
+      "matched_domain": "大模型优化器设计",
+      "score": 8.13
+    },
+    {
+      "title": "AF-Muon: An AdamW-Free Muon Optimizer for Tied-Embedding Models",
+      "source": "arxiv",
+      "arxiv_id": "2610.01395",
+      "url": "https://arxiv.org/abs/2610.01395v1",
+      "note_filename": "AF_Muon_An_AdamW_Free_Muon_Optimizer_for_Tied_Embedding_Models",
+      "matched_domain": "大模型优化器设计",
+      "score": 7.67
+    },
+    {
+      "title": "Pretraining Data Scale Reverses the Muon-AdamW Fine-Tuning Gap",
+      "source": "openreview",
+      "arxiv_id": "",
+      "url": "https://openreview.net/forum?id=HdmpksqRLM",
+      "note_filename": "Pretraining_Data_Scale_Reverses_the_Muon_AdamW_Fine_Tuning_Gap",
+      "matched_domain": "大模型优化器设计",
+      "score": 8.67
+    },
+    {
+      "title": "Rethinking Muon Beyond Pretraining: Spectral Failures and High-Pass Remedies for VLA and RLVR",
+      "source": "openreview",
+      "arxiv_id": "",
+      "url": "https://openreview.net/forum?id=S6NsL02XZz",
+      "note_filename": "Rethinking_Muon_Beyond_Pretraining_Spectral_Failures_and_High_Pass_Remedies_for_VLA_and_RLVR",
+      "matched_domain": "大模型优化器设计",
+      "score": 8.27
+    },
+    {
+      "title": "Monarch–Muon: Structure-Aware Muon for Fast and Memory-Efficient Pretraining",
+      "source": "openreview",
+      "arxiv_id": "",
+      "url": "https://openreview.net/forum?id=TOUrP5VzcN",
+      "note_filename": "Monarch–Muon_Structure_Aware_Muon_for_Fast_and_Memory_Efficient_Pretraining",
+      "matched_domain": "大模型优化器设计",
+      "score": 8.2
+    },
+    {
+      "title": "The Row Normalization Puzzle in Muon",
+      "source": "arxiv",
+      "arxiv_id": "2609.39114",
+      "url": "https://arxiv.org/abs/2609.39114v1",
+      "note_filename": "The_Row_Normalization_Puzzle_in_Muon",
+      "matched_domain": "大模型优化器设计",
+      "score": 8.15
+    },
+    {
+      "title": "SOLAR: A State-Driven Online Learning Rate Scheduler for LLM Pretraining",
+      "source": "arxiv",
+      "arxiv_id": "2609.34681",
+      "url": "https://arxiv.org/abs/2609.34681v1",
+      "note_filename": "SOLAR_A_State_Driven_Online_Learning_Rate_Scheduler_for_LLM_Pretraining",
+      "matched_domain": "大模型优化器设计",
+      "score": 7.22
+    }
+  ]
+}
