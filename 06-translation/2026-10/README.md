@@ -1,6 +1,6 @@
 # 2026-10 翻译结果
 
-本目录保存 **2026-10** 入库论文的翻译结果，按论文标题建立目录，文件按翻译形式命名。
+本目录登记 **2026-10** 入库的 7 篇论文，其中已翻译 0 篇。
 尚未翻译的论文只在此处登记，不预建空目录。
 
 ## 清单
@@ -12,13 +12,14 @@
 | 未翻译 | Convergence of Stochastic Gradient Methods under Heavy-Tailed Noise and H\"{o}lder Smoothness | Convergence_of_Stochastic_Gradient_Methods_under_Heavy_Tailed_Noise_and_H_{o}lder_Smoothness | -- | -- | -- |
 | 未翻译 | Polyak-Type Extragradient Methods for Monotone Root-Finding Problems | Polyak_Type_Extragradient_Methods_for_Monotone_Root_Finding_Problems | -- | -- | -- |
 | 未翻译 | ABrA-GD: Adaptive Bregman Accelerated Gradient Descent for Relatively Smooth and (Strongly-)Convex Optimization | ABrA_GD_Adaptive_Bregman_Accelerated_Gradient_Descent_for_Relatively_Smooth_and_(Strongly_)Convex_Optimization | -- | -- | -- |
+| 已翻译 | A Zeroth-Order Paradigm for LLM Preference Alignment | A_Zeroth_Order_Paradigm_for_LLM_Preference_Alignment | 双栏对比 | 2026-10-04 | [目录](A_Zeroth_Order_Paradigm_for_LLM_Preference_Alignment) |
 | 未翻译 | Convergence Analysis of STORM Under Different Geometries | Convergence_Analysis_of_STORM_Under_Different_Geometries | -- | -- | -- |
 | 未翻译 | Is Weight Tying Still Beneficial for Decoder-Only LLMs in Private Settings Under DP-SGD? | Is_Weight_Tying_Still_Beneficial_for_Decoder_Only_LLMs_in_Private_Settings_Under_DP_SGD | -- | -- | -- |
 
 ## 汇总
 
-- 论文总数：6 篇（2026-10 6 篇）
-- 翻译状态：已翻译 0 / 翻译中 0 / 未翻译 6
+- 论文总数：7 篇（2026-10 7 篇）
+- 翻译状态：已翻译 1 / 翻译中 0 / 未翻译 6
 - **未翻译论文**：Convergence_guarantees_for_Muon_New_parameter_regimes_and_generalizations、Convergence_of_Stochastic_Gradient_Methods_under_Heavy_Tailed_Noise_and_H_{o}lder_Smoothness、Polyak_Type_Extragradient_Methods_for_Monotone_Root_Finding_Problems、ABrA_GD_Adaptive_Bregman_Accelerated_Gradient_Descent_for_Relatively_Smooth_and_(Strongly_)Convex_Optimization、Convergence_Analysis_of_STORM_Under_Different_Geometries、Is_Weight_Tying_Still_Beneficial_for_Decoder_Only_LLMs_in_Private_Settings_Under_DP_SGD
 <!-- INDEX:END -->
 

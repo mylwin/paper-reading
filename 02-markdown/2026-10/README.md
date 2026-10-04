@@ -1,6 +1,6 @@
 # 2026-10 解析结果
 
-本目录保存 **2026-10** 入库论文的 PDF 解析 Markdown，共 6 篇。
+本目录登记 **2026-10** 入库的 7 篇论文，其中已解析 1 篇。
 文件名主干与 `01-raw/2026-10/` 中对应 PDF 完全一致。
 
 ## 清单
@@ -12,13 +12,14 @@
 | 未解析 | Convergence of Stochastic Gradient Methods under Heavy-Tailed Noise and H\"{o}lder Smoothness | Convergence_of_Stochastic_Gradient_Methods_under_Heavy_Tailed_Noise_and_H_{o}lder_Smoothness | -- | 2026-10-02 | -- |
 | 未解析 | Polyak-Type Extragradient Methods for Monotone Root-Finding Problems | Polyak_Type_Extragradient_Methods_for_Monotone_Root_Finding_Problems | -- | 2026-10-02 | -- |
 | 未解析 | ABrA-GD: Adaptive Bregman Accelerated Gradient Descent for Relatively Smooth and (Strongly-)Convex Optimization | ABrA_GD_Adaptive_Bregman_Accelerated_Gradient_Descent_for_Relatively_Smooth_and_(Strongly_)Convex_Optimization | -- | 2026-10-04 | -- |
+| 已解析 | A Zeroth-Order Paradigm for LLM Preference Alignment | A_Zeroth_Order_Paradigm_for_LLM_Preference_Alignment | [解析文件](A_Zeroth_Order_Paradigm_for_LLM_Preference_Alignment.md) | 2026-10-04 | -- |
 | 未解析 | Convergence Analysis of STORM Under Different Geometries | Convergence_Analysis_of_STORM_Under_Different_Geometries | -- | 2026-10-04 | -- |
 | 未解析 | Is Weight Tying Still Beneficial for Decoder-Only LLMs in Private Settings Under DP-SGD? | Is_Weight_Tying_Still_Beneficial_for_Decoder_Only_LLMs_in_Private_Settings_Under_DP_SGD | -- | 2026-10-04 | -- |
 
 ## 汇总
 
-- 论文总数：6 篇（2026-10 6 篇）
-- 解析状态：已解析 0 / 未解析 6 / 解析失败 0
+- 论文总数：7 篇（2026-10 7 篇）
+- 解析状态：已解析 1 / 未解析 6 / 解析失败 0
 - **未解析论文**（需补解析）：Convergence_guarantees_for_Muon_New_parameter_regimes_and_generalizations、Convergence_of_Stochastic_Gradient_Methods_under_Heavy_Tailed_Noise_and_H_{o}lder_Smoothness、Polyak_Type_Extragradient_Methods_for_Monotone_Root_Finding_Problems、ABrA_GD_Adaptive_Bregman_Accelerated_Gradient_Descent_for_Relatively_Smooth_and_(Strongly_)Convex_Optimization、Convergence_Analysis_of_STORM_Under_Different_Geometries、Is_Weight_Tying_Still_Beneficial_for_Decoder_Only_LLMs_in_Private_Settings_Under_DP_SGD
 <!-- INDEX:END -->
 
