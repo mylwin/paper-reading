@@ -1,0 +1,52 @@
+{
+  "papers_dir": "/Users/myl/Documents/paper/01-raw",
+  "month_dir": "/Users/myl/Documents/paper/01-raw/2026-10",
+  "month": "2026-10",
+  "date": "2026-10-04",
+  "requested": 3,
+  "downloaded": 2,
+  "skipped_existing": 0,
+  "failed": 1,
+  "index_updated": [
+    "/Users/myl/Documents/paper/01-raw/index.md",
+    "/Users/myl/Documents/paper/01-raw/2026-10/README.md",
+    "/Users/myl/Documents/paper/02-markdown/index.md",
+    "/Users/myl/Documents/paper/02-markdown/2026-10/README.md",
+    "/Users/myl/Documents/paper/03-notes/index.md",
+    "/Users/myl/Documents/paper/03-notes/2026-10/README.md",
+    "/Users/myl/Documents/paper/06-translation/index.md",
+    "/Users/myl/Documents/paper/06-translation/2026-10/README.md"
+  ],
+  "archived": [
+    {
+      "title": "TACO: Ternary Absolute-max Column-wise One-sparse Optimizer for LLM Fine-Tuning",
+      "paper_stem": "TACO_Ternary_Absolute_max_Column_wise_One_sparse_Optimizer_for_LLM_Fine_Tuning",
+      "month": "2026-10",
+      "source": "arxiv",
+      "pdf_url": "https://arxiv.org/pdf/2610.02199v1",
+      "path": "/Users/myl/Documents/paper/01-raw/2026-10/TACO_Ternary_Absolute_max_Column_wise_One_sparse_Optimizer_for_LLM_Fine_Tuning.pdf",
+      "status": "downloaded",
+      "detail": "605.3 KB"
+    },
+    {
+      "title": "MeqMuon: Matrix-Equilibrating Muon for LLM Pretraining",
+      "paper_stem": "MeqMuon_Matrix_Equilibrating_Muon_for_LLM_Pretraining",
+      "month": "2026-10",
+      "source": "arxiv",
+      "pdf_url": "https://arxiv.org/pdf/2609.35701v1",
+      "path": "/Users/myl/Documents/paper/01-raw/2026-10/MeqMuon_Matrix_Equilibrating_Muon_for_LLM_Pretraining.pdf",
+      "status": "downloaded",
+      "detail": "685.5 KB"
+    },
+    {
+      "title": "TUON: A Tensor-Aware Optimizer Utilizing Tensor-SVD and Polarization for Large Language Model Pretraining",
+      "paper_stem": "TUON_A_Tensor_Aware_Optimizer_Utilizing_Tensor_SVD_and_Polarization_for_Large_Language_Model_Pretraining",
+      "month": "2026-10",
+      "source": "openreview",
+      "pdf_url": "https://openreview.net/pdf/063a0195f59decacb98754a6d2d73e55a92ab2cf.pdf",
+      "path": "/Users/myl/Documents/paper/01-raw/2026-10/TUON_A_Tensor_Aware_Optimizer_Utilizing_Tensor_SVD_and_Polarization_for_Large_Language_Model_Pretraining.pdf",
+      "status": "failed",
+      "detail": "HTTP 403"
+    }
+  ]
+}

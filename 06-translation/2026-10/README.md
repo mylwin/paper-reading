@@ -15,12 +15,14 @@
 | 已翻译 | A Zeroth-Order Paradigm for LLM Preference Alignment | A_Zeroth_Order_Paradigm_for_LLM_Preference_Alignment | 双栏对比 | 2026-10-04 | [目录](A_Zeroth_Order_Paradigm_for_LLM_Preference_Alignment) |
 | 未翻译 | Convergence Analysis of STORM Under Different Geometries | Convergence_Analysis_of_STORM_Under_Different_Geometries | -- | -- | -- |
 | 未翻译 | Is Weight Tying Still Beneficial for Decoder-Only LLMs in Private Settings Under DP-SGD? | Is_Weight_Tying_Still_Beneficial_for_Decoder_Only_LLMs_in_Private_Settings_Under_DP_SGD | -- | -- | -- |
+| 未翻译 | MeqMuon: Matrix-Equilibrating Muon for LLM Pretraining | MeqMuon_Matrix_Equilibrating_Muon_for_LLM_Pretraining | -- | -- | -- |
+| 未翻译 | TACO: Ternary Absolute-max Column-wise One-sparse Optimizer for LLM Fine-Tuning | TACO_Ternary_Absolute_max_Column_wise_One_sparse_Optimizer_for_LLM_Fine_Tuning | -- | -- | -- |
 
 ## 汇总
 
-- 论文总数：7 篇（2026-10 7 篇）
-- 翻译状态：已翻译 1 / 翻译中 0 / 未翻译 6
-- **未翻译论文**：Convergence_guarantees_for_Muon_New_parameter_regimes_and_generalizations、Convergence_of_Stochastic_Gradient_Methods_under_Heavy_Tailed_Noise_and_H_{o}lder_Smoothness、Polyak_Type_Extragradient_Methods_for_Monotone_Root_Finding_Problems、ABrA_GD_Adaptive_Bregman_Accelerated_Gradient_Descent_for_Relatively_Smooth_and_(Strongly_)Convex_Optimization、Convergence_Analysis_of_STORM_Under_Different_Geometries、Is_Weight_Tying_Still_Beneficial_for_Decoder_Only_LLMs_in_Private_Settings_Under_DP_SGD
+- 论文总数：9 篇（2026-10 9 篇）
+- 翻译状态：已翻译 1 / 翻译中 0 / 未翻译 8
+- **未翻译论文**：Convergence_guarantees_for_Muon_New_parameter_regimes_and_generalizations、Convergence_of_Stochastic_Gradient_Methods_under_Heavy_Tailed_Noise_and_H_{o}lder_Smoothness、Polyak_Type_Extragradient_Methods_for_Monotone_Root_Finding_Problems、ABrA_GD_Adaptive_Bregman_Accelerated_Gradient_Descent_for_Relatively_Smooth_and_(Strongly_)Convex_Optimization、Convergence_Analysis_of_STORM_Under_Different_Geometries、Is_Weight_Tying_Still_Beneficial_for_Decoder_Only_LLMs_in_Private_Settings_Under_DP_SGD、MeqMuon_Matrix_Equilibrating_Muon_for_LLM_Pretraining、TACO_Ternary_Absolute_max_Column_wise_One_sparse_Optimizer_for_LLM_Fine_Tuning
 <!-- INDEX:END -->
 
 ## 说明

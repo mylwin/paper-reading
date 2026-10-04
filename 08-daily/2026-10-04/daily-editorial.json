@@ -1,0 +1,269 @@
+{
+  "date": "2026-10-04",
+  "overview": {
+    "trend": "今日重点为“直接针对大模型训练优化，且摘要或正文报告对应实验”。候选中，Muon相关工作从逐矩阵谱几何，扩展到行列均衡、参数类别专用更新、跨层张量结构，以及低精度/稀疏状态。推荐顺序为语义复排顺序，元数据预筛分数保持不变。前两篇已核验关键正文实验，其他条目是摘要初评。",
+    "hotspots": [
+      {
+        "title": "显存收益与任务表现的取舍",
+        "text": "TACO实测全参数微调，Rethinking Memory-Efficient Optimizers要求加入量化强基线，Monarch–Muon展示改变参数化的代价；状态显存、训练峰值和到达同等质量的时间需分别报告。"
+      },
+      {
+        "title": "从逐层几何到跨层结构",
+        "text": "MeqMuon以行/列不均衡模式选择更新；TUON摘要将结构提升到跨层张量。二者适合对照几何假设如何被消融实验支持。"
+      },
+      {
+        "title": "预训练收益的适用边界",
+        "text": "Pretraining Data Scale Reverses…和Pion提供微调/后训练反例线索，避免仅以预训练损失判断优化器在下游的价值。"
+      },
+      {
+        "title": "检索覆盖与证据限制",
+        "text": "运行日期为2026-10-04；最近窗口2026-09-04至10-04，不表示所有推荐都于今日发表。原始返回arXiv 171条、OpenReview 200条，经筛选、去重、别名合并与补查得到303篇；20篇已在库/历史推荐，283篇为未命中候选。Semantic Scholar两次HTTP 429，过去一年高影响力补充检索不完整；不能据此断言没有旧代表工作。"
+      },
+      {
+        "title": "筛选与去重说明",
+        "text": "排除纯理论且未确认LLM实验、EEG等不相关任务；Muon粒子物理同名结果归入未分类并标记排除。ZFO已在10月2日推荐，因此跳过；Hyperball与同名OpenReview版本合并。NorMuon补查条目触发共享配置的workshop排除词，未加入推荐。前三篇依次覆盖微调、逐矩阵预训练和跨层预训练；其余第10篇为学习率调度扩展项。"
+      },
+      {
+        "title": "可读版本状态",
+        "text": "本次OpenReview多篇为ICLR 2027匿名投稿，非接收结论。TACO与MeqMuon原始PDF已入库2026-10；TUON三种官方PDF入口均403，按技能规则保留推荐与失败原因。"
+      }
+    ]
+  },
+  "domain_summaries": {
+    "大模型优化器设计": {
+      "summary": "候选152篇、今日推荐10篇；数量为关键词归类结果，不代表逐篇都有LLM实验。今日只把已在摘要或正文确认LLM实验线索的条目放入推荐。",
+      "subfields": {
+        "符号与范数几何优化": "MeqMuon、TUON及Row Normalization Puzzle分别提供归一化机制、跨层结构与最坏例/实证差异；前两者的证据层级不同。",
+        "自适应与状态内存": "TACO、AF-Muon与量化基线比较，关注一阶/二阶状态、低精度分量及参数类别；不能把状态节省倍数当成峰值显存倍数。",
+        "大模型训练与优化器设计": "包含预训练到微调的收益反转、RLVR失败及Monarch结构参数化实验；优先检查同预算与下游收益。",
+        "免调参与梯度裁剪": "自动规则与学习率控制候选需核验是否只是转移了超参数；SOLAR属于调度扩展，而非独立优化器。"
+      }
+    },
+    "随机梯度与优化理论": {
+      "summary": "候选74篇、今日推荐0篇。该池仍完整记录在附录；本次优先直接LLM实验，而纯理论工作保留作背景线索。",
+      "subfields": {
+        "非凸与随机优化": "理论保证的平滑性、噪声与维度依赖可帮助审计优化器主张，但本次未因理论关键词直接推荐。",
+        "自适应优化理论": "需区分基础算法保证与低精度、截断、近似极分解的实际实现。"
+      }
+    }
+  },
+  "top_papers": {
+    "TACO: Ternary Absolute-max Column-wise One-sparse Optimizer for LLM Fine-Tuning": {
+      "title_zh": "TACO：用于大语言模型微调的三值绝对最大逐列单稀疏优化器",
+      "summary": "用逐列单稀疏更新与低精度重项动量大幅削减优化器状态，并实测单张H100上的全参数微调；训练峰值收益还依赖梯度释放等系统配置。",
+      "abstract_zh": "大语言模型（LLM）的全参数微调会带来大量优化器状态内存开销，限制现代GPU能够容纳的模型规模。现有方法要么压缩优化器状态，要么放弃一阶梯度，要么在保留稠密状态的同时改变更新几何。近期提出的Muon优化器通过矩阵值更新减少优化器内存。然而，它的几何与AdamW不同，在微调由AdamW预训练的模型时可能导致性能下降。为了在LLM微调中减少优化器内存，同时不牺牲准确率或计算效率，我们提出三值绝对最大逐列单稀疏优化器（Ternary Absolute-max Column-wise One-sparse optimizer），简称TACO。它沿用Muon的算子范数最速下降视角，并进一步推进这条几何路线。TACO通过在二维权重矩阵的每一列中选择绝对值最大元素的符号，计算维度归一化的 $1\\to1$ 算子范数下的精确最速下降方向。这保留了一阶梯度，同时使优化器状态内存几乎可以忽略。实用版TACO优化器仅为每列维护少量低精度梯度分量，在OPT-13B上，相较AdamW8bit，将持久优化器状态缩减 $174\\times$（从27.7 GB降至0.16 GB），将训练峰值内存缩减 $2.9\\times$（从80.6 GB降至27.5 GB），同时实现可比的准确率与运行时间。TACO还支持在单张80 GB H100 GPU上，对多个模型家族和任务中的30–32B参数模型进行全参数微调。",
+      "contributions": [
+        "几何机制：维度归一化的1→1算子范数产生每列至多一个非零元素的更新方向；它与Muon的谱范数更新有明确区别。",
+        "工程机制：每列仅保留k个重项的稀疏EMA，使用FP8分量与整数索引；默认k=16，把理论上的单稀疏方向做成有动量的实用方案。",
+        "实验范围：OPT、Qwen3、Pythia、Llama、Mistral等家族，覆盖分类与问答任务及30–32B全参数微调。"
+      ],
+      "method": "正文§3给出 $D^*=-(m/n)S(G)$，其中S(G)逐列保留绝对值最大梯度的符号。§5的实际实现维护每列k=16个重项，FP8 E4M3数值配合int32索引，更新仍是逐列单稀疏；非矩阵参数使用辅助AdamW。训练配方结合activation checkpointing和反向传播梯度释放。平滑非凸条件下的迭代复杂度结果针对基础算法，不能直接当成低精度、截断动量工程版的完整保证。",
+      "result": "已定点核验正文§6及附录B：OPT-13B上，TACO状态0.16 GB、峰值27.5 GB；AdamW8bit分别27.7 GB、80.6 GB。前者是状态缩减174倍，峰值只缩减2.9倍。SST-2表中TACO准确率94.2%、吞吐276 token/s；Adafactor为95.5%、350 token/s，GaLore为95.7%、31 token/s，FlashAdamW为95.5%、547 token/s（峰值67.7 GB）。因此这组结果支持很大的显存收益，同时显示准确率与吞吐的取舍；不支持普遍优于所有基线。附录B主对照每配置启动5个种子，均值只统计成功运行，部分单元格标注n/5或OOM。",
+      "selection_reason": "优先级1：直接回答大模型全参数微调的显存瓶颈，有状态、峰值、吞吐和任务表现可交叉核验。与已有PowerStep的范数几何路线、LionMuon的符号更新互补；将“更小状态”落实到训练能否装进GPU，比纯理论候选更符合本次要求。",
+      "evidence_limit": "置信度中等：已核验关键方法与实验段落，未完成全文逐条复现审计。需要统一梯度释放、checkpoint、batch和学习率搜索预算，才能区分几何与系统配方收益。主表成功运行条件均值不能代替所有种子的失败率统计；完整复现需按任务报告成功数。30–32B结果为微调，不是从零预训练；稀疏更新的长期精度影响及其他硬件尚待核验。",
+      "reading_decision": "精读：优先读§3、§5、§6和附录B；复现时同时记录峰值显存、状态显存、吞吐、任务得分及所有种子的成功率。"
+    },
+    "MeqMuon: Matrix-Equilibrating Muon for LLM Pretraining": {
+      "title_zh": "MeqMuon：用于大语言模型预训练的矩阵均衡Muon",
+      "summary": "按更新矩阵的不均衡模式选择行或列归一化，并替换辅助AdamW；C4预训练显示较小的PPL改善与可量化的状态节省。",
+      "abstract_zh": "大语言模型（LLM）的成功伴随着模型规模和预训练成本的持续增长。Muon在LLM预训练中提供较高的准确性与训练效率。近期工作在Muon中引入逐行归一化，以平衡更新幅度并改善预训练表现。然而，仅靠逐行归一化无法适应更新矩阵中不同的不均衡模式。本文提出一种改进的Muon优化器，称为矩阵均衡Muon（matrix-equilibrating Muon，MeqMuon），用于LLM预训练。MeqMuon通过归一化平衡行与列的幅度，而且这种归一化能够自动适应不同的不均衡模式，无需人工干预。此外，MeqMuon无需存储AdamW的二阶矩估计，从而减少优化器状态内存占用。实证结果表明，在LLM预训练中，MeqMuon相较AdamW、Muon以及其他基线具有更好的收敛表现。",
+      "contributions": [
+        "隐藏矩阵按行/列幅度变异系数自动选择归一化方向，针对固定逐行归一化不能覆盖所有更新模式的问题。",
+        "对嵌入、输出头等其他二维矩阵以及一维参数单独设计归一化规则，整体只存一阶动量，移除辅助AdamW二阶矩。",
+        "包含C4从零预训练、模型家族与规模对照，以及隐藏矩阵/其他二维/一维组件消融。"
+      ],
+      "method": "已核验§3.2：隐藏二维矩阵先对动量作Muon正交化，再比较行/列幅度的变异系数，按当前不均衡模式选择一侧归一化；并非每步都对全部隐藏矩阵同时做行列归一化。其他二维矩阵对未正交化动量做两侧归一化，一维参数做整体RMS归一化。各类参数共享仅需一阶动量的思路。",
+      "result": "已核验§4表4、5、7：C4上随机初始化训练Llama 60M/130M/350M、SmolLM2 135M/360M、Qwen2.5 0.5B，预算为参数量的20倍token，序列长度1024、batch 512。Llama-130M PPL：AdamW 24.46、Muon 21.64、NorMuon 21.57、MeqMuon 21.38；Qwen-0.5B：19.65、18.79、18.76、18.63。MeqMuon优于NorMuon的六组绝对差约0.01–0.19 PPL，效果较小。Qwen优化器状态1884.59 MiB，对比Muon 2404.17 MiB，约节省21.6%；这是状态内存，并非训练峰值。Llama-130M组件消融：仅隐藏矩阵21.53、仅其他二维21.52、仅一维21.69、完整21.38。",
+      "selection_reason": "优先级2：既有直接竞争方法NorMuon，又有拆解组件的预训练实验，适合研究Muon几何设计怎样影响损失与状态开销。可与已有Spectral Allocation、PowerStep并读；其自动选择行/列规则也是可做小规模消融的具体机制。",
+      "evidence_limit": "置信度中等：已核验主实验和组件消融。主实验最高0.5B，不能据此外推多十亿参数收益。正文已查看段落未提供足以核对各方法重复种子、置信区间及同等超参搜索预算的信息，需要进一步核验，尤其是对NorMuon仅0.01–0.19 PPL的改进。还需检查端到端步时、额外归一化开销、完整峰值内存及多数据源稳定性。",
+      "reading_decision": "精读：先核验§3.2与表4/5/7；以130M固定token预算比较Muon、NorMuon、MeqMuon，统一学习率搜索并报告种子波动。"
+    },
+    "TUON: A Tensor-Aware Optimizer Utilizing Tensor-SVD and Polarization for Large Language Model Pretraining": {
+      "title_zh": "TUON：利用Tensor-SVD与极分解进行大语言模型预训练的张量感知优化器",
+      "summary": "摘要提出“跨层酉变换→逐切片极分解→逆变换”，并报告最高Qwen-4B预训练与消融；目前正文不可访问，作为跨层优化方向的候选。",
+      "abstract_zh": "大规模语言模型（LLM）的预训练日益受优化器效率制约，推动优化器设计从AdamW等向量感知方法走向矩阵感知方法。\n\n  Muon等矩阵感知优化器利用矩阵结构，但独立处理各层，忽略跨层相关性。因此需要张量感知优化器，然而现有方法依赖基于矩阵化的张量代数，仍局限于浅层堆叠和特定模块。\n\n  本文提出TUON，一种基于由Tensor-SVD（T-SVD）导出的变换型张量代数的新优化器。与对全局展开矩阵进行极分解的方法不同，TUON通过酉变换 $\\boldsymbol{Q}$ 混合各层，随后对每个变换后的切片进行极分解，再通过逆变换恢复更新。这种先混合再分离的策略在保留各层多样性的同时捕获跨层相关性，避免了展开带来的结构性维度不均衡和跨层错配。因此，它能成功扩展到更多层以及QKV之外的多种模块。\n\n  在理论上，我们证明TUON是在经 $\\boldsymbol{Q}$ 变换的张量谱范数下进行最速下降，并将其更新识别为T-SVD的张量极因子。我们进一步建立了变换非冗余性、与Muon和TEON的范数及平滑性比较，以及收敛保证。在实证上，TUON在GPT-124M/350M和Qwen-0.6B/4B上持续优于Muon和TEON，消融实验确认了变换机制、超越两层堆叠的跨层结构、在QKV之外的适应性，以及对极分解方法的稳健性。",
+      "contributions": [
+        "摘要主张：在T-SVD诱导的变换型张量代数中定义更新，拓展逐层矩阵优化到跨层结构。",
+        "摘要主张：以酉变换混层后逐切片极分解、再逆变换，减少全局矩阵展开导致的维度不均衡与错配。",
+        "摘要报告：GPT-124M/350M、Qwen-0.6B/4B上与Muon/TEON比较，并对变换、跨层堆叠、QKV外模块和极分解方法做消融。"
+      ],
+      "method": "仅依据官方OpenReview摘要：把跨层梯度或动量组成张量，经Q变换混合各层，逐切片求极因子后逆变换。作者将其解释为Q变换张量谱范数下的最速下降。实际张量如何构造、Q如何选择、异形层如何分组、是否加动量以及分布式实现，摘要未交代，不能据此补写。",
+      "result": "摘要报告相较Muon和TEON在GPT-124M/350M及Qwen-0.6B/4B上持续改善，并声称相应消融支持跨层机制。没有可核验的具体损失数值、token预算、GPU步时或种子方差，本文不填补这些数值。记录为ICLR 2027 Conference Submission，是投稿版本，不能表述成已接收论文。",
+      "selection_reason": "优先级3：摘要有明确模型规模与实验对象，符合有LLM实验的初筛要求；跨层张量几何与前两篇的微调稀疏化、逐矩阵归一化构成有信息差异的组合。可与已有谱分配工作对照“结构信息从何而来”，但阅读优先级受正文证据可得性限制。",
+      "evidence_limit": "低置信度、摘要初评。官方PDF文件地址、openreview.net/pdf?id和api2.openreview.net/pdf?id均返回HTTP 403，正文尚未核验。后续优先核对Q及跨层分组、理论假设、等参数/等token/等计算预算、Muon/TEON/AdamW超参公平性、额外变换和极分解开销、随机种子，以及消融是否真正隔离跨层相关性。",
+      "reading_decision": "选读：优先取得正文后核验主实验表和机制消融；在此之前保留为跨层优化方向候选。"
+    },
+    "Rethinking Memory-Efficient Optimizers for LLM Pre-Training": {
+      "summary": "摘要明确提出量化强基线与结构压缩的对照，有257M/500M及MoE实验；适合作为上述方法的实验设计检查表，待全文核验。 提交日期：2026-09-17。"
+    },
+    "AF-Muon: An AdamW-Free Muon Optimizer for Tied-Embedding Models": {
+      "summary": "九种共享词表设置及124M–1B实验，直接与MeqMuon比较移除辅助AdamW的两种策略；待细读正文。 提交日期：2026-10-01。"
+    },
+    "Pretraining Data Scale Reverses the Muon-AdamW Fine-Tuning Gap": {
+      "summary": "含预训练预算、微调和扰动实验的反向结果，可检验预训练优势是否延续到下游；摘要初评，待全文核验。 提交日期：2026-09-18。"
+    },
+    "Rethinking Muon Beyond Pretraining: Spectral Failures and High-Pass Remedies for VLA and RLVR": {
+      "summary": "摘要报告Qwen3-1.7B/4B的GRPO/GMPO实验及Muon失败案例，提供后训练谱过滤线索；待全文核验公平性。 提交日期：2026-09-12。"
+    },
+    "Monarch–Muon: Structure-Aware Muon for Fast and Memory-Efficient Pretraining": {
+      "summary": "摘要报告6.89B状态内存较AdamW/Muon缩减4.1/2.2倍，步时2986.9→1638.6 ms；同时改变Monarch参数化并付出验证损失增加，需拆分结构与优化器收益。提交：2026-10-02，OPT 2026 Poster；待全文核验。"
+    },
+    "The Row Normalization Puzzle in Muon": {
+      "summary": "同时有最坏例合成实验和LLM预训练结果，解释行归一化的理论与实证差异；作为MeqMuon的批判性近邻。 提交日期：2026-09-30。"
+    },
+    "SOLAR: A State-Driven Online Learning Rate Scheduler for LLM Pretraining": {
+      "summary": "学习率调度扩展项：摘要报告60M–1B密集模型、至3B MoE及AdamW/Muon实验；提供残差策略、两种子消融和60M策略迁移。它不是独立的新优化器更新规则。提交：2026-09-28；待全文核验。"
+    }
+  },
+  "semantic_reranking": {
+    "criteria": [
+      "直接LLM训练/微调/后训练相关性",
+      "有可定位实验线索",
+      "与库内资产的信息增益",
+      "阅读与复现成本",
+      "微调/逐矩阵/跨层的机制组合"
+    ],
+    "scores_modified": false,
+    "original_top10_audit": [
+      {
+        "title": "When Muon Optimizer Meets Adversarial Training: A Theoretical and Empirical Study",
+        "screening_rank": 1,
+        "score": 8.67,
+        "decision": "降出今日推荐：摘要实验集中对抗学习，当前未确认有直接LLM训练证据"
+      },
+      {
+        "title": "Pretraining Data Scale Reverses the Muon-AdamW Fine-Tuning Gap",
+        "screening_rank": 2,
+        "score": 8.67,
+        "decision": "保留，依当前问题与信息增益复排"
+      },
+      {
+        "title": "TUON: A Tensor-Aware Optimizer Utilizing Tensor-SVD and Polarization for Large Language Model Pretraining",
+        "screening_rank": 3,
+        "score": 8.33,
+        "decision": "保留，依当前问题与信息增益复排"
+      },
+      {
+        "title": "Rethinking Muon Beyond Pretraining: Spectral Failures and High-Pass Remedies for VLA and RLVR",
+        "screening_rank": 5,
+        "score": 8.27,
+        "decision": "保留，依当前问题与信息增益复排"
+      },
+      {
+        "title": "Muon--Adam Training for Overparameterized Neural Networks: Convergence and Generalization",
+        "screening_rank": 6,
+        "score": 8.27,
+        "decision": "降出今日推荐：当前摘要不足以确认符合用户所需的直接LLM实验"
+      },
+      {
+        "title": "Generalization Analysis of Muon",
+        "screening_rank": 7,
+        "score": 8.27,
+        "decision": "降出今日推荐：当前摘要不足以确认符合用户所需的直接LLM实验"
+      },
+      {
+        "title": "Monarch–Muon: Structure-Aware Muon for Fast and Memory-Efficient Pretraining",
+        "screening_rank": 8,
+        "score": 8.2,
+        "decision": "保留，依当前问题与信息增益复排"
+      },
+      {
+        "title": "The Row Normalization Puzzle in Muon",
+        "screening_rank": 11,
+        "score": 8.15,
+        "decision": "保留，依当前问题与信息增益复排"
+      },
+      {
+        "title": "Rethinking Memory-Efficient Optimizers for LLM Pre-Training",
+        "screening_rank": 13,
+        "score": 8.13,
+        "decision": "保留，依当前问题与信息增益复排"
+      },
+      {
+        "title": "AGraSS: Understanding and Shaping Gradient Spectra for EEG Learning",
+        "screening_rank": 14,
+        "score": 8.13,
+        "decision": "降出今日推荐：EEG任务，非直接LLM优化器实验"
+      }
+    ],
+    "expanded_candidates": [
+      {
+        "title": "TACO: Ternary Absolute-max Column-wise One-sparse Optimizer for LLM Fine-Tuning",
+        "reason": "有1.3B–32B全参数微调、显存拆分及消融；最新的范数几何稀疏状态路线，优先读内存收益与精度代价。",
+        "screening_rank": 23,
+        "global_screening_rank": 57
+      },
+      {
+        "title": "MeqMuon: Matrix-Equilibrating Muon for LLM Pretraining",
+        "reason": "直接研究Muon更新的行列不均衡，包含C4预训练和近邻NorMuon比较；可与已有PowerStep及谱分配工作并读。",
+        "screening_rank": 13,
+        "global_screening_rank": 26
+      },
+      {
+        "title": "AF-Muon: An AdamW-Free Muon Optimizer for Tied-Embedding Models",
+        "reason": "九种共享词表设置及124M–1B实验，直接与MeqMuon比较移除辅助AdamW的两种策略；待细读正文。",
+        "screening_rank": 18,
+        "global_screening_rank": 42
+      },
+      {
+        "title": "SOLAR: A State-Driven Online Learning Rate Scheduler for LLM Pretraining",
+        "reason": "有60M–1B密集模型、至3B MoE及AdamW/Muon实验；补充动态学习率控制路线，待全文核验。",
+        "screening_rank": 27,
+        "global_screening_rank": 61
+      }
+    ],
+    "decisions": [
+      {
+        "title": "TACO: Ternary Absolute-max Column-wise One-sparse Optimizer for LLM Fine-Tuning",
+        "semantic_rank": 1,
+        "reason": "有1.3B–32B全参数微调、显存拆分及消融；最新的范数几何稀疏状态路线，优先读内存收益与精度代价。"
+      },
+      {
+        "title": "MeqMuon: Matrix-Equilibrating Muon for LLM Pretraining",
+        "semantic_rank": 2,
+        "reason": "直接研究Muon更新的行列不均衡，包含C4预训练和近邻NorMuon比较；可与已有PowerStep及谱分配工作并读。"
+      },
+      {
+        "title": "TUON: A Tensor-Aware Optimizer Utilizing Tensor-SVD and Polarization for Large Language Model Pretraining",
+        "semantic_rank": 3,
+        "reason": "摘要报告GPT与Qwen至4B预训练及跨层消融；跨层张量几何是与逐层Muon不同的机制，需定点核验正文。"
+      },
+      {
+        "title": "Rethinking Memory-Efficient Optimizers for LLM Pre-Training",
+        "semantic_rank": 4,
+        "reason": "摘要明确提出量化强基线与结构压缩的对照，有257M/500M及MoE实验；适合作为上述方法的实验设计检查表，待全文核验。"
+      },
+      {
+        "title": "AF-Muon: An AdamW-Free Muon Optimizer for Tied-Embedding Models",
+        "semantic_rank": 5,
+        "reason": "九种共享词表设置及124M–1B实验，直接与MeqMuon比较移除辅助AdamW的两种策略；待细读正文。"
+      },
+      {
+        "title": "Pretraining Data Scale Reverses the Muon-AdamW Fine-Tuning Gap",
+        "semantic_rank": 6,
+        "reason": "含预训练预算、微调和扰动实验的反向结果，可检验预训练优势是否延续到下游；摘要初评，待全文核验。"
+      },
+      {
+        "title": "Rethinking Muon Beyond Pretraining: Spectral Failures and High-Pass Remedies for VLA and RLVR",
+        "semantic_rank": 7,
+        "reason": "摘要报告Qwen3-1.7B/4B的GRPO/GMPO实验及Muon失败案例，提供后训练谱过滤线索；待全文核验公平性。"
+      },
+      {
+        "title": "Monarch–Muon: Structure-Aware Muon for Fast and Memory-Efficient Pretraining",
+        "semantic_rank": 8,
+        "reason": "摘要提供6.89B显存、端到端步时及验证损失代价；改变参数化，须区分结构收益与优化器收益。"
+      },
+      {
+        "title": "The Row Normalization Puzzle in Muon",
+        "semantic_rank": 9,
+        "reason": "同时有最坏例合成实验和LLM预训练结果，解释行归一化的理论与实证差异；作为MeqMuon的批判性近邻。"
+      },
+      {
+        "title": "SOLAR: A State-Driven Online Learning Rate Scheduler for LLM Pretraining",
+        "semantic_rank": 10,
+        "reason": "有60M–1B密集模型、至3B MoE及AdamW/Muon实验；补充动态学习率控制路线，待全文核验。"
+      }
+    ],
+    "boundary": "没有把未选候选称为推荐；除前两篇定点核验正文外，其余推荐按摘要报告筛选，不代表已验证结果可复现。"
+  }
+}
