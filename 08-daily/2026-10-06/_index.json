@@ -1,0 +1,118 @@
+{
+  "date": "2026-10-06",
+  "note_file": "今日检索.md",
+  "generated_at": "2026-10-06T11:40:24",
+  "skill": "paper-daily",
+  "sources_searched": [
+    "arxiv",
+    "openreview",
+    "semantic_scholar"
+  ],
+  "source_counts": {
+    "arxiv": 180,
+    "openreview": 66
+  },
+  "date_windows": {
+    "recent_30d": {
+      "start": "2026-09-06",
+      "end": "2026-10-06"
+    },
+    "past_year": {
+      "start": "2025-10-06",
+      "end": "2026-09-05"
+    }
+  },
+  "total_unique": 227,
+  "top_papers": [
+    {
+      "title": "MuonIO: Principled Norm-Aware Descent for Embedding Tables and Language Model Heads",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2610.02705v1",
+      "note_filename": "MuonIO_Principled_Norm_Aware_Descent_for_Embedding_Tables_and_Language_Model_Heads",
+      "matched_domain": "大模型优化器设计",
+      "score": 8.07
+    },
+    {
+      "title": "Clean: Second-order LLM Training at Linear Memory Cost via Nyström Sketching",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2610.04204v1",
+      "note_filename": "Clean_Second_order_LLM_Training_at_Linear_Memory_Cost_via_Nyström_Sketching",
+      "matched_domain": "大模型优化器设计",
+      "score": 7.8
+    },
+    {
+      "title": "OptiSelect: How does the Optimizer Shape Data Curriculum?",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2610.03432v1",
+      "note_filename": "OptiSelect_How_does_the_Optimizer_Shape_Data_Curriculum",
+      "matched_domain": "大模型优化器设计",
+      "score": 7.93
+    },
+    {
+      "title": "Complexity analysis of trust-region methods under $(α,L_0,L_1)$-smoothness",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2609.33238v1",
+      "note_filename": "Complexity_analysis_of_trust_region_methods_under_$(α_L_0_L_1)$_smoothness",
+      "matched_domain": "随机梯度与优化理论",
+      "score": 7.87
+    },
+    {
+      "title": "Near-Optimal Convex Optimization with Lazy Second-Order Oracles",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2610.03222v1",
+      "note_filename": "Near_Optimal_Convex_Optimization_with_Lazy_Second_Order_Oracles",
+      "matched_domain": "大模型优化器设计",
+      "score": 7.93
+    },
+    {
+      "title": "Closing the Accuracy Gap in Stochastic First-Order Bilevel Optimization",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2610.03633v1",
+      "note_filename": "Closing_the_Accuracy_Gap_in_Stochastic_First_Order_Bilevel_Optimization",
+      "matched_domain": "随机梯度与优化理论",
+      "score": 8.04
+    },
+    {
+      "title": "Broken scale symmetries in undercomplete linear autoencoders",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2610.03640v1",
+      "note_filename": "Broken_scale_symmetries_in_undercomplete_linear_autoencoders",
+      "matched_domain": "大模型优化器设计",
+      "score": 7.93
+    },
+    {
+      "title": "Minimax Call Complexity, Rounds and Admissible Noise in Zeroth-Order Optimization of Highly Smooth Functions",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2610.05517v1",
+      "note_filename": "Minimax_Call_Complexity_Rounds_and_Admissible_Noise_in_Zeroth_Order_Optimization_of_Highly_Smooth_Functions",
+      "matched_domain": "随机梯度与优化理论",
+      "score": 7.87
+    },
+    {
+      "title": "Differential Privacy of Gradient Descent on Perturbed Objectives",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2610.02716v1",
+      "note_filename": "Differential_Privacy_of_Gradient_Descent_on_Perturbed_Objectives",
+      "matched_domain": "大模型优化器设计",
+      "score": 8.27
+    },
+    {
+      "title": "Chebyshev-Exact Acceleration under Hessian Variation, II: Computer-Assisted Variational Lower Bound",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2610.05164v1",
+      "note_filename": "Chebyshev_Exact_Acceleration_under_Hessian_Variation_II_Computer_Assisted_Variational_Lower_Bound",
+      "matched_domain": "随机梯度与优化理论",
+      "score": 7.87
+    }
+  ]
+}

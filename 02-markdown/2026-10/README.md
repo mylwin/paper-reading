@@ -17,12 +17,15 @@
 | 未解析 | Is Weight Tying Still Beneficial for Decoder-Only LLMs in Private Settings Under DP-SGD? | Is_Weight_Tying_Still_Beneficial_for_Decoder_Only_LLMs_in_Private_Settings_Under_DP_SGD | -- | 2026-10-04 | -- |
 | 未解析 | MeqMuon: Matrix-Equilibrating Muon for LLM Pretraining | MeqMuon_Matrix_Equilibrating_Muon_for_LLM_Pretraining | -- | 2026-10-04 | -- |
 | 未解析 | TACO: Ternary Absolute-max Column-wise One-sparse Optimizer for LLM Fine-Tuning | TACO_Ternary_Absolute_max_Column_wise_One_sparse_Optimizer_for_LLM_Fine_Tuning | -- | 2026-10-04 | -- |
+| 未解析 | Clean: Second-order LLM Training at Linear Memory Cost via Nyström Sketching | Clean_Second_order_LLM_Training_at_Linear_Memory_Cost_via_Nyström_Sketching | -- | 2026-10-06 | -- |
+| 未解析 | MuonIO: Principled Norm-Aware Descent for Embedding Tables and Language Model Heads | MuonIO_Principled_Norm_Aware_Descent_for_Embedding_Tables_and_Language_Model_Heads | -- | 2026-10-06 | -- |
+| 未解析 | OptiSelect: How does the Optimizer Shape Data Curriculum? | OptiSelect_How_does_the_Optimizer_Shape_Data_Curriculum | -- | 2026-10-06 | -- |
 
 ## 汇总
 
-- 论文总数：9 篇（2026-10 9 篇）
-- 解析状态：已解析 1 / 未解析 8 / 解析失败 0
-- **未解析论文**（需补解析）：Convergence_guarantees_for_Muon_New_parameter_regimes_and_generalizations、Convergence_of_Stochastic_Gradient_Methods_under_Heavy_Tailed_Noise_and_H_{o}lder_Smoothness、Polyak_Type_Extragradient_Methods_for_Monotone_Root_Finding_Problems、ABrA_GD_Adaptive_Bregman_Accelerated_Gradient_Descent_for_Relatively_Smooth_and_(Strongly_)Convex_Optimization、Convergence_Analysis_of_STORM_Under_Different_Geometries、Is_Weight_Tying_Still_Beneficial_for_Decoder_Only_LLMs_in_Private_Settings_Under_DP_SGD、MeqMuon_Matrix_Equilibrating_Muon_for_LLM_Pretraining、TACO_Ternary_Absolute_max_Column_wise_One_sparse_Optimizer_for_LLM_Fine_Tuning
+- 论文总数：12 篇（2026-10 12 篇）
+- 解析状态：已解析 1 / 未解析 11 / 解析失败 0
+- **未解析论文**（需补解析）：Convergence_guarantees_for_Muon_New_parameter_regimes_and_generalizations、Convergence_of_Stochastic_Gradient_Methods_under_Heavy_Tailed_Noise_and_H_{o}lder_Smoothness、Polyak_Type_Extragradient_Methods_for_Monotone_Root_Finding_Problems、ABrA_GD_Adaptive_Bregman_Accelerated_Gradient_Descent_for_Relatively_Smooth_and_(Strongly_)Convex_Optimization、Convergence_Analysis_of_STORM_Under_Different_Geometries、Is_Weight_Tying_Still_Beneficial_for_Decoder_Only_LLMs_in_Private_Settings_Under_DP_SGD、MeqMuon_Matrix_Equilibrating_Muon_for_LLM_Pretraining、TACO_Ternary_Absolute_max_Column_wise_One_sparse_Optimizer_for_LLM_Fine_Tuning、Clean_Second_order_LLM_Training_at_Linear_Memory_Cost_via_Nyström_Sketching、MuonIO_Principled_Norm_Aware_Descent_for_Embedding_Tables_and_Language_Model_Heads、OptiSelect_How_does_the_Optimizer_Shape_Data_Curriculum
 <!-- INDEX:END -->
 
 ## 说明

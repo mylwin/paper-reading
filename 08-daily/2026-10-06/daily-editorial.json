@@ -1,0 +1,223 @@
+{
+  "date": "2026-10-06",
+  "overview": {
+    "trend": "本次候选显示，大模型优化器研究同时向参数块专用几何、低秩二阶状态和优化器与数据选择协同扩展。前三篇分别选择 MuonIO、Clean 与 OptiSelect：输入输出层更新、曲率与内存权衡、数据课程机制，避免只比较同一种逐矩阵正交化。其余推荐覆盖免调参广义光滑性、二阶 oracle 与随机优化下界。以下为题目和原始摘要的初步判断，PDF 归档不等于完成全文评审。检索窗口为2026-09-06至2026-10-06，不意味着这些论文均发表于今天。arXiv四批取得180条，OpenReview三项独立查询取得66条，跨源去重及相关性筛选后227篇；每批数量上限使覆盖并非穷举。Semantic Scholar两项年度查询HTTP 429，过去一年高影响力筛选未完成；引用信号缺失不作质量判断。 主题数量按脚本关键词和类别自动归类，宽泛优化词可能使理论工作归入大模型方向；“未细分”及主题计数不代表已有直接LLM实验。推荐理由另按摘要语义判定。",
+    "hotspots": [
+      {
+        "title": "输入输出层的专用范数几何",
+        "text": "MuonIO对嵌入表与语言模型头采用对应的算子范数，可与已在库的AF-Muon及MeqMuon比较参数块更新与状态节省。"
+      },
+      {
+        "title": "二阶状态与端到端成本",
+        "text": "Clean用Nyström近似SOAP预条件器；应同时检查低秩补偿、低精度状态、墙钟时间和总显存。"
+      },
+      {
+        "title": "优化器与数据课程",
+        "text": "OptiSelect提示训练更新几何与样本评分几何可能需要分别选择，AdamW式评分可服务Muon训练。"
+      }
+    ]
+  },
+  "domain_summaries": {
+    "大模型优化器设计": {
+      "summary": "推荐聚焦输入输出层几何、二阶状态压缩和数据选择；对已有Muon变体而言，关键新增信息是参数块与预条件器结构，而不是再列一个预训练胜率。",
+      "subfields": {
+        "符号与范数几何优化": "MuonIO将行/列向量归一化联系到输入one-hot与输出softmax几何；OptiSelect关注这种几何对样本效用区分的影响。",
+        "自适应与状态内存": "Clean将SOAP左右预条件器压缩到线性内存，并报告Q-Clean低精度变体；须区分优化器状态与训练总显存。",
+        "免调参与梯度裁剪": "全量列表包含历史裁剪与步长工作；今日前三篇不据关键词重合宣称已解决免调参。",
+        "大模型训练与优化器设计": "MuonIO、Clean与OptiSelect均在摘要中报告语言模型训练实验，规模、预算和调参公平性仍需全文核验。"
+      }
+    },
+    "随机梯度与优化理论": {
+      "summary": "剩余推荐强调可迁移的假设和复杂度边界：广义光滑性下无参数信赖域、懒二阶oracle的上下界、随机双层与零阶下界、噪声引起的尺度漂移。多数结果在专门模型下成立，不能直接推为LLM训练保证。",
+      "subfields": {
+        "随机梯度与收敛性": "双层优化准确率下界与零阶调用复杂度提供oracle成本标尺，隐私目标扰动则分析有限GD迭代的可逆映射。",
+        "动量、裁剪与加速": "Chebyshev终端精确递推的扰动敏感性，以及线性自编码器尺度漂移，提示稳定性不能仅由最终二次误差或单个锐度指标判断。",
+        "自适应与二阶优化": "懒Hessian查询降低更新频率的复杂度代价；无参数信赖域在广义光滑性下可接入有限内存拟牛顿近似。",
+        "算子与范数几何": "广义光滑性与不同范数下的复杂度需要逐项检查参数、维度和噪声条件。"
+      }
+    }
+  },
+  "top_papers": {
+    "MuonIO: Principled Norm-Aware Descent for Embedding Tables and Language Model Heads": {
+      "title_zh": "MuonIO：面向嵌入表与语言模型头的有原则范数感知下降",
+      "abstract_zh": "Muon优化器通过求解以谱范数惩罚的损失局部线性化问题，推导隐藏线性层的更新规则，其动机来自稠密线性层的RMS稳定性论证。然而，标准Muon实现将输入层（嵌入表）和输出层（语言模型头）排除在这一有原则的处理之外，转而对它们使用AdamW。我们提出MuonIO，为这两类层提供统一的Muon式更新。对于语言模型头 $\\mathbf{L}\\in\\mathbb{R}^{V\\times d}$，由于softmax输出几何的Lipschitz连续性，我们论证采用 $2\\to\\infty$ 算子范数；对于嵌入表 $\\mathbf{E}\\in\\mathbb{R}^{d\\times V}$，我们基于Bernstein与Newhouse（2025）指出的one-hot输入几何，采用 $1\\to2$ 算子范数。恒等式 $\\lVert\\mathbf{L}\\rVert_{2\\to\\infty}=\\lVert\\mathbf{L}^{\\top}\\rVert_{1\\to2}$ 因而将两个矩阵置于相同的词表导向几何中：MuonIO应用统一的归一化向量规则，对 $\\mathbf{E}$ 表现为列归一化，对 $\\mathbf{L}$ 表现为行归一化。实证评估表明我们的方法有效：在C4上预训练1B LLaMA时，与Muon相比，MuonIO将输入输出（I/O）优化器状态内存减少50%，将I/O更新FLOPs减少约46%，同时改善验证集困惑度。",
+      "summary": "为嵌入表和语言模型头统一推导向量归一化更新，补上隐藏层Muon之外的参数块几何。",
+      "contributions": [
+        "摘要主张从输入one-hot与输出softmax几何分别选择算子范数，并通过转置恒等式统一更新。",
+        "摘要报告1B LLaMA/C4实验中的I/O状态内存、更新FLOPs与困惑度收益。"
+      ],
+      "method": "隐藏矩阵保留谱几何；词表矩阵分别采用 $1\\to2$ 与 $2\\to\\infty$ 范数，产生列/行归一化向量更新。RMS稳定性及softmax Lipschitz论证的适用条件待读正文。",
+      "result": "摘要报告I/O优化器状态内存下降50%、I/O更新FLOPs下降约46%，并改善验证困惑度。这里的50%与46%仅是I/O部分，不能写成整个模型或训练总显存节省。",
+      "selection_reason": "当前课题直接关注范数几何及状态内存；相对历史AF-Muon的共享词表处理，可具体比较独立/共享词表、行内幅值保留及归一化尺度，是直接竞争机制。由原候选第2位提升至第1位。",
+      "evidence_limit": "仅核验原始摘要；待全文核验词表权重共享时两种梯度来源如何合并、基线Muon的I/O配方、学习率缩放、训练token预算、种子方差及总显存与墙钟收益；不判定其理论正确性或相对AF-Muon的确定净增量。",
+      "reading_decision": "精读"
+    },
+    "Clean: Second-order LLM Training at Linear Memory Cost via Nyström Sketching": {
+      "title_zh": "Clean：通过Nyström草图以线性内存成本实现二阶大模型训练",
+      "abstract_zh": "训练大语言模型（LLM）存在一个根本权衡：Adam等节省内存的优化器舍弃跨参数曲率，而SOAP等完整曲率方法虽然能够加速收敛，却需要难以承受的内存成本。我们提出Clean，一种旨在解决这一瓶颈的节省内存且保留完整曲率的优化器。Clean利用随机Nyström方法准确近似SOAP中的左、右预条件器，将优化器内存复杂度相对于模型维度从二次降低至线性。随后，我们重新纳入子空间外的分量，以捕获低秩近似之外的曲率信息，在极小内存成本下保留丰富曲率。我们还提出Q-Clean，一种大幅压缩优化器状态的低精度变体。在预训练LLaMA-1.3B架构时，Q-Clean相较Muon将优化器内存消耗降低超过50%，同时保持较强且有竞争力的预测性能。值得注意的是，Clean的优化器状态占用小于标准AdamW，却能以快26%的墙钟时间达到AdamW的最终性能。此外，我们的方法独有地支持在单张80GB GPU上预训练一个13B（130亿）参数模型，为大规模模型优化提供可扩展、高效且易于获得的途径。",
+      "summary": "用Nyström近似SOAP左右预条件器，并补偿子空间外分量，检验曲率信息与线性状态内存能否兼得。",
+      "contributions": [
+        "摘要主张将SOAP预条件器的二次状态内存改为线性，并加入子空间外曲率补偿。",
+        "摘要报告Q-Clean相对Muon的状态节省及Clean相对AdamW的墙钟收益。"
+      ],
+      "method": "对左右预条件器做随机Nyström草图，随后重新纳入子空间外分量；低精度Q-Clean进一步压缩状态。近似秩、逆根计算、刷新频率及误差控制均待全文核验。",
+      "result": "摘要报告LLaMA-1.3B上Q-Clean优化器内存比Muon少超过50%；Clean状态少于AdamW，达到AdamW最终性能的墙钟时间快26%；单张80GB GPU支持13B模型预训练。摘要未给出该13B设置的token预算、吞吐及激活内存配置。",
+      "selection_reason": "从候选第10位提升至第2位，补充现有符号/谱几何路线之外的曲率压缩方案。可与在库内存优化器比较状态量化和结构近似的收益来源，并设计固定显存预算下的公平实验。",
+      "evidence_limit": "仅核验原始摘要；完整曲率是作者术语，低秩与子空间补偿并不自动证明精确全曲率。待核验SOAP、AdamW、Muon的匹配预算，随机秩/低精度消融，端到端总显存，26%计时口径和单卡13B是否使用卸载、检查点或其他技巧。",
+      "reading_decision": "精读"
+    },
+    "OptiSelect: How does the Optimizer Shape Data Curriculum?": {
+      "title_zh": "OptiSelect：优化器如何塑造数据课程？",
+      "abstract_zh": "在线数据选择通过在每个批次中训练最有价值的候选样本，已表现出显著的大语言模型预训练效率收益。由于候选样本的价值通过其实际模型更新实现，有原则的选择应考虑优化器步骤：优化器会在更新模型参数之前重塑原始梯度。我们将这一优化器感知的选择范式形式化为OptiSelect，并首次系统研究优化器如何影响数据选择。我们的理论建立了一个选择收益原理：在线选择的优势由优化器诱导的效用分数的可区分性决定。我们证明，Lion和Muon的符号型及极分解切向预条件器会出现可区分性坍缩，从而限制OptiSelect可获得的收益；相较之下，AdamW和Sophia等对角自适应优化器允许严格更好的上界。该原理还给出了最优候选过采样比例的定量推导。在124M和720M模型上的预训练实验与我们的理论分析一致，并显示，即使训练优化器使用Muon，AdamW的对角自适应评分几何仍然是最强的评分几何。我们进一步表明，OptiSelect在数据改写下仍保有收益；数据改写是现代数据处理流程中使用的一项技术。我们的发现为在大语言模型预训练中协同设计优化器和数据选择提供理论基础与实践指导。",
+      "summary": "把样本选择分数与优化器更新几何联系起来，提示Muon训练可搭配AdamW式样本评分。",
+      "contributions": [
+        "摘要主张在线选择收益由效用分数可区分性控制，并推导候选过采样比例。",
+        "摘要报告Lion/Muon几何的可区分性限制及124M、720M预训练实验。"
+      ],
+      "method": "以实际更新后的样本效用构建优化器感知评分，分析符号、极分解切向和对角自适应预条件器；将样本评分几何与实际训练优化器做组合比较。",
+      "result": "摘要报告124M和720M实验支持选择收益原理，且Muon训练使用AdamW式评分几何效果最佳；数据改写下仍有收益。未给出具体提升幅度和选择开销。",
+      "selection_reason": "从候选第4位提升至第3位，加入与参数块几何、曲率状态不同的数据课程机制。它给出可检验的反例方向：优化器训练表现好，不意味着其样本效用评分最可区分。",
+      "evidence_limit": "仅核验原始摘要；严格更好的上界不自动代表实际收益严格更大。待核验效用定义、坍缩定理的梯度/噪声假设、评分状态与计算成本、公平token及墙钟预算、过采样最优性条件和数据改写消融。",
+      "reading_decision": "选读"
+    },
+    "Complexity analysis of trust-region methods under $(α,L_0,L_1)$-smoothness": {
+      "summary": "免调参信赖域在广义光滑性下达到已知最优复杂度，并兼容有限内存拟牛顿近似；对未知光滑性参数的研究有直接价值，待核验模型条件与非凸紧性证明。",
+      "reading_decision": "精读",
+      "selection_reason": "免调参信赖域在广义光滑性下达到已知最优复杂度，并兼容有限内存拟牛顿近似；对未知光滑性参数的研究有直接价值，待核验模型条件与非凸紧性证明。",
+      "evidence_limit": "原始摘要初评，待全文核验。"
+    },
+    "Near-Optimal Convex Optimization with Lazy Second-Order Oracles": {
+      "summary": "懒Hessian oracle把每m步查询一次曲率的代价写成匹配上下界，可为二阶刷新频率提供理论参照；须核验正则性与oracle预算，不能直接替代LLM实测。",
+      "reading_decision": "选读",
+      "selection_reason": "懒Hessian oracle把每m步查询一次曲率的代价写成匹配上下界，可为二阶刷新频率提供理论参照；须核验正则性与oracle预算，不能直接替代LLM实测。",
+      "evidence_limit": "原始摘要初评，待全文核验。"
+    },
+    "Closing the Accuracy Gap in Stochastic First-Order Bilevel Optimization": {
+      "summary": "随机双层优化将准确率指数下界与结构化曲率预算联系起来；可学下界构造，但算法类、维度及高精度条件较专门。",
+      "reading_decision": "选读",
+      "selection_reason": "随机双层优化将准确率指数下界与结构化曲率预算联系起来；可学下界构造，但算法类、维度及高精度条件较专门。",
+      "evidence_limit": "原始摘要初评，待全文核验。"
+    },
+    "Broken scale symmetries in undercomplete linear autoencoders": {
+      "summary": "线性自编码器中噪声沿等价解流形推动尺度漂移，提供单一锐度指标可能误导的具体机制；向LLM外推待证。",
+      "reading_decision": "选读",
+      "selection_reason": "线性自编码器中噪声沿等价解流形推动尺度漂移，提供单一锐度指标可能误导的具体机制；向LLM外推待证。",
+      "evidence_limit": "原始摘要初评，待全文核验。"
+    },
+    "Minimax Call Complexity, Rounds and Admissible Noise in Zeroth-Order Optimization of Highly Smooth Functions": {
+      "summary": "高阶光滑零阶优化同时刻画函数调用、并行轮数与可容许噪声；可与库内零阶偏好对齐工作对读，凸性和噪声假设限制直接迁移。",
+      "reading_decision": "选读",
+      "selection_reason": "高阶光滑零阶优化同时刻画函数调用、并行轮数与可容许噪声；可与库内零阶偏好对齐工作对读，凸性和噪声假设限制直接迁移。",
+      "evidence_limit": "原始摘要初评，待全文核验。"
+    },
+    "Differential Privacy of Gradient Descent on Perturbed Objectives": {
+      "summary": "目标扰动的有限GD迭代通过映射可逆性做隐私分析；涉及强凸、光滑及Hessian Lipschitz条件，与当前LLM优化器主线距离较大。",
+      "reading_decision": "跟踪",
+      "selection_reason": "目标扰动的有限GD迭代通过映射可逆性做隐私分析；涉及强凸、光滑及Hessian Lipschitz条件，与当前LLM优化器主线距离较大。",
+      "evidence_limit": "原始摘要初评，待全文核验。"
+    },
+    "Chebyshev-Exact Acceleration under Hessian Variation, II: Computer-Assisted Variational Lower Bound": {
+      "summary": "计算机辅助证书比较Chebyshev终端精确递推对Hessian扰动的响应；精确常数很强但需先读Part I及区间算术证书，暂列跟踪。",
+      "reading_decision": "跟踪",
+      "selection_reason": "计算机辅助证书比较Chebyshev终端精确递推对Hessian扰动的响应；精确常数很强但需先读Part I及区间算术证书，暂列跟踪。",
+      "evidence_limit": "原始摘要初评，待全文核验。"
+    }
+  },
+  "semantic_reranking": {
+    "scores_modified": false,
+    "assessment_scope": "metadata_and_verified_original_abstracts",
+    "original_top10_audit": [
+      {
+        "title": "Differential Privacy of Gradient Descent on Perturbed Objectives",
+        "candidate_screening_rank": 1,
+        "screening_rank": 15,
+        "score": 8.27,
+        "semantic_rank": 9,
+        "decision": "跟踪",
+        "reason": "目标扰动的有限GD迭代通过映射可逆性做隐私分析；涉及强凸、光滑及Hessian Lipschitz条件，与当前LLM优化器主线距离较大。"
+      },
+      {
+        "title": "MuonIO: Principled Norm-Aware Descent for Embedding Tables and Language Model Heads",
+        "candidate_screening_rank": 2,
+        "screening_rank": 31,
+        "score": 8.07,
+        "semantic_rank": 1,
+        "decision": "精读",
+        "reason": "当前课题直接关注范数几何及状态内存；相对历史AF-Muon的共享词表处理，可具体比较独立/共享词表、行内幅值保留及归一化尺度，是直接竞争机制。由原候选第2位提升至第1位。"
+      },
+      {
+        "title": "Closing the Accuracy Gap in Stochastic First-Order Bilevel Optimization",
+        "candidate_screening_rank": 3,
+        "screening_rank": 34,
+        "score": 8.04,
+        "semantic_rank": 6,
+        "decision": "选读",
+        "reason": "随机双层优化将准确率指数下界与结构化曲率预算联系起来；可学下界构造，但算法类、维度及高精度条件较专门。"
+      },
+      {
+        "title": "OptiSelect: How does the Optimizer Shape Data Curriculum?",
+        "candidate_screening_rank": 4,
+        "screening_rank": 39,
+        "score": 7.93,
+        "semantic_rank": 3,
+        "decision": "选读",
+        "reason": "从候选第4位提升至第3位，加入与参数块几何、曲率状态不同的数据课程机制。它给出可检验的反例方向：优化器训练表现好，不意味着其样本效用评分最可区分。"
+      },
+      {
+        "title": "Broken scale symmetries in undercomplete linear autoencoders",
+        "candidate_screening_rank": 5,
+        "screening_rank": 41,
+        "score": 7.93,
+        "semantic_rank": 7,
+        "decision": "选读",
+        "reason": "线性自编码器中噪声沿等价解流形推动尺度漂移，提供单一锐度指标可能误导的具体机制；向LLM外推待证。"
+      },
+      {
+        "title": "Near-Optimal Convex Optimization with Lazy Second-Order Oracles",
+        "candidate_screening_rank": 6,
+        "screening_rank": 50,
+        "score": 7.93,
+        "semantic_rank": 5,
+        "decision": "选读",
+        "reason": "懒Hessian oracle把每m步查询一次曲率的代价写成匹配上下界，可为二阶刷新频率提供理论参照；须核验正则性与oracle预算，不能直接替代LLM实测。"
+      },
+      {
+        "title": "Complexity analysis of trust-region methods under $(α,L_0,L_1)$-smoothness",
+        "candidate_screening_rank": 7,
+        "screening_rank": 65,
+        "score": 7.87,
+        "semantic_rank": 4,
+        "decision": "精读",
+        "reason": "免调参信赖域在广义光滑性下达到已知最优复杂度，并兼容有限内存拟牛顿近似；对未知光滑性参数的研究有直接价值，待核验模型条件与非凸紧性证明。"
+      },
+      {
+        "title": "Chebyshev-Exact Acceleration under Hessian Variation, II: Computer-Assisted Variational Lower Bound",
+        "candidate_screening_rank": 8,
+        "screening_rank": 66,
+        "score": 7.87,
+        "semantic_rank": 10,
+        "decision": "跟踪",
+        "reason": "计算机辅助证书比较Chebyshev终端精确递推对Hessian扰动的响应；精确常数很强但需先读Part I及区间算术证书，暂列跟踪。"
+      },
+      {
+        "title": "Minimax Call Complexity, Rounds and Admissible Noise in Zeroth-Order Optimization of Highly Smooth Functions",
+        "candidate_screening_rank": 9,
+        "screening_rank": 67,
+        "score": 7.87,
+        "semantic_rank": 8,
+        "decision": "选读",
+        "reason": "高阶光滑零阶优化同时刻画函数调用、并行轮数与可容许噪声；可与库内零阶偏好对齐工作对读，凸性和噪声假设限制直接迁移。"
+      },
+      {
+        "title": "Clean: Second-order LLM Training at Linear Memory Cost via Nyström Sketching",
+        "candidate_screening_rank": 10,
+        "screening_rank": 72,
+        "score": 7.8,
+        "semantic_rank": 2,
+        "decision": "精读",
+        "reason": "从候选第10位提升至第2位，补充现有符号/谱几何路线之外的曲率压缩方案。可与在库内存优化器比较状态量化和结构近似的收益来源，并设计固定显存预算下的公平实验。"
+      }
+    ],
+    "combination_reason": "优先当前大模型优化器设计，前三篇覆盖参数块几何、二阶内存及数据选择；其余保留免调参和复杂度理论。"
+  }
+}
