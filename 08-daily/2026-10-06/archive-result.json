@@ -1,0 +1,52 @@
+{
+  "papers_dir": "/Users/myl/Documents/paper/01-raw",
+  "month_dir": "/Users/myl/Documents/paper/01-raw/2026-10",
+  "month": "2026-10",
+  "date": "2026-10-06",
+  "requested": 3,
+  "downloaded": 3,
+  "skipped_existing": 0,
+  "failed": 0,
+  "index_updated": [
+    "/Users/myl/Documents/paper/01-raw/index.md",
+    "/Users/myl/Documents/paper/01-raw/2026-10/README.md",
+    "/Users/myl/Documents/paper/02-markdown/index.md",
+    "/Users/myl/Documents/paper/02-markdown/2026-10/README.md",
+    "/Users/myl/Documents/paper/03-notes/index.md",
+    "/Users/myl/Documents/paper/03-notes/2026-10/README.md",
+    "/Users/myl/Documents/paper/06-translation/index.md",
+    "/Users/myl/Documents/paper/06-translation/2026-10/README.md"
+  ],
+  "archived": [
+    {
+      "title": "MuonIO: Principled Norm-Aware Descent for Embedding Tables and Language Model Heads",
+      "paper_stem": "MuonIO_Principled_Norm_Aware_Descent_for_Embedding_Tables_and_Language_Model_Heads",
+      "month": "2026-10",
+      "source": "arxiv",
+      "pdf_url": "https://arxiv.org/pdf/2610.02705v1",
+      "path": "/Users/myl/Documents/paper/01-raw/2026-10/MuonIO_Principled_Norm_Aware_Descent_for_Embedding_Tables_and_Language_Model_Heads.pdf",
+      "status": "downloaded",
+      "detail": "415.9 KB"
+    },
+    {
+      "title": "Clean: Second-order LLM Training at Linear Memory Cost via Nyström Sketching",
+      "paper_stem": "Clean_Second_order_LLM_Training_at_Linear_Memory_Cost_via_Nyström_Sketching",
+      "month": "2026-10",
+      "source": "arxiv",
+      "pdf_url": "https://arxiv.org/pdf/2610.04204v1",
+      "path": "/Users/myl/Documents/paper/01-raw/2026-10/Clean_Second_order_LLM_Training_at_Linear_Memory_Cost_via_Nyström_Sketching.pdf",
+      "status": "downloaded",
+      "detail": "1132.5 KB"
+    },
+    {
+      "title": "OptiSelect: How does the Optimizer Shape Data Curriculum?",
+      "paper_stem": "OptiSelect_How_does_the_Optimizer_Shape_Data_Curriculum",
+      "month": "2026-10",
+      "source": "arxiv",
+      "pdf_url": "https://arxiv.org/pdf/2610.03432v1",
+      "path": "/Users/myl/Documents/paper/01-raw/2026-10/OptiSelect_How_does_the_Optimizer_Shape_Data_Curriculum.pdf",
+      "status": "downloaded",
+      "detail": "915.9 KB"
+    }
+  ]
+}
