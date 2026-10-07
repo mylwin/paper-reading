@@ -1,0 +1,1648 @@
+{
+  "skill": "paper-weekly",
+  "generated_at": "2026-10-07T17:32:43",
+  "schedule": {
+    "enabled": true,
+    "interval_days": 7,
+    "start_date": "2026-09-21",
+    "last_run": "2026-09-28",
+    "is_first_run": false,
+    "due": true,
+    "next_due": "2026-10-05",
+    "days_since_last": 9
+  },
+  "week": {
+    "week_no": 3,
+    "week_start": "2026-10-05",
+    "week_end": "2026-10-11",
+    "suggested_filename": "2026-10-05-第3周周报.md"
+  },
+  "theme_first": true,
+  "config_path": "/Users/myl/Documents/paper/.claude/skills/config.yaml",
+  "research_dir": "/Users/myl/Documents/paper/07-research",
+  "report_path": "/Users/myl/Documents/paper/07-research/2026-10-05-第3周周报.md",
+  "domains": [
+    "大模型优化器设计",
+    "随机梯度与优化理论"
+  ],
+  "domain_keywords": {
+    "大模型优化器设计": [
+      "large language model optimizer",
+      "LLM optimizer",
+      "optimizer design",
+      "memory-efficient optimizer",
+      "optimizer state memory",
+      "adaptive optimization",
+      "sign-based optimization",
+      "SignSGD",
+      "Muon",
+      "PowerStep",
+      "gradient clipping",
+      "parameter-free optimization"
+    ],
+    "随机梯度与优化理论": [
+      "stochastic gradient descent",
+      "SGD",
+      "stochastic optimization",
+      "stochastic approximation",
+      "mini-batch",
+      "variance reduction",
+      "SVRG",
+      "SAGA",
+      "SARAH",
+      "STORM",
+      "momentum",
+      "heavy ball"
+    ]
+  },
+  "window": {
+    "since": "2026-10-01",
+    "until": "2026-10-07"
+  },
+  "workspace": "/Users/myl/Documents/paper",
+  "daily_dirs": [
+    {
+      "date": "2026-10-02",
+      "dir": "/Users/myl/Documents/paper/08-daily/2026-10-02",
+      "search_result": "/Users/myl/Documents/paper/08-daily/2026-10-02/search_result.json",
+      "daily_note": "/Users/myl/Documents/paper/08-daily/2026-10-02/今日检索.md",
+      "total_unique": 58,
+      "titles": [
+        "Sample complexity bounds for categorical Markov random fields via Discrete Diffusions",
+        "CARM: Cancellation-Aware Response Masking for LLM Reinforcement Learning",
+        "Polyak-Type Extragradient Methods for Monotone Root-Finding Problems",
+        "The Curvature of Regret in Contextual Linear Optimization",
+        "FERPO: Forward Entropy-Regularized Policy Optimization",
+        "Trust the Direction, Search the Step: Zero-and-First-Order Methods for LLM Fine-Tuning",
+        "Optimizer Memory Schedules for Outscaling the Overtraining Axis",
+        "Convergence guarantees for Muon: New parameter regimes and generalizations",
+        "Convergence of Practical Muon",
+        "Convergence of Stochastic Gradient Methods under Heavy-Tailed Noise and H\\\"{o}lder Smoothness",
+        "Curvature-Aware Clipping: Mitigating Bias in DPSGD via Approximate Second-Order Information",
+        "SoftServe: A Scalable Quasi-Newton Method for Deep Learning",
+        "Linear Programming Representations and Strongly Polynomial Algorithms for Robust Markov Decision Processes",
+        "Scalable, Transferable Meta-network for Data Selection Requires a Different Loss (and Why the Obvious Choice is Problematic)",
+        "Optimizers for Diffusion Models: A Controlled Benchmark",
+        "Muon Sublates the Edge of Stability in LLM Pretraining",
+        "Low-Rank Friction for Memory-Efficient Transformer Pretraining",
+        "TACO: Ternary Absolute-max Column-wise One-sparse Optimizer for LLM Fine-Tuning",
+        "High-Probability Guarantees for SGD under $\\beta$-Heavy-Tailed Gradient Noise",
+        "A stochastic subgradient method with optimal failure exponent",
+        "Physical Muon: Orthogonalization as an Equilibrium Computation",
+        "Muon in Vision Transformers: Optimizer-Recipe Interactions and Gradient Spectra",
+        "Towards Better Training Signal: Advantage Clipped Policy Optimization",
+        "Muon Under Gradient Noise and the Limits of Orthogonalization Near Optima",
+        "LionMuon: Alternating Spectral and Sign Descent for Efficient Training",
+        "Faynt: Scaling and Optimizing Policies for Competitive Melee",
+        "Monarch–Muon: Structure-Aware Muon for Fast and Memory-Efficient Pretraining",
+        "Are We Recovering Mechanisms? Objective-Level Recovery Gaps in Mechanistic Interpretability",
+        "Local Support Learning",
+        "Distributionally Robust Schrödinger Bridge",
+        "From Geometry to Generalization: Why Row Normalization Can Beat Adam and Muon",
+        "Minimal Experiments for Robust Stabilization: Information, Spectral Geometry, and Duration",
+        "Geometry and Convergence of Quadratically Regularized Optimal Transport II",
+        "Sign compression for Muon: SignMuon, MuonSign, and the Limits of Error Feedback",
+        "From Gradients to Capabilities: Understanding Multi-Teacher On-Policy Distillation",
+        "(Cheap) Stochastic Policy Gradient Converges with High Probability for Linear Quadratic Regulator",
+        "The Newton-Muon Optimizer",
+        "Euclidean Distance Optimization Within the Grassmannian",
+        "On Language Drift during RLVR Post-Training",
+        "Approximation and computation of the geodesic Sinkhorn distance",
+        "AF-Muon: An AdamW-Free Muon Optimizer for Tied-Embedding Models",
+        "Does Muon's Pretraining Advantage Over Adam Survive Fine-Tuning?",
+        "When Do Intrinsic Rewards Lead to Exploration?",
+        "Sim+Real: Joint Simulation - Experiment Training Improves Balanced Prediction in Physical Systems",
+        "Closure Masks for Hardware-Compatible 2:4 Sparse Muon",
+        "When Does Muon Actually Win? A Paired Data-, Time-, and Tuning-Budget Benchmark",
+        "Muon Under Covariate Shift: Spectral Learning and Temporal Stability",
+        "Homomorphic Advantage Operator: Stabilizing Reinforcement Learning Under Fully Homomorphic Encryption Constraints",
+        "LoRA-TSD: Tangent-Space Spectral Descent for LoRA via Muon-Style Updates",
+        "Adaptive Quantile Clipping under Heavy-Tailed Noise and Differential Privacy"
+      ]
+    },
+    {
+      "date": "2026-10-03",
+      "dir": "/Users/myl/Documents/paper/08-daily/2026-10-03",
+      "search_result": "/Users/myl/Documents/paper/08-daily/2026-10-03/search_result.json",
+      "daily_note": "/Users/myl/Documents/paper/08-daily/2026-10-03/今日检索.md",
+      "total_unique": 189,
+      "titles": [
+        "Resource-Adaptive Stochastic Gradient Descent for Online Linear Programming without Re-solving",
+        "Quantile-based Loss Filtering for Outlier-Robust Stochastic Gradient Descent",
+        "Stiefel-AdamW: Geometry-Aware AdamW for Linear Factorization Blocks",
+        "Is Weight Tying Still Beneficial for Decoder-Only LLMs in Private Settings Under DP-SGD?",
+        "Exact information accounting for SGD methods",
+        "High-Probability Convergence of SGD via Batched Updates",
+        "Ordinary Nonconvex SGD under Distance-Dependent Moments: Finite-Horizon Stationarity and Nagaev Bounds",
+        "Finite-Time Concentration and Convergence Rates for Projected Two-Time-Scale Stochastic Approximation with Markov Noise",
+        "Constrained Nonconvex Stochastic Optimization with One Projection",
+        "Sparse Data Augmentation for Optimization with Provable Guarantees",
+        "Stochastic Heavy Ball with Polyak Step Size and Armijo Line Search: A General Convergence Analysis",
+        "ABrA-GD: Adaptive Bregman Accelerated Gradient Descent for Relatively Smooth and (Strongly-)Convex Optimization",
+        "Convergence Analysis of STORM Under Different Geometries",
+        "Solving Finite-sum Coupled Compositional Optimization via Multi-block-Single-probe Estimator",
+        "Generalization Analysis of Distributed Kernel-based Robust Gradient Descent Algorithms",
+        "Lower Bounds for Stochastic First-Order Algorithms with Variance Reduction in Nonconvex--Concave Minimax Optimization",
+        "Optimal Parameter-Free Second-order Acceleration with Inexact Hessians under Generalized Smoothness",
+        "The Exponential Price of Determinism in Nonsmooth Nonconvex Optimization",
+        "Curvature-Independent Regret Bounds for Distributed Online Optimization on Hadamard Manifolds",
+        "Tight Regret Bound for Online Inverse Linear Optimization via Multiscale Matrix Weights",
+        "Stability-Constrained Approximation in Spline KANs: Exact Layer Balancing and Budget-Compatible Saturation",
+        "Adam under Generalized Smoothness with Second-Moment-Type Stochastic Gradients",
+        "Lower Bounds For Gradient-Free Convex Optimization And Convex-Concave Saddle-Point Problems",
+        "Second-Order Smooth Planning with Optimal-Transport Bellman Smoothing",
+        "TR-SSQP: A Trust-Region Method for Constrained Stochastic Optimization under Heavy-Tailed Noise",
+        "Optimizers for Diffusion Models: A Controlled Benchmark",
+        "Mini-batch Sampling Strategies for Long-Tailed Image Classification: An Empirical Study on CIFAR-100-LT",
+        "Learned Preconditioning for a Primal-Dual Interior-Point Method",
+        "Optimizer Memory Schedules for Outscaling the Overtraining Axis",
+        "Normalize-Then-Precondition: A Hierarchical Approach to Marginal Scale and Interaction Geometry for LLM Training",
+        "Almost Sure Convergence Analysis of Stochastic Gradient Methods with Clipping and Additive Noise",
+        "Optimizer as Detector: Stochastic Gradient Descent for Latent Mixture Models",
+        "Continuous Delayed-Memory Stochastic Gradient Descent and Continuous-Time Reinforcement Learning from History of Astrophysical Time Series Studies",
+        "Robustifying Asynchronous SGD via Soft Throttling",
+        "LionMuon: Alternating Spectral and Sign Descent for Efficient Training",
+        "Symmetry-quotient Flatness and Generalization",
+        "A Riemannian Inertial Adaptive Gradient Method with Momentum Restart",
+        "Early stopping of stochastic variance reduced gradient for linear inverse problems by the discrepancy principle",
+        "Asymptotic Lower Bounds for Continuous Optimization",
+        "AdamX: Cosine similarity meets gradient descent",
+        "Matching Lower Bounds for Randomized First-Order Methods in Hessian-Lipschitz Nonconvex Optimization",
+        "Matching Multi-Loop Complexities with a Single Loop: Optimal Optimization Stationarity and Best-Known Game Stationarity in Nonconvex--Concave Minimax Optimization",
+        "Primal Methods for Constrained Variational Inequalities: Optimal Rates, Feasibility Trade-offs, and Lower Bounds",
+        "Joint Lower Bounds for Zeroth-Order Nonconvex Optimization on Euclidean Balls",
+        "Convergence of a Randomized Newton Method in Nonconvex Optimization",
+        "Stochastic Gradient Descent over P2",
+        "The Exact Time-Uniform Rate Frontier for Stochastic Gradient Descent on Smooth Convex Objectives",
+        "Convergence of Practical Muon",
+        "Convergence of Stochastic Gradient Methods under Heavy-Tailed Noise and Hölder Smoothness",
+        "Stronger Lower Bounds for (Non-)Anytime Acceleration of Gradient Descent"
+      ]
+    },
+    {
+      "date": "2026-10-04",
+      "dir": "/Users/myl/Documents/paper/08-daily/2026-10-04",
+      "search_result": "/Users/myl/Documents/paper/08-daily/2026-10-04/search_result.json",
+      "daily_note": "/Users/myl/Documents/paper/08-daily/2026-10-04/今日检索.md",
+      "total_unique": 303,
+      "titles": [
+        "When Muon Optimizer Meets Adversarial Training: A Theoretical and Empirical Study",
+        "Pretraining Data Scale Reverses the Muon-AdamW Fine-Tuning Gap",
+        "TUON: A Tensor-Aware Optimizer Utilizing Tensor-SVD and Polarization for Large Language Model Pretraining",
+        "LionMuon: Alternating Spectral and Sign Descent for Efficient Training",
+        "Rethinking Muon Beyond Pretraining: Spectral Failures and High-Pass Remedies for VLA and RLVR",
+        "Muon--Adam Training for Overparameterized Neural Networks: Convergence and Generalization",
+        "Generalization Analysis of Muon",
+        "Monarch–Muon: Structure-Aware Muon for Fast and Memory-Efficient Pretraining",
+        "Stiefel-AdamW: Geometry-Aware AdamW for Linear Factorization Blocks",
+        "Muon-C: Operator-Aligned Muon for Convolutional Kernels",
+        "The Row Normalization Puzzle in Muon",
+        "Spectral Deflation for Factorization-Free Matrix Filtering in Muon and Semidefinite Programming",
+        "Rethinking Memory-Efficient Optimizers for LLM Pre-Training",
+        "AGraSS: Understanding and Shaping Gradient Spectra for EEG Learning",
+        "Convergence of Practical Muon with Finite Newton-Schulz Iterations and Nesterov Momentum",
+        "Muon meets Tamed Langevin: Momentum Preconditioning beyond Convex and gradient-Lipschitz Potentials",
+        "Clean: Second-order LLM Training at Linear Memory Cost via Nyström Sketching",
+        "FMuon: Coordinated Momentum Orthogonalization for Federated Training of Large Models",
+        "Optimizers for Diffusion Models: A Controlled Benchmark",
+        "Rank-Efficient LoRA via Joint Tangent-Space Optimization under Isotropic Curvature",
+        "The Illusion of Speed: Uncovering the Trade-Offs of Muon’s Spectral Flattening",
+        "Demystifying Maximum Attention-Logit Dynamics in Muon Training",
+        "Convergence of Practical Muon",
+        "Optimizer Memory Schedules for Outscaling the Overtraining Axis",
+        "Normalize-Then-Precondition: A Hierarchical Approach to Marginal Scale and Interaction Geometry for LLM Training",
+        "MeqMuon: Matrix-Equilibrating Muon for LLM Pretraining",
+        "Musec: MomentUm SpEctral Clipping for Stable Muon-type Training",
+        "Mano: Restriking Manifold Optimization for LLM Pretraining",
+        "When Does Muon Actually Win? A Paired Data-, Time-, and Tuning-Budget Benchmark",
+        "MuonIO: Principled Norm-Aware Descent for Embedding Tables and Language Model Heads",
+        "Same Features, Different Geometry: Localizing Muon's Advantage to the OV Circuit",
+        "Closure Masks for Hardware-Compatible 2:4 Sparse Muon",
+        "Convergence guarantees for Muon: New parameter regimes and generalizations",
+        "Fast BIB simulation at a future Muon Collider with generative machine learning",
+        "Orthogonal Witness Control for Muon Optimization via Sigmoid Spectral Reshaping",
+        "Preconditioning Benefits of Spectral Orthogonalization in Muon",
+        "AdamW Scaling Laws from First Principles",
+        "Muon Under Covariate Shift: Spectral Learning and Temporal Stability",
+        "Sharpness-Aware Minimization and Muon: Robustness Under the Spectral Norm",
+        "DP-Muon: Differentially Private Optimization via Matrix-Orthogonalized Momentum",
+        "AF-Muon: An AdamW-Free Muon Optimizer for Tied-Embedding Models",
+        "FIRMO: Robust Matrix-Aware Optimization for Neural Networks",
+        "FedSubMuon: Communication-Efficient Federated LLM Fine-Tuning via Structured Subspace Muon",
+        "PowerStep: Memory-Efficient Adaptive Optimization via $\\ell_p$-Norm Steepest Descent",
+        "Muon Can Outperform Dedicated Continual Learning Methods",
+        "ChromaMuon: Spectral Optimizer Diagnostics and Design with Retained Newton--Schulz Coordinates",
+        "TMuon: Tangent Momentum improves Muon for LLM Training",
+        "Is Muon Geometrically Unique? Orthonormal Rank-One Systems for Normalized Optimizers",
+        "Taming Softmax at the Limits of Muon: A Unified Approach through Hilbert Geometry",
+        "Muon Sublates the Edge of Stability in LLM Pretraining"
+      ]
+    },
+    {
+      "date": "2026-10-06",
+      "dir": "/Users/myl/Documents/paper/08-daily/2026-10-06",
+      "search_result": "/Users/myl/Documents/paper/08-daily/2026-10-06/search_result.json",
+      "daily_note": "/Users/myl/Documents/paper/08-daily/2026-10-06/今日检索.md",
+      "total_unique": 227,
+      "titles": [
+        "Resource-Adaptive Stochastic Gradient Descent for Online Linear Programming without Re-solving",
+        "Quantile-based Loss Filtering for Outlier-Robust Stochastic Gradient Descent",
+        "Stiefel-AdamW: Geometry-Aware AdamW for Linear Factorization Blocks",
+        "Is Weight Tying Still Beneficial for Decoder-Only LLMs in Private Settings Under DP-SGD?",
+        "Exact information accounting for SGD methods",
+        "High-Probability Convergence of SGD via Batched Updates",
+        "Ordinary Nonconvex SGD under Distance-Dependent Moments: Finite-Horizon Stationarity and Nagaev Bounds",
+        "Finite-Time Concentration and Convergence Rates for Projected Two-Time-Scale Stochastic Approximation with Markov Noise",
+        "Constrained Nonconvex Stochastic Optimization with One Projection",
+        "Stochastic Heavy Ball with Polyak Step Size and Armijo Line Search: A General Convergence Analysis",
+        "ABrA-GD: Adaptive Bregman Accelerated Gradient Descent for Relatively Smooth and (Strongly-)Convex Optimization",
+        "Convergence Analysis of STORM Under Different Geometries",
+        "Solving Finite-sum Coupled Compositional Optimization via Multi-block-Single-probe Estimator",
+        "Generalization Analysis of Distributed Kernel-based Robust Gradient Descent Algorithms",
+        "Differential Privacy of Gradient Descent on Perturbed Objectives",
+        "Lower Bounds for Stochastic First-Order Algorithms with Variance Reduction in Nonconvex--Concave Minimax Optimization",
+        "Optimal Parameter-Free Second-order Acceleration with Inexact Hessians under Generalized Smoothness",
+        "The Exponential Price of Determinism in Nonsmooth Nonconvex Optimization",
+        "Curvature-Independent Regret Bounds for Distributed Online Optimization on Hadamard Manifolds",
+        "Tight Regret Bound for Online Inverse Linear Optimization via Multiscale Matrix Weights",
+        "Stability-Constrained Approximation in Spline KANs: Exact Layer Balancing and Budget-Compatible Saturation",
+        "Adam under Generalized Smoothness with Second-Moment-Type Stochastic Gradients",
+        "Lower Bounds For Gradient-Free Convex Optimization And Convex-Concave Saddle-Point Problems",
+        "Second-Order Smooth Planning with Optimal-Transport Bellman Smoothing",
+        "TR-SSQP: A Trust-Region Method for Constrained Stochastic Optimization under Heavy-Tailed Noise",
+        "Optimizers for Diffusion Models: A Controlled Benchmark",
+        "MuonIO: Principled Norm-Aware Descent for Embedding Tables and Language Model Heads",
+        "Mini-batch Sampling Strategies for Long-Tailed Image Classification: An Empirical Study on CIFAR-100-LT",
+        "Learned Preconditioning for a Primal-Dual Interior-Point Method",
+        "Closing the Accuracy Gap in Stochastic First-Order Bilevel Optimization",
+        "Normalize-Then-Precondition: A Hierarchical Approach to Marginal Scale and Interaction Geometry for LLM Training",
+        "Almost Sure Convergence Analysis of Stochastic Gradient Methods with Clipping and Additive Noise",
+        "Optimizer as Detector: Stochastic Gradient Descent for Latent Mixture Models",
+        "Continuous Delayed-Memory Stochastic Gradient Descent and Continuous-Time Reinforcement Learning from History of Astrophysical Time Series Studies",
+        "OptiSelect: How does the Optimizer Shape Data Curriculum?",
+        "Robustifying Asynchronous SGD via Soft Throttling",
+        "Broken scale symmetries in undercomplete linear autoencoders",
+        "LionMuon: Alternating Spectral and Sign Descent for Efficient Training",
+        "Symmetry-quotient Flatness and Generalization",
+        "A Riemannian Inertial Adaptive Gradient Method with Momentum Restart",
+        "Early stopping of stochastic variance reduced gradient for linear inverse problems by the discrepancy principle",
+        "Asymptotic Lower Bounds for Continuous Optimization",
+        "AdamX: Cosine similarity meets gradient descent",
+        "Matching Lower Bounds for Randomized First-Order Methods in Hessian-Lipschitz Nonconvex Optimization",
+        "Near-Optimal Convex Optimization with Lazy Second-Order Oracles",
+        "Matching Multi-Loop Complexities with a Single Loop: Optimal Optimization Stationarity and Best-Known Game Stationarity in Nonconvex--Concave Minimax Optimization",
+        "Primal Methods for Constrained Variational Inequalities: Optimal Rates, Feasibility Trade-offs, and Lower Bounds",
+        "Joint Lower Bounds for Zeroth-Order Nonconvex Optimization on Euclidean Balls",
+        "Stochastic Gradient Descent over P2",
+        "The Exact Time-Uniform Rate Frontier for Stochastic Gradient Descent on Smooth Convex Objectives"
+      ]
+    },
+    {
+      "date": "2026-10-07",
+      "dir": "/Users/myl/Documents/paper/08-daily/2026-10-07",
+      "search_result": "/Users/myl/Documents/paper/08-daily/2026-10-07/search_result.json",
+      "daily_note": "/Users/myl/Documents/paper/08-daily/2026-10-07/今日检索.md",
+      "total_unique": 235,
+      "titles": [
+        "Resource-Adaptive Stochastic Gradient Descent for Online Linear Programming without Re-solving",
+        "Quantile-based Loss Filtering for Outlier-Robust Stochastic Gradient Descent",
+        "Budget-Constrained Multi-Consensus Decentralized Gradient Descent",
+        "Stiefel-AdamW: Geometry-Aware AdamW for Linear Factorization Blocks",
+        "Is Weight Tying Still Beneficial for Decoder-Only LLMs in Private Settings Under DP-SGD?",
+        "Exact information accounting for SGD methods",
+        "High-Probability Convergence of SGD via Batched Updates",
+        "Ordinary Nonconvex SGD under Distance-Dependent Moments: Finite-Horizon Stationarity and Nagaev Bounds",
+        "Finite-Time Concentration and Convergence Rates for Projected Two-Time-Scale Stochastic Approximation with Markov Noise",
+        "Constrained Nonconvex Stochastic Optimization with One Projection",
+        "Stochastic Heavy Ball with Polyak Step Size and Armijo Line Search: A General Convergence Analysis",
+        "Last-Iterate Convergence Rate of Normalized Gradient Descent under Hölder Smoothness",
+        "ABrA-GD: Adaptive Bregman Accelerated Gradient Descent for Relatively Smooth and (Strongly-)Convex Optimization",
+        "Convergence Analysis of STORM Under Different Geometries",
+        "Solving Finite-sum Coupled Compositional Optimization via Multi-block-Single-probe Estimator",
+        "Generalization Analysis of Distributed Kernel-based Robust Gradient Descent Algorithms",
+        "Differential Privacy of Gradient Descent on Perturbed Objectives",
+        "Lower Bounds for Stochastic First-Order Algorithms with Variance Reduction in Nonconvex--Concave Minimax Optimization",
+        "Optimal Parameter-Free Second-order Acceleration with Inexact Hessians under Generalized Smoothness",
+        "The Exponential Price of Determinism in Nonsmooth Nonconvex Optimization",
+        "Curvature-Independent Regret Bounds for Distributed Online Optimization on Hadamard Manifolds",
+        "Tight Regret Bound for Online Inverse Linear Optimization via Multiscale Matrix Weights",
+        "Stability-Constrained Approximation in Spline KANs: Exact Layer Balancing and Budget-Compatible Saturation",
+        "Adam under Generalized Smoothness with Second-Moment-Type Stochastic Gradients",
+        "Lower Bounds For Gradient-Free Convex Optimization And Convex-Concave Saddle-Point Problems",
+        "TR-SSQP: A Trust-Region Method for Constrained Stochastic Optimization under Heavy-Tailed Noise",
+        "Optimizers for Diffusion Models: A Controlled Benchmark",
+        "MuonIO: Principled Norm-Aware Descent for Embedding Tables and Language Model Heads",
+        "Mini-batch Sampling Strategies for Long-Tailed Image Classification: An Empirical Study on CIFAR-100-LT",
+        "Learned Preconditioning for a Primal-Dual Interior-Point Method",
+        "Closing the Accuracy Gap in Stochastic First-Order Bilevel Optimization",
+        "Normalize-Then-Precondition: A Hierarchical Approach to Marginal Scale and Interaction Geometry for LLM Training",
+        "Almost Sure Convergence Analysis of Stochastic Gradient Methods with Clipping and Additive Noise",
+        "Optimizer as Detector: Stochastic Gradient Descent for Latent Mixture Models",
+        "Continuous Delayed-Memory Stochastic Gradient Descent and Continuous-Time Reinforcement Learning from History of Astrophysical Time Series Studies",
+        "OptiSelect: How does the Optimizer Shape Data Curriculum?",
+        "Robustifying Asynchronous SGD via Soft Throttling",
+        "Broken scale symmetries in undercomplete linear autoencoders",
+        "LionMuon: Alternating Spectral and Sign Descent for Efficient Training",
+        "A Riemannian Inertial Adaptive Gradient Method with Momentum Restart",
+        "Early stopping of stochastic variance reduced gradient for linear inverse problems by the discrepancy principle",
+        "Asymptotic Lower Bounds for Continuous Optimization",
+        "AdamX: Cosine similarity meets gradient descent",
+        "Matching Lower Bounds for Randomized First-Order Methods in Hessian-Lipschitz Nonconvex Optimization",
+        "Near-Optimal Convex Optimization with Lazy Second-Order Oracles",
+        "Matching Multi-Loop Complexities with a Single Loop: Optimal Optimization Stationarity and Best-Known Game Stationarity in Nonconvex--Concave Minimax Optimization",
+        "Primal Methods for Constrained Variational Inequalities: Optimal Rates, Feasibility Trade-offs, and Lower Bounds",
+        "Joint Lower Bounds for Zeroth-Order Nonconvex Optimization on Euclidean Balls",
+        "Stochastic Gradient Descent over P2",
+        "The Exact Time-Uniform Rate Frontier for Stochastic Gradient Descent on Smooth Convex Objectives"
+      ]
+    }
+  ],
+  "daily_topics": {
+    "titles_total": 533,
+    "domain_counts": {
+      "大模型优化器设计": 257,
+      "随机梯度与优化理论": 199,
+      "未分类": 77
+    },
+    "by_domain": {
+      "大模型优化器设计": [
+        {
+          "title": "Sample complexity bounds for categorical Markov random fields via Discrete Diffusions",
+          "score": 8.47,
+          "source": "arxiv",
+          "already_known": false
+        },
+        {
+          "title": "CARM: Cancellation-Aware Response Masking for LLM Reinforcement Learning",
+          "score": 8.33,
+          "source": "arxiv",
+          "already_known": false
+        },
+        {
+          "title": "Polyak-Type Extragradient Methods for Monotone Root-Finding Problems",
+          "score": 8.27,
+          "source": "arxiv",
+          "already_known": false
+        },
+        {
+          "title": "The Curvature of Regret in Contextual Linear Optimization",
+          "score": 8.2,
+          "source": "arxiv",
+          "already_known": false
+        },
+        {
+          "title": "FERPO: Forward Entropy-Regularized Policy Optimization",
+          "score": 8.13,
+          "source": "arxiv",
+          "already_known": false
+        },
+        {
+          "title": "Trust the Direction, Search the Step: Zero-and-First-Order Methods for LLM Fine-Tuning",
+          "score": 8.13,
+          "source": "arxiv",
+          "already_known": false
+        },
+        {
+          "title": "Optimizer Memory Schedules for Outscaling the Overtraining Axis",
+          "score": 8.0,
+          "source": "arxiv",
+          "already_known": true
+        },
+        {
+          "title": "Convergence guarantees for Muon: New parameter regimes and generalizations",
+          "score": 7.93,
+          "source": "arxiv",
+          "already_known": false
+        },
+        {
+          "title": "Convergence of Practical Muon",
+          "score": 7.87,
+          "source": "arxiv",
+          "already_known": false
+        },
+        {
+          "title": "Convergence of Stochastic Gradient Methods under Heavy-Tailed Noise and H\\\"{o}lder Smoothness",
+          "score": 7.87,
+          "source": "arxiv",
+          "already_known": false
+        },
+        {
+          "title": "Linear Programming Representations and Strongly Polynomial Algorithms for Robust Markov Decision Processes",
+          "score": 7.73,
+          "source": "arxiv",
+          "already_known": false
+        },
+        {
+          "title": "Scalable, Transferable Meta-network for Data Selection Requires a Different Loss (and Why the Obvious Choice is Problematic)",
+          "score": 7.73,
+          "source": "arxiv",
+          "already_known": false
+        },
+        {
+          "title": "Optimizers for Diffusion Models: A Controlled Benchmark",
+          "score": 7.73,
+          "source": "arxiv",
+          "already_known": true
+        },
+        {
+          "title": "Muon Sublates the Edge of Stability in LLM Pretraining",
+          "score": 7.53,
+          "source": "arxiv",
+          "already_known": false
+        },
+        {
+          "title": "Low-Rank Friction for Memory-Efficient Transformer Pretraining",
+          "score": 7.53,
+          "source": "arxiv",
+          "already_known": false
+        },
+        {
+          "title": "TACO: Ternary Absolute-max Column-wise One-sparse Optimizer for LLM Fine-Tuning",
+          "score": 7.4,
+          "source": "arxiv",
+          "already_known": false
+        },
+        {
+          "title": "High-Probability Guarantees for SGD under $\\beta$-Heavy-Tailed Gradient Noise",
+          "score": 7.4,
+          "source": "arxiv",
+          "already_known": false
+        },
+        {
+          "title": "A stochastic subgradient method with optimal failure exponent",
+          "score": 7.4,
+          "source": "arxiv",
+          "already_known": false
+        },
+        {
+          "title": "Physical Muon: Orthogonalization as an Equilibrium Computation",
+          "score": 7.4,
+          "source": "arxiv",
+          "already_known": false
+        },
+        {
+          "title": "Muon in Vision Transformers: Optimizer-Recipe Interactions and Gradient Spectra",
+          "score": 7.13,
+          "source": "arxiv",
+          "already_known": false
+        },
+        {
+          "title": "Towards Better Training Signal: Advantage Clipped Policy Optimization",
+          "score": 7.07,
+          "source": "arxiv",
+          "already_known": false
+        },
+        {
+          "title": "Muon Under Gradient Noise and the Limits of Orthogonalization Near Optima",
+          "score": 7.0,
+          "source": "arxiv",
+          "already_known": false
+        },
+        {
+          "title": "LionMuon: Alternating Spectral and Sign Descent for Efficient Training",
+          "score": 6.87,
+          "source": "openreview",
+          "already_known": true
+        },
+        {
+          "title": "Faynt: Scaling and Optimizing Policies for Competitive Melee",
+          "score": 6.77,
+          "source": "arxiv",
+          "already_known": false
+        },
+        {
+          "title": "Monarch–Muon: Structure-Aware Muon for Fast and Memory-Efficient Pretraining",
+          "score": 6.73,
+          "source": "openreview",
+          "already_known": false
+        },
+        {
+          "title": "Are We Recovering Mechanisms? Objective-Level Recovery Gaps in Mechanistic Interpretability",
+          "score": 6.7,
+          "source": "arxiv",
+          "already_known": false
+        },
+        {
+          "title": "Local Support Learning",
+          "score": 6.43,
+          "source": "arxiv",
+          "already_known": false
+        },
+        {
+          "title": "Distributionally Robust Schrödinger Bridge",
+          "score": 6.43,
+          "source": "arxiv",
+          "already_known": false
+        },
+        {
+          "title": "Minimal Experiments for Robust Stabilization: Information, Spectral Geometry, and Duration",
+          "score": 6.1,
+          "source": "arxiv",
+          "already_known": false
+        },
+        {
+          "title": "Geometry and Convergence of Quadratically Regularized Optimal Transport II",
+          "score": 6.03,
+          "source": "arxiv",
+          "already_known": false
+        }
+      ],
+      "随机梯度与优化理论": [
+        {
+          "title": "Curvature-Aware Clipping: Mitigating Bias in DPSGD via Approximate Second-Order Information",
+          "score": 7.8,
+          "source": "openreview",
+          "already_known": false
+        },
+        {
+          "title": "SoftServe: A Scalable Quasi-Newton Method for Deep Learning",
+          "score": 7.73,
+          "source": "arxiv",
+          "already_known": false
+        },
+        {
+          "title": "From Geometry to Generalization: Why Row Normalization Can Beat Adam and Muon",
+          "score": 6.43,
+          "source": "openreview",
+          "already_known": false
+        },
+        {
+          "title": "Sign compression for Muon: SignMuon, MuonSign, and the Limits of Error Feedback",
+          "score": 5.91,
+          "source": "openreview",
+          "already_known": false
+        },
+        {
+          "title": "Homomorphic Advantage Operator: Stabilizing Reinforcement Learning Under Fully Homomorphic Encryption Constraints",
+          "score": 4.88,
+          "source": "arxiv",
+          "already_known": false
+        },
+        {
+          "title": "Adaptive Quantile Clipping under Heavy-Tailed Noise and Differential Privacy",
+          "score": 4.68,
+          "source": "openreview",
+          "already_known": false
+        },
+        {
+          "title": "How Does Muon Work in Private Deep Learning? Scalable Differentially Private Training via Orthogonalization",
+          "score": 4.21,
+          "source": "openreview",
+          "already_known": false
+        },
+        {
+          "title": "Low-rank orthogonalization for large-scale matrix optimization with applications to foundation model training",
+          "score": 3.44,
+          "source": "openreview",
+          "already_known": false
+        },
+        {
+          "title": "Quantile-based Loss Filtering for Outlier-Robust Stochastic Gradient Descent",
+          "score": 8.67,
+          "source": "arxiv",
+          "already_known": true
+        },
+        {
+          "title": "Is Weight Tying Still Beneficial for Decoder-Only LLMs in Private Settings Under DP-SGD?",
+          "score": 8.29,
+          "source": "arxiv",
+          "already_known": false
+        },
+        {
+          "title": "Constrained Nonconvex Stochastic Optimization with One Projection",
+          "score": 8.27,
+          "source": "arxiv",
+          "already_known": true
+        },
+        {
+          "title": "ABrA-GD: Adaptive Bregman Accelerated Gradient Descent for Relatively Smooth and (Strongly-)Convex Optimization",
+          "score": 8.27,
+          "source": "arxiv",
+          "already_known": false
+        },
+        {
+          "title": "Optimal Parameter-Free Second-order Acceleration with Inexact Hessians under Generalized Smoothness",
+          "score": 8.27,
+          "source": "arxiv",
+          "already_known": true
+        },
+        {
+          "title": "Adam under Generalized Smoothness with Second-Moment-Type Stochastic Gradients",
+          "score": 8.16,
+          "source": "arxiv",
+          "already_known": true
+        },
+        {
+          "title": "Lower Bounds For Gradient-Free Convex Optimization And Convex-Concave Saddle-Point Problems",
+          "score": 8.16,
+          "source": "arxiv",
+          "already_known": false
+        },
+        {
+          "title": "Second-Order Smooth Planning with Optimal-Transport Bellman Smoothing",
+          "score": 8.16,
+          "source": "arxiv",
+          "already_known": true
+        },
+        {
+          "title": "Optimizer as Detector: Stochastic Gradient Descent for Latent Mixture Models",
+          "score": 7.93,
+          "source": "arxiv",
+          "already_known": true
+        },
+        {
+          "title": "Continuous Delayed-Memory Stochastic Gradient Descent and Continuous-Time Reinforcement Learning from History of Astrophysical Time Series Studies",
+          "score": 7.93,
+          "source": "arxiv",
+          "already_known": true
+        },
+        {
+          "title": "A Riemannian Inertial Adaptive Gradient Method with Momentum Restart",
+          "score": 7.93,
+          "source": "arxiv",
+          "already_known": true
+        },
+        {
+          "title": "Early stopping of stochastic variance reduced gradient for linear inverse problems by the discrepancy principle",
+          "score": 7.93,
+          "source": "arxiv",
+          "already_known": true
+        },
+        {
+          "title": "Asymptotic Lower Bounds for Continuous Optimization",
+          "score": 7.93,
+          "source": "arxiv",
+          "already_known": true
+        },
+        {
+          "title": "Matching Lower Bounds for Randomized First-Order Methods in Hessian-Lipschitz Nonconvex Optimization",
+          "score": 7.93,
+          "source": "arxiv",
+          "already_known": false
+        },
+        {
+          "title": "Primal Methods for Constrained Variational Inequalities: Optimal Rates, Feasibility Trade-offs, and Lower Bounds",
+          "score": 7.93,
+          "source": "arxiv",
+          "already_known": true
+        },
+        {
+          "title": "Joint Lower Bounds for Zeroth-Order Nonconvex Optimization on Euclidean Balls",
+          "score": 7.9,
+          "source": "arxiv",
+          "already_known": false
+        },
+        {
+          "title": "Convergence of a Randomized Newton Method in Nonconvex Optimization",
+          "score": 7.9,
+          "source": "arxiv",
+          "already_known": true
+        },
+        {
+          "title": "Stronger Lower Bounds for (Non-)Anytime Acceleration of Gradient Descent",
+          "score": 7.87,
+          "source": "arxiv",
+          "already_known": true
+        },
+        {
+          "title": "Second-Order Stationarity with Common Random Losses: Matching Tolerance Bounds",
+          "score": 7.87,
+          "source": "arxiv",
+          "already_known": true
+        },
+        {
+          "title": "Complexity analysis of trust-region methods under $(α,L_0,L_1)$-smoothness",
+          "score": 7.87,
+          "source": "arxiv",
+          "already_known": false
+        },
+        {
+          "title": "Matrix AdaGrad: Row-wise and Column-wise Adaptive Subgradient Methods",
+          "score": 7.82,
+          "source": "arxiv",
+          "already_known": true
+        },
+        {
+          "title": "The Complexity of Finding Stationary Points in Nonsmooth Nonconvex Optimization",
+          "score": 7.82,
+          "source": "arxiv",
+          "already_known": true
+        }
+      ],
+      "未分类": [
+        {
+          "title": "Fast BIB simulation at a future Muon Collider with generative machine learning",
+          "score": 7.75,
+          "source": "arxiv",
+          "already_known": false
+        },
+        {
+          "title": "An Operator Analysis of Radiative Muon Decay",
+          "score": 6.85,
+          "source": "arxiv",
+          "already_known": false
+        },
+        {
+          "title": "Development of a Physics-Informed Neural Framework, MEOWN, for Rapid Prediction of Muon Stopping Sites in Crystalline Materials, for understanding Quantum Magnet employing Muon Spectroscopy",
+          "score": 6.65,
+          "source": "arxiv",
+          "already_known": false
+        },
+        {
+          "title": "Estimating High-Energy Neutrino Effective Areas from Muon Propagation",
+          "score": 6.65,
+          "source": "arxiv",
+          "already_known": false
+        },
+        {
+          "title": "Neutrino trident process at a muon collider",
+          "score": 6.45,
+          "source": "arxiv",
+          "already_known": false
+        },
+        {
+          "title": "Projected Sensitivity to Slow Muonphilic Dark Matter with Accelerator Muon Beams",
+          "score": 6.45,
+          "source": "arxiv",
+          "already_known": false
+        },
+        {
+          "title": "Muon decay across scales: from LEFT to SMEFT",
+          "score": 6.45,
+          "source": "arxiv",
+          "already_known": false
+        },
+        {
+          "title": "Connecting Vector-like Muons, pNGB Dark Matter and Electroweak Phase Transition through Collider and Gravitational Wave",
+          "score": 6.45,
+          "source": "arxiv",
+          "already_known": false
+        },
+        {
+          "title": "Probing anomalous $hZγ$ couplings in single Higgs production at future muon colliders",
+          "score": 6.45,
+          "source": "arxiv",
+          "already_known": false
+        },
+        {
+          "title": "Probing the Tau Neutrino Magnetic Moment via the $μ^{-}γ\\rightarrow μ^{-}ν\\barν$ Process at Future Muon Colliders",
+          "score": 6.45,
+          "source": "arxiv",
+          "already_known": false
+        },
+        {
+          "title": "Probing the Inert Scalar Sector of the Inert Doublet Model via Vector-Boson Fusion at a Muon Collider",
+          "score": 6.45,
+          "source": "arxiv",
+          "already_known": false
+        },
+        {
+          "title": "Data-driven analysis of muon flux variations in muography time series at the Sos Enattos Mine",
+          "score": 6.38,
+          "source": "arxiv",
+          "already_known": false
+        },
+        {
+          "title": "Prospects for precision Higgs boson measurements at a 10 TeV muon collider",
+          "score": 6.38,
+          "source": "arxiv",
+          "already_known": false
+        },
+        {
+          "title": "Search for a light pseudoscalar Higgs boson in final states with boosted muon pairs and tau lepton pairs in proton-proton collisions at $\\sqrt{s}$ = 13 TeV",
+          "score": 6.38,
+          "source": "arxiv",
+          "already_known": false
+        },
+        {
+          "title": "Kilojoule-scale laser acceleration enabling efficient generation of electron-positron and muon beams",
+          "score": 6.25,
+          "source": "arxiv",
+          "already_known": false
+        },
+        {
+          "title": "GNN-based track reconstruction for MUonE experiment",
+          "score": 6.12,
+          "source": "arxiv",
+          "already_known": false
+        },
+        {
+          "title": "Hyperfine-driven polarization effects in elastic muon scattering by atomic nuclei",
+          "score": 6.12,
+          "source": "arxiv",
+          "already_known": false
+        },
+        {
+          "title": "Simulation study of accelerator-based muography using the GeV-scale forward muon component at SHINE",
+          "score": 6.12,
+          "source": "arxiv",
+          "already_known": false
+        },
+        {
+          "title": "Vanilla Scotogenic Model at the future Muon Collider",
+          "score": 6.12,
+          "source": "arxiv",
+          "already_known": false
+        },
+        {
+          "title": "The LHC is not enough: the LZ High-Recoil Event at FCC-hh and a Muon Collider",
+          "score": 6.12,
+          "source": "arxiv",
+          "already_known": false
+        },
+        {
+          "title": "Toponium Production at Future Muon Colliders and in heavy ion ultraperipheral collisions",
+          "score": 6.12,
+          "source": "arxiv",
+          "already_known": false
+        },
+        {
+          "title": "Improved calculation of the hyperfine structure of muonic helium",
+          "score": 6.12,
+          "source": "arxiv",
+          "already_known": false
+        },
+        {
+          "title": "Searching for new physics with contact-free transitions in muonic atoms",
+          "score": 6.12,
+          "source": "arxiv",
+          "already_known": false
+        },
+        {
+          "title": "Spacetimes of maximal proper acceleration and muon mean lifetime",
+          "score": 6.05,
+          "source": "arxiv",
+          "already_known": false
+        },
+        {
+          "title": "Probing Neutrinophilic Scalars in Muon Decays",
+          "score": 6.05,
+          "source": "arxiv",
+          "already_known": false
+        },
+        {
+          "title": "Suitability studies of exotic muon decay at the High Intensity heavy-ion Accelerator Facility",
+          "score": 5.98,
+          "source": "arxiv",
+          "already_known": false
+        },
+        {
+          "title": "Muon Detection and Direction Reconstruction with the Upgraded 1-ton Water Cherenkov Prototype Detector at CJPL-I",
+          "score": 5.98,
+          "source": "arxiv",
+          "already_known": false
+        },
+        {
+          "title": "Future Muon Physics Experiments: Muon Beams and Experimental Apparatus",
+          "score": 5.72,
+          "source": "arxiv",
+          "already_known": false
+        },
+        {
+          "title": "Progress in Muon Cooling and Moderation Techniques",
+          "score": 5.72,
+          "source": "arxiv",
+          "already_known": false
+        },
+        {
+          "title": "Imaging with GeV muons produced via laser-wakefield-accelerated electrons",
+          "score": 5.72,
+          "source": "arxiv",
+          "already_known": false
+        }
+      ]
+    },
+    "top_scored": [
+      {
+        "title": "When Muon Optimizer Meets Adversarial Training: A Theoretical and Empirical Study",
+        "score": 8.67,
+        "domain": "随机梯度与优化理论"
+      },
+      {
+        "title": "Resource-Adaptive Stochastic Gradient Descent for Online Linear Programming without Re-solving",
+        "score": 8.67,
+        "domain": "大模型优化器设计"
+      },
+      {
+        "title": "Quantile-based Loss Filtering for Outlier-Robust Stochastic Gradient Descent",
+        "score": 8.67,
+        "domain": "随机梯度与优化理论"
+      },
+      {
+        "title": "Pretraining Data Scale Reverses the Muon-AdamW Fine-Tuning Gap",
+        "score": 8.67,
+        "domain": "大模型优化器设计"
+      },
+      {
+        "title": "Budget-Constrained Multi-Consensus Decentralized Gradient Descent",
+        "score": 8.56,
+        "domain": "随机梯度与优化理论"
+      },
+      {
+        "title": "Sample complexity bounds for categorical Markov random fields via Discrete Diffusions",
+        "score": 8.47,
+        "domain": "大模型优化器设计"
+      },
+      {
+        "title": "TUON: A Tensor-Aware Optimizer Utilizing Tensor-SVD and Polarization for Large Language Model Pretraining",
+        "score": 8.33,
+        "domain": "大模型优化器设计"
+      },
+      {
+        "title": "Stiefel-AdamW: Geometry-Aware AdamW for Linear Factorization Blocks",
+        "score": 8.33,
+        "domain": "大模型优化器设计"
+      },
+      {
+        "title": "CARM: Cancellation-Aware Response Masking for LLM Reinforcement Learning",
+        "score": 8.33,
+        "domain": "大模型优化器设计"
+      },
+      {
+        "title": "Is Weight Tying Still Beneficial for Decoder-Only LLMs in Private Settings Under DP-SGD?",
+        "score": 8.29,
+        "domain": "随机梯度与优化理论"
+      },
+      {
+        "title": "Tight Regret Bound for Online Inverse Linear Optimization via Multiscale Matrix Weights",
+        "score": 8.27,
+        "domain": "大模型优化器设计"
+      },
+      {
+        "title": "The Exponential Price of Determinism in Nonsmooth Nonconvex Optimization",
+        "score": 8.27,
+        "domain": "大模型优化器设计"
+      },
+      {
+        "title": "Stochastic Heavy Ball with Polyak Step Size and Armijo Line Search: A General Convergence Analysis",
+        "score": 8.27,
+        "domain": "大模型优化器设计"
+      },
+      {
+        "title": "Stability-Constrained Approximation in Spline KANs: Exact Layer Balancing and Budget-Compatible Saturation",
+        "score": 8.27,
+        "domain": "大模型优化器设计"
+      },
+      {
+        "title": "Sparse Data Augmentation for Optimization with Provable Guarantees",
+        "score": 8.27,
+        "domain": "大模型优化器设计"
+      },
+      {
+        "title": "Solving Finite-sum Coupled Compositional Optimization via Multi-block-Single-probe Estimator",
+        "score": 8.27,
+        "domain": "大模型优化器设计"
+      },
+      {
+        "title": "Rethinking Muon Beyond Pretraining: Spectral Failures and High-Pass Remedies for VLA and RLVR",
+        "score": 8.27,
+        "domain": "大模型优化器设计"
+      },
+      {
+        "title": "Polyak-Type Extragradient Methods for Monotone Root-Finding Problems",
+        "score": 8.27,
+        "domain": "大模型优化器设计"
+      },
+      {
+        "title": "Ordinary Nonconvex SGD under Distance-Dependent Moments: Finite-Horizon Stationarity and Nagaev Bounds",
+        "score": 8.27,
+        "domain": "大模型优化器设计"
+      },
+      {
+        "title": "Optimal Parameter-Free Second-order Acceleration with Inexact Hessians under Generalized Smoothness",
+        "score": 8.27,
+        "domain": "随机梯度与优化理论"
+      },
+      {
+        "title": "Muon--Adam Training for Overparameterized Neural Networks: Convergence and Generalization",
+        "score": 8.27,
+        "domain": "大模型优化器设计"
+      },
+      {
+        "title": "Lower Bounds for Stochastic First-Order Algorithms with Variance Reduction in Nonconvex--Concave Minimax Optimization",
+        "score": 8.27,
+        "domain": "大模型优化器设计"
+      },
+      {
+        "title": "Last-Iterate Convergence Rate of Normalized Gradient Descent under Hölder Smoothness",
+        "score": 8.27,
+        "domain": "大模型优化器设计"
+      },
+      {
+        "title": "High-Probability Convergence of SGD via Batched Updates",
+        "score": 8.27,
+        "domain": "大模型优化器设计"
+      },
+      {
+        "title": "Generalization Analysis of Muon",
+        "score": 8.27,
+        "domain": "大模型优化器设计"
+      },
+      {
+        "title": "Generalization Analysis of Distributed Kernel-based Robust Gradient Descent Algorithms",
+        "score": 8.27,
+        "domain": "大模型优化器设计"
+      },
+      {
+        "title": "Finite-Time Concentration and Convergence Rates for Projected Two-Time-Scale Stochastic Approximation with Markov Noise",
+        "score": 8.27,
+        "domain": "大模型优化器设计"
+      },
+      {
+        "title": "Exact information accounting for SGD methods",
+        "score": 8.27,
+        "domain": "大模型优化器设计"
+      },
+      {
+        "title": "Differential Privacy of Gradient Descent on Perturbed Objectives",
+        "score": 8.27,
+        "domain": "大模型优化器设计"
+      },
+      {
+        "title": "Curvature-Independent Regret Bounds for Distributed Online Optimization on Hadamard Manifolds",
+        "score": 8.27,
+        "domain": "大模型优化器设计"
+      }
+    ]
+  },
+  "papers": [
+    {
+      "stem": "lastiterateconvergencerateofnormalizedgradientdescentunderhldersmoothness",
+      "files": [
+        {
+          "path": "01-raw/2026-10/Last_Iterate_Convergence_Rate_of_Normalized_Gradient_Descent_under_Hölder_Smoothness.pdf",
+          "kind": "git",
+          "root": "01-raw",
+          "git_added": "2026-10-07"
+        }
+      ],
+      "mtime": "",
+      "month": "2026-10",
+      "roots": [
+        "01-raw"
+      ],
+      "priority": 4,
+      "git_added": "2026-10-07",
+      "git_subject": "docs(daily): 归档10月7日优化器文献日报与原文"
+    },
+    {
+      "stem": "secondmomentstochasticapproximationmethods",
+      "files": [
+        {
+          "path": "01-raw/2026-10/Second_Moment_Stochastic_Approximation_Methods.pdf",
+          "kind": "git",
+          "root": "01-raw",
+          "git_added": "2026-10-07"
+        }
+      ],
+      "mtime": "",
+      "month": "2026-10",
+      "roots": [
+        "01-raw"
+      ],
+      "priority": 4,
+      "git_added": "2026-10-07",
+      "git_subject": "docs(daily): 归档10月7日优化器文献日报与原文"
+    },
+    {
+      "stem": "softserveascalablequasinewtonmethodfordeeplearning",
+      "files": [
+        {
+          "path": "01-raw/2026-10/SoftServe_A_Scalable_Quasi_Newton_Method_for_Deep_Learning.pdf",
+          "kind": "git",
+          "root": "01-raw",
+          "git_added": "2026-10-07"
+        }
+      ],
+      "mtime": "",
+      "month": "2026-10",
+      "roots": [
+        "01-raw"
+      ],
+      "priority": 4,
+      "git_added": "2026-10-07",
+      "git_subject": "docs(daily): 归档10月7日优化器文献日报与原文"
+    },
+    {
+      "stem": "cleansecondorderllmtrainingatlinearmemorycostvianystrmsketching",
+      "files": [
+        {
+          "path": "01-raw/2026-10/Clean_Second_order_LLM_Training_at_Linear_Memory_Cost_via_Nyström_Sketching.pdf",
+          "kind": "git",
+          "root": "01-raw",
+          "git_added": "2026-10-06"
+        }
+      ],
+      "mtime": "",
+      "month": "2026-10",
+      "roots": [
+        "01-raw"
+      ],
+      "priority": 4,
+      "git_added": "2026-10-06",
+      "git_subject": "docs(daily): 归档10月6日优化器文献日报与原文"
+    },
+    {
+      "stem": "muonioprinciplednormawaredescentforembeddingtablesandlanguagemodelheads",
+      "files": [
+        {
+          "path": "01-raw/2026-10/MuonIO_Principled_Norm_Aware_Descent_for_Embedding_Tables_and_Language_Model_Heads.pdf",
+          "kind": "git",
+          "root": "01-raw",
+          "git_added": "2026-10-06"
+        }
+      ],
+      "mtime": "",
+      "month": "2026-10",
+      "roots": [
+        "01-raw"
+      ],
+      "priority": 4,
+      "git_added": "2026-10-06",
+      "git_subject": "docs(daily): 归档10月6日优化器文献日报与原文"
+    },
+    {
+      "stem": "optiselecthowdoestheoptimizershapedatacurriculum",
+      "files": [
+        {
+          "path": "01-raw/2026-10/OptiSelect_How_does_the_Optimizer_Shape_Data_Curriculum.pdf",
+          "kind": "git",
+          "root": "01-raw",
+          "git_added": "2026-10-06"
+        }
+      ],
+      "mtime": "",
+      "month": "2026-10",
+      "roots": [
+        "01-raw"
+      ],
+      "priority": 4,
+      "git_added": "2026-10-06",
+      "git_subject": "docs(daily): 归档10月6日优化器文献日报与原文"
+    },
+    {
+      "stem": "meqmuonmatrixequilibratingmuonforllmpretraining",
+      "files": [
+        {
+          "path": "01-raw/2026-10/MeqMuon_Matrix_Equilibrating_Muon_for_LLM_Pretraining.pdf",
+          "kind": "git",
+          "root": "01-raw",
+          "git_added": "2026-10-04"
+        }
+      ],
+      "mtime": "",
+      "month": "2026-10",
+      "roots": [
+        "01-raw"
+      ],
+      "priority": 4,
+      "git_added": "2026-10-04",
+      "git_subject": "docs(daily): 归档10月4日大模型优化器实验文献"
+    },
+    {
+      "stem": "tacoternaryabsolutemaxcolumnwiseonesparseoptimizerforllmfinetuning",
+      "files": [
+        {
+          "path": "01-raw/2026-10/TACO_Ternary_Absolute_max_Column_wise_One_sparse_Optimizer_for_LLM_Fine_Tuning.pdf",
+          "kind": "git",
+          "root": "01-raw",
+          "git_added": "2026-10-04"
+        }
+      ],
+      "mtime": "",
+      "month": "2026-10",
+      "roots": [
+        "01-raw"
+      ],
+      "priority": 4,
+      "git_added": "2026-10-04",
+      "git_subject": "docs(daily): 归档10月4日大模型优化器实验文献"
+    },
+    {
+      "stem": "abragdadaptivebregmanacceleratedgradientdescentforrelativelysmoothandstronglyconvexoptimization",
+      "files": [
+        {
+          "path": "01-raw/2026-10/ABrA_GD_Adaptive_Bregman_Accelerated_Gradient_Descent_for_Relatively_Smooth_and_(Strongly_)Convex_Optimization.pdf",
+          "kind": "git",
+          "root": "01-raw",
+          "git_added": "2026-10-04"
+        }
+      ],
+      "mtime": "",
+      "month": "2026-10",
+      "roots": [
+        "01-raw"
+      ],
+      "priority": 4,
+      "git_added": "2026-10-04",
+      "git_subject": "docs(daily): 归档10月3日论文检索与原文"
+    },
+    {
+      "stem": "convergenceanalysisofstormunderdifferentgeometries",
+      "files": [
+        {
+          "path": "01-raw/2026-10/Convergence_Analysis_of_STORM_Under_Different_Geometries.pdf",
+          "kind": "git",
+          "root": "01-raw",
+          "git_added": "2026-10-04"
+        }
+      ],
+      "mtime": "",
+      "month": "2026-10",
+      "roots": [
+        "01-raw"
+      ],
+      "priority": 4,
+      "git_added": "2026-10-04",
+      "git_subject": "docs(daily): 归档10月3日论文检索与原文"
+    },
+    {
+      "stem": "isweighttyingstillbeneficialfordecoderonlyllmsinprivatesettingsunderdpsgd",
+      "files": [
+        {
+          "path": "01-raw/2026-10/Is_Weight_Tying_Still_Beneficial_for_Decoder_Only_LLMs_in_Private_Settings_Under_DP_SGD.pdf",
+          "kind": "git",
+          "root": "01-raw",
+          "git_added": "2026-10-04"
+        }
+      ],
+      "mtime": "",
+      "month": "2026-10",
+      "roots": [
+        "01-raw"
+      ],
+      "priority": 4,
+      "git_added": "2026-10-04",
+      "git_subject": "docs(daily): 归档10月3日论文检索与原文"
+    },
+    {
+      "stem": "images",
+      "files": [
+        {
+          "path": "/Users/myl/Documents/paper/02-markdown/2026-10/images/A_Zeroth_Order_Paradigm_for_LLM_Preference_Alignment/fig4.jpg",
+          "kind": "jpg",
+          "root": "02-markdown"
+        },
+        {
+          "path": "/Users/myl/Documents/paper/02-markdown/2026-10/images/A_Zeroth_Order_Paradigm_for_LLM_Preference_Alignment/fig1.jpg",
+          "kind": "jpg",
+          "root": "02-markdown"
+        },
+        {
+          "path": "/Users/myl/Documents/paper/02-markdown/2026-10/images/A_Zeroth_Order_Paradigm_for_LLM_Preference_Alignment/fig3.jpg",
+          "kind": "jpg",
+          "root": "02-markdown"
+        },
+        {
+          "path": "/Users/myl/Documents/paper/02-markdown/2026-10/images/A_Zeroth_Order_Paradigm_for_LLM_Preference_Alignment/fig2.jpg",
+          "kind": "jpg",
+          "root": "02-markdown"
+        }
+      ],
+      "mtime": "2026-10-04",
+      "month": "2026-10",
+      "roots": [
+        "02-markdown"
+      ],
+      "priority": 3
+    },
+    {
+      "stem": "azerothorderparadigmforllmpreferencealignment",
+      "files": [
+        {
+          "path": "/Users/myl/Documents/paper/03-notes/2026-10/A_Zeroth_Order_Paradigm_for_LLM_Preference_Alignment/精读.md",
+          "kind": "md",
+          "root": "03-notes"
+        },
+        {
+          "path": "/Users/myl/Documents/paper/03-notes/2026-10/A_Zeroth_Order_Paradigm_for_LLM_Preference_Alignment/images/fig1.png",
+          "kind": "png",
+          "root": "03-notes"
+        },
+        {
+          "path": "/Users/myl/Documents/paper/03-notes/2026-10/A_Zeroth_Order_Paradigm_for_LLM_Preference_Alignment/images/fig2.png",
+          "kind": "png",
+          "root": "03-notes"
+        },
+        {
+          "path": "/Users/myl/Documents/paper/02-markdown/2026-10/A_Zeroth_Order_Paradigm_for_LLM_Preference_Alignment.md",
+          "kind": "md",
+          "root": "02-markdown"
+        },
+        {
+          "path": "01-raw/2026-10/A_Zeroth_Order_Paradigm_for_LLM_Preference_Alignment.pdf",
+          "kind": "git",
+          "root": "01-raw",
+          "git_added": "2026-10-04"
+        },
+        {
+          "path": "02-markdown/2026-10/A_Zeroth_Order_Paradigm_for_LLM_Preference_Alignment.md",
+          "kind": "git",
+          "root": "02-markdown",
+          "git_added": "2026-10-04"
+        },
+        {
+          "path": "03-notes/2026-10/A_Zeroth_Order_Paradigm_for_LLM_Preference_Alignment/精读.md",
+          "kind": "git",
+          "root": "03-notes",
+          "git_added": "2026-10-04"
+        }
+      ],
+      "mtime": "2026-10-04",
+      "month": "2026-10",
+      "roots": [
+        "03-notes",
+        "02-markdown",
+        "01-raw"
+      ],
+      "priority": 2,
+      "git_added": "2026-10-04",
+      "git_subject": "feat(translation): 新增偏好对齐论文双栏译文",
+      "assets": {
+        "06-translation": {
+          "extract": "existence_only",
+          "files": [
+            "双栏对比.pdf"
+          ]
+        }
+      }
+    },
+    {
+      "stem": "convergenceguaranteesformuonnewparameterregimesandgeneralizations",
+      "files": [
+        {
+          "path": "01-raw/2026-10/Convergence_guarantees_for_Muon_New_parameter_regimes_and_generalizations.pdf",
+          "kind": "git",
+          "root": "01-raw",
+          "git_added": "2026-10-02"
+        }
+      ],
+      "mtime": "",
+      "month": "2026-10",
+      "roots": [
+        "01-raw"
+      ],
+      "priority": 4,
+      "git_added": "2026-10-02",
+      "git_subject": "docs(daily): 归档10月2日论文检索与原文"
+    },
+    {
+      "stem": "convergenceofstochasticgradientmethodsunderheavytailednoiseandholdersmoothness",
+      "files": [
+        {
+          "path": "01-raw/2026-10/Convergence_of_Stochastic_Gradient_Methods_under_Heavy_Tailed_Noise_and_H_{o}lder_Smoothness.pdf",
+          "kind": "git",
+          "root": "01-raw",
+          "git_added": "2026-10-02"
+        }
+      ],
+      "mtime": "",
+      "month": "2026-10",
+      "roots": [
+        "01-raw"
+      ],
+      "priority": 4,
+      "git_added": "2026-10-02",
+      "git_subject": "docs(daily): 归档10月2日论文检索与原文"
+    },
+    {
+      "stem": "polyaktypeextragradientmethodsformonotonerootfindingproblems",
+      "files": [
+        {
+          "path": "01-raw/2026-10/Polyak_Type_Extragradient_Methods_for_Monotone_Root_Finding_Problems.pdf",
+          "kind": "git",
+          "root": "01-raw",
+          "git_added": "2026-10-02"
+        }
+      ],
+      "mtime": "",
+      "month": "2026-10",
+      "roots": [
+        "01-raw"
+      ],
+      "priority": 4,
+      "git_added": "2026-10-02",
+      "git_subject": "docs(daily): 归档10月2日论文检索与原文"
+    }
+  ],
+  "papers_total": 16,
+  "daily_total": 5,
+  "reading_log": [],
+  "git_added": {
+    "available": true,
+    "error": null,
+    "commits": 7,
+    "stems": [
+      "convergenceguaranteesformuonnewparameterregimesandgeneralizations",
+      "convergenceofstochasticgradientmethodsunderheavytailednoiseandholdersmoothness",
+      "polyaktypeextragradientmethodsformonotonerootfindingproblems",
+      "meqmuonmatrixequilibratingmuonforllmpretraining",
+      "tacoternaryabsolutemaxcolumnwiseonesparseoptimizerforllmfinetuning",
+      "azerothorderparadigmforllmpreferencealignment",
+      "abragdadaptivebregmanacceleratedgradientdescentforrelativelysmoothandstronglyconvexoptimization",
+      "convergenceanalysisofstormunderdifferentgeometries",
+      "isweighttyingstillbeneficialfordecoderonlyllmsinprivatesettingsunderdpsgd",
+      "cleansecondorderllmtrainingatlinearmemorycostvianystrmsketching",
+      "muonioprinciplednormawaredescentforembeddingtablesandlanguagemodelheads",
+      "optiselecthowdoestheoptimizershapedatacurriculum",
+      "lastiterateconvergencerateofnormalizedgradientdescentunderhldersmoothness",
+      "secondmomentstochasticapproximationmethods",
+      "softserveascalablequasinewtonmethodfordeeplearning"
+    ],
+    "roots": {
+      "01-raw": 15,
+      "02-markdown": 1,
+      "03-notes": 1
+    },
+    "files": [
+      {
+        "stem": "convergenceguaranteesformuonnewparameterregimesandgeneralizations",
+        "files": [
+          {
+            "path": "01-raw/2026-10/Convergence_guarantees_for_Muon_New_parameter_regimes_and_generalizations.pdf",
+            "root": "01-raw"
+          }
+        ],
+        "first_commit_date": "2026-10-02",
+        "commit_subject": "docs(daily): 归档10月2日论文检索与原文",
+        "month": "2026-10"
+      },
+      {
+        "stem": "convergenceofstochasticgradientmethodsunderheavytailednoiseandholdersmoothness",
+        "files": [
+          {
+            "path": "01-raw/2026-10/Convergence_of_Stochastic_Gradient_Methods_under_Heavy_Tailed_Noise_and_H_{o}lder_Smoothness.pdf",
+            "root": "01-raw"
+          }
+        ],
+        "first_commit_date": "2026-10-02",
+        "commit_subject": "docs(daily): 归档10月2日论文检索与原文",
+        "month": "2026-10"
+      },
+      {
+        "stem": "polyaktypeextragradientmethodsformonotonerootfindingproblems",
+        "files": [
+          {
+            "path": "01-raw/2026-10/Polyak_Type_Extragradient_Methods_for_Monotone_Root_Finding_Problems.pdf",
+            "root": "01-raw"
+          }
+        ],
+        "first_commit_date": "2026-10-02",
+        "commit_subject": "docs(daily): 归档10月2日论文检索与原文",
+        "month": "2026-10"
+      },
+      {
+        "stem": "meqmuonmatrixequilibratingmuonforllmpretraining",
+        "files": [
+          {
+            "path": "01-raw/2026-10/MeqMuon_Matrix_Equilibrating_Muon_for_LLM_Pretraining.pdf",
+            "root": "01-raw"
+          }
+        ],
+        "first_commit_date": "2026-10-04",
+        "commit_subject": "docs(daily): 归档10月4日大模型优化器实验文献",
+        "month": "2026-10"
+      },
+      {
+        "stem": "tacoternaryabsolutemaxcolumnwiseonesparseoptimizerforllmfinetuning",
+        "files": [
+          {
+            "path": "01-raw/2026-10/TACO_Ternary_Absolute_max_Column_wise_One_sparse_Optimizer_for_LLM_Fine_Tuning.pdf",
+            "root": "01-raw"
+          }
+        ],
+        "first_commit_date": "2026-10-04",
+        "commit_subject": "docs(daily): 归档10月4日大模型优化器实验文献",
+        "month": "2026-10"
+      },
+      {
+        "stem": "azerothorderparadigmforllmpreferencealignment",
+        "files": [
+          {
+            "path": "01-raw/2026-10/A_Zeroth_Order_Paradigm_for_LLM_Preference_Alignment.pdf",
+            "root": "01-raw"
+          },
+          {
+            "path": "02-markdown/2026-10/A_Zeroth_Order_Paradigm_for_LLM_Preference_Alignment.md",
+            "root": "02-markdown"
+          },
+          {
+            "path": "03-notes/2026-10/A_Zeroth_Order_Paradigm_for_LLM_Preference_Alignment/精读.md",
+            "root": "03-notes"
+          }
+        ],
+        "first_commit_date": "2026-10-04",
+        "commit_subject": "feat(translation): 新增偏好对齐论文双栏译文",
+        "month": "2026-10"
+      },
+      {
+        "stem": "abragdadaptivebregmanacceleratedgradientdescentforrelativelysmoothandstronglyconvexoptimization",
+        "files": [
+          {
+            "path": "01-raw/2026-10/ABrA_GD_Adaptive_Bregman_Accelerated_Gradient_Descent_for_Relatively_Smooth_and_(Strongly_)Convex_Optimization.pdf",
+            "root": "01-raw"
+          }
+        ],
+        "first_commit_date": "2026-10-04",
+        "commit_subject": "docs(daily): 归档10月3日论文检索与原文",
+        "month": "2026-10"
+      },
+      {
+        "stem": "convergenceanalysisofstormunderdifferentgeometries",
+        "files": [
+          {
+            "path": "01-raw/2026-10/Convergence_Analysis_of_STORM_Under_Different_Geometries.pdf",
+            "root": "01-raw"
+          }
+        ],
+        "first_commit_date": "2026-10-04",
+        "commit_subject": "docs(daily): 归档10月3日论文检索与原文",
+        "month": "2026-10"
+      },
+      {
+        "stem": "isweighttyingstillbeneficialfordecoderonlyllmsinprivatesettingsunderdpsgd",
+        "files": [
+          {
+            "path": "01-raw/2026-10/Is_Weight_Tying_Still_Beneficial_for_Decoder_Only_LLMs_in_Private_Settings_Under_DP_SGD.pdf",
+            "root": "01-raw"
+          }
+        ],
+        "first_commit_date": "2026-10-04",
+        "commit_subject": "docs(daily): 归档10月3日论文检索与原文",
+        "month": "2026-10"
+      },
+      {
+        "stem": "cleansecondorderllmtrainingatlinearmemorycostvianystrmsketching",
+        "files": [
+          {
+            "path": "01-raw/2026-10/Clean_Second_order_LLM_Training_at_Linear_Memory_Cost_via_Nyström_Sketching.pdf",
+            "root": "01-raw"
+          }
+        ],
+        "first_commit_date": "2026-10-06",
+        "commit_subject": "docs(daily): 归档10月6日优化器文献日报与原文",
+        "month": "2026-10"
+      },
+      {
+        "stem": "muonioprinciplednormawaredescentforembeddingtablesandlanguagemodelheads",
+        "files": [
+          {
+            "path": "01-raw/2026-10/MuonIO_Principled_Norm_Aware_Descent_for_Embedding_Tables_and_Language_Model_Heads.pdf",
+            "root": "01-raw"
+          }
+        ],
+        "first_commit_date": "2026-10-06",
+        "commit_subject": "docs(daily): 归档10月6日优化器文献日报与原文",
+        "month": "2026-10"
+      },
+      {
+        "stem": "optiselecthowdoestheoptimizershapedatacurriculum",
+        "files": [
+          {
+            "path": "01-raw/2026-10/OptiSelect_How_does_the_Optimizer_Shape_Data_Curriculum.pdf",
+            "root": "01-raw"
+          }
+        ],
+        "first_commit_date": "2026-10-06",
+        "commit_subject": "docs(daily): 归档10月6日优化器文献日报与原文",
+        "month": "2026-10"
+      },
+      {
+        "stem": "lastiterateconvergencerateofnormalizedgradientdescentunderhldersmoothness",
+        "files": [
+          {
+            "path": "01-raw/2026-10/Last_Iterate_Convergence_Rate_of_Normalized_Gradient_Descent_under_Hölder_Smoothness.pdf",
+            "root": "01-raw"
+          }
+        ],
+        "first_commit_date": "2026-10-07",
+        "commit_subject": "docs(daily): 归档10月7日优化器文献日报与原文",
+        "month": "2026-10"
+      },
+      {
+        "stem": "secondmomentstochasticapproximationmethods",
+        "files": [
+          {
+            "path": "01-raw/2026-10/Second_Moment_Stochastic_Approximation_Methods.pdf",
+            "root": "01-raw"
+          }
+        ],
+        "first_commit_date": "2026-10-07",
+        "commit_subject": "docs(daily): 归档10月7日优化器文献日报与原文",
+        "month": "2026-10"
+      },
+      {
+        "stem": "softserveascalablequasinewtonmethodfordeeplearning",
+        "files": [
+          {
+            "path": "01-raw/2026-10/SoftServe_A_Scalable_Quasi_Newton_Method_for_Deep_Learning.pdf",
+            "root": "01-raw"
+          }
+        ],
+        "first_commit_date": "2026-10-07",
+        "commit_subject": "docs(daily): 归档10月7日优化器文献日报与原文",
+        "month": "2026-10"
+      }
+    ]
+  }
+}
