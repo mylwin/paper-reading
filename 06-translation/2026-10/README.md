@@ -20,12 +20,15 @@
 | 未翻译 | Clean: Second-order LLM Training at Linear Memory Cost via Nyström Sketching | Clean_Second_order_LLM_Training_at_Linear_Memory_Cost_via_Nyström_Sketching | -- | -- | -- |
 | 未翻译 | MuonIO: Principled Norm-Aware Descent for Embedding Tables and Language Model Heads | MuonIO_Principled_Norm_Aware_Descent_for_Embedding_Tables_and_Language_Model_Heads | -- | -- | -- |
 | 未翻译 | OptiSelect: How does the Optimizer Shape Data Curriculum? | OptiSelect_How_does_the_Optimizer_Shape_Data_Curriculum | -- | -- | -- |
+| 未翻译 | Last-Iterate Convergence Rate of Normalized Gradient Descent under Hölder Smoothness | Last_Iterate_Convergence_Rate_of_Normalized_Gradient_Descent_under_Hölder_Smoothness | -- | -- | -- |
+| 未翻译 | Second-Moment Stochastic Approximation Methods | Second_Moment_Stochastic_Approximation_Methods | -- | -- | -- |
+| 未翻译 | SoftServe: A Scalable Quasi-Newton Method for Deep Learning | SoftServe_A_Scalable_Quasi_Newton_Method_for_Deep_Learning | -- | -- | -- |
 
 ## 汇总
 
-- 论文总数：12 篇（2026-10 12 篇）
-- 翻译状态：已翻译 1 / 翻译中 0 / 未翻译 11
-- **未翻译论文**：Convergence_guarantees_for_Muon_New_parameter_regimes_and_generalizations、Convergence_of_Stochastic_Gradient_Methods_under_Heavy_Tailed_Noise_and_H_{o}lder_Smoothness、Polyak_Type_Extragradient_Methods_for_Monotone_Root_Finding_Problems、ABrA_GD_Adaptive_Bregman_Accelerated_Gradient_Descent_for_Relatively_Smooth_and_(Strongly_)Convex_Optimization、Convergence_Analysis_of_STORM_Under_Different_Geometries、Is_Weight_Tying_Still_Beneficial_for_Decoder_Only_LLMs_in_Private_Settings_Under_DP_SGD、MeqMuon_Matrix_Equilibrating_Muon_for_LLM_Pretraining、TACO_Ternary_Absolute_max_Column_wise_One_sparse_Optimizer_for_LLM_Fine_Tuning、Clean_Second_order_LLM_Training_at_Linear_Memory_Cost_via_Nyström_Sketching、MuonIO_Principled_Norm_Aware_Descent_for_Embedding_Tables_and_Language_Model_Heads、OptiSelect_How_does_the_Optimizer_Shape_Data_Curriculum
+- 论文总数：15 篇（2026-10 15 篇）
+- 翻译状态：已翻译 1 / 翻译中 0 / 未翻译 14
+- **未翻译论文**：Convergence_guarantees_for_Muon_New_parameter_regimes_and_generalizations、Convergence_of_Stochastic_Gradient_Methods_under_Heavy_Tailed_Noise_and_H_{o}lder_Smoothness、Polyak_Type_Extragradient_Methods_for_Monotone_Root_Finding_Problems、ABrA_GD_Adaptive_Bregman_Accelerated_Gradient_Descent_for_Relatively_Smooth_and_(Strongly_)Convex_Optimization、Convergence_Analysis_of_STORM_Under_Different_Geometries、Is_Weight_Tying_Still_Beneficial_for_Decoder_Only_LLMs_in_Private_Settings_Under_DP_SGD、MeqMuon_Matrix_Equilibrating_Muon_for_LLM_Pretraining、TACO_Ternary_Absolute_max_Column_wise_One_sparse_Optimizer_for_LLM_Fine_Tuning、Clean_Second_order_LLM_Training_at_Linear_Memory_Cost_via_Nyström_Sketching、MuonIO_Principled_Norm_Aware_Descent_for_Embedding_Tables_and_Language_Model_Heads、OptiSelect_How_does_the_Optimizer_Shape_Data_Curriculum、Last_Iterate_Convergence_Rate_of_Normalized_Gradient_Descent_under_Hölder_Smoothness、Second_Moment_Stochastic_Approximation_Methods、SoftServe_A_Scalable_Quasi_Newton_Method_for_Deep_Learning
 <!-- INDEX:END -->
 
 ## 说明

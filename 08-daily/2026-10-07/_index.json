@@ -1,0 +1,118 @@
+{
+  "date": "2026-10-07",
+  "note_file": "今日检索.md",
+  "generated_at": "2026-10-07T15:06:53",
+  "skill": "paper-daily",
+  "sources_searched": [
+    "arxiv",
+    "openreview",
+    "semantic_scholar"
+  ],
+  "source_counts": {
+    "arxiv": 180,
+    "openreview": 83
+  },
+  "date_windows": {
+    "recent_30d": {
+      "start": "2026-09-07",
+      "end": "2026-10-07"
+    },
+    "past_year": {
+      "start": "2025-10-07",
+      "end": "2026-09-06"
+    }
+  },
+  "total_unique": 235,
+  "top_papers": [
+    {
+      "title": "Second-Moment Stochastic Approximation Methods",
+      "source": "arxiv",
+      "arxiv_id": "2609.36600",
+      "url": "https://arxiv.org/abs/2609.36600",
+      "note_filename": "Second_Moment_Stochastic_Approximation_Methods",
+      "matched_domain": "大模型优化器设计",
+      "score": 7.73
+    },
+    {
+      "title": "Last-Iterate Convergence Rate of Normalized Gradient Descent under Hölder Smoothness",
+      "source": "arxiv",
+      "arxiv_id": "2610.06070",
+      "url": "https://arxiv.org/abs/2610.06070",
+      "note_filename": "Last_Iterate_Convergence_Rate_of_Normalized_Gradient_Descent_under_Hölder_Smoothness",
+      "matched_domain": "大模型优化器设计",
+      "score": 8.27
+    },
+    {
+      "title": "SoftServe: A Scalable Quasi-Newton Method for Deep Learning",
+      "source": "arxiv",
+      "arxiv_id": "2610.02182",
+      "url": "https://arxiv.org/abs/2610.02182",
+      "note_filename": "SoftServe_A_Scalable_Quasi_Newton_Method_for_Deep_Learning",
+      "matched_domain": "随机梯度与优化理论",
+      "score": 7.73
+    },
+    {
+      "title": "Revisiting AdaGrad in Stochastic Convex Optimization: Last Iterates, High Probability, and Lower Bounds",
+      "source": "arxiv",
+      "arxiv_id": "2609.32729",
+      "url": "https://arxiv.org/abs/2609.32729",
+      "note_filename": "Revisiting_AdaGrad_in_Stochastic_Convex_Optimization_Last_Iterates_High_Probability_and_Lower_Bounds",
+      "matched_domain": "大模型优化器设计",
+      "score": 7.53
+    },
+    {
+      "title": "On the Comparison of Optimizers for Imbalanced Learning",
+      "source": "arxiv",
+      "arxiv_id": "2610.06421",
+      "url": "https://arxiv.org/abs/2610.06421",
+      "note_filename": "On_the_Comparison_of_Optimizers_for_Imbalanced_Learning",
+      "matched_domain": "大模型优化器设计",
+      "score": 7.73
+    },
+    {
+      "title": "Geometric Moment Contraction for Stochastic Nesterov Acceleration",
+      "source": "arxiv",
+      "arxiv_id": "2609.31303",
+      "url": "https://arxiv.org/abs/2609.31303",
+      "note_filename": "Geometric_Moment_Contraction_for_Stochastic_Nesterov_Acceleration",
+      "matched_domain": "大模型优化器设计",
+      "score": 7.73
+    },
+    {
+      "title": "CaCuTe Meets SESOP: Better Theory and Practice with Lipschitz Hessians",
+      "source": "arxiv",
+      "arxiv_id": "2610.06557",
+      "url": "https://arxiv.org/abs/2610.06557",
+      "note_filename": "CaCuTe_Meets_SESOP_Better_Theory_and_Practice_with_Lipschitz_Hessians",
+      "matched_domain": "随机梯度与优化理论",
+      "score": 7.59
+    },
+    {
+      "title": "Stochastic Gradient Descent Ascent is Suboptimal for Nonconvex-PL Min-Max Games",
+      "source": "arxiv",
+      "arxiv_id": "2610.07814",
+      "url": "https://arxiv.org/abs/2610.07814",
+      "note_filename": "Stochastic_Gradient_Descent_Ascent_is_Suboptimal_for_Nonconvex_PL_Min_Max_Games",
+      "matched_domain": "大模型优化器设计",
+      "score": 7.53
+    },
+    {
+      "title": "Budget-Constrained Multi-Consensus Decentralized Gradient Descent",
+      "source": "arxiv",
+      "arxiv_id": "2610.08508",
+      "url": "https://arxiv.org/abs/2610.08508",
+      "note_filename": "Budget_Constrained_Multi_Consensus_Decentralized_Gradient_Descent",
+      "matched_domain": "随机梯度与优化理论",
+      "score": 8.56
+    },
+    {
+      "title": "Riemannian Gradient Descent for Gaussian Mixture Models with unknown diagonal covariances",
+      "source": "arxiv",
+      "arxiv_id": "2609.30220",
+      "url": "https://arxiv.org/abs/2609.30220",
+      "note_filename": "Riemannian_Gradient_Descent_for_Gaussian_Mixture_Models_with_unknown_diagonal_covariances",
+      "matched_domain": "大模型优化器设计",
+      "score": 7.73
+    }
+  ]
+}
