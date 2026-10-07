@@ -1,0 +1,59 @@
+{
+  "date": "2026-10-07",
+  "purpose": "scalar zero-signal Gaussian response calibration only; no momentum or training",
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "n_per_seed": 100000,
+  "rows": [
+    {
+      "alpha": 0,
+      "slope": 0.7978845608028655,
+      "analytic_variance_ratio": 1.570796326794896,
+      "mc_mean": 1.5752610004399905,
+      "mc_sd_across_seeds": 0.005439489731216761,
+      "mc_residual_input_cross": 0.001944958617355468
+    },
+    {
+      "alpha": 0.1,
+      "slope": 0.8041358421965985,
+      "analytic_variance_ratio": 1.392579475890174,
+      "mc_mean": 1.396234475975009,
+      "mc_sd_across_seeds": 0.004293266410398994,
+      "mc_residual_input_cross": 0.0018121364495893584
+    },
+    {
+      "alpha": 0.5,
+      "slope": 0.8600399873245198,
+      "analytic_variance_ratio": 1.0787052023767583,
+      "mc_mean": 1.080819490957399,
+      "mc_sd_across_seeds": 0.0017743350317318176,
+      "mc_residual_input_cross": 0.0011418326122206604
+    },
+    {
+      "alpha": 0.9,
+      "slope": 0.9653199172350748,
+      "analytic_variance_ratio": 1.002449023644194,
+      "mc_mean": 1.0029501891272259,
+      "mc_sd_across_seeds": 0.00034805923425943976,
+      "mc_residual_input_cross": 0.00025491033683908566
+    },
+    {
+      "alpha": 1,
+      "slope": 0.9999999999999999,
+      "analytic_variance_ratio": 1.0000000000000002,
+      "mc_mean": 1.0000000000000004,
+      "mc_sd_across_seeds": 1.2161883888976234e-16,
+      "mc_residual_input_cross": 1.5993282313334568e-16
+    }
+  ],
+  "python": "3.9.6",
+  "sampling": "random.Random(seed).gauss(0, 1); common samples across exponents",
+  "mc_ratio": "statistics.variance(T_alpha) / statistics.variance(Z)",
+  "cross_moment": "mean((T_alpha-Z)*Z); not centered",
+  "status": "completed scalar diagnostic only; no LLM or optimizer training"
+}
