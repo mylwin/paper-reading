@@ -1,0 +1,117 @@
+{
+  "date": "2026-10-08",
+  "note_file": "今日检索.md",
+  "generated_at": "2026-10-08T15:24:02",
+  "skill": "paper-daily",
+  "sources_searched": [
+    "arxiv",
+    "openreview"
+  ],
+  "source_counts": {
+    "arxiv": 193,
+    "openreview": 89
+  },
+  "date_windows": {
+    "recent_30d": {
+      "start": "2026-09-08",
+      "end": "2026-10-08"
+    },
+    "past_year": {
+      "start": "2025-10-08",
+      "end": "2026-09-07"
+    }
+  },
+  "total_unique": 224,
+  "top_papers": [
+    {
+      "title": "DGA-Muon: Decoupled Geometry-Aligned Adaptive Scaling for Muon",
+      "source": "arxiv",
+      "arxiv_id": "2610.06578",
+      "url": "http://arxiv.org/abs/2610.06578v2",
+      "note_filename": "DGA_Muon_Decoupled_Geometry_Aligned_Adaptive_Scaling_for_Muon",
+      "matched_domain": "大模型优化器设计",
+      "score": 6.85
+    },
+    {
+      "title": "ORCA: The Annealed Spectral Conditioning Optimizer for Faster, Better LLM Training",
+      "source": "arxiv",
+      "arxiv_id": "2610.06116",
+      "url": "http://arxiv.org/abs/2610.06116v1",
+      "note_filename": "ORCA_The_Annealed_Spectral_Conditioning_Optimizer_for_Faster_Better_LLM_Training",
+      "matched_domain": "大模型优化器设计",
+      "score": 5.78
+    },
+    {
+      "title": "The Best Optimizer Depends on Batch Size",
+      "source": "arxiv",
+      "arxiv_id": "2610.08975",
+      "url": "http://arxiv.org/abs/2610.08975v1",
+      "note_filename": "The_Best_Optimizer_Depends_on_Batch_Size",
+      "matched_domain": "大模型优化器设计",
+      "score": 5.38
+    },
+    {
+      "title": "Does U-W Ratio Alignment Benefit Muon in LLM Pretraining?",
+      "source": "openreview",
+      "arxiv_id": "",
+      "url": "https://openreview.net/forum?id=HSypqovmmM",
+      "note_filename": "Does_U_W_Ratio_Alignment_Benefit_Muon_in_LLM_Pretraining",
+      "matched_domain": "大模型优化器设计",
+      "score": 8.27
+    },
+    {
+      "title": "Convergence of Practical Muon with Finite Newton-Schulz Iterations and Nesterov Momentum",
+      "source": "arxiv",
+      "arxiv_id": "2609.39595",
+      "url": "http://arxiv.org/abs/2609.39595v1",
+      "note_filename": "Convergence_of_Practical_Muon_with_Finite_Newton_Schulz_Iterations_and_Nesterov_Momentum",
+      "matched_domain": "大模型优化器设计",
+      "score": 8.08
+    },
+    {
+      "title": "Muon Learns Facts Better: Understanding the Role of Spectral Orthogonalization",
+      "source": "arxiv",
+      "arxiv_id": "2610.02798",
+      "url": "http://arxiv.org/abs/2610.02798v1",
+      "note_filename": "Muon_Learns_Facts_Better_Understanding_the_Role_of_Spectral_Orthogonalization",
+      "matched_domain": "大模型优化器设计",
+      "score": 8.08
+    },
+    {
+      "title": "The Illusion of Speed: Uncovering the Trade-Offs of Muon’s Spectral Flattening",
+      "source": "openreview",
+      "arxiv_id": "",
+      "url": "https://openreview.net/forum?id=Z7Lh1u62F7",
+      "note_filename": "The_Illusion_of_Speed_Uncovering_the_Trade_Offs_of_Muon’s_Spectral_Flattening",
+      "matched_domain": "大模型优化器设计",
+      "score": 7.93
+    },
+    {
+      "title": "Muon--Adam Training for Overparameterized Neural Networks: Convergence and Generalization",
+      "source": "openreview",
+      "arxiv_id": "",
+      "url": "https://openreview.net/forum?id=tbztUBo0k7",
+      "note_filename": "Muon_Adam_Training_for_Overparameterized_Neural_Networks_Convergence_and_Generalization",
+      "matched_domain": "大模型优化器设计",
+      "score": 8.27
+    },
+    {
+      "title": "Generalization Analysis of Muon",
+      "source": "openreview",
+      "arxiv_id": "",
+      "url": "https://openreview.net/forum?id=VmcqJl2sB8",
+      "note_filename": "Generalization_Analysis_of_Muon",
+      "matched_domain": "大模型优化器设计",
+      "score": 8.27
+    },
+    {
+      "title": "Decentralized SGD under Heavy-Tailed Noise: Optimal Convergence Rates and the Role of Gradient Clipping",
+      "source": "arxiv",
+      "arxiv_id": "2610.10527",
+      "url": "http://arxiv.org/abs/2610.10527v1",
+      "note_filename": "Decentralized_SGD_under_Heavy_Tailed_Noise_Optimal_Convergence_Rates_and_the_Role_of_Gradient_Clipping",
+      "matched_domain": "大模型优化器设计",
+      "score": 8.15
+    }
+  ]
+}

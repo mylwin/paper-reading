@@ -22,12 +22,15 @@
 | 未精读 | Last-Iterate Convergence Rate of Normalized Gradient Descent under Hölder Smoothness | Last_Iterate_Convergence_Rate_of_Normalized_Gradient_Descent_under_Hölder_Smoothness | -- | -- | -- | -- |
 | 未精读 | Second-Moment Stochastic Approximation Methods | Second_Moment_Stochastic_Approximation_Methods | -- | -- | -- | -- |
 | 未精读 | SoftServe: A Scalable Quasi-Newton Method for Deep Learning | SoftServe_A_Scalable_Quasi_Newton_Method_for_Deep_Learning | -- | -- | -- | -- |
+| 未精读 | DGA-Muon: Decoupled Geometry-Aligned Adaptive Scaling for Muon | DGA_Muon_Decoupled_Geometry_Aligned_Adaptive_Scaling_for_Muon | -- | -- | -- | -- |
+| 未精读 | ORCA: The Annealed Spectral Conditioning Optimizer for Faster, Better LLM Training | ORCA_The_Annealed_Spectral_Conditioning_Optimizer_for_Faster_Better_LLM_Training | -- | -- | -- | -- |
+| 未精读 | The Best Optimizer Depends on Batch Size | The_Best_Optimizer_Depends_on_Batch_Size | -- | -- | -- | -- |
 
 ## 汇总
 
-- 论文总数：15 篇（2026-10 15 篇）
-- 精读状态：已精读 1 / 精读中 0 / 未精读 14
-- **未精读论文**：Convergence_guarantees_for_Muon_New_parameter_regimes_and_generalizations、Convergence_of_Stochastic_Gradient_Methods_under_Heavy_Tailed_Noise_and_H_{o}lder_Smoothness、Polyak_Type_Extragradient_Methods_for_Monotone_Root_Finding_Problems、ABrA_GD_Adaptive_Bregman_Accelerated_Gradient_Descent_for_Relatively_Smooth_and_(Strongly_)Convex_Optimization、Convergence_Analysis_of_STORM_Under_Different_Geometries、Is_Weight_Tying_Still_Beneficial_for_Decoder_Only_LLMs_in_Private_Settings_Under_DP_SGD、MeqMuon_Matrix_Equilibrating_Muon_for_LLM_Pretraining、TACO_Ternary_Absolute_max_Column_wise_One_sparse_Optimizer_for_LLM_Fine_Tuning、Clean_Second_order_LLM_Training_at_Linear_Memory_Cost_via_Nyström_Sketching、MuonIO_Principled_Norm_Aware_Descent_for_Embedding_Tables_and_Language_Model_Heads、OptiSelect_How_does_the_Optimizer_Shape_Data_Curriculum、Last_Iterate_Convergence_Rate_of_Normalized_Gradient_Descent_under_Hölder_Smoothness、Second_Moment_Stochastic_Approximation_Methods、SoftServe_A_Scalable_Quasi_Newton_Method_for_Deep_Learning
+- 论文总数：18 篇（2026-10 18 篇）
+- 精读状态：已精读 1 / 精读中 0 / 未精读 17
+- **未精读论文**：Convergence_guarantees_for_Muon_New_parameter_regimes_and_generalizations、Convergence_of_Stochastic_Gradient_Methods_under_Heavy_Tailed_Noise_and_H_{o}lder_Smoothness、Polyak_Type_Extragradient_Methods_for_Monotone_Root_Finding_Problems、ABrA_GD_Adaptive_Bregman_Accelerated_Gradient_Descent_for_Relatively_Smooth_and_(Strongly_)Convex_Optimization、Convergence_Analysis_of_STORM_Under_Different_Geometries、Is_Weight_Tying_Still_Beneficial_for_Decoder_Only_LLMs_in_Private_Settings_Under_DP_SGD、MeqMuon_Matrix_Equilibrating_Muon_for_LLM_Pretraining、TACO_Ternary_Absolute_max_Column_wise_One_sparse_Optimizer_for_LLM_Fine_Tuning、Clean_Second_order_LLM_Training_at_Linear_Memory_Cost_via_Nyström_Sketching、MuonIO_Principled_Norm_Aware_Descent_for_Embedding_Tables_and_Language_Model_Heads、OptiSelect_How_does_the_Optimizer_Shape_Data_Curriculum、Last_Iterate_Convergence_Rate_of_Normalized_Gradient_Descent_under_Hölder_Smoothness、Second_Moment_Stochastic_Approximation_Methods、SoftServe_A_Scalable_Quasi_Newton_Method_for_Deep_Learning、DGA_Muon_Decoupled_Geometry_Aligned_Adaptive_Scaling_for_Muon、ORCA_The_Annealed_Spectral_Conditioning_Optimizer_for_Faster_Better_LLM_Training、The_Best_Optimizer_Depends_on_Batch_Size
 <!-- INDEX:END -->
 
 ## 说明
