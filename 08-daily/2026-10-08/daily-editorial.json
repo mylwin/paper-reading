@@ -1,0 +1,189 @@
+{
+  "overview": {
+    "trend": "今日围绕大模型优化器设计，优先阅读三个互补问题：Muon的自适应缩放是否携带原始梯度信息、谱约束应在何时退出、优化器胜率是否随批量大小改变。前三篇为DGA-Muon、ORCA、The Best Optimizer Depends on Batch Size。检索日期为2026-10-08，近期窗口2026-09-08至2026-10-08，并不表示论文均今日发表。DGA-Muon采用10月7日修订的v2摘要；ORCA首投10月5日，批量大小论文首投10月6日。arXiv返回193条，OpenReview四个独立关键词首100条检索返回89条窗口内候选，经过筛选及跨源去重保留224篇，37篇命中已有资料或历史推荐。关键词预筛前10混入Muon Collider粒子物理、采样和卷积应用，已语义排除并扩展候选池；原分数不修改，语义排序独立于预筛分。Semantic Scholar两次HTTP429，过去一年高影响力补检未完成；无引用数据不解释为低质量。以下仅为题目与完整摘要的低置信度初评，归档PDF不表示完成全文评审。检索有数量上限且OpenReview时间可能为建帖时间，覆盖非穷举。",
+    "hotspots": [
+      {
+        "title": "自适应与矩阵形状",
+        "text": "DGA-Muon要求原始梯度统计与正交化解耦，并按宽矩阵/高矩阵选择行/列缩放，适合研究缩放与谱几何的兼容性。"
+      },
+      {
+        "title": "早期塑形、后期释放",
+        "text": "ORCA将谱控制变成训练阶段相关干预；应核验收益来自约束日程还是额外调参。"
+      },
+      {
+        "title": "跨批量评价",
+        "text": "批量大小比较直接约束新优化器的实验协议：同一批量下胜出不能自动外推到其他梯度噪声水平。"
+      }
+    ]
+  },
+  "domain_summaries": {
+    "大模型优化器设计": {
+      "summary": "优先组合几何机制、训练干预与评价协议。其余七篇围绕U/W比率、有限Newton–Schulz与Nesterov、事实学习、噪声鲁棒性、混合Muon–Adam及泛化理论。分布式裁剪仅作为设计依据选读，不能视为已在LLM上验证。数量按关键词匹配统计，包含宽泛和误命中条目。",
+      "subfields": {
+        "符号与范数几何优化": "关注DGA-Muon的行列缩放、有限步正交化和动量，以及谱更新对事实学习与噪声方向的影响；谱展平不自动意味着泛化改善。",
+        "免调参与梯度裁剪": "新候选包含重尾分布式裁剪分析；需核验通信图、矩条件和一致性误差，不能直接替代集中式大模型训练结论。",
+        "自适应与状态内存": "DGA-Muon讨论自适应信号来源；今天前三篇摘要没有给出显存下降数字，不补写状态内存收益。",
+        "大模型训练与优化器设计": "ORCA提供130M至8B的摘要级训练证据；批量比较要求跨batch重新调参；U/W比率候选提供方向与幅度分离的可测诊断。"
+      }
+    }
+  },
+  "retrieval_limits": {
+    "arxiv": "6个今日focus关键词，近30天，每源最多200条；非穷举",
+    "openreview": "Muon、optimizer、gradient clipping、parameter-free四个独立查询，每个只读取前100条，按pdate/cdate/tcdate过滤；不等同首次公开日期",
+    "semantic_scholar": "年度窗口2025-10-08至2026-09-07，HTTP429，两次失败，未完成高影响力补检"
+  },
+  "semantic_review": [
+    {
+      "title": "Does U-W Ratio Alignment Benefit Muon in LLM Pretraining?",
+      "screening_rank": 1,
+      "decision": "保留选读",
+      "reason": "已读题目与完整摘要；与优化器机制、几何或相关理论直接相关，前三篇优先覆盖设计与评价组合。"
+    },
+    {
+      "title": "Muon--Adam Training for Overparameterized Neural Networks: Convergence and Generalization",
+      "screening_rank": 2,
+      "decision": "保留选读",
+      "reason": "已读题目与完整摘要；与优化器机制、几何或相关理论直接相关，前三篇优先覆盖设计与评价组合。"
+    },
+    {
+      "title": "Generalization Analysis of Muon",
+      "screening_rank": 3,
+      "decision": "保留选读",
+      "reason": "已读题目与完整摘要；与优化器机制、几何或相关理论直接相关，前三篇优先覆盖设计与评价组合。"
+    },
+    {
+      "title": "Decentralized SGD under Heavy-Tailed Noise: Optimal Convergence Rates and the Role of Gradient Clipping",
+      "screening_rank": 4,
+      "decision": "保留选读",
+      "reason": "已读题目与完整摘要；与优化器机制、几何或相关理论直接相关，前三篇优先覆盖设计与评价组合。"
+    },
+    {
+      "title": "Muon Learns Facts Better: Understanding the Role of Spectral Orthogonalization",
+      "screening_rank": 5,
+      "decision": "保留选读",
+      "reason": "已读题目与完整摘要；与优化器机制、几何或相关理论直接相关，前三篇优先覆盖设计与评价组合。"
+    },
+    {
+      "title": "Convergence of Practical Muon with Finite Newton-Schulz Iterations and Nesterov Momentum",
+      "screening_rank": 6,
+      "decision": "保留选读",
+      "reason": "已读题目与完整摘要；与优化器机制、几何或相关理论直接相关，前三篇优先覆盖设计与评价组合。"
+    },
+    {
+      "title": "Muon meets Tamed Langevin: Momentum Preconditioning beyond Convex and gradient-Lipschitz Potentials",
+      "screening_rank": 7,
+      "decision": "排除今日推荐",
+      "reason": "Gibbs采样与势函数理论，当前训练优化器课题直接性较弱。"
+    },
+    {
+      "title": "Muon Is Theoretically Wrong For Convolutions, But Empirically Effective",
+      "screening_rank": 8,
+      "decision": "排除今日推荐",
+      "reason": "卷积算子几何及图像分类，与当前LLM设计主线较远。"
+    },
+    {
+      "title": "The Illusion of Speed: Uncovering the Trade-Offs of Muon’s Spectral Flattening",
+      "screening_rank": 9,
+      "decision": "保留选读",
+      "reason": "已读题目与完整摘要；与优化器机制、几何或相关理论直接相关，前三篇优先覆盖设计与评价组合。"
+    },
+    {
+      "title": "Fast BIB simulation at a future Muon Collider with generative machine learning",
+      "screening_rank": 10,
+      "decision": "排除今日推荐",
+      "reason": "Muon Collider为粒子物理同名误命中，排除推荐。"
+    }
+  ],
+  "top_papers": {
+    "DGA-Muon: Decoupled Geometry-Aligned Adaptive Scaling for Muon": {
+      "title_zh": "DGA-Muon：面向Muon的解耦几何对齐自适应缩放",
+      "summary": "从NorMuon缩放退化出发，将原始梯度统计与正交化解耦，并让缩放方向适配矩阵形状。",
+      "abstract_zh": "尽管NorMuon在预训练中取得了很强的实证表现，其底层自适应机制在很大程度上仍依赖启发式设计，尚未得到充分理解。在这项工作中，我们对NorMuon的自适应性给出首次系统性理论分析，揭示其主要源于正交化引起的几何结构，而非真正的优化动力学，其作用是抵消由此产生的几何不均匀性。在精确正交化下，对于方形和宽矩阵，自适应缩放因子退化为一个全局标量；而对于高矩阵，其变化来自正交化后行能量的不均匀分布。在近似正交化下，正交残差向缩放引入额外变化，产生了一个违反直觉的“正交化—自适应性悖论”：正交化越准确，自适应性越弱。我们进一步证明，NorMuon固定采用的逐行缩放通过扭曲列正交性，与高矩阵的单侧正交结构在几何上不对齐。受这些局限启发，我们提出Muon的理想自适应机制应满足的两条核心设计原则。第一，自适应缩放应与正交化解耦，缩放因子直接由原始梯度计算。第二，自适应缩放应与极分解因子的、依赖形状的正交结构对齐，对宽矩阵采用逐行缩放，对高矩阵采用逐列缩放。我们证明，这种几何对齐的缩放能够保留更新的正交结构。通过结合若干其他技术，我们得到解耦几何对齐Muon（Decoupled Geometry-Aligned Muon，DGA-Muon）。我们为DGA-Muon建立收敛保证，并以实证方式验证了我们对NorMuon缩放退化的理论刻画以及DGA-Muon的优越性。",
+      "contributions": [
+        "作者主张NorMuon的缩放变化主要来自正交化几何，并刻画精确/近似正交化下的退化。",
+        "提出由原始梯度估计缩放、按矩阵形状对齐缩放的设计原则；声称证明结构保持及收敛。"
+      ],
+      "method": "将极分解的单侧正交结构与自适应幅度分开分析，宽矩阵逐行、高矩阵逐列缩放；具体其他技术应以v2正文为准。",
+      "result": "摘要声称收敛保证及实证优势，但未给出模型规模、损失差、墙钟时间或状态内存数字。",
+      "selection_reason": "直接回答如何在Muon上设计有优化信息的自适应机制；相对已有谱分配与交替谱/符号更新，新增的是统计来源与形状兼容性的可证伪解释。建议先构造宽/高矩阵对照，检查正交残差、缩放方差与训练收益的关系。",
+      "evidence_limit": "原始arXiv摘要v2，2026-10-07修订；仅低置信度初评。待核验退化命题是否依赖精确极因子、有限NS误差范围、收敛假设、方阵处理及基线调参预算。不可从摘要断言大规模预训练胜率或显存收益。",
+      "reading_decision": "精读"
+    },
+    "ORCA: The Annealed Spectral Conditioning Optimizer for Faster, Better LLM Training": {
+      "title_zh": "ORCA：通过退火谱调节实现更快、更好大模型训练的优化器",
+      "summary": "训练早期施加强软正交正则，随后移除，在早期谱塑形与后期自由适配之间折中。",
+      "abstract_zh": "Muon等现代大语言模型优化器通常产生比Adam有效秩更高的权重矩阵，然而进一步的谱控制只带来了有限收益。我们指出这一结果背后存在一种张力：集中的谱会抑制相互耦合的权重矩阵中的梯度方向，并减慢优化；而贯穿整个训练过程的约束会限制对具体任务的适配，并抬高可达到的损失下限。我们提出ORCA（Orthogonal Regularization, Cooled After，先施加正交正则、随后冷却），一种最小化的优化器干预：在训练早期施加强但暂时的软正交正则化，随后将其移除。这样，权重能够在早期受益于更宽广的谱，之后则可自由适配。在参数规模从130M到8B的LLaMA、Qwen3以及细粒度混合专家模型上，ORCA取得了比Muon更低的最终验证损失。相对于Muon的损失下降幅度，达到或超过了Muon相对于Adam的下降幅度。消融实验支持这种“早期塑形、后期释放”的设计。此外，ORCA无需修改架构，且仅增加极少的开销。",
+      "contributions": [
+        "作者将持续谱约束的适配限制与集中谱造成的优化减速联系起来。",
+        "用暂时软正交正则替代全程保持约束，摘要报告跨架构与规模的验证损失改善。"
+      ],
+      "method": "对权重施加训练早期强、后期撤除的软正交正则；区别于仅将更新矩阵正交化，具体正则表达式及撤除日程待正文核验。",
+      "result": "摘要报告LLaMA、Qwen3和细粒度MoE、130M至8B上最终验证损失低于Muon；相对损失改善达到或超过Muon对Adam的改善，未给出绝对差和开销百分比。",
+      "selection_reason": "提供与DGA-Muon不同的可组合设计轴：控制何时塑造权重谱，而非只调整更新的幅度。相对已有LionMuon等更新变体，可测试相同训练预算下“早开后关”是否优于全程正则或相同强度的普通权重衰减。",
+      "evidence_limit": "依据arXiv v1原始摘要，低置信度初评。待核验正则强度及退出时间的调参代价、所有基线的训练tokens与学习率预算、多种子误差、MoE细节、端到端墙钟和显存；“极少开销”仅为作者定性主张。",
+      "reading_decision": "精读"
+    },
+    "The Best Optimizer Depends on Batch Size": {
+      "title_zh": "最佳优化器取决于批量大小",
+      "summary": "作者报告，即使充分调参，语言模型预训练的最佳优化器仍随批量大小变化。",
+      "abstract_zh": "大量新型自适应优化器旨在高效估计并利用小批量梯度统计量来塑造参数更新，但通常只在单一批量大小下进行基准评测。超参数缩放规则承诺在批量大小和梯度噪声变化时维持性能，这意味着在一种批量大小下表现最好的优化器，在另一种批量大小下也应保持最佳。我们通过展示以下两点，对这种开发和评估优化器的方式提出挑战：（1）没有一种有原则依据的Muon缩放规则能在不同训练设置下始终奏效；（2）即便进行广泛的超参数调优，语言模型预训练的最佳优化器也会随批量大小而改变。",
+      "contributions": [
+        "作者质疑仅用单批量评测及超参数缩放规则来比较新优化器的做法。",
+        "摘要报告Muon缩放规则跨设置不一致，以及充分调参后仍出现优化器排序随批量改变。"
+      ],
+      "method": "通过改变批量大小和梯度噪声并广泛调参比较训练结果；摘要未列出优化器名单、模型大小或批量范围，不补写。",
+      "result": "摘要提供两项定性结论，无损失数值、统计误差或计算成本。",
+      "selection_reason": "直接影响优化器设计课题的最小验证协议。先读此文可避免把某一批量下的收益误判为普遍机制；它与DGA-Muon和ORCA组成“机制—干预—公平评价”组合，信息增益高于继续堆叠同类收敛定理。",
+      "evidence_limit": "依据arXiv v1原始摘要，低置信度初评。待核验固定tokens/steps/compute/墙钟哪一种预算、各批量调参是否对称、学习率与动量范围、梯度累积及关键批量区间。作者结论限其研究设置，不能推导所有缩放规律均失效。",
+      "reading_decision": "精读"
+    },
+    "Does U-W Ratio Alignment Benefit Muon in LLM Pretraining?": {
+      "summary": "选读：U/W比率对齐分离方向与幅度，提供单步下降和协方差诊断；需核验modded-nanogpt的窄基准外推。",
+      "reading_decision": "选读"
+    },
+    "Convergence of Practical Muon with Finite Newton-Schulz Iterations and Nesterov Momentum": {
+      "summary": "选读：直接分析有限NS及Nesterov，期望平均Frobenius梯度范数O(T^{-1/4})依赖学习率与动量耦合日程，不能当固定超参保证。",
+      "reading_decision": "选读"
+    },
+    "Muon Learns Facts Better: Understanding the Role of Spectral Orthogonalization": {
+      "summary": "选读：事实回忆的线性Transformer及连续时间模型解释谱更新；不能直接等同真实语言模型事实能力。",
+      "reading_decision": "选读"
+    },
+    "The Illusion of Speed: Uncovering the Trade-Offs of Muon’s Spectral Flattening": {
+      "summary": "选读：谱展平可能放大弱噪声方向；证据来自ViT/CIFAR-100，适合作为LLM待测反例机制。",
+      "reading_decision": "选读"
+    },
+    "Muon--Adam Training for Overparameterized Neural Networks: Convergence and Generalization": {
+      "summary": "选读：两层过参数ReLU与配对初始化下Muon–Adam联合分析；不是实际深层Transformer训练保证。",
+      "reading_decision": "选读"
+    },
+    "Generalization Analysis of Muon": {
+      "summary": "选读：低秩球上的总体梯度及高概率泛化界；需核验秩约束、样本复杂度和对真实参数轨迹的适用性。",
+      "reading_decision": "选读"
+    },
+    "Decentralized SGD under Heavy-Tailed Noise: Optimal Convergence Rates and the Role of Gradient Clipping": {
+      "summary": "选读：重尾噪声下裁剪DSGD的最优阶及线性加速，提供裁剪保留幅度的机制线索；分布式假设和LLM实证待核验。",
+      "reading_decision": "选读"
+    }
+  },
+  "semantic_promotions": [
+    {
+      "title": "DGA-Muon: Decoupled Geometry-Aligned Adaptive Scaling for Muon",
+      "screening_rank": 30,
+      "semantic_rank": 1,
+      "reason": "直接回答如何在Muon上设计有优化信息的自适应机制；相对已有谱分配与交替谱/符号更新，新增的是统计来源与形状兼容性的可证伪解释。建议先构造宽/高矩阵对照，检查正交残差、缩放方差与训练收益的关系。"
+    },
+    {
+      "title": "ORCA: The Annealed Spectral Conditioning Optimizer for Faster, Better LLM Training",
+      "screening_rank": 89,
+      "semantic_rank": 2,
+      "reason": "提供与DGA-Muon不同的可组合设计轴：控制何时塑造权重谱，而非只调整更新的幅度。相对已有LionMuon等更新变体，可测试相同训练预算下“早开后关”是否优于全程正则或相同强度的普通权重衰减。"
+    },
+    {
+      "title": "The Best Optimizer Depends on Batch Size",
+      "screening_rank": 111,
+      "semantic_rank": 3,
+      "reason": "直接影响优化器设计课题的最小验证协议。先读此文可避免把某一批量下的收益误判为普遍机制；它与DGA-Muon和ORCA组成“机制—干预—公平评价”组合，信息增益高于继续堆叠同类收敛定理。"
+    }
+  ]
+}
