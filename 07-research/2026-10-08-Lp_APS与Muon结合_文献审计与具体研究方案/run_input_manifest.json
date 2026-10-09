@@ -1,0 +1,38 @@
+[
+  {
+    "path": "reproduction/Preconditioned_Inexact_Stochastic_ADMM_for_Deep_Models/runs/fig2/nano/adam/full/run_summary.json",
+    "sha256": "f4f0e94b6b0ecc8feec4688d2b29376f24f0a904d0fb811165e9f0df97500820"
+  },
+  {
+    "path": "reproduction/Preconditioned_Inexact_Stochastic_ADMM_for_Deep_Models/runs/fig2/nano/muon/full-v2/run_summary.json",
+    "sha256": "3d3e9f69e5416f0b54332c421e3454ad3061efdfa9780a78c95cfaa78d28445d"
+  },
+  {
+    "path": "reproduction/Preconditioned_Inexact_Stochastic_ADMM_for_Deep_Models/runs/fig2/nano/nsisa/full-v1/run_summary.json",
+    "sha256": "7e043e8475a990072f0b3696ae9c516add7f0a0e957d86baa9cbd08cad29e269"
+  },
+  {
+    "path": "reproduction/Preconditioned_Inexact_Stochastic_ADMM_for_Deep_Models/runs/fig2/nano/soap/full-v2/run_summary.json",
+    "sha256": "5ae2b703c714c0bae479fd549d4dd3d9c233de2a5fafc66c628dead03e6268df"
+  },
+  {
+    "path": "reproduction/Preconditioned_Inexact_Stochastic_ADMM_for_Deep_Models/runs/fig2/nano/pbsgdm(优化参数)/full/run_summary.json",
+    "sha256": "8daedd38d1a132cb63979dc6f47667a05b3456d520e4b103534a59d515215910"
+  },
+  {
+    "path": "reproduction/Preconditioned_Inexact_Stochastic_ADMM_for_Deep_Models/runs/fig2/nano/lp-sgda(优化参数)/full/run_summary.json",
+    "sha256": "3b2600a7c12842f4484ef35b30191492b53d5d0cd15e9503ae6432f96ccea25b"
+  },
+  {
+    "path": "reproduction/Preconditioned_Inexact_Stochastic_ADMM_for_Deep_Models/runs/fig2/nano/lp-sgda(优化参数)/full/train_metrics.jsonl",
+    "sha256": "667d95fc4e644e1fc63cc79c369d2dd319c3942f77b0e031680a6f8b95487a22"
+  },
+  {
+    "path": "reproduction/Preconditioned_Inexact_Stochastic_ADMM_for_Deep_Models/runs/fig2/nano/lp-sgdma(优化参数)/full/run_summary.json",
+    "sha256": "d07b816af87b4c91e9551f26ad56d6264de416a8a4f53bc53a1e1d0bdda80de1"
+  },
+  {
+    "path": "reproduction/Preconditioned_Inexact_Stochastic_ADMM_for_Deep_Models/runs/fig2/nano/lp-sgdma(优化参数)/full/train_metrics.jsonl",
+    "sha256": "639c1082cb75b0bc2db720950cd8ee4f166839bd5c4309d66aef2fda0493de3c"
+  }
+]

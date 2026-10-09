@@ -1,0 +1,96 @@
+{
+  "scope": "Deterministic scalar algebra checks only; not a training experiment.",
+  "aps_degree_zero": [
+    {
+      "gradient": 1.0,
+      "aps_muon_eta": 0.0033222591361022503,
+      "c_eta": 0.9966777408306751,
+      "step_norm_if_unit_muon": 0.0033222591361022503,
+      "lp_gamma_03_step_norm": 0.0033222591361022503
+    },
+    {
+      "gradient": 0.1,
+      "aps_muon_eta": 0.0033322225913588062,
+      "c_eta": 0.9996667774076419,
+      "step_norm_if_unit_muon": 0.0033322225913588062,
+      "lp_gamma_03_step_norm": 0.0016695137383650413
+    },
+    {
+      "gradient": 0.01,
+      "aps_muon_eta": 0.003333222214815432,
+      "c_eta": 0.9999666644446297,
+      "step_norm_if_unit_muon": 0.003333222214815432,
+      "lp_gamma_03_step_norm": 0.00083718436969334
+    },
+    {
+      "gradient": 0.001,
+      "aps_muon_eta": 0.003333322111148893,
+      "c_eta": 0.9999966333446679,
+      "step_norm_if_unit_muon": 0.003333322111148893,
+      "lp_gamma_03_step_norm": 0.00041963058200926787
+    },
+    {
+      "gradient": 1e-05,
+      "aps_muon_eta": 0.0033333221111488927,
+      "c_eta": 0.9999966333446678,
+      "step_norm_if_unit_muon": 0.0033333221111488927,
+      "lp_gamma_03_step_norm": 0.00010539803431135196
+    }
+  ],
+  "quadratic_secant_invariance": [
+    {
+      "loss_scale": 0.1,
+      "direction_scale": 0.2,
+      "alpha": 0.05000000000000008,
+      "displacement": 0.010000000000000016
+    },
+    {
+      "loss_scale": 0.1,
+      "direction_scale": 1.0,
+      "alpha": 0.010000000000000018,
+      "displacement": 0.010000000000000018
+    },
+    {
+      "loss_scale": 0.1,
+      "direction_scale": 5.0,
+      "alpha": 0.0020000000000000018,
+      "displacement": 0.010000000000000009
+    },
+    {
+      "loss_scale": 1.0,
+      "direction_scale": 0.2,
+      "alpha": 0.050000000000000086,
+      "displacement": 0.010000000000000018
+    },
+    {
+      "loss_scale": 1.0,
+      "direction_scale": 1.0,
+      "alpha": 0.010000000000000009,
+      "displacement": 0.010000000000000009
+    },
+    {
+      "loss_scale": 1.0,
+      "direction_scale": 5.0,
+      "alpha": 0.0020000000000000013,
+      "displacement": 0.010000000000000007
+    },
+    {
+      "loss_scale": 10.0,
+      "direction_scale": 0.2,
+      "alpha": 0.04999999999999997,
+      "displacement": 0.009999999999999995
+    },
+    {
+      "loss_scale": 10.0,
+      "direction_scale": 1.0,
+      "alpha": 0.010000000000000005,
+      "displacement": 0.010000000000000005
+    },
+    {
+      "loss_scale": 10.0,
+      "direction_scale": 5.0,
+      "alpha": 0.0020000000000000026,
+      "displacement": 0.010000000000000012
+    }
+  ]
+}
