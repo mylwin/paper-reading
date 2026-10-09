@@ -1,0 +1,200 @@
+"""Human editorial decisions and complete abstract translations for 2026-10-09."""
+import json
+import re
+import sys
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[2]
+RUN = Path(__file__).resolve().parent
+DAY = ROOT / '08-daily/2026-10-09'
+sys.path.insert(0, str(ROOT / '.claude/skills/paper-daily/scripts'))
+from paper_config import clean_stem, load_config, sanitize_paper_title
+
+data = json.loads((DAY / 'search_result.json').read_text())
+config = load_config(None)
+original = list(data['top_papers'])
+order = [3, 6, 0, 1, 4, 2, 7, 5, 8, 9]
+data['top_papers'] = [original[index] for index in order]
+raw = []
+for source in ['arxiv', 'openreview']:
+    raw.extend(json.loads((RUN / (source + '-raw.json')).read_text()))
+by_title = {clean_stem(p['title']): p for p in raw}
+
+for paper in data['all_papers'] + data['top_papers']:
+    source_record = by_title.get(clean_stem(paper['title'])) or {}
+    paper.setdefault('summary', source_record.get('summary', ''))
+    if paper.get('pdf_url', '').startswith('/'):
+        paper['pdf_url'] = 'https://openreview.net' + paper['pdf_url']
+    if paper.get('source') == 'arxiv':
+        match = re.search(r'/abs/(\d{4}\.\d{4,5})', paper.get('url', ''))
+        if match:
+            paper['arxiv_id'] = match.group(1)
+    if paper.get('matched_domain') not in config['research_domains']:
+        paper['matched_domain'] = ''
+    text = (paper['title'] + ' ' + paper.get('summary', '')).lower()
+    subdomain = '未细分'
+    for name, specification in config['research_domains']['大模型优化器设计']['subdomains'].items():
+        if any(keyword.lower() in text for keyword in specification['keywords']):
+            subdomain = name
+            break
+    paper['matched_subdomain'] = subdomain
+    stop = {'how', 'does', 'need', 'not', 'rate', 'robustness', 'training', 'models'}
+    paper['related_papers'] = [
+        item for item in paper.get('related_papers', [])
+        if set(item.get('shared_terms', [])) - stop
+    ]
+
+for rank, paper in enumerate(data['top_papers'], 1):
+    paper['semantic_rank'] = rank
+    paper['candidate_screening_rank'] = next(
+        index + 1 for index, item in enumerate(original) if item['title'] == paper['title'])
+
+
+def related(fragment, shared):
+    for path in sorted((ROOT / '03-notes').glob('*/*/精读.md')):
+        if fragment.lower() in path.parent.name.lower():
+            return {'title': path.parent.name.replace('_', ' '), 'path': str(path),
+                    'source': 'note', 'shared_terms': shared}
+    for path in sorted((ROOT / '01-raw').glob('*/*.pdf')):
+        if fragment.lower() in path.stem.lower():
+            return {'title': path.stem.replace('_', ' '), 'path': str(path),
+                    'source': 'pdf', 'shared_terms': shared}
+    raise ValueError('No verified asset: ' + fragment)
+
+
+data['top_papers'][0]['related_papers'] = [
+    related('ORCA_', ['谱方向', '训练时间与调度']),
+    related('DGA_Muon', ['方向与尺度分离']),
+]
+data['top_papers'][1]['related_papers'] = [
+    related('DGA_Muon', ['更新方向与步长尺度']),
+    related('PowerStep_', ['方向几何', '实际更新幅度']),
+    related('The_Best_Optimizer', ['公平优化器比较', '训练配置依赖']),
+]
+data['top_papers'][2]['related_papers'] = [
+    related('PowerStep_', ['低状态内存', '幅值信息']),
+    related('Parameter_Free_', ['Polyak 步长', '免学习率调参']),
+    related('When_and_Why_SignSGD', ['符号更新', '范数几何']),
+]
+
+titles = [paper['title'] for paper in data['top_papers']]
+analyses = {
+    titles[0]: {
+        'title_zh': '采用无调度谱优化的随时可用训练',
+        'summary': 'SF-NorMuon 将谱优化与无调度训练结合，在 125M/772M 语言模型上缩小相对按训练时长调度的性能差距。',
+        'abstract_zh': '标准神经网络训练依赖与固定训练时长绑定的学习率调度，导致很强的路径依赖，并在可用数据量变化时带来高昂的重新调参成本。无调度（Schedule-Free，SF）方法通过移除显式调度来解决这一问题，但目前最先进的随时可用优化器 SF-AdamW 持续逊于充分调优的 AdamW 基线。我们提出 SF-NorMuon，一种弥合这一差距的无调度谱优化器：采用单一超参数配置，SF-NorMuon 在 125M 和 772M 参数语言模型、覆盖 $1$--$8\\times$ Chinchilla 训练时长的设置中，达到或超过调优后的 AdamW；它与知道训练时长、采用余弦调度的 NorMuon 相比，仅落后约 $0.03$ nats，从而显著缩小随时可用优化器与带调度谱优化器之间的差距。在理论方面，我们证明了无调度谱动力学的驻点保证，并指出对快迭代点施加权重衰减是长训练时长下保持稳定性的关键。SF-NorMuon 使实践者无需预先确定训练时长，也能在训练过程中的任意时刻获得高质量检查点。在不使用调度的情况下完全达到知道训练时长的谱优化器的性能，仍是一个开放问题，我们将其指出为未来研究方向。通过弥合与调优 AdamW 基线之间的性能差距，SF-NorMuon 使不预设训练时长的优化更加实用，朝真正开放式、持续学习迈出了一步。',
+        'contributions': [
+            '作者提出 SF-NorMuon，将无调度训练动力学与谱更新组合，目标是不预先绑定训练终点。',
+            '摘要声称给出驻点保证，并将快迭代点的权重衰减定位为长时稳定的关键机制。',
+        ],
+        'method': '初步判断：从 schedule-free 的多迭代点动力学出发，使用 NorMuon 谱方向，并审查权重衰减作用在哪个迭代点。无调度不等于没有学习率或其他超参数，摘要只承诺单一配置覆盖所测训练时长。',
+        'result': '摘要报告 125M、772M 语言模型及 1–8 倍 Chinchilla 训练时长；单一配置达到或超过调优 AdamW，但仍比余弦调度 NorMuon 落后约 0.03 nats。没有报告误差条或完整调参预算。',
+        'selection_reason': '补充昨日主要围绕方向与半径的方案：训练终点依赖是另一个可独立检验的设计轴。先精读多迭代点更新与衰减位置，可为 APS/Muon 提供无显式终点调度的直接竞争方案。它虽在历史全量列表出现，尚未进入历史推荐或归档。',
+        'evidence_limit': '依据 OpenReview 当前原始摘要，低置信度初评，待全文核验；匿名 ICLR 2027 投稿不等于录用。需核对驻点定理的随机性/光滑性假设、快慢迭代点实现、超参数搜索预算、token 与墙钟公平性、种子方差，以及 0.03 nats 在各时长下的分布。不能推出更大模型或长期持续学习已验证。',
+        'reading_decision': '精读',
+    },
+    titles[1]: {
+        'title_zh': '在强化学习后训练中，正交化带来学习率余量，而非稳健性',
+        'summary': '通过分别匹配矩阵步幅、层输出位移与策略变化，检验 Muon 在 RL 后训练中的稳定性优势是否只是尺度选择造成。',
+        'abstract_zh': '已有报告称，Muon 等正交化优化器在具有可验证奖励的强化学习（RLVR）中会发生崩溃，而谱滤波器 Pion 能胜过 AdamW。步长能够解释 Muon 的崩溃与 Pion 的稳定性。公开的 Pion 代码以 AdamW 实测步幅的十三倍运行 Muon，而 Pion 的滤波器会将主导方向所占能量不足 2/3 的每个矩阵推向零。在 Qwen3 上进行 GRPO 时，若将每个矩阵的步幅大小与 AdamW 匹配，平坦谱的正交化更新在 60 步内，于 0.6B 模型上可容忍大 2.0–3.0 倍的学习率，于 1.7B 上可容忍大 1.4–2.8 倍的学习率；4B 上尚未确定这一余量，而在不加惩罚项运行 200 步时，这一余量消失。这一余量并不是稳健性：对于层实际接收的输入，同样大小的平坦谱更新造成的层输出变化约比 AdamW 更新小三倍。若按照该输出位移进行匹配，它在 15 个设置中的 14 个里至少与 AdamW 同样容易崩溃，并在存在差异的 12 个设置中的 11 个里更早崩溃（按设置统计 $p=0.003$，按模型、任务和训练时长分组统计为 $0.062$）；若在每一步按照对策略的改变程度进行匹配，其崩溃比例落在预注册的相对 AdamW 的 ±25 个百分点范围内，而每组采用三十二个随机种子时，则落在更紧的 ±20 个百分点范围内（差值 +8，90% 区间为 −4 到 +20）。在各组自己的最佳学习率下，两者最终准确率相差不到一个百分点（75.7% 和 75.6%；采用实践者训练配方时为 72.3% 和 71.6%），平坦谱更新更早达到这一水平。关键检验事先进行了注册，失败的检验也与其余结果一并报告。',
+        'contributions': [
+            '作者将同矩阵步幅、同层输出位移、同策略变化作为不同公平性标准，拆解正交化的表观稳定收益。',
+            '摘要报告对公开 Pion 实现的尺度审计，以及预注册检验和未支持假设的结果。',
+        ],
+        'method': '在 Qwen3 的 GRPO 后训练中分别控制更新范数、函数空间输出变化和策略变化；比较崩溃比例、达到目标准确率的速度以及各方法最佳学习率。应将这三种匹配方式作为不同的实验问题，不能混为同一个控制变量。',
+        'result': '摘要报告 0.6B/1.7B 的短时学习率余量，但 4B 未确定且无惩罚项 200 步时消失；按输出位移匹配后，14/15 设置至少同样容易崩溃。两个检验的 p 值分别为 0.003 和分组后的 0.062，不能只引用显著者。最佳学习率下准确率约 75.7% 对 75.6%，同时保留预注册容许区间与 90% 置信区间。',
+        'selection_reason': '直接补充昨日“先固定方向、再校准半径”的归因问题：相同参数更新范数未必产生相同函数变化。它提供比再叠加一种谱滤波器更有信息增益的竞争解释；未来 APS/Muon 消融应加入输出变化或独立 batch 的下降响应。RL 场景可迁移的是对照设计，预训练收益仍须独立验证。',
+        'evidence_limit': '依据 OpenReview 原始摘要，低置信度初评，待全文核验；需核对崩溃定义、输出/策略匹配算法、每种预算与惩罚项、Pion 版本、预注册原件、模型任务分组及最佳学习率的选择协议。等效区间较宽，不能将“未显著不同”解释为严格等价，也不能将 RL 结论直接外推到 NanoGPT 预训练。',
+        'reading_decision': '精读',
+    },
+    titles[2]: {
+        'title_zh': '最小状态优化：达到 AdamW 的准确率究竟需要多少优化器内存？',
+        'summary': 'A∗Grad 用带信赖域的 Polyak 步长固定尺度设计，再通过方向几何比较零状态和半状态更新的任务依赖收益。',
+        'abstract_zh': 'AdamW 等自适应优化器为每个参数额外保存两个张量（一阶矩和二阶矩），使模型的内存占用翻倍。要达到 AdamW 的准确率，究竟有多少优化器状态是真正必要的？我们通过 A∗Grad 研究这一问题：它是一种无需设置学习率的优化器，步长由带信赖域的 Polyak 规则确定，唯一可调超参数是无量纲比例 $ρ$。仅改变更新方向的几何，A∗Grad 就能覆盖一系列优化器状态大小。我们发现，所需状态取决于任务，而尖锐度诊断能够预测这一点：基于符号的更新（零状态）丢弃梯度幅值，收敛到比 SGD 的极小值尖锐 5–10 倍的极小值（使用滤波器归一化扰动衡量），从而损害泛化。恢复幅值信息能够解决这一问题，但最优恢复机制严格依赖于任务。对于从头训练的视觉任务（CIFAR-100/WRN），带权重衰减的全局 L2 归一化更新在零优化器状态下就已足够，较 AdamW 提高 +2.4 个百分点。对于 Transformer 微调（BERT/MNLI），则需要逐坐标 RMS；仅使用 AdamW 一半状态的情况下，它较 AdamW 提高 +0.5 个百分点，并在所有方法中具有最小的随机种子方差。我们在准确率–内存 Pareto 前沿上，将 A∗Grad 与两种近期的低内存优化器 MicroAdam 和 NanoAdam 对比，并划定 A∗Grad 展现明确优势的运行区域（稳定性、零状态视觉任务、无需超参数操作），以及其收益减弱的场景（某些微调任务、大规模下的峰值准确率）。所提优化器的代码已在 Github 公开（https://anonymous.4open.science/r/astar_grad-D001）。',
+        'contributions': [
+            '作者以同一 Polyak–信赖域尺度规则对比不同方向几何，将最小状态需求表述为任务依赖问题。',
+            '摘要通过尖锐度诊断比较符号丢幅值与恢复幅值的后果，并与 MicroAdam/NanoAdam 做准确率–内存前沿比较。',
+        ],
+        'method': 'A∗Grad 的步长由 Polyak 规则与信赖域共同决定；方向从符号、全局 L2 归一化到逐坐标 RMS。需从全文核对目标损失下界、信赖域形式与比例 ρ 的选取。学习率无需设置与仍有一个可调比例同时成立，摘要中的“无需超参数操作”只能作为作者对特定运行区域的说法。',
+        'result': '摘要报告符号更新的极小值尖锐度为 SGD 的 5–10 倍；CIFAR-100/WRN 零状态配置较 AdamW 高 2.4 个百分点，BERT/MNLI 半状态 RMS 配置高 0.5 个百分点。摘要没有大语言模型预训练结果；“内存翻倍”指其张量计数描述，不能等同于端到端峰值显存。',
+        'selection_reason': '与已有 PowerStep、SignSGD 和 parameter-free Polyak 笔记形成直接对照：少状态收益是否来自步长规则、方向幅值还是特定任务？它能帮助把 APS/Muon 的内存、方向和尺度设计拆开验证，同时提醒零状态的视觉结果不能直接移植到大语言模型。',
+        'evidence_limit': '依据 OpenReview 原始摘要，低置信度初评，待全文核验；核对 Polyak 下界是否使用 oracle、ρ 是否固定跨任务、sharpness 与泛化是否有因果消融、基线搜索预算、RMS 状态精度、临时张量/峰值显存和大模型规模。匿名投稿及匿名代码地址不构成复现完成的证据。',
+        'reading_decision': '选读',
+    },
+}
+
+rest = [
+    'Evie-KF 在 Adam 白化坐标中用梯度噪声协方差构造 Riccati 预条件器；最大语言模型为 33.7M，优先核对中心化估计、Kronecker 额外成本和匹配墙钟的调参协议。',
+    '两个解析问题中研究 exact-polar Muon 的条件数收益；初始化和步长条件、不同硬实例与共同实例的区别决定能否迁移到有限 NS 的 LLM。',
+    'HyperTransfer 检验参数方向与范数更新的动力学等价；对当前研究最有用的是有效学习率而非名义学习率的公平比较，先核对尺度不变假设。',
+    'Ember 为 embedding/LM-head 提供 O(V+D) 状态；摘要未给具体模型、收益数字，且代码称待发布，先跟踪接口几何和实际状态精度。',
+    'StructMuon 从既有动量/更新提取历史子空间通信 r×r 核；92.0–97.5% 通信降幅相对逐步同步 Full Muon，需核对局部状态、残差与端到端墙钟。',
+    'MoRE 在 MoE 任务边界重置快状态、保留部分历史调节学习率；TRACE 得分和对 EWC 的存储收益不等于通用低状态预训练证据。',
+    '联邦优化器状态同步的收益由方向响应而非状态距离决定；48% 上行节省含探测成本，适合借鉴反馈诊断，暂不作为 LLM 预训练主线。',
+]
+for paper, summary in zip(data['top_papers'][3:], rest):
+    analyses[paper['title']] = {'summary': summary}
+
+coverage = json.loads((RUN / 'openreview-coverage.json').read_text())
+data['sources_searched'] = ['arxiv', 'openreview', 'semantic_scholar']
+data['source_counts']['semantic_scholar'] = 0
+data['focus_keywords'] = ['optimizer', 'orthogonalization', 'preconditioner', 'optimizer state', 'spectral']
+data['retrieval_keywords'] = config['research_domains']['大模型优化器设计']['keywords']
+data['source_status'] = {
+    'arxiv': {'status': 'partial', 'detail': '近30天、配置15关键词，按相关性最多200篇，达到上限；不是穷尽列表。'},
+    'openreview': {'status': 'partial', 'detail': '配置15关键词分开检索，每词仅第1页100条，按公开日期过滤；未遍历完整会场。', 'queries': coverage},
+    'semantic_scholar': {'status': 'failed', 'detail': '过去一年窗口的匿名API两次请求均HTTP 429，未取得引用信号。'},
+}
+data['screening_method_note'] = '先按配置检索；因Muon碰撞器等词义误命中，在同一已取得候选池上用今日focus运行原脚本重新预筛。语义复排限于该次预筛前10篇，保留原脚本分数与screening_rank。'
+data['semantic_reranking_scope'] = 'title_and_abstract; top_10_screened_candidates'
+
+for paper in data['top_papers'][:3]:
+    record = json.loads((RUN / ('openreview-' + paper['id'] + '.json')).read_text())
+    paper['license'] = record.get('license')
+    paper['metadata_verified'] = True
+    paper['authors_status'] = 'anonymous_submission_not_disclosed'
+
+editorial = {
+    'overview': {
+        'trend': '今天更有信息增益的设计轴是：谱优化能否摆脱预设训练终点、尺度匹配怎样改变稳定性结论，以及少状态更新需要保留哪些幅值信息。前三篇来自近一个月的 OpenReview 匿名投稿，属于今日新增推荐，不代表今天刚发表。所有研究判断均为摘要级初评。',
+        'hotspots': [
+            {'title': '可复核的检索边界', 'text': '窗口为 2026-09-09 至 2026-10-09；arXiv 200 条和 OpenReview 15 个关键词各100条第1页均有截断，不能解读为完整覆盖。Semantic Scholar 两次 HTTP 429，因此过去一年高影响力补充与引用数缺失。310 篇是关键词候选，其中63篇已在库、247篇未推荐过；宽泛词及物理Muon误命中只保留在附录，不赋予研究意义。'},
+            {'title': '接续昨日 APS/Muon 方案', 'text': '先读 SF-NorMuon 的迭代点与衰减规则，再读 RL 步幅/输出位移/策略变化三种匹配；A∗Grad 提供 Polyak 规则下状态–方向几何的对照。三者都不能替代本地固定预算的 NanoGPT 消融。'},
+            {'title': '新近条目待排入后续阅读', 'text': 'arXiv 同时检出 10月8日提交的 Rounding in Preconditioner Space（2610.12444）、10月7日的 Spectrally Targeted Muon（2610.10965）和 10月5日的 BulkBoost 工作（2610.07497）。分别涉及量化误差传播、小谱方向与两频带重加权，见附录原文链接；本次按focus预筛未进入前10，不替换前三篇，也未完成全文评审。'},
+        ],
+    },
+    'domain_summaries': {
+        '大模型优化器设计': {
+            'summary': '将更新方向、实际尺度、调度终点与持久状态四个因素拆开。与知识库已有 DGA-Muon、ORCA、PowerStep 和 parameter-free Polyak 相比，今日组合补充无调度训练、函数空间尺度控制和任务依赖的状态需求；不从会议投稿或摘要收益推断技术正确性。',
+            'subfields': {
+                '符号与范数几何优化': 'Muon 谱方向的理论、谱重加权、方向表示与后训练对照密集；首要审查 exact-polar 与有限NS实现、参数范数与输出位移的区别。包含物理Muon词义误命中，附录数量不是全部相关论文数量。',
+                '免调参与梯度裁剪': 'Polyak/信赖域和裁剪需核对未知目标值、比例参数及噪声假设。无学习率调参、无显式调度和真正无可调参数是不同承诺。',
+                '自适应与状态内存': 'A∗Grad、Evie-KF、Ember 和状态量化给出不同路线；必须分别核算持久状态、临时张量、峰值显存、通信和端到端墙钟。',
+                '大模型训练与优化器设计': '训练协议与优化器几何共同决定结果；对小模型或后训练观察，应先确定可迁移的机制和最小对照实验。',
+                '未细分': '命中宽泛focus或分类的候选尚未匹配配置细分关键词；只作检索线索，不扩展共享研究主题。',
+            },
+        },
+    },
+    'top_papers': analyses,
+    'semantic_reranking': [
+        {'title': paper['title'], 'screening_rank': paper['screening_rank'],
+         'candidate_screening_rank': paper['candidate_screening_rank'],
+         'semantic_rank': paper['semantic_rank'],
+         'reason': analyses[paper['title']].get('selection_reason') or analyses[paper['title']]['summary'],
+         'assessment_scope': 'metadata_and_abstract'}
+        for paper in data['top_papers']
+    ],
+    'abstract_translation_audit': {
+        'source': 'OpenReview 原始记录；三篇均 CC BY 4.0；保留原英文并另附中文翻译，翻译属于改编。作者匿名未披露。',
+        'checked': ['方法名与变量', '模型和数据集', '数字和区间', '比较方向', '限定条件及负面结果'],
+    },
+}
+
+(DAY / 'search_result.json').write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding='utf-8')
+target = DAY / 'daily-editorial.json'
+if target.exists():
+    raise FileExistsError(target)
+target.write_text(json.dumps(editorial, ensure_ascii=False, indent=2), encoding='utf-8')
+print('Semantic ranks:')
+for paper in data['top_papers']:
+    print(paper['semantic_rank'], paper['title'])

@@ -1,0 +1,75 @@
+{
+  "content": {
+    "TLDR": {
+      "value": "Muon's reported collapse in RLVR is a step-size artifact, and the headroom left after RMS matching is a rescaling, not robustness: matched in output displacement or policy change, the flat step is no more stable than AdamW."
+    },
+    "venue": {
+      "value": "ICLR 2027 Conference Submission"
+    },
+    "keywords": {
+      "value": [
+        "Reinforcement Learning",
+        "Reinforcement Learning with Verifiable Rewards",
+        "GRPO",
+        "Muon",
+        "Pion",
+        "AdamW",
+        "Orthogonalized Optimizers",
+        "Spectral Methods",
+        "Training Stability",
+        "Optimization",
+        "Update Geometry",
+        "LLM Post-Training"
+      ]
+    },
+    "supplementary_material": {
+      "value": "/attachment/3eb4e9049486ee8f63fa09b6e9f043be590bbb94.zip"
+    },
+    "primary_area": {
+      "value": "optimization"
+    },
+    "abstract": {
+      "value": "Orthogonalized optimizers such as Muon are reported to collapse in RL with verifiable rewards (RLVR), and the spectral filter Pion to beat AdamW. Step size accounts for Muon's collapse and for Pion's stability. The public Pion code runs Muon at thirteen times AdamW's measured step, and Pion's filter drives toward zero every matrix whose leading direction holds less than 2/3 of the energy. With each matrix's step matched in size to AdamW's, in GRPO on Qwen3, the flat-spectrum orthogonalized step tolerates within 60 steps a 2.0–3.0× larger learning rate at 0.6B and 1.4–2.8× at 1.7B; at 4B it is not determined, and over 200 steps without a penalty it is gone. That margin is not robustness: a flat step moves the layer outputs, on the inputs they receive, about three times less than an AdamW step of the same size. Matched in that output displacement it collapses at least as often as AdamW in 14 of 15 settings, and earlier in 11 of the 12 that differ (p = 0.003 over settings, 0.062 over groups of model, task and horizon); matched at every step in how much it changes the policy, its collapse fraction is within the registered ±25 points of AdamW's, and at thirty-two seeds per arm within a tighter ±20 (+8, 90% interval −4 to +20). At each arm's best learning rate the two end within a point of each other in accuracy (75.7% and 75.6%; under a practitioner's recipe, 72.3% and 71.6%), the flat step getting there sooner. The key tests were registered in advance, and the ones that failed are reported with the rest."
+    },
+    "_bibtex": {
+      "value": "@inproceedings{\nanonymous2026orthogonalization,\ntitle={Orthogonalization buys a learning rate, not robustness, in {RL} post-training},\nauthor={Anonymous},\nbooktitle={Submitted to The Fifteenth International Conference on Learning Representations},\nyear={2026},\nurl={https://openreview.net/forum?id=ZEQE8bJkZz},\nnote={under review}\n}"
+    },
+    "title": {
+      "value": "Orthogonalization buys a learning rate, not robustness, in RL post-training"
+    },
+    "pdf": {
+      "value": "/pdf/82eb76303641a6cd5cc821a2cc991fae57158a47.pdf"
+    },
+    "venueid": {
+      "value": "ICLR.cc/2027/Conference/Submission"
+    }
+  },
+  "tmdate": 1791233438809,
+  "tcdate": 1789741215899,
+  "writers": [
+    "ICLR.cc/2027/Conference",
+    "ICLR.cc/2027/Conference/Submission43944/Authors"
+  ],
+  "signatures": [
+    "ICLR.cc/2027/Conference/Submission43944/Authors"
+  ],
+  "forum": "ZEQE8bJkZz",
+  "license": "CC BY 4.0",
+  "number": 43944,
+  "cdate": 1789741215899,
+  "readers": [
+    "everyone"
+  ],
+  "invitations": [
+    "ICLR.cc/2027/Conference/-/Submission",
+    "ICLR.cc/2027/Conference/-/Edit",
+    "ICLR.cc/2027/Conference/-/Submission_Change_Before_Bidding",
+    "ICLR.cc/2027/Conference/Submission43944/-/Full_Submission",
+    "ICLR.cc/2027/Conference/-/Submission_Change_Before_Reviewing"
+  ],
+  "mdate": 1791233438809,
+  "odate": 1791031328286,
+  "domain": "ICLR.cc/2027/Conference",
+  "id": "ZEQE8bJkZz",
+  "version": 2
+}

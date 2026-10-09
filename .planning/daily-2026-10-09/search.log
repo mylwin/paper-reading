@@ -1,0 +1,80 @@
+14:49:48 [INFO] Loading config from: /Users/myl/Documents/paper/.claude/skills/config.yaml
+14:49:48 [INFO] max-results=200 top-n=10 days=30
+14:49:48 [INFO] Data sources: ['arxiv', 'openreview']
+14:49:48 [INFO] Configured keywords: 15
+14:49:48 [INFO] Target date: 2026-10-09
+14:49:48 [INFO] Date windows:
+14:49:48 [INFO]   Recent 30 days: 2026-09-09 to 2026-10-09
+14:49:48 [INFO]   Past year (31-365 days): 2025-10-09 to 2026-09-08
+14:49:48 [INFO] ======================================================================
+14:49:48 [INFO] Step 1: Multi-source search (last 30 days) for configured interests
+14:49:48 [INFO] ======================================================================
+14:49:48 [INFO] [arXiv] Keyword search batch 1/1 (15 keywords)
+14:49:48 [INFO] [arXiv] Keyword search: ['large language model optimizer', 'LLM optimizer', 'optimizer design', 'memory-efficient optimizer', 'optimizer state memory', 'adaptive optimization', 'sign-based optimization', 'SignSGD', 'Muon', 'PowerStep', 'gradient clipping', 'parameter-free optimization', 'Polyak stepsize', 'lp-norm steepest descent', 'AdamW']
+14:49:51 [INFO] [arXiv] Keyword search found 200 papers
+14:49:51 [INFO] [arXiv] Keyword search found 200 papers across all batches
+14:49:51 [INFO] [OpenReview] Keyword search: ['large language model optimizer', 'LLM optimizer', 'optimizer design', 'memory-efficient optimizer', 'optimizer state memory', 'adaptive optimization']
+Traceback (most recent call last):
+  File "/Users/myl/Documents/paper/.claude/skills/paper-daily/scripts/search_arxiv.py", line 1809, in <module>
+    sys.exit(main())
+             ~~~~^^
+  File "/Users/myl/Documents/paper/.claude/skills/paper-daily/scripts/search_arxiv.py", line 1584, in main
+    recent_papers, source_counts = search_papers_across_sources(
+                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        sources=sources,
+        ^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+        max_results_per_source=args.max_results,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/myl/Documents/paper/.claude/skills/paper-daily/scripts/search_arxiv.py", line 473, in search_papers_across_sources
+    fetched = fetch_with_paper_config(
+        source,
+    ...<3 lines>...
+        max_results=max_results_per_source,
+    )
+  File "/Users/myl/Documents/paper/.claude/skills/paper-daily/scripts/search_arxiv.py", line 453, in fetch_with_paper_config
+    return fetch_for_source(source, **kwargs)
+  File "/Users/myl/Documents/paper/.claude/skills/paper-daily/scripts/search_arxiv.py", line 438, in fetch_for_source
+    return entry['fetch'](**kwargs)
+           ~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/Users/myl/Documents/paper/.claude/skills/paper-daily/scripts/search_arxiv.py", line 369, in search_openreview_by_keywords
+    with urllib.request.urlopen(req, timeout=45) as response:
+         ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Caskroom/miniconda/base/lib/python3.13/urllib/request.py", line 189, in urlopen
+    return opener.open(url, data, timeout)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Caskroom/miniconda/base/lib/python3.13/urllib/request.py", line 489, in open
+    response = self._open(req, data)
+  File "/opt/homebrew/Caskroom/miniconda/base/lib/python3.13/urllib/request.py", line 506, in _open
+    result = self._call_chain(self.handle_open, protocol, protocol +
+                              '_open', req)
+  File "/opt/homebrew/Caskroom/miniconda/base/lib/python3.13/urllib/request.py", line 466, in _call_chain
+    result = func(*args)
+  File "/opt/homebrew/Caskroom/miniconda/base/lib/python3.13/urllib/request.py", line 1367, in https_open
+    return self.do_open(http.client.HTTPSConnection, req,
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                        context=self._context)
+                        ^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Caskroom/miniconda/base/lib/python3.13/urllib/request.py", line 1323, in do_open
+    r = h.getresponse()
+  File "/opt/homebrew/Caskroom/miniconda/base/lib/python3.13/http/client.py", line 1450, in getresponse
+    response.begin()
+    ~~~~~~~~~~~~~~^^
+  File "/opt/homebrew/Caskroom/miniconda/base/lib/python3.13/http/client.py", line 336, in begin
+    version, status, reason = self._read_status()
+                              ~~~~~~~~~~~~~~~~~^^
+  File "/opt/homebrew/Caskroom/miniconda/base/lib/python3.13/http/client.py", line 297, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+               ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/opt/homebrew/Caskroom/miniconda/base/lib/python3.13/socket.py", line 719, in readinto
+    return self._sock.recv_into(b)
+           ~~~~~~~~~~~~~~~~~~~~^^^
+  File "/opt/homebrew/Caskroom/miniconda/base/lib/python3.13/ssl.py", line 1304, in recv_into
+    return self.read(nbytes, buffer)
+           ~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Caskroom/miniconda/base/lib/python3.13/ssl.py", line 1138, in read
+    return self._sslobj.read(len, buffer)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+KeyboardInterrupt

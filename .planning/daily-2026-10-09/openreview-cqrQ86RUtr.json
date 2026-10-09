@@ -1,0 +1,63 @@
+{
+  "content": {
+    "TLDR": {
+      "value": "We suggest A∗Grad, a learning- rate-free optimizer whose step size is set by a Polyak rule with a trust region, and whose only tunable knob is a dimensionless ratio ρ."
+    },
+    "venue": {
+      "value": "ICLR 2027 Conference Submission"
+    },
+    "keywords": {
+      "value": [
+        "Optimizer",
+        "Learning-Rate-Free",
+        "Sharpness-guided"
+      ]
+    },
+    "primary_area": {
+      "value": "optimization"
+    },
+    "abstract": {
+      "value": "Adaptive optimizers such as AdamW store two extra tensors per parameter (first and\nsecond moments), doubling the model’s memory footprint. How much of this optimizer\nstate is actually necessary to match AdamW’s accuracy? We study this through A∗Grad,\na learning-rate-free optimizer whose step size is set by a Polyak rule with a trust re-\ngion, and whose only tunable hyperparameter is a dimensionless ratio ρ. By varying\nonly the geometry of the update direction, A∗Grad spans a spectrum of optimizer-state\nsizes. We find the required state is task-dependent, and a sharpness diagnosis predicts\nit: the sign-based step (zero state) discards gradient magnitude and converges to min-\nima 5–10× sharper than SGD’s (filter-normalized perturbation), which hurts generaliza-\ntion. Restoring magnitude resolves this issue, though the optimal restoration mecha-\nnism is strictly task-dependent. For from-scratch vision (CIFAR-100/WRN), a global L2-\nnormalized step with weight decay suffices at zero optimizer state, outperforming AdamW\nby +2.4%p. For Transformer fine-tuning (BERT/MNLI), per-coordinate RMS is needed; at\nhalf AdamW’s state, it outperforms it by +0.5%p with the smallest seed variance among\nall methods. We place A∗Grad against two recent low-memory optimizers, MicroAdam and\nNanoAdam, on an accuracy–memory Pareto front, and delineate the operational regimes\nwhere A∗Grad demonstrates clear advantages (stability, zero-state vision, hyperparameter-\nfree operation) versus scenarios where its benefits are attenuated (certain fine-tuning tasks,\npeak accuracy at scale). The code of the proposed optimizer is publicly available at\nGithub (https://anonymous.4open.science/r/astar_grad-D001)."
+    },
+    "_bibtex": {
+      "value": "@inproceedings{\nanonymous2026minimalstate,\ntitle={Minimal-State Optimization: How Little Optimizer Memory Does AdamW{\\textquoteright}s Accuracy Need?},\nauthor={Anonymous},\nbooktitle={Submitted to The Fifteenth International Conference on Learning Representations},\nyear={2026},\nurl={https://openreview.net/forum?id=cqrQ86RUtr},\nnote={under review}\n}"
+    },
+    "title": {
+      "value": "Minimal-State Optimization: How Little Optimizer Memory Does AdamW’s Accuracy Need?"
+    },
+    "pdf": {
+      "value": "/pdf/770e128fd066d7a76171c9ef57c43ce99095af47.pdf"
+    },
+    "venueid": {
+      "value": "ICLR.cc/2027/Conference/Submission"
+    }
+  },
+  "tmdate": 1791231255305,
+  "tcdate": 1789642978625,
+  "writers": [
+    "ICLR.cc/2027/Conference",
+    "ICLR.cc/2027/Conference/Submission30683/Authors"
+  ],
+  "signatures": [
+    "ICLR.cc/2027/Conference/Submission30683/Authors"
+  ],
+  "forum": "cqrQ86RUtr",
+  "license": "CC BY 4.0",
+  "number": 30683,
+  "cdate": 1789642978625,
+  "readers": [
+    "everyone"
+  ],
+  "invitations": [
+    "ICLR.cc/2027/Conference/-/Submission",
+    "ICLR.cc/2027/Conference/Submission30683/-/Full_Submission",
+    "ICLR.cc/2027/Conference/-/Submission_Change_Before_Bidding",
+    "ICLR.cc/2027/Conference/-/Submission_Change_Before_Reviewing",
+    "ICLR.cc/2027/Conference/-/Edit"
+  ],
+  "mdate": 1791231255305,
+  "odate": 1791031328286,
+  "domain": "ICLR.cc/2027/Conference",
+  "id": "cqrQ86RUtr",
+  "version": 2
+}

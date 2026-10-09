@@ -1,0 +1,43 @@
+{
+  "papers_dir": "/Users/myl/Documents/paper/01-raw",
+  "month_dir": "/Users/myl/Documents/paper/01-raw/2026-10",
+  "month": "2026-10",
+  "date": "2026-10-09",
+  "requested": 3,
+  "downloaded": 0,
+  "skipped_existing": 0,
+  "failed": 3,
+  "index_updated": [],
+  "archived": [
+    {
+      "title": "Anytime Training with Schedule-Free Spectral Optimization",
+      "paper_stem": "Anytime_Training_with_Schedule_Free_Spectral_Optimization",
+      "month": "2026-10",
+      "source": "openreview",
+      "pdf_url": "https://openreview.net/pdf/56557c403f0b9b0ab7b214c4b256a89b32f49087.pdf",
+      "path": "/Users/myl/Documents/paper/01-raw/2026-10/Anytime_Training_with_Schedule_Free_Spectral_Optimization.pdf",
+      "status": "failed",
+      "detail": "HTTP 403"
+    },
+    {
+      "title": "Orthogonalization buys a learning rate, not robustness, in RL post-training",
+      "paper_stem": "Orthogonalization_buys_a_learning_rate_not_robustness_in_RL_post_training",
+      "month": "2026-10",
+      "source": "openreview",
+      "pdf_url": "https://openreview.net/pdf/82eb76303641a6cd5cc821a2cc991fae57158a47.pdf",
+      "path": "/Users/myl/Documents/paper/01-raw/2026-10/Orthogonalization_buys_a_learning_rate_not_robustness_in_RL_post_training.pdf",
+      "status": "failed",
+      "detail": "HTTP 403"
+    },
+    {
+      "title": "Minimal-State Optimization: How Little Optimizer Memory Does AdamW’s Accuracy Need?",
+      "paper_stem": "Minimal_State_Optimization_How_Little_Optimizer_Memory_Does_AdamW’s_Accuracy_Need",
+      "month": "2026-10",
+      "source": "openreview",
+      "pdf_url": "https://openreview.net/pdf/770e128fd066d7a76171c9ef57c43ce99095af47.pdf",
+      "path": "/Users/myl/Documents/paper/01-raw/2026-10/Minimal_State_Optimization_How_Little_Optimizer_Memory_Does_AdamW’s_Accuracy_Need.pdf",
+      "status": "failed",
+      "detail": "HTTP 403"
+    }
+  ]
+}

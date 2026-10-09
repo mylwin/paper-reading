@@ -1,0 +1,53 @@
+{
+  "papers_dir": "/Users/myl/Documents/paper/01-raw",
+  "month_dir": "/Users/myl/Documents/paper/01-raw/2026-10",
+  "month": "2026-10",
+  "date": "2026-10-09",
+  "requested": 3,
+  "downloaded": 1,
+  "skipped_existing": 0,
+  "failed": 2,
+  "index_updated": [
+    "/Users/myl/Documents/paper/01-raw/index.md",
+    "/Users/myl/Documents/paper/01-raw/2026-10/README.md",
+    "/Users/myl/Documents/paper/02-markdown/index.md",
+    "/Users/myl/Documents/paper/02-markdown/2026-10/README.md",
+    "/Users/myl/Documents/paper/03-notes/index.md",
+    "/Users/myl/Documents/paper/03-notes/2026-10/README.md",
+    "/Users/myl/Documents/paper/06-translation/index.md",
+    "/Users/myl/Documents/paper/06-translation/2026-10/README.md"
+  ],
+  "archived": [
+    {
+      "title": "Anytime Training with Schedule-Free Spectral Optimization",
+      "paper_stem": "Anytime_Training_with_Schedule_Free_Spectral_Optimization",
+      "month": "2026-10",
+      "source": "openreview",
+      "pdf_url": "https://arxiv.org/pdf/2605.23061",
+      "path": "/Users/myl/Documents/paper/01-raw/2026-10/Anytime_Training_with_Schedule_Free_Spectral_Optimization.pdf",
+      "status": "downloaded",
+      "detail": "1108.9 KB"
+    },
+    {
+      "title": "Orthogonalization buys a learning rate, not robustness, in RL post-training",
+      "paper_stem": "Orthogonalization_buys_a_learning_rate_not_robustness_in_RL_post_training",
+      "month": "2026-10",
+      "source": "openreview",
+      "pdf_url": "https://openreview.net/pdf?id=ZEQE8bJkZz",
+      "path": "/Users/myl/Documents/paper/01-raw/2026-10/Orthogonalization_buys_a_learning_rate_not_robustness_in_RL_post_training.pdf",
+      "status": "failed",
+      "detail": "HTTP 403"
+    },
+    {
+      "title": "Minimal-State Optimization: How Little Optimizer Memory Does AdamW’s Accuracy Need?",
+      "paper_stem": "Minimal_State_Optimization_How_Little_Optimizer_Memory_Does_AdamW’s_Accuracy_Need",
+      "month": "2026-10",
+      "source": "openreview",
+      "pdf_url": "https://openreview.net/pdf?id=cqrQ86RUtr",
+      "path": "/Users/myl/Documents/paper/01-raw/2026-10/Minimal_State_Optimization_How_Little_Optimizer_Memory_Does_AdamW’s_Accuracy_Need.pdf",
+      "status": "failed",
+      "detail": "HTTP 403"
+    }
+  ],
+  "retry_note": "OpenReview三篇文件哈希及标准地址均HTTP 403；首篇改从arXiv 2605.23061v2归档，其余保持失败。"
+}

@@ -1,0 +1,137 @@
+[
+  {
+    "term": "large language model optimizer",
+    "page_limit": 1,
+    "page_size": 100,
+    "retrieved": 100,
+    "in_window": 14,
+    "truncated": true,
+    "status": "ok"
+  },
+  {
+    "term": "LLM optimizer",
+    "page_limit": 1,
+    "page_size": 100,
+    "retrieved": 100,
+    "in_window": 6,
+    "truncated": true,
+    "status": "ok"
+  },
+  {
+    "term": "optimizer design",
+    "page_limit": 1,
+    "page_size": 100,
+    "retrieved": 100,
+    "in_window": 19,
+    "truncated": true,
+    "status": "ok"
+  },
+  {
+    "term": "memory-efficient optimizer",
+    "page_limit": 1,
+    "page_size": 100,
+    "retrieved": 100,
+    "in_window": 17,
+    "truncated": true,
+    "status": "ok"
+  },
+  {
+    "term": "optimizer state memory",
+    "page_limit": 1,
+    "page_size": 100,
+    "retrieved": 100,
+    "in_window": 26,
+    "truncated": true,
+    "status": "ok"
+  },
+  {
+    "term": "adaptive optimization",
+    "page_limit": 1,
+    "page_size": 100,
+    "retrieved": 100,
+    "in_window": 10,
+    "truncated": true,
+    "status": "ok"
+  },
+  {
+    "term": "sign-based optimization",
+    "page_limit": 1,
+    "page_size": 100,
+    "retrieved": 100,
+    "in_window": 6,
+    "truncated": true,
+    "status": "ok"
+  },
+  {
+    "term": "SignSGD",
+    "page_limit": 1,
+    "page_size": 100,
+    "retrieved": 92,
+    "in_window": 12,
+    "truncated": false,
+    "status": "ok"
+  },
+  {
+    "term": "Muon",
+    "page_limit": 1,
+    "page_size": 100,
+    "retrieved": 100,
+    "in_window": 47,
+    "truncated": true,
+    "status": "ok"
+  },
+  {
+    "term": "PowerStep",
+    "page_limit": 1,
+    "page_size": 100,
+    "retrieved": 3,
+    "in_window": 2,
+    "truncated": false,
+    "status": "ok"
+  },
+  {
+    "term": "gradient clipping",
+    "page_limit": 1,
+    "page_size": 100,
+    "retrieved": 100,
+    "in_window": 9,
+    "truncated": true,
+    "status": "ok"
+  },
+  {
+    "term": "parameter-free optimization",
+    "page_limit": 1,
+    "page_size": 100,
+    "retrieved": 100,
+    "in_window": 6,
+    "truncated": true,
+    "status": "ok"
+  },
+  {
+    "term": "Polyak stepsize",
+    "page_limit": 1,
+    "page_size": 100,
+    "retrieved": 100,
+    "in_window": 6,
+    "truncated": true,
+    "status": "ok"
+  },
+  {
+    "term": "lp-norm steepest descent",
+    "page_limit": 1,
+    "page_size": 100,
+    "retrieved": 100,
+    "in_window": 10,
+    "truncated": true,
+    "status": "ok"
+  },
+  {
+    "term": "AdamW",
+    "page_limit": 1,
+    "page_size": 100,
+    "retrieved": 100,
+    "in_window": 43,
+    "truncated": true,
+    "status": "ok"
+  }
+]

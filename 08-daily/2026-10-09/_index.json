@@ -1,0 +1,119 @@
+{
+  "date": "2026-10-09",
+  "note_file": "今日检索.md",
+  "generated_at": "2026-10-09T15:08:18",
+  "skill": "paper-daily",
+  "sources_searched": [
+    "arxiv",
+    "openreview",
+    "semantic_scholar"
+  ],
+  "source_counts": {
+    "arxiv": 200,
+    "openreview": 169,
+    "semantic_scholar": 0
+  },
+  "date_windows": {
+    "recent_30d": {
+      "start": "2026-09-09",
+      "end": "2026-10-09"
+    },
+    "past_year": {
+      "start": "2025-10-09",
+      "end": "2026-09-08"
+    }
+  },
+  "total_unique": 310,
+  "top_papers": [
+    {
+      "title": "Anytime Training with Schedule-Free Spectral Optimization",
+      "source": "openreview",
+      "arxiv_id": "",
+      "url": "https://openreview.net/forum?id=aIdrg5gk9T",
+      "note_filename": "Anytime_Training_with_Schedule_Free_Spectral_Optimization",
+      "matched_domain": "大模型优化器设计",
+      "score": 8.33
+    },
+    {
+      "title": "Orthogonalization buys a learning rate, not robustness, in RL post-training",
+      "source": "openreview",
+      "arxiv_id": "",
+      "url": "https://openreview.net/forum?id=ZEQE8bJkZz",
+      "note_filename": "Orthogonalization_buys_a_learning_rate_not_robustness_in_RL_post_training",
+      "matched_domain": "大模型优化器设计",
+      "score": 8.2
+    },
+    {
+      "title": "Minimal-State Optimization: How Little Optimizer Memory Does AdamW’s Accuracy Need?",
+      "source": "openreview",
+      "arxiv_id": "",
+      "url": "https://openreview.net/forum?id=cqrQ86RUtr",
+      "note_filename": "Minimal_State_Optimization_How_Little_Optimizer_Memory_Does_AdamW’s_Accuracy_Need",
+      "matched_domain": "大模型优化器设计",
+      "score": 8.4
+    },
+    {
+      "title": "Evie-KF: Risk-Sensitive Kronecker-Factored Preconditioning for Adaptive Optimizers",
+      "source": "openreview",
+      "arxiv_id": "",
+      "url": "https://openreview.net/forum?id=qb2Q70GDmE",
+      "note_filename": "Evie_KF_Risk_Sensitive_Kronecker_Factored_Preconditioning_for_Adaptive_Optimizers",
+      "matched_domain": "大模型优化器设计",
+      "score": 8.4
+    },
+    {
+      "title": "Preconditioning Benefits of Spectral Orthogonalization in Muon",
+      "source": "openreview",
+      "arxiv_id": "",
+      "url": "https://openreview.net/forum?id=DIoUssxjoe",
+      "note_filename": "Preconditioning_Benefits_of_Spectral_Orthogonalization_in_Muon",
+      "matched_domain": "大模型优化器设计",
+      "score": 8.27
+    },
+    {
+      "title": "HyperTransfer: Understanding the Equivalence  between Base Optimizer and Hyperball",
+      "source": "openreview",
+      "arxiv_id": "",
+      "url": "https://openreview.net/forum?id=Vpdwu2TJUQ",
+      "note_filename": "HyperTransfer_Understanding_the_Equivalence_between_Base_Optimizer_and_Hyperball",
+      "matched_domain": "大模型优化器设计",
+      "score": 8.33
+    },
+    {
+      "title": "Ember: A Kilobyte-State Optimizer for Token Interfaces",
+      "source": "openreview",
+      "arxiv_id": "",
+      "url": "https://openreview.net/forum?id=24Tbm5hU4W",
+      "note_filename": "Ember_A_Kilobyte_State_Optimizer_for_Token_Interfaces",
+      "matched_domain": "大模型优化器设计",
+      "score": 8.13
+    },
+    {
+      "title": "StructMuon: Compact Core Communication by Reusing Muon History Subspaces",
+      "source": "openreview",
+      "arxiv_id": "",
+      "url": "https://openreview.net/forum?id=77V7BF6UKE",
+      "note_filename": "StructMuon_Compact_Core_Communication_by_Reusing_Muon_History_Subspaces",
+      "matched_domain": "大模型优化器设计",
+      "score": 8.2
+    },
+    {
+      "title": "Reset or Reuse? Understanding How Optimizer Memory Shapes Continual Mixture-of-Experts Learning",
+      "source": "openreview",
+      "arxiv_id": "",
+      "url": "https://openreview.net/forum?id=iSadNiakMc",
+      "note_filename": "Reset_or_Reuse_Understanding_How_Optimizer_Memory_Shapes_Continual_Mixture_of_Experts_Learning",
+      "matched_domain": "大模型优化器设计",
+      "score": 8.13
+    },
+    {
+      "title": "When Is Optimizer Memory Federable? Adaptive Synchronization in Federated Learning",
+      "source": "openreview",
+      "arxiv_id": "",
+      "url": "https://openreview.net/forum?id=DMd4HaUhfk",
+      "note_filename": "When_Is_Optimizer_Memory_Federable_Adaptive_Synchronization_in_Federated_Learning",
+      "matched_domain": "大模型优化器设计",
+      "score": 8.0
+    }
+  ]
+}
