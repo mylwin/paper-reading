@@ -1,0 +1,16 @@
+{
+  "date": "2026-10-09",
+  "unique": 310,
+  "known": 63,
+  "recommendations": 10,
+  "archived": 1,
+  "pdf_failed": 2,
+  "candidate_scores_preserved": true,
+  "all_appendix_rows_once": true,
+  "editorial_fields_complete": true,
+  "pdf_magic_verified": true,
+  "temporary_parts": 0,
+  "relative_links_issues": 0,
+  "month_consistency_issues": 0,
+  "missing_readmes": 0
+}
