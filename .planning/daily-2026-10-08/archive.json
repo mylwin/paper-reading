@@ -1,0 +1,52 @@
+{
+  "papers_dir": "/Users/myl/Documents/paper/01-raw",
+  "month_dir": "/Users/myl/Documents/paper/01-raw/2026-10",
+  "month": "2026-10",
+  "date": "2026-10-08",
+  "requested": 3,
+  "downloaded": 3,
+  "skipped_existing": 0,
+  "failed": 0,
+  "index_updated": [
+    "/Users/myl/Documents/paper/01-raw/index.md",
+    "/Users/myl/Documents/paper/01-raw/2026-10/README.md",
+    "/Users/myl/Documents/paper/02-markdown/index.md",
+    "/Users/myl/Documents/paper/02-markdown/2026-10/README.md",
+    "/Users/myl/Documents/paper/03-notes/index.md",
+    "/Users/myl/Documents/paper/03-notes/2026-10/README.md",
+    "/Users/myl/Documents/paper/06-translation/index.md",
+    "/Users/myl/Documents/paper/06-translation/2026-10/README.md"
+  ],
+  "archived": [
+    {
+      "title": "DGA-Muon: Decoupled Geometry-Aligned Adaptive Scaling for Muon",
+      "paper_stem": "DGA_Muon_Decoupled_Geometry_Aligned_Adaptive_Scaling_for_Muon",
+      "month": "2026-10",
+      "source": "arxiv",
+      "pdf_url": "https://arxiv.org/pdf/2610.06578v2",
+      "path": "/Users/myl/Documents/paper/01-raw/2026-10/DGA_Muon_Decoupled_Geometry_Aligned_Adaptive_Scaling_for_Muon.pdf",
+      "status": "downloaded",
+      "detail": "478.1 KB"
+    },
+    {
+      "title": "ORCA: The Annealed Spectral Conditioning Optimizer for Faster, Better LLM Training",
+      "paper_stem": "ORCA_The_Annealed_Spectral_Conditioning_Optimizer_for_Faster_Better_LLM_Training",
+      "month": "2026-10",
+      "source": "arxiv",
+      "pdf_url": "https://arxiv.org/pdf/2610.06116v1",
+      "path": "/Users/myl/Documents/paper/01-raw/2026-10/ORCA_The_Annealed_Spectral_Conditioning_Optimizer_for_Faster_Better_LLM_Training.pdf",
+      "status": "downloaded",
+      "detail": "1879.1 KB"
+    },
+    {
+      "title": "The Best Optimizer Depends on Batch Size",
+      "paper_stem": "The_Best_Optimizer_Depends_on_Batch_Size",
+      "month": "2026-10",
+      "source": "arxiv",
+      "pdf_url": "https://arxiv.org/pdf/2610.08975v1",
+      "path": "/Users/myl/Documents/paper/01-raw/2026-10/The_Best_Optimizer_Depends_on_Batch_Size.pdf",
+      "status": "downloaded",
+      "detail": "1362.6 KB"
+    }
+  ]
+}

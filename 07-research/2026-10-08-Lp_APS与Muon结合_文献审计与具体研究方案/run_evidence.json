@@ -1,0 +1,66 @@
+[
+  {
+    "val_loss_last": 4.060439109802246,
+    "wall_clock_hours": 4.116496938697787,
+    "tokens_total": 334233600,
+    "tokens_per_s": 28674.607666016986,
+    "peak_memory_MiB": 5398,
+    "run": "adam/full"
+  },
+  {
+    "val_loss_last": 3.626272201538086,
+    "wall_clock_hours": 4.146626599218645,
+    "tokens_total": 334233600,
+    "tokens_per_s": 28472.75913599884,
+    "peak_memory_MiB": 5076,
+    "run": "muon/full-v2"
+  },
+  {
+    "val_loss_last": 3.667546510696411,
+    "wall_clock_hours": 5.972081263303084,
+    "tokens_total": 334233600,
+    "tokens_per_s": 18247.253069856386,
+    "peak_memory_MiB": 5052,
+    "run": "nsisa/full-v1"
+  },
+  {
+    "val_loss_last": 3.6438560485839844,
+    "wall_clock_hours": 4.8009100687480535,
+    "tokens_total": 334233600,
+    "tokens_per_s": 23868.25833726523,
+    "peak_memory_MiB": 7672,
+    "run": "soap/full-v2"
+  },
+  {
+    "val_loss_last": 4.458025932312012,
+    "wall_clock_hours": 3.9903830644180482,
+    "tokens_total": 334233600,
+    "tokens_per_s": 29876.845800247193,
+    "peak_memory_MiB": 4926,
+    "run": "pbsgdm(优化参数)/full"
+  },
+  {
+    "val_loss_last": 4.77971076965332,
+    "wall_clock_hours": 7.139675503929611,
+    "tokens_total": 334233600,
+    "tokens_per_s": 14807.209096545113,
+    "peak_memory_MiB": 4930,
+    "run": "lp-sgda(优化参数)/full",
+    "n": 5100,
+    "cap_fraction": 0.9988235294117647,
+    "eta_median": 0.003333148314999469,
+    "eta_final": 0.003333056095723554
+  },
+  {
+    "val_loss_last": 4.030325889587402,
+    "wall_clock_hours": 6.542692983776667,
+    "tokens_total": 334233600,
+    "tokens_per_s": 16423.98770980912,
+    "peak_memory_MiB": 5397,
+    "run": "lp-sgdma(优化参数)/full",
+    "n": 5100,
+    "cap_fraction": 0.9976470588235294,
+    "eta_median": 0.0033332867310039713,
+    "eta_final": 0.003333298382553839
+  }
+]
