@@ -1,0 +1,14 @@
+{
+  "report": "/Users/myl/Documents/paper/07-research/2026-10-10-Muon优化器近三年研究综述与APS_Lp可行性探索.md",
+  "characters": 31730,
+  "lines": 544,
+  "indexed_sources": 41,
+  "local_links_checked": 26,
+  "missing_local_links": [],
+  "unique_web_urls": 55,
+  "display_math_delimiters": 30,
+  "code_fences": 2,
+  "placeholder_hits": [],
+  "sha256": "1b97ee74c129169c8d8cd665ca37f205549f1d308662f9970071c8dfe15e1651",
+  "checks_scope": "local link existence, source-index count, paired delimiters, JSON parsing and algebra checks; no browser rendering or training"
+}

@@ -1,0 +1,14 @@
+[
+  {
+    "path": "/Users/myl/Documents/graduate-thesis-code/reusable_optimizers/pisa/power_aps.py",
+    "sha256": "04abb72847a95e2b39892eba705a4be5e92f4afbaaec552e63a1bb83da74e290",
+    "lines": 263,
+    "purpose": "read-only current implementation audit; no execution or modification"
+  },
+  {
+    "path": "/Users/myl/Documents/graduate-thesis-code/reusable_optimizers/pisa/muon.py",
+    "sha256": "f4d155b2ee3aeef40d46046892b9bcc0b401dc1523b8aa4d7ad59f3e96804470",
+    "lines": 73,
+    "purpose": "read-only current implementation audit; no execution or modification"
+  }
+]
