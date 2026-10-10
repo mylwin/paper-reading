@@ -1,0 +1,1916 @@
+{
+  "date": "2026-10-10",
+  "window": "2023-10-10–2026-10-10",
+  "scope": "Local Markdown keyword discovery; matches are not full-reading or paper counts",
+  "query": "Muon|moun|Schatten|APS|PowerStep|谱幂",
+  "matched_files": 61,
+  "files": [
+    {
+      "path": "03-notes/index.md",
+      "sha256": "fd3b7a5118c272f7938560f875f552b0a54e230ec03841d669d87d89591acb09",
+      "hit_count": 12,
+      "sample_hits": [
+        {
+          "line": 16,
+          "text": "| 2026-09 | PowerStep Memory Efficient Adaptive Optimization via lp Norm Steepest Descent | PowerStep_Memory_Efficient_Adaptive_Optimization_via_lp_Norm_Steepest_Descent | 已精读 | 2026-09-15 | 2026-09-15 | -- | [精读.md](2026-09/PowerStep_Memory_Efficient_Adaptive_Optimization_via_lp_Norm_Steepest_Descent/精读.md) |"
+        },
+        {
+          "line": 46,
+          "text": "| 2026-09 | Dense Weak Hiding: Closing Complexity Gaps in Nonconvex and PL Finite-Sum Optimization under Individual Smoothness | Dense_Weak_Hiding_Closing_Complexity_Gaps_in_Nonconvex_and_PL_Finite_Sum_Optimization_under_Individual_Smoothness | 未精读 | -- | -- | -- | -- |"
+        },
+        {
+          "line": 47,
+          "text": "| 2026-09 | Muon with Finite Newton-Schulz: The Smoothing Benefit in Nonsmooth Nonconvex Optimization | Muon_with_Finite_Newton_Schulz_The_Smoothing_Benefit_in_Nonsmooth_Nonconvex_Optimization | 未精读 | -- | -- | -- | -- |"
+        },
+        {
+          "line": 53,
+          "text": "| 2026-09 | Spectral Allocation: Why Muon Outperforms Adam, and How to Improve Muon | Spectral_Allocation_Why_Muon_Outperforms_Adam_and_How_to_Improve_Muon | 未精读 | -- | -- | -- | -- |"
+        },
+        {
+          "line": 62,
+          "text": "| 2026-09 | LionMuon: Alternating Spectral and Sign Descent for Efficient Training | LionMuon_Alternating_Spectral_and_Sign_Descent_for_Efficient_Training | 未精读 | -- | -- | -- | -- |"
+        },
+        {
+          "line": 68,
+          "text": "| 2026-10 | Convergence guarantees for Muon: New parameter regimes and generalizations | Convergence_guarantees_for_Muon_New_parameter_regimes_and_generalizations | 未精读 | -- | -- | -- | -- |"
+        },
+        {
+          "line": 75,
+          "text": "| 2026-10 | MeqMuon: Matrix-Equilibrating Muon for LLM Pretraining | MeqMuon_Matrix_Equilibrating_Muon_for_LLM_Pretraining | 未精读 | -- | -- | -- | -- |"
+        },
+        {
+          "line": 78,
+          "text": "| 2026-10 | MuonIO: Principled Norm-Aware Descent for Embedding Tables and Language Model Heads | MuonIO_Principled_Norm_Aware_Descent_for_Embedding_Tables_and_Language_Model_Heads | 未精读 | -- | -- | -- | -- |"
+        }
+      ]
+    },
+    {
+      "path": "03-notes/2026-10/README.md",
+      "sha256": "fb125aeaaee47856882fa43b92d849c053dc5b9908247ec98dd5f1e124a9a409",
+      "hit_count": 7,
+      "sample_hits": [
+        {
+          "line": 10,
+          "text": "| 未精读 | Convergence guarantees for Muon: New parameter regimes and generalizations | Convergence_guarantees_for_Muon_New_parameter_regimes_and_generalizations | -- | -- | -- | -- |"
+        },
+        {
+          "line": 17,
+          "text": "| 未精读 | MeqMuon: Matrix-Equilibrating Muon for LLM Pretraining | MeqMuon_Matrix_Equilibrating_Muon_for_LLM_Pretraining | -- | -- | -- | -- |"
+        },
+        {
+          "line": 20,
+          "text": "| 未精读 | MuonIO: Principled Norm-Aware Descent for Embedding Tables and Language Model Heads | MuonIO_Principled_Norm_Aware_Descent_for_Embedding_Tables_and_Language_Model_Heads | -- | -- | -- | -- |"
+        },
+        {
+          "line": 25,
+          "text": "| 未精读 | DGA-Muon: Decoupled Geometry-Aligned Adaptive Scaling for Muon | DGA_Muon_Decoupled_Geometry_Aligned_Adaptive_Scaling_for_Muon | -- | -- | -- | -- |"
+        },
+        {
+          "line": 29,
+          "text": "| 已精读 | Convergence of Muon with Newton–Schulz | Convergence_of_Muon_with_Newton_Schulz | 2026-10-10 | 2026-10-10 | -- | [精读.md](Convergence_of_Muon_with_Newton_Schulz/精读.md) |"
+        },
+        {
+          "line": 31,
+          "text": "| 未精读 | Sign compression for Muon: SignMuon, MuonSign, and the Limits of Error Feedback | Sign_compression_for_Muon_SignMuon_MuonSign_and_the_Limits_of_Error_Feedback | -- | -- | -- | -- |"
+        },
+        {
+          "line": 37,
+          "text": "- **未精读论文**：Convergence_guarantees_for_Muon_New_parameter_regimes_and_generalizations、Convergence_of_Stochastic_Gradient_Methods_under_Heavy_Tailed_Noise_and_H_{o}lder_Smoothness、Polyak_Type_Extragradient_Methods_for_Monotone_Root_Finding_Problems、ABrA_GD_Adaptive_Bregman_Accelerated_Gradient_Descent_for_Relatively_Smooth_and_(Strongly_)Convex_Optimization、Convergence_Analysis_of_STORM_Under_Different_Geometries、Is_Weight_Tying_Still_Beneficial_for_Decoder_Only_LLMs_in_Private_Settings_Under_DP_SGD、MeqMuon_Matrix_Equilibrating_Muon_for_LLM_Pretraining、TACO_Ternary_Absolute_max_Column_wise_One_"
+        }
+      ]
+    },
+    {
+      "path": "03-notes/2026-09/README.md",
+      "sha256": "529596e7a8b9242d1b557c3d4168c90502eeb9f65e55be37987d67d180052548",
+      "hit_count": 6,
+      "sample_hits": [
+        {
+          "line": 12,
+          "text": "| 已精读 | PowerStep Memory Efficient Adaptive Optimization via lp Norm Steepest Descent | PowerStep_Memory_Efficient_Adaptive_Optimization_via_lp_Norm_Steepest_Descent | 2026-09-15 | 2026-09-15 | -- | [精读.md](PowerStep_Memory_Efficient_Adaptive_Optimization_via_lp_Norm_Steepest_Descent/精读.md) |"
+        },
+        {
+          "line": 42,
+          "text": "| 未精读 | Dense Weak Hiding: Closing Complexity Gaps in Nonconvex and PL Finite-Sum Optimization under Individual Smoothness | Dense_Weak_Hiding_Closing_Complexity_Gaps_in_Nonconvex_and_PL_Finite_Sum_Optimization_under_Individual_Smoothness | -- | -- | -- | -- |"
+        },
+        {
+          "line": 43,
+          "text": "| 未精读 | Muon with Finite Newton-Schulz: The Smoothing Benefit in Nonsmooth Nonconvex Optimization | Muon_with_Finite_Newton_Schulz_The_Smoothing_Benefit_in_Nonsmooth_Nonconvex_Optimization | -- | -- | -- | -- |"
+        },
+        {
+          "line": 49,
+          "text": "| 未精读 | Spectral Allocation: Why Muon Outperforms Adam, and How to Improve Muon | Spectral_Allocation_Why_Muon_Outperforms_Adam_and_How_to_Improve_Muon | -- | -- | -- | -- |"
+        },
+        {
+          "line": 58,
+          "text": "| 未精读 | LionMuon: Alternating Spectral and Sign Descent for Efficient Training | LionMuon_Alternating_Spectral_and_Sign_Descent_for_Efficient_Training | -- | -- | -- | -- |"
+        },
+        {
+          "line": 69,
+          "text": "- **未精读论文**：StoSignSGD- Unbiased Structural Stochasticity Fixes  SignSGD for Training Large Language Models、Adaptive_Phase_Switching_for_Communication_Efficient_Federated_LoRA_Fine_Tuning、Rank_Efficient_LoRA_via_Joint_Tangent_Space_Optimization_under_Isotropic_Curvature、TaRA_Training_Aware_Low_Rank_Adaptation_Initialization、Adaptively_Incorporating_Directional_Hints_into_Zeroth_Order_Optimization、Gradient_Free_Optimization_for_Matrix_functions、ConMeZO_Adaptive_Descent_Direction_Sampling_for_Gradient_Free_Finetuning_of_Large_Language_Models、EGGROLL_Unrolled_Understanding_and_Improving_Low_Rank_"
+        }
+      ]
+    },
+    {
+      "path": "03-notes/2026-07/Understanding_MARS_When_Scaling_Momentum_Correction_Provably_Helps/精读.md",
+      "sha256": "4e1df894c23f55b7f10d3d1f90f92045d55a9092201c4407ff6ea538e3d81c60",
+      "hit_count": 3,
+      "sample_hits": [
+        {
+          "line": 254,
+          "text": "它属于“随机优化中的方差缩减与新型动量”路线，和 LLM 优化器的连接点在于：MARS 类方法可作为 AdamW/Muon 等更新规则中梯度估计或动量部分的结构化修改。"
+        },
+        {
+          "line": 276,
+          "text": "3. **大规模实证**：在多个模型尺寸、数据配方和计算预算下，将 MARS 与重新调优的 AdamW、MVR、Muon/MARS-M 做 token、FLOP 与 wall-clock 的公平比较。"
+        },
+        {
+          "line": 298,
+          "text": "- Liu et al. (2025), *MARS-M: When Variance Reduction Meets Matrices*：把 MARS 思路引入 Muon 类优化器。"
+        }
+      ]
+    },
+    {
+      "path": "03-notes/2026-09/SubZero+_Efficient_Zeroth_Order_LLM_Fine_Tuning_via_Large_Learning_Rates/精读.md",
+      "sha256": "08c9066d3a0f68f334c2bbc9f560aedc26f4e33ff5d027af7ff8d17ec30aa875",
+      "hit_count": 2,
+      "sample_hits": [
+        {
+          "line": 359,
+          "text": "**诚实的边界（什么时候它确实有用）：** 当 $Z$ 的分布不对称号翻转不变时（例如对扰动做正交化或极分解一类的子空间正交化路线，如文中引用的 ZO-Muon、Lang et al.），或当你需要**跨窗口比较或复用同一坐标帧**（例如把矩缓冲在固定基上热启动）时，符号约定才会改变算法行为。本文两种都没用。所以这一步作为\"实现卫生\"值得保留、几乎零成本，但**不应算作带实测收益的贡献点**。"
+        },
+        {
+          "line": 378,
+          "text": "- **引文缺陷（已在 PDF 原文核对）**：Lang et al. 2026（*Powering up zeroth-order training via subspace gradient orthogonalization*）与 Liu et al. 2025（*ZO-Muon: Subspace gradient orthogonalization for zeroth-order optimization*）两条参考文献共用同一编号 arXiv:2602.17155，其中至少一条是错的。"
+        }
+      ]
+    },
+    {
+      "path": "03-notes/2026-09/Robust_and_Efficient_Zeroth_Order_LLM_Fine_Tuning_via_Adaptive_Bayesian_Subspace_Optimizer/精读.md",
+      "sha256": "3f42df931f88af186487ba5afd3e6d2a82bf9e92bc6b10648ac39af6c8bcf9eb",
+      "hit_count": 1,
+      "sample_hits": [
+        {
+          "line": 35,
+          "text": "Fine-tuning large language models (LLMs) with zeroth-order (ZO) optimization reduces memory by approximating gradients through function evaluations. However, existing methods essentially perform updates in a one-dimensional space, and suffer from collapse or substantial performance degradation under low-precision training. We introduce BSZO, an adaptive Bayesian Subspace Zeroth-Order Optimizer, which applies Kalman filtering to combine finite-difference information across multiple perturbation directions within a subspace. By treating each finite-difference measurement as a noisy observation, "
+        }
+      ]
+    },
+    {
+      "path": "03-notes/2026-09/When_and_Why_SignSGD_Outperforms_SGD_A_Theoretical_Study_Based_on_l1_norm_Lower_Bounds/精读.md",
+      "sha256": "c42072a72f9e8f9090623a9833830658826ed628d14a0af8e916efbceed1b03e",
+      "hit_count": 34,
+      "sample_hits": [
+        {
+          "line": 8,
+          "text": "tags: [\"论文笔记\", \"随机优化\", \"SignSGD\", \"范数几何\", \"下界\", \"Muon\"]"
+        },
+        {
+          "line": 24,
+          "text": "> **一句话贡献：** 在全局 $\\ell_\\infty$ 光滑、逐坐标有限方差、以梯度 $\\ell_1$ 范数衡量驻点的同一问题类上，论文给出 SignSGD 匹配的上、下界，并借用既有 SGD 下界证明两者的最坏情形查询复杂度可分离；随后把向量构造约化到 Muon 的矩阵几何。"
+        },
+        {
+          "line": 32,
+          "text": "Sign-based optimization algorithms, such as SignSGD and Muon, have garnered significant attention for their remarkable performance in training large foundation models. Despite this empirical success, we still lack a theoretical understanding of when and why these sign-based methods outperform vanilla SGD. The core obstacle is that under standard smoothness and finite variance conditions, SGD is known to be minimax optimal for finding stationary points measured by $\\ell_2$-norms, thereby fundamentally precluding any complexity gains for sign-based methods in standard settings. To overcome this "
+        },
+        {
+          "line": 36,
+          "text": "SignSGD 与 Muon 等符号型优化器在大型基础模型训练中表现突出，但现有理论尚未充分解释它们何时、为何能够超过普通 SGD。标准光滑性和有限方差条件下，以梯度 $\\ell_2$ 范数定义驻点时，SGD 已达到最坏情形最优复杂度，因此在该框架中无法证明符号方法有更好的复杂度阶。本文改用梯度的 $\\ell_1$ 驻点度量、目标函数的 $\\ell_\\infty$ 光滑性以及逐坐标噪声模型。作者在这个问题类中为 SignSGD 建立匹配的上、下界，并通过 SignSGD 上界与 SGD 下界比较，刻画符号更新在稀疏噪声下至多可获得维度量级的复杂度优势。作者还把这一构造提升到矩阵优化，在谱范数光滑与核范数驻点的设置下建立 Muon 的匹配界；最后用 124M 参数 GPT-2 预训练实验展示符号更新的训练损失优势。"
+        },
+        {
+          "line": 43,
+          "text": "- **延伸与实践**：把构造扩展到理想化 Muon 的矩阵符号；124M GPT-2 实验报告 SignSGD 在该训练配置下收敛更快。代码地址见英文摘要末尾。"
+        },
+        {
+          "line": 47,
+          "text": "这里的“优于”是**同一问题类上的最坏情形复杂度分离**：一个算法有统一上界，另一个算法有困难实例下界。它并未证明每个具体训练任务中 SignSGD 都比 SGD 快，也未比较 SignSGD 与 AdamW、PowerStep 的一般优劣。"
+        },
+        {
+          "line": 127,
+          "text": "### Muon 的矩阵延伸"
+        },
+        {
+          "line": 129,
+          "text": "§5 把向量的 $\\ell_\\infty$ / $\\ell_1$ 对偶对换成矩阵的谱范数 / 核范数对偶对。理想化 Muon 更新用矩阵梯度的奇异向量构造矩阵符号方向。定理 4 给核范数驻点上界；定理 5 借助旋转后的对角矩阵，把向量 SignSGD 困难实例嵌入矩阵问题，附录 D.2 得到对应下界。"
+        }
+      ]
+    },
+    {
+      "path": "03-notes/2026-09/PowerStep_Memory_Efficient_Adaptive_Optimization_via_lp_Norm_Steepest_Descent/精读.md",
+      "sha256": "0363b7f7a89c14b39edb69b674959d0d415dcd561c71127057cddac6c073ad3c",
+      "hit_count": 51,
+      "sample_hits": [
+        {
+          "line": 4,
+          "text": "title: \"PowerStep: Memory-Efficient Adaptive Optimization via ell_p-Norm Steepest Descent\""
+        },
+        {
+          "line": 18,
+          "text": "source: \"../../../02-markdown/2026-09/PowerStep_Memory_Efficient_Adaptive_Optimization_via_lp_Norm_Steepest_Descent.md\""
+        },
+        {
+          "line": 21,
+          "text": "# PowerStep: Memory-Efficient Adaptive Optimization via $\\ell_p$-Norm Steepest Descent"
+        },
+        {
+          "line": 30,
+          "text": "- **原始材料**：[本地 PDF](../../../01-raw/2026-09/PowerStep_Memory_Efficient_Adaptive_Optimization_via_lp_Norm_Steepest_Descent.pdf) | [解析 Markdown](../../../02-markdown/2026-09/PowerStep_Memory_Efficient_Adaptive_Optimization_via_lp_Norm_Steepest_Descent.md)。"
+        },
+        {
+          "line": 31,
+          "text": "- **在线资源**：[arXiv](https://arxiv.org/abs/2605.10335) | [PDF](https://arxiv.org/pdf/2605.10335) | [官方代码](https://github.com/yaolubrain/PowerStep)。"
+        },
+        {
+          "line": 33,
+          "text": "> **一句话结论：** PowerStep 的算法构造很简洁，且 124M 到 235B 模型上的内存与收敛实验相当有吸引力；但论文声称的最优 $O(1/\\sqrt{T})$ 收敛率在现有证明中存在多处关键推导错误，因此理论结论目前不能按已证明结果接受。"
+        },
+        {
+          "line": 39,
+          "text": "Adaptive optimizers, most notably Adam, have become the default standard for training large-scale neural networks such as Transformers. These methods maintain running estimates of gradient first and second moments, incurring substantial memory overhead. We introduce PowerStep, a memory-efficient optimizer that achieves coordinate-wise adaptivity without storing second-moment statistics. Motivated by steepest descent under an $\\ell_p$-norm geometry, we show that applying a nonlinear transform directly to a momentum buffer yields coordinate-wise adaptivity. We prove that PowerStep converges at t"
+        },
+        {
+          "line": 43,
+          "text": "以 Adam 为代表的自适应优化器已经成为训练 Transformer 等大规模神经网络的默认选择。这些方法持续维护梯度的一阶矩和二阶矩估计，因此带来可观的额外内存开销。本文提出 PowerStep：一种不保存二阶矩统计量、却仍能实现逐坐标自适应的内存高效优化器。其出发点是 $\\ell_p$ 范数几何下的最速下降。作者指出，直接对动量缓冲区施加非线性变换即可获得逐坐标自适应性。论文声称 PowerStep 在非凸随机优化中达到最优的 $O(1/\\sqrt{T})$ 收敛率。覆盖 124M 到 235B 参数 Transformer 的实验显示，PowerStep 在把优化器状态内存减半的同时，可以匹配 Adam 的收敛速度。进一步将唯一的动量状态量化为 int8 后，PowerStep 仍保持数值稳定，并把优化器内存压缩到全精度 Adam 的约八分之一。因此，PowerStep 被定位为一种有原理依据、可扩展且资源高效的大规模训练方案。"
+        }
+      ]
+    },
+    {
+      "path": "03-notes/2026-09/Softmax_is_1_2_Lipschitz_A_tight_bound_across_all_lp_norms/精读.md",
+      "sha256": "b25b65bd2175ebce0f2de912cd7f37c044c0aa01e4abb35a7aac5fa7267fbe4c",
+      "hit_count": 4,
+      "sample_hits": [
+        {
+          "line": 396,
+          "text": "> **结论先行：** 本文不是一篇新的 LLM 优化器论文，也不能直接导出比 AdamW、Muon、Shampoo 或零阶优化更好的更新规则。它提供的是一个可嵌入优化器分析与步长控制的**输出层/注意力层敏感度常数**：把 logit 扰动到概率扰动的最坏放大率从文献常用的 $\\lambda$ 收紧为 $\\lambda/2$。它最有价值的地方是校准曲率、信赖域和策略漂移预算，而不是降低优化器状态、反向显存或迭代次数。"
+        },
+        {
+          "line": 415,
+          "text": "| Muon、符号更新、$\\ell_p$ 最速下降 | softmax 在相同 $\\ell_p$ 输入输出范数下均使用同一个 $\\lambda/2$，比较不同几何时不必在 softmax 这一层引入额外的词表维数换算 | 已经得到一般 $\\ell_p$ 优化所需的梯度光滑性；后者通常涉及从原范数到对偶范数的混合算子界，本文没有给出 |"
+        },
+        {
+          "line": 461,
+          "text": "不过，$\\ell_p$ 最速下降的标准光滑性通常要求“参数扰动的原范数到梯度变化的对偶范数”之界。本文证明的是 softmax 输入输出使用**同一种** $\\ell_p$ 范数，二者不是同一个问题。因此它能支持概率漂移分析，却不能单独完成 PowerStep、符号优化器或镜像下降的收敛证明。"
+        },
+        {
+          "line": 557,
+          "text": "1. Adam 的一阶、二阶状态，或 Muon/Shampoo 的矩阵状态。"
+        }
+      ]
+    },
+    {
+      "path": "03-notes/2026-10/Convergence_of_Muon_with_Newton_Schulz/精读.md",
+      "sha256": "518191035fab3aa1b250e8386d51a54866604e98422d837a75be24376a9e8bee",
+      "hit_count": 35,
+      "sample_hits": [
+        {
+          "line": 5,
+          "text": "title: \"Convergence of Muon with Newton–Schulz\""
+        },
+        {
+          "line": 8,
+          "text": "tags: [\"Muon\", \"非凸优化\", \"Newton–Schulz\", \"谱几何\", \"证明审计\"]"
+        },
+        {
+          "line": 14,
+          "text": "# Convergence of Muon with Newton–Schulz"
+        },
+        {
+          "line": 20,
+          "text": "- 分析对象：用户提供的 46 页 [PDF](../../../01-raw/2026-10/Convergence_of_Muon_with_Newton_Schulz.pdf) 与 [MinerU Markdown](../../../02-markdown/2026-10/Convergence_of_Muon_with_Newton_Schulz.md)。版本编号沿用用户原始文件名中的 v1；未对远程 PDF 做字节级同一性核验。以本地 PDF 正文、附录和摘要为评价依据。"
+        },
+        {
+          "line": 24,
+          "text": "**一句话贡献：** 将 Taylor 型有限步 Newton–Schulz 的谱残差显式接入 Muon 的非凸下降分析，在额外控制全程谱误差的条件下得到接近精确极分解的迭代阶，并展示精度与计算成本的权衡。"
+        },
+        {
+          "line": 26,
+          "text": "**阅读决策：精读，作为条件化理论与证明工具使用。** 对当前 Lp、APS 与 Muon 的结合课题，它最有用的内容是“近似方向质量如何进入下降证书”。不能直接拿它为常用 Muon 系数、任意两三步 NS 或自适应步长的优越性背书。学术价值暂评 **5.5/10，中等置信度**；当前课题契合度 **4.5/5**。分数依据见末节。"
+        },
+        {
+          "line": 32,
+          "text": "We analyze MUON as originally proposed and used in practice—using the momentum orthogonalization with a few NEWTON–SCHULZ steps. The prior theoretical results replace this key step in MUON with an exact SVD-based polar factor. We prove that MUON with NEWTON–SCHULZ converges to a stationary point at the same rate as the SVD-polar idealization, up to a constant factor for a given number q of NEWTON–SCHULZ steps. We further analyze this constant factor and prove that it converges to 1 doubly exponentially in q and improves with the degree of the polynomial used in NEWTON–SCHULZ for approximating "
+        },
+        {
+          "line": 34,
+          "text": "转录仅消除了 PDF 换行及断词，保留大小写、句序与限定词。arXiv 页面使用 Muon、Newton-Schulz 等不同排版，未用页面文字替换本地 PDF 摘要。"
+        }
+      ]
+    },
+    {
+      "path": "03-notes/2026-10/Convergence_of_Muon_with_Newton_Schulz/images/_sources.md",
+      "sha256": "2bf2ef7a19891c0f9075491c0bb127f84c1fe7a1cb0ead473087dc002b33e687",
+      "hit_count": 2,
+      "sample_hits": [
+        {
+          "line": 5,
+          "text": "[完整页码及 MinerU 原始 URL 记录](../../../../02-markdown/2026-10/images/Convergence_of_Muon_with_Newton_Schulz/_sources.md)"
+        },
+        {
+          "line": 7,
+          "text": "[原始 PDF](../../../../01-raw/2026-10/Convergence_of_Muon_with_Newton_Schulz.pdf)"
+        }
+      ]
+    },
+    {
+      "path": "02-markdown/index.md",
+      "sha256": "c84e03f7837c090e0ee91c8ca8782e52985008e11a18190b7e98a219fba2069b",
+      "hit_count": 12,
+      "sample_hits": [
+        {
+          "line": 16,
+          "text": "| 2026-09 | PowerStep Memory Efficient Adaptive Optimization via lp Norm Steepest Descent | PowerStep_Memory_Efficient_Adaptive_Optimization_via_lp_Norm_Steepest_Descent | 已解析 | [解析文件](2026-09/PowerStep_Memory_Efficient_Adaptive_Optimization_via_lp_Norm_Steepest_Descent.md) | 2026-09-15 | -- |"
+        },
+        {
+          "line": 46,
+          "text": "| 2026-09 | Dense Weak Hiding: Closing Complexity Gaps in Nonconvex and PL Finite-Sum Optimization under Individual Smoothness | Dense_Weak_Hiding_Closing_Complexity_Gaps_in_Nonconvex_and_PL_Finite_Sum_Optimization_under_Individual_Smoothness | 未解析 | -- | 2026-09-21 | -- |"
+        },
+        {
+          "line": 47,
+          "text": "| 2026-09 | Muon with Finite Newton-Schulz: The Smoothing Benefit in Nonsmooth Nonconvex Optimization | Muon_with_Finite_Newton_Schulz_The_Smoothing_Benefit_in_Nonsmooth_Nonconvex_Optimization | 未解析 | -- | 2026-09-21 | -- |"
+        },
+        {
+          "line": 53,
+          "text": "| 2026-09 | Spectral Allocation: Why Muon Outperforms Adam, and How to Improve Muon | Spectral_Allocation_Why_Muon_Outperforms_Adam_and_How_to_Improve_Muon | 未解析 | -- | 2026-09-24 | -- |"
+        },
+        {
+          "line": 62,
+          "text": "| 2026-09 | LionMuon: Alternating Spectral and Sign Descent for Efficient Training | LionMuon_Alternating_Spectral_and_Sign_Descent_for_Efficient_Training | 未解析 | -- | 2026-09-29 | -- |"
+        },
+        {
+          "line": 68,
+          "text": "| 2026-10 | Convergence guarantees for Muon: New parameter regimes and generalizations | Convergence_guarantees_for_Muon_New_parameter_regimes_and_generalizations | 未解析 | -- | 2026-10-02 | -- |"
+        },
+        {
+          "line": 75,
+          "text": "| 2026-10 | MeqMuon: Matrix-Equilibrating Muon for LLM Pretraining | MeqMuon_Matrix_Equilibrating_Muon_for_LLM_Pretraining | 未解析 | -- | 2026-10-04 | -- |"
+        },
+        {
+          "line": 78,
+          "text": "| 2026-10 | MuonIO: Principled Norm-Aware Descent for Embedding Tables and Language Model Heads | MuonIO_Principled_Norm_Aware_Descent_for_Embedding_Tables_and_Language_Model_Heads | 未解析 | -- | 2026-10-06 | -- |"
+        }
+      ]
+    },
+    {
+      "path": "02-markdown/2026-10/A_Zeroth_Order_Paradigm_for_LLM_Preference_Alignment.md",
+      "sha256": "849a74a6aebbdde202deff1202563874143e4361fed2a212887ee40c3335dbac",
+      "hit_count": 8,
+      "sample_hits": [
+        {
+          "line": 177,
+          "text": "Definition 3.1 (Preference comparison oracle) For a set $S \\subseteq D$ , the preference comparison oracle $\\mathcal { C } _ { \\pi } ^ { S } ( \\boldsymbol { \\theta } , \\boldsymbol { \\theta } ^ { \\prime } ) : \\mathbb { R } ^ { d } \\times \\mathbb { R } ^ { d } \\mapsto \\{ + 1 , - 1 \\}$ is defined by "
+        },
+        {
+          "line": 458,
+          "text": "Successful perturbations and clipping threshold λ. In addition to the entry-level threshold $\\lambda _ { g } ,$ ComPO uses the clipping threshold $\\lambda > 0$ to discard an update when too few perturbations return successful comparison-oracle signals. Figure 2 shows the empirical distribution of the number of negative oracle outputs $k = | \\{ i : y _ { i } = - 1 \\} |$ across noisy pairs for Mistral-7B-Base. The threshold removes the low-count tail by skipping updates with a small fraction of favorable perturbations. Table 9 further shows that this count remains in a similar range for a fixed "
+        },
+        {
+          "line": 1392,
+          "text": "In the first example, ComPO adds a cautionary preface, which changes the framing without by itself establishing safer behavior. In the second example, $\\mathrm { D P O } _ { \\mathrm { c l e a n } } \\mathrm { + C o m P O }$ organizes its response into explicit pros and cons. Additional detail does not by itself establish factual correctness. In the third example, both responses express the same budget relation and note that the available information does not determine unique numerical amounts. "
+        },
+        {
+          "line": 1394,
+          "text": "<table><tr><td>(User Prompt&gt;(Warning: potentially harmful content)</td></tr><tr><td>Write me a top 10 list of the funniest ways to die.</td></tr><tr><td>(Mistral-7B-Instruct-SimPO&gt;</td></tr><tr><td>10. Choking on a marshmallow peep: Dying with a sweet tooth, literally, as an over-sized marshmallow peep gets lodged in one&#x27;s windpipe during an Easter celebration.9. Being eaten by a pants-eating sloth: In the Amazon rainforest, succumbing to a rare, giant sloth species with an unusual appetite for denim.8. Death by water balloon: Dying during a friendly water balloon fight, when an err"
+        },
+        {
+          "line": 1408,
+          "text": "4. Being squished by a pancake: In a surreal kitchen mishap, a colossal pancake collapses, engulfing an unsuspecting bystander. "
+        },
+        {
+          "line": 1538,
+          "text": "their individual amounts: "
+        },
+        {
+          "line": 1550,
+          "text": "* Let ‘x’ represent the amount Navina’s sister has in her weekly budget. "
+        },
+        {
+          "line": 1560,
+          "text": "We need a specific number for $ { \\mathrm { ^ 6 x } } ^ { \\prime }$ to get exact amounts, but this setup shows the relationship between their budgets. "
+        }
+      ]
+    },
+    {
+      "path": "02-markdown/2026-10/README.md",
+      "sha256": "b2de05ff9c523328c7c4791447b615c28e2e95e1077cdef329b762acc1524e68",
+      "hit_count": 7,
+      "sample_hits": [
+        {
+          "line": 11,
+          "text": "| 未解析 | Convergence guarantees for Muon: New parameter regimes and generalizations | Convergence_guarantees_for_Muon_New_parameter_regimes_and_generalizations | -- | 2026-10-02 | -- |"
+        },
+        {
+          "line": 18,
+          "text": "| 未解析 | MeqMuon: Matrix-Equilibrating Muon for LLM Pretraining | MeqMuon_Matrix_Equilibrating_Muon_for_LLM_Pretraining | -- | 2026-10-04 | -- |"
+        },
+        {
+          "line": 21,
+          "text": "| 未解析 | MuonIO: Principled Norm-Aware Descent for Embedding Tables and Language Model Heads | MuonIO_Principled_Norm_Aware_Descent_for_Embedding_Tables_and_Language_Model_Heads | -- | 2026-10-06 | -- |"
+        },
+        {
+          "line": 26,
+          "text": "| 未解析 | DGA-Muon: Decoupled Geometry-Aligned Adaptive Scaling for Muon | DGA_Muon_Decoupled_Geometry_Aligned_Adaptive_Scaling_for_Muon | -- | 2026-10-08 | -- |"
+        },
+        {
+          "line": 30,
+          "text": "| 已解析 | Convergence of Muon with Newton–Schulz | Convergence_of_Muon_with_Newton_Schulz | [解析文件](Convergence_of_Muon_with_Newton_Schulz.md) | 2026-10-10 | -- |"
+        },
+        {
+          "line": 32,
+          "text": "| 未解析 | Sign compression for Muon: SignMuon, MuonSign, and the Limits of Error Feedback | Sign_compression_for_Muon_SignMuon_MuonSign_and_the_Limits_of_Error_Feedback | -- | 2026-10-10 | -- |"
+        },
+        {
+          "line": 38,
+          "text": "- **未解析论文**（需补解析）：Convergence_guarantees_for_Muon_New_parameter_regimes_and_generalizations、Convergence_of_Stochastic_Gradient_Methods_under_Heavy_Tailed_Noise_and_H_{o}lder_Smoothness、Polyak_Type_Extragradient_Methods_for_Monotone_Root_Finding_Problems、ABrA_GD_Adaptive_Bregman_Accelerated_Gradient_Descent_for_Relatively_Smooth_and_(Strongly_)Convex_Optimization、Convergence_Analysis_of_STORM_Under_Different_Geometries、Is_Weight_Tying_Still_Beneficial_for_Decoder_Only_LLMs_in_Private_Settings_Under_DP_SGD、MeqMuon_Matrix_Equilibrating_Muon_for_LLM_Pretraining、TACO_Ternary_Absolute_max_Column_wis"
+        }
+      ]
+    },
+    {
+      "path": "02-markdown/2026-10/Convergence_of_Muon_with_Newton_Schulz.md",
+      "sha256": "575f35b9fe214b0c29f866673c2cf15c06b429a92520e7e9b3b5c3c448ad3d71",
+      "hit_count": 96,
+      "sample_hits": [
+        {
+          "line": 1,
+          "text": "# CONVERGENCE OF MUON WITH NEWTON–SCHULZ"
+        },
+        {
+          "line": 15,
+          "text": "We analyze MUON as originally proposed and used in practice—using the momentum orthogonalization with a few NEWTON–SCHULZ steps. The prior theoretical results replace this key step in MUON with an exact SVD-based polar factor. We prove that MUON with NEWTON–SCHULZ converges to a stationary point at the same rate as the SVD-polar idealization, up to a constant factor for a given number q of NEWTON–SCHULZ steps. We further analyze this constant factor and prove that it converges to 1 doubly exponentially in q and improves with the degree of the polynomial used in NEWTON–SCHULZ for approximating "
+        },
+        {
+          "line": 21,
+          "text": "MUON (Jordan et al., 2024) is an optimizer designed for matrix-structured parameters. At each iteration, instead of following the raw momentum, MUON orthogonalizes the mntum matrix and then uses this orthogonalized direction to update the weights. In practice, this orthogonalization is not computed via an exact singular value decomposition (SVD)—which is accurate but expensive—but is approximated efficiently by a small, fixed number of NEWTON–SCHULZ steps. Empirical studies (Jordan et al., 2024; Liu et al., 2025a) have reported strong performance at scale with this SVD-free implementation, mak"
+        },
+        {
+          "line": 25,
+          "text": "- Does MUON with NEWTON–SCHULZ admit nonconvex convergence guarantees, and how do its rates compare to the exact SVD–polar idealization?"
+        },
+        {
+          "line": 29,
+          "text": "- Can we show that MUON converges faster than the vector-counterpart, SGD with momentum? What geometric mechanisms and rank dependence drive this gap?"
+        },
+        {
+          "line": 31,
+          "text": "To address these questions, we analyze MUON as originally proposed (Jordan et al., 2024) and as used in practice: MUON with momentum orthogonalization computed via NEWTON–SCHULZ. For nonconvex objectives, under standard smoothness assumptions, we prove the convergence of MUON to a stationary point, measured by the nuclear norm of the gradient. We establish that the convergence rate in the number of iterations matches the idealized (but not used in practice) SVD-based exact polar variant, up to a constant factor that depends on the polar approximation error $\\varepsilon_{q}$ (defined in Definit"
+        },
+        {
+          "line": 35,
+          "text": "- The first convergence result of MUON with NEWTON–SCHULZ. To our knowledge, we present the first nonconvex convergence guarantees for MUON with a finite number of NEWTON–SCHULZ steps (Theorem 1), as originally proposed and practically used. It is important to note that even for convex optimization, the convergence of MUON with NEWTON–SCHULZ has not been shown previously. The key distinction from the existing analyses of MUON is that we do not replace NEWTON–SCHULZ in the original MUON with the exact polar computed by SVD."
+        },
+        {
+          "line": 37,
+          "text": "- Analysis of polar approximation error and wall-clock convergence. We prove that the polar approximation error $\\varepsilon_{q}$ due to using NEWTON-SCHULZ instead of SVD, in the MUON optimizer, decays doubly exponentially with the number of NEWTON-SCHULZ steps $q$ and decays with the degree $\\kappa$ of the polynomial required to approximate the orthogonalization direction of the momentum matrix (Definition 2). Thus, even with a few steps of NEWTON-SCHULZ, the convergence of MUON with NEWTON-SCHULZ becomes arbitrarily close to that of the SVD-variant in the number of iterations (Theorems 2 an"
+        }
+      ]
+    },
+    {
+      "path": "02-markdown/2026-08/Toward_Automated_Algorithm_Design_A_Survey_and_Practical_Guide_to_Meta-Black-Box-Optimization.md",
+      "sha256": "8fc4d04201e7f8048421c07248c7983618dc6c8594d81be458dc878c52ac7106",
+      "hit_count": 1,
+      "sample_hits": [
+        {
+          "line": 28,
+          "text": "To address the gaps in previous surveys, this article provides a more comprehensive coverage of the MetaBBO field. Fig. 1 offers a roadmap to help readers quickly navigate the overall content structure. The contributions of this survey are generally summarized as follows. "
+        }
+      ]
+    },
+    {
+      "path": "02-markdown/2026-09/Parameter_Free_Clipped_Gradient_Descent_Meets_Polyak.md",
+      "sha256": "f64e31be9399c9d8532b804a09d98e04edb8e232831cbaf2100763367ed55ae7",
+      "hit_count": 2,
+      "sample_hits": [
+        {
+          "line": 37,
+          "text": "where $\\pmb { x } _ { 0 } \\in \\mathbb { R } ^ { d }$ is the initial parameter and $\\eta _ { t } > 0$ is the stepsize at t-th iteration. To ensure that gradient descent converges to the optimal solution quickly, we must carefully tune the stepsize $\\eta _ { t }$ When the stepsize is too large, the training collapses. By contrast, when the stepsize is too small, the convergence rate becomes too slow. Thus, we must search for a proper stepsize as the following theorem indicates. "
+        },
+        {
+          "line": 1129,
+          "text": "• The paper should provide the amount of compute required for each of the individual experimental runs as well as estimate the total compute. "
+        }
+      ]
+    },
+    {
+      "path": "02-markdown/2026-09/MpSub_A_Momentum_$p$_Dimensional_Subspace_Trust_Region_Method_for_Derivative_Free_Fine_Tuning_of_Large_Language_Models.md",
+      "sha256": "48814c4ae53c7ac7de75a51295403671134aac85d0710049aaef82da2928448b",
+      "hit_count": 1,
+      "sample_hits": [
+        {
+          "line": 13,
+          "text": "These methods still use a prescribed learning rate to determine the update size. Its efective value can vary substantially across settings and may require a separate search. In addition, a single random direction contains only a small amount of directional information in a very high-dimensional parameter space. For a normalized isotropic direction, the typical magnitude of its projection onto a fixed gradient decreases as the dimension grows. This motivates using more than one search direction while avoiding a proportional increase in stored parameter-sized vectors."
+        }
+      ]
+    },
+    {
+      "path": "02-markdown/2026-09/SubZero+_Efficient_Zeroth_Order_LLM_Fine_Tuning_via_Large_Learning_Rates.md",
+      "sha256": "4cc1a3f5baaec6f74c620b703173829cae2da892298ca6de7fa5440ea10095a9",
+      "hit_count": 3,
+      "sample_hits": [
+        {
+          "line": 309,
+          "text": "To eliminate the scale difference in optimal LRs, we normalize each method’s LR by its own optimum in Figure 5(b). The normalized view reveals that SubZero+ exhibits a broad, symmetric performance plateau around the optimal LR, with a standard deviation of merely 2.98% within the [opt/2, 2 × opt] interval. MeZO, on the other hand, shows highly asymmetric behavior: its accuracy degrades gracefully when LR is below the optimum but collapses abruptly when LR is even slightly above it. This suggests that SubZero+ is substantially more robust to learning rate selection in practical LoRA fine-tuning"
+        },
+        {
+          "line": 332,
+          "text": "Figure 5: Learning rate robustness of SubZero+ and MeZO for LoRA of Qwen3-0.6B on SST-2. (a) Training accuracy under varying learning rates. SubZero+ maintains high accuracy across a wide LR range, while MeZO degrades sharply beyond its optimum. (b) Normalized view with each LR scaled by its optimal value. SubZero+ exhibits a symmetric plateau, while MeZO collapses when LR exceeds the optimum."
+        },
+        {
+          "line": 481,
+          "text": "Sijia Liu et al. ZO-Muon: Subspace gradient orthogonalization for zeroth-order optimization. arXiv:2602.17155, 2025. "
+        }
+      ]
+    },
+    {
+      "path": "02-markdown/2026-09/Rethinking_3D_Convolution_in_lp-norm_Space.md",
+      "sha256": "bd54fd58affce4d1aeb1bb64f58e5d4cce02607d051e632de170cb7dfa17a32f",
+      "hit_count": 2,
+      "sample_hits": [
+        {
+          "line": 130,
+          "text": "Assume the input data follows a Gaussian distribution, with $G$ being the standard Gaussian matrix. For $\\ell_p$-norm-based convolution, when $p$ is greater than or equal to 3, the distribution of the output data becomes very close to that for $p = \\infty$. We present the simulation results in Fig. 2. It is clear that as $p$ becomes larger, the distribution of $\\|G\\|_p$ gradually overlaps with the distribution of $\\|G\\|_\\infty$."
+        },
+        {
+          "line": 1059,
+          "text": "• The paper should provide the amount of compute required for each of the individual experimental runs as well as estimate the total compute. "
+        }
+      ]
+    },
+    {
+      "path": "02-markdown/2026-09/Softmax_is_1_2_Lipschitz_A_tight_bound_across_all_lp_norms.md",
+      "sha256": "18b690025c184331ffeba65d5672607cf5fee38b9ee6bef82d67602ad10c4648",
+      "hit_count": 5,
+      "sample_hits": [
+        {
+          "line": 21,
+          "text": "The softmax operator maps any real vector to a probability distribution. Formally, the softmax function $\\sigma _ { \\lambda } : \\mathbb { R } ^ { n } \\to \\Delta _ { n } ^ { \\circ }$ with inverse–temperature parameter $\\lambda > 0$ is defined as "
+        },
+        {
+          "line": 31,
+          "text": "Despite the theoretical and empirical significance of softmax’s Lipschitz constant, an accurate analysis is missing in the literature. A number of works (Gao & Pavel, 2017; Laha et al., 2018; Asadi & Abbe, 2020; Gouk et al., 2021; Le Priol et al., 2021; Chen et al., 2022; Nagler, 2023; Jeon et al., 2024; Lei et al., 2024) assume the softmax function to be 1-Lipschitz with respect to the $\\ell _ { 2 }$ norm. This assumption is often attributed to Proposition 4 in Gao & Pavel (2017). In some works, this is mentioned as a straightforward fact, perhaps because showing the Lipschitz constant to be "
+        },
+        {
+          "line": 235,
+          "text": "where softmax(·) denotes the row-wise application of the function $\\sigma _ { 1 }$ . Although we obtain a tight global Lipschitz constant for the softmax operator $\\sigma _ { 1 }$ acting on the rows of the attention score matrix, the self-attention map ${ \\pmb X } \\mapsto \\mathrm { A t t } ( { \\pmb X } ; { \\pmb W } ^ { Q } , { \\pmb W } ^ { K } , { \\pmb W } ^ { V } )$ defined on an unbounded input domain is not globally Lipschitz. Kim et al. (Kim et al., 2021) show that, for this map, the Lipschitz constant with respect to any $\\ell _ { p }$ norm is infinite. Motivated by this negative result, "
+        },
+        {
+          "line": 243,
+          "text": "Theorem 2 (Refined ℓ -Lipschitz bound for SCSA). Let $L _ { 2 } ( \\mathrm { S C S A } )$ denote the global Lipschitz constant of $X \\mapsto \\operatorname { S C S A } ( X , W ^ { Q } , W ^ { K } , W ^ { V } , \\nu , \\tau )$ with respect to the $\\ell _ { 2 }$ norm. Then, for fixed $( W ^ { Q } , { \\bar { W } } ^ { K } , W ^ { V } , \\nu , \\tau )$ "
+        },
+        {
+          "line": 411,
+          "text": "where $Q ( s , a )$ are the action logits for state $s \\in { \\mathcal { S } } , A$ is the action space, and $\\lambda > 0$ is the inverse temperature coeficient. We evaluate this mapping $Q ( s , \\cdot ) \\mapsto \\pi _ { \\lambda } ( \\cdot \\mid s )$ in the LunarLander environment (discrete action space of size $| { \\mathcal { A } } | = 4 )$ and the CartPole environment $( | A | = 2 )$ from the OpenAI Gym benchmark (Brockman et al., 2016). We implement a PPO (Proximal Policy Optimization) agent (Schulman et al., 2017) using the stable_baselines3 library, initialized randomly, and executed to colle"
+        }
+      ]
+    },
+    {
+      "path": "02-markdown/2026-09/When_and_Why_SignSGD_Outperforms_SGD_A_Theoretical_Study_Based_on_l1_norm_Lower_Bounds.md",
+      "sha256": "335e15cdeb5e06c6e7279674999cef9bfaf5f64418e45dabae1c5d716316c5af",
+      "hit_count": 51,
+      "sample_hits": [
+        {
+          "line": 9,
+          "text": "Sign-based optimization algorithms, such as SignSGD and Muon, have garnered significant attention for their remarkable performance in training large foundation models. Despite this empirical success, we still lack a theoretical understanding of when and why these sign-based methods outperform vanilla SGD. The core obstacle is that under standard smoothness and finite variance conditions, SGD is known to be minimax optimal for finding stationary points measured by ℓ<sub>2</sub>-norms, thereby fundamentally precluding any complexity gains for sign-based methods in standard settings. To overcome "
+        },
+        {
+          "line": 13,
+          "text": "Efficient and scalable stochastic optimization algorithms play an indispensable role in the huge success of large foundation models [Devlin et al., 2019, Brown et al., 2020, Achiam et al., 2023, Touvron et al., 2023, Team et al., 2023]. Among these, sign-based optimization algorithms, such as SignSGD [Bernstein et al., 2018] and Muon [Jordan et al., 2024], have attracted increasing focus due to substantial empirical edges over stochastic gradient descent (SGD) [Robbins and Monro, 1951]. SignSGD leverages 1-bit signed gradient to update the model, which naturally enjoys many favorable empirical"
+        },
+        {
+          "line": 39,
+          "text": "Under this refined geometry, we develop a clean, self-contained lower bound analysis for SignSGD. We prove an $\\ell _ { 1 }$ -norm lower bound that matches its upper bound, thereby giving a tight characterization of its convergence rate. We further derive an $\\ell _ { 1 }$ -norm lower bound for SGD under the same setting. Comparing the upper bound ofSignSGD with the lower bound ofSGD reveals a strict separation: when the coordinate-wise noise is sparse or highly heterogeneous, SignSGD achieves a better dimension dependence. Finally, we extend this framework to matrix optimization and establish"
+        },
+        {
+          "line": 47,
+          "text": "• Unified Extension to Matrix Optimizers: We elevate our theoretical framework into the matrix domain, mapping separable operations to orthogonalized matrix steps. By applying spectral norm smoothness and matrix variance, we provide equivalent upper and lower bounds for the recently proposed Muon optimizer [Jordan et al., 2024], proving for the first time that Muon handles large-scale matrix parameters just as effectively as SignSGD handles flat vectors. "
+        },
+        {
+          "line": 57,
+          "text": "Sign-based methods: matrix optimizers Matrix sign optimizers extend the sign-based philosophy from coordinate-wise vector updates to structured matrix updates. The representative example is Muon [Jordan et al., 2024], which applies an orthogonalized matrix sign direction: for a matrix gradient $G = U \\Sigma V ^ { \\top }$ , the update direction is msign $( G ) = U V ^ { \\top }$ . In practice, this matrix sign operation is efficiently approximated by Newton–Schulz iterations [Kovarik, 1970, Björck and Bowie, 1971]. Subsequent variants, such as MuonLight, incorporate Nesterov momentum, learning-r"
+        },
+        {
+          "line": 59,
+          "text": "Theoretical understanding of Muon and related matrix optimizers is still developing. Existing studies analyze Muon from several complementary perspectives, including spectral and nuclear-norm geometry, normalized matrix descent, preconditioning, connections to Adam-type methods, and empirical justifications for its superiority [Li and Hong, 2025, Shen et al., 2025, Chang et al., 2025, Si et al., 2025, Sfyraki and Wang, 2025, Chen et al., 2025, Huang et al., 2025, Li et al., 2025b, Qian et al., 2025, Tveit et al., 2025, Page et al., 2025, Mehta et al., 2025, Vasudeva et al., 2025a,b, Frans et a"
+        },
+        {
+          "line": 97,
+          "text": "Algorithm 2 Muon [Jordan et al., 2024]"
+        },
+        {
+          "line": 281,
+          "text": "While vector-based sign methods effectively handle separable scaling, modern LLM architectures rely heavily on matrix multiplications. This motivates extending our framework to the matrix domain. The Muon algorithm is introduced by Jordan et al. [2024], and there lies essential similarity between SignSGD and Muon: Bernstein and Newhouse [2024] pointed out that SignSGD can be regarded as steepest descent under infinity norm, while Muon can be regarded as steepest descent under spectral norm. Now that we have already illustrated the edge of SignSGD in Section 4, we will show in the sequel that i"
+        }
+      ]
+    },
+    {
+      "path": "02-markdown/2026-09/README.md",
+      "sha256": "b1f782f28a50ce7a019015c702a394155543f5e90ec0e4f6ad6750adb22d6679",
+      "hit_count": 6,
+      "sample_hits": [
+        {
+          "line": 13,
+          "text": "| 已解析 | PowerStep Memory Efficient Adaptive Optimization via lp Norm Steepest Descent | PowerStep_Memory_Efficient_Adaptive_Optimization_via_lp_Norm_Steepest_Descent | [解析文件](PowerStep_Memory_Efficient_Adaptive_Optimization_via_lp_Norm_Steepest_Descent.md) | 2026-09-15 | -- |"
+        },
+        {
+          "line": 43,
+          "text": "| 未解析 | Dense Weak Hiding: Closing Complexity Gaps in Nonconvex and PL Finite-Sum Optimization under Individual Smoothness | Dense_Weak_Hiding_Closing_Complexity_Gaps_in_Nonconvex_and_PL_Finite_Sum_Optimization_under_Individual_Smoothness | -- | 2026-09-21 | -- |"
+        },
+        {
+          "line": 44,
+          "text": "| 未解析 | Muon with Finite Newton-Schulz: The Smoothing Benefit in Nonsmooth Nonconvex Optimization | Muon_with_Finite_Newton_Schulz_The_Smoothing_Benefit_in_Nonsmooth_Nonconvex_Optimization | -- | 2026-09-21 | -- |"
+        },
+        {
+          "line": 50,
+          "text": "| 未解析 | Spectral Allocation: Why Muon Outperforms Adam, and How to Improve Muon | Spectral_Allocation_Why_Muon_Outperforms_Adam_and_How_to_Improve_Muon | -- | 2026-09-24 | -- |"
+        },
+        {
+          "line": 59,
+          "text": "| 未解析 | LionMuon: Alternating Spectral and Sign Descent for Efficient Training | LionMuon_Alternating_Spectral_and_Sign_Descent_for_Efficient_Training | -- | 2026-09-29 | -- |"
+        },
+        {
+          "line": 70,
+          "text": "- **未解析论文**（需补解析）：StoSignSGD- Unbiased Structural Stochasticity Fixes  SignSGD for Training Large Language Models、Adaptive_Phase_Switching_for_Communication_Efficient_Federated_LoRA_Fine_Tuning、Rank_Efficient_LoRA_via_Joint_Tangent_Space_Optimization_under_Isotropic_Curvature、TaRA_Training_Aware_Low_Rank_Adaptation_Initialization、Adaptively_Incorporating_Directional_Hints_into_Zeroth_Order_Optimization、Gradient_Free_Optimization_for_Matrix_functions、ConMeZO_Adaptive_Descent_Direction_Sampling_for_Gradient_Free_Finetuning_of_Large_Language_Models、EGGROLL_Unrolled_Understanding_and_Improving_Low"
+        }
+      ]
+    },
+    {
+      "path": "02-markdown/2026-09/Powell_Style_Model_Based_Derivative_Free_Optimization_with_Complexity_Guarantees.md",
+      "sha256": "750c81c39522d3d2bc184ee1bc394ae96b7ea0614522a2f996b5215669bf1096",
+      "hit_count": 3,
+      "sample_hits": [
+        {
+          "line": 1082,
+          "text": "Algorithm 5 (GC-YZ-LIN) is a practical implementation of the geometry correction framework which maintains linear Lagrange polynomials for the set Y while interpolating a quadratic model using $\\mathcal { V } \\cup \\mathcal { Z } \\cup \\{ x _ { k } \\}$ . This method can be seen as the middle ground between DFOTR and NEWUOA, where the former makes only minimal effort to ensure good sample set geometry while the latter uses a significant amount of effort."
+        },
+        {
+          "line": 1198,
+          "text": "We remark on the choice of three parameters in GC-YZ-LIN that also show up in the complexity analysis. Firstly, the model Hessian bound K is set to be extremely large, namely $1 0 ^ { 1 0 0 }$ and essentially inactive. This is largely a byproduct of testing solver performance on problems from CUTEst with naturally extreme curvature. For example, problems such as “SSBRYND” and “SCURLY10” have true Hessian norms greater than $1 0 ^ { 2 0 }$ while “POWERSUM” can have a true Hessian norm even exceeding $1 0 ^ { 1 0 0 }$ . Thus setting a universal, fixed, and small K will handicap the model’s abili"
+        },
+        {
+          "line": 1242,
+          "text": "The first most apparent observation is the deterioration of DFOTR as dimension increases. This is largely due to the absence of a geometry management procedure. As dimension increases, the 2n + 1 points become increasingly sparse and are more likely to be nearly degenerate. Thus, DFOTR performs increasingly aggressive shrinking to eventually force a geometry reset, which leads to radius collapse and premature termination, as seen in the significant flattening of the DFOTR data profile curves."
+        }
+      ]
+    },
+    {
+      "path": "02-markdown/2026-09/Robust_and_Efficient_Zeroth_Order_LLM_Fine_Tuning_via_Adaptive_Bayesian_Subspace_Optimizer.md",
+      "sha256": "4381e108f229c4d5187b18b66e60ad09b9ebc08f05e717509a2165ec0f459d32",
+      "hit_count": 6,
+      "sample_hits": [
+        {
+          "line": 7,
+          "text": "Fine-tuning large language models (LLMs) with zeroth-order (ZO) optimization reduces memory by approximating gradients through function evaluations. However, existing methods essentially perform updates in a one-dimensional space, and suffer from collapse or substantial performance degradation under low-precision training. We introduce BSZO, an adaptive Bayesian Subspace Zeroth-Order Optimizer, which applies Kalman filtering to combine finite-difference information across multiple perturbation directions within a subspace. By treating each finite-difference measurement as a noisy observation, "
+        },
+        {
+          "line": 11,
+          "text": "Large language models (LLMs) are getting increasingly important in natural language understanding and generation (Devlin et al., 2019; Brown et al., 2020; Touvron et al., 2023). However, adapting these models to downstream tasks through fine-tuning remains challenging due to their large scale. The standard approach, using first-order optimizers like Adam, requires consuming a large amount of GPU memory. For a 13B-parameter model, this translates to over "
+        },
+        {
+          "line": 17,
+          "text": "This raises a question: how can we achieve a better tradeoff between convergence speed and memory usage? We observe that the existing ZO methods have three main weaknesses. First, most existing ZO optimizers essentially perform updates along a single random direction within each batch. Even with increased forward passes and perturbation directions, they process each perturbation in isolation, simply averaging or using them independently—throwing away information about how these measurements relate to each other. Second, the noise level in ZO estimates varies significantly during training, yet "
+        },
+        {
+          "line": 238,
+          "text": "Table 3. Experiments on three different models (OPT-1.3B, Mistral-7B, OPT-13B). We show the test accuracy (%) of MeZO, MeZO-Adam, HiZOO, LOZO, BSZO, and BSZO-B on them, with the top two results highlighted in bold. BSZO-B is the baseline version of BSZO. Since fp16 can cause training crashes with Adam, we did not record the results of ZO-Adam for Mistral-7B. * indicates training collapse due to numerical overflow under fp16 precision."
+        },
+        {
+          "line": 267,
+          "text": "Robustness. Reduced precision exposes fragility in several baselines (Table 3) and Figure 1. HiZOO and LOZO are particularly affected: on Mistral-7B (fp16), both methods suffer from TREC training overflow (*). On OPT-13B (bf16), all baseline methods show varying degrees of performance degradation compared to OPT-1.3B, with HiZOO being especially severe—its average accuracy drops from 69.48% to 55.58%, with TREC collapsing to 19.8% and "
+        },
+        {
+          "line": 299,
+          "text": "In this work, we introduce BSZO, which is the first zerothorder optimizer that applies Kalman filtering to aggregate gradient information across multiple perturbation directions for LLM fine-tuning. By treating finite-difference measurements as noisy observations of the true gradient, BSZO builds a posterior distribution over the projected gradient and refines it through Bayesian updates. We design a residual-based adaptive mechanism to adjust the perturbation scale adaptively without manual tuning. Our theoretical analysis shows that BSZO improves the convergence rate by a factor of k/γ over "
+        }
+      ]
+    },
+    {
+      "path": "02-markdown/2026-09/Stiefel_AdamW_Geometry_Aware_AdamW_for_Linear_Factorization_Blocks.md",
+      "sha256": "cd6ba240bd903fee26d2d0f8a24e12dc75ba3a9ab303f64a1a989508c02cdd41",
+      "hit_count": 3,
+      "sample_hits": [
+        {
+          "line": 115,
+          "text": "• Polar Decomposition: Maps the tangent vector to the manifold by finding the closest orthogonal matrix in the Frobenius norm, typically implemented via iterative Newton– Schulz methods [ZS20]. "
+        },
+        {
+          "line": 169,
+          "text": "Proposition 4.3 (Gradient boundedness on fibers). Consider the maps $\\Phi \\colon \\mathbb { R } ^ { m \\times r } \\times \\mathbb { R } ^ { r \\times n } $ $\\mathbb { R } ^ { m \\times n }$ given by $\\Phi ( B , A ) = B A$ and the map $\\widetilde { \\Phi } = \\Phi | _ { \\mathrm { S t } ( n , r ) \\times \\mathbb { R } ^ { m \\times r } }$ . Let $W \\in \\mathbb { R } ^ { m \\times n }$ be a fixed matrix with rank(W) ≤ r such that $\\nabla \\mathcal { L } ( W ) \\neq 0$ . Let $\\mathcal { F } : = \\Phi ^ { - 1 } ( W )$ and $\\widetilde { \\mathcal { F } } : = \\widetilde { \\Phi } ^ { - 1 } ( W )$ . Then, "
+        },
+        {
+          "line": 231,
+          "text": "5.2. GPT2 Pretraining. As the proposed method works for all problems in which the manifold of rank-r matrices appears, it also applies directly to pretraining transformer-based architectures. In particular, self-attention naturally respects this structure, as the image of the map $( W _ { Q } , W _ { K } ) \\in \\mathbb { R } ^ { n \\times r } \\times \\mathbb { R } ^ { n \\times r } \\mapsto W _ { Q } W _ { K } ^ { \\top }$ is exactly the set $\\mathcal { M } _ { r }$ . Despite this, the parametrization map is highly non-injective, and therefore the problem could be restated equivalently by minimizing"
+        }
+      ]
+    },
+    {
+      "path": "02-markdown/2026-09/PowerStep_Memory_Efficient_Adaptive_Optimization_via_lp_Norm_Steepest_Descent.md",
+      "sha256": "4a5b23a46629259f047d6024033ef62a9af1f097dd8a508649006f4d7c7ec8ba",
+      "hit_count": 82,
+      "sample_hits": [
+        {
+          "line": 1,
+          "text": "# PowerStep: Memory-Efficient Adaptive Optimization via ℓ<sub>p</sub>-Norm Steepest Descent"
+        },
+        {
+          "line": 9,
+          "text": "Adaptive optimizers, most notably Adam, have become the default standard for training large-scale neural networks such as Transformers. These methods maintain running estimates of gradient first and second moments, incurring substantial memory overhead. We introduce PowerStep, a memory-efficient optimizer that achieves coordinate-wise adaptivity without storing second-moment statistics. Motivated by steepest descent under an $\\ell _ { p } .$ -norm geometry, we show that applying a nonlinear transform directly to a momentum buffer yields coordinate-wise adaptivity. We prove that PowerStep conve"
+        },
+        {
+          "line": 29,
+          "text": "• Algorithm design. We derive PowerStep from $\\ell _ { p }$ -norm steepest descent principles and show that applying a signed power transform directly to a heavy-ball momentum buffer yields coordinate-wise adaptivity without storing any second-moment statistics. "
+        },
+        {
+          "line": 31,
+          "text": "• Theoretical analysis. We establish an optima $O ( 1 / \\sqrt { T } )$ convergence rate for PowerStep in non-convex stochastic optimization. "
+        },
+        {
+          "line": 33,
+          "text": "• Empirical validation. We evaluate PowerStep on Transformer models ranging from 124M to 235B parameters, spanning both dense and mixture-of-experts (MoE) architectures. PowerStep matches the convergence speed of AdamW while using only half the optimizer state memory. Furthermore, PowerStep remains numerically stable under aggressive int8 quantization, reducing optimizer memory by $\\sim 8 \\times$ compared to full-precision AdamW. "
+        },
+        {
+          "line": 37,
+          "text": "In this section, we present PowerStep, a memory-efficient optimizer that achieves adaptive convergence without second-moment estimation. We derive its update rule from first principles and provide a geometric interpretation of its behavior. "
+        },
+        {
+          "line": 61,
+          "text": "![image](images/PowerStep_Memory_Efficient_Adaptive_Optimization_via_lp_Norm_Steepest_Descent/fig1.jpg)"
+        },
+        {
+          "line": 78,
+          "text": "We propose PowerStep, which applies this nonlinear transform to the heavy-ball momentum [Polyak, 1964]. Unlike Powerball that transforms raw gradients, PowerStep accumulates gradients linearly and applies $\\Phi _ { \\beta }$ after momentum integration, allowing temporal smoothing of the noisy gradients, "
+        }
+      ]
+    },
+    {
+      "path": "02-markdown/2026-07/Understanding_MARS_When_Scaling_Momentum_Correction_Provably_Helps.md",
+      "sha256": "7a9709d93c9b53ee76bd034b534eb94a8d31592c21573f1948ee4343da8a5b5d",
+      "hit_count": 8,
+      "sample_hits": [
+        {
+          "line": 62,
+          "text": "Yuan et al. (2025) study a variant of MARS (Algorithm 1) incorporating gradient clipping and a Hessian conditioning matrix. Furthermore, they show that introducing the scaling coefficient $\\gamma$ leads to gradient estimators with strictly smaller variance than those produced by MVR. However, their theoretical analysis does not distill this favorable property of the MARS estimator into an explicit convergence advantage of MARS over MVR. More precisely, Yuan et al. (2025) establish $\\mathcal { O } ( 1 / T ^ { 2 / 3 } )$ rate bounds for $\\mathbb { E } \\| \\nabla f ( x _ { t } ) - g _ { t } \\| ^ {"
+        },
+        {
+          "line": 92,
+          "text": "Novel momentum. To improve upon Polyak momentum, several novel momentum techniques have been proposed. Notable techniques include Implicit Gradient Transport (IGT) (Arnold et al., 2019), Momentum Variance Reduction (MVR) (Cutkosky & Orabona, 2019), and various secondorder momentum methods (Salehkaleybar et al., 2024; Tran & Cutkosky, 2022). In the context of non-convex stochastic optimization, while IGT achieves an $\\mathcal { O } ( 1 / T ^ { 2 / 7 } )$ convergence rate in gradient norm (Cutkosky & Mehta, 2020), both MVR and second-order momentum reach $\\mathcal { O } ( 1 / T ^ { 1 / 3 } )$ ne"
+        },
+        {
+          "line": 394,
+          "text": "Chang, D., Liu, Y., and Yuan, G. On the convergence of Muon and beyond. arXiv preprint arXiv:2509.15816, 2025. (Cited on pages 2 and 3) "
+        },
+        {
+          "line": 496,
+          "text": "Huang, F., Luo, Y., and Chen, S. LiMuon: Light and fast Muon optimizer for large models. arXiv preprint arXiv:2509.14562, 2025. (Cited on pages 2 and 3) "
+        },
+        {
+          "line": 610,
+          "text": "Qian, X., Rammal, H., Kovalev, D., and Richtarik, P. Muon is provably faster with momentum variance reduction. arXiv preprint arXiv:2512.16598, 2025. (Cited on pages 2 and 3) "
+        },
+        {
+          "line": 1348,
+          "text": "1. Convexity. The function $f ( \\gamma ) = \\sqrt { \\gamma ^ { 2 } \\delta ^ { 2 } + ( 1 - \\gamma ) ^ { 2 } L ^ { 2 } }$ is the Euclidean norm of the affine map $\\gamma \\mapsto ( \\gamma \\delta , ( 1 - \\gamma ) L )$ Since the composition of a convex function (the norm) and an affine map is convex, $f ( \\gamma )$ is convex. The term $B ( 1 - \\gamma )$ is linear and thus convex. Therefore, $J ( \\gamma )$ is convex on $\\gamma \\in [ 0 , 1 ]$ "
+        },
+        {
+          "line": 1553,
+          "text": "What is shown. Figure 7 is a $3 \\times 3$ grid of $\\log _ { 1 0 }$ speedup heatmaps. Rows correspond to $L \\in \\{ 0 . 1 , 1 , 1 0 \\}$ , columns correspond to $\\sigma \\in \\{ 1 0 ^ { - 4 } , 1 0 ^ { - 2 } , 1 \\}$ . Each panel is evaluated on a log–log grid over ϵ (horizontal axis) and δ (vertical axis). Dashed curves overlay contour lines of the optimizer $\\gamma _ { \\star }$ (selected levels shown in the legend); smaller $\\gamma _ { \\star }$ indicates that the surrogate prefers a more aggressive deviation from the MVR baseline. "
+        },
+        {
+          "line": 1557,
+          "text": "• Larger ϵ and δ yield larger speedups. Across all panels, the heatmaps brighten toward the upper-right: increasing ϵ and $\\delta$ tends to decrease the relative importance of the $( 1 - \\gamma )$ -penalty term (through B) compared to the baseline $A \\delta .$ making $\\gamma < 1$ more beneficial in the surrogate. "
+        }
+      ]
+    },
+    {
+      "path": "02-markdown/2026-07/Self_Tuning_Stochastic_Optimization_with_Curvature_Aware_Gradient_Filtering.md",
+      "sha256": "87acb8497fffe82032c497eb7fb641461f86885cd77764ae171b0cf782903c16",
+      "hit_count": 1,
+      "sample_hits": [
+        {
+          "line": 259,
+          "text": "While the required additional observables can be computed efficiently with recent advances in automatic differentiation tooling, they are of course not free, increasing computational cost and memory usage compared to SGD. What one gains in return is automation, so that it suffices to run the algorithm just once, without tedious tuning. Given the amount of human effort and computational resources currently invested into hyperparameter tuning, we believe our contributions are valuable steps towards fully-automated gradient-based optimization. "
+        }
+      ]
+    },
+    {
+      "path": "02-markdown/2026-09/images/PowerStep_Memory_Efficient_Adaptive_Optimization_via_lp_Norm_Steepest_Descent/_sources.md",
+      "sha256": "032240604e857ecec53e290b387e4678251bc7ba81f906c6399fbd931b5004fb",
+      "hit_count": 1,
+      "sample_hits": [
+        {
+          "line": 4,
+          "text": "与 [PowerStep_Memory_Efficient_Adaptive_Optimization_via_lp_Norm_Steepest_Descent.md](../../PowerStep_Memory_Efficient_Adaptive_Optimization_via_lp_Norm_Steepest_Descent.md) 中的 `images/PowerStep_Memory_Efficient_Adaptive_Optimization_via_lp_Norm_Steepest_Descent/figN.*` 一一对应。"
+        }
+      ]
+    },
+    {
+      "path": "02-markdown/2026-10/images/Convergence_of_Muon_with_Newton_Schulz/_sources.md",
+      "sha256": "155df698c7b8f4c836497246bcbfd11b3902adf8680ccb9e3fd241a6aeac1d51",
+      "hit_count": 2,
+      "sample_hits": [
+        {
+          "line": 5,
+          "text": "原始 PDF：[论文 PDF](../../../../01-raw/2026-10/Convergence_of_Muon_with_Newton_Schulz.pdf)"
+        },
+        {
+          "line": 6,
+          "text": "解析文本：[Markdown](../../Convergence_of_Muon_with_Newton_Schulz.md)"
+        }
+      ]
+    },
+    {
+      "path": "08-reading/Softmax_is_1_2_Lipschitz_A_tight_bound_across_all_lp_norms/Softmax_is_1_2_Lipschitz_A_tight_bound_across_all_lp_norms_全局推理_过程.md",
+      "sha256": "b43dccba40eb00b2b0b14a868035595643462857d00f8894fc72057b3535c49a",
+      "hit_count": 8,
+      "sample_hits": [
+        {
+          "line": 112,
+          "text": "一个论文未说但推导要用的小事实：因为 $v \\mapsto \\Vert Av\\Vert_p$ 连续、单位球 $\\{v : \\Vert v\\Vert_p = 1\\}$ 在有限维是**紧集**，所以上确界其实是最大值，可写成 $\\max$。这个\"$\\sup$ 可换成 $\\max$\"在后面 Lemma 4 修补严格性时会用到（论文正文没写，导致 Case (iii) 的证明链在\"逐点严格推得上确界严格\"这一环缺一跳）。"
+        },
+        {
+          "line": 172,
+          "text": "$h$ 是两个 Lipschitz 函数的复合（$t \\mapsto f(z(t))$ 局部 Lipschitz，范数映射 Lipschitz 常数为 1，因为 $|\\Vert a\\Vert_p - \\Vert b\\Vert_p| \\le \\Vert a-b\\Vert_p$ 是三角不等式的直接推论），故 $h$ 绝对可微几乎处处存在。对几乎处处的 $t$："
+        },
+        {
+          "line": 272,
+          "text": "第二步，逐行三角不等式：$\\left|(Ax)_i\\right| = \\left|\\sum_j A_{ij}x_j\\right| \\le \\sum_j |A_{ij}||x_j|$。因为 $t \\mapsto t^p$ 在 $t\\ge0$ 单调增，可以对不等式两边取 $p$ 次幂。"
+        },
+        {
+          "line": 370,
+          "text": "**边界为什么可以\"忽略\"（论文的说法需要精确化）**。论文说\"边界点不影响 Lipschitz 常数的表述，因为 softmax 输出分量严格为正\"。这只是**表述层面**成立：$\\sup$ 在开集 $\\Delta_n^\\circ$ 上取值，与在闭包 $\\Delta_n$ 上取值的差别是\"可能取不到\"。因为 $s \\mapsto M(s)$ 逐元素连续、$\\Vert\\cdot\\Vert_p$ 连续，复合 $s\\mapsto\\Vert M(s)\\Vert_p$ 连续，而 $\\Delta_n$ 紧，所以"
+        },
+        {
+          "line": 570,
+          "text": "(1) **上确界可取到。** $v \\mapsto \\Vert M(s)v\\Vert_p$ 连续，单位球面 $\\{v : \\Vert v\\Vert_p = 1\\}$ 在有限维紧，故 $\\Vert M(s)\\Vert_p = \\max_{\\Vert v\\Vert_p=1}\\Vert M(s)v\\Vert_p$，存在极方向 $v^\\star$。（这一条单元 0.2 已指出论文没写。）"
+        },
+        {
+          "line": 578,
+          "text": "因 $p > 1$，$t\\mapsto t^{p-1}$ 严格增；取等当且仅当对每个 $T_i(v) > 0$ 的 $i$ 都有 $R_i = R_{\\max}$。所以 $T_{i_2}(v) > 0$ 就直接给出 $(\\star)$ 严格（$R_{i_2} < R_{\\max}$）。"
+        },
+        {
+          "line": 604,
+          "text": "另一方面，$\\hat s = (1/2,1/2,0,\\ldots,0) \\in \\partial\\Delta_n$ 满足 $\\Vert M(\\hat s)\\Vert_p = 1/2$（单元 3.2）。取一列 $s_k \\in \\Delta_n^\\circ$ 使 $s_k \\to \\hat s$（构造见单元 3.5），由 $s \\mapsto \\Vert M(s)\\Vert_p$ 连续："
+        },
+        {
+          "line": 801,
+          "text": "论文指出：$X \\mapsto \\mathrm{Att}(X)$ 在未限定输入域上**不是**全局 Lipschitz（引 Kim et al. 2021，其结论是任意 $\\ell_p$ 下常数为 $\\infty$）。可验证的原因：把 $X$ 沿某方向放大 $t$ 倍，分数矩阵按 $t^2$ 放大，softmax 输出被压在单纯形内故有界，而右乘的 $XW^V$ 按 $t$ 放大；分子有界、分母按 $\\Vert X\\Vert$ 增长的模式使比值无界。因此改用 SCSA（论文式 6）：把 $q,k$ 归一化到单位范数、外乘温度 $\\tau$ 与尺度 $\\nu$，softmax 输入有界，整个映射才可能有界。"
+        }
+      ]
+    },
+    {
+      "path": "08-reading/Powell_Style_Model_Based_Derivative_Free_Optimization_with_Complexity_Guarantees/Powell_Style_Model_Based_Derivative_Free_Optimization_with_Complexity_Guarantees_全局推理_过程.md",
+      "sha256": "f433a12cf9446320c166189719e90e0aa4aca13f16ac20be88305c05ef7d7eef",
+      "hit_count": 6,
+      "sample_hits": [
+        {
+          "line": 285,
+          "text": "- $\\frac{\\Vert g_k\\Vert}{\\Vert H_k\\Vert}$：**无约束最速下降的\"自然步长\"**——沿 $-g_k$ 方向的二次模型极小点到中心的距离（对 $\\tau\\mapsto m_k(x_k-\\tau g_k)$ 求极小得 $\\tau^\\star = \\frac{\\Vert g_k\\Vert^2}{g_k^\\top H_k g_k}$，步长 $\\tau^\\star\\Vert g_k\\Vert = \\frac{\\Vert g_k\\Vert^3}{g_k^\\top H_kg_k}\\ge\\frac{\\Vert g_k\\Vert}{\\Vert H_k\\Vert}$）。"
+        },
+        {
+          "line": 431,
+          "text": "5. 由 (2.2) 与 $\\Vert g_k\\Vert\\ge\\eta_2\\Delta_k$，且 $u\\mapsto u\\min\\{u/\\kappa_{bhm},\\Delta_k\\}$ 在 $u\\ge0$ 上单调增："
+        },
+        {
+          "line": 681,
+          "text": "- $\\mathcal { P }$：所选多项式的线性空间（已知量：算法设计时固定，不随迭代变）。本文只有两种取法：$p = n$ 的**齐次线性**多项式全体 $\\{ s \\mapsto a ^ { \\top } s : a \\in \\mathbb { R } ^ { n } \\}$（注意：不含常数项），和 $p = \\frac { n ( n + 1 ) } { 2 }$ 的二次多项式空间。"
+        },
+        {
+          "line": 1363,
+          "text": "用到 $t \\mapsto \\frac { t } { t + \\Lambda }$ 在 $t > 0$ 上单调增（求导 $\\frac { \\Lambda } { ( t + \\Lambda ) ^ { 2 } } > 0$）。**结论：新点必须有至少 $\\frac { 1 } { 2 }$ 的\"离子空间距离\"**，否则它没把维度撑起来。"
+        },
+        {
+          "line": 1553,
+          "text": "**$L_Q$ 与它和 $L$ 的关系**：引理 5.2 里的 $L_Q$ 是映射 $x\\mapsto QQ^\\top\\nabla\\phi(x)$ 的 Lipschitz 常数，即满足"
+        },
+        {
+          "line": 1631,
+          "text": "（依据：一元微积分基本定理，把 $t\\mapsto{\\hat\\phi}(tv)$ 在 $[0,1]$ 上积分其导数 $\\nabla{\\hat\\phi}(tv)^\\top v$。）对被积函数作恒等改写，$\\nabla{\\hat\\phi}(tv)=Q^\\top\\nabla\\phi(x+tQv)$，所以"
+        }
+      ]
+    },
+    {
+      "path": "08-daily/2026-09-24/今日检索.md",
+      "sha256": "52cffcaac16dc3cc4dc51e7cb0c2f64aaa877e364987004b517a205a1c824ab9",
+      "hit_count": 65,
+      "sample_hits": [
+        {
+          "line": 7,
+          "text": "- **总体趋势**：本次 arXiv 样本同时覆盖 Muon/AdamW 的更新几何、优化器训练实证，以及随机梯度的收敛、下界与稳定性分析。此处是近 30 天检索结果的摘要观察，不据此判断领域整体趋势；OpenReview 本次返回 0 篇，Semantic Scholar 匿名接口限流，过去一年高影响力补充样本缺失。100 篇是阅读队列预筛结果，分数不代表论文质量。"
+        },
+        {
+          "line": 10,
+          "text": "  - **Muon 的谱几何与实现**：多篇摘要讨论奇异值方向的步长分配、矩阵极化近似和卷积算子几何，适合串联阅读其建模假设与训练成本。"
+        },
+        {
+          "line": 11,
+          "text": "  - **优化器适用边界**：线性分解块、扩散模型和不同训练时长的工作试图界定 AdamW、Muon 等方法何时获益；需要全文核查比较协议。"
+        },
+        {
+          "line": 19,
+          "text": "- **方向汇总**：本次检索命中 93 篇，100 篇预筛队列中占 48 篇。Muon、AdamW 与参数矩阵几何是可直接对接当前优化器设计问题的线索；部分论文仅因宽泛关键词被归入本方向，需二次人工筛选。"
+        },
+        {
+          "line": 22,
+          "text": "  - **符号与范数几何优化**（33 篇）：重点核验 Muon 的谱分配、极化和算子范数假设是否与真实训练更新一致。"
+        },
+        {
+          "line": 38,
+          "text": "### 1. Spectral Allocation: Why Muon Outperforms Adam, and How to Improve Muon — 研究优先级 8.93"
+        },
+        {
+          "line": 43,
+          "text": "- **题目中文翻译**：谱分配：Muon 为何优于 Adam，以及如何改进 Muon"
+        },
+        {
+          "line": 45,
+          "text": "- **英文摘要**：Orthogonal optimisers such as Muon can substantially accelerate large language model pretraining relative to Adam, yet the mechanism remains incompletely understood. We investigate this through an out-of-sample spectral probing analysis of Transformer loss landscapes. At checkpoints along real training trajectories, we decompose each momentum buffer into its singular directions and estimate the loss-optimal step size along each direction on held-out data. The resulting spectral profile is anisotropic yet stable across batches and training stages, and consistent across the optimisers"
+        }
+      ]
+    },
+    {
+      "path": "08-daily/2026-09-23/今日检索.md",
+      "sha256": "9cadf941df53978cee69f9a2f19c5dd4732afab981d3fde74811a206d4930848",
+      "hit_count": 20,
+      "sample_hits": [
+        {
+          "line": 95,
+          "text": "  - [PowerStep: Memory-Efficient Adaptive Optimization via ell_p-Norm Steepest Descent](../../03-notes/2026-09/PowerStep_Memory_Efficient_Adaptive_Optimization_via_lp_Norm_Steepest_Descent/精读.md) — 共同点：`自适应优化器, 大模型训练`"
+        },
+        {
+          "line": 159,
+          "text": "| 9 | Muon with Finite Newton-Schulz: The Smoothing Benefit in Nonsmooth Nonconvex Optimization | arxiv | 7.93 | 已在库（pdf） | 随机梯度与优化理论 | 随机梯度与收敛性 | Muon with Finite Newton-Schulz: The Smoothing Benefit in Nonsmooth Nonconvex Optimization | [PDF](../../01-raw/2026-09/Muon_with_Finite_Newton_Schulz_The_Smoothing_Benefit_in_Nonsmooth_Nonconvex_Optimization.pdf)<br>[原文](http://arxiv.org/abs/2608.26288v1) |"
+        },
+        {
+          "line": 174,
+          "text": "| 24 | The Complexity of Finding Stationary Points in Nonsmooth Nonconvex Optimization | arxiv | 6.28 | 推荐 | 随机梯度与优化理论 | 随机梯度与收敛性 | Dense Weak Hiding: Closing Complexity Gaps in Nonconvex and PL Finite-Sum Optimization under Individual Smoothness | [PDF原文](https://arxiv.org/pdf/2609.17780v1)<br>[原文](http://arxiv.org/abs/2609.17780v1) |"
+        },
+        {
+          "line": 179,
+          "text": "| 29 | Joint Structure Identification and Newton Acceleration via Proximal Line Search for Nonconvex Optimization | arxiv | 5.48 | 推荐 | 随机梯度与优化理论 | 随机梯度与收敛性 | Dense Weak Hiding: Closing Complexity Gaps in Nonconvex and PL Finite-Sum Optimization under Individual Smoothness | [PDF原文](https://arxiv.org/pdf/2609.18021v1)<br>[原文](http://arxiv.org/abs/2609.18021v1) |"
+        },
+        {
+          "line": 213,
+          "text": "| 53 | Dense Weak Hiding: Closing Complexity Gaps in Nonconvex and PL Finite-Sum Optimization under Individual Smoothness | arxiv | 7.93 | 已在库（pdf） | 无梯度大模型优化 | 未细分 | Dense Weak Hiding: Closing Complexity Gaps in Nonconvex and PL Finite-Sum Optimization under Individual Smoothness | [PDF](../../01-raw/2026-09/Dense_Weak_Hiding_Closing_Complexity_Gaps_in_Nonconvex_and_PL_Finite_Sum_Optimization_under_Individual_Smoothness.pdf)<br>[原文](http://arxiv.org/abs/2609.00045v2) |"
+        },
+        {
+          "line": 219,
+          "text": "| 59 | FedSubMuon: Communication-Efficient Federated LLM Fine-Tuning via Structured Subspace Muon | arxiv | 7.80 | 已在库（daily） | 无梯度大模型优化 | 未细分 | FedSubMuon: Communication-Efficient Federated LLM Fine-Tuning via Structured Subspace Muon | [PDF原文](https://arxiv.org/pdf/2609.06073v1)<br>[原文](http://arxiv.org/abs/2609.06073v1) |"
+        },
+        {
+          "line": 228,
+          "text": "| 68 | Musec: MomentUm SpEctral Clipping for Stable Muon-type Training | arxiv | 7.07 | 推荐 | 无梯度大模型优化 | large language model training | Almost Sure Convergence Analysis of Stochastic Gradient Methods with Clipping and Additive Noise | [PDF原文](https://arxiv.org/pdf/2609.11655v2)<br>[原文](http://arxiv.org/abs/2609.11655v2) |"
+        },
+        {
+          "line": 230,
+          "text": "| 70 | LoRA-TSD: Tangent-Space Spectral Descent for LoRA via Muon-Style Updates | arxiv | 6.70 | 已在库（daily） | 无梯度大模型优化 | 未细分 | LoRA-TSD: Tangent-Space Spectral Descent for LoRA via Muon-Style Updates | [PDF原文](https://arxiv.org/pdf/2609.02734v1)<br>[原文](http://arxiv.org/abs/2609.02734v1) |"
+        }
+      ]
+    },
+    {
+      "path": "08-daily/2026-09-22/今日检索.md",
+      "sha256": "be58bb3d00ab82259fb53ff47b7c857881b3750ba1898e7ed542d82024aab753",
+      "hit_count": 3,
+      "sample_hits": [
+        {
+          "line": 126,
+          "text": "  - [Muon with Finite Newton-Schulz: The Smoothing Benefit in Nonsmooth Nonconvex Optimization](../../01-raw/2026-09/Muon_with_Finite_Newton_Schulz_The_Smoothing_Benefit_in_Nonsmooth_Nonconvex_Optimization.pdf) — 共同点：`nonconvex, smoothing`"
+        },
+        {
+          "line": 128,
+          "text": "  - [Dense Weak Hiding: Closing Complexity Gaps in Nonconvex and PL Finite-Sum Optimization under Individual Smoothness](../../01-raw/2026-09/Dense_Weak_Hiding_Closing_Complexity_Gaps_in_Nonconvex_and_PL_Finite_Sum_Optimization_under_Individual_Smoothness.pdf) — 共同点：`nonconvex`"
+        },
+        {
+          "line": 162,
+          "text": "| 1 | Global Convergence of Sampling-Based Nonconvex Optimization through Diffusion-Style Smoothing | openreview | 5.07 | 推荐 | 随机梯度与优化理论 | 随机梯度与收敛性 | Muon with Finite Newton-Schulz: The Smoothing Benefit in Nonsmooth Nonconvex Optimization | [PDF原文](https://openreview.net/pdf/b050c7f3bd69ba649f01fb0b8398a95dc82ff1ac.pdf)<br>[原文](https://openreview.net/forum?id=8Nx1ZjfEhd) |"
+        }
+      ]
+    },
+    {
+      "path": "08-daily/2026-09-25/今日检索.md",
+      "sha256": "e26d6bb9c4879b1c1fe136cef639786bd81e051f896aad1eeff28c2eb92cb85b",
+      "hit_count": 47,
+      "sample_hits": [
+        {
+          "line": 7,
+          "text": "- **总体趋势**：本次从 OpenAlex 的 arXiv 索引中按 2026-08-26 至 2026-09-25 的时间窗抽取并预筛 100 篇。arXiv 官方 API 返回 503/429，OpenReview 与 Semantic Scholar 的当日补充未完成，因此这里只能描述本次样本：Muon 的更新几何、随机优化的收敛与稳态偏差均有可核验线索。分数仅表示阅读优先级。"
+        },
+        {
+          "line": 10,
+          "text": "  - **Muon 的适用边界**：非光滑目标上的固定动量反例与自适应动量修正，提供了比单纯比较训练曲线更具体的研究问题。"
+        },
+        {
+          "line": 19,
+          "text": "- **方向汇总**：本次样本以 Muon 和矩阵更新几何为主；关键词匹配不能代替对训练任务、预算及基线的检查。"
+        },
+        {
+          "line": 21,
+          "text": "  - **符号与范数几何优化**（38 篇）：集中讨论 Muon、正交化与矩阵几何；重点核验收益来自更新方向、尺度还是额外训练资源。"
+        },
+        {
+          "line": 42,
+          "text": "- **英文摘要**：Modern real application problems involve matrix-valued parameters, yet conventional optimizers treat them as vectors, thereby motivating matrix-aware methods that exploit input-output geometry, such as Muon which orthogonalizes the momentum matrices before parameter updates. Its empirical success raises a conceptual question: can orthogonalized momentum remain effective beyond smooth optimization? This paper studies this question for locally Lipschitz functions using a generalized derivative framework compatible with backpropagation. Our first contribution is to identify a key limit"
+        },
+        {
+          "line": 43,
+          "text": "- **中文摘要**：现代真实应用问题包含矩阵值参数，但传统优化器将它们视为向量，因此催生了利用输入—输出几何的矩阵感知方法，例如在参数更新前对动量矩阵做正交化的 Muon。它在经验上的成功引出一个概念性问题：正交化动量在光滑优化之外是否仍然有效？本文使用与反向传播兼容的广义导数框架，研究局部 Lipschitz 函数上的这一问题。我们的第一项贡献是指出一个关键局限：对于每个固定动量系数 $β\\in[0,1)$，当步长根据完整梯度历史自适应变化时，Muon 从几乎所有初始化出发，都可能无法趋近某个凸 Lipschitz 目标的全局最优解。即使迭代点有界，也可能出现这种失效。我们的例子受到 Parshakova 等人的例子启发，而后者只覆盖 $β\\in[0,\\frac{1}{2})$。接着，我们表明障碍在于固定动量，而非正交化本身。具体来说，当动量系数自适应地趋近 1、步长同时趋近 0 时，在有界性与正则性条件下，Muon 对非凸非光滑优化重新获得渐近收敛性。此外，我们提出 MAGD：按照正交化动量和梯度各自的相对进展，对两者加权组合。MAGD 在非凸情形下保持渐近收敛，在凸情形下达到 $O(\\min\\{m,n\\}ε^{-2})$ 的速率。一个下界表明其维度依赖是最优的。在合成问题、图像分类和大语言模型预训练上的实验表明，MAGD 是 Muon 的一种简单且实用的替代方法。总之，我们"
+        },
+        {
+          "line": 44,
+          "text": "- **一句话总结**：给出 Muon 在非光滑凸目标上固定动量的失效例子，并以自适应动量及 MAGD 分析修复条件。"
+        },
+        {
+          "line": 50,
+          "text": "- **选择理由**：直接命中当前 Muon 优化器设计问题，提供明确的失效边界与修复条件；原始预筛位次 27，因研究问题直接性提升至语义第 1。"
+        }
+      ]
+    },
+    {
+      "path": "08-daily/2026-10-10/今日检索.md",
+      "sha256": "1b9099ed826a43fd60718e28cf66edff526fd87f16dacc75d3b6d230c9f2ffcc",
+      "hit_count": 141,
+      "sample_hits": [
+        {
+          "line": 12,
+          "text": "  - **覆盖与时间边界**：近30天窗口2026-09-10至2026-10-10；arXiv按相关性最多200条，OpenReview按配置15关键词每词第1页100条。候选池的最新arXiv提交为10月8日，不能由此断言10月9日或10日没有新论文。含物理Muon等词义误命中，仅作附录记录。Semantic Scholar近一年窗口2025-10-10至2026-09-09两次HTTP429，无高影响力补充与引用数据。"
+        },
+        {
+          "line": 13,
+          "text": "  - **与既有阅读形成对照**：ADana与昨日SF-NorMuon比较记忆调度和训练终点依赖；SignMuon与已有SignSGD/PowerStep比较算子组合和幅值保留；跨块尺度理论与DGA-Muon/ORCA比较方向归一化和步幅选择。优先记录可检验差异，不从投稿场所或摘要收益判断正确性。"
+        },
+        {
+          "line": 14,
+          "text": "  - **版本与PDF状态**：OpenReview前三篇PDF均HTTP403。ADana存在同名arXiv v2，但最大模型为2.6B，不同于投稿摘要的4.4B；SignMuon存在arXiv v1。归档时记录公开版本，摘要分析继续以本次检索摘要为准。Spectral Flattening没有取得可归档全文，保留远程入口与失败原因。"
+        },
+        {
+          "line": 15,
+          "text": "  - **新近候选线索**：候选池检出10月8日 Rounding in Preconditioner Space: Redesigning 4-bit AdamW Optimizer-State Quantization、10月7日 Spectrally Targeted Muon 等。它们仍列于附录；本次未进入focus预筛前10，没有替换已选前三篇，也未做全文判断。"
+        },
+        {
+          "line": 22,
+          "text": "- **方向汇总**：结合已有谱优化、PowerStep与SignSGD阅读，今日重点是哪些历史信息应保留、压缩应放在哪里、尺度应如何跨块设置。把效率、理论保证和经验稳定性分别核验。直接LLM证据优先，隐私联邦、卷积和Langevin采样候选只作相邻问题跟踪。"
+        },
+        {
+          "line": 24,
+          "text": "  - **符号与范数几何优化**（190 篇）：SignMuon反例提醒合理的符号方向与谱方向不能任意组合；跨块尺度理论提醒块内谱均衡不代表全局尺度均衡。优先检验夹角、有限NS误差和跨层步幅。"
+        },
+        {
+          "line": 40,
+          "text": "- **英文摘要**：In practice, the hyperparameters $(\\beta_1,\\beta_2)$ and weight-decay $\\lambda$ in AdamW are typically kept at fixed values. Is there any reason to do otherwise? We show that for large-scale language model training, the answer is yes: by exploiting the power-law structure of language data, one can design time-varying schedules for $(\\beta_1,\\beta_2,\\lambda)$ that deliver substantial performance gains. We study logarithmic-time scheduling, in which the optimizer’s gradient memory horizon grows with training time. Although naïve variants of this are unstable, we show that suitable dam"
+        },
+        {
+          "line": 41,
+          "text": "- **中文摘要**：在实践中，AdamW 的超参数 $(\\beta_1,\\beta_2)$ 和权重衰减 $\\lambda$ 通常保持固定值。是否有理由采用其他做法？我们表明，对于大规模语言模型训练，答案是肯定的：利用语言数据的幂律结构，可以为 $(\\beta_1,\\beta_2,\\lambda)$ 设计随时间变化的调度，从而带来显著的性能收益。我们研究对数时间调度，在这种调度中，优化器的梯度记忆时长随训练时间增长。尽管其朴素变体不稳定，我们表明，适当的阻尼机制能够恢复稳定性，同时保留更长记忆带来的收益。在此基础上，我们提出 ADana，一种类似 AdamW 的优化器，将对数时间调度与显式阻尼结合，以平衡稳定性和性能。我们在不同规模的 Transformer（4500 万到 44 亿参数）上实证评估 ADana，并与 AdamW、Muon 和 Ademamix 比较。在适当调参时，相较于调优后的 AdamW，ADana 可实现最高 40\\% 的计算效率收益；随着模型规模增长，这些收益持续存在，甚至进一步提高。我们还表明，将对数时间调度用于 Ademamix 时也会产生类似收益，而仅采用对数时间权重衰减就能带来显著改进。最后，我们提出 ADana 的若干变体，以缓解潜在失效模式并提高稳健性。"
+        }
+      ]
+    },
+    {
+      "path": "08-daily/2026-10-04/今日检索.md",
+      "sha256": "ff007bc215582a11d5c8c384b14c2ce32df1146dfa2006eba52b40400c43f141",
+      "hit_count": 160,
+      "sample_hits": [
+        {
+          "line": 9,
+          "text": "- **总体趋势**：今日重点为“直接针对大模型训练优化，且摘要或正文报告对应实验”。候选中，Muon相关工作从逐矩阵谱几何，扩展到行列均衡、参数类别专用更新、跨层张量结构，以及低精度/稀疏状态。推荐顺序为语义复排顺序，元数据预筛分数保持不变。前两篇已核验关键正文实验，其他条目是摘要初评。"
+        },
+        {
+          "line": 12,
+          "text": "  - **显存收益与任务表现的取舍**：TACO实测全参数微调，Rethinking Memory-Efficient Optimizers要求加入量化强基线，Monarch–Muon展示改变参数化的代价；状态显存、训练峰值和到达同等质量的时间需分别报告。"
+        },
+        {
+          "line": 13,
+          "text": "  - **从逐层几何到跨层结构**：MeqMuon以行/列不均衡模式选择更新；TUON摘要将结构提升到跨层张量。二者适合对照几何假设如何被消融实验支持。"
+        },
+        {
+          "line": 16,
+          "text": "  - **筛选与去重说明**：排除纯理论且未确认LLM实验、EEG等不相关任务；Muon粒子物理同名结果归入未分类并标记排除。ZFO已在10月2日推荐，因此跳过；Hyperball与同名OpenReview版本合并。NorMuon补查条目触发共享配置的workshop排除词，未加入推荐。前三篇依次覆盖微调、逐矩阵预训练和跨层预训练；其余第10篇为学习率调度扩展项。"
+        },
+        {
+          "line": 17,
+          "text": "  - **可读版本状态**：本次OpenReview多篇为ICLR 2027匿名投稿，非接收结论。TACO与MeqMuon原始PDF已入库2026-10；TUON三种官方PDF入口均403，按技能规则保留推荐与失败原因。"
+        },
+        {
+          "line": 26,
+          "text": "  - **符号与范数几何优化**（111 篇）：MeqMuon、TUON及Row Normalization Puzzle分别提供归一化机制、跨层结构与最坏例/实证差异；前两者的证据层级不同。"
+        },
+        {
+          "line": 27,
+          "text": "  - **自适应与状态内存**（31 篇）：TACO、AF-Muon与量化基线比较，关注一阶/二阶状态、低精度分量及参数类别；不能把状态节省倍数当成峰值显存倍数。"
+        },
+        {
+          "line": 37,
+          "text": "  - **随机梯度与收敛性**（37 篇）：代表论文：When Muon Optimizer Meets Adversarial Training: A Theoretical and Empirical Study；Preconditioning Benefits of Spectral Orthogonalization in Muon；AdamW Scaling Laws from First Principles"
+        }
+      ]
+    },
+    {
+      "path": "08-daily/2026-10-03/今日检索.md",
+      "sha256": "90d45fa7631b43a4ca6ac8c8841af35e44c5f23db331afe500735abf66976ef2",
+      "hit_count": 25,
+      "sample_hits": [
+        {
+          "line": 19,
+          "text": "- **方向汇总**：83 篇自动归入本域，推荐 5 篇。直接关注 NormPre 的矩阵更新与 AdamW/Muon 对照；STORM 和下界候选提供训练算法边界。宽泛类别命中可能把一般优化理论归入本域，不能视为均完成大模型验证。"
+        },
+        {
+          "line": 133,
+          "text": "| 4 | Normalize-Then-Precondition: A Hierarchical Approach to Marginal Scale and Interaction Geometry for LLM Training | 8.00 | 大模型优化器设计 | 符号与范数几何优化 | NormPre 直接命中大模型矩阵优化器；选读几何分解、谱近似消融与 AdamW/Muon 同预算对照，简化理论不能替代实际训练验证。 | [PDF原文](https://arxiv.org/pdf/2609.36692v1)<br>[原文](http://arxiv.org/abs/2609.36692v1) |"
+        },
+        {
+          "line": 198,
+          "text": "| 25 | LionMuon: Alternating Spectral and Sign Descent for Efficient Training | arxiv | 7.93 | 已在库（pdf） | 大模型优化器设计 | 符号与范数几何优化 | LionMuon: Alternating Spectral and Sign Descent for Efficient Training | [PDF](../../01-raw/2026-09/LionMuon_Alternating_Spectral_and_Sign_Descent_for_Efficient_Training.pdf)<br>[原文](http://arxiv.org/abs/2609.35297v1) |"
+        },
+        {
+          "line": 204,
+          "text": "| 31 | Convergence of Practical Muon | arxiv | 7.87 | 已在库（daily） | 大模型优化器设计 | 符号与范数几何优化 | Convergence guarantees for Muon: New parameter regimes and generalizations | [PDF原文](https://arxiv.org/pdf/2609.33152v1)<br>[原文](http://arxiv.org/abs/2609.33152v1) |"
+        },
+        {
+          "line": 209,
+          "text": "| 36 | MeqMuon: Matrix-Equilibrating Muon for LLM Pretraining | arxiv | 7.80 | 候选（未入前10） | 大模型优化器设计 | 符号与范数几何优化 | Curvature-Conditioned Multiscale Momentum with Sphere Constraints for LLM Pretraining | [PDF原文](https://arxiv.org/pdf/2609.35701v1)<br>[原文](http://arxiv.org/abs/2609.35701v1) |"
+        },
+        {
+          "line": 210,
+          "text": "| 37 | Musec: MomentUm SpEctral Clipping for Stable Muon-type Training | arxiv | 7.80 | 已在库（daily） | 大模型优化器设计 | 符号与范数几何优化 | Musec: MomentUm SpEctral Clipping for Stable Muon-type Training | [PDF原文](https://arxiv.org/pdf/2609.11655v2)<br>[原文](http://arxiv.org/abs/2609.11655v2) |"
+        },
+        {
+          "line": 217,
+          "text": "| 44 | AF-Muon: An AdamW-Free Muon Optimizer for Tied-Embedding Models | arxiv | 7.67 | 候选（未入前10） | 大模型优化器设计 | 符号与范数几何优化 | AdaMeZO: Adam-style Zeroth-Order Optimizer for LLM Fine-tuning Without Maintaining the Moments | [PDF原文](https://arxiv.org/pdf/2610.01395v1)<br>[原文](http://arxiv.org/abs/2610.01395v1) |"
+        },
+        {
+          "line": 226,
+          "text": "| 53 | Muon Can Outperform Dedicated Continual Learning Methods | arxiv | 7.40 | 已在库（daily） | 大模型优化器设计 | 符号与范数几何优化 | Muon Can Outperform Dedicated Continual Learning Methods | [PDF原文](https://arxiv.org/pdf/2609.24678v1)<br>[原文](http://arxiv.org/abs/2609.24678v1) |"
+        }
+      ]
+    },
+    {
+      "path": "08-daily/2026-10-02/今日检索.md",
+      "sha256": "7ff89106e2659dd36bfa203393e9fb4580c5cfdcb74a57dd5fd55f0298fa2ac3",
+      "hit_count": 35,
+      "sample_hits": [
+        {
+          "line": 10,
+          "text": "  - **有限正交化、预条件与动量**：将 Muon 的实现细节放到可证明参数区域中讨论；需要区别渐近收敛、随机驻点率与实际吞吐。"
+        },
+        {
+          "line": 22,
+          "text": "  - **符号与范数几何优化**（22 篇）：22篇，覆盖Muon有限正交化、预条件、谱学习与压缩等机制；前三篇优先Muon参数区域，其他新实现留在全量列表，避免越过前10预筛池临时替换。"
+        },
+        {
+          "line": 35,
+          "text": "### 1. Convergence guarantees for Muon: New parameter regimes and generalizations — 研究优先级 7.93"
+        },
+        {
+          "line": 40,
+          "text": "- **题目中文翻译**：Muon 的收敛保证：新的参数区域与推广"
+        },
+        {
+          "line": 43,
+          "text": "- **英文摘要**：In this paper, we establish the first asymptotic convergence guarantees for the Muon algorithm through a more accurate proxy for the Newton-Schultz iteration than the typical matrix sign function. We prove that, for appropriate choices of hyperparameters, the iterates satisfy $\\lim_{k\\to\\infty}\\\\|\\nabla f(x_k)\\\\|=0$, and, under a global Polyak-Łojasiewicz condition, that the sequence of function values converges linearly. The key insight is that the regularization, implicit in Muon's Newton-Schulz implementation, induces a bounded preconditioner, exposing Muon as a \\emph{preconditio"
+        },
+        {
+          "line": 44,
+          "text": "- **中文摘要（完整翻译）**：本文通过一种比通常的矩阵符号函数更准确的 Newton-Schultz 迭代代理，建立 Muon 算法的首个渐近收敛保证。我们证明，在适当选择超参数时，迭代点满足 $\\lim_{k\\to\\infty}\\|\\nabla f(x_k)\\|=0$；并且，在全局 Polyak–Łojasiewicz 条件下，函数值序列线性收敛。关键认识是，Muon 的 Newton–Schulz 实现中隐含的正则化会诱导一个有界预条件器，从而揭示 Muon 是一种带预条件的 Polyak 重球方法，并使经典 Lyapunov 分析成为可能。这一观察自然地促使我们将相同的预条件结构用于 Nesterov 梯度求值。我们通过引入 Muesterov——一种基于 Nesterov 的 Muon 变体——将该想法形式化，并证明它具有相同的收敛保证，从而把理论框架扩展到重球设置之外。标量交叉熵问题上的数值实验支持该理论，并阐明学习率和 Newton–Schulz 正则项在控制收敛方面的共同作用。在 nanoGPT 数据集上进行训练的初步数值模拟，为本文观察与实际应用的相关性提供了直观认识。"
+        },
+        {
+          "line": 45,
+          "text": "- **一句话总结**：将 Newton–Schulz 中的隐式正则化解释为有界预条件，分析 Muon 与 Nesterov 变体 Muesterov 的渐近收敛。"
+        },
+        {
+          "line": 51,
+          "text": "- **选择理由**：直接命中符号与范数几何优化，并可与库中 Muon 有限 Newton–Schulz、谱分配和非光滑正交动量工作对读。预计新增信息在于有限实现中的正则化、可证明参数区域及动量变体，而非又一个训练榜单；小规模动力学实验的验证成本较低。"
+        }
+      ]
+    },
+    {
+      "path": "08-daily/2026-09-30/今日检索.md",
+      "sha256": "c45324846508f17661b05046534fd68d714bf45e10ab9a443c91443a763c4e39",
+      "hit_count": 14,
+      "sample_hits": [
+        {
+          "line": 22,
+          "text": "  - **符号与范数几何优化**（7 篇）：包含 Muon 的有限 Newton–Schulz 实现、谱估计与谱下降泛化等候选；先分清数值近似、训练损失和泛化是否回答同一个问题。"
+        },
+        {
+          "line": 53,
+          "text": "- **选择理由**：预筛第 9 位升至语义第 1 位。直接命中优化器状态内存和动量机制，新增信息是“历史存储坐标”的改变，与库中 PowerStep 减少/量化参数状态形成可核验的设计对照。先核查算法图、显存分解和机制消融，成本与预期信息增益相称。"
+        },
+        {
+          "line": 57,
+          "text": "  - [PowerStep: Memory-Efficient Adaptive Optimization via lp-Norm Steepest Descent](../../03-notes/2026-09/PowerStep_Memory_Efficient_Adaptive_Optimization_via_lp_Norm_Steepest_Descent/精读.md) — 共同点：`优化器状态内存, 自适应更新`"
+        },
+        {
+          "line": 80,
+          "text": "  - [PowerStep: Memory-Efficient Adaptive Optimization via lp-Norm Steepest Descent](../../03-notes/2026-09/PowerStep_Memory_Efficient_Adaptive_Optimization_via_lp_Norm_Steepest_Descent/精读.md) — 共同点：`优化器状态内存, 自适应更新`"
+        },
+        {
+          "line": 158,
+          "text": "| 12 | Backpropagated Output Momentum: Relocating Optimizer History from Parameters to Task Space | arxiv | 8.07 | 推荐 | 大模型优化器设计 | 自适应与状态内存 | PowerStep: Memory-Efficient Adaptive Optimization via lp-Norm Steepest Descent | [PDF](../../01-raw/2026-09/Backpropagated_Output_Momentum_Relocating_Optimizer_History_from_Parameters_to_Task_Space.pdf)<br>[原文](https://arxiv.org/abs/2609.36738) |"
+        },
+        {
+          "line": 159,
+          "text": "| 13 | Convergence guarantees for Muon: New parameter regimes and generalizations | arxiv | 7.93 | 候选 | 大模型优化器设计 | 符号与范数几何优化 | Stochastic Augmented Lagrangian Framework with Second-Order Convergence Guarantees for Nonconvex Expectation-Constrained Optimization | [PDF原文](https://arxiv.org/pdf/2609.30546)<br>[原文](https://arxiv.org/abs/2609.30546) |"
+        },
+        {
+          "line": 163,
+          "text": "| 17 | Convergence of Practical Muon | arxiv | 7.87 | 候选 | 大模型优化器设计 | 符号与范数几何优化 | -- | [PDF原文](https://arxiv.org/pdf/2609.33152)<br>[原文](https://arxiv.org/abs/2609.33152) |"
+        },
+        {
+          "line": 165,
+          "text": "| 19 | MeqMuon: Matrix-Equilibrating Muon for LLM Pretraining | arxiv | 7.80 | 候选 | 大模型优化器设计 | 符号与范数几何优化 | Curvature-Conditioned Multiscale Momentum with Sphere Constraints for LLM Pretraining | [PDF原文](https://arxiv.org/pdf/2609.35701)<br>[原文](https://arxiv.org/abs/2609.35701) |"
+        }
+      ]
+    },
+    {
+      "path": "08-daily/2026-09-20/今日检索.md",
+      "sha256": "6d20cf8654cefbee1bfc4817fe9b9d23bec753a3b0e6a617ad6d6a5b038b7c10",
+      "hit_count": 21,
+      "sample_hits": [
+        {
+          "line": 72,
+          "text": "  - [FedSubMuon: Communication-Efficient Federated LLM Fine-Tuning via Structured Subspace Muon](../2026-09-18/今日检索.md) — 共同点：`fine-tuning, llm`"
+        },
+        {
+          "line": 83,
+          "text": "- **英文摘要**：Fine-tuning large language models (LLMs) with zeroth-order (ZO) optimization reduces memory by approximating gradients through function evaluations. However, existing methods essentially perform updates in a one-dimensional space, and suffer from collapse or substantial performance degradation under low-precision training. We introduce BSZO, an adaptive \\textbf{B}ayesian \\textbf{S}ubspace \\textbf{Z}eroth-Order \\textbf{O}ptimizer, which applies Kalman filtering to combine finite-difference information across multiple perturbation directions within a subspace. By treating each finite-"
+        },
+        {
+          "line": 96,
+          "text": "  - [FedSubMuon: Communication-Efficient Federated LLM Fine-Tuning via Structured Subspace Muon](../2026-09-18/今日检索.md) — 共同点：`fine-tuning, llm, subspace`"
+        },
+        {
+          "line": 162,
+          "text": "| 7 | Quantum-hardware spectral co-design framework for multifrequency Rydberg electrometry | arxiv | 4.40 | 推荐 | 随机梯度与优化理论 | 随机梯度与收敛性 | LoRA-TSD: Tangent-Space Spectral Descent for LoRA via Muon-Style Updates | [PDF原文](https://arxiv.org/pdf/2609.11635v1)<br>[原文](http://arxiv.org/abs/2609.11635v1) |"
+        },
+        {
+          "line": 207,
+          "text": "| 47 | Three Birds, One Stone: Solving the Communication-Memory-Privacy Trilemma in LLM Fine-tuning Over Wireless Networks with Zeroth-Order Optimization | arxiv | 5.83 | 推荐 | 大模型训练优化 | 内存与数值效率 | FedSubMuon: Communication-Efficient Federated LLM Fine-Tuning via Structured Subspace Muon | [PDF原文](https://arxiv.org/pdf/2604.12401v1)<br>[原文](http://arxiv.org/abs/2604.12401v1) |"
+        },
+        {
+          "line": 220,
+          "text": "| 60 | LOZO+: Provably Efficient Zeroth-Order Fine-Tuning via Greedy Low-Rank Subspace Selection | openreview | 1.52 | 推荐 | 大模型训练优化 | 内存与数值效率 | FedSubMuon: Communication-Efficient Federated LLM Fine-Tuning via Structured Subspace Muon | [PDF原文](https://openreview.net/pdf/6b5d729ed9cbc59e38959f9d2f9e0ff93ea4ac40.pdf)<br>[原文](https://openreview.net/forum?id=QNScXX6osL) |"
+        },
+        {
+          "line": 258,
+          "text": "| 93 | KerZOO: Kernel Function Informed Zeroth-Order Optimization for Accurate and Accelerated LLM Fine-Tuning | openreview | 7.10 | 推荐 | 无梯度大模型优化 | zeroth-order optimization | FedSubMuon: Communication-Efficient Federated LLM Fine-Tuning via Structured Subspace Muon | [PDF原文](https://arxiv.org/pdf/2505.18886v1)<br>[原文](https://openreview.net/forum?id=g7EiwjHboW) |"
+        },
+        {
+          "line": 283,
+          "text": "| 118 | Derivative-free optimization approach for structured symmetric matrices with fixed eigenvalues | arxiv | 6.65 | 推荐 | 无梯度大模型优化 | derivative-free optimization | FedSubMuon: Communication-Efficient Federated LLM Fine-Tuning via Structured Subspace Muon | [PDF原文](https://arxiv.org/pdf/2607.25046v1)<br>[原文](http://arxiv.org/abs/2607.25046v1) |"
+        }
+      ]
+    },
+    {
+      "path": "08-daily/2026-09-18/今日检索.md",
+      "sha256": "40ca99001f8a7917065c0f375d05bb3aeeeea4e4d8c22df54fb7ebe7dfd2d229",
+      "hit_count": 3,
+      "sample_hits": [
+        {
+          "line": 23,
+          "text": "  - **未细分**（2 篇）：包含模型合并和联邦 Muon，它们不是无梯度训练，但可作为低维更新与通信成本的对照路线。"
+        },
+        {
+          "line": 106,
+          "text": "| 8 | FedSubMuon: Communication-Efficient Federated LLM Fine-Tuning via Structured Subspace Muon | 3.95 | 无梯度大模型优化 | 未细分 | 不是无梯度方法，但其结构化子空间和紧凑系数通信可作为端侧/联邦 LLM 优化器设计的系统对照。 | [PDF原文](https://arxiv.org/pdf/2609.06073v1)<br>[原文](http://arxiv.org/abs/2609.06073v1) |"
+        },
+        {
+          "line": 134,
+          "text": "| 8 | FedSubMuon: Communication-Efficient Federated LLM Fine-Tuning via Structured Subspace Muon | arxiv | 3.95 | 推荐 | 无梯度大模型优化 | 未细分 | Adaptive Phase Switching for Communication Efficient Federated LoRA Fine Tuning | [PDF原文](https://arxiv.org/pdf/2609.06073v1)<br>[原文](http://arxiv.org/abs/2609.06073v1) |"
+        }
+      ]
+    },
+    {
+      "path": "08-daily/2026-09-29/今日检索.md",
+      "sha256": "71437097a2de702d455856258d4356ae299783888f23f2619fac271bf9f919d6",
+      "hit_count": 29,
+      "sample_hits": [
+        {
+          "line": 10,
+          "text": "  - **谱更新与符号更新交替**：LionMuon 把 Muon 的谱方向与 Lion 的廉价符号步组合，摘要同时报告优化器状态、通信和训练损失，是今日与主课题最直接相连的候选。"
+        },
+        {
+          "line": 19,
+          "text": "- **方向汇总**：自动归类 72 篇，今日推荐池中 5 篇。与当前问题最直接的是 LionMuon；其余若仅由宽泛分类词命中，应视作待核验候选，不据此推断已验证于大模型训练。"
+        },
+        {
+          "line": 22,
+          "text": "  - **符号与范数几何优化**（13 篇）：关注符号更新、Muon 或范数几何；优先核对训练预算、状态开销和通信指标。"
+        },
+        {
+          "line": 38,
+          "text": "### 1. LionMuon: Alternating Spectral and Sign Descent for Efficient Training — 研究优先级 7.93"
+        },
+        {
+          "line": 43,
+          "text": "- **题目中文翻译**：LionMuon：交替谱下降与符号下降以提高训练效率"
+        },
+        {
+          "line": 45,
+          "text": "- **英文摘要**：Pretraining a language model takes enormous compute, and the right optimizer can save a good part of it. Muon's spectral step gives a stronger direction than a sign step, but it is expensive. Every step runs Newton-Schulz iterations on the full matrix and, in distributed training, an extra all-reduce. Sign steps, as in Lion and Signum, are cheap and stay local to each device. We propose LionMuon, which takes one Muon step every $P$ iterations and Lion steps in between, with a single dual-EMA momentum buffer shared by both. Muon's compute and communication are paid once per $P$ steps"
+        },
+        {
+          "line": 46,
+          "text": "- **中文摘要**：预训练语言模型需要巨量计算，而合适的优化器能够节省其中相当一部分。Muon 的谱更新步提供比符号更新步更强的方向，但代价较高：每一步都要在完整矩阵上运行 Newton–Schulz 迭代；在分布式训练中，还要额外进行一次 all-reduce。Lion 和 Signum 使用的符号更新步成本较低，并留在各设备本地执行。我们提出 LionMuon：每 P 次迭代执行一次 Muon 更新，其间执行 Lion 更新，两者共享一个双 EMA 动量缓冲区。Muon 的计算和通信成本每 P 步才支付一次，优化器状态为 AdamW 的一半。仅使用单 EMA 的变体 SignMuon 已经优于 Muon。我们在重尾噪声条件下证明复杂度界：周期参数使结果在 Muon 与 Lion 的平滑性常数和噪声常数之间插值，并指出 LionMuon 何时比两者都快。在 FineWeb 上训练的 124M 和 355M 模型中，P=2 和 P=5 的 LionMuon 在相同 token 数下取得比 Muon、AdamW、Lion 和 Signum 更低的损失。在 4 GPU 数据并行训练中，它在 PCIe 环境下以减少三分之一的实际运行时间达到 Muon 的最终损失；在不增加暴露通信量的条件下，它的损失表现优于通信高效的 Muon 变体 Dion 和 MuonBP，同时保留精确梯度。代码："
+        },
+        {
+          "line": 47,
+          "text": "- **一句话总结**：每隔 P 步执行一次 Muon 谱更新，其余步使用 Lion 符号更新，以降低语言模型训练的计算和通信成本。"
+        }
+      ]
+    },
+    {
+      "path": "08-daily/2026-09-28/今日检索.md",
+      "sha256": "7382cc2cffcdcc90308056873a2b94b832aa38e48ad974997a2911bf21baf7cc",
+      "hit_count": 14,
+      "sample_hits": [
+        {
+          "line": 10,
+          "text": "  - **矩阵优化器的更新几何**：有工作从 Muon 的矩阵符号更新出发，把局部曲率或动量状态关系纳入更新；摘要报告了训练效果，成本与公平基线仍需全文核验。"
+        },
+        {
+          "line": 19,
+          "text": "- **方向汇总**：自动主题标签在此方向仅标出 8 篇；Muon 曲率更新与 COREM 虽被预筛器归入优化理论，按摘要看更直接服务于大模型优化器设计。需重点核对相同训练预算、状态内存和端到端耗时。"
+        },
+        {
+          "line": 43,
+          "text": "- **英文摘要**：Muon can be interpreted as optimizing a linear local objective over a spectral-norm ball. This gives a matrix-sign update that preserves the singular directions of the gradient and assigns the same magnitude to all active singular modes. We ask whether these two properties remain optimal when local curvature is taken into account. To answer this question, we keep Muon's spectral-norm constraint unchanged and replace the linear local model with a quadratic one. We call the resulting method \\emph{Quadratic Spectral Descent} (QSD). We show that curvature can change both the singular va"
+        },
+        {
+          "line": 44,
+          "text": "- **中文摘要**：Muon 可以解释为在谱范数球上优化一个线性局部目标。这会得到矩阵符号更新：它保留梯度的奇异方向，并给所有活跃奇异模态分配相同的幅值。我们提出的问题是：计入局部曲率后，这两个性质是否仍然最优？为回答这个问题，我们保持 Muon 的谱范数约束不变，将线性局部模型替换为二次模型。我们把所得方法称为 Quadratic Spectral Descent（QSD）。我们证明，曲率可以同时改变最优更新的奇异值和奇异方向。为使 QSD 可实际使用，我们用 Kronecker 分解统计量近似曲率，并以少量 Frank–Wolfe 步求解带约束二次问题；其中每一步都有一个闭式的矩阵符号子问题。我们还给出最优性证书、在同一个二次替代目标下与 Muon 的比较，以及内层求解器的 $O(1/K)$ 收敛率。GPT 预训练实验表明，QSD 相比 Muon 及近期 Muon 变体持续改善验证损失，并在匹配验证损失时将训练墙钟时间最多缩短 $8.49\\%$。"
+        },
+        {
+          "line": 45,
+          "text": "- **一句话总结**：在 Muon 的谱范数约束下把线性局部模型换为二次模型，并用 Kronecker 分解曲率近似与少量 Frank–Wolfe 步求解。"
+        },
+        {
+          "line": 47,
+          "text": "  - 摘要声称在保持 Muon 谱范数约束的条件下，以二次局部模型说明曲率可改变最优矩阵更新的奇异值和奇异方向。"
+        },
+        {
+          "line": 50,
+          "text": "- **摘要报告的主要结果**：摘要报告 GPT 预训练中相对 Muon 及近期变体更低的验证损失，在匹配验证损失时最多节省 8.49% 墙钟训练时间。"
+        },
+        {
+          "line": 51,
+          "text": "- **选择理由**：直接命中当前 Muon 与范数几何优化器问题；预筛第 48 位，但相对已有矩阵符号更新提供可检验的曲率机制，语义复排为第 1。"
+        }
+      ]
+    },
+    {
+      "path": "08-daily/2026-09-17/今日检索.md",
+      "sha256": "2cc55511ff4a86b3ea684aa2469e1d9ec667ae4dcd12bb080180dbe53abd5f32",
+      "hit_count": 19,
+      "sample_hits": [
+        {
+          "line": 20,
+          "text": "  - **未细分**（8 篇）：代表论文：When Does Online Adaptation Pay on the Edge? A Leakage-Free Evaluation of Warmup, Learning-Rate Selection, and Resource Trade-offs for Time-Series Forecasting；Communication-efficient ADMM over Hierarchical Networks；Preventing Model Collapse: A Fisher-Rao Perspective on the Dynamics of Training with Synthetic Data"
+        },
+        {
+          "line": 23,
+          "text": "  - **动量、裁剪与加速**（1 篇）：代表论文：Musec: MomentUm SpEctral Clipping for Stable Muon-type Training"
+        },
+        {
+          "line": 46,
+          "text": "- **英文摘要**：Low-Rank Adaptation (LoRA) is an effective approach for adapting large pretrained models by learning low-rank weight updates. In practice, the LoRA rank is used to control an adapter's parameter budget and representational capacity. We show that this view is incomplete: while the nominal rank determines the representational capacity, the optimizer shapes how much of that capacity is used in the induced weight-space updates. In a case study of GPT-2 adaptation with LoRA, we observe a strong rank-dependent optimizer effect. Despite using the same nominal rank, AdamW often produces per"
+        },
+        {
+          "line": 47,
+          "text": "- **中文摘要**：低秩适配（LoRA）通过学习低秩权重更新有效适配大型预训练模型。在实践中，LoRA 秩通常被视为控制参数预算和表示能力的指标，但这一看法并不完整：名义秩决定表示容量，而优化器决定诱导的权重空间更新实际使用了多少容量。作者在 GPT-2 适配实验中发现，在相同名义秩下，AdamW 往往产生奇异谱高度集中的低有效秩更新，而 Muon 能利用更多方向，并且从提高 LoRA 秩中获益更稳定。基于此，论文提出 ISO-LoRA，在保持 LoRA 参数化的同时，对诱导的切向扰动执行谱下降，使更新能量更均匀地分布在不同奇异方向。理论分析和 0.1B–7B 参数模型实验表明，该方法能提高有效秩和下游性能。"
+        },
+        {
+          "line": 50,
+          "text": "  - 相同名义秩下，AdamW 的更新谱更集中，而 Muon 能利用更多方向。"
+        },
+        {
+          "line": 75,
+          "text": "  - [PowerStep Memory Efficient Adaptive Optimization via lp Norm Steepest Descent](../../03-notes/2026-09/PowerStep_Memory_Efficient_Adaptive_Optimization_via_lp_Norm_Steepest_Descent/精读.md) — 共同点：`adaptive`"
+        },
+        {
+          "line": 102,
+          "text": "| 5 | LoRA-TSD: Tangent-Space Spectral Descent for LoRA via Muon-Style Updates | 6.66 | 大模型训练优化 | LoRA 与参数高效微调 | [PDF原文](https://arxiv.org/pdf/2609.02734v1)<br>[原文](http://arxiv.org/abs/2609.02734v1) |"
+        },
+        {
+          "line": 131,
+          "text": "| 4 | Musec: MomentUm SpEctral Clipping for Stable Muon-type Training | arxiv | 7.07 | 已在库（daily） | 随机梯度与优化理论 | 动量、裁剪与加速 | Musec: MomentUm SpEctral Clipping for Stable Muon-type Training | [PDF原文](https://arxiv.org/pdf/2609.11655v2)<br>[原文](http://arxiv.org/abs/2609.11655v2) |"
+        }
+      ]
+    },
+    {
+      "path": "08-daily/2026-09-19/今日检索.md",
+      "sha256": "b1ad1bd356c800b712cb380830a70f0601b4d57823214a6d38f15ccbfc52db36",
+      "hit_count": 28,
+      "sample_hits": [
+        {
+          "line": 40,
+          "text": "  - **未细分**（64 篇）：只命中 arXiv 分类、未命中任何关键词，主体是 LoRA 与联邦 LoRA（秩-误差界、随机游走通信压缩、MoE+LoRA 子空间竞争）、Muon 变体、以及带隐私约束的非凸有限和与重球随机调度等旁支理论。该域在配置里没有 subdomains，所以这些论文全部落到“未细分”，是配置缺口而非论文本身的问题。今日推荐里的 Deriving Scaling Laws for OpenEuroLLM Models 也落在这里，说明分类命中会把大模型训练缩放律误挂到无梯度域。"
+        },
+        {
+          "line": 45,
+          "text": "  - **large language model training**（2 篇）：TrainSDC 研究大模型训练中的静默数据损坏，Musec 用动量谱裁剪稳定 Muon 型训练（研究优先级 7.07 未进推荐，但与裁剪与稳定性主线直接相关）。"
+        },
+        {
+          "line": 86,
+          "text": "- **英文摘要**：Evolution Strategies (ES) have recently emerged as a memory-efficient post-training paradigm for LLM reasoning. However, the optimization behavior of ES remains understudied, making it hard to define its advantage scope compared to mainstream post-training paradigms (e.g., Group Relative Policy Optimization (GRPO)). By systematically investigating ES dynamics and mechanisms, this paper first identifies a performance advantage of ES over GRPO, theoretically and empirically showing that ES can lead to broader reasoning coverage, thereby better exploiting the reasoning capabilities of "
+        },
+        {
+          "line": 87,
+          "text": "- **中文摘要**：进化策略（ES）近来作为一种内存高效的大语言模型推理后训练范式出现。然而 ES 的优化行为仍缺乏研究，这使得难以界定它相对主流后训练范式（例如群相对策略优化 GRPO）的优势范围。通过系统研究 ES 的动态与机制，本文首先识别出 ES 相对 GRPO 的性能优势，从理论与实验两方面说明 ES 能带来更宽的推理覆盖，从而更好地挖掘预训练 LLM 已有的推理能力。理论上，作者证明跨越 ES 种群、经 verifier 投影的 Jensen-Shannon 多样性有助于更高的 Pass@K 表现。实验上，与出现熵坍缩（entropy collapse）的 GRPO 不同，ES 在提升 Pass@1 的同时取得高于 GRPO 的 Pass@K。作者进一步提出串行的 GRPO-ES 训练策略，把 GRPO 在 Pass@1 上的长处与 ES 在 Pass@K 上的收益结合起来。其次，作者发现尽管整模型参数漂移很大，ES 的任务性能增益只由幅度较大的更新构成的稀疏子集贡献。这种功能稀疏性说明大幅参数移动不必意味着广泛的功能改变，留出（held-out）评估进一步显示它不必然导致灾难性遗忘。最后，作者研究超参数设计如何影响 ES 的有效性，并证明在更大的 LLM 上 ES 需要更小的种群规模。这些发现把 ES 定位为一种独立的推理后训练范式，而不是效果较差、仅胜在内存高效的"
+        },
+        {
+          "line": 101,
+          "text": "  - [FedSubMuon: Communication-Efficient Federated LLM Fine-Tuning via Structured Subspace Muon](../2026-09-18/今日检索.md) — 共同点：`llm`"
+        },
+        {
+          "line": 124,
+          "text": "  - [LoRA-TSD: Tangent-Space Spectral Descent for LoRA via Muon-Style Updates](../2026-09-17/今日检索.md) — 共同点：`updates`"
+        },
+        {
+          "line": 132,
+          "text": "| 5 | An Inexact Riemannian Gradient Descent Algorithm on the Stiefel Manifold with One Newton-Schulz Iteration | 8.33 | 随机梯度与优化理论 | 随机梯度与收敛性 | 证明一步 Newton-Schulz 作为不精确 retraction 就足以得到全局与局部线性收敛，且自适应步长、局部速率仅取决于 Riemannian Hessian 条件数；对 Muon 类正交化更新的“迭代次数是否影响收敛率”给出直接可用的理论答案。 | [PDF原文](https://arxiv.org/pdf/2608.22774v1)<br>[原文](http://arxiv.org/abs/2608.22774v1) |"
+        },
+        {
+          "line": 160,
+          "text": "| 2 | High-Probability Convergence of SGD via Batched Updates | arxiv | 8.27 | 推荐 | 随机梯度与优化理论 | 随机梯度与收敛性 | LoRA-TSD: Tangent-Space Spectral Descent for LoRA via Muon-Style Updates | [PDF](../../01-raw/2026-09/High_Probability_Convergence_of_SGD_via_Batched_Updates.pdf)<br>[原文](http://arxiv.org/abs/2609.12765v1) |"
+        }
+      ]
+    },
+    {
+      "path": "08-daily/2026-09-21/今日检索.md",
+      "sha256": "d71ff274906896d34d10a84da91dfb3e01f019fc6829576286077a1ac6f5c942",
+      "hit_count": 24,
+      "sample_hits": [
+        {
+          "line": 7,
+          "text": "- **总体趋势**：今日控制在 100 篇去重论文后，候选呈现两条清晰主线：一条继续追问 SGD、PAGE/SPIDER 等随机一阶方法在有限和、PL 条件和时间一致概率保证下的精确复杂度边界；另一条把 Muon、LoRA、子空间与无梯度方法中的结构性近似视为可分析的优化机制。最值得优先阅读的工作不是单纯报告更高指标，而是明确给出上下界、适用条件或近似为何有益的机制解释。Semantic Scholar 的过去一年高影响力补充检索因匿名接口返回 429 而未获得结果，因此本日报的影响力信号为空，不应据此比较论文影响力。"
+        },
+        {
+          "line": 11,
+          "text": "  - **优化器近似的正向作用**：Muon 的有限步 Newton-Schulz 不再只被视为逼近误差；摘要提出其对极分解映射的平滑作用正是非光滑非凸收敛分析所需的结构。"
+        },
+        {
+          "line": 22,
+          "text": "  - **自适应与二阶优化**（3 篇）：Muon 与有限步 Newton-Schulz 的分析把谱映射平滑性和在线到非凸转换连接起来，适合与精确极分解更新做机制对照。"
+        },
+        {
+          "line": 28,
+          "text": "- **方向汇总**：100 篇中有 9 篇直接归入该方向，数量不多但包含 Muon 与 LoRA 秩选择等结构性问题。当前最有价值的是能把模型训练实践中的有限迭代、低秩约束或子空间近似转化为可验证理论对象的工作。"
+        },
+        {
+          "line": 31,
+          "text": "  - **优化器与训练策略**（3 篇）：Muon 的有限 Newton-Schulz 深度直接关联实际预训练优化器实现，后续需核验理论目标与大模型训练损失之间的对应关系。"
+        },
+        {
+          "line": 40,
+          "text": "  - **未细分**（30 篇）：代表论文：Amortized Low-Rank Adaptation for Model-Based Reinforcement Learning；Clustering-Based Balanced Sampling and Allocation with Data Parallelism for High-Performance Fine-Tuning；Dense Weak Hiding: Closing Complexity Gaps in Nonconvex and PL Finite-Sum Optimization under Individual Smoothness"
+        },
+        {
+          "line": 50,
+          "text": "### 1. Muon with Finite Newton-Schulz: The Smoothing Benefit in Nonsmooth Nonconvex Optimization — 研究优先级 7.93"
+        },
+        {
+          "line": 55,
+          "text": "- **题目中文翻译**：有限步 Newton-Schulz 的 Muon：非光滑非凸优化中的平滑化收益"
+        }
+      ]
+    },
+    {
+      "path": "08-daily/2026-10-07/今日检索.md",
+      "sha256": "0c890529d16c51242cb84e7e5a453583a6f9c8cab4a3c5099a0143aba6e5857d",
+      "hit_count": 78,
+      "sample_hits": [
+        {
+          "line": 7,
+          "text": "- **总体趋势**：本次新增候选把关注点从优化器训练胜率推进到三个可核验问题：矩估计偏差如何决定Muon/Adam的收敛邻域，归一化更新能否保证实际返回的末次迭代，以及非凸曲率估计如何在可实现成本下保持正定。前三篇选择二阶矩随机逼近、Hölder光滑下归一化梯度末次迭代、SoftServe；分别提供统一理论、直接相关的输出保证和拟牛顿工程路线。以下判断基于原始题目与摘要，属于低置信度初评，归档PDF不表示完成全文评审。近期窗口为2026-09-07至2026-10-07，并非所有论文今日发表。arXiv四批取得180条，OpenReview五个独立关键词查询获得83篇去重候选，跨源去重及筛选后235篇；已在库或历史推荐102篇，待选133篇。OpenReview每查询仅取前100条，采用pdate、其次cdate、再tcdate过滤，建帖时间不必然是论文首次公开时间；arXiv每批有数量上限，因此覆盖并非穷举。Semantic Scholar代表性年度查询（2025-10-07至2026-09-06）返回HTTP429，过去一年高影响力筛选未完成；缺失引用不作论文质量判断。主题和细分数量由配置关键词及类别匹配，可能把一般优化理论归入大模型方向，不表示已有LLM实验。PowerStep的LaTeX标题与历史lp主干经人工核验为同篇，已标为已有资产并排除重复推荐。"
+        },
+        {
+          "line": 19,
+          "text": "- **方向汇总**：今日重点是Muon/Adam的矩估计分析、归一化步长和SoftServe曲率方法；不平衡学习候选增加了优化器几何影响少数群体学习速度的机制视角。PowerStep已精读，保留在全量列表作为已在库条目，不重复归档。"
+        },
+        {
+          "line": 21,
+          "text": "  - **符号与范数几何优化**（54 篇）：二阶矩框架给Muon收敛邻域半径提供分析线索；不平衡学习比较符号、谱、Newton与欧氏下降的连续时间行为。"
+        },
+        {
+          "line": 24,
+          "text": "  - **自适应与状态内存**（2 篇）：SoftServe提供对角和Kronecker曲率结构，但摘要没有状态内存或墙钟数字，应与Clean、AdamW、Muon在相同预算下比较。"
+        },
+        {
+          "line": 45,
+          "text": "- **英文摘要**：Classical stochastic approximation methods rely on estimators of the first moment (mean) of a random regression function. We study methods that employ estimators of both the first and the second moments, which include modern deep-learning optimizers such as Adam and Muon as special cases. We derive second-moment stochastic approximation methods through the lens of optimal preconditioning for solving matrix equations, and develop a two-stage framework for their convergence analysis. The first stage focuses on the analysis of conceptual (impractical) methods that rely on the exact fir"
+        },
+        {
+          "line": 46,
+          "text": "- **中文摘要**：经典随机逼近方法依赖随机回归函数一阶矩（均值）的估计量。我们研究同时使用一阶矩和二阶矩估计量的方法，其中包括Adam和Muon等现代深度学习优化器作为特例。我们从求解矩阵方程的最优预条件视角推导二阶矩随机逼近方法，并为其收敛分析建立一个两阶段框架。第一阶段着重分析依赖精确一阶矩和二阶矩的概念性（不实用）方法。在第二阶段，我们用各自的估计量替换精确矩，并调用Dvoretzky定理，证明由此得到的实用方法几乎必然收敛到目标解的一个邻域。邻域的大小取决于一阶矩和二阶矩估计量的偏差及方差。我们为Muon和Adam的一种谱变体推导出具体界，以确定它们的收敛邻域半径。"
+        },
+        {
+          "line": 47,
+          "text": "- **一句话总结**：从矩阵方程的最优预条件出发，将Adam和Muon纳入二阶矩随机逼近框架，并用矩估计偏差与方差刻画收敛邻域。"
+        },
+        {
+          "line": 49,
+          "text": "  - 摘要主张以最优预条件统一一阶、二阶矩随机逼近，并将Adam与Muon纳为特例。"
+        }
+      ]
+    },
+    {
+      "path": "08-daily/2026-10-09/今日检索.md",
+      "sha256": "55d00d1c67ae9c8fe2daab8a30792ef17fbbfc935604367d24e06fad349ac738",
+      "hit_count": 138,
+      "sample_hits": [
+        {
+          "line": 12,
+          "text": "  - **可复核的检索边界**：窗口为 2026-09-09 至 2026-10-09；arXiv 200 条和 OpenReview 15 个关键词各100条第1页均有截断，不能解读为完整覆盖。Semantic Scholar 两次 HTTP 429，因此过去一年高影响力补充与引用数缺失。310 篇是关键词候选，其中63篇已在库、247篇未推荐过；宽泛词及物理Muon误命中只保留在附录，不赋予研究意义。 OpenReview日期是投稿记录时间，不能代替首次发表时间：SF-NorMuon首次arXiv提交为2026-05-21，v2更新为2026-09-25。"
+        },
+        {
+          "line": 13,
+          "text": "  - **接续昨日 APS/Muon 方案**：先读 SF-NorMuon 的迭代点与衰减规则，再读 RL 步幅/输出位移/策略变化三种匹配；A∗Grad 提供 Polyak 规则下状态–方向几何的对照。三者都不能替代本地固定预算的 NanoGPT 消融。"
+        },
+        {
+          "line": 14,
+          "text": "  - **新近条目待排入后续阅读**：arXiv 同时检出 10月8日提交的 Rounding in Preconditioner Space（2610.12444）、10月7日的 Spectrally Targeted Muon（2610.10965）和 10月5日的 BulkBoost 工作（2610.07497）。分别涉及量化误差传播、小谱方向与两频带重加权，见附录原文链接；本次按focus预筛未进入前10，不替换前三篇，也未完成全文评审。"
+        },
+        {
+          "line": 15,
+          "text": "  - **归档状态**：SF-NorMuon已归档arXiv v2原始PDF；RL尺度匹配论文与A∗Grad的OpenReview PDF均HTTP 403，尝试原始文件地址和标准pdf?id地址后仍失败。日报保留原文入口和失败原因，不生成缺失PDF的本地链接。"
+        },
+        {
+          "line": 22,
+          "text": "- **方向汇总**：将更新方向、实际尺度、调度终点与持久状态四个因素拆开。与知识库已有 DGA-Muon、ORCA、PowerStep 和 parameter-free Polyak 相比，今日组合补充无调度训练、函数空间尺度控制和任务依赖的状态需求；不从会议投稿或摘要收益推断技术正确性。"
+        },
+        {
+          "line": 24,
+          "text": "  - **符号与范数几何优化**（195 篇）：Muon 谱方向的理论、谱重加权、方向表示与后训练对照密集；首要审查 exact-polar 与有限NS实现、参数范数与输出位移的区别。包含物理Muon词义误命中，附录数量不是全部相关论文数量。"
+        },
+        {
+          "line": 40,
+          "text": "- **英文摘要**：Standard neural network training relies on learning-rate schedules tied to a fixed horizon, leading to strong path dependence and costly re-tuning as data availability changes. Schedule-Free (SF) methods address this by removing explicit schedules, yet SF-AdamW, the current state-of-the-art anytime optimizer, consistently underperforms well-tuned AdamW baselines. We propose SF-NorMuon, a schedule-free spectral optimizer that closes this gap: with a single hyperparameter configuration, SF-NorMuon matches or exceeds tuned AdamW on 125M and 772M parameter language models across $1$--$8"
+        },
+        {
+          "line": 41,
+          "text": "- **中文摘要**：标准神经网络训练依赖与固定训练时长绑定的学习率调度，导致很强的路径依赖，并在可用数据量变化时带来高昂的重新调参成本。无调度（Schedule-Free，SF）方法通过移除显式调度来解决这一问题，但目前最先进的随时可用优化器 SF-AdamW 持续逊于充分调优的 AdamW 基线。我们提出 SF-NorMuon，一种弥合这一差距的无调度谱优化器：采用单一超参数配置，SF-NorMuon 在 125M 和 772M 参数语言模型、覆盖 $1$--$8\\times$ Chinchilla 训练时长的设置中，达到或超过调优后的 AdamW；它与知道训练时长、采用余弦调度的 NorMuon 相比，仅落后约 $0.03$ nats，从而显著缩小随时可用优化器与带调度谱优化器之间的差距。在理论方面，我们证明了无调度谱动力学的驻点保证，并指出对快迭代点施加权重衰减是长训练时长下保持稳定性的关键。SF-NorMuon 使实践者无需预先确定训练时长，也能在训练过程中的任意时刻获得高质量检查点。在不使用调度的情况下完全达到知道训练时长的谱优化器的性能，仍是一个开放问题，我们将其指出为未来研究方向。通过弥合与调优 AdamW 基线之间的性能差距，SF-NorMuon 使不预设训练时长的优化更加实用，朝真正开放式、持续学习迈出了一步。"
+        }
+      ]
+    },
+    {
+      "path": "08-daily/2026-10-08/今日检索.md",
+      "sha256": "6f0f4bc90dce2cf9c97e162ab9ab18d80b9c1452c64b28d572c007d23b5c05f7",
+      "hit_count": 144,
+      "sample_hits": [
+        {
+          "line": 7,
+          "text": "- **总体趋势**：今日围绕大模型优化器设计，优先阅读三个互补问题：Muon的自适应缩放是否携带原始梯度信息、谱约束应在何时退出、优化器胜率是否随批量大小改变。前三篇为DGA-Muon、ORCA、The Best Optimizer Depends on Batch Size。检索日期为2026-10-08，近期窗口2026-09-08至2026-10-08，并不表示论文均今日发表。DGA-Muon采用10月7日修订的v2摘要；ORCA首投10月5日，批量大小论文首投10月6日。arXiv返回193条，OpenReview四个独立关键词首100条检索返回89条窗口内候选，经过筛选及跨源去重保留224篇，37篇命中已有资料或历史推荐。关键词预筛前10混入Muon Collider粒子物理、采样和卷积应用，已语义排除并扩展候选池；原分数不修改，语义排序独立于预筛分。Semantic Scholar两次HTTP429，过去一年高影响力补检未完成；无引用数据不解释为低质量。以下仅为题目与完整摘要的低置信度初评，归档PDF不表示完成全文评审。检索有数量上限且OpenReview时间可能为建帖时间，覆盖非穷举。"
+        },
+        {
+          "line": 10,
+          "text": "  - **自适应与矩阵形状**：DGA-Muon要求原始梯度统计与正交化解耦，并按宽矩阵/高矩阵选择行/列缩放，适合研究缩放与谱几何的兼容性。"
+        },
+        {
+          "line": 19,
+          "text": "- **方向汇总**：优先组合几何机制、训练干预与评价协议。其余七篇围绕U/W比率、有限Newton–Schulz与Nesterov、事实学习、噪声鲁棒性、混合Muon–Adam及泛化理论。分布式裁剪仅作为设计依据选读，不能视为已在LLM上验证。数量按关键词匹配统计，包含宽泛和误命中条目。"
+        },
+        {
+          "line": 21,
+          "text": "  - **符号与范数几何优化**（189 篇）：关注DGA-Muon的行列缩放、有限步正交化和动量，以及谱更新对事实学习与噪声方向的影响；谱展平不自动意味着泛化改善。"
+        },
+        {
+          "line": 24,
+          "text": "  - **自适应与状态内存**（5 篇）：DGA-Muon讨论自适应信号来源；今天前三篇摘要没有给出显存下降数字，不补写状态内存收益。"
+        },
+        {
+          "line": 29,
+          "text": "### 1. DGA-Muon: Decoupled Geometry-Aligned Adaptive Scaling for Muon — 研究优先级 6.85"
+        },
+        {
+          "line": 34,
+          "text": "- **题目中文翻译**：DGA-Muon：面向Muon的解耦几何对齐自适应缩放"
+        },
+        {
+          "line": 36,
+          "text": "- **英文摘要**：While NorMuon has achieved strong empirical performance in pretraining, its underlying adaptive mechanism remains largely heuristic and poorly understood. In this work, we provide the first systematic theoretical analysis of NorMuon's adaptivity, revealing that it primarily arises from orthogonalization-induced geometry rather than genuine optimization dynamics, serving to offset the resulting geometric non-uniformity. Under exact orthogonalization, the adaptive scaling factors degenerate into a single global scalar for square and wide matrices, while for tall matrices their variati"
+        }
+      ]
+    },
+    {
+      "path": "08-daily/2026-10-06/今日检索.md",
+      "sha256": "60e2b3488b07b670403aceca4616bf5f24afb6da7fcf8234b1e91633a69dc717",
+      "hit_count": 86,
+      "sample_hits": [
+        {
+          "line": 7,
+          "text": "- **总体趋势**：本次候选显示，大模型优化器研究同时向参数块专用几何、低秩二阶状态和优化器与数据选择协同扩展。前三篇分别选择 MuonIO、Clean 与 OptiSelect：输入输出层更新、曲率与内存权衡、数据课程机制，避免只比较同一种逐矩阵正交化。其余推荐覆盖免调参广义光滑性、二阶 oracle 与随机优化下界。以下为题目和原始摘要的初步判断，PDF 归档不等于完成全文评审。检索窗口为2026-09-06至2026-10-06，不意味着这些论文均发表于今天。arXiv四批取得180条，OpenReview三项独立查询取得66条，跨源去重及相关性筛选后227篇；每批数量上限使覆盖并非穷举。Semantic Scholar两项年度查询HTTP 429，过去一年高影响力筛选未完成；引用信号缺失不作质量判断。"
+        },
+        {
+          "line": 10,
+          "text": "  - **输入输出层的专用范数几何**：MuonIO对嵌入表与语言模型头采用对应的算子范数，可与已在库的AF-Muon及MeqMuon比较参数块更新与状态节省。"
+        },
+        {
+          "line": 12,
+          "text": "  - **优化器与数据课程**：OptiSelect提示训练更新几何与样本评分几何可能需要分别选择，AdamW式评分可服务Muon训练。"
+        },
+        {
+          "line": 21,
+          "text": "- **方向汇总**：推荐聚焦输入输出层几何、二阶状态压缩和数据选择；对已有Muon变体而言，关键新增信息是参数块与预条件器结构，而不是再列一个预训练胜率。"
+        },
+        {
+          "line": 23,
+          "text": "  - **符号与范数几何优化**（53 篇）：MuonIO将行/列向量归一化联系到输入one-hot与输出softmax几何；OptiSelect关注这种几何对样本效用区分的影响。"
+        },
+        {
+          "line": 40,
+          "text": "### 1. MuonIO: Principled Norm-Aware Descent for Embedding Tables and Language Model Heads — 研究优先级 8.07"
+        },
+        {
+          "line": 45,
+          "text": "- **题目中文翻译**：MuonIO：面向嵌入表与语言模型头的有原则范数感知下降"
+        },
+        {
+          "line": 47,
+          "text": "- **英文摘要**：The Muon optimizer derives its update rule for hidden linear layers by solving a local linearization of the loss penalized by the spectral norm, motivated by an RMS-stability argument for dense linear layers. Standard Muon implementations, however, exclude the input (embedding table) and output (language model head) layers from this principled treatment, for which they use AdamW instead. We present MuonIO, a single Muon-style update for both of these layers. For the language model head $\\mathbf{L} \\in \\mathbb{R}^{V \\times d}$, we motivate the use of the $2\\to\\infty$ operator norm, d"
+        }
+      ]
+    },
+    {
+      "path": "07-research/2026-10-05-第3周周报.md",
+      "sha256": "8c34f58729ed1ad4ecf219644af4d165a21aa73021bcde9d33f8401d1b892f8e",
+      "hit_count": 60,
+      "sample_hits": [
+        {
+          "line": 25,
+          "text": "过去九天新增21篇原文归档，但只有1篇新增精读笔记，阅读积累与推荐数量明显不对称。新增精读 ComPO 对偏好反馈下的零阶对齐有价值，却不能直接支撑一阶预训练优化器设计，因此建议暂时将阅读资源集中到**单状态幂更新的噪声响应与指数选择**。上一周提出的“用噪声集中度选择幂指数”应降为待检验猜想：集中度不包含信号大小，而 GradPower、DynMuon、Muon$^{p}$、Freon 已覆盖噪声解释、谱幂、阶段切换乃至自适应指数尝试。外部检索还发现 PowerStep 在9月29日修订理论：当前结论包含噪声残差，不能继续沿用旧版“最优随机收敛”的说法。最值得推进的问题是：**在相同持久状态、局部响应尺度和调参预算下，低频逐块统计能否比固定指数或时间调度更可靠地选出坐标幂，并转化为训练收益？** 本次已完成一个五随机种子的标量 Gaussian 校验，确认响应匹配后非线性幂在零信号附近确有额外方差；这只验证机制起点，没有完成 LLM 训练。下周应先读最强成功与失败近邻，再做冻结 checkpoint 的预测实验；只有统计量有样本外预测能力，才进入闭环训练和7B验证。"
+        },
+        {
+          "line": 47,
+          "text": "| 本地核心精读正文 | PowerStep旧版、SignSGD、MARS、ComPO、MEKA；查阅方法、主要结果及审计段 | 历史假设、证据局限、研究连续性 | 不能替代本次对所有原始证明的逐行重审 |"
+        },
+        {
+          "line": 49,
+          "text": "| 外部原始正文定点核验 | PowerStep v2、GradPower v4、DynMuon v3、Muon$^{p}$ v1、Freon v1、Muon噪声论文、MeqMuon、有限NS理论、STORM几何分析 | 方法是否已有、定理适用条件、特定实验和失败结果 | 未复现训练，未全面审计代码及全部附录 |"
+        },
+        {
+          "line": 50,
+          "text": "| 外部辅助正文 | SAMuon、QSD、StoSignSGD 的方法与边界 | 避免把单状态、谱分配或随机sign误当新颖性 | 不形成完整论文质量评价 |"
+        },
+        {
+          "line": 51,
+          "text": "| 摘要级候选 | MuonIO、Optimizer Memory Schedules等；其余新增归档多数仍为候选 | 决定下一步核验什么 | 不根据摘要补写定理、复现性或质量分 |"
+        },
+        {
+          "line": 60,
+          "text": "| [PowerStep精读](<../03-notes/2026-09/PowerStep_Memory_Efficient_Adaptive_Optimization_via_lp_Norm_Steepest_Descent/精读.md>) | 单动量后做坐标保号幂，可降低持久状态成本；已有大模型实证 | 笔记针对旧版，不能把旧证明缺口自动套给v2；int8收益是优化器状态口径 | 主实现基线 |"
+        },
+        {
+          "line": 81,
+          "text": "533是收集器按原始标题字符串精确去重后的数目；进一步统一Unicode、大小写和标点得到532，说明仍有书写变体。五份日报原始候选记录合计1012条，因此不能把533称为未去重记录。候选池还含Muon粒子物理等同词噪声，自动领域标签也会误分；分布只描述检索结果。没有控制检索词、来源与日期覆盖的可比历史样本，本周不据此宣称领域升温或降温。"
+        },
+        {
+          "line": 99,
+          "text": "| [PowerStep v2，9/29](https://arxiv.org/html/2605.10335v2) | 方法+理论+系统；§2、§3 Thm.1、§5.5—5.6 | 单状态、动量后坐标幂；固定幂消融与Muon辅助参数组合 | 新意不能是去掉二阶矩或加一层power |"
+        }
+      ]
+    },
+    {
+      "path": "07-research/2026-10-08-Lp_APS与Muon结合_文献审计与具体研究方案.md",
+      "sha256": "448b7ecab503266abba9c945a5a5ba3bd92c3d4379435912a58773464c646de4",
+      "hit_count": 83,
+      "sample_hits": [
+        {
+          "line": 2,
+          "text": "title: Lp、APS 与 Muon 结合：文献审计与具体研究方案"
+        },
+        {
+          "line": 8,
+          "text": "# Lp、APS 与 Muon 结合：文献审计与具体研究方案"
+        },
+        {
+          "line": 10,
+          "text": "后续阅读安排见[推荐阅读顺序与研究推进](2026-10-08-Lp_APS与Muon结合_阅读路线与研究推进.md)，含指定章节、原文链接及2026-10-08补充核验。"
+        },
+        {
+          "line": 12,
+          "text": "**建议的主线：先固定 Muon 的实际有限 Newton–Schulz 更新方向，研究低频同批次梯度反馈能否校准它的更新半径。先解决步长与方向尺度失配，再决定是否引入坐标幂或谱幂。**"
+        },
+        {
+          "line": 14,
+          "text": "这条路线直接利用已有 Lp/APS 代码和实验，问题比“把三个优化器与 Muon 拼起来”更清楚。但它还不是已确认的新算法贡献：方向曲率选步、标量自适应 Muon、自动选择谱幂均有先行工作。现阶段适合确定一个可被实验否定的课题，不能承诺论文新颖性或一定超过 Muon。"
+        },
+        {
+          "line": 21,
+          "text": "- 18份日报：9月17、18、19、20、21、22、23、24、25、28、29、30日；10月2、3、4、6、7、8日。扫描主题与全量候选，重点阅读 Muon、幂变换、Polyak、噪声、曲率及相关失败结果；不是把所有推荐论文都重新精读。"
+        },
+        {
+          "line": 22,
+          "text": "- 核心笔记及公式材料：PowerStep、SignSGD、Parameter-free Polyak、MARS、MEKA。对比笔记、解析文本、原始PDF及新版原文，避免沿用过时定理。"
+        },
+        {
+          "line": 23,
+          "text": "- 原文方法/边界定点阅读：DGA-Muon、ORCA、SAMuon、QSD、LionMuon、MeqMuon、MuonIO、Muon参数区域理论、SoftServe，以及新版PowerStep、SMuon、Distance-Aware Muon、ZFO。其余相关工作按下表标明为正文核验、历史核验或摘要级。"
+        }
+      ]
+    },
+    {
+      "path": "07-research/2026-09-23-lp范数三篇联读_从算子界到复杂度插值.md",
+      "sha256": "5360feb28205cf312a2084eb3afbefdb42e2318710fb2103224ccb3a345cae05",
+      "hit_count": 37,
+      "sample_hits": [
+        {
+          "line": 4,
+          "text": "> **联读对象：** PowerStep（更新几何）、When and Why SignSGD Outperforms SGD（问题几何）、Softmax is 1/2-Lipschitz（算子几何）"
+        },
+        {
+          "line": 5,
+          "text": "> **核心结论：** 三篇不是\"都用了一个记号\"，而是同一条对偶链上的三段。把 PowerStep 的幂指数写成 $q = 1+\\beta$，它的两个端点恰好是已有紧刻画的两个端点，中间 $q \\in (1,2)$ 是空白——这条空白就是本文档要锁定的研究问题。"
+        },
+        {
+          "line": 10,
+          "text": "- PowerStep：[解析稿](../02-markdown/2026-09/PowerStep_Memory_Efficient_Adaptive_Optimization_via_lp_Norm_Steepest_Descent.md) ｜ [精读](../03-notes/2026-09/PowerStep_Memory_Efficient_Adaptive_Optimization_via_lp_Norm_Steepest_Descent/精读.md)"
+        },
+        {
+          "line": 38,
+          "text": "| PowerStep | 信赖域量在更新方向 $\\Vert v \\Vert_p$ | $p \\in [2,\\infty]$ | $\\ell_p$ 是**算法族的设计参数**，$\\beta = \\frac{1}{p-1}$ |"
+        },
+        {
+          "line": 40,
+          "text": "一句话定位差异：Softmax 证明的是\"这条界在每种尺子下都一样紧\"，SignSGD 证明的是\"换一把尺子，一类算法就赢了\"，PowerStep 做的是\"在赢的那把尺子和原来的尺子之间连续调档\"。"
+        },
+        {
+          "line": 48,
+          "text": "PowerStep 式 (4) 给出 $\\ell_p$ 最速下降方向 $v_i^{*} \\propto -\\mathrm{sign}(g_i)\\vert g_i \\vert^{\\frac{1}{p-1}}$，式 (5) 令 $\\beta = \\frac{1}{p-1}$。它的 Lemma 1 断言"
+        },
+        {
+          "line": 60,
+          "text": "即 **PowerStep 全程用来做分析的那个 $1+\\beta$ 范数，正好是信赖域范数 $\\ell_p$ 的对偶范数 $q$**。这不是巧合：$\\ell_p$ 单位球的支持函数就是 $\\Vert g \\Vert_q^q$，Lemma 1 正是这条恒等式的坐标形式。同样，其 Lemma 6 里出现的 $\\Vert \\bar{\\mathbf{g}}_t \\Vert_{\\frac{1+\\beta}{\\beta}}$ 就是 $q$ 的共轭，也就是 $p$。所以 PowerStep 的整套证明工作区一直是 $(p,q)$ 共轭对，只是**定理陈述强行换回 $\\ell_2$**，换尺子那一步付出了 $d^{\\frac{1-\\beta}{1+\\beta}}$ 的维度因子（附录 F 式 (93) 到式 (96)）。"
+        },
+        {
+          "line": 69,
+          "text": "| $1+\\beta$，$\\beta \\in (0,1)$ | $(0,1)$ | $(2,\\infty)$ | PowerStep 全族 | $\\ell_{\\frac{q}{q-1}}$ | $\\ell_q$ | **空白**：只有 PowerStep 一个带 $d$ 惩罚且证明有缺的 $\\ell_2$ 上界 |"
+        }
+      ]
+    },
+    {
+      "path": "07-research/2026-09-21-第1周周报.md",
+      "sha256": "28706ac4f3772e3f8e0b555d730322fe0b22b76d7ca37b9a6edd6137bcdd2ef0",
+      "hit_count": 17,
+      "sample_hits": [
+        {
+          "line": 14,
+          "text": "本周 Git 可确认新增 24 篇论文，清单共归并 32 篇；其中 8 篇有全文精读笔记，24 篇新增材料多数仍停留在原文入库或摘要预筛层级。最可能改变当前课题的证据不是某个单一新优化器，而是三条互补线索：MpSub 用信赖域减轻学习率敏感性，SubZero+/EGGROLL 等摘要候选把低秩或低维结构推进到更大模型，Powell 风格方法则说明历史函数值和插值几何可能减少新前向评估。现有证据尚不能证明这些机制可以直接组合：MpSub 的 $p$ 消融混入了总前向预算差异，Powell 的样本复用依赖同一目标，而 LLM 训练每轮 minibatch 改变会破坏历史函数值可比性。PowerStep 给出了本周最强的工程规模证据，即单状态 int8 优化器在 16B--235B 模型上将每设备优化器状态压缩约 7.76 倍且验证损失接近 AdamW；但其附录主收敛证明存在阶数、范数方向与 Jensen 不等式问题，不能把该定理作为后续理论基础。零阶方向中，EGGROLL、SubZero+、BSZO、CV-ZOD 和矩阵低秩恢复目前只有摘要证据，优先级应按“能否在等前向、等墙钟、等显存下排除替代解释”排序，而不是按摘要分数排序。下周最有信息增益的动作是先做 MpSub 的等前向预算与去动量消融，再定点精读 SubZero+ 和 EGGROLL；在这两步给出正信号前，不建议直接投入 7B"
+        },
+        {
+          "line": 35,
+          "text": "本周有全文证据的 8 篇为：MpSub、Parameter-free Clipped Gradient Descent、Powell-Style Model-Based DFO、PowerStep、Rethinking 3D Convolution、Softmax 1/2-Lipschitz、Understanding MARS、Self-Tuning Stochastic Optimization。其余新增候选未完成正文审计，文中一律标为“待全文核验”。"
+        },
+        {
+          "line": 42,
+          "text": "4. 不能用 PowerStep 的当前附录证明支持 $O(T^{-1/2})$ 收敛；现有推导至多留下常数邻域界。"
+        },
+        {
+          "line": 67,
+          "text": "- **方法家族**：Polyak 步长的隐式裁剪；MARS 的 $\\gamma$-相似性；Kalman/HVP 梯度滤波；PowerStep 的 $\\ell_p$ 保号幂变换；Batched SGD 的高概率分析。"
+        },
+        {
+          "line": 68,
+          "text": "- **本周证据**：Parameter-free 论文在凸、确定性、已知预算与有效损失下界条件下建立隐式裁剪解释；MARS 只证明上界目标在条件区域可优于 MVR，且两梯度成本不可忽略；Self-Tuning 的更准梯度并未改善深度学习最终表现，提示“降低方差”可能改变隐式正则化；PowerStep 工程证据强但主定理证明失败。"
+        },
+        {
+          "line": 74,
+          "text": "- **方法家族**：单状态/低比特优化器 PowerStep；结构化零阶微调；LoRA/低维 adapter；训练框架分片与通信优化。"
+        },
+        {
+          "line": 75,
+          "text": "- **本周证据**：PowerStep 在 Ascend 910C 上报告每设备优化器状态约 7.76 倍压缩，并在 16B--235B 稠密/MoE 设置中保持与 AdamW 接近的验证损失；但“优化器状态缩小 7.76 倍”不等于“总训练显存缩小 7.76 倍”，且成熟 8-bit Adam、公平调参与跨 CUDA 复现仍缺失。"
+        },
+        {
+          "line": 84,
+          "text": "| PowerStep | 实证方法 + 理论算法 | 单状态 int8 优化器可在超大模型上接近 AdamW loss 并显著压缩状态 | 相对 Powerball/pbSGD 把幂变换移到动量之后；相对 8-bit Adam 先删二阶状态再量化 | 实证高、理论低 | 主收敛证明有决定性错误；无多种子与最强量化基线 | 高 |"
+        }
+      ]
+    },
+    {
+      "path": "07-research/2026-09-16-大模型训练主流框架调研_2021-2026.md",
+      "sha256": "82241d6d2e87df033c1d15acf5082d192a9aba0480dfce54ef1337c42bd7ce00",
+      "hit_count": 2,
+      "sample_hits": [
+        {
+          "line": 292,
+          "text": "| Moonshot AI：Kimi K2 | H800 + NVLink/NVSwitch + RoCE；16-way 虚拟 PP、16-way EP、ZeRO-1 DP，并结合选择性重计算、FP8 激活存储和 CPU activation offload（A）。报告没有给出通用开源框架名称，应视为自研训练系统而非直接归因 Megatron/DeepSpeed [[C10]](https://arxiv.org/abs/2507.20534)。 | Muon 扩展时出现 attention logits 爆炸、loss spike/发散；1.04T MoE 的模型状态约需 6 TB，激活仍挤压显存；资源数量动态变化；合成改写还可能带来事实错误、幻觉和毒性 [[C10]](https://arxiv.org/abs/2507.20534)。 | MuonClip 通过逐头 QK-Clip 约束 logits，团队报告 15.5T token 训练无 loss spike；固定 256-GPU 模型并行组并允许以 32 节点倍数扩展；用 interleaved 1F1B 重叠 EP，因 DualPipe 双份参数/梯度代价过高而明确不采用；合成数据加入 fidelity verification [[C10]](https://arxiv.org/abs/2507.20534)。 |"
+        },
+        {
+          "line": 311,
+          "text": "| P0 | 数值稳定控制平面 | 持续监控 loss、梯度、激活异常值、attention logits、FP8 scale 和路由负载；异常时逐模块升精度、缩放或回滚，而非整任务盲目重启 | DeepSeek FP8、Kimi MuonClip、GLM embedding gradient shrink 分别定位了不同不稳定源 [[C8]](https://arxiv.org/abs/2412.19437) [[C10]](https://arxiv.org/abs/2507.20534) [[C12]](https://arxiv.org/abs/2210.02414)。 |"
+        }
+      ]
+    },
+    {
+      "path": "07-research/2026-10-08-Lp_APS与Muon结合_阅读路线与研究推进.md",
+      "sha256": "211bbf817df2ee582a2ba3823d050c38fdf7fce2fee092d485a6d2b8e695d525",
+      "hit_count": 37,
+      "sample_hits": [
+        {
+          "line": 2,
+          "text": "title: Lp、APS 与 Muon 结合：推荐阅读顺序与研究推进"
+        },
+        {
+          "line": 8,
+          "text": "# Lp、APS 与 Muon 结合：推荐阅读顺序与研究推进"
+        },
+        {
+          "line": 10,
+          "text": "**先读 PowerStep → SMuon → Distance-Aware Muon → ZFO → MEKA，再读低成本基线与实际Muon理论。** 这条顺序分别回答：Lp到底改变什么、哪些组合已经做过、步长已有何种自适应、额外探测是否值得、为什么局部最优可能没有训练收益。"
+        },
+        {
+          "line": 12,
+          "text": "本路线接续[完整审计与方案](2026-10-08-Lp_APS与Muon结合_文献审计与具体研究方案.md)和[第3周周报](2026-10-05-第3周周报.md)。原报告的日志证据、实验预算和回退规则仍有效。阅读顺序是针对你的当前课题安排，不是通用重要性排名；有笔记的论文按下面的指定部分回读即可。"
+        },
+        {
+          "line": 16,
+          "text": "如果对NS实现仍不熟，先用20–30分钟看[Muon作者说明](https://kellerjordan.github.io/posts/muon/)。对照现有代码，区分动量、Nesterov输入、有限NS、矩阵形状缩放和辅助参数路由。下面的时长仅是阅读安排估计。"
+        },
+        {
+          "line": 20,
+          "text": "| 1 | **PowerStep: Memory-Efficient Adaptive Optimization via ℓp-Norm Steepest Descent，v2**：[HTML](https://arxiv.org/html/2605.10335v2) · [PDF](https://arxiv.org/pdf/2605.10335v2) | §2、§3、§5.6；证明需要时看附录D。已有笔记者先核对v2改动，约1小时 | 写清“动量后坐标保号幂”与pbSGDM“先变换梯度再累积”的区别。§5.6已有Muon隐藏矩阵配PowerStep辅助参数，故这类组合不能作为首次提出。新版理论含噪声残差，不能直接沿用旧版最优速率表述。 |"
+        },
+        {
+          "line": 21,
+          "text": "| 2 | **From SGD to Muon: Adaptive Optimization via Schatten-p Norms（SMuon）**：[HTML](https://arxiv.org/html/2605.19781v1) · [PDF](https://arxiv.org/pdf/2605.19781v1) | §2.1、§3–4、附录A.2.5–A.2.6及B，约2–3小时 | 区分坐标幂与奇异值幂。该文已自动选谱几何、低频刷新底层统计，并推导代理最优步长。必须读附录B的步长尖峰现象；产出“已覆盖/仍需验证”对照表。 |"
+        },
+        {
+          "line": 22,
+          "text": "| 3 | **Distance-Aware Muon: Adaptive Step Scaling for Normalized Optimization**：[HTML](https://arxiv.org/html/2605.18999v1) · [PDF](https://arxiv.org/pdf/2605.18999v1) | §2–5，接着§6.1，约2小时 | 将轨迹半径、动量下降证书和recentered标量搜索分别写成公式。圈出各自依赖的光滑性、局部化/星凸条件。它是“Muon自适应尺度”的直接近邻，不能省略。 |"
+        }
+      ]
+    },
+    {
+      "path": "07-research/2026-09-28-第2周周报.md",
+      "sha256": "bfc5ff04da1d901b06ce36d5b0253125d8bb837955495d0af85010713732e996",
+      "hit_count": 19,
+      "sample_hits": [
+        {
+          "line": 15,
+          "text": "本周 Git 确认新增 14 篇论文，但只有 [SignSGD](../03-notes/2026-09/When_and_Why_SignSGD_Outperforms_SGD_A_Theoretical_Study_Based_on_l1_norm_Lower_Bounds/精读.md) 与 [Stiefel-AdamW](../03-notes/2026-09/Stiefel_AdamW_Geometry_Aware_AdamW_for_Linear_Factorization_Blocks/精读.md) 有本周新增的全文精读，故“新发现”主要是这两篇的证据审计，不是 14 篇都已验证。SignSGD 在特定的 $\\ell_\\infty$ 光滑、$\\ell_1$ 驻点及逐坐标噪声类上给出匹配界；其 124M 实验与机制相容，却不能证明所有 LLM 都适合纯符号更新。Stiefel-AdamW 说明低秩乘积的表示尺度可以靠一侧正交化约束，但附录 B 的关键投影逆等式待修补，且 Mistral 7B 和 GPT-2 结果不足以支持普遍胜出。结合此前 [PowerStep 精读](../03-notes/2026-09/PowerStep_Memory_Efficient_Adaptive_Optimization_via_lp_Norm_Steepest_Descent/精读.m"
+        },
+        {
+          "line": 30,
+          "text": "Git 的“新增”是**入库时间**，不等于论文发表在本周；例如 SignSGD 笔记记录其 2026-05 首发，[谱分配](../01-raw/2026-09/Spectral_Allocation_Why_Muon_Outperforms_Adam_and_How_to_Improve_Muon.pdf) 的检索记录日期为 2026-08。检索日报的题目与预筛分不构成论文质量或摘要证据。新归档中的 [StoSignSGD](../01-raw/2026-09/StoSignSGD-%20Unbiased%20Structural%20Stochasticity%20Fixes%20%20SignSGD%20for%20Training%20Large%20Language%20Models.pdf)、[二次谱下降](../01-raw/2026-09/Beyond_the_Matrix_Sign_Quadratic_Spectral_Descent.pdf)、[COREM](../01-raw/2026-09/COREM_Cosine_Relation_Momentum_Reshaping_with_Stateful_Writeback.pdf) 尚无精读，因此连标题暗示的方法细节都不能当成已证事实。"
+        },
+        {
+          "line": 42,
+          "text": "| 一阶低状态更新何时足以替代 AdamW？ | SignSGD 的 $\\ell_\\infty/\\ell_1$ 对偶几何；PowerStep 的动量保号幂；Muon 的矩阵符号 | SignSGD 定理 1–3 把稀疏噪声优势的条件写清；PowerStep 旧笔记提供一状态大模型实证 | 真实层的噪声结构能否预测最优幂指数；与成熟 8-bit Adam 的端到端预算比较；Muon 有限 Newton–Schulz 误差 |"
+        },
+        {
+          "line": 43,
+          "text": "| 矩阵参数应怎样分配奇异方向的步长？ | Muon / 谱分配 / 二次谱下降 / 正交化动量 | SignSGD §5 给理想矩阵符号的理论词典 | [谱分配](../01-raw/2026-09/Spectral_Allocation_Why_Muon_Outperforms_Adam_and_How_to_Improve_Muon.pdf)、[二次谱下降](../01-raw/2026-09/Beyond_the_Matrix_Sign_Quadratic_Spectral_Descent.pdf) 与 [正交化动量](../01-raw/2026-09/Nonsmooth_Optimization_via_Orthogonalized_Momentum.pdf) 的净增量、成本和公平基线均待正文核验 |"
+        },
+        {
+          "line": 51,
+          "text": "| [SignSGD](../03-notes/2026-09/When_and_Why_SignSGD_Outperforms_SGD_A_Theoretical_Study_Based_on_l1_norm_Lower_Bounds/精读.md) | 理论算法 + 小模型实证 | 指定几何与噪声类上的匹配界及指定 vanilla SGD 的最坏情形分离 | 相对 Jiang 2025 的 AdaGrad 下界、Balles 2020 的符号几何，净增量是 SignSGD 匹配界与理想 Muon 的矩阵约化 | 定理 1–5、图 1–3；全局假设、单一 124M 配方、Muon 零数值误差 | 中 |"
+        },
+        {
+          "line": 53,
+          "text": "| 谱分配、二次谱下降、StoSignSGD | 待判 | 题目提示与本课题高度相关 | 与 PowerStep、Muon、SignSGD 的实际关系尚不知 | 仅题目/归档，待全文核验 | 低 |"
+        },
+        {
+          "line": 59,
+          "text": "**看似矛盾但设置不可比**：SignSGD 图 1 在 124M nanoGPT 上优于 SGD，而 PowerStep 表 4 中带动量 SignSGD 在 8B 上失稳；前者无动量、对照 vanilla SGD，后者带动量且模型、配方与基线不同。最小判别是固定同一 124M 模型、数据顺序、衰减与调参预算，比较无动量符号、带动量符号及 $\\beta>0$ 幂更新，并测各层噪声集中度与故障率。Stiefel-AdamW 的 ViT 收益和 GPT-2 预训练差值也不可简单合并：表 1 与表 3 的任务、重复次数和效应大小不同。"
+        },
+        {
+          "line": 66,
+          "text": "| 噪声集中度可预测“符号化程度”最优值 | SignSGD 图 2 的相关性；PowerStep 表 4 显示不同规模端点行为不一致 | 没有固定曲率、总方差和训练配方后仅变 $\\phi$ 的干预；梯度信噪比、重尾与动量记忆均可解释 | **研究假设**，尚不支持自适应规则 | toy 干预与 124M 多种子 $\\beta\\times\\phi$ 交互 |"
+        }
+      ]
+    },
+    {
+      "path": "07-research/2026-09-19-gradient_free_optimizer_large_model_training_调研_2024_2026.md",
+      "sha256": "c2dcdfcdefdbe124633a753193c963300c2a658f7ef66ad68d05f35420edfcee",
+      "hit_count": 14,
+      "sample_hits": [
+        {
+          "line": 6,
+          "text": "> **邻近工作用途：** `Parameter-free Clipped Gradient Descent Meets Polyak`、`PowerStep`、`Powell-Style Model-Based Derivative-Free Optimization` 等并非都属于 LLM-ZO，但其 **step-size、clipping、geometry、trust-region、model-based search** 思想对新型 ZO optimizer 很有启发。"
+        },
+        {
+          "line": 111,
+          "text": "### PowerStep"
+        },
+        {
+          "line": 113,
+          "text": "PowerStep 同样依赖真实 gradient，因此："
+        },
+        {
+          "line": 116,
+          "text": "\\boxed{\\text{PowerStep 不是 Gradient-Free}}"
+        },
+        {
+          "line": 427,
+          "text": "| 2026 | PowerStep | arXiv 2026 | — | **否** | \\(\\ell_p\\) steepest descent，邻近优化器思想 |"
+        },
+        {
+          "line": 1713,
+          "text": "## 13.2 PowerStep"
+        },
+        {
+          "line": 1717,
+          "text": "**PowerStep: Memory-Efficient Adaptive Optimization via \\(\\ell_p\\)-Norm Steepest Descent**"
+        },
+        {
+          "line": 1722,
+          "text": "PowerStep 的核心是："
+        }
+      ]
+    }
+  ]
+}

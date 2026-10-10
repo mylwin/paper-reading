@@ -1,0 +1,82 @@
+{
+  "scope": "Algebraic sanity checks; not optimizer convergence or LLM evidence.",
+  "coordinate_power_breaks_orthogonality": {
+    "original_row_dot": 0.0,
+    "powered_row_dot": -0.2843944954456077
+  },
+  "spectral_power_then_exact_polar": [
+    {
+      "alpha": 0.1,
+      "input_singular_values": [
+        1.2457309396155174,
+        1.0,
+        0.6309573444801932
+      ],
+      "exact_polar_singular_values": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "alpha": 0.5,
+      "input_singular_values": [
+        3.0,
+        1.0,
+        0.1
+      ],
+      "exact_polar_singular_values": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "alpha": 1,
+      "input_singular_values": [
+        9,
+        1,
+        0.01
+      ],
+      "exact_polar_singular_values": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    }
+  ],
+  "aps_direction_rescaling": [
+    {
+      "direction_scale": 0.2,
+      "eta": 0.25,
+      "displacement": 0.05
+    },
+    {
+      "direction_scale": 1,
+      "eta": 0.31249999999999994,
+      "displacement": 0.31249999999999994
+    },
+    {
+      "direction_scale": 5,
+      "eta": 0.32894736842105265,
+      "displacement": 1.6447368421052633
+    }
+  ],
+  "quadratic_radius_loss_scale_invariance": [
+    {
+      "loss_scale": 0.1,
+      "curvature": 0.19999999999999965,
+      "radius": 0.010000000000000018
+    },
+    {
+      "loss_scale": 1,
+      "curvature": 1.9999999999999982,
+      "radius": 0.010000000000000009
+    },
+    {
+      "loss_scale": 10,
+      "curvature": 19.99999999999999,
+      "radius": 0.010000000000000005
+    }
+  ]
+}
