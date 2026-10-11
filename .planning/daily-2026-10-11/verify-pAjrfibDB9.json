@@ -1,0 +1,816 @@
+{
+  "notes": [
+    {
+      "content": {
+        "venue": {
+          "value": "ICLR 2027 Conference Submission"
+        },
+        "keywords": {
+          "value": [
+            "Loss Spikes",
+            "Adam",
+            "Moment Mismatch"
+          ]
+        },
+        "primary_area": {
+          "value": "interpretability and explainable AI"
+        },
+        "abstract": {
+          "value": "Loss spikes can disrupt AdamW training despite gradient clipping. Mismatched first- and second-moment time scales can let momentum\noutpace its normalization, amplifying the adaptive update ($u_t=m_t/(\\sqrt{v_t}+\\epsilon)$). We study how its magnitude and allocation affect immediate loss. Across three GPT-2 355M runs, at the unit threshol $|u_{t,i}|=|m_{t,i}/(\\sqrt{v_{t,i}}+\\epsilon)|>1$, the median fraction of coordinates newly crossing the threshold is 0.571\\% at 19 captured loss-spike onset states versus 0.0033\\% at nine ordinary states (over $170\\times$). Globally shrinking the adaptive update lowers immediate loss at all 19 states, while selectively limiting new tail entrants improves further at equal norm. Tensor-relative history helps allocate attenuation, and replay favors sustained over onset-only control. These findings motivate \\method{}, a lightweight yet effective combination of coordinate clipping and a tensor-relative growth constraint, with negligible optimizer-state overhead and no extra forward or backward passes. Across three GPT-2 774M runs per configuration, it reduces post-warmup spike episodes from 17 to zero and improves mean validation loss from 2.916 to 2.856. Half-rate and global norm-matched controls retain spikes despite similar validation quality. Dual control also achieves zero post-warmup spikes in the tested larger NanoGPT and Qwen3 models,\nsupporting transfer across architectures."
+        },
+        "_bibtex": {
+          "value": "@inproceedings{\nanonymous2026understanding,\ntitle={Understanding and Mitigating AdamW Loss Spikes},\nauthor={Anonymous},\nbooktitle={Submitted to The Fifteenth International Conference on Learning Representations},\nyear={2026},\nurl={https://openreview.net/forum?id=pAjrfibDB9},\nnote={under review}\n}"
+        },
+        "title": {
+          "value": "Understanding and Mitigating AdamW Loss Spikes"
+        },
+        "pdf": {
+          "value": "/pdf/aef6c0effe13564ce0f07c63b7610d9b6b7ce3a5.pdf"
+        },
+        "venueid": {
+          "value": "ICLR.cc/2027/Conference/Submission"
+        }
+      },
+      "tmdate": 1791232143550,
+      "tcdate": 1789703439447,
+      "writers": [
+        "ICLR.cc/2027/Conference",
+        "ICLR.cc/2027/Conference/Submission36730/Authors"
+      ],
+      "signatures": [
+        "ICLR.cc/2027/Conference/Submission36730/Authors"
+      ],
+      "forum": "pAjrfibDB9",
+      "license": "CC BY 4.0",
+      "number": 36730,
+      "cdate": 1789703439447,
+      "readers": [
+        "everyone"
+      ],
+      "invitations": [
+        "ICLR.cc/2027/Conference/-/Submission",
+        "ICLR.cc/2027/Conference/-/Submission_Change_Before_Bidding",
+        "ICLR.cc/2027/Conference/Submission36730/-/Full_Submission",
+        "ICLR.cc/2027/Conference/-/Submission_Change_Before_Reviewing",
+        "ICLR.cc/2027/Conference/-/Edit"
+      ],
+      "mdate": 1791232143550,
+      "odate": 1791031328286,
+      "domain": "ICLR.cc/2027/Conference",
+      "id": "pAjrfibDB9",
+      "version": 2
+    },
+    {
+      "content": {
+        "venue": {
+          "value": "Submitted to ICLR 2026"
+        },
+        "keywords": {
+          "value": [
+            "loss spike",
+            "Adam",
+            "training instability"
+          ]
+        },
+        "supplementary_material": {
+          "value": "/attachment/35292f0ed6aab270fc86a3eb86b12b89897b9c14.zip"
+        },
+        "primary_area": {
+          "value": "learning theory"
+        },
+        "abstract": {
+          "value": "Loss spikes commonly emerge during neural network training with the Adam optimizer across diverse architectures and scales, yet their underlying mechanisms remain poorly understood. In this work, we investigate the fundamental causes of Adam spikes. While previous explanations attribute these phenomena to sharper loss landscapes at lower loss values, our analysis reveals that it is Adam's adaptive preconditioners that trigger spikes during training. We identify a key mechanism where the second moment estimate becomes insensitive to current gradients when using large $\\beta_2$ values. This insensitivity can push the maximum eigenvalue of the preconditioned Hessian beyond the stability threshold $2/\\eta$ for sustained periods, manifesting as dramatic loss spikes. We theoretically and experimentally characterize five distinct stages of spike evolution and propose a predictor for anticipating spikes based on gradient-directional curvature. We further validate our mechanism and demonstrate practical mitigation strategies from small fully connected networks to large-scale Transformers. These findings provide new theoretical insights for understanding and controlling loss spike behavior in Adam optimization."
+        },
+        "_bibtex": {
+          "value": "@misc{\nbai2026adaptive,\ntitle={Adaptive Preconditioners Trigger Loss Spikes in Adam},\nauthor={Zhiwei Bai and Zhangchen Zhou and Jiajie Zhao and Xiaolong Li and Zhiyu li and Feiyu Xiong and Hongkang Yang and Yaoyu Zhang and Zhi-Qin John Xu},\nyear={2026},\nurl={https://openreview.net/forum?id=dwx3rjWGju}\n}"
+        },
+        "title": {
+          "value": "Adaptive Preconditioners Trigger Loss Spikes in Adam"
+        },
+        "pdf": {
+          "value": "/pdf/1808294aba644c99f6110d36354291b0318773d4.pdf"
+        },
+        "venueid": {
+          "value": "ICLR.cc/2026/Conference/Rejected_Submission"
+        },
+        "paperhash": {
+          "value": "bai|adaptive_preconditioners_trigger_loss_spikes_in_adam"
+        },
+        "authorids": {
+          "value": [
+            "~Zhiwei_Bai1",
+            "~Zhangchen_Zhou1",
+            "~Jiajie_Zhao1",
+            "~Xiaolong_Li1",
+            "~Zhiyu_li2",
+            "~Feiyu_Xiong1",
+            "~Hongkang_Yang1",
+            "~Yaoyu_Zhang1",
+            "~Zhi-Qin_John_Xu1"
+          ]
+        },
+        "authors": {
+          "value": [
+            "Zhiwei Bai",
+            "Zhangchen Zhou",
+            "Jiajie Zhao",
+            "Xiaolong Li",
+            "Zhiyu li",
+            "Feiyu Xiong",
+            "Hongkang Yang",
+            "Yaoyu Zhang",
+            "Zhi-Qin John Xu"
+          ]
+        }
+      },
+      "tmdate": 1770804984308,
+      "tcdate": 1758209783123,
+      "writers": [
+        "ICLR.cc/2026/Conference",
+        "ICLR.cc/2026/Conference/Submission12725/Authors"
+      ],
+      "signatures": [
+        "ICLR.cc/2026/Conference/Submission12725/Authors"
+      ],
+      "forum": "dwx3rjWGju",
+      "license": "CC BY 4.0",
+      "number": 12725,
+      "cdate": 1758209783123,
+      "readers": [
+        "everyone"
+      ],
+      "invitations": [
+        "ICLR.cc/2026/Conference/-/Submission",
+        "ICLR.cc/2026/Conference/-/Post_Submission",
+        "ICLR.cc/2026/Conference/Submission12725/-/Full_Submission",
+        "ICLR.cc/2026/Conference/Submission12725/-/Rebuttal_Revision",
+        "ICLR.cc/2026/Conference/-/Edit"
+      ],
+      "mdate": 1770804984308,
+      "odate": 1759896705795,
+      "domain": "ICLR.cc/2026/Conference",
+      "id": "dwx3rjWGju",
+      "version": 2
+    },
+    {
+      "content": {
+        "venue": {
+          "value": "IEEE Trans. Pattern Anal. Mach. Intell. 2024"
+        },
+        "pdf": {
+          "value": "https://ieeexplore.ieee.org/iel7/34/10627928/10480574.pdf"
+        },
+        "venueid": {
+          "value": "dblp.org/journals/PAMI/2024"
+        },
+        "paperhash": {
+          "value": "zhou|towards_understanding_convergence_and_generalization_of_adamw"
+        },
+        "authorids": {
+          "value": [
+            "https://dblp.org/search/pid/api?q=author:Pan_Zhou_0002:",
+            "https://dblp.org/search/pid/api?q=author:Xingyu_Xie:",
+            "~Zhouchen_Lin1",
+            "https://dblp.org/search/pid/api?q=author:Shuicheng_Yan:"
+          ]
+        },
+        "html": {
+          "value": "https://doi.org/10.1109/TPAMI.2024.3382294"
+        },
+        "_bibtex": {
+          "value": "@article{DBLP:journals/pami/ZhouXLY24,\n  author={Pan Zhou and Xingyu Xie and Zhouchen Lin and Shuicheng Yan},\n  title={Towards Understanding Convergence and Generalization of AdamW},\n  year={2024},\n  month={September},\n  cdate={1725148800000},\n  journal={IEEE Trans. Pattern Anal. Mach. Intell.},\n  volume={46},\n  number={9},\n  pages={6486-6493},\n  url={https://doi.org/10.1109/TPAMI.2024.3382294}\n}\n"
+        },
+        "abstract": {
+          "value": "AdamW modifies Adam by adding a decoupled weight decay to decay network weights per training iteration. For adaptive algorithms, this decoupled weight decay does not affect specific optimization steps, and differs from the widely used $\\ell _{2}$-regularizer which changes optimization steps via changing the first- and second-order gradient moments. Despite its great practical success, for AdamW, its convergence behavior and generalization improvement over Adam and $\\ell _{2}$-regularized Adam ($\\ell _{2}$-Adam) remain absent yet. To solve this issue, we prove the convergence of AdamW and justify its generalization advantages over Adam and $\\ell _{2}$-Adam. Specifically, AdamW provably converges but minimizes a dynamically regularized loss that combines vanilla loss and a dynamical regularization induced by decoupled weight decay, thus yielding different behaviors with Adam and $\\ell _{2}$-Adam. Moreover, on both general nonconvex problems and PŁ-conditioned problems, we establish stochastic gradient complexity of AdamW to find a stationary point. Such complexity is also applicable to Adam and $\\ell _{2}$-Adam, and improves their previously known complexity, especially for over-parametrized networks. Besides, we prove that AdamW enjoys smaller generalization errors than Adam and $\\ell _{2}$-Adam from the Bayesian posterior aspect. This result, for the first time, explicitly reveals the benefits of decoupled weight decay in AdamW. Experimental results validate our theory."
+        },
+        "title": {
+          "value": "Towards Understanding Convergence and Generalization of AdamW"
+        },
+        "authors": {
+          "value": [
+            "Pan Zhou",
+            "Xingyu Xie",
+            "Zhouchen Lin",
+            "Shuicheng Yan"
+          ]
+        }
+      },
+      "tmdate": 1769162093689,
+      "pdate": 1735603200000,
+      "externalIds": [
+        "dblp:journals/pami/ZhouXLY24"
+      ],
+      "tcdate": 1769162083424,
+      "writers": [
+        "~"
+      ],
+      "signatures": [
+        "~Zhouchen_Lin1"
+      ],
+      "forum": "SrifZPcHyn",
+      "license": "CC BY-SA 4.0",
+      "number": 791364,
+      "cdate": 1725148800000,
+      "readers": [
+        "everyone"
+      ],
+      "invitations": [
+        "DBLP.org/-/Record",
+        "DBLP.org/-/Edit"
+      ],
+      "mdate": 1769162093689,
+      "domain": "DBLP.org",
+      "id": "SrifZPcHyn",
+      "version": 2
+    },
+    {
+      "content": {
+        "TLDR": {
+          "value": "TIC uses frozen ghost updates to build representation-space test statistics that give early-warning signals for future non-NaN training-loss spikes."
+        },
+        "venue": {
+          "value": "ICML26-Testing Poster"
+        },
+        "pdf": {
+          "value": "/pdf/fc5172b0f0efd9fe2161de659d1e4cdb4127e614.pdf"
+        },
+        "keywords": {
+          "value": [
+            "hypothesis testing",
+            "sequential testing",
+            "training dynamics",
+            "loss spikes",
+            "neural network optimization",
+            "representation learning",
+            "early-warning detection",
+            "transformer training"
+          ]
+        },
+        "venueid": {
+          "value": "ICML.cc/2026/Workshop/Hypothesis_Testing"
+        },
+        "paperhash": {
+          "value": "sanghyun|transport_instability_coordinates_for_earlywarning_tests_of_training_loss_spikes"
+        },
+        "authorids": {
+          "value": [
+            "~Kim_sanghyun2"
+          ]
+        },
+        "abstract": {
+          "value": "Loss spikes in neural-network training are typically detected only after probe loss has entered an unstable regime. We frame future spike detection as a sequential testing problem in which row-wise, causal features act as test statistics for a finite non-NaN probe-loss spike event in a future lead window. Standard diagnostics such as loss trends, gradient norms, update norms, and adaptive-moment statistics measure scalar or parameter-space quantities, but they do not directly measure how the current stochastic optimizer transition moves the model’s representations. We introduce Transport Instability Coordinates (TIC), a causal feature-space diagnostic based on ghost updates from a frozen optimizer state. At each measured step, TIC samples ghost microbatches, applies the corresponding temporary AdamW transitions, and records the induced changes in a fixed probe representation and probe loss. These measurements define trace, log-moment, whitened, modal-concentration, and loss-directed transport coordinates, which we use in a discrete-time hazard model for future non-NaN probe-loss spikes. In dense critical-learning-rate Transformer experiments, TIC improves over time, loss-trend, gradient-norm, update-norm, Adam-mismatch, trace-only, and raw-tabular baselines at a fixed false-alert budget. A secondary PolyPythias-410M audit shows that the same coordinates decompose known outlier windows into coordinate-specific transport expansion. The results support feature-space transport as an early-warning statistic for imminent training instability."
+        },
+        "_bibtex": {
+          "value": "@inproceedings{\nsanghyun2026transport,\ntitle={Transport Instability Coordinates for Early-Warning Tests of Training Loss Spikes},\nauthor={Kim sanghyun},\nbooktitle={The ICML 2026 Workshop on Hypothesis Testing},\nyear={2026},\nurl={https://openreview.net/forum?id=6BWFYVa5E3}\n}"
+        },
+        "title": {
+          "value": "Transport Instability Coordinates for Early-Warning Tests of Training Loss Spikes"
+        },
+        "previous_publication_record": {
+          "value": "No, it is a new submission."
+        },
+        "authors": {
+          "value": [
+            "Kim sanghyun"
+          ]
+        }
+      },
+      "tmdate": 1783244273972,
+      "pdate": 1779455315716,
+      "tcdate": 1778565960033,
+      "writers": [
+        "ICML.cc/2026/Workshop/Hypothesis_Testing",
+        "ICML.cc/2026/Workshop/Hypothesis_Testing/Submission111/Authors"
+      ],
+      "signatures": [
+        "ICML.cc/2026/Workshop/Hypothesis_Testing/Submission111/Authors"
+      ],
+      "forum": "6BWFYVa5E3",
+      "license": "CC BY 4.0",
+      "number": 111,
+      "cdate": 1778565960033,
+      "readers": [
+        "everyone"
+      ],
+      "invitations": [
+        "ICML.cc/2026/Workshop/Hypothesis_Testing/-/Submission",
+        "ICML.cc/2026/Workshop/Hypothesis_Testing/-/Post_Submission",
+        "ICML.cc/2026/Workshop/Hypothesis_Testing/-/Edit",
+        "ICML.cc/2026/Workshop/Hypothesis_Testing/Submission111/-/Camera_Ready"
+      ],
+      "mdate": 1783244273972,
+      "odate": 1783089390031,
+      "domain": "ICML.cc/2026/Workshop/Hypothesis_Testing",
+      "id": "6BWFYVa5E3",
+      "version": 2
+    },
+    {
+      "content": {
+        "venue": {
+          "value": "Submitted to ICLR 2025"
+        },
+        "code_of_ethics": {
+          "value": "I acknowledge that I and all co-authors of this work have read and commit to adhering to the ICLR Code of Ethics."
+        },
+        "keywords": {
+          "value": [
+            "Optimizer",
+            "Adam",
+            "Loss Spikes"
+          ]
+        },
+        "supplementary_material": {
+          "value": "/attachment/fb03d7542bd72f5632439da6a8f007226db38a88.zip"
+        },
+        "primary_area": {
+          "value": "optimization"
+        },
+        "submission_guidelines": {
+          "value": "I certify that this submission complies with the submission instructions as described on https://iclr.cc/Conferences/2025/AuthorGuide."
+        },
+        "abstract": {
+          "value": "Adam has been widely successful in training deep neural networks (DNNs), yet the factors contributing to both its practical effectiveness and ineffectiveness remain largely underexplored. In this study, we  reveal that the effectiveness of Adam in training complicated DNNs stems primarily from its similarity to SignSGD in managing significant gradient variations, while we also theoretically and empirically uncover that Adam is  susceptible to loss spikes  due to potential excessively large updates. Building on these insights, we propose a novel optimizer,  SignSoftSGD (S3), which incorporates a generalized sign-like formulation with a flexible $p$-th order ($p\\ge 1$) momentum in the denominator of the update, replacing the fixed $2$-order momentum. We also integrate the memory-efficient Nesterov's accelerated gradient technique into S3, enhancing convergence speed without additional memory overhead. To minimize the risk of loss spikes, we utilize the same coefficient for the momentums in both the numerator and the denominator of the update, which also practically streamlines the tuning overhead.  We conduct a theoretical analysis of S3 on a general nonconvex stochastic problem, demonstrating that  S3 achieves the optimal convergence rate under weak assumptions. Extensive experimentation across various vision and language tasks demonstrates that  S3 not only achieves rapid  convergence and improved  performance but also  rarely encounters loss spikes even at a \\textbf{${10\\times}$} larger learning rate. Specifically, S3 delivers performance comparable to or better than AdamW}with ${2\\times}$ the training steps."
+        },
+        "_bibtex": {
+          "value": "@misc{\npeng2025softsignsgds,\ntitle={SoftSign{SGD}(S3): An Enhanced Optimize for Practical {DNN} Training and Loss Spikes Minimization Beyond Adam},\nauthor={Hanyang Peng and Shuang Qin and Fangqing Jiang and Yue Yu and Hui Wang and Ge Li},\nyear={2025},\nurl={https://openreview.net/forum?id=TBJCtWTvXJ}\n}"
+        },
+        "title": {
+          "value": "SoftSignSGD(S3): An Enhanced Optimize for Practical DNN Training and Loss Spikes Minimization Beyond Adam"
+        },
+        "pdf": {
+          "value": "/pdf/a123162371f376d4097860678c054bbf94570686.pdf"
+        },
+        "venueid": {
+          "value": "ICLR.cc/2025/Conference/Rejected_Submission"
+        },
+        "paperhash": {
+          "value": "peng|softsignsgds3_an_enhanced_optimize_for_practical_dnn_training_and_loss_spikes_minimization_beyond_adam"
+        },
+        "authorids": {
+          "value": [
+            "~Hanyang_Peng1",
+            "~Shuang_Qin1",
+            "~Fangqing_Jiang1",
+            "~Yue_Yu8",
+            "~Hui_Wang13",
+            "~Ge_Li2"
+          ]
+        },
+        "anonymous_url": {
+          "value": "I certify that there is no URL (e.g., github page) that could be used to find authors’ identity."
+        },
+        "no_acknowledgement_section": {
+          "value": "I certify that there is no acknowledgement section in this submission for double blind review."
+        },
+        "authors": {
+          "value": [
+            "Hanyang Peng",
+            "Shuang Qin",
+            "Fangqing Jiang",
+            "Yue Yu",
+            "Hui Wang",
+            "Ge Li"
+          ]
+        }
+      },
+      "tmdate": 1738735791925,
+      "tcdate": 1727422104131,
+      "writers": [
+        "ICLR.cc/2025/Conference",
+        "ICLR.cc/2025/Conference/Submission9405/Authors"
+      ],
+      "signatures": [
+        "ICLR.cc/2025/Conference/Submission9405/Authors"
+      ],
+      "forum": "TBJCtWTvXJ",
+      "license": "CC BY 4.0",
+      "number": 9405,
+      "cdate": 1727422104131,
+      "readers": [
+        "everyone"
+      ],
+      "invitations": [
+        "ICLR.cc/2025/Conference/-/Submission",
+        "ICLR.cc/2025/Conference/-/Post_Submission",
+        "ICLR.cc/2025/Conference/Submission9405/-/Full_Submission",
+        "ICLR.cc/2025/Conference/Submission9405/-/Rebuttal_Revision",
+        "ICLR.cc/2025/Conference/-/Edit"
+      ],
+      "mdate": 1738735791925,
+      "odate": 1728008565725,
+      "domain": "ICLR.cc/2025/Conference",
+      "id": "TBJCtWTvXJ",
+      "version": 2
+    },
+    {
+      "content": {
+        "venue": {
+          "value": "CoRR 2025"
+        },
+        "pdf": {
+          "value": "https://arxiv.org/pdf/2507.06464v1"
+        },
+        "venueid": {
+          "value": "dblp.org/journals/CORR/2025"
+        },
+        "paperhash": {
+          "value": "peng|softsignsgds3_an_enhanced_optimizer_for_practical_dnn_training_and_loss_spikes_minimization_beyond_adam"
+        },
+        "authorids": {
+          "value": [
+            "https://dblp.org/search/pid/api?q=author:Hanyang_Peng:",
+            "https://dblp.org/search/pid/api?q=author:Shuang_Qin:",
+            "~Yue_Yu8",
+            "https://dblp.org/search/pid/api?q=author:Fangqing_Jiang:",
+            "https://dblp.org/search/pid/api?q=author:Hui_Wang_0030:",
+            "https://dblp.org/search/pid/api?q=author:Wen_Gao_0001:"
+          ]
+        },
+        "html": {
+          "value": "https://doi.org/10.48550/arXiv.2507.06464"
+        },
+        "_bibtex": {
+          "value": "@article{DBLP:journals/corr/abs-2507-06464,\n  publtype={informal},\n  author={Hanyang Peng and Shuang Qin and Yue Yu and Fangqing Jiang and Hui Wang and Wen Gao},\n  title={SoftSignSGD(S3): An Enhanced Optimizer for Practical DNN Training and Loss Spikes Minimization Beyond Adam},\n  year={2025},\n  month={July},\n  cdate={1751328000000},\n  journal={CoRR},\n  volume={abs/2507.06464},\n  url={https://doi.org/10.48550/arXiv.2507.06464}\n}\n"
+        },
+        "abstract": {
+          "value": "Adam has proven remarkable successful in training deep neural networks, but the mechanisms underlying its empirical successes and limitations remain underexplored. In this study, we demonstrate that the effectiveness of Adam stems largely from its similarity to SignSGD in robustly handling large gradient fluctuations, yet it is also vulnerable to destabilizing loss spikes due to its uncontrolled update scaling. To enhance the advantage of Adam and mitigate its limitation, we propose SignSoftSGD (S3), a novel optimizer with three key innovations. \\emph{First}, S3 generalizes the sign-like update by employing a flexible $p$-th order momentum ($p \\geq 1$) in the denominator, departing from the conventional second-order momentum (variance) preconditioning. This design enables enhanced performance while achieving stable training even with aggressive learning rates. \\emph{Second}, S3 minimizes the occurrences of loss spikes through unified exponential moving average coefficients for numerator and denominator momenta, which inherently bound updates to $[-1, 1]$ and simplify hyperparameter tuning. \\emph{Third}, S3 incorporates an equivalent Nesterov's accelerated gradient(NAG) module, accelerating convergence without memory overhead. Theoretically, we prove that S3 achieves the optimal convergence rate of $O\\left(\\frac{1}{T^{\\sfrac{1}{4}}}\\right)$ for general nonconvex stochastic optimization under weak assumptions. Extensive experiments across a range of vision and language tasks show that \\textsf{\\small S3} not only converges more rapidly and improves performance but also rarely experiences loss spikes, even with a \\textbf{$\\bm{10 \\times}$} larger learning rate. In fact, S3 delivers performance comparable to or better than AdamW with \\textbf{$2 \\times$} the training steps, establishing its efficacy in both efficiency and final task performance."
+        },
+        "title": {
+          "value": "SoftSignSGD(S3): An Enhanced Optimizer for Practical DNN Training and Loss Spikes Minimization Beyond Adam"
+        },
+        "authors": {
+          "value": [
+            "Hanyang Peng",
+            "Shuang Qin",
+            "Yue Yu",
+            "Fangqing Jiang",
+            "Hui Wang",
+            "Wen Gao"
+          ]
+        }
+      },
+      "tmdate": 1768978510648,
+      "pdate": 1767139200000,
+      "externalIds": [
+        "dblp:journals/corr/abs-2507-06464"
+      ],
+      "tcdate": 1768978502510,
+      "writers": [
+        "~"
+      ],
+      "signatures": [
+        "~Yue_Yu8"
+      ],
+      "forum": "zg437TqE9u",
+      "license": "CC BY-SA 4.0",
+      "number": 779614,
+      "cdate": 1751328000000,
+      "readers": [
+        "everyone"
+      ],
+      "invitations": [
+        "DBLP.org/-/Record",
+        "DBLP.org/-/Edit"
+      ],
+      "mdate": 1768978510648,
+      "domain": "DBLP.org",
+      "id": "zg437TqE9u",
+      "version": 2
+    },
+    {
+      "content": {
+        "venue": {
+          "value": "ICML 2026 regular"
+        },
+        "keywords": {
+          "value": [
+            "loss spike",
+            "Adam",
+            "training instability"
+          ]
+        },
+        "supplementary_material": {
+          "value": "/attachment/8e673c6a173b0a0276bf78597d8e64e8ed58e41b.zip"
+        },
+        "_bibtex": {
+          "value": "@inproceedings{\nbai2026adaptive,\ntitle={Adaptive Preconditioners Trigger Loss Spikes in Adam},\nauthor={Zhiwei Bai and Zhangchen Zhou and Jiajie Zhao and Xiaolong Li and Zhiyu li and Feiyu Xiong and Hongkang Yang and Yaoyu Zhang and Zhi-Qin John Xu},\nbooktitle={Forty-third International Conference on Machine Learning},\nyear={2026},\nurl={https://openreview.net/forum?id=STWQoscanw}\n}"
+        },
+        "title": {
+          "value": "Adaptive Preconditioners Trigger Loss Spikes in Adam"
+        },
+        "paperhash": {
+          "value": "bai|adaptive_preconditioners_trigger_loss_spikes_in_adam"
+        },
+        "originally_submitted_PDF": {
+          "value": "/pdf/a72180554ee292a6cc4235772a532163ed87f41f.pdf"
+        },
+        "TLDR": {
+          "value": "We provide a mechanistic analysis of loss spikes phenomenon in Adam training."
+        },
+        "primary_area": {
+          "value": "theory->learning_theory"
+        },
+        "abstract": {
+          "value": "Loss spikes commonly emerge during neural network training with the Adam optimizer across diverse architectures and scales, yet their underlying mechanism remains elusive.  While previous explanations attribute these phenomena to sharper loss landscapes at lower loss, we show that landscape geometry alone is insufficient to explain the phenomenon. In this work, we pinpoint the root cause in the internal dynamics of Adam's second moment estimator. We identify a critical ``decoupling'' mechanism where the adaptive preconditioner $v_t$ fails to track the instantaneous squared gradients $g_t^2$, causing the adaptive mechanism to effectively fail. This decoupling allows the preconditioner to decay autonomously despite rising gradients, which pushes the maximum eigenvalue of the preconditioned Hessian beyond the stability threshold $2/\\eta$ for sustained periods, manifesting as dramatic loss spikes. Through a quadratic approximation analysis, we theoretically and experimentally characterize five distinct stages of spike evolution and propose a predictor for anticipating spikes based on gradient-directional curvature. We empirically find that the proposed loss spike mechanism, although derived from simplified models, generalizes well to practical scenarios ranging from small neural networks to large-scale Transformers."
+        },
+        "pdf": {
+          "value": "/pdf/b6e22b4c1fde599dd55f8f0025e491a3c965ea0a.pdf"
+        },
+        "lay_summary": {
+          "value": "When training deep neural networks, the goal is to smoothly reduce the model's \"loss\" or error. However, a widely used training tool called the Adam optimizer frequently suffers from \"loss spikes\"—sudden, violent increases in error that can severely disrupt the learning process.\n\nPreviously, some scientists believed these spikes occurred simply because the network wandered into a sharply curved, unstable area of the loss landscape. Our research proves otherwise. We discovered a hidden mechanical flaw inside the Adam optimizer itself.\n\nAdam uses an internal memory mechanism to automatically adjust its learning pace. We found that under certain conditions, this memory stops paying attention to the actual steepness of the problem and begins to shrink on its own. Because of this \"blind spot,\" Adam gets tricked into taking dangerously large steps. This built-up energy eventually launches the network out of its safe zone, resulting in a massive spike in loss.\n\nIn this paper, we map out the exact five-stage life cycle of these spikes. We also introduce a new early-warning metric to predict them before they happen. Importantly, we demonstrate that this internal flaw isn't just a theoretical curiosity—it actively triggers instabilities  from simple toy models to the massive neural networks powering today's advanced language models."
+        },
+        "venueid": {
+          "value": "ICML.cc/2026/Conference"
+        },
+        "authorids": {
+          "value": [
+            "~Zhiwei_Bai1",
+            "~Zhangchen_Zhou1",
+            "~Jiajie_Zhao1",
+            "~Xiaolong_Li1",
+            "~Zhiyu_li2",
+            "~Feiyu_Xiong1",
+            "~Hongkang_Yang1",
+            "~Yaoyu_Zhang1",
+            "~Zhi-Qin_John_Xu1"
+          ]
+        },
+        "authors": {
+          "value": [
+            "Zhiwei Bai",
+            "Zhangchen Zhou",
+            "Jiajie Zhao",
+            "Xiaolong Li",
+            "Zhiyu li",
+            "Feiyu Xiong",
+            "Hongkang Yang",
+            "Yaoyu Zhang",
+            "Zhi-Qin John Xu"
+          ]
+        }
+      },
+      "tmdate": 1790067384638,
+      "pdate": 1777576580820,
+      "tcdate": 1769133216849,
+      "writers": [
+        "ICML.cc/2026/Conference",
+        "ICML.cc/2026/Conference/Submission19316/Authors"
+      ],
+      "signatures": [
+        "ICML.cc/2026/Conference/Submission19316/Authors"
+      ],
+      "forum": "STWQoscanw",
+      "license": "CC BY 4.0",
+      "number": 19316,
+      "cdate": 1769133216849,
+      "readers": [
+        "everyone"
+      ],
+      "invitations": [
+        "ICML.cc/2026/Conference/-/Submission",
+        "ICML.cc/2026/Conference/-/Post_Submission",
+        "ICML.cc/2026/Conference/Submission19316/-/Reciprocal_Reviewing_Correction",
+        "ICML.cc/2026/Conference/Submission19316/-/Full_Submission",
+        "ICML.cc/2026/Conference/-/Edit",
+        "ICML.cc/2026/Conference/Submission19316/-/Camera_Ready_Revision"
+      ],
+      "mdate": 1790067384638,
+      "odate": 1782341974240,
+      "domain": "ICML.cc/2026/Conference",
+      "id": "STWQoscanw",
+      "version": 2
+    },
+    {
+      "content": {
+        "submission_length": {
+          "value": "Regular submission (no more than 12 pages of main content)"
+        },
+        "venue": {
+          "value": "Accepted by TMLR"
+        },
+        "code": {
+          "value": "https://github.com/zhenxun-zhuang/AdamW-Scale-free"
+        },
+        "abstract": {
+          "value": "Adam has been widely adopted for training deep neural networks due to less hyperparameter tuning and remarkable performance. To improve generalization, Adam is typically used in tandem with a squared $\\ell_2$ regularizer (referred to as Adam-$\\ell_2$). However, even better performance can be obtained with AdamW, which decouples the gradient of the regularizer from the update rule of Adam-$\\ell_2$. Yet, we are still lacking a complete explanation of the advantages of AdamW. In this paper, we tackle this question from both an optimization and an empirical point of view. First, we show how to re-interpret AdamW as an approximation of a proximal gradient method, which takes advantage of the closed-form proximal mapping of the regularizer instead of only utilizing its gradient information as in Adam-$\\ell_2$. Next, we consider the property of \"scale-freeness\" enjoyed by AdamW and by its proximal counterpart: their updates are invariant to component-wise rescaling of the gradients. We provide empirical evidence across a wide range of deep learning experiments showing a correlation between the problems in which AdamW exhibits an advantage over Adam-$\\ell_2$ and the degree to which we expect the gradients of the network to exhibit multiple scales, thus motivating the hypothesis that the advantage of AdamW could be due to the scale-free updates."
+        },
+        "_bibtex": {
+          "value": "@article{\nzhuang2022understanding,\ntitle={Understanding AdamW through Proximal Methods and Scale-Freeness},\nauthor={Zhenxun Zhuang and Mingrui Liu and Ashok Cutkosky and Francesco Orabona},\njournal={Transactions on Machine Learning Research},\nissn={2835-8856},\nyear={2022},\nurl={https://openreview.net/forum?id=IKhEPWGdwK},\nnote={Expert Certification}\n}"
+        },
+        "title": {
+          "value": "Understanding AdamW through Proximal Methods and Scale-Freeness"
+        },
+        "certifications": {
+          "value": [
+            "Expert Certification"
+          ]
+        },
+        "license": {
+          "value": "Creative Commons Attribution 4.0 International (CC BY 4.0)"
+        },
+        "pdf": {
+          "value": "/pdf/bd3df6205037f97f4108993e7c51ad2779c7f4db.pdf"
+        },
+        "venueid": {
+          "value": "TMLR"
+        },
+        "paperhash": {
+          "value": "zhuang|understanding_adamw_through_proximal_methods_and_scalefreeness",
+          "readers": [
+            "everyone"
+          ]
+        },
+        "authorids": {
+          "readers": [
+            "everyone"
+          ],
+          "value": [
+            "~Zhenxun_Zhuang1",
+            "~Mingrui_Liu2",
+            "~Ashok_Cutkosky1",
+            "~Francesco_Orabona1"
+          ]
+        },
+        "expert_reviewers": {
+          "value": [
+            "~Ashok_Cutkosky1"
+          ]
+        },
+        "assigned_action_editor": {
+          "value": "~Lijun_Zhang1"
+        },
+        "authors": {
+          "readers": [
+            "everyone"
+          ],
+          "value": [
+            "Zhenxun Zhuang",
+            "Mingrui Liu",
+            "Ashok Cutkosky",
+            "Francesco Orabona"
+          ]
+        }
+      },
+      "tmdate": 1726599624798,
+      "pdate": 1660016682046,
+      "tcdate": 1654114697350,
+      "writers": [
+        "TMLR"
+      ],
+      "signatures": [
+        "TMLR/Paper147/Authors"
+      ],
+      "forum": "IKhEPWGdwK",
+      "number": 147,
+      "license": "CC BY 4.0",
+      "cdate": 1654114697350,
+      "mdate": 1726599624798,
+      "readers": [
+        "everyone"
+      ],
+      "invitations": [
+        "TMLR/-/Submission",
+        "TMLR/Paper147/-/Revision",
+        "TMLR/-/Under_Review",
+        "TMLR/Paper147/-/Submission_Editable",
+        "TMLR/Paper147/-/Camera_Ready_Revision",
+        "TMLR/-/Accepted",
+        "TMLR/-/Edit"
+      ],
+      "odate": 1654218086959,
+      "domain": "TMLR",
+      "id": "IKhEPWGdwK",
+      "version": 2
+    },
+    {
+      "content": {
+        "venue": {
+          "value": "ICLR 2027 Conference Submission"
+        },
+        "TLDR": {
+          "value": "Loss spike mitigation techniques that target the LM head subsequently also reduce quantization error."
+        },
+        "keywords": {
+          "value": [
+            "loss spikes",
+            "LLM pretraining",
+            "training instabilities",
+            "long horizon training"
+          ]
+        },
+        "primary_area": {
+          "value": "foundation or frontier models, including LLMs"
+        },
+        "abstract": {
+          "value": "Loss spikes in language model pretraining can waste substantial compute and derail otherwise healthy runs. A primary driver of loss spikes is the growth and divergence of output logits in the final language modeling (LM) head. In this work, we divide these training instabilities into two types: fast spikes that abruptly increase loss before recovering, and slow terminal divergences that emerge only after prolonged training, which we call time-bomb spikes. We build on observations that these instabilities stem from fundamental properties of the softmax cross-entropy loss and its interaction with Adam’s preconditioner. We observe that this interaction leads to LM head weight growth that may be harmless under exact arithmetic but can be destabilizing under finite-precision training and propose a simple optimization adjustment that ameliorates the issue. Furthermore, we show that various mitigation techniques from the literature (including our own) largely act on the shared underlying problem of logit growth by reducing quantization error in the LM head. Our work connects fast and time-bomb spikes and an array of prior methodological proposals through a common lens of analysis: controlling last-layer logit growth reduces finite-precision rounding error which is essential for stabilizing long pretraining runs."
+        },
+        "_bibtex": {
+          "value": "@inproceedings{\nanonymous2026spiking,\ntitle={Spiking, Fast and Slow: The Anatomy of Loss Spikes in Language Model Pretraining},\nauthor={Anonymous},\nbooktitle={Submitted to The Fifteenth International Conference on Learning Representations},\nyear={2026},\nurl={https://openreview.net/forum?id=ptNmbmCdj3},\nnote={under review}\n}"
+        },
+        "title": {
+          "value": "Spiking, Fast and Slow: The Anatomy of Loss Spikes in Language Model Pretraining"
+        },
+        "pdf": {
+          "value": "/pdf/f67e4dca06fc75a3ecbd8a4f1763826a63056b7f.pdf"
+        },
+        "venueid": {
+          "value": "ICLR.cc/2027/Conference/Submission"
+        }
+      },
+      "tmdate": 1791227543488,
+      "tcdate": 1789312275949,
+      "writers": [
+        "ICLR.cc/2027/Conference",
+        "ICLR.cc/2027/Conference/Submission16181/Authors"
+      ],
+      "signatures": [
+        "ICLR.cc/2027/Conference/Submission16181/Authors"
+      ],
+      "forum": "ptNmbmCdj3",
+      "license": "CC BY 4.0",
+      "number": 16181,
+      "cdate": 1789312275949,
+      "readers": [
+        "everyone"
+      ],
+      "invitations": [
+        "ICLR.cc/2027/Conference/-/Submission",
+        "ICLR.cc/2027/Conference/-/Submission_Change_Before_Bidding",
+        "ICLR.cc/2027/Conference/Submission16181/-/Full_Submission",
+        "ICLR.cc/2027/Conference/-/Submission_Change_Before_Reviewing",
+        "ICLR.cc/2027/Conference/-/Edit"
+      ],
+      "mdate": 1791227543488,
+      "odate": 1791031328286,
+      "domain": "ICLR.cc/2027/Conference",
+      "id": "ptNmbmCdj3",
+      "version": 2
+    },
+    {
+      "content": {
+        "venue": {
+          "value": "ICML 2024 Poster"
+        },
+        "abstract": {
+          "value": "Adam with decoupled weight decay, also known as AdamW, is widely acclaimed for its superior performance in language modeling tasks, surpassing Adam with $\\ell_2$ regularization in terms of generalization and optimization. However, this advantage is not theoretically well-understood. One challenge here is that though intuitively Adam with $\\ell_2$ regularization optimizes the $\\ell_2$ regularized loss, it is not clear if AdamW optimizes a specific objective. In this work, we make progress toward understanding the benefit of AdamW by showing that it implicitly performs constrained optimization. More concretely, we show in the full-batch setting, if AdamW converges with any non-increasing learning rate schedule whose partial sum diverges, it must converge to a KKT point of the original loss under the constraint that the $\\ell_\\infty$ norm of the parameter is bounded by the inverse of the weight decay factor. This result is built on the observation that Adam can be viewed as a smoothed version of SignGD, which is the normalized steepest descent with respect to $\\ell_\\infty$ norm, and a surprising connection between normalized steepest descent with weight decay and Frank-Wolfe."
+        },
+        "_bibtex": {
+          "value": "@inproceedings{\nxie2024implicit,\ntitle={Implicit Bias of AdamW: \\${\\textbackslash}ell\\_{\\textbackslash}infty\\$-Norm Constrained Optimization},\nauthor={Shuo Xie and Zhiyuan Li},\nbooktitle={Forty-first International Conference on Machine Learning},\nyear={2024},\nurl={https://openreview.net/forum?id=CmXkdlO6JJ}\n}"
+        },
+        "title": {
+          "value": "Implicit Bias of AdamW: $\\ell_\\infty$-Norm Constrained Optimization"
+        },
+        "pdf": {
+          "value": "/pdf/6b8c09295cd06adea7b347edf8e6a2576173ae94.pdf"
+        },
+        "venueid": {
+          "value": "ICML.cc/2024/Conference"
+        },
+        "paperhash": {
+          "value": "xie|implicit_bias_of_adamw_\\ell_\\inftynorm_constrained_optimization"
+        },
+        "authorids": {
+          "value": [
+            "~Shuo_Xie2",
+            "~Zhiyuan_Li2"
+          ]
+        },
+        "authors": {
+          "value": [
+            "Shuo Xie",
+            "Zhiyuan Li"
+          ]
+        }
+      },
+      "tmdate": 1719287255625,
+      "pdate": 1714610381941,
+      "tcdate": 1706780763782,
+      "writers": [
+        "ICML.cc/2024/Conference",
+        "ICML.cc/2024/Conference/Submission5152/Authors"
+      ],
+      "signatures": [
+        "ICML.cc/2024/Conference/Submission5152/Authors"
+      ],
+      "forum": "CmXkdlO6JJ",
+      "license": "CC BY 4.0",
+      "number": 5152,
+      "cdate": 1706780763782,
+      "readers": [
+        "everyone"
+      ],
+      "invitations": [
+        "ICML.cc/2024/Conference/-/Submission",
+        "ICML.cc/2024/Conference/-/Post_Submission",
+        "ICML.cc/2024/Conference/-/Edit",
+        "ICML.cc/2024/Conference/Submission5152/-/Camera_Ready_Revision"
+      ],
+      "mdate": 1719287255625,
+      "odate": 1717693061847,
+      "domain": "ICML.cc/2024/Conference",
+      "id": "CmXkdlO6JJ",
+      "version": 2
+    }
+  ],
+  "count": 10000
+}

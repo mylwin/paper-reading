@@ -1,0 +1,23 @@
+{
+  "papers_dir": "/Users/myl/Documents/paper/01-raw",
+  "month_dir": "/Users/myl/Documents/paper/01-raw/2026-10",
+  "month": "2026-10",
+  "date": "2026-10-11",
+  "requested": 1,
+  "downloaded": 0,
+  "skipped_existing": 0,
+  "failed": 1,
+  "index_updated": [],
+  "archived": [
+    {
+      "title": "Understanding and Mitigating AdamW Loss Spikes",
+      "paper_stem": "Understanding_and_Mitigating_AdamW_Loss_Spikes",
+      "month": "2026-10",
+      "source": "openreview",
+      "pdf_url": "https://openreview.net/pdf?id=pAjrfibDB9",
+      "path": "/Users/myl/Documents/paper/01-raw/2026-10/Understanding_and_Mitigating_AdamW_Loss_Spikes.pdf",
+      "status": "failed",
+      "detail": "HTTP 403"
+    }
+  ]
+}

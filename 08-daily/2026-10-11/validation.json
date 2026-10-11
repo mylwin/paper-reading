@@ -1,0 +1,33 @@
+{
+  "date": "2026-10-11",
+  "scope": "本次日报与新增PDF",
+  "status": "passed",
+  "unique_candidates": 303,
+  "known": 78,
+  "recommended": 10,
+  "pdf_downloaded": 2,
+  "pdf_failed": 1,
+  "checks": [
+    "原始候选集合、预筛分与screening_rank保留",
+    "前三篇原始英文摘要一致；完整中文翻译逐项核对",
+    "复排理由及semantic_rank完整",
+    "附录303篇各出现一次",
+    "本次日报所有本地链接有效",
+    "新增PDF魔数正确，无.part",
+    "四阶段索引刷新，新增论文待处理状态登记"
+  ],
+  "daily_link_errors": 0,
+  "workspace_check": {
+    "preexisting_link_errors": 9,
+    "missing_readme": 0,
+    "month_consistency_errors": 0,
+    "detail": "9处在2026-10-08和2026-10-10调研文档，涉及外部graduate-thesis-code路径，超出今日检索范围"
+  },
+  "source_limitations": {
+    "arxiv": "最近30天按相关性最多200条，非穷尽",
+    "openreview": "15个配置关键词逐词第1页100条，有截断；日期缺失条目保留",
+    "semantic_scholar": "近一年请求2次HTTP429，无补充结果或引用量",
+    "focus": "optimizer,Muon,AdamW,preconditioner,spectral,optimizer state；在同一池上重预筛，未新增主题",
+    "assessment_scope": "metadata_and_abstract"
+  }
+}

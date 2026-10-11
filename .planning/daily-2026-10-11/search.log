@@ -1,0 +1,60 @@
+14:29:56 [INFO] Loading config from: /Users/myl/Documents/paper/.claude/skills/config.yaml
+14:29:56 [INFO] max-results=200 top-n=10 days=30
+14:29:56 [INFO] Data sources: ['arxiv', 'openreview']
+14:29:56 [INFO] Configured keywords: 15
+14:29:56 [INFO] Target date: 2026-10-11
+14:29:56 [INFO] Date windows:
+14:29:56 [INFO]   Recent 30 days: 2026-09-11 to 2026-10-11
+14:29:56 [INFO]   Past year (31-365 days): 2025-10-11 to 2026-09-10
+14:29:56 [INFO] ======================================================================
+14:29:56 [INFO] Step 1: Multi-source search (last 30 days) for configured interests
+14:29:56 [INFO] ======================================================================
+14:29:56 [INFO] [arXiv] Keyword search batch 1/1 (15 keywords)
+14:29:56 [INFO] [arXiv] Keyword search: ['large language model optimizer', 'LLM optimizer', 'optimizer design', 'memory-efficient optimizer', 'optimizer state memory', 'adaptive optimization', 'sign-based optimization', 'SignSGD', 'Muon', 'PowerStep', 'gradient clipping', 'parameter-free optimization', 'Polyak stepsize', 'lp-norm steepest descent', 'AdamW']
+14:30:00 [INFO] [arXiv] Keyword search found 200 papers
+14:30:00 [INFO] [arXiv] Keyword search found 200 papers across all batches
+OpenReview coverage: {"term": "large language model optimizer", "page_limit": 1, "page_size": 100, "retrieved": 100, "in_window": 14, "truncated": true, "status": "ok"}
+OpenReview coverage: {"term": "LLM optimizer", "page_limit": 1, "page_size": 100, "retrieved": 100, "in_window": 5, "truncated": true, "status": "ok"}
+OpenReview coverage: {"term": "optimizer design", "page_limit": 1, "page_size": 100, "retrieved": 100, "in_window": 17, "truncated": true, "status": "ok"}
+OpenReview coverage: {"term": "memory-efficient optimizer", "page_limit": 1, "page_size": 100, "retrieved": 100, "in_window": 17, "truncated": true, "status": "ok"}
+OpenReview coverage: {"term": "optimizer state memory", "page_limit": 1, "page_size": 100, "retrieved": 100, "in_window": 25, "truncated": true, "status": "ok"}
+OpenReview coverage: {"term": "adaptive optimization", "page_limit": 1, "page_size": 100, "retrieved": 100, "in_window": 10, "truncated": true, "status": "ok"}
+OpenReview coverage: {"term": "sign-based optimization", "page_limit": 1, "page_size": 100, "retrieved": 100, "in_window": 6, "truncated": true, "status": "ok"}
+OpenReview coverage: {"term": "SignSGD", "page_limit": 1, "page_size": 100, "retrieved": 93, "in_window": 12, "truncated": false, "status": "ok"}
+OpenReview coverage: {"term": "Muon", "page_limit": 1, "page_size": 100, "retrieved": 100, "in_window": 45, "truncated": true, "status": "ok"}
+OpenReview coverage: {"term": "PowerStep", "page_limit": 1, "page_size": 100, "retrieved": 3, "in_window": 2, "truncated": false, "status": "ok"}
+OpenReview coverage: {"term": "gradient clipping", "page_limit": 1, "page_size": 100, "retrieved": 100, "in_window": 9, "truncated": true, "status": "ok"}
+OpenReview coverage: {"term": "parameter-free optimization", "page_limit": 1, "page_size": 100, "retrieved": 100, "in_window": 6, "truncated": true, "status": "ok"}
+OpenReview coverage: {"term": "Polyak stepsize", "page_limit": 1, "page_size": 100, "retrieved": 100, "in_window": 6, "truncated": true, "status": "ok"}
+OpenReview coverage: {"term": "lp-norm steepest descent", "page_limit": 1, "page_size": 100, "retrieved": 100, "in_window": 10, "truncated": true, "status": "ok"}
+OpenReview coverage: {"term": "AdamW", "page_limit": 1, "page_size": 100, "retrieved": 100, "in_window": 41, "truncated": true, "status": "ok"}
+14:30:14 [INFO] [Sources] Fetched {'arxiv': 200, 'openreview': 164}
+14:30:14 [INFO] Scored 291 recent papers
+14:30:14 [INFO] ======================================================================
+14:30:14 [INFO] Step 2: Searching hot papers (past year) from Semantic Scholar
+14:30:14 [INFO] ======================================================================
+14:30:14 [INFO] [S2] Searching hot papers from 2025-10-11 to 2026-09-10
+14:30:14 [INFO] [S2] Query: 'large language model optimizer LLM optimizer optimizer design'
+14:30:16 [WARNING] [S2] Error (attempt 1/2): 429 Client Error:  for url: https://api.semanticscholar.org/graph/v1/paper/search?query=large+language+model+optimizer+LLM+optimizer+optimizer+design&publicationDateOrYear=2025-10-11%3A2026-09-10&limit=100&fields=title%2Cabstract%2CpublicationDate%2CcitationCount%2CinfluentialCitationCount%2Curl%2Cauthors%2Cauthors.affiliations%2CexternalIds
+14:30:16 [WARNING] [S2] Rate limit hit. Waiting 10 seconds...
+14:30:28 [WARNING] [S2] Error (attempt 2/2): 429 Client Error:  for url: https://api.semanticscholar.org/graph/v1/paper/search?query=large+language+model+optimizer+LLM+optimizer+optimizer+design&publicationDateOrYear=2025-10-11%3A2026-09-10&limit=100&fields=title%2Cabstract%2CpublicationDate%2CcitationCount%2CinfluentialCitationCount%2Curl%2Cauthors%2Cauthors.affiliations%2CexternalIds
+14:30:28 [ERROR] [S2] Failed after 2 attempts
+14:30:31 [WARNING] No hot papers found from Semantic Scholar
+14:30:31 [INFO] ======================================================================
+14:30:31 [INFO] Step 3: Merging and ranking results
+14:30:31 [INFO] ======================================================================
+14:30:31 [INFO] Total unique papers after deduplication: 270
+14:30:31 [INFO] daily history: 302 previously recommended papers
+14:30:31 [INFO] Known-library scan: 66 papers already in library, 261 papers have related prior work
+14:30:31 [INFO] Results saved to: 08-daily/2026-10-11/search_result.json
+14:30:31 [INFO]   1. Commutator Memory: Sparse, Path-Local Reading and Steering i... (Score: 8.4)
+14:30:31 [INFO]   2. Sampling Allocation of LinUCB: Optimal Design Limits in the ... (Score: 8.27)
+14:30:31 [INFO]   3. LLMs as Adaptive Meta-Solvers: Strategy-Diverse RL for Indus... (Score: 8.0)
+14:30:31 [INFO]   4. Does Step Law Transfer to Small-Scale Language Models? An Em... (Score: 8.0)
+14:30:31 [INFO]   5. Training-Loss Guarantees for Muon with Finite-Step Newton--S... (Score: 7.93)
+14:30:31 [INFO]   6. From Geometry to Generalization: Why Row Normalization Can B... (Score: 7.93)
+14:30:31 [INFO]   7. Orthogonal Witness Control for Muon Optimization via Sigmoid... (Score: 7.93)
+14:30:31 [INFO]   8. Benign Overfitting for General Norms and Distributions... (Score: 7.93)
+14:30:31 [INFO]   9. Can Representation Learning Decouple from Loss Minimization?... (Score: 7.87)
+14:30:31 [INFO]   10. Does Muon Need Fine-Grained Spectral Shaping?... (Score: 7.8)
+14:30:31 [INFO] （另有 66 篇已在知识库中，未计入推荐）

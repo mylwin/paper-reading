@@ -1,0 +1,36 @@
+14:30:57 [INFO] Focus keywords: ['optimizer', 'Muon', 'AdamW', 'preconditioner', 'spectral', 'optimizer state']
+14:30:57 [INFO] Loading config from: /Users/myl/Documents/paper/.claude/skills/config.yaml
+14:30:57 [INFO] max-results=200 top-n=10 days=30
+14:30:57 [INFO] Data sources: ['arxiv', 'openreview']
+14:30:57 [INFO] Configured keywords: 15
+14:30:57 [INFO] Target date: 2026-10-11
+14:30:57 [INFO] Date windows:
+14:30:57 [INFO]   Recent 30 days: 2026-09-11 to 2026-10-11
+14:30:57 [INFO]   Past year (31-365 days): 2025-10-11 to 2026-09-10
+14:30:57 [INFO] ======================================================================
+14:30:57 [INFO] Step 1 (Focus): Multi-source keyword search for: ['optimizer', 'Muon', 'AdamW', 'preconditioner', 'spectral', 'optimizer state']
+14:30:57 [INFO] ======================================================================
+14:30:57 [INFO] Focus data sources: ['arxiv', 'openreview']
+14:30:57 [INFO] [Sources] Fetched {'arxiv': 200, 'openreview': 164}
+14:30:57 [INFO] Scored 325 focus keyword papers
+14:30:57 [INFO] ======================================================================
+14:30:57 [INFO] Step 2 (Focus): Searching hot papers for focus keywords from Semantic Scholar
+14:30:57 [INFO] ======================================================================
+14:30:57 [INFO] ======================================================================
+14:30:57 [INFO] Step 3: Merging and ranking results
+14:30:57 [INFO] ======================================================================
+14:30:57 [INFO] Total unique papers after deduplication: 303
+14:30:57 [INFO] daily history: 312 previously recommended papers
+14:30:58 [INFO] Known-library scan: 78 papers already in library, 294 papers have related prior work
+14:30:58 [INFO] Results saved to: .planning/daily-2026-10-11/focus-screening-result.json
+14:30:58 [INFO]   1. The Conflict Between Logic and Memory: Training Conditions f... (Score: 8.13)
+14:30:58 [INFO]   2. NS-ATTENTION: Newton-Schulz Transformations of Attention Out... (Score: 8.13)
+14:30:58 [INFO]   3. Accelerating Muon with Spectral Residual Correction... (Score: 8.13)
+14:30:58 [INFO]   4. Does Muon's Pretraining Advantage Over Adam Survive Fine-Tun... (Score: 8.13)
+14:30:58 [INFO]   5. Understanding and Mitigating AdamW Loss Spikes... (Score: 8.13)
+14:30:58 [INFO]   6. Optimizing Large Language Models with Chained LMOs... (Score: 8.0)
+14:30:58 [INFO]   7. Beyond Non-Zero Initialization: Investigating Update Balance... (Score: 8.0)
+14:30:58 [INFO]   8. ISO: An RLVR-Native Optimization Stack... (Score: 8.0)
+14:30:58 [INFO]   9. Optimizer-dependent training dynamics converge to the same o... (Score: 7.93)
+14:30:58 [INFO]   10. Cost-free Spectral Estimation for Adaptive Newton--Schulz in... (Score: 7.93)
+14:30:58 [INFO] （另有 78 篇已在知识库中，未计入推荐）

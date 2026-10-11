@@ -1,0 +1,132 @@
+import json
+import sys
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[2]
+DAY = ROOT / '08-daily/2026-10-11'
+sys.path.insert(0, str(ROOT / '.claude/skills/paper-daily/scripts'))
+import paper_config as pc
+
+data = json.loads((DAY / 'search_result.json').read_text())
+top = data['top_papers']
+analyses = {
+    top[0]['title']: {
+        'title_zh': '理解并缓解 AdamW 的损失尖峰',
+        'summary': '将裁剪对象从原始梯度移到归一化后的自适应更新，并同时限制坐标尾部和张量相对增长，用以控制 AdamW 损失尖峰。',
+        'abstract_zh': r'''即使使用梯度裁剪，损失尖峰也可能扰乱 AdamW 训练。一阶矩与二阶矩的时间尺度不匹配，可能使动量增长超出其归一化量的增长，从而放大自适应更新（$u_t=m_t/(\sqrt{v_t}+\epsilon)$）。我们研究更新的幅度及其分配如何影响即时损失。在三次 GPT-2 355M 运行中，以单位阈值 $|u_{t,i}|=|m_{t,i}/(\sqrt{v_{t,i}}+\epsilon)|>1$ 为界，在捕获的 19 个损失尖峰起始状态中，新越过该阈值的坐标比例中位数为 0.571%，而在九个普通状态中为 0.0033%（超过 $170\times$）。在全部 19 个状态下，全局缩小自适应更新都降低了即时损失，而在相同范数下，选择性限制新进入尾部的坐标还能进一步改善。张量相对历史有助于分配衰减，重放实验更支持持续控制，而非仅在起始时控制。这些发现促使我们提出 \method{}，它将坐标裁剪与张量相对增长约束轻量而有效地结合起来，额外优化器状态开销可忽略，且不需要额外前向或反向传播。每种配置进行三次 GPT-2 774M 运行时，它将预热后的尖峰事件从 17 次减少到零，并将平均验证损失从 2.916 改善至 2.856。半学习率对照和全局范数匹配对照在验证表现相近的情况下仍出现尖峰。双重控制在测试的更大 NanoGPT 和 Qwen3 模型上同样实现了零次预热后尖峰，支持其跨架构迁移。''',
+        'contributions': [
+            '作者将一阶/二阶矩时标不匹配与归一化更新尾部扩张联系起来，并报告尖峰起始状态与普通状态的坐标越界差异。',
+            '作者通过即时干预、等范数分配对照和重放实验，提出坐标裁剪与张量相对增长约束的联合控制；摘要未展开方法名宏。'
+        ],
+        'method': '先在已捕获状态上缩小或重新分配 AdamW 自适应更新，区分总幅度和新尾部坐标的作用，再把持续坐标控制与张量历史控制结合。这里控制的是 m/√v 后的更新，不应与裁剪 g 的机制混同。',
+        'result': '摘要报告 GPT-2 355M 三次运行中的19个尖峰起始与9个普通状态；GPT-2 774M 每配置三次运行中，预热后尖峰17→0、平均验证损失2.916→2.856；半学习率与等全局范数对照仍有尖峰。更大 NanoGPT/Qwen3 仅报告零尖峰，未给出具体规模和损失。',
+        'selection_reason': '直接命中梯度裁剪与自适应更新设计。相对已有 Parameter-Free Clipped Gradient Descent Meets Polyak，新增问题是预条件化之后的异常更新，不能用原梯度界限直接替代。最小验证可先记录新尾部比例，再做等更新范数的坐标重分配对照，成本低于完整大模型预训练。',
+        'evidence_limit': '当前依据 OpenReview 原始摘要，低置信度初步判断，待全文核验。匿名 ICLR 2027 投稿不等于录用。需核对尖峰定义、阈值与超参是否通过同一验证预算选择、19/9个状态的抽样是否存在选择偏差、持续控制所需的张量历史状态、β1/β2与已有裁剪设置，以及三种子方差和更大模型规模。摘要保留未展开的 \\method{}，不猜测算法名称；当前 PDF 取得状态另见今日落盘。',
+        'reading_decision': '精读'
+    },
+    top[1]['title']: {
+        'title_zh': '利用链式线性最小化预言机优化大语言模型',
+        'summary': '把矩阵归一化的组合写成链式 LMO，区分可能发散的组合与在各向异性嵌入下有效的组合，并用跨层张量更新验证。',
+        'abstract_zh': '''Muon 推动了不断壮大的优化器家族，这些优化器组合多个矩阵归一化操作，但这些方法仍较为分散，缺乏统一视角。我们提出链式线性最小化预言机（chained linear minimization oracles，chained LMOs），将这些方法表述为 LMO 的组合。尽管它们在经验上取得成功，许多链式组合仍不属于标准 LMO 框架，并且可能在光滑凸目标上发散。为解释为什么组合仍可能有帮助，我们转向线性关联记忆，并表明在各向异性嵌入下，链式组合可以优于 Muon。在实证方面，我们提出该框架内的新优化器 TensorChain：它将不同层中兼容的权重矩阵堆叠起来，并沿各轴归一化所得的三维张量。在 Qwen3 0.6B 和 1.7B 预训练中，TensorChain 的平均 token 效率优于所有链式基线；在匹配验证损失时，相对 Muon 平均节省 9.6% 的 token。''',
+        'contributions': [
+            '作者用 chained LMOs 统一矩阵归一化组合，并指出部分组合在光滑凸目标上也可能发散。',
+            '作者在线性关联记忆中解释各向异性嵌入下的组合收益，并提出跨层堆叠、按轴归一化的 TensorChain。'
+        ],
+        'method': '将不同归一化算子视为 LMO 链，先审查组合是否保持标准 LMO 的下降性质，再在有各向异性结构的记忆任务和 Qwen3 预训练中考察收益。TensorChain 对兼容矩阵做跨层张量堆叠；摘要没有交代具体兼容规则或各轴处理顺序。',
+        'result': '摘要给出光滑凸目标上的潜在发散、各向异性嵌入下优于 Muon 的线性关联记忆结果，以及 Qwen3 0.6B/1.7B 匹配验证损失下平均9.6%的token节省。token效率不自动意味着墙钟或显存效率。',
+        'selection_reason': '与昨日 Sign compression for Muon 的算子组合反例形成直接对照，将符号/谱算子位置问题扩展为一般 LMO 链。相对已精读 PowerStep 的单一范数最陡下降，可检验组合是否仍对应同一个可行域、是否破坏下降，而非仅比较验证损失。',
+        'evidence_limit': '当前依据 arXiv 2610.10975v1 原始摘要与作者/版本元数据，低置信度初步判断，待全文核验。需读发散构造的步长与光滑性条件、线性关联记忆的嵌入假设、兼容矩阵堆叠规则、不同维度下的归一化尺度、Qwen3基线调参与随机种子，以及额外通信/堆叠成本。不能将存在发散反例解释成所有链式优化器或实际LLM训练必然发散。首次提交2026-10-07，属于今日新增推荐而非今日首发。',
+        'reading_decision': '精读'
+    },
+    top[2]['title']: {
+        'title_zh': '矩阵优化器中自适应 Newton–Schulz 的无额外矩阵乘法谱估计',
+        'summary': '复用 Newton–Schulz 内部 Gram 矩阵的谱矩，为各层和训练时刻选择多项式，减少固定迭代预算下的正交化误差。',
+        'abstract_zh': '''Muon 等矩阵优化器通过近似正交化变换每个动量矩阵，通常以少量 Newton–Schulz 矩阵乘法实现。该近似的质量和成本强烈依赖输入的奇异值谱，但现有实现对每一层及整个训练过程使用相同的固定多项式程序。我们表明，这种统一处理并非必要：Newton–Schulz 方法中的计算已经揭示了足以使该方法自适应的信息。Newton–Schulz 迭代内部形成的 Gram 矩阵，通过低成本的标量归约即可给出谱矩，无需额外矩阵乘法。利用这些谱矩，我们恢复经验奇异值分布的估计，并据此选择针对当前矩阵的多项式程序。这使 Newton–Schulz 正交化成为一种谱自适应过程，能够响应不同层之间及训练时间上的差异。在保存的动量矩阵上，谱估计在固定迭代预算下显著降低正交化误差，或者用更少迭代达到相同精度；在最大 1B 参数的 GPT 预训练中，它降低了两种矩阵优化器的验证损失。我们的结果表明，优化器内部的矩阵函数操作不必针对保守的最坏情形谱来设计：它们可以低成本地测量自己正在处理的谱，并据此针对性地调整计算。''',
+        'contributions': [
+            '作者提出复用 Newton–Schulz 已有 Gram 矩阵，以标量归约估计谱矩和经验奇异值分布，无需额外矩阵乘法。',
+            '作者按层和训练时刻选择多项式程序，并分别报告保存动量矩阵上的近似误差结果及 GPT 训练中的验证损失改善。'
+        ],
+        'method': '从迭代内已有中间量提取谱矩，估计经验奇异值分布，然后选择适配该输入谱的多项式。相比改目标谱的 Soren/Freon，这里优先改变计算该谱变换的近似过程；需全文确认估计器与选择规则。',
+        'result': '摘要报告固定预算误差下降或相同精度更少迭代，以及最大1B GPT上两种矩阵优化器的验证损失下降；未给误差比例、损失差值或端到端加速数字。“Cost-free”仅由无需新增矩阵乘法这一机制支持，归约与选择仍有开销。',
+        'selection_reason': '对优化器设计提供可迁移的计算组件，与今日链式LMO改变更新几何的方向互补。可与已有有限Newton–Schulz分析及昨日Turbo-Muon对照：分别问近似误差是否影响方向、如何利用实际谱省计算、是否取得真实端到端收益。先在已保存动量矩阵上验证，复现成本相对低。',
+        'evidence_limit': '当前依据 arXiv 2609.33047v1 原始摘要与作者/版本元数据，低置信度初步判断，待全文核验。需核对少量谱矩能否可靠区分长尾/多峰分布，估计器在低精度和秩亏矩阵上的误差、多项式选择稳定性、两种优化器具体名称、GPU归约/同步成本、调参预算和多种子结果。更少矩阵乘法不自动等于端到端加速；未声称减少优化器状态内存。首次提交2026-09-27，属于今日新增推荐而非今日首发。',
+        'reading_decision': '选读'
+    }
+}
+
+rest = [
+    'AIMuon对梯度–动量残差另做matrix-sign变换，再以核范数加权校正参数步；GPT-2 small/medium报告12.8%/7.7%更少步数，需核算第二次谱变换是否抵消墙钟收益。',
+    'Qwen3-4B全参数微调中，辅助AdamW组学习率调好后Muon与Adam接近；四数据集及权重衰减置信区间值得用于设计公平基线，但结论限于微调。',
+    'ISO在固定基模型谱下优化输入/输出奇异框架，Qwen3-4B-Base报告280步达到AdamW400步准确率、少27%墙钟；需核对RLVR预算和谱冻结边界，摘要1.5×与400/280约1.43有取整差异。',
+    '结构化LoRA初始化的互逆因子缩放保持初始适配器不变却改变更新分配；SignSGD规则限于各向同性高斯输入，AdamW探针的迁移代价和九组实证需核验。',
+    '干扰连接权重可训练性改变SGD/Adam/Muon的规则学习优势；共同验证选择协议提供对照价值，但单隐层ReLU与LLM优化器设计的迁移仍间接。',
+    '教师–学生模型区分每步动态指数和最优数据指数，七种优化器报告2α_r+α_t=1与D^-1/3；有助于避免把有限预算动态收益称为改变普适标度律。',
+    'NS-Attn将NS作用于注意力表示，12组ViT/Swin配对种子报告0.25–0.83百分点收益并增加推理延迟；它是模型表示变换，暂作谱机制跟踪，非优先优化器改造。'
+]
+for paper, summary in zip(top[3:], rest):
+    analyses[paper['title']] = {'summary': summary}
+
+# Resolve scientifically relevant neighbors from actual assets, not title-word overlap.
+known = []
+for root in ['03-notes', '01-raw']:
+    pattern = '**/精读.md' if root == '03-notes' else '**/*.pdf'
+    for path in (ROOT / root).glob(pattern):
+        stem = path.parent.name if root == '03-notes' else path.stem
+        known.append((pc.clean_stem(stem), path))
+neighbors = [
+    [('Parameter-Free Clipped Gradient Descent Meets Polyak', '裁剪与步长；本篇额外考察预条件化后更新'),
+     ('Beyond Quadratic Loss: The Stability Phase Diagram of Adam', 'Adam稳定性；不同问题与证据类型')],
+    [('LionMuon: Alternating Spectral and Sign Descent for Efficient Training', '谱方向与符号方向的组合；交替与链式组合不同'),
+     ('PowerStep: Memory Efficient Adaptive Optimization via lp-Norm Steepest Descent', '范数几何与最陡下降')],
+    [('Muon with Finite Newton-Schulz: The Smoothing Benefit in Nonsmooth Nonconvex Optimization', '有限迭代近似的影响')]
+]
+for paper, specs in zip(top[:3], neighbors):
+    related = []
+    for title, shared in specs:
+        norm = pc.clean_stem(title)
+        matches = [path for key, path in known if key == norm]
+        if matches:
+            related.append({'title': title, 'path': str(matches[0]), 'shared_terms': [shared]})
+        else:
+            print('Neighbor absent:', title)
+    paper['related_papers'] = related
+    for entry in data['all_papers']:
+        if entry['title'] == paper['title']:
+            entry['related_papers'] = related
+
+editorial = {
+    'overview': {
+        'trend': '本次围绕大模型优化器设计，优先读更新稳定性、归一化算子的组合边界，以及按实际谱选择正交化计算三个互补问题。303篇是关键词候选，并非303篇直接相关研究；78篇命中已有资产或历史推荐，225篇未命中，推荐10篇。检索日为2026-10-11，前三篇是今日新增推荐，首发日期分别为9月18日、10月7日、9月27日。以下判断仅依据题目与摘要，待全文核验。',
+        'hotspots': [
+            {'title': '来源覆盖边界', 'text': '最近30天窗口2026-09-11至2026-10-11。arXiv按相关性最多200条；OpenReview逐一查询配置15关键词，每词仅第1页100条，有截断且未穷尽。候选最新arXiv提交为10月8日，不能断言此后无新论文。过去一年窗口2025-10-11至2026-09-10的Semantic Scholar两次HTTP429，缺少引用与高影响力补充。'},
+            {'title': '从原梯度控制到实际更新控制', 'text': 'AdamW损失尖峰候选提示裁剪g不足以直接约束m/√v；摘要给出等更新范数的分配对照。后续重点验证收益来自异常坐标限制、时标匹配还是更保守的有效步长。'},
+            {'title': '组合几何与近似计算分开检查', 'text': 'TensorChain改变归一化组合及跨层耦合，谱估计改变NS计算程序，AIMuon改变参数步校正。分别检查下降方向、近似误差和总计算预算，避免将token/步数节省直接写为墙钟收益。'}
+        ]
+    },
+    'domain_summaries': {
+        '大模型优化器设计': {
+            'summary': '今日推荐主要覆盖AdamW更新稳定性、Muon方向组合及NS近似计算；微调超参、LoRA因子尺度和RLVR固定谱提供不同训练阶段的对照。部分宽泛词匹配和粒子物理Muon仍保留在附录，但不据此判断领域趋势。',
+            'subfields': {
+                '符号与范数几何优化': '链式LMO从算子组合解释Muon变体，AIMuon以谱残差校正参数步；两者首先核验下降条件和额外矩阵计算。Cost-free谱估计则针对NS多项式近似，属于实现层面的互补。',
+                '免调参与梯度裁剪': 'AdamW损失尖峰控制直接命中梯度裁剪边界；摘要中的双控制有新增阈值/历史规则，不因没有额外前后向就称免调参。',
+                '自适应与状态内存': '微调Muon辅助AdamW学习率、LoRA因子尺度与ISO帧变量更新覆盖自适应设计。今日前三没有直接报告状态内存压缩比例，不能把少迭代或低开销等同于省状态。',
+                '大模型训练与优化器设计': 'Qwen3预训练、全参数微调、RLVR与结构化LoRA的训练目标与预算不同，阅读时分别固定token、墙钟、随机种子和调参预算；合并排序不意味着可跨任务直接比较。',
+                '未细分': '仅共享宽泛优化/类别词的条目缺乏直接命中所配置子方向的证据；保持候选身份，避免从分类匹配扩大推荐范围。'
+            }
+        }
+    },
+    'top_papers': analyses,
+    'semantic_reranking': [
+        {'title': x['title'], 'screening_rank': x['screening_rank'],
+         'candidate_screening_rank': x['candidate_screening_rank'], 'semantic_rank': x['semantic_rank'],
+         'reason': analyses[x['title']].get('selection_reason') or analyses[x['title']]['summary'],
+         'assessment_scope': 'metadata_and_abstract'} for x in top
+    ],
+    'abstract_translation_audit': {
+        'source': '前三篇原始摘要完整翻译，CC BY 4.0许可已通过原始记录或arXiv许可链接核验；题目、作者/匿名状态和原文入口均注明，中文为翻译改编。',
+        'checked': ['保持原始信息顺序', 'AdamW更新公式与阈值', '355M/774M与三次运行', '19/9状态、0.571%/0.0033%、170×', '17→0与2.916→2.856', '未展开method宏保留', 'Qwen3 0.6B/1.7B与9.6%token', '最大1B、两种优化器与无新增矩阵乘法限定']
+    }
+}
+(DAY / 'search_result.json').write_text(json.dumps(data, ensure_ascii=False, indent=2) + '\n')
+(DAY / 'daily-editorial.json').write_text(json.dumps(editorial, ensure_ascii=False, indent=2) + '\n')
+print('Editorial saved; semantic order and original scores retained.')
