@@ -1,0 +1,64 @@
+{
+  "papers_dir": "/Users/myl/Documents/paper/01-raw",
+  "month_dir": "/Users/myl/Documents/paper/01-raw/2026-10",
+  "month": "2026-10",
+  "date": "2026-10-11",
+  "requested": 3,
+  "downloaded": 2,
+  "skipped_existing": 0,
+  "failed": 1,
+  "index_updated": [
+    "/Users/myl/Documents/paper/01-raw/index.md",
+    "/Users/myl/Documents/paper/01-raw/2026-10/README.md",
+    "/Users/myl/Documents/paper/02-markdown/index.md",
+    "/Users/myl/Documents/paper/02-markdown/2026-10/README.md",
+    "/Users/myl/Documents/paper/03-notes/index.md",
+    "/Users/myl/Documents/paper/03-notes/2026-10/README.md",
+    "/Users/myl/Documents/paper/06-translation/index.md",
+    "/Users/myl/Documents/paper/06-translation/2026-10/README.md"
+  ],
+  "archived": [
+    {
+      "title": "Understanding and Mitigating AdamW Loss Spikes",
+      "paper_stem": "Understanding_and_Mitigating_AdamW_Loss_Spikes",
+      "month": "2026-10",
+      "source": "openreview",
+      "pdf_url": "https://openreview.net/pdf/aef6c0effe13564ce0f07c63b7610d9b6b7ce3a5.pdf",
+      "path": "/Users/myl/Documents/paper/01-raw/2026-10/Understanding_and_Mitigating_AdamW_Loss_Spikes.pdf",
+      "status": "failed",
+      "detail": "HTTP 403"
+    },
+    {
+      "title": "Optimizing Large Language Models with Chained LMOs",
+      "paper_stem": "Optimizing_Large_Language_Models_with_Chained_LMOs",
+      "month": "2026-10",
+      "source": "arxiv",
+      "pdf_url": "https://arxiv.org/pdf/2610.10975v1",
+      "path": "/Users/myl/Documents/paper/01-raw/2026-10/Optimizing_Large_Language_Models_with_Chained_LMOs.pdf",
+      "status": "downloaded",
+      "detail": "3017.4 KB"
+    },
+    {
+      "title": "Cost-free Spectral Estimation for Adaptive Newton--Schulz in Matrix Optimizers",
+      "paper_stem": "Cost_free_Spectral_Estimation_for_Adaptive_Newton_Schulz_in_Matrix_Optimizers",
+      "month": "2026-10",
+      "source": "arxiv",
+      "pdf_url": "https://arxiv.org/pdf/2609.33047v1",
+      "path": "/Users/myl/Documents/paper/01-raw/2026-10/Cost_free_Spectral_Estimation_for_Adaptive_Newton_Schulz_in_Matrix_Optimizers.pdf",
+      "status": "downloaded",
+      "detail": "2695.0 KB"
+    }
+  ],
+  "additional_attempts": [
+    {
+      "title": "Understanding and Mitigating AdamW Loss Spikes",
+      "paper_stem": "Understanding_and_Mitigating_AdamW_Loss_Spikes",
+      "month": "2026-10",
+      "source": "openreview",
+      "pdf_url": "https://openreview.net/pdf?id=pAjrfibDB9",
+      "path": "/Users/myl/Documents/paper/01-raw/2026-10/Understanding_and_Mitigating_AdamW_Loss_Spikes.pdf",
+      "status": "failed",
+      "detail": "HTTP 403"
+    }
+  ]
+}

@@ -1,0 +1,119 @@
+{
+  "date": "2026-10-11",
+  "note_file": "今日检索.md",
+  "generated_at": "2026-10-11T17:46:53",
+  "skill": "paper-daily",
+  "sources_searched": [
+    "arxiv",
+    "openreview",
+    "semantic_scholar"
+  ],
+  "source_counts": {
+    "arxiv": 200,
+    "openreview": 164,
+    "semantic_scholar": 0
+  },
+  "date_windows": {
+    "recent_30d": {
+      "start": "2026-09-11",
+      "end": "2026-10-11"
+    },
+    "past_year": {
+      "start": "2025-10-11",
+      "end": "2026-09-10"
+    }
+  },
+  "total_unique": 303,
+  "top_papers": [
+    {
+      "title": "Understanding and Mitigating AdamW Loss Spikes",
+      "source": "openreview",
+      "arxiv_id": "",
+      "url": "https://openreview.net/forum?id=pAjrfibDB9",
+      "note_filename": "Understanding_and_Mitigating_AdamW_Loss_Spikes",
+      "matched_domain": "大模型优化器设计",
+      "score": 8.13
+    },
+    {
+      "title": "Optimizing Large Language Models with Chained LMOs",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "https://arxiv.org/abs/2610.10975v1",
+      "note_filename": "Optimizing_Large_Language_Models_with_Chained_LMOs",
+      "matched_domain": "大模型优化器设计",
+      "score": 8.0
+    },
+    {
+      "title": "Cost-free Spectral Estimation for Adaptive Newton--Schulz in Matrix Optimizers",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "https://arxiv.org/abs/2609.33047v1",
+      "note_filename": "Cost_free_Spectral_Estimation_for_Adaptive_Newton_Schulz_in_Matrix_Optimizers",
+      "matched_domain": "大模型优化器设计",
+      "score": 7.93
+    },
+    {
+      "title": "Accelerating Muon with Spectral Residual Correction",
+      "source": "openreview",
+      "arxiv_id": "",
+      "url": "https://openreview.net/forum?id=neaieUZdWW",
+      "note_filename": "Accelerating_Muon_with_Spectral_Residual_Correction",
+      "matched_domain": "大模型优化器设计",
+      "score": 8.13
+    },
+    {
+      "title": "Does Muon's Pretraining Advantage Over Adam Survive Fine-Tuning?",
+      "source": "openreview",
+      "arxiv_id": "",
+      "url": "https://openreview.net/forum?id=GPYH0UPouD",
+      "note_filename": "Does_Muon's_Pretraining_Advantage_Over_Adam_Survive_Fine_Tuning",
+      "matched_domain": "大模型优化器设计",
+      "score": 8.13
+    },
+    {
+      "title": "ISO: An RLVR-Native Optimization Stack",
+      "source": "openreview",
+      "arxiv_id": "",
+      "url": "https://openreview.net/forum?id=7TlYUWak6o",
+      "note_filename": "ISO_An_RLVR_Native_Optimization_Stack",
+      "matched_domain": "大模型优化器设计",
+      "score": 8.0
+    },
+    {
+      "title": "Beyond Non-Zero Initialization: Investigating Update Balance in Structured LoRA Initialization",
+      "source": "openreview",
+      "arxiv_id": "",
+      "url": "https://openreview.net/forum?id=FjJrpmn8zD",
+      "note_filename": "Beyond_Non_Zero_Initialization_Investigating_Update_Balance_in_Structured_LoRA_Initialization",
+      "matched_domain": "大模型优化器设计",
+      "score": 8.0
+    },
+    {
+      "title": "The Conflict Between Logic and Memory: Training Conditions for Optimizer-Dependent Rule Acquisition",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "https://arxiv.org/abs/2610.00403v2",
+      "note_filename": "The_Conflict_Between_Logic_and_Memory_Training_Conditions_for_Optimizer_Dependent_Rule_Acquisition",
+      "matched_domain": "大模型优化器设计",
+      "score": 8.13
+    },
+    {
+      "title": "Optimizer-dependent training dynamics converge to the same one-third optimal data scaling",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "https://arxiv.org/abs/2609.37745v1",
+      "note_filename": "Optimizer_dependent_training_dynamics_converge_to_the_same_one_third_optimal_data_scaling",
+      "matched_domain": "大模型优化器设计",
+      "score": 7.93
+    },
+    {
+      "title": "NS-ATTENTION: Newton-Schulz Transformations of Attention Outputs in Vision Transformers",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "https://arxiv.org/abs/2609.27735v3",
+      "note_filename": "NS_ATTENTION_Newton_Schulz_Transformations_of_Attention_Outputs_in_Vision_Transformers",
+      "matched_domain": "大模型优化器设计",
+      "score": 8.13
+    }
+  ]
+}
