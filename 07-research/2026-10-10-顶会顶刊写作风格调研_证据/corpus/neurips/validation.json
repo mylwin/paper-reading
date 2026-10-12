@@ -1,0 +1,32 @@
+{
+  "venue": "neurips",
+  "target_count": 50,
+  "locked_count": 50,
+  "downloaded_count": 50,
+  "parsed_count": 50,
+  "semantic_reviewed_count": 2,
+  "holdout_reviewed_count": 0,
+  "pending_semantic_count": 48,
+  "status": "continuous semantic pilot2complete",
+  "review_scope": "all scientific PDF appendices/checklists; code correctness and generic tool manuals not independently audited",
+  "holdout_validation_status": "pending",
+  "counts": {
+    "locked": 50,
+    "pdf_acquired": 50,
+    "text_parsed": 50,
+    "main_text_style_reviewed": 2,
+    "full_text_and_relevant_appendix_reviewed": 2,
+    "induction_complete": 2,
+    "holdout_complete": 0
+  },
+  "updated": "2026-10-12",
+  "acceptance_status": "in_progress;50pervenue and40induction/10heldout acceptance not achieved",
+  "main_text_review_ids": [
+    "neurips-2024-2aada42a",
+    "neurips-2025-aac4a9fe"
+  ],
+  "complete_review_ids": [
+    "neurips-2024-2aada42a",
+    "neurips-2025-aac4a9fe"
+  ]
+}

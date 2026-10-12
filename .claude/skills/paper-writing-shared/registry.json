@@ -1,0 +1,88 @@
+{
+  "schema_version": 1,
+  "verified_on": "2026-10-11",
+  "corpus_window": [
+    2024,
+    2025
+  ],
+  "semantic_corpus_status": "see each venue profile and evidence manifest; never infer completion from PDF count",
+  "venues": {
+    "aaai": {
+      "profile": "venues/aaai.md",
+      "latest": "2027",
+      "versions": {
+        "2027": "assets/templates/aaai/2027/spec.json"
+      }
+    },
+    "ijcai": {
+      "profile": "venues/ijcai.md",
+      "latest": "2026",
+      "versions": {
+        "2026": "assets/templates/ijcai/2026/spec.json"
+      }
+    },
+    "icml": {
+      "profile": "venues/icml.md",
+      "latest": "2026",
+      "versions": {
+        "2026": "assets/templates/icml/2026/spec.json"
+      }
+    },
+    "neurips": {
+      "profile": "venues/neurips.md",
+      "latest": "2026",
+      "versions": {
+        "2026": "assets/templates/neurips/2026/spec.json"
+      }
+    },
+    "iclr": {
+      "profile": "venues/iclr.md",
+      "latest": "2027",
+      "versions": {
+        "2027": "assets/templates/iclr/2027/spec.json"
+      }
+    },
+    "colt": {
+      "profile": "venues/colt.md",
+      "latest": "2026",
+      "versions": {
+        "2026": "assets/templates/colt/2026/spec.json"
+      }
+    },
+    "jmlr": {
+      "profile": "venues/jmlr.md",
+      "latest": "2026",
+      "versions": {
+        "2026": "assets/templates/jmlr/2026/spec.json"
+      }
+    },
+    "tmlr": {
+      "profile": "venues/tmlr.md",
+      "latest": "2026",
+      "versions": {
+        "2026": "assets/templates/tmlr/2026/spec.json"
+      }
+    },
+    "tpami": {
+      "profile": "venues/tpami.md",
+      "latest": "2026",
+      "versions": {
+        "2026": "assets/templates/tpami/2026/spec.json"
+      }
+    },
+    "tnnls": {
+      "profile": "venues/tnnls.md",
+      "latest": "2026",
+      "versions": {
+        "2026": "assets/templates/tnnls/2026/spec.json"
+      }
+    },
+    "tai": {
+      "profile": "venues/tai.md",
+      "latest": "2026",
+      "versions": {
+        "2026": "assets/templates/tai/2026/spec.json"
+      }
+    }
+  }
+}

@@ -1,0 +1,339 @@
+{
+  "date": "2026-10-12",
+  "scope": "Evidence integrity and preservation; not independent semantic reading certification, compilation or behavior evaluation",
+  "passed": 55,
+  "total": 55,
+  "all_passed": true,
+  "checks": [
+    {
+      "check": "canonical progress matches archived after snapshot",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "cumulative counts and remaining gap",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "venue totals sum to cumulative counts",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "batch progression equals declared new work",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "seven main, five full, no holdout and one new asset",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "aaai-2025-12: PDF identity and full page coverage",
+      "passed": true,
+      "detail": {
+        "pages": 9
+      }
+    },
+    {
+      "check": "aaai-2025-12: ten nonempty dimensions and version/supplement scope",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "aaai-2025-12: recorded full status matches ledger",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "aaai-2024-22: PDF identity and full page coverage",
+      "passed": true,
+      "detail": {
+        "pages": 8
+      }
+    },
+    {
+      "check": "aaai-2024-22: ten nonempty dimensions and version/supplement scope",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "aaai-2024-22: recorded full status matches ledger",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "tai-2025-16: PDF identity and full page coverage",
+      "passed": true,
+      "detail": {
+        "pages": 12
+      }
+    },
+    {
+      "check": "tai-2025-16: ten nonempty dimensions and version/supplement scope",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "tai-2025-16: recorded full status matches ledger",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "tai-2025-01: PDF identity and full page coverage",
+      "passed": true,
+      "detail": {
+        "pages": 15
+      }
+    },
+    {
+      "check": "tai-2025-01: ten nonempty dimensions and version/supplement scope",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "tai-2025-01: recorded full status matches ledger",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "neurips-2024-2aada42a: PDF identity and full page coverage",
+      "passed": true,
+      "detail": {
+        "pages": 37
+      }
+    },
+    {
+      "check": "neurips-2024-2aada42a: ten nonempty dimensions and version/supplement scope",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "neurips-2024-2aada42a: recorded full status matches ledger",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "neurips-2025-aac4a9fe: PDF identity and full page coverage",
+      "passed": true,
+      "detail": {
+        "pages": 26
+      }
+    },
+    {
+      "check": "neurips-2025-aac4a9fe: ten nonempty dimensions and version/supplement scope",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "neurips-2025-aac4a9fe: recorded full status matches ledger",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "tai-2024-03-r1: PDF identity and full page coverage",
+      "passed": true,
+      "detail": {
+        "pages": 10
+      }
+    },
+    {
+      "check": "tai-2024-03-r1: ten nonempty dimensions and version/supplement scope",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "tai-2024-03-r1: recorded full status matches ledger",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "actual PDF page count and separate supplement accounting",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "aaai: fifty positions with fixed yearly split",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "colt: fifty positions with fixed yearly split",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "iclr: fifty positions with fixed yearly split",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "icml: fifty positions with fixed yearly split",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "ijcai: fifty positions with fixed yearly split",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "jmlr: fifty positions with fixed yearly split",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "neurips: fifty positions with fixed yearly split",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "tai: fifty positions with fixed yearly split",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "tmlr: fifty positions with fixed yearly split",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "tnnls: fifty positions with fixed yearly split",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "tpami: fifty positions with fixed yearly split",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "550 unique active identities across eleven venues",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "AAAI and NeurIPS locked manifests unchanged",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "TAI original manifest and record bytes preserved",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "TAI eligibility repair changes exactly one induction slot",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "TAI all ten holdout identities and locked records preserved",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "post-pilot repair not represented as original immutable pre-analysis lock",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "all AAAI delegated source evidence hashes unchanged",
+      "passed": true,
+      "detail": {
+        "files": 15
+      }
+    },
+    {
+      "check": "29 saved original-page images are real PNG files",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "repaired official NeurIPS supplement ZIP complete and CRC valid",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "all 654 historical evaluation evidence hashes unchanged",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "template packs, project scripts and entry skills unchanged since evaluation",
+      "passed": true,
+      "detail": {
+        "changed": [
+          ".claude/skills/paper-writing-shared/venues/aaai.md",
+          ".claude/skills/paper-writing-shared/venues/neurips.md",
+          ".claude/skills/paper-writing-shared/venues/overview.md",
+          ".claude/skills/paper-writing-shared/venues/tai.md",
+          ".claude/skills/paper-writing-shared/venues/tmlr.md"
+        ]
+      }
+    },
+    {
+      "check": "21 restored old skill files match Git index recovery hashes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "six existing and two new skills discoverable through existing entry",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "new PDF and parse share stable stem and actual files",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "check": "new asset indexed in restored read-only index workflow",
+      "passed": true,
+      "detail": {
+        "row": [
+          {
+            "paper_stem": "Efficient_Structure_Slimming_for_Spiking_Neural_Networks",
+            "title": "Efficient Structure Slimming for Spiking Neural Networks",
+            "archive_date": "2026-10-12",
+            "archive_month": "2026-10",
+            "source": "[作者机构接受稿](https://research.birmingham.ac.uk/en/publications/efficient-structure-slimming-for-spiking-neural-networks/)",
+            "raw_path": "/Users/myl/Documents/paper/.claude/skills/paper-writing-shared/tmp/corpus/tai/pdf/Efficient_Structure_Slimming_for_Spiking_Neural_Networks.pdf",
+            "markdown_path": "/Users/myl/Documents/paper/.claude/skills/paper-writing-shared/tmp/corpus/tai/markdown/Efficient_Structure_Slimming_for_Spiking_Neural_Networks.md",
+            "notes_path": null,
+            "translation_path": null,
+            "parse_status": "已解析",
+            "reading_status": "未精读",
+            "translation_status": "未翻译",
+            "reading_start": "--",
+            "reading_finish": "--",
+            "priority": "--",
+            "translation_forms": [],
+            "parse_error": "--",
+            "months_seen": [
+              "2026-10"
+            ],
+            "translation_finish": "--"
+          }
+        ]
+      }
+    },
+    {
+      "check": "workspace link scanner returns structured result",
+      "passed": true,
+      "detail": {
+        "exit_code": 1,
+        "scope": "Existing unrelated broken links are reported separately, not a global pass."
+      }
+    },
+    {
+      "check": "updated research report and five profiles have no broken local links",
+      "passed": true,
+      "detail": {
+        "broken": []
+      }
+    }
+  ]
+}

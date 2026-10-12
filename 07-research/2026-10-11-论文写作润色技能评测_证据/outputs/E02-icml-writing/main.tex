@@ -1,0 +1,37 @@
+% Derived skeleton; official class/style files are unmodified.
+\documentclass{article}\usepackage{microtype,graphicx,booktabs,hyperref}
+\usepackage{icml2026}
+\usepackage{algorithm,algorithmic}
+\usepackage{amsmath,amssymb}
+\newtheorem{PWTheorem}{Theorem}
+\newcommand{\AuthorPending}[1]{\textbf{AUTHOR INPUT PENDING:} #1}
+\providecommand{\theHalgorithm}{\arabic{algorithm}}
+\icmltitlerunning{Confidence Gate Evaluation}
+\begin{document}\twocolumn[
+\icmltitle{A Fixed Confidence Gate for Selective Classification}
+\begin{icmlauthorlist}\icmlauthor{AUTHOR INFORMATION PENDING}{pending}\end{icmlauthorlist}
+\icmlaffiliation{pending}{AUTHOR INFORMATION PENDING}\icmlcorrespondingauthor{AUTHOR INFORMATION PENDING}{author-input-pending}\icmlkeywords{Author input pending}\vskip 0.3in]
+\printAffiliationsAndNotice{}
+\begin{abstract}
+We examine a fixed confidence gate for selective classification using a synthetic
+evaluation fixture. The gate abstains from predictions below a specified confidence
+threshold. We report accuracy among accepted predictions alongside coverage on two
+synthetic datasets. Conditional accuracy increases on one dataset and decreases on
+the other; these observations do not establish an overall accuracy improvement.
+A range bound for selective risk requires positive coverage and bounded loss.
+Statistical uncertainty, runtime, and distribution shift remain unevaluated.
+\end{abstract}
+\input{sections/body.tex}
+\section*{Impact Statement}\AuthorPending{Describe the actual impacts without making unsupported assurances.}
+
+\section*{Related Work}
+\AuthorPending{Supply verified nearest references; no research citation has been invented.}
+\clearpage
+\appendix
+\section{Proof of the Range Bound}\label{app:proof}
+Since $0\leq a(X)\ell(h(X),Y)\leq a(X)$, taking expectations gives
+$0\leq\mathbb{E}[a(X)\ell(h(X),Y)]\leq C$. Division by $C>0$ proves
+Theorem~\ref{thm:bounded}. This argument applies to the specified distribution;
+it does not establish a bound under distribution shift.
+
+\end{document}

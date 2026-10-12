@@ -1,0 +1,73 @@
+{
+  "venue": "aaai",
+  "version": "2027",
+  "verified_on": "2026-10-11",
+  "template_source": "https://aaai.org/authorkit27/",
+  "author_guidelines": "https://aaai.org/conference/aaai/aaai-27/submission-instructions/",
+  "official_files": {
+    "aaai2027.sty": "391bce82815bf698b8e382dd3ae7e30c75d7ab46df140cb295b1266016bc8623",
+    "ReproducibilityChecklist.tex": "06a3459158089bf1c64b738986118f1d1566e816da4b710c6397561e33c3d5e6",
+    "aaai2027.bst": "5db7765ba99de5c1e4686f9b3940a0add9c5e702f2164514462bec130ccb6e3c"
+  },
+  "modes": {
+    "submission": {
+      "available": true,
+      "directory": "project/submission",
+      "anonymous": true,
+      "main_page_limit": 7,
+      "page_limit_status": "verified",
+      "counting": "Main text unless journal-specific rules explicitly include references",
+      "engine": "pdflatex",
+      "article_type": "original-research",
+      "full_manuscript_page_limit": null,
+      "max_pdf_megabytes": null,
+      "validation": {
+        "compile": "passed",
+        "unresolved_citations_or_references": false,
+        "visual_review": "reviewed all rendered pages",
+        "rendered_pages": 4,
+        "verified_on": "2026-10-11",
+        "evidence_path": "07-research/2026-10-10-顶会顶刊写作风格调研_证据/templates/render-results.json",
+        "submission_compliance": "pending author content and policy fields"
+      }
+    },
+    "final": {
+      "available": true,
+      "directory": "project/final",
+      "anonymous": false,
+      "main_page_limit": 7,
+      "page_limit_status": "verified",
+      "counting": "Main text unless journal-specific rules explicitly include references",
+      "engine": "pdflatex",
+      "article_type": "original-research",
+      "full_manuscript_page_limit": null,
+      "max_pdf_megabytes": null,
+      "validation": {
+        "compile": "passed",
+        "unresolved_citations_or_references": false,
+        "visual_review": "reviewed all rendered pages",
+        "rendered_pages": 4,
+        "verified_on": "2026-10-11",
+        "evidence_path": "07-research/2026-10-10-顶会顶刊写作风格调研_证据/templates/render-results.json",
+        "submission_compliance": "pending author content and policy fields"
+      }
+    }
+  },
+  "format_status": "compiled-and-visually-reviewed-draft-scaffold",
+  "limitations": [
+    "Compilation is not submission compliance. Publication metadata and actual results must be provided.",
+    "Unknown page limits or anonymity policies are not assumed compliant.",
+    "Official style internal date is 2027/05/04 although downloaded on 2026-10-10; preserve as distributed and recheck target author kit before submission.",
+    "Supplementary appendix is scaffolded in supplement.tex and compiled separately; it is not attached to main.tex."
+  ],
+  "archive_provenance": {
+    "filename": "aaai-kit.zip",
+    "sha256": "e28c6ac9bc6eb3b4e2d849547d2cefb5162610ee39d0a12e0dc62d1126b44a7d",
+    "source_url": "https://aaai.org/authorkit27/",
+    "archive_path_from_workspace": "07-research/2026-10-10-顶会顶刊写作风格调研_证据/templates/aaai-kit.zip",
+    "acquired_during": [
+      "2026-10-10",
+      "2026-10-11"
+    ]
+  }
+}

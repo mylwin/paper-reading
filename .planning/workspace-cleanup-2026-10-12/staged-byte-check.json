@@ -1,0 +1,18 @@
+{
+  "staged_files_checked": 3059,
+  "raw_staged_bytes": 1737449969,
+  "byte_mismatches": [],
+  "missing": [],
+  "staged_deletions": [],
+  "directory_counts": {
+    ".claude": 266,
+    ".gitattributes": 1,
+    ".planning": 102,
+    "01-raw": 457,
+    "02-markdown": 455,
+    "03-notes": 2,
+    "06-translation": 2,
+    "07-research": 1768,
+    "08-daily": 6
+  }
+}

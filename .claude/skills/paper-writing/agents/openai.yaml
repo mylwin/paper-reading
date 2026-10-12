@@ -1,0 +1,6 @@
+interface:
+  display_name: "顶会顶刊论文写作"
+  short_description: "依据具体会议期刊风格起草论文，保留官方 LaTeX 格式并生成可编译工程"
+  default_prompt: "使用 $paper-writing，依据研究材料起草目标会议或期刊论文，并生成其官方 LaTeX 工程。"
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,44 @@
+[
+  {
+    "venue": "aaai",
+    "mode": "submission",
+    "exit_code": 0,
+    "output": "{\"command\": [\"/Library/TeX/texbin/latexmk\", \"-norc\", \"-pdf\", \"-interaction=nonstopmode\", \"-halt-on-error\", \"-file-line-error\", \"-latexoption=-no-shell-escape\", \"-outdir=/Users/myl/Documents/paper/07-research/2026-10-10-顶会顶刊写作风格调研_证据/templates/builds/aaai-submission/build\", \"/Users/myl/Documents/paper/07-research/2026-10-10-顶会顶刊写作风格调研_证据/templates/builds/aaai-submission/main.tex\"], \"exit_code\": 0, \"pdf\": \"/Users/myl/Documents/paper/07-research/2026-10-10-顶会顶刊写作风格调研_证据/templates/builds/aaai-submission/build/main.pdf\"}\n",
+    "error_tail": ""
+  },
+  {
+    "venue": "aaai",
+    "mode": "final",
+    "exit_code": 0,
+    "output": "{\"command\": [\"/Library/TeX/texbin/latexmk\", \"-norc\", \"-pdf\", \"-interaction=nonstopmode\", \"-halt-on-error\", \"-file-line-error\", \"-latexoption=-no-shell-escape\", \"-outdir=/Users/myl/Documents/paper/07-research/2026-10-10-顶会顶刊写作风格调研_证据/templates/builds/aaai-final/build\", \"/Users/myl/Documents/paper/07-research/2026-10-10-顶会顶刊写作风格调研_证据/templates/builds/aaai-final/main.tex\"], \"exit_code\": 0, \"pdf\": \"/Users/myl/Documents/paper/07-research/2026-10-10-顶会顶刊写作风格调研_证据/templates/builds/aaai-final/build/main.pdf\"}\n",
+    "error_tail": ""
+  },
+  {
+    "venue": "neurips",
+    "mode": "submission",
+    "exit_code": 0,
+    "output": "{\"command\": [\"/Library/TeX/texbin/latexmk\", \"-norc\", \"-pdf\", \"-interaction=nonstopmode\", \"-halt-on-error\", \"-file-line-error\", \"-latexoption=-no-shell-escape\", \"-outdir=/Users/myl/Documents/paper/07-research/2026-10-10-顶会顶刊写作风格调研_证据/templates/builds/neurips-submission/build\", \"/Users/myl/Documents/paper/07-research/2026-10-10-顶会顶刊写作风格调研_证据/templates/builds/neurips-submission/main.tex\"], \"exit_code\": 0, \"pdf\": \"/Users/myl/Documents/paper/07-research/2026-10-10-顶会顶刊写作风格调研_证据/templates/builds/neurips-submission/build/main.pdf\"}\n",
+    "error_tail": ""
+  },
+  {
+    "venue": "neurips",
+    "mode": "final",
+    "exit_code": 0,
+    "output": "{\"command\": [\"/Library/TeX/texbin/latexmk\", \"-norc\", \"-pdf\", \"-interaction=nonstopmode\", \"-halt-on-error\", \"-file-line-error\", \"-latexoption=-no-shell-escape\", \"-outdir=/Users/myl/Documents/paper/07-research/2026-10-10-顶会顶刊写作风格调研_证据/templates/builds/neurips-final/build\", \"/Users/myl/Documents/paper/07-research/2026-10-10-顶会顶刊写作风格调研_证据/templates/builds/neurips-final/main.tex\"], \"exit_code\": 0, \"pdf\": \"/Users/myl/Documents/paper/07-research/2026-10-10-顶会顶刊写作风格调研_证据/templates/builds/neurips-final/build/main.pdf\"}\n",
+    "error_tail": ""
+  },
+  {
+    "venue": "tmlr",
+    "mode": "submission",
+    "exit_code": 0,
+    "output": "{\"command\": [\"/Library/TeX/texbin/latexmk\", \"-norc\", \"-pdf\", \"-interaction=nonstopmode\", \"-halt-on-error\", \"-file-line-error\", \"-latexoption=-no-shell-escape\", \"-outdir=/Users/myl/Documents/paper/07-research/2026-10-10-顶会顶刊写作风格调研_证据/templates/builds/tmlr-submission/build\", \"/Users/myl/Documents/paper/07-research/2026-10-10-顶会顶刊写作风格调研_证据/templates/builds/tmlr-submission/main.tex\"], \"exit_code\": 0, \"pdf\": \"/Users/myl/Documents/paper/07-research/2026-10-10-顶会顶刊写作风格调研_证据/templates/builds/tmlr-submission/build/main.pdf\"}\n",
+    "error_tail": ""
+  },
+  {
+    "venue": "tmlr",
+    "mode": "final",
+    "exit_code": 0,
+    "output": "{\"command\": [\"/Library/TeX/texbin/latexmk\", \"-norc\", \"-pdf\", \"-interaction=nonstopmode\", \"-halt-on-error\", \"-file-line-error\", \"-latexoption=-no-shell-escape\", \"-outdir=/Users/myl/Documents/paper/07-research/2026-10-10-顶会顶刊写作风格调研_证据/templates/builds/tmlr-final/build\", \"/Users/myl/Documents/paper/07-research/2026-10-10-顶会顶刊写作风格调研_证据/templates/builds/tmlr-final/main.tex\"], \"exit_code\": 0, \"pdf\": \"/Users/myl/Documents/paper/07-research/2026-10-10-顶会顶刊写作风格调研_证据/templates/builds/tmlr-final/build/main.pdf\"}\n",
+    "error_tail": ""
+  }
+]

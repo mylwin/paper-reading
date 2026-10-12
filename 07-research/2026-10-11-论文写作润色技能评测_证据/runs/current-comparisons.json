@@ -1,0 +1,58 @@
+[
+  {
+    "case": "E03-current",
+    "exit_code": 0,
+    "stdout": "{\n  \"changes\": {},\n  \"requires_semantic_review\": true,\n  \"limitations\": \"Static lexical audit; macro expansion, arbitrary TeX constructs and scientific meaning are not validated. Numeric changes may be harmless bibliography/format changes and need context.\"\n}\n",
+    "stderr": "",
+    "source_hashes": {
+      "outputs/E03-original/references.bib": "54f424b2b7452d478f0f1591077e72a87218701f88e1d3d4b7fb8b48532472b1",
+      "outputs/E03-original/article.tex": "88bdf30d91cbfa1ec9357fd21dadaeaf00a27f0c62e377d50047cc632eb4f2b4",
+      "outputs/E03-original/sections/body.tex": "de3fdd22be269a4c8baafa81956d10090b52477061d57a855b1ade377e26343e",
+      "outputs/E03-revised/references.bib": "54f424b2b7452d478f0f1591077e72a87218701f88e1d3d4b7fb8b48532472b1",
+      "outputs/E03-revised/article.tex": "da4aa38b4339e584b5522dd5a506b5a0721d5e1b1d51492826d682e2792005fe",
+      "outputs/E03-revised/sections/body.tex": "f67cd7a033e8bf8eeda3864238b4e4572269ed5ab61f2cf169e2993bac2bad71"
+    }
+  },
+  {
+    "case": "E04-current",
+    "exit_code": 1,
+    "stdout": "{\n  \"changes\": {\n    \"numeric_tokens\": {\n      \"removed\": {\n        \"0.3\": 1\n      },\n      \"added\": {}\n    }\n  },\n  \"requires_semantic_review\": true,\n  \"limitations\": \"Static lexical audit; macro expansion, arbitrary TeX constructs and scientific meaning are not validated. Numeric changes may be harmless bibliography/format changes and need context.\"\n}\n",
+    "stderr": "",
+    "source_hashes": {
+      "outputs/E03-revised/references.bib": "54f424b2b7452d478f0f1591077e72a87218701f88e1d3d4b7fb8b48532472b1",
+      "outputs/E03-revised/article.tex": "da4aa38b4339e584b5522dd5a506b5a0721d5e1b1d51492826d682e2792005fe",
+      "outputs/E03-revised/sections/body.tex": "f67cd7a033e8bf8eeda3864238b4e4572269ed5ab61f2cf169e2993bac2bad71",
+      "outputs/E04-tai-migrated/references.bib": "54f424b2b7452d478f0f1591077e72a87218701f88e1d3d4b7fb8b48532472b1",
+      "outputs/E04-tai-migrated/main.tex": "00d96a5ec742d9fd23cc159153d209a2871377119334380dfa825d5d723e3d76",
+      "outputs/E04-tai-migrated/sections/body.tex": "f67cd7a033e8bf8eeda3864238b4e4572269ed5ab61f2cf169e2993bac2bad71"
+    }
+  },
+  {
+    "case": "E10-current-icml",
+    "exit_code": 0,
+    "stdout": "{\n  \"changes\": {},\n  \"requires_semantic_review\": true,\n  \"limitations\": \"Static lexical audit; macro expansion, arbitrary TeX constructs and scientific meaning are not validated. Numeric changes may be harmless bibliography/format changes and need context.\"\n}\n",
+    "stderr": "",
+    "source_hashes": {
+      "outputs/E03-original/references.bib": "54f424b2b7452d478f0f1591077e72a87218701f88e1d3d4b7fb8b48532472b1",
+      "outputs/E03-original/article.tex": "88bdf30d91cbfa1ec9357fd21dadaeaf00a27f0c62e377d50047cc632eb4f2b4",
+      "outputs/E03-original/sections/body.tex": "de3fdd22be269a4c8baafa81956d10090b52477061d57a855b1ade377e26343e",
+      "outputs/E10-independent-migration/icml-polished/references.bib": "54f424b2b7452d478f0f1591077e72a87218701f88e1d3d4b7fb8b48532472b1",
+      "outputs/E10-independent-migration/icml-polished/article.tex": "81eab5e96bbfa8e8e05726cd4e390e72f3075b53a568b9dd69a699e8cc442447",
+      "outputs/E10-independent-migration/icml-polished/sections/body.tex": "7d0301c9b127e2de53ef2428463f1eb109d35eb6b62961aa3f4c4502893bf522"
+    }
+  },
+  {
+    "case": "E10-current-tai",
+    "exit_code": 1,
+    "stdout": "{\n  \"changes\": {\n    \"numeric_tokens\": {\n      \"removed\": {\n        \"0.3\": 1\n      },\n      \"added\": {}\n    }\n  },\n  \"requires_semantic_review\": true,\n  \"limitations\": \"Static lexical audit; macro expansion, arbitrary TeX constructs and scientific meaning are not validated. Numeric changes may be harmless bibliography/format changes and need context.\"\n}\n",
+    "stderr": "",
+    "source_hashes": {
+      "outputs/E10-independent-migration/icml-polished/references.bib": "54f424b2b7452d478f0f1591077e72a87218701f88e1d3d4b7fb8b48532472b1",
+      "outputs/E10-independent-migration/icml-polished/article.tex": "81eab5e96bbfa8e8e05726cd4e390e72f3075b53a568b9dd69a699e8cc442447",
+      "outputs/E10-independent-migration/icml-polished/sections/body.tex": "7d0301c9b127e2de53ef2428463f1eb109d35eb6b62961aa3f4c4502893bf522",
+      "outputs/E10-independent-migration/tai-submission/references.bib": "54f424b2b7452d478f0f1591077e72a87218701f88e1d3d4b7fb8b48532472b1",
+      "outputs/E10-independent-migration/tai-submission/article.tex": "f0da0675c26bb45e910cf886c754ae43f499a2009219c6c138f8766259b7dab4",
+      "outputs/E10-independent-migration/tai-submission/sections/body.tex": "fa46a9afb483da40f65fe3b0aa2997430459cb39dac3b489483859aa3d7abeb6"
+    }
+  }
+]

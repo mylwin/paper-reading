@@ -1,0 +1,59 @@
+{
+  "project": "/Users/myl/Documents/paper/07-research/2026-10-11-论文写作润色技能评测_证据/outputs/E08-author-leak",
+  "entrypoint": "main.tex",
+  "issues": [
+    {
+      "kind": "author-block-visible-in-anonymous-mode",
+      "note": "A literal author field is visible in the rendered PDF"
+    }
+  ],
+  "warnings": [
+    {
+      "kind": "compile-freshness-unverified",
+      "note": "Older build has no input fingerprints; compile again to record them"
+    },
+    {
+      "kind": "page-policy-unverified"
+    },
+    {
+      "kind": "source-word-count-estimate",
+      "note": "TeX macros may change rendered counts; manually verify"
+    },
+    {
+      "kind": "manual-anonymity-review-required",
+      "note": "Literal author check does not audit acknowledgments, funding, links, assets or PDF metadata"
+    }
+  ],
+  "main_pages": 1,
+  "total_pages": 1,
+  "word_count_estimates": {
+    "abstract": 76,
+    "IEEEImpStatement": 117
+  },
+  "limits": {
+    "available": true,
+    "directory": "project/submission",
+    "anonymous": true,
+    "main_page_limit": null,
+    "page_limit_status": "requires-target-stage-verification",
+    "counting": "Main text unless journal-specific rules explicitly include references",
+    "engine": "pdflatex",
+    "article_type": "original-research",
+    "full_manuscript_page_limit": 15,
+    "max_pdf_megabytes": null,
+    "validation": {
+      "compile": "passed",
+      "unresolved_citations_or_references": false,
+      "visual_review": "reviewed all rendered pages",
+      "rendered_pages": 2,
+      "verified_on": "2026-10-11",
+      "evidence_path": "07-research/2026-10-10-顶会顶刊写作风格调研_证据/templates/render-results.json",
+      "submission_compliance": "pending author content and policy fields"
+    }
+  },
+  "static_check_passed": false,
+  "anonymity_check": "partial-literal-author-check; requires-full-review",
+  "visual_check": "not-performed-by-this-command",
+  "official_system_check": "not-performed",
+  "semantic_fidelity": "requires-review"
+}

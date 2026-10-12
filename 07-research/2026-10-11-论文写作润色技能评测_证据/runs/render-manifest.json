@@ -1,0 +1,119 @@
+[
+  {
+    "case": "E02-icml-writing",
+    "pdf": "outputs/E02-icml-writing/build/main.pdf",
+    "pdf_sha256": "75894f964a929cb8d5113e968f749cbbcd4513832825099a51eadf6e258a40c2",
+    "pages": 2,
+    "contacts": [
+      "renders/E02-icml-writing/contact-1.png"
+    ],
+    "visual_review": "root reviewed all actual rendered pages",
+    "findings": "No clipping or overlap observed; required headings and cited appendix are visible. Incomplete research inputs and guide-citation defect remain separately reported.",
+    "page_sha256": {
+      "renders/E02-icml-writing/page-1.png": "e41b0c4b7320206698e4a4356e8aaa13e5ebbbddde17bbf65a9a3c07c5c4100e",
+      "renders/E02-icml-writing/page-2.png": "ff6e7e1d57f360b5605d4c8052edf90e5a3ee60387e689d45a8863626d6fdbd0"
+    }
+  },
+  {
+    "case": "E03-revised",
+    "pdf": "outputs/E03-revised/build/article.pdf",
+    "pdf_sha256": "9acc2698ecf1f1958acf7d1302460082c21599b175a945207c2a44b321a773ea",
+    "pages": 2,
+    "contacts": [
+      "renders/E03-revised/contact-1.png"
+    ],
+    "visual_review": "root reviewed all actual rendered pages",
+    "findings": "No clipping or overlap observed; required headings and cited appendix are visible. Incomplete research inputs and guide-citation defect remain separately reported.",
+    "page_sha256": {
+      "renders/E03-revised/page-1.png": "1e4c1feb77d9656c40abe202eacdbcd88a6057ba9cba4a097163f56b374ef163",
+      "renders/E03-revised/page-2.png": "ff6e7e1d57f360b5605d4c8052edf90e5a3ee60387e689d45a8863626d6fdbd0"
+    }
+  },
+  {
+    "case": "E04-tai-migrated",
+    "pdf": "outputs/E04-tai-migrated/build/main.pdf",
+    "pdf_sha256": "2297438f3743c915e0f2ea3f7d4440471863282a1862f69a8a18c78dbdb49e1d",
+    "pages": 1,
+    "contacts": [
+      "renders/E04-tai-migrated/contact-1.png"
+    ],
+    "visual_review": "root reviewed all actual rendered pages",
+    "findings": "No clipping or overlap observed; required headings and cited appendix are visible. Incomplete research inputs and guide-citation defect remain separately reported.",
+    "page_sha256": {
+      "renders/E04-tai-migrated/page-1.png": "71a829a86b7466d7b35ff43421e2e462ede40bbbf964489a2701fedb1cea5eb6"
+    }
+  },
+  {
+    "case": "E05-independent-iclr",
+    "pdf": "outputs/E05-independent-iclr/build/main.pdf",
+    "pdf_sha256": "5071a63cdfe1f183981ef57afaed504b8a888e4c3960a504923499f1848a13b4",
+    "pages": 3,
+    "contacts": [
+      "renders/E05-independent-iclr/contact-1.png"
+    ],
+    "visual_review": "root reviewed all actual rendered pages",
+    "findings": "No clipping or overlap observed; required headings and cited appendix are visible. Incomplete research inputs and guide-citation defect remain separately reported.",
+    "page_sha256": {
+      "renders/E05-independent-iclr/page-1.png": "1e5affcef61cac4aa9a62325dbd6b3cabfd323e6da312e28f03473189cd33042",
+      "renders/E05-independent-iclr/page-3.png": "58274b5120002b998d081036985363c1ed75fe9da1850f4032f5e2c76381969c",
+      "renders/E05-independent-iclr/page-2.png": "5aa2a827a84985592d87d4510d3bd14dc28d55ccec9acce027ac5be0091065a6"
+    }
+  },
+  {
+    "case": "E08-author-leak",
+    "pdf": "outputs/E08-author-leak/build/main.pdf",
+    "pdf_sha256": "8df84166e6a587c93139f5fb15101ed88a3176e25b25c1c1c18b610657e83dd6",
+    "pages": 1,
+    "contacts": [
+      "renders/E08-author-leak/contact-1.png"
+    ],
+    "visual_review": "targeted negative probe inspection: visible author or expanded title",
+    "findings": "Intentional negative: identity is visible",
+    "page_sha256": {
+      "renders/E08-author-leak/page-1.png": "1ccd6f7dba00aed5f73a26dd2d0d5a58271b8b63d3fcd7d638467876fb21cf67"
+    }
+  },
+  {
+    "case": "E08-macro-title",
+    "pdf": "outputs/E08-macro-title/build/main.pdf",
+    "pdf_sha256": "d7d7ddde61a5b0acb0bed4469ab229b1b96a67b9764f0ea1f71a4acc8f6d820d",
+    "pages": 1,
+    "contacts": [
+      "renders/E08-macro-title/contact-1.png"
+    ],
+    "visual_review": "targeted negative probe inspection: visible author or expanded title",
+    "findings": "Intentional negative: expanded title is 18 words, above 15",
+    "page_sha256": {
+      "renders/E08-macro-title/page-1.png": "4ac13bd92d50948e40e80ef08d1e7d3eb9026d1a14dd1369d89e7d927a5d0f25"
+    }
+  },
+  {
+    "case": "E10-independent-migration/icml-polished",
+    "pdf": "outputs/E10-independent-migration/icml-polished/build/article.pdf",
+    "pdf_sha256": "ffd52991234f2758caead5d56e111feebf2c06029fd936fd1256c2dda7097f56",
+    "pages": 2,
+    "contacts": [
+      "renders/E10-independent-migration/icml-polished/contact-1.png"
+    ],
+    "visual_review": "root reviewed all actual rendered pages",
+    "findings": "No clipping or overlap observed; required headings and cited appendix are visible. Incomplete research inputs and guide-citation defect remain separately reported.",
+    "page_sha256": {
+      "renders/E10-independent-migration/icml-polished/page-1.png": "2d7dbda0bb7c4579dd2e44d54802d11271d1111c0c376788fcc09e69dc2be2c2",
+      "renders/E10-independent-migration/icml-polished/page-2.png": "ff6e7e1d57f360b5605d4c8052edf90e5a3ee60387e689d45a8863626d6fdbd0"
+    }
+  },
+  {
+    "case": "E10-independent-migration/tai-submission",
+    "pdf": "outputs/E10-independent-migration/tai-submission/build/article.pdf",
+    "pdf_sha256": "f0598dc117582dcf2201bd7d3d79527c08d6b032fa3a0ff2581341ecd6bbb460",
+    "pages": 1,
+    "contacts": [
+      "renders/E10-independent-migration/tai-submission/contact-1.png"
+    ],
+    "visual_review": "root reviewed all actual rendered pages",
+    "findings": "No clipping or overlap observed; required headings and cited appendix are visible. Incomplete research inputs and guide-citation defect remain separately reported.",
+    "page_sha256": {
+      "renders/E10-independent-migration/tai-submission/page-1.png": "6b0c91a17129bf8e50fa5de5972508d12389c556466a8e731ba11f1393fd066c"
+    }
+  }
+]

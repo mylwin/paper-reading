@@ -1,0 +1,51 @@
+{
+  "id": "iclr-2024-710a9140",
+  "reviewed_on": "2026-10-11",
+  "reviewer": "Codex root",
+  "scope": "continuous published main reading pp1-11 plus official supplementary A-E pp12-20, verified text-identical to already-read author v1 appendix; not proof verification or replication",
+  "full_text_and_relevant_appendix_review_complete": true,
+  "main_text_style_review_complete": true,
+  "sources": {
+    "main": "https://proceedings.iclr.cc/paper_files/paper/2024/file/6920c76183516fb8efff75416393a577-Paper-Conference.pdf",
+    "official_supplement": "https://proceedings.iclr.cc/paper_files/paper/2024/file/6920c76183516fb8efff75416393a577-Supplementary-Conference.pdf",
+    "author_extended": {
+      "url": "https://arxiv.org/pdf/2401.09278v1",
+      "pdf_path": ".claude/skills/paper-writing-shared/tmp/corpus/iclr/pdf/Adaptive Regret for Bandits Made Possible- Two Queries Suffice_Author_Extended_v1.pdf",
+      "markdown_path": ".claude/skills/paper-writing-shared/tmp/corpus/iclr/markdown/Adaptive Regret for Bandits Made Possible- Two Queries Suffice_Author_Extended_v1.md",
+      "sha256": "f9c26dc3bf8687646a01cfc2d5e762f0654a196da80dfd490aee70ba69fc2be9",
+      "pages": 20,
+      "version": "author public v1; separate from publisher final main PDF"
+    }
+  },
+  "dimensions": {
+    "audience": "p1 online optimization and changing environments motivate adaptation before technical background",
+    "title_abstract": "p1 theorem and query budget dominate abstract rather than accuracy gain",
+    "introduction": "pp1-2 open question and Our Results; Table1 query/regret comparison",
+    "related_work": "pp2-3 thematic adaptive/dynamic/BCO subsections inside Introduction",
+    "methods_theory": "pp3-4 feedback model and Assumption1; p5 algorithms and main guarantee; pp6-7 explicit three-step proof route",
+    "experiments": "pp7-9 reward conventions, 5 repeated synthetic comparison, varying-history ablation and downstream BBOB setting; main figure only one function",
+    "discussion": "p9 integrated conclusions and open questions; logarithmic factors, BCO queries and dynamic-regret extension",
+    "language": "model distinctions are stated explicitly; optimal terminology suppresses log terms but limitation retains them",
+    "body_appendix": "formal main pp1-11 has no appendix; author v1 pp12-20 A algorithms B/C proofs D alternative strategy E expanded synthetic",
+    "advice": "separate query from number of maintained learners; exact and asymptotic guarantees from empirical adaptation"
+  },
+  "counterexamples": [
+    "ICLR theory-led main article uses explicit assumptions and proof sketch; do not force all ICLR papers into an empirical architecture story",
+    "Two total queries does not imply two base learners or constant computational effort",
+    "No independent limitations section; limitations appear in Conclusions; current official required sections take precedence"
+  ],
+  "issues": [
+    "AppendixD reduces BCO queries to2 while main theorem presents3 and conclusion poses further query reduction; flag reconciliation rather than silently rewriting",
+    "Main p9 promises full downstream results in appendix; examined author appendixE contains expanded synthetic expert-advice plots, so that promised coverage cannot be inferred from it"
+  ],
+  "confidence": "single-paper structure high; venue-wide frequency extremely low",
+  "official_supplement": {
+    "url": "https://proceedings.iclr.cc/paper_files/paper/2024/file/6920c76183516fb8efff75416393a577-Supplementary-Conference.pdf",
+    "pdf_path": ".claude/skills/paper-writing-shared/tmp/corpus/iclr/pdf/Adaptive Regret for Bandits Made Possible- Two Queries Suffice_Official_Supplement.pdf",
+    "markdown_path": ".claude/skills/paper-writing-shared/tmp/corpus/iclr/markdown/Adaptive Regret for Bandits Made Possible- Two Queries Suffice_Official_Supplement.md",
+    "sha256": "10313920fda0f6eedcbd7d42d83b0ce8bda5b197cd8fe33ab3d1e8edc9776864",
+    "pages": 20,
+    "acquired_on": "2026-10-11",
+    "identity_check": "A-E text whitespace-normalized equal to read author v1; no PDF byte identity claimed"
+  }
+}

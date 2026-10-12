@@ -1,0 +1,127 @@
+{
+  "updated": "2026-10-11",
+  "status": "in_progress",
+  "venues": [
+    {
+      "venue": "aaai",
+      "locked": 50,
+      "pdf_acquired": 50,
+      "text_parsed": 50,
+      "main_text_style_reviewed": 1,
+      "full_text_and_relevant_appendix_reviewed": 0,
+      "induction_complete": 0,
+      "holdout_complete": 0
+    },
+    {
+      "venue": "colt",
+      "locked": 50,
+      "pdf_acquired": 50,
+      "text_parsed": 50,
+      "main_text_style_reviewed": 2,
+      "full_text_and_relevant_appendix_reviewed": 1,
+      "induction_complete": 0,
+      "holdout_complete": 1
+    },
+    {
+      "venue": "iclr",
+      "locked": 50,
+      "pdf_acquired": 50,
+      "text_parsed": 50,
+      "main_text_style_reviewed": 1,
+      "full_text_and_relevant_appendix_reviewed": 1,
+      "induction_complete": 1,
+      "holdout_complete": 0
+    },
+    {
+      "venue": "icml",
+      "locked": 50,
+      "pdf_acquired": 50,
+      "text_parsed": 50,
+      "main_text_style_reviewed": 4,
+      "full_text_and_relevant_appendix_reviewed": 4,
+      "induction_complete": 4,
+      "holdout_complete": 0
+    },
+    {
+      "venue": "ijcai",
+      "locked": 50,
+      "pdf_acquired": 50,
+      "text_parsed": 50,
+      "main_text_style_reviewed": 2,
+      "full_text_and_relevant_appendix_reviewed": 2,
+      "induction_complete": 1,
+      "holdout_complete": 1
+    },
+    {
+      "venue": "jmlr",
+      "locked": 50,
+      "pdf_acquired": 50,
+      "text_parsed": 50,
+      "main_text_style_reviewed": 4,
+      "full_text_and_relevant_appendix_reviewed": 4,
+      "induction_complete": 3,
+      "holdout_complete": 1
+    },
+    {
+      "venue": "neurips",
+      "locked": 50,
+      "pdf_acquired": 50,
+      "text_parsed": 50,
+      "main_text_style_reviewed": 0,
+      "full_text_and_relevant_appendix_reviewed": 0,
+      "induction_complete": 0,
+      "holdout_complete": 0
+    },
+    {
+      "venue": "tai",
+      "locked": 50,
+      "pdf_acquired": 23,
+      "text_parsed": 23,
+      "main_text_style_reviewed": 0,
+      "full_text_and_relevant_appendix_reviewed": 0,
+      "induction_complete": 0,
+      "holdout_complete": 0
+    },
+    {
+      "venue": "tmlr",
+      "locked": 50,
+      "pdf_acquired": 0,
+      "text_parsed": 0,
+      "main_text_style_reviewed": 0,
+      "full_text_and_relevant_appendix_reviewed": 0,
+      "induction_complete": 0,
+      "holdout_complete": 0
+    },
+    {
+      "venue": "tnnls",
+      "locked": 50,
+      "pdf_acquired": 26,
+      "text_parsed": 26,
+      "main_text_style_reviewed": 1,
+      "full_text_and_relevant_appendix_reviewed": 1,
+      "induction_complete": 0,
+      "holdout_complete": 1
+    },
+    {
+      "venue": "tpami",
+      "locked": 50,
+      "pdf_acquired": 26,
+      "text_parsed": 26,
+      "main_text_style_reviewed": 1,
+      "full_text_and_relevant_appendix_reviewed": 1,
+      "induction_complete": 1,
+      "holdout_complete": 0
+    }
+  ],
+  "totals": {
+    "locked": 550,
+    "pdf_acquired": 425,
+    "text_parsed": 425,
+    "main_text_style_reviewed": 16,
+    "full_text_and_relevant_appendix_reviewed": 14,
+    "induction_complete": 10,
+    "holdout_complete": 4
+  },
+  "remaining_full_review": 536,
+  "qualification": "PDF availability is not accepted-version verification or semantic full reading; main-only reviews with unreviewed referenced appendices are excluded from full count."
+}

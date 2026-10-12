@@ -1,0 +1,232 @@
+{
+  "id": "tai-2025-01",
+  "title": "DrugMAP: Deep Multimodal Transformers for Drug-Target Mechanism of Action Prediction",
+  "doi": "10.1109/TAI.2025.3565671",
+  "year": 2025,
+  "split": "derivation",
+  "pdf": ".claude/skills/paper-writing-shared/tmp/corpus/tai/pdf/DrugMAP_Deep_Multimodal_Transformers_for_Drug_Target_Mechanism_of_Action_Prediction.pdf",
+  "review_date": "2026-10-12",
+  "mode": "continuous_all_page_semantic_writing_style_review",
+  "main_text_style_review_complete": true,
+  "full_text_style_review_complete": true,
+  "external_appendix_review_complete": false,
+  "full_text_and_relevant_appendix_reviewed": false,
+  "coverage": {
+    "pdf_pages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "cover": 1,
+    "article_pages": "PDF 2–15 = manuscript 1–14",
+    "body": "PDF 2–13",
+    "references": "PDF 13–15",
+    "embedded_appendix": "none",
+    "missing": "S1–S7尚未完成审阅。HAL API真实附件清单已取得，但七个附件下载均返回机器人挑战HTML，未保存为PDF/XLSX；无编号PDF归属S6未确定。"
+  },
+  "version_audit": {
+    "original_locator_label": "submittedVersion",
+    "verified_version": "author_accepted_manuscript_clean_copy",
+    "eligibility": "published_research_identity_verified; relevant_supplements_pending",
+    "sources": [
+      "https://hal.science/hal-05067564v1",
+      "https://api.archives-ouvertes.fr/search/?q=halId_s%3Ahal-05067564&fl=*&wt=json",
+      "https://api.crossref.org/works/10.1109%2Ftai.2025.3565671"
+    ],
+    "evidence": "实际PDF各篇内页带 ACCEPTED MANUSCRIPT / CLEAN COPY。HAL 封面/一手 API title+7作者+DOI一致，Crossref正式记录为2025年11月,6(11),3087–3099。HAL accepted稿14页与正式页数13不同，不宣称版面等价。HAL 2025-10-13 Submitted on 是仓储提交日期，不是期刊审稿提交状态。",
+    "author_name_note": "PDF/HAL Bandopadhyay；正式DOI作者 Bandyopadhyay。保存拼写差异，不静默纠正原稿。",
+    "publisher_vor_byte_equivalence_verified": false
+  },
+  "ten_dimensions": {
+    "reader_argument": {
+      "observation": "先解释 DTI 二分类与作用机制 MoA 的区别，面向药理与机器学习交叉读者；论证新数据资源与多模态建模缺一不可。",
+      "pdf_pages": [
+        2,
+        3,
+        4
+      ],
+      "recommendation": "先明确目标输出与现有任务的区别，再介绍表示学习。",
+      "counterexample": "不要把分类机制标签当作因果机制被验证或临床效果被测量。",
+      "condition": "应用领域的新任务/数据集方法稿",
+      "rule_kind": "corpus_observation_with_editorial_advice",
+      "confidence": "high_for_this_paper; low_for_venue_generalization"
+    },
+    "title_abstract": {
+      "observation": "命名方法＋网络类型＋目标任务；摘要现实成本、现有二分类不足、数据缺口、融合架构、资源与改进数字；独立 Impact Statement 解释潜在应用。",
+      "pdf_pages": [
+        2
+      ],
+      "recommendation": "现实意义用潜力表述，并将摘要数字绑定表中任务/指标。",
+      "counterexample": "AUC提高3.5%的表述实际0.950→0.985为3.5个百分点，非相对3.5%；临床影响没有前瞻实验。",
+      "condition": "数据资源与模型同时贡献的稿件",
+      "rule_kind": "corpus_observation_with_editorial_advice",
+      "confidence": "high_for_this_paper; low_for_venue_generalization"
+    },
+    "introduction": {
+      "observation": "药物机制识别需求→已有DTA/DTI未覆盖MoA→预训练与跨注意力动机→四条数据、表示、编码器与消融贡献。",
+      "pdf_pages": [
+        2,
+        3
+      ],
+      "recommendation": "贡献条目对应后文可检查的数据、模块与实验，不把堆叠组件数量当创新证据。",
+      "counterexample": "预训练模型来源与本文训练要区分，不能把借用模型写为本文新提出。",
+      "condition": "复用预训练编码器的方法稿",
+      "rule_kind": "corpus_observation_with_editorial_advice",
+      "confidence": "high_for_this_paper; low_for_venue_generalization"
+    },
+    "related_work": {
+      "observation": "按DTI二分类/回归分任务，再补充tuple输入与全图输入在未见节点上的区别，定位MoA标签缺口。",
+      "pdf_pages": [
+        3,
+        4
+      ],
+      "recommendation": "相关工作先按问题与数据假设分类，再解释本稿选择的条件。",
+      "counterexample": "不得宣称所有图输入都无法处理新节点；这是文中的限制论证而非普适定理。",
+      "condition": "多个邻近预测任务并存",
+      "rule_kind": "corpus_observation_with_editorial_advice",
+      "confidence": "high_for_this_paper; low_for_venue_generalization"
+    },
+    "method_theory": {
+      "observation": "独立Dataset Description在Methodology之前，数据来源版本、过滤、类合并、增强、负样本先清楚；方法再分预训练编码器、WRX-Attn、融合预测头，Eq3–10与图1–5逐块对应。",
+      "pdf_pages": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "recommendation": "保留自建数据集的规则和任务定义，区分标准公式与本文新增WRX模块。",
+      "counterexample": "正文IV称predict affinity但III说明无定量亲和力且为分类，润色应标记任务用词冲突，不能暗加回归能力。",
+      "condition": "自建数据集是贡献核心",
+      "rule_kind": "corpus_observation_with_editorial_advice",
+      "confidence": "high_for_this_paper; low_for_venue_generalization"
+    },
+    "evidence": {
+      "observation": "Experiments先基准、训练、指标；Results按自建数据、公共二分类数据、五个测试集案例、编码器/融合/增强消融分开。共享设置说明基线重新训练，80:20并train内5折。",
+      "pdf_pages": [
+        10,
+        11,
+        12,
+        13
+      ],
+      "recommendation": "每张表说明DTI还是MoA，样本划分单位、增强时机、基线适配和指标聚合需要可核验。",
+      "counterexample": "正文VI-A写MoA AUC0.940/AUPR0.931，实际表II为0.985/0.940；不能静默选数字。新增药物/靶标泛化没有cold split在主文明确说明。",
+      "condition": "多任务、多数据集报告",
+      "rule_kind": "corpus_observation_with_editorial_advice",
+      "confidence": "high_for_this_paper; low_for_venue_generalization"
+    },
+    "discussion_limits": {
+      "observation": "无独立Discussion，结论总结数据+方法+主指标并写长蛋白token限制，另III说明简单离子/极长序列被排除。病例是选自测试集的预测与文献解释。",
+      "pdf_pages": [
+        5,
+        12,
+        13
+      ],
+      "recommendation": "允许局限放结论但应连到前文过滤与任务边界；保持case studies来源明确。",
+      "counterexample": "五个测试集案例不是新分子实验验证或临床试验；嵌入相似0.9973不直接证明突变保留生物功能。",
+      "condition": "监督分类应用稿",
+      "rule_kind": "corpus_observation_with_editorial_advice",
+      "confidence": "high_for_this_paper; low_for_venue_generalization"
+    },
+    "paragraph_language": {
+      "observation": "先给模块作用再解释表示和公式，较多领域教程；论证中robust/generalize词语较强，因果机制和跨模态增益需要消融支撑。",
+      "pdf_pages": [
+        6,
+        7,
+        8,
+        9,
+        12,
+        13
+      ],
+      "recommendation": "压缩重复的transformer教程，保留新模块的必要维度与操作；likely解释不要提升为确定因果。",
+      "counterexample": "不能复用潜在临床作用强度作为普通语言优化；新增生物/因果结论需新证据。",
+      "condition": "交叉领域应用稿",
+      "rule_kind": "corpus_observation_with_editorial_advice",
+      "confidence": "high_for_this_paper; low_for_venue_generalization"
+    },
+    "main_appendix": {
+      "observation": "主体保留数据处理、机制定义、网络与比较主表；S1排除清单、S2修正、S3基线参数、S4消融、S5逐类曲线、S6划分/超参、S7案例细节外置。",
+      "pdf_pages": [
+        4,
+        11,
+        12,
+        13
+      ],
+      "recommendation": "建立每个S文件与正文主张映射；重要消融结论不能只靠文件名字验证。",
+      "counterexample": "已定位HAL附件，但当前还不能确认S6归属或完成审阅，不能计全文+相关补充完成。",
+      "condition": "补充文件分散的期刊工程",
+      "rule_kind": "corpus_observation_with_editorial_advice",
+      "confidence": "high_for_this_paper; low_for_venue_generalization"
+    },
+    "actionable": {
+      "observation": "用任务×数据划分×指标对齐文字、表、摘要与结论，清楚区分“百分点”与相对提升。",
+      "pdf_pages": [
+        2,
+        11,
+        12,
+        13
+      ],
+      "recommendation": "原创示例（作者核对数值后）：On the constructed MoA dataset, Table II reports an AUC of 0.985; the absolute increase over MMA-DPI is 0.035.",
+      "counterexample": "在正文-表格冲突未解决前只能写编辑查询，不自行把全稿改成0.985。",
+      "condition": "数值一致性审计建议，非TAI独特措辞规范",
+      "rule_kind": "corpus_observation_with_editorial_advice",
+      "confidence": "high_for_this_paper; low_for_venue_generalization"
+    }
+  },
+  "counterexamples": [
+    {
+      "pdf_pages": [
+        11,
+        12,
+        13
+      ],
+      "issue": "Table II MoA AUC/AUPR=0.985/0.940；VI-A文本0.940/0.931；结论再次为98.5%/94.0%。",
+      "action": "保留数字冲突及定位，询问作者确认，禁止语言润色静默改值。"
+    },
+    {
+      "pdf_pages": [
+        11,
+        12,
+        13
+      ],
+      "issue": "0.985-0.950=0.035，为3.5个百分点；0.998-0.985=0.013，为1.3个百分点，而移除graph编码器段落写1.6%。",
+      "action": "标记指标单位与减法不一致；补充审阅后再判断是否不同设置。"
+    }
+  ],
+  "visual_checks": [
+    {
+      "pdf_page": 11,
+      "file": "renders/drugmap-pdf11.png",
+      "checked": "Table II and III; DTI vs MoA columns and numeric prose conflict"
+    }
+  ],
+  "independent_experiment_or_proof_verification": false,
+  "holdout_validation": null,
+  "pdf_sha256": "69201b3b0aa86a62984583f11f1742f213bea4066e0a7685add4c1510bab77be",
+  "support_sample_ids": [
+    "tai-2025-01"
+  ],
+  "supplement_audit": {
+    "source": "sources/drugmap-hal-full.json",
+    "download_log": "sources/annex-fetch-log.json",
+    "all_downloads_failed_content_check": true,
+    "code_repository_tree": "sources/drugmap-tree.json",
+    "fixed_commit": "6d46ebf10c82a277c8a216be54a05f153759fce2",
+    "tree_truncated": false,
+    "code_readme": "sources/drugmap-README-fixed.md"
+  }
+}

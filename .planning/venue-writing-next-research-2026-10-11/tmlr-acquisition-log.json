@@ -1,0 +1,23 @@
+[
+  {
+    "id": "tmlr-2024-01",
+    "status": "acquired",
+    "url": "https://arxiv.org/pdf/2309.16941v2",
+    "pages": 20,
+    "first_page": "                                         Published in Transactions on Machine Learning Research (05/2024)\n\n\n\n\n                                         G4SATBench: Benchmarking and Advancing SAT Solving\n                                         with Graph Neural Networks\n\n                                         Zhaoyu Li                                                                                zhaoyu@cs.toronto.edu\n                                         University of Toronto\n\n             "
+  },
+  {
+    "id": "tmlr-2024-02",
+    "status": "acquired",
+    "url": "https://arxiv.org/pdf/2303.16133v2",
+    "pages": 26,
+    "first_page": "                                         Exposing and Addressing Cross-Task Inconsistency\n                                         in Unified Vision-Language Models\n\n                                         Adyasha Maharana                                                                            adyasha@cs.unc.edu\n                                         University of North Carolina, Chapel Hill\n\n                                         Amita Kamath                                             "
+  },
+  {
+    "id": "tmlr-2025-01",
+    "status": "acquired",
+    "url": "https://arxiv.org/pdf/2506.22982v1",
+    "pages": 40,
+    "first_page": "                                         Published in Transactions on Machine Learning Research (06/2025)\n\n\n\n\n                                         Revisiting CroPA: A Reproducibility Study and Enhance-\n                                         ments for Cross-Prompt Adversarial Transferability in Vision-\n                                         Language Models\n\n                                         Atharv Mittal∗                                                                         athar"
+  }
+]

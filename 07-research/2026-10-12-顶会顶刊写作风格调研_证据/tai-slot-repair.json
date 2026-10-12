@@ -1,0 +1,119 @@
+{
+  "date": "2026-10-12",
+  "operation": "repair nonresearch induction slot; no holdout change",
+  "old_record": {
+    "title": "Front Cover",
+    "year": 2024,
+    "publication_url": "https://doi.org/10.1109/tai.2024.3372796",
+    "pdf_url": "https://ieeexplore.ieee.org/ielx7/9078688/10478748/10478749.pdf",
+    "authors": "",
+    "doi": "10.1109/tai.2024.3372796",
+    "version": "publishedVersion",
+    "version_metadata_source": "OpenAlex locator, not independent content/version verification",
+    "publication_verified": "Crossref publisher DOI deposit",
+    "openalex_id": "https://openalex.org/W4393166451",
+    "provisional_stratum": "other",
+    "semantic_review_status": "not_reviewed",
+    "eligibility": "ineligible_nonresearch_front_cover",
+    "id": "tai-2024-03",
+    "split": "derivation",
+    "selection_locked": "2026-10-10",
+    "type_status": "metadata title and absence of authors confirmed nonresearch",
+    "replacement_status": "pending; original locked record retained for audit",
+    "exclusion_date": "2026-10-11"
+  },
+  "new_record": {
+    "id": "tai-2024-03-r1",
+    "selection_slot": "tai-2024-03",
+    "replaces": "tai-2024-03",
+    "venue": "tai",
+    "year": 2024,
+    "split": "derivation",
+    "selection_locked": "2026-10-12",
+    "original_slot_locked": "2026-10-10",
+    "title": "Efficient Structure Slimming for Spiking Neural Networks",
+    "authors": "Yaxin Li, Xuanye Fang, Yuyuan Gao, Dongdong Zhou, Jiangrong Shen, Jian K. Liu, Gang Pan, Qi Xu",
+    "doi": "10.1109/tai.2024.3352533",
+    "publication_url": "https://ieeexplore.ieee.org/document/10391076/",
+    "pdf_url": "https://pure-oai.bham.ac.uk/ws/files/219032020/LiY24.pdf",
+    "source_index": "original archived OpenAlex locator frame; deterministic DOI-order eligibility repair",
+    "version": "accepted_author_manuscript",
+    "version_metadata_source": "actual institutional PDF cover and matching institution/crossref",
+    "publication_verified": "publisher-deposited Crossref print2024 plus institution Article/accepted manuscript declaration",
+    "eligibility": "accepted_original_research_version_content_confirmed",
+    "paper_type": "empirical sparse neuromorphic model method",
+    "type_status": "continuous semantic content classification",
+    "provisional_stratum": "learning",
+    "pdf_path": ".claude/skills/paper-writing-shared/tmp/corpus/tai/pdf/Efficient_Structure_Slimming_for_Spiking_Neural_Networks.pdf",
+    "pdf_sha256": "1b4243c3e5fd71310821f345f53cc103545d519120d17aa9433afaf6a8aef3dc",
+    "markdown_path": ".claude/skills/paper-writing-shared/tmp/corpus/tai/markdown/Efficient_Structure_Slimming_for_Spiking_Neural_Networks.md",
+    "page_count": 10,
+    "paper_pages": 9,
+    "acquisition_status": "downloaded accepted-author PDF and text parsed",
+    "download_ok": true,
+    "parse_status": "full_pdf_text_extracted",
+    "acquired_version": "accepted_author_manuscript",
+    "version_verification": "Institution Access to Document states accepted author manuscript; actual PDF cover states Peer reviewed version and accepted author manuscript of an article published in TAI, with matching DOI/title/all 8 authors. OpenAlex submittedVersion locator label is inaccurate for this actual deposit.",
+    "full_text_style_review_complete": true,
+    "external_appendix_review_complete": true,
+    "semantic_review_status": "continuous all10PDFpages writing-style review; no referenced prose appendix",
+    "reviewed_date": "2026-10-12",
+    "selection_amendment": "selection-amendments.json",
+    "semantic_review_path": "07-research/2026-10-10-顶会顶刊写作风格调研_证据/corpus/tai/semantic-reviews/tai-2024-03-r1.json"
+  },
+  "reason": "Front Cover is not original research",
+  "selection_policy": "Reuse original archived public-locator frame. Sort unused 2024 entries by normalized DOI. Exclude editorial/front matter/review by content-type screen; require a novel original-research paper, unique existing first author, publisher 2024 print identity, and independently confirmed accepted/published full-text version. Among otherwise eligible rows, prefer confirmable accepted/published versions, as in the original sampling method. Do not inspect holdout outcomes or select based on writing-style findings.",
+  "screen_log": [
+    {
+      "doi": "10.1109/tai.2023.3342563",
+      "title": "Guest Editorial: Special Issue on Physics-Informed Machine Learning",
+      "decision": "exclude",
+      "reason": "guest editorial; title-level type exclusion, no style analysis"
+    },
+    {
+      "doi": "10.1109/tai.2023.3345689",
+      "title": "Front Cover",
+      "decision": "exclude",
+      "reason": "front matter"
+    },
+    {
+      "doi": "10.1109/tai.2023.3345691",
+      "title": "IEEE Transactions on Artificial Intelligence Publication Information",
+      "decision": "exclude",
+      "reason": "front matter"
+    },
+    {
+      "doi": "10.1109/tai.2023.3345693",
+      "title": "Table of Contents",
+      "decision": "exclude",
+      "reason": "front matter"
+    },
+    {
+      "doi": "10.1109/tai.2024.3350543",
+      "title": "Semisupervised Transfer Boosting (SS-TrBoosting)",
+      "decision": "defer_version_confirmation",
+      "reason": "Crossref confirms 2024 print vol.5(7),3431–3444 and original-research identity; arXiv v1 authors/title match and author journal reference links DOI, but actual PDF lacks acceptance/publication/venue/DOI header. Cannot independently label this deposited edition accepted/published merely from related DOI. Candidate retained, not falsely excluded as nonresearch."
+    },
+    {
+      "doi": "10.1109/tai.2024.3351798",
+      "title": "A Survey on Verification and Validation, Testing and Evaluations of Neurosymbolic Artificial Intelligence",
+      "decision": "exclude",
+      "reason": "survey, outside default original-research corpus"
+    },
+    {
+      "doi": "10.1109/tai.2024.3352533",
+      "title": "Efficient Structure Slimming for Spiking Neural Networks",
+      "decision": "propose",
+      "reason": "first independently confirmable accepted-original-research full text in this documented deterministic screen; novel neuron/channel slimming methods and empirical tests, new first author, 2024 print identity"
+    }
+  ],
+  "source_proposal": "07-research/2026-10-12-顶会顶刊写作风格调研_证据/tai-replacement/replacement-candidate.json",
+  "original_manifest_backup": "07-research/2026-10-10-顶会顶刊写作风格调研_证据/corpus/tai/manifest.locked-before-2026-10-12-repair.json",
+  "original_manifest_sha256": "847a296c1842295b8796c643ca2782e6c8bb8d1ad09432fac9f98a9f13e3c90b",
+  "original_records_backup": "07-research/2026-10-10-顶会顶刊写作风格调研_证据/corpus/tai/records.before-2026-10-12-slot-repair.jsonl",
+  "original_records_sha256": "7ad07209b76f1edc579d809513670df60f58f131234d332029ea9a178e718f08",
+  "holdout_preserved": true,
+  "original_active_positions": 50,
+  "new_active_positions": 50,
+  "qualification": "An eligibility repair after original pilot lock. It does not claim all active50papers were selected before first pilot reading or that all remaining candidate qualifications are verified."
+}

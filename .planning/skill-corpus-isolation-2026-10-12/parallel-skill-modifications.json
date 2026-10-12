@@ -1,0 +1,13 @@
+{
+  "user_parallel_modified_skill_files": [
+    ".claude/skills/paper-analyze/SKILL.md",
+    ".claude/skills/paper-conf/SKILL.md",
+    ".claude/skills/paper-daily/SKILL.md",
+    ".claude/skills/paper-interests/SKILL.md",
+    ".claude/skills/paper-polishing/SKILL.md",
+    ".claude/skills/paper-sgd-reading/SKILL.md",
+    ".claude/skills/paper-weekly/SKILL.md",
+    ".claude/skills/paper-writing/SKILL.md"
+  ],
+  "preserve": true
+}

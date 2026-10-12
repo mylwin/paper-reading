@@ -1,0 +1,23 @@
+[
+  {
+    "archive": "07-research/2026-10-11-论文写作润色技能评测_证据",
+    "files": 654,
+    "errors": []
+  },
+  {
+    "archive": "07-research/2026-10-12-顶会顶刊写作风格调研_证据",
+    "files": 90,
+    "errors": []
+  },
+  {
+    "old_skill_changes": [],
+    "old_skills_retained": true
+  },
+  {
+    "untracked_credential_signature_alerts": [
+      "07-research/2026-10-10-顶会顶刊写作风格调研_证据/sources/icml/2025-official-listing.html"
+    ],
+    "resolution": "false positive: official ICML listing contains public Notion URL slug Task- followed by page UUID; no credential value",
+    "confirmed_credential_leaks": 0
+  }
+]

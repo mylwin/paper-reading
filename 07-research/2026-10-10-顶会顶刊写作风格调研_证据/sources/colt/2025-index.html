@@ -1,0 +1,1850 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Search Engine Info --><!-- Solution from http://stackoverflow.com/questions/31593297/using-execcommand-javascript-to-copy-hidden-text-to-clipboard -->
+<script src="https://proceedings.mlr.press/v291/assets/js/copy_input.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://proceedings.mlr.press/v291/assets/js/download.js"></script>
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Proceedings of Machine Learning Research | Proceedings of Thirty Eighth Conference on Learning Theory Held in Lyon, France on 30 June to 04 July 2025 Published as Volume 291 by the Proceedings of Machine Learning Research on 02 July 2025. Volume Edited by: Nika Haghtalab Ankur Moitra Series Editors: Neil D. Lawrence</title>
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Proceedings of Machine Learning Research" />
+<meta name="author" content="PMLR" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Proceedings of Thirty Eighth Conference on Learning Theory Held in Lyon, France on 30 June to 04 July 2025 Published as Volume 291 by the Proceedings of Machine Learning Research on 02 July 2025. Volume Edited by: Nika Haghtalab Ankur Moitra Series Editors: Neil D. Lawrence" />
+<meta property="og:description" content="Proceedings of Thirty Eighth Conference on Learning Theory Held in Lyon, France on 30 June to 04 July 2025 Published as Volume 291 by the Proceedings of Machine Learning Research on 02 July 2025. Volume Edited by: Nika Haghtalab Ankur Moitra Series Editors: Neil D. Lawrence" />
+<link rel="canonical" href="https://proceedings.mlr.press/v291/" />
+<meta property="og:url" content="https://proceedings.mlr.press/v291/" />
+<meta property="og:site_name" content="Proceedings of Machine Learning Research" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Proceedings of Machine Learning Research" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","author":{"@type":"Person","name":"PMLR"},"description":"Proceedings of Thirty Eighth Conference on Learning Theory Held in Lyon, France on 30 June to 04 July 2025 Published as Volume 291 by the Proceedings of Machine Learning Research on 02 July 2025. Volume Edited by: Nika Haghtalab Ankur Moitra Series Editors: Neil D. Lawrence","headline":"Proceedings of Machine Learning Research","name":"Proceedings of Machine Learning Research","url":"https://proceedings.mlr.press/v291/"}</script>
+<!-- End Jekyll SEO tag -->
+<!-- Style Info -->
+  <link rel="stylesheet" type="text/css" href="https://proceedings.mlr.press/v291/assets/css/pmlr.css" />
+  <style>.hero-text {
+    color: #303030;
+  }</style>
+
+  <!-- Icon Info -->
+  <link rel="shortcut icon" href="https://proceedings.mlr.press/v291/assets/images/favicon-pmlr.ico" type="image/x-icon">
+  <link rel="icon" href="https://proceedings.mlr.press/v291/assets/images/favicon-pmlr.ico" type="image/x-icon">
+
+  <!-- Feed Info --><link type="application/atom+xml" rel="alternate" href="https://proceedings.mlr.press/v291/feed.xml" title="Proceedings of Machine Learning Research" /><!-- Scripting info --><!-- Solution from http://stackoverflow.com/questions/31593297/using-execcommand-javascript-to-copy-hidden-text-to-clipboard -->
+<script src="https://proceedings.mlr.press/v291/assets/js/copy_input.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://proceedings.mlr.press/v291/assets/js/download.js"></script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-92432422-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    TeX: {
+      equationNumbers: {
+          autoNumber: "AMS"
+        }
+      },
+      tex2jax: {
+      inlineMath: [ ['$','$'], ['\\(', '\\)'] ],
+      displayMath: [ ['$$','$$'], ['\\[', '\\]'] ],
+      processEscapes: true,
+    }
+  });
+</script>
+<script  async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  <!-- User custom header -->
+</head>
+
+
+
+
+
+
+<body>
+
+
+<header class="site-header">
+  <div class="wrapper">
+    
+
+
+<div class="hero-image">
+  <div class="hero-text">
+    <a href="/" target="_top"><img src="/v291/assets/images/logo-pmlr.svg" alt="[The Thirty Eighth Annual Conference on Learning Theory Logo]"></a>
+    Proceedings of Machine Learning Research
+  </div>
+</div>
+
+
+    <nav class="site-nav">
+  <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+  <label for="nav-trigger">
+  <span class="menu-icon"><svg viewBox="0 0 18 15" width="18px" height="15px">
+  <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+</svg>
+</span>
+  </label>
+  <div class="trigger"><a class="page-link" href="/">PMLR</a><a class="page-link" href="https://www.jmlr.org/">JMLR</a> 
+    <a class="page-link" href="https://data.mlr.press/">DMLR</a> 
+    <a class="page-link" href="https://jmlr.org/tmlr/">TMLR</a> 
+    <a class="page-link" href="https://www.jmlr.org/mloss">MLOSS</a>
+    <a class="page-link" href="/faq.html">FAQ</a>
+    <a class="page-link" href="/spec.html">Submission Format</a>
+    <a class="page-link" href="https://proceedings.mlr.press//v291/assets/rss/feed.xml">
+      <img src="https://proceedings.mlr.press/v291/assets/images/RSS.gif" class="rss" alt="RSS Feed">
+    </a>
+  </div>
+</nav>
+
+  </div>
+</header>
+
+
+
+
+
+<main class="page-content" aria-label="Content"><div class="wrapper">
+
+
+<p style="text-align:right">[<a href="https://github.com/mlresearch/v291/edit/gh-pages/index.html" target="_blank" onclick="ga('send', 'event', 'Edit Page', 'Edit', 'https://github.com/mlresearch/v291/edit/gh-pages/index.html', 13);">edit</a>]</p>
+
+
+
+
+
+
+
+
+
+<h2>Volume 291: The Thirty Eighth Annual Conference on Learning Theory, 30 June to 4 July 2025, Lyon, France</h2>
+
+
+<p style="text-align:right">[<a href="https://github.com/mlresearch/v291/edit/gh-pages/_config.yml" target="_blank" onclick="ga('send', 'event', 'Edit Page', 'Edit', 'https://github.com/mlresearch/v291/edit/gh-pages/_config.yml', 13);">edit</a>]</p>
+
+
+  
+<p><strong>Editors: Nika Haghtalab,&nbsp;Ankur Moitra</strong></p>
+<p>[<a href="./assets/bib/bibliography.bib" target="_blank" onclick="ga('send', 'event', 'Download File', 'Download', 'https://proceedings.mlr.press/v291/assets/bib/bibliography.bib', 14);">bib</a>][<a href="./assets/bib/citeproc.yaml"  target="_blank" onclick="ga('send', 'event', 'Download File', 'Download', 'https://proceedings.mlr.press/v291/assets/bib/citeproc.yaml', 14);">citeproc</a>]</p>
+<div id="sectionnav">
+  <p>Contents:</p>
+  <ul>
+    
+    <li><a href="#Preface">Preface</a></li>
+    
+    <li><a href="#Original Papers">Original Papers</a></li>
+    
+    <li><a href="#Open Problems">Open Problems</a></li>
+    
+  </ul>
+  
+  <p>
+  <label for="search-authors">Filter Authors:</label>
+  <input type="search" name="filter-authors" id="search-authors" value />
+  <label for="search-titles">Filter Titles:</label>
+  <input type="search" name="filter-titles" id="search-titles" value />
+  </p>
+</div>
+
+
+
+
+
+<h3 id="Preface">Preface</h3>
+<div class="paper">
+  <p class="title">Conference on Learning Theory 2025: Preface</p>
+  <p class="details">
+    <span class="authors">Nika Haghtalab,&nbsp;Ankur Moitra</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:i-i</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/haghtalab25a.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/haghtalab25a/haghtalab25a.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/haghtalab25a/haghtalab25a.pdf', 10);">Download PDF</a>]</p>
+</div>
+
+<h3 id="Original Papers">Original Papers</h3>
+<div class="paper">
+  <p class="title">Optimistic Q-learning for average reward and episodic reinforcement learning extended abstract</p>
+  <p class="details">
+    <span class="authors">Priyank Agrawal,&nbsp;Shipra Agrawal</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:1-1</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/agrawal25a.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/agrawal25a/agrawal25a.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/agrawal25a/agrawal25a.pdf', 10);">Download PDF</a>]</p>
+</div>
+<div class="paper">
+  <p class="title">Computable learning of natural hypothesis classes</p>
+  <p class="details">
+    <span class="authors">Syed Akbari,&nbsp;Matthew Harrison-Trainor</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:2-21</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/akbari25a.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/akbari25a/akbari25a.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/akbari25a/akbari25a.pdf', 10);">Download PDF</a>]</p>
+</div>
+<div class="paper">
+  <p class="title">Better Private Distribution Testing by Leveraging Unverified Auxiliary Data</p>
+  <p class="details">
+    <span class="authors">Maryam Aliakbarpour,&nbsp;Arnav Burudgunte,&nbsp;Clément Canonne,&nbsp;Ronitt Rubinfeld</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:22-63</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/aliakbarpour25a.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/aliakbarpour25a/aliakbarpour25a.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/aliakbarpour25a/aliakbarpour25a.pdf', 10);">Download PDF</a>]</p>
+</div>
+<div class="paper">
+  <p class="title">Regret Bounds for Robust Online Decision Making</p>
+  <p class="details">
+    <span class="authors">Alexander Appel,&nbsp;Vanessa Kosoy</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:64-146</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/appel25a.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/appel25a/appel25a.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/appel25a/appel25a.pdf', 10);">Download PDF</a>]</p>
+</div>
+<div class="paper">
+  <p class="title">Simplifying Adversarially Robust PAC Learning With Tolerance</p>
+  <p class="details">
+    <span class="authors">Hassan Ashtiani,&nbsp;Vinayak Pathak,&nbsp;Ruth Urner</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:147-168</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/ashtiani25a.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/ashtiani25a/ashtiani25a.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/ashtiani25a/ashtiani25a.pdf', 10);">Download PDF</a>]</p>
+</div>
+<div class="paper">
+  <p class="title">Computational Intractability of Strategizing against Online Learners</p>
+  <p class="details">
+    <span class="authors">Angelos Assos,&nbsp;Yuval Dagan,&nbsp;Nived Rajaraman</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:169-199</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/assos25a.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/assos25a/assos25a.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/assos25a/assos25a.pdf', 10);">Download PDF</a>]</p>
+</div>
+<div class="paper">
+  <p class="title">Testing Thresholds and Spectral Properties of High-Dimensional Random Toroidal Graphs via Edgeworth-Style Expansions</p>
+  <p class="details">
+    <span class="authors">Samuel Baguley,&nbsp;Andreas Göbel,&nbsp;Marcus Pappik,&nbsp;Leon Schiller</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:200-201</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/baguley25a.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/baguley25a/baguley25a.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/baguley25a/baguley25a.pdf', 10);">Download PDF</a>]</p>
+</div>
+<div class="paper">
+  <p class="title">Faster Acceleration for Steepest Descent</p>
+  <p class="details">
+    <span class="authors">Cedar Site Bai,&nbsp;Brian Bullins</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:202-230</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/bai25a.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/bai25a/bai25a.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/bai25a/bai25a.pdf', 10);">Download PDF</a>]</p>
+</div>
+<div class="paper">
+  <p class="title">Thompson Sampling for Bandit Convex Optimisation</p>
+  <p class="details">
+    <span class="authors">Alireza Bakhtiari,&nbsp;Tor Lattimore,&nbsp;Csaba Szepesvári</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:231-263</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/bakhtiari25a.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/bakhtiari25a/bakhtiari25a.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/bakhtiari25a/bakhtiari25a.pdf', 10);">Download PDF</a>]</p>
+</div>
+<div class="paper">
+  <p class="title">Metric Embeddings Beyond Bi-Lipschitz Distortion via Sherali-Adams</p>
+  <p class="details">
+    <span class="authors">Ainesh Bakshi,&nbsp;Vincent Cohen-Addad,&nbsp;Rajesh Jayaram,&nbsp;Samuel B. Hopkins,&nbsp;Silvio Lattanzi</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:264-279</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/bakshi25a.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/bakshi25a/bakshi25a.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/bakshi25a/bakshi25a.pdf', 10);">Download PDF</a>]</p>
+</div>
+<div class="paper">
+  <p class="title">How to safely discard features based on aggregate SHAP values</p>
+  <p class="details">
+    <span class="authors">Robi Bhattacharjee,&nbsp;Karolin Frohnapfel,&nbsp;Ulrike von Luxburg</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:280-314</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/bhattacharjee25a.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/bhattacharjee25a/bhattacharjee25a.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/bhattacharjee25a/bhattacharjee25a.pdf', 10);">Download PDF</a>]</p>
+</div>
+<div class="paper">
+  <p class="title">Optimal Graph Reconstruction by Counting Connected Components in Induced Subgraphs</p>
+  <p class="details">
+    <span class="authors">Hadley Black,&nbsp;Arya Mazumdar,&nbsp;Barna Saha,&nbsp;Yinzhan Xu</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:315-343</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/black25a.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/black25a/black25a.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/black25a/black25a.pdf', 10);">Download PDF</a>]</p>
+</div>
+<div class="paper">
+  <p class="title">Learning Partitions with Optimal Query and Round Complexities</p>
+  <p class="details">
+    <span class="authors">Hadley Black,&nbsp;Arya Mazumdar,&nbsp;Barna Saha</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:344-374</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/black25b.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/black25b/black25b.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/black25b/black25b.pdf', 10);">Download PDF</a>]</p>
+</div>
+<div class="paper">
+  <p class="title">A Distributional-Lifting Theorem for PAC Learning</p>
+  <p class="details">
+    <span class="authors">Guy Blanc,&nbsp;Jane Lange,&nbsp;Carmen Strassle,&nbsp;Li-Yang Tan</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:375-379</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/blanc25a.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/blanc25a/blanc25a.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/blanc25a/blanc25a.pdf', 10);">Download PDF</a>]</p>
+</div>
+<div class="paper">
+  <p class="title">Stability and List-Replicability for Agnostic Learners</p>
+  <p class="details">
+    <span class="authors">Ari Blondal,&nbsp;Gao Shan,&nbsp;Hamed Hatami,&nbsp;Pooya Hatami</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:380-400</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/blondal25a.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/blondal25a/blondal25a.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/blondal25a/blondal25a.pdf', 10);">Download PDF</a>]</p>
+</div>
+<div class="paper">
+  <p class="title">Proofs as Explanations: Short Certificates for Reliable Predictions</p>
+  <p class="details">
+    <span class="authors">Avrim Blum,&nbsp;Steve Hanneke,&nbsp;Chirag Pabbaraju,&nbsp;Donya Saless</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:401-420</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/blum25a.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/blum25a/blum25a.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/blum25a/blum25a.pdf', 10);">Download PDF</a>]</p>
+</div>
+<div class="paper">
+  <p class="title">Accelerating Proximal Gradient Descent via Silver Stepsizes</p>
+  <p class="details">
+    <span class="authors">Jinho Bok,&nbsp;Jason M. Altschuler</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:421-453</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/bok25a.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/bok25a/bok25a.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/bok25a/bok25a.pdf', 10);">Download PDF</a>]</p>
+</div>
+<div class="paper">
+  <p class="title">Logarithmic regret of exploration in average reward Markov decision processes</p>
+  <p class="details">
+    <span class="authors">Victor Boone,&nbsp;Bruno Gaujal</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:454-533</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/boone25a.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/boone25a/boone25a.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/boone25a/boone25a.pdf', 10);">Download PDF</a>]</p>
+</div>
+<div class="paper">
+  <p class="title">Partial and Exact Recovery of a Random Hypergraph from its Graph Projection</p>
+  <p class="details">
+    <span class="authors">Guy Bresler,&nbsp;Chenghao Guo,&nbsp;Yury Polyanskiy,&nbsp;Andrew Yao</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:534-593</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/bresler25a.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/bresler25a/bresler25a.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/bresler25a/bresler25a.pdf', 10);">Download PDF</a>]</p>
+</div>
+<div class="paper">
+  <p class="title">Computational Equivalence of Spiked Covariance and Spiked Wigner Models via Gram-Schmidt Perturbation</p>
+  <p class="details">
+    <span class="authors">Guy Bresler,&nbsp;Alina Harbuzova</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:594-595</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/bresler25b.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/bresler25b/bresler25b.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/bresler25b/bresler25b.pdf', 10);">Download PDF</a>]</p>
+</div>
+<div class="paper">
+  <p class="title">Of Dice and Games: A Theory of Generalized Boosting</p>
+  <p class="details">
+    <span class="authors">Marco Bressan,&nbsp;Nataly Brukhim,&nbsp;Nicolò Cesa-Bianchi,&nbsp;Emmanuel Esposito,&nbsp;Yishay Mansour,&nbsp;Shay Moran,&nbsp;Maximilian Thiessen</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:596-640</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/bressan25a.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/bressan25a/bressan25a.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/bressan25a/bressan25a.pdf', 10);">Download PDF</a>]</p>
+</div>
+<div class="paper">
+  <p class="title">A Fine-grained Characterization of PAC Learnability</p>
+  <p class="details">
+    <span class="authors">Marco Bressan,&nbsp;Nataly Brukhim,&nbsp;Nicolò Cesa-Bianchi,&nbsp;Emmanuel Esposito,&nbsp;Yishay Mansour,&nbsp;Shay Moran,&nbsp;Maximilian Thiessen</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:641-676</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/bressan25b.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/bressan25b/bressan25b.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/bressan25b/bressan25b.pdf', 10);">Download PDF</a>]</p>
+</div>
+<div class="paper">
+  <p class="title">On the Convergence of Min-Max Langevin Dynamics and Algorithm</p>
+  <p class="details">
+    <span class="authors">Yang Cai,&nbsp;Siddharth Mitra,&nbsp;Xiuyuan Wang,&nbsp;Andre Wibisono</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:677-754</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/cai25a.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/cai25a/cai25a.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/cai25a/cai25a.pdf', 10);">Download PDF</a>]</p>
+</div>
+<div class="paper">
+  <p class="title">What Makes Treatment Effects Identifiable? Characterizations and Estimators Beyond Unconfoundedness (Extended Abstract)</p>
+  <p class="details">
+    <span class="authors">Yang Cai,&nbsp;Alkis Kalavasis,&nbsp;Katerina Mamali,&nbsp;Anay Mehrotra,&nbsp;Manolis Zampetakis</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:755-756</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/cai25b.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/cai25b/cai25b.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/cai25b/cai25b.pdf', 10);">Download PDF</a>]</p>
+</div>
+<div class="paper">
+  <p class="title">Information-theoretic reduction of deep neural networks to linear models in the overparametrized proportional regime</p>
+  <p class="details">
+    <span class="authors">Francesco Camilli,&nbsp;Daria Tieplova,&nbsp;Eleonora Bergamin,&nbsp;Jean Barbier</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:757-798</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/camilli25a.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/camilli25a/camilli25a.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/camilli25a/camilli25a.pdf', 10);">Download PDF</a>]</p>
+</div>
+<div class="paper">
+  <p class="title">Market Making without Regret</p>
+  <p class="details">
+    <span class="authors">Nicolò Cesa-Bianchi,&nbsp;Tommaso Cesari,&nbsp;Roberto Colomboni,&nbsp;Luigi Foscari,&nbsp;Vinayak Pathak</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:799-837</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/cesa-bianchi25a.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/cesa-bianchi25a/cesa-bianchi25a.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/cesa-bianchi25a/cesa-bianchi25a.pdf', 10);">Download PDF</a>]</p>
+</div>
+<div class="paper">
+  <p class="title">Towards Fair Representation: Clustering and Consensus</p>
+  <p class="details">
+    <span class="authors">Diptarka Chakraborty,&nbsp;Kushagra Chatterjee,&nbsp;Debarati Das,&nbsp;Tien Long Nguyen,&nbsp;Romina Nobahari</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:838-853</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/chakraborty25a.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/chakraborty25a/chakraborty25a.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/chakraborty25a/chakraborty25a.pdf', 10);">Download PDF</a>]</p>
+</div>
+<div class="paper">
+  <p class="title">Exploring Facets of Language Generation in the Limit</p>
+  <p class="details">
+    <span class="authors">Moses Charikar,&nbsp;Chirag Pabbaraju</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:854-887</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/charikar25a.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/charikar25a/charikar25a.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/charikar25a/charikar25a.pdf', 10);">Download PDF</a>]</p>
+</div>
+<div class="paper">
+  <p class="title">Deterministic Apple Tasting</p>
+  <p class="details">
+    <span class="authors">Zachary Chase,&nbsp;Idan Mehalel</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:888-923</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/chase25a.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/chase25a/chase25a.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/chase25a/chase25a.pdf', 10);">Download PDF</a>]</p>
+</div>
+<div class="paper">
+  <p class="title">DiscQuant: A Quantization Method for Neural Networks Inspired by Discrepancy Theory</p>
+  <p class="details">
+    <span class="authors">Jerry Chee,&nbsp;Arturs Backurs,&nbsp;Rainie Heck,&nbsp;Li Zhang,&nbsp;Janardhan Kulkarni,&nbsp;Thomas Rothvoss,&nbsp;Sivakanth Gopi</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:924-951</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/chee25a.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/chee25a/chee25a.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/chee25a/chee25a.pdf', 10);">Download PDF</a>]</p>
+</div>
+<div class="paper">
+  <p class="title">Solving Convex-Concave Problems with $\mathcal{O}(\epsilon^{-4/7})$ Second-Order Oracle Complexity</p>
+  <p class="details">
+    <span class="authors">Lesi Chen,&nbsp;Chengchang Liu,&nbsp;Luo Luo,&nbsp;Jingzhao Zhang</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:952-982</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/chen25a.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/chen25a/chen25a.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/chen25a/chen25a.pdf', 10);">Download PDF</a>]</p>
+</div>
+<div class="paper">
+  <p class="title">Decision Making in Changing Environments: Robustness, Query-Based Learning, and Differential Privacy</p>
+  <p class="details">
+    <span class="authors">Fan Chen,&nbsp;Alexander Rakhlin</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:983-985</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/chen25b.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/chen25b/chen25b.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/chen25b/chen25b.pdf', 10);">Download PDF</a>]</p>
+</div>
+<div class="paper">
+  <p class="title">Predicting quantum channels over general product distributions</p>
+  <p class="details">
+    <span class="authors">Sitan Chen,&nbsp;Jaume de Dios Pont,&nbsp;Jun-Ting Hsieh,&nbsp;Hsin-Yuan Huang,&nbsp;Jane Lange,&nbsp;Jerry Li</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:986-1007</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/chen25c.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/chen25c/chen25c.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/chen25c/chen25c.pdf', 10);">Download PDF</a>]</p>
+</div>
+<div class="paper">
+  <p class="title">Improved sample upper and lower bounds for trace estimation of quantum state powers</p>
+  <p class="details">
+    <span class="authors">Kean Chen,&nbsp;Qisheng Wang</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:1008-1028</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/chen25d.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/chen25d/chen25d.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/chen25d/chen25d.pdf', 10);">Download PDF</a>]</p>
+</div>
+<div class="paper">
+  <p class="title">Learning general Gaussian mixtures with efficient score matching</p>
+  <p class="details">
+    <span class="authors">Sitan Chen,&nbsp;Vasilis Kontonis,&nbsp;Kulin Shah</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:1029-1090</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/chen25e.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/chen25e/chen25e.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/chen25e/chen25e.pdf', 10);">Download PDF</a>]</p>
+</div>
+<div class="paper">
+  <p class="title">Algorithms for Sparse LPN and LSPN Against Low-noise (extended abstract)</p>
+  <p class="details">
+    <span class="authors">Xue Chen,&nbsp;Wenxuan Shu,&nbsp;Zhaienhe Zhou</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:1091-1093</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/chen25f.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/chen25f/chen25f.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/chen25f/chen25f.pdf', 10);">Download PDF</a>]</p>
+</div>
+<div class="paper">
+  <p class="title">Optimization, Isoperimetric Inequalities, and Sampling via Lyapunov Potentials</p>
+  <p class="details">
+    <span class="authors">August Y Chen,&nbsp;Karthik Sridharan</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:1094-1153</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/chen25g.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/chen25g/chen25g.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/chen25g/chen25g.pdf', 10);">Download PDF</a>]</p>
+</div>
+<div class="paper">
+  <p class="title">Heavy-tailed Estimation is Easier than Adversarial Contamination</p>
+  <p class="details">
+    <span class="authors">Yeshwanth Cherapanamjeri,&nbsp;Daniel Lee</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:1154-1184</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/cherapanamjeri25a.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/cherapanamjeri25a/cherapanamjeri25a.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/cherapanamjeri25a/cherapanamjeri25a.pdf', 10);">Download PDF</a>]</p>
+</div>
+<div class="paper">
+  <p class="title">The Space Complexity of Learning-Unlearning Algorithms (extended abstract)</p>
+  <p class="details">
+    <span class="authors">Yeshwanth Cherapanamjeri,&nbsp;Sumegha Garg,&nbsp;Nived Rajaraman,&nbsp;Ayush Sekhari,&nbsp;Abhishek Shetty</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:1185-1193</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/cherapanamjeri25b.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/cherapanamjeri25b/cherapanamjeri25b.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/cherapanamjeri25b/cherapanamjeri25b.pdf', 10);">Download PDF</a>]</p>
+</div>
+<div class="paper">
+  <p class="title">Quantum State and Unitary Learning Implies Circuit Lower Bounds</p>
+  <p class="details">
+    <span class="authors">Nai-Hui Chia,&nbsp;Daniel Liang,&nbsp;Fang Song</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:1194-1252</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/chia25a.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/chia25a/chia25a.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/chia25a/chia25a.pdf', 10);">Download PDF</a>]</p>
+</div>
+<div class="paper">
+  <p class="title">Stochastic block models with many communities and the Kesten–Stigum bound - extended abstract</p>
+  <p class="details">
+    <span class="authors">Byron Chin,&nbsp;Elchanan Mossel,&nbsp;Youngtak Sohn,&nbsp;Alexander S. Wein</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:1253-1258</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/chin25a.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/chin25a/chin25a.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/chin25a/chin25a.pdf', 10);">Download PDF</a>]</p>
+</div>
+<div class="paper">
+  <p class="title">Spherical Dimension</p>
+  <p class="details">
+    <span class="authors">Bogdan Chornomaz,&nbsp;Shay Moran,&nbsp;Tom Waknine</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:1259-1313</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/chornomaz25a.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/chornomaz25a/chornomaz25a.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/chornomaz25a/chornomaz25a.pdf', 10);">Download PDF</a>]</p>
+</div>
+<div class="paper">
+  <p class="title">Lower Bounds for Greedy Teaching Set Constructions</p>
+  <p class="details">
+    <span class="authors">Spencer Compton,&nbsp;Chirag Pabbaraju,&nbsp;Nikita Zhivotovskiy</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:1314-1329</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/compton25a.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/compton25a/compton25a.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/compton25a/compton25a.pdf', 10);">Download PDF</a>]</p>
+</div>
+<div class="paper">
+  <p class="title">Non-Euclidean High-Order Smooth Convex Optimization Extended Abstract</p>
+  <p class="details">
+    <span class="authors">Juan Pablo Contreras,&nbsp;Cristóbal Guzmán,&nbsp;David Martı́nez-Rubio</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:1330-1330</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/contreras25a.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/contreras25a/contreras25a.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/contreras25a/contreras25a.pdf', 10);">Download PDF</a>]</p>
+</div>
+<div class="paper">
+  <p class="title">Low-dimensional Functions are Efficiently Learnable under Randomly Biased Distributions</p>
+  <p class="details">
+    <span class="authors">Elisabetta Cornacchia,&nbsp;Dan Mikulincer,&nbsp;Elchanan Mossel</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:1331-1365</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/cornacchia25a.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/cornacchia25a/cornacchia25a.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/cornacchia25a/cornacchia25a.pdf', 10);">Download PDF</a>]</p>
+</div>
+<div class="paper">
+  <p class="title">Non-Monetary Mechanism Design without Distributional Information: Using Scarce Audits Wisely (Extended Abstract)</p>
+  <p class="details">
+    <span class="authors">Yan Dai,&nbsp;Moïse Blanchard,&nbsp;Patrick Jaillet</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:1366-1367</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/dai25a.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/dai25a/dai25a.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/dai25a/dai25a.pdf', 10);">Download PDF</a>]</p>
+</div>
+<div class="paper">
+  <p class="title">Existence of Adversarial Examples for Random Convolutional Networks via  Isoperimetric Inequalities on $\mathbb{SO}(d)$</p>
+  <p class="details">
+    <span class="authors">Amit Daniely</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:1368-1379</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/daniely25a.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/daniely25a/daniely25a.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/daniely25a/daniely25a.pdf', 10);">Download PDF</a>]</p>
+</div>
+<div class="paper">
+  <p class="title">Rate-Preserving Reductions for Blackwell Approachability</p>
+  <p class="details">
+    <span class="authors">Christoph Dann,&nbsp;Yishay Mansour,&nbsp;Mehryar Mohri,&nbsp;Jon Schneider,&nbsp;Balasubramanian Sivan</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:1380-1414</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/dann25a.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/dann25a/dann25a.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/dann25a/dann25a.pdf', 10);">Download PDF</a>]</p>
+</div>
+<div class="paper">
+  <p class="title">Low-rank fine-tuning lies between lazy training and feature learning</p>
+  <p class="details">
+    <span class="authors">Arif Kerem Dayi,&nbsp;Sitan Chen</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:1415-1471</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/dayi25a.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/dayi25a/dayi25a.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/dayi25a/dayi25a.pdf', 10);">Download PDF</a>]</p>
+</div>
+<div class="paper">
+  <p class="title">Learning Intersections of Two Margin Halfspaces under Factorizable Distributions</p>
+  <p class="details">
+    <span class="authors">Ilias Diakonikolas,&nbsp;Ma Mingchen,&nbsp;Ren Lisheng,&nbsp;Tzamos Christos</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:1472-1530</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/diakonikolas25a.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/diakonikolas25a/diakonikolas25a.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/diakonikolas25a/diakonikolas25a.pdf', 10);">Download PDF</a>]</p>
+</div>
+<div class="paper">
+  <p class="title">Faster Algorithms for Agnostically Learning Disjunctions and their Implications</p>
+  <p class="details">
+    <span class="authors">Ilias Diakonikolas,&nbsp;Daniel M. Kane,&nbsp;Lisheng Ren</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:1531-1558</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/diakonikolas25b.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/diakonikolas25b/diakonikolas25b.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/diakonikolas25b/diakonikolas25b.pdf', 10);">Download PDF</a>]</p>
+</div>
+<div class="paper">
+  <p class="title">A Proof of The Changepoint Detection Threshold Conjecture in Preferential Attachment Models</p>
+  <p class="details">
+    <span class="authors">Hang Du,&nbsp;Shuyang Gong,&nbsp;Jiaming Xu</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:1559-1563</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/du25a.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/du25a/du25a.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/du25a/du25a.pdf', 10);">Download PDF</a>]</p>
+</div>
+<div class="paper">
+  <p class="title">From Fairness to Infinity: Outcome-Indistinguishable (Omni)Prediction in Evolving Graphs</p>
+  <p class="details">
+    <span class="authors">Cynthia Dwork,&nbsp;Chris Hays,&nbsp;Nicole Immorlica,&nbsp;Juan C. Perdomo,&nbsp;Pranay Tankala</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:1564-1637</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/dwork25a.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/dwork25a/dwork25a.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/dwork25a/dwork25a.pdf', 10);">Download PDF</a>]</p>
+</div>
+<div class="paper">
+  <p class="title">Logarithmic Width Suffices for Robust Memorization</p>
+  <p class="details">
+    <span class="authors">Amitsour Egosi,&nbsp;Gilad Yehudai,&nbsp;Ohad Shamir</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:1638-1690</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/egosi25a.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/egosi25a/egosi25a.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/egosi25a/egosi25a.pdf', 10);">Download PDF</a>]</p>
+</div>
+<div class="paper">
+  <p class="title">Detecting Arbitrary Planted Subgraphs in Random Graphs</p>
+  <p class="details">
+    <span class="authors">Dor Elimelech,&nbsp;Wasim Huleihel</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:1691-1798</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/elimelech25a.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/elimelech25a/elimelech25a.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/elimelech25a/elimelech25a.pdf', 10);">Download PDF</a>]</p>
+</div>
+<div class="paper">
+  <p class="title">Universality of High-Dimensional Logistic Regression and a Novel CGMT under Dependence with Applications to Data Augmentation</p>
+  <p class="details">
+    <span class="authors">Matthew Esmaili Mallory,&nbsp;Kevin Han Huang,&nbsp;Morgane Austern</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:1799-1918</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/esmaili-mallory25a.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/esmaili-mallory25a/esmaili-mallory25a.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/esmaili-mallory25a/esmaili-mallory25a.pdf', 10);">Download PDF</a>]</p>
+</div>
+<div class="paper">
+  <p class="title">Learning Augmented Graph $k$-Clustering</p>
+  <p class="details">
+    <span class="authors">Chenglin Fan,&nbsp;Kijun Shin</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:1919-1934</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/fan25a.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/fan25a/fan25a.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/fan25a/fan25a.pdf', 10);">Download PDF</a>]</p>
+</div>
+<div class="paper">
+  <p class="title">Trade-offs in Data Memorization via Strong Data Processing Inequalities</p>
+  <p class="details">
+    <span class="authors">Vitaly Feldman,&nbsp;Guy Kornowski,&nbsp;Xin Lyu</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:1935-1973</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/feldman25a.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/feldman25a/feldman25a.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/feldman25a/feldman25a.pdf', 10);">Download PDF</a>]</p>
+</div>
+<div class="paper">
+  <p class="title">Approximating the total variation distance between spin systems</p>
+  <p class="details">
+    <span class="authors">Weiming Feng,&nbsp;Hongyang Liu,&nbsp;Minji Yang</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:1974-2025</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/feng25a.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/feng25a/feng25a.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/feng25a/feng25a.pdf', 10);">Download PDF</a>]</p>
+</div>
+<div class="paper">
+  <p class="title">Is a Good Foundation Necessary for Efficient Reinforcement Learning? The Computational Role of the Base Model in Exploration</p>
+  <p class="details">
+    <span class="authors">Dylan J Foster,&nbsp;Zakaria Mhammedi,&nbsp;Dhruv Rohatgi</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:2026-2142</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/foster25a.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/foster25a/foster25a.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/foster25a/foster25a.pdf', 10);">Download PDF</a>]</p>
+</div>
+<div class="paper">
+  <p class="title">An uncertainty principle for Linear Recurrent Neural Networks</p>
+  <p class="details">
+    <span class="authors">Alexandre François,&nbsp;Antonio Orvieto,&nbsp;Francis Bach</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:2143-2187</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/francois25a.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/francois25a/francois25a.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/francois25a/francois25a.pdf', 10);">Download PDF</a>]</p>
+</div>
+<div class="paper">
+  <p class="title">Complexity of Injectivity and Verification of ReLU Neural Networks (Extended Abstract)</p>
+  <p class="details">
+    <span class="authors">Vincent Froese,&nbsp;Moritz Grillo,&nbsp;Martin Skutella</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:2188-2189</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/froese25a.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/froese25a/froese25a.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/froese25a/froese25a.pdf', 10);">Download PDF</a>]</p>
+</div>
+<div class="paper">
+  <p class="title">Bayes correlated equilibria, no-regret dynamics in Bayesian games, and the price of anarchy</p>
+  <p class="details">
+    <span class="authors">Kaito Fujii</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:2190-2191</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/fujii25a.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/fujii25a/fujii25a.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/fujii25a/fujii25a.pdf', 10);">Download PDF</a>]</p>
+</div>
+<div class="paper">
+  <p class="title">Gradient Methods with Online Scaling</p>
+  <p class="details">
+    <span class="authors">Wenzhi Gao,&nbsp;Ya-Chi Chu,&nbsp;Yinyu Ye,&nbsp;Madeleine Udell</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:2192-2226</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/gao25a.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/gao25a/gao25a.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/gao25a/gao25a.pdf', 10);">Download PDF</a>]</p>
+</div>
+<div class="paper">
+  <p class="title">Computing High-dimensional Confidence Sets for Arbitrary Distributions</p>
+  <p class="details">
+    <span class="authors">Chao Gao,&nbsp;Liren Shan,&nbsp;Vaidehi Srinivas,&nbsp;Aravindan Vijayaraghavan</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:2227-2269</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/gao25b.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/gao25b/gao25b.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/gao25b/gao25b.pdf', 10);">Download PDF</a>]</p>
+</div>
+<div class="paper">
+  <p class="title">Blackwell’s Approachability with Approximation Algorithms</p>
+  <p class="details">
+    <span class="authors">Dan Garber,&nbsp;Massalha Mhna</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:2270-2290</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/garber25a.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/garber25a/garber25a.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/garber25a/garber25a.pdf', 10);">Download PDF</a>]</p>
+</div>
+<div class="paper">
+  <p class="title">Faster Low-Rank Approximation and Kernel Ridge Regression via the Block-Nyström Method</p>
+  <p class="details">
+    <span class="authors">Sachin Garg,&nbsp;Michał Dereziński</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:2291-2325</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/garg25a.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/garg25a/garg25a.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/garg25a/garg25a.pdf', 10);">Download PDF</a>]</p>
+</div>
+<div class="paper">
+  <p class="title">Model predictive control is almost optimal for restless bandits</p>
+  <p class="details">
+    <span class="authors">Nicolas "Gast,&nbsp;Dheeraj" Narasimha</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:2326-2361</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/gast25a.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/gast25a/gast25a.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/gast25a/gast25a.pdf', 10);">Download PDF</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/assets/gast25a/gast25a-supp.zip" target="_blank" onclick="ga('send', 'event', 'Extra Downloads', 'Download', 'Supplementary ZIP', 12);">Supplementary ZIP</a>]</p>
+</div>
+<div class="paper">
+  <p class="title">Computing Optimal Regularizers for Online Linear Optimization</p>
+  <p class="details">
+    <span class="authors">Khashayar Gatmiry,&nbsp;Jon Schneider,&nbsp;Stefanie Jegelka</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:2362-2402</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/gatmiry25a.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/gatmiry25a/gatmiry25a.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/gatmiry25a/gatmiry25a.pdf', 10);">Download PDF</a>]</p>
+</div>
+<div class="paper">
+  <p class="title">Learning Mixtures of Gaussians Using Diffusion Models</p>
+  <p class="details">
+    <span class="authors">Khashayar Gatmiry,&nbsp;Jonathan Kelner,&nbsp;Holden Lee</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:2403-2456</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/gatmiry25b.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/gatmiry25b/gatmiry25b.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/gatmiry25b/gatmiry25b.pdf', 10);">Download PDF</a>]</p>
+</div>
+<div class="paper">
+  <p class="title">“All-Something-Nothing” Phase Transitions in Planted $k$-Factor Recovery (Extended Abstract)</p>
+  <p class="details">
+    <span class="authors">Julia Gaudio,&nbsp;Colin Sandon,&nbsp;Jiaming Xu,&nbsp;Dana Yang</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:2457-2459</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/gaudio25a.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/gaudio25a/gaudio25a.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/gaudio25a/gaudio25a.pdf', 10);">Download PDF</a>]</p>
+</div>
+<div class="paper">
+  <p class="title">PREM: Privately Answering Statistical Queries with Relative Error</p>
+  <p class="details">
+    <span class="authors">Badih Ghazi,&nbsp;Cristóbal Guzmán,&nbsp;Pritish Kamath,&nbsp;Alexander Knop,&nbsp;Ravi Kumar,&nbsp;Pasin Manurangsi,&nbsp;Sushant Sachdeva</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:2460-2460</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/ghazi25a.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/ghazi25a/ghazi25a.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/ghazi25a/ghazi25a.pdf', 10);">Download PDF</a>]</p>
+</div>
+<div class="paper">
+  <p class="title">Mean-field analysis of polynomial-width two-layer neural network beyond finite time horizon</p>
+  <p class="details">
+    <span class="authors">Margalit Glasgow,&nbsp;Denny Wu,&nbsp;Joan Bruna</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:2461-2539</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/glasgow25a.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/glasgow25a/glasgow25a.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/glasgow25a/glasgow25a.pdf', 10);">Download PDF</a>]</p>
+</div>
+<div class="paper">
+  <p class="title">Tight Bounds for Noisy Computation of High-Influence Functions, Connectivity, and Threshold</p>
+  <p class="details">
+    <span class="authors">Yuzhou Gu,&nbsp;Xin Li,&nbsp;Yinzhan Xu</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:2540-2591</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/gu25a.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/gu25a/gu25a.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/gu25a/gu25a.pdf', 10);">Download PDF</a>]</p>
+</div>
+<div class="paper">
+  <p class="title">Agnostic Learning of Arbitrary ReLU Activation under Gaussian Marginals</p>
+  <p class="details">
+    <span class="authors">Anxin Guo,&nbsp;Aravindan Vijayaraghavan</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:2592-2631</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/guo25a.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/guo25a/guo25a.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/guo25a/guo25a.pdf', 10);">Download PDF</a>]</p>
+</div>
+<div class="paper">
+  <p class="title">Alternating Regret for Online Convex Optimization</p>
+  <p class="details">
+    <span class="authors">Soumita Hait,&nbsp;Ping Li,&nbsp;Haipeng Luo,&nbsp;Mengxiao Zhang</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:2632-2633</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/hait25a.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/hait25a/hait25a.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/hait25a/hait25a.pdf', 10);">Download PDF</a>]</p>
+</div>
+<div class="paper">
+  <p class="title">Data Selection for ERMs</p>
+  <p class="details">
+    <span class="authors">Steve Hanneke,&nbsp;Shay Moran,&nbsp;Alexander Shlimovich,&nbsp;Amir Yehudayoff</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:2634-2665</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/hanneke25a.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/hanneke25a/hanneke25a.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/hanneke25a/hanneke25a.pdf', 10);">Download PDF</a>]</p>
+</div>
+<div class="paper">
+  <p class="title">Universal Rates of ERM for Agnostic Learning</p>
+  <p class="details">
+    <span class="authors">Steve Hanneke,&nbsp;Mingyue Xu</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:2666-2703</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/hanneke25b.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/hanneke25b/hanneke25b.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/hanneke25b/hanneke25b.pdf', 10);">Download PDF</a>]</p>
+</div>
+<div class="paper">
+  <p class="title">Universal Rates for Multiclass Learning with Bandit Feedback</p>
+  <p class="details">
+    <span class="authors">Steve Hanneke,&nbsp;Amirreza Shaeiri,&nbsp;Qian Zhang</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:2704-2756</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/hanneke25c.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/hanneke25c/hanneke25c.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/hanneke25c/hanneke25c.pdf', 10);">Download PDF</a>]</p>
+</div>
+<div class="paper">
+  <p class="title">Compression Barriers in Autoregressive Transformers</p>
+  <p class="details">
+    <span class="authors">Themistoklis Haris,&nbsp;Krzysztof Onak</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:2757-2785</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/haris25a.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/haris25a/haris25a.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/haris25a/haris25a.pdf', 10);">Download PDF</a>]</p>
+</div>
+<div class="paper">
+  <p class="title">On the query complexity of sampling from non-log-concave distributions (extended abstract)</p>
+  <p class="details">
+    <span class="authors">Yuchen He,&nbsp;Chihao Zhang</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:2786-2787</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/he25a.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/he25a/he25a.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/he25a/he25a.pdf', 10);">Download PDF</a>]</p>
+</div>
+<div class="paper">
+  <p class="title">Learning DNF through Generalized Fourier Representations</p>
+  <p class="details">
+    <span class="authors">Mohsen Heidari,&nbsp;Roni Khardon</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:2788-2804</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/heidari25a.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/heidari25a/heidari25a.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/heidari25a/heidari25a.pdf', 10);">Download PDF</a>]</p>
+</div>
+<div class="paper">
+  <p class="title">Noisy Group Testing in the Linear Regime: Exact Thresholds and Efficient </p>
+  <p class="details">
+    <span class="authors">Lukas Hintze,&nbsp;Lena Krieg,&nbsp;Olga Scheftelowitsch,&nbsp;Haodong Zhu</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:2805-2821</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/hintze25a.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/hintze25a/hintze25a.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/hintze25a/hintze25a.pdf', 10);">Download PDF</a>]</p>
+</div>
+<div class="paper">
+  <p class="title">Improved Margin Generalization Bounds for Voting Classifiers</p>
+  <p class="details">
+    <span class="authors">Mikael Høgsgaard Møller,&nbsp;Kasper Green Larsen</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:2822-2855</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/hogsgaard-moller25a.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/hogsgaard-moller25a/hogsgaard-moller25a.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/hogsgaard-moller25a/hogsgaard-moller25a.pdf', 10);">Download PDF</a>]</p>
+</div>
+<div class="paper">
+  <p class="title">Polynomial low degree hardness for Broadcasting on Trees (Extended Abstract)</p>
+  <p class="details">
+    <span class="authors">Han Huang,&nbsp;Elchanan Mossel</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:2856-2857</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/huang25a.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/huang25a/huang25a.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/huang25a/huang25a.pdf', 10);">Download PDF</a>]</p>
+</div>
+<div class="paper">
+  <p class="title">Instance-Dependent Regret Bounds for Learning Two-Player Zero-Sum Games with Bandit Feedback</p>
+  <p class="details">
+    <span class="authors">Shinji Ito,&nbsp;Haipeng Luo,&nbsp;Taira Tsuchiya,&nbsp;Yue Wu</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:2858-2892</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/ito25a.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/ito25a/ito25a.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/ito25a/ito25a.pdf', 10);">Download PDF</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/assets/ito25a/ito25a-supp.zip" target="_blank" onclick="ga('send', 'event', 'Extra Downloads', 'Download', 'Supplementary ZIP', 12);">Supplementary ZIP</a>]</p>
+</div>
+<div class="paper">
+  <p class="title">Optimal Differentially Private Sampling of Unbounded Gaussians</p>
+  <p class="details">
+    <span class="authors">Valentio Iverson,&nbsp;Gautam Kamath,&nbsp;Argyris Mouzakis</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:2893-2941</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/iverson25a.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/iverson25a/iverson25a.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/iverson25a/iverson25a.pdf', 10);">Download PDF</a>]</p>
+</div>
+<div class="paper">
+  <p class="title">Local Regularizers Are Not Transductive Learners</p>
+  <p class="details">
+    <span class="authors">Sky Jafar,&nbsp;Julian Asilis,&nbsp;Shaddin Dughmi</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:2942-2957</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/jafar25a.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/jafar25a/jafar25a.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/jafar25a/jafar25a.pdf', 10);">Download PDF</a>]</p>
+</div>
+<div class="paper">
+  <p class="title">On the Minimax Regret of Sequential Probability Assignment via Square-Root Entropy</p>
+  <p class="details">
+    <span class="authors">Zeyu Jia,&nbsp;Alexander Rakhlin,&nbsp;Yury Polyanskiy</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:2958-3016</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/jia25a.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/jia25a/jia25a.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/jia25a/jia25a.pdf', 10);">Download PDF</a>]</p>
+</div>
+<div class="paper">
+  <p class="title">Regularized Dikin Walks for Sampling Truncated Logconcave Measures, Mixed Isoperimetry and Beyond Worst-Case Analysis</p>
+  <p class="details">
+    <span class="authors">Minhui Jiang,&nbsp;Yuansi Chen</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:3017-3078</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/jiang25a.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/jiang25a/jiang25a.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/jiang25a/jiang25a.pdf', 10);">Download PDF</a>]</p>
+</div>
+<div class="paper">
+  <p class="title">Online Covariance Estimation in Nonsmooth Stochastic Approximation</p>
+  <p class="details">
+    <span class="authors">Liwei Jiang,&nbsp;Abhishek Roy,&nbsp;Krishnakumar Balasubramanian,&nbsp;Damek Davis,&nbsp;Dmitriy Drusvyatskiy,&nbsp;Sen Na</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:3079-3123</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/jiang25b.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/jiang25b/jiang25b.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/jiang25b/jiang25b.pdf', 10);">Download PDF</a>]</p>
+</div>
+<div class="paper">
+  <p class="title">Provable Complexity Improvement of AdaGrad over SGD: Upper and Lower Bounds in Stochastic Non-Convex Optimization</p>
+  <p class="details">
+    <span class="authors">Ruichen Jiang,&nbsp;Devyani Maladkar,&nbsp;Aryan Mokhtari</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:3124-3158</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/jiang25c.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/jiang25c/jiang25c.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/jiang25c/jiang25c.pdf', 10);">Download PDF</a>]</p>
+</div>
+<div class="paper">
+  <p class="title">Structure-agnostic Optimality of Doubly Robust Learning for Treatment Effect Estimation (Extended Abstract)</p>
+  <p class="details">
+    <span class="authors">Jikai Jin,&nbsp;Vasilis Syrgkanis</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:3159-3160</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/jin25a.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/jin25a/jin25a.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/jin25a/jin25a.pdf', 10);">Download PDF</a>]</p>
+</div>
+<div class="paper">
+  <p class="title">A Theory of Learning with Autoregressive Chain of Thought</p>
+  <p class="details">
+    <span class="authors">Nirmit Joshi,&nbsp;Gal Vardi,&nbsp;Adam Block,&nbsp;Surbhi Goel,&nbsp;Zhiyuan Li,&nbsp;Theodor Misiakiewicz,&nbsp;Nathan Srebro</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:3161-3212</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/joshi25a.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/joshi25a/joshi25a.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/joshi25a/joshi25a.pdf', 10);">Download PDF</a>]</p>
+</div>
+<div class="paper">
+  <p class="title">The Sample Complexity of Distributed Simple Binary Hypothesis Testing under Information Constraints</p>
+  <p class="details">
+    <span class="authors">Hadi Kazemi,&nbsp;Ankit Pensia,&nbsp;Jog Varun</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:3213-3214</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/kazemi25a.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/kazemi25a/kazemi25a.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/kazemi25a/kazemi25a.pdf', 10);">Download PDF</a>]</p>
+</div>
+<div class="paper">
+  <p class="title">Experimental Design for Semiparametric Bandits</p>
+  <p class="details">
+    <span class="authors">Seok-Jin Kim,&nbsp;Gi-Soo Kim,&nbsp;Min-hwan Oh</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:3215-3252</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/kim25a.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/kim25a/kim25a.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/kim25a/kim25a.pdf', 10);">Download PDF</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/assets/kim25a/kim25a-supp.zip" target="_blank" onclick="ga('send', 'event', 'Extra Downloads', 'Download', 'Supplementary ZIP', 12);">Supplementary ZIP</a>]</p>
+</div>
+<div class="paper">
+  <p class="title">Learning Constant-Depth Circuits in Malicious Noise Models</p>
+  <p class="details">
+    <span class="authors">Adam Klivans,&nbsp;Konstantinos Stavropoulos,&nbsp;Arsen Vasilyan</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:3253-3263</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/klivans25a.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/klivans25a/klivans25a.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/klivans25a/klivans25a.pdf', 10);">Download PDF</a>]</p>
+</div>
+<div class="paper">
+  <p class="title">Efficiently learning and sampling multimodal distributions with data-based initialization</p>
+  <p class="details">
+    <span class="authors">Frederic Koehler,&nbsp;Holden Lee,&nbsp;Thuy-Duong Vuong</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:3264-3326</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/koehler25a.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/koehler25a/koehler25a.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/koehler25a/koehler25a.pdf', 10);">Download PDF</a>]</p>
+</div>
+<div class="paper">
+  <p class="title">The Oracle Complexity of Simplex-based Matrix Games: Linear Separability and Nash Equilibria</p>
+  <p class="details">
+    <span class="authors">Guy Kornowski,&nbsp;Ohad Shamir</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:3327-3353</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/kornowski25a.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/kornowski25a/kornowski25a.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/kornowski25a/kornowski25a.pdf', 10);">Download PDF</a>]</p>
+</div>
+<div class="paper">
+  <p class="title">Spectral Estimators for Multi-Index Models: Precise Asymptotics and Optimal Weak Recovery</p>
+  <p class="details">
+    <span class="authors">Filip Kovačević,&nbsp;Zhang Yihan,&nbsp;Marco Mondelli</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:3354-3404</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/kovacevic25a.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/kovacevic25a/kovacevic25a.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/kovacevic25a/kovacevic25a.pdf', 10);">Download PDF</a>]</p>
+</div>
+<div class="paper">
+  <p class="title">The Role of Environment Access in Agnostic Reinforcement Learning (Extended Abstract)</p>
+  <p class="details">
+    <span class="authors">Akshay Krishnamurthy,&nbsp;Gene Li,&nbsp;Ayush Sekhari</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:3405-3406</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/krishnamurthy25a.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/krishnamurthy25a/krishnamurthy25a.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/krishnamurthy25a/krishnamurthy25a.pdf', 10);">Download PDF</a>]</p>
+</div>
+<div class="paper">
+  <p class="title">Spike-and-Slab Posterior Sampling in High Dimensions</p>
+  <p class="details">
+    <span class="authors">Symantak Kumar,&nbsp;Purnamrita Sarkar,&nbsp;Kevin Tian,&nbsp;Yusong Zhu</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:3407-3462</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/kumar25a.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/kumar25a/kumar25a.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/kumar25a/kumar25a.pdf', 10);">Download PDF</a>]</p>
+</div>
+<div class="paper">
+  <p class="title">A Gap Between the Gaussian RKHS and Neural Networks: An Infinite-Center Asymptotic Analysis</p>
+  <p class="details">
+    <span class="authors">Akash Kumar,&nbsp;Rahul Parhi,&nbsp;Mikhail Belkin</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:3463-3485</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/kumar25b.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/kumar25b/kumar25b.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/kumar25b/kumar25b.pdf', 10);">Download PDF</a>]</p>
+</div>
+<div class="paper">
+  <p class="title">Low coordinate degree algorithms II: Categorical signals and generalized stochastic block models</p>
+  <p class="details">
+    <span class="authors">Dmitriy Kunisky</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:3486-3526</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/kunisky25a.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/kunisky25a/kunisky25a.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/kunisky25a/kunisky25a.pdf', 10);">Download PDF</a>]</p>
+</div>
+<div class="paper">
+  <p class="title">Fast and Furious Symmetric Learning in Zero-Sum Games: Gradient Descent as Fictitious Play</p>
+  <p class="details">
+    <span class="authors">John Lazarsfeld,&nbsp;Georgios Piliouras,&nbsp;Ryann Sim,&nbsp;Andre Wibisono</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:3527-3577</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/lazarsfeld25a.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/lazarsfeld25a/lazarsfeld25a.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/lazarsfeld25a/lazarsfeld25a.pdf', 10);">Download PDF</a>]</p>
+</div>
+<div class="paper">
+  <p class="title">The Fundamental Limits of Recovering Planted Subgraphs (extended abstract)</p>
+  <p class="details">
+    <span class="authors">Daniel Z. Lee,&nbsp;Francisco Pernice,&nbsp;Amit Rajaraman,&nbsp;Ilias Zadik</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:3578-3579</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/lee25a.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/lee25a/lee25a.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/lee25a/lee25a.pdf', 10);">Download PDF</a>]</p>
+</div>
+<div class="paper">
+  <p class="title">Robust random graph matching in Gaussian models via vector approximate message passing</p>
+  <p class="details">
+    <span class="authors">Zhangsong Li</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:3580-3581</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/li25a.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/li25a/li25a.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/li25a/li25a.pdf', 10);">Download PDF</a>]</p>
+</div>
+<div class="paper">
+  <p class="title">Some easy optimization problems have the overlap-gap property</p>
+  <p class="details">
+    <span class="authors">Shuangping Li,&nbsp;Tselil Schramm</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:3582-3622</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/li25b.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/li25b/li25b.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/li25b/li25b.pdf', 10);">Download PDF</a>]</p>
+</div>
+<div class="paper">
+  <p class="title">A Polynomial-time Algorithm for Online Sparse Linear Regression with Improved Regret Bound under Weaker Conditions</p>
+  <p class="details">
+    <span class="authors">Junfan Li,&nbsp;Shizhong Liao,&nbsp;Zenglin Xu,&nbsp;Liqiang Nie</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:3623-3670</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/li25c.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/li25c/li25c.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/li25c/li25c.pdf', 10);">Download PDF</a>]</p>
+</div>
+<div class="paper">
+  <p class="title">Multi-Pass Memory Lower Bounds for Learning Problems</p>
+  <p class="details">
+    <span class="authors">Qian Li,&nbsp;Shuo Wang,&nbsp;Jiapeng Zhang</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:3671-3699</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/li25d.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/li25d/li25d.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/li25d/li25d.pdf', 10);">Download PDF</a>]</p>
+</div>
+<div class="paper">
+  <p class="title">Private Realizable-to-Agnostic Transformation with Near-Optimal Sample Complexity</p>
+  <p class="details">
+    <span class="authors">Bo Li,&nbsp;Wei Wang,&nbsp;Peng Ye</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:3700-3722</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/li25e.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/li25e/li25e.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/li25e/li25e.pdf', 10);">Download PDF</a>]</p>
+</div>
+<div class="paper">
+  <p class="title">Low-dimensional adaptation of diffusion models: Convergence in total variation (extended abstract)</p>
+  <p class="details">
+    <span class="authors">Jiadong Liang,&nbsp;Zhihan Huang,&nbsp;Yuxin Chen</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:3723-3729</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/liang25a.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/liang25a/liang25a.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/liang25a/liang25a.pdf', 10);">Download PDF</a>]</p>
+</div>
+<div class="paper">
+  <p class="title">Characterizing Dependence of Samples along the Langevin Dynamics and Algorithms via Contraction of $Φ$-Mutual Information (Extended Abstract)</p>
+  <p class="details">
+    <span class="authors">Jiaming Liang,&nbsp;Siddharth Mitra,&nbsp;Andre Wibisono</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:3730-3731</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/liang25b.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/liang25b/liang25b.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/liang25b/liang25b.pdf', 10);">Download PDF</a>]</p>
+</div>
+<div class="paper">
+  <p class="title">Decision Making in Hybrid Environments: A Model Aggregation Approach</p>
+  <p class="details">
+    <span class="authors">Haolin Liu,&nbsp;Chen-Yu Wei,&nbsp;Zimmert Julian</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:3732-3765</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/liu25a.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/liu25a/liu25a.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/liu25a/liu25a.pdf', 10);">Download PDF</a>]</p>
+</div>
+<div class="paper">
+  <p class="title">Robust Algorithms for Recovering Planted $r$-Colorable Graphs</p>
+  <p class="details">
+    <span class="authors">Anand Louis,&nbsp;Rameesh Paul,&nbsp;Prasad Raghavendra</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:3766-3794</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/louis25a.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/louis25a/louis25a.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/louis25a/louis25a.pdf', 10);">Download PDF</a>]</p>
+</div>
+<div class="paper">
+  <p class="title">Sparsity-Based Interpolation of External, Internal and Swap Regret</p>
+  <p class="details">
+    <span class="authors">Zhou Lu,&nbsp;Y Jennifer Sun,&nbsp;Zhiyu Zhang</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:3795-3828</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/lu25a.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/lu25a/lu25a.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/lu25a/lu25a.pdf', 10);">Download PDF</a>]</p>
+</div>
+<div class="paper">
+  <p class="title">Sample Efficient Omniprediction and Downstream Swap Regret for Non-Linear Losses</p>
+  <p class="details">
+    <span class="authors">Jiuyao Lu,&nbsp;Aaron Roth,&nbsp;Mirah Shi</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:3829-3878</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/lu25b.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/lu25b/lu25b.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/lu25b/lu25b.pdf', 10);">Download PDF</a>]</p>
+</div>
+<div class="paper">
+  <p class="title">Identifiability and Estimation in High-Dimensional Nonparametric Latent Structure Models</p>
+  <p class="details">
+    <span class="authors">Yichen Lyu,&nbsp;Pengkun Yang</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:3879-3880</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/lyu25a.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/lyu25a/lyu25a.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/lyu25a/lyu25a.pdf', 10);">Download PDF</a>]</p>
+</div>
+<div class="paper">
+  <p class="title">Efficient Near-Optimal Algorithm for Online Shortest Paths in Directed Acyclic Graphs with Bandit Feedback Against Adaptive Adversaries</p>
+  <p class="details">
+    <span class="authors">Arnab Maiti,&nbsp;Zhiyuan Fan,&nbsp;Kevin Jamieson,&nbsp;Lillian J. Ratliff,&nbsp;Gabriele Farina</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:3881-3932</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/maiti25a.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/maiti25a/maiti25a.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/maiti25a/maiti25a.pdf', 10);">Download PDF</a>]</p>
+</div>
+<div class="paper">
+  <p class="title">Learning sparse generalized linear models with binary outcomes via iterative hard thresholding</p>
+  <p class="details">
+    <span class="authors">Namiko Matsumoto,&nbsp;Arya Mazumdar</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:3933-4032</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/matsumoto25a.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/matsumoto25a/matsumoto25a.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/matsumoto25a/matsumoto25a.pdf', 10);">Download PDF</a>]</p>
+</div>
+<div class="paper">
+  <p class="title">Online Convex Optimization with a Separation Oracle</p>
+  <p class="details">
+    <span class="authors">Zakaria Mhammedi</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:4033-4077</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/mhammedi25a.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/mhammedi25a/mhammedi25a.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/mhammedi25a/mhammedi25a.pdf', 10);">Download PDF</a>]</p>
+</div>
+<div class="paper">
+  <p class="title">Sample and Oracle Efficient Reinforcement Learning for MDPs with Linearly-Realizable Value Functions</p>
+  <p class="details">
+    <span class="authors">Zakaria Mhammedi</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:4078-4165</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/mhammedi25b.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/mhammedi25b/mhammedi25b.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/mhammedi25b/mhammedi25b.pdf', 10);">Download PDF</a>]</p>
+</div>
+<div class="paper">
+  <p class="title">The Planted Spanning Tree Problems: Exact Overlap Characterization via Local Weak Convergence Extended Abstract</p>
+  <p class="details">
+    <span class="authors">Mehrdad Moharrami,&nbsp;Cristopher Moore,&nbsp;Jiaming Xu</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:4166-4167</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/moharrami25a.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/moharrami25a/moharrami25a.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/moharrami25a/moharrami25a.pdf', 10);">Download PDF</a>]</p>
+</div>
+<div class="paper">
+  <p class="title">Beyond Worst-Case Online Classification: VC-Based Regret Bounds for Relaxed Benchmarks</p>
+  <p class="details">
+    <span class="authors">Omar Montasser,&nbsp;Abhishek Shetty,&nbsp;Nikita Zhivotovskiy</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:4168-4202</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/montasser25a.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/montasser25a/montasser25a.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/montasser25a/montasser25a.pdf', 10);">Download PDF</a>]</p>
+</div>
+<div class="paper">
+  <p class="title">Optimistically Optimistic Exploration for Provably Efficient Infinite-Horizon Reinforcement and Imitation Learning</p>
+  <p class="details">
+    <span class="authors">Antoine Moulin,&nbsp;Gergely Neu,&nbsp;Luca Viano</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:4203-4270</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/moulin25a.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/moulin25a/moulin25a.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/moulin25a/moulin25a.pdf', 10);">Download PDF</a>]</p>
+</div>
+<div class="paper">
+  <p class="title">Are all models wrong? Fundamental limits in distribution-free empirical model falsification</p>
+  <p class="details">
+    <span class="authors">Manuel M. Müller,&nbsp;Yuetian Luo,&nbsp;Rina Foygel Barber</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:4271-4308</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/muller25a.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/muller25a/muller25a.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/muller25a/muller25a.pdf', 10);">Download PDF</a>]</p>
+</div>
+<div class="paper">
+  <p class="title">Sharper Bounds for Chebyshev Moment Matching, with Applications</p>
+  <p class="details">
+    <span class="authors">Cameron Musco,&nbsp;Christopher Musco,&nbsp;Lucas Rosenblatt,&nbsp;Apoorv Vikram Singh</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:4309-4358</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/musco25a.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/musco25a/musco25a.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/musco25a/musco25a.pdf', 10);">Download PDF</a>]</p>
+</div>
+<div class="paper">
+  <p class="title">Estimating stationary mass, frequency by frequency</p>
+  <p class="details">
+    <span class="authors">Milind Nakul,&nbsp;Vidya Muthukumar,&nbsp;Ashwin Pananjady</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:4359-4359</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/nakul25a.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/nakul25a/nakul25a.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/nakul25a/nakul25a.pdf', 10);">Download PDF</a>]</p>
+</div>
+<div class="paper">
+  <p class="title">Improved algorithms for learning quantum Hamiltonians, via flat polynomials</p>
+  <p class="details">
+    <span class="authors">Shyam Narayanan</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:4360-4385</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/narayanan25a.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/narayanan25a/narayanan25a.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/narayanan25a/narayanan25a.pdf', 10);">Download PDF</a>]</p>
+</div>
+<div class="paper">
+  <p class="title">Data-dependent Bounds with $T$-Optimal Best-of-Both-Worlds Guarantees in Multi-Armed Bandits using Stability-Penalty Matching</p>
+  <p class="details">
+    <span class="authors">Quan Nguyen,&nbsp;Shinji Ito,&nbsp;Junpei Komiyama,&nbsp;Mehta Nishant</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:4386-4451</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/nguyen25a.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/nguyen25a/nguyen25a.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/nguyen25a/nguyen25a.pdf', 10);">Download PDF</a>]</p>
+</div>
+<div class="paper">
+  <p class="title">On the Hardness of Bandit Learning</p>
+  <p class="details">
+    <span class="authors">Nataly Brukhim,&nbsp;Aldo Pacchiano,&nbsp;Miroslav Dudik,&nbsp;Robert Schapire</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:4452-4485</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/brukhim25a.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/brukhim25a/brukhim25a.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/brukhim25a/brukhim25a.pdf', 10);">Download PDF</a>]</p>
+</div>
+<div class="paper">
+  <p class="title">Learning Algorithms in the Limit</p>
+  <p class="details">
+    <span class="authors">Hristo Papazov,&nbsp;Nicolas Flammarion</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:4486-4510</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/papazov25a.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/papazov25a/papazov25a.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/papazov25a/papazov25a.pdf', 10);">Download PDF</a>]</p>
+</div>
+<div class="paper">
+  <p class="title">Differentially Private Synthetic Graphs Preserving Triangle-Motif Cuts</p>
+  <p class="details">
+    <span class="authors">Pan Peng,&nbsp;Hangyu Xu</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:4511-4564</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/peng25a.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/peng25a/peng25a.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/peng25a/peng25a.pdf', 10);">Download PDF</a>]</p>
+</div>
+<div class="paper">
+  <p class="title">Recovering Labels from Crowdsourced Data: an Optimal and Polynomial-Time Method</p>
+  <p class="details">
+    <span class="authors">Emmanuel Pilliat</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:4565-4595</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/pilliat25a.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/pilliat25a/pilliat25a.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/pilliat25a/pilliat25a.pdf', 10);">Download PDF</a>]</p>
+</div>
+<div class="paper">
+  <p class="title">Optimal Robust Estimation under Local and Global Corruptions: Stronger Adversary and Smaller Error</p>
+  <p class="details">
+    <span class="authors">Thanasis Pittas,&nbsp;Ankit Pensia</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:4596-4639</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/pittas25a.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/pittas25a/pittas25a.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/pittas25a/pittas25a.pdf', 10);">Download PDF</a>]</p>
+</div>
+<div class="paper">
+  <p class="title">Lower Bounds for Private Estimation of Gaussian Covariance Matrices under All Reasonable Parameter Regimes</p>
+  <p class="details">
+    <span class="authors">Victor S. Portella,&nbsp;Nicholas J. A. Harvey</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:4640-4667</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/portella25a.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/portella25a/portella25a.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/portella25a/portella25a.pdf', 10);">Download PDF</a>]</p>
+</div>
+<div class="paper">
+  <p class="title">Linear Convergence of Diffusion Models Under the Manifold Hypothesis</p>
+  <p class="details">
+    <span class="authors">Peter Potaptchik,&nbsp;Iskander Azangulov,&nbsp;George Deligiannidis</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:4668-4685</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/potaptchik25a.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/potaptchik25a/potaptchik25a.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/potaptchik25a/potaptchik25a.pdf', 10);">Download PDF</a>]</p>
+</div>
+<div class="paper">
+  <p class="title">Truthfulness of Decision-Theoretic Calibration Measures</p>
+  <p class="details">
+    <span class="authors">Mingda Qiao,&nbsp;Eric Zhao</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:4686-4739</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/qiao25a.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/qiao25a/qiao25a.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/qiao25a/qiao25a.pdf', 10);">Download PDF</a>]</p>
+</div>
+<div class="paper">
+  <p class="title">Generation through the lens of learning theory</p>
+  <p class="details">
+    <span class="authors">Vinod Raman,&nbsp;Jiaxun Li,&nbsp;Ambuj Tewari</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:4740-4776</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/raman25a.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/raman25a/raman25a.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/raman25a/raman25a.pdf', 10);">Download PDF</a>]</p>
+</div>
+<div class="paper">
+  <p class="title">Metric Clustering and Graph Optimization Problems using Weak Comparison Oracles</p>
+  <p class="details">
+    <span class="authors">Rahul Raychaudhury,&nbsp;Wen-Zhi Li,&nbsp;Syamantak Das,&nbsp;Sainyam Galhotra,&nbsp;Stavros Sintos</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:4777-4830</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/raychaudhury25a.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/raychaudhury25a/raychaudhury25a.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/raychaudhury25a/raychaudhury25a.pdf', 10);">Download PDF</a>]</p>
+</div>
+<div class="paper">
+  <p class="title">Computational-Statistical Tradeoffs at the Next-Token Prediction Barrier: Autoregressive and Imitation Learning under Misspecification (extended abstract)</p>
+  <p class="details">
+    <span class="authors">Dhruv Rohatgi,&nbsp;Adam Block,&nbsp;Audrey Huang,&nbsp;Akshay Krishnamurthy,&nbsp;Dylan J. Foster</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:4831-4837</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/rohatgi25a.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/rohatgi25a/rohatgi25a.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/rohatgi25a/rohatgi25a.pdf', 10);">Download PDF</a>]</p>
+</div>
+<div class="paper">
+  <p class="title">Necessary and Sufficient Oracles: Toward a Computational Taxonomy for Reinforcement Learning</p>
+  <p class="details">
+    <span class="authors">Dhruv Rohatgi,&nbsp;Dylan J. Foster</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:4838-4936</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/rohatgi25b.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/rohatgi25b/rohatgi25b.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/rohatgi25b/rohatgi25b.pdf', 10);">Download PDF</a>]</p>
+</div>
+<div class="paper">
+  <p class="title">Can a calibration metric be both testable and actionable?</p>
+  <p class="details">
+    <span class="authors">Raphael Rossellini,&nbsp;Jake A. Soloff,&nbsp;Rina Foygel Barber,&nbsp;Zhimei Ren,&nbsp;Rebecca Willett</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:4937-4972</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/rossellini25a.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/rossellini25a/rossellini25a.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/rossellini25a/rossellini25a.pdf', 10);">Download PDF</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/assets/rossellini25a/rossellini25a-supp.zip" target="_blank" onclick="ga('send', 'event', 'Extra Downloads', 'Download', 'Supplementary ZIP', 12);">Supplementary ZIP</a>]</p>
+</div>
+<div class="paper">
+  <p class="title">Capacity-Constrained Online Learning with Delays: Scheduling Frameworks and Regret Trade-offs</p>
+  <p class="details">
+    <span class="authors">Alexander Ryabchenko,&nbsp;Idan Attias,&nbsp;Daniel M. Roy</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:4973-5014</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/ryabchenko25a.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/ryabchenko25a/ryabchenko25a.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/ryabchenko25a/ryabchenko25a.pdf', 10);">Download PDF</a>]</p>
+</div>
+<div class="paper">
+  <p class="title">Improved Offline Contextual Bandits with Second-Order Bounds: Betting and Freezing</p>
+  <p class="details">
+    <span class="authors">J. Jon Ryu,&nbsp;Jeongyeol Kwon,&nbsp;Benjamin Koppe,&nbsp;Kwang-Sung Jun</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:5015-5053</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/ryu25a.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/ryu25a/ryu25a.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/ryu25a/ryu25a.pdf', 10);">Download PDF</a>]</p>
+</div>
+<div class="paper">
+  <p class="title">New Lower Bounds for Non-Convex Stochastic Optimization through Divergence Decomposition</p>
+  <p class="details">
+    <span class="authors">El Mehdi Saad,&nbsp;Wei-Cheng Lee,&nbsp;Francesco Orabona</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:5054-5107</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/saad25a.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/saad25a/saad25a.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/saad25a/saad25a.pdf', 10);">Download PDF</a>]</p>
+</div>
+<div class="paper">
+  <p class="title">Depth Separations in Neural Networks: Separating the Dimension from the Accuracy</p>
+  <p class="details">
+    <span class="authors">Itay Safran,&nbsp;Daniel Reichman,&nbsp;Paul Valiant</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:5108-5142</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/safran25a.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/safran25a/safran25a.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/safran25a/safran25a.pdf', 10);">Download PDF</a>]</p>
+</div>
+<div class="paper">
+  <p class="title">The late-stage training dynamics of (stochastic) subgradient descent on homogeneous neural networks</p>
+  <p class="details">
+    <span class="authors">Sholom Schechtman,&nbsp;Nicolas Schreuder</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:5143-5172</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/schechtman25a.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/schechtman25a/schechtman25a.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/schechtman25a/schechtman25a.pdf', 10);">Download PDF</a>]</p>
+</div>
+<div class="paper">
+  <p class="title">Private List Learnability vs. Online List Learnability</p>
+  <p class="details">
+    <span class="authors">Steve Hanneke,&nbsp;Shay Moran,&nbsp;Hilla Schefler,&nbsp;Iska Tsubari</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:5173-5213</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/hanneke25d.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/hanneke25d/hanneke25d.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/hanneke25d/hanneke25d.pdf', 10);">Download PDF</a>]</p>
+</div>
+<div class="paper">
+  <p class="title">Testing Juntas and Junta Subclasses with Relative Error</p>
+  <p class="details">
+    <span class="authors">Xi Chen,&nbsp;William Pires,&nbsp;Toniann Pitassi,&nbsp;R. A. Servedio</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:5214-5245</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/chen25h.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/chen25h/chen25h.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/chen25h/chen25h.pdf', 10);">Download PDF</a>]</p>
+</div>
+<div class="paper">
+  <p class="title">Testing (Conditional) Mutual Information - Extended Abstract</p>
+  <p class="details">
+    <span class="authors">Jan Seyfried,&nbsp;Sayantan Sen,&nbsp;Marco Tomamichel</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:5246-5247</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/seyfried25a.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/seyfried25a/seyfried25a.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/seyfried25a/seyfried25a.pdf', 10);">Download PDF</a>]</p>
+</div>
+<div class="paper">
+  <p class="title">The Pitfalls of Imitation Learning when Actions are Continuous</p>
+  <p class="details">
+    <span class="authors">Max Simchowitz,&nbsp;Daniel Pfrommer,&nbsp;Ali Jadbabaie</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:5248-5351</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/simchowitz25a.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/simchowitz25a/simchowitz25a.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/simchowitz25a/simchowitz25a.pdf', 10);">Download PDF</a>]</p>
+</div>
+<div class="paper">
+  <p class="title">Community detection with the Bethe-Hessian</p>
+  <p class="details">
+    <span class="authors">Ludovic Stephan,&nbsp;Yizhe Zhu</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:5352-5353</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/stephan25a.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/stephan25a/stephan25a.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/stephan25a/stephan25a.pdf', 10);">Download PDF</a>]</p>
+</div>
+<div class="paper">
+  <p class="title">Non-convex matrix sensing: Breaking the quadratic rank barrier in the sample complexity Extended Abstract</p>
+  <p class="details">
+    <span class="authors">Dominik Stöger,&nbsp;Yizhe Zhu</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:5354-5355</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/stoger25a.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/stoger25a/stoger25a.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/stoger25a/stoger25a.pdf', 10);">Download PDF</a>]</p>
+</div>
+<div class="paper">
+  <p class="title">Optimal Online Bookmaking for Any Number of Outcomes</p>
+  <p class="details">
+    <span class="authors">Hadar Tal,&nbsp;Oron Sabag</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:5356-5409</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/tal25a.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/tal25a/tal25a.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/tal25a/tal25a.pdf', 10);">Download PDF</a>]</p>
+</div>
+<div class="paper">
+  <p class="title">Beyond propagation of chaos: A stochastic algorithm for mean field optimization</p>
+  <p class="details">
+    <span class="authors">Chandan Tankala,&nbsp;Dheeraj Nagaraj,&nbsp;Anant Raj</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:5410-5440</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/tankala25a.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/tankala25a/tankala25a.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/tankala25a/tankala25a.pdf', 10);">Download PDF</a>]</p>
+</div>
+<div class="paper">
+  <p class="title">Optimal Scheduling of Dynamic Transport</p>
+  <p class="details">
+    <span class="authors">Panos Tsimpos,&nbsp;Ren Zhi,&nbsp;Jakob Zech,&nbsp;Youssef Marzouk</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:5441-5505</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/tsimpos25a.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/tsimpos25a/tsimpos25a.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/tsimpos25a/tsimpos25a.pdf', 10);">Download PDF</a>]</p>
+</div>
+<div class="paper">
+  <p class="title">Corrupted Learning Dynamics in Games</p>
+  <p class="details">
+    <span class="authors">Taira Tsuchiya,&nbsp;Shinji Ito,&nbsp;Haipeng Luo</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:5506-5552</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/tsuchiya25a.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/tsuchiya25a/tsuchiya25a.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/tsuchiya25a/tsuchiya25a.pdf', 10);">Download PDF</a>]</p>
+</div>
+<div class="paper">
+  <p class="title">Learning shallow quantum circuits with many-qubit gates</p>
+  <p class="details">
+    <span class="authors">Francisca Vasconcelos,&nbsp;Hsin-Yuan Huang</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:5553-5604</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/vasconcelos25a.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/vasconcelos25a/vasconcelos25a.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/vasconcelos25a/vasconcelos25a.pdf', 10);">Download PDF</a>]</p>
+</div>
+<div class="paper">
+  <p class="title">Black-Box Reductions for Decentralized Online Convex Optimization in Changing Environments</p>
+  <p class="details">
+    <span class="authors">Yuanyu Wan</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:5605-5631</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/wan25a.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/wan25a/wan25a.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/wan25a/wan25a.pdf', 10);">Download PDF</a>]</p>
+</div>
+<div class="paper">
+  <p class="title">Learning Compositional Functions with Transformers from Easy-to-Hard Data</p>
+  <p class="details">
+    <span class="authors">Zixuan Wang,&nbsp;Eshaan Nichani,&nbsp;Alberto Bietti,&nbsp;Alex Damian,&nbsp;Daniel Hsu,&nbsp;Jason D Lee,&nbsp;Denny Wu</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:5632-5711</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/wang25a.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/wang25a/wang25a.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/wang25a/wang25a.pdf', 10);">Download PDF</a>]</p>
+</div>
+<div class="paper">
+  <p class="title">Orthogonal Causal Calibration (Extended Abstract)</p>
+  <p class="details">
+    <span class="authors">Justin Whitehouse,&nbsp;Christopher Jung,&nbsp;Vasilis Syrgkanis,&nbsp;Bryan Wilder,&nbsp;Zhiwei Steven Wu</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:5712-5713</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/whitehouse25a.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/whitehouse25a/whitehouse25a.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/whitehouse25a/whitehouse25a.pdf', 10);">Download PDF</a>]</p>
+</div>
+<div class="paper">
+  <p class="title">Time-Uniform Self-Normalized Concentration for Vector-Valued Processes (Extended Abstract)</p>
+  <p class="details">
+    <span class="authors">Justin Whitehouse,&nbsp;Zhiwei Steven Wu,&nbsp;Aaditya Ramdas</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:5714-5715</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/whitehouse25b.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/whitehouse25b/whitehouse25b.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/whitehouse25b/whitehouse25b.pdf', 10);">Download PDF</a>]</p>
+</div>
+<div class="paper">
+  <p class="title">Mixing Time of the Proximal Sampler in Relative Fisher Information via Strong Data Processing Inequality (Extended Abstract)</p>
+  <p class="details">
+    <span class="authors">Andre Wibisono</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:5716-5717</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/wibisono25a.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/wibisono25a/wibisono25a.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/wibisono25a/wibisono25a.pdf', 10);">Download PDF</a>]</p>
+</div>
+<div class="paper">
+  <p class="title">Taking a Big Step: Large Learning Rates in Denoising Score Matching Prevent Memorization</p>
+  <p class="details">
+    <span class="authors">Yu-Han Wu,&nbsp;Pierre Marion,&nbsp;Gérard Biau,&nbsp;Claire Boyer</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:5718-5756</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/wu25a.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/wu25a/wu25a.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/wu25a/wu25a.pdf', 10);">Download PDF</a>]</p>
+</div>
+<div class="paper">
+  <p class="title">Fundamental Limits of Matrix Sensing: Exact Asymptotics, Universality, and Applications</p>
+  <p class="details">
+    <span class="authors">Yizhou Xu,&nbsp;Antoine Maillard,&nbsp;Lenka Zdeborová,&nbsp;Florent Krzakala</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:5757-5823</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/xu25a.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/xu25a/xu25a.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/xu25a/xu25a.pdf', 10);">Download PDF</a>]</p>
+</div>
+<div class="paper">
+  <p class="title">Generalization error bound for denoising score matching under relaxed manifold assumption</p>
+  <p class="details">
+    <span class="authors">Konstantin Yakovlev,&nbsp;Nikita Puchkin</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:5824-5891</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/yakovlev25a.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/yakovlev25a/yakovlev25a.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/yakovlev25a/yakovlev25a.pdf', 10);">Download PDF</a>]</p>
+</div>
+<div class="paper">
+  <p class="title">Improved Algorithms for Effective Resistance Computation on Graphs</p>
+  <p class="details">
+    <span class="authors">Yang Yichun,&nbsp;Li Rong-Hua,&nbsp;Liao Meihao,&nbsp;Wang Guoren</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:5892-5920</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/yichun25a.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/yichun25a/yichun25a.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/yichun25a/yichun25a.pdf', 10);">Download PDF</a>]</p>
+</div>
+<div class="paper">
+  <p class="title">Robustly Learning Monotone Generalized Linear Models via Data Augmentation</p>
+  <p class="details">
+    <span class="authors">Nikos Zarifis,&nbsp;Puqian Wang,&nbsp;Ilias Diakonikolas,&nbsp;Jelena Diakonikolas</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:5921-5990</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/zarifis25a.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/zarifis25a/zarifis25a.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/zarifis25a/zarifis25a.pdf', 10);">Download PDF</a>]</p>
+</div>
+<div class="paper">
+  <p class="title">Anytime Acceleration of Gradient Descent</p>
+  <p class="details">
+    <span class="authors">Zihan Zhang,&nbsp;Jason Lee,&nbsp;Simon Du,&nbsp;Yuxin Chen</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:5991-6013</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/zhang25a.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/zhang25a/zhang25a.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/zhang25a/zhang25a.pdf', 10);">Download PDF</a>]</p>
+</div>
+<div class="paper">
+  <p class="title">Fast and Multiphase Rates for Nearest Neighbor Classifiers</p>
+  <p class="details">
+    <span class="authors">Pengkun Yang,&nbsp;Jingzhao Zhang</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:6014-6015</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/yang25a.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/yang25a/yang25a.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/yang25a/yang25a.pdf', 10);">Download PDF</a>]</p>
+</div>
+<div class="paper">
+  <p class="title">Linear Bandits on Ellipsoids: Minimax Optimal Algorithms</p>
+  <p class="details">
+    <span class="authors">Raymond Zhang,&nbsp;Hadiji Hédi,&nbsp;Combes Richard</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:6016-6040</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/zhang25b.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/zhang25b/zhang25b.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/zhang25b/zhang25b.pdf', 10);">Download PDF</a>]</p>
+</div>
+<div class="paper">
+  <p class="title">Towards Fundamental Limits for Active Multi-distribution Learning</p>
+  <p class="details">
+    <span class="authors">Chicheng Zhang,&nbsp;Yihan Zhou</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:6041-6090</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/zhang25c.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/zhang25c/zhang25c.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/zhang25c/zhang25c.pdf', 10);">Download PDF</a>]</p>
+</div>
+<div class="paper">
+  <p class="title">The Adaptive Complexity of Finding a Stationary Point</p>
+  <p class="details">
+    <span class="authors">Zhou Huanjian,&nbsp;Han Andi,&nbsp;Takeda Akiko,&nbsp;Sugiyama Masashi</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:6091-6123</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/huanjian25a.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/huanjian25a/huanjian25a.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/huanjian25a/huanjian25a.pdf', 10);">Download PDF</a>]</p>
+</div>
+<div class="paper">
+  <p class="title">Quantifying Overfitting along the Regularization Path for Two-Part-Code MDL in Supervised Classification</p>
+  <p class="details">
+    <span class="authors">Xiaohan Zhu,&nbsp;Nathan Srebro</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:6124-6155</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/zhu25a.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/zhu25a/zhu25a.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/zhu25a/zhu25a.pdf', 10);">Download PDF</a>]</p>
+</div>
+<div class="paper">
+  <p class="title">Span-Agnostic Optimal Sample Complexity and Oracle Inequalities for Average-Reward RL</p>
+  <p class="details">
+    <span class="authors">Matthew Zurek,&nbsp;Yudong Chen</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:6156-6209</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/zurek25a.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/zurek25a/zurek25a.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/zurek25a/zurek25a.pdf', 10);">Download PDF</a>]</p>
+</div>
+
+<h3 id="Open Problems">Open Problems</h3>
+<div class="paper">
+  <p class="title">Open Problem: Fixed-Parameter Tractability of Zonotope Problems</p>
+  <p class="details">
+    <span class="authors">Vincent Froese,&nbsp;Moritz Grillo,&nbsp;Christoph Hertrich,&nbsp;Martin Skutella</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:6210-6214</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/froese25b.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/froese25b/froese25b.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/froese25b/froese25b.pdf', 10);">Download PDF</a>]</p>
+</div>
+<div class="paper">
+  <p class="title">Open Problem: Structure-Agnostic Minimax Risk for Partial Linear Model</p>
+  <p class="details">
+    <span class="authors">Yihong Gu</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:6220-6224</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/gu25b.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/gu25b/gu25b.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/gu25b/gu25b.pdf', 10);">Download PDF</a>]</p>
+</div>
+<div class="paper">
+  <p class="title">Open Problem: Data Selection for Regression Tasks</p>
+  <p class="details">
+    <span class="authors">Steve Hanneke,&nbsp;Shay Moran,&nbsp;Alexander Shlimovich,&nbsp;Amir Yehudayoff</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:6225-6229</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/hanneke25e.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/hanneke25e/hanneke25e.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/hanneke25e/hanneke25e.pdf', 10);">Download PDF</a>]</p>
+</div>
+<div class="paper">
+  <p class="title">Open Problem: Optimal Instance-Dependent Sample Complexity for finding Nash Equilibrium in Two Player Zero-Sum Matrix games</p>
+  <p class="details">
+    <span class="authors">Arnab Maiti</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:6230-6234</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/maiti25b.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/maiti25b/maiti25b.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/maiti25b/maiti25b.pdf', 10);">Download PDF</a>]</p>
+</div>
+
+
+<div class="paper">
+  <p class="title">Open Problem: Regret Minimization in Heavy-Tailed Bandits with Unknown Distributional Parameters</p>
+  <p class="details">
+    <span class="authors">Gianmarco Genalti,&nbsp;Alberto Maria Metelli</span>;
+    <span class="info"><i>Proceedings of Thirty Eighth Conference on Learning Theory</i>, PMLR 291:1-5</span>
+  </p>
+  <p class="links">
+    [<a href="https://proceedings.mlr.press/v291/genalti25a.html">abs</a>][<a href="https://raw.githubusercontent.com/mlresearch/v291/main/assets/genalti25a/genalti25a.pdf" target="_blank" onclick="ga('send', 'event', 'PDF Downloads', 'Download', 'https://raw.githubusercontent.com/mlresearch/v291/main/assets/genalti25a/genalti25a.pdf', 10);">Download PDF</a>]</p>
+</div>
+
+
+<p class="rss-subscribe">subscribe <a href="/v291/assets/rss/feed.xml">via RSS</a></p>
+
+<!-- Search Widget -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://proceedings.mlr.press/v291/assets/js/search.js"></script>
+
+
+
+
+
+
+
+      </div>
+    </main>
+
+
+<footer class="site-footer">
+  <div class="wrapper">
+    <p>This site last compiled Wed, 07 Oct 2026 11:43:07 +0000</p>
+      <div class="footer-left"><i><a href="https://github.com/mlresearch/v291">Github Account</a></i>
+      </div>
+      <div class="footer-right">Copyright &copy; <a href="https://proceedings.mlr.press">The authors and PMLR</a> 2026.<a href="https://twitter.com/MLResearchPress"><i class="icon-twitter"></i>&nbsp;MLResearchPress</a></div>
+  </div>
+</footer>
+
+
+
+
+
+</body>
+
+</html>

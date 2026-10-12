@@ -1,0 +1,71 @@
+{
+  "venue": "ijcai",
+  "version": "2026",
+  "verified_on": "2026-10-11",
+  "template_source": "https://www.ijcai.org/sites/default/files/Guidelines/FormattingGuidelines-IJCAI-ECAI-26.zip",
+  "author_guidelines": "https://www.ijcai.org/authors_kit",
+  "official_files": {
+    "ijcai26.sty": "cdf7ca9a28c6b1ba60cde0f42019ccea3722838242b69471db572d21f879d3b2",
+    "named.bst": "72c53a0febca9745a9a6febdc1e49327d2b6ac4f161e1d7a210dd47e5f5dda40"
+  },
+  "modes": {
+    "submission": {
+      "available": true,
+      "directory": "project/submission",
+      "anonymous": true,
+      "main_page_limit": 7,
+      "page_limit_status": "verified",
+      "counting": "Main text unless journal-specific rules explicitly include references",
+      "engine": "pdflatex",
+      "article_type": "original-research",
+      "full_manuscript_page_limit": null,
+      "max_pdf_megabytes": null,
+      "validation": {
+        "compile": "passed",
+        "unresolved_citations_or_references": false,
+        "visual_review": "reviewed all rendered pages",
+        "rendered_pages": 2,
+        "verified_on": "2026-10-11",
+        "evidence_path": "07-research/2026-10-10-顶会顶刊写作风格调研_证据/templates/render-results.json",
+        "submission_compliance": "pending author content and policy fields"
+      }
+    },
+    "final": {
+      "available": true,
+      "directory": "project/final",
+      "anonymous": false,
+      "main_page_limit": null,
+      "page_limit_status": "requires-target-stage-verification",
+      "counting": "Main text unless journal-specific rules explicitly include references",
+      "engine": "pdflatex",
+      "article_type": "original-research",
+      "full_manuscript_page_limit": null,
+      "max_pdf_megabytes": null,
+      "validation": {
+        "compile": "passed",
+        "unresolved_citations_or_references": false,
+        "visual_review": "reviewed all rendered pages",
+        "rendered_pages": 2,
+        "verified_on": "2026-10-11",
+        "evidence_path": "07-research/2026-10-10-顶会顶刊写作风格调研_证据/templates/render-results.json",
+        "submission_compliance": "pending author content and policy fields"
+      }
+    }
+  },
+  "format_status": "compiled-and-visually-reviewed-draft-scaffold",
+  "limitations": [
+    "Compilation is not submission compliance. Publication metadata and actual results must be provided.",
+    "Unknown page limits or anonymity policies are not assumed compliant.",
+    "Supplementary appendix is scaffolded in supplement.tex and compiled separately; it is not attached to main.tex."
+  ],
+  "archive_provenance": {
+    "filename": "ijcai2026.zip",
+    "sha256": "68c0f282c3b2340795642586998dff19597686c4b34d0bd9057de43d4e2a6ed3",
+    "source_url": "https://www.ijcai.org/sites/default/files/Guidelines/FormattingGuidelines-IJCAI-ECAI-26.zip",
+    "archive_path_from_workspace": "07-research/2026-10-10-顶会顶刊写作风格调研_证据/templates/ijcai2026.zip",
+    "acquired_during": [
+      "2026-10-10",
+      "2026-10-11"
+    ]
+  }
+}

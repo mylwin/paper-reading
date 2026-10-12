@@ -1,0 +1,39 @@
+{
+  "venue": "tai",
+  "locked": 50,
+  "downloaded": 24,
+  "parsed": 24,
+  "metadata_accepted_or_published": 16,
+  "semantic_fulltext_reviewed": 2,
+  "holdout_semantic_validation": "pending",
+  "official_fulltext_and_version_content_confirmation": "4 actual accepted author manuscripts independently confirmed;2 full scientific reading,2 referenced supplements pending",
+  "automated_extraction_is_not_fulltext_review": true,
+  "counts": {
+    "locked": 50,
+    "pdf_acquired": 24,
+    "text_parsed": 24,
+    "main_text_style_reviewed": 4,
+    "full_text_and_relevant_appendix_reviewed": 2,
+    "induction_complete": 2,
+    "holdout_complete": 0
+  },
+  "updated": "2026-10-12",
+  "acceptance_status": "in_progress;50pervenue and40induction/10heldout acceptance not achieved",
+  "main_text_review_ids": [
+    "tai-2024-03-r1",
+    "tai-2024-07",
+    "tai-2025-01",
+    "tai-2025-16"
+  ],
+  "complete_review_ids": [
+    "tai-2024-03-r1",
+    "tai-2024-07"
+  ],
+  "known_ineligible_count": 0,
+  "known_ineligible_ids": [],
+  "replacement_status": "registered2026-10-12 as tai-2024-03-r1;50active rows and holdout preserved; original lock backup retained",
+  "excluded_historical_nonresearch_ids": [
+    "tai-2024-03"
+  ],
+  "content_confirmed_accepted_manuscripts": 4
+}

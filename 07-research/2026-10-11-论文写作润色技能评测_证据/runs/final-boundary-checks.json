@@ -1,0 +1,32 @@
+[
+  {
+    "case": "E08-macro-title",
+    "command": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "/Users/myl/Documents/paper/.claude/skills/paper-writing-shared/scripts/project.py",
+      "check",
+      "--project",
+      "/Users/myl/Documents/paper/07-research/2026-10-11-论文写作润色技能评测_证据/outputs/E08-macro-title"
+    ],
+    "exit_code": 0,
+    "stdout": "{\n  \"project\": \"/Users/myl/Documents/paper/07-research/2026-10-11-论文写作润色技能评测_证据/outputs/E08-macro-title\",\n  \"entrypoint\": \"main.tex\",\n  \"issues\": [],\n  \"warnings\": [\n    {\n      \"kind\": \"compile-freshness-unverified\",\n      \"note\": \"Older build has no input fingerprints; compile again to record them\"\n    },\n    {\n      \"kind\": \"page-policy-unverified\"\n    },\n    {\n      \"kind\": \"title-word-count-requires-manual-check\",\n      \"note\": \"The title contains a macro; count its rendered expansion\"\n    },\n    {\n      \"kind\": \"source-word-count-estimate\",\n      \"note\": \"TeX macros may change rendered counts; manually verify\"\n    },\n    {\n      \"kind\": \"manual-anonymity-review-required\",\n      \"note\": \"Literal author check does not audit acknowledgments, funding, links, assets or PDF metadata\"\n    }\n  ],\n  \"main_pages\": 1,\n  \"total_pages\": 1,\n  \"word_count_estimates\": {\n    \"abstract\": 76,\n    \"IEEEImpStatement\": 117\n  },\n  \"limits\": {\n    \"available\": true,\n    \"directory\": \"project/submission\",\n    \"anonymous\": true,\n    \"main_page_limit\": null,\n    \"page_limit_status\": \"requires-target-stage-verification\",\n    \"counting\": \"Main text unless journal-specific rules explicitly include references\",\n    \"engine\": \"pdflatex\",\n    \"article_type\": \"original-research\",\n    \"full_manuscript_page_limit\": 15,\n    \"max_pdf_megabytes\": null,\n    \"validation\": {\n      \"compile\": \"passed\",\n      \"unresolved_citations_or_references\": false,\n      \"visual_review\": \"reviewed all rendered pages\",\n      \"rendered_pages\": 2,\n      \"verified_on\": \"2026-10-11\",\n      \"evidence_path\": \"07-research/2026-10-10-顶会顶刊写作风格调研_证据/templates/render-results.json\",\n      \"submission_compliance\": \"pending author content and policy fields\"\n    }\n  },\n  \"static_check_passed\": true,\n  \"anonymity_check\": \"partial-literal-author-check; requires-full-review\",\n  \"visual_check\": \"not-performed-by-this-command\",\n  \"official_system_check\": \"not-performed\",\n  \"semantic_fidelity\": \"requires-review\"\n}\n",
+    "stderr": ""
+  },
+  {
+    "case": "E04-compare",
+    "command": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "/Users/myl/Documents/paper/.claude/skills/paper-writing-shared/scripts/project.py",
+      "compare",
+      "--before",
+      "/Users/myl/Documents/paper/07-research/2026-10-11-论文写作润色技能评测_证据/outputs/E03-revised",
+      "--after",
+      "/Users/myl/Documents/paper/07-research/2026-10-11-论文写作润色技能评测_证据/outputs/E04-tai-migrated",
+      "--report",
+      "/Users/myl/Documents/paper/07-research/2026-10-11-论文写作润色技能评测_证据/runs/E04-compare-final.json"
+    ],
+    "exit_code": 1,
+    "stdout": "{\n  \"changes\": {\n    \"numeric_tokens\": {\n      \"removed\": {\n        \"0.3\": 1\n      },\n      \"added\": {}\n    }\n  },\n  \"requires_semantic_review\": true,\n  \"limitations\": \"Static lexical audit; macro expansion, arbitrary TeX constructs and scientific meaning are not validated. Numeric changes may be harmless bibliography/format changes and need context.\"\n}\n",
+    "stderr": ""
+  }
+]

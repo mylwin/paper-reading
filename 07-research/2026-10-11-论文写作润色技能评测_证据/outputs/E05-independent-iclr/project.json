@@ -1,0 +1,47 @@
+{
+  "venue": "iclr",
+  "version": "2027",
+  "mode": "submission",
+  "template_source": "https://media.iclr.cc/Conferences/ICLR2027/iclr-2027-style-files.zip",
+  "verified_on": "2026-10-11",
+  "official_files": {
+    "math_commands.tex": "90473c4d0542070db244cea73ef962d6cddc5b2a746757e6a40ddf5fdfb90ba9",
+    "fancyhdr.sty": "b56ec4434b9f4607529a4b23dc68ad8d4b94f1f631c8cddaf7da78140d53a5ea",
+    "iclr2027_conference.bst": "2d67552db7ed38ccfccb5957b52f95656e25c249724761d3cf5f7922ad1844c5",
+    "natbib.sty": "88bc70c0e48461934cab5b2accef06b74a8b3ac45ad03ccd3f2a6b7e0d6d530d",
+    "iclr2027_conference.sty": "797deef41724e93761426ac0cbcca46279a91cc650dd1f0ce76a4f08d2098ea6"
+  },
+  "constraints": {
+    "available": true,
+    "directory": "project/submission",
+    "anonymous": true,
+    "main_page_limit": 9,
+    "page_limit_status": "verified",
+    "counting": "Main text unless journal-specific rules explicitly include references",
+    "engine": "pdflatex",
+    "article_type": "original-research",
+    "full_manuscript_page_limit": null,
+    "max_pdf_megabytes": null,
+    "validation": {
+      "compile": "passed",
+      "unresolved_citations_or_references": false,
+      "visual_review": "reviewed all rendered pages",
+      "rendered_pages": 3,
+      "verified_on": "2026-10-11",
+      "evidence_path": "07-research/2026-10-10-顶会顶刊写作风格调研_证据/templates/render-results.json",
+      "submission_compliance": "pending author content and actual AI-use disclosure"
+    }
+  },
+  "rules": {
+    "required_sections": [
+      "AI use statement"
+    ],
+    "ai_policy": "https://iclr.cc/Conferences/2027/AIPolicyForAuthors"
+  },
+  "entrypoint": "main.tex",
+  "status": "draft-with-author-inputs-pending",
+  "scope": "Template is locally verified; future venue policies need rechecking.",
+  "evaluation_status": "synthetic-draft-with-missing-evidence-and-author-review-pending",
+  "author_review": "not performed",
+  "bibliography_status": "empty; no verified scholarly sources supplied"
+}

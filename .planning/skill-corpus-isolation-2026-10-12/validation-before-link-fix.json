@@ -1,0 +1,118 @@
+{
+  "date": "2026-10-12",
+  "checks": [
+    {
+      "check": "938 assets migrated byte-for-byte; no former source files remain",
+      "passed": true
+    },
+    {
+      "check": "356 original knowledge assets unchanged",
+      "passed": true
+    },
+    {
+      "check": "skill research absent from all eight knowledge indexes",
+      "passed": true,
+      "bad": []
+    },
+    {
+      "check": "all moved materials ignored by Git",
+      "passed": true
+    },
+    {
+      "check": "prior 654 evaluation files unchanged",
+      "passed": true
+    },
+    {
+      "check": "90 relocated research evidence hashes resolve",
+      "passed": true
+    },
+    {
+      "check": "complete style review count remains23 and acquired main count429",
+      "passed": true
+    },
+    {
+      "check": "old six and new two skill entries exist",
+      "passed": true
+    },
+    {
+      "check": "current seven paper record paths resolve outside knowledge base",
+      "passed": true
+    },
+    {
+      "check": "two daily papers retained in knowledge base",
+      "passed": true
+    },
+    {
+      "check": "updated acquisition/registration scripts parse without executing downloads",
+      "passed": true
+    },
+    {
+      "check": "only nine pre-existing external links remain, no consistency errors",
+      "passed": false,
+      "details": [
+        {
+          "file": "07-research/2026-10-08-Lp_APS与Muon结合_文献审计与具体研究方案.md",
+          "line": 73,
+          "target": "../../graduate-thesis-code/reproduction/Preconditioned_Inexact_Stochastic_ADMM_for_Deep_Models/runs/fig2/nano/muon/full-v2/run_summary.json"
+        },
+        {
+          "file": "07-research/2026-10-08-Lp_APS与Muon结合_文献审计与具体研究方案.md",
+          "line": 74,
+          "target": "../../graduate-thesis-code/reproduction/Preconditioned_Inexact_Stochastic_ADMM_for_Deep_Models/runs/fig2/nano/lp-sgdma%28优化参数%29/full/run_summary.json"
+        },
+        {
+          "file": "07-research/2026-10-08-Lp_APS与Muon结合_文献审计与具体研究方案.md",
+          "line": 75,
+          "target": "../../graduate-thesis-code/reproduction/Preconditioned_Inexact_Stochastic_ADMM_for_Deep_Models/runs/fig2/nano/lp-sgda%28优化参数%29/full/train_metrics.jsonl"
+        },
+        {
+          "file": "07-research/2026-10-08-Lp_APS与Muon结合_文献审计与具体研究方案.md",
+          "line": 76,
+          "target": "../../graduate-thesis-code/reproduction/Preconditioned_Inexact_Stochastic_ADMM_for_Deep_Models/code/power_aps_optimizers.py"
+        },
+        {
+          "file": "07-research/2026-10-08-Lp_APS与Muon结合_文献审计与具体研究方案.md",
+          "line": 76,
+          "target": "../../graduate-thesis-code/reproduction/Preconditioned_Inexact_Stochastic_ADMM_for_Deep_Models/code/internal_optimizers.py"
+        },
+        {
+          "file": "07-research/2026-10-08-Lp_APS与Muon结合_文献审计与具体研究方案.md",
+          "line": 77,
+          "target": "../../graduate-thesis-code/reproduction/Preconditioned_Inexact_Stochastic_ADMM_for_Deep_Models/code/NanoGPT/train_gpt_sisa_lower_no_2ndgradient.py"
+        },
+        {
+          "file": "07-research/2026-10-10-Muon优化器近三年研究综述与APS_Lp可行性探索.md",
+          "line": 50,
+          "target": "/Users/myl/Documents/graduate-thesis-code/reusable_optimizers/pisa/power_aps.py:132"
+        },
+        {
+          "file": "07-research/2026-10-10-Muon优化器近三年研究综述与APS_Lp可行性探索.md",
+          "line": 50,
+          "target": "/Users/myl/Documents/graduate-thesis-code/reusable_optimizers/pisa/muon.py:28"
+        },
+        {
+          "file": "07-research/2026-10-10-Muon优化器近三年研究综述与APS_Lp可行性探索.md",
+          "line": 93,
+          "target": "/Users/myl/Documents/graduate-thesis-code/reusable_optimizers/pisa/muon.py:53"
+        },
+        {
+          "file": "07-research/2026-10-12-顶会顶刊写作风格调研_证据/tai-replacement/README.md",
+          "line": 11,
+          "target": "../../../.claude/skills/paper-writing-shared/tmp/source-materials/.claude/skills/paper-writing-shared/tmp/source-materials/07-research/2026-10-12-顶会顶刊写作风格调研_证据/tai-replacement/snn-slimming-accepted-author.pdf"
+        },
+        {
+          "file": "07-research/2026-10-12-顶会顶刊写作风格调研_证据/tai-replacement/README.md",
+          "line": 11,
+          "target": "../../../.claude/skills/paper-writing-shared/tmp/source-materials/.claude/skills/paper-writing-shared/tmp/source-materials/07-research/2026-10-12-顶会顶刊写作风格调研_证据/tai-replacement/snn-slimming-accepted-author.txt"
+        }
+      ]
+    },
+    {
+      "check": "46 regression tests pass",
+      "passed": true
+    }
+  ],
+  "passed": 12,
+  "total": 13,
+  "scope": "material relocation, Git exclusion and knowledge-base preservation; no new corpus semantic review or template compilation"
+}

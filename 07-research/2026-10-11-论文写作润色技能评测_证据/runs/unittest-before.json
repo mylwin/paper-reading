@@ -1,0 +1,7 @@
+{
+  "tests": 14,
+  "exit_code": 1,
+  "passed": 13,
+  "error": "Missing-bibliography test called helper with /var/... path; tex_content canonicalized reachable file to /private/var/... but kept noncanonical base, causing ValueError before bibliography check.",
+  "evidence": "Original command output retained in this Codex task. This JSON is a diagnostic summary, not a verbatim transcript."
+}

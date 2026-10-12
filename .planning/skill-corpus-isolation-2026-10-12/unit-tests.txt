@@ -1,0 +1,55 @@
+requests library not found, using urllib for Semantic Scholar API
+test_legacy_bullet_fallback_handles_unicode_title (test_paper_skills.ArchiveDateTests.test_legacy_bullet_fallback_handles_unicode_title) ... ok
+test_month_readme_is_authoritative (test_paper_skills.ArchiveDateTests.test_month_readme_is_authoritative) ... ok
+test_clean_workspace_has_no_problems (test_paper_skills.CheckLinksTests.test_clean_workspace_has_no_problems) ... ok
+test_dangling_link_and_missing_readme_are_reported (test_paper_skills.CheckLinksTests.test_dangling_link_and_missing_readme_are_reported) ... ok
+test_inline_code_examples_are_not_links (test_paper_skills.CheckLinksTests.test_inline_code_examples_are_not_links)
+文档里的 `![说明](images/<论文标题>/fig1.jpg)` 是示例，不算悬空链接。 ... ok
+test_month_mismatch_is_reported (test_paper_skills.ConsistencyTests.test_month_mismatch_is_reported) ... ok
+test_index_existing_pdfs_is_month_recursive_and_normalized (test_paper_skills.FetchPdfsTests.test_index_existing_pdfs_is_month_recursive_and_normalized) ... ok
+test_allowed_host (test_paper_skills.LocalizeImagesTests.test_allowed_host) ... ok
+test_detect_extension_by_magic_bytes (test_paper_skills.LocalizeImagesTests.test_detect_extension_by_magic_bytes) ... ok
+test_dry_run_leaves_file_untouched (test_paper_skills.LocalizeImagesTests.test_dry_run_leaves_file_untouched) ... [dry-run] 将下载 https://cdn-mineru.openxlab.org.cn/result/x/y.jpg -> /var/folders/j1/b84gb6k13r9bwltnjxlfvlww0000gn/T/tmp61d54yyc/02-markdown/2026-09/images/Paper_A/fig1.<ext>
+ok
+test_non_allowlisted_host_is_ignored (test_paper_skills.LocalizeImagesTests.test_non_allowlisted_host_is_ignored) ... ok
+test_is_month_dir (test_paper_skills.MonthHelperTests.test_is_month_dir) ... ok
+test_iter_month_dirs_sorted (test_paper_skills.MonthHelperTests.test_iter_month_dirs_sorted) ... ok
+test_month_of (test_paper_skills.MonthHelperTests.test_month_of) ... ok
+test_paper_path_and_dir_fallback (test_paper_skills.MonthHelperTests.test_paper_path_and_dir_fallback) ... ok
+test_rel_link_depth (test_paper_skills.MonthHelperTests.test_rel_link_depth) ... ok
+test_scan_paper_entries (test_paper_skills.MonthHelperTests.test_scan_paper_entries) ... ok
+test_focus_relevance_is_capped_to_scoring_scale (test_paper_skills.ResearchPriorityScoringTests.test_focus_relevance_is_capped_to_scoring_scale) ... ok
+test_hype_words_do_not_count_as_research_evidence (test_paper_skills.ResearchPriorityScoringTests.test_hype_words_do_not_count_as_research_evidence) ... ok
+test_recent_paper_does_not_receive_fabricated_impact (test_paper_skills.ResearchPriorityScoringTests.test_recent_paper_does_not_receive_fabricated_impact) ... ok
+test_relevance_remains_primary_screening_signal (test_paper_skills.ResearchPriorityScoringTests.test_relevance_remains_primary_screening_signal) ... ok
+test_generated_index_has_no_timestamp (test_paper_skills.SyncIndexesTests.test_generated_index_has_no_timestamp)
+索引内容必须只依赖磁盘状态，否则每次刷新都会弄脏 git。 ... ok
+test_refresh_generates_indexes_and_month_readmes (test_paper_skills.SyncIndexesTests.test_refresh_generates_indexes_and_month_readmes) ... ok
+test_refresh_is_idempotent (test_paper_skills.SyncIndexesTests.test_refresh_is_idempotent) ... ok
+test_refresh_records_new_paper_month_and_status (test_paper_skills.SyncIndexesTests.test_refresh_records_new_paper_month_and_status) ... ok
+test_replace_marked_block_keeps_surrounding_text (test_paper_skills.SyncIndexesTests.test_replace_marked_block_keeps_surrounding_text) ... ok
+test_month_from_repo_path (test_paper_skills.WeeklyStemTests.test_month_from_repo_path) ... ok
+test_paper_stem_skips_month_segment (test_paper_skills.WeeklyStemTests.test_paper_stem_skips_month_segment) ... ok
+test_paper_stem_uses_folder_for_paper_dirs (test_paper_skills.WeeklyStemTests.test_paper_stem_uses_folder_for_paper_dirs) ... ok
+test_stem_from_repo_path (test_paper_skills.WeeklyStemTests.test_stem_from_repo_path) ... ok
+test_bibliography_relocation_preserves_reference_contents (test_paper_writing_projects.ProjectIntegrityTests.test_bibliography_relocation_preserves_reference_contents) ... ok
+test_custom_entrypoint_compare_checks_the_actual_manuscript (test_paper_writing_projects.ProjectIntegrityTests.test_custom_entrypoint_compare_checks_the_actual_manuscript) ... ok
+test_custom_entrypoint_is_checked_and_stale_pdf_error_is_rejected (test_paper_writing_projects.ProjectIntegrityTests.test_custom_entrypoint_is_checked_and_stale_pdf_error_is_rejected) ... ok
+test_formula_scope_change_is_detected (test_paper_writing_projects.ProjectIntegrityTests.test_formula_scope_change_is_detected) ... ok
+test_init_refuses_existing_directory_without_touching_it (test_paper_writing_projects.ProjectIntegrityTests.test_init_refuses_existing_directory_without_touching_it) ... ok
+test_macro_body_change_is_detected_with_same_name (test_paper_writing_projects.ProjectIntegrityTests.test_macro_body_change_is_detected_with_same_name) ... ok
+test_macro_title_does_not_pass_as_zero_rendered_words (test_paper_writing_projects.ProjectIntegrityTests.test_macro_title_does_not_pass_as_zero_rendered_words) ... ok
+test_missing_citation_is_detected (test_paper_writing_projects.ProjectIntegrityTests.test_missing_citation_is_detected) ... ok
+test_missing_declared_bibliography_is_not_silently_ignored (test_paper_writing_projects.ProjectIntegrityTests.test_missing_declared_bibliography_is_not_silently_ignored) ... ok
+test_packaged_official_asset_matches_generated_project (test_paper_writing_projects.ProjectIntegrityTests.test_packaged_official_asset_matches_generated_project) ... ok
+test_plain_tex_macro_body_change_is_detected (test_paper_writing_projects.ProjectIntegrityTests.test_plain_tex_macro_body_change_is_detected) ... ok
+test_prose_edit_preserves_formula_citations_and_macro (test_paper_writing_projects.ProjectIntegrityTests.test_prose_edit_preserves_formula_citations_and_macro) ... ok
+test_required_ai_statement_is_not_silently_dropped (test_paper_writing_projects.ProjectIntegrityTests.test_required_ai_statement_is_not_silently_dropped) ... ok
+test_same_citation_key_with_changed_bibliography_is_detected (test_paper_writing_projects.ProjectIntegrityTests.test_same_citation_key_with_changed_bibliography_is_detected) ... ok
+test_template_identifier_digits_do_not_mimic_research_values (test_paper_writing_projects.ProjectIntegrityTests.test_template_identifier_digits_do_not_mimic_research_values) ... ok
+test_unknown_template_version_creates_nothing (test_paper_writing_projects.ProjectIntegrityTests.test_unknown_template_version_creates_nothing) ... ok
+
+----------------------------------------------------------------------
+Ran 46 tests in 0.461s
+
+OK

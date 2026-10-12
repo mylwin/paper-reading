@@ -1,0 +1,28 @@
+{
+  "venue": "iclr",
+  "locked_count": 50,
+  "downloaded_count": 50,
+  "parsed_count": 50,
+  "semantic_reviewed_count": 1,
+  "holdout_reviewed_count": 0,
+  "status": "pending semantic review",
+  "note": "Downloading and extracting full PDF text is not full-text semantic reading.",
+  "counts": {
+    "locked": 50,
+    "pdf_acquired": 50,
+    "text_parsed": 50,
+    "main_text_style_reviewed": 1,
+    "full_text_and_relevant_appendix_reviewed": 1,
+    "induction_complete": 1,
+    "holdout_complete": 0
+  },
+  "updated": "2026-10-11",
+  "acceptance_status": "in_progress; 50 complete per venue not achieved",
+  "main_text_review_ids": [
+    "iclr-2024-710a9140"
+  ],
+  "complete_review_ids": [
+    "iclr-2024-710a9140"
+  ],
+  "holdout_validation_status": "pending: one induction pilot, no frozen40+10 validation"
+}

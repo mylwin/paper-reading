@@ -1,0 +1,38 @@
+{
+  "venue": "tmlr",
+  "version": "2026",
+  "mode": "submission",
+  "template_source": "https://github.com/JmlrOrg/tmlr-style-file",
+  "verified_on": "2026-10-11",
+  "official_files": {
+    "tmlr.sty": "816214ff5919aa457b6b443bee52b15d9561421417b7f8a50cc84651519f0002",
+    "LICENSE": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+    "fancyhdr.sty": "3d2922548e0e5f1a6c5676eda6ebb6dc20d7d305b4d8c2be5f1c833fb1084e6d",
+    "tmlr.bst": "306fd454cf40771bee01293eeb98d2c1cd5f4e11ed0cd7296b335f354fc45206"
+  },
+  "constraints": {
+    "available": true,
+    "directory": "project/submission",
+    "anonymous": true,
+    "main_page_limit": null,
+    "page_limit_status": "requires-target-stage-verification",
+    "counting": "Main text unless journal-specific rules explicitly include references",
+    "engine": "pdflatex",
+    "article_type": "original-research",
+    "full_manuscript_page_limit": null,
+    "max_pdf_megabytes": null,
+    "validation": {
+      "compile": "passed",
+      "unresolved_citations_or_references": false,
+      "visual_review": "reviewed all rendered pages",
+      "rendered_pages": 2,
+      "verified_on": "2026-10-11",
+      "evidence_path": "07-research/2026-10-10-顶会顶刊写作风格调研_证据/templates/render-results.json",
+      "submission_compliance": "pending author content and policy fields"
+    }
+  },
+  "rules": {},
+  "entrypoint": "main.tex",
+  "status": "draft-with-author-inputs-pending",
+  "scope": "Template is locally verified; future venue policies need rechecking."
+}

@@ -1,0 +1,49 @@
+{
+  "source_unchanged": true,
+  "original_copy_identical": true,
+  "body_prose_token_counts": {
+    "original": 456,
+    "icml-polished": 289,
+    "tai-submission": 266
+  },
+  "counting_method": "Auxiliary source-based count: remove math, tabular data, TeX commands, section headings, labels and citation/ref keys; retain table captions and added impact text. Not submission word count.",
+  "semantic_fidelity": "Reviewed fixed h and a, bounded loss, positive C, range-only theorem and proof; fixed 0.8 threshold, same classifier, no retraining, all six fixture table values, 1000 samples and 5 seed means; no new results.",
+  "template_provenance": "Local registry/spec verified_on 2026-10-11; no live-policy claim or network upload",
+  "icml": {
+    "entrypoint": "article.tex",
+    "main_pages": 1,
+    "total_pages": 2,
+    "compile": "passed",
+    "static": "passed",
+    "visual": "reviewed both final rendered pages",
+    "anonymous": "anonymous rendered author fields; source and asset reviewed; PDF Author Anonymous Authors",
+    "impact_statement": "added synthetic-fixture-specific section",
+    "limitations": [
+      "Bibliography lacks author/key; existing ICML citation renders (for, 2026)",
+      "Underfull bibliography URL paragraph, no clipping"
+    ]
+  },
+  "tai": {
+    "entrypoint": "article.tex",
+    "article_type": "Regular",
+    "total_pages": 1,
+    "normal_pages": 10,
+    "maximum_pages": 15,
+    "title_words": 7,
+    "running_head": "Fixed Confidence Gate",
+    "running_head_characters": 21,
+    "abstract_words": 159,
+    "impact_words": 121,
+    "keywords": 4,
+    "compile": "passed",
+    "static": "passed",
+    "visual": "reviewed final rendered page, including appendix A title and proof",
+    "anonymous": "source/body/author-assets/PDF metadata reviewed; no identifying author names, institutions, funding, acknowledgments or identifying links; PDF Author blank",
+    "limitations": [
+      "Underfull conclusion paragraph, no clipping",
+      "Official class name diagnostic: IEEEtai declares IEEEtran; supplied official class unchanged"
+    ]
+  },
+  "official_system_check": "not performed; no external upload",
+  "submission_readiness": "Not a real research submission; synthetic evaluation fixture with missing reproducibility details and substantive related research references. Portal fields and applicable policy disclosures remain author tasks."
+}

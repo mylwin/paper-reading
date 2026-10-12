@@ -1,0 +1,24 @@
+[
+  {
+    "skill": "paper-writing",
+    "command": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "/Users/myl/.codex/skills/.system/skill-creator/scripts/quick_validate.py",
+      "/Users/myl/Documents/paper/.claude/skills/paper-writing"
+    ],
+    "exit_code": 0,
+    "stdout": "Skill is valid!\n",
+    "stderr": ""
+  },
+  {
+    "skill": "paper-polishing",
+    "command": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "/Users/myl/.codex/skills/.system/skill-creator/scripts/quick_validate.py",
+      "/Users/myl/Documents/paper/.claude/skills/paper-polishing"
+    ],
+    "exit_code": 0,
+    "stdout": "Skill is valid!\n",
+    "stderr": ""
+  }
+]

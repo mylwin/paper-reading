@@ -2,3 +2,6 @@
 .folderslice.assetmeta/
 __pycache__/
 *.pyc
+
+# Skill development corpora remain local and never enter the paper knowledge base.
+/.claude/skills/*/tmp/

@@ -1,0 +1,38 @@
+{
+  "venue": "neurips",
+  "version": "2026",
+  "mode": "submission",
+  "template_source": "https://media.neurips.cc/Conferences/NeurIPS2026/Formatting_Instructions_For_NeurIPS_2026.zip",
+  "verified_on": "2026-10-11",
+  "official_files": {
+    "plainnat.bst": "21eefa76f1c967f5074776fcef096c0f8f2b9e42347e84b62e1dbb121dcae486",
+    "checklist.tex": "780ba13c480f652dcc42e69ed61a752ce0ea270f15d332d4a45b059dabad84f6",
+    "neurips_2026.sty": "c3fc2894e83d2517ca18b66741d6c595986d97957dc08ec08bb2125a7ec4555a",
+    "abbrvnat.bst": "9ab1f8c5dfdb7e247e96ec877ed1ee3abea2a40feecec649eb8214aefa869dc3"
+  },
+  "constraints": {
+    "available": true,
+    "directory": "project/submission",
+    "anonymous": true,
+    "main_page_limit": 9,
+    "page_limit_status": "verified",
+    "counting": "Main text unless journal-specific rules explicitly include references",
+    "engine": "pdflatex",
+    "article_type": "original-research",
+    "full_manuscript_page_limit": null,
+    "max_pdf_megabytes": null,
+    "validation": {
+      "compile": "passed",
+      "unresolved_citations_or_references": false,
+      "visual_review": "reviewed all rendered pages",
+      "rendered_pages": 9,
+      "verified_on": "2026-10-11",
+      "evidence_path": "07-research/2026-10-10-顶会顶刊写作风格调研_证据/templates/render-results.json",
+      "submission_compliance": "pending author content and policy fields"
+    }
+  },
+  "rules": {},
+  "entrypoint": "main.tex",
+  "status": "draft-with-author-inputs-pending",
+  "scope": "Template is locally verified; future venue policies need rechecking."
+}

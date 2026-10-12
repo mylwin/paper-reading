@@ -1,0 +1,102 @@
+{
+  "updated": "2026-10-12",
+  "template_and_resource_checks": [
+    {
+      "venue": "aaai",
+      "modes_official_hashes_match": true,
+      "profile_exists": true,
+      "archive_hash_matches": true
+    },
+    {
+      "venue": "ijcai",
+      "modes_official_hashes_match": true,
+      "profile_exists": true,
+      "archive_hash_matches": true
+    },
+    {
+      "venue": "icml",
+      "modes_official_hashes_match": true,
+      "profile_exists": true,
+      "archive_hash_matches": true
+    },
+    {
+      "venue": "neurips",
+      "modes_official_hashes_match": true,
+      "profile_exists": true,
+      "archive_hash_matches": true
+    },
+    {
+      "venue": "iclr",
+      "modes_official_hashes_match": true,
+      "profile_exists": true,
+      "archive_hash_matches": true
+    },
+    {
+      "venue": "colt",
+      "modes_official_hashes_match": true,
+      "profile_exists": true,
+      "archive_hash_matches": true
+    },
+    {
+      "venue": "jmlr",
+      "modes_official_hashes_match": true,
+      "profile_exists": true,
+      "archive_hash_matches": true
+    },
+    {
+      "venue": "tmlr",
+      "modes_official_hashes_match": true,
+      "profile_exists": true,
+      "archive_hash_matches": true
+    },
+    {
+      "venue": "tpami",
+      "modes_official_hashes_match": true,
+      "profile_exists": true,
+      "archive_hash_matches": true
+    },
+    {
+      "venue": "tnnls",
+      "modes_official_hashes_match": true,
+      "profile_exists": true,
+      "archive_hash_matches": true
+    },
+    {
+      "venue": "tai",
+      "modes_official_hashes_match": true,
+      "profile_exists": true,
+      "archive_hash_matches": true
+    }
+  ],
+  "main_compile_passed": 22,
+  "supplement_compile_passed": 4,
+  "pdfs_visually_reviewed_and_hash_current": 26,
+  "two_independent_skills": true,
+  "shared_directory_is_support_only": true,
+  "project_tests_passed": 16,
+  "semantic_workflow_evaluation": {
+    "status": "limited synthetic forward evaluations completed",
+    "independent_cases": 3,
+    "coverage": [
+      "local polishing and translation without venue",
+      "missing-data ICLR 2027 drafting",
+      "ICML polishing/compression and TAI migration"
+    ],
+    "report": "07-research/2026-10-11-论文写作润色技能评测.md",
+    "evidence": "07-research/2026-10-11-论文写作润色技能评测_证据/results.json",
+    "not_claimed": [
+      "all-venue long-manuscript behavior",
+      "corpus validation",
+      "official submission compliance"
+    ]
+  },
+  "full_corpus_research": "incomplete",
+  "workspace_link_check": {
+    "new_task_links": "no dangling links detected",
+    "preexisting_unrelated_links": 9
+  },
+  "full_corpus_completed_count": 23,
+  "iclr2027_policy": "current AuthorGuidelines and AI policy verified; authoritative media kit compiled/reviewed",
+  "full_corpus_count_as_of": "2026-10-12; prior isolated behavior evaluation archive remains historical14paper snapshot",
+  "current_research_report": "07-research/2026-10-12-顶会顶刊写作风格调研.md"
+}

@@ -1,0 +1,30 @@
+[
+  {
+    "file": "drugmap-hal-full.json",
+    "url": "https://api.archives-ouvertes.fr/search/?q=halId_s%3Ahal-05067564&fl=*&wt=json",
+    "final_url": "https://api.archives-ouvertes.fr/search/?q=halId_s%3Ahal-05067564&fl=*&wt=json",
+    "bytes": 95349,
+    "sha256": "3b059ee53a706238f1cad525cc82da54810151ae9917c005e3beac479ff9ce0c"
+  },
+  {
+    "file": "drugmap-README-fixed.md",
+    "url": "https://raw.githubusercontent.com/JUCompBio/DTI-MOA/6d46ebf10c82a277c8a216be54a05f153759fce2/README.md",
+    "final_url": "https://raw.githubusercontent.com/JUCompBio/DTI-MOA/6d46ebf10c82a277c8a216be54a05f153759fce2/README.md",
+    "bytes": 384,
+    "sha256": "56e1cf05d016440e7713dfb9df690de192daf50d364fbb766832ad95ed0b38de"
+  },
+  {
+    "file": "sudoku-xplore.html",
+    "url": "https://ieeexplore.ieee.org/document/10887036/",
+    "final_url": "https://ieeexplore.ieee.org/document/10887036/",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "file": "drugmap-xplore.html",
+    "url": "https://ieeexplore.ieee.org/document/10980435/",
+    "final_url": "https://ieeexplore.ieee.org/document/10980435/",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+]

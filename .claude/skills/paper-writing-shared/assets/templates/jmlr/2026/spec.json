@@ -1,0 +1,82 @@
+{
+  "venue": "jmlr",
+  "version": "2026",
+  "verified_on": "2026-10-11",
+  "template_source": "https://github.com/JmlrOrg/jmlr-style-file",
+  "author_guidelines": "https://www.jmlr.org/format/format.html",
+  "official_files": {
+    "jmlr2e.sty": "a430a875d561235951800e4e21d2631e18ddf0b369646ec276f43ea5080f27c3",
+    "plainnat.bst": "21eefa76f1c967f5074776fcef096c0f8f2b9e42347e84b62e1dbb121dcae486",
+    "abbrvnat.bst": "9ab1f8c5dfdb7e247e96ec877ed1ee3abea2a40feecec649eb8214aefa869dc3"
+  },
+  "modes": {
+    "submission": {
+      "available": true,
+      "directory": "project/submission",
+      "anonymous": false,
+      "main_page_limit": null,
+      "page_limit_status": "requires-target-stage-verification",
+      "counting": "Main text unless journal-specific rules explicitly include references",
+      "engine": "pdflatex",
+      "article_type": "original-research",
+      "full_manuscript_page_limit": null,
+      "max_pdf_megabytes": null,
+      "validation": {
+        "compile": "passed",
+        "unresolved_citations_or_references": false,
+        "visual_review": "reviewed all rendered pages",
+        "rendered_pages": 3,
+        "verified_on": "2026-10-11",
+        "evidence_path": "07-research/2026-10-10-顶会顶刊写作风格调研_证据/templates/render-results.json",
+        "submission_compliance": "pending author content and policy fields"
+      }
+    },
+    "final": {
+      "available": true,
+      "directory": "project/final",
+      "anonymous": false,
+      "main_page_limit": null,
+      "page_limit_status": "requires-target-stage-verification",
+      "counting": "Main text unless journal-specific rules explicitly include references",
+      "engine": "pdflatex",
+      "article_type": "original-research",
+      "full_manuscript_page_limit": null,
+      "max_pdf_megabytes": null,
+      "validation": {
+        "compile": "passed",
+        "unresolved_citations_or_references": false,
+        "visual_review": "reviewed all rendered pages",
+        "rendered_pages": 3,
+        "verified_on": "2026-10-11",
+        "evidence_path": "07-research/2026-10-10-顶会顶刊写作风格调研_证据/templates/render-results.json",
+        "submission_compliance": "pending author content and policy fields"
+      }
+    }
+  },
+  "format_status": "compiled-and-visually-reviewed-draft-scaffold",
+  "limitations": [
+    "Compilation is not submission compliance. Publication metadata and actual results must be provided.",
+    "Unknown page limits or anonymity policies are not assumed compliant."
+  ],
+  "dependency_sources": {
+    "plainnat.bst": "TeX Live 2026 natbib distribution",
+    "abbrvnat.bst": "TeX Live 2026 natbib distribution"
+  },
+  "archive_provenance": {
+    "filename": "jmlr-repo.zip",
+    "sha256": "ae98919e069a0a5557932e471acf462f2592c91de39999a6aa72ed607729958e",
+    "source_url": "https://codeload.github.com/JmlrOrg/jmlr-style-file/zip/refs/heads/master",
+    "archive_path_from_workspace": "07-research/2026-10-10-顶会顶刊写作风格调研_证据/templates/jmlr-repo.zip",
+    "acquired_during": [
+      "2026-10-10",
+      "2026-10-11"
+    ]
+  },
+  "rules": {
+    "abstract_max_words": 200,
+    "length_guidance": {
+      "main_above_35": "may delay review, not a hard rejection limit",
+      "including_appendix_above_50": "justify in cover letter"
+    }
+  }
+}

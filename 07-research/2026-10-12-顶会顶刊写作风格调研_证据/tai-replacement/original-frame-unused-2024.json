@@ -1,0 +1,5068 @@
+{
+  "date": "2026-10-12",
+  "ordering": "ascending normalized DOI; preserve original source snapshot row IDs",
+  "source_checksums": {
+    "tai-openalex.json": "428d420f71523d6f7565dc910b963a80edc849893d6d06c34f481da643ef095a",
+    "tai-openalex-expanded.json": "21c1ea56cbd36da112a3ca9865323522f78f069d9d88a3db66f4d0d4896758e9",
+    "tai-openalex-page2.json": "c8a4d7f54dd336a390a2bb83344e60f44d05ffc22a814c1d89410c1178fc813f"
+  },
+  "candidates": [
+    {
+      "doi": "10.1109/tai.2023.3342563",
+      "title": "Guest Editorial: Special Issue on Physics-Informed Machine Learning",
+      "openalex_id": "https://openalex.org/W4393167330",
+      "locator_year": 2024,
+      "locator_date": "2024-03-01",
+      "authors": [
+        "Francesco Piccialli",
+        "Maizar Raissi",
+        "Felipe Antonio Chegury Viana",
+        "Giancarlo Fortino",
+        "Huimin Lu",
+        "Amir Hussain"
+      ],
+      "first_author_new": true,
+      "locations": [
+        {
+          "id": "doi:10.1109/tai.2023.3342563",
+          "doi": "https://doi.org/10.1109/tai.2023.3342563",
+          "is_oa": true,
+          "landing_page_url": "https://doi.org/10.1109/tai.2023.3342563",
+          "pdf_url": "https://ieeexplore.ieee.org/ielx7/9078688/10478748/10478751.pdf",
+          "source": {
+            "id": "https://openalex.org/S4210169448",
+            "display_name": "IEEE Transactions on Artificial Intelligence",
+            "issn_l": "2691-4581",
+            "issn": [
+              "2691-4581"
+            ],
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": true,
+            "listed_in": [
+              "cwts-core",
+              "jufo-1",
+              "norway-1"
+            ],
+            "host_organization": "https://openalex.org/P4310319808",
+            "host_organization_name": "Institute of Electrical and Electronics Engineers",
+            "host_organization_lineage": [
+              "https://openalex.org/P4310319808"
+            ],
+            "host_organization_lineage_names": [
+              "Institute of Electrical and Electronics Engineers"
+            ],
+            "type": "journal"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "publishedVersion",
+          "is_accepted": true,
+          "is_published": true,
+          "raw_source_name": "IEEE Transactions on Artificial Intelligence",
+          "raw_type": "journal-article"
+        },
+        {
+          "id": "pmh:oai:iris.unical.it:20.500.11770/373142",
+          "doi": null,
+          "is_oa": false,
+          "landing_page_url": "https://hdl.handle.net/20.500.11770/373142",
+          "pdf_url": null,
+          "source": {
+            "id": "https://openalex.org/S4377196898",
+            "display_name": "Archive of Doctoral Theses and Digital Collections (University of Calabria)",
+            "issn_l": null,
+            "issn": null,
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": false,
+            "listed_in": [],
+            "host_organization": "https://openalex.org/I45204951",
+            "host_organization_name": "University of Calabria",
+            "host_organization_lineage": [
+              "https://openalex.org/I45204951"
+            ],
+            "host_organization_lineage_names": [],
+            "type": "repository"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "submittedVersion",
+          "is_accepted": false,
+          "is_published": false,
+          "raw_source_name": null,
+          "raw_type": "info:eu-repo/semantics/article"
+        },
+        {
+          "id": "pmh:oai:repository@napier.ac.uk:3579738",
+          "doi": null,
+          "is_oa": false,
+          "landing_page_url": "http://researchrepository.napier.ac.uk/Output/3579738",
+          "pdf_url": null,
+          "source": {
+            "id": "https://openalex.org/S4306402591",
+            "display_name": "Edinburgh Napier Research Repository (Edinburgh Napier University)",
+            "issn_l": null,
+            "issn": null,
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": false,
+            "listed_in": [],
+            "host_organization": "https://openalex.org/I251738",
+            "host_organization_name": "Edinburgh Napier University",
+            "host_organization_lineage": [
+              "https://openalex.org/I251738"
+            ],
+            "host_organization_lineage_names": [],
+            "type": "repository"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "submittedVersion",
+          "is_accepted": false,
+          "is_published": false,
+          "raw_source_name": null,
+          "raw_type": "Journal Article"
+        }
+      ],
+      "frame_source": "07-research/2026-10-10-顶会顶刊写作风格调研_证据/sources/tai/tai-openalex-expanded.json",
+      "scope": "Locator metadata only; not an independent PDF/version or article-type audit."
+    },
+    {
+      "doi": "10.1109/tai.2023.3345689",
+      "title": "Front Cover",
+      "openalex_id": "https://openalex.org/W4390659866",
+      "locator_year": 2024,
+      "locator_date": "2024-01-01",
+      "authors": [],
+      "first_author_new": false,
+      "locations": [
+        {
+          "id": "doi:10.1109/tai.2023.3345689",
+          "doi": "https://doi.org/10.1109/tai.2023.3345689",
+          "is_oa": true,
+          "landing_page_url": "https://doi.org/10.1109/tai.2023.3345689",
+          "pdf_url": "https://ieeexplore.ieee.org/ielx7/9078688/10384607/10384603.pdf",
+          "source": {
+            "id": "https://openalex.org/S4210169448",
+            "display_name": "IEEE Transactions on Artificial Intelligence",
+            "issn_l": "2691-4581",
+            "issn": [
+              "2691-4581"
+            ],
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": true,
+            "listed_in": [
+              "cwts-core",
+              "jufo-1",
+              "norway-1"
+            ],
+            "host_organization": "https://openalex.org/P4310319808",
+            "host_organization_name": "Institute of Electrical and Electronics Engineers",
+            "host_organization_lineage": [
+              "https://openalex.org/P4310319808"
+            ],
+            "host_organization_lineage_names": [
+              "Institute of Electrical and Electronics Engineers"
+            ],
+            "type": "journal"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "publishedVersion",
+          "is_accepted": true,
+          "is_published": true,
+          "raw_source_name": "IEEE Transactions on Artificial Intelligence",
+          "raw_type": "journal-article"
+        }
+      ],
+      "frame_source": "07-research/2026-10-10-顶会顶刊写作风格调研_证据/sources/tai/tai-openalex-page2.json",
+      "scope": "Locator metadata only; not an independent PDF/version or article-type audit."
+    },
+    {
+      "doi": "10.1109/tai.2023.3345691",
+      "title": "IEEE Transactions on Artificial Intelligence Publication Information",
+      "openalex_id": "https://openalex.org/W4390660366",
+      "locator_year": 2024,
+      "locator_date": "2024-01-01",
+      "authors": [],
+      "first_author_new": false,
+      "locations": [
+        {
+          "id": "doi:10.1109/tai.2023.3345691",
+          "doi": "https://doi.org/10.1109/tai.2023.3345691",
+          "is_oa": true,
+          "landing_page_url": "https://doi.org/10.1109/tai.2023.3345691",
+          "pdf_url": "https://ieeexplore.ieee.org/ielx7/9078688/10384607/10384605.pdf",
+          "source": {
+            "id": "https://openalex.org/S4210169448",
+            "display_name": "IEEE Transactions on Artificial Intelligence",
+            "issn_l": "2691-4581",
+            "issn": [
+              "2691-4581"
+            ],
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": true,
+            "listed_in": [
+              "cwts-core",
+              "jufo-1",
+              "norway-1"
+            ],
+            "host_organization": "https://openalex.org/P4310319808",
+            "host_organization_name": "Institute of Electrical and Electronics Engineers",
+            "host_organization_lineage": [
+              "https://openalex.org/P4310319808"
+            ],
+            "host_organization_lineage_names": [
+              "Institute of Electrical and Electronics Engineers"
+            ],
+            "type": "journal"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "publishedVersion",
+          "is_accepted": true,
+          "is_published": true,
+          "raw_source_name": "IEEE Transactions on Artificial Intelligence",
+          "raw_type": "journal-article"
+        }
+      ],
+      "frame_source": "07-research/2026-10-10-顶会顶刊写作风格调研_证据/sources/tai/tai-openalex-page2.json",
+      "scope": "Locator metadata only; not an independent PDF/version or article-type audit."
+    },
+    {
+      "doi": "10.1109/tai.2023.3345693",
+      "title": "Table of Contents",
+      "openalex_id": "https://openalex.org/W4390660331",
+      "locator_year": 2024,
+      "locator_date": "2024-01-01",
+      "authors": [],
+      "first_author_new": false,
+      "locations": [
+        {
+          "id": "doi:10.1109/tai.2023.3345693",
+          "doi": "https://doi.org/10.1109/tai.2023.3345693",
+          "is_oa": true,
+          "landing_page_url": "https://doi.org/10.1109/tai.2023.3345693",
+          "pdf_url": "https://ieeexplore.ieee.org/ielx7/9078688/10384607/10384601.pdf",
+          "source": {
+            "id": "https://openalex.org/S4210169448",
+            "display_name": "IEEE Transactions on Artificial Intelligence",
+            "issn_l": "2691-4581",
+            "issn": [
+              "2691-4581"
+            ],
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": true,
+            "listed_in": [
+              "cwts-core",
+              "jufo-1",
+              "norway-1"
+            ],
+            "host_organization": "https://openalex.org/P4310319808",
+            "host_organization_name": "Institute of Electrical and Electronics Engineers",
+            "host_organization_lineage": [
+              "https://openalex.org/P4310319808"
+            ],
+            "host_organization_lineage_names": [
+              "Institute of Electrical and Electronics Engineers"
+            ],
+            "type": "journal"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "publishedVersion",
+          "is_accepted": true,
+          "is_published": true,
+          "raw_source_name": "IEEE Transactions on Artificial Intelligence",
+          "raw_type": "journal-article"
+        }
+      ],
+      "frame_source": "07-research/2026-10-10-顶会顶刊写作风格调研_证据/sources/tai/tai-openalex-page2.json",
+      "scope": "Locator metadata only; not an independent PDF/version or article-type audit."
+    },
+    {
+      "doi": "10.1109/tai.2024.3350543",
+      "title": "Semisupervised Transfer Boosting (SS-TrBoosting)",
+      "openalex_id": "https://openalex.org/W4390659859",
+      "locator_year": 2024,
+      "locator_date": "2024-01-08",
+      "authors": [
+        "Lingfei Deng",
+        "Changming Zhao",
+        "Zhenbang Du",
+        "Kun Xia",
+        "Dongrui Wu"
+      ],
+      "first_author_new": true,
+      "locations": [
+        {
+          "id": "doi:10.1109/tai.2024.3350543",
+          "doi": "https://doi.org/10.1109/tai.2024.3350543",
+          "is_oa": false,
+          "landing_page_url": "https://doi.org/10.1109/tai.2024.3350543",
+          "pdf_url": null,
+          "source": {
+            "id": "https://openalex.org/S4210169448",
+            "display_name": "IEEE Transactions on Artificial Intelligence",
+            "issn_l": "2691-4581",
+            "issn": [
+              "2691-4581"
+            ],
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": true,
+            "listed_in": [
+              "cwts-core",
+              "jufo-1",
+              "norway-1"
+            ],
+            "host_organization": "https://openalex.org/P4310319808",
+            "host_organization_name": "Institute of Electrical and Electronics Engineers",
+            "host_organization_lineage": [
+              "https://openalex.org/P4310319808"
+            ],
+            "host_organization_lineage_names": [
+              "Institute of Electrical and Electronics Engineers"
+            ],
+            "type": "journal"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "publishedVersion",
+          "is_accepted": true,
+          "is_published": true,
+          "raw_source_name": "IEEE Transactions on Artificial Intelligence",
+          "raw_type": "journal-article"
+        },
+        {
+          "id": "pmh:oai:arXiv.org:2412.03212",
+          "doi": null,
+          "is_oa": true,
+          "landing_page_url": "http://arxiv.org/abs/2412.03212",
+          "pdf_url": "https://arxiv.org/pdf/2412.03212",
+          "source": {
+            "id": "https://openalex.org/S4306400194",
+            "display_name": "arXiv (Cornell University)",
+            "issn_l": "2331-8422",
+            "issn": [
+              "2331-8422"
+            ],
+            "is_oa": true,
+            "is_in_doaj": false,
+            "is_core": false,
+            "listed_in": [],
+            "host_organization": "https://openalex.org/I205783295",
+            "host_organization_name": "Cornell University",
+            "host_organization_lineage": [
+              "https://openalex.org/I205783295"
+            ],
+            "host_organization_lineage_names": [],
+            "type": "repository"
+          },
+          "license": "cc-by",
+          "license_id": "https://openalex.org/licenses/cc-by",
+          "version": "submittedVersion",
+          "is_accepted": false,
+          "is_published": false,
+          "raw_source_name": null,
+          "raw_type": "text"
+        },
+        {
+          "id": "doi:10.48550/arxiv.2412.03212",
+          "doi": "https://doi.org/10.48550/arxiv.2412.03212",
+          "is_oa": true,
+          "landing_page_url": "https://doi.org/10.48550/arxiv.2412.03212",
+          "pdf_url": null,
+          "source": {
+            "id": "https://openalex.org/S4306400194",
+            "display_name": "arXiv (Cornell University)",
+            "issn_l": "2331-8422",
+            "issn": [
+              "2331-8422"
+            ],
+            "is_oa": true,
+            "is_in_doaj": false,
+            "is_core": false,
+            "listed_in": [],
+            "host_organization": "https://openalex.org/I205783295",
+            "host_organization_name": "Cornell University",
+            "host_organization_lineage": [
+              "https://openalex.org/I205783295"
+            ],
+            "host_organization_lineage_names": [],
+            "type": "repository"
+          },
+          "license": "cc-by",
+          "license_id": "https://openalex.org/licenses/cc-by",
+          "version": null,
+          "is_accepted": false,
+          "is_published": null,
+          "raw_source_name": null,
+          "raw_type": "article-journal"
+        }
+      ],
+      "frame_source": "07-research/2026-10-10-顶会顶刊写作风格调研_证据/sources/tai/tai-openalex-expanded.json",
+      "scope": "Locator metadata only; not an independent PDF/version or article-type audit."
+    },
+    {
+      "doi": "10.1109/tai.2024.3351798",
+      "title": "A Survey on Verification and Validation, Testing and Evaluations of Neurosymbolic Artificial Intelligence",
+      "openalex_id": "https://openalex.org/W4390729056",
+      "locator_year": 2024,
+      "locator_date": "2024-01-09",
+      "authors": [
+        "Justus Renkhoff",
+        "Ke Feng",
+        "Marc Meier-Doernberg",
+        "Alvaro Velasquez",
+        "Houbing  Herbert Song"
+      ],
+      "first_author_new": true,
+      "locations": [
+        {
+          "id": "doi:10.1109/tai.2024.3351798",
+          "doi": "https://doi.org/10.1109/tai.2024.3351798",
+          "is_oa": false,
+          "landing_page_url": "https://doi.org/10.1109/tai.2024.3351798",
+          "pdf_url": null,
+          "source": {
+            "id": "https://openalex.org/S4210169448",
+            "display_name": "IEEE Transactions on Artificial Intelligence",
+            "issn_l": "2691-4581",
+            "issn": [
+              "2691-4581"
+            ],
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": true,
+            "listed_in": [
+              "cwts-core",
+              "jufo-1",
+              "norway-1"
+            ],
+            "host_organization": "https://openalex.org/P4310319808",
+            "host_organization_name": "Institute of Electrical and Electronics Engineers",
+            "host_organization_lineage": [
+              "https://openalex.org/P4310319808"
+            ],
+            "host_organization_lineage_names": [
+              "Institute of Electrical and Electronics Engineers"
+            ],
+            "type": "journal"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "publishedVersion",
+          "is_accepted": true,
+          "is_published": true,
+          "raw_source_name": "IEEE Transactions on Artificial Intelligence",
+          "raw_type": "journal-article"
+        },
+        {
+          "id": "pmh:oai:arXiv.org:2401.03188",
+          "doi": null,
+          "is_oa": true,
+          "landing_page_url": "http://arxiv.org/abs/2401.03188",
+          "pdf_url": "https://arxiv.org/pdf/2401.03188",
+          "source": {
+            "id": "https://openalex.org/S4306400194",
+            "display_name": "arXiv (Cornell University)",
+            "issn_l": "2331-8422",
+            "issn": [
+              "2331-8422"
+            ],
+            "is_oa": true,
+            "is_in_doaj": false,
+            "is_core": false,
+            "listed_in": [],
+            "host_organization": "https://openalex.org/I205783295",
+            "host_organization_name": "Cornell University",
+            "host_organization_lineage": [
+              "https://openalex.org/I205783295"
+            ],
+            "host_organization_lineage_names": [],
+            "type": "repository"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "submittedVersion",
+          "is_accepted": false,
+          "is_published": false,
+          "raw_source_name": null,
+          "raw_type": "text"
+        },
+        {
+          "id": "pmh:oai:mdsoar.org:11603/31370",
+          "doi": null,
+          "is_oa": true,
+          "landing_page_url": "http://hdl.handle.net/11603/31370",
+          "pdf_url": "https://mdsoar.org/bitstreams/1eed7382-c10d-439c-878f-a41a4b05acbc/download",
+          "source": {
+            "id": "https://openalex.org/S4306402556",
+            "display_name": "Maryland Shared Open Access Repository (USMAI Consortium)",
+            "issn_l": null,
+            "issn": null,
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": false,
+            "listed_in": [],
+            "host_organization": null,
+            "host_organization_name": null,
+            "host_organization_lineage": [],
+            "host_organization_lineage_names": [],
+            "type": "repository"
+          },
+          "license": "other-oa",
+          "license_id": "https://openalex.org/licenses/other-oa",
+          "version": "submittedVersion",
+          "is_accepted": false,
+          "is_published": false,
+          "raw_source_name": null,
+          "raw_type": "Text"
+        },
+        {
+          "id": "pmh:oai:mdsoar.org:11603/31447",
+          "doi": null,
+          "is_oa": false,
+          "landing_page_url": "http://hdl.handle.net/11603/31447",
+          "pdf_url": null,
+          "source": {
+            "id": "https://openalex.org/S4306402556",
+            "display_name": "Maryland Shared Open Access Repository (USMAI Consortium)",
+            "issn_l": null,
+            "issn": null,
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": false,
+            "listed_in": [],
+            "host_organization": null,
+            "host_organization_name": null,
+            "host_organization_lineage": [],
+            "host_organization_lineage_names": [],
+            "type": "repository"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "submittedVersion",
+          "is_accepted": false,
+          "is_published": false,
+          "raw_source_name": "",
+          "raw_type": "Text"
+        },
+        {
+          "id": "doi:10.48550/arxiv.2401.03188",
+          "doi": "https://doi.org/10.48550/arxiv.2401.03188",
+          "is_oa": true,
+          "landing_page_url": "https://doi.org/10.48550/arxiv.2401.03188",
+          "pdf_url": null,
+          "source": {
+            "id": "https://openalex.org/S4306400194",
+            "display_name": "arXiv (Cornell University)",
+            "issn_l": "2331-8422",
+            "issn": [
+              "2331-8422"
+            ],
+            "is_oa": true,
+            "is_in_doaj": false,
+            "is_core": false,
+            "listed_in": [],
+            "host_organization": "https://openalex.org/I205783295",
+            "host_organization_name": "Cornell University",
+            "host_organization_lineage": [
+              "https://openalex.org/I205783295"
+            ],
+            "host_organization_lineage_names": [],
+            "type": "repository"
+          },
+          "license": null,
+          "license_id": null,
+          "version": null,
+          "is_accepted": false,
+          "is_published": null,
+          "raw_source_name": null,
+          "raw_type": "article-journal"
+        }
+      ],
+      "frame_source": "07-research/2026-10-10-顶会顶刊写作风格调研_证据/sources/tai/tai-openalex-expanded.json",
+      "scope": "Locator metadata only; not an independent PDF/version or article-type audit."
+    },
+    {
+      "doi": "10.1109/tai.2024.3352533",
+      "title": "Efficient Structure Slimming for Spiking Neural Networks",
+      "openalex_id": "https://openalex.org/W4390806820",
+      "locator_year": 2024,
+      "locator_date": "2024-01-11",
+      "authors": [
+        "Yaxin Li",
+        "Xuanye Fang",
+        "Yuyuan Gao",
+        "Dongdong Zhou",
+        "Jiangrong Shen",
+        "Jian K. Liu",
+        "Gang Pan",
+        "Qi Xu"
+      ],
+      "first_author_new": true,
+      "locations": [
+        {
+          "id": "doi:10.1109/tai.2024.3352533",
+          "doi": "https://doi.org/10.1109/tai.2024.3352533",
+          "is_oa": false,
+          "landing_page_url": "https://doi.org/10.1109/tai.2024.3352533",
+          "pdf_url": null,
+          "source": {
+            "id": "https://openalex.org/S4210169448",
+            "display_name": "IEEE Transactions on Artificial Intelligence",
+            "issn_l": "2691-4581",
+            "issn": [
+              "2691-4581"
+            ],
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": true,
+            "listed_in": [
+              "cwts-core",
+              "jufo-1",
+              "norway-1"
+            ],
+            "host_organization": "https://openalex.org/P4310319808",
+            "host_organization_name": "Institute of Electrical and Electronics Engineers",
+            "host_organization_lineage": [
+              "https://openalex.org/P4310319808"
+            ],
+            "host_organization_lineage_names": [
+              "Institute of Electrical and Electronics Engineers"
+            ],
+            "type": "journal"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "publishedVersion",
+          "is_accepted": true,
+          "is_published": true,
+          "raw_source_name": "IEEE Transactions on Artificial Intelligence",
+          "raw_type": "journal-article"
+        },
+        {
+          "id": "pmh:oai:pure.atira.dk:publications/9058e9e9-47f9-4e36-9943-04feb1ea13d5",
+          "doi": null,
+          "is_oa": true,
+          "landing_page_url": "https://research.birmingham.ac.uk/en/publications/9058e9e9-47f9-4e36-9943-04feb1ea13d5",
+          "pdf_url": "https://pure-oai.bham.ac.uk/ws/files/219032020/LiY24.pdf",
+          "source": {
+            "id": "https://openalex.org/S4306402634",
+            "display_name": "University of Birmingham Research Portal (University of Birmingham)",
+            "issn_l": null,
+            "issn": null,
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": false,
+            "listed_in": [],
+            "host_organization": "https://openalex.org/I79619799",
+            "host_organization_name": "University of Birmingham",
+            "host_organization_lineage": [
+              "https://openalex.org/I79619799"
+            ],
+            "host_organization_lineage_names": [],
+            "type": "repository"
+          },
+          "license": "other-oa",
+          "license_id": "https://openalex.org/licenses/other-oa",
+          "version": "submittedVersion",
+          "is_accepted": false,
+          "is_published": false,
+          "raw_source_name": "Li , Y , Fang , X , Gao , Y , Zhou , D , Shen , J , Liu , J K , Pan , G & Xu , Q 2024 , ' Efficient Structure Slimming for Spiking Neural Networks ' , IEEE Transactions on Artificial Intelligence . https://doi.org/10.1109/tai.2024.3352533",
+          "raw_type": "article"
+        }
+      ],
+      "frame_source": "07-research/2026-10-10-顶会顶刊写作风格调研_证据/sources/tai/tai-openalex-expanded.json",
+      "scope": "Locator metadata only; not an independent PDF/version or article-type audit."
+    },
+    {
+      "doi": "10.1109/tai.2024.3353163",
+      "title": "quantile-Long Short Term Memory: A Robust, Time Series Anomaly Detection Method",
+      "openalex_id": "https://openalex.org/W4390821828",
+      "locator_year": 2024,
+      "locator_date": "2024-01-12",
+      "authors": [
+        "Snehanshu Saha",
+        "Jyotirmoy Sarkar",
+        "Soma Sekhar Dhavala",
+        "Preyank Mota",
+        "Santonu Sarkar"
+      ],
+      "first_author_new": true,
+      "locations": [
+        {
+          "id": "doi:10.1109/tai.2024.3353163",
+          "doi": "https://doi.org/10.1109/tai.2024.3353163",
+          "is_oa": false,
+          "landing_page_url": "https://doi.org/10.1109/tai.2024.3353163",
+          "pdf_url": null,
+          "source": {
+            "id": "https://openalex.org/S4210169448",
+            "display_name": "IEEE Transactions on Artificial Intelligence",
+            "issn_l": "2691-4581",
+            "issn": [
+              "2691-4581"
+            ],
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": true,
+            "listed_in": [
+              "cwts-core",
+              "jufo-1",
+              "norway-1"
+            ],
+            "host_organization": "https://openalex.org/P4310319808",
+            "host_organization_name": "Institute of Electrical and Electronics Engineers",
+            "host_organization_lineage": [
+              "https://openalex.org/P4310319808"
+            ],
+            "host_organization_lineage_names": [
+              "Institute of Electrical and Electronics Engineers"
+            ],
+            "type": "journal"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "publishedVersion",
+          "is_accepted": true,
+          "is_published": true,
+          "raw_source_name": "IEEE Transactions on Artificial Intelligence",
+          "raw_type": "journal-article"
+        },
+        {
+          "id": "pmh:oai:arXiv.org:2302.08712",
+          "doi": null,
+          "is_oa": true,
+          "landing_page_url": "http://arxiv.org/abs/2302.08712",
+          "pdf_url": "https://arxiv.org/pdf/2302.08712",
+          "source": {
+            "id": "https://openalex.org/S4306400194",
+            "display_name": "arXiv (Cornell University)",
+            "issn_l": "2331-8422",
+            "issn": [
+              "2331-8422"
+            ],
+            "is_oa": true,
+            "is_in_doaj": false,
+            "is_core": false,
+            "listed_in": [],
+            "host_organization": "https://openalex.org/I205783295",
+            "host_organization_name": "Cornell University",
+            "host_organization_lineage": [
+              "https://openalex.org/I205783295"
+            ],
+            "host_organization_lineage_names": [],
+            "type": "repository"
+          },
+          "license": "cc-by",
+          "license_id": "https://openalex.org/licenses/cc-by",
+          "version": "submittedVersion",
+          "is_accepted": false,
+          "is_published": false,
+          "raw_source_name": null,
+          "raw_type": "text"
+        },
+        {
+          "id": "doi:10.48550/arxiv.2302.08712",
+          "doi": "https://doi.org/10.48550/arxiv.2302.08712",
+          "is_oa": true,
+          "landing_page_url": "https://doi.org/10.48550/arxiv.2302.08712",
+          "pdf_url": null,
+          "source": {
+            "id": "https://openalex.org/S4306400194",
+            "display_name": "arXiv (Cornell University)",
+            "issn_l": "2331-8422",
+            "issn": [
+              "2331-8422"
+            ],
+            "is_oa": true,
+            "is_in_doaj": false,
+            "is_core": false,
+            "listed_in": [],
+            "host_organization": "https://openalex.org/I205783295",
+            "host_organization_name": "Cornell University",
+            "host_organization_lineage": [
+              "https://openalex.org/I205783295"
+            ],
+            "host_organization_lineage_names": [],
+            "type": "repository"
+          },
+          "license": "cc-by",
+          "license_id": "https://openalex.org/licenses/cc-by",
+          "version": null,
+          "is_accepted": false,
+          "is_published": null,
+          "raw_source_name": null,
+          "raw_type": "article-journal"
+        }
+      ],
+      "frame_source": "07-research/2026-10-10-顶会顶刊写作风格调研_证据/sources/tai/tai-openalex-expanded.json",
+      "scope": "Locator metadata only; not an independent PDF/version or article-type audit."
+    },
+    {
+      "doi": "10.1109/tai.2024.3356669",
+      "title": "Guest Editorial: New Developments in Explainable and Interpretable Artificial Intelligence",
+      "openalex_id": "https://openalex.org/W4394859375",
+      "locator_year": 2024,
+      "locator_date": "2024-04-01",
+      "authors": [
+        "Koduvayur P. Subbalakshmi",
+        "Wojciech Samek",
+        "Xia Hu"
+      ],
+      "first_author_new": true,
+      "locations": [
+        {
+          "id": "doi:10.1109/tai.2024.3356669",
+          "doi": "https://doi.org/10.1109/tai.2024.3356669",
+          "is_oa": true,
+          "landing_page_url": "https://doi.org/10.1109/tai.2024.3356669",
+          "pdf_url": "https://ieeexplore.ieee.org/ielx7/9078688/10495741/10500898.pdf",
+          "source": {
+            "id": "https://openalex.org/S4210169448",
+            "display_name": "IEEE Transactions on Artificial Intelligence",
+            "issn_l": "2691-4581",
+            "issn": [
+              "2691-4581"
+            ],
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": true,
+            "listed_in": [
+              "cwts-core",
+              "jufo-1",
+              "norway-1"
+            ],
+            "host_organization": "https://openalex.org/P4310319808",
+            "host_organization_name": "Institute of Electrical and Electronics Engineers",
+            "host_organization_lineage": [
+              "https://openalex.org/P4310319808"
+            ],
+            "host_organization_lineage_names": [
+              "Institute of Electrical and Electronics Engineers"
+            ],
+            "type": "journal"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "publishedVersion",
+          "is_accepted": true,
+          "is_published": true,
+          "raw_source_name": "IEEE Transactions on Artificial Intelligence",
+          "raw_type": "journal-article"
+        },
+        {
+          "id": "pmh:oai:publica.fraunhofer.de:publica/474216",
+          "doi": null,
+          "is_oa": true,
+          "landing_page_url": "https://publica.fraunhofer.de/handle/publica/474216",
+          "pdf_url": null,
+          "source": {
+            "id": "https://openalex.org/S4306400318",
+            "display_name": "Fraunhofer-Publica (Fraunhofer-Gesellschaft)",
+            "issn_l": null,
+            "issn": null,
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": false,
+            "listed_in": [],
+            "host_organization": "https://openalex.org/I4923324",
+            "host_organization_name": "Fraunhofer-Gesellschaft",
+            "host_organization_lineage": [
+              "https://openalex.org/I4923324"
+            ],
+            "host_organization_lineage_names": [],
+            "type": "repository"
+          },
+          "license": "other-oa",
+          "license_id": "https://openalex.org/licenses/other-oa",
+          "version": "submittedVersion",
+          "is_accepted": false,
+          "is_published": false,
+          "raw_source_name": null,
+          "raw_type": "editorial"
+        }
+      ],
+      "frame_source": "07-research/2026-10-10-顶会顶刊写作风格调研_证据/sources/tai/tai-openalex-page2.json",
+      "scope": "Locator metadata only; not an independent PDF/version or article-type audit."
+    },
+    {
+      "doi": "10.1109/tai.2024.3358215",
+      "title": "Table of Contents",
+      "openalex_id": "https://openalex.org/W4391756790",
+      "locator_year": 2024,
+      "locator_date": "2024-02-01",
+      "authors": [],
+      "first_author_new": false,
+      "locations": [
+        {
+          "id": "doi:10.1109/tai.2024.3358215",
+          "doi": "https://doi.org/10.1109/tai.2024.3358215",
+          "is_oa": true,
+          "landing_page_url": "https://doi.org/10.1109/tai.2024.3358215",
+          "pdf_url": "https://ieeexplore.ieee.org/ielx7/9078688/10433275/10433294.pdf",
+          "source": {
+            "id": "https://openalex.org/S4210169448",
+            "display_name": "IEEE Transactions on Artificial Intelligence",
+            "issn_l": "2691-4581",
+            "issn": [
+              "2691-4581"
+            ],
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": true,
+            "listed_in": [
+              "cwts-core",
+              "jufo-1",
+              "norway-1"
+            ],
+            "host_organization": "https://openalex.org/P4310319808",
+            "host_organization_name": "Institute of Electrical and Electronics Engineers",
+            "host_organization_lineage": [
+              "https://openalex.org/P4310319808"
+            ],
+            "host_organization_lineage_names": [
+              "Institute of Electrical and Electronics Engineers"
+            ],
+            "type": "journal"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "publishedVersion",
+          "is_accepted": true,
+          "is_published": true,
+          "raw_source_name": "IEEE Transactions on Artificial Intelligence",
+          "raw_type": "journal-article"
+        }
+      ],
+      "frame_source": "07-research/2026-10-10-顶会顶刊写作风格调研_证据/sources/tai/tai-openalex-page2.json",
+      "scope": "Locator metadata only; not an independent PDF/version or article-type audit."
+    },
+    {
+      "doi": "10.1109/tai.2024.3358217",
+      "title": "Front Cover",
+      "openalex_id": "https://openalex.org/W4391741331",
+      "locator_year": 2024,
+      "locator_date": "2024-02-01",
+      "authors": [],
+      "first_author_new": false,
+      "locations": [
+        {
+          "id": "doi:10.1109/tai.2024.3358217",
+          "doi": "https://doi.org/10.1109/tai.2024.3358217",
+          "is_oa": true,
+          "landing_page_url": "https://doi.org/10.1109/tai.2024.3358217",
+          "pdf_url": "https://ieeexplore.ieee.org/ielx7/9078688/10433275/10433255.pdf",
+          "source": {
+            "id": "https://openalex.org/S4210169448",
+            "display_name": "IEEE Transactions on Artificial Intelligence",
+            "issn_l": "2691-4581",
+            "issn": [
+              "2691-4581"
+            ],
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": true,
+            "listed_in": [
+              "cwts-core",
+              "jufo-1",
+              "norway-1"
+            ],
+            "host_organization": "https://openalex.org/P4310319808",
+            "host_organization_name": "Institute of Electrical and Electronics Engineers",
+            "host_organization_lineage": [
+              "https://openalex.org/P4310319808"
+            ],
+            "host_organization_lineage_names": [
+              "Institute of Electrical and Electronics Engineers"
+            ],
+            "type": "journal"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "publishedVersion",
+          "is_accepted": true,
+          "is_published": true,
+          "raw_source_name": "IEEE Transactions on Artificial Intelligence",
+          "raw_type": "journal-article"
+        }
+      ],
+      "frame_source": "07-research/2026-10-10-顶会顶刊写作风格调研_证据/sources/tai/tai-openalex-page2.json",
+      "scope": "Locator metadata only; not an independent PDF/version or article-type audit."
+    },
+    {
+      "doi": "10.1109/tai.2024.3358219",
+      "title": "IEEE Transactions on Artificial Intelligence Publication Information",
+      "openalex_id": "https://openalex.org/W4391741163",
+      "locator_year": 2024,
+      "locator_date": "2024-02-01",
+      "authors": [],
+      "first_author_new": false,
+      "locations": [
+        {
+          "id": "doi:10.1109/tai.2024.3358219",
+          "doi": "https://doi.org/10.1109/tai.2024.3358219",
+          "is_oa": true,
+          "landing_page_url": "https://doi.org/10.1109/tai.2024.3358219",
+          "pdf_url": "https://ieeexplore.ieee.org/ielx7/9078688/10433275/10433301.pdf",
+          "source": {
+            "id": "https://openalex.org/S4210169448",
+            "display_name": "IEEE Transactions on Artificial Intelligence",
+            "issn_l": "2691-4581",
+            "issn": [
+              "2691-4581"
+            ],
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": true,
+            "listed_in": [
+              "cwts-core",
+              "jufo-1",
+              "norway-1"
+            ],
+            "host_organization": "https://openalex.org/P4310319808",
+            "host_organization_name": "Institute of Electrical and Electronics Engineers",
+            "host_organization_lineage": [
+              "https://openalex.org/P4310319808"
+            ],
+            "host_organization_lineage_names": [
+              "Institute of Electrical and Electronics Engineers"
+            ],
+            "type": "journal"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "publishedVersion",
+          "is_accepted": true,
+          "is_published": true,
+          "raw_source_name": "IEEE Transactions on Artificial Intelligence",
+          "raw_type": "journal-article"
+        }
+      ],
+      "frame_source": "07-research/2026-10-10-顶会顶刊写作风格调研_证据/sources/tai/tai-openalex-page2.json",
+      "scope": "Locator metadata only; not an independent PDF/version or article-type audit."
+    },
+    {
+      "doi": "10.1109/tai.2024.3358261",
+      "title": "Optimal Inference of Hidden Markov Models Through Expert-Acquired Data",
+      "openalex_id": "https://openalex.org/W4391164360",
+      "locator_year": 2024,
+      "locator_date": "2024-01-24",
+      "authors": [
+        "Amirhossein Ravari",
+        "Seyede Fatemeh Ghoreishi",
+        "Mahdi Imani"
+      ],
+      "first_author_new": true,
+      "locations": [
+        {
+          "id": "doi:10.1109/tai.2024.3358261",
+          "doi": "https://doi.org/10.1109/tai.2024.3358261",
+          "is_oa": false,
+          "landing_page_url": "https://doi.org/10.1109/tai.2024.3358261",
+          "pdf_url": null,
+          "source": {
+            "id": "https://openalex.org/S4210169448",
+            "display_name": "IEEE Transactions on Artificial Intelligence",
+            "issn_l": "2691-4581",
+            "issn": [
+              "2691-4581"
+            ],
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": true,
+            "listed_in": [
+              "cwts-core",
+              "jufo-1",
+              "norway-1"
+            ],
+            "host_organization": "https://openalex.org/P4310319808",
+            "host_organization_name": "Institute of Electrical and Electronics Engineers",
+            "host_organization_lineage": [
+              "https://openalex.org/P4310319808"
+            ],
+            "host_organization_lineage_names": [
+              "Institute of Electrical and Electronics Engineers"
+            ],
+            "type": "journal"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "publishedVersion",
+          "is_accepted": true,
+          "is_published": true,
+          "raw_source_name": "IEEE Transactions on Artificial Intelligence",
+          "raw_type": "journal-article"
+        },
+        {
+          "id": "pmid:39144916",
+          "doi": null,
+          "is_oa": false,
+          "landing_page_url": "https://pubmed.ncbi.nlm.nih.gov/39144916",
+          "pdf_url": null,
+          "source": {
+            "id": "https://openalex.org/S4306525036",
+            "display_name": "PubMed",
+            "issn_l": null,
+            "issn": null,
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": false,
+            "listed_in": [],
+            "host_organization": "https://openalex.org/I1299303238",
+            "host_organization_name": "National Institutes of Health",
+            "host_organization_lineage": [
+              "https://openalex.org/I1299303238"
+            ],
+            "host_organization_lineage_names": [],
+            "type": "repository"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "publishedVersion",
+          "is_accepted": true,
+          "is_published": true,
+          "raw_source_name": "IEEE transactions on artificial intelligence",
+          "raw_type": "Journal Article"
+        },
+        {
+          "id": "pmh:oai:pubmedcentral.nih.gov:11324238",
+          "doi": null,
+          "is_oa": true,
+          "landing_page_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/11324238",
+          "pdf_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11324238/pdf/nihms-1977902.pdf",
+          "source": {
+            "id": "https://openalex.org/S2764455111",
+            "display_name": "PubMed Central",
+            "issn_l": null,
+            "issn": null,
+            "is_oa": true,
+            "is_in_doaj": false,
+            "is_core": false,
+            "listed_in": [],
+            "host_organization": "https://openalex.org/I1299303238",
+            "host_organization_name": "National Institutes of Health",
+            "host_organization_lineage": [
+              "https://openalex.org/I1299303238"
+            ],
+            "host_organization_lineage_names": [],
+            "type": "repository"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "submittedVersion",
+          "is_accepted": false,
+          "is_published": false,
+          "raw_source_name": "IEEE Trans Artif Intell",
+          "raw_type": "Text"
+        }
+      ],
+      "frame_source": "07-research/2026-10-10-顶会顶刊写作风格调研_证据/sources/tai/tai-openalex-expanded.json",
+      "scope": "Locator metadata only; not an independent PDF/version or article-type audit."
+    },
+    {
+      "doi": "10.1109/tai.2024.3363686",
+      "title": "Explainable Attention Pruning: A Metalearning-Based Approach",
+      "openalex_id": "https://openalex.org/W4391661692",
+      "locator_year": 2024,
+      "locator_date": "2024-02-08",
+      "authors": [
+        "Praboda Rajapaksha",
+        "Noël Crespi"
+      ],
+      "first_author_new": true,
+      "locations": [
+        {
+          "id": "doi:10.1109/tai.2024.3363686",
+          "doi": "https://doi.org/10.1109/tai.2024.3363686",
+          "is_oa": false,
+          "landing_page_url": "https://doi.org/10.1109/tai.2024.3363686",
+          "pdf_url": null,
+          "source": {
+            "id": "https://openalex.org/S4210169448",
+            "display_name": "IEEE Transactions on Artificial Intelligence",
+            "issn_l": "2691-4581",
+            "issn": [
+              "2691-4581"
+            ],
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": true,
+            "listed_in": [
+              "cwts-core",
+              "jufo-1",
+              "norway-1"
+            ],
+            "host_organization": "https://openalex.org/P4310319808",
+            "host_organization_name": "Institute of Electrical and Electronics Engineers",
+            "host_organization_lineage": [
+              "https://openalex.org/P4310319808"
+            ],
+            "host_organization_lineage_names": [
+              "Institute of Electrical and Electronics Engineers"
+            ],
+            "type": "journal"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "publishedVersion",
+          "is_accepted": true,
+          "is_published": true,
+          "raw_source_name": "IEEE Transactions on Artificial Intelligence",
+          "raw_type": "journal-article"
+        },
+        {
+          "id": "pmh:oai:HAL:hal-04447491v1",
+          "doi": null,
+          "is_oa": true,
+          "landing_page_url": "https://hal.science/hal-04447491",
+          "pdf_url": "https://hal.science/hal-04447491/document",
+          "source": {
+            "id": "https://openalex.org/S4306402512",
+            "display_name": "HAL (Le Centre pour la Communication Scientifique Directe)",
+            "issn_l": null,
+            "issn": null,
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": false,
+            "listed_in": [],
+            "host_organization": "https://openalex.org/I1294671590",
+            "host_organization_name": "Centre National de la Recherche Scientifique",
+            "host_organization_lineage": [
+              "https://openalex.org/I1294671590"
+            ],
+            "host_organization_lineage_names": [],
+            "type": "repository"
+          },
+          "license": "other-oa",
+          "license_id": "https://openalex.org/licenses/other-oa",
+          "version": "submittedVersion",
+          "is_accepted": false,
+          "is_published": false,
+          "raw_source_name": "IEEE Transactions on Artificial Intelligence, 2024, pp.1-12. &#x27E8;10.1109/TAI.2024.3363686&#x27E9;",
+          "raw_type": "info:eu-repo/semantics/article"
+        }
+      ],
+      "frame_source": "07-research/2026-10-10-顶会顶刊写作风格调研_证据/sources/tai/tai-openalex-expanded.json",
+      "scope": "Locator metadata only; not an independent PDF/version or article-type audit."
+    },
+    {
+      "doi": "10.1109/tai.2024.3364586",
+      "title": "An Iterative Optimizing Framework for Radiology Report Summarization With ChatGPT",
+      "openalex_id": "https://openalex.org/W4391759824",
+      "locator_year": 2024,
+      "locator_date": "2024-02-12",
+      "authors": [
+        "Chong Ma",
+        "Zihao Wu",
+        "Jiaqi Wang",
+        "Shaochen Xu",
+        "Yaonai Wei",
+        "Zhengliang Liu",
+        "Fang Zeng",
+        "Xi Jiang",
+        "Lei Guo",
+        "Xiaoyan Cai",
+        "Shu Zhang",
+        "Tuo Zhang",
+        "Dajiang Zhu",
+        "Dinggang G. Shen",
+        "Tianming Liu",
+        "Xiang Li"
+      ],
+      "first_author_new": true,
+      "locations": [
+        {
+          "id": "doi:10.1109/tai.2024.3364586",
+          "doi": "https://doi.org/10.1109/tai.2024.3364586",
+          "is_oa": false,
+          "landing_page_url": "https://doi.org/10.1109/tai.2024.3364586",
+          "pdf_url": null,
+          "source": {
+            "id": "https://openalex.org/S4210169448",
+            "display_name": "IEEE Transactions on Artificial Intelligence",
+            "issn_l": "2691-4581",
+            "issn": [
+              "2691-4581"
+            ],
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": true,
+            "listed_in": [
+              "cwts-core",
+              "jufo-1",
+              "norway-1",
+              "poland-20"
+            ],
+            "host_organization": "https://openalex.org/P4310319808",
+            "host_organization_name": "Institute of Electrical and Electronics Engineers",
+            "host_organization_lineage": [
+              "https://openalex.org/P4310319808"
+            ],
+            "host_organization_lineage_names": [
+              "Institute of Electrical and Electronics Engineers"
+            ],
+            "type": "journal"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "publishedVersion",
+          "is_accepted": true,
+          "is_published": true,
+          "raw_source_name": "IEEE Transactions on Artificial Intelligence",
+          "raw_type": "journal-article"
+        },
+        {
+          "id": "pmh:oai:arXiv.org:2304.08448",
+          "doi": null,
+          "is_oa": true,
+          "landing_page_url": "http://arxiv.org/abs/2304.08448",
+          "pdf_url": "https://arxiv.org/pdf/2304.08448",
+          "source": {
+            "id": "https://openalex.org/S4306400194",
+            "display_name": "arXiv (Cornell University)",
+            "issn_l": "2331-8422",
+            "issn": [
+              "2331-8422"
+            ],
+            "is_oa": true,
+            "is_in_doaj": false,
+            "is_core": false,
+            "listed_in": [],
+            "host_organization": "https://openalex.org/I205783295",
+            "host_organization_name": "Cornell University",
+            "host_organization_lineage": [
+              "https://openalex.org/I205783295"
+            ],
+            "host_organization_lineage_names": [],
+            "type": "repository"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "submittedVersion",
+          "is_accepted": false,
+          "is_published": false,
+          "raw_source_name": null,
+          "raw_type": "text"
+        },
+        {
+          "id": "doi:10.48550/arxiv.2304.08448",
+          "doi": "https://doi.org/10.48550/arxiv.2304.08448",
+          "is_oa": true,
+          "landing_page_url": "https://doi.org/10.48550/arxiv.2304.08448",
+          "pdf_url": null,
+          "source": {
+            "id": "https://openalex.org/S4306400194",
+            "display_name": "arXiv (Cornell University)",
+            "issn_l": "2331-8422",
+            "issn": [
+              "2331-8422"
+            ],
+            "is_oa": true,
+            "is_in_doaj": false,
+            "is_core": false,
+            "listed_in": [],
+            "host_organization": "https://openalex.org/I205783295",
+            "host_organization_name": "Cornell University",
+            "host_organization_lineage": [
+              "https://openalex.org/I205783295"
+            ],
+            "host_organization_lineage_names": [],
+            "type": "repository"
+          },
+          "license": null,
+          "license_id": null,
+          "version": null,
+          "is_accepted": false,
+          "is_published": null,
+          "raw_source_name": null,
+          "raw_type": "article-journal"
+        }
+      ],
+      "frame_source": "07-research/2026-10-10-顶会顶刊写作风格调研_证据/sources/tai/tai-openalex-expanded.json",
+      "scope": "Locator metadata only; not an independent PDF/version or article-type audit."
+    },
+    {
+      "doi": "10.1109/tai.2024.3365775",
+      "title": "Dynamic Long-Term Time-Series Forecasting via Meta Transformer Networks",
+      "openalex_id": "https://openalex.org/W4391941743",
+      "locator_year": 2024,
+      "locator_date": "2024-02-19",
+      "authors": [
+        "Muhammad Anwar Ma’Sum",
+        "Md Rasel Sarkar",
+        "Mahardhika Pratama",
+        "Savitha Ramasamy",
+        "Sreenatha Gopalarao Anavatti",
+        "Lin Liu",
+        "H. Habibullah",
+        "Ryszard Kowalczyk"
+      ],
+      "first_author_new": true,
+      "locations": [
+        {
+          "id": "doi:10.1109/tai.2024.3365775",
+          "doi": "https://doi.org/10.1109/tai.2024.3365775",
+          "is_oa": false,
+          "landing_page_url": "https://doi.org/10.1109/tai.2024.3365775",
+          "pdf_url": null,
+          "source": {
+            "id": "https://openalex.org/S4210169448",
+            "display_name": "IEEE Transactions on Artificial Intelligence",
+            "issn_l": "2691-4581",
+            "issn": [
+              "2691-4581"
+            ],
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": true,
+            "listed_in": [
+              "cwts-core",
+              "jufo-1",
+              "norway-1"
+            ],
+            "host_organization": "https://openalex.org/P4310319808",
+            "host_organization_name": "Institute of Electrical and Electronics Engineers",
+            "host_organization_lineage": [
+              "https://openalex.org/P4310319808"
+            ],
+            "host_organization_lineage_names": [
+              "Institute of Electrical and Electronics Engineers"
+            ],
+            "type": "journal"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "publishedVersion",
+          "is_accepted": true,
+          "is_published": true,
+          "raw_source_name": "IEEE Transactions on Artificial Intelligence",
+          "raw_type": "journal-article"
+        },
+        {
+          "id": "pmh:oai:urm_publish:9916831630701831",
+          "doi": null,
+          "is_oa": true,
+          "landing_page_url": "https://find.library.unisa.edu.au/discovery/fulldisplay/alma9916831630701831/61USOUTHAUS_INST:ROR",
+          "pdf_url": null,
+          "source": {
+            "id": "https://openalex.org/S4306402528",
+            "display_name": "UniSA Research Outputs Repository (University of South Australia)",
+            "issn_l": null,
+            "issn": null,
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": false,
+            "listed_in": [],
+            "host_organization": "https://openalex.org/I170239107",
+            "host_organization_name": "University of South Australia",
+            "host_organization_lineage": [
+              "https://openalex.org/I170239107"
+            ],
+            "host_organization_lineage_names": [],
+            "type": "repository"
+          },
+          "license": "cc-by-nc-sa",
+          "license_id": "https://openalex.org/licenses/cc-by-nc-sa",
+          "version": "submittedVersion",
+          "is_accepted": false,
+          "is_published": false,
+          "raw_source_name": "",
+          "raw_type": "text"
+        },
+        {
+          "id": "pmh:oai:digital.library.adelaide.edu.au:11541.2/37706",
+          "doi": null,
+          "is_oa": true,
+          "landing_page_url": "https://hdl.handle.net/11541.2/37706",
+          "pdf_url": null,
+          "source": {
+            "id": "https://openalex.org/S4306401835",
+            "display_name": "Adelaide Research & Scholarship (AR&S) (University of Adelaide)",
+            "issn_l": null,
+            "issn": null,
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": false,
+            "listed_in": [],
+            "host_organization": "https://openalex.org/I5681781",
+            "host_organization_name": "The University of Adelaide",
+            "host_organization_lineage": [
+              "https://openalex.org/I5681781"
+            ],
+            "host_organization_lineage_names": [],
+            "type": "repository"
+          },
+          "license": "cc-by-nc-sa",
+          "license_id": "https://openalex.org/licenses/cc-by-nc-sa",
+          "version": "submittedVersion",
+          "is_accepted": false,
+          "is_published": false,
+          "raw_source_name": "https://doi.org/10.48550/arXiv.2401.13968",
+          "raw_type": "Journal article"
+        }
+      ],
+      "frame_source": "07-research/2026-10-10-顶会顶刊写作风格调研_证据/sources/tai/tai-openalex-expanded.json",
+      "scope": "Locator metadata only; not an independent PDF/version or article-type audit."
+    },
+    {
+      "doi": "10.1109/tai.2024.3366871",
+      "title": "Learning Multipursuit Evasion for Safe Targeted Navigation of Drones",
+      "openalex_id": "https://openalex.org/W4391940985",
+      "locator_year": 2024,
+      "locator_date": "2024-02-19",
+      "authors": [
+        "Jiaping Xiao",
+        "Mir Feroskhan"
+      ],
+      "first_author_new": true,
+      "locations": [
+        {
+          "id": "doi:10.1109/tai.2024.3366871",
+          "doi": "https://doi.org/10.1109/tai.2024.3366871",
+          "is_oa": false,
+          "landing_page_url": "https://doi.org/10.1109/tai.2024.3366871",
+          "pdf_url": null,
+          "source": {
+            "id": "https://openalex.org/S4210169448",
+            "display_name": "IEEE Transactions on Artificial Intelligence",
+            "issn_l": "2691-4581",
+            "issn": [
+              "2691-4581"
+            ],
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": true,
+            "listed_in": [
+              "cwts-core",
+              "jufo-1",
+              "norway-1"
+            ],
+            "host_organization": "https://openalex.org/P4310319808",
+            "host_organization_name": "Institute of Electrical and Electronics Engineers",
+            "host_organization_lineage": [
+              "https://openalex.org/P4310319808"
+            ],
+            "host_organization_lineage_names": [
+              "Institute of Electrical and Electronics Engineers"
+            ],
+            "type": "journal"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "publishedVersion",
+          "is_accepted": true,
+          "is_published": true,
+          "raw_source_name": "IEEE Transactions on Artificial Intelligence",
+          "raw_type": "journal-article"
+        },
+        {
+          "id": "pmh:oai:arXiv.org:2304.03443",
+          "doi": null,
+          "is_oa": true,
+          "landing_page_url": "http://arxiv.org/abs/2304.03443",
+          "pdf_url": "https://arxiv.org/pdf/2304.03443",
+          "source": {
+            "id": "https://openalex.org/S4306400194",
+            "display_name": "arXiv (Cornell University)",
+            "issn_l": "2331-8422",
+            "issn": [
+              "2331-8422"
+            ],
+            "is_oa": true,
+            "is_in_doaj": false,
+            "is_core": false,
+            "listed_in": [],
+            "host_organization": "https://openalex.org/I205783295",
+            "host_organization_name": "Cornell University",
+            "host_organization_lineage": [
+              "https://openalex.org/I205783295"
+            ],
+            "host_organization_lineage_names": [],
+            "type": "repository"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "submittedVersion",
+          "is_accepted": false,
+          "is_published": false,
+          "raw_source_name": null,
+          "raw_type": "text"
+        },
+        {
+          "id": "pmh:oai:dr.ntu.edu.sg:10356/232013",
+          "doi": null,
+          "is_oa": false,
+          "landing_page_url": "https://hdl.handle.net/10356/232013",
+          "pdf_url": null,
+          "source": {
+            "id": "https://openalex.org/S4306402609",
+            "display_name": "DR-NTU (Nanyang Technological University)",
+            "issn_l": null,
+            "issn": null,
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": false,
+            "listed_in": [],
+            "host_organization": "https://openalex.org/I172675005",
+            "host_organization_name": "Nanyang Technological University",
+            "host_organization_lineage": [
+              "https://openalex.org/I172675005"
+            ],
+            "host_organization_lineage_names": [],
+            "type": "repository"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "submittedVersion",
+          "is_accepted": false,
+          "is_published": false,
+          "raw_source_name": null,
+          "raw_type": "Journal Article"
+        },
+        {
+          "id": "doi:10.48550/arxiv.2304.03443",
+          "doi": "https://doi.org/10.48550/arxiv.2304.03443",
+          "is_oa": true,
+          "landing_page_url": "https://doi.org/10.48550/arxiv.2304.03443",
+          "pdf_url": null,
+          "source": {
+            "id": "https://openalex.org/S4306400194",
+            "display_name": "arXiv (Cornell University)",
+            "issn_l": "2331-8422",
+            "issn": [
+              "2331-8422"
+            ],
+            "is_oa": true,
+            "is_in_doaj": false,
+            "is_core": false,
+            "listed_in": [],
+            "host_organization": "https://openalex.org/I205783295",
+            "host_organization_name": "Cornell University",
+            "host_organization_lineage": [
+              "https://openalex.org/I205783295"
+            ],
+            "host_organization_lineage_names": [],
+            "type": "repository"
+          },
+          "license": null,
+          "license_id": null,
+          "version": null,
+          "is_accepted": false,
+          "is_published": null,
+          "raw_source_name": null,
+          "raw_type": "article-journal"
+        }
+      ],
+      "frame_source": "07-research/2026-10-10-顶会顶刊写作风格调研_证据/sources/tai/tai-openalex-expanded.json",
+      "scope": "Locator metadata only; not an independent PDF/version or article-type audit."
+    },
+    {
+      "doi": "10.1109/tai.2024.3372792",
+      "title": "Table of Contents",
+      "openalex_id": "https://openalex.org/W4393167357",
+      "locator_year": 2024,
+      "locator_date": "2024-03-01",
+      "authors": [],
+      "first_author_new": false,
+      "locations": [
+        {
+          "id": "doi:10.1109/tai.2024.3372792",
+          "doi": "https://doi.org/10.1109/tai.2024.3372792",
+          "is_oa": true,
+          "landing_page_url": "https://doi.org/10.1109/tai.2024.3372792",
+          "pdf_url": "https://ieeexplore.ieee.org/ielx7/9078688/10478748/10478750.pdf",
+          "source": {
+            "id": "https://openalex.org/S4210169448",
+            "display_name": "IEEE Transactions on Artificial Intelligence",
+            "issn_l": "2691-4581",
+            "issn": [
+              "2691-4581"
+            ],
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": true,
+            "listed_in": [
+              "cwts-core",
+              "jufo-1",
+              "norway-1"
+            ],
+            "host_organization": "https://openalex.org/P4310319808",
+            "host_organization_name": "Institute of Electrical and Electronics Engineers",
+            "host_organization_lineage": [
+              "https://openalex.org/P4310319808"
+            ],
+            "host_organization_lineage_names": [
+              "Institute of Electrical and Electronics Engineers"
+            ],
+            "type": "journal"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "publishedVersion",
+          "is_accepted": true,
+          "is_published": true,
+          "raw_source_name": "IEEE Transactions on Artificial Intelligence",
+          "raw_type": "journal-article"
+        }
+      ],
+      "frame_source": "07-research/2026-10-10-顶会顶刊写作风格调研_证据/sources/tai/tai-openalex-page2.json",
+      "scope": "Locator metadata only; not an independent PDF/version or article-type audit."
+    },
+    {
+      "doi": "10.1109/tai.2024.3372794",
+      "title": "IEEE Transactions on Artificial Intelligence Publication Information",
+      "openalex_id": "https://openalex.org/W4393166435",
+      "locator_year": 2024,
+      "locator_date": "2024-03-01",
+      "authors": [],
+      "first_author_new": false,
+      "locations": [
+        {
+          "id": "doi:10.1109/tai.2024.3372794",
+          "doi": "https://doi.org/10.1109/tai.2024.3372794",
+          "is_oa": true,
+          "landing_page_url": "https://doi.org/10.1109/tai.2024.3372794",
+          "pdf_url": "https://ieeexplore.ieee.org/ielx7/9078688/10478748/10478786.pdf",
+          "source": {
+            "id": "https://openalex.org/S4210169448",
+            "display_name": "IEEE Transactions on Artificial Intelligence",
+            "issn_l": "2691-4581",
+            "issn": [
+              "2691-4581"
+            ],
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": true,
+            "listed_in": [
+              "cwts-core",
+              "jufo-1",
+              "norway-1"
+            ],
+            "host_organization": "https://openalex.org/P4310319808",
+            "host_organization_name": "Institute of Electrical and Electronics Engineers",
+            "host_organization_lineage": [
+              "https://openalex.org/P4310319808"
+            ],
+            "host_organization_lineage_names": [
+              "Institute of Electrical and Electronics Engineers"
+            ],
+            "type": "journal"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "publishedVersion",
+          "is_accepted": true,
+          "is_published": true,
+          "raw_source_name": "IEEE Transactions on Artificial Intelligence",
+          "raw_type": "journal-article"
+        }
+      ],
+      "frame_source": "07-research/2026-10-10-顶会顶刊写作风格调研_证据/sources/tai/tai-openalex-page2.json",
+      "scope": "Locator metadata only; not an independent PDF/version or article-type audit."
+    },
+    {
+      "doi": "10.1109/tai.2024.3376319",
+      "title": "Developing a Reliable Shallow Supervised Learning for Thermal Comfort Using Multiple ASHRAE Databases",
+      "openalex_id": "https://openalex.org/W4392931741",
+      "locator_year": 2024,
+      "locator_date": "2024-03-18",
+      "authors": [
+        "Kanisius Karyono",
+        "Badr M. Abdullah",
+        "Alison Cotgrave",
+        "Ana Brás",
+        "Jeff D. Cullen"
+      ],
+      "first_author_new": true,
+      "locations": [
+        {
+          "id": "doi:10.1109/tai.2024.3376319",
+          "doi": "https://doi.org/10.1109/tai.2024.3376319",
+          "is_oa": false,
+          "landing_page_url": "https://doi.org/10.1109/tai.2024.3376319",
+          "pdf_url": null,
+          "source": {
+            "id": "https://openalex.org/S4210169448",
+            "display_name": "IEEE Transactions on Artificial Intelligence",
+            "issn_l": "2691-4581",
+            "issn": [
+              "2691-4581"
+            ],
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": true,
+            "listed_in": [
+              "cwts-core",
+              "jufo-1",
+              "norway-1"
+            ],
+            "host_organization": "https://openalex.org/P4310319808",
+            "host_organization_name": "Institute of Electrical and Electronics Engineers",
+            "host_organization_lineage": [
+              "https://openalex.org/P4310319808"
+            ],
+            "host_organization_lineage_names": [
+              "Institute of Electrical and Electronics Engineers"
+            ],
+            "type": "journal"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "publishedVersion",
+          "is_accepted": true,
+          "is_published": true,
+          "raw_source_name": "IEEE Transactions on Artificial Intelligence",
+          "raw_type": "journal-article"
+        },
+        {
+          "id": "pmh:oai:researchonline.ljmu.ac.uk:22906",
+          "doi": null,
+          "is_oa": true,
+          "landing_page_url": "https://orcid.org/0000-0002-1281-148X",
+          "pdf_url": "https://researchonline.ljmu.ac.uk/id/eprint/22906/1/Manuscript_TAI_V3.pdf",
+          "source": {
+            "id": "https://openalex.org/S4306401246",
+            "display_name": "Liverpool John Moores University",
+            "issn_l": null,
+            "issn": null,
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": false,
+            "listed_in": [],
+            "host_organization": "https://openalex.org/I63098007",
+            "host_organization_name": "Liverpool John Moores University",
+            "host_organization_lineage": [
+              "https://openalex.org/I63098007"
+            ],
+            "host_organization_lineage_names": [],
+            "type": "repository"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "submittedVersion",
+          "is_accepted": false,
+          "is_published": false,
+          "raw_source_name": null,
+          "raw_type": "Article"
+        }
+      ],
+      "frame_source": "07-research/2026-10-10-顶会顶刊写作风格调研_证据/sources/tai/tai-openalex-expanded.json",
+      "scope": "Locator metadata only; not an independent PDF/version or article-type audit."
+    },
+    {
+      "doi": "10.1109/tai.2024.3377173",
+      "title": "Multiscale and Multilayer Contrastive Learning for Domain Generalization",
+      "openalex_id": "https://openalex.org/W4392824638",
+      "locator_year": 2024,
+      "locator_date": "2024-03-14",
+      "authors": [
+        "Aristotelis Ballas",
+        "Christos Diou"
+      ],
+      "first_author_new": true,
+      "locations": [
+        {
+          "id": "doi:10.1109/tai.2024.3377173",
+          "doi": "https://doi.org/10.1109/tai.2024.3377173",
+          "is_oa": false,
+          "landing_page_url": "https://doi.org/10.1109/tai.2024.3377173",
+          "pdf_url": null,
+          "source": {
+            "id": "https://openalex.org/S4210169448",
+            "display_name": "IEEE Transactions on Artificial Intelligence",
+            "issn_l": "2691-4581",
+            "issn": [
+              "2691-4581"
+            ],
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": true,
+            "listed_in": [
+              "cwts-core",
+              "jufo-1",
+              "norway-1"
+            ],
+            "host_organization": "https://openalex.org/P4310319808",
+            "host_organization_name": "Institute of Electrical and Electronics Engineers",
+            "host_organization_lineage": [
+              "https://openalex.org/P4310319808"
+            ],
+            "host_organization_lineage_names": [
+              "Institute of Electrical and Electronics Engineers"
+            ],
+            "type": "journal"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "publishedVersion",
+          "is_accepted": true,
+          "is_published": true,
+          "raw_source_name": "IEEE Transactions on Artificial Intelligence",
+          "raw_type": "journal-article"
+        },
+        {
+          "id": "pmh:oai:arXiv.org:2308.14418",
+          "doi": null,
+          "is_oa": true,
+          "landing_page_url": "http://arxiv.org/abs/2308.14418",
+          "pdf_url": "https://arxiv.org/pdf/2308.14418",
+          "source": {
+            "id": "https://openalex.org/S4306400194",
+            "display_name": "arXiv (Cornell University)",
+            "issn_l": "2331-8422",
+            "issn": [
+              "2331-8422"
+            ],
+            "is_oa": true,
+            "is_in_doaj": false,
+            "is_core": false,
+            "listed_in": [],
+            "host_organization": "https://openalex.org/I205783295",
+            "host_organization_name": "Cornell University",
+            "host_organization_lineage": [
+              "https://openalex.org/I205783295"
+            ],
+            "host_organization_lineage_names": [],
+            "type": "repository"
+          },
+          "license": "cc-by",
+          "license_id": "https://openalex.org/licenses/cc-by",
+          "version": "submittedVersion",
+          "is_accepted": false,
+          "is_published": false,
+          "raw_source_name": null,
+          "raw_type": "text"
+        },
+        {
+          "id": "doi:10.48550/arxiv.2308.14418",
+          "doi": "https://doi.org/10.48550/arxiv.2308.14418",
+          "is_oa": true,
+          "landing_page_url": "https://doi.org/10.48550/arxiv.2308.14418",
+          "pdf_url": null,
+          "source": {
+            "id": "https://openalex.org/S4306400194",
+            "display_name": "arXiv (Cornell University)",
+            "issn_l": "2331-8422",
+            "issn": [
+              "2331-8422"
+            ],
+            "is_oa": true,
+            "is_in_doaj": false,
+            "is_core": false,
+            "listed_in": [],
+            "host_organization": "https://openalex.org/I205783295",
+            "host_organization_name": "Cornell University",
+            "host_organization_lineage": [
+              "https://openalex.org/I205783295"
+            ],
+            "host_organization_lineage_names": [],
+            "type": "repository"
+          },
+          "license": "cc-by",
+          "license_id": "https://openalex.org/licenses/cc-by",
+          "version": null,
+          "is_accepted": false,
+          "is_published": null,
+          "raw_source_name": null,
+          "raw_type": "article-journal"
+        }
+      ],
+      "frame_source": "07-research/2026-10-10-顶会顶刊写作风格调研_证据/sources/tai/tai-openalex-expanded.json",
+      "scope": "Locator metadata only; not an independent PDF/version or article-type audit."
+    },
+    {
+      "doi": "10.1109/tai.2024.3379940",
+      "title": "Progressively Select and Reject Pseudolabeled Samples for Open-Set Domain Adaptation",
+      "openalex_id": "https://openalex.org/W4393144927",
+      "locator_year": 2024,
+      "locator_date": "2024-03-25",
+      "authors": [
+        "Qian Wang",
+        "Fanlin Meng",
+        "Toby P. Breckon"
+      ],
+      "first_author_new": true,
+      "locations": [
+        {
+          "id": "doi:10.1109/tai.2024.3379940",
+          "doi": "https://doi.org/10.1109/tai.2024.3379940",
+          "is_oa": false,
+          "landing_page_url": "https://doi.org/10.1109/tai.2024.3379940",
+          "pdf_url": null,
+          "source": {
+            "id": "https://openalex.org/S4210169448",
+            "display_name": "IEEE Transactions on Artificial Intelligence",
+            "issn_l": "2691-4581",
+            "issn": [
+              "2691-4581"
+            ],
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": true,
+            "listed_in": [
+              "cwts-core",
+              "jufo-1",
+              "norway-1"
+            ],
+            "host_organization": "https://openalex.org/P4310319808",
+            "host_organization_name": "Institute of Electrical and Electronics Engineers",
+            "host_organization_lineage": [
+              "https://openalex.org/P4310319808"
+            ],
+            "host_organization_lineage_names": [
+              "Institute of Electrical and Electronics Engineers"
+            ],
+            "type": "journal"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "publishedVersion",
+          "is_accepted": true,
+          "is_published": true,
+          "raw_source_name": "IEEE Transactions on Artificial Intelligence",
+          "raw_type": "journal-article"
+        },
+        {
+          "id": "pmh:oai:pure.atira.dk:openaire/93e2ac91-6ef1-447f-8c50-ae3e89b48b30",
+          "doi": null,
+          "is_oa": true,
+          "landing_page_url": "https://research.manchester.ac.uk/en/publications/93e2ac91-6ef1-447f-8c50-ae3e89b48b30",
+          "pdf_url": null,
+          "source": {
+            "id": "https://openalex.org/S4306400662",
+            "display_name": "Research Explorer (The University of Manchester)",
+            "issn_l": null,
+            "issn": null,
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": false,
+            "listed_in": [],
+            "host_organization": "https://openalex.org/I28407311",
+            "host_organization_name": "University of Manchester",
+            "host_organization_lineage": [
+              "https://openalex.org/I28407311"
+            ],
+            "host_organization_lineage_names": [],
+            "type": "repository"
+          },
+          "license": "cc-by",
+          "license_id": "https://openalex.org/licenses/cc-by",
+          "version": "publishedVersion",
+          "is_accepted": true,
+          "is_published": true,
+          "raw_source_name": "Wang, Q, Meng, F & Breckon, T P 2024, 'Progressively Select and Reject Pseudo-labelled Samples for Open-Set Domain Adaptation', IEEE Transactions on Artificial Intelligence, pp. 1-12. https://doi.org/10.1109/TAI.2024.3379940",
+          "raw_type": "info:eu-repo/semantics/article"
+        },
+        {
+          "id": "pmh:oai:durham-repository.worktribe.com:2347522",
+          "doi": null,
+          "is_oa": true,
+          "landing_page_url": "https://durham-repository.worktribe.com/2347522/1/Accepted%20Journal%20Article",
+          "pdf_url": "https://durham-repository.worktribe.com/file/2347522/1/Accepted%20Journal%20Article",
+          "source": {
+            "id": "https://openalex.org/S4306400188",
+            "display_name": "Durham Research Online (Durham University)",
+            "issn_l": null,
+            "issn": null,
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": false,
+            "listed_in": [],
+            "host_organization": "https://openalex.org/I190082696",
+            "host_organization_name": "Durham University",
+            "host_organization_lineage": [
+              "https://openalex.org/I190082696"
+            ],
+            "host_organization_lineage_names": [],
+            "type": "repository"
+          },
+          "license": "cc-by",
+          "license_id": "https://openalex.org/licenses/cc-by",
+          "version": "submittedVersion",
+          "is_accepted": false,
+          "is_published": false,
+          "raw_source_name": null,
+          "raw_type": "Journal Article"
+        }
+      ],
+      "frame_source": "07-research/2026-10-10-顶会顶刊写作风格调研_证据/sources/tai/tai-openalex-expanded.json",
+      "scope": "Locator metadata only; not an independent PDF/version or article-type audit."
+    },
+    {
+      "doi": "10.1109/tai.2024.3382429",
+      "title": "Front Cover",
+      "openalex_id": "https://openalex.org/W4394596257",
+      "locator_year": 2024,
+      "locator_date": "2024-04-01",
+      "authors": [],
+      "first_author_new": false,
+      "locations": [
+        {
+          "id": "doi:10.1109/tai.2024.3382429",
+          "doi": "https://doi.org/10.1109/tai.2024.3382429",
+          "is_oa": true,
+          "landing_page_url": "https://doi.org/10.1109/tai.2024.3382429",
+          "pdf_url": "https://ieeexplore.ieee.org/ielx7/9078688/10495741/10495743.pdf",
+          "source": {
+            "id": "https://openalex.org/S4210169448",
+            "display_name": "IEEE Transactions on Artificial Intelligence",
+            "issn_l": "2691-4581",
+            "issn": [
+              "2691-4581"
+            ],
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": true,
+            "listed_in": [
+              "cwts-core",
+              "jufo-1",
+              "norway-1"
+            ],
+            "host_organization": "https://openalex.org/P4310319808",
+            "host_organization_name": "Institute of Electrical and Electronics Engineers",
+            "host_organization_lineage": [
+              "https://openalex.org/P4310319808"
+            ],
+            "host_organization_lineage_names": [
+              "Institute of Electrical and Electronics Engineers"
+            ],
+            "type": "journal"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "publishedVersion",
+          "is_accepted": true,
+          "is_published": true,
+          "raw_source_name": "IEEE Transactions on Artificial Intelligence",
+          "raw_type": "journal-article"
+        }
+      ],
+      "frame_source": "07-research/2026-10-10-顶会顶刊写作风格调研_证据/sources/tai/tai-openalex-page2.json",
+      "scope": "Locator metadata only; not an independent PDF/version or article-type audit."
+    },
+    {
+      "doi": "10.1109/tai.2024.3382431",
+      "title": "Table of Contents",
+      "openalex_id": "https://openalex.org/W4394622668",
+      "locator_year": 2024,
+      "locator_date": "2024-04-01",
+      "authors": [],
+      "first_author_new": false,
+      "locations": [
+        {
+          "id": "doi:10.1109/tai.2024.3382431",
+          "doi": "https://doi.org/10.1109/tai.2024.3382431",
+          "is_oa": true,
+          "landing_page_url": "https://doi.org/10.1109/tai.2024.3382431",
+          "pdf_url": "https://ieeexplore.ieee.org/ielx7/9078688/10495741/10495744.pdf",
+          "source": {
+            "id": "https://openalex.org/S4210169448",
+            "display_name": "IEEE Transactions on Artificial Intelligence",
+            "issn_l": "2691-4581",
+            "issn": [
+              "2691-4581"
+            ],
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": true,
+            "listed_in": [
+              "cwts-core",
+              "jufo-1",
+              "norway-1"
+            ],
+            "host_organization": "https://openalex.org/P4310319808",
+            "host_organization_name": "Institute of Electrical and Electronics Engineers",
+            "host_organization_lineage": [
+              "https://openalex.org/P4310319808"
+            ],
+            "host_organization_lineage_names": [
+              "Institute of Electrical and Electronics Engineers"
+            ],
+            "type": "journal"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "publishedVersion",
+          "is_accepted": true,
+          "is_published": true,
+          "raw_source_name": "IEEE Transactions on Artificial Intelligence",
+          "raw_type": "journal-article"
+        }
+      ],
+      "frame_source": "07-research/2026-10-10-顶会顶刊写作风格调研_证据/sources/tai/tai-openalex-page2.json",
+      "scope": "Locator metadata only; not an independent PDF/version or article-type audit."
+    },
+    {
+      "doi": "10.1109/tai.2024.3382433",
+      "title": "IEEE Transactions on Artificial Intelligence Publication Information",
+      "openalex_id": "https://openalex.org/W4394622670",
+      "locator_year": 2024,
+      "locator_date": "2024-04-01",
+      "authors": [],
+      "first_author_new": false,
+      "locations": [
+        {
+          "id": "doi:10.1109/tai.2024.3382433",
+          "doi": "https://doi.org/10.1109/tai.2024.3382433",
+          "is_oa": true,
+          "landing_page_url": "https://doi.org/10.1109/tai.2024.3382433",
+          "pdf_url": "https://ieeexplore.ieee.org/ielx7/9078688/10495741/10495742.pdf",
+          "source": {
+            "id": "https://openalex.org/S4210169448",
+            "display_name": "IEEE Transactions on Artificial Intelligence",
+            "issn_l": "2691-4581",
+            "issn": [
+              "2691-4581"
+            ],
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": true,
+            "listed_in": [
+              "cwts-core",
+              "jufo-1",
+              "norway-1"
+            ],
+            "host_organization": "https://openalex.org/P4310319808",
+            "host_organization_name": "Institute of Electrical and Electronics Engineers",
+            "host_organization_lineage": [
+              "https://openalex.org/P4310319808"
+            ],
+            "host_organization_lineage_names": [
+              "Institute of Electrical and Electronics Engineers"
+            ],
+            "type": "journal"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "publishedVersion",
+          "is_accepted": true,
+          "is_published": true,
+          "raw_source_name": "IEEE Transactions on Artificial Intelligence",
+          "raw_type": "journal-article"
+        }
+      ],
+      "frame_source": "07-research/2026-10-10-顶会顶刊写作风格调研_证据/sources/tai/tai-openalex-page2.json",
+      "scope": "Locator metadata only; not an independent PDF/version or article-type audit."
+    },
+    {
+      "doi": "10.1109/tai.2024.3394389",
+      "title": "Fostering Human Rights in Responsible AI: A Systematic Review for Best Practices in Industry",
+      "openalex_id": "https://openalex.org/W4396214976",
+      "locator_year": 2024,
+      "locator_date": "2024-04-29",
+      "authors": [
+        "Maria Teresa Baldassarre",
+        "Caivano Danilo",
+        "Berenice Fernández Nieto",
+        "Domenico Gigante",
+        "Azzurra Ragone"
+      ],
+      "first_author_new": true,
+      "locations": [
+        {
+          "id": "doi:10.1109/tai.2024.3394389",
+          "doi": "https://doi.org/10.1109/tai.2024.3394389",
+          "is_oa": false,
+          "landing_page_url": "https://doi.org/10.1109/tai.2024.3394389",
+          "pdf_url": null,
+          "source": {
+            "id": "https://openalex.org/S4210169448",
+            "display_name": "IEEE Transactions on Artificial Intelligence",
+            "issn_l": "2691-4581",
+            "issn": [
+              "2691-4581"
+            ],
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": true,
+            "listed_in": [
+              "cwts-core",
+              "jufo-1",
+              "norway-1"
+            ],
+            "host_organization": "https://openalex.org/P4310319808",
+            "host_organization_name": "Institute of Electrical and Electronics Engineers",
+            "host_organization_lineage": [
+              "https://openalex.org/P4310319808"
+            ],
+            "host_organization_lineage_names": [
+              "Institute of Electrical and Electronics Engineers"
+            ],
+            "type": "journal"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "publishedVersion",
+          "is_accepted": true,
+          "is_published": true,
+          "raw_source_name": "IEEE Transactions on Artificial Intelligence",
+          "raw_type": "journal-article"
+        },
+        {
+          "id": "pmh:oai:ricerca.uniba.it:11586/479162",
+          "doi": null,
+          "is_oa": true,
+          "landing_page_url": "https://hdl.handle.net/11586/479162",
+          "pdf_url": null,
+          "source": {
+            "id": "https://openalex.org/S4377196296",
+            "display_name": "CINECA IRIS Institutional Research Information System (University of Bari Aldo Moro)",
+            "issn_l": null,
+            "issn": null,
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": false,
+            "listed_in": [],
+            "host_organization": "https://openalex.org/I5561750",
+            "host_organization_name": "University of Bari Aldo Moro",
+            "host_organization_lineage": [
+              "https://openalex.org/I5561750"
+            ],
+            "host_organization_lineage_names": [],
+            "type": "repository"
+          },
+          "license": "other-oa",
+          "license_id": "https://openalex.org/licenses/other-oa",
+          "version": "submittedVersion",
+          "is_accepted": false,
+          "is_published": false,
+          "raw_source_name": null,
+          "raw_type": "info:eu-repo/semantics/article"
+        }
+      ],
+      "frame_source": "07-research/2026-10-10-顶会顶刊写作风格调研_证据/sources/tai/tai-openalex-expanded.json",
+      "scope": "Locator metadata only; not an independent PDF/version or article-type audit."
+    },
+    {
+      "doi": "10.1109/tai.2024.3394795",
+      "title": "Quadratic Neuron-Empowered Heterogeneous Autoencoder for Unsupervised Anomaly Detection",
+      "openalex_id": "https://openalex.org/W4396214969",
+      "locator_year": 2024,
+      "locator_date": "2024-04-29",
+      "authors": [
+        "Jing-Xiao Liao",
+        "Bojian Hou",
+        "Hangcheng Dong",
+        "Hao Zhang",
+        "Xiaoge Zhang",
+        "Jinwei Sun",
+        "Shiping Zhang",
+        "Fenglei Fan"
+      ],
+      "first_author_new": true,
+      "locations": [
+        {
+          "id": "doi:10.1109/tai.2024.3394795",
+          "doi": "https://doi.org/10.1109/tai.2024.3394795",
+          "is_oa": false,
+          "landing_page_url": "https://doi.org/10.1109/tai.2024.3394795",
+          "pdf_url": null,
+          "source": {
+            "id": "https://openalex.org/S4210169448",
+            "display_name": "IEEE Transactions on Artificial Intelligence",
+            "issn_l": "2691-4581",
+            "issn": [
+              "2691-4581"
+            ],
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": true,
+            "listed_in": [
+              "cwts-core",
+              "jufo-1",
+              "norway-1",
+              "poland-20"
+            ],
+            "host_organization": "https://openalex.org/P4310319808",
+            "host_organization_name": "Institute of Electrical and Electronics Engineers",
+            "host_organization_lineage": [
+              "https://openalex.org/P4310319808"
+            ],
+            "host_organization_lineage_names": [
+              "Institute of Electrical and Electronics Engineers"
+            ],
+            "type": "journal"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "publishedVersion",
+          "is_accepted": true,
+          "is_published": true,
+          "raw_source_name": "IEEE Transactions on Artificial Intelligence",
+          "raw_type": "journal-article"
+        },
+        {
+          "id": "pmh:oai:arXiv.org:2204.01707",
+          "doi": null,
+          "is_oa": true,
+          "landing_page_url": "http://arxiv.org/abs/2204.01707",
+          "pdf_url": "https://arxiv.org/pdf/2204.01707",
+          "source": {
+            "id": "https://openalex.org/S4306400194",
+            "display_name": "arXiv (Cornell University)",
+            "issn_l": "2331-8422",
+            "issn": [
+              "2331-8422"
+            ],
+            "is_oa": true,
+            "is_in_doaj": false,
+            "is_core": false,
+            "listed_in": [],
+            "host_organization": "https://openalex.org/I205783295",
+            "host_organization_name": "Cornell University",
+            "host_organization_lineage": [
+              "https://openalex.org/I205783295"
+            ],
+            "host_organization_lineage_names": [],
+            "type": "repository"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "submittedVersion",
+          "is_accepted": false,
+          "is_published": false,
+          "raw_source_name": null,
+          "raw_type": "text"
+        },
+        {
+          "id": "doi:10.48550/arxiv.2204.01707",
+          "doi": "https://doi.org/10.48550/arxiv.2204.01707",
+          "is_oa": true,
+          "landing_page_url": "https://doi.org/10.48550/arxiv.2204.01707",
+          "pdf_url": null,
+          "source": {
+            "id": "https://openalex.org/S4306400194",
+            "display_name": "arXiv (Cornell University)",
+            "issn_l": "2331-8422",
+            "issn": [
+              "2331-8422"
+            ],
+            "is_oa": true,
+            "is_in_doaj": false,
+            "is_core": false,
+            "listed_in": [],
+            "host_organization": "https://openalex.org/I205783295",
+            "host_organization_name": "Cornell University",
+            "host_organization_lineage": [
+              "https://openalex.org/I205783295"
+            ],
+            "host_organization_lineage_names": [],
+            "type": "repository"
+          },
+          "license": "cc-by",
+          "license_id": "https://openalex.org/licenses/cc-by",
+          "version": null,
+          "is_accepted": false,
+          "is_published": null,
+          "raw_source_name": null,
+          "raw_type": "article-journal"
+        }
+      ],
+      "frame_source": "07-research/2026-10-10-顶会顶刊写作风格调研_证据/sources/tai/tai-openalex-expanded.json",
+      "scope": "Locator metadata only; not an independent PDF/version or article-type audit."
+    },
+    {
+      "doi": "10.1109/tai.2024.3394798",
+      "title": "Automatic Plane Pose Estimation for Cardiac Left Ventricle Coverage Estimation via Deep Adversarial Regression Network",
+      "openalex_id": "https://openalex.org/W4396754464",
+      "locator_year": 2024,
+      "locator_date": "2024-05-08",
+      "authors": [
+        "Le Zhang",
+        "Kevin Bronik",
+        "Stefan Kazimierz Piechnik",
+        "João A.C. Lima",
+        "Stefan Neubauer",
+        "Steffen Erhard Petersen",
+        "Alejandro Federico Frangi"
+      ],
+      "first_author_new": true,
+      "locations": [
+        {
+          "id": "doi:10.1109/tai.2024.3394798",
+          "doi": "https://doi.org/10.1109/tai.2024.3394798",
+          "is_oa": true,
+          "landing_page_url": "https://doi.org/10.1109/tai.2024.3394798",
+          "pdf_url": null,
+          "source": {
+            "id": "https://openalex.org/S4210169448",
+            "display_name": "IEEE Transactions on Artificial Intelligence",
+            "issn_l": "2691-4581",
+            "issn": [
+              "2691-4581"
+            ],
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": true,
+            "listed_in": [
+              "cwts-core",
+              "jufo-1",
+              "norway-1"
+            ],
+            "host_organization": "https://openalex.org/P4310319808",
+            "host_organization_name": "Institute of Electrical and Electronics Engineers",
+            "host_organization_lineage": [
+              "https://openalex.org/P4310319808"
+            ],
+            "host_organization_lineage_names": [
+              "Institute of Electrical and Electronics Engineers"
+            ],
+            "type": "journal"
+          },
+          "license": "cc-by-nc-nd",
+          "license_id": "https://openalex.org/licenses/cc-by-nc-nd",
+          "version": "publishedVersion",
+          "is_accepted": true,
+          "is_published": true,
+          "raw_source_name": "IEEE Transactions on Artificial Intelligence",
+          "raw_type": "journal-article"
+        },
+        {
+          "id": "pmh:oai:pure.atira.dk:openaire/788881e9-fdd7-437f-9d36-0520fb934d16",
+          "doi": null,
+          "is_oa": true,
+          "landing_page_url": "https://research.manchester.ac.uk/en/publications/788881e9-fdd7-437f-9d36-0520fb934d16",
+          "pdf_url": null,
+          "source": {
+            "id": "https://openalex.org/S4306400662",
+            "display_name": "Research Explorer (The University of Manchester)",
+            "issn_l": null,
+            "issn": null,
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": false,
+            "listed_in": [],
+            "host_organization": "https://openalex.org/I28407311",
+            "host_organization_name": "University of Manchester",
+            "host_organization_lineage": [
+              "https://openalex.org/I28407311"
+            ],
+            "host_organization_lineage_names": [],
+            "type": "repository"
+          },
+          "license": "cc-by",
+          "license_id": "https://openalex.org/licenses/cc-by",
+          "version": "publishedVersion",
+          "is_accepted": true,
+          "is_published": true,
+          "raw_source_name": "Zhang, L, Bronik, K, Piechnik, S K, Lima, J A C, Neubauer, S, Petersen, S E & Frangi, A F 2024, 'Automatic Plane Pose Estimation for Cardiac Left Ventricle Coverage Estimation via Deep Adversarial Regression Network', IEEE Transactions on Artificial Intelligence, pp. 1-15. https://doi.org/10.1109/TAI.2024.3394798",
+          "raw_type": "info:eu-repo/semantics/article"
+        },
+        {
+          "id": "pmh:oai:pure.atira.dk:openaire/430af1d1-451e-4b0e-a1b4-3df6d5e0cee8",
+          "doi": null,
+          "is_oa": true,
+          "landing_page_url": "https://research.birmingham.ac.uk/en/publications/430af1d1-451e-4b0e-a1b4-3df6d5e0cee8",
+          "pdf_url": null,
+          "source": {
+            "id": "https://openalex.org/S4306402634",
+            "display_name": "University of Birmingham Research Portal (University of Birmingham)",
+            "issn_l": null,
+            "issn": null,
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": false,
+            "listed_in": [],
+            "host_organization": "https://openalex.org/I79619799",
+            "host_organization_name": "University of Birmingham",
+            "host_organization_lineage": [
+              "https://openalex.org/I79619799"
+            ],
+            "host_organization_lineage_names": [],
+            "type": "repository"
+          },
+          "license": "cc-by-nc-nd",
+          "license_id": "https://openalex.org/licenses/cc-by-nc-nd",
+          "version": "submittedVersion",
+          "is_accepted": false,
+          "is_published": false,
+          "raw_source_name": "Zhang, L, Bronik, K, Piechnik, S, Lima, J, Neubauer, S, Petersen, S & Frangi, A 2024, 'Automatic Plane Pose Estimation for Cardiac Left Ventricle Coverage Estimation via Deep Adversarial Regression Network', IEEE Transactions on Artificial Intelligence. https://doi.org/10.1109/TAI.2024.3394798",
+          "raw_type": "info:eu-repo/semantics/article"
+        }
+      ],
+      "frame_source": "07-research/2026-10-10-顶会顶刊写作风格调研_证据/sources/tai/tai-openalex-expanded.json",
+      "scope": "Locator metadata only; not an independent PDF/version or article-type audit."
+    },
+    {
+      "doi": "10.1109/tai.2024.3396529",
+      "title": "Table of Contents",
+      "openalex_id": "https://openalex.org/W4396980155",
+      "locator_year": 2024,
+      "locator_date": "2024-05-01",
+      "authors": [],
+      "first_author_new": false,
+      "locations": [
+        {
+          "id": "doi:10.1109/tai.2024.3396529",
+          "doi": "https://doi.org/10.1109/tai.2024.3396529",
+          "is_oa": true,
+          "landing_page_url": "https://doi.org/10.1109/tai.2024.3396529",
+          "pdf_url": "https://ieeexplore.ieee.org/ielx7/9078688/10532210/10532245.pdf",
+          "source": {
+            "id": "https://openalex.org/S4210169448",
+            "display_name": "IEEE Transactions on Artificial Intelligence",
+            "issn_l": "2691-4581",
+            "issn": [
+              "2691-4581"
+            ],
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": true,
+            "listed_in": [
+              "cwts-core",
+              "jufo-1",
+              "norway-1"
+            ],
+            "host_organization": "https://openalex.org/P4310319808",
+            "host_organization_name": "Institute of Electrical and Electronics Engineers",
+            "host_organization_lineage": [
+              "https://openalex.org/P4310319808"
+            ],
+            "host_organization_lineage_names": [
+              "Institute of Electrical and Electronics Engineers"
+            ],
+            "type": "journal"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "publishedVersion",
+          "is_accepted": true,
+          "is_published": true,
+          "raw_source_name": "IEEE Transactions on Artificial Intelligence",
+          "raw_type": "journal-article"
+        }
+      ],
+      "frame_source": "07-research/2026-10-10-顶会顶刊写作风格调研_证据/sources/tai/tai-openalex-page2.json",
+      "scope": "Locator metadata only; not an independent PDF/version or article-type audit."
+    },
+    {
+      "doi": "10.1109/tai.2024.3396531",
+      "title": "IEEE Transactions on Artificial Intelligence Publication Information",
+      "openalex_id": "https://openalex.org/W4396980216",
+      "locator_year": 2024,
+      "locator_date": "2024-05-01",
+      "authors": [],
+      "first_author_new": false,
+      "locations": [
+        {
+          "id": "doi:10.1109/tai.2024.3396531",
+          "doi": "https://doi.org/10.1109/tai.2024.3396531",
+          "is_oa": true,
+          "landing_page_url": "https://doi.org/10.1109/tai.2024.3396531",
+          "pdf_url": "https://ieeexplore.ieee.org/ielx7/9078688/10532210/10532213.pdf",
+          "source": {
+            "id": "https://openalex.org/S4210169448",
+            "display_name": "IEEE Transactions on Artificial Intelligence",
+            "issn_l": "2691-4581",
+            "issn": [
+              "2691-4581"
+            ],
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": true,
+            "listed_in": [
+              "cwts-core",
+              "jufo-1",
+              "norway-1"
+            ],
+            "host_organization": "https://openalex.org/P4310319808",
+            "host_organization_name": "Institute of Electrical and Electronics Engineers",
+            "host_organization_lineage": [
+              "https://openalex.org/P4310319808"
+            ],
+            "host_organization_lineage_names": [
+              "Institute of Electrical and Electronics Engineers"
+            ],
+            "type": "journal"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "publishedVersion",
+          "is_accepted": true,
+          "is_published": true,
+          "raw_source_name": "IEEE Transactions on Artificial Intelligence",
+          "raw_type": "journal-article"
+        }
+      ],
+      "frame_source": "07-research/2026-10-10-顶会顶刊写作风格调研_证据/sources/tai/tai-openalex-page2.json",
+      "scope": "Locator metadata only; not an independent PDF/version or article-type audit."
+    },
+    {
+      "doi": "10.1109/tai.2024.3396533",
+      "title": "Front Cover",
+      "openalex_id": "https://openalex.org/W4396980176",
+      "locator_year": 2024,
+      "locator_date": "2024-05-01",
+      "authors": [],
+      "first_author_new": false,
+      "locations": [
+        {
+          "id": "doi:10.1109/tai.2024.3396533",
+          "doi": "https://doi.org/10.1109/tai.2024.3396533",
+          "is_oa": true,
+          "landing_page_url": "https://doi.org/10.1109/tai.2024.3396533",
+          "pdf_url": "https://ieeexplore.ieee.org/ielx7/9078688/10532210/10532248.pdf",
+          "source": {
+            "id": "https://openalex.org/S4210169448",
+            "display_name": "IEEE Transactions on Artificial Intelligence",
+            "issn_l": "2691-4581",
+            "issn": [
+              "2691-4581"
+            ],
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": true,
+            "listed_in": [
+              "cwts-core",
+              "jufo-1",
+              "norway-1"
+            ],
+            "host_organization": "https://openalex.org/P4310319808",
+            "host_organization_name": "Institute of Electrical and Electronics Engineers",
+            "host_organization_lineage": [
+              "https://openalex.org/P4310319808"
+            ],
+            "host_organization_lineage_names": [
+              "Institute of Electrical and Electronics Engineers"
+            ],
+            "type": "journal"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "publishedVersion",
+          "is_accepted": true,
+          "is_published": true,
+          "raw_source_name": "IEEE Transactions on Artificial Intelligence",
+          "raw_type": "journal-article"
+        }
+      ],
+      "frame_source": "07-research/2026-10-10-顶会顶刊写作风格调研_证据/sources/tai/tai-openalex-page2.json",
+      "scope": "Locator metadata only; not an independent PDF/version or article-type audit."
+    },
+    {
+      "doi": "10.1109/tai.2024.3397292",
+      "title": "Unsupervised Representation Learning for 3-D Magnetic Resonance Imaging Superresolution With Degradation Adaptation",
+      "openalex_id": "https://openalex.org/W4396712970",
+      "locator_year": 2024,
+      "locator_date": "2024-05-07",
+      "authors": [
+        "Jianan Liu",
+        "Hao Li",
+        "Tao Huang",
+        "Euijoon Ahn",
+        "Kang Han",
+        "Adeel Razi",
+        "Wei Xiang",
+        "Jinman Kim",
+        "Dagan D. Feng"
+      ],
+      "first_author_new": true,
+      "locations": [
+        {
+          "id": "doi:10.1109/tai.2024.3397292",
+          "doi": "https://doi.org/10.1109/tai.2024.3397292",
+          "is_oa": false,
+          "landing_page_url": "https://doi.org/10.1109/tai.2024.3397292",
+          "pdf_url": null,
+          "source": {
+            "id": "https://openalex.org/S4210169448",
+            "display_name": "IEEE Transactions on Artificial Intelligence",
+            "issn_l": "2691-4581",
+            "issn": [
+              "2691-4581"
+            ],
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": true,
+            "listed_in": [
+              "cwts-core",
+              "jufo-1",
+              "norway-1"
+            ],
+            "host_organization": "https://openalex.org/P4310319808",
+            "host_organization_name": "Institute of Electrical and Electronics Engineers",
+            "host_organization_lineage": [
+              "https://openalex.org/P4310319808"
+            ],
+            "host_organization_lineage_names": [
+              "Institute of Electrical and Electronics Engineers"
+            ],
+            "type": "journal"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "publishedVersion",
+          "is_accepted": true,
+          "is_published": true,
+          "raw_source_name": "IEEE Transactions on Artificial Intelligence",
+          "raw_type": "journal-article"
+        },
+        {
+          "id": "pmh:oai:arXiv.org:2205.06891",
+          "doi": null,
+          "is_oa": true,
+          "landing_page_url": "http://arxiv.org/abs/2205.06891",
+          "pdf_url": "https://arxiv.org/pdf/2205.06891",
+          "source": {
+            "id": "https://openalex.org/S4306400194",
+            "display_name": "arXiv (Cornell University)",
+            "issn_l": "2331-8422",
+            "issn": [
+              "2331-8422"
+            ],
+            "is_oa": true,
+            "is_in_doaj": false,
+            "is_core": false,
+            "listed_in": [],
+            "host_organization": "https://openalex.org/I205783295",
+            "host_organization_name": "Cornell University",
+            "host_organization_lineage": [
+              "https://openalex.org/I205783295"
+            ],
+            "host_organization_lineage_names": [],
+            "type": "repository"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "submittedVersion",
+          "is_accepted": false,
+          "is_published": false,
+          "raw_source_name": null,
+          "raw_type": "text"
+        },
+        {
+          "id": "doi:10.48550/arxiv.2205.06891",
+          "doi": "https://doi.org/10.48550/arxiv.2205.06891",
+          "is_oa": true,
+          "landing_page_url": "https://doi.org/10.48550/arxiv.2205.06891",
+          "pdf_url": null,
+          "source": {
+            "id": "https://openalex.org/S4306400194",
+            "display_name": "arXiv (Cornell University)",
+            "issn_l": "2331-8422",
+            "issn": [
+              "2331-8422"
+            ],
+            "is_oa": true,
+            "is_in_doaj": false,
+            "is_core": false,
+            "listed_in": [],
+            "host_organization": "https://openalex.org/I205783295",
+            "host_organization_name": "Cornell University",
+            "host_organization_lineage": [
+              "https://openalex.org/I205783295"
+            ],
+            "host_organization_lineage_names": [],
+            "type": "repository"
+          },
+          "license": null,
+          "license_id": null,
+          "version": null,
+          "is_accepted": false,
+          "is_published": null,
+          "raw_source_name": null,
+          "raw_type": "article-journal"
+        }
+      ],
+      "frame_source": "07-research/2026-10-10-顶会顶刊写作风格调研_证据/sources/tai/tai-openalex-expanded.json",
+      "scope": "Locator metadata only; not an independent PDF/version or article-type audit."
+    },
+    {
+      "doi": "10.1109/tai.2024.3400749",
+      "title": "Inferring Electrocardiography From Optical Sensing Using Lightweight Neural Network",
+      "openalex_id": "https://openalex.org/W4396941486",
+      "locator_year": 2024,
+      "locator_date": "2024-05-15",
+      "authors": [
+        "Yuenan Li",
+        "Xin Tian",
+        "Qiang Zhu",
+        "Min Hua Wu"
+      ],
+      "first_author_new": true,
+      "locations": [
+        {
+          "id": "doi:10.1109/tai.2024.3400749",
+          "doi": "https://doi.org/10.1109/tai.2024.3400749",
+          "is_oa": false,
+          "landing_page_url": "https://doi.org/10.1109/tai.2024.3400749",
+          "pdf_url": null,
+          "source": {
+            "id": "https://openalex.org/S4210169448",
+            "display_name": "IEEE Transactions on Artificial Intelligence",
+            "issn_l": "2691-4581",
+            "issn": [
+              "2691-4581"
+            ],
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": true,
+            "listed_in": [
+              "cwts-core",
+              "jufo-1",
+              "norway-1"
+            ],
+            "host_organization": "https://openalex.org/P4310319808",
+            "host_organization_name": "Institute of Electrical and Electronics Engineers",
+            "host_organization_lineage": [
+              "https://openalex.org/P4310319808"
+            ],
+            "host_organization_lineage_names": [
+              "Institute of Electrical and Electronics Engineers"
+            ],
+            "type": "journal"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "publishedVersion",
+          "is_accepted": true,
+          "is_published": true,
+          "raw_source_name": "IEEE Transactions on Artificial Intelligence",
+          "raw_type": "journal-article"
+        },
+        {
+          "id": "pmh:oai:arXiv.org:2012.04949",
+          "doi": null,
+          "is_oa": true,
+          "landing_page_url": "http://arxiv.org/abs/2012.04949",
+          "pdf_url": "https://arxiv.org/pdf/2012.04949",
+          "source": {
+            "id": "https://openalex.org/S4306400194",
+            "display_name": "arXiv (Cornell University)",
+            "issn_l": "2331-8422",
+            "issn": [
+              "2331-8422"
+            ],
+            "is_oa": true,
+            "is_in_doaj": false,
+            "is_core": false,
+            "listed_in": [],
+            "host_organization": "https://openalex.org/I205783295",
+            "host_organization_name": "Cornell University",
+            "host_organization_lineage": [
+              "https://openalex.org/I205783295"
+            ],
+            "host_organization_lineage_names": [],
+            "type": "repository"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "submittedVersion",
+          "is_accepted": false,
+          "is_published": false,
+          "raw_source_name": null,
+          "raw_type": "text"
+        },
+        {
+          "id": "doi:10.48550/arxiv.2012.04949",
+          "doi": "https://doi.org/10.48550/arxiv.2012.04949",
+          "is_oa": true,
+          "landing_page_url": "https://doi.org/10.48550/arxiv.2012.04949",
+          "pdf_url": null,
+          "source": {
+            "id": "https://openalex.org/S4306400194",
+            "display_name": "arXiv (Cornell University)",
+            "issn_l": "2331-8422",
+            "issn": [
+              "2331-8422"
+            ],
+            "is_oa": true,
+            "is_in_doaj": false,
+            "is_core": false,
+            "listed_in": [],
+            "host_organization": "https://openalex.org/I205783295",
+            "host_organization_name": "Cornell University",
+            "host_organization_lineage": [
+              "https://openalex.org/I205783295"
+            ],
+            "host_organization_lineage_names": [],
+            "type": "repository"
+          },
+          "license": null,
+          "license_id": null,
+          "version": null,
+          "is_accepted": false,
+          "is_published": null,
+          "raw_source_name": null,
+          "raw_type": "article-journal"
+        }
+      ],
+      "frame_source": "07-research/2026-10-10-顶会顶刊写作风格调研_证据/sources/tai/tai-openalex-expanded.json",
+      "scope": "Locator metadata only; not an independent PDF/version or article-type audit."
+    },
+    {
+      "doi": "10.1109/tai.2024.3401102",
+      "title": "Adjusting Logit in Gaussian Form for Long-Tailed Visual Recognition",
+      "openalex_id": "https://openalex.org/W4396941522",
+      "locator_year": 2024,
+      "locator_date": "2024-05-15",
+      "authors": [
+        "Mengke Li",
+        "Yiu‐ming Cheung",
+        "Yang Lu",
+        "Zhikai Hu",
+        "Weichao Lan",
+        "Hui Fei Huang"
+      ],
+      "first_author_new": true,
+      "locations": [
+        {
+          "id": "doi:10.1109/tai.2024.3401102",
+          "doi": "https://doi.org/10.1109/tai.2024.3401102",
+          "is_oa": true,
+          "landing_page_url": "https://doi.org/10.1109/tai.2024.3401102",
+          "pdf_url": null,
+          "source": {
+            "id": "https://openalex.org/S4210169448",
+            "display_name": "IEEE Transactions on Artificial Intelligence",
+            "issn_l": "2691-4581",
+            "issn": [
+              "2691-4581"
+            ],
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": true,
+            "listed_in": [
+              "cwts-core",
+              "jufo-1",
+              "norway-1"
+            ],
+            "host_organization": "https://openalex.org/P4310319808",
+            "host_organization_name": "Institute of Electrical and Electronics Engineers",
+            "host_organization_lineage": [
+              "https://openalex.org/P4310319808"
+            ],
+            "host_organization_lineage_names": [
+              "Institute of Electrical and Electronics Engineers"
+            ],
+            "type": "journal"
+          },
+          "license": "cc-by",
+          "license_id": "https://openalex.org/licenses/cc-by",
+          "version": "publishedVersion",
+          "is_accepted": true,
+          "is_published": true,
+          "raw_source_name": "IEEE Transactions on Artificial Intelligence",
+          "raw_type": "journal-article"
+        },
+        {
+          "id": "pmh:oai:arXiv.org:2305.10648",
+          "doi": null,
+          "is_oa": true,
+          "landing_page_url": "http://arxiv.org/abs/2305.10648",
+          "pdf_url": "https://arxiv.org/pdf/2305.10648",
+          "source": {
+            "id": "https://openalex.org/S4306400194",
+            "display_name": "arXiv (Cornell University)",
+            "issn_l": "2331-8422",
+            "issn": [
+              "2331-8422"
+            ],
+            "is_oa": true,
+            "is_in_doaj": false,
+            "is_core": false,
+            "listed_in": [],
+            "host_organization": "https://openalex.org/I205783295",
+            "host_organization_name": "Cornell University",
+            "host_organization_lineage": [
+              "https://openalex.org/I205783295"
+            ],
+            "host_organization_lineage_names": [],
+            "type": "repository"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "submittedVersion",
+          "is_accepted": false,
+          "is_published": false,
+          "raw_source_name": null,
+          "raw_type": "text"
+        },
+        {
+          "id": "doi:10.48550/arxiv.2305.10648",
+          "doi": "https://doi.org/10.48550/arxiv.2305.10648",
+          "is_oa": true,
+          "landing_page_url": "https://doi.org/10.48550/arxiv.2305.10648",
+          "pdf_url": null,
+          "source": {
+            "id": "https://openalex.org/S4306400194",
+            "display_name": "arXiv (Cornell University)",
+            "issn_l": "2331-8422",
+            "issn": [
+              "2331-8422"
+            ],
+            "is_oa": true,
+            "is_in_doaj": false,
+            "is_core": false,
+            "listed_in": [],
+            "host_organization": "https://openalex.org/I205783295",
+            "host_organization_name": "Cornell University",
+            "host_organization_lineage": [
+              "https://openalex.org/I205783295"
+            ],
+            "host_organization_lineage_names": [],
+            "type": "repository"
+          },
+          "license": null,
+          "license_id": null,
+          "version": null,
+          "is_accepted": false,
+          "is_published": null,
+          "raw_source_name": null,
+          "raw_type": "article-journal"
+        }
+      ],
+      "frame_source": "07-research/2026-10-10-顶会顶刊写作风格调研_证据/sources/tai/tai-openalex-expanded.json",
+      "scope": "Locator metadata only; not an independent PDF/version or article-type audit."
+    },
+    {
+      "doi": "10.1109/tai.2024.3404414",
+      "title": "Nonlinear Regression With Hierarchical Recurrent Neural Networks Under Missing Data",
+      "openalex_id": "https://openalex.org/W4398226330",
+      "locator_year": 2024,
+      "locator_date": "2024-05-22",
+      "authors": [
+        "Safa Onur Şahin",
+        "Süleyman S. Kozat"
+      ],
+      "first_author_new": true,
+      "locations": [
+        {
+          "id": "doi:10.1109/tai.2024.3404414",
+          "doi": "https://doi.org/10.1109/tai.2024.3404414",
+          "is_oa": false,
+          "landing_page_url": "https://doi.org/10.1109/tai.2024.3404414",
+          "pdf_url": null,
+          "source": {
+            "id": "https://openalex.org/S4210169448",
+            "display_name": "IEEE Transactions on Artificial Intelligence",
+            "issn_l": "2691-4581",
+            "issn": [
+              "2691-4581"
+            ],
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": true,
+            "listed_in": [
+              "cwts-core",
+              "jufo-1",
+              "norway-1"
+            ],
+            "host_organization": "https://openalex.org/P4310319808",
+            "host_organization_name": "Institute of Electrical and Electronics Engineers",
+            "host_organization_lineage": [
+              "https://openalex.org/P4310319808"
+            ],
+            "host_organization_lineage_names": [
+              "Institute of Electrical and Electronics Engineers"
+            ],
+            "type": "journal"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "publishedVersion",
+          "is_accepted": true,
+          "is_published": true,
+          "raw_source_name": "IEEE Transactions on Artificial Intelligence",
+          "raw_type": "journal-article"
+        },
+        {
+          "id": "pmh:oai:repository.bilkent.edu.tr:11693/116736",
+          "doi": null,
+          "is_oa": true,
+          "landing_page_url": "https://hdl.handle.net/11693/116736",
+          "pdf_url": null,
+          "source": {
+            "id": "https://openalex.org/S4306400079",
+            "display_name": "Bilkent University Institutional Repository (Bilkent University)",
+            "issn_l": null,
+            "issn": null,
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": false,
+            "listed_in": [],
+            "host_organization": "https://openalex.org/I168864056",
+            "host_organization_name": "Bilkent University",
+            "host_organization_lineage": [
+              "https://openalex.org/I168864056"
+            ],
+            "host_organization_lineage_names": [],
+            "type": "repository"
+          },
+          "license": "cc-by-nc-nd",
+          "license_id": "https://openalex.org/licenses/cc-by-nc-nd",
+          "version": "submittedVersion",
+          "is_accepted": false,
+          "is_published": false,
+          "raw_source_name": "IEEE Transactions on Artificial Intelligence",
+          "raw_type": "Article"
+        }
+      ],
+      "frame_source": "07-research/2026-10-10-顶会顶刊写作风格调研_证据/sources/tai/tai-openalex-expanded.json",
+      "scope": "Locator metadata only; not an independent PDF/version or article-type audit."
+    },
+    {
+      "doi": "10.1109/tai.2024.3424427",
+      "title": "An Integrated Fusion Framework for Ensemble Learning Leveraging Gradient-Boosting and Fuzzy Rule-Based Models",
+      "openalex_id": "https://openalex.org/W4400411150",
+      "locator_year": 2024,
+      "locator_date": "2024-07-08",
+      "authors": [
+        "Jinbo Li",
+        "Peng Liu",
+        "Long Chen",
+        "Witold Pedrycz",
+        "Weiping Ding"
+      ],
+      "first_author_new": true,
+      "locations": [
+        {
+          "id": "doi:10.1109/tai.2024.3424427",
+          "doi": "https://doi.org/10.1109/tai.2024.3424427",
+          "is_oa": false,
+          "landing_page_url": "https://doi.org/10.1109/tai.2024.3424427",
+          "pdf_url": null,
+          "source": {
+            "id": "https://openalex.org/S4210169448",
+            "display_name": "IEEE Transactions on Artificial Intelligence",
+            "issn_l": "2691-4581",
+            "issn": [
+              "2691-4581"
+            ],
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": true,
+            "listed_in": [
+              "cwts-core",
+              "jufo-1",
+              "norway-1"
+            ],
+            "host_organization": "https://openalex.org/P4310319808",
+            "host_organization_name": "Institute of Electrical and Electronics Engineers",
+            "host_organization_lineage": [
+              "https://openalex.org/P4310319808"
+            ],
+            "host_organization_lineage_names": [
+              "Institute of Electrical and Electronics Engineers"
+            ],
+            "type": "journal"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "publishedVersion",
+          "is_accepted": true,
+          "is_published": true,
+          "raw_source_name": "IEEE Transactions on Artificial Intelligence",
+          "raw_type": "journal-article"
+        },
+        {
+          "id": "pmh:oai:arXiv.org:2511.08077",
+          "doi": null,
+          "is_oa": true,
+          "landing_page_url": "http://arxiv.org/abs/2511.08077",
+          "pdf_url": "https://arxiv.org/pdf/2511.08077",
+          "source": {
+            "id": "https://openalex.org/S4306400194",
+            "display_name": "arXiv (Cornell University)",
+            "issn_l": "2331-8422",
+            "issn": [
+              "2331-8422"
+            ],
+            "is_oa": true,
+            "is_in_doaj": false,
+            "is_core": false,
+            "listed_in": [],
+            "host_organization": "https://openalex.org/I205783295",
+            "host_organization_name": "Cornell University",
+            "host_organization_lineage": [
+              "https://openalex.org/I205783295"
+            ],
+            "host_organization_lineage_names": [],
+            "type": "repository"
+          },
+          "license": "cc-by-nc-nd",
+          "license_id": "https://openalex.org/licenses/cc-by-nc-nd",
+          "version": "submittedVersion",
+          "is_accepted": false,
+          "is_published": false,
+          "raw_source_name": null,
+          "raw_type": "text"
+        },
+        {
+          "id": "doi:10.48550/arxiv.2511.08077",
+          "doi": "https://doi.org/10.48550/arxiv.2511.08077",
+          "is_oa": true,
+          "landing_page_url": "https://doi.org/10.48550/arxiv.2511.08077",
+          "pdf_url": null,
+          "source": {
+            "id": "https://openalex.org/S4306400194",
+            "display_name": "arXiv (Cornell University)",
+            "issn_l": "2331-8422",
+            "issn": [
+              "2331-8422"
+            ],
+            "is_oa": true,
+            "is_in_doaj": false,
+            "is_core": false,
+            "listed_in": [],
+            "host_organization": "https://openalex.org/I205783295",
+            "host_organization_name": "Cornell University",
+            "host_organization_lineage": [
+              "https://openalex.org/I205783295"
+            ],
+            "host_organization_lineage_names": [],
+            "type": "repository"
+          },
+          "license": null,
+          "license_id": null,
+          "version": null,
+          "is_accepted": false,
+          "is_published": null,
+          "raw_source_name": null,
+          "raw_type": "Preprint"
+        }
+      ],
+      "frame_source": "07-research/2026-10-10-顶会顶刊写作风格调研_证据/sources/tai/tai-openalex-expanded.json",
+      "scope": "Locator metadata only; not an independent PDF/version or article-type audit."
+    },
+    {
+      "doi": "10.1109/tai.2024.3426408",
+      "title": "Federated $c$-Means and Fuzzy $c$-Means Clustering Algorithms for Horizontally and Vertically Partitioned Data",
+      "openalex_id": "https://openalex.org/W4400524780",
+      "locator_year": 2024,
+      "locator_date": "2024-07-11",
+      "authors": [
+        "José Luis Corcuera Bárcena",
+        "Francesco Marcelloni",
+        "Alessandro Renda",
+        "Alessio Bechini",
+        "Pietro Ducange"
+      ],
+      "first_author_new": true,
+      "locations": [
+        {
+          "id": "doi:10.1109/tai.2024.3426408",
+          "doi": "https://doi.org/10.1109/tai.2024.3426408",
+          "is_oa": true,
+          "landing_page_url": "https://doi.org/10.1109/tai.2024.3426408",
+          "pdf_url": null,
+          "source": {
+            "id": "https://openalex.org/S4210169448",
+            "display_name": "IEEE Transactions on Artificial Intelligence",
+            "issn_l": "2691-4581",
+            "issn": [
+              "2691-4581"
+            ],
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": true,
+            "listed_in": [
+              "cwts-core",
+              "jufo-1",
+              "norway-1"
+            ],
+            "host_organization": "https://openalex.org/P4310319808",
+            "host_organization_name": "Institute of Electrical and Electronics Engineers",
+            "host_organization_lineage": [
+              "https://openalex.org/P4310319808"
+            ],
+            "host_organization_lineage_names": [
+              "Institute of Electrical and Electronics Engineers"
+            ],
+            "type": "journal"
+          },
+          "license": "cc-by-nc-nd",
+          "license_id": "https://openalex.org/licenses/cc-by-nc-nd",
+          "version": "publishedVersion",
+          "is_accepted": true,
+          "is_published": true,
+          "raw_source_name": "IEEE Transactions on Artificial Intelligence",
+          "raw_type": "journal-article"
+        },
+        {
+          "id": "pmh:oai:arpi.unipi.it:11568/1270692",
+          "doi": null,
+          "is_oa": true,
+          "landing_page_url": "https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10595840",
+          "pdf_url": null,
+          "source": {
+            "id": "https://openalex.org/S4377196265",
+            "display_name": "CINECA IRIS Institutial research information system (University of Pisa)",
+            "issn_l": null,
+            "issn": null,
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": false,
+            "listed_in": [],
+            "host_organization": "https://openalex.org/I108290504",
+            "host_organization_name": "University of Pisa",
+            "host_organization_lineage": [
+              "https://openalex.org/I108290504"
+            ],
+            "host_organization_lineage_names": [],
+            "type": "repository"
+          },
+          "license": "cc-by-nc-nd",
+          "license_id": "https://openalex.org/licenses/cc-by-nc-nd",
+          "version": "submittedVersion",
+          "is_accepted": false,
+          "is_published": false,
+          "raw_source_name": null,
+          "raw_type": "info:eu-repo/semantics/article"
+        },
+        {
+          "id": "pmh:oai:arts.units.it:11368/3120427",
+          "doi": null,
+          "is_oa": true,
+          "landing_page_url": "https://ieeexplore.ieee.org/document/10595840",
+          "pdf_url": null,
+          "source": {
+            "id": "https://openalex.org/S4306400480",
+            "display_name": "ArTS Archivio della ricerca di Trieste (University of Trieste https://www.units.it/)",
+            "issn_l": null,
+            "issn": null,
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": false,
+            "listed_in": [],
+            "host_organization": "https://openalex.org/I142444530",
+            "host_organization_name": "University of Trieste",
+            "host_organization_lineage": [
+              "https://openalex.org/I142444530"
+            ],
+            "host_organization_lineage_names": [],
+            "type": "repository"
+          },
+          "license": "cc-by-nc-nd",
+          "license_id": "https://openalex.org/licenses/cc-by-nc-nd",
+          "version": "submittedVersion",
+          "is_accepted": false,
+          "is_published": false,
+          "raw_source_name": null,
+          "raw_type": "info:eu-repo/semantics/article"
+        }
+      ],
+      "frame_source": "07-research/2026-10-10-顶会顶刊写作风格调研_证据/sources/tai/tai-openalex-expanded.json",
+      "scope": "Locator metadata only; not an independent PDF/version or article-type audit."
+    },
+    {
+      "doi": "10.1109/tai.2024.3428513",
+      "title": "U-Park: A User-Centric Smart Parking Recommendation System for Electric Shared Micromobility Services",
+      "openalex_id": "https://openalex.org/W4400678973",
+      "locator_year": 2024,
+      "locator_date": "2024-07-16",
+      "authors": [
+        "Sen Yan",
+        "Noel Edward O'Connor",
+        "Mingming Liu"
+      ],
+      "first_author_new": true,
+      "locations": [
+        {
+          "id": "doi:10.1109/tai.2024.3428513",
+          "doi": "https://doi.org/10.1109/tai.2024.3428513",
+          "is_oa": true,
+          "landing_page_url": "https://doi.org/10.1109/tai.2024.3428513",
+          "pdf_url": null,
+          "source": {
+            "id": "https://openalex.org/S4210169448",
+            "display_name": "IEEE Transactions on Artificial Intelligence",
+            "issn_l": "2691-4581",
+            "issn": [
+              "2691-4581"
+            ],
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": true,
+            "listed_in": [
+              "cwts-core",
+              "jufo-1",
+              "norway-1"
+            ],
+            "host_organization": "https://openalex.org/P4310319808",
+            "host_organization_name": "Institute of Electrical and Electronics Engineers",
+            "host_organization_lineage": [
+              "https://openalex.org/P4310319808"
+            ],
+            "host_organization_lineage_names": [
+              "Institute of Electrical and Electronics Engineers"
+            ],
+            "type": "journal"
+          },
+          "license": "cc-by",
+          "license_id": "https://openalex.org/licenses/cc-by",
+          "version": "publishedVersion",
+          "is_accepted": true,
+          "is_published": true,
+          "raw_source_name": "IEEE Transactions on Artificial Intelligence",
+          "raw_type": "journal-article"
+        },
+        {
+          "id": "pmh:oai:arXiv.org:2303.03152",
+          "doi": null,
+          "is_oa": true,
+          "landing_page_url": "http://arxiv.org/abs/2303.03152",
+          "pdf_url": "https://arxiv.org/pdf/2303.03152",
+          "source": {
+            "id": "https://openalex.org/S4306400194",
+            "display_name": "arXiv (Cornell University)",
+            "issn_l": "2331-8422",
+            "issn": [
+              "2331-8422"
+            ],
+            "is_oa": true,
+            "is_in_doaj": false,
+            "is_core": false,
+            "listed_in": [],
+            "host_organization": "https://openalex.org/I205783295",
+            "host_organization_name": "Cornell University",
+            "host_organization_lineage": [
+              "https://openalex.org/I205783295"
+            ],
+            "host_organization_lineage_names": [],
+            "type": "repository"
+          },
+          "license": "cc-by",
+          "license_id": "https://openalex.org/licenses/cc-by",
+          "version": "submittedVersion",
+          "is_accepted": false,
+          "is_published": false,
+          "raw_source_name": null,
+          "raw_type": "text"
+        },
+        {
+          "id": "doi:10.48550/arxiv.2303.03152",
+          "doi": "https://doi.org/10.48550/arxiv.2303.03152",
+          "is_oa": true,
+          "landing_page_url": "https://doi.org/10.48550/arxiv.2303.03152",
+          "pdf_url": null,
+          "source": {
+            "id": "https://openalex.org/S4306400194",
+            "display_name": "arXiv (Cornell University)",
+            "issn_l": "2331-8422",
+            "issn": [
+              "2331-8422"
+            ],
+            "is_oa": true,
+            "is_in_doaj": false,
+            "is_core": false,
+            "listed_in": [],
+            "host_organization": "https://openalex.org/I205783295",
+            "host_organization_name": "Cornell University",
+            "host_organization_lineage": [
+              "https://openalex.org/I205783295"
+            ],
+            "host_organization_lineage_names": [],
+            "type": "repository"
+          },
+          "license": "cc-by",
+          "license_id": "https://openalex.org/licenses/cc-by",
+          "version": null,
+          "is_accepted": false,
+          "is_published": null,
+          "raw_source_name": null,
+          "raw_type": "article-journal"
+        }
+      ],
+      "frame_source": "07-research/2026-10-10-顶会顶刊写作风格调研_证据/sources/tai/tai-openalex-expanded.json",
+      "scope": "Locator metadata only; not an independent PDF/version or article-type audit."
+    },
+    {
+      "doi": "10.1109/tai.2024.3428519",
+      "title": "A Survey on Symbolic Knowledge Distillation of Large Language Models",
+      "openalex_id": "https://openalex.org/W4400644218",
+      "locator_year": 2024,
+      "locator_date": "2024-07-15",
+      "authors": [
+        "Kamal Acharya",
+        "Alvaro Velasquez",
+        "Houbing  Herbert Song"
+      ],
+      "first_author_new": true,
+      "locations": [
+        {
+          "id": "doi:10.1109/tai.2024.3428519",
+          "doi": "https://doi.org/10.1109/tai.2024.3428519",
+          "is_oa": false,
+          "landing_page_url": "https://doi.org/10.1109/tai.2024.3428519",
+          "pdf_url": null,
+          "source": {
+            "id": "https://openalex.org/S4210169448",
+            "display_name": "IEEE Transactions on Artificial Intelligence",
+            "issn_l": "2691-4581",
+            "issn": [
+              "2691-4581"
+            ],
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": true,
+            "listed_in": [
+              "cwts-core",
+              "jufo-1",
+              "norway-1"
+            ],
+            "host_organization": "https://openalex.org/P4310319808",
+            "host_organization_name": "Institute of Electrical and Electronics Engineers",
+            "host_organization_lineage": [
+              "https://openalex.org/P4310319808"
+            ],
+            "host_organization_lineage_names": [
+              "Institute of Electrical and Electronics Engineers"
+            ],
+            "type": "journal"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "publishedVersion",
+          "is_accepted": true,
+          "is_published": true,
+          "raw_source_name": "IEEE Transactions on Artificial Intelligence",
+          "raw_type": "journal-article"
+        },
+        {
+          "id": "pmh:oai:arXiv.org:2408.10210",
+          "doi": null,
+          "is_oa": true,
+          "landing_page_url": "http://arxiv.org/abs/2408.10210",
+          "pdf_url": "https://arxiv.org/pdf/2408.10210",
+          "source": {
+            "id": "https://openalex.org/S4306400194",
+            "display_name": "arXiv (Cornell University)",
+            "issn_l": "2331-8422",
+            "issn": [
+              "2331-8422"
+            ],
+            "is_oa": true,
+            "is_in_doaj": false,
+            "is_core": false,
+            "listed_in": [],
+            "host_organization": "https://openalex.org/I205783295",
+            "host_organization_name": "Cornell University",
+            "host_organization_lineage": [
+              "https://openalex.org/I205783295"
+            ],
+            "host_organization_lineage_names": [],
+            "type": "repository"
+          },
+          "license": "cc-by",
+          "license_id": "https://openalex.org/licenses/cc-by",
+          "version": "submittedVersion",
+          "is_accepted": false,
+          "is_published": false,
+          "raw_source_name": null,
+          "raw_type": "text"
+        },
+        {
+          "id": "doi:10.48550/arxiv.2408.10210",
+          "doi": "https://doi.org/10.48550/arxiv.2408.10210",
+          "is_oa": true,
+          "landing_page_url": "https://doi.org/10.48550/arxiv.2408.10210",
+          "pdf_url": null,
+          "source": {
+            "id": "https://openalex.org/S4306400194",
+            "display_name": "arXiv (Cornell University)",
+            "issn_l": "2331-8422",
+            "issn": [
+              "2331-8422"
+            ],
+            "is_oa": true,
+            "is_in_doaj": false,
+            "is_core": false,
+            "listed_in": [],
+            "host_organization": "https://openalex.org/I205783295",
+            "host_organization_name": "Cornell University",
+            "host_organization_lineage": [
+              "https://openalex.org/I205783295"
+            ],
+            "host_organization_lineage_names": [],
+            "type": "repository"
+          },
+          "license": "cc-by",
+          "license_id": "https://openalex.org/licenses/cc-by",
+          "version": null,
+          "is_accepted": false,
+          "is_published": null,
+          "raw_source_name": null,
+          "raw_type": "article-journal"
+        }
+      ],
+      "frame_source": "07-research/2026-10-10-顶会顶刊写作风格调研_证据/sources/tai/tai-openalex-expanded.json",
+      "scope": "Locator metadata only; not an independent PDF/version or article-type audit."
+    },
+    {
+      "doi": "10.1109/tai.2024.3428520",
+      "title": "A Human-in-the-Middle Attack Against Object Detection Systems",
+      "openalex_id": "https://openalex.org/W4400643968",
+      "locator_year": 2024,
+      "locator_date": "2024-07-15",
+      "authors": [
+        "Han Wu",
+        "Sareh Rowlands",
+        "Johan Wahlström"
+      ],
+      "first_author_new": true,
+      "locations": [
+        {
+          "id": "doi:10.1109/tai.2024.3428520",
+          "doi": "https://doi.org/10.1109/tai.2024.3428520",
+          "is_oa": false,
+          "landing_page_url": "https://doi.org/10.1109/tai.2024.3428520",
+          "pdf_url": null,
+          "source": {
+            "id": "https://openalex.org/S4210169448",
+            "display_name": "IEEE Transactions on Artificial Intelligence",
+            "issn_l": "2691-4581",
+            "issn": [
+              "2691-4581"
+            ],
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": true,
+            "listed_in": [
+              "cwts-core",
+              "jufo-1",
+              "norway-1"
+            ],
+            "host_organization": "https://openalex.org/P4310319808",
+            "host_organization_name": "Institute of Electrical and Electronics Engineers",
+            "host_organization_lineage": [
+              "https://openalex.org/P4310319808"
+            ],
+            "host_organization_lineage_names": [
+              "Institute of Electrical and Electronics Engineers"
+            ],
+            "type": "journal"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "publishedVersion",
+          "is_accepted": true,
+          "is_published": true,
+          "raw_source_name": "IEEE Transactions on Artificial Intelligence",
+          "raw_type": "journal-article"
+        },
+        {
+          "id": "pmh:oai:ore.exeter.ac.uk:10871/137466",
+          "doi": null,
+          "is_oa": true,
+          "landing_page_url": "http://hdl.handle.net/10871/137466",
+          "pdf_url": "https://ore.exeter.ac.uk/repository/bitstream/10871/137466/1/A_Human-in-the-Middle_Attack_against_Object_Detection_Systems.pdf",
+          "source": {
+            "id": "https://openalex.org/S4306401998",
+            "display_name": "Open Research Exeter (University of Exeter)",
+            "issn_l": null,
+            "issn": null,
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": false,
+            "listed_in": [],
+            "host_organization": "https://openalex.org/I23923803",
+            "host_organization_name": "University of Exeter",
+            "host_organization_lineage": [
+              "https://openalex.org/I23923803"
+            ],
+            "host_organization_lineage_names": [],
+            "type": "repository"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "submittedVersion",
+          "is_accepted": false,
+          "is_published": false,
+          "raw_source_name": null,
+          "raw_type": "Article"
+        },
+        {
+          "id": "pmh:oai:figshare.com:article/29811779",
+          "doi": null,
+          "is_oa": false,
+          "landing_page_url": "https://figshare.com/articles/journal_contribution/A_Human-in-the-Middle_Attack_against_Object_Detection_Systems/29811779",
+          "pdf_url": null,
+          "source": {
+            "id": "https://openalex.org/S4377196282",
+            "display_name": "Figshare",
+            "issn_l": null,
+            "issn": null,
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": false,
+            "listed_in": [],
+            "host_organization": "https://openalex.org/I4210132348",
+            "host_organization_name": "Figshare (United Kingdom)",
+            "host_organization_lineage": [
+              "https://openalex.org/I4210132348"
+            ],
+            "host_organization_lineage_names": [],
+            "type": "repository"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "submittedVersion",
+          "is_accepted": false,
+          "is_published": false,
+          "raw_source_name": null,
+          "raw_type": "Text"
+        }
+      ],
+      "frame_source": "07-research/2026-10-10-顶会顶刊写作风格调研_证据/sources/tai/tai-openalex-expanded.json",
+      "scope": "Locator metadata only; not an independent PDF/version or article-type audit."
+    },
+    {
+      "doi": "10.1109/tai.2024.3429048",
+      "title": "Artificial Intelligence-Driven Framework for Augmented Reality Markerless Navigation in Knee Surgery",
+      "openalex_id": "https://openalex.org/W4400678991",
+      "locator_year": 2024,
+      "locator_date": "2024-07-16",
+      "authors": [
+        "Xue Long Hu",
+        "Fabrizio Cutolo",
+        "Hisham Iqbal",
+        "Johann Henckel",
+        "Ferdinando Rodriguez y Baena"
+      ],
+      "first_author_new": true,
+      "locations": [
+        {
+          "id": "doi:10.1109/tai.2024.3429048",
+          "doi": "https://doi.org/10.1109/tai.2024.3429048",
+          "is_oa": true,
+          "landing_page_url": "https://doi.org/10.1109/tai.2024.3429048",
+          "pdf_url": null,
+          "source": {
+            "id": "https://openalex.org/S4210169448",
+            "display_name": "IEEE Transactions on Artificial Intelligence",
+            "issn_l": "2691-4581",
+            "issn": [
+              "2691-4581"
+            ],
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": true,
+            "listed_in": [
+              "cwts-core",
+              "jufo-1",
+              "norway-1"
+            ],
+            "host_organization": "https://openalex.org/P4310319808",
+            "host_organization_name": "Institute of Electrical and Electronics Engineers",
+            "host_organization_lineage": [
+              "https://openalex.org/P4310319808"
+            ],
+            "host_organization_lineage_names": [
+              "Institute of Electrical and Electronics Engineers"
+            ],
+            "type": "journal"
+          },
+          "license": "cc-by-nc-nd",
+          "license_id": "https://openalex.org/licenses/cc-by-nc-nd",
+          "version": "publishedVersion",
+          "is_accepted": true,
+          "is_published": true,
+          "raw_source_name": "IEEE Transactions on Artificial Intelligence",
+          "raw_type": "journal-article"
+        },
+        {
+          "id": "pmh:oai:arpi.unipi.it:11568/1255667",
+          "doi": null,
+          "is_oa": true,
+          "landing_page_url": "https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=10599938",
+          "pdf_url": null,
+          "source": {
+            "id": "https://openalex.org/S4377196265",
+            "display_name": "CINECA IRIS Institutial research information system (University of Pisa)",
+            "issn_l": null,
+            "issn": null,
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": false,
+            "listed_in": [],
+            "host_organization": "https://openalex.org/I108290504",
+            "host_organization_name": "University of Pisa",
+            "host_organization_lineage": [
+              "https://openalex.org/I108290504"
+            ],
+            "host_organization_lineage_names": [],
+            "type": "repository"
+          },
+          "license": "cc-by-nc-nd",
+          "license_id": "https://openalex.org/licenses/cc-by-nc-nd",
+          "version": "submittedVersion",
+          "is_accepted": false,
+          "is_published": false,
+          "raw_source_name": null,
+          "raw_type": "info:eu-repo/semantics/article"
+        }
+      ],
+      "frame_source": "07-research/2026-10-10-顶会顶刊写作风格调研_证据/sources/tai/tai-openalex-expanded.json",
+      "scope": "Locator metadata only; not an independent PDF/version or article-type audit."
+    },
+    {
+      "doi": "10.1109/tai.2024.3429479",
+      "title": "Exploring Machine Learning for Semiconductor Process Optimization: A Systematic Review",
+      "openalex_id": "https://openalex.org/W4400726485",
+      "locator_year": 2024,
+      "locator_date": "2024-07-17",
+      "authors": [
+        "Ying-Lin Chen",
+        "Sara Sacchi",
+        "Bappaditya Dey",
+        "Victor Blanco",
+        "Sandip Halder",
+        "Philippe J. Leray",
+        "Stefan De Gendt"
+      ],
+      "first_author_new": true,
+      "locations": [
+        {
+          "id": "doi:10.1109/tai.2024.3429479",
+          "doi": "https://doi.org/10.1109/tai.2024.3429479",
+          "is_oa": false,
+          "landing_page_url": "https://doi.org/10.1109/tai.2024.3429479",
+          "pdf_url": null,
+          "source": {
+            "id": "https://openalex.org/S4210169448",
+            "display_name": "IEEE Transactions on Artificial Intelligence",
+            "issn_l": "2691-4581",
+            "issn": [
+              "2691-4581"
+            ],
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": true,
+            "listed_in": [
+              "cwts-core",
+              "jufo-1",
+              "norway-1"
+            ],
+            "host_organization": "https://openalex.org/P4310319808",
+            "host_organization_name": "Institute of Electrical and Electronics Engineers",
+            "host_organization_lineage": [
+              "https://openalex.org/P4310319808"
+            ],
+            "host_organization_lineage_names": [
+              "Institute of Electrical and Electronics Engineers"
+            ],
+            "type": "journal"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "publishedVersion",
+          "is_accepted": true,
+          "is_published": true,
+          "raw_source_name": "IEEE Transactions on Artificial Intelligence",
+          "raw_type": "journal-article"
+        },
+        {
+          "id": "doi:10.36227/techrxiv.172114788.85190557/v1",
+          "doi": "https://doi.org/10.36227/techrxiv.172114788.85190557/v1",
+          "is_oa": true,
+          "landing_page_url": "https://doi.org/10.36227/techrxiv.172114788.85190557/v1",
+          "pdf_url": null,
+          "source": null,
+          "license": "cc-by-nc-sa",
+          "license_id": "https://openalex.org/licenses/cc-by-nc-sa",
+          "version": "acceptedVersion",
+          "is_accepted": true,
+          "is_published": false,
+          "raw_source_name": null,
+          "raw_type": "posted-content"
+        }
+      ],
+      "frame_source": "07-research/2026-10-10-顶会顶刊写作风格调研_证据/sources/tai/tai-openalex-expanded.json",
+      "scope": "Locator metadata only; not an independent PDF/version or article-type audit."
+    },
+    {
+      "doi": "10.1109/tai.2024.3430236",
+      "title": "Label-Efficient Time Series Representation Learning: A Review",
+      "openalex_id": "https://openalex.org/W4400726538",
+      "locator_year": 2024,
+      "locator_date": "2024-07-17",
+      "authors": [
+        "Emadeldeen Eldele",
+        "Mohamed Ragab",
+        "Zhenghua Chen",
+        "Min Wu",
+        "Chee Keong Kwoh",
+        "Xiaoli Li"
+      ],
+      "first_author_new": true,
+      "locations": [
+        {
+          "id": "doi:10.1109/tai.2024.3430236",
+          "doi": "https://doi.org/10.1109/tai.2024.3430236",
+          "is_oa": false,
+          "landing_page_url": "https://doi.org/10.1109/tai.2024.3430236",
+          "pdf_url": null,
+          "source": {
+            "id": "https://openalex.org/S4210169448",
+            "display_name": "IEEE Transactions on Artificial Intelligence",
+            "issn_l": "2691-4581",
+            "issn": [
+              "2691-4581"
+            ],
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": true,
+            "listed_in": [
+              "cwts-core",
+              "jufo-1",
+              "norway-1"
+            ],
+            "host_organization": "https://openalex.org/P4310319808",
+            "host_organization_name": "Institute of Electrical and Electronics Engineers",
+            "host_organization_lineage": [
+              "https://openalex.org/P4310319808"
+            ],
+            "host_organization_lineage_names": [
+              "Institute of Electrical and Electronics Engineers"
+            ],
+            "type": "journal"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "publishedVersion",
+          "is_accepted": true,
+          "is_published": true,
+          "raw_source_name": "IEEE Transactions on Artificial Intelligence",
+          "raw_type": "journal-article"
+        },
+        {
+          "id": "pmh:oai:arXiv.org:2302.06433",
+          "doi": null,
+          "is_oa": true,
+          "landing_page_url": "http://arxiv.org/abs/2302.06433",
+          "pdf_url": "https://arxiv.org/pdf/2302.06433",
+          "source": {
+            "id": "https://openalex.org/S4306400194",
+            "display_name": "arXiv (Cornell University)",
+            "issn_l": "2331-8422",
+            "issn": [
+              "2331-8422"
+            ],
+            "is_oa": true,
+            "is_in_doaj": false,
+            "is_core": false,
+            "listed_in": [],
+            "host_organization": "https://openalex.org/I205783295",
+            "host_organization_name": "Cornell University",
+            "host_organization_lineage": [
+              "https://openalex.org/I205783295"
+            ],
+            "host_organization_lineage_names": [],
+            "type": "repository"
+          },
+          "license": "cc-by",
+          "license_id": "https://openalex.org/licenses/cc-by",
+          "version": "submittedVersion",
+          "is_accepted": false,
+          "is_published": false,
+          "raw_source_name": null,
+          "raw_type": "text"
+        },
+        {
+          "id": "pmh:oai:dr.ntu.edu.sg:10356/232355",
+          "doi": null,
+          "is_oa": false,
+          "landing_page_url": "https://hdl.handle.net/10356/232355",
+          "pdf_url": null,
+          "source": {
+            "id": "https://openalex.org/S4306402609",
+            "display_name": "DR-NTU (Nanyang Technological University)",
+            "issn_l": null,
+            "issn": null,
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": false,
+            "listed_in": [],
+            "host_organization": "https://openalex.org/I172675005",
+            "host_organization_name": "Nanyang Technological University",
+            "host_organization_lineage": [
+              "https://openalex.org/I172675005"
+            ],
+            "host_organization_lineage_names": [],
+            "type": "repository"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "submittedVersion",
+          "is_accepted": false,
+          "is_published": false,
+          "raw_source_name": null,
+          "raw_type": "Journal Article"
+        },
+        {
+          "id": "doi:10.48550/arxiv.2302.06433",
+          "doi": "https://doi.org/10.48550/arxiv.2302.06433",
+          "is_oa": true,
+          "landing_page_url": "https://doi.org/10.48550/arxiv.2302.06433",
+          "pdf_url": null,
+          "source": {
+            "id": "https://openalex.org/S4306400194",
+            "display_name": "arXiv (Cornell University)",
+            "issn_l": "2331-8422",
+            "issn": [
+              "2331-8422"
+            ],
+            "is_oa": true,
+            "is_in_doaj": false,
+            "is_core": false,
+            "listed_in": [],
+            "host_organization": "https://openalex.org/I205783295",
+            "host_organization_name": "Cornell University",
+            "host_organization_lineage": [
+              "https://openalex.org/I205783295"
+            ],
+            "host_organization_lineage_names": [],
+            "type": "repository"
+          },
+          "license": "cc-by",
+          "license_id": "https://openalex.org/licenses/cc-by",
+          "version": null,
+          "is_accepted": false,
+          "is_published": null,
+          "raw_source_name": null,
+          "raw_type": "article-journal"
+        }
+      ],
+      "frame_source": "07-research/2026-10-10-顶会顶刊写作风格调研_证据/sources/tai/tai-openalex-expanded.json",
+      "scope": "Locator metadata only; not an independent PDF/version or article-type audit."
+    },
+    {
+      "doi": "10.1109/tai.2024.3430250",
+      "title": "A Study of Enhancing Federated Learning on Non-IID Data With Server Learning",
+      "openalex_id": "https://openalex.org/W4400726489",
+      "locator_year": 2024,
+      "locator_date": "2024-07-17",
+      "authors": [
+        "Van Sy Mai",
+        "Richard J. La",
+        "Tao Zhang"
+      ],
+      "first_author_new": true,
+      "locations": [
+        {
+          "id": "doi:10.1109/tai.2024.3430250",
+          "doi": "https://doi.org/10.1109/tai.2024.3430250",
+          "is_oa": false,
+          "landing_page_url": "https://doi.org/10.1109/tai.2024.3430250",
+          "pdf_url": null,
+          "source": {
+            "id": "https://openalex.org/S4210169448",
+            "display_name": "IEEE Transactions on Artificial Intelligence",
+            "issn_l": "2691-4581",
+            "issn": [
+              "2691-4581"
+            ],
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": true,
+            "listed_in": [
+              "cwts-core",
+              "jufo-1",
+              "norway-1"
+            ],
+            "host_organization": "https://openalex.org/P4310319808",
+            "host_organization_name": "Institute of Electrical and Electronics Engineers",
+            "host_organization_lineage": [
+              "https://openalex.org/P4310319808"
+            ],
+            "host_organization_lineage_names": [
+              "Institute of Electrical and Electronics Engineers"
+            ],
+            "type": "journal"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "publishedVersion",
+          "is_accepted": true,
+          "is_published": true,
+          "raw_source_name": "IEEE Transactions on Artificial Intelligence",
+          "raw_type": "journal-article"
+        },
+        {
+          "id": "pmid:39479519",
+          "doi": null,
+          "is_oa": false,
+          "landing_page_url": "https://pubmed.ncbi.nlm.nih.gov/39479519",
+          "pdf_url": null,
+          "source": {
+            "id": "https://openalex.org/S4306525036",
+            "display_name": "PubMed",
+            "issn_l": null,
+            "issn": null,
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": false,
+            "listed_in": [],
+            "host_organization": "https://openalex.org/I1299303238",
+            "host_organization_name": "National Institutes of Health",
+            "host_organization_lineage": [
+              "https://openalex.org/I1299303238"
+            ],
+            "host_organization_lineage_names": [],
+            "type": "repository"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "publishedVersion",
+          "is_accepted": true,
+          "is_published": true,
+          "raw_source_name": "IEEE transactions on artificial intelligence",
+          "raw_type": "Journal Article"
+        },
+        {
+          "id": "pmh:oai:pubmedcentral.nih.gov:11523028",
+          "doi": null,
+          "is_oa": true,
+          "landing_page_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/11523028",
+          "pdf_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11523028/pdf/nihms-2013954.pdf",
+          "source": {
+            "id": "https://openalex.org/S2764455111",
+            "display_name": "PubMed Central",
+            "issn_l": null,
+            "issn": null,
+            "is_oa": true,
+            "is_in_doaj": false,
+            "is_core": false,
+            "listed_in": [],
+            "host_organization": "https://openalex.org/I1299303238",
+            "host_organization_name": "National Institutes of Health",
+            "host_organization_lineage": [
+              "https://openalex.org/I1299303238"
+            ],
+            "host_organization_lineage_names": [],
+            "type": "repository"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "submittedVersion",
+          "is_accepted": false,
+          "is_published": false,
+          "raw_source_name": "IEEE Trans Artif Intell",
+          "raw_type": "Text"
+        }
+      ],
+      "frame_source": "07-research/2026-10-10-顶会顶刊写作风格调研_证据/sources/tai/tai-openalex-expanded.json",
+      "scope": "Locator metadata only; not an independent PDF/version or article-type audit."
+    },
+    {
+      "doi": "10.1109/tai.2024.3439048",
+      "title": "Editorial: From Explainable Artificial Intelligence (xAI) to Understandable Artificial Intelligence (uAI)",
+      "openalex_id": "https://openalex.org/W4402401237",
+      "locator_year": 2024,
+      "locator_date": "2024-09-01",
+      "authors": [
+        "Hussein A. Abbass",
+        "Keeley A. Crockett",
+        "Jonathan M. Garibaldi",
+        "ALEXANDER E. GEGOV",
+        "Uzay Kaymak",
+        "João M. C. Sousa"
+      ],
+      "first_author_new": true,
+      "locations": [
+        {
+          "id": "doi:10.1109/tai.2024.3439048",
+          "doi": "https://doi.org/10.1109/tai.2024.3439048",
+          "is_oa": false,
+          "landing_page_url": "https://doi.org/10.1109/tai.2024.3439048",
+          "pdf_url": null,
+          "source": {
+            "id": "https://openalex.org/S4210169448",
+            "display_name": "IEEE Transactions on Artificial Intelligence",
+            "issn_l": "2691-4581",
+            "issn": [
+              "2691-4581"
+            ],
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": true,
+            "listed_in": [
+              "cwts-core",
+              "jufo-1",
+              "norway-1"
+            ],
+            "host_organization": "https://openalex.org/P4310319808",
+            "host_organization_name": "Institute of Electrical and Electronics Engineers",
+            "host_organization_lineage": [
+              "https://openalex.org/P4310319808"
+            ],
+            "host_organization_lineage_names": [
+              "Institute of Electrical and Electronics Engineers"
+            ],
+            "type": "journal"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "publishedVersion",
+          "is_accepted": true,
+          "is_published": true,
+          "raw_source_name": "IEEE Transactions on Artificial Intelligence",
+          "raw_type": "journal-article"
+        },
+        {
+          "id": "pmh:oai:e-space.mmu.ac.uk:635488",
+          "doi": null,
+          "is_oa": true,
+          "landing_page_url": "https://orcid.org/0000-0002-8837-0748",
+          "pdf_url": "https://e-space.mmu.ac.uk/635488/1/Editorial2024V5N9%20final%20version%20V1.pdf",
+          "source": {
+            "id": "https://openalex.org/S4306401617",
+            "display_name": "e-space (Manchester Metropolitan University)",
+            "issn_l": null,
+            "issn": null,
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": false,
+            "listed_in": [],
+            "host_organization": "https://openalex.org/I11983389",
+            "host_organization_name": "Manchester Metropolitan University",
+            "host_organization_lineage": [
+              "https://openalex.org/I11983389"
+            ],
+            "host_organization_lineage_names": [],
+            "type": "repository"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "submittedVersion",
+          "is_accepted": false,
+          "is_published": false,
+          "raw_source_name": null,
+          "raw_type": "Article"
+        },
+        {
+          "id": "pmh:oai:figshare.com:article/32489787",
+          "doi": null,
+          "is_oa": false,
+          "landing_page_url": "https://figshare.com/articles/journal_contribution/Editorial_From_Explainable_Artificial_Intelligence_xAI_to_Understandable_Artificial_Intelligence_uAI_/32489787",
+          "pdf_url": null,
+          "source": {
+            "id": "https://openalex.org/S4377196282",
+            "display_name": "Figshare",
+            "issn_l": null,
+            "issn": null,
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": false,
+            "listed_in": [],
+            "host_organization": "https://openalex.org/I4210132348",
+            "host_organization_name": "Figshare (United Kingdom)",
+            "host_organization_lineage": [
+              "https://openalex.org/I4210132348"
+            ],
+            "host_organization_lineage_names": [],
+            "type": "repository"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "submittedVersion",
+          "is_accepted": false,
+          "is_published": false,
+          "raw_source_name": null,
+          "raw_type": "Text"
+        },
+        {
+          "id": "pmh:oai:pure.tue.nl:openaire/1ebd92a8-471c-4fb0-a72b-477f808c0e6c",
+          "doi": null,
+          "is_oa": true,
+          "landing_page_url": "https://research.tue.nl/en/publications/1ebd92a8-471c-4fb0-a72b-477f808c0e6c",
+          "pdf_url": null,
+          "source": {
+            "id": "https://openalex.org/S4406922641",
+            "display_name": "TU/e Research Portal",
+            "issn_l": null,
+            "issn": null,
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": false,
+            "listed_in": [],
+            "host_organization": null,
+            "host_organization_name": null,
+            "host_organization_lineage": [],
+            "host_organization_lineage_names": [],
+            "type": "repository"
+          },
+          "license": "other-oa",
+          "license_id": "https://openalex.org/licenses/other-oa",
+          "version": "submittedVersion",
+          "is_accepted": false,
+          "is_published": false,
+          "raw_source_name": "Abbass, H, Crockett, K, Garibaldi, J, Gegov, A, Kaymak, U & Sousa, J M C 2024, 'Editorial : From Explainable Artificial Intelligence (xAI) to Understandable Artificial Intelligence (uAI)', IEEE Transactions on Artificial Intelligence, vol. 5, no. 9, 10673750, pp. 4310-4314. https://doi.org/10.1109/TAI.2024.3439048",
+          "raw_type": "info:eu-repo/semantics/publishedVersion"
+        }
+      ],
+      "frame_source": "07-research/2026-10-10-顶会顶刊写作风格调研_证据/sources/tai/tai-openalex-expanded.json",
+      "scope": "Locator metadata only; not an independent PDF/version or article-type audit."
+    },
+    {
+      "doi": "10.1109/tai.2024.3454566",
+      "title": "Spatiotemporal Object Detection for Improved Aerial Vehicle Detection in Traffic Monitoring",
+      "openalex_id": "https://openalex.org/W4402260736",
+      "locator_year": 2024,
+      "locator_date": "2024-09-05",
+      "authors": [
+        "Kristina Telegraph",
+        "Christos Kyrkou"
+      ],
+      "first_author_new": true,
+      "locations": [
+        {
+          "id": "doi:10.1109/tai.2024.3454566",
+          "doi": "https://doi.org/10.1109/tai.2024.3454566",
+          "is_oa": false,
+          "landing_page_url": "https://doi.org/10.1109/tai.2024.3454566",
+          "pdf_url": null,
+          "source": {
+            "id": "https://openalex.org/S4210169448",
+            "display_name": "IEEE Transactions on Artificial Intelligence",
+            "issn_l": "2691-4581",
+            "issn": [
+              "2691-4581"
+            ],
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": true,
+            "listed_in": [
+              "cwts-core",
+              "jufo-1",
+              "norway-1"
+            ],
+            "host_organization": "https://openalex.org/P4310319808",
+            "host_organization_name": "Institute of Electrical and Electronics Engineers",
+            "host_organization_lineage": [
+              "https://openalex.org/P4310319808"
+            ],
+            "host_organization_lineage_names": [
+              "Institute of Electrical and Electronics Engineers"
+            ],
+            "type": "journal"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "publishedVersion",
+          "is_accepted": true,
+          "is_published": true,
+          "raw_source_name": "IEEE Transactions on Artificial Intelligence",
+          "raw_type": "journal-article"
+        },
+        {
+          "id": "pmh:oai:arXiv.org:2410.13616",
+          "doi": null,
+          "is_oa": true,
+          "landing_page_url": "http://arxiv.org/abs/2410.13616",
+          "pdf_url": "https://arxiv.org/pdf/2410.13616",
+          "source": {
+            "id": "https://openalex.org/S4306400194",
+            "display_name": "arXiv (Cornell University)",
+            "issn_l": "2331-8422",
+            "issn": [
+              "2331-8422"
+            ],
+            "is_oa": true,
+            "is_in_doaj": false,
+            "is_core": false,
+            "listed_in": [],
+            "host_organization": "https://openalex.org/I205783295",
+            "host_organization_name": "Cornell University",
+            "host_organization_lineage": [
+              "https://openalex.org/I205783295"
+            ],
+            "host_organization_lineage_names": [],
+            "type": "repository"
+          },
+          "license": "cc-by",
+          "license_id": "https://openalex.org/licenses/cc-by",
+          "version": "submittedVersion",
+          "is_accepted": false,
+          "is_published": false,
+          "raw_source_name": null,
+          "raw_type": "text"
+        },
+        {
+          "id": "doi:10.48550/arxiv.2410.13616",
+          "doi": "https://doi.org/10.48550/arxiv.2410.13616",
+          "is_oa": true,
+          "landing_page_url": "https://doi.org/10.48550/arxiv.2410.13616",
+          "pdf_url": null,
+          "source": {
+            "id": "https://openalex.org/S4306400194",
+            "display_name": "arXiv (Cornell University)",
+            "issn_l": "2331-8422",
+            "issn": [
+              "2331-8422"
+            ],
+            "is_oa": true,
+            "is_in_doaj": false,
+            "is_core": false,
+            "listed_in": [],
+            "host_organization": "https://openalex.org/I205783295",
+            "host_organization_name": "Cornell University",
+            "host_organization_lineage": [
+              "https://openalex.org/I205783295"
+            ],
+            "host_organization_lineage_names": [],
+            "type": "repository"
+          },
+          "license": "cc-by",
+          "license_id": "https://openalex.org/licenses/cc-by",
+          "version": null,
+          "is_accepted": false,
+          "is_published": null,
+          "raw_source_name": null,
+          "raw_type": "article-journal"
+        }
+      ],
+      "frame_source": "07-research/2026-10-10-顶会顶刊写作风格调研_证据/sources/tai/tai-openalex-expanded.json",
+      "scope": "Locator metadata only; not an independent PDF/version or article-type audit."
+    },
+    {
+      "doi": "10.1109/tai.2024.3459857",
+      "title": "Traffexplainer: A Framework Toward GNN-Based Interpretable Traffic Prediction",
+      "openalex_id": "https://openalex.org/W4402508763",
+      "locator_year": 2024,
+      "locator_date": "2024-09-13",
+      "authors": [
+        "Lingbai Kong",
+        "Hanchen Yang",
+        "Wengen Li",
+        "Yichao Zhang",
+        "Jihong Guan",
+        "Shuigeng Zhou"
+      ],
+      "first_author_new": true,
+      "locations": [
+        {
+          "id": "doi:10.1109/tai.2024.3459857",
+          "doi": "https://doi.org/10.1109/tai.2024.3459857",
+          "is_oa": true,
+          "landing_page_url": "https://doi.org/10.1109/tai.2024.3459857",
+          "pdf_url": null,
+          "source": {
+            "id": "https://openalex.org/S4210169448",
+            "display_name": "IEEE Transactions on Artificial Intelligence",
+            "issn_l": "2691-4581",
+            "issn": [
+              "2691-4581"
+            ],
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": true,
+            "listed_in": [
+              "cwts-core",
+              "jufo-1",
+              "norway-1"
+            ],
+            "host_organization": "https://openalex.org/P4310319808",
+            "host_organization_name": "Institute of Electrical and Electronics Engineers",
+            "host_organization_lineage": [
+              "https://openalex.org/P4310319808"
+            ],
+            "host_organization_lineage_names": [
+              "Institute of Electrical and Electronics Engineers"
+            ],
+            "type": "journal"
+          },
+          "license": "cc-by-nc-nd",
+          "license_id": "https://openalex.org/licenses/cc-by-nc-nd",
+          "version": "publishedVersion",
+          "is_accepted": true,
+          "is_published": true,
+          "raw_source_name": "IEEE Transactions on Artificial Intelligence",
+          "raw_type": "journal-article"
+        }
+      ],
+      "frame_source": "07-research/2026-10-10-顶会顶刊写作风格调研_证据/sources/tai/tai-openalex-expanded.json",
+      "scope": "Locator metadata only; not an independent PDF/version or article-type audit."
+    },
+    {
+      "doi": "10.1109/tai.2024.3483190",
+      "title": "Personalized Learning Path Problem Variations: Computational Complexity and AI Approaches",
+      "openalex_id": "https://openalex.org/W4403534126",
+      "locator_year": 2024,
+      "locator_date": "2024-10-18",
+      "authors": [
+        "Sean A. Mochocki",
+        "Mark G. Reith",
+        "Brett J. Borghetti",
+        "Gilbert L. Peterson",
+        "John D. Jasper",
+        "Laurence D. Merkle"
+      ],
+      "first_author_new": true,
+      "locations": [
+        {
+          "id": "doi:10.1109/tai.2024.3483190",
+          "doi": "https://doi.org/10.1109/tai.2024.3483190",
+          "is_oa": true,
+          "landing_page_url": "https://doi.org/10.1109/tai.2024.3483190",
+          "pdf_url": null,
+          "source": {
+            "id": "https://openalex.org/S4210169448",
+            "display_name": "IEEE Transactions on Artificial Intelligence",
+            "issn_l": "2691-4581",
+            "issn": [
+              "2691-4581"
+            ],
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": true,
+            "listed_in": [
+              "cwts-core",
+              "jufo-1",
+              "norway-1"
+            ],
+            "host_organization": "https://openalex.org/P4310319808",
+            "host_organization_name": "Institute of Electrical and Electronics Engineers",
+            "host_organization_lineage": [
+              "https://openalex.org/P4310319808"
+            ],
+            "host_organization_lineage_names": [
+              "Institute of Electrical and Electronics Engineers"
+            ],
+            "type": "journal"
+          },
+          "license": "cc-by",
+          "license_id": "https://openalex.org/licenses/cc-by",
+          "version": "publishedVersion",
+          "is_accepted": true,
+          "is_published": true,
+          "raw_source_name": "IEEE Transactions on Artificial Intelligence",
+          "raw_type": "journal-article"
+        }
+      ],
+      "frame_source": "07-research/2026-10-10-顶会顶刊写作风格调研_证据/sources/tai/tai-openalex-expanded.json",
+      "scope": "Locator metadata only; not an independent PDF/version or article-type audit."
+    },
+    {
+      "doi": "10.1109/tai.2024.3485519",
+      "title": "Deep Learning-Based Dual Watermarking for Image Copyright Protection and Authentication",
+      "openalex_id": "https://openalex.org/W4403721346",
+      "locator_year": 2024,
+      "locator_date": "2024-10-24",
+      "authors": [
+        "Sudev Kumar Padhi",
+        "Archana Tiwari",
+        "Sk. Subidh Ali"
+      ],
+      "first_author_new": true,
+      "locations": [
+        {
+          "id": "doi:10.1109/tai.2024.3485519",
+          "doi": "https://doi.org/10.1109/tai.2024.3485519",
+          "is_oa": false,
+          "landing_page_url": "https://doi.org/10.1109/tai.2024.3485519",
+          "pdf_url": null,
+          "source": {
+            "id": "https://openalex.org/S4210169448",
+            "display_name": "IEEE Transactions on Artificial Intelligence",
+            "issn_l": "2691-4581",
+            "issn": [
+              "2691-4581"
+            ],
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": true,
+            "listed_in": [
+              "cwts-core",
+              "jufo-1",
+              "norway-1"
+            ],
+            "host_organization": "https://openalex.org/P4310319808",
+            "host_organization_name": "Institute of Electrical and Electronics Engineers",
+            "host_organization_lineage": [
+              "https://openalex.org/P4310319808"
+            ],
+            "host_organization_lineage_names": [
+              "Institute of Electrical and Electronics Engineers"
+            ],
+            "type": "journal"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "publishedVersion",
+          "is_accepted": true,
+          "is_published": true,
+          "raw_source_name": "IEEE Transactions on Artificial Intelligence",
+          "raw_type": "journal-article"
+        },
+        {
+          "id": "pmh:oai:arXiv.org:2502.18501",
+          "doi": null,
+          "is_oa": true,
+          "landing_page_url": "http://arxiv.org/abs/2502.18501",
+          "pdf_url": "https://arxiv.org/pdf/2502.18501",
+          "source": {
+            "id": "https://openalex.org/S4306400194",
+            "display_name": "arXiv (Cornell University)",
+            "issn_l": "2331-8422",
+            "issn": [
+              "2331-8422"
+            ],
+            "is_oa": true,
+            "is_in_doaj": false,
+            "is_core": false,
+            "listed_in": [],
+            "host_organization": "https://openalex.org/I205783295",
+            "host_organization_name": "Cornell University",
+            "host_organization_lineage": [
+              "https://openalex.org/I205783295"
+            ],
+            "host_organization_lineage_names": [],
+            "type": "repository"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "submittedVersion",
+          "is_accepted": false,
+          "is_published": false,
+          "raw_source_name": null,
+          "raw_type": "text"
+        },
+        {
+          "id": "doi:10.48550/arxiv.2502.18501",
+          "doi": "https://doi.org/10.48550/arxiv.2502.18501",
+          "is_oa": true,
+          "landing_page_url": "https://doi.org/10.48550/arxiv.2502.18501",
+          "pdf_url": null,
+          "source": {
+            "id": "https://openalex.org/S4306400194",
+            "display_name": "arXiv (Cornell University)",
+            "issn_l": "2331-8422",
+            "issn": [
+              "2331-8422"
+            ],
+            "is_oa": true,
+            "is_in_doaj": false,
+            "is_core": false,
+            "listed_in": [],
+            "host_organization": "https://openalex.org/I205783295",
+            "host_organization_name": "Cornell University",
+            "host_organization_lineage": [
+              "https://openalex.org/I205783295"
+            ],
+            "host_organization_lineage_names": [],
+            "type": "repository"
+          },
+          "license": "cc-by",
+          "license_id": "https://openalex.org/licenses/cc-by",
+          "version": null,
+          "is_accepted": false,
+          "is_published": null,
+          "raw_source_name": null,
+          "raw_type": "article-journal"
+        }
+      ],
+      "frame_source": "07-research/2026-10-10-顶会顶刊写作风格调研_证据/sources/tai/tai-openalex-expanded.json",
+      "scope": "Locator metadata only; not an independent PDF/version or article-type audit."
+    },
+    {
+      "doi": "10.1109/tai.2024.3487149",
+      "title": "Neural Network-Based Ensemble Learning Model to Identify Antigenic Fragments of SARS-CoV-2",
+      "openalex_id": "https://openalex.org/W4403826494",
+      "locator_year": 2024,
+      "locator_date": "2024-10-28",
+      "authors": [
+        "Syed Nisar Hussain Bukhari",
+        "Kingsley A. Ogudo"
+      ],
+      "first_author_new": true,
+      "locations": [
+        {
+          "id": "doi:10.1109/tai.2024.3487149",
+          "doi": "https://doi.org/10.1109/tai.2024.3487149",
+          "is_oa": true,
+          "landing_page_url": "https://doi.org/10.1109/tai.2024.3487149",
+          "pdf_url": null,
+          "source": {
+            "id": "https://openalex.org/S4210169448",
+            "display_name": "IEEE Transactions on Artificial Intelligence",
+            "issn_l": "2691-4581",
+            "issn": [
+              "2691-4581"
+            ],
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": true,
+            "listed_in": [
+              "cwts-core",
+              "jufo-1",
+              "norway-1"
+            ],
+            "host_organization": "https://openalex.org/P4310319808",
+            "host_organization_name": "Institute of Electrical and Electronics Engineers",
+            "host_organization_lineage": [
+              "https://openalex.org/P4310319808"
+            ],
+            "host_organization_lineage_names": [
+              "Institute of Electrical and Electronics Engineers"
+            ],
+            "type": "journal"
+          },
+          "license": "cc-by-nc-nd",
+          "license_id": "https://openalex.org/licenses/cc-by-nc-nd",
+          "version": "publishedVersion",
+          "is_accepted": true,
+          "is_published": true,
+          "raw_source_name": "IEEE Transactions on Artificial Intelligence",
+          "raw_type": "journal-article"
+        }
+      ],
+      "frame_source": "07-research/2026-10-10-顶会顶刊写作风格调研_证据/sources/tai/tai-openalex-expanded.json",
+      "scope": "Locator metadata only; not an independent PDF/version or article-type audit."
+    },
+    {
+      "doi": "10.1109/tai.2024.3489534",
+      "title": "Expanding Horizons of Level Diversity via Multiobjective Evolutionary Learning",
+      "openalex_id": "https://openalex.org/W4404035390",
+      "locator_year": 2024,
+      "locator_date": "2024-11-04",
+      "authors": [
+        "Qingquan Zhang",
+        "Ziqi Wang",
+        "Yuchen Li",
+        "Keyuan Zhang",
+        "Bo Yuan",
+        "Jialin Liu"
+      ],
+      "first_author_new": true,
+      "locations": [
+        {
+          "id": "doi:10.1109/tai.2024.3489534",
+          "doi": "https://doi.org/10.1109/tai.2024.3489534",
+          "is_oa": false,
+          "landing_page_url": "https://doi.org/10.1109/tai.2024.3489534",
+          "pdf_url": null,
+          "source": {
+            "id": "https://openalex.org/S4210169448",
+            "display_name": "IEEE Transactions on Artificial Intelligence",
+            "issn_l": "2691-4581",
+            "issn": [
+              "2691-4581"
+            ],
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": true,
+            "listed_in": [
+              "cwts-core",
+              "jufo-1",
+              "norway-1"
+            ],
+            "host_organization": "https://openalex.org/P4310319808",
+            "host_organization_name": "Institute of Electrical and Electronics Engineers",
+            "host_organization_lineage": [
+              "https://openalex.org/P4310319808"
+            ],
+            "host_organization_lineage_names": [
+              "Institute of Electrical and Electronics Engineers"
+            ],
+            "type": "journal"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "publishedVersion",
+          "is_accepted": true,
+          "is_published": true,
+          "raw_source_name": "IEEE Transactions on Artificial Intelligence",
+          "raw_type": "journal-article"
+        },
+        {
+          "id": "pmh:oai:arXiv.org:2509.24341",
+          "doi": null,
+          "is_oa": true,
+          "landing_page_url": "http://arxiv.org/abs/2509.24341",
+          "pdf_url": "https://arxiv.org/pdf/2509.24341",
+          "source": {
+            "id": "https://openalex.org/S4306400194",
+            "display_name": "arXiv (Cornell University)",
+            "issn_l": "2331-8422",
+            "issn": [
+              "2331-8422"
+            ],
+            "is_oa": true,
+            "is_in_doaj": false,
+            "is_core": false,
+            "listed_in": [],
+            "host_organization": "https://openalex.org/I205783295",
+            "host_organization_name": "Cornell University",
+            "host_organization_lineage": [
+              "https://openalex.org/I205783295"
+            ],
+            "host_organization_lineage_names": [],
+            "type": "repository"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "submittedVersion",
+          "is_accepted": false,
+          "is_published": false,
+          "raw_source_name": null,
+          "raw_type": "text"
+        },
+        {
+          "id": "doi:10.48550/arxiv.2509.24341",
+          "doi": "https://doi.org/10.48550/arxiv.2509.24341",
+          "is_oa": true,
+          "landing_page_url": "https://doi.org/10.48550/arxiv.2509.24341",
+          "pdf_url": null,
+          "source": {
+            "id": "https://openalex.org/S4306400194",
+            "display_name": "arXiv (Cornell University)",
+            "issn_l": "2331-8422",
+            "issn": [
+              "2331-8422"
+            ],
+            "is_oa": true,
+            "is_in_doaj": false,
+            "is_core": false,
+            "listed_in": [],
+            "host_organization": "https://openalex.org/I205783295",
+            "host_organization_name": "Cornell University",
+            "host_organization_lineage": [
+              "https://openalex.org/I205783295"
+            ],
+            "host_organization_lineage_names": [],
+            "type": "repository"
+          },
+          "license": null,
+          "license_id": null,
+          "version": null,
+          "is_accepted": false,
+          "is_published": null,
+          "raw_source_name": null,
+          "raw_type": "Preprint"
+        }
+      ],
+      "frame_source": "07-research/2026-10-10-顶会顶刊写作风格调研_证据/sources/tai/tai-openalex-expanded.json",
+      "scope": "Locator metadata only; not an independent PDF/version or article-type audit."
+    },
+    {
+      "doi": "10.1109/tai.2024.3491693",
+      "title": "Semisupervised Breast MRI Density Segmentation Integrating Fine and Rough Annotations",
+      "openalex_id": "https://openalex.org/W4404238189",
+      "locator_year": 2024,
+      "locator_date": "2024-11-11",
+      "authors": [
+        "Tianyu Xie",
+        "Yue Sun",
+        "Hongxu Yang",
+        "Shuo Li",
+        "Jinhong Song",
+        "Qimin Yang",
+        "Hao Chen",
+        "Mingxiang Wu",
+        "Tao Tan"
+      ],
+      "first_author_new": true,
+      "locations": [
+        {
+          "id": "doi:10.1109/tai.2024.3491693",
+          "doi": "https://doi.org/10.1109/tai.2024.3491693",
+          "is_oa": false,
+          "landing_page_url": "https://doi.org/10.1109/tai.2024.3491693",
+          "pdf_url": null,
+          "source": {
+            "id": "https://openalex.org/S4210169448",
+            "display_name": "IEEE Transactions on Artificial Intelligence",
+            "issn_l": "2691-4581",
+            "issn": [
+              "2691-4581"
+            ],
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": true,
+            "listed_in": [
+              "cwts-core",
+              "jufo-1",
+              "norway-1"
+            ],
+            "host_organization": "https://openalex.org/P4310319808",
+            "host_organization_name": "Institute of Electrical and Electronics Engineers",
+            "host_organization_lineage": [
+              "https://openalex.org/P4310319808"
+            ],
+            "host_organization_lineage_names": [
+              "Institute of Electrical and Electronics Engineers"
+            ],
+            "type": "journal"
+          },
+          "license": null,
+          "license_id": null,
+          "version": "publishedVersion",
+          "is_accepted": true,
+          "is_published": true,
+          "raw_source_name": "IEEE Transactions on Artificial Intelligence",
+          "raw_type": "journal-article"
+        },
+        {
+          "id": "pmh:oai:pure.tue.nl:openaire/d064f1ec-144a-43d1-bbec-9109122f743c",
+          "doi": null,
+          "is_oa": true,
+          "landing_page_url": "https://research.tue.nl/en/publications/d064f1ec-144a-43d1-bbec-9109122f743c",
+          "pdf_url": null,
+          "source": {
+            "id": "https://openalex.org/S4406922641",
+            "display_name": "TU/e Research Portal",
+            "issn_l": null,
+            "issn": null,
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": false,
+            "listed_in": [],
+            "host_organization": null,
+            "host_organization_name": null,
+            "host_organization_lineage": [],
+            "host_organization_lineage_names": [],
+            "type": "repository"
+          },
+          "license": "other-oa",
+          "license_id": "https://openalex.org/licenses/other-oa",
+          "version": "publishedVersion",
+          "is_accepted": true,
+          "is_published": true,
+          "raw_source_name": "Xie, T, Sun, Y, Yang, H, Li, S, Song, J, Yang, Q, Chen, H, Wu, M & Tan, T 2025, 'Semi Supervised Breast MRI Density Segmentation Integrating Fine and Rough Annotations', IEEE Transactions on Artificial Intelligence, vol. 6, no. 3, 10750144, pp. 690-699. https://doi.org/10.1109/TAI.2024.3491693",
+          "raw_type": "info:eu-repo/semantics/article"
+        },
+        {
+          "id": "pmh:oai:ris.utwente.nl:openaire/3bdeaef8-dfb3-4129-a237-b3c10a6a9d5a",
+          "doi": null,
+          "is_oa": true,
+          "landing_page_url": "https://research.utwente.nl/en/publications/3bdeaef8-dfb3-4129-a237-b3c10a6a9d5a",
+          "pdf_url": null,
+          "source": {
+            "id": "https://openalex.org/S4406922991",
+            "display_name": "University of Twente Research Information",
+            "issn_l": null,
+            "issn": null,
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": false,
+            "listed_in": [],
+            "host_organization": null,
+            "host_organization_name": null,
+            "host_organization_lineage": [],
+            "host_organization_lineage_names": [],
+            "type": "repository"
+          },
+          "license": "other-oa",
+          "license_id": "https://openalex.org/licenses/other-oa",
+          "version": "publishedVersion",
+          "is_accepted": true,
+          "is_published": true,
+          "raw_source_name": "Xie, T, Sun, Y, Yang, H, Li, S, Song, J, Yang, Q, Chen, H, Wu, M & Tan, T 2025, 'Semisupervised Breast MRI Density Segmentation Integrating Fine and Rough Annotations', IEEE Transactions on Artificial Intelligence, vol. 6, no. 3, pp. 690-699. https://doi.org/10.1109/TAI.2024.3491693",
+          "raw_type": "info:eu-repo/semantics/article"
+        }
+      ],
+      "frame_source": "07-research/2026-10-10-顶会顶刊写作风格调研_证据/sources/tai/tai-openalex-expanded.json",
+      "scope": "Locator metadata only; not an independent PDF/version or article-type audit."
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "created": "2026-10-12",
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 13498,
+      "sha256": "5aaaebae1fc4da0179d7bf21627702fc62e050eafcc0251154ca38140e31ebc1"
+    },
+    {
+      "path": "aaai-2024-22.json",
+      "bytes": 12645,
+      "sha256": "825aad2cb854e75184af656c959b1f2517a4dd1aeee647b63b82690fc00bfdd7"
+    },
+    {
+      "path": "aaai-2025-12.json",
+      "bytes": 13870,
+      "sha256": "44942dbb97b3923ea2d4bee69aa771babad2bee7868146da6b0054a5e0e6f03c"
+    },
+    {
+      "path": "official-landing-pages.txt",
+      "bytes": 7700,
+      "sha256": "643386021c91452a282e0f6d1e86e74ad443f60de07e4d31afa3c9ba5c74d5cf"
+    },
+    {
+      "path": "renders/coalition-p4.png",
+      "bytes": 682795,
+      "sha256": "880f08319213dadfa79aa79e7c4d5b524b5e8feddccae8bd26e3adf5fa26e5a5"
+    },
+    {
+      "path": "renders/coalition-p5.png",
+      "bytes": 600647,
+      "sha256": "341e02bbda83fa9b8f9ae99a138e26216c0259ab24f99114b1a1ee5f292fc444"
+    },
+    {
+      "path": "renders/coalition-p6.png",
+      "bytes": 819535,
+      "sha256": "6ce08f4a2f0222b090fbfeef1bf901b69406a684aa0e18f6c6d32fe40ffd8976"
+    },
+    {
+      "path": "renders/coalition-p7.png",
+      "bytes": 633620,
+      "sha256": "938a8a55e3a3465fca50552db85f0bd729de93bc4f9078e8fc24cee13181fa41"
+    },
+    {
+      "path": "renders/kdclub-p3.png",
+      "bytes": 733762,
+      "sha256": "5442a57cf81f469d33d32304154b8196a0f3793ef6b1b2acb0a7f48ea416be45"
+    },
+    {
+      "path": "renders/kdclub-p6.png",
+      "bytes": 694834,
+      "sha256": "cff68b144b6ea7cfdb3700a1d91ef5d2ed69eba30184b5477393120b6bf3ae9b"
+    },
+    {
+      "path": "renders/kdclub-p7.png",
+      "bytes": 569520,
+      "sha256": "b0a542eb1bbf51ce37d93f4bf2f457dc9e173beec48cca6e28c7b0379cff23a2"
+    },
+    {
+      "path": "../../../.claude/skills/paper-writing-shared/tmp/source-materials/07-research/2026-10-12-顶会顶刊写作风格调研_证据/aaai/supplement-complete-web-text.txt",
+      "bytes": 43469,
+      "sha256": "4201783498ce570ba3273a7a2695899eca2dac09e7731df8dda759b82d26d505"
+    },
+    {
+      "path": "../../../.claude/skills/paper-writing-shared/tmp/source-materials/07-research/2026-10-12-顶会顶刊写作风格调研_证据/aaai/supplement-end-web-text.txt",
+      "bytes": 13609,
+      "sha256": "e89e3f32b165f45b0ade08ec67196332bd76b68a765c5aeb0e6c745f4cbc3bf2"
+    },
+    {
+      "path": "supplement-web-access.json",
+      "bytes": 15518,
+      "sha256": "a995a66417504bf011ab0176007c1887f7cad5d2668cc4e850f6fcab277d079d"
+    },
+    {
+      "path": "../../../.claude/skills/paper-writing-shared/tmp/source-materials/07-research/2026-10-12-顶会顶刊写作风格调研_证据/aaai/supplement-web-text-complete.txt",
+      "bytes": 40887,
+      "sha256": "ef81ec0274adce19ceb74b7f7259ca1cef4320c895805b34b10c6e4d50dd34dc"
+    }
+  ]
+}

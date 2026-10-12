@@ -1,0 +1,78 @@
+{
+  "venue": "tpami",
+  "version": "2026",
+  "verified_on": "2026-10-11",
+  "template_source": "https://template-selector.ieee.org/api/ieee-template-selector/template/199/download",
+  "author_guidelines": "https://www.computer.org/digital-library/journals/tp/cfp-ieee-pattern-analysis-machine-intelligence",
+  "official_files": {
+    "IEEEtran.bst": "314f0ece704568faf827011bac498650691b2b5ee06320720830e782416d5a5f",
+    "IEEEtran-README": "cc2de809d6e86ab95cd4e88d97b41cb81dd96cf224e6445474aeb7419f4a0462",
+    "IEEEtran.cls": "da751920a317ed318b7b5cd7fa585a6cc7d28502d457856382e9be24b10a3bd7"
+  },
+  "modes": {
+    "submission": {
+      "available": true,
+      "directory": "project/submission",
+      "anonymous": null,
+      "main_page_limit": null,
+      "page_limit_status": "requires-target-stage-verification",
+      "counting": "Main text unless journal-specific rules explicitly include references",
+      "engine": "pdflatex",
+      "article_type": "original-research",
+      "full_manuscript_page_limit": null,
+      "max_pdf_megabytes": null,
+      "validation": {
+        "compile": "passed",
+        "unresolved_citations_or_references": false,
+        "visual_review": "reviewed all rendered pages",
+        "rendered_pages": 2,
+        "verified_on": "2026-10-11",
+        "evidence_path": "07-research/2026-10-10-顶会顶刊写作风格调研_证据/templates/render-results.json",
+        "submission_compliance": "pending author content and policy fields"
+      }
+    },
+    "final": {
+      "available": true,
+      "directory": "project/final",
+      "anonymous": false,
+      "main_page_limit": null,
+      "page_limit_status": "requires-target-stage-verification",
+      "counting": "Main text unless journal-specific rules explicitly include references",
+      "engine": "pdflatex",
+      "article_type": "original-research",
+      "full_manuscript_page_limit": null,
+      "max_pdf_megabytes": null,
+      "validation": {
+        "compile": "passed",
+        "unresolved_citations_or_references": false,
+        "visual_review": "reviewed all rendered pages",
+        "rendered_pages": 2,
+        "verified_on": "2026-10-11",
+        "evidence_path": "07-research/2026-10-10-顶会顶刊写作风格调研_证据/templates/render-results.json",
+        "submission_compliance": "pending author content and policy fields"
+      }
+    }
+  },
+  "format_status": "compiled-and-visually-reviewed-draft-scaffold",
+  "limitations": [
+    "Compilation is not submission compliance. Publication metadata and actual results must be provided.",
+    "Unknown page limits or anonymity policies are not assumed compliant."
+  ],
+  "template_selector": "https://template-selector.ieee.org/",
+  "snapshot_year": "2026",
+  "dependency_sources": {
+    "IEEEtran.bst": "https://tug.ctan.org/macros/latex/contrib/IEEEtran/bibtex/IEEEtran.bst",
+    "IEEEtran.cls": "https://tug.ctan.org/macros/latex/contrib/IEEEtran/IEEEtran.cls"
+  },
+  "archive_provenance": {
+    "filename": "ieee-tpami.zip",
+    "sha256": "f1abd5e9ed440e4263d9e9c2d941eeb4d4cfcfdfece43ccfa10e87613c7bdde9",
+    "source_url": "https://template-selector.ieee.org/api/ieee-template-selector/template/199/download",
+    "archive_path_from_workspace": "07-research/2026-10-10-顶会顶刊写作风格调研_证据/templates/ieee-tpami.zip",
+    "acquired_during": [
+      "2026-10-10",
+      "2026-10-11"
+    ]
+  },
+  "guidelines_status": "official-scope-verified; full-current-submission-guide-pending"
+}

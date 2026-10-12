@@ -1,0 +1,28 @@
+{
+  "command": [
+    "/Library/TeX/texbin/latexmk",
+    "-norc",
+    "-pdf",
+    "-interaction=nonstopmode",
+    "-halt-on-error",
+    "-file-line-error",
+    "-latexoption=-no-shell-escape",
+    "-outdir=/Users/myl/Documents/paper/07-research/2026-10-11-论文写作润色技能评测_证据/outputs/E03-revised/build",
+    "/Users/myl/Documents/paper/07-research/2026-10-11-论文写作润色技能评测_证据/outputs/E03-revised/article.tex"
+  ],
+  "entrypoint": "article.tex",
+  "checked_at": "2026-10-11T05:39:14.457703+00:00",
+  "exit_code": 0,
+  "pdf": "/Users/myl/Documents/paper/07-research/2026-10-11-论文写作润色技能评测_证据/outputs/E03-revised/build/article.pdf",
+  "log_tail": "Rc files read (in order):\n  NONE\nLatexmk: This is Latexmk, John Collins, 9 March 2026. Version 4.88.\nLatexmk: Nothing to do for '/Users/myl/Documents/paper/07-research/2026-10-11-论文写作润色技能评测_证据/outputs/E03-revised/article.tex'.\nLatexmk: All targets (build/article.pdf) are up-to-date\n\n",
+  "input_sha256": {
+    "algorithm.sty": "93fd0eb31c112eb405833db8f1d7f5d238c7e691b1c05680d7276e68f36d564a",
+    "algorithmic.sty": "48d18794a5d97c0479a588cc2eac0917992feb9da83acc4631b8f55757d80f9b",
+    "article.tex": "88bdf30d91cbfa1ec9357fd21dadaeaf00a27f0c62e377d50047cc632eb4f2b4",
+    "fancyhdr.sty": "9130c52f91087abc6d223164ffa587e207e3257fcbcd069ef09ecb5391043f14",
+    "icml2026.sty": "7cdcf90f6a59c5219e7f15c88f7ed09fcaf598dad91e6cdddc4dc3cb0e397a95",
+    "references.bib": "54f424b2b7452d478f0f1591077e72a87218701f88e1d3d4b7fb8b48532472b1",
+    "sections/body.tex": "f67cd7a033e8bf8eeda3864238b4e4572269ed5ab61f2cf169e2993bac2bad71"
+  },
+  "pdf_sha256": "15114b61ac737d4fa594dce57625a1b0d240fd1e20f8c3a09fae3398ae563a78"
+}

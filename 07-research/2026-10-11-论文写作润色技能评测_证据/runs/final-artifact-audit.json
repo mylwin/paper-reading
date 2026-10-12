@@ -1,0 +1,14 @@
+{
+  "user_facing_links": {
+    "files": [
+      "07-research/2026-10-11-论文写作润色技能评测.md",
+      "07-research/2026-10-10-顶会顶刊写作风格调研.md",
+      ".claude/skills/paper-skills-README.md"
+    ],
+    "broken": []
+  },
+  "official_assets_unchanged": true,
+  "final_skill_snapshot_matches": true,
+  "independent_cases": 3,
+  "new_research_papers_counted": 0
+}

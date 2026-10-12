@@ -1,0 +1,96 @@
+{
+  "source": "git index; restore missing files only",
+  "restored": [
+    {
+      "path": ".claude/skills/paper-analyze/SKILL.md",
+      "sha256": "a33117bb4de24b47bc70577b43cbdbb5e6898b433018dd15ad23ad0ebeeae064"
+    },
+    {
+      "path": ".claude/skills/paper-analyze/scripts/generate_note.py",
+      "sha256": "d81a34c0444c17bb3c1a1e2c6741c33263523a45b27f74fca5fa264d14d0cfea"
+    },
+    {
+      "path": ".claude/skills/paper-conf/SKILL.md",
+      "sha256": "2241b791ac13cf4f6e177dfd974cb4ad3148aff7172fa27b1e66f1aefe685c0c"
+    },
+    {
+      "path": ".claude/skills/paper-conf/agents/openai.yaml",
+      "sha256": "4fdbb13b9af954dabbf897ffbc1f019335050930a614294a7f46f10cd58b8e4f"
+    },
+    {
+      "path": ".claude/skills/paper-conf/config.yaml",
+      "sha256": "1edfa9344f2de8a867d03f1382d85dfe610f1f2de581acda353918a8a52226b8"
+    },
+    {
+      "path": ".claude/skills/paper-conf/scripts/search_conf_papers.py",
+      "sha256": "d669dbc80f7fb5efeccc96b80b97cf5865093191f2609eb94919dd876e8812c1"
+    },
+    {
+      "path": ".claude/skills/paper-daily/SKILL.md",
+      "sha256": "95e4eb4588dbdd6b9183dbb1105fea370bfc4d6d905bef49836d0ec4ef6e5f8d"
+    },
+    {
+      "path": ".claude/skills/paper-daily/agents/openai.yaml",
+      "sha256": "a9a5a2be46dfe3b9bb8b9ef0dd7dfacefe49553d54302094cb5f522bf2898f96"
+    },
+    {
+      "path": ".claude/skills/paper-daily/scripts/common_words.py",
+      "sha256": "288a5153e9e8818715f157cebdab9e9bb17ca5201733fcbb1d618e98b97f38c4"
+    },
+    {
+      "path": ".claude/skills/paper-daily/scripts/fetch_pdfs.py",
+      "sha256": "07df2367fce88f7f729f28f6ef39e9ece1defe9460f81a5d6cffcdbf7ef2b494"
+    },
+    {
+      "path": ".claude/skills/paper-daily/scripts/link_keywords.py",
+      "sha256": "13a28cc2a20cec75431f8e8b67b911c851d32494316800b02c1cc4c1f19dd739"
+    },
+    {
+      "path": ".claude/skills/paper-daily/scripts/localize_markdown_images.py",
+      "sha256": "a9e4d1e4d79d2b23f06725f3bb25ec0e99496244576791e07bfe8e9efd435847"
+    },
+    {
+      "path": ".claude/skills/paper-daily/scripts/paper_config.py",
+      "sha256": "e0544b36dee0f2504f2322052e64c04b7d165e755f2059d0d3fb3c2417b22423"
+    },
+    {
+      "path": ".claude/skills/paper-daily/scripts/render_note.py",
+      "sha256": "884c230192158b62fd222a74de078e2f97836c3439b6a7c35f88f83a78a3e3cd"
+    },
+    {
+      "path": ".claude/skills/paper-daily/scripts/scan_existing_notes.py",
+      "sha256": "98e984d9683da2952783f8e79d7cc4fc622521d462df28dc9f87f828aea10b97"
+    },
+    {
+      "path": ".claude/skills/paper-daily/scripts/search_arxiv.py",
+      "sha256": "ef536a43b2455511e08fc1eca9aef445c5af88dc16536f4e04a18493554e56c1"
+    },
+    {
+      "path": ".claude/skills/paper-daily/scripts/sync_indexes.py",
+      "sha256": "c0ab8aed79118402fd19dd980f696c2c09ef9176659ca7819a368bf5a2159668"
+    },
+    {
+      "path": ".claude/skills/paper-daily/scripts/write_note.py",
+      "sha256": "0c1b9d5ae7bd169af2882c9313dae2e241ac11593e6220d26dd6dbe8aa73f693"
+    },
+    {
+      "path": ".claude/skills/paper-interests/SKILL.md",
+      "sha256": "1ed56d2b09e1c85860f166b2db54626fc516537c7c49249873c1a604eebaa5e7"
+    },
+    {
+      "path": ".claude/skills/paper-interests/agents/openai.yaml",
+      "sha256": "e0b1da0ecd20292f00543b99da1832f0141cc8845df9456303005a1679869eca"
+    },
+    {
+      "path": ".claude/skills/paper-interests/scripts/merge_interests.py",
+      "sha256": "23cdeb35da3455f9f1394c1271422c6bec80a5310fd2593b9e1cd988f5641755"
+    }
+  ],
+  "existing_preserved": [],
+  "validation": {
+    "hash_matches": 21,
+    "restored_file_count": 21,
+    "discovery_entries": 8,
+    "passed": true
+  }
+}

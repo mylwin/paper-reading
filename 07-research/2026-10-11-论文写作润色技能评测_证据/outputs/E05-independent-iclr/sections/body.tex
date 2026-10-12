@@ -1,0 +1,128 @@
+\section{Scope and Problem}
+\label{sec:scope}
+A classifier prediction may be passed through an acceptance rule that determines
+whether the prediction is retained or rejected. Confidence Gate uses only the
+largest class probability reported for that prediction. The supplied proposal
+sets the threshold to $0.8$ and keeps the classifier fixed. This manuscript
+specifies that behavior; it does not establish whether the rule is useful on any
+particular task.
+
+\textbf{Draft status.} This is a synthetic skill evaluation rather than a real
+research paper. No experiments or theoretical guarantees are available, and the
+authors have not reviewed the AI-assisted initial draft. The term ``Confidence
+Gate'' preserves the supplied method name. Here, ``confidence'' denotes the
+maximum reported class probability; it does not assert that this probability is
+calibrated or equals the probability that the prediction is correct.
+
+\AuthorPending{Provide the intended application, the task-specific reason for
+rejecting predictions, and evidence of the problem that the rule is intended to
+address. Novelty and comparison with existing approaches cannot be assessed
+without verified related literature.}
+
+\section{Decision Rule}
+\label{sec:method}
+Let $x$ denote an input. Write $p_k(x)$ for the class probability reported by the
+fixed classifier for class $k\in\{1,\ldots,K\}$, and let $\widehat y(x)$ denote
+its original predicted label. This notation represents the supplied description
+of class probabilities; it does not specify a model architecture or a training
+procedure. Define the score and acceptance indicator as
+\begin{equation}
+\label{eq:gate}
+ s(x)=\max_{1\leq k\leq K} p_k(x),
+ \qquad a(x)=\mathbf{1}\{s(x)\geq 0.8\}.
+\end{equation}
+Confidence Gate returns the original prediction when $a(x)=1$ and a rejection
+symbol $\bot$ when $a(x)=0$:
+\begin{equation}
+\label{eq:output}
+ g(x)=\begin{cases}
+ \widehat y(x), & s(x)\geq 0.8,\\
+ \bot, & s(x)<0.8.
+ \end{cases}
+\end{equation}
+In particular, a score exactly equal to $0.8$ is accepted. Rejection provides no
+alternative label in the supplied rule. The classifier's original prediction
+is retained, so the gate does not introduce a separate label-selection or tie-breaking
+procedure. How the classifier produces its probabilities and predicted labels
+is not specified.
+
+Operationally, the rule takes the fixed classifier's reported probabilities and
+prediction, computes the maximum probability, compares it with $0.8$, and either
+passes through the prediction or returns $\bot$. The material supplies no
+rationale for selecting $0.8$ and no threshold-selection experiment. The value
+is therefore a fixed specification, not an empirically optimized parameter.
+\AuthorPending{Specify the classifier, class set, probability-generation
+procedure, handling of invalid or missing outputs, numerical representation,
+and downstream treatment of rejection.}
+
+\section{Evidence Status and Evaluation Requirements}
+\label{sec:evidence}
+No evaluation has been performed or reported in the supplied material.
+Table~\ref{tab:gaps} records the missing inputs. In particular, an accepted
+prediction has a reported score of at least $0.8$ by definition, but that rule
+alone does not establish an accuracy level, an error reduction, or any other
+performance benefit. No theorem or proof is asserted here.
+
+\begin{table}[ht]
+\centering
+\caption{Material gaps. These entries describe availability, not experimental results.}
+\label{tab:gaps}
+\begin{tabular}{p{0.29\linewidth}p{0.62\linewidth}}
+\hline
+Required information & Status and consequence\\
+\hline
+Dataset and task & Not supplied; task scope and data distribution are unknown.\\
+Classifier & Specific model and training details are not supplied.\\
+Evaluation protocol & Splits, seeds, comparison methods, and metric definitions are not supplied.\\
+Measurements & No performance values or uncertainty estimates are supplied.\\
+Code and resources & No code, execution environment, or resource measurements are supplied.\\
+Related literature & No verified references are supplied; positioning is pending.\\
+Theory & No theorem or proof is supplied; no guarantee is claimed.\\
+\hline
+\end{tabular}
+\end{table}
+
+An author-designed evaluation could examine how frequently the rule accepts
+predictions and how often those accepted predictions are wrong. For clarity,
+if labeled evaluation examples $(x_i,y_i)_{i=1}^n$ become available, one possible
+reporting convention is empirical acceptance frequency
+\begin{equation}
+ \widehat C=\frac{1}{n}\sum_{i=1}^n a(x_i),
+\end{equation}
+and accepted-prediction error
+\begin{equation}
+ \widehat R=\frac{\sum_{i=1}^n a(x_i)\mathbf{1}\{\widehat y(x_i)\neq y_i\}}
+ {\sum_{i=1}^n a(x_i)},
+ \quad\text{when }\sum_{i=1}^n a(x_i)>0.
+\end{equation}
+If no prediction is accepted, the latter quantity is undefined and should be
+reported as such. These are proposed descriptive reporting definitions, not
+measurements, author-approved study choices, or a theoretical guarantee.
+Any comparison must also report acceptance frequency so that error figures can
+be interpreted with their retained sample size. The authors must decide the
+protocol and appropriate comparisons for the actual task.
+
+\AuthorPending{Supply actual data, model details, evaluation choices, code,
+seeds where applicable, results, and the basis for uncertainty reporting. A
+prospective evaluation should distinguish the specified threshold from any
+subsequent threshold tuning. No claim of improvement can be added until its
+comparison conditions and evidence are available.}
+
+\section{Related Work, Limitations, and Conclusion}
+\label{sec:limitations}
+\AuthorPending{Provide and verify the closest scholarly references, then
+compare their assumptions, acceptance rules, and supported conclusions with
+this proposal. No novelty claim is justified by the current material.}
+
+The current material supports the definition of Confidence Gate and its
+inclusive threshold boundary. It does not support a claim about robustness,
+calibration, fairness, computational savings, or deployment suitability.
+The consequences of rejecting an input depend on an unspecified downstream
+procedure. There is also no empirical basis for recommending $0.8$ across
+classifiers, datasets, or applications.
+
+Confidence Gate accepts a fixed classifier's prediction precisely when its
+maximum reported class probability is at least $0.8$. This draft makes that
+rule explicit and exposes the missing evidence. Assessing its value requires
+author-reviewed research materials; the draft is not ready for submission.
+\label{pw:main-end}

@@ -1,12 +1,16 @@
 # paper-skills
 
-论文推荐 + 周期分析 skill 集合（Claude Code / OpenAI Codex / dsh / pencode / qoder / trae 通用），面向本论文工作区（目录规范见工作区 `.AGENT.md`，本文件中的一切路径都以它为准）。
+论文推荐、周期分析、写作与润色 skill 集合（Claude Code / OpenAI Codex / dsh / pencode / qoder / trae 通用），面向本论文工作区（目录规范见工作区 `.AGENT.md`，本文件中的一切路径都以它为准）。
 
 **不需要任何大模型 API key**——脚本只做 HTTP 检索、候选预筛与落盘；写概览、研究评价、主张-证据审计和周度综合这些语义工作由当前 agent（宿主模型）完成。
 
 所有论文评价共用 [`research-evaluation-rubric.md`](research-evaluation-rubric.md)：元数据阶段只给研究优先级，读过正文后才按论文类型做证据化学术评价。会议、引用和摘要宣传词都不能替代全文判断。
 
-## 六个 skill
+## 八个 skill
+
+新增 `paper-writing` 和 `paper-polishing` 与原有六个 paper skill 并存。后续适配、调研和评测保留旧技能及其脚本，不通过删除或替换旧技能完成升级。
+
+技能开发与风格调研的论文、科学补充和全文解析仅存放在 `paper-writing-shared/tmp/`，不进入论文知识库或其索引，不提交或推送。用户已有知识库资料保持原位置；可提交的是技能、官方模板、写作总结和调研/评测记录。历史迁移位置见支持目录的 `corpus-locations.json`。
 
 | Skill | 作用 | 产出位置 |
 |---|---|---|
@@ -16,6 +20,16 @@
 | `paper-weekly` | 每 7 天一次：建立问题与证据地图，综合共识/冲突/空白，再结合个人卡点形成可证伪的研究机会与计划 | `07-research/<周起始日>-第N周周报.md` |
 | `paper-interests` | 对话式维护研究主题：询问 → 扩散关键词 → 确认 → 写配置 | `.claude/skills/config.yaml` |
 | `paper-sgd-reading` | 随机梯度类理论论文的**交互式精读家教**：逐个公式讲、不跳步、禁生活类比；问答过程落盘，定稿进公式目录 | 过程：`08-reading/<标题>/`；定稿：`04-equation_problem/<标题>/全局推理.md` 等 |
+| `paper-writing` | 以目标会议/期刊为主轴起草论文和章节，组装官方 LaTeX 工程并编译 | 用户指定的新工程；研究记录在 `07-research/` |
+| `paper-polishing` | 润色、翻译、压缩现稿；保留公式、宏、引用和工程；换 venue 时迁移到新工程 | 原工程或用户指定的新工程；中文修改说明 |
+
+写作与润色覆盖 AAAI、IJCAI、ICML、NeurIPS、ICLR、COLT、JMLR、TMLR、IEEE TPAMI、TNNLS、TAI；研究方向只影响术语和证据，不将风格限定为优化器论文。两技能共享 [`paper-writing-shared/registry.json`](paper-writing-shared/registry.json)、[各 venue 的独立档案及对照](paper-writing-shared/venues/overview.md)和官方模板。共享目录没有 `SKILL.md`，不形成第三个技能；安装时一并复制两个技能及共享目录，无需全局 Nature 安装。
+
+**当前为实现与调研中的版本。** 模板编译和视觉检查已有记录，语料全文及相关附录精读尚未达到每 venue 50 篇，风格观察按档案中的真实覆盖范围使用。详见[调研报告](../../07-research/2026-10-10-顶会顶刊写作风格调研.md)。实际投稿时还须核验目标届次和作者材料；骨架中的待补标记不能直接投稿。
+
+已保存[进一步行为与工程评测](../../07-research/2026-10-11-论文写作润色技能评测.md)：三项隔离上下文测试覆盖局部润色、缺失材料写作及压缩迁移；16项工程保护回归通过。原始失败、修复、输出工程、PDF和渲染均保留；有限合成评测不替代50篇/venue的语料验收。
+
+调用示例：`用 paper-writing 按 ICML 2026 投稿版，根据这些研究材料起草方法章节`；`用 paper-polishing 润色这个 TNNLS 工程，保留公式和引用键`。局部润色未指定 venue 时可先用通用规则；全文工程生成需要明确目标。
 
 **不属于本套 skill 的**：`02-markdown` 的 PDF 解析由用户自己的流程负责，本套 skill 只读它用于去重与周期分析。`03-notes` 的精读笔记可以由用户手写，也可以由 `paper-analyze` 生成——两者都写入同一个固定入口 `03-notes/<YYYY-MM>/<论文标题>/精读.md`。
 
@@ -101,7 +115,19 @@
 │   ├── assets/session-log-template.md
 │   ├── references/                  # 公式/算法/假设讲解模板 + 术语表
 │   └── scripts/outputs.py           # 路径解析 + 过程/定稿落盘（自包含，可独立安装）
-└── tests/test_paper_skills.py
+├── paper-writing/
+│   ├── SKILL.md
+│   └── agents/openai.yaml
+├── paper-polishing/
+│   ├── SKILL.md
+│   └── agents/openai.yaml
+├── paper-writing-shared/           # 支持资源，不设 SKILL.md
+│   ├── registry.json               # venue、年份和阶段入口
+│   ├── core/  sections/  venues/   # 核心原则、章节与 11 份独立档案
+│   ├── assets/templates/           # 官方文件、校验值及投稿/终稿骨架
+│   ├── licenses/  provenance.md    # 来源、许可与 Nature 适配审计
+│   └── scripts/project.py          # init / compile / check / compare
+└── tests/                          # 原有测试及工程保护检查
 ```
 
 ## 设计原则：解耦 —— 研究主题只有一处真相源

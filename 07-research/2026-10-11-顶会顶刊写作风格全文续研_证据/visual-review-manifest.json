@@ -1,0 +1,67 @@
+[
+  {
+    "path": "07-research/2026-10-11-顶会顶刊写作风格全文续研_证据/visual-review/additional-renders/naruto-p7.png",
+    "sha256": "a21c45029e94b9898ca72a72ad8df18b8b504d7b8d48e72b0f1da6416252222f",
+    "inspection": "Codex root directly viewed actual PDF render; selected ambiguous/evidence-critical pages, not all-pages layout audit"
+  },
+  {
+    "path": "07-research/2026-10-11-顶会顶刊写作风格全文续研_证据/visual-review/additional-renders/q-cogni-p1.png",
+    "sha256": "d3c11f1d22438324f7a877849477184257c1bd0bc6325915e02931dea66e964a",
+    "inspection": "Codex root directly viewed actual PDF render; selected ambiguous/evidence-critical pages, not all-pages layout audit"
+  },
+  {
+    "path": "07-research/2026-10-11-顶会顶刊写作风格全文续研_证据/visual-review/additional-renders/q-cogni-p7.png",
+    "sha256": "ee831e6adb7ce14925467e70ebae0e9de6ab99518a44a7aed52c629f316c4fef",
+    "inspection": "Codex root directly viewed actual PDF render; selected ambiguous/evidence-critical pages, not all-pages layout audit"
+  },
+  {
+    "path": "07-research/2026-10-11-顶会顶刊写作风格全文续研_证据/visual-review/additional-renders/q-cogni-p8.png",
+    "sha256": "f6fca39f575d2db04b5a43b52e9970c6c7e0d575486898f50f9b997774dd21e8",
+    "inspection": "Codex root directly viewed actual PDF render; selected ambiguous/evidence-critical pages, not all-pages layout audit"
+  },
+  {
+    "path": "07-research/2026-10-11-顶会顶刊写作风格全文续研_证据/visual-review/additional-renders/verified-api-p4.png",
+    "sha256": "ba065603f090a291ed8d958dc11f63aaf890273fa9a2e46edea029d761adf746",
+    "inspection": "Codex root directly viewed actual PDF render; selected ambiguous/evidence-critical pages, not all-pages layout audit"
+  },
+  {
+    "path": "07-research/2026-10-11-顶会顶刊写作风格全文续研_证据/visual-review/additional-renders/verified-api-p6.png",
+    "sha256": "5daf1331456ea7bf699d7669763e80a9b1a93763faca5d39a34518a2cb77a0ca",
+    "inspection": "Codex root directly viewed actual PDF render; selected ambiguous/evidence-critical pages, not all-pages layout audit"
+  },
+  {
+    "path": "07-research/2026-10-11-顶会顶刊写作风格全文续研_证据/visual-review/tmlr-renders/cropa-p11.png",
+    "sha256": "48811cf0f7b8e6ced5bbec862eb15f703152a2da764f2b95e34954fb96979060",
+    "inspection": "Codex root directly viewed actual PDF render; selected ambiguous/evidence-critical pages, not all-pages layout audit"
+  },
+  {
+    "path": "07-research/2026-10-11-顶会顶刊写作风格全文续研_证据/visual-review/tmlr-renders/cropa-p19.png",
+    "sha256": "79292be008513adb5d9ce31462f00e5d868824a78ef7ef795b12acce13d38b9f",
+    "inspection": "Codex root directly viewed actual PDF render; selected ambiguous/evidence-critical pages, not all-pages layout audit"
+  },
+  {
+    "path": "07-research/2026-10-11-顶会顶刊写作风格全文续研_证据/visual-review/tmlr-renders/cropa-p21.png",
+    "sha256": "de1ea7c103e1ff6ad66086a0f60ca72a40f440f65c55520cfa440c0fbe076649",
+    "inspection": "Codex root directly viewed actual PDF render; selected ambiguous/evidence-critical pages, not all-pages layout audit"
+  },
+  {
+    "path": "07-research/2026-10-11-顶会顶刊写作风格全文续研_证据/visual-review/tmlr-renders/cropa-p32.png",
+    "sha256": "7bf1626aabab20df9171a3ce1122e0e3ef95b44e2cf604b3506fd5cc024736c3",
+    "inspection": "Codex root directly viewed actual PDF render; selected ambiguous/evidence-critical pages, not all-pages layout audit"
+  },
+  {
+    "path": "07-research/2026-10-11-顶会顶刊写作风格全文续研_证据/visual-review/tmlr-renders/cropa-p33.png",
+    "sha256": "d8ee10e4c2b4a56eb9f501c298567b2ec67d4f26853cc0f625e30ce68d57ddb7",
+    "inspection": "Codex root directly viewed actual PDF render; selected ambiguous/evidence-critical pages, not all-pages layout audit"
+  },
+  {
+    "path": "07-research/2026-10-11-顶会顶刊写作风格全文续研_证据/visual-review/tmlr-renders/cropa-p39.png",
+    "sha256": "28a89112d42cc5b17095bd3b320a58d405ccc488bad6bf277e88f695e6061abb",
+    "inspection": "Codex root directly viewed actual PDF render; selected ambiguous/evidence-critical pages, not all-pages layout audit"
+  },
+  {
+    "path": "07-research/2026-10-11-顶会顶刊写作风格全文续研_证据/visual-review/tmlr-renders/g4satbench-p20.png",
+    "sha256": "e4d8ae7281dc3fabb7ebc20433b950a5e063dbe7b76e2f1c80e8a8cd54c25870",
+    "inspection": "Codex root directly viewed actual PDF render; selected ambiguous/evidence-critical pages, not all-pages layout audit"
+  }
+]

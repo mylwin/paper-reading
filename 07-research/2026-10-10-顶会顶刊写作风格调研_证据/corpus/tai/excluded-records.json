@@ -1,0 +1,26 @@
+[
+  {
+    "title": "Front Cover",
+    "year": 2024,
+    "publication_url": "https://doi.org/10.1109/tai.2024.3372796",
+    "pdf_url": "https://ieeexplore.ieee.org/ielx7/9078688/10478748/10478749.pdf",
+    "authors": "",
+    "doi": "10.1109/tai.2024.3372796",
+    "version": "publishedVersion",
+    "version_metadata_source": "OpenAlex locator, not independent content/version verification",
+    "publication_verified": "Crossref publisher DOI deposit",
+    "openalex_id": "https://openalex.org/W4393166451",
+    "provisional_stratum": "other",
+    "semantic_review_status": "not_reviewed",
+    "eligibility": "ineligible_nonresearch_front_cover",
+    "id": "tai-2024-03",
+    "split": "derivation",
+    "selection_locked": "2026-10-10",
+    "type_status": "metadata title and absence of authors confirmed nonresearch",
+    "replacement_status": "pending; original locked record retained for audit",
+    "exclusion_date": "2026-10-11",
+    "excluded_from_active_corpus": true,
+    "exclusion_reason": "nonresearch Front Cover",
+    "replacement_id": "tai-2024-03-r1"
+  }
+]

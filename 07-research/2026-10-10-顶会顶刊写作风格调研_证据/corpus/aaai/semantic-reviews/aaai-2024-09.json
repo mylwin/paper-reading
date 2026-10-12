@@ -1,0 +1,83 @@
+{
+  "id": "aaai-2024-09",
+  "title": "NaRuto: Automatically Acquiring Planning Models from Narrative Texts",
+  "venue": "aaai",
+  "year": 2024,
+  "split": "induction",
+  "review_date": "2026-10-11",
+  "reviewer": "Codex root",
+  "mode": "Continuous all-page semantic writing-style reading, including references and embedded appendices; not independent theorem/code verification or experimental reproduction",
+  "full_text_style_review_complete": true,
+  "external_appendix_review_complete": true,
+  "publication_identity_and_acquired_version": "official AAAI Press published PDF",
+  "publisher_current_byte_equivalence": "downloaded from official DOI-linked article",
+  "pdf_path": ".claude/skills/paper-writing-shared/tmp/corpus/aaai/pdf/NaRuto- Automatically Acquiring Planning Models from Narrative Texts.pdf",
+  "pdf_sha256": "96a147dd58c0c461a37de351488f56a4692acbe67acc345e3853275d9770e568",
+  "markdown_path": ".claude/skills/paper-writing-shared/tmp/corpus/aaai/markdown/NaRuto- Automatically Acquiring Planning Models from Narrative Texts.md",
+  "markdown_sha256": "a51a166ef8621c6cf24d9c3ac5fd14aa8a4cf78b8ad18e2ba4d8848cc37e5ab5",
+  "coverage": [
+    {
+      "version": "official AAAI Press published PDF",
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "section_pages": {
+        "1": "Abstract, Introduction",
+        "2": "Background and Related Work; event extraction",
+        "3–5": "event processing, commonsense generation and filtering",
+        "5–7": "evaluation, human assessment, planning tasks, Conclusion",
+        "7–9": "References"
+      },
+      "method": "continuous reading; any truncated tool text reread separately; figures/formulas ambiguous in extraction checked in actual page render"
+    }
+  ],
+  "supplement_audit": {
+    "source": "https://ojs.aaai.org/index.php/AAAI/article/view/29999",
+    "result": "Official article lists PDF and Video/Poster; no textual supplement link. The complete nine-page PDF does not refer to an appendix or supplementary prose. Prior event-extraction publication is cited prior work, not this paper appendix."
+  },
+  "ten_dimensions": {
+    "reader_argument": "面向规划与更广AI读者，p1用叙事句子与动作模型的差距建立任务；不先堆语言模型技术名词。",
+    "title_abstract": "标题为系统名＋可核验功能；p1摘要从领域模型瓶颈转到自动系统和比较，sometimes限定与半自动方法的关系。",
+    "introduction": "p1–2明确新贡献是由既有事件抽取发展到动作模型，不把全部流水线伪称首次提出；叙事实例与PDDL表示连接动机和输出。",
+    "related_work": "p2背景与相关工作合并，围绕规划表示与获取来源组织；这是系统稿可选结构，不是AAAI统一要求。",
+    "method_theory": "p2–5按事件抽取、指代/短语动词/条件因果处理、常识预测和过滤展开，阈值与选择逻辑留在正文；无正式定理，不能补造证明。",
+    "evidence": "p5–7分别检验动作覆盖、专家对前提/效果的适切性、改变初始事实后的规划可解性；9名专家、每域6份评估，不把人评当绝对正确性。",
+    "discussion_limits": "p7结论回收自动获取与比较，承认负效果选择及故事上下文仍有限；未来规模用途不等于已部署验证。",
+    "paragraph_language": "解释步骤接输入/操作/作用；比较对象明确自动、半自动、人工，结论的sometimes不可删除。",
+    "main_appendix": "9页完整正式PDF，无另引附录；必要生成与评估细节在正文。无附录不代表所有类型都应无附录。",
+    "actionable": "系统稿先展示输入与输出差距，再把生成质量、人工判断和下游效用分开；标明不可复现基线的近似来源及每项比较的分母。"
+  },
+  "counterexamples": [
+    {
+      "location": "p7 Table2",
+      "finding": "NaRuto(L) West3.57超过StoryFramer3.26，但Aladdin3.34低于4.04；人工GT在两域更高。",
+      "editing_rule": "不能把sometimes on par强化为超过所有人工/半自动模型。"
+    },
+    {
+      "location": "p5–7 baselines and Table3",
+      "finding": "H2020不可用时由描述近似；不同模型的Total Tasks不同；规划器每任务仅一任意plan。",
+      "editing_rule": "说明近似基线、分母及distinct plans下界，不能当共同任务集成功率。"
+    }
+  ],
+  "confidence": {
+    "paper_observation": "high for documented page content",
+    "venue_generalization": "low; purposive pilot, no frequency estimate, no complete50-paper or heldout validation"
+  },
+  "official_requirement": false,
+  "holdout_validation": null,
+  "previous_status": {
+    "semantic_review_status": "preliminary published-PDF navigation/prose-excerpt style review",
+    "version": "AAAI Press published technical-track paper",
+    "acquired_version": null,
+    "version_verification": null,
+    "eligibility": null
+  }
+}

@@ -1,0 +1,6 @@
+interface:
+  display_name: "顶会顶刊论文润色"
+  short_description: "优化已有论文的语言与论证，维护公式引用及目标会议期刊的 LaTeX 规范"
+  default_prompt: "使用 $paper-polishing，按目标会议或期刊润色我的论文，保持研究含义与 LaTeX 工程完整。"
+policy:
+  allow_implicit_invocation: true

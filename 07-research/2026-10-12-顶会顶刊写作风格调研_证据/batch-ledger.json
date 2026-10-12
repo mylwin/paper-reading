@@ -1,0 +1,92 @@
+{
+  "date": "2026-10-12",
+  "papers": [
+    {
+      "id": "aaai-2025-12",
+      "venue": "aaai",
+      "year": 2025,
+      "split": "induction",
+      "main_complete": true,
+      "full_and_appendix_complete": true,
+      "review_path": "07-research/2026-10-10-顶会顶刊写作风格调研_证据/corpus/aaai/semantic-reviews/aaai-2025-12.json",
+      "pdf_path": ".claude/skills/paper-writing-shared/tmp/corpus/aaai/pdf/Online Learning of Coalition Structures by Selfish Agents.pdf",
+      "pdf_sha256": "6e6eb5f18e792eb14eff2e283d4b2d72e4afa0a2819dcd91ea14dab76db41b33"
+    },
+    {
+      "id": "aaai-2024-22",
+      "venue": "aaai",
+      "year": 2024,
+      "split": "induction",
+      "main_complete": true,
+      "full_and_appendix_complete": true,
+      "review_path": "07-research/2026-10-10-顶会顶刊写作风格调研_证据/corpus/aaai/semantic-reviews/aaai-2024-22.json",
+      "pdf_path": ".claude/skills/paper-writing-shared/tmp/corpus/aaai/pdf/KD-Club- An Efficient Exact Algorithm with New Coloring-Based Upper Bound for the Maximum k-Defective Clique Problem.pdf",
+      "pdf_sha256": "10f1f79bba65075b43abd44cb03dd83558862d2a7ce86a303e94f2adfa95e8f8"
+    },
+    {
+      "id": "tai-2025-16",
+      "venue": "tai",
+      "year": 2025,
+      "split": "derivation",
+      "main_complete": true,
+      "full_and_appendix_complete": false,
+      "review_path": "07-research/2026-10-10-顶会顶刊写作风格调研_证据/corpus/tai/semantic-reviews/tai-2025-16.json",
+      "pdf_path": ".claude/skills/paper-writing-shared/tmp/corpus/tai/pdf/Efficient_Solution_Validation_of_Constraint_Satisfaction_Problems_on_Neuromorphic_Hardware_The_Case_of_Sudoku_Puzzles.pdf",
+      "pdf_sha256": "9170be44e88f650993f291780fc48e82895d584e82d55eea10412aec07ec12c4"
+    },
+    {
+      "id": "tai-2025-01",
+      "venue": "tai",
+      "year": 2025,
+      "split": "derivation",
+      "main_complete": true,
+      "full_and_appendix_complete": false,
+      "review_path": "07-research/2026-10-10-顶会顶刊写作风格调研_证据/corpus/tai/semantic-reviews/tai-2025-01.json",
+      "pdf_path": ".claude/skills/paper-writing-shared/tmp/corpus/tai/pdf/DrugMAP_Deep_Multimodal_Transformers_for_Drug_Target_Mechanism_of_Action_Prediction.pdf",
+      "pdf_sha256": "69201b3b0aa86a62984583f11f1742f213bea4066e0a7685add4c1510bab77be"
+    },
+    {
+      "id": "neurips-2024-2aada42a",
+      "venue": "neurips",
+      "year": 2024,
+      "split": "induction",
+      "main_complete": true,
+      "full_and_appendix_complete": true,
+      "review_path": "07-research/2026-10-10-顶会顶刊写作风格调研_证据/corpus/neurips/semantic-reviews/neurips-2024-2aada42a.json",
+      "pdf_path": ".claude/skills/paper-writing-shared/tmp/corpus/neurips/pdf/Boundary Decomposition for Nadir Objective Vector Estimation.pdf",
+      "pdf_sha256": "a447cc8174bf422b7a7115c0690e061c7109ade29f8afd7cf29c95d7eb9232be"
+    },
+    {
+      "id": "neurips-2025-aac4a9fe",
+      "venue": "neurips",
+      "year": 2025,
+      "split": "induction",
+      "main_complete": true,
+      "full_and_appendix_complete": true,
+      "review_path": "07-research/2026-10-10-顶会顶刊写作风格调研_证据/corpus/neurips/semantic-reviews/neurips-2025-aac4a9fe.json",
+      "pdf_path": ".claude/skills/paper-writing-shared/tmp/corpus/neurips/pdf/Causal LLM Routing- End-to-End Regret Minimization from Observational Data.pdf",
+      "pdf_sha256": "f496fe2a2abeb7d2909f60fb7675cae5cbc08a2b01bfe7b0f2fd8e3f5953c45f"
+    },
+    {
+      "id": "tai-2024-03-r1",
+      "venue": "tai",
+      "year": 2024,
+      "split": "derivation",
+      "main_complete": true,
+      "full_and_appendix_complete": true,
+      "review_path": "07-research/2026-10-10-顶会顶刊写作风格调研_证据/corpus/tai/semantic-reviews/tai-2024-03-r1.json",
+      "pdf_path": ".claude/skills/paper-writing-shared/tmp/corpus/tai/pdf/Efficient_Structure_Slimming_for_Spiking_Neural_Networks.pdf",
+      "pdf_sha256": "1b4243c3e5fd71310821f345f53cc103545d519120d17aa9433afaf6a8aef3dc",
+      "new_pdf_acquisition": true,
+      "eligibility_repair": true
+    }
+  ],
+  "new_main_reviews": 7,
+  "new_full_reviews": 5,
+  "new_holdout_reviews": 0,
+  "new_pdf_acquisitions": 1,
+  "pdf_pages_continuously_read": 117,
+  "additional_author_supplement_pages_read": 7,
+  "institution_covers_in_pdf_page_count": 3,
+  "qualification": "Continuous scientific writing-style reading, not independent theorem/code correctness or reproduction. AAAI7page supplement read via full web PDF text without binary archive/visual glyph certification. TAI2025two cited supplements unreviewed and excluded from full count."
+}

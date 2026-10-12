@@ -1,0 +1,90 @@
+Online Learning of Coalition Structures by Selfish Agents | Proceedings of the AAAI Conference on Artificial Intelligence (https://ojs.aaai.org/index.php/AAAI/article/view/33498)
+citeturn93view0 [wordlim: 200] Crawled: 2 days ago; Content type: text/html; Source: open({"ref_id":"https://ojs.aaai.org/index.php/AAAI/article/view/33498","lineno":null}); Total lines: 67
+L0: cite0†Skip to main content cite1†Skip to main navigation menu cite2†Skip to site footer L1: 
+L2: Open Menu
+L3: 
+L4: cite3†Proceedings of the AAAI Conference on Artificial Intelligence L5: 
+L6:   * cite4†Current L7:   * cite5†Archives L8:   * cite6†About L9:     * cite6†About the Journal L10:     * cite7†Submissions L11:     * cite8†Privacy Statement L12:     * cite9†Contact L13: 
+L14: cite10†Search L15: 
+L16:   * cite11†Login L17: 
+L18: # Online Learning of Coalition Structures by Selfish Agents
+L19: ## Authors
+L20: 
+L21:   * Saar Cohen Department of Computer Science, Bar-Ilan University
+L22:   * Noa Agmon Department of Computer Science, Bar-Ilan University
+L23: 
+L24: ## DOI:
+L25: 
+L26: cite12†https://doi.org/10.1609/aaai.v39i13.33498†doi.org L27: ## Abstract
+L28: Coalition formation concerns autonomous agents that strategically interact to form self-organized coalitions. When agents lack initial sufficient information to evaluate their preferences before interacting with others, they learn them online through repeated feedback while iteratively forming coalitions.
+L29: In this work, we introduce online learning in coalition formation from a non-cooperative perspective, studying the impact of collective data utilization where selfish agents aim to accelerate their learning by leveraging a shared data platform. Thus, the efficiency and dynamics of the learning process are affected by each agent's local feedbacks, motivating us to explore the tension between semi-bandit and bandit feedback, which differ in the granularity of utility information observed by each agent.
+L30: Under our non-cooperative viewpoint, we evaluate the system by means of Nash stability, where no agent can improve her utility by unilaterally deviating. Our main result is a sample-efficient algorithm for selfish agents that aims to minimize their Nash regret under both semi-bandit and bandit feedback, implying approximately Nash stable outcomes. Under both feedback settings, our algorithm enjoys Nash regret and sample complexity bounds that are optimal up to logarithmic factors.
+L31: ## Downloads
+L32: 
+L33:   * cite13†PDF L34:   * cite14†Video L35: 
+L36: ## Published
+L37: 
+L38: 2025-04-11
+L39: ## How to Cite
+L40: 
+L41: Cohen, S., & Agmon, N. (2025). Online Learning of Coalition Structures by Selfish Agents. Proceedings of the AAAI Conference on Artificial Intelligence, 39(13), 13709–13717. https://doi.org/10.1609/aaai.v39i13.33498
+L42: 
+L43: [Button: More Citation Formats ]
+L44: 
+L45:   * cite15†ACM L46:   * cite16†ACS L47:   * cite17†APA L48:   * cite18†ABNT L49:   * cite19†Chicago L50:   * cite20†Harvard L51:   * cite21†IEEE L52:   * cite22†MLA L53:   * cite23†Turabian L54:   * cite24†Vancouver L55: 
+L56: Download Citation
+L57: 
+L58:   * cite25†Endnote/Zotero/Mendeley (RIS) L59:   * cite26†BibTeX L60: ## Issue
+L61: 
+L62: cite27†Vol. 39 No. 13: AAAI-25 Technical Tracks 13 L63: 
+L64: ## Section
+L65: 
+L66: AAAI Technical Track on Game Theory and Economic Paradigms
+--------------------------------------------------------------------------------
+KD-Club: An Efficient Exact Algorithm with New Coloring-Based Upper Bound for the Maximum k-Defective Clique Problem | Proceedings of the AAAI Conference on Artificial Intelligence (https://ojs.aaai.org/index.php/AAAI/article/view/30061)
+citeturn93view1 [wordlim: 200] Crawled: 5 days ago; Content type: text/html; Source: open({"ref_id":"https://ojs.aaai.org/index.php/AAAI/article/view/30061","lineno":null}); Total lines: 70
+L0: cite0†Skip to main content cite1†Skip to main navigation menu cite2†Skip to site footer L1: 
+L2: Open Menu
+L3: 
+L4: cite3†Proceedings of the AAAI Conference on Artificial Intelligence L5: 
+L6:   * cite4†Current L7:   * cite5†Archives L8:   * cite6†About L9:     * cite6†About the Journal L10:     * cite7†Submissions L11:     * cite8†Privacy Statement L12:     * cite9†Contact L13: 
+L14: cite10†Search L15: 
+L16:   * cite11†Login L17: 
+L18: # KD-Club: An Efficient Exact Algorithm with New Coloring-Based Upper Bound for the Maximum k-Defective Clique Problem
+L19: ## Authors
+L20: 
+L21:   * Mingming Jin Huazhong University of Science and Technology
+L22:   * Jiongzhi Zheng Huazhong University of Science and Technology
+L23:   * Kun He Huazhong University of Science and Technology
+L24: 
+L25: ## DOI:
+L26: 
+L27: cite12†https://doi.org/10.1609/aaai.v38i18.30061†doi.org L28: 
+L29: ## Keywords:
+L30: 
+L31: SO: Combinatorial Optimization, CSO: Search, CSO: Solvers and Tools
+L32: ## Abstract
+L33: The Maximum k-Defective Clique Problem (MDCP) aims to find a maximum k-defective clique in a given graph, where a k-defective clique is a relaxation clique missing at most k edges. MDCP is NP-hard and finds many real-world applications in analyzing dense but not necessarily complete subgraphs. Exact algorithms for MDCP mainly follow the Branch-and-bound (BnB) framework, whose performance heavily depends on the quality of the upper bound on the cardinality of a maximum k-defective clique.
+L34: The state-of-the-art BnB MDCP algorithms calculate the upper bound quickly but conservatively as they ignore many possible missing edges. In this paper, we propose a novel CoLoring-based Upper Bound (CLUB) that uses graph coloring techniques to detect independent sets so as to detect missing edges ignored by the previous methods. We then develop a new BnB algorithm for MDCP, called KD-Club, using CLUB in both the preprocessing stage for graph reduction and the BnB searching process for branch pruning.
+L35: Extensive experiments show that KD-Club significantly outperforms state-of-the-art BnB MDCP algorithms on the number of solved instances within the cut-off time, having much smaller search tree and shorter solving time on various benchmarks.
+L36: ## Downloads
+L37: 
+L38:   * cite13†PDF L39: 
+L40: ## Published
+L41: 
+L42: 2024-03-24
+L43: ## How to Cite
+L44: 
+L45: Jin, M., Zheng, J., & He, K. (2024). KD-Club: An Efficient Exact Algorithm with New Coloring-Based Upper Bound for the Maximum k-Defective Clique Problem. Proceedings of the AAAI Conference on Artificial Intelligence, 38(18), 20735–20742. https://doi.org/10.1609/aaai.v38i18.30061
+L46: 
+L47: [Button: More Citation Formats ]
+L48: 
+L49:   * cite14†ACM L50:   * cite15†ACS L51:   * cite16†APA L52:   * cite17†ABNT L53:   * cite18†Chicago L54:   * cite19†Harvard L55:   * cite20†IEEE L56:   * cite21†MLA L57:   * cite22†Turabian L58:   * cite23†Vancouver L59: 
+L60: Download Citation
+L61:   * cite24†Endnote/Zotero/Mendeley (RIS) L62:   * cite25†BibTeX L63: ## Issue
+L64: 
+L65: cite26†Vol. 38 No. 18: AAAI-24 Technical Tracks 18 L66: 
+L67: ## Section
+L68: 
+L69: AAAI Technical Track on Search and Optimization
+

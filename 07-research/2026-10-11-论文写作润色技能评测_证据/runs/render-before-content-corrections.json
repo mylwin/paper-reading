@@ -1,0 +1,62 @@
+[
+  {
+    "case": "E02-icml-writing",
+    "pdf": "outputs/E02-icml-writing/build/main.pdf",
+    "pdf_sha256": "75894f964a929cb8d5113e968f749cbbcd4513832825099a51eadf6e258a40c2",
+    "pages": 2,
+    "contacts": [
+      "renders-before-content-corrections/E02-icml-writing/contact-1.png"
+    ],
+    "visual_review": "pending direct image inspection"
+  },
+  {
+    "case": "E03-revised",
+    "pdf": "outputs/E03-before-impact-correction/build/article.pdf",
+    "pdf_sha256": "15114b61ac737d4fa594dce57625a1b0d240fd1e20f8c3a09fae3398ae563a78",
+    "pages": 2,
+    "contacts": [
+      "renders-before-content-corrections/E03-revised/contact-1.png"
+    ],
+    "visual_review": "pending direct image inspection"
+  },
+  {
+    "case": "E04-tai-migrated",
+    "pdf": "outputs/E04-before-appendix-correction/build/main.pdf",
+    "pdf_sha256": "3c81330cc3dda0c737eec52108aad43933d01dda3ce2e6c7f5bac9654d62bcd6",
+    "pages": 1,
+    "contacts": [
+      "renders-before-content-corrections/E04-tai-migrated/contact-1.png"
+    ],
+    "visual_review": "pending direct image inspection"
+  },
+  {
+    "case": "E05-independent-iclr",
+    "pdf": "outputs/E05-independent-iclr/build/main.pdf",
+    "pdf_sha256": "5071a63cdfe1f183981ef57afaed504b8a888e4c3960a504923499f1848a13b4",
+    "pages": 3,
+    "contacts": [
+      "renders-before-content-corrections/E05-independent-iclr/contact-1.png"
+    ],
+    "visual_review": "pending direct image inspection"
+  },
+  {
+    "case": "E08-author-leak",
+    "pdf": "outputs/E08-author-leak/build/main.pdf",
+    "pdf_sha256": "8df84166e6a587c93139f5fb15101ed88a3176e25b25c1c1c18b610657e83dd6",
+    "pages": 1,
+    "contacts": [
+      "renders-before-content-corrections/E08-author-leak/contact-1.png"
+    ],
+    "visual_review": "pending direct image inspection"
+  },
+  {
+    "case": "E08-macro-title",
+    "pdf": "outputs/E08-macro-title/build/main.pdf",
+    "pdf_sha256": "d7d7ddde61a5b0acb0bed4469ab229b1b96a67b9764f0ea1f71a4acc8f6d820d",
+    "pages": 1,
+    "contacts": [
+      "renders-before-content-corrections/E08-macro-title/contact-1.png"
+    ],
+    "visual_review": "pending direct image inspection"
+  }
+]

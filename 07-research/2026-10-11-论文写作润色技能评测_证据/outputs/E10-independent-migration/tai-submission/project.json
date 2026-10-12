@@ -1,0 +1,49 @@
+{
+  "venue": "tai",
+  "version": "2026",
+  "mode": "submission",
+  "template_source": "https://template-selector.ieee.org/api/ieee-template-selector/template/542/download",
+  "verified_on": "2026-10-11",
+  "official_files": {
+    "IEEEtran.bst": "314f0ece704568faf827011bac498650691b2b5ee06320720830e782416d5a5f",
+    "IEEEtai.cls": "e46d339baa0c9fbb9913bae0fd5bc6c3b382f08eb67761a24ce6a72570b42564",
+    "IEEEtran-README": "cc2de809d6e86ab95cd4e88d97b41cb81dd96cf224e6445474aeb7419f4a0462"
+  },
+  "constraints": {
+    "available": true,
+    "directory": "project/submission",
+    "anonymous": true,
+    "main_page_limit": null,
+    "page_limit_status": "verified",
+    "counting": "full manuscript, including references and appendix; normal 10 pages, maximum 15 pages",
+    "engine": "pdflatex",
+    "article_type": "regular",
+    "full_manuscript_page_limit": 15,
+    "max_pdf_megabytes": null,
+    "page_policy_source": "local TAI 2026 spec rules.regular_pages, verified_on 2026-10-11"
+  },
+  "rules": {
+    "title_max_words": 15,
+    "running_head_max_characters": 25,
+    "abstract_max_words": 250,
+    "keywords_min": 3,
+    "keywords_max": 6,
+    "impact_statement_words": [
+      100,
+      150
+    ],
+    "regular_pages": {
+      "normal": 10,
+      "maximum": 15,
+      "counting": "full manuscript according to author guidelines; extra pages have charges"
+    }
+  },
+  "entrypoint": "article.tex",
+  "status": "synthetic-evaluation-draft-with-reproducibility-inputs-pending",
+  "scope": "Template is locally verified; future venue policies need rechecking.",
+  "article_type": "Regular",
+  "validation": {
+    "semantic_review": "performed against supplied synthetic fixture; no new results",
+    "submission_compliance": "not submission ready; synthetic fixture and missing author inputs"
+  }
+}

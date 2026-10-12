@@ -1,0 +1,24 @@
+{
+  "venue": "icml",
+  "target_count": 50,
+  "locked_count": 50,
+  "downloaded_count": 50,
+  "parsed_count": 50,
+  "semantic_reviewed_count": 4,
+  "holdout_reviewed_count": 0,
+  "pending_semantic_count": 46,
+  "status": "incomplete",
+  "review_scope": "Writing-focused semantic audit of main prose and appendix organization, purpose, claim statements and evidence links; not a proof correctness or replication audit.",
+  "holdout_validation_status": "pending",
+  "counts": {
+    "locked": 50,
+    "pdf_acquired": 50,
+    "text_parsed": 50,
+    "main_text_style_reviewed": 4,
+    "full_text_and_relevant_appendix_reviewed": 4,
+    "induction_complete": 4,
+    "holdout_complete": 0
+  },
+  "updated": "2026-10-11",
+  "acceptance_status": "in_progress; 50 complete per venue not achieved"
+}

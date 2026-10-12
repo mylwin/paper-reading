@@ -1,0 +1,85 @@
+{
+  "venue": "tnnls",
+  "version": "2026",
+  "verified_on": "2026-10-11",
+  "template_source": "https://template-selector.ieee.org/api/ieee-template-selector/template/262/download",
+  "author_guidelines": "https://cis.ieee.org/publications/t-neural-networks-and-learning-systems/tnnls",
+  "official_files": {
+    "IEEEtran.bst": "314f0ece704568faf827011bac498650691b2b5ee06320720830e782416d5a5f",
+    "IEEEtran-README": "cc2de809d6e86ab95cd4e88d97b41cb81dd96cf224e6445474aeb7419f4a0462",
+    "IEEEtran.cls": "b0eb3567b81aec7fe98144a3ad283eeac2d31035bb19e0d9dcba7da190f18d9d"
+  },
+  "modes": {
+    "submission": {
+      "available": true,
+      "directory": "project/submission",
+      "anonymous": true,
+      "main_page_limit": null,
+      "page_limit_status": "requires-target-stage-verification",
+      "counting": "Main text unless journal-specific rules explicitly include references",
+      "engine": "pdflatex",
+      "article_type": "original-research",
+      "full_manuscript_page_limit": 15,
+      "max_pdf_megabytes": null,
+      "validation": {
+        "compile": "passed",
+        "unresolved_citations_or_references": false,
+        "visual_review": "reviewed all rendered pages",
+        "rendered_pages": 2,
+        "verified_on": "2026-10-11",
+        "evidence_path": "07-research/2026-10-10-顶会顶刊写作风格调研_证据/templates/render-results.json",
+        "submission_compliance": "pending author content and policy fields"
+      }
+    },
+    "final": {
+      "available": true,
+      "directory": "project/final",
+      "anonymous": false,
+      "main_page_limit": null,
+      "page_limit_status": "requires-target-stage-verification",
+      "counting": "Main text unless journal-specific rules explicitly include references",
+      "engine": "pdflatex",
+      "article_type": "original-research",
+      "full_manuscript_page_limit": 15,
+      "max_pdf_megabytes": null,
+      "validation": {
+        "compile": "passed",
+        "unresolved_citations_or_references": false,
+        "visual_review": "reviewed all rendered pages",
+        "rendered_pages": 2,
+        "verified_on": "2026-10-11",
+        "evidence_path": "07-research/2026-10-10-顶会顶刊写作风格调研_证据/templates/render-results.json",
+        "submission_compliance": "pending author content and policy fields"
+      }
+    }
+  },
+  "format_status": "compiled-and-visually-reviewed-draft-scaffold",
+  "limitations": [
+    "Compilation is not submission compliance. Publication metadata and actual results must be provided.",
+    "Unknown page limits or anonymity policies are not assumed compliant."
+  ],
+  "template_selector": "https://template-selector.ieee.org/",
+  "snapshot_year": "2026",
+  "dependency_sources": {
+    "IEEEtran.bst": "https://tug.ctan.org/macros/latex/contrib/IEEEtran/bibtex/IEEEtran.bst"
+  },
+  "rules": {
+    "keywords_min": 4,
+    "keywords_max": 5,
+    "regular_pages": {
+      "normal": 10,
+      "maximum": 15,
+      "counting": "full manuscript excluding supplementary material"
+    }
+  },
+  "archive_provenance": {
+    "filename": "ieee-tnnls.zip",
+    "sha256": "6c315c3b6729bd7b96a6a0e7d3bb6342023413a4cd4d113fb4a193019af1c603",
+    "source_url": "https://template-selector.ieee.org/api/ieee-template-selector/template/262/download",
+    "archive_path_from_workspace": "07-research/2026-10-10-顶会顶刊写作风格调研_证据/templates/ieee-tnnls.zip",
+    "acquired_during": [
+      "2026-10-10",
+      "2026-10-11"
+    ]
+  }
+}

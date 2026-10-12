@@ -1,0 +1,800 @@
+[
+  {
+    "case": "E02-icml-writing",
+    "command": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "/Users/myl/Documents/paper/.claude/skills/paper-writing-shared/scripts/project.py",
+      "compile",
+      "--project",
+      "/Users/myl/Documents/paper/07-research/2026-10-11-论文写作润色技能评测_证据/outputs/E02-icml-writing",
+      "--main",
+      "main.tex"
+    ],
+    "exit_code": 0,
+    "stdout": "{\"command\": [\"/Library/TeX/texbin/latexmk\", \"-norc\", \"-pdf\", \"-interaction=nonstopmode\", \"-halt-on-error\", \"-file-line-error\", \"-latexoption=-no-shell-escape\", \"-outdir=/Users/myl/Documents/paper/07-research/2026-10-11-论文写作润色技能评测_证据/outputs/E02-icml-writing/build\", \"/Users/myl/Documents/paper/07-research/2026-10-11-论文写作润色技能评测_证据/outputs/E02-icml-writing/main.tex\"], \"entrypoint\": \"main.tex\", \"checked_at\": \"2026-10-11T05:37:07.617600+00:00\", \"exit_code\": 0, \"pdf\": \"/Users/myl/Documents/paper/07-research/2026-10-11-论文写作润色技能评测_证据/outputs/E02-icml-writing/build/main.pdf\"}\n",
+    "stderr": "",
+    "time": "2026-10-11T05:37:07.621838+00:00"
+  },
+  {
+    "case": "E02-icml-writing-check",
+    "command": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "/Users/myl/Documents/paper/.claude/skills/paper-writing-shared/scripts/project.py",
+      "check",
+      "--project",
+      "/Users/myl/Documents/paper/07-research/2026-10-11-论文写作润色技能评测_证据/outputs/E02-icml-writing"
+    ],
+    "exit_code": 1,
+    "stdout": "{\n  \"project\": \"/Users/myl/Documents/paper/07-research/2026-10-11-论文写作润色技能评测_证据/outputs/E02-icml-writing\",\n  \"entrypoint\": \"main.tex\",\n  \"issues\": [\n    {\n      \"kind\": \"author-input-pending\",\n      \"note\": \"Skeleton is not a finished manuscript\"\n    }\n  ],\n  \"warnings\": [],\n  \"main_pages\": 1,\n  \"total_pages\": 2,\n  \"word_count_estimates\": {},\n  \"limits\": {\n    \"available\": true,\n    \"directory\": \"project/submission\",\n    \"anonymous\": true,\n    \"main_page_limit\": 8,\n    \"page_limit_status\": \"verified\",\n    \"counting\": \"Main text unless journal-specific rules explicitly include references\",\n    \"engine\": \"pdflatex\",\n    \"article_type\": \"original-research\",\n    \"full_manuscript_page_limit\": null,\n    \"max_pdf_megabytes\": 50,\n    \"validation\": {\n      \"compile\": \"passed\",\n      \"unresolved_citations_or_references\": false,\n      \"visual_review\": \"reviewed all rendered pages\",\n      \"rendered_pages\": 3,\n      \"verified_on\": \"2026-10-11\",\n      \"evidence_path\": \"07-research/2026-10-10-顶会顶刊写作风格调研_证据/templates/render-results.json\",\n      \"submission_compliance\": \"pending author content and policy fields\"\n    }\n  },\n  \"static_check_passed\": false,\n  \"visual_check\": \"not-performed-by-this-command\",\n  \"official_system_check\": \"not-performed\",\n  \"semantic_fidelity\": \"requires-review\"\n}\n",
+    "stderr": "",
+    "time": "2026-10-11T05:37:07.701858+00:00"
+  },
+  {
+    "case": "E03-original",
+    "command": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "/Users/myl/Documents/paper/.claude/skills/paper-writing-shared/scripts/project.py",
+      "compile",
+      "--project",
+      "/Users/myl/Documents/paper/07-research/2026-10-11-论文写作润色技能评测_证据/outputs/E03-original",
+      "--main",
+      "article.tex"
+    ],
+    "exit_code": 0,
+    "stdout": "{\"command\": [\"/Library/TeX/texbin/latexmk\", \"-norc\", \"-pdf\", \"-interaction=nonstopmode\", \"-halt-on-error\", \"-file-line-error\", \"-latexoption=-no-shell-escape\", \"-outdir=/Users/myl/Documents/paper/07-research/2026-10-11-论文写作润色技能评测_证据/outputs/E03-original/build\", \"/Users/myl/Documents/paper/07-research/2026-10-11-论文写作润色技能评测_证据/outputs/E03-original/article.tex\"], \"entrypoint\": \"article.tex\", \"checked_at\": \"2026-10-11T05:37:09.858658+00:00\", \"exit_code\": 0, \"pdf\": \"/Users/myl/Documents/paper/07-research/2026-10-11-论文写作润色技能评测_证据/outputs/E03-original/build/article.pdf\"}\n",
+    "stderr": "",
+    "time": "2026-10-11T05:37:09.863471+00:00"
+  },
+  {
+    "case": "E03-original-check",
+    "command": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "/Users/myl/Documents/paper/.claude/skills/paper-writing-shared/scripts/project.py",
+      "check",
+      "--project",
+      "/Users/myl/Documents/paper/07-research/2026-10-11-论文写作润色技能评测_证据/outputs/E03-original"
+    ],
+    "exit_code": 0,
+    "stdout": "{\n  \"project\": \"/Users/myl/Documents/paper/07-research/2026-10-11-论文写作润色技能评测_证据/outputs/E03-original\",\n  \"entrypoint\": \"article.tex\",\n  \"issues\": [],\n  \"warnings\": [],\n  \"main_pages\": 2,\n  \"total_pages\": 3,\n  \"word_count_estimates\": {},\n  \"limits\": {\n    \"available\": true,\n    \"directory\": \"project/submission\",\n    \"anonymous\": true,\n    \"main_page_limit\": 8,\n    \"page_limit_status\": \"verified\",\n    \"counting\": \"Main text unless journal-specific rules explicitly include references\",\n    \"engine\": \"pdflatex\",\n    \"article_type\": \"original-research\",\n    \"full_manuscript_page_limit\": null,\n    \"max_pdf_megabytes\": 50,\n    \"validation\": {\n      \"compile\": \"passed\",\n      \"unresolved_citations_or_references\": false,\n      \"visual_review\": \"reviewed all rendered pages\",\n      \"rendered_pages\": 3,\n      \"verified_on\": \"2026-10-11\",\n      \"evidence_path\": \"07-research/2026-10-10-顶会顶刊写作风格调研_证据/templates/render-results.json\",\n      \"submission_compliance\": \"pending author content and policy fields\"\n    }\n  },\n  \"static_check_passed\": true,\n  \"visual_check\": \"not-performed-by-this-command\",\n  \"official_system_check\": \"not-performed\",\n  \"semantic_fidelity\": \"requires-review\"\n}\n",
+    "stderr": "",
+    "time": "2026-10-11T05:37:09.927124+00:00"
+  },
+  {
+    "case": "E03-revised",
+    "command": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "/Users/myl/Documents/paper/.claude/skills/paper-writing-shared/scripts/project.py",
+      "compile",
+      "--project",
+      "/Users/myl/Documents/paper/07-research/2026-10-11-论文写作润色技能评测_证据/outputs/E03-revised",
+      "--main",
+      "article.tex"
+    ],
+    "exit_code": 0,
+    "stdout": "{\"command\": [\"/Library/TeX/texbin/latexmk\", \"-norc\", \"-pdf\", \"-interaction=nonstopmode\", \"-halt-on-error\", \"-file-line-error\", \"-latexoption=-no-shell-escape\", \"-outdir=/Users/myl/Documents/paper/07-research/2026-10-11-论文写作润色技能评测_证据/outputs/E03-revised/build\", \"/Users/myl/Documents/paper/07-research/2026-10-11-论文写作润色技能评测_证据/outputs/E03-revised/article.tex\"], \"entrypoint\": \"article.tex\", \"checked_at\": \"2026-10-11T05:37:11.947759+00:00\", \"exit_code\": 0, \"pdf\": \"/Users/myl/Documents/paper/07-research/2026-10-11-论文写作润色技能评测_证据/outputs/E03-revised/build/article.pdf\"}\n",
+    "stderr": "",
+    "time": "2026-10-11T05:37:11.954697+00:00"
+  },
+  {
+    "case": "E03-revised-check",
+    "command": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "/Users/myl/Documents/paper/.claude/skills/paper-writing-shared/scripts/project.py",
+      "check",
+      "--project",
+      "/Users/myl/Documents/paper/07-research/2026-10-11-论文写作润色技能评测_证据/outputs/E03-revised"
+    ],
+    "exit_code": 0,
+    "stdout": "{\n  \"project\": \"/Users/myl/Documents/paper/07-research/2026-10-11-论文写作润色技能评测_证据/outputs/E03-revised\",\n  \"entrypoint\": \"article.tex\",\n  \"issues\": [],\n  \"warnings\": [],\n  \"main_pages\": 1,\n  \"total_pages\": 2,\n  \"word_count_estimates\": {},\n  \"limits\": {\n    \"available\": true,\n    \"directory\": \"project/submission\",\n    \"anonymous\": true,\n    \"main_page_limit\": 8,\n    \"page_limit_status\": \"verified\",\n    \"counting\": \"Main text unless journal-specific rules explicitly include references\",\n    \"engine\": \"pdflatex\",\n    \"article_type\": \"original-research\",\n    \"full_manuscript_page_limit\": null,\n    \"max_pdf_megabytes\": 50,\n    \"validation\": {\n      \"compile\": \"passed\",\n      \"unresolved_citations_or_references\": false,\n      \"visual_review\": \"reviewed all rendered pages\",\n      \"rendered_pages\": 3,\n      \"verified_on\": \"2026-10-11\",\n      \"evidence_path\": \"07-research/2026-10-10-顶会顶刊写作风格调研_证据/templates/render-results.json\",\n      \"submission_compliance\": \"pending author content and policy fields\"\n    }\n  },\n  \"static_check_passed\": true,\n  \"visual_check\": \"not-performed-by-this-command\",\n  \"official_system_check\": \"not-performed\",\n  \"semantic_fidelity\": \"requires-review\"\n}\n",
+    "stderr": "",
+    "time": "2026-10-11T05:37:12.034586+00:00"
+  },
+  {
+    "case": "E04-tai-migrated",
+    "command": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "/Users/myl/Documents/paper/.claude/skills/paper-writing-shared/scripts/project.py",
+      "compile",
+      "--project",
+      "/Users/myl/Documents/paper/07-research/2026-10-11-论文写作润色技能评测_证据/outputs/E04-tai-migrated",
+      "--main",
+      "main.tex"
+    ],
+    "exit_code": 0,
+    "stdout": "{\"command\": [\"/Library/TeX/texbin/latexmk\", \"-norc\", \"-pdf\", \"-interaction=nonstopmode\", \"-halt-on-error\", \"-file-line-error\", \"-latexoption=-no-shell-escape\", \"-outdir=/Users/myl/Documents/paper/07-research/2026-10-11-论文写作润色技能评测_证据/outputs/E04-tai-migrated/build\", \"/Users/myl/Documents/paper/07-research/2026-10-11-论文写作润色技能评测_证据/outputs/E04-tai-migrated/main.tex\"], \"entrypoint\": \"main.tex\", \"checked_at\": \"2026-10-11T05:37:13.448212+00:00\", \"exit_code\": 0, \"pdf\": \"/Users/myl/Documents/paper/07-research/2026-10-11-论文写作润色技能评测_证据/outputs/E04-tai-migrated/build/main.pdf\"}\n",
+    "stderr": "",
+    "time": "2026-10-11T05:37:13.452757+00:00"
+  },
+  {
+    "case": "E04-tai-migrated-check",
+    "command": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "/Users/myl/Documents/paper/.claude/skills/paper-writing-shared/scripts/project.py",
+      "check",
+      "--project",
+      "/Users/myl/Documents/paper/07-research/2026-10-11-论文写作润色技能评测_证据/outputs/E04-tai-migrated"
+    ],
+    "exit_code": 0,
+    "stdout": "{\n  \"project\": \"/Users/myl/Documents/paper/07-research/2026-10-11-论文写作润色技能评测_证据/outputs/E04-tai-migrated\",\n  \"entrypoint\": \"main.tex\",\n  \"issues\": [],\n  \"warnings\": [\n    {\n      \"kind\": \"page-policy-unverified\"\n    },\n    {\n      \"kind\": \"source-word-count-estimate\",\n      \"note\": \"TeX macros may change rendered counts; manually verify\"\n    }\n  ],\n  \"main_pages\": 1,\n  \"total_pages\": 1,\n  \"word_count_estimates\": {\n    \"abstract\": 76,\n    \"IEEEImpStatement\": 117\n  },\n  \"limits\": {\n    \"available\": true,\n    \"directory\": \"project/submission\",\n    \"anonymous\": true,\n    \"main_page_limit\": null,\n    \"page_limit_status\": \"requires-target-stage-verification\",\n    \"counting\": \"Main text unless journal-specific rules explicitly include references\",\n    \"engine\": \"pdflatex\",\n    \"article_type\": \"original-research\",\n    \"full_manuscript_page_limit\": 15,\n    \"max_pdf_megabytes\": null,\n    \"validation\": {\n      \"compile\": \"passed\",\n      \"unresolved_citations_or_references\": false,\n      \"visual_review\": \"reviewed all rendered pages\",\n      \"rendered_pages\": 2,\n      \"verified_on\": \"2026-10-11\",\n      \"evidence_path\": \"07-research/2026-10-10-顶会顶刊写作风格调研_证据/templates/render-results.json\",\n      \"submission_compliance\": \"pending author content and policy fields\"\n    }\n  },\n  \"static_check_passed\": true,\n  \"visual_check\": \"not-performed-by-this-command\",\n  \"official_system_check\": \"not-performed\",\n  \"semantic_fidelity\": \"requires-review\"\n}\n",
+    "stderr": "",
+    "time": "2026-10-11T05:37:13.516404+00:00"
+  },
+  {
+    "case": "E03-compare",
+    "command": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "/Users/myl/Documents/paper/.claude/skills/paper-writing-shared/scripts/project.py",
+      "compare",
+      "--before",
+      "/Users/myl/Documents/paper/07-research/2026-10-11-论文写作润色技能评测_证据/outputs/E03-original",
+      "--after",
+      "/Users/myl/Documents/paper/07-research/2026-10-11-论文写作润色技能评测_证据/outputs/E03-revised",
+      "--report",
+      "/Users/myl/Documents/paper/07-research/2026-10-11-论文写作润色技能评测_证据/runs/E03-compare.json"
+    ],
+    "exit_code": 0,
+    "stdout": "{\n  \"changes\": {},\n  \"requires_semantic_review\": true,\n  \"limitations\": \"Static lexical audit; macro expansion, arbitrary TeX constructs and scientific meaning are not validated. Numeric changes may be harmless bibliography/format changes and need context.\"\n}\n",
+    "stderr": "",
+    "time": "2026-10-11T05:37:13.556448+00:00"
+  },
+  {
+    "case": "E04-compare",
+    "command": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "/Users/myl/Documents/paper/.claude/skills/paper-writing-shared/scripts/project.py",
+      "compare",
+      "--before",
+      "/Users/myl/Documents/paper/07-research/2026-10-11-论文写作润色技能评测_证据/outputs/E03-revised",
+      "--after",
+      "/Users/myl/Documents/paper/07-research/2026-10-11-论文写作润色技能评测_证据/outputs/E04-tai-migrated",
+      "--report",
+      "/Users/myl/Documents/paper/07-research/2026-10-11-论文写作润色技能评测_证据/runs/E04-compare.json"
+    ],
+    "exit_code": 1,
+    "stdout": "{\n  \"changes\": {\n    \"macro_names\": {\n      \"removed\": {\n        \"theHalgorithm\": 1\n      },\n      \"added\": {}\n    },\n    \"macro_definitions\": {\n      \"removed\": {\n        \"\\\\providecommand{\\\\theHalgorithm}{\\\\arabic{algorithm}}\": 1\n      },\n      \"added\": {}\n    },\n    \"numeric_tokens\": {\n      \"removed\": {\n        \"026\": 2,\n        \"0.3\": 1\n      },\n      \"added\": {}\n    }\n  },\n  \"requires_semantic_review\": true,\n  \"limitations\": \"Static lexical audit; macro expansion, arbitrary TeX constructs and scientific meaning are not validated. Numeric changes may be harmless bibliography/format changes and need context.\"\n}\n",
+    "stderr": "",
+    "time": "2026-10-11T05:37:13.594252+00:00"
+  },
+  {
+    "case": "E06-unknown-venue",
+    "command": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "/Users/myl/Documents/paper/.claude/skills/paper-writing-shared/scripts/project.py",
+      "init",
+      "--venue",
+      "unsupported",
+      "--output",
+      "/Users/myl/Documents/paper/07-research/2026-10-11-论文写作润色技能评测_证据/outputs/unknown-venue"
+    ],
+    "exit_code": 2,
+    "stdout": "",
+    "stderr": "Unknown venue unsupported; choose aaai, ijcai, icml, neurips, iclr, colt, jmlr, tmlr, tpami, tnnls, tai\n",
+    "time": "2026-10-11T05:37:13.631544+00:00",
+    "target_created": false
+  },
+  {
+    "case": "E06-unknown-year",
+    "command": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "/Users/myl/Documents/paper/.claude/skills/paper-writing-shared/scripts/project.py",
+      "init",
+      "--venue",
+      "icml",
+      "--version",
+      "2099",
+      "--output",
+      "/Users/myl/Documents/paper/07-research/2026-10-11-论文写作润色技能评测_证据/outputs/unknown-year"
+    ],
+    "exit_code": 2,
+    "stdout": "",
+    "stderr": "No verified icml 2099 template; available: 2026\n",
+    "time": "2026-10-11T05:37:13.668467+00:00",
+    "target_created": false
+  },
+  {
+    "case": "E06-existing",
+    "command": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "/Users/myl/Documents/paper/.claude/skills/paper-writing-shared/scripts/project.py",
+      "init",
+      "--venue",
+      "icml",
+      "--output",
+      "/Users/myl/Documents/paper/07-research/2026-10-11-论文写作润色技能评测_证据/outputs/E03-original"
+    ],
+    "exit_code": 2,
+    "stdout": "",
+    "stderr": "Destination already exists; refusing overwrite: /Users/myl/Documents/paper/07-research/2026-10-11-论文写作润色技能评测_证据/outputs/E03-original\n",
+    "time": "2026-10-11T05:37:13.708513+00:00",
+    "original_unchanged": true
+  },
+  {
+    "case": "E07-aaai-submission",
+    "command": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "/Users/myl/Documents/paper/.claude/skills/paper-writing-shared/scripts/project.py",
+      "init",
+      "--venue",
+      "aaai",
+      "--mode",
+      "submission",
+      "--output",
+      "/Users/myl/Documents/paper/07-research/2026-10-11-论文写作润色技能评测_证据/outputs/template-matrix/aaai-submission"
+    ],
+    "exit_code": 0,
+    "stdout": "{\"created\": \"/Users/myl/Documents/paper/07-research/2026-10-11-论文写作润色技能评测_证据/outputs/template-matrix/aaai-submission\", \"venue\": \"aaai\", \"version\": \"2027\", \"mode\": \"submission\"}\n",
+    "stderr": "",
+    "time": "2026-10-11T05:37:13.749127+00:00",
+    "official_hashes_match": true,
+    "stage_anonymous": true,
+    "unverified_stage_fields": []
+  },
+  {
+    "case": "E07-aaai-final",
+    "command": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "/Users/myl/Documents/paper/.claude/skills/paper-writing-shared/scripts/project.py",
+      "init",
+      "--venue",
+      "aaai",
+      "--mode",
+      "final",
+      "--output",
+      "/Users/myl/Documents/paper/07-research/2026-10-11-论文写作润色技能评测_证据/outputs/template-matrix/aaai-final"
+    ],
+    "exit_code": 0,
+    "stdout": "{\"created\": \"/Users/myl/Documents/paper/07-research/2026-10-11-论文写作润色技能评测_证据/outputs/template-matrix/aaai-final\", \"venue\": \"aaai\", \"version\": \"2027\", \"mode\": \"final\"}\n",
+    "stderr": "",
+    "time": "2026-10-11T05:37:13.790217+00:00",
+    "official_hashes_match": true,
+    "stage_anonymous": false,
+    "unverified_stage_fields": []
+  },
+  {
+    "case": "E07-ijcai-submission",
+    "command": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "/Users/myl/Documents/paper/.claude/skills/paper-writing-shared/scripts/project.py",
+      "init",
+      "--venue",
+      "ijcai",
+      "--mode",
+      "submission",
+      "--output",
+      "/Users/myl/Documents/paper/07-research/2026-10-11-论文写作润色技能评测_证据/outputs/template-matrix/ijcai-submission"
+    ],
+    "exit_code": 0,
+    "stdout": "{\"created\": \"/Users/myl/Documents/paper/07-research/2026-10-11-论文写作润色技能评测_证据/outputs/template-matrix/ijcai-submission\", \"venue\": \"ijcai\", \"version\": \"2026\", \"mode\": \"submission\"}\n",
+    "stderr": "",
+    "time": "2026-10-11T05:37:13.831250+00:00",
+    "official_hashes_match": true,
+    "stage_anonymous": true,
+    "unverified_stage_fields": []
+  },
+  {
+    "case": "E07-ijcai-final",
+    "command": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "/Users/myl/Documents/paper/.claude/skills/paper-writing-shared/scripts/project.py",
+      "init",
+      "--venue",
+      "ijcai",
+      "--mode",
+      "final",
+      "--output",
+      "/Users/myl/Documents/paper/07-research/2026-10-11-论文写作润色技能评测_证据/outputs/template-matrix/ijcai-final"
+    ],
+    "exit_code": 0,
+    "stdout": "{\"created\": \"/Users/myl/Documents/paper/07-research/2026-10-11-论文写作润色技能评测_证据/outputs/template-matrix/ijcai-final\", \"venue\": \"ijcai\", \"version\": \"2026\", \"mode\": \"final\"}\n",
+    "stderr": "",
+    "time": "2026-10-11T05:37:13.872067+00:00",
+    "official_hashes_match": true,
+    "stage_anonymous": false,
+    "unverified_stage_fields": [
+      "main_page_limit"
+    ]
+  },
+  {
+    "case": "E07-icml-submission",
+    "command": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "/Users/myl/Documents/paper/.claude/skills/paper-writing-shared/scripts/project.py",
+      "init",
+      "--venue",
+      "icml",
+      "--mode",
+      "submission",
+      "--output",
+      "/Users/myl/Documents/paper/07-research/2026-10-11-论文写作润色技能评测_证据/outputs/template-matrix/icml-submission"
+    ],
+    "exit_code": 0,
+    "stdout": "{\"created\": \"/Users/myl/Documents/paper/07-research/2026-10-11-论文写作润色技能评测_证据/outputs/template-matrix/icml-submission\", \"venue\": \"icml\", \"version\": \"2026\", \"mode\": \"submission\"}\n",
+    "stderr": "",
+    "time": "2026-10-11T05:37:13.912102+00:00",
+    "official_hashes_match": true,
+    "stage_anonymous": true,
+    "unverified_stage_fields": []
+  },
+  {
+    "case": "E07-icml-final",
+    "command": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "/Users/myl/Documents/paper/.claude/skills/paper-writing-shared/scripts/project.py",
+      "init",
+      "--venue",
+      "icml",
+      "--mode",
+      "final",
+      "--output",
+      "/Users/myl/Documents/paper/07-research/2026-10-11-论文写作润色技能评测_证据/outputs/template-matrix/icml-final"
+    ],
+    "exit_code": 0,
+    "stdout": "{\"created\": \"/Users/myl/Documents/paper/07-research/2026-10-11-论文写作润色技能评测_证据/outputs/template-matrix/icml-final\", \"venue\": \"icml\", \"version\": \"2026\", \"mode\": \"final\"}\n",
+    "stderr": "",
+    "time": "2026-10-11T05:37:13.952556+00:00",
+    "official_hashes_match": true,
+    "stage_anonymous": false,
+    "unverified_stage_fields": []
+  },
+  {
+    "case": "E07-neurips-submission",
+    "command": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "/Users/myl/Documents/paper/.claude/skills/paper-writing-shared/scripts/project.py",
+      "init",
+      "--venue",
+      "neurips",
+      "--mode",
+      "submission",
+      "--output",
+      "/Users/myl/Documents/paper/07-research/2026-10-11-论文写作润色技能评测_证据/outputs/template-matrix/neurips-submission"
+    ],
+    "exit_code": 0,
+    "stdout": "{\"created\": \"/Users/myl/Documents/paper/07-research/2026-10-11-论文写作润色技能评测_证据/outputs/template-matrix/neurips-submission\", \"venue\": \"neurips\", \"version\": \"2026\", \"mode\": \"submission\"}\n",
+    "stderr": "",
+    "time": "2026-10-11T05:37:13.993987+00:00",
+    "official_hashes_match": true,
+    "stage_anonymous": true,
+    "unverified_stage_fields": []
+  },
+  {
+    "case": "E07-neurips-final",
+    "command": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "/Users/myl/Documents/paper/.claude/skills/paper-writing-shared/scripts/project.py",
+      "init",
+      "--venue",
+      "neurips",
+      "--mode",
+      "final",
+      "--output",
+      "/Users/myl/Documents/paper/07-research/2026-10-11-论文写作润色技能评测_证据/outputs/template-matrix/neurips-final"
+    ],
+    "exit_code": 0,
+    "stdout": "{\"created\": \"/Users/myl/Documents/paper/07-research/2026-10-11-论文写作润色技能评测_证据/outputs/template-matrix/neurips-final\", \"venue\": \"neurips\", \"version\": \"2026\", \"mode\": \"final\"}\n",
+    "stderr": "",
+    "time": "2026-10-11T05:37:14.033372+00:00",
+    "official_hashes_match": true,
+    "stage_anonymous": false,
+    "unverified_stage_fields": []
+  },
+  {
+    "case": "E07-iclr-submission",
+    "command": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "/Users/myl/Documents/paper/.claude/skills/paper-writing-shared/scripts/project.py",
+      "init",
+      "--venue",
+      "iclr",
+      "--mode",
+      "submission",
+      "--output",
+      "/Users/myl/Documents/paper/07-research/2026-10-11-论文写作润色技能评测_证据/outputs/template-matrix/iclr-submission"
+    ],
+    "exit_code": 0,
+    "stdout": "{\"created\": \"/Users/myl/Documents/paper/07-research/2026-10-11-论文写作润色技能评测_证据/outputs/template-matrix/iclr-submission\", \"venue\": \"iclr\", \"version\": \"2027\", \"mode\": \"submission\"}\n",
+    "stderr": "",
+    "time": "2026-10-11T05:37:14.073582+00:00",
+    "official_hashes_match": true,
+    "stage_anonymous": true,
+    "unverified_stage_fields": []
+  },
+  {
+    "case": "E07-iclr-final",
+    "command": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "/Users/myl/Documents/paper/.claude/skills/paper-writing-shared/scripts/project.py",
+      "init",
+      "--venue",
+      "iclr",
+      "--mode",
+      "final",
+      "--output",
+      "/Users/myl/Documents/paper/07-research/2026-10-11-论文写作润色技能评测_证据/outputs/template-matrix/iclr-final"
+    ],
+    "exit_code": 0,
+    "stdout": "{\"created\": \"/Users/myl/Documents/paper/07-research/2026-10-11-论文写作润色技能评测_证据/outputs/template-matrix/iclr-final\", \"venue\": \"iclr\", \"version\": \"2027\", \"mode\": \"final\"}\n",
+    "stderr": "",
+    "time": "2026-10-11T05:37:14.120157+00:00",
+    "official_hashes_match": true,
+    "stage_anonymous": false,
+    "unverified_stage_fields": []
+  },
+  {
+    "case": "E07-colt-submission",
+    "command": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "/Users/myl/Documents/paper/.claude/skills/paper-writing-shared/scripts/project.py",
+      "init",
+      "--venue",
+      "colt",
+      "--mode",
+      "submission",
+      "--output",
+      "/Users/myl/Documents/paper/07-research/2026-10-11-论文写作润色技能评测_证据/outputs/template-matrix/colt-submission"
+    ],
+    "exit_code": 0,
+    "stdout": "{\"created\": \"/Users/myl/Documents/paper/07-research/2026-10-11-论文写作润色技能评测_证据/outputs/template-matrix/colt-submission\", \"venue\": \"colt\", \"version\": \"2026\", \"mode\": \"submission\"}\n",
+    "stderr": "",
+    "time": "2026-10-11T05:37:14.162697+00:00",
+    "official_hashes_match": true,
+    "stage_anonymous": true,
+    "unverified_stage_fields": []
+  },
+  {
+    "case": "E07-colt-final",
+    "command": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "/Users/myl/Documents/paper/.claude/skills/paper-writing-shared/scripts/project.py",
+      "init",
+      "--venue",
+      "colt",
+      "--mode",
+      "final",
+      "--output",
+      "/Users/myl/Documents/paper/07-research/2026-10-11-论文写作润色技能评测_证据/outputs/template-matrix/colt-final"
+    ],
+    "exit_code": 0,
+    "stdout": "{\"created\": \"/Users/myl/Documents/paper/07-research/2026-10-11-论文写作润色技能评测_证据/outputs/template-matrix/colt-final\", \"venue\": \"colt\", \"version\": \"2026\", \"mode\": \"final\"}\n",
+    "stderr": "",
+    "time": "2026-10-11T05:37:14.206989+00:00",
+    "official_hashes_match": true,
+    "stage_anonymous": false,
+    "unverified_stage_fields": [
+      "main_page_limit"
+    ]
+  },
+  {
+    "case": "E07-jmlr-submission",
+    "command": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "/Users/myl/Documents/paper/.claude/skills/paper-writing-shared/scripts/project.py",
+      "init",
+      "--venue",
+      "jmlr",
+      "--mode",
+      "submission",
+      "--output",
+      "/Users/myl/Documents/paper/07-research/2026-10-11-论文写作润色技能评测_证据/outputs/template-matrix/jmlr-submission"
+    ],
+    "exit_code": 0,
+    "stdout": "{\"created\": \"/Users/myl/Documents/paper/07-research/2026-10-11-论文写作润色技能评测_证据/outputs/template-matrix/jmlr-submission\", \"venue\": \"jmlr\", \"version\": \"2026\", \"mode\": \"submission\"}\n",
+    "stderr": "",
+    "time": "2026-10-11T05:37:14.248828+00:00",
+    "official_hashes_match": true,
+    "stage_anonymous": false,
+    "unverified_stage_fields": [
+      "main_page_limit"
+    ]
+  },
+  {
+    "case": "E07-jmlr-final",
+    "command": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "/Users/myl/Documents/paper/.claude/skills/paper-writing-shared/scripts/project.py",
+      "init",
+      "--venue",
+      "jmlr",
+      "--mode",
+      "final",
+      "--output",
+      "/Users/myl/Documents/paper/07-research/2026-10-11-论文写作润色技能评测_证据/outputs/template-matrix/jmlr-final"
+    ],
+    "exit_code": 0,
+    "stdout": "{\"created\": \"/Users/myl/Documents/paper/07-research/2026-10-11-论文写作润色技能评测_证据/outputs/template-matrix/jmlr-final\", \"venue\": \"jmlr\", \"version\": \"2026\", \"mode\": \"final\"}\n",
+    "stderr": "",
+    "time": "2026-10-11T05:37:14.287368+00:00",
+    "official_hashes_match": true,
+    "stage_anonymous": false,
+    "unverified_stage_fields": [
+      "main_page_limit"
+    ]
+  },
+  {
+    "case": "E07-tmlr-submission",
+    "command": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "/Users/myl/Documents/paper/.claude/skills/paper-writing-shared/scripts/project.py",
+      "init",
+      "--venue",
+      "tmlr",
+      "--mode",
+      "submission",
+      "--output",
+      "/Users/myl/Documents/paper/07-research/2026-10-11-论文写作润色技能评测_证据/outputs/template-matrix/tmlr-submission"
+    ],
+    "exit_code": 0,
+    "stdout": "{\"created\": \"/Users/myl/Documents/paper/07-research/2026-10-11-论文写作润色技能评测_证据/outputs/template-matrix/tmlr-submission\", \"venue\": \"tmlr\", \"version\": \"2026\", \"mode\": \"submission\"}\n",
+    "stderr": "",
+    "time": "2026-10-11T05:37:14.325883+00:00",
+    "official_hashes_match": true,
+    "stage_anonymous": true,
+    "unverified_stage_fields": [
+      "main_page_limit"
+    ]
+  },
+  {
+    "case": "E07-tmlr-final",
+    "command": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "/Users/myl/Documents/paper/.claude/skills/paper-writing-shared/scripts/project.py",
+      "init",
+      "--venue",
+      "tmlr",
+      "--mode",
+      "final",
+      "--output",
+      "/Users/myl/Documents/paper/07-research/2026-10-11-论文写作润色技能评测_证据/outputs/template-matrix/tmlr-final"
+    ],
+    "exit_code": 0,
+    "stdout": "{\"created\": \"/Users/myl/Documents/paper/07-research/2026-10-11-论文写作润色技能评测_证据/outputs/template-matrix/tmlr-final\", \"venue\": \"tmlr\", \"version\": \"2026\", \"mode\": \"final\"}\n",
+    "stderr": "",
+    "time": "2026-10-11T05:37:14.363941+00:00",
+    "official_hashes_match": true,
+    "stage_anonymous": false,
+    "unverified_stage_fields": [
+      "main_page_limit"
+    ]
+  },
+  {
+    "case": "E07-tpami-submission",
+    "command": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "/Users/myl/Documents/paper/.claude/skills/paper-writing-shared/scripts/project.py",
+      "init",
+      "--venue",
+      "tpami",
+      "--mode",
+      "submission",
+      "--output",
+      "/Users/myl/Documents/paper/07-research/2026-10-11-论文写作润色技能评测_证据/outputs/template-matrix/tpami-submission"
+    ],
+    "exit_code": 0,
+    "stdout": "{\"created\": \"/Users/myl/Documents/paper/07-research/2026-10-11-论文写作润色技能评测_证据/outputs/template-matrix/tpami-submission\", \"venue\": \"tpami\", \"version\": \"2026\", \"mode\": \"submission\"}\n",
+    "stderr": "",
+    "time": "2026-10-11T05:37:14.402690+00:00",
+    "official_hashes_match": true,
+    "stage_anonymous": null,
+    "unverified_stage_fields": [
+      "main_page_limit",
+      "anonymous"
+    ]
+  },
+  {
+    "case": "E07-tpami-final",
+    "command": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "/Users/myl/Documents/paper/.claude/skills/paper-writing-shared/scripts/project.py",
+      "init",
+      "--venue",
+      "tpami",
+      "--mode",
+      "final",
+      "--output",
+      "/Users/myl/Documents/paper/07-research/2026-10-11-论文写作润色技能评测_证据/outputs/template-matrix/tpami-final"
+    ],
+    "exit_code": 0,
+    "stdout": "{\"created\": \"/Users/myl/Documents/paper/07-research/2026-10-11-论文写作润色技能评测_证据/outputs/template-matrix/tpami-final\", \"venue\": \"tpami\", \"version\": \"2026\", \"mode\": \"final\"}\n",
+    "stderr": "",
+    "time": "2026-10-11T05:37:14.443602+00:00",
+    "official_hashes_match": true,
+    "stage_anonymous": false,
+    "unverified_stage_fields": [
+      "main_page_limit"
+    ]
+  },
+  {
+    "case": "E07-tnnls-submission",
+    "command": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "/Users/myl/Documents/paper/.claude/skills/paper-writing-shared/scripts/project.py",
+      "init",
+      "--venue",
+      "tnnls",
+      "--mode",
+      "submission",
+      "--output",
+      "/Users/myl/Documents/paper/07-research/2026-10-11-论文写作润色技能评测_证据/outputs/template-matrix/tnnls-submission"
+    ],
+    "exit_code": 0,
+    "stdout": "{\"created\": \"/Users/myl/Documents/paper/07-research/2026-10-11-论文写作润色技能评测_证据/outputs/template-matrix/tnnls-submission\", \"venue\": \"tnnls\", \"version\": \"2026\", \"mode\": \"submission\"}\n",
+    "stderr": "",
+    "time": "2026-10-11T05:37:14.484420+00:00",
+    "official_hashes_match": true,
+    "stage_anonymous": true,
+    "unverified_stage_fields": [
+      "main_page_limit"
+    ]
+  },
+  {
+    "case": "E07-tnnls-final",
+    "command": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "/Users/myl/Documents/paper/.claude/skills/paper-writing-shared/scripts/project.py",
+      "init",
+      "--venue",
+      "tnnls",
+      "--mode",
+      "final",
+      "--output",
+      "/Users/myl/Documents/paper/07-research/2026-10-11-论文写作润色技能评测_证据/outputs/template-matrix/tnnls-final"
+    ],
+    "exit_code": 0,
+    "stdout": "{\"created\": \"/Users/myl/Documents/paper/07-research/2026-10-11-论文写作润色技能评测_证据/outputs/template-matrix/tnnls-final\", \"venue\": \"tnnls\", \"version\": \"2026\", \"mode\": \"final\"}\n",
+    "stderr": "",
+    "time": "2026-10-11T05:37:14.525084+00:00",
+    "official_hashes_match": true,
+    "stage_anonymous": false,
+    "unverified_stage_fields": [
+      "main_page_limit"
+    ]
+  },
+  {
+    "case": "E07-tai-submission",
+    "command": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "/Users/myl/Documents/paper/.claude/skills/paper-writing-shared/scripts/project.py",
+      "init",
+      "--venue",
+      "tai",
+      "--mode",
+      "submission",
+      "--output",
+      "/Users/myl/Documents/paper/07-research/2026-10-11-论文写作润色技能评测_证据/outputs/template-matrix/tai-submission"
+    ],
+    "exit_code": 0,
+    "stdout": "{\"created\": \"/Users/myl/Documents/paper/07-research/2026-10-11-论文写作润色技能评测_证据/outputs/template-matrix/tai-submission\", \"venue\": \"tai\", \"version\": \"2026\", \"mode\": \"submission\"}\n",
+    "stderr": "",
+    "time": "2026-10-11T05:37:14.564699+00:00",
+    "official_hashes_match": true,
+    "stage_anonymous": true,
+    "unverified_stage_fields": [
+      "main_page_limit"
+    ]
+  },
+  {
+    "case": "E07-tai-final",
+    "command": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "/Users/myl/Documents/paper/.claude/skills/paper-writing-shared/scripts/project.py",
+      "init",
+      "--venue",
+      "tai",
+      "--mode",
+      "final",
+      "--output",
+      "/Users/myl/Documents/paper/07-research/2026-10-11-论文写作润色技能评测_证据/outputs/template-matrix/tai-final"
+    ],
+    "exit_code": 0,
+    "stdout": "{\"created\": \"/Users/myl/Documents/paper/07-research/2026-10-11-论文写作润色技能评测_证据/outputs/template-matrix/tai-final\", \"venue\": \"tai\", \"version\": \"2026\", \"mode\": \"final\"}\n",
+    "stderr": "",
+    "time": "2026-10-11T05:37:14.603153+00:00",
+    "official_hashes_match": true,
+    "stage_anonymous": false,
+    "unverified_stage_fields": [
+      "main_page_limit"
+    ]
+  },
+  {
+    "case": "E08-default-entrypoint",
+    "command": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "/Users/myl/Documents/paper/.claude/skills/paper-writing-shared/scripts/project.py",
+      "compile",
+      "--project",
+      "/Users/myl/Documents/paper/07-research/2026-10-11-论文写作润色技能评测_证据/outputs/E03-revised"
+    ],
+    "exit_code": 2,
+    "stdout": "",
+    "stderr": "Missing entrypoint: /Users/myl/Documents/paper/07-research/2026-10-11-论文写作润色技能评测_证据/outputs/E03-revised/main.tex\n",
+    "time": "2026-10-11T05:37:14.638486+00:00"
+  },
+  {
+    "case": "E08-stale-pdf",
+    "command": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "/Users/myl/Documents/paper/.claude/skills/paper-writing-shared/scripts/project.py",
+      "check",
+      "--project",
+      "/Users/myl/Documents/paper/07-research/2026-10-11-论文写作润色技能评测_证据/outputs/E08-stale-pdf"
+    ],
+    "exit_code": 0,
+    "stdout": "{\n  \"project\": \"/Users/myl/Documents/paper/07-research/2026-10-11-论文写作润色技能评测_证据/outputs/E08-stale-pdf\",\n  \"entrypoint\": \"article.tex\",\n  \"issues\": [],\n  \"warnings\": [],\n  \"main_pages\": 1,\n  \"total_pages\": 2,\n  \"word_count_estimates\": {},\n  \"limits\": {\n    \"available\": true,\n    \"directory\": \"project/submission\",\n    \"anonymous\": true,\n    \"main_page_limit\": 8,\n    \"page_limit_status\": \"verified\",\n    \"counting\": \"Main text unless journal-specific rules explicitly include references\",\n    \"engine\": \"pdflatex\",\n    \"article_type\": \"original-research\",\n    \"full_manuscript_page_limit\": null,\n    \"max_pdf_megabytes\": 50,\n    \"validation\": {\n      \"compile\": \"passed\",\n      \"unresolved_citations_or_references\": false,\n      \"visual_review\": \"reviewed all rendered pages\",\n      \"rendered_pages\": 3,\n      \"verified_on\": \"2026-10-11\",\n      \"evidence_path\": \"07-research/2026-10-10-顶会顶刊写作风格调研_证据/templates/render-results.json\",\n      \"submission_compliance\": \"pending author content and policy fields\"\n    }\n  },\n  \"static_check_passed\": true,\n  \"visual_check\": \"not-performed-by-this-command\",\n  \"official_system_check\": \"not-performed\",\n  \"semantic_fidelity\": \"requires-review\"\n}\n",
+    "stderr": "",
+    "time": "2026-10-11T05:37:14.709942+00:00"
+  },
+  {
+    "case": "E08-bib-drift",
+    "command": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "/Users/myl/Documents/paper/.claude/skills/paper-writing-shared/scripts/project.py",
+      "compare",
+      "--before",
+      "/Users/myl/Documents/paper/07-research/2026-10-11-论文写作润色技能评测_证据/outputs/E03-revised",
+      "--after",
+      "/Users/myl/Documents/paper/07-research/2026-10-11-论文写作润色技能评测_证据/outputs/E08-bib-drift",
+      "--report",
+      "/Users/myl/Documents/paper/07-research/2026-10-11-论文写作润色技能评测_证据/runs/E08-bib-before.json"
+    ],
+    "exit_code": 0,
+    "stdout": "{\n  \"changes\": {},\n  \"requires_semantic_review\": true,\n  \"limitations\": \"Static lexical audit; macro expansion, arbitrary TeX constructs and scientific meaning are not validated. Numeric changes may be harmless bibliography/format changes and need context.\"\n}\n",
+    "stderr": "",
+    "time": "2026-10-11T05:37:14.752227+00:00"
+  },
+  {
+    "case": "E08-author-leak-compile",
+    "command": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "/Users/myl/Documents/paper/.claude/skills/paper-writing-shared/scripts/project.py",
+      "compile",
+      "--project",
+      "/Users/myl/Documents/paper/07-research/2026-10-11-论文写作润色技能评测_证据/outputs/E08-author-leak"
+    ],
+    "exit_code": 0,
+    "stdout": "{\"command\": [\"/Library/TeX/texbin/latexmk\", \"-norc\", \"-pdf\", \"-interaction=nonstopmode\", \"-halt-on-error\", \"-file-line-error\", \"-latexoption=-no-shell-escape\", \"-outdir=/Users/myl/Documents/paper/07-research/2026-10-11-论文写作润色技能评测_证据/outputs/E08-author-leak/build\", \"/Users/myl/Documents/paper/07-research/2026-10-11-论文写作润色技能评测_证据/outputs/E08-author-leak/main.tex\"], \"entrypoint\": \"main.tex\", \"checked_at\": \"2026-10-11T05:37:15.225359+00:00\", \"exit_code\": 0, \"pdf\": \"/Users/myl/Documents/paper/07-research/2026-10-11-论文写作润色技能评测_证据/outputs/E08-author-leak/build/main.pdf\"}\n",
+    "stderr": "",
+    "time": "2026-10-11T05:37:15.229726+00:00"
+  },
+  {
+    "case": "E08-author-leak-check",
+    "command": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "/Users/myl/Documents/paper/.claude/skills/paper-writing-shared/scripts/project.py",
+      "check",
+      "--project",
+      "/Users/myl/Documents/paper/07-research/2026-10-11-论文写作润色技能评测_证据/outputs/E08-author-leak"
+    ],
+    "exit_code": 0,
+    "stdout": "{\n  \"project\": \"/Users/myl/Documents/paper/07-research/2026-10-11-论文写作润色技能评测_证据/outputs/E08-author-leak\",\n  \"entrypoint\": \"main.tex\",\n  \"issues\": [],\n  \"warnings\": [\n    {\n      \"kind\": \"page-policy-unverified\"\n    },\n    {\n      \"kind\": \"source-word-count-estimate\",\n      \"note\": \"TeX macros may change rendered counts; manually verify\"\n    }\n  ],\n  \"main_pages\": 1,\n  \"total_pages\": 1,\n  \"word_count_estimates\": {\n    \"abstract\": 76,\n    \"IEEEImpStatement\": 117\n  },\n  \"limits\": {\n    \"available\": true,\n    \"directory\": \"project/submission\",\n    \"anonymous\": true,\n    \"main_page_limit\": null,\n    \"page_limit_status\": \"requires-target-stage-verification\",\n    \"counting\": \"Main text unless journal-specific rules explicitly include references\",\n    \"engine\": \"pdflatex\",\n    \"article_type\": \"original-research\",\n    \"full_manuscript_page_limit\": 15,\n    \"max_pdf_megabytes\": null,\n    \"validation\": {\n      \"compile\": \"passed\",\n      \"unresolved_citations_or_references\": false,\n      \"visual_review\": \"reviewed all rendered pages\",\n      \"rendered_pages\": 2,\n      \"verified_on\": \"2026-10-11\",\n      \"evidence_path\": \"07-research/2026-10-10-顶会顶刊写作风格调研_证据/templates/render-results.json\",\n      \"submission_compliance\": \"pending author content and policy fields\"\n    }\n  },\n  \"static_check_passed\": true,\n  \"visual_check\": \"not-performed-by-this-command\",\n  \"official_system_check\": \"not-performed\",\n  \"semantic_fidelity\": \"requires-review\"\n}\n",
+    "stderr": "",
+    "time": "2026-10-11T05:37:15.292234+00:00"
+  },
+  {
+    "case": "E08-macro-title-compile",
+    "command": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "/Users/myl/Documents/paper/.claude/skills/paper-writing-shared/scripts/project.py",
+      "compile",
+      "--project",
+      "/Users/myl/Documents/paper/07-research/2026-10-11-论文写作润色技能评测_证据/outputs/E08-macro-title"
+    ],
+    "exit_code": 0,
+    "stdout": "{\"command\": [\"/Library/TeX/texbin/latexmk\", \"-norc\", \"-pdf\", \"-interaction=nonstopmode\", \"-halt-on-error\", \"-file-line-error\", \"-latexoption=-no-shell-escape\", \"-outdir=/Users/myl/Documents/paper/07-research/2026-10-11-论文写作润色技能评测_证据/outputs/E08-macro-title/build\", \"/Users/myl/Documents/paper/07-research/2026-10-11-论文写作润色技能评测_证据/outputs/E08-macro-title/main.tex\"], \"entrypoint\": \"main.tex\", \"checked_at\": \"2026-10-11T05:37:15.839340+00:00\", \"exit_code\": 0, \"pdf\": \"/Users/myl/Documents/paper/07-research/2026-10-11-论文写作润色技能评测_证据/outputs/E08-macro-title/build/main.pdf\"}\n",
+    "stderr": "",
+    "time": "2026-10-11T05:37:15.844368+00:00"
+  },
+  {
+    "case": "E08-macro-title-check",
+    "command": [
+      "/opt/homebrew/opt/python@3.14/bin/python3.14",
+      "/Users/myl/Documents/paper/.claude/skills/paper-writing-shared/scripts/project.py",
+      "check",
+      "--project",
+      "/Users/myl/Documents/paper/07-research/2026-10-11-论文写作润色技能评测_证据/outputs/E08-macro-title"
+    ],
+    "exit_code": 0,
+    "stdout": "{\n  \"project\": \"/Users/myl/Documents/paper/07-research/2026-10-11-论文写作润色技能评测_证据/outputs/E08-macro-title\",\n  \"entrypoint\": \"main.tex\",\n  \"issues\": [],\n  \"warnings\": [\n    {\n      \"kind\": \"page-policy-unverified\"\n    },\n    {\n      \"kind\": \"source-word-count-estimate\",\n      \"note\": \"TeX macros may change rendered counts; manually verify\"\n    }\n  ],\n  \"main_pages\": 1,\n  \"total_pages\": 1,\n  \"word_count_estimates\": {\n    \"abstract\": 76,\n    \"IEEEImpStatement\": 117\n  },\n  \"limits\": {\n    \"available\": true,\n    \"directory\": \"project/submission\",\n    \"anonymous\": true,\n    \"main_page_limit\": null,\n    \"page_limit_status\": \"requires-target-stage-verification\",\n    \"counting\": \"Main text unless journal-specific rules explicitly include references\",\n    \"engine\": \"pdflatex\",\n    \"article_type\": \"original-research\",\n    \"full_manuscript_page_limit\": 15,\n    \"max_pdf_megabytes\": null,\n    \"validation\": {\n      \"compile\": \"passed\",\n      \"unresolved_citations_or_references\": false,\n      \"visual_review\": \"reviewed all rendered pages\",\n      \"rendered_pages\": 2,\n      \"verified_on\": \"2026-10-11\",\n      \"evidence_path\": \"07-research/2026-10-10-顶会顶刊写作风格调研_证据/templates/render-results.json\",\n      \"submission_compliance\": \"pending author content and policy fields\"\n    }\n  },\n  \"static_check_passed\": true,\n  \"visual_check\": \"not-performed-by-this-command\",\n  \"official_system_check\": \"not-performed\",\n  \"semantic_fidelity\": \"requires-review\"\n}\n",
+    "stderr": "",
+    "time": "2026-10-11T05:37:15.916858+00:00"
+  }
+]

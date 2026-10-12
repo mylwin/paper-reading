@@ -1,0 +1,135 @@
+000
+001
+002                         A Fixed Confidence Gate for Selective Classification
+003
+004
+005
+006                                                       Anonymous Authors1
+007
+008
+009                            Abstract                                    3. Synthetic Evaluation
+010
+           We evaluate a fixed confidence gate for selec-                  Alpha and Beta each contain 1000 synthetic samples. Both
+011
+           tive classification using two synthetic fixtures.               methods use the same model and 5 evaluation seeds; results
+012
+           The gate abstains below a specified confidence                  are seed means, with no variance estimates.
+013
+           threshold. We report accuracy among accepted
+014                                                                        Table 1. Synthetic fixture values. Always accuracy uses all sam-
+           predictions together with coverage. Conditional
+015                                                                        ples; Gate accuracy is conditional on acceptance. These values are
+           accuracy rises on one dataset and falls on the                  not research findings.
+016
+           other, without establishing an overall accuracy
+017
+           improvement. A selective-risk range bound re-                       Dataset    Always (%)       Gate (%)      Coverage (%)
+018
+           quires bounded loss and positive coverage. Un-                      Alpha            80.0           84.0              60.0
+019
+           certainty, runtime, and distribution shift remain                   Beta             76.0           75.5              58.0
+020
+           unevaluated.
+021
+022                                                                        Table 1 shows a higher conditional accuracy on Alpha and
+023                                                                        a lower conditional accuracy on Beta. Different evalua-
+024   1. Introduction                                                      tion populations prevent interpreting these differences as an
+025                                                                        overall accuracy improvement. No significance tests, run-
+      Selective classification allows a model to abstain from uncer-       time measurements, or distribution-shift evaluations were
+026   tain predictions. We evaluate a fixed confidence gate using
+027                                                                        performed.
+      synthetic fixtures. Because the gate selects which predic-
+028   tions are evaluated, we report coverage alongside accuracy
+029   among accepted predictions.                                          4. Limitations and Conclusion
+030
+031                                                                        The synthetic evaluation compares a fixed gate with a sin-
+032   2. Method                                                            gle baseline. It does not establish state-of-the-art perfor-
+033                                                                        mance or a guarantee of lower risk. The classifier and
+      Gate uses a fixed classifier and accepts a prediction when           data-generation details remain missing and are required
+034   its maximum class probability is at least 0.8; otherwise, it
+035                                                                        for reproducibility. Conditional accuracy and coverage de-
+      abstains. Always uses the same classifier and accepts every          scribe the accepted population; deployment benefits remain
+036   prediction. Neither method retrains the model. For a fixed
+037                                                                        untested. The source template follows the ICML author
+      classifier h and acceptance function a(x) ∈ {0, 1}, assume           guidelines (for, 2026).
+038   0 ≤ ℓ(h(x), y) ≤ 1 and positive coverage C = E[a(X)] >
+039   0. Selective risk is
+040                                                                        Impact Statement
+041                         E[a(X)ℓ(h(X), Y )]
+042                  Rsel =                    .                 (1)       This manuscript is a synthetic fixture for evaluating writing
+                                   C
+043                                                                        and template migration skills; its values are not research
+044   Theorem 1 Under these assumptions, 0 ≤ Rsel ≤ 1.                     findings. Reporting coverage with conditional accuracy clar-
+045                                                                        ifies how abstention changes the evaluation population. The
+046   This range bound provides neither a generalization guar-             fixture supports no claim of improved deployment outcomes,
+047   antee nor a comparison between Gate and Always. Ap-                  social benefit, universal applicability, or faster execution.
+048   pendix A gives the full proof.
+049     1
+          Anonymous Institution, Anonymous City, Anonymous Region,         References
+050   Anonymous Country. Correspondence to: Anonymous Author
+051   <anon.email@domain.com>.                                             Icml 2026 author instructions. https://icml.cc/
+052                                                                          Conferences/2026/AuthorInstructions,
+053
+      Preliminary work. Under review by the International Conference         2026.
+      on Machine Learning (ICML). Do not distribute.
+054
+                                                                       1
+                                                        Confidence Gate Evaluation
+
+055   A. Proof of the Range Bound
+056
+057   Since 0 ≤ a(X)ℓ(h(X), Y ) ≤ a(X), taking expectations
+058   gives 0 ≤ E[a(X)ℓ(h(X), Y )] ≤ C. Division by C > 0
+059   proves Theorem 1. This argument applies to the specified
+060   distribution; it does not establish a bound under distribution
+061   shift.
+062
+063
+064
+065
+066
+067
+068
+069
+070
+071
+072
+073
+074
+075
+076
+077
+078
+079
+080
+081
+082
+083
+084
+085
+086
+087
+088
+089
+090
+091
+092
+093
+094
+095
+096
+097
+098
+099
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+                                                                       2
+

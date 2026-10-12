@@ -1,0 +1,54 @@
+{
+  "workspace": "/Users/myl/Documents/paper",
+  "dangling": [
+    {
+      "file": "07-research/2026-10-08-Lp_APS与Muon结合_文献审计与具体研究方案.md",
+      "line": 73,
+      "target": "../../graduate-thesis-code/reproduction/Preconditioned_Inexact_Stochastic_ADMM_for_Deep_Models/runs/fig2/nano/muon/full-v2/run_summary.json"
+    },
+    {
+      "file": "07-research/2026-10-08-Lp_APS与Muon结合_文献审计与具体研究方案.md",
+      "line": 74,
+      "target": "../../graduate-thesis-code/reproduction/Preconditioned_Inexact_Stochastic_ADMM_for_Deep_Models/runs/fig2/nano/lp-sgdma%28优化参数%29/full/run_summary.json"
+    },
+    {
+      "file": "07-research/2026-10-08-Lp_APS与Muon结合_文献审计与具体研究方案.md",
+      "line": 75,
+      "target": "../../graduate-thesis-code/reproduction/Preconditioned_Inexact_Stochastic_ADMM_for_Deep_Models/runs/fig2/nano/lp-sgda%28优化参数%29/full/train_metrics.jsonl"
+    },
+    {
+      "file": "07-research/2026-10-08-Lp_APS与Muon结合_文献审计与具体研究方案.md",
+      "line": 76,
+      "target": "../../graduate-thesis-code/reproduction/Preconditioned_Inexact_Stochastic_ADMM_for_Deep_Models/code/power_aps_optimizers.py"
+    },
+    {
+      "file": "07-research/2026-10-08-Lp_APS与Muon结合_文献审计与具体研究方案.md",
+      "line": 76,
+      "target": "../../graduate-thesis-code/reproduction/Preconditioned_Inexact_Stochastic_ADMM_for_Deep_Models/code/internal_optimizers.py"
+    },
+    {
+      "file": "07-research/2026-10-08-Lp_APS与Muon结合_文献审计与具体研究方案.md",
+      "line": 77,
+      "target": "../../graduate-thesis-code/reproduction/Preconditioned_Inexact_Stochastic_ADMM_for_Deep_Models/code/NanoGPT/train_gpt_sisa_lower_no_2ndgradient.py"
+    },
+    {
+      "file": "07-research/2026-10-10-Muon优化器近三年研究综述与APS_Lp可行性探索.md",
+      "line": 50,
+      "target": "/Users/myl/Documents/graduate-thesis-code/reusable_optimizers/pisa/power_aps.py:132"
+    },
+    {
+      "file": "07-research/2026-10-10-Muon优化器近三年研究综述与APS_Lp可行性探索.md",
+      "line": 50,
+      "target": "/Users/myl/Documents/graduate-thesis-code/reusable_optimizers/pisa/muon.py:28"
+    },
+    {
+      "file": "07-research/2026-10-10-Muon优化器近三年研究综述与APS_Lp可行性探索.md",
+      "line": 93,
+      "target": "/Users/myl/Documents/graduate-thesis-code/reusable_optimizers/pisa/muon.py:53"
+    }
+  ],
+  "dangling_count": 9,
+  "missing_readme": [],
+  "consistency_errors": [],
+  "problems": 9
+}

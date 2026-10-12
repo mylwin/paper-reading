@@ -1,0 +1,51 @@
+{
+  "checked_at_utc": "2026-10-11T05:39:48.118429+00:00",
+  "compilation": {
+    "exit_code": 0,
+    "pdf": "build/main.pdf",
+    "engine": "pdflatex via latexmk",
+    "warnings": []
+  },
+  "static": {
+    "report": "build/format-check.json",
+    "passed": false,
+    "issues": [
+      {
+        "kind": "author-input-pending",
+        "note": "Skeleton is not a finished manuscript"
+      }
+    ],
+    "interpretation": "Expected pending-author-input finding is retained; do not relabel as complete."
+  },
+  "page_count": {
+    "main_end": 3,
+    "total": 3,
+    "local_main_limit": 9
+  },
+  "visual": {
+    "performed": true,
+    "pages_reviewed": [
+      1,
+      2,
+      3
+    ],
+    "source": "build/rendered/page-*.png, rendered from actual compiled PDF",
+    "findings": "No clipping, overlaps, unreadable formulas, or table overflow observed."
+  },
+  "anonymity": {
+    "manual_source_and_pdf_review": "Anonymous authors only; no personal or institutional identifiers, acknowledgments, external research links, or identifying PDF metadata observed.",
+    "official_validation": "not performed"
+  },
+  "semantic": {
+    "known_rule_preserved": true,
+    "threshold_boundary": "inclusive at 0.8",
+    "no_claimed_research_results": true,
+    "no_fabricated_references": true,
+    "prospective_metric_definitions": "explicitly proposals, no measurements",
+    "ai_use_disclosed": true,
+    "author_review": "pending"
+  },
+  "official_system_check": "not performed",
+  "live_policy_check": "not performed; local 2026-10-11 spec only",
+  "submission_ready": false
+}

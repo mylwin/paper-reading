@@ -1,0 +1,275 @@
+{
+  "id": "aaai-2025-12",
+  "venue": "aaai",
+  "year": 2025,
+  "split": "induction",
+  "title": "Online Learning of Coalition Structures by Selfish Agents",
+  "authors": "Saar Cohen, Noa Agmon",
+  "review_date": "2026-10-12",
+  "reviewer": "Codex continuous-reading agent",
+  "mode": "Continuous all-page semantic writing-style review; not independent theorem verification or experimental reproduction",
+  "full_text_style_review_complete": true,
+  "external_appendix_review_complete": true,
+  "count_eligible_full_text_and_relevant_appendix": true,
+  "pdf_path": ".claude/skills/paper-writing-shared/tmp/corpus/aaai/pdf/Online Learning of Coalition Structures by Selfish Agents.pdf",
+  "markdown_path": ".claude/skills/paper-writing-shared/tmp/corpus/aaai/markdown/Online Learning of Coalition Structures by Selfish Agents.md",
+  "pdf_sha256": "6e6eb5f18e792eb14eff2e283d4b2d72e4afa0a2819dcd91ea14dab76db41b33",
+  "version_audit": {
+    "version": "AAAI Press published technical-track version",
+    "official_landing": "https://ojs.aaai.org/index.php/AAAI/article/view/33498",
+    "official_pdf": "https://ojs.aaai.org/index.php/AAAI/article/download/33498/35653",
+    "identity_checks": [
+      "title and authors",
+      "AAAI-24/25 publication header",
+      "proceedings page range"
+    ],
+    "publisher_byte_identity_rechecked": false,
+    "doi": "10.1609/aaai.v39i13.33498",
+    "published_date": "2025-04-11",
+    "proceedings_pages": "13709–13717"
+  },
+  "holdout_validation": null,
+  "official_requirements": [],
+  "generalization_warning": "No official requirement is inferred from these papers; official template/submission-stage rules remain separate.",
+  "coverage": [
+    {
+      "asset": "published main PDF",
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "reading": "continuous full text including all proofs shown and references",
+      "sections": "Abstract; Introduction; Related Work; Preliminaries; Optimistic Online Learning Algorithms; Conclusions and Future Work; Acknowledgments; References"
+    },
+    {
+      "asset": "author-hosted actual Supplementary Materials (AAAI 2025)",
+      "url": "https://u.cs.biu.ac.il/~agmon/CohenAAAI25Sup.pdf",
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "reading": "continuous all-page textual/semantic reading from PDF parser, 1949 indexed source lines with no missing lines",
+      "sections": "A: Theorem 1 proof pp1; B: symmetric-ASHG deviation proof pp1–2; C.1: semi-bandit estimation pp2–3; C.2: bandit estimation and consequences pp3–4; D: semi-bandit regret auxiliaries p5; E: exploration sums pp6–7; F: bandit Nash-regret proof p7",
+      "limitations": "Binary PDF could not be saved due DNS failure/timeout; web screenshot calls did not return usable visible images. Thus supplement typography and potentially ambiguous equation glyphs were not visually certified."
+    }
+  ],
+  "supplement_audit": {
+    "result": "All main-paper-referenced A–F proof sections are present in the actual 7-page author supplement and were continuously read. The cited main reference p8 supplies exact URL. Official landing lists PDF and video; video is not an omitted text appendix.",
+    "author_identity": "same title, Saar Cohen and Noa Agmon, AAAI 2025 supplement heading",
+    "text_line_coverage": "L0–L1948, all 1949 unique indexed source lines covered",
+    "archive": "supplement-web-text-complete.txt",
+    "binary_pdf_archived": false,
+    "download_failure": "normal curl Could not resolve host; escalated curl Resolving timed out after 15004 ms",
+    "visual_supplement_check": "not completed; unavailable screenshot images",
+    "full_text_semantic_count_basis": "Actual supplement text is available and all 7 pages read; count means semantic writing-style reading, not visual/technical proof correctness certification"
+  },
+  "ten_dimensions": {
+    "reader_argument": {
+      "category": "corpus_observation",
+      "observation": "先用学习小组例子降低联盟博弈进入门槛，再明确非合作、自利、Nash稳定性与共享数据平台。一般AI读者得到动机，理论读者得到评价目标。",
+      "positions": [
+        "main pp1–2",
+        "main pp3–4"
+      ],
+      "editorial_advice": "先解释决策者、信息来源及目标，再定义对应的评价量。",
+      "applicability": "仅适用于该非合作在线博弈理论样本；不能据此规定所有AAAI都要生活类比。",
+      "confidence": {
+        "paper_specific": "high",
+        "venue_frequency": "not_estimated; two induction samples cannot establish venue-wide prevalence"
+      }
+    },
+    "title_abstract": {
+      "category": "corpus_observation",
+      "observation": "标题描述问题和行为主体，不带算法缩写；摘要按初始未知偏好→非合作建模→两类反馈→Nash regret与样本复杂度排列，结论是近似稳定及对数因素内最优。",
+      "positions": [
+        "main p1"
+      ],
+      "editorial_advice": "摘要应保留反馈条件、近似性和最优性的量纲/范围，避免仅写一个无条件optimal。",
+      "applicability": "理论工作；没有实验数字不能虚构实证验证。",
+      "confidence": {
+        "paper_specific": "high",
+        "venue_frequency": "not_estimated; two induction samples cannot establish venue-wide prevalence"
+      }
+    },
+    "introduction": {
+      "category": "corpus_observation",
+      "observation": "例子→hedonic games与集中式已知偏好局限→在线未知偏好→Nash稳定目标→共享平台；Contributions段明确既有潜在博弈方法对联合策略空间线性而导致n的指数依赖。",
+      "positions": [
+        "main pp1–2"
+      ],
+      "editorial_advice": "贡献写成具体依赖改进及机制，而非将常规UCB本身说成新算法思想。",
+      "applicability": "保留ASHG对称偏好和共享平台；不是无通信分布式学习。",
+      "confidence": {
+        "paper_specific": "high",
+        "venue_frequency": "not_estimated; two induction samples cannot establish venue-wide prevalence"
+      }
+    },
+    "related_work": {
+      "category": "corpus_observation",
+      "observation": "独立Related Work占pp2–3，按博弈表示/稳定复杂度、在线与动态、PAC、匹配市场、潜在博弈学习分组，各组以信息/合作性/策略规模差异定位。",
+      "positions": [
+        "main pp2–3"
+      ],
+      "editorial_advice": "围绕影响结论的假设轴组织相关工作，说明哪些baseline目标不同。",
+      "applicability": "与KD-Club将相关工作融入引言形成结构反例；不可强制所有AAAI独立该节。",
+      "confidence": {
+        "paper_specific": "high",
+        "venue_frequency": "not_estimated; two induction samples cannot establish venue-wide prevalence"
+      }
+    },
+    "method_theory": {
+      "category": "corpus_observation",
+      "observation": "Preliminaries先给四步交互流程及反馈、regret定义；4.1 bandit与4.2 semi-bandit分开估计器，再由potential结构、ε-BRD和估计误差导向4.3 regret。主文有短证明/关键推导，附录补长证明。",
+      "positions": [
+        "main pp3–7",
+        "supplement A–F pp1–7"
+      ],
+      "editorial_advice": "保留定理条件、反馈类型、ε和δ；建立引理→子程序→主定理依赖图；不静默修补原证明。",
+      "applicability": "该样本完全理论，无实验节；形式正确性未独立证明。",
+      "confidence": {
+        "paper_specific": "high",
+        "venue_frequency": "not_estimated; two induction samples cannot establish venue-wide prevalence"
+      }
+    },
+    "evidence": {
+      "category": "corpus_observation",
+      "observation": "证据链是potential-game引理、ε-BRD步数、置信误差界、Nash-regret定理、online-to-batch推论，无经验实验。两个反馈的n依赖不同，不能用同一O(sqrt(T))隐藏全部参数。",
+      "positions": [
+        "main p6 Theorem1/Lemma4",
+        "main p7 Theorem2 Eqs8–9 and Remark2",
+        "supplement C–F"
+      ],
+      "editorial_advice": "理论稿可以用完整条件化的定理和附录证据，不为适配AAAI虚构实验；同时保留n、T、δ依赖。",
+      "applicability": "最优性是作者陈述与引用支持，本次未独立核验下界及证明。",
+      "confidence": {
+        "paper_specific": "high",
+        "venue_frequency": "not_estimated; two induction samples cannot establish venue-wide prevalence"
+      }
+    },
+    "discussion_limits": {
+      "category": "corpus_observation",
+      "observation": "Conclusions and Future Work将扩展范围写成其他hedonic类、其他解概念、无共享平台的分布式算法、其他信息模型及任意对手下no-regret。",
+      "positions": [
+        "main p7"
+      ],
+      "editorial_advice": "把当前假设和未来范围区分开，未来工作不是当前能力。",
+      "applicability": "本例没有单列Limitations；不得伪装该节为官方必需。",
+      "confidence": {
+        "paper_specific": "high",
+        "venue_frequency": "not_estimated; two induction samples cannot establish venue-wide prevalence"
+      }
+    },
+    "paragraph_language": {
+      "category": "corpus_observation",
+      "observation": "解释段先给概念直觉再数学对象，段末常指出与已有技术差异；“optimal”紧邻feedback及log因素，使用显式“in contrast”“unlike”定位。",
+      "positions": [
+        "main pp4–7"
+      ],
+      "editorial_advice": "高密度理论段保留直觉→定义→用途；自利agent与中央协调/共享数据的术语要稳定。",
+      "applicability": "重复对照句可能增加篇幅；这是观察而非要求复刻连接词。",
+      "confidence": {
+        "paper_specific": "high",
+        "venue_frequency": "not_estimated; two induction samples cannot establish venue-wide prevalence"
+      }
+    },
+    "main_appendix": {
+      "category": "corpus_observation",
+      "observation": "主文pp1–7保留模型、两段算法、核心结果和证明骨架，pp8–9参考文献；补充A–F共7页承接完整证明。补充B Theorem2与主文Theorem2不同，补充F Theorem3对应主文bandit regret分支。",
+      "positions": [
+        "main p2 proof pointer",
+        "main p6 Remark1",
+        "main p7 appendix pointers",
+        "supplement pp1–7"
+      ],
+      "editorial_advice": "主附录用带语义名称的对应表核对，不只按定理编号自动链接；长证明移出正文时保留条件。",
+      "applicability": "补充编号不完全同步构成需要修复的反例，不是可学习的风格规则。",
+      "confidence": {
+        "paper_specific": "high",
+        "venue_frequency": "not_estimated; two induction samples cannot establish venue-wide prevalence"
+      }
+    },
+    "actionable": {
+      "category": "corpus_observation",
+      "observation": "可复用的是对信息反馈与评价目标条件化的论证组织，以及正式结果/证明分配。",
+      "positions": [
+        "main pp3–7"
+      ],
+      "editorial_advice": "原创示例：We distinguish aggregate coalition feedback from pairwise feedback and state separate Nash-regret bounds under the shared-data assumption.（仅为结构示例，不宣称新研究已有结果。）",
+      "applicability": "只有作者材料提供证明时才能填入保证；本例问题不是所有AAAI稿件的研究方向。",
+      "confidence": {
+        "paper_specific": "high",
+        "venue_frequency": "not_estimated; two induction samples cannot establish venue-wide prevalence"
+      }
+    }
+  },
+  "counterexamples": [
+    {
+      "position": "main p7 Eqs8–9",
+      "finding": "bandit与semi-bandit的n依赖不同，即使均为sqrt(T)量级也不能润色为相同regret bound。",
+      "editorial_action": "保留两个公式及反馈标签。"
+    },
+    {
+      "position": "main p6 Theorem1 and proof; supplement A p1",
+      "finding": "定理文字写for any game，而证明依赖potential函数；在介绍稿中不得扩张成任意博弈均保证收敛。",
+      "editorial_action": "标记范围/假设待作者确认，不自行添加或删除条件；未开展独立定理正确性证明。"
+    },
+    {
+      "position": "main p6 Remark1/main p7 Theorem2; supplement B and F",
+      "finding": "同名Theorem2不是同一结论，supplement F标Theorem3承接主文Theorem2 bandit分支。",
+      "editorial_action": "核对所有cross-reference，保留原版本差异并提出作者确认。"
+    },
+    {
+      "position": "main p7 Eq10; supplement D Eq37 and C.2 Eq26",
+      "finding": "ε-NS的近似保证在推导中写成等式，正文公式视觉确认确为等号；需要核对是否应写相应不等式。",
+      "editorial_action": "记为实质性公式审计项，不能作为语言润色自动改写；补充glyph尚未视觉认证。"
+    },
+    {
+      "position": "main p7 Conclusions/Future Work",
+      "finding": "无共享平台的distributed algorithm只是未来工作。",
+      "editorial_action": "不得在摘要和贡献中宣传已实现communication-free算法。"
+    }
+  ],
+  "visual_review": {
+    "main_pages": [
+      4,
+      5,
+      6,
+      7
+    ],
+    "supplement_pages": [],
+    "figures_or_tables": "no experiments/figures; inspected two algorithms and conditional regret display",
+    "image_files": [
+      "renders/coalition-p4.png",
+      "renders/coalition-p5.png",
+      "renders/coalition-p6.png",
+      "renders/coalition-p7.png"
+    ]
+  },
+  "parent_inspection": "Root inspected coverage, full10dimensions, counterexamples, version/supplement evidence and SHA; relies on designated reviewer for continuous reading, no duplicate full read",
+  "publication_identity_and_acquired_version": {
+    "version": "AAAI Press published technical-track version",
+    "official_landing": "https://ojs.aaai.org/index.php/AAAI/article/view/33498",
+    "official_pdf": "https://ojs.aaai.org/index.php/AAAI/article/download/33498/35653",
+    "identity_checks": [
+      "title and authors",
+      "AAAI-24/25 publication header",
+      "proceedings page range"
+    ],
+    "publisher_byte_identity_rechecked": false,
+    "doi": "10.1609/aaai.v39i13.33498",
+    "published_date": "2025-04-11",
+    "proceedings_pages": "13709–13717"
+  }
+}

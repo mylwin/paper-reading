@@ -1,0 +1,23 @@
+{
+  "venue": "jmlr",
+  "locked": 50,
+  "downloaded": 50,
+  "parsed": 50,
+  "semantic_fulltext_reviewed": 4,
+  "holdout_semantic_validation": "1 of 10 complete; jmlr-2024-21 independently checked against four frozen pilot rules",
+  "automated_extraction_is_not_fulltext_review": true,
+  "semantic_reviews_source": "semantic-reviews.json",
+  "derivation_fulltext_reviewed": 3,
+  "holdout_fulltext_reviewed": 1,
+  "counts": {
+    "locked": 50,
+    "pdf_acquired": 50,
+    "text_parsed": 50,
+    "main_text_style_reviewed": 4,
+    "full_text_and_relevant_appendix_reviewed": 4,
+    "induction_complete": 3,
+    "holdout_complete": 1
+  },
+  "updated": "2026-10-11",
+  "acceptance_status": "in_progress; 50 complete per venue not achieved"
+}

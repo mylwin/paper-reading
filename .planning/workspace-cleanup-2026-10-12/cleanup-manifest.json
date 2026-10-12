@@ -1,0 +1,373 @@
+{
+  "status": "deleted",
+  "entries": [
+    {
+      "path": ".planning/venue-writing-aaai-2026-10-12/renders/coalition-p5.png",
+      "replacement": "07-research/2026-10-12-顶会顶刊写作风格调研_证据/aaai/renders/coalition-p5.png",
+      "bytes": 600647,
+      "sha256": "341e02bbda83fa9b8f9ae99a138e26216c0259ab24f99114b1a1ee5f292fc444",
+      "reason": "identical scratch rendering; canonical evidence retained"
+    },
+    {
+      "path": ".planning/venue-writing-aaai-2026-10-12/renders/coalition-p4.png",
+      "replacement": "07-research/2026-10-12-顶会顶刊写作风格调研_证据/aaai/renders/coalition-p4.png",
+      "bytes": 682795,
+      "sha256": "880f08319213dadfa79aa79e7c4d5b524b5e8feddccae8bd26e3adf5fa26e5a5",
+      "reason": "identical scratch rendering; canonical evidence retained"
+    },
+    {
+      "path": ".planning/venue-writing-aaai-2026-10-12/renders/coalition-p6.png",
+      "replacement": "07-research/2026-10-12-顶会顶刊写作风格调研_证据/aaai/renders/coalition-p6.png",
+      "bytes": 819535,
+      "sha256": "6ce08f4a2f0222b090fbfeef1bf901b69406a684aa0e18f6c6d32fe40ffd8976",
+      "reason": "identical scratch rendering; canonical evidence retained"
+    },
+    {
+      "path": ".planning/venue-writing-aaai-2026-10-12/renders/coalition-p7.png",
+      "replacement": "07-research/2026-10-12-顶会顶刊写作风格调研_证据/aaai/renders/coalition-p7.png",
+      "bytes": 633620,
+      "sha256": "938a8a55e3a3465fca50552db85f0bd729de93bc4f9078e8fc24cee13181fa41",
+      "reason": "identical scratch rendering; canonical evidence retained"
+    },
+    {
+      "path": ".planning/venue-writing-aaai-2026-10-12/renders/kdclub-p6.png",
+      "replacement": "07-research/2026-10-12-顶会顶刊写作风格调研_证据/aaai/renders/kdclub-p6.png",
+      "bytes": 694834,
+      "sha256": "cff68b144b6ea7cfdb3700a1d91ef5d2ed69eba30184b5477393120b6bf3ae9b",
+      "reason": "identical scratch rendering; canonical evidence retained"
+    },
+    {
+      "path": ".planning/venue-writing-aaai-2026-10-12/renders/kdclub-p7.png",
+      "replacement": "07-research/2026-10-12-顶会顶刊写作风格调研_证据/aaai/renders/kdclub-p7.png",
+      "bytes": 569520,
+      "sha256": "b0a542eb1bbf51ce37d93f4bf2f457dc9e173beec48cca6e28c7b0379cff23a2",
+      "reason": "identical scratch rendering; canonical evidence retained"
+    },
+    {
+      "path": ".planning/venue-writing-aaai-2026-10-12/renders/kdclub-p3.png",
+      "replacement": "07-research/2026-10-12-顶会顶刊写作风格调研_证据/aaai/renders/kdclub-p3.png",
+      "bytes": 733762,
+      "sha256": "5442a57cf81f469d33d32304154b8196a0f3793ef6b1b2acb0a7f48ea416be45",
+      "reason": "identical scratch rendering; canonical evidence retained"
+    },
+    {
+      "path": ".planning/venue-writing-next-research-2026-10-11/additional-renders/q-cogni-p1.png",
+      "replacement": "07-research/2026-10-11-顶会顶刊写作风格全文续研_证据/visual-review/additional-renders/q-cogni-p1.png",
+      "bytes": 685565,
+      "sha256": "d3c11f1d22438324f7a877849477184257c1bd0bc6325915e02931dea66e964a",
+      "reason": "identical scratch rendering; canonical evidence retained"
+    },
+    {
+      "path": ".planning/venue-writing-next-research-2026-10-11/additional-renders/q-cogni-p7.png",
+      "replacement": "07-research/2026-10-11-顶会顶刊写作风格全文续研_证据/visual-review/additional-renders/q-cogni-p7.png",
+      "bytes": 957371,
+      "sha256": "ee831e6adb7ce14925467e70ebae0e9de6ab99518a44a7aed52c629f316c4fef",
+      "reason": "identical scratch rendering; canonical evidence retained"
+    },
+    {
+      "path": ".planning/venue-writing-next-research-2026-10-11/additional-renders/verified-api-p6.png",
+      "replacement": "07-research/2026-10-11-顶会顶刊写作风格全文续研_证据/visual-review/additional-renders/verified-api-p6.png",
+      "bytes": 594932,
+      "sha256": "5daf1331456ea7bf699d7669763e80a9b1a93763faca5d39a34518a2cb77a0ca",
+      "reason": "identical scratch rendering; canonical evidence retained"
+    },
+    {
+      "path": ".planning/venue-writing-next-research-2026-10-11/additional-renders/q-cogni-p8.png",
+      "replacement": "07-research/2026-10-11-顶会顶刊写作风格全文续研_证据/visual-review/additional-renders/q-cogni-p8.png",
+      "bytes": 692866,
+      "sha256": "f6fca39f575d2db04b5a43b52e9970c6c7e0d575486898f50f9b997774dd21e8",
+      "reason": "identical scratch rendering; canonical evidence retained"
+    },
+    {
+      "path": ".planning/venue-writing-next-research-2026-10-11/additional-renders/verified-api-p4.png",
+      "replacement": "07-research/2026-10-11-顶会顶刊写作风格全文续研_证据/visual-review/additional-renders/verified-api-p4.png",
+      "bytes": 591545,
+      "sha256": "ba065603f090a291ed8d958dc11f63aaf890273fa9a2e46edea029d761adf746",
+      "reason": "identical scratch rendering; canonical evidence retained"
+    },
+    {
+      "path": ".planning/venue-writing-next-research-2026-10-11/additional-renders/naruto-p7.png",
+      "replacement": "07-research/2026-10-11-顶会顶刊写作风格全文续研_证据/visual-review/additional-renders/naruto-p7.png",
+      "bytes": 471424,
+      "sha256": "a21c45029e94b9898ca72a72ad8df18b8b504d7b8d48e72b0f1da6416252222f",
+      "reason": "identical scratch rendering; canonical evidence retained"
+    },
+    {
+      "path": ".planning/venue-writing-next-research-2026-10-11/tmlr-renders/cropa-p33.png",
+      "replacement": "07-research/2026-10-11-顶会顶刊写作风格全文续研_证据/visual-review/tmlr-renders/cropa-p33.png",
+      "bytes": 263058,
+      "sha256": "d8ee10e4c2b4a56eb9f501c298567b2ec67d4f26853cc0f625e30ce68d57ddb7",
+      "reason": "identical scratch rendering; canonical evidence retained"
+    },
+    {
+      "path": ".planning/venue-writing-next-research-2026-10-11/tmlr-renders/cropa-p32.png",
+      "replacement": "07-research/2026-10-11-顶会顶刊写作风格全文续研_证据/visual-review/tmlr-renders/cropa-p32.png",
+      "bytes": 167137,
+      "sha256": "7bf1626aabab20df9171a3ce1122e0e3ef95b44e2cf604b3506fd5cc024736c3",
+      "reason": "identical scratch rendering; canonical evidence retained"
+    },
+    {
+      "path": ".planning/venue-writing-next-research-2026-10-11/tmlr-renders/cropa-p19.png",
+      "replacement": "07-research/2026-10-11-顶会顶刊写作风格全文续研_证据/visual-review/tmlr-renders/cropa-p19.png",
+      "bytes": 291205,
+      "sha256": "79292be008513adb5d9ce31462f00e5d868824a78ef7ef795b12acce13d38b9f",
+      "reason": "identical scratch rendering; canonical evidence retained"
+    },
+    {
+      "path": ".planning/venue-writing-next-research-2026-10-11/tmlr-renders/cropa-p21.png",
+      "replacement": "07-research/2026-10-11-顶会顶刊写作风格全文续研_证据/visual-review/tmlr-renders/cropa-p21.png",
+      "bytes": 284203,
+      "sha256": "de1ea7c103e1ff6ad66086a0f60ca72a40f440f65c55520cfa440c0fbe076649",
+      "reason": "identical scratch rendering; canonical evidence retained"
+    },
+    {
+      "path": ".planning/venue-writing-next-research-2026-10-11/tmlr-renders/g4satbench-p20.png",
+      "replacement": "07-research/2026-10-11-顶会顶刊写作风格全文续研_证据/visual-review/tmlr-renders/g4satbench-p20.png",
+      "bytes": 393249,
+      "sha256": "e4d8ae7281dc3fabb7ebc20433b950a5e063dbe7b76e2f1c80e8a8cd54c25870",
+      "reason": "identical scratch rendering; canonical evidence retained"
+    },
+    {
+      "path": ".planning/venue-writing-next-research-2026-10-11/tmlr-renders/cropa-p11.png",
+      "replacement": "07-research/2026-10-11-顶会顶刊写作风格全文续研_证据/visual-review/tmlr-renders/cropa-p11.png",
+      "bytes": 311134,
+      "sha256": "48811cf0f7b8e6ced5bbec862eb15f703152a2da764f2b95e34954fb96979060",
+      "reason": "identical scratch rendering; canonical evidence retained"
+    },
+    {
+      "path": ".planning/venue-writing-next-research-2026-10-11/tmlr-renders/cropa-p39.png",
+      "replacement": "07-research/2026-10-11-顶会顶刊写作风格全文续研_证据/visual-review/tmlr-renders/cropa-p39.png",
+      "bytes": 186390,
+      "sha256": "28a89112d42cc5b17095bd3b320a58d405ccc488bad6bf277e88f695e6061abb",
+      "reason": "identical scratch rendering; canonical evidence retained"
+    },
+    {
+      "path": ".planning/venue-writing-tai-2026-10-12/drugmap-pdf11.png",
+      "replacement": "07-research/2026-10-12-顶会顶刊写作风格调研_证据/tai/renders/drugmap-pdf11.png",
+      "bytes": 515208,
+      "sha256": "0b21028fc45530c4391c9f4aed8008f631be8f3d8a7258b686a332d298f86f2c",
+      "reason": "identical scratch rendering; canonical evidence retained"
+    },
+    {
+      "path": ".planning/venue-writing-tai-2026-10-12/sudoku-pdf8.png",
+      "replacement": "07-research/2026-10-12-顶会顶刊写作风格调研_证据/tai/renders/sudoku-pdf8.png",
+      "bytes": 571750,
+      "sha256": "ef6c192c15673fe3117ac480b97b10f9eff548df23b363d834faa6aaa016dc71",
+      "reason": "identical scratch rendering; canonical evidence retained"
+    },
+    {
+      "path": ".planning/venue-writing-next-research-2026-10-12/index-runtime/sync_indexes.py",
+      "bytes": 37033,
+      "sha256": "c0ab8aed79118402fd19dd980f696c2c09ef9176659ca7819a368bf5a2159668",
+      "reason": "temporary Git-index fallback is obsolete after old skills restored; active indexing uses original script"
+    },
+    {
+      "path": ".planning/venue-writing-next-research-2026-10-12/index-runtime/provenance.json",
+      "bytes": 693,
+      "sha256": "0b1970b32b12da3949d7546ef09768eeee274ab7325c499be6eb5b8349a05cdd",
+      "reason": "temporary Git-index fallback is obsolete after old skills restored; active indexing uses original script"
+    },
+    {
+      "path": ".planning/venue-writing-next-research-2026-10-12/index-runtime/paper_config.py",
+      "bytes": 24599,
+      "sha256": "e0544b36dee0f2504f2322052e64c04b7d165e755f2059d0d3fb3c2417b22423",
+      "reason": "temporary Git-index fallback is obsolete after old skills restored; active indexing uses original script"
+    },
+    {
+      "path": ".planning/venue-writing-neurips-next-2026-10-11/supplemental/neurips-2024-2aada42a.zip",
+      "bytes": 711658,
+      "sha256": "71d98487b0526e252d03ca74541b82f42b07f87b7488362cff00330f61bee3e0",
+      "replacement": "07-research/2026-10-11-顶会顶刊写作风格全文续研_证据/next-batch/neurips-2024-2aada42a-complete.zip",
+      "reason": "incomplete ZIP superseded by validated complete official ZIP"
+    },
+    {
+      "path": ".planning/venue-writing-next-research-2026-10-12/workspace-registry.json",
+      "bytes": 526201,
+      "sha256": "1a8fdb2e43e227e30bb40b2602d077ab14ddb0f0236cd17b6be29315608de306",
+      "replacement": ".planning/venue-writing-next-research-2026-10-12/workspace-registry-restored-skills.json",
+      "reason": "identical unused snapshot; active validator reads restored-skills snapshot"
+    },
+    {
+      "path": ".DS_Store",
+      "bytes": 34820,
+      "sha256": "b417af3efb80e3ca1bd87b6eaa0eed0af2b75f85fd3d31c35728d48028ab7d4f",
+      "reason": "regenerable local cache"
+    },
+    {
+      "path": "08-reading/.DS_Store",
+      "bytes": 8196,
+      "sha256": "d236e56647371d44a39778b38f40f4f49243a322c1cb51e8db157d3464df7991",
+      "reason": "regenerable local cache"
+    },
+    {
+      "path": "07-research/.DS_Store",
+      "bytes": 6148,
+      "sha256": "91d265af2fb22550b09a8d0a45c3977f464c4e626e251fbbebe9fb4ade9220b1",
+      "reason": "regenerable local cache"
+    },
+    {
+      "path": "01-raw/.DS_Store",
+      "bytes": 10244,
+      "sha256": "e3abcdf145cdf94ff6c935d07bbb9b5ca22c18a697376c2c976062fc0e7114a8",
+      "reason": "regenerable local cache"
+    },
+    {
+      "path": "06-translation/.DS_Store",
+      "bytes": 6148,
+      "sha256": "5711dc18d789084f8fdd12a42fe6eb439c3c45d56e196eeb124ed0f7875778d6",
+      "reason": "regenerable local cache"
+    },
+    {
+      "path": ".claude/.DS_Store",
+      "bytes": 8196,
+      "sha256": "80b096c678a16638c3e5ea1259d887b9f191ff36bf282312c8fc9cfac8fe40ee",
+      "reason": "regenerable local cache"
+    },
+    {
+      "path": "08-daily/.DS_Store",
+      "bytes": 18436,
+      "sha256": "d506ab33423ce491365ec16c1ba572ce27740f1cbacf3226af61f6d7ac74b5fb",
+      "reason": "regenerable local cache"
+    },
+    {
+      "path": "02-markdown/.DS_Store",
+      "bytes": 10244,
+      "sha256": "ef34210841caec8d95b16fe5fb76cc6ca12a1be0e78c4a25656487adb48ceea5",
+      "reason": "regenerable local cache"
+    },
+    {
+      "path": "04-equation_problem/.DS_Store",
+      "bytes": 10244,
+      "sha256": "0ca11e5e798542d750b6e4cbaba388cb26fef7f6ec77305bc2f56bfac183a5ca",
+      "reason": "regenerable local cache"
+    },
+    {
+      "path": "03-notes/.DS_Store",
+      "bytes": 6148,
+      "sha256": "a7621a38c0684546a5dce03189a5009dcca49d99c080a56f7992d34591eba51e",
+      "reason": "regenerable local cache"
+    },
+    {
+      "path": "03-notes/2026-09/.DS_Store",
+      "bytes": 14340,
+      "sha256": "b6f1aa55bca92241c74773f135441f8ee91481173391df3c9bb59f6ec6e65ad6",
+      "reason": "regenerable local cache"
+    },
+    {
+      "path": "03-notes/2026-07/Self_Tuning_Stochastic_Optimization_with_Curvature_Aware_Gradient_Filtering/.DS_Store",
+      "bytes": 6148,
+      "sha256": "142e32c03156faadc4014c3289f072985a60023bbf569870d5ac828f30201520",
+      "reason": "regenerable local cache"
+    },
+    {
+      "path": "03-notes/2026-09/MpSub_A_Momentum_$p$_Dimensional_Subspace_Trust_Region_Method_for_Derivative_Free_Fine_Tuning_of_Large_Language_Models/.DS_Store",
+      "bytes": 8196,
+      "sha256": "ce5a4e1ddaba3400bd849b49995caa6678a553f15594a71fdbe9940aca0902bf",
+      "reason": "regenerable local cache"
+    },
+    {
+      "path": "03-notes/2026-08/Toward_Automated_Algorithm_Design_A_Survey_and_Practical_Guide_to_Meta-Black-Box-Optimization/.DS_Store",
+      "bytes": 6148,
+      "sha256": "142e32c03156faadc4014c3289f072985a60023bbf569870d5ac828f30201520",
+      "reason": "regenerable local cache"
+    },
+    {
+      "path": ".planning/venue-writing-next-research-2026-10-12/index-runtime/__pycache__/paper_config.cpython-313.pyc",
+      "bytes": 35372,
+      "sha256": "d74796f760a9d8c867876c0ba02a596e70a418253eb94d605b63019ac136e48d",
+      "reason": "regenerable local cache"
+    },
+    {
+      "path": "02-markdown/2026-10/.DS_Store",
+      "bytes": 6148,
+      "sha256": "142e32c03156faadc4014c3289f072985a60023bbf569870d5ac828f30201520",
+      "reason": "regenerable local cache"
+    },
+    {
+      "path": "02-markdown/2026-09/.DS_Store",
+      "bytes": 8196,
+      "sha256": "f985555434ddbbc2f451dfa91a2f29f3b161ff6e1b5a54fc7edfc6d6af0cdda0",
+      "reason": "regenerable local cache"
+    },
+    {
+      "path": ".claude/skills/.DS_Store",
+      "bytes": 6148,
+      "sha256": "ea038f5ba3242eeb85c76c87f1c6dee373c28a1bd434ab38fd2ee715f29e7f6b",
+      "reason": "regenerable local cache"
+    },
+    {
+      "path": ".claude/skills/paper-writing-shared/scripts/__pycache__/project.cpython-314.pyc",
+      "bytes": 35215,
+      "sha256": "003c9c6505cfb6a2251b9197a5f91cec7d194a398ea3abd39a72d0c671dbc072",
+      "reason": "regenerable local cache"
+    },
+    {
+      "path": ".claude/skills/paper-daily/scripts/__pycache__/paper_config.cpython-314.pyc",
+      "bytes": 41149,
+      "sha256": "7363fab33c50565dd80b0ea0dcec07e88f13020abd4959fbaa13b47b6cd59ef7",
+      "reason": "regenerable local cache"
+    },
+    {
+      "path": ".claude/skills/tests/__pycache__/test_paper_writing_projects.cpython-314.pyc",
+      "bytes": 18767,
+      "sha256": "ec9d44edf297c122c8ac65bd21ad46bb3904481eb669077399f8b082e50206b8",
+      "reason": "regenerable local cache"
+    },
+    {
+      "path": ".claude/skills/tests/__pycache__/test_paper_skills.cpython-313.pyc",
+      "bytes": 34903,
+      "sha256": "e2e9386c94f48ef893cfb8d0d5e1d069940b896c493c8f376b9b3394e5c04d09",
+      "reason": "regenerable local cache"
+    },
+    {
+      "path": ".claude/skills/tests/__pycache__/test_paper_skills.cpython-311.pyc",
+      "bytes": 36796,
+      "sha256": "01a69a3063a5d8c59ba594c5f439240b66b054a71938fd60b4cb0e0462977347",
+      "reason": "regenerable local cache"
+    },
+    {
+      "path": ".claude/skills/paper-weekly/scripts/__pycache__/collect.cpython-313.pyc",
+      "bytes": 42951,
+      "sha256": "b680b6716878e7969b6d61d54756d4e1dc1bb1a94c80f353327e94d4cfe4ef1e",
+      "reason": "regenerable local cache"
+    },
+    {
+      "path": ".claude/skills/paper-weekly/scripts/__pycache__/collect.cpython-311.pyc",
+      "bytes": 48548,
+      "sha256": "c067a5c8c2d80e6d59a2870ea6fef1315d54abca764fca64b82a1592007d18ee",
+      "reason": "regenerable local cache"
+    },
+    {
+      "path": "06-translation/2026-09/.DS_Store",
+      "bytes": 6148,
+      "sha256": "bd01726bce9f4cc3dddeaadb03d1ec9fff5d527e147d931e6e68e3545bae2c99",
+      "reason": "regenerable local cache"
+    },
+    {
+      "path": "07-research/2026-10-10-顶会顶刊写作风格调研_证据/.DS_Store",
+      "bytes": 6148,
+      "sha256": "929346c5259c9089bb39172750da045f6eb63030300fa8d33912e30fb7c99449",
+      "reason": "regenerable local cache"
+    },
+    {
+      "path": "07-research/2026-10-10-顶会顶刊写作风格调研_证据/corpus/.DS_Store",
+      "bytes": 6148,
+      "sha256": "1e4877931733aee508069e09867574c6c0131a27b8323618aae2ddf05a8f4a44",
+      "reason": "regenerable local cache"
+    },
+    {
+      "path": "07-research/2026-10-10-顶会顶刊写作风格调研_证据/corpus/__pycache__/journal_acquire.cpython-314.pyc",
+      "bytes": 16350,
+      "sha256": "3ff6efec29141fbb02bbd9e36d1647920341b253e2b1e0d3ce3bd470e3a16583",
+      "reason": "regenerable local cache"
+    },
+    {
+      "path": "07-research/2026-10-10-顶会顶刊写作风格调研_证据/corpus/__pycache__/journal_acquire.cpython-313.pyc",
+      "bytes": 15965,
+      "sha256": "dc6d83ce42df8e1ac4801f669ad22e9b7c7706054df151f75753f9c40f51fb58",
+      "reason": "regenerable local cache"
+    }
+  ],
+  "protected": "old six skills, all PDFs/parses, frozen evaluation/research evidence and current templates",
+  "total_bytes": 13530542
+}
