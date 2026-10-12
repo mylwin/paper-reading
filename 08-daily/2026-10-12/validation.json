@@ -1,0 +1,50 @@
+{
+  "date": "2026-10-12",
+  "status": "passed",
+  "scope": "本次日报、前三PDF和四阶段登记",
+  "unique_candidates": 267,
+  "known": 74,
+  "recommended": 10,
+  "pdf_downloaded": 3,
+  "pdf_failed": 0,
+  "daily_link_errors": 0,
+  "publication_link_errors": 0,
+  "pdf_checks": [
+    {
+      "title": "From Geometry to Generalization: Why Row Normalization Can Beat Adam and Muon",
+      "pages": 90,
+      "bytes": 1626285
+    },
+    {
+      "title": "Does Muon Need Fine-Grained Spectral Shaping?",
+      "pages": 49,
+      "bytes": 990313
+    },
+    {
+      "title": "Training-Loss Guarantees for Muon with Finite-Step Newton--Schulz Orthogonalization",
+      "pages": 22,
+      "bytes": 728554
+    }
+  ],
+  "checks": [
+    "原前十候选集合、分数、摘要、screening_rank均保留",
+    "逐篇语义复排与理由已保存",
+    "前三完整摘要译文按原顺序核对数字、公式和限定词；CC BY 4.0链接已核验",
+    "附录267篇各出现一次、连续编号",
+    "本地链接存在且为已跟踪或本次新增资产，可随提交访问",
+    "PDF魔数、pdfinfo结构、首页标题通过；无.part",
+    "三篇在四阶段根索引与月份README登记、状态与磁盘一致"
+  ],
+  "workspace_check": {
+    "preexisting_link_errors": 9,
+    "missing_readme": 0,
+    "month_consistency_errors": 0,
+    "detail": "9处既有问题位于10月8日和10月10日研究文档，指向外部graduate-thesis-code路径"
+  },
+  "source_limitations": {
+    "arxiv": "15个配置关键词OR查询，按相关性最多200条，非穷尽；部分Muon为粒子物理误命中",
+    "openreview": "15关键词各查询第一页100条，存在截断；日期缺失候选保留",
+    "semantic_scholar": "过去一年补充两次HTTP429，引用信号不可得，不推断不存在高影响力论文",
+    "assessment": "只依据元数据与摘要，低置信度初评；今日新增推荐不等于今日首发"
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "papers_dir": "/Users/myl/Documents/paper/01-raw",
+  "month_dir": "/Users/myl/Documents/paper/01-raw/2026-10",
+  "month": "2026-10",
+  "date": "2026-10-12",
+  "requested": 3,
+  "downloaded": 3,
+  "skipped_existing": 0,
+  "failed": 0,
+  "index_updated": [
+    "/Users/myl/Documents/paper/01-raw/index.md",
+    "/Users/myl/Documents/paper/01-raw/2026-10/README.md",
+    "/Users/myl/Documents/paper/02-markdown/index.md",
+    "/Users/myl/Documents/paper/02-markdown/2026-10/README.md",
+    "/Users/myl/Documents/paper/03-notes/index.md",
+    "/Users/myl/Documents/paper/03-notes/2026-10/README.md",
+    "/Users/myl/Documents/paper/06-translation/index.md",
+    "/Users/myl/Documents/paper/06-translation/2026-10/README.md"
+  ],
+  "archived": [
+    {
+      "title": "From Geometry to Generalization: Why Row Normalization Can Beat Adam and Muon",
+      "paper_stem": "From_Geometry_to_Generalization_Why_Row_Normalization_Can_Beat_Adam_and_Muon",
+      "month": "2026-10",
+      "source": "arxiv",
+      "pdf_url": "https://arxiv.org/pdf/2610.11309v1",
+      "path": "/Users/myl/Documents/paper/01-raw/2026-10/From_Geometry_to_Generalization_Why_Row_Normalization_Can_Beat_Adam_and_Muon.pdf",
+      "status": "downloaded",
+      "detail": "1588.2 KB"
+    },
+    {
+      "title": "Does Muon Need Fine-Grained Spectral Shaping?",
+      "paper_stem": "Does_Muon_Need_Fine_Grained_Spectral_Shaping",
+      "month": "2026-10",
+      "source": "arxiv",
+      "pdf_url": "https://arxiv.org/pdf/2610.07497v1",
+      "path": "/Users/myl/Documents/paper/01-raw/2026-10/Does_Muon_Need_Fine_Grained_Spectral_Shaping.pdf",
+      "status": "downloaded",
+      "detail": "967.1 KB"
+    },
+    {
+      "title": "Training-Loss Guarantees for Muon with Finite-Step Newton--Schulz Orthogonalization",
+      "paper_stem": "Training_Loss_Guarantees_for_Muon_with_Finite_Step_Newton_Schulz_Orthogonalization",
+      "month": "2026-10",
+      "source": "arxiv",
+      "pdf_url": "https://arxiv.org/pdf/2610.03306v1",
+      "path": "/Users/myl/Documents/paper/01-raw/2026-10/Training_Loss_Guarantees_for_Muon_with_Finite_Step_Newton_Schulz_Orthogonalization.pdf",
+      "status": "downloaded",
+      "detail": "711.5 KB"
+    }
+  ]
+}
