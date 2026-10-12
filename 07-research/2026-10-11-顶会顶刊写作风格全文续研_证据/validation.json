@@ -1,0 +1,188 @@
+{
+  "updated": "2026-10-11",
+  "kind": "research evidence integrity checks; not a new skill behavior or LaTeX compile evaluation",
+  "checks": [
+    {
+      "check": "progress exact aggregate",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "batch counts conservative",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "main21 full18 induction14 holdout4",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "locked manifests not mutated",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "aaai identity/year/split unchanged",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "aaai 25peryear20induction5holdout",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "aaai validation matches progress",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "aaai-2024-09 identity and exact asset hashes",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "aaai-2024-09 continuous page coverage certificate",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "aaai-2024-09 no completion inference from parse",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "aaai-2025-16 identity and exact asset hashes",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "aaai-2025-16 continuous page coverage certificate",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "aaai-2025-16 no completion inference from parse",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "tmlr identity/year/split unchanged",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "tmlr 25peryear20induction5holdout",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "tmlr validation matches progress",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "tmlr-2024-01 identity and exact asset hashes",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "tmlr-2024-01 continuous page coverage certificate",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "tmlr-2024-01 no completion inference from parse",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "tmlr-2025-01 identity and exact asset hashes",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "tmlr-2025-01 continuous page coverage certificate",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "tmlr-2025-01 no completion inference from parse",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "tai identity/year/split unchanged",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "tai 25peryear20induction5holdout",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "tai validation matches progress",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "tai-2024-07 identity and exact asset hashes",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "tai-2024-07 continuous page coverage certificate",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "tai-2024-07 no completion inference from parse",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "prior evaluation archived bytes unchanged",
+      "passed": true,
+      "details": {
+        "files_checked": 654,
+        "mismatches": []
+      }
+    },
+    {
+      "check": "CroPA fixed source snapshots match provenance",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "NeurIPS supplement complete ZIP CRC and hash",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "13 directly inspected actual page renders preserved",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "new3 asset dates and no research-note promotion",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "new task links resolve; known unrelated9 kept",
+      "passed": true,
+      "details": {
+        "new_dangling": [],
+        "preexisting_dangling": 9
+      }
+    }
+  ],
+  "all_checks_passed": true,
+  "link_check": {
+    "new_dangling_count": 0,
+    "preexisting_unrelated_count": 9,
+    "global_exit_code": 1
+  }
+}

@@ -1,0 +1,263 @@
+﻿
+Information for Authors - IEEE Computational Intelligence Society
+{"system.paths":{"root":"","rootFull":"https:\/\/cis.ieee.org\/","base":"","baseFull":"https:\/\/cis.ieee.org\/"},"csrf.token":"3e4c0c4b6672800a1153cf877b4a4479"}
+window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+gtag('config', 'G-9RX2NP9Q03', {'dimension1': 'anonymous', 'dimension2': '', 'dimension3': '', 'dimension4': 'TNNLS', 'dimension5': ''});
+	jQuery(document).ready(function($) {
+		'use strict'
+		$.noConflict();
+		$(".jcepopup").each( function() {
+			$(this).on('click', function() {
+				gtag('config', 'G-9RX2NP9Q03', {'dimension1': 'anonymous', 'dimension2': '', 'dimension3': '', 'dimension4': 'TNNLS', 'dimension5': '', 'page_title': document.title, 'page_location': 'https://cis.ieee.org/publications/t-neural-networks-and-learning-systems/tnnls'});
+							});
+		});
+
+		$("a").each(function() {
+			if($(this).attr("href")) {
+				if( $(this).attr("href").match(/images\/files/) ) {
+		   			$(this).on('click', function() {
+							gtag('config', 'G-9RX2NP9Q03', {'dimension1': 'anonymous', 'dimension2': '', 'dimension3': '', 'dimension4': 'TNNLS', 'dimension5': '', 'page_title': document.title, 'page_location': $(this).attr("href")});
+
+									   			});
+				}
+			}
+		});
+
+	});
+body{display:none !important;}
+if (self === top) {
+         var acj = document.getElementById("acj");
+         acj.parentNode.removeChild(acj);
+     } else {
+         top.location = self.location;
+     }
+Join IEEE
+|
+Donate
+|
+Sign In
+IEEE.org
+IEEE
+Xplore®
+IEEE Standards
+IEEE Spectrum
+More Sites
+More Sites
+IEEE
+Xplore®
+IEEE Standards
+IEEE Spectrum
+More Sites
+Toggle navigation
+Publications
+Welcome from the Vice President for Publications
+Publications Committee
+IEEE CIS Newsletter
+IEEE Computational Intelligence Magazine
+IEEE Transactions on Neural Networks and Learning Systems
+IEEE Transactions on Evolutionary Computation
+IEEE Transactions on Fuzzy Systems
+IEEE Transactions on Emerging Topics in Computational Intelligence
+IEEE Transactions on Games
+IEEE Computational Intelligence Letters
+IEEE Transactions on Artificial Intelligence
+IEEE Transactions on Cognitive and Developmental Systems
+IEEE Press Book Series
+Other Co-Sponsored Journals
+Social Media
+IEEE PSPB Operations Manual
+Conferences
+Welcome from the Vice President for Conferences
+Conference Calendar
+Getting Involved in Conferences and Events
+Task Forces
+History of CIS Conferences
+Activities
+Technical Activities
+Membership Activities
+Educational Activities
+Industrial & Governmental Activities
+Awards
+IEEE CIS Awards
+IEEE Awards
+2027 Award Recipients
+Past Recipients
+Awards Committee
+Committees
+IEEE CIS Leadership Appointments and Reappointments at WCCI 2026
+EXCOM-Executive Committee
+ADCOM-Administrative Committee
+Strategic Planning Committee
+Constitution & Bylaws Committee
+Standards Committee
+Technical Committees
+History Committee
+Finance Committee
+Fellows Evaluation Committee
+Other Standing Committees
+About
+Welcome to the IEEE CIS
+President's Message
+Mission/Vision/Field of Interest
+Strategic Plan
+What is Computational Intelligence?
+How CIS works
+Volunteer Resources
+Contact CIS
+Resource Center
+Search IEEE Computational Intelligence Society
+Search
+IEEE Computational Intelligence Society
+Toggle navigation
+Home
+Publications
+IEEE Transactions on Neural Networks and Learning Systems
+Information for Authors
+TNNLS Information for Authors
+Scope
+The IEEE
+Transactions on Neural Networks and Learning Systems
+publishes technical articles that deal with the theory, design, and applications of neural networks and related learning systems. Readers are encouraged to submit manuscripts which disclose significant technical achievements, indicate exploratory developments, or present significant application for neural networks and related learning systems.
+A. Types of Contributions
+TNNLS
+publishes three types of articles:
+Papers (Full Papers)
+Brief Papers
+Comments Papers and Communications
+Full Papers
+are characterized by novel contributions of archival nature in developing theories and/or innovative applications of neural networks and learning systems. The contribution should not be of incremental nature, but must present a well-founded and conclusive treatment of a problem. Well organized survey of literature on topics of current interest may also be considered.
+Brief Papers
+report sufficiently interesting new theories and/or developments on previously published work in neural networks and related learning systems. For example, brief papers may report an extension of previous results or algorithms, innovative applications of a known approach to interesting problems, brief theoretical results, etc. The contribution should be conclusive and useful.
+Comments Papers and Communications
+are short articles which may be commenting on an error one has found in, or a significant disagreement one has with, a previously published paper. Typically, a comments paper is assigned to the same Associate Editor who handled the published paper being commented on. If the Associate Editor who was handling the previously published paper is no longer available, the Editor-in-Chief will assign the comments paper to another Associate Editor whose expertise closely matches the paper’s topic. Comments papers and communications should comprise a significant contribution of interest to the
+TNNLS
+readership. The authors of the original paper may be invited to submit a rebuttal. A comments paper should be as concise as possible and will not exceed 3 pages formatted in the IEEE two-column style.
+During the review process, submitted manuscripts will NOT be transferred from one category to another after submission/review. It would be the responsibility of authors to decide the category of their manuscript at the time of submission. The articles in this journal are peer reviewed in accordance with the requirements set forth in the IEEE Publication Services and Products Board Operations Manual (
+https://pspb.ieee.org/images/.les/.les/opsmanual.pdf
+). Each published article was reviewed by a minimum of two independent reviewers using a double-
+anonymous
+peer review process, where the identities of the reviewers are not known to the authors, and the reviewers do not know the identities of the authors.
+B. Submission of Manuscripts
+To avoid delay in processing your paper, please follow closely the following guidelines. Submission and review of new manuscripts is now done through IEEE Author Portal, the IEEE’s on-line submission and review system. Please log on to
+https://ieee.atyponrex.com/journal/tnnls
+and follow the directions to create an account (if a first time user) and to submit your manuscript. If the manuscript is printable (all font embedded), it will be entered into the review process. You will be able to check on the status of your manuscript during the review process. Authors are required to provide detailed contact information for every author of their paper during submission. The paper will be returned without review if any such information is missing or incorrect.
+The IEEE
+Transactions on Neural Networks and Learning Systems
+is primarily devoted to archival reports of work that have not been published elsewhere. Specifically, conference records and book chapters that have been published are not acceptable unless and until they have been significantly enhanced. In special circumstances or on exceptional occasions, the Editor-in-Chief may deem a contribution noteworthy enough to be exempted from this policy. Authors will be asked to confirm that the work being submitted has not been published elsewhere nor is it currently under review by another publication. If either of these conditions is not met or is subsequently violated, the article will be disqualified from possible publication in
+TNNLS
+.
+Plagiarism in any form will be considered a serious breach of professional conduct with potentially severe ethical and legal consequences as defined in the IEEE PSPB operational manual, which can be downloaded from:
+https://pspb.ieee.org/images/files/files/opsmanual.pdf
+.
+C. ORCID Required
+All IEEE journals require an Open Researcher and Contributor ID (ORCID) for all authors. To create an ORCID, please visit:
+https://orcid.org/register
+. The author will need a registered ORCID in order to submit a manuscript or review a proof in this journal.
+D. English Language Editing Services
+English language editing services can help refine the language of your article and reduce the risk of rejection without review. IEEE authors are eligible for discounts at several language editing services; visit the IEEE Author Center to learn more. Please note these services are fee-based and do not guarantee acceptance.
+E. Author Names in Native Languages
+IEEE supports the publication of author names in their native language alongside the English versions of their names in the author list of an article. For more information, please visit the IEEE Author Center at the following URL:
+https://journals.ieeeauthorcenter.ieee.org/create-your-ieee-article/create-the-text-of-your-article/publishing-author-names-in-native-languages/
+.
+F. Style for Manuscript
+The IEEE
+Transactions on Neural Networks and Learning Systems
+follows the format standards of the IEEE. The IEEE Author Center can be accessed here:
+https://journals.ieeeauthorcenter.ieee.org/create-your-ieee-journal-article/create-the-text-of-your-article/structure-your-article/
+.
+Here are some of the general guidelines. A list of 4–5 keywords (index terms) and an abstract (described below) are required for all manuscripts submitted to this journal. When submitting a new article through ScholarOne Manuscripts, you may choose your own keywords related to the submitted manuscript. The submitted manuscript must be in the following format:
+PDF format;
+Singled-spaced, double column, standard IEEE published format.
+All pages should be numbered. Provide an abstract of reasonable length that is an informative summary of the paper, including any important results found or conclusions drawn. Authors are encouraged to put detailed derivations in appendixes.
+G. Open Access
+This publication is a hybrid journal, allowing either Traditional manuscript submission or Open Access (author-pays OA) manuscript submission.
+US$2800 for articles submitted in 2026
+IEEE Members receive a 5% discount
+IEEE Society Members receive a 20% discount
+Discounts cannot be combined
+Discounts do not apply to undergraduate and graduate students.
+Corresponding authors from
+low-income countries
+(as classified by the World Bank) are eligible for discounts on article processing charges. For more information, please visit the
+IEEE Author Center
+or
+Learn more about the program
+.
+H. Page Charges
+After a manuscript has been accepted for publication, the author’s company or institution will be requested to pay a charge of $110 per printed page to cover part of the cost of publication. Page charges for this TRANSACTIONS, like those for journals of other professional societies, are not obligatory nor is their payment a prerequisite for publication. Papers submitted to this transaction will be imposed mandatory over-length page charge for pages in excess of 10 pages for a full paper, 15 pages for a survey paper, and 6 pages for a brief paper. Authors of papers accepted for publication will be assessed a mandatory page charge of $200 (per page) for every printed page over these limits. The maximum total manuscript length (excluding supplementary materials) with over-length page charge is 15 pages for a regular paper, 21 pages for a survey paper, and 9 pages for a brief paper. For "Comments Papers and Communications" existing rules apply.
+I. Copyright
+It is the policy of the IEEE to own copyright to the technical contributions it publishes. To comply with the IEEE copyright policy, authors are required to sign the IEEE Copyright Transfer Form before publication in either the print or electronic medium. The form is provided upon approval of the manuscript. Authors must submit a signed copy of this form with their final manuscripts (after a manuscript is accepted for publication).
+J. Submission of Final Manuscript
+Page Numbers:
+Number all pages, including illustrations, in a single series, with no omitted numbers. Figures should be identified with the figure number.
+References and Captions:
+Put all references at the end of your paper in IEEE style (see "IEEE Author Center" information above). Do not include figure captions on the illustrations themselves. Figure captions should be sufficiently clear so that the figures can be understood without detailed reference to the accompanying text. Axes of graphs should have self-explanatory labels, not just symbols.
+Illustrations and Photos:
+Color figures are automatically posted in color on the IEEE
+Xplore
+website free of charge. The color-in-print charge is a flat rate of $275 per figure. The corresponding author of the article has the opportunity to address the color-in-print option during an "Article Setup" step. All invoices and payments are handled through an automated payment portal system. The payment portal allows various payment types such as credit card, bank wire transfers, check, preapproved waivers, special payment circumstances, and third party billing. Please note that these are costs for color printing and do not include page charges or reprint charges, which must be paid separately. Once your paper is received at the IEEE, a staff editor will contact you with specific instructions on how to proceed with color figures.
+Manuscript and Electronic File:
+For the final printed production of the manuscript, the author will need to provide a single zip file which contains all the source files of the peer approved version. Please be certain that changes made to your paper version are incorporated into your electronic version. Check that your files are complete including abstract, text, references, footnotes, biographies (for Papers), and figures captions.
+IEEE can process most commercial software programs, but not page layout programs. Do not send postscript files. The preferred programs are TeX, LaTeX, and WORD (use standard macros). An IEEE LaTeX style file can be obtained by visiting the IEEE Author Center at
+https://journals.ieeeauthorcenter.ieee.org/create-your-ieee-journal-article/authoring-tools-and-templates/tools-for-ieee-authors/ieee-article-templates/
+.
+K. Artificial intelligence (AI)-Generated Text (e.g., chatGPT)
+The use of AI-generated text in an article shall be disclosed in the acknowledgements section of any paper submitted to an IEEE Conference or Periodical. The sections of the paper that use AI-generated text shall have a citation to the AI system used to generate the text.
+Information for Authors
+IEEE Transactions on Neural Networks and Learning Systems
+Welcome from the Vice President for Publications
+Editor and Associate Editors
+IEEE TNNLS 2025 Outstanding Associate Editors
+IEEE Xplore (TNNLS)
+Information for Authors
+Guidelines for Paper Submission
+Types of Contributions
+Manuscript Submission
+IEEE Copyright
+Page Charges
+Information on Comments Papers
+English Language Editing Services
+Plagiarism and Ethical Issues
+Arxiv
+Recent Articles
+Most Accessed Articles
+Information on Special Issues
+Featured Papers
+LaTeX and Microsoft Word Templates
+Open Researcher and Contributor ID
+Online Submission (IEEE TNNLS Author Portal)
+Advertising
+IEEE PSPB Operations Manual
+|
+IEEE Transactions on Fuzzy Systems, Volume 34, Issue 10, October 2026
+IEEE Transactions on Artificial Intelligence, Volume 7, Issue 10, October 2026
+IEEE Transactions on Evolutionary Computation, Volume 30, Issue 5, October 2025
+IEEE Transactions on Emerging Topics in Computational Intelligence Volume 10, Issue 6, October 2026
+IEEE Transactions on Neural Networks and Learning Systems, Volume 37, Issue 9, September 2026
+IEEE Transactions on Fuzzy Systems, Volume 34, Issue 9, September 2026
+IEEE Transactions on Artificial Intelligence, Volume 7, Issue 9, September 2026
+IEEE Transactions on Cognitive and Developmental Systems, Volume 18, Issue 4, August 2026
+IEEE Transactions on Fuzzy Systems, Volume 34, Issue 8, August 2026
+IEEE Transactions on Neural Networks and Learning Systems, Volume 37, Issue 8, August 2026
+Home
+Sitemap
+Contact
+Accessibility
+Nondiscrimination Policy
+IEEE Ethics Reporting
+IEEE Privacy Policy
+Terms
+© Copyright 2026 IEEE – All rights reserved. A public charity, IEEE is the world's largest technical professional organization dedicated to advancing technology for the benefit of humanity.
+!function(f,e,a,t,h,r){if(!f[h]){r=f[h]=function(){r.invoke?
+  r.invoke.apply(r,arguments):r.queue.push(arguments)},
+  r.queue=[],r.loaded=1*new Date,r.version="1.0.0",
+  f.FeathrBoomerang=r;var g=e.createElement(a),
+  h=e.getElementsByTagName("head")[0]||e.getElementsByTagName("script")[0].parentNode;
+  g.async=!0,g.src=t,h.appendChild(g)}
+  }(window,document,"script","https://cdn.feathr.co/js/boomerang.min.js","feathr");
+
+  feathr("fly", "588f5ef88e80271ed938605b");
+  feathr("sprinkle", "page_view");

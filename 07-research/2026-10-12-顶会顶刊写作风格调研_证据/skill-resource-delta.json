@@ -1,0 +1,11 @@
+{
+  "compared_to": "07-research/2026-10-11-论文写作润色技能评测_证据/final-skills-sha256.json",
+  "changed": [
+    ".claude/skills/paper-writing-shared/venues/aaai.md",
+    ".claude/skills/paper-writing-shared/venues/neurips.md",
+    ".claude/skills/paper-writing-shared/venues/overview.md",
+    ".claude/skills/paper-writing-shared/venues/tai.md",
+    ".claude/skills/paper-writing-shared/venues/tmlr.md"
+  ],
+  "new_compilation_or_behavior_evaluation": false
+}

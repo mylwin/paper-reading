@@ -1,0 +1,27 @@
+[
+  {
+    "path": "07-research/2026-10-12-顶会顶刊写作风格调研_证据/neurips/PlatEMO-README.txt",
+    "sha256": "f57b77ff0db35ced6627e5f689576757e53aa67f84b7655b7f52901a6664e397",
+    "coverage": "full"
+  },
+  {
+    "path": "07-research/2026-10-12-顶会顶刊写作风格调研_证据/neurips/PlatEMO-manual.txt",
+    "sha256": "d57ef0bd09d56e19883f2b522674018965c3dc6936ad8e040c0ba84b2511a2a6",
+    "coverage": "manualPDF title/copyright/contents3pages; not all38generic tutorial pages"
+  },
+  {
+    "path": "07-research/2026-10-12-顶会顶刊写作风格调研_证据/neurips/PlatEMO-releasenote.txt",
+    "sha256": "23767f1d3228996ebd89e1690b59fee73b425ffc2c80d738c05f795e26c58f51",
+    "coverage": "full"
+  },
+  {
+    "path": "07-research/2026-10-12-顶会顶刊写作风格调研_证据/neurips/supplement-README.txt",
+    "sha256": "af93ff55d65c7e4a3cdf09428bda16766cdc871d22d77e120df43fcfb024e414",
+    "coverage": "full"
+  },
+  {
+    "path": "07-research/2026-10-12-顶会顶刊写作风格调研_证据/neurips/PlatEMO-manual.pdf",
+    "sha256": "26221f7ef6acec046c6d8b176b1c3f313aaf69f7881eb015a5c9c212a6b9e97f",
+    "coverage": "first3pages only; generic tutorial classified outside scientific appendix"
+  }
+]

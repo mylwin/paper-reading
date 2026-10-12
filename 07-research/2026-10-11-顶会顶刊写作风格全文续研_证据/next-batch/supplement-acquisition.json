@@ -1,0 +1,404 @@
+{
+  "id": "neurips-2024-2aada42a",
+  "url": "https://papers.nips.cc/paper_files/paper/2024/file/19f461132d8ed04764f58f88b7a8e842-Supplemental-Conference.zip",
+  "downloaded_bytes": 2121560,
+  "sha256": "9655b463e5dd68ca2219ca65c07e15d531ef27e287e6681dab93e740ad48db2e",
+  "local_path": "07-research/2026-10-11-顶会顶刊写作风格全文续研_证据/next-batch/neurips-2024-2aada42a-complete.zip",
+  "zip_crc": "passed",
+  "members": [
+    {
+      "path": "NeurIPS2024/",
+      "bytes": 0
+    },
+    {
+      "path": "NeurIPS2024/PlatEMO-master/",
+      "bytes": 0
+    },
+    {
+      "path": "NeurIPS2024/PlatEMO-master/.gitignore",
+      "bytes": 57
+    },
+    {
+      "path": "NeurIPS2024/PlatEMO-master/Doc/",
+      "bytes": 0
+    },
+    {
+      "path": "NeurIPS2024/PlatEMO-master/Doc/logo.png",
+      "bytes": 13640
+    },
+    {
+      "path": "NeurIPS2024/PlatEMO-master/Doc/QQgroupNumber.jpg",
+      "bytes": 142233
+    },
+    {
+      "path": "NeurIPS2024/PlatEMO-master/Doc/releasenote.md",
+      "bytes": 6584
+    },
+    {
+      "path": "NeurIPS2024/PlatEMO-master/PlatEMO/",
+      "bytes": 0
+    },
+    {
+      "path": "NeurIPS2024/PlatEMO-master/PlatEMO/Algorithms/",
+      "bytes": 0
+    },
+    {
+      "path": "NeurIPS2024/PlatEMO-master/PlatEMO/Algorithms/ALGORITHM.m",
+      "bytes": 10825
+    },
+    {
+      "path": "NeurIPS2024/PlatEMO-master/PlatEMO/Algorithms/MOEAs/",
+      "bytes": 0
+    },
+    {
+      "path": "NeurIPS2024/PlatEMO-master/PlatEMO/Algorithms/MOEAs/BDNE.m",
+      "bytes": 17156
+    },
+    {
+      "path": "NeurIPS2024/PlatEMO-master/PlatEMO/Algorithms/MOEAs/DNPE.m",
+      "bytes": 2003
+    },
+    {
+      "path": "NeurIPS2024/PlatEMO-master/PlatEMO/Algorithms/MOEAs/ECRNSGAII.m",
+      "bytes": 3119
+    },
+    {
+      "path": "NeurIPS2024/PlatEMO-master/PlatEMO/Algorithms/Utility functions/",
+      "bytes": 0
+    },
+    {
+      "path": "NeurIPS2024/PlatEMO-master/PlatEMO/Algorithms/Utility functions/CrowdingDistance.m",
+      "bytes": 2122
+    },
+    {
+      "path": "NeurIPS2024/PlatEMO-master/PlatEMO/Algorithms/Utility functions/NDSort.m",
+      "bytes": 6717
+    },
+    {
+      "path": "NeurIPS2024/PlatEMO-master/PlatEMO/Algorithms/Utility functions/OperatorGAhalf_2.m",
+      "bytes": 3209
+    },
+    {
+      "path": "NeurIPS2024/PlatEMO-master/PlatEMO/Algorithms/Utility functions/OperatorGA_2.m",
+      "bytes": 4196
+    },
+    {
+      "path": "NeurIPS2024/PlatEMO-master/PlatEMO/Algorithms/Utility functions/RouletteWheelSelection.m",
+      "bytes": 1195
+    },
+    {
+      "path": "NeurIPS2024/PlatEMO-master/PlatEMO/Algorithms/Utility functions/TournamentSelection.m",
+      "bytes": 1492
+    },
+    {
+      "path": "NeurIPS2024/PlatEMO-master/PlatEMO/Algorithms/Utility functions/UniformPoint.m",
+      "bytes": 5551
+    },
+    {
+      "path": "NeurIPS2024/PlatEMO-master/PlatEMO/GUI/",
+      "bytes": 0
+    },
+    {
+      "path": "NeurIPS2024/PlatEMO-master/PlatEMO/GUI/Draw.m",
+      "bytes": 3795
+    },
+    {
+      "path": "NeurIPS2024/PlatEMO-master/PlatEMO/GUI/GUI.m",
+      "bytes": 12075
+    },
+    {
+      "path": "NeurIPS2024/PlatEMO-master/PlatEMO/GUI/GUI.mat",
+      "bytes": 20188
+    },
+    {
+      "path": "NeurIPS2024/PlatEMO-master/PlatEMO/GUI/module_app.m",
+      "bytes": 58041
+    },
+    {
+      "path": "NeurIPS2024/PlatEMO-master/PlatEMO/GUI/module_exp.m",
+      "bytes": 49785
+    },
+    {
+      "path": "NeurIPS2024/PlatEMO-master/PlatEMO/GUI/module_test.m",
+      "bytes": 27159
+    },
+    {
+      "path": "NeurIPS2024/PlatEMO-master/PlatEMO/GUI/uicontext.m",
+      "bytes": 2877
+    },
+    {
+      "path": "NeurIPS2024/PlatEMO-master/PlatEMO/GUI/uicontext2.m",
+      "bytes": 3918
+    },
+    {
+      "path": "NeurIPS2024/PlatEMO-master/PlatEMO/GUI/uilist.m",
+      "bytes": 10622
+    },
+    {
+      "path": "NeurIPS2024/PlatEMO-master/PlatEMO/manual.pdf",
+      "bytes": 1342939
+    },
+    {
+      "path": "NeurIPS2024/PlatEMO-master/PlatEMO/Metrics/",
+      "bytes": 0
+    },
+    {
+      "path": "NeurIPS2024/PlatEMO-master/PlatEMO/Metrics/DistNadir.m",
+      "bytes": 800
+    },
+    {
+      "path": "NeurIPS2024/PlatEMO-master/PlatEMO/platemo.m",
+      "bytes": 5336
+    },
+    {
+      "path": "NeurIPS2024/PlatEMO-master/PlatEMO/Problems/",
+      "bytes": 0
+    },
+    {
+      "path": "NeurIPS2024/PlatEMO-master/PlatEMO/Problems/MOPs/",
+      "bytes": 0
+    },
+    {
+      "path": "NeurIPS2024/PlatEMO-master/PlatEMO/Problems/MOPs/DTLZ/",
+      "bytes": 0
+    },
+    {
+      "path": "NeurIPS2024/PlatEMO-master/PlatEMO/Problems/MOPs/DTLZ/DTLZ2_nadir.m",
+      "bytes": 2417
+    },
+    {
+      "path": "NeurIPS2024/PlatEMO-master/PlatEMO/Problems/MOPs/DTLZ/DTLZ5.m",
+      "bytes": 2357
+    },
+    {
+      "path": "NeurIPS2024/PlatEMO-master/PlatEMO/Problems/MOPs/IMOP/",
+      "bytes": 0
+    },
+    {
+      "path": "NeurIPS2024/PlatEMO-master/PlatEMO/Problems/MOPs/IMOP/IMOP4.m",
+      "bytes": 2250
+    },
+    {
+      "path": "NeurIPS2024/PlatEMO-master/PlatEMO/Problems/MOPs/IMOP/IMOP6.m",
+      "bytes": 2948
+    },
+    {
+      "path": "NeurIPS2024/PlatEMO-master/PlatEMO/Problems/MOPs/MaF/",
+      "bytes": 0
+    },
+    {
+      "path": "NeurIPS2024/PlatEMO-master/PlatEMO/Problems/MOPs/MaF/MaF2.m",
+      "bytes": 3458
+    },
+    {
+      "path": "NeurIPS2024/PlatEMO-master/PlatEMO/Problems/MOPs/mDTLZ/",
+      "bytes": 0
+    },
+    {
+      "path": "NeurIPS2024/PlatEMO-master/PlatEMO/Problems/MOPs/mDTLZ/mDTLZ2.m",
+      "bytes": 2524
+    },
+    {
+      "path": "NeurIPS2024/PlatEMO-master/PlatEMO/Problems/MOPs/Real-world MOPs/",
+      "bytes": 0
+    },
+    {
+      "path": "NeurIPS2024/PlatEMO-master/PlatEMO/Problems/MOPs/Real-world MOPs/MLDMP.m",
+      "bytes": 5300
+    },
+    {
+      "path": "NeurIPS2024/PlatEMO-master/PlatEMO/Problems/MOPs/Real-world MOPs/MPDMP.m",
+      "bytes": 3210
+    },
+    {
+      "path": "NeurIPS2024/PlatEMO-master/PlatEMO/Problems/MOPs/Real-world MOPs/RE/",
+      "bytes": 0
+    },
+    {
+      "path": "NeurIPS2024/PlatEMO-master/PlatEMO/Problems/MOPs/Real-world MOPs/RE/approximated_Pareto_fronts/",
+      "bytes": 0
+    },
+    {
+      "path": "NeurIPS2024/PlatEMO-master/PlatEMO/Problems/MOPs/Real-world MOPs/RE/approximated_Pareto_fronts/reference_points_RE37.dat",
+      "bytes": 67870
+    },
+    {
+      "path": "NeurIPS2024/PlatEMO-master/PlatEMO/Problems/MOPs/Real-world MOPs/RE/approximated_Pareto_fronts/reference_points_RE61.dat",
+      "bytes": 269910
+    },
+    {
+      "path": "NeurIPS2024/PlatEMO-master/PlatEMO/Problems/MOPs/Real-world MOPs/RE/CRE531.m",
+      "bytes": 1893
+    },
+    {
+      "path": "NeurIPS2024/PlatEMO-master/PlatEMO/Problems/MOPs/Real-world MOPs/RE/RE347.m",
+      "bytes": 1720
+    },
+    {
+      "path": "NeurIPS2024/PlatEMO-master/PlatEMO/Problems/MOPs/Real-world MOPs/RE/remarks.md",
+      "bytes": 117
+    },
+    {
+      "path": "NeurIPS2024/PlatEMO-master/PlatEMO/Problems/MOPs/Real-world MOPs/RE/reproblem_matlab_ver/",
+      "bytes": 0
+    },
+    {
+      "path": "NeurIPS2024/PlatEMO-master/PlatEMO/Problems/MOPs/Real-world MOPs/RE/reproblem_matlab_ver/closestValue.m",
+      "bytes": 1126
+    },
+    {
+      "path": "NeurIPS2024/PlatEMO-master/PlatEMO/Problems/MOPs/Real-world MOPs/RE/reproblem_matlab_ver/CRE21.m",
+      "bytes": 1425
+    },
+    {
+      "path": "NeurIPS2024/PlatEMO-master/PlatEMO/Problems/MOPs/Real-world MOPs/RE/reproblem_matlab_ver/CRE22.m",
+      "bytes": 2094
+    },
+    {
+      "path": "NeurIPS2024/PlatEMO-master/PlatEMO/Problems/MOPs/Real-world MOPs/RE/reproblem_matlab_ver/CRE23.m",
+      "bytes": 1602
+    },
+    {
+      "path": "NeurIPS2024/PlatEMO-master/PlatEMO/Problems/MOPs/Real-world MOPs/RE/reproblem_matlab_ver/CRE24.m",
+      "bytes": 2120
+    },
+    {
+      "path": "NeurIPS2024/PlatEMO-master/PlatEMO/Problems/MOPs/Real-world MOPs/RE/reproblem_matlab_ver/CRE25.m",
+      "bytes": 1378
+    },
+    {
+      "path": "NeurIPS2024/PlatEMO-master/PlatEMO/Problems/MOPs/Real-world MOPs/RE/reproblem_matlab_ver/CRE31.m",
+      "bytes": 2395
+    },
+    {
+      "path": "NeurIPS2024/PlatEMO-master/PlatEMO/Problems/MOPs/Real-world MOPs/RE/reproblem_matlab_ver/CRE32.m",
+      "bytes": 3325
+    },
+    {
+      "path": "NeurIPS2024/PlatEMO-master/PlatEMO/Problems/MOPs/Real-world MOPs/RE/reproblem_matlab_ver/CRE51.m",
+      "bytes": 1986
+    },
+    {
+      "path": "NeurIPS2024/PlatEMO-master/PlatEMO/Problems/MOPs/Real-world MOPs/RE/reproblem_matlab_ver/main.m",
+      "bytes": 5370
+    },
+    {
+      "path": "NeurIPS2024/PlatEMO-master/PlatEMO/Problems/MOPs/Real-world MOPs/RE/reproblem_matlab_ver/RE21.m",
+      "bytes": 1228
+    },
+    {
+      "path": "NeurIPS2024/PlatEMO-master/PlatEMO/Problems/MOPs/Real-world MOPs/RE/reproblem_matlab_ver/RE22.m",
+      "bytes": 1752
+    },
+    {
+      "path": "NeurIPS2024/PlatEMO-master/PlatEMO/Problems/MOPs/Real-world MOPs/RE/reproblem_matlab_ver/RE23.m",
+      "bytes": 1555
+    },
+    {
+      "path": "NeurIPS2024/PlatEMO-master/PlatEMO/Problems/MOPs/Real-world MOPs/RE/reproblem_matlab_ver/RE24.m",
+      "bytes": 1480
+    },
+    {
+      "path": "NeurIPS2024/PlatEMO-master/PlatEMO/Problems/MOPs/Real-world MOPs/RE/reproblem_matlab_ver/RE25.m",
+      "bytes": 2217
+    },
+    {
+      "path": "NeurIPS2024/PlatEMO-master/PlatEMO/Problems/MOPs/Real-world MOPs/RE/reproblem_matlab_ver/RE31.m",
+      "bytes": 1483
+    },
+    {
+      "path": "NeurIPS2024/PlatEMO-master/PlatEMO/Problems/MOPs/Real-world MOPs/RE/reproblem_matlab_ver/RE32.m",
+      "bytes": 2156
+    },
+    {
+      "path": "NeurIPS2024/PlatEMO-master/PlatEMO/Problems/MOPs/Real-world MOPs/RE/reproblem_matlab_ver/RE33.m",
+      "bytes": 1665
+    },
+    {
+      "path": "NeurIPS2024/PlatEMO-master/PlatEMO/Problems/MOPs/Real-world MOPs/RE/reproblem_matlab_ver/RE34.m",
+      "bytes": 1610
+    },
+    {
+      "path": "NeurIPS2024/PlatEMO-master/PlatEMO/Problems/MOPs/Real-world MOPs/RE/reproblem_matlab_ver/RE35.m",
+      "bytes": 2233
+    },
+    {
+      "path": "NeurIPS2024/PlatEMO-master/PlatEMO/Problems/MOPs/Real-world MOPs/RE/reproblem_matlab_ver/RE36.m",
+      "bytes": 1421
+    },
+    {
+      "path": "NeurIPS2024/PlatEMO-master/PlatEMO/Problems/MOPs/Real-world MOPs/RE/reproblem_matlab_ver/RE37.m",
+      "bytes": 2236
+    },
+    {
+      "path": "NeurIPS2024/PlatEMO-master/PlatEMO/Problems/MOPs/Real-world MOPs/RE/reproblem_matlab_ver/RE41.m",
+      "bytes": 2505
+    },
+    {
+      "path": "NeurIPS2024/PlatEMO-master/PlatEMO/Problems/MOPs/Real-world MOPs/RE/reproblem_matlab_ver/RE42.m",
+      "bytes": 3756
+    },
+    {
+      "path": "NeurIPS2024/PlatEMO-master/PlatEMO/Problems/MOPs/Real-world MOPs/RE/reproblem_matlab_ver/RE61.m",
+      "bytes": 2070
+    },
+    {
+      "path": "NeurIPS2024/PlatEMO-master/PlatEMO/Problems/MOPs/Real-world MOPs/RE/reproblem_matlab_ver/RE91.m",
+      "bytes": 2259
+    },
+    {
+      "path": "NeurIPS2024/PlatEMO-master/PlatEMO/Problems/MOPs/Real-world MOPs/RE/uneven_approximated_Pareto_fronts/",
+      "bytes": 0
+    },
+    {
+      "path": "NeurIPS2024/PlatEMO-master/PlatEMO/Problems/MOPs/Real-world MOPs/RE/uneven_approximated_Pareto_fronts/reference_points_nadir_CRE531.mat",
+      "bytes": 305848
+    },
+    {
+      "path": "NeurIPS2024/PlatEMO-master/PlatEMO/Problems/MOPs/Real-world MOPs/RE/uneven_approximated_Pareto_fronts/reference_points_nadir_RE347.mat",
+      "bytes": 121960
+    },
+    {
+      "path": "NeurIPS2024/PlatEMO-master/PlatEMO/Problems/MOPs/TN/",
+      "bytes": 0
+    },
+    {
+      "path": "NeurIPS2024/PlatEMO-master/PlatEMO/Problems/MOPs/TN/TN1.m",
+      "bytes": 3776
+    },
+    {
+      "path": "NeurIPS2024/PlatEMO-master/PlatEMO/Problems/MOPs/TN/TN2.m",
+      "bytes": 4780
+    },
+    {
+      "path": "NeurIPS2024/PlatEMO-master/PlatEMO/Problems/MOPs/TN/TN3.m",
+      "bytes": 4068
+    },
+    {
+      "path": "NeurIPS2024/PlatEMO-master/PlatEMO/Problems/MOPs/TN/TN4.m",
+      "bytes": 4912
+    },
+    {
+      "path": "NeurIPS2024/PlatEMO-master/PlatEMO/Problems/PROBLEM.m",
+      "bytes": 12500
+    },
+    {
+      "path": "NeurIPS2024/PlatEMO-master/PlatEMO/Problems/SOLUTION.m",
+      "bytes": 5954
+    },
+    {
+      "path": "NeurIPS2024/PlatEMO-master/PlatEMO/Problems/UserProblem.m",
+      "bytes": 7148
+    },
+    {
+      "path": "NeurIPS2024/PlatEMO-master/README.md",
+      "bytes": 5270
+    },
+    {
+      "path": "NeurIPS2024/README.md",
+      "bytes": 930
+    }
+  ],
+  "semantic_reading_complete": false,
+  "note": "Earlier interrupted agent ZIP lacks central-directory end; preserved in planning, excluded from complete supplement assets. New intact archive not semantically read and never counted as completed paper."
+}

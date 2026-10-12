@@ -1,0 +1,301 @@
+﻿
+Information for Authors - IEEE Computational Intelligence Society
+Join IEEE
+|
+Donate
+|
+Sign In
+IEEE.org
+IEEE
+Xplore®
+IEEE Standards
+IEEE Spectrum
+More Sites
+More Sites
+IEEE
+Xplore®
+IEEE Standards
+IEEE Spectrum
+More Sites
+Toggle navigation
+Publications
+Welcome from the Vice President for Publications
+Publications Committee
+IEEE CIS Newsletter
+IEEE Computational Intelligence Magazine
+IEEE Transactions on Neural Networks and Learning Systems
+IEEE Transactions on Evolutionary Computation
+IEEE Transactions on Fuzzy Systems
+IEEE Transactions on Emerging Topics in Computational Intelligence
+IEEE Transactions on Games
+IEEE Computational Intelligence Letters
+IEEE Transactions on Artificial Intelligence
+IEEE Transactions on Cognitive and Developmental Systems
+IEEE Press Book Series
+Other Co-Sponsored Journals
+Social Media
+IEEE PSPB Operations Manual
+Conferences
+Welcome from the Vice President for Conferences
+Conference Calendar
+Getting Involved in Conferences and Events
+Task Forces
+History of CIS Conferences
+Activities
+Technical Activities
+Membership Activities
+Educational Activities
+Industrial & Governmental Activities
+Awards
+IEEE CIS Awards
+IEEE Awards
+2027 Award Recipients
+Past Recipients
+Awards Committee
+Committees
+IEEE CIS Leadership Appointments and Reappointments at WCCI 2026
+EXCOM-Executive Committee
+ADCOM-Administrative Committee
+Strategic Planning Committee
+Constitution & Bylaws Committee
+Standards Committee
+Technical Committees
+History Committee
+Finance Committee
+Fellows Evaluation Committee
+Other Standing Committees
+About
+Welcome to the IEEE CIS
+President's Message
+Mission/Vision/Field of Interest
+Strategic Plan
+What is Computational Intelligence?
+How CIS works
+Volunteer Resources
+Contact CIS
+Resource Center
+Search IEEE Computational Intelligence Society
+Search
+IEEE Computational Intelligence Society
+Toggle navigation
+Home
+Publications
+IEEE Transactions on Artificial Intelligence
+Information for Authors
+Information for Authors
+IEEE
+Transactions on Artificial Intelligence
+Author Instructions
+Note: IEEE TAI has switched to Double Anonymous Review Policy. Authors must exclude any author-identifying information in their PDF files.
+Paper Template
+https://template-selector.ieee.org/
+Submission Site
+https://ieee.atyponrex.com/journal/tai-ieee
+Aims & Scope
+The IEEE TRANSACTIONS ON ARTIFICIAL INTELLIGENCE (TAI) is a multidisciplinary journal publishing papers on theories and methodologies of Artificial Intelligence. Applications of Artificial Intelligence are also considered. The aim is to publish impactful research in Artificial Intelligence, survey articles, and applications.
+Types of Contributions
+IEEE TAI publishes three types of articles:
+Original Research Regular Manuscripts
+Original Research Regular Manuscripts represent significant contributions with novel experimental, analytical, and/or theoretical findings. These articles could be application focused, where the novelty lies in the methodology for adopting an artificial intelligence (AI) algorithm to a challenging application. The work needs to be self-contained, scientifically sound, evidence-based, and representing a conclusive treatment of a problem.
+Original Research Review Manuscripts
+Original Research Review Manuscripts offer a systematic survey and a critical assessment of a scientific field with an aim to synthesize the research already done by others into a new form. A review article needs to articulate the methodology for the review including the inclusion and exclusion criteria (methodological filter) for the papers being reviewed. The synthesis should lead to open research questions addressing significant research gaps and/or new conceptual frameworks.
+Original Research Briefs Manuscripts
+Original Research Briefs Manuscripts are shorter forms of research articles. They could offer sufficiently interesting new theoretical, experimental, and/or analytical findings, short comments on topical issues of interest to the journal readership, and/or a blue-sky idea with appropriate evidence of the potential of the idea and its impact on artificial intelligence.
+Manuscript Category Responsibilities
+During the review process, submitted manuscripts will NOT be transferred from one category to another after submission/review. It is the responsibility of authors to decide the category of their manuscript at the time of submission. The articles in this journal are peer reviewed in accordance with the requirements set forth in the IEEE Publication Services and Products Board Operations Manual (https://pspb.ieee.org/images/.les/.les/opsmanual.pdf). Each published article was reviewed by a minimum of two independent reviewers using a double-anonymous peer review process, where the identities of the reviewers are not known to the authors, but the reviewers know the identities of the authors.
+Restrictions to Notice
+Paper Type
+Normal Page Limit
+Extra Page Limit
+Max total
+Original Research Regular Manuscripts
+10
+5**
+15
+Original Research Review Manuscripts
+15
+6**
+21
+Original Research Brief Manuscripts
+6
+3**
+9
+Maximum number of words in the title 15 words
+Maximum length of running head 25 characters
+Maximum length of abstract 250 words
+Minimum number of keywords 3
+Maximum number of keywords 6
+** Current mandatory page charges are US$200 per extra page.
+Open Access
+This publication is a hybrid journal, allowing either Traditional manuscript submission or Open Access (author-pays OA) manuscript submission.
+US$2800 for articles submitted in 2026
+IEEE Members receive a 5% discount
+IEEE Society Members receive a 20% discount
+Discounts cannot be combined
+Discounts do not apply to undergraduate and graduate students.
+Corresponding authors from
+low-income countries
+(as classified by the World Bank) are eligible for discounts on article processing charges. For more information, please visit the
+IEEE Author Center
+or
+Learn more about the program
+.
+Double-Anonymous Review
+The articles in this journal are peer reviewed in accordance with the requirements set forth in the
+IEEE PSPB Operations Manual
+(sections 8.2.1.C & 8.2.2.A). Each published article was reviewed by a minimum of two independent reviewers using a double-anonymous peer review process, where the identities of the reviewers are not known to the authors, and the reviewers are not provideed with the identities of the authors at the time of review. Articles will be screened for plagiarism before acceptance.
+IEEE Guidelines on AI-Generated Text
+The use of artificial intelligence (AI)–generated text in an article shall be disclosed in the acknowledgements section of any paper submitted to an IEEE Conference or Periodical. The sections of the paper that use AI-generated text shall have a citation to the AI system used to generate the text.
+Ethics
+All IEEE authors are expected to adhere to IEEE’s publishing ethics, including the
+definition of authorship
+, the
+appropriate citation of sources
+, the
+accurate reporting of data
+, and the
+publishing of original research
+. Visit the
+IEEE Author Center
+to learn more. All articles submitted for publication should be original and not under consideration elsewhere; if your article is based on a previous publication such as a conference proceeding, cite the original publication and clearly indicate how the articles differ.
+Papers involving human or animal participation must include in their manuscript information on the ethics clearance protocol followed and the approval number from an appropriate ethics committee.
+Contact the Editor-in-Chief with any questions on publishing ethics.
+Extending Conference Papers
+The journal accepts an extended version of authors' conference papers with the following conditions:
+The submitted journal version of the paper contains additional substantial contributions to the conference version. Examples of substantial contributions include significant methodological improvements, essential mathematical proofs, or significant extension to experimental frameworks. The mere addition of experiments on new datasets or expanding the background section, while important, are not considered substantial contributions.
+Authors must reference the conference paper, explain the difference, and list the additional contributions.
+Similarity index does not exceed 25% excluding bibliography and preprints of the same paper.
+Manuscript Organization
+The IEEE Transactions on Artificial Intelligence (TAI) aims to reach out to a wide readership pool that includes academics, practitioners, executives, and policy makers. The journal presents technical contents requiring technical rigor and, correct and sound investigations.
+To respect the double-anonymized review policy
+, authors should exclude their names, contact information, and affiliations from the entire manuscript including frontmatter information, figures, tables, acknowledgement, references, supplementary materials, and links to external websites such as GitHub. To refer to their prior work, authors should use a third-person voice. For example, instead of writing “Our prior work (Mary and Michael, 2023) has shown”, you can write “Mary and Michael (2023) have shown” or “The work of Mary and Michael (2023) has shown”. Exclude acknowledgements and any references to funding sources. These information are provided in author portals.
+A manuscript in TAI needs be structured well to achieve these objectives. It is recommended that authors adhere to the following guidelines when organizing their manuscript.
+Title
+Abstract
+Impact Statement
+Introduction
+Background
+Methodology
+Theory/Analysis, Experimental Design/Results/Analysis/Discussion
+Conclusion and Future Work
+References
+Supplementary Materials if any
+The title should be concise and reflect the scope, contribution(s) and significance of the work.
+Avoid phrases such as “a novel methodology”, “a new algorithm”, and “a significant application” in the title. By default, papers in TAI offer novel contributions that are significant. One purpose of the paper is to convince the reader that the contribution is novel, scientifically sound, technically correct, and significant. As such, words such as ‘novel’ and ‘new’ are redundant.
+The “Abstract”, “Introduction” and “Conclusion and Future Work” sections must be accessible to the wide readership of TAI. A non-specialist needs to be able to understand the problem the manuscript is attempting to solve, the motivation and significance of the problem, the novelty of the proposed solution and how it advances the field, the significance of the findings, and the remaining research questions that other researchers could use to continue with a similar line of work.
+The “Abstract” should not exceed 250 words. Authors are encouraged to attempt to use the following guideline in writing their abstract:
+1 to 2 sentences introducing the problem.
+2 to 3 sentences summarizing the state-of-art. Be concise and offer an objective assessment of the current state of play in this area.
+1 to 2 sentences clearly describing the research gap the paper is concerned with.
+1 to 2 sentences summarizing the main methodological contribution.
+1 to 2 sentences summarizing the main result.
+2 to 3 sentences summarizing the implications of the findings on the wider field of AI.
+The introduction should motivate the work, expand on the problem definition and discusses an initial summary of the state of the art with the absolute minimum use of technical jargon.
+For mathematically oriented manuscripts, over-use of mathematics should be avoided. The purpose of mathematics is to be concise, formalize the problem, and support the technical soundness of the contribution. Mathematical proofs should be complemented with explanations sufficient for a graduate student to follow the logic of the proof. Obvious steps in a proof that get skipped by an expert should be included in the supplementary materials for a graduate student to follow the proofs.
+For experimental manuscripts, authors should adhere to the scientific method. A clear hypothesis needs to be established. Experimental validity should guide the experimental design. Appropriate statistical tests of significance should be used before making any claim on the superior performance of one algorithm over another. Claims should be scientifically sound, driven from the analysis, and should not exaggerate the findings. When comparing a proposed algorithm to others from the literature, the paper should avoid excessive comparisons. It is sufficient to compare against the top two or three most recent and competitive algorithms in the field of the paper. The choice of these algorithms should be justified.
+For survey manuscripts, there should be a clear and systematic survey methodology. Previous survey papers in the area should be acknowledged and summarized before updating the survey with new advances in the field. A survey paper needs to synthesize the literature into a new form such as a conceptual model and/or open research questions.
+Each paper should have a conclusion and future work section. The conclusion should summarize the key finding of the paper and position it in the wider research area. Future research directions stemming from a paper’s findings need to be discussed in a concise manner. Authors are encouraged to avoid superficial and very generic future research statements.
+References should cover recent papers. Unless the manuscript is addressing a long-forgotten topic in artificial intelligence, it is expected that the majority of references will be dedicated to recent publications. Self-reference should be kept to the absolute minimum necessary.
+The Impact Statement:
+It is becoming more important than ever that the science published in top tier journals such as the IEEE Transactions on Artificial Intelligence, needs to be communicated widely to the community and readership of the journal.
+Every good piece of research has an impact, but it could become deeply hidden in the technical language used to describe the work, making it harder for non-specialists to understand it. To facilitate making the wider readership pool of the journal to understand the research published in the Transactions, each paper must include a 100-150 words impact statement following the abstract.
+The statement needs to offer a concise explanation of the impact of the research and findings. Authors may wish to be guided by the PESTEL dimensions: political, economic, social, technological, environmental, and legal. Explain how the manuscript substantially advances the knowledge base in the specific branch of AI and the wider field of AI, and the ‘so-what’ question by reflecting on how the findings could be beneficial for some or all of the PESTEL dimensions.
+Impact statements are taken seriously in the evaluation of the manuscript and its suitability for IEEE TAI. The impact statement should convince a smart, but not necessarily a specialist, reader that your work is novel and will create a legacy in the research area. Your paper may get returned to you without review if the impact statement is thin, ambiguous, a copy of the abstract, or does not demonstrate a real advance in the scientific or technological field that matters.
+A YouTube video explaining how to write an Impact Statement by the Founding Editor-in-Chief can be viewed by
+Clicking Here
+.
+Tips for writing good impact statements:
+Do not repeat the abstract. The abstract is about the what, why, how and findings. The impact statement is about the ‘so-what’.
+Please avoid ambiguous statements, exaggeration or under-estimation of impact, and technical jargons.
+A journalist or a politician with no expertise in AI should be able to read your impact statement and understand the significance of the research.
+Authors may wish to read
+https://ieeexplore.ieee.org/document/731328
+Hypothetical Example 1 of an impact statement:
+Chatbots are a popular technology in online interaction. They reduce the load on human support teams and offer continuous 24-7 support to customers. However, recent usability research has demonstrated that 30% of customers are unhappy with current chatbots due to their poor conversational skills and inability to emotionally engage customers. The natural language algorithms we introduce in this paper overcome these limitations. With a significant increase in user satisfaction to 92% after adopting our algorithms, the technology is ready to support users in a wide variety of applications including government front-shops, automatic tellers, and the gaming industry.  Moreover, the proposed technology could offer an alternative way of interaction for some physically disable users.
+Hypothetical Example 2 of an impact statement:
+While existing pattern recognition algorithms in autonomous cars can detect 99% of obstacles during a clear day, their accuracy drops to 10% in low-visibility environments with fog or heavy rain. The technology proposed in this paper has improved the accuracy of these algorithms in low-visibility environments to 80%. This improvement caused the expected number of collisions for autonomous cars to fall below the safety threshold needed to deploy them on roads. The economic implication of this advance is expected to increase GDP with 5% over the next five years, while reducing death tolls in the streets to less than 45% of current figures.
+Article Submission
+All articles must be submitted via our submission site at
+https://ieee.atyponrex.com/journal/tai-ieee
+Format your article for submission by using the standard IEEE two column format. Style files are available from the
+IEEE Author Center
+. In particular, please use the Latex template available
+here.
+Submit your article text in two-column PDF IEEE format. Visit the
+IEEE Author Center
+for information on writing the abstract, using equations in your article, publishing author names in native languages, and more.
+Authors will need to submit a minimum of three and a maximum of six keywords chosen from a dropdown list. These keywords are important to identify and assign appropriate reviewers to the manuscript. Authors need to choose the keywords that match their manuscript. If none of the keywords exactly match the manuscript, authors need to select the closest keywords from the list that match their manuscript. If there are absolutely no keywords that match the manuscript, the authors need to rethink of the relevance of their manuscript to IEEE TAI.
+Submit your figures individually in PS, EPS, PDF, PNG, or TIF format. Visit the
+IEEE Author Center
+for information on resolution, size requirements, file naming conventions, and more.
+For information on submitting supplementary material such as graphical abstracts, multimedia, or datasets, visit the
+IEEE Author Center
+.
+A rejected paper should not normally be submitted again to the journal. If it has gone significant and substantial changes to contents to eliminate all issues identified in the rejection letter, authors could consult with the Editor-in-Chief to check if their paper has changed in form and contents sufficiently to warrant a new submission. This piece of guideline is to avoid repeated desk reject decisions when rejected papers cycle back with similar forms and contents; overloading the review system of the journal.
+ORCID
+All IEEE journals require an Open Researcher and Contributor ID (ORCID) for all authors. ORCID is a persistent unique identifier for researchers and functions similarly to an article’s Digital Object Identifier (DOI). You will need a registered ORCID to submit an article or review a proof in this journal.
+Learn more about ORCID
+and
+sign up for an ORCID
+today.
+English Language Editing Services
+English language editing services can help refine the language of your article and reduce the risk of rejection without review. IEEE authors are eligible for discounts at several language editing services; visit the
+IEEE Author Center
+to learn more. Please note these services are fee-based and do not guarantee acceptance.
+Share Your Code and Data
+Increase the impact of your work by sharing your code and data for others to view, build upon, and reuse. IEEE works with Code Ocean [
+https://codeocean.com/
+], a cloud-based computational reproducibility platform, to make your code discoverable. IEEE DataPort [
+https://ieee-dataport.org/
+], an online data repository of datasets and data analysis tools, makes your datasets discoverable. Visit the
+IEEE Author Center
+for more information.
+IEEE Author Tools
+Preparing your article for submission is easy with
+IEEE Author Tools
+. Tools are available to help you find the right publication for your research, check the quality of your graphics, validate your LaTeX files, and verify your reference list.
+Page Charges
+After a manuscript has been accepted for publication, the author’s company or institution will be requested to pay a charge of $110 per printed page to cover part of the cost of publication. Page charges for this transaction, like those for journals of other professional societies, are not obligatory nor is their payment a prerequisite for publication. Articles submitted to this transaction will be imposed a mandatory over-length page charge for pages in excess of 10 pages for a regular paper, 15 pages for a review paper, 6 pages for a brief paper, 10 pages for an invited paper, and 15 pages for an invited review paper. Authors of articles accepted for publication will be assessed a mandatory page charge of $200 (per page) for every printed page over these limits.
+Post-Acceptance
+If your article is accepted for publication, you will receive emailed instructions regarding your next steps. You may be asked to upload final production-ready files. Shortly after final files are uploaded, you will receive your article proofs for final review, along with instructions on how to review your proofs and submit any corrections. Please note that major changes to your article, including the list of references, are not permitted after the article is accepted for publication. Please contact the Editor-in-Chief if you have any doubts about whether a modification you wish to make is appropriate.
+Copyright
+It is the policy of the IEEE to own the copyright of the technical contributions it publishes. IEEE has moved to an all-electronic copyright submission system. Once you have submitted your final files you will be automatically redirected to the IEEE electronic copyright form where you will be able to complete copyright transfer or select an appropriate license agreement. Hard copy copyright forms are no longer acceptable.
+Author Names in Native Languages
+IEEE supports the publication of author names in their native language alongside the English versions of their names in the author list of an article. For more information, please visit the IEEE Author Center at the following URL:
+https://journals.ieeeauthorcenter.ieee.org/create-your-ieee-article/create-the-text-of-your-article/publishing-author-names-in-native-languages/
+.
+Information for Authors
+IEEE Transactions on Artificial Intelligence
+Welcome from the Vice President for Publications
+Editors and Associate Editors
+IEEE Xplore (TAI)
+Information for Authors
+Online Submission
+Review Process
+IEEE Copyright
+Plagiarism and Ethical Issues
+LaTeX and Microsoft Word Templates
+Open Researcher and Contributor ID
+Advertising
+Special Issues
+IEEE PSPB Operations Manual
+|
+IEEE Transactions on Fuzzy Systems, Volume 34, Issue 10, October 2026
+IEEE Transactions on Artificial Intelligence, Volume 7, Issue 10, October 2026
+IEEE Transactions on Evolutionary Computation, Volume 30, Issue 5, October 2025
+IEEE Transactions on Emerging Topics in Computational Intelligence Volume 10, Issue 6, October 2026
+IEEE Transactions on Neural Networks and Learning Systems, Volume 37, Issue 9, September 2026
+IEEE Transactions on Fuzzy Systems, Volume 34, Issue 9, September 2026
+IEEE Transactions on Artificial Intelligence, Volume 7, Issue 9, September 2026
+IEEE Transactions on Cognitive and Developmental Systems, Volume 18, Issue 4, August 2026
+IEEE Transactions on Fuzzy Systems, Volume 34, Issue 8, August 2026
+IEEE Transactions on Neural Networks and Learning Systems, Volume 37, Issue 8, August 2026
+Home
+Sitemap
+Contact
+Accessibility
+Nondiscrimination Policy
+IEEE Ethics Reporting
+IEEE Privacy Policy
+Terms
+© Copyright 2026 IEEE – All rights reserved. A public charity, IEEE is the world's largest technical professional organization dedicated to advancing technology for the benefit of humanity.

@@ -1,0 +1,40 @@
+% Synthetic skill evaluation; author review and research evidence are pending.
+\documentclass{article}
+\usepackage{iclr2027_conference,times}
+\usepackage{amsmath,amssymb}
+\usepackage{hyperref,url}
+\newcommand{\AuthorPending}[1]{\textbf{AUTHOR INPUT PENDING:} #1}
+\title{Confidence Gate: A Fixed Probability Threshold for Accepting Classifier Predictions}
+\author{Anonymous authors}
+% Do not enable \iclrfinalcopy: this project uses double-anonymous submission mode.
+\begin{document}
+\maketitle
+\begin{abstract}
+This manuscript is a synthetic skill-evaluation draft, not a report of completed research.
+We specify Confidence Gate, a rule applied to the predictions of a fixed classifier:
+a prediction is accepted when its maximum class probability is at least $0.8$ and
+rejected otherwise. The rule is defined without modifying the classifier.
+The supplied material contains no dataset, named model, experimental measurements,
+implementation, related literature, or theoretical result. Accordingly, this draft
+formalizes the decision rule and identifies the information needed for evaluation,
+without claiming improved performance, novelty, or a correctness guarantee.
+The threshold is a supplied design choice whose empirical justification remains
+unavailable. All research conclusions beyond the stated rule require additional
+author evidence and review.
+\end{abstract}
+\input{sections/body.tex}
+\section*{AI use statement}
+AI was used to organize this initial draft and express the supplied material in
+English. The authors have not yet reviewed the resulting text. No experimental
+results, references, theorems, or proofs were supplied for this drafting task;
+this manuscript does not claim that AI use established any research result.
+\AuthorPending{The authors must verify the manuscript and update this statement
+to reflect the complete, actual AI-use record before any submission.}
+\section*{Reproducibility statement}
+The threshold rule in Section~\ref{sec:method} is specified, but the classifier,
+data, implementation, and evaluation protocol are unavailable. No executable
+research implementation or experimental reproduction is provided. The supplied
+material is insufficient to reproduce a performance claim because no such claim
+has been verified. The accompanying \texttt{references.bib} is deliberately empty:
+no verified scholarly references were supplied.
+\end{document}

@@ -1,0 +1,11 @@
+{
+  "checked": [
+    {
+      "id": "tpami-2025-03",
+      "outcome": "replace_or_find_author_accepted_version",
+      "evidence": "PDFp1 bioRxiv version2023-09-13 not certified by peer review; OpenAlex label unreliable",
+      "pages_inspected": "1–7 plus startp8",
+      "fulltext_semantic_review_count": 0
+    }
+  ]
+}

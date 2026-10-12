@@ -1,0 +1,233 @@
+{
+  "id": "aaai-2024-22",
+  "venue": "aaai",
+  "year": 2024,
+  "split": "induction",
+  "title": "KD-Club: An Efficient Exact Algorithm with New Coloring-Based Upper Bound for the Maximum k-Defective Clique Problem",
+  "authors": "Mingming Jin, Jiongzhi Zheng, Kun He",
+  "review_date": "2026-10-12",
+  "reviewer": "Codex continuous-reading agent",
+  "mode": "Continuous all-page semantic writing-style review; not independent theorem verification or experimental reproduction",
+  "full_text_style_review_complete": true,
+  "external_appendix_review_complete": true,
+  "count_eligible_full_text_and_relevant_appendix": true,
+  "pdf_path": ".claude/skills/paper-writing-shared/tmp/corpus/aaai/pdf/KD-Club- An Efficient Exact Algorithm with New Coloring-Based Upper Bound for the Maximum k-Defective Clique Problem.pdf",
+  "markdown_path": ".claude/skills/paper-writing-shared/tmp/corpus/aaai/markdown/KD-Club- An Efficient Exact Algorithm with New Coloring-Based Upper Bound for the Maximum k-Defective Clique Problem.md",
+  "pdf_sha256": "10f1f79bba65075b43abd44cb03dd83558862d2a7ce86a303e94f2adfa95e8f8",
+  "version_audit": {
+    "version": "AAAI Press published technical-track version",
+    "official_landing": "https://ojs.aaai.org/index.php/AAAI/article/view/30061",
+    "official_pdf": "https://ojs.aaai.org/index.php/AAAI/article/download/30061/31868",
+    "identity_checks": [
+      "title and authors",
+      "AAAI-24/25 publication header",
+      "proceedings page range"
+    ],
+    "publisher_byte_identity_rechecked": false,
+    "doi": "10.1609/aaai.v38i18.30061",
+    "published_date": "2024-03-24",
+    "proceedings_pages": "20735–20742"
+  },
+  "holdout_validation": null,
+  "official_requirements": [],
+  "generalization_warning": "No official requirement is inferred from these papers; official template/submission-stage rules remain separate.",
+  "coverage": [
+    {
+      "asset": "published main PDF",
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "reading": "continuous full text, all shown lemma proof, algorithms1–5, tables1–2, figure2 and references",
+      "sections": "Abstract; Introduction; Preliminaries; Coloring-based Upper Bound; Branch and Bound Algorithm; Empirical Evaluation; Conclusion; Acknowledgments; References"
+    }
+  ],
+  "supplement_audit": {
+    "result": "No external text appendix is referenced in continuously read main PDF; official landing lists only PDF. Code links and graph datasets are artifacts, not omitted manuscript appendices.",
+    "appendix_status": "not_applicable_no_referenced_text_appendix",
+    "code_repository": "https://github.com/JHL-HUST/KD-Club",
+    "code_repository_observation": "Public root page contains KD-Club and baseline-KDBB directories; code is not claimed reviewed or executed.",
+    "caveat": "This establishes absence of a referenced text appendix in the consulted publication/landing, not that no unlisted material could exist."
+  },
+  "ten_dimensions": {
+    "reader_argument": {
+      "category": "corpus_observation",
+      "observation": "引言从clique的苛刻完整连接到允许缺边的dense subgraph，说明k-defective介于clique与(k+1)-plex，再聚焦精确求解和BnB上界。",
+      "positions": [
+        "main pp1–2"
+      ],
+      "editorial_advice": "先辨明任务相对近邻的定义与目标，再让读者理解为何边缺失信息控制剪枝效率。",
+      "applicability": "组合搜索算法样本；不能把其问题背景作为AAAI通用主题。",
+      "confidence": {
+        "paper_specific": "high",
+        "venue_frequency": "not_estimated; two induction samples cannot establish venue-wide prevalence"
+      }
+    },
+    "title_abstract": {
+      "category": "corpus_observation",
+      "observation": "标题含算法名、exact、coloring-based upper bound和问题全名；摘要是任务→BnB瓶颈→忽略边信息→CLUB→两处集成→求解数/树/时间证据。",
+      "positions": [
+        "main p1"
+      ],
+      "editorial_advice": "标题突出具体技术对象，摘要结果写清cut-off时间与量度；不要把上界更紧等价为每个实例都更快。",
+      "applicability": "标题形式与2025-12无算法名标题不同，无统一AAAI命名要求。",
+      "confidence": {
+        "paper_specific": "high",
+        "venue_frequency": "not_estimated; two induction samples cannot establish venue-wide prevalence"
+      }
+    },
+    "introduction": {
+      "category": "corpus_observation",
+      "observation": "相关方法嵌入引言，逐个指出MADEC+大k上界退化与KDBB忽略候选集内部缺边的机制；贡献段解释颜色独立集如何提供被忽略的缺边下界。",
+      "positions": [
+        "main pp1–2"
+      ],
+      "editorial_advice": "写可定位的机制缺口，将CLUB的两个作用点与后续实验指标对应。",
+      "applicability": "未使用独立贡献列表或Related Work节；不可强制固定模板。",
+      "confidence": {
+        "paper_specific": "high",
+        "venue_frequency": "not_estimated; two induction samples cannot establish venue-wide prevalence"
+      }
+    },
+    "related_work": {
+      "category": "corpus_observation",
+      "observation": "Introduction比较RDS/branch-and-price及两种最近BnB；Preliminaries的Revisiting the Reduction Rules of KDBB细化直接baseline定义和Rules1–2。",
+      "positions": [
+        "main pp1–2"
+      ],
+      "editorial_advice": "背景方法与被替换的技术接口分别组织；准确区分作者复实现与原作者代码。",
+      "applicability": "本例直接baseline不是同硬件上原始论文数字；KDBB为本文作者重实现。",
+      "confidence": {
+        "paper_specific": "high",
+        "venue_frequency": "not_estimated; two induction samples cannot establish venue-wide prevalence"
+      }
+    },
+    "method_theory": {
+      "category": "corpus_observation",
+      "observation": "Lemma1短证明→CLUB定义Eq1→七顶点图例→ColorBound/Extract→KD-Club主框架→预处理Rules3–4→BnB。示例显式比较旧界7和新界5相对LB6的剪枝。",
+      "positions": [
+        "main pp2–5",
+        "main p3 Fig1"
+      ],
+      "editorial_advice": "给核心界的推导和可手算例子，算法以输入输出和line references连接正文；保留精确性依据。",
+      "applicability": "理论的bound dominance不等于运行时间dominance；不声称独立证明所有算法正确性。",
+      "confidence": {
+        "paper_specific": "high",
+        "venue_frequency": "not_estimated; two induction samples cannot establish venue-wide prevalence"
+      }
+    },
+    "evidence": {
+      "category": "corpus_observation",
+      "observation": "341图×6个k=2046实例；硬件、1800s cut-off和baseline来源在正文；Table1分图集/k汇总解出数，Table2给20代表实例的约简后规模、树大小与秒数，Fig2拆分预处理和BnB两个作用点。",
+      "positions": [
+        "main pp5–7"
+      ],
+      "editorial_advice": "实验组织按总体覆盖→可解释性能机制→模块消融；保留图数据、k、cut-off、单位、NA超时语义与重实现来源。",
+      "applicability": "Table2是选择的代表实例；两种k消融曲线不能代表全部2046实例的细粒度排名。",
+      "confidence": {
+        "paper_specific": "high",
+        "venue_frequency": "not_estimated; two induction samples cannot establish venue-wide prevalence"
+      }
+    },
+    "discussion_limits": {
+      "category": "corpus_observation",
+      "observation": "Conclusion总结更充分缺边检测及两处应用；future work提出推广其他relaxed clique/BnB问题。实验正文承认dense图预处理无约简、大k预处理作用小。",
+      "positions": [
+        "main p6 dense cases",
+        "main p7 ablation discussion/conclusion"
+      ],
+      "editorial_advice": "把机制在哪些密度和k有效说清；将推广目标写未来工作而非当前已有证据。",
+      "applicability": "无独立Limitations节；不以此取消用户目标venue当前官方栏目要求。",
+      "confidence": {
+        "paper_specific": "high",
+        "venue_frequency": "not_estimated; two induction samples cannot establish venue-wide prevalence"
+      }
+    },
+    "paragraph_language": {
+      "category": "corpus_observation",
+      "observation": "每小节先说明目的再给式或algorithm、最后解释对应line ranges；性能陈述常用significantly/excellent，而表格提供局部例外，因而润色应收紧量词。",
+      "positions": [
+        "main pp3–7"
+      ],
+      "editorial_advice": "因果机制保持具体（候选内部缺边→上界→剪枝），避免空泛robustness与无条件优越。",
+      "applicability": "主文没有统计检验或多seed报告；不能自动扩成statistically significant。",
+      "confidence": {
+        "paper_specific": "high",
+        "venue_frequency": "not_estimated; two induction samples cannot establish venue-wide prevalence"
+      }
+    },
+    "main_appendix": {
+      "category": "corpus_observation",
+      "observation": "八页发表稿直接容纳全部关键Lemma证明、五个算法、图例、实验设置和结果；pp1–7正文，p8致谢与参考文献，无附录承接。",
+      "positions": [
+        "main pp1–8"
+      ],
+      "editorial_advice": "对于短可展开的界推导可放正文，把算法和必要实验参数留在可阅读位置；勿为贴近Nature而删去technical proof。",
+      "applicability": "与2025-12外部七页proof supplement不同；篇幅分配取决于论文类型和官方规则。",
+      "confidence": {
+        "paper_specific": "high",
+        "venue_frequency": "not_estimated; two induction samples cannot establish venue-wide prevalence"
+      }
+    },
+    "actionable": {
+      "category": "corpus_observation",
+      "observation": "可执行组织是机制缺口→界证明/例子→两阶段集成→分层比较/消融，并保留局部败例。",
+      "positions": [
+        "main pp2–7"
+      ],
+      "editorial_advice": "原创示例：Under the 1,800-second budget, the solver improves coverage on most benchmark groups; dense k=1 and SNAP k=5 remain exceptions.（结构示例，不可嫁接成用户新算法的事实。）",
+      "applicability": "例外来自本样本表格，不是venue强制措辞；不得把精确求解改写成polynomial-time guarantee。",
+      "confidence": {
+        "paper_specific": "high",
+        "venue_frequency": "not_estimated; two induction samples cannot establish venue-wide prevalence"
+      }
+    }
+  },
+  "counterexamples": [
+    {
+      "position": "main p6 Table1, DIMACS2 k=1",
+      "finding": "KD-Club解31，MADEC+解32；不是每个group都最多。",
+      "editorial_action": "保留most groups限定与cut-off。"
+    },
+    {
+      "position": "main p6 Table1, SNAP/DIMACS10 k=5",
+      "finding": "KD-Club解37，KDBB解38；该group发生反向差异。",
+      "editorial_action": "保留局部失败条件，不将overall改写成uniform dominance。"
+    },
+    {
+      "position": "main p7 Fig2(a), k=3; p6 general ablation prose",
+      "finding": "实际曲线显示去预处理变体KD-Club^-Pre低于KDBB，另一变体KD-Club^-BnB也低于KDBB；“两variants优于KDBB”的笼统表述不能无条件采纳。",
+      "editorial_action": "逐k读图，模块贡献具有相互作用；不能从完整算法更强推导每个消融变体都更强。"
+    },
+    {
+      "position": "main p6 baseline KDBB paragraph",
+      "finding": "KDBB是本文作者重实现，文中声称比原报道结果更好；不等于使用原作者实现或独立复现认证。",
+      "editorial_action": "保留baseline provenance，比较对象可重复性待代码实验核验。"
+    },
+    {
+      "position": "main p7 Table2 and main p6 dense-case explanation",
+      "finding": "dense代表图约简前后规模相同，仍可通过BnB得到速度收益；不能将全部收益归因于预处理压缩。",
+      "editorial_action": "分离预处理机制与搜索机制；代表实例并非完整样本。"
+    }
+  ],
+  "visual_review": {
+    "main_pages": [
+      3,
+      6,
+      7
+    ],
+    "supplement_pages": [],
+    "image_files": [
+      "renders/kdclub-p3.png",
+      "renders/kdclub-p6.png",
+      "renders/kdclub-p7.png"
+    ],
+    "extraction_correction": "Figure2 text extraction had garbled legend glyphs; actual rendered plots resolved KD-Club, KD-Club^-Pre, KD-Club^-BnB, KDBB and nonuniform ablation behavior."
+  }
+}

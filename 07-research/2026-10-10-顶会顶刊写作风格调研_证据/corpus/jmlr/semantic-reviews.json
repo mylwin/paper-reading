@@ -1,0 +1,183 @@
+{
+  "review_scope": "Human-agent semantic reading of extracted complete prose and appendix organization for writing style; mathematical correctness not re-proved; extraction can lose mathematical layout.",
+  "reviews": [
+    {
+      "id": "jmlr-2025-16",
+      "status": "fulltext_style_semantic_reviewed",
+      "pages_covered": "1–30",
+      "appendix_coverage": "Appendix A pp20–27; all remaining proofs read for statement/proof mapping and exposition, not independently re-proved",
+      "paper_type": "original theoretical characterization",
+      "reader": "ML/statistical learning readers; explains terminology before proving characterization",
+      "title_abstract": "Strong exclusive-title claim; abstract explicitly restricts continuous nonnegative loss functions with identity of indiscernibles and discusses transformed Bregman divergences",
+      "introduction": "Starts with established decomposition, identifies unsuccessful generalizations and open necessary/sufficient question, then provides section roadmap; no mandatory contribution bullets",
+      "related_work": "Integrated into intro, Bregman section, uniqueness comparison and concluding critique rather than separate Related Work section",
+      "method_theory": "§2 defines losses; §3 defines clean decomposition; §4 constructs admissible examples and constrained exceptions; §5 gives uniqueness. Boxed Examples alternate with formal statements. Figure1 explains proof construction before Lemma11 and appendix proof",
+      "experiments": "No empirical benchmark; evidence is characterization theorem, corollaries and carefully scoped counterexamples. Do not force Experiments section into this type",
+      "discussion_limits": "§6 explicitly relaxes identity/domain constraints; §7 separates proved restricted class from implications for robustness and future functional-space extensions",
+      "language": "Defined terms reused consistently; 'only' tied to a precise class; 'can'/'appears challenging' for extensions; repeated distinctions prevent reversing asymmetric argument order",
+      "main_appendix": "Main text keeps statements, assumptions, examples and proof intuition; Appendix A repeats statements before proofs, enabling direct result-to-proof tracing",
+      "claim_evidence": [
+        {
+          "claim": "g-Bregman uniqueness within stated loss class",
+          "location": "abstract; Theorem12 §5 p15; Appendix A pp26–27"
+        },
+        {
+          "claim": "equality constraints can break clean decomposition",
+          "location": "Example8 §4 pp12–13"
+        },
+        {
+          "claim": "squared transformed Euclidean form is only symmetric possibility",
+          "location": "Corollary13 p15"
+        }
+      ],
+      "counterexample_to_style_rule": "No numerical experiments, no standalone related work, strong title with carefully conditioned abstract. These are valid variants; not universal JMLR requirements",
+      "editing_checks": "Do not drop continuity/nonnegativity/identity conditions when shortening abstract; keep label/prediction argument order; distinguish all g-Bregman losses from equality-constrained cases",
+      "confidence": "high for this paper; low for venue-wide frequency (pilot sample)"
+    },
+    {
+      "id": "jmlr-2025-17",
+      "status": "fulltext_style_semantic_reviewed",
+      "pages_covered": "1–25",
+      "appendix_coverage": "A theorem proofs pp17–18; B optimization pp18–19; C graph-choice illustration pp19–20; D baseline asymptotic estimate p20; references pp20–25",
+      "paper_type": "original algorithm with theory, simulation and application",
+      "reader": "Bayesian computation audience with broader ML motivation; intro explains slow mixing and approximation tradeoffs",
+      "title_abstract": "Mechanism plus input resource in title; abstract progresses practical motivation→acceptance-rate obstacle→graph mechanism→theory and demonstrated settings; no headline benchmark number",
+      "introduction": "Long contextualized comparison of canonical MCMC, variational/diffusion approaches and combinations, then states simple general plug-in goal",
+      "related_work": "Integrated literature-rich introduction; contribution is contrasted by implementation burden and exact stationary target, not only leaderboard rank",
+      "method_theory": "§2 gives exact transition steps, theorem1 and toy illustration; Remarks3–4 clarify ergodicity and alternatives. §3 distinguishes conductance-based bound improvement from direct mixing-time comparison and declares tractability assumptions A1–A3",
+      "experiments": "§4 separates banana-contour illustration from dimension/sample-size simulation; 20 repetitions, ESS per iteration, acceptance rates and construction cost. §5 gives count-data model, priors, burn-in and sampling details before effects",
+      "discussion_limits": "§6 describes fixed graph limitation, growing graph/detailed balance risk, discrete and manifold settings. Future ideas are possibilities, not completed capabilities",
+      "language": "Purpose-first section entries; practical guidance explicitly separated from intractable theoretical constants; upper-bound claim qualified in §3.1 and AppendixA.4",
+      "main_appendix": "Main keeps mechanisms, assumptions, simulations and application; appendix holds proofs, optimization extension, illustrative comparison and baseline estimate",
+      "claim_evidence": [
+        {
+          "claim": "preserves stationary posterior by detailed balance",
+          "location": "Theorem1 §2.1 p4; AppendixA.1 p17"
+        },
+        {
+          "claim": "conductance upper-bound improvement, not direct mixing-time ordering",
+          "location": "§3.1 p10; AppendixA.4 p18"
+        },
+        {
+          "claim": "roughly100x ESS/iteration in toy mixture only",
+          "location": "§2.1 p5 Figure1"
+        },
+        {
+          "claim": "approx3x iterations for equal ESS in application",
+          "location": "§5 p15 Figure5g"
+        }
+      ],
+      "counterexample_to_style_rule": "Discussion is standalone; no standalone Conclusion section; related work integrated; main text includes both theory and full application derivation",
+      "editing_checks": "Keep w<1 ergodicity explanation and conditional assumptions; don't promote case-specific100x into universal speedup. Published PDF appendix titles Proof of Theorem2/3 mismatch main Theorem5/6 and Remark8 refers Theorem2: flag numbering issue for author verification, do not imitate it",
+      "confidence": "high for this paper; low for venue-wide frequency (pilot sample)"
+    },
+    {
+      "id": "jmlr-2024-21",
+      "status": "fulltext_style_semantic_reviewed",
+      "pages_covered": "1–37",
+      "appendix_coverage": "A bandit convex optimization pp30–31; B proof details pp32–35; C zero violation variant pp35–37; all prose and proof exposition read, mathematics not independently verified",
+      "paper_type": "original theoretical algorithm/framework",
+      "reader": "contextual-bandit specialists with notation explained and subproblem interfaces isolated",
+      "title_abstract": "Problem family plus modular Lagrangian mechanism; abstract strongest optimality claim conditioned on mild assumptions, non-stationary result explicitly weaker benchmark",
+      "introduction": "Labelled paragraphs Our scope/Our contributions/Special cases; three technical contributions in connected prose; §§1.1–1.3 context, concurrent independent work, roadmap",
+      "related_work": "Dedicated intro subsections grouped contextual bandits/BwK/constraints/adversarial/large vs small budget; explicitly acknowledges already solved special cases and incomparable benchmarks",
+      "method_theory": "§2 formal model and Remarks on iid contexts, consumption signs, null-arm distinction; §3 framework and theory interfaces; §4 central proof three steps; §5 regression instantiation and guarantees; §6 switching benchmark and guarantees",
+      "experiments": "No own empirical experiment; empirical motivations cite previous real-data studies. No Experiments subsection must be invented",
+      "discussion_limits": "§5.3 separates possible practical tuning from guarantees; §7 known Slater margin limitation and follow-ups, future benchmark-based nonstationarity",
+      "language": "Algorithm names consistent; clear distinctions stochastic/switching, standard/pacing benchmark, known/unknown parameters; high-probability not almost-sure; summary uses essentially optimal only with conditions",
+      "main_appendix": "Core proof mechanism remains main; appendix includes additional application, standalone completeness proofs and stricter zero-violation variant; bibliography precedes appendix",
+      "claim_evidence": [
+        {
+          "claim": "sqrtT outcome regret under Slater and large budgets; weakerT3/4 generally",
+          "location": "intro p3; Theorem9 p12; Corollary17 p18"
+        },
+        {
+          "claim": "non-stationary vanishing regret uses weaker pacing comparator",
+          "location": "§6 p21 Theorem22 p22"
+        },
+        {
+          "claim": "zero violations require rescaling and high probability",
+          "location": "Remark10 p12; AppendixC pp35–37"
+        }
+      ],
+      "counterexample_to_style_rule": "Standalone background/related subsections in intro rather than separate later Related Work; lengthy main proofs despite appendices; pure theory without experiments",
+      "editing_checks": "Do not drop regression oracle guarantees, known Slater margin or budget regime; don't equate pacing and strongest dynamic benchmarks; theorem/lemma cross-reference mismatches in source require author review",
+      "confidence": "high for this paper; insufficient for venue frequency",
+      "holdout_validation": {
+        "tested_pilot_rules": [
+          "main claims conditioned",
+          "related work flexible",
+          "pure theory may omit experiments",
+          "appendix result mapping"
+        ],
+        "result": "all four compatible; no new rule inferred from holdout; main proof length and bibliography-before-appendix are variants, not fixed layout recommendations"
+      }
+    },
+    {
+      "id": "jmlr-2024-04",
+      "status": "fulltext_style_semantic_reviewed",
+      "pages_covered": "1–31",
+      "appendix_coverage": "No appendix in publisher final; §§4.1–4.2 pp11–26 carry construction and complete presented proofs; bibliography pp30–31 read",
+      "paper_type": "original minimax theory with explanatory simulation",
+      "reader": "Nonparametric learning readers; starts with two visually adjacent margin definitions to explain an otherwise subtle distinction",
+      "title_abstract": "No Gain is immediately scoped by non-unique Bayes classes, near-uniform marginals and worst-case rates; abstract separately explains what extends the earlier binary conference version",
+      "introduction": "§1 pp1–4 starts with accepted margin intuition, contrasting two definitions, lists two regime results, summarizes in Table1, explains savings mechanisms, explicitly excludes the interpretation of no practical constant-factor gain, and gives a conference-extension paragraph plus roadmap",
+      "related_work": "Integrated into problem motivation and theorem-by-theorem comparison; no separate related-work section; substantive extension explained rather than merely adding omitted proofs",
+      "method_theory": "§2 formalizes smoothness/density/effective classes and excess 0–1 risk; §3 gives regime overview with assumptions/theorems/remarks and two pseudocodes; §4 explains difficult-distribution construction, randomization and decoupling before propositions and proof details",
+      "experiments": "§5 pp27–28 constructs synthetic three-class distribution, defines active/passive classifiers and shared known smoothness, test size100000, 10 repetitions and standard-deviation bars. Simulation illustrates theoretical mechanism; not broad benchmark superiority",
+      "discussion_limits": "§6 pp28–29 distinguishes refined margin gain and minimax no-gain, leaves parametric/VC classes and alternative loss measures open",
+      "language": "Strong negative claim qualified by minimax rate versus constants; may/can used for practical or open implications; novelty is explained via construction differences, not only adjectives",
+      "main_appendix": "All proofs in main text and no appendix. This counterexample prevents making appendix placement or short proofs mandatory. Main §3 accessible result overview precedes long §4 formal evidence",
+      "claim_evidence": [
+        {
+          "claim": "No improvement of worst-case rate under strong density and TMC allowing nonunique Bayes",
+          "location": "Table1 p3; Theorem11 p6; §4.1 pp11–20"
+        },
+        {
+          "claim": "Possible practical constant-factor gain remains",
+          "location": "§1 p3; Theorem21 pp10–11; simulation Fig4 p28"
+        },
+        {
+          "claim": "General-density regime allows worst-case improvement",
+          "location": "Theorem23 p11 and proof §4.2.2 pp25–26"
+        }
+      ],
+      "counterexamples": [
+        "No independent Related Work section",
+        "Proofs occupy main text, no appendix",
+        "Explanatory simulation rather than standard dataset benchmark suite"
+      ],
+      "source_cautions": [
+        "Extracted mathematical notation may be lossy; no correctness re-proof",
+        "Original reference to Lemma B.1 p14 has no Appendix B in publisher PDF; verify source rather than propagate cross-reference automatically"
+      ],
+      "confidence": "high for this paper, low as venue-frequency evidence"
+    }
+  ],
+  "excluded_after_reading": [
+    {
+      "title": "Aequitas Flow: Streamlining Fair ML Experimentation",
+      "pages_covered": "1–7",
+      "reason": "Software/framework article, outside default original research corpus; no theorem or hypothesis-driven study; method components and illustrative tool outputs. PDF retained but replaced in 50-paper manifest.",
+      "replacement_id": "jmlr-2024-14",
+      "replacement_title": "Fixed points of nonnegative neural networks"
+    }
+  ],
+  "navigation_only_not_fulltext": [
+    {
+      "id": "jmlr-2024-01",
+      "coverage": "47-page section/page previews incl appendix A–C; not complete prose read",
+      "observation": "Main proof infrastructure and approximation limits before related work; QTD family/multiple fixed points; cannot universalize empirical success into proof beyond tabular settings"
+    },
+    {
+      "id": "jmlr-2024-02",
+      "coverage": "52-page section/page previews incl appendix A–G; not complete prose read",
+      "observation": "Theory→implementation guidance→numerical illustrations→explicit limitations; related work embedded intro; theory assumptions distinguish well-posedness from finite discretization behavior"
+    },
+    {
+      "id": "jmlr-2024-03",
+      "coverage": "76-page section/page previews incl appendix A–F; not complete prose read",
+      "observation": "Algorithmic tradeoffs and proofs occupy main; related work separate; appendix theorem support; no empirical results of its own, cited subsequent work supplies experiments"
+    }
+  ]
+}

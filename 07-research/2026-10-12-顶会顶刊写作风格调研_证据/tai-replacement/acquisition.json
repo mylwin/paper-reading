@@ -1,0 +1,26 @@
+[
+  {
+    "url": "https://pure-oai.bham.ac.uk/ws/files/219032020/LiY24.pdf",
+    "file": ".claude/skills/paper-writing-shared/tmp/source-materials/07-research/2026-10-12-顶会顶刊写作风格调研_证据/tai-replacement/snn-slimming-accepted-author.pdf",
+    "bytes": 1675136,
+    "sha256": "1b4243c3e5fd71310821f345f53cc103545d519120d17aa9433afaf6a8aef3dc"
+  },
+  {
+    "url": "https://research.birmingham.ac.uk/en/publications/efficient-structure-slimming-for-spiking-neural-networks/",
+    "file": "07-research/2026-10-12-顶会顶刊写作风格调研_证据/tai-replacement/snn-repository.html",
+    "bytes": 56377,
+    "sha256": "b531a39793dfbc367023b63a987bcdd10d062e83b2631386fbc8397efca7dd5d"
+  },
+  {
+    "file": ".claude/skills/paper-writing-shared/tmp/source-materials/07-research/2026-10-12-顶会顶刊写作风格调研_证据/tai-replacement/ss-trboosting-arxiv-v1.pdf",
+    "status": "exists-not-overwritten"
+  },
+  {
+    "file": "07-research/2026-10-12-顶会顶刊写作风格调研_证据/tai-replacement/ss-trboosting-crossref.json",
+    "status": "exists-not-overwritten"
+  },
+  {
+    "file": "07-research/2026-10-12-顶会顶刊写作风格调研_证据/tai-replacement/snn-slimming-crossref.json",
+    "status": "exists-not-overwritten"
+  }
+]

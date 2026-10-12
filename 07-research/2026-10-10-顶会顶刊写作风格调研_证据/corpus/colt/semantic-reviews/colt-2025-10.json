@@ -1,0 +1,56 @@
+{
+  "id": "colt-2025-10",
+  "title": "Learning DNF through Generalized Fourier Representations",
+  "review_date": "2026-10-11",
+  "mode": "continuous page-range semantic style review; formulas browsed for exposition not re-proved",
+  "full_text_style_review_complete": true,
+  "external_appendix_review_complete": true,
+  "coverage": [
+    {
+      "version": "PMLR published 2025",
+      "pages": "1–17",
+      "sections": "Abstract; Introduction; Preliminaries; BN basis; extended KM; k-junta; chain expansion and bound; tree bound; lower bounds; learnability; conclusions; references",
+      "missing": "none in published PDF"
+    },
+    {
+      "version": "arXiv2506.01075v1, 2025-06-01",
+      "pdf_path": ".claude/skills/paper-writing-shared/tmp/corpus/colt/pdf/Learning DNF through Generalized Fourier Representations（作者扩展版 arXiv 2506.01075v1）.pdf",
+      "markdown_path": ".claude/skills/paper-writing-shared/tmp/corpus/colt/markdown/Learning DNF through Generalized Fourier Representations（作者扩展版 arXiv 2506.01075v1）.md",
+      "sha256": "1cab56c12c1c4e560aee0048adf9303b85b6e263f031ac4e43243664ef106d3c",
+      "pages": "1–54",
+      "sections": "§1–11 including full proofs, both restricted Chow–Liu learning variants §10, Appendix A Lemmas37–38, references",
+      "missing": "no appendix missing; no separate experiments in theory article"
+    }
+  ],
+  "ten_dimensions": {
+    "reader_argument": "学习理论读者；动机以 DNF 长期可学习性问题及 MQ 模型开始，逐步限定可证结论，而不是应用性能故事（正式版§1）。",
+    "title_abstract": "标题将对象 DNF 与手段 generalized Fourier 对接；正式摘要三类贡献分别说表示、算法工具、受约束分布谱范数与可学习性。作者扩展版摘要五项，增加未知分布学习；不能将两个版本的贡献计数混同（扩展p1）。",
+    "introduction": "从一般困难→已有uniform/product结果→缺口→新基与谱范数→明确两层适用域。扩展p3每条贡献映射 Corollary/Theorem/Lemma，读者能找到证据。",
+    "related_work": "嵌入问题历史和预备知识，并在k-junta、DNF、Chow–Liu各节就近对比；无需独立Related Work章。原算法继承与新适配分别交代（扩展§4、9、10）。",
+    "method_theory": "先definition/normalization，再KM估计和采样，chain推导为tree准备；fullproof使用命名lemma、case拆分、worked Example1、分支图与归纳连接，陈述限制在定理内部（扩展§3–7）。",
+    "evidence": "证明承担证据，泛化不是新数据集；上下界共同解释树结构和difference条件，反例防止基适用所有分布推成DNF可学所有分布（正式§8、扩展§7）。",
+    "discussion_limits": "结论重新划分 basis/KM 任意分布 vs learnability受约束；future questions分别graph/parametertradeoff、lowdegree、其他算法应用，未宣称经验验证（扩展§11）。",
+    "paragraph_language": "段首说明该lemma在下一步中的作用，公式后解释新因子/独立性理由；强谓词 prove/show 带对象与假设，substantial extension用确切类别支撑。",
+    "main_appendix": "正式版给证明思路和足够关键公式，完整推导指作者54页v1。扩展版大量证明位于主体；唯一Appendix A是square error与spectral norm连接。不可一律要求proof全部附录。",
+    "actionable": "先列结果依赖图和每项假设，再写摘要；在结论重申不同定理的适用域；完整证明外置时正文保留核心构造、关键lemma及为何约束必要。"
+  },
+  "counterexample": "对“每篇有实验”“必须独立Related Work”“方法对任意分布→所有DNF可学”“完整证明全部附录”均为反例。",
+  "holdout_validation": {
+    "split": "holdout locked before extraction",
+    "purpose": "首个完整留出读解；尚无40篇归纳完成，不能称完整留出验证",
+    "checks": [
+      {
+        "rule": "贡献必须和定理证据及条件对应",
+        "result": "supports with theorem-mapped list"
+      },
+      {
+        "rule": "所有proof移附录",
+        "result": "reject; expanded full proof mostly main text"
+      },
+      {
+        "rule": "basis generality equals learnability generality",
+        "result": "reject; explicit domain distinction"
+      }
+    ]
+  }
+}

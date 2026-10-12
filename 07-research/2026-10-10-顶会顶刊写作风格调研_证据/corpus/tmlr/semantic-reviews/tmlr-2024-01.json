@@ -1,0 +1,99 @@
+{
+  "id": "tmlr-2024-01",
+  "title": "G4SATBench: Benchmarking and Advancing SAT Solving with Graph Neural Networks",
+  "venue": "tmlr",
+  "year": 2024,
+  "split": "derivation",
+  "review_date": "2026-10-11",
+  "reviewer": "Codex root",
+  "mode": "Continuous all-page semantic writing-style reading, including references and embedded appendices; not independent theorem/code verification or experimental reproduction",
+  "full_text_style_review_complete": true,
+  "external_appendix_review_complete": true,
+  "publication_identity_and_acquired_version": "arXiv2309.16941v2; author-deposited TMLR published-header version, not byte-verified against current OpenReview PDF",
+  "publisher_current_byte_equivalence": "not established",
+  "pdf_path": ".claude/skills/paper-writing-shared/tmp/corpus/tmlr/pdf/G4SATBench_Benchmarking_and_Advancing_SAT_Solving_with_Graph_Neural_Networks.pdf",
+  "pdf_sha256": "fd35c5cb7e8303af994b2306280c7734c9bc016a5ab8634f0816217daf90bcbb",
+  "markdown_path": ".claude/skills/paper-writing-shared/tmp/corpus/tmlr/markdown/G4SATBench_Benchmarking_and_Advancing_SAT_Solving_with_Graph_Neural_Networks.md",
+  "markdown_sha256": "5c3193bf63e7e46e684eb2cabe5c66fc92c52730e865a2f1180a99a3bf6b4aa5",
+  "coverage": [
+    {
+      "version": "arXiv2309.16941v2; author-deposited TMLR published-header version, not byte-verified against current OpenReview PDF",
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "section_pages": {
+        "1–3": "Abstract, Introduction, Related Work, Preliminaries",
+        "3–6": "dataset, GNN representation, training objectives and inference",
+        "6–10": "benchmark and diagnostic questions, results",
+        "10–13": "Discussion, limitations, Conclusion, References",
+        "14–20": "Appendices A–D: generator settings, model equations, complete results, diagnostics and solver budgets"
+      },
+      "method": "continuous reading; any truncated tool text reread separately; figures/formulas ambiguous in extraction checked in actual page render"
+    }
+  ],
+  "supplement_audit": {
+    "source": "https://openreview.net/forum?id=7VB5db72lr",
+    "result": "Appendices A–D embedded and continuously read. Author G4SATBench repository inspected for artifact context; no separately referenced prose supplement located. Matching Published TMLR05/2024 and Reviewed-on7VB5db72lr header, authors/title and official publication index. Current publisher PDF byte equality remains unknown."
+  },
+  "ten_dimensions": {
+    "reader_argument": "p1–2把不统一任务/数据造成的比较失真作为基准动机，兼顾SAT与GNN读者；先说明能比较什么。",
+    "title_abstract": "标题是基准＋推进的功能；摘要依次缺口、7类数据/难度/模型评估和负发现，承认与CDCL差距。",
+    "introduction": "贡献围绕数据、可比较流程、诊断发现与公开产物，不以单个SOTA数值替代意义。",
+    "related_work": "p2–3区分独立求解与神经辅助求解，讨论既有数据缺陷，然后补SAT预备知识；不是强制所有TMLR稿都这样排列。",
+    "method_theory": "p3–6将Dataset/GNN/Tasks/Training/Inference分开，Figure1流程地图＋关键消息传递式，模型全变体放AppendixB；无正式定理。",
+    "evidence": "p6–8统一比较，p8–10按行为诊断问题解释；预训练负结果Table5保留。一般benchmark3seeds，而AppendixC.1明确泛化实验1seed，不能统一改为三次。",
+    "discussion_limits": "p10–11限制与未来分开，承认小型合成数据、独立GNN与工业求解差距；不把探讨机制写成证明。",
+    "paragraph_language": "问题标签导向结果和解释；失败的训练种子在表中保留“-”，不删失败样本来强化稳定性。",
+    "main_appendix": "A p14–15生成参数/统计；B p15–16模型；C p15–19完整结果；D p19–20诊断与solver预算，全部读完。",
+    "actionable": "基准稿按可比性与研究问题组织，正文给关键口径、附录给完整配置；solver比较明确预算、分摊时间与无预算结果。"
+  },
+  "counterexamples": [
+    {
+      "location": "p20 Table12; AppendixD",
+      "finding": "NeuroSAT在限制32flips时优于Sparrow；无限预算Sparrow与CaDiCaL均求解全部。GPU时间还按batch分摊。",
+      "editing_rule": "不能把限定预算胜率改成全面替代经典solver或同口径更快。"
+    },
+    {
+      "location": "p6 vs p16 AppendixC.1",
+      "finding": "一般benchmark3seeds，泛化实验1seed。",
+      "editing_rule": "重复次数按实验注明，不能统一表述。"
+    },
+    {
+      "location": "p7 general statement vs p8 Table2 and AppendixC.3",
+      "finding": "medium kClique的NeuroSAT有训练失败“-”。",
+      "editing_rule": "stable all等表述需保留例外，失败结果不可移除。"
+    }
+  ],
+  "confidence": {
+    "paper_observation": "high for documented page content",
+    "venue_generalization": "low; purposive pilot, no frequency estimate, no complete50-paper or heldout validation"
+  },
+  "official_requirement": false,
+  "holdout_validation": null,
+  "previous_status": {
+    "semantic_review_status": "not_reviewed",
+    "version": "official_published_openreview_current",
+    "acquired_version": "author_arxiv_deposit_pending_publication_audit",
+    "version_verification": "pending",
+    "eligibility": null
+  }
+}

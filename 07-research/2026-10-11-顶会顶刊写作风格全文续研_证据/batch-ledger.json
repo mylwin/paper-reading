@@ -1,0 +1,70 @@
+{
+  "updated": "2026-10-11",
+  "new_main_reviews": 5,
+  "new_full_reviews": 4,
+  "new_pdf_acquisitions": 3,
+  "new_holdout_reviews": 0,
+  "papers": [
+    {
+      "id": "aaai-2024-09",
+      "venue": "aaai",
+      "year": 2024,
+      "split": "induction",
+      "pdf_pages": 9,
+      "main_complete": true,
+      "full_and_appendix_complete": true,
+      "review_path": "07-research/2026-10-10-顶会顶刊写作风格调研_证据/corpus/aaai/semantic-reviews/aaai-2024-09.json",
+      "pdf_sha256": "96a147dd58c0c461a37de351488f56a4692acbe67acc345e3853275d9770e568"
+    },
+    {
+      "id": "aaai-2025-16",
+      "venue": "aaai",
+      "year": 2025,
+      "split": "induction",
+      "pdf_pages": 9,
+      "main_complete": true,
+      "full_and_appendix_complete": true,
+      "review_path": "07-research/2026-10-10-顶会顶刊写作风格调研_证据/corpus/aaai/semantic-reviews/aaai-2025-16.json",
+      "pdf_sha256": "fe3e1f8acc57041582a2376a46e495ae02ba25d79b4aa0951e588d2b1536b54e"
+    },
+    {
+      "id": "tmlr-2024-01",
+      "venue": "tmlr",
+      "year": 2024,
+      "split": "derivation",
+      "pdf_pages": 20,
+      "main_complete": true,
+      "full_and_appendix_complete": true,
+      "review_path": "07-research/2026-10-10-顶会顶刊写作风格调研_证据/corpus/tmlr/semantic-reviews/tmlr-2024-01.json",
+      "pdf_sha256": "fd35c5cb7e8303af994b2306280c7734c9bc016a5ab8634f0816217daf90bcbb"
+    },
+    {
+      "id": "tmlr-2025-01",
+      "venue": "tmlr",
+      "year": 2025,
+      "split": "derivation",
+      "pdf_pages": 40,
+      "main_complete": true,
+      "full_and_appendix_complete": false,
+      "review_path": "07-research/2026-10-10-顶会顶刊写作风格调研_证据/corpus/tmlr/semantic-reviews/tmlr-2025-01.json",
+      "pdf_sha256": "fe326fafd89cdf8298b6eaefc327990b131338c25b671dc85856f9b89afde451"
+    },
+    {
+      "id": "tai-2024-07",
+      "venue": "tai",
+      "year": 2024,
+      "split": "derivation",
+      "pdf_pages": 10,
+      "main_complete": true,
+      "full_and_appendix_complete": true,
+      "review_path": "07-research/2026-10-10-顶会顶刊写作风格调研_证据/corpus/tai/semantic-reviews/tai-2024-07.json",
+      "pdf_sha256": "127317187dda92b71196a6b24409ac43790068e1c168a4275483c956a5d06053"
+    }
+  ],
+  "eligibility_issue": {
+    "id": "tai-2024-03",
+    "reason": "Front Cover; not original research",
+    "replacement": "pending; locked slot retained, does not count as research paper"
+  },
+  "unfinished_agent_materials": "AAAI/NeurIPS/TAI agent intermediates not certified by root and excluded; account usage interruption"
+}

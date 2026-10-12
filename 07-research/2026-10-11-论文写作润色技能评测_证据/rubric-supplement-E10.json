@@ -1,0 +1,16 @@
+{
+  "case": "E10",
+  "executor": "independent-agent",
+  "scope": "Blind combined polishing, compression and ICML-to-TAI migration; only original project and skill resources exposed",
+  "gates": [
+    "Evidence boundaries and negative findings preserved",
+    "Compression measured without a prescribed ratio",
+    "Source tree unchanged",
+    "Math/citations/labels/user macros preserved or explicitly justified",
+    "Official TAI class unchanged",
+    "Impact statement 100–150 words",
+    "Both outputs compile and PDF visually checked",
+    "Missing facts marked; no submission-ready claim"
+  ],
+  "independence": "Raw request and original engineering input only, no reference answer or this rubric"
+}

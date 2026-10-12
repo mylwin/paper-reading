@@ -1,0 +1,53 @@
+{
+  "review_scope": "Completeextracted prose organized bypage read forwritingstyle; not mathre-proof/tablecellverification/typographyinspection",
+  "reviews": [
+    {
+      "id": "tnnls-2024-23",
+      "status": "fulltext_style_semantic_reviewed",
+      "pages_covered": "1–15",
+      "appendix_coverage": "No appendix in early-access15pagePDF; allmainsectionsI–VII andbibliography/bios read. Several tablecells areembedded/unextracted, no independent numeric validation claimed",
+      "paper_type": "original hybrid quantum-classicalmethod withsimulated empirical evaluation andcomplexityanalysis",
+      "version_verified": "Publisher early-access typeset header contentfinalexceptpagination, matching DOI10.1109/TNNLS.2023.3312170 andacceptancedate2023-08-31; Crossrefprintyear2024, online/DOIyear2023 remains explicit",
+      "reader": "EO/learning readers; nomenclature plusbasicquantum backgroundsectionII makesinterdisciplinary methodselfcontained",
+      "title_abstract": "Title methodclass+task, abstractmotivation→resourceconstraint→hybridmechanism→complexity→namedbenchmarks; tentative quantumfuture framingdistinct fromempiricalclassification",
+      "introduction": "§I challenge/currentNISQconstraints→openrelativeperformance→proposedarchitecture→evaluationoverview→three numberedcontributions→roadmap; distinguishesfuturehardwarebenefit fromcurrentsimulation",
+      "related_work": "§III separatedfromBackgroundII, groupsQML/QNN/remote-sensingQML; closecomparison §III.B–C explainsqubit/encoding/featureextractiondifferences",
+      "method_theory": "§IV architecturefourlayers withcircuits, amplitudeencoding, kerneloperation, measurement, multicategorychoices andtrainingstepsequence; nomenclaturedefines symbols; complexityanalysisseparate§VIafterexperiments",
+      "experiments": "§V namesfiveEOdatasets thenexactcategorysubsets/downsampling8×8/preprocessing/splits; matchedCNNstructure/features/parameters plusmodifieddeeperbaselines; noiselessTFQandadjointlimitations stated; threeruns mean/std, Wilcoxonsignedrankacrossfivedatasets; component/noiseexperiments statepurposes",
+      "discussion_limits": "§V.A noalwaysoutperformcomplexmodels, idealnoiselesscondition; §VI convolutiononlyspeedup excludesencoding/measurement overhead, futureencodingefficiencyoutside scope; §VII proof-of-concept andfuturehardware directions",
+      "language": "Can/might/suggests markhardwarepotential; comparativeclaimscopedtoclassicalcounterparts; insufficientstatisticalevidence againstmorecomplexcompetitorsexplicit; noveltyphrasespresentbutmechanismspecific",
+      "main_appendix": "Allmethod/background/experiments/discussion inmain15p; noappendix. No empiricalassumptionthatallTNNLSmustdedicatedappendix, nomenclature optionalasobserved",
+      "claim_evidence": [
+        {
+          "claim": "Betterclassification thanCNNcounterparts overfiveprepared datasets",
+          "location": "§V.A pp9–10 TablesIII–IV; Wilcoxonp<.05for twoCNNbaselines, notallcompetitors"
+        },
+        {
+          "claim": "Quantumconvolutionhasoperation advantage",
+          "location": "§VI.A pp12–13; encoding/measurementoverhead caveatp13"
+        },
+        {
+          "claim": "Resultsareproof-of-concept via simulator",
+          "location": "§Vsimulatorsettingsp9; §VIIp13"
+        }
+      ],
+      "counterexamples": [
+        "DedicatedBackgroundprecedesseparateRelatedWork",
+        "Noappendixdespiteofficialencouragement",
+        "Fulltypeset15pwithnoappendix; cannot infercurrentanonymousrevieworlengthfrom2023acceptedlayout"
+      ],
+      "holdout_validation": {
+        "basis": "Pre-existing editorial advice in tnnls.md before reading; no40paperempiricalrules yet",
+        "rules_checked": [
+          "Claimsboundedbyevaluateddata/protocol",
+          "Mechanismconditionsexplained",
+          "Evidenceandfuturepossibilityseparated"
+        ],
+        "outcome": "Compatible: datasetsubsetsand8×8preprocessing visible; efficiencyoverhead andnoiselesscaveats explicit; futurehardwarebenefit tentative",
+        "completion": "1 of10heldout read, not50paperprofilevalidated",
+        "no_derivation_from_holdout": true
+      },
+      "confidence": "highforpaperorganization; novenuefrequencyclaim"
+    }
+  ]
+}

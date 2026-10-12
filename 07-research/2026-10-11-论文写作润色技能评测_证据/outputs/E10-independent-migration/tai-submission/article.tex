@@ -1,0 +1,64 @@
+% Synthetic skill-evaluation manuscript; not research findings.
+% Derived from the supplied multi-file ICML project. Official files unchanged.
+\documentclass[journal]{IEEEtai}
+\usepackage{microtype,graphicx,booktabs,hyperref}
+\usepackage{algorithm,algorithmic}
+\usepackage{amsmath,amssymb}
+\newtheorem{PWTheorem}{Theorem}
+\newcommand{\riskname}{selective risk}
+\def\methodname{Gate}
+\providecommand{\theHalgorithm}{\arabic{algorithm}}
+\hypersetup{hidelinks,pdftitle={A Fixed Confidence Gate for Selective Classification},
+  pdfauthor={},pdfsubject={Synthetic skill evaluation},pdfkeywords={selective classification, confidence threshold, coverage, selective risk}}
+\title{A Fixed Confidence Gate for Selective Classification}
+\author{Anonymous submission}
+\markboth{Fixed Confidence Gate}{Fixed Confidence Gate}
+\begin{document}
+\maketitle
+\begin{abstract}
+Selective classification allows a model to abstain from uncertain predictions,
+but accuracy among accepted predictions describes a selected population.
+This manuscript examines a fixed confidence gate in a synthetic evaluation
+fixture, with coverage reported alongside conditional accuracy. The gate
+accepts predictions at or above a specified confidence threshold and otherwise
+abstains; the comparator uses the same classifier and accepts every prediction.
+Neither method retrains the model. Across two synthetic datasets, conditional
+accuracy increases on one and decreases on the other. These observations do
+not establish an overall accuracy improvement because the evaluation
+populations differ. A range bound places selective risk between its stated
+limits under bounded loss and positive coverage; it establishes neither a
+generalization guarantee nor superiority over the comparator. The fixture
+illustrates the need to interpret abstention metrics with their coverage and
+assumptions. Its values are not research findings. Statistical uncertainty,
+runtime, distribution shift, and deployment outcomes remain unevaluated,
+and missing classifier and data-generation details limit reproducibility.
+\end{abstract}
+\begin{IEEEImpStatement}
+Abstention changes which predictions contribute to a reported accuracy.
+Researchers and practitioners therefore need coverage to interpret accuracy
+among accepted predictions. This synthetic fixture illustrates that reporting
+only conditional accuracy can obscure the population being evaluated. It
+provides an example for checking whether manuscript language preserves this
+distinction during editing and template migration. The fixture is not evidence
+of a deployable classification system or an improvement in decision quality.
+No runtime, distribution-shift, or deployment assessment has been performed,
+and statistical uncertainty is unavailable. Any proposed practical use would
+require reproducible model and data descriptions, suitable comparisons,
+and evaluation of the relevant operating conditions. The numerical values
+remain synthetic inputs to a skill evaluation, rather than research findings
+or demonstrated social benefits.
+\end{IEEEImpStatement}
+\begin{IEEEkeywords}
+Confidence threshold, coverage, selective classification, selective risk
+\end{IEEEkeywords}
+\input{sections/body.tex}
+\bibliographystyle{IEEEtran}\bibliography{references}
+\appendices
+\section{Proof of the Range Bound}\label{app:proof}
+Since $0\leq a(X)\ell(h(X),Y)\leq a(X)$, taking expectations gives
+$0\leq\mathbb{E}[a(X)\ell(h(X),Y)]\leq C$. Division by $C>0$ proves
+Theorem~\ref{thm:bounded}. This argument applies to the specified distribution;
+it does not establish a bound under distribution shift.
+
+
+\end{document}

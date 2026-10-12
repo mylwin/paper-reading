@@ -1,0 +1,226 @@
+{
+  "id": "tai-2025-16",
+  "title": "Efficient Solution Validation of Constraint Satisfaction Problems on Neuromorphic Hardware: The Case of Sudoku Puzzles",
+  "doi": "10.1109/TAI.2025.3536428",
+  "year": 2025,
+  "split": "derivation",
+  "pdf": ".claude/skills/paper-writing-shared/tmp/corpus/tai/pdf/Efficient_Solution_Validation_of_Constraint_Satisfaction_Problems_on_Neuromorphic_Hardware_The_Case_of_Sudoku_Puzzles.pdf",
+  "review_date": "2026-10-12",
+  "mode": "continuous_all_page_semantic_writing_style_review",
+  "main_text_style_review_complete": true,
+  "full_text_style_review_complete": true,
+  "external_appendix_review_complete": false,
+  "full_text_and_relevant_appendix_reviewed": false,
+  "coverage": {
+    "pdf_pages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "cover": 1,
+    "article_pages": "PDF 2–12 = manuscript 1–11",
+    "body": "PDF 2–11",
+    "references_and_biographies": "PDF 11–12",
+    "embedded_appendix": "none",
+    "missing": "独立 Supplementary Material：Latin square 方法对比，正文结论 PDF 11 明确引用"
+  },
+  "version_audit": {
+    "original_locator_label": "submittedVersion",
+    "verified_version": "institutional_author_accepted_manuscript",
+    "eligibility": "published_research_identity_verified; relevant_supplement_pending",
+    "authors": [
+      "Riccardo Pignari",
+      "Vittorio Fra",
+      "Enrico Macii",
+      "Gianvito Urgese"
+    ],
+    "sources": [
+      "https://iris.polito.it/handle/11583/2992746",
+      "https://api.crossref.org/works/10.1109%2Ftai.2025.3536428"
+    ],
+    "evidence": "机构封面及正式记录明确 IEEE postprint / Author's Accepted Manuscript；Crossref 和机构记录一致为 2025, 6(8), 2061–2072。PDF 篇内保留 JOURNAL OF LATEX CLASS FILES 2021 / SHELL 样例页眉，属于未清理模板，不能作为发表身份或推荐格式。",
+    "publisher_vor_byte_equivalence_verified": false
+  },
+  "ten_dimensions": {
+    "reader_argument": {
+      "observation": "用 CSP、SNN、神经形态平台逐级解释，为 AI 与硬件交叉读者建立共同术语；论证新增验证/停机模块如何减少平台外操作。",
+      "pdf_pages": [
+        2,
+        3,
+        4
+      ],
+      "recommendation": "交叉领域工程稿先给读者足以理解瓶颈的定义，再落到具体新增模块。",
+      "counterexample": "不是所有 CSP 都需数独背景；本文无通用最优性证明。",
+      "condition": "硬件/系统方法论文",
+      "rule_kind": "corpus_observation_with_editorial_advice",
+      "confidence": "high_for_this_paper; low_for_venue_generalization"
+    },
+    "title_abstract": {
+      "observation": "标题将广义 CSP 范围与数独个案并列；摘要按平台基础、三种改动、先软件后硬件验证、三类收益组织，最后给提取 spike 与提取时间范围。",
+      "pdf_pages": [
+        2
+      ],
+      "recommendation": "摘要数字必须带具体平台、测量量与实例范围。",
+      "counterexample": "Impact Statement 声称能效提升，但正文未直接报告焦耳/功率测量；传输和提取时间不是整体能耗。",
+      "condition": "有实际平台测量的工程稿",
+      "rule_kind": "corpus_observation_with_editorial_advice",
+      "confidence": "high_for_this_paper; low_for_venue_generalization"
+    },
+    "introduction": {
+      "observation": "应用范围→既有 spike 求解器→外部验证开销→图1新旧管线→选择 Sudoku 个案。贡献以模块职责展开，不依赖固定贡献列表。",
+      "pdf_pages": [
+        2,
+        3
+      ],
+      "recommendation": "用原系统与改进系统对照图支撑差异，写清验证位置变化。",
+      "counterexample": "不要将减少外部依赖写成完全没有外部控制/传输。",
+      "condition": "系统改造研究",
+      "rule_kind": "corpus_observation_with_editorial_advice",
+      "confidence": "high_for_this_paper; low_for_venue_generalization"
+    },
+    "related_work": {
+      "observation": "Background 中按 CSP 形式化、网络映射、既有三项不足组织引文；没有独立 Related Work 章。结论指向补充的更广 Latin square 对比。",
+      "pdf_pages": [
+        3,
+        11
+      ],
+      "recommendation": "相关工作位置由读者理解依赖决定，合并背景也可；保留补充比较的正文指针。",
+      "counterexample": "未取得补充对比，不能声称已审查其基线完整性。",
+      "condition": "领域背景和技术依赖紧密结合的稿件",
+      "rule_kind": "corpus_observation_with_editorial_advice",
+      "confidence": "high_for_this_paper; low_for_venue_generalization"
+    },
+    "method_theory": {
+      "observation": "Implementation 分网络单元、吸引子动力学、约束稳定、停机与内置验证、端到端复述。图2/3与参数表I/II配合，逐块解释信息和抑制连接。",
+      "pdf_pages": [
+        4,
+        5,
+        6
+      ],
+      "recommendation": "模块图、变量定义与参数表要互相引用，先局部机制再解释全管线。",
+      "counterexample": "没有正式定理，不应为适配期刊强加理论保证；同一模块在III-C和III-D反复说明可酌情压缩。",
+      "condition": "模块化工程方法",
+      "rule_kind": "corpus_observation_with_editorial_advice",
+      "confidence": "high_for_this_paper; low_for_venue_generalization"
+    },
+    "evidence": {
+      "observation": "GeNN 四配置×九题×300次共10800，先消融；SpiNNaker 两配置×九题×100次共1800，后部署；另5400次检查数值精度。表III/IV报告逐题成功数，图示分难度汇总。",
+      "pdf_pages": [
+        7,
+        8,
+        9
+      ],
+      "recommendation": "把软件消融、硬件迁移、精度诊断分层，保留各自重复次数和实例数。",
+      "counterexample": "实际硬件 easy 成功率82.33%降至78.67%，不能润色成所有难度均提升；重复运行不是更多独立题目。",
+      "condition": "软件与硬件双阶段验证",
+      "rule_kind": "corpus_observation_with_editorial_advice",
+      "confidence": "high_for_this_paper; low_for_venue_generalization"
+    },
+    "discussion_limits": {
+      "observation": "Discussion 解释初始线索失效、停机只在找到解后触发、Memory 写入延迟及 SpiNNaker 144步限制；明确仅适用于 Latin square，其他约束需专门设计。",
+      "pdf_pages": [
+        8,
+        9,
+        10,
+        11
+      ],
+      "recommendation": "讨论把部署差异连接到具体机制，局限写清适用问题类和必要改造。",
+      "counterexample": "浮点16/32/64实验仅支持精度敏感性，不能独立证明定点量化是唯一原因。",
+      "condition": "存在平台迁移差异的工程稿",
+      "rule_kind": "corpus_observation_with_editorial_advice",
+      "confidence": "high_for_this_paper; low_for_venue_generalization"
+    },
+    "paragraph_language": {
+      "observation": "段落多以模块功能或观测结果开头，用图表回指解释因果机制；正文承认硬件 easy 类下降。部分形容词如 huge/disruptively 强于测量范围。",
+      "pdf_pages": [
+        5,
+        8,
+        10,
+        11
+      ],
+      "recommendation": "保留直接结果与有条件机制解释，将夸张形容词改为具体指标范围。",
+      "counterexample": "不要模仿强语气；推测和实测应标记证据等级。",
+      "condition": "实证方法与系统稿",
+      "rule_kind": "corpus_observation_with_editorial_advice",
+      "confidence": "high_for_this_paper; low_for_venue_generalization"
+    },
+    "main_appendix": {
+      "observation": "正文容纳大图、神经参数表、硬件修正值、逐题结果和限制；更广方法对比外移 Supplementary Material。",
+      "pdf_pages": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        10,
+        11
+      ],
+      "recommendation": "正文保留足以理解新增机制与主结果的参数；外移材料仍需实际版本和可追溯定位。",
+      "counterexample": "外部 Supplementary Material 尚未取得，不能将其内容当证据或标完整。",
+      "condition": "版面有限而部署参数关键的稿件",
+      "rule_kind": "corpus_observation_with_editorial_advice",
+      "confidence": "high_for_this_paper; low_for_venue_generalization"
+    },
+    "actionable": {
+      "observation": "从主张、配置、平台和指标四项核对摘要/Impact Statement/结果/结论。",
+      "pdf_pages": [
+        2,
+        8,
+        9,
+        11
+      ],
+      "recommendation": "原创示例：On the nine evaluated Sudoku instances, the SpiNNaker pipeline reduced spike extraction time while improving medium and hard success rates; easy-instance success decreased.",
+      "counterexample": "不能写 The pipeline improves every class and demonstrates measured energy savings。",
+      "condition": "仅复用本研究实际提供的指标，不推广为 TAI 强制措辞",
+      "rule_kind": "corpus_observation_with_editorial_advice",
+      "confidence": "high_for_this_paper; low_for_venue_generalization"
+    }
+  },
+  "visual_checks": [
+    {
+      "pdf_page": 8,
+      "file": "renders/sudoku-pdf8.png",
+      "checked": "Table IV and Figure 6; hardware easy decline and medium/hard success counts"
+    }
+  ],
+  "independent_experiment_or_proof_verification": false,
+  "holdout_validation": null,
+  "pdf_sha256": "9170be44e88f650993f291780fc48e82895d584e82d55eea10412aec07ec12c4",
+  "support_sample_ids": [
+    "tai-2025-16"
+  ],
+  "supplement_audit": {
+    "referenced_at_pdf_page": 11,
+    "material": "independent Latin square comparison Supplementary Material",
+    "institution_file_listing": "sources/sudoku-institution.html",
+    "official_xplore": "https://ieeexplore.ieee.org/document/10887036/",
+    "result": "not_obtained; JavaScript/robot verification; own background-browser create timed out"
+  },
+  "parent_inspection": "Root inspected coverage, full10dimensions, counterexamples, version/supplement evidence and SHA; relies on designated reviewer for continuous reading, no duplicate full read",
+  "publication_identity_and_acquired_version": {
+    "original_locator_label": "submittedVersion",
+    "verified_version": "institutional_author_accepted_manuscript",
+    "eligibility": "published_research_identity_verified; relevant_supplement_pending",
+    "authors": [
+      "Riccardo Pignari",
+      "Vittorio Fra",
+      "Enrico Macii",
+      "Gianvito Urgese"
+    ],
+    "sources": [
+      "https://iris.polito.it/handle/11583/2992746",
+      "https://api.crossref.org/works/10.1109%2Ftai.2025.3536428"
+    ],
+    "evidence": "机构封面及正式记录明确 IEEE postprint / Author's Accepted Manuscript；Crossref 和机构记录一致为 2025, 6(8), 2061–2072。PDF 篇内保留 JOURNAL OF LATEX CLASS FILES 2021 / SHELL 样例页眉，属于未清理模板，不能作为发表身份或推荐格式。",
+    "publisher_vor_byte_equivalence_verified": false
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "project": "/Users/myl/Documents/paper/07-research/2026-10-11-论文写作润色技能评测_证据/outputs/E10-independent-migration/tai-submission",
+  "entrypoint": "article.tex",
+  "issues": [],
+  "warnings": [
+    {
+      "kind": "source-word-count-estimate",
+      "note": "TeX macros may change rendered counts; manually verify"
+    },
+    {
+      "kind": "manual-anonymity-review-required",
+      "note": "Literal author check does not audit acknowledgments, funding, links, assets or PDF metadata"
+    }
+  ],
+  "main_pages": 1,
+  "total_pages": 1,
+  "word_count_estimates": {
+    "abstract": 159,
+    "IEEEImpStatement": 121
+  },
+  "limits": {
+    "available": true,
+    "directory": "project/submission",
+    "anonymous": true,
+    "main_page_limit": null,
+    "page_limit_status": "verified",
+    "counting": "full manuscript, including references and appendix; normal 10 pages, maximum 15 pages",
+    "engine": "pdflatex",
+    "article_type": "regular",
+    "full_manuscript_page_limit": 15,
+    "max_pdf_megabytes": null,
+    "page_policy_source": "local TAI 2026 spec rules.regular_pages, verified_on 2026-10-11"
+  },
+  "static_check_passed": true,
+  "anonymity_check": "partial-literal-author-check; requires-full-review",
+  "visual_check": "not-performed-by-this-command",
+  "official_system_check": "not-performed",
+  "semantic_fidelity": "requires-review"
+}

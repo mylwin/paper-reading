@@ -1,0 +1,52 @@
+\section{Introduction}
+Selective classification allows a model to abstain from uncertain predictions.
+We evaluate a fixed confidence gate using synthetic fixtures. Because the gate
+selects which predictions are evaluated, we report coverage alongside accuracy
+among accepted predictions.
+\section{Method}\label{sec:method}
+Gate uses a fixed classifier and accepts a prediction when its maximum class
+probability is at least 0.8; otherwise, it abstains. Always uses the same classifier
+and accepts every prediction. Neither method retrains the model.
+For a fixed classifier $h$ and acceptance function $a(x)\in\{0,1\}$, assume
+$0\leq\ell(h(x),y)\leq1$ and positive coverage $C=\mathbb{E}[a(X)]>0$.
+Selective risk is
+\begin{equation}\label{eq:risk}
+R_{\mathrm{sel}}=\frac{\mathbb{E}[a(X)\ell(h(X),Y)]}{C}.
+\end{equation}
+\begin{PWTheorem}\label{thm:bounded}
+Under these assumptions, $0\leq R_{\mathrm{sel}}\leq1$.
+\end{PWTheorem}
+This range bound provides neither a generalization guarantee nor a comparison
+between Gate and Always. Appendix~\ref{app:proof} gives the full proof.
+\section{Synthetic Evaluation}\label{sec:results}
+Alpha and Beta each contain 1000 synthetic samples. Both methods use the same
+model and 5 evaluation seeds; results are seed means, with no variance estimates.
+
+\begin{table}[htbp]\centering
+\caption{Synthetic fixture values. Always accuracy uses all samples;
+Gate accuracy is conditional on acceptance. These values are not research findings.}
+\label{tab:results}
+\begin{tabular}{lrrr}\hline
+Dataset & Always (\%) & Gate (\%) & Coverage (\%)\\\hline
+Alpha & 80.0 & 84.0 & 60.0\\
+Beta & 76.0 & 75.5 & 58.0\\\hline
+\end{tabular}\end{table}
+
+Table~\ref{tab:results} shows a higher conditional accuracy on Alpha and a lower
+conditional accuracy on Beta. Different evaluation populations prevent interpreting
+these differences as an overall accuracy improvement. No significance tests,
+runtime measurements, or distribution-shift evaluations were performed.
+\section{Limitations and Conclusion}
+The synthetic evaluation compares a fixed gate with a single baseline. It does
+not establish state-of-the-art performance or a guarantee of lower risk.
+The classifier and data-generation details remain missing and are required for
+reproducibility. Conditional accuracy and coverage describe the accepted
+population; deployment benefits remain untested.
+The source template follows the ICML author guidelines~\cite{formatguide}.
+\section*{Impact Statement}
+This manuscript is a synthetic fixture for evaluating writing and template
+migration skills; its values are not research findings. Reporting coverage with
+conditional accuracy clarifies how abstention changes the evaluation population.
+The fixture supports no claim of improved deployment outcomes, social benefit,
+universal applicability, or faster execution.
+\label{pw:main-end}

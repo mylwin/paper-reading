@@ -1,0 +1,247 @@
+      Under review as a conference paper at ICLR 2027
+
+
+
+
+000
+001
+      C ONFIDENCE G ATE : A F IXED P ROBABILITY T HRESH -
+002   OLD FOR ACCEPTING C LASSIFIER P REDICTIONS
+003
+004
+005    Anonymous authors
+006    Paper under double-blind review
+007
+008
+009                                               A BSTRACT
+010
+011            This manuscript is a synthetic skill-evaluation draft, not a report of completed re-
+012            search. We specify Confidence Gate, a rule applied to the predictions of a fixed
+013            classifier: a prediction is accepted when its maximum class probability is at least
+014            0.8 and rejected otherwise. The rule is defined without modifying the classifier.
+015            The supplied material contains no dataset, named model, experimental measure-
+016            ments, implementation, related literature, or theoretical result. Accordingly, this
+017            draft formalizes the decision rule and identifies the information needed for evalua-
+018
+               tion, without claiming improved performance, novelty, or a correctness guarantee.
+               The threshold is a supplied design choice whose empirical justification remains
+019
+               unavailable. All research conclusions beyond the stated rule require additional
+020
+               author evidence and review.
+021
+022
+023
+      1   S COPE AND P ROBLEM
+024
+025
+      A classifier prediction may be passed through an acceptance rule that determines whether the pre-
+026   diction is retained or rejected. Confidence Gate uses only the largest class probability reported for
+027   that prediction. The supplied proposal sets the threshold to 0.8 and keeps the classifier fixed. This
+028   manuscript specifies that behavior; it does not establish whether the rule is useful on any particular
+029   task.
+030
+      Draft status. This is a synthetic skill evaluation rather than a real research paper. No experiments or
+031
+      theoretical guarantees are available, and the authors have not reviewed the AI-assisted initial draft.
+032   The term “Confidence Gate” preserves the supplied method name. Here, “confidence” denotes the
+033   maximum reported class probability; it does not assert that this probability is calibrated or equals
+034   the probability that the prediction is correct.
+035
+      AUTHOR INPUT PENDING: Provide the intended application, the task-specific reason for re-
+036
+      jecting predictions, and evidence of the problem that the rule is intended to address. Novelty and
+037
+      comparison with existing approaches cannot be assessed without verified related literature.
+038
+039
+040   2   D ECISION RULE
+041
+042   Let x denote an input. Write pk (x) for the class probability reported by the fixed classifier for
+043   class k ∈ {1, . . . , K}, and let yb(x) denote its original predicted label. This notation represents
+044   the supplied description of class probabilities; it does not specify a model architecture or a training
+045
+      procedure. Define the score and acceptance indicator as
+046                            s(x) = max pk (x),           a(x) = 1{s(x) ≥ 0.8}.                        (1)
+047                                    1≤k≤K
+
+048   Confidence Gate returns the original prediction when a(x) = 1 and a rejection symbol ⊥ when
+049   a(x) = 0:
+050                                            
+                                                 yb(x), s(x) ≥ 0.8,
+051                                    g(x) =                                                  (2)
+                                                 ⊥,     s(x) < 0.8.
+052
+053   In particular, a score exactly equal to 0.8 is accepted. Rejection provides no alternative label in
+      the supplied rule. The classifier’s original prediction is retained, so the gate does not introduce a
+
+
+                                                        1
+      Under review as a conference paper at ICLR 2027
+
+
+
+
+054
+      separate label-selection or tie-breaking procedure. How the classifier produces its probabilities and
+055   predicted labels is not specified.
+056
+057   Operationally, the rule takes the fixed classifier’s reported probabilities and prediction, computes
+058
+      the maximum probability, compares it with 0.8, and either passes through the prediction or returns
+      ⊥. The material supplies no rationale for selecting 0.8 and no threshold-selection experiment. The
+059
+      value is therefore a fixed specification, not an empirically optimized parameter. AUTHOR INPUT
+060
+      PENDING: Specify the classifier, class set, probability-generation procedure, handling of invalid
+061   or missing outputs, numerical representation, and downstream treatment of rejection.
+062
+063
+064   3    E VIDENCE S TATUS AND E VALUATION R EQUIREMENTS
+065
+066   No evaluation has been performed or reported in the supplied material. Table 1 records the missing
+067   inputs. In particular, an accepted prediction has a reported score of at least 0.8 by definition, but that
+068
+      rule alone does not establish an accuracy level, an error reduction, or any other performance benefit.
+      No theorem or proof is asserted here.
+069
+070
+071           Table 1: Material gaps. These entries describe availability, not experimental results.
+072       Required information          Status and consequence
+073       Dataset and task              Not supplied; task scope and data distribution are unknown.
+074       Classifier                    Specific model and training details are not supplied.
+075       Evaluation protocol           Splits, seeds, comparison methods, and metric definitions are
+076                                     not supplied.
+077       Measurements                  No performance values or uncertainty estimates are supplied.
+078
+          Code and resources            No code, execution environment, or resource measurements
+                                        are supplied.
+079
+          Related literature            No verified references are supplied; positioning is pending.
+080
+          Theory                        No theorem or proof is supplied; no guarantee is claimed.
+081
+082
+      An author-designed evaluation could examine how frequently the rule accepts predictions and how
+083
+      often those accepted predictions are wrong. For clarity, if labeled evaluation examples (xi , yi )ni=1
+084
+      become available, one possible reporting convention is empirical acceptance frequency
+085
+                                                       n
+086
+                                                 b= 1
+                                                      X
+087
+                                                 C        a(xi ),                                           (3)
+                                                    n i=1
+088
+089   and accepted-prediction error
+090                             Pn                                       n
+                                            y (xi ) ̸= yi }
+                                    a(xi )1{b                            X
+091                       R = i=1 Pn
+                           b                                ,     when          a(xi ) > 0.                 (4)
+092                                    i=1 a(x i)                         i=1
+093
+094
+      If no prediction is accepted, the latter quantity is undefined and should be reported as such. These
+      are proposed descriptive reporting definitions, not measurements, author-approved study choices,
+095
+      or a theoretical guarantee. Any comparison must also report acceptance frequency so that error
+096
+      figures can be interpreted with their retained sample size. The authors must decide the protocol and
+097   appropriate comparisons for the actual task.
+098
+099   AUTHOR INPUT PENDING: Supply actual data, model details, evaluation choices, code, seeds
+100
+      where applicable, results, and the basis for uncertainty reporting. A prospective evaluation should
+      distinguish the specified threshold from any subsequent threshold tuning. No claim of improvement
+101
+      can be added until its comparison conditions and evidence are available.
+102
+103
+104   4    R ELATED W ORK , L IMITATIONS , AND C ONCLUSION
+105
+106   AUTHOR INPUT PENDING: Provide and verify the closest scholarly references, then compare
+107   their assumptions, acceptance rules, and supported conclusions with this proposal. No novelty claim
+      is justified by the current material.
+
+
+                                                          2
+      Under review as a conference paper at ICLR 2027
+
+
+
+
+108
+      The current material supports the definition of Confidence Gate and its inclusive threshold boundary.
+109   It does not support a claim about robustness, calibration, fairness, computational savings, or deploy-
+110   ment suitability. The consequences of rejecting an input depend on an unspecified downstream
+111   procedure. There is also no empirical basis for recommending 0.8 across classifiers, datasets, or
+112   applications.
+113
+      Confidence Gate accepts a fixed classifier’s prediction precisely when its maximum reported class
+114
+      probability is at least 0.8. This draft makes that rule explicit and exposes the missing evidence.
+115   Assessing its value requires author-reviewed research materials; the draft is not ready for submission.
+116
+117
+118
+119
+      AI USE STATEMENT
+120
+121
+      AI was used to organize this initial draft and express the supplied material in English. The authors
+      have not yet reviewed the resulting text. No experimental results, references, theorems, or proofs
+122
+      were supplied for this drafting task; this manuscript does not claim that AI use established any
+123
+      research result. AUTHOR INPUT PENDING: The authors must verify the manuscript and update
+124   this statement to reflect the complete, actual AI-use record before any submission.
+125
+126
+127   R EPRODUCIBILITY STATEMENT
+128
+129   The threshold rule in Section 2 is specified, but the classifier, data, implementation, and evaluation
+130
+      protocol are unavailable. No executable research implementation or experimental reproduction is
+      provided. The supplied material is insufficient to reproduce a performance claim because no such
+131
+      claim has been verified. The accompanying references.bib is deliberately empty: no verified
+132
+      scholarly references were supplied.
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+
+
+
+                                                        3
+

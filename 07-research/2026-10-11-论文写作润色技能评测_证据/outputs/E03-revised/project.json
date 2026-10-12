@@ -1,0 +1,43 @@
+{
+  "venue": "icml",
+  "version": "2026",
+  "mode": "submission",
+  "template_source": "https://media.icml.cc/Conferences/ICML2026/Styles/icml2026.zip",
+  "verified_on": "2026-10-11",
+  "official_files": {
+    "icml2026.sty": "7cdcf90f6a59c5219e7f15c88f7ed09fcaf598dad91e6cdddc4dc3cb0e397a95",
+    "fancyhdr.sty": "9130c52f91087abc6d223164ffa587e207e3257fcbcd069ef09ecb5391043f14",
+    "algorithm.sty": "93fd0eb31c112eb405833db8f1d7f5d238c7e691b1c05680d7276e68f36d564a",
+    "algorithmic.sty": "48d18794a5d97c0479a588cc2eac0917992feb9da83acc4631b8f55757d80f9b",
+    "icml2026.bst": "0ec3d5eb9b02efb7e0b44a32f3775882f42a743d0bdc618f34e6936309b98764"
+  },
+  "constraints": {
+    "available": true,
+    "directory": "project/submission",
+    "anonymous": true,
+    "main_page_limit": 8,
+    "page_limit_status": "verified",
+    "counting": "Main text unless journal-specific rules explicitly include references",
+    "engine": "pdflatex",
+    "article_type": "original-research",
+    "full_manuscript_page_limit": null,
+    "max_pdf_megabytes": 50,
+    "validation": {
+      "compile": "passed",
+      "unresolved_citations_or_references": false,
+      "visual_review": "reviewed all rendered pages",
+      "rendered_pages": 3,
+      "verified_on": "2026-10-11",
+      "evidence_path": "07-research/2026-10-10-\u9876\u4f1a\u9876\u520a\u5199\u4f5c\u98ce\u683c\u8c03\u7814_\u8bc1\u636e/templates/render-results.json",
+      "submission_compliance": "pending author content and policy fields"
+    }
+  },
+  "rules": {
+    "required_sections": [
+      "Impact Statement"
+    ]
+  },
+  "entrypoint": "article.tex",
+  "status": "draft-with-author-inputs-pending",
+  "scope": "Template is locally verified; future venue policies need rechecking."
+}

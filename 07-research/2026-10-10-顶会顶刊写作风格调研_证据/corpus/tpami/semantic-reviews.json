@@ -1,0 +1,48 @@
+{
+  "review_scope": "All extractedprose andappendices read semantically for writing organization; math not independently re-proved; no visual typographic compliance claim",
+  "reviews": [
+    {
+      "id": "tpami-2025-07",
+      "status": "fulltext_style_semantic_reviewed",
+      "pages_covered": "1–11",
+      "appendix_coverage": "AppendicesA–D pp7–10, including model problems/boundaries, discretisation/splits, filters, time integrators, architecture and training; bibliography and bios p11 read",
+      "paper_type": "original physics-guided super-resolution method with numerical analysis and experiments",
+      "version_verified": "Author accepted manuscript, header states accepted for TPAMI and matching DOI10.1109/TPAMI.2025.3596647; arXivv3 dated2025-08-12. Not publisher final despite OpenAlex publishedVersion locator",
+      "reader": "Computer vision and scientific-ML readers; explains image SR metrics and application-specific physical consistency",
+      "title_abstract": "Acronym+full method+general transient problem; abstract links physical relevance to method and quantitative13% data claim, then broader impact; strong promises should not be taken as established universality",
+      "introduction": "§I motivates SR computational savings, taxonomy, two specific prior physics constraints and temporal causality gap; ends with targetfirst-orderIBVP, two representative problems, separate inner/boundary loss mechanism. No contribution bullet list",
+      "related_work": "Integrated §I taxonomy and close comparison; method cites baseline architecture; discussion compares pushforward approach. No standalone RelatedWork",
+      "method_theory": "§II defines boundedLipschitz domain and wellposed first-order problem, generatedpairedFEMdatasets, losscomponents/timeintegrators, directionalfilters; schematicFig1 leads method; §III.B erroranalysis placed withinResults not separateTheory",
+      "experiments": "§III TableI compares twoGANfamilies/timeintegrators/boundaries/scales; fixes sharedsamples; Fig3 data-efficiency withfixedvalidation/test, trainingcost; TableII componentweights; §IV downstreamFEMrestart checks intendedscientific use. AppendixD providescodecommit,optimizer/checkpoint/LPIPS conversion",
+      "discussion_limits": "§IV connects gradientfidelity to downstreamsimulation, first-ordertimederivativecondition; second-orderhyperbolicsystems and16×scaling arefuturework; diffusion/flowarchitecture applicability described asmay, nottested",
+      "language": "Mechanism and result bridges explicit; some sweeping words promise/causal/general are not fully tested, so editing should scope to statedPDEclass andtwo systems; presumably marksmechanisticinterpretation ofoverfit",
+      "main_appendix": "MainI–IV pp1–7; appendixAmodelproblem+splits, Bfilters, Ctimemarching, Darchitecturetraining pp7–10. Reproductiondetails concrete, while coreloss/metrics remainmain",
+      "claim_evidence": [
+        {
+          "claim": "13%trainingdata reaches baselinePSNR; metric-dependent threshold",
+          "location": "abstractp1; §III.C.1 Fig3 pp5–6; MSErequires17.7%"
+        },
+        {
+          "claim": "Physicallyguided method improves downstreamFEM restart",
+          "location": "§IV Fig5 p7; twoinitializations+100steps"
+        },
+        {
+          "claim": "Timeintegration changes accuracy",
+          "location": "§III TableI pp3–4; §III.B eq16–17 p5; AppendixC pp8–9"
+        }
+      ],
+      "counterexamples": [
+        "No separateRelatedWork orConclusion section; conclusionparagraphinsideDiscussion",
+        "Theory analysis insideResults",
+        "Ablation TableII improves some metrics whenlosscomponentremoved; do notclaimallcomponentsimproveallmetrics"
+      ],
+      "source_cautions": [
+        "Authoracceptedversion typography notfinalpublisher authority",
+        "TableII zero boundaryloss lowersMSE/MSGE despite narrative sayingconsistentdegradation; preservevalues andflagconflict",
+        "No reportedstandarddeviation/significance testinthisPDF; significantly usedintextdoesnotcreate statisticalevidence",
+        "Two-columnlayout extractedlineorder imperfect; readall extractedprose butnotvisualPDFinspection"
+      ],
+      "confidence": "high for thispaper organization; verylow forvenuefrequency"
+    }
+  ]
+}

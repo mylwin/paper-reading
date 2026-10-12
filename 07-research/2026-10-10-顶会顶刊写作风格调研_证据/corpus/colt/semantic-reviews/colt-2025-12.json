@@ -1,0 +1,32 @@
+{
+  "id": "colt-2025-12",
+  "canonical_title": "Noisy Group Testing in the Linear Regime: Exact Thresholds and Efficient Algorithms",
+  "title_alias_note": "PMLRHTMLtitle truncated afterEfficient; existingstablearchivepaths preserved; PDFtitle used as canonical",
+  "review_date": "2026-10-11",
+  "mode": "continuous official17pages semantic writing-style reading; proof roadmap read but full referred proofs pending",
+  "main_text_style_review_complete": true,
+  "full_text_style_review_complete": false,
+  "external_appendix_review_complete": false,
+  "coverage": [
+    {
+      "version": "officialPMLR2025",
+      "pages": "1–17",
+      "sections": "Abstract; §1intro/contributions/relatedwork; §2modeland4results; §3MAP/goodtestprelims; §4nonadaptiveimpossibility+SPOGachievability; §5adaptiveproofroadmaps; ack;refs",
+      "missing": "cited fullproof arXiv2411.03839v2 2024-11-14 AppendixC/D andfull§5 not read yet"
+    }
+  ],
+  "ten_dimensions": {
+    "reader_argument": "以group testing应用引入，但论证目标是线性infectedrate下noisybinarychannel exactrecovery adaptive/nonadaptive的matchingthreshold，而非PCR数据验证（§1）。",
+    "title_abstract": "双段标题对象/linearregime与结果exactthreshold/algorithm；abstract固定α、independenterrors、exactallindividuals、高概率与adaptive差异，completelysolve附studiedsetting（p1）。",
+    "introduction": "从稀疏理论丰富与线性场景缺口建立必要性，再Contribution先讲goodtests/obstacles和SPOG/PRESTO如何解决，Figure1展示定理threshold不是统计实验（p2–4）。",
+    "related_work": "§1.2按regime/noise/adaptivity划分可比较假设，给Scarlett差一个常数factor及technique从communitydetection迁移，不用泛泛“previousmethodsbad”（p4）。",
+    "method_theory": "§2首先formallydefinesnoise有效域和w.h.p.再对adaptive/nonadaptive分别lower+algorithmupper；后正文证明strategy归纳成lemma依赖链，SPOG流程图和algorithm直观使genie概念可实现（p5–14）。",
+    "evidence": "exactthreshold由impossibility+achievability配对，无经验experimentsection；figurethresholdplot支持解释adaptivity/noiseasymmetry但不充当数值模拟性能证据（p3–4）。",
+    "discussion_limits": "§1.1明确approxrecover用更少tests且exactcount仍open；末页adaptive证明outline结束而非单独Conclusion，是理论论文允许形态，不能生成Conclusion强制模板（p3、14）。",
+    "paragraph_language": "每lemma前说明它为下一bound做什么，每lemma后指出外置proof精确位置；usewithhighprobability和sufficientlylarge n避免宣称finitealln。",
+    "main_appendix": "正式版17pagesbody14、refs3；多处指作者fullversion细到AppendixD.1.1…D.2.7及C.1。附录尚待读，故本篇不计完整全文+附录验收。",
+    "actionable": "用“建模条件→mainlower/upperresults→障碍→proofstrategy→algorithm”组织；显示关键新估计；matchingoptimum须同时上下界且说明metric/asymptotic；具体proof回链不得笼统seeappendix。"
+  },
+  "counterexample": "没有单独Conclusion/Experiments；thresholdcurve不是经验性能实验；solve限定模型，不推广approxrecovery或其他priors；fullproofstatuspending",
+  "holdout_validation": null
+}

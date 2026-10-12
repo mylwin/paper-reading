@@ -1,0 +1,139 @@
+{
+  "id": "neurips-2024-2aada42a",
+  "title": "Boundary Decomposition for Nadir Objective Vector Estimation",
+  "venue": "neurips",
+  "year": 2024,
+  "split": "induction",
+  "review_date": "2026-10-12",
+  "reviewer": "Codex root",
+  "mode": "Continuous all37PDF pages writing-style reading, including scientific appendices and checklist; not independent proof/code correctness audit or experimental reproduction",
+  "full_text_style_review_complete": true,
+  "external_appendix_review_complete": true,
+  "publication_identity_and_acquired_version": "official proceedings PDF; exact bytes locked by SHA256",
+  "pdf_path": ".claude/skills/paper-writing-shared/tmp/corpus/neurips/pdf/Boundary Decomposition for Nadir Objective Vector Estimation.pdf",
+  "pdf_sha256": "a447cc8174bf422b7a7115c0690e061c7109ade29f8afd7cf29c95d7eb9232be",
+  "markdown_path": ".claude/skills/paper-writing-shared/tmp/corpus/neurips/markdown/Boundary Decomposition for Nadir Objective Vector Estimation.md",
+  "markdown_sha256": "a18d7285c185676f41d73c182f00bf2afb678c9409fdd96b4d92c907696b0dbd",
+  "coverage": [
+    {
+      "version": "official NeurIPS2024 Main Conference proceedings PDF",
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37
+      ],
+      "section_pages": {
+        "1–2": "Abstract, introduction including Definitions1–7 and contributions",
+        "2–3": "Related Works",
+        "3–8": "Methodology, Definitions8–10, Theorems1–6, Corollaries1–3, BLOP and evolutionary implementation",
+        "8–10": "Experimental Studies, Conclusion/Limitation/Future Work and funding",
+        "10–14": "References61items",
+        "15–16": "AppendixA heuristic counterexample",
+        "17–19": "AppendixB test generators and settings",
+        "20": "AppendixC hardware/runtime and complexity",
+        "21": "AppendixD societal impact and limits",
+        "22–26": "AppendixE ablation, parameters, extra baselines, pilot integration, broader suites",
+        "27–31": "AppendixF all proof subsectionsF1–F10",
+        "32–37": "complete NeurIPS2024 checklist15items and justifications"
+      },
+      "method": "Root continuous reading; whitespace collapsed for legibility without omitting prose, tables or references;9critical original pages visually inspected"
+    }
+  ],
+  "supplement_audit": {
+    "source": "https://papers.nips.cc/paper_files/paper/2024/hash/19f461132d8ed04764f58f88b7a8e842-Abstract-Conference.html",
+    "official_supplement_url": "https://papers.nips.cc/paper_files/paper/2024/file/19f461132d8ed04764f58f88b7a8e842-Supplemental-Conference.zip",
+    "local_path": "07-research/2026-10-11-顶会顶刊写作风格全文续研_证据/next-batch/neurips-2024-2aada42a-complete.zip",
+    "sha256": "9655b463e5dd68ca2219ca65c07e15d531ef27e287e6681dab93e740ad48db2e",
+    "zip_crc": "passed",
+    "inventory": "saved complete member listing in 2026-10-11 next-batch/supplement-acquisition.json",
+    "scientific_appendices": "AllA–F embedded in official paper and read",
+    "external_materials": "OfficialZIP contains source code/data and generic PlatEMO v3.5 user manual, not a separate scientific proof/results appendix. Paper-specific930byte README fully read, PlatEMO README and release note fully read. Manual title, copyright and contents pages1–3 inspected:38page generic platform tutorial; remainder not claimed read. Source programs inventoried, not executed or independently audited.",
+    "appendix_status": "complete scientific narrative/proof appendix coverage; generic tool manual and full program correctness outside this style-review scope"
+  },
+  "ten_dimensions": {
+    "reader_argument": "p1直接MOP数学定义，七个定义后p2说明nadir用于归一化、偏好与搜索；读者入口可以技术化，此单篇反例否定必须先大众故事，不证明NeurIPS普遍偏好先写公式。",
+    "title_abstract": "标题方法构造＋明确估计对象；摘要从现有离散/启发式限制到boundary+BLOP、条件保证与实验，没有具体提升数字；不能强制数字摘要或把mild conditions删除。",
+    "introduction": "p2把难点与失效区域连接，贡献两项分别标量化的条件性质与双层建模；定义及现实用途配合，而非以LLM/优化器研究方向限定venue。",
+    "related_work": "p2–3独立Related Works按exact/heuristic分类，解释各自离散空间/极端点策略的缺陷；AppendixA的特定反例支撑比较，不能外推为所有启发式在任何复杂问题都失败。",
+    "method_theory": "p3–8按boundary定义→性质和解释→BLOP→black-box近似实现组织，6theorems/3corollaries正式编号回链F；proper Pareto、reference points、alpha与M条件属于主文。实践CMA-ES/MOEA常只给近似LLOP，条件理论保证不同于有限预算实现保证。",
+    "evidence": "p8–10用28instances、30runs、mean/std、Wilcoxon0.05及rank/gap解释准确度；p20runtime另给，p22–26ablation/参数/更多基线/集成pilot/完整suite。统计阈值仅此实验做法，不作为全会必须30runs或Wilcoxon规定。",
+    "discussion_limits": "p10将Conclusion/Limitation/Future Work合节，独立nadir估计转算法迭代是未来与p25pilot；p21明确无法保证有限时间达到目标精度、偏好隐私与单指标决策风险。未验证实际社会收益。",
+    "paragraph_language": "formal statement之后解释功能和依赖，方法段落用First/Second/steps降低密度；结论general/superiority的措辞必须回到条件、指标、实例和资源，不把发表于主会等同表述准确。",
+    "main_appendix": "正文1–10、references10–14、科学附录A–F15–31、checklist32–37；正文给必要条件/设置/核心表，附录承接完整证明、成本、替代方法与更广结果。重要代价不能只留在附录而在摘要或结论消失。",
+    "actionable": "理论＋实证稿按定义、保证、实际算法、协议与限制搭建；主文写清保证何时成立，附录精确回链；写作/润色同步核对表格例外、耗时、基准名称和公式算例；checklist逐项实际作答，不复制该稿Yes/NA。"
+  },
+  "counterexamples": [
+    {
+      "location": "p4–7 theoretical conditions; p21 impact; p23 parameter study",
+      "finding": "proper Pareto/cone optimality、reference point与alpha/M条件；实际求解器不保证有限次数找到最优LLOP。",
+      "editing_rule": "不能把条件定理改成当前实现对所有MOP在任意预算都精确成功。"
+    },
+    {
+      "location": "p20 AppendixC Table6",
+      "finding": "BDNE在全部28instances耗时比两基线长，runtime平均rank3；精度与效率不是同一优势。",
+      "editing_rule": "保留资源代价，不能将accuracy overall better改成faster或all-round superiority。"
+    },
+    {
+      "location": "p9 Table3; p24 Tables8–9; p26 Table12",
+      "finding": "DNPE主表有2个实例更好；EP1在9个实例更好；更广suite仍有失败实例。",
+      "editing_rule": "overall/most不能升级为every instance；给基线例外与参考前沿近似状态。"
+    },
+    {
+      "location": "p25 Table10",
+      "finding": "MOEA/D在TN2上V1均值0.227高于V2的0.226，V1std0.00234而V2std0.0217。",
+      "editing_rule": "不能将V2总体较好改成每个问题更优或更稳定。"
+    },
+    {
+      "location": "p8 Instances vs p9 Table3 and p25 E5; officialZIP filenames",
+      "finding": "正文写DTLZ3/mDTLZ3，主表及官方代码文件是DTLZ2/mDTLZ2；另Table5 p19有两个TN3行。",
+      "status": "original PDF visually confirmed; benchmark/row correspondence requires author confirmation",
+      "editing_rule": "先确认基准与表行，禁止静默换名称；这不是已有实验已重跑的结论。"
+    },
+    {
+      "location": "p4 Eq4 vs p5 numerical illustration",
+      "finding": "以m3,alpha0.5代入Eq4，对u=(0,1,1)得(1/3,5/6,5/6)，对v=(0.2,0.5,0.5)得(0.3,0.45,0.45)，与p5给(1,2,2)/(0.8,1.1,1.1)不同。该例的支配方向仍一致。",
+      "status": "direct arithmetic mismatch; no claim that this disproves theorems",
+      "editing_rule": "公式—算例核查单独列作者问题，不静默调整理论或以此断言定理无效。"
+    }
+  ],
+  "confidence": {
+    "paper_content": "high for read/cross-rendered observations",
+    "venue_generalization": "low; one2024theory-plus-empirical induction sample, no2025 or heldout validation"
+  },
+  "official_requirement": false,
+  "holdout_validation": null
+}

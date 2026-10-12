@@ -1,0 +1,52 @@
+{
+  "id": "ijcai-2025-25",
+  "review_date": "2026-10-11",
+  "mode": "continuous reading of official9pages, allprose and tables; equation rendering caveats inspected",
+  "full_text_style_review_complete": true,
+  "external_appendix_review_complete": true,
+  "coverage": [
+    {
+      "version": "official IJCAI2025",
+      "pages": "1–9",
+      "sections": "abstract; §1introduction; §2relatedwork(2themes); §3problemformulation; §4method(3modules); §5experimentsRQ1/2/3; §6discussion; §7conclusion; acknowledgements; references",
+      "missing": "no separate appendix referenced or in officialrecord; not a reproduction of public code"
+    }
+  ],
+  "supplement_audit": {
+    "official_article": "https://www.ijcai.org/proceedings/2025/837",
+    "official_page_saved": "07-research/2026-10-10-顶会顶刊写作风格调研_证据/sources/ijcai/ijcai-2025-25-article.html",
+    "code_reference": "https://github.com/NingboSong/COGRASP",
+    "result": "Official pagePDF/BibTeX only; fullpaper referencescode but no appendix. GitHubREADME/tree checked; code/data graph/model illustration, no visible manuscript supplement. externalappendix notapplicable for surveyedversion; inaccessiblematerial cannot be excluded."
+  },
+  "ten_dimensions": {
+    "reader_argument": "跨AI与金融；先关系图为何有助于预测，再静态concept graph和时尺度缺口。问题定义为次日relativepricechange非stockranking，实验metric仍IC/RankIC及IR须明确（§1、3、5）。",
+    "title_abstract": "方法缩写+cooccurrencegraph+stockforecasting；abstract背景→手工graph局限→两模块→openstockempiricalresults，strongSOTAclaim应保留比较范围（p1）。",
+    "introduction": "对data/model两个挑战分解；贡献graphconstruction、architecture、四metrics相对bestbaseline改进及ablation/cases，numericclaims回指Table1但MDGNN来自不同原文reportednumbers（p1、5）。",
+    "related_work": "独立§2按stockmovementprediction与graphconstruction两轴；从fixedwindow到frequency、从conceptgraph到socialattention的定位为方法两模块铺路（p2）。",
+    "method_theory": "problemnotation→Fig1three-moduleoverview→§4.1D1–D4缺点和对应rationale→GCN细节→ALSTM三时尺度→weightedaggregation。无定理，公式承担definition/implementation，不应虚构收敛（p2–5）。",
+    "evidence": "RQ1comparison，RQ2moduleablation，RQ3graphstats+crossmodelgraphreplacement+ShanghaiAirportcase；5repeatsreportmean且tablecaptionp<0.01，但testdetails/errorbars未充分交代；MDGNNprivate unreproducible值直接借原文，不能建议无条件公平比较（p5–7）。",
+    "discussion_limits": "单独discussion承认inputquality不可完全控制、blackbox透明性；attentionweights/graph关联是initial解释而非已证因果，nextwork解释keysubgraph/timefeatures（p7）。",
+    "paragraph_language": "模块按痛点→rationale→technicaloperation；resultparagraph不仅复述表，还解释为何graph/multiscale作用。absolute“scientifically appropriate”“comprehensive”等是待收紧措辞，不把发表句式当硬规范。",
+    "main_appendix": "p1–7body，p8ack+refs至p9，主文实验含split/hyperparams/metrics和qualitativecases；未引用外置appendix；codeREADME提示timeseriesdata另备，不等同completeexperimentarchive。",
+    "actionable": "用RQ明确每个experiment回答哪项contribution；forgraph方法给replacegraphcrossmodelcontrol；把privateoriginalnumbers和同条件re-run分开，报告uncertainty/testdetails；forecastcorrelation不是投资return或causaleffect。"
+  },
+  "counterexample": "该formaltheoryIJCAI反例是同venue同时接受无实验纯formal与有RQ经验稿，不能统一固定章节。SOTAclaim不能脱离singlemarket/timewindow和private-baseline条件。",
+  "holdout_validation": {
+    "split": "holdout lockedbeforeextraction",
+    "status": "onefullyreadholdout, complete40+10validation pending",
+    "checks": [
+      {
+        "rule": "所有IJCAI必须独立RelatedWork",
+        "result": "no; this supports independentsection but ijcai-2024-23 lacks it"
+      },
+      {
+        "rule": "各实验应对应contribution",
+        "result": "supports withRQ1–3"
+      },
+      {
+        "rule": "保留证据限制而非加强claim",
+        "result": "supports limitationparagraph and rejects reducingallbaselinesasfairreruns"
+      }
+    ]
+  }
+}

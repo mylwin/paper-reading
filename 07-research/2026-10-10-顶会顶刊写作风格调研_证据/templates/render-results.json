@@ -1,0 +1,914 @@
+[
+  {
+    "project": "aaai-final",
+    "pdf": "builds/aaai-final/build/main.pdf",
+    "pages": 4,
+    "renders": [
+      "renders/aaai-final/page-1.png",
+      "renders/aaai-final/page-2.png",
+      "renders/aaai-final/page-3.png",
+      "renders/aaai-final/page-4.png"
+    ],
+    "contact_sheets": [
+      "renders/aaai-final/contact-1.png"
+    ],
+    "pdf_sha256": "99e242edfc25da76ee2e28bb204ee3d39d021831f4096d9b7373c05364d90908",
+    "visual_review_status": "reviewed",
+    "reviewed_on": "2026-10-11",
+    "reviewer": "Codex root: direct rendered-page inspection",
+    "coverage": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "checks": [
+      "title and author block",
+      "abstract and heading order",
+      "equations and algorithm",
+      "single and wide floats",
+      "bibliography and references",
+      "last page and appendix/checklist where applicable"
+    ],
+    "findings": [
+      "No visible overlap, clipped text, missing formula glyphs or unintended empty final page.",
+      "Draft placeholders remain; sparse float pages in this short formatting demonstration are expected."
+    ],
+    "submission_compliance": "not certified; draft placeholders and unverified policy fields remain"
+  },
+  {
+    "project": "aaai-submission",
+    "pdf": "builds/aaai-submission/build/main.pdf",
+    "pages": 4,
+    "renders": [
+      "renders/aaai-submission/page-1.png",
+      "renders/aaai-submission/page-2.png",
+      "renders/aaai-submission/page-3.png",
+      "renders/aaai-submission/page-4.png"
+    ],
+    "contact_sheets": [
+      "renders/aaai-submission/contact-1.png"
+    ],
+    "pdf_sha256": "e95db9b2d071b66e46b2d6861ad34c033b39d05b39f17faeb2a737a6fd73e9fa",
+    "visual_review_status": "reviewed",
+    "reviewed_on": "2026-10-11",
+    "reviewer": "Codex root: direct rendered-page inspection",
+    "coverage": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "checks": [
+      "title and author block",
+      "abstract and heading order",
+      "equations and algorithm",
+      "single and wide floats",
+      "bibliography and references",
+      "last page and appendix/checklist where applicable"
+    ],
+    "findings": [
+      "No visible overlap, clipped text, missing formula glyphs or unintended empty final page.",
+      "Draft placeholders remain; sparse float pages in this short formatting demonstration are expected."
+    ],
+    "submission_compliance": "not certified; draft placeholders and unverified policy fields remain"
+  },
+  {
+    "project": "colt-final",
+    "pdf": "builds/colt-final/build/main.pdf",
+    "pages": 3,
+    "renders": [
+      "renders/colt-final/page-1.png",
+      "renders/colt-final/page-2.png",
+      "renders/colt-final/page-3.png"
+    ],
+    "contact_sheets": [
+      "renders/colt-final/contact-1.png"
+    ],
+    "pdf_sha256": "47788357aa97a493df867174a59059b882beba9b07ca3cb3cd7961f3eb986eb1",
+    "visual_review_status": "reviewed",
+    "reviewed_on": "2026-10-11",
+    "reviewer": "Codex root: direct rendered-page inspection",
+    "coverage": [
+      1,
+      2,
+      3
+    ],
+    "checks": [
+      "title and author block",
+      "abstract and heading order",
+      "equations and algorithm",
+      "single and wide floats",
+      "bibliography and references",
+      "last page and appendix/checklist where applicable"
+    ],
+    "findings": [
+      "No visible overlap, clipped text, missing formula glyphs or unintended empty final page.",
+      "Draft placeholders remain; sparse float pages in this short formatting demonstration are expected."
+    ],
+    "submission_compliance": "not certified; draft placeholders and unverified policy fields remain"
+  },
+  {
+    "project": "colt-submission",
+    "pdf": "builds/colt-submission/build/main.pdf",
+    "pages": 3,
+    "renders": [
+      "renders/colt-submission/page-1.png",
+      "renders/colt-submission/page-2.png",
+      "renders/colt-submission/page-3.png"
+    ],
+    "contact_sheets": [
+      "renders/colt-submission/contact-1.png"
+    ],
+    "pdf_sha256": "6b44e8d77b4b707f156c195967789abdeba2d3f3efb22349f64e18995ab2ec66",
+    "visual_review_status": "reviewed",
+    "reviewed_on": "2026-10-11",
+    "reviewer": "Codex root: direct rendered-page inspection",
+    "coverage": [
+      1,
+      2,
+      3
+    ],
+    "checks": [
+      "title and author block",
+      "abstract and heading order",
+      "equations and algorithm",
+      "single and wide floats",
+      "bibliography and references",
+      "last page and appendix/checklist where applicable"
+    ],
+    "findings": [
+      "No visible overlap, clipped text, missing formula glyphs or unintended empty final page.",
+      "Draft placeholders remain; sparse float pages in this short formatting demonstration are expected."
+    ],
+    "submission_compliance": "not certified; draft placeholders and unverified policy fields remain"
+  },
+  {
+    "project": "iclr-final",
+    "pdf": "builds/iclr-final/build/main.pdf",
+    "pages": 3,
+    "renders": [
+      "renders/iclr-final/page-1.png",
+      "renders/iclr-final/page-2.png",
+      "renders/iclr-final/page-3.png"
+    ],
+    "contact_sheets": [
+      "renders/iclr-final/contact-1.png"
+    ],
+    "pdf_sha256": "09f66202ffac21e1a9489ce2b1bd944e123f16536ec36852ea6291e4cf2e2af8",
+    "visual_review_status": "reviewed",
+    "reviewed_on": "2026-10-11",
+    "reviewer": "Codex root: direct rendered-page inspection after authoritative author-kit update",
+    "coverage": [
+      1,
+      2,
+      3
+    ],
+    "checks": [
+      "title and anonymity",
+      "abstract and main text",
+      "algorithm and equations",
+      "single/wide floats and table",
+      "AI use statement and reproducibility paragraph",
+      "references and appendix",
+      "last page"
+    ],
+    "findings": [
+      "Required AI use statement is present before references; placeholders remain.",
+      "No overlap, clipped content or unresolved visible citations.",
+      "Official submission line numbers and final author block behave as configured."
+    ],
+    "submission_compliance": "not certified; actual author disclosure and content pending"
+  },
+  {
+    "project": "iclr-submission",
+    "pdf": "builds/iclr-submission/build/main.pdf",
+    "pages": 3,
+    "renders": [
+      "renders/iclr-submission/page-1.png",
+      "renders/iclr-submission/page-2.png",
+      "renders/iclr-submission/page-3.png"
+    ],
+    "contact_sheets": [
+      "renders/iclr-submission/contact-1.png"
+    ],
+    "pdf_sha256": "063a150be18a6f2f061eced9f53ac98769a2a53f337f9cc969f9099d094c8d80",
+    "visual_review_status": "reviewed",
+    "reviewed_on": "2026-10-11",
+    "reviewer": "Codex root: direct rendered-page inspection after authoritative author-kit update",
+    "coverage": [
+      1,
+      2,
+      3
+    ],
+    "checks": [
+      "title and anonymity",
+      "abstract and main text",
+      "algorithm and equations",
+      "single/wide floats and table",
+      "AI use statement and reproducibility paragraph",
+      "references and appendix",
+      "last page"
+    ],
+    "findings": [
+      "Required AI use statement is present before references; placeholders remain.",
+      "No overlap, clipped content or unresolved visible citations.",
+      "Official submission line numbers and final author block behave as configured."
+    ],
+    "submission_compliance": "not certified; actual author disclosure and content pending"
+  },
+  {
+    "project": "icml-final",
+    "pdf": "builds/icml-final/build/main.pdf",
+    "pages": 3,
+    "renders": [
+      "renders/icml-final/page-1.png",
+      "renders/icml-final/page-2.png",
+      "renders/icml-final/page-3.png"
+    ],
+    "contact_sheets": [
+      "renders/icml-final/contact-1.png"
+    ],
+    "pdf_sha256": "72eb6a1424fdb463a94fce5a86974334d168eea06ab8b25724750fb779959039",
+    "visual_review_status": "reviewed",
+    "reviewed_on": "2026-10-11",
+    "reviewer": "Codex root: direct rendered-page inspection",
+    "coverage": [
+      1,
+      2,
+      3
+    ],
+    "checks": [
+      "title and author block",
+      "abstract and heading order",
+      "equations and algorithm",
+      "single and wide floats",
+      "bibliography and references",
+      "last page and appendix/checklist where applicable"
+    ],
+    "findings": [
+      "No visible overlap, clipped text, missing formula glyphs or unintended empty final page.",
+      "Draft placeholders remain; sparse float pages in this short formatting demonstration are expected."
+    ],
+    "submission_compliance": "not certified; draft placeholders and unverified policy fields remain"
+  },
+  {
+    "project": "icml-submission",
+    "pdf": "builds/icml-submission/build/main.pdf",
+    "pages": 3,
+    "renders": [
+      "renders/icml-submission/page-1.png",
+      "renders/icml-submission/page-2.png",
+      "renders/icml-submission/page-3.png"
+    ],
+    "contact_sheets": [
+      "renders/icml-submission/contact-1.png"
+    ],
+    "pdf_sha256": "3622ab6817e28fbff5861adfcdb2a4ee7e0a75c4951e6fd11484b438b97c239d",
+    "visual_review_status": "reviewed",
+    "reviewed_on": "2026-10-11",
+    "reviewer": "Codex root: direct rendered-page inspection",
+    "coverage": [
+      1,
+      2,
+      3
+    ],
+    "checks": [
+      "title and author block",
+      "abstract and heading order",
+      "equations and algorithm",
+      "single and wide floats",
+      "bibliography and references",
+      "last page and appendix/checklist where applicable"
+    ],
+    "findings": [
+      "No visible overlap, clipped text, missing formula glyphs or unintended empty final page.",
+      "Draft placeholders remain; sparse float pages in this short formatting demonstration are expected."
+    ],
+    "submission_compliance": "not certified; draft placeholders and unverified policy fields remain"
+  },
+  {
+    "project": "ijcai-final",
+    "pdf": "builds/ijcai-final/build/main.pdf",
+    "pages": 2,
+    "renders": [
+      "renders/ijcai-final/page-1.png",
+      "renders/ijcai-final/page-2.png"
+    ],
+    "contact_sheets": [
+      "renders/ijcai-final/contact-1.png"
+    ],
+    "pdf_sha256": "3a35f8939d5ed6ab7b35fe134a5138a8444bc1e01e6a0a3a1a9ee1426fe264cc",
+    "visual_review_status": "reviewed",
+    "reviewed_on": "2026-10-11",
+    "reviewer": "Codex root: direct rendered-page inspection",
+    "coverage": [
+      1,
+      2
+    ],
+    "checks": [
+      "title and author block",
+      "abstract and heading order",
+      "equations and algorithm",
+      "single and wide floats",
+      "bibliography and references",
+      "last page and appendix/checklist where applicable"
+    ],
+    "findings": [
+      "No visible overlap, clipped text, missing formula glyphs or unintended empty final page.",
+      "Draft placeholders remain; sparse float pages in this short formatting demonstration are expected."
+    ],
+    "submission_compliance": "not certified; draft placeholders and unverified policy fields remain"
+  },
+  {
+    "project": "ijcai-submission",
+    "pdf": "builds/ijcai-submission/build/main.pdf",
+    "pages": 2,
+    "renders": [
+      "renders/ijcai-submission/page-1.png",
+      "renders/ijcai-submission/page-2.png"
+    ],
+    "contact_sheets": [
+      "renders/ijcai-submission/contact-1.png"
+    ],
+    "pdf_sha256": "8b5e6f4f3f899e632fa69230ce10e6195595457125bc278ad29824b703a1cfd4",
+    "visual_review_status": "reviewed",
+    "reviewed_on": "2026-10-11",
+    "reviewer": "Codex root: direct rendered-page inspection",
+    "coverage": [
+      1,
+      2
+    ],
+    "checks": [
+      "title and author block",
+      "abstract and heading order",
+      "equations and algorithm",
+      "single and wide floats",
+      "bibliography and references",
+      "last page and appendix/checklist where applicable"
+    ],
+    "findings": [
+      "No visible overlap, clipped text, missing formula glyphs or unintended empty final page.",
+      "Draft placeholders remain; sparse float pages in this short formatting demonstration are expected."
+    ],
+    "submission_compliance": "not certified; draft placeholders and unverified policy fields remain"
+  },
+  {
+    "project": "jmlr-final",
+    "pdf": "builds/jmlr-final/build/main.pdf",
+    "pages": 3,
+    "renders": [
+      "renders/jmlr-final/page-1.png",
+      "renders/jmlr-final/page-2.png",
+      "renders/jmlr-final/page-3.png"
+    ],
+    "contact_sheets": [
+      "renders/jmlr-final/contact-1.png"
+    ],
+    "pdf_sha256": "489185cec2696f5d45a38aac774c3eaf78a979f584417ffd9d31cd1bd0b46236",
+    "visual_review_status": "reviewed",
+    "reviewed_on": "2026-10-11",
+    "reviewer": "Codex root: direct rendered-page inspection",
+    "coverage": [
+      1,
+      2,
+      3
+    ],
+    "checks": [
+      "title and author block",
+      "abstract and heading order",
+      "equations and algorithm",
+      "single and wide floats",
+      "bibliography and references",
+      "last page and appendix/checklist where applicable"
+    ],
+    "findings": [
+      "No visible overlap, clipped text, missing formula glyphs or unintended empty final page.",
+      "Draft placeholders remain; sparse float pages in this short formatting demonstration are expected."
+    ],
+    "submission_compliance": "not certified; draft placeholders and unverified policy fields remain"
+  },
+  {
+    "project": "jmlr-submission",
+    "pdf": "builds/jmlr-submission/build/main.pdf",
+    "pages": 3,
+    "renders": [
+      "renders/jmlr-submission/page-1.png",
+      "renders/jmlr-submission/page-2.png",
+      "renders/jmlr-submission/page-3.png"
+    ],
+    "contact_sheets": [
+      "renders/jmlr-submission/contact-1.png"
+    ],
+    "pdf_sha256": "489185cec2696f5d45a38aac774c3eaf78a979f584417ffd9d31cd1bd0b46236",
+    "visual_review_status": "reviewed",
+    "reviewed_on": "2026-10-11",
+    "reviewer": "Codex root: direct rendered-page inspection",
+    "coverage": [
+      1,
+      2,
+      3
+    ],
+    "checks": [
+      "title and author block",
+      "abstract and heading order",
+      "equations and algorithm",
+      "single and wide floats",
+      "bibliography and references",
+      "last page and appendix/checklist where applicable"
+    ],
+    "findings": [
+      "No visible overlap, clipped text, missing formula glyphs or unintended empty final page.",
+      "Draft placeholders remain; sparse float pages in this short formatting demonstration are expected."
+    ],
+    "submission_compliance": "not certified; draft placeholders and unverified policy fields remain"
+  },
+  {
+    "project": "neurips-final",
+    "pdf": "builds/neurips-final/build/main.pdf",
+    "pages": 9,
+    "renders": [
+      "renders/neurips-final/page-1.png",
+      "renders/neurips-final/page-2.png",
+      "renders/neurips-final/page-3.png",
+      "renders/neurips-final/page-4.png",
+      "renders/neurips-final/page-5.png",
+      "renders/neurips-final/page-6.png",
+      "renders/neurips-final/page-7.png",
+      "renders/neurips-final/page-8.png",
+      "renders/neurips-final/page-9.png"
+    ],
+    "contact_sheets": [
+      "renders/neurips-final/contact-1.png",
+      "renders/neurips-final/contact-2.png",
+      "renders/neurips-final/contact-3.png"
+    ],
+    "pdf_sha256": "231676182e68d33664a7b3f8d5bd5cde7e709d3e464c095baf958d58a0a95188",
+    "visual_review_status": "reviewed",
+    "reviewed_on": "2026-10-11",
+    "reviewer": "Codex root: direct rendered-page inspection",
+    "coverage": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "checks": [
+      "title and author block",
+      "abstract and heading order",
+      "equations and algorithm",
+      "single and wide floats",
+      "bibliography and references",
+      "last page and appendix/checklist where applicable"
+    ],
+    "findings": [
+      "No visible overlap, clipped text, missing formula glyphs or unintended empty final page.",
+      "Draft placeholders remain; sparse float pages in this short formatting demonstration are expected."
+    ],
+    "submission_compliance": "not certified; draft placeholders and unverified policy fields remain"
+  },
+  {
+    "project": "neurips-submission",
+    "pdf": "builds/neurips-submission/build/main.pdf",
+    "pages": 9,
+    "renders": [
+      "renders/neurips-submission/page-1.png",
+      "renders/neurips-submission/page-2.png",
+      "renders/neurips-submission/page-3.png",
+      "renders/neurips-submission/page-4.png",
+      "renders/neurips-submission/page-5.png",
+      "renders/neurips-submission/page-6.png",
+      "renders/neurips-submission/page-7.png",
+      "renders/neurips-submission/page-8.png",
+      "renders/neurips-submission/page-9.png"
+    ],
+    "contact_sheets": [
+      "renders/neurips-submission/contact-1.png",
+      "renders/neurips-submission/contact-2.png",
+      "renders/neurips-submission/contact-3.png"
+    ],
+    "pdf_sha256": "331390ec91c4e056a95d50471a14dc355e87d86d97d13267fefa818c397e6452",
+    "visual_review_status": "reviewed",
+    "reviewed_on": "2026-10-11",
+    "reviewer": "Codex root: direct rendered-page inspection",
+    "coverage": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "checks": [
+      "title and author block",
+      "abstract and heading order",
+      "equations and algorithm",
+      "single and wide floats",
+      "bibliography and references",
+      "last page and appendix/checklist where applicable"
+    ],
+    "findings": [
+      "No visible overlap, clipped text, missing formula glyphs or unintended empty final page.",
+      "Draft placeholders remain; sparse float pages in this short formatting demonstration are expected."
+    ],
+    "submission_compliance": "not certified; draft placeholders and unverified policy fields remain"
+  },
+  {
+    "project": "tai-final",
+    "pdf": "builds/tai-final/build/main.pdf",
+    "pages": 2,
+    "renders": [
+      "renders/tai-final/page-1.png",
+      "renders/tai-final/page-2.png"
+    ],
+    "contact_sheets": [
+      "renders/tai-final/contact-1.png"
+    ],
+    "pdf_sha256": "4e41d14ea5787dd236a8585a7142d04e28d47fb1932330c9c8adb86f5bfc1209",
+    "visual_review_status": "reviewed",
+    "reviewed_on": "2026-10-11",
+    "reviewer": "Codex root: direct rendered-page inspection",
+    "coverage": [
+      1,
+      2
+    ],
+    "checks": [
+      "title and author block",
+      "abstract and heading order",
+      "equations and algorithm",
+      "single and wide floats",
+      "bibliography and references",
+      "last page and appendix/checklist where applicable"
+    ],
+    "findings": [
+      "No visible overlap, clipped text, missing formula glyphs or unintended empty final page.",
+      "Draft placeholders remain; sparse float pages in this short formatting demonstration are expected."
+    ],
+    "submission_compliance": "not certified; draft placeholders and unverified policy fields remain"
+  },
+  {
+    "project": "tai-submission",
+    "pdf": "builds/tai-submission/build/main.pdf",
+    "pages": 2,
+    "renders": [
+      "renders/tai-submission/page-1.png",
+      "renders/tai-submission/page-2.png"
+    ],
+    "contact_sheets": [
+      "renders/tai-submission/contact-1.png"
+    ],
+    "pdf_sha256": "b57f2c44193723e327100bdd0db408c04295d89ca1f3805673696afeb539668c",
+    "visual_review_status": "reviewed",
+    "reviewed_on": "2026-10-11",
+    "reviewer": "Codex root: direct rendered-page inspection",
+    "coverage": [
+      1,
+      2
+    ],
+    "checks": [
+      "title and author block",
+      "abstract and heading order",
+      "equations and algorithm",
+      "single and wide floats",
+      "bibliography and references",
+      "last page and appendix/checklist where applicable"
+    ],
+    "findings": [
+      "No visible overlap, clipped text, missing formula glyphs or unintended empty final page.",
+      "Draft placeholders remain; sparse float pages in this short formatting demonstration are expected."
+    ],
+    "submission_compliance": "not certified; draft placeholders and unverified policy fields remain"
+  },
+  {
+    "project": "tmlr-final",
+    "pdf": "builds/tmlr-final/build/main.pdf",
+    "pages": 2,
+    "renders": [
+      "renders/tmlr-final/page-1.png",
+      "renders/tmlr-final/page-2.png"
+    ],
+    "contact_sheets": [
+      "renders/tmlr-final/contact-1.png"
+    ],
+    "pdf_sha256": "856362cd80689b370087b0c96a0befe650739436e2e620a1b2cf3bba51572233",
+    "visual_review_status": "reviewed",
+    "reviewed_on": "2026-10-11",
+    "reviewer": "Codex root: direct rendered-page inspection",
+    "coverage": [
+      1,
+      2
+    ],
+    "checks": [
+      "title and author block",
+      "abstract and heading order",
+      "equations and algorithm",
+      "single and wide floats",
+      "bibliography and references",
+      "last page and appendix/checklist where applicable"
+    ],
+    "findings": [
+      "No visible overlap, clipped text, missing formula glyphs or unintended empty final page.",
+      "Draft placeholders remain; sparse float pages in this short formatting demonstration are expected."
+    ],
+    "submission_compliance": "not certified; draft placeholders and unverified policy fields remain"
+  },
+  {
+    "project": "tmlr-submission",
+    "pdf": "builds/tmlr-submission/build/main.pdf",
+    "pages": 2,
+    "renders": [
+      "renders/tmlr-submission/page-1.png",
+      "renders/tmlr-submission/page-2.png"
+    ],
+    "contact_sheets": [
+      "renders/tmlr-submission/contact-1.png"
+    ],
+    "pdf_sha256": "3644dab04bf718eb523ed889001186194843341937797460bdeb2d97c8c0c40b",
+    "visual_review_status": "reviewed",
+    "reviewed_on": "2026-10-11",
+    "reviewer": "Codex root: direct rendered-page inspection",
+    "coverage": [
+      1,
+      2
+    ],
+    "checks": [
+      "title and author block",
+      "abstract and heading order",
+      "equations and algorithm",
+      "single and wide floats",
+      "bibliography and references",
+      "last page and appendix/checklist where applicable"
+    ],
+    "findings": [
+      "No visible overlap, clipped text, missing formula glyphs or unintended empty final page.",
+      "Draft placeholders remain; sparse float pages in this short formatting demonstration are expected."
+    ],
+    "submission_compliance": "not certified; draft placeholders and unverified policy fields remain"
+  },
+  {
+    "project": "tnnls-final",
+    "pdf": "builds/tnnls-final/build/main.pdf",
+    "pages": 2,
+    "renders": [
+      "renders/tnnls-final/page-1.png",
+      "renders/tnnls-final/page-2.png"
+    ],
+    "contact_sheets": [
+      "renders/tnnls-final/contact-1.png"
+    ],
+    "pdf_sha256": "f767b9b88bad467480378428c5658fc5036a43b81108eb03b72d6605de793520",
+    "visual_review_status": "reviewed",
+    "reviewed_on": "2026-10-11",
+    "reviewer": "Codex root: direct rendered-page inspection",
+    "coverage": [
+      1,
+      2
+    ],
+    "checks": [
+      "title and author block",
+      "abstract and heading order",
+      "equations and algorithm",
+      "single and wide floats",
+      "bibliography and references",
+      "last page and appendix/checklist where applicable"
+    ],
+    "findings": [
+      "No visible overlap, clipped text, missing formula glyphs or unintended empty final page.",
+      "Draft placeholders remain; sparse float pages in this short formatting demonstration are expected."
+    ],
+    "submission_compliance": "not certified; draft placeholders and unverified policy fields remain"
+  },
+  {
+    "project": "tnnls-submission",
+    "pdf": "builds/tnnls-submission/build/main.pdf",
+    "pages": 2,
+    "renders": [
+      "renders/tnnls-submission/page-1.png",
+      "renders/tnnls-submission/page-2.png"
+    ],
+    "contact_sheets": [
+      "renders/tnnls-submission/contact-1.png"
+    ],
+    "pdf_sha256": "e42ebd6d1038c211bffa93f89748f0b3367eb86b062946d7126071a89354adc3",
+    "visual_review_status": "reviewed",
+    "reviewed_on": "2026-10-11",
+    "reviewer": "Codex root: direct rendered-page inspection",
+    "coverage": [
+      1,
+      2
+    ],
+    "checks": [
+      "title and author block",
+      "abstract and heading order",
+      "equations and algorithm",
+      "single and wide floats",
+      "bibliography and references",
+      "last page and appendix/checklist where applicable"
+    ],
+    "findings": [
+      "No visible overlap, clipped text, missing formula glyphs or unintended empty final page.",
+      "Draft placeholders remain; sparse float pages in this short formatting demonstration are expected."
+    ],
+    "submission_compliance": "not certified; draft placeholders and unverified policy fields remain"
+  },
+  {
+    "project": "tpami-final",
+    "pdf": "builds/tpami-final/build/main.pdf",
+    "pages": 2,
+    "renders": [
+      "renders/tpami-final/page-1.png",
+      "renders/tpami-final/page-2.png"
+    ],
+    "contact_sheets": [
+      "renders/tpami-final/contact-1.png"
+    ],
+    "pdf_sha256": "d629d024f490aecdcea16366c67f985a74c877771ccda50c41ab30e903c9ea11",
+    "visual_review_status": "reviewed",
+    "reviewed_on": "2026-10-11",
+    "reviewer": "Codex root: direct rendered-page inspection",
+    "coverage": [
+      1,
+      2
+    ],
+    "checks": [
+      "title",
+      "abstract",
+      "body",
+      "equations and algorithm",
+      "single and wide floats",
+      "bibliography and appendix",
+      "last page"
+    ],
+    "findings": [
+      "No overlap or clipped text; long official scope URL wraps in the bibliography.",
+      "Author pending; current submission policy still requires verification."
+    ],
+    "submission_compliance": "not certified"
+  },
+  {
+    "project": "tpami-submission",
+    "pdf": "builds/tpami-submission/build/main.pdf",
+    "pages": 2,
+    "renders": [
+      "renders/tpami-submission/page-1.png",
+      "renders/tpami-submission/page-2.png"
+    ],
+    "contact_sheets": [
+      "renders/tpami-submission/contact-1.png"
+    ],
+    "pdf_sha256": "d629d024f490aecdcea16366c67f985a74c877771ccda50c41ab30e903c9ea11",
+    "visual_review_status": "reviewed",
+    "reviewed_on": "2026-10-11",
+    "reviewer": "Codex root: direct rendered-page inspection",
+    "coverage": [
+      1,
+      2
+    ],
+    "checks": [
+      "title",
+      "abstract",
+      "body",
+      "equations and algorithm",
+      "single and wide floats",
+      "bibliography and appendix",
+      "last page"
+    ],
+    "findings": [
+      "No overlap or clipped text; long official scope URL wraps in the bibliography.",
+      "Author pending; current submission policy still requires verification."
+    ],
+    "submission_compliance": "not certified"
+  },
+  {
+    "project": "aaai-final-supplement",
+    "pdf": "builds/aaai-final/build/supplement.pdf",
+    "pages": 1,
+    "renders": [
+      "renders/aaai-final-supplement/page-1.png"
+    ],
+    "contact_sheets": [
+      "renders/aaai-final-supplement/contact-1.png"
+    ],
+    "pdf_sha256": "e00d450c203a82f1a2a682f6670392d1cb231cdd29d3be4136cf14917ca20535",
+    "visual_review_status": "reviewed",
+    "reviewed_on": "2026-10-11",
+    "reviewer": "Codex root: direct rendered-page inspection",
+    "coverage": [
+      1
+    ],
+    "checks": [
+      "title and author block",
+      "abstract and heading order",
+      "equations and algorithm",
+      "single and wide floats",
+      "bibliography and references",
+      "last page and appendix/checklist where applicable"
+    ],
+    "findings": [
+      "No visible overlap, clipped text, missing formula glyphs or unintended empty final page.",
+      "Draft placeholders remain; sparse float pages in this short formatting demonstration are expected."
+    ],
+    "submission_compliance": "not certified; draft placeholders and unverified policy fields remain"
+  },
+  {
+    "project": "aaai-submission-supplement",
+    "pdf": "builds/aaai-submission/build/supplement.pdf",
+    "pages": 1,
+    "renders": [
+      "renders/aaai-submission-supplement/page-1.png"
+    ],
+    "contact_sheets": [
+      "renders/aaai-submission-supplement/contact-1.png"
+    ],
+    "pdf_sha256": "1d7630c00e7a4f12c0c48873216895adbb49cc4baf2b6d3da8cee21cf2d354e8",
+    "visual_review_status": "reviewed",
+    "reviewed_on": "2026-10-11",
+    "reviewer": "Codex root: direct rendered-page inspection",
+    "coverage": [
+      1
+    ],
+    "checks": [
+      "title and author block",
+      "abstract and heading order",
+      "equations and algorithm",
+      "single and wide floats",
+      "bibliography and references",
+      "last page and appendix/checklist where applicable"
+    ],
+    "findings": [
+      "No visible overlap, clipped text, missing formula glyphs or unintended empty final page.",
+      "Draft placeholders remain; sparse float pages in this short formatting demonstration are expected."
+    ],
+    "submission_compliance": "not certified; draft placeholders and unverified policy fields remain"
+  },
+  {
+    "project": "ijcai-final-supplement",
+    "pdf": "builds/ijcai-final/build/supplement.pdf",
+    "pages": 1,
+    "renders": [
+      "renders/ijcai-final-supplement/page-1.png"
+    ],
+    "contact_sheets": [
+      "renders/ijcai-final-supplement/contact-1.png"
+    ],
+    "pdf_sha256": "4f860e60ff7ac6c77226ca6e969fc43800124cc88a4016f7dbd0541551d751ea",
+    "visual_review_status": "reviewed",
+    "reviewed_on": "2026-10-11",
+    "reviewer": "Codex root: direct rendered-page inspection",
+    "coverage": [
+      1
+    ],
+    "checks": [
+      "title and author block",
+      "abstract and heading order",
+      "equations and algorithm",
+      "single and wide floats",
+      "bibliography and references",
+      "last page and appendix/checklist where applicable"
+    ],
+    "findings": [
+      "No visible overlap, clipped text, missing formula glyphs or unintended empty final page.",
+      "Draft placeholders remain; sparse float pages in this short formatting demonstration are expected."
+    ],
+    "submission_compliance": "not certified; draft placeholders and unverified policy fields remain"
+  },
+  {
+    "project": "ijcai-submission-supplement",
+    "pdf": "builds/ijcai-submission/build/supplement.pdf",
+    "pages": 1,
+    "renders": [
+      "renders/ijcai-submission-supplement/page-1.png"
+    ],
+    "contact_sheets": [
+      "renders/ijcai-submission-supplement/contact-1.png"
+    ],
+    "pdf_sha256": "e43d0b0baed71f045b95918b26e9e82ff1637e21d9a210e7d6f1394e7c67960d",
+    "visual_review_status": "reviewed",
+    "reviewed_on": "2026-10-11",
+    "reviewer": "Codex root: direct rendered-page inspection",
+    "coverage": [
+      1
+    ],
+    "checks": [
+      "title and author block",
+      "abstract and heading order",
+      "equations and algorithm",
+      "single and wide floats",
+      "bibliography and references",
+      "last page and appendix/checklist where applicable"
+    ],
+    "findings": [
+      "No visible overlap, clipped text, missing formula glyphs or unintended empty final page.",
+      "Draft placeholders remain; sparse float pages in this short formatting demonstration are expected."
+    ],
+    "submission_compliance": "not certified; draft placeholders and unverified policy fields remain"
+  }
+]

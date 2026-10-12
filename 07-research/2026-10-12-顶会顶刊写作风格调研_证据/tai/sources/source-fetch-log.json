@@ -1,0 +1,37 @@
+[
+  {
+    "file": "sudoku-institution.html",
+    "url": "https://iris.polito.it/handle/11583/2992746",
+    "final_url": "https://iris.polito.it/handle/11583/2992746",
+    "bytes": 53066,
+    "sha256": "07d77ce574d0cb1ba6679c53c8c44f6bfb5bdf96123a3885d9616c77a0345cd6"
+  },
+  {
+    "file": "drugmap-hal-api.json",
+    "url": "https://api.archives-ouvertes.fr/search/?q=halId_s%3Ahal-05067564&wt=json",
+    "final_url": "https://api.archives-ouvertes.fr/search/?q=halId_s%3Ahal-05067564&wt=json",
+    "bytes": 518,
+    "sha256": "83cc54a8e71af696ddcd10ffe9bd0f51628411b58aac86ce47ebaff6c5026b0e"
+  },
+  {
+    "file": "drugmap-tree.json",
+    "url": "https://api.github.com/repos/JUCompBio/DTI-MOA/git/trees/main?recursive=1",
+    "final_url": "https://api.github.com/repos/JUCompBio/DTI-MOA/git/trees/main?recursive=1",
+    "bytes": 4857,
+    "sha256": "0ae10d10b5cfbb4a8e10de0fcb1450a3b155e7840b3682c7a2d9a63b96e11555"
+  },
+  {
+    "file": "sudoku-crossref.json",
+    "url": "https://api.crossref.org/works/10.1109%2Ftai.2025.3536428",
+    "final_url": "https://api.crossref.org/works/10.1109%2Ftai.2025.3536428",
+    "bytes": 6611,
+    "sha256": "aeb1aee216997a62a1e825938a8e3a0fad71742f2ef3dd4ec3dcb78a318870aa"
+  },
+  {
+    "file": "drugmap-crossref.json",
+    "url": "https://api.crossref.org/works/10.1109%2Ftai.2025.3565671",
+    "final_url": "https://api.crossref.org/works/10.1109%2Ftai.2025.3565671",
+    "bytes": 9390,
+    "sha256": "6c38feefe16971572ebfb514f2d871bcbf1cf3016f08301c0b1f7630010122bb"
+  }
+]

@@ -1,0 +1,82 @@
+{
+  "id": "aaai-2025-16",
+  "title": "Formally Verified Approximate Policy Iteration",
+  "venue": "aaai",
+  "year": 2025,
+  "split": "induction",
+  "review_date": "2026-10-11",
+  "reviewer": "Codex root",
+  "mode": "Continuous all-page semantic writing-style reading, including references and embedded appendices; not independent theorem/code verification or experimental reproduction",
+  "full_text_style_review_complete": true,
+  "external_appendix_review_complete": true,
+  "publication_identity_and_acquired_version": "official AAAI Press published PDF",
+  "publisher_current_byte_equivalence": "downloaded from official DOI-linked article",
+  "pdf_path": ".claude/skills/paper-writing-shared/tmp/corpus/aaai/pdf/Formally Verified Approximate Policy Iteration.pdf",
+  "pdf_sha256": "fe3e1f8acc57041582a2376a46e495ae02ba25d79b4aa0951e588d2b1536b54e",
+  "markdown_path": ".claude/skills/paper-writing-shared/tmp/corpus/aaai/markdown/Formally Verified Approximate Policy Iteration.md",
+  "markdown_sha256": "383a59efea959ad458ed7cc0ac14f703d0bb6c95f97531e7c1d24cfe2d91f23b",
+  "coverage": [
+    {
+      "version": "official AAAI Press published PDF",
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "section_pages": {
+        "1–2": "Abstract, Introduction, Background",
+        "3–6": "factored MDP, specifications, algorithms, conditional theorem, refinement",
+        "6–7": "code generation, LP certification, evaluation, Discussion, Related Work",
+        "7–9": "References"
+      },
+      "method": "continuous reading; any truncated tool text reread separately; figures/formulas ambiguous in extraction checked in actual page render"
+    }
+  ],
+  "supplement_audit": {
+    "source": "https://ojs.aaai.org/index.php/AAAI/article/view/34868",
+    "result": "No prose appendix in PDF or official article. Referenced Isabelle formalization repository README inspected as executable proof artifact. Its complete source and machine proofs were not independently verified; this writing-style reading completion does not assert proof verification."
+  },
+  "ten_dimensions": {
+    "reader_argument": "p1–2从安全相关软件正确性和大状态空间连接交互式证明用途，任务是可验证算法开发，不是宣称全新RL算法。",
+    "title_abstract": "标题直接验证对象；摘要依次陈述方法论、API案例、可执行细化、实践评估和LP证书。",
+    "introduction": "说明表示复杂性与分解验证难点；贡献是验证过程及模块化工具，明确沿用与修改前人算法。",
+    "related_work": "背景p2解释ITP/HOL；专门Related Work在p7，与NaRuto早期合并节形成结构反例。",
+    "method_theory": "p3–6用7项Specification、6个Algorithm和locale依赖组织；Theorem1 p4要求返回标志True即权重收敛；不保证任意停止状态。",
+    "evidence": "形式规范、细化关系与可执行评估承担不同主张；p6Table1分ring/star拓扑、总时间与LP时间、约束与变量规模。",
+    "discussion_limits": "p6–7外部LP求解器本身未验证，结果经证书核验；精确有理数有成本，大ring实例求解失败，未来浮点精度需误差界。",
+    "paragraph_language": "规范先说明功能，再给条件与公式，后细化实现；数学正确性与实现性能分开，不把verified扩大到未验证LP求解器。",
+    "main_appendix": "9页论文无独立附录；部分完整细节由公开Isabelle形式化承载。已审论文与仓库README，不声称重放机器证明或审计全代码。",
+    "actionable": "验证类稿件保留定理前提、模块保证和外部组件可信边界；性能表按拓扑/精度口径组织，不强加神经网络消融。"
+  },
+  "counterexamples": [
+    {
+      "location": "p4 Theorem1",
+      "finding": "API返回True的收敛前提不能删除。",
+      "editing_rule": "定理结论条件化，非任意timeout结果都获该界。"
+    },
+    {
+      "location": "p6–7 LP certification/evaluation",
+      "finding": "LP solver未验证，只验证其证书；star2^40规模不能泛化成所有ring或任意MDP。",
+      "editing_rule": "验证对象、精确求解成本和拓扑分别陈述。"
+    }
+  ],
+  "confidence": {
+    "paper_observation": "high for documented page content",
+    "venue_generalization": "low; purposive pilot, no frequency estimate, no complete50-paper or heldout validation"
+  },
+  "official_requirement": false,
+  "holdout_validation": null,
+  "previous_status": {
+    "semantic_review_status": "preliminary published-PDF navigation/prose-excerpt style review",
+    "version": "AAAI Press published technical-track paper",
+    "acquired_version": null,
+    "version_verification": null,
+    "eligibility": null
+  }
+}

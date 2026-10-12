@@ -1,0 +1,90 @@
+{
+  "id": "tai-2024-07",
+  "title": "Q-Cogni: An Integrated Causal Reinforcement Learning Framework",
+  "venue": "tai",
+  "year": 2024,
+  "split": "derivation",
+  "review_date": "2026-10-11",
+  "reviewer": "Codex root",
+  "mode": "Continuous all-page semantic writing-style reading, including references and embedded appendices; not independent theorem/code verification or experimental reproduction",
+  "full_text_style_review_complete": true,
+  "external_appendix_review_complete": true,
+  "publication_identity_and_acquired_version": "UWA accepted author manuscript; explicit IEEE accepted declaration, not final typeset published PDF",
+  "publisher_current_byte_equivalence": "not established",
+  "pdf_path": ".claude/skills/paper-writing-shared/tmp/corpus/tai/pdf/Q_Cogni_An_Integrated_Causal_Reinforcement_Learning_Framework.pdf",
+  "pdf_sha256": "127317187dda92b71196a6b24409ac43790068e1c168a4275483c956a5d06053",
+  "markdown_path": ".claude/skills/paper-writing-shared/tmp/corpus/tai/markdown/Q_Cogni_An_Integrated_Causal_Reinforcement_Learning_Framework.md",
+  "markdown_sha256": "43d5de9a550d407f3049b641ff321da8b6ee86a8c3da562ed24169bf1df36d42",
+  "coverage": [
+    {
+      "version": "UWA accepted author manuscript; explicit IEEE accepted declaration, not final typeset published PDF",
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "section_pages": {
+        "1–3": "Abstract, Impact Statement, Introduction and Background",
+        "3–5": "three-module framework, causal inference and modified Q-learning algorithms",
+        "5–6": "validation setting and learning-efficiency results",
+        "6–8": "scale comparison and NYC dataset routing experiments",
+        "8–9": "dynamic-traffic illustrations, application discussion and Conclusion",
+        "9–10": "References"
+      },
+      "method": "continuous reading; any truncated tool text reread separately; figures/formulas ambiguous in extraction checked in actual page render"
+    }
+  ],
+  "supplement_audit": {
+    "source": "https://doi.org/10.1109/tai.2024.3453230",
+    "result": "Complete10page accepted-author PDF contains no appendix or reference to external supplementary prose. UWA landing page explicitly labels Accepted author manuscript and confirms journal publication. PDF provisional VOL05NO10OCT2024 is not final bibliographic metadata; final record5(12):6186–6195,Dec2024."
+  },
+  "ten_dimensions": {
+    "reader_argument": "p1–3以人类学习类比引入model-based/free和因果模型，再连接路由问题；降低入口术语负担，有背景教程但未验证其全刊普遍性。",
+    "title_abstract": "标题方法＋框架；摘要报告NYC数据与76%/66%，p1独立Impact Statement讲意义，不与摘要合并；first/domain-agnostic的强度应另审。",
+    "introduction": "p1–2按已知因果结构局限→离线发现与在线学习整合→三项贡献，先解释架构作用。",
+    "related_work": "引言和Background嵌入相关方法比较，没有独立Related Work章节；不能从官方要求推导固定节名。",
+    "method_theory": "p3–5结构发现、BBN推断、修改Q-learning三模块；Algorithms1–2给输入和选择条件，先验目标顺序与人工结构约束实际使用，未给普适收敛证明。",
+    "evidence": "p5–8分学习效率、规模与NYC路由；Taxiv3离线500000随机步，NYC1000000采样＋100000训练episodes，531行程；训练和离线数据成本不得隐去。",
+    "discussion_limits": "p8随机交通仅示例，p9把新领域列未来；实证限路由与离散任务，不能把医疗/金融用途写成已实现收益。",
+    "paragraph_language": "每项系统特点有解释，但agnostic to prior knowledge仅指不需完整地图，不等于无先验；76%同最短距离是观察比例，不是全输入最优保证。",
+    "main_appendix": "10页接受作者稿无引用外部附录；保留IEEE接受声明，不能用其临时卷期、作者信息及页眉反推当前匿名/终稿格式。",
+    "actionable": "应用系统稿分模块、成本和评价层级，Impact说明证据支持的用途；曲线实测与外推线分别标注，优势按规模/先验/指标限定。"
+  },
+  "counterexamples": [
+    {
+      "location": "p6–8 data collection, Fig6",
+      "finding": "Q-Cogni先有离线随机采样与训练；Fig6低规模明显更慢，大规模有外推虚线。",
+      "editing_rule": "分摊离线/训练/在线成本并标实测/外推，不能声称全规模更快。"
+    },
+    {
+      "location": "p4 and p6 constraints; p7–8 NYC setting",
+      "finding": "实验有人工结构约束、排序目标和预先拟合BBN；不需完整地图不等于无先验。",
+      "editing_rule": "按实际使用的先验限定自动/agnostic主张。"
+    },
+    {
+      "location": "p8 outcomes and traffic examples; p9 future",
+      "finding": "531行程76%与Dijkstra同距离、24%更长；66%比Q-learning短；交通只给2示例，未验证燃油/成本/医疗收益。",
+      "editing_rule": "写经验比例及样本场景；部署和社会效果留作未验证可能性。"
+    }
+  ],
+  "confidence": {
+    "paper_observation": "high for documented page content",
+    "venue_generalization": "low; purposive pilot, no frequency estimate, no complete50-paper or heldout validation"
+  },
+  "official_requirement": false,
+  "holdout_validation": null,
+  "previous_status": {
+    "semantic_review_status": "not_reviewed",
+    "version": "submittedVersion",
+    "acquired_version": null,
+    "version_verification": null,
+    "eligibility": "pending_content_version_confirmation"
+  }
+}

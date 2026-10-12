@@ -1,0 +1,39 @@
+{
+  "project": "/Users/myl/Documents/paper/07-research/2026-10-10-顶会顶刊写作风格调研_证据/templates/builds/icml-submission",
+  "entrypoint": "main.tex",
+  "issues": [
+    {
+      "kind": "author-input-pending",
+      "note": "Skeleton is not a finished manuscript"
+    }
+  ],
+  "warnings": [],
+  "main_pages": 1,
+  "total_pages": 3,
+  "word_count_estimates": {},
+  "limits": {
+    "available": true,
+    "directory": "project/submission",
+    "anonymous": true,
+    "main_page_limit": 8,
+    "page_limit_status": "verified",
+    "counting": "Main text unless journal-specific rules explicitly include references",
+    "engine": "pdflatex",
+    "article_type": "original-research",
+    "full_manuscript_page_limit": null,
+    "max_pdf_megabytes": 50,
+    "validation": {
+      "compile": "passed",
+      "unresolved_citations_or_references": false,
+      "visual_review": "reviewed all rendered pages",
+      "rendered_pages": 3,
+      "verified_on": "2026-10-11",
+      "evidence_path": "07-research/2026-10-10-顶会顶刊写作风格调研_证据/templates/render-results.json",
+      "submission_compliance": "pending author content and policy fields"
+    }
+  },
+  "static_check_passed": false,
+  "visual_check": "not-performed-by-this-command",
+  "official_system_check": "not-performed",
+  "semantic_fidelity": "requires-review"
+}

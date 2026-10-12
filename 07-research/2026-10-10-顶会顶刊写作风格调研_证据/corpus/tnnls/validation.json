@@ -1,0 +1,25 @@
+{
+  "venue": "tnnls",
+  "locked": 50,
+  "downloaded": 26,
+  "parsed": 26,
+  "metadata_accepted_or_published": 26,
+  "semantic_fulltext_reviewed": 1,
+  "holdout_semantic_validation": "1 of10 read against editorial advice; noempiricalderivationrules yet",
+  "official_fulltext_and_version_content_confirmation": "pending",
+  "automated_extraction_is_not_fulltext_review": true,
+  "derivation_fulltext_reviewed": 0,
+  "holdout_fulltext_reviewed": 1,
+  "content_verified_accepted_fulltext": 1,
+  "counts": {
+    "locked": 50,
+    "pdf_acquired": 26,
+    "text_parsed": 26,
+    "main_text_style_reviewed": 1,
+    "full_text_and_relevant_appendix_reviewed": 1,
+    "induction_complete": 0,
+    "holdout_complete": 1
+  },
+  "updated": "2026-10-11",
+  "acceptance_status": "in_progress; 50 complete per venue not achieved"
+}

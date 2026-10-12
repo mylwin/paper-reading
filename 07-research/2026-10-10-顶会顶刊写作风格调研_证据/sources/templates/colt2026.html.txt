@@ -1,0 +1,106 @@
+COLT 2026 - Call for Papers
+COLT 2026
+Twitter
+YouTube
+Call for Papers
+The 39th Annual Conference on Learning Theory (COLT 2026) will take place June 29-July 3, 2026 in San Diego, USA. We invite submissions of papers addressing theoretical aspects of machine learning, broadly defined as a subject at the intersection of computer science, statistics and applied mathematics. We strongly support an inclusive view of learning theory, including fundamental theoretical aspects of learnability in various contexts, and theory that sheds light on empirical phenomena.
+The topics include but are not limited to:
+Design and analysis of learning algorithms
+Statistical and computational complexity of learning
+Optimization methods for learning, including online and stochastic optimization
+Theory of artificial neural networks, including deep learning
+Theoretical explanation of empirical phenomena in learning
+Supervised learning
+Unsupervised, semi-supervised learning, domain adaptation
+Learning geometric and topological structures in data, manifold learning
+Active and interactive learning
+Reinforcement learning
+Online learning and decision-making
+Interactions of learning theory with other mathematical fields
+High-dimensional and non-parametric statistics
+Kernel methods
+Causality
+Sampling
+Theoretical analysis of probabilistic graphical models
+Bayesian methods in learning
+Game theory and learning
+Learning with system constraints (e.g., privacy, fairness, memory, communication)
+Learning from complex data (e.g., networks, time series)
+Learning in neuroscience, social science, economics and other subjects
+Quantum learning theory
+Submissions by authors who are new to COLT are encouraged.
+While the primary focus of the conference is theoretical, authors are welcome to support their analysis with relevant experimental results.
+Accepted papers will be presented at the conference. At least one author of each accepted paper should present the work at the conference. Accepted papers will be published electronically in the Proceedings of Machine Learning Research (PMLR). Authors of accepted papers will have the option of opting out of the proceedings in favor of a 1-page extended abstract, which will point to an open access archival version of the full paper reviewed for COLT.
+PAPER AWARDS
+COLT will award both best paper and best student paper awards. To be eligible for the best student paper award, the primary contributor(s) must be full-time students at the time of submission. The program committee may decline to make these awards, or may split them among several papers.
+DUAL SUBMISSIONS POLICY
+Conferences: In general, submissions that are substantially similar to papers that have been previously published, accepted for publication, or submitted in parallel to other peer-reviewed conferences with proceedings may not be submitted to COLT.
+Journals: Submissions that are substantially similar to papers that have been previously published, accepted for publication, or submitted in parallel to journals may not be submitted to COLT. Papers that are in submission at COLT may not be submitted to a journal until after the decisions are released (or the submission is withdrawn).
+ATTENDANCE POLICY
+At least one author of each accepted paper must attend the conference in person to present the work.
+LLM POLICY
+Authors
+may use large language models (LLMs) for writing, mathematics and general research. We encourage authors to mention any unusual contributions made
+                by models; for example if they supplied an interesting idea or imaginative proof. Authors are responsible for the correctness of their submission,
+                including validity of references and analysis. This can be demonstrated to reviewers by making sure that analysis has been re-written in a way that is suitable
+                for a COLT submission.
+Reviewers
+must not share submissions with any LLM. Models may be used (like books, wikipedia, etc) to help understand technical aspects of 
+                a submission, but reviewers should be careful that this does not leak confidential information.
+REBUTTAL PHASE
+As in previous years, there will be a rebuttal phase during the review process. Initial reviews will be sent to authors before final decisions have been made. Authors will have an opportunity to address the issues brought up in the reviews.
+REVIEWING PHILOSOPHY
+We strongly encourage constructive feedback that can help authors improve their work. The aim of the reviewing process is to assess whether the work is close to being ready for publication; as such, the interaction between authors and referees is meant to both figure this out and guide the paper into a publishable state.
+We recommend the following video for a thoughtful discussion of such aims and related issues:
+IACR Distinguished Lecture: Caught in Between Theory and Practice
+IMPORTANT DATES
+(All dates are in 2026.)
+Submission deadline: February 4, Anywhere on Earth
+Author notification: On or before May 4
+Conference dates: June 29–July 3
+Submission Instructions
+FORMATTING AND ANONYMIZATION
+Formatting: This year, we expect authors to submit their entire manuscript as a single PDF. The main body is limited to 12 PMLR formatted pages, excluding references. 
+                There is no page limit on the references and appendices.
+All details, proofs and derivations required to substantiate the results must be included in the submission, possibly in the appendices. However, the contribution, novelty and significance of submissions will be judged primarily based on the main paper (without appendices), and so enough details, including proof details, must be provided in the main text to convince the reviewers of the submissions’ merits.
+Anonymization: Submissions should be suitable for double-blind reviewing; in particular, submissions should NOT include author names or other identifying information. To the extent possible, you should avoid including directly identifying information in the text. You should still include all relevant references, discussion, and scientific content, even if this might provide significant hints as to the authors’ identity. But you should generally refer to your own prior work in third person. Do not include acknowledgments in the submission. They can be added in the camera-ready version of accepted papers.
+While submissions are anonymized, and author names are withheld from reviewers, they are known to the area chair overseeing the paper’s review. The assigned area chair is allowed to reveal author names to a reviewer during the rebuttal period, upon the reviewer’s request, if they deem such information is needed in ensuring a proper review.
+Style files: Please use the following style files. The "[anon]" option in the LaTeX template should be used to suppress author names from appearing in the submission.
+LaTeX style files and template
+SUBMITTING YOUR PAPER
+Papers should be submitted through CMT; the deadline for submissions is February 4, 2026, Anywhere on Earth.
+CMT submission site:
+https://cmt3.research.microsoft.com/COLT2026
+Please contact the COLT program chairs if you have any questions about the policy or technical issues with the submission process.
+The Microsoft CMT service was used for managing the peer-reviewing process for this conference. This service was provided for free by Microsoft and they bore all expenses, including costs for Azure cloud services as well as for software development and support.
+Menu
+COLT 2026
+The Conference
+Program
+Accepted Papers
+Keynote Speakers
+Awards
+Important Dates
+Conference Organization
+Sponsors
+Contact Information
+Workshops/Tutorials
+Call for Proposals
+Workshop Day
+Open Problems
+Call for Open Problems
+For Authors
+Call for Papers
+Submission Instructions
+For Participants
+Registration
+Code of Conduct
+© 2025–2026
+Association for Computational Learning
+. Images:
+Familydestinationsguide.com
+,
+Eric Rothermel
+. Design:
+HTML5 UP
+.

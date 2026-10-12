@@ -1,0 +1,35 @@
+{
+  "id": "aaai-2024-06",
+  "review_date": "2026-10-11",
+  "mode": "continuous all-page semantic writing-style review; formulas inspected for presentation, not independently proved",
+  "full_text_style_review_complete": true,
+  "external_appendix_review_complete": false,
+  "coverage": [
+    {
+      "version": "official AAAI2024 technical paper",
+      "pages": "1–8",
+      "sections": "Abstract, Introduction, Preliminaries, Principles23items, links propositions, semanticsARM/ARC/ARH with9theoremstatements and4workedexamples, Discussion&Conclusion, acknowledgements, references",
+      "missing": "Published PDF has no proofs for theoremstatements and no Appendix. It does not cite a full proof supplement."
+    }
+  ],
+  "supplement_audit": {
+    "official_article": "https://ojs.aaai.org/index.php/AAAI/article/view/28945",
+    "official_page_saved": "07-research/2026-10-10-顶会顶刊写作风格调研_证据/sources/aaai/aaai-2024-06-article.html",
+    "result": "official page lists PDF and Video/Poster; no supplementary proof link. Author site checked 2026-10-11; only DOI for thispaper; targeted title+appendix/proof search returned official/author samepaper andposter, no completeproofs. Cannot certify no inaccessible supplement exists.",
+    "appendix_status": "not located; proof-completeness gap remains explicit"
+  },
+  "ten_dimensions": {
+    "reader_argument": "从argumentation标准定性语义引向quantitative评估；以投票解释同acceptability不同rejectability，读者无需先接受抽象新principle才能看见问题（p1–2）。",
+    "title_abstract": "标题直接方法family＋weightedargumentation；摘要先task/context再bilateralrejectability，再principles和three semantics，收尾收敛性声明。preferablerealworldapplications仅数学可计算性推论，无应用实验支持（p1）。",
+    "introduction": "先接受度与拒绝度非对称概念，Table1列两者来源，投票Figure1与算例说明可区分；最后贡献不是简单SOTA列表而是properties→compatibility→sequences→convergence→semantics→satisfaction五步（p1–2）。",
+    "related_work": "引言对extension/labelling/gradual区别；discussion另对trust/iterative/QuAD/probabilisticfamilies辨析，不强制独立RelatedWork或统一靠前（p1、7）。",
+    "method_theory": "先WAG、bilateral函数、isomorphism/path四定义；23principles每项preceded一句plainlanguage功能再formal条件；quality/cardinality/compensation图例。5propositions说明principles兼容和蕴含；三semantics都重复iteration→limit→example→properties，Table2汇总（p2–7）。",
+    "evidence": "正式版证明证据有限：给9theoremstatements与算例但未展示proof。该阅读观察不能成为删证明建议。Table2支持“mostprinciples”而非全部，ARM7类违反项被明确列出（p5–7）。",
+    "discussion_limits": "Discussion&Conclusion合并定位已有gradual/probabilistic方法、回收三semantics贡献，未来bipolar/SETAF；no realdeployment/empiricalsection（p7）。",
+    "paragraph_language": "原则的直觉→条件句式密集但局部结构稳定；多处theoremsaid选择scope。抽象强调real-world但没有经验验证，应作为主张强度待谨慎点而非模板话术。",
+    "main_appendix": "主体7页+refs1页，无内置Appendix/证明；官方与作者公开来源核查未定位proofsupplement。补充完整性未验收，不能count正文+附录全覆盖。",
+    "actionable": "对axiomatic稿先用一个小反例展示新维度必要性；principle先plainlanguage再formal；方法变体用相同解释顺序并以propertiesmatrix对照；关键收敛定理须带proof或准确附录回链，不能照搬此版省略。"
+  },
+  "counterexample": "理论论文无实验，相关定位可以在discussion；allproperties为错误强化；preferenceforrealworld不等于实证成功。",
+  "holdout_validation": null
+}

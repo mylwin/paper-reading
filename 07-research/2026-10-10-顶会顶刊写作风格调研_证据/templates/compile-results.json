@@ -1,0 +1,1118 @@
+[
+  {
+    "venue": "aaai",
+    "mode": "submission",
+    "compile_exit_code": 0,
+    "error_tail": "",
+    "format_check_exit_code": 1,
+    "format_check": {
+      "project": "/Users/myl/Documents/paper/07-research/2026-10-10-顶会顶刊写作风格调研_证据/templates/builds/aaai-submission",
+      "entrypoint": "main.tex",
+      "issues": [
+        {
+          "kind": "author-input-pending",
+          "note": "Skeleton is not a finished manuscript"
+        }
+      ],
+      "warnings": [],
+      "main_pages": 1,
+      "total_pages": 4,
+      "word_count_estimates": {},
+      "limits": {
+        "available": true,
+        "directory": "project/submission",
+        "anonymous": true,
+        "main_page_limit": 7,
+        "page_limit_status": "verified",
+        "counting": "Main text unless journal-specific rules explicitly include references",
+        "engine": "pdflatex",
+        "article_type": "original-research",
+        "full_manuscript_page_limit": null,
+        "max_pdf_megabytes": null,
+        "validation": {
+          "compile": "passed",
+          "unresolved_citations_or_references": false,
+          "visual_review": "reviewed all rendered pages",
+          "rendered_pages": 4,
+          "verified_on": "2026-10-11",
+          "evidence_path": "07-research/2026-10-10-顶会顶刊写作风格调研_证据/templates/render-results.json",
+          "submission_compliance": "pending author content and policy fields"
+        }
+      },
+      "static_check_passed": false,
+      "visual_check": "not-performed-by-this-command",
+      "official_system_check": "not-performed",
+      "semantic_fidelity": "requires-review"
+    },
+    "supplement_compile_exit_code": 0,
+    "supplement_error_tail": ""
+  },
+  {
+    "venue": "aaai",
+    "mode": "final",
+    "compile_exit_code": 0,
+    "error_tail": "",
+    "format_check_exit_code": 1,
+    "format_check": {
+      "project": "/Users/myl/Documents/paper/07-research/2026-10-10-顶会顶刊写作风格调研_证据/templates/builds/aaai-final",
+      "entrypoint": "main.tex",
+      "issues": [
+        {
+          "kind": "author-input-pending",
+          "note": "Skeleton is not a finished manuscript"
+        }
+      ],
+      "warnings": [],
+      "main_pages": 1,
+      "total_pages": 4,
+      "word_count_estimates": {},
+      "limits": {
+        "available": true,
+        "directory": "project/final",
+        "anonymous": false,
+        "main_page_limit": 7,
+        "page_limit_status": "verified",
+        "counting": "Main text unless journal-specific rules explicitly include references",
+        "engine": "pdflatex",
+        "article_type": "original-research",
+        "full_manuscript_page_limit": null,
+        "max_pdf_megabytes": null,
+        "validation": {
+          "compile": "passed",
+          "unresolved_citations_or_references": false,
+          "visual_review": "reviewed all rendered pages",
+          "rendered_pages": 4,
+          "verified_on": "2026-10-11",
+          "evidence_path": "07-research/2026-10-10-顶会顶刊写作风格调研_证据/templates/render-results.json",
+          "submission_compliance": "pending author content and policy fields"
+        }
+      },
+      "static_check_passed": false,
+      "visual_check": "not-performed-by-this-command",
+      "official_system_check": "not-performed",
+      "semantic_fidelity": "requires-review"
+    },
+    "supplement_compile_exit_code": 0,
+    "supplement_error_tail": ""
+  },
+  {
+    "venue": "ijcai",
+    "mode": "submission",
+    "compile_exit_code": 0,
+    "error_tail": "",
+    "format_check_exit_code": 1,
+    "format_check": {
+      "project": "/Users/myl/Documents/paper/07-research/2026-10-10-顶会顶刊写作风格调研_证据/templates/builds/ijcai-submission",
+      "entrypoint": "main.tex",
+      "issues": [
+        {
+          "kind": "author-input-pending",
+          "note": "Skeleton is not a finished manuscript"
+        }
+      ],
+      "warnings": [],
+      "main_pages": 1,
+      "total_pages": 2,
+      "word_count_estimates": {},
+      "limits": {
+        "available": true,
+        "directory": "project/submission",
+        "anonymous": true,
+        "main_page_limit": 7,
+        "page_limit_status": "verified",
+        "counting": "Main text unless journal-specific rules explicitly include references",
+        "engine": "pdflatex",
+        "article_type": "original-research",
+        "full_manuscript_page_limit": null,
+        "max_pdf_megabytes": null,
+        "validation": {
+          "compile": "passed",
+          "unresolved_citations_or_references": false,
+          "visual_review": "reviewed all rendered pages",
+          "rendered_pages": 2,
+          "verified_on": "2026-10-11",
+          "evidence_path": "07-research/2026-10-10-顶会顶刊写作风格调研_证据/templates/render-results.json",
+          "submission_compliance": "pending author content and policy fields"
+        }
+      },
+      "static_check_passed": false,
+      "visual_check": "not-performed-by-this-command",
+      "official_system_check": "not-performed",
+      "semantic_fidelity": "requires-review"
+    },
+    "supplement_compile_exit_code": 0,
+    "supplement_error_tail": ""
+  },
+  {
+    "venue": "ijcai",
+    "mode": "final",
+    "compile_exit_code": 0,
+    "error_tail": "",
+    "format_check_exit_code": 1,
+    "format_check": {
+      "project": "/Users/myl/Documents/paper/07-research/2026-10-10-顶会顶刊写作风格调研_证据/templates/builds/ijcai-final",
+      "entrypoint": "main.tex",
+      "issues": [
+        {
+          "kind": "author-input-pending",
+          "note": "Skeleton is not a finished manuscript"
+        }
+      ],
+      "warnings": [
+        {
+          "kind": "page-policy-unverified"
+        }
+      ],
+      "main_pages": 1,
+      "total_pages": 2,
+      "word_count_estimates": {},
+      "limits": {
+        "available": true,
+        "directory": "project/final",
+        "anonymous": false,
+        "main_page_limit": null,
+        "page_limit_status": "requires-target-stage-verification",
+        "counting": "Main text unless journal-specific rules explicitly include references",
+        "engine": "pdflatex",
+        "article_type": "original-research",
+        "full_manuscript_page_limit": null,
+        "max_pdf_megabytes": null,
+        "validation": {
+          "compile": "passed",
+          "unresolved_citations_or_references": false,
+          "visual_review": "reviewed all rendered pages",
+          "rendered_pages": 2,
+          "verified_on": "2026-10-11",
+          "evidence_path": "07-research/2026-10-10-顶会顶刊写作风格调研_证据/templates/render-results.json",
+          "submission_compliance": "pending author content and policy fields"
+        }
+      },
+      "static_check_passed": false,
+      "visual_check": "not-performed-by-this-command",
+      "official_system_check": "not-performed",
+      "semantic_fidelity": "requires-review"
+    },
+    "supplement_compile_exit_code": 0,
+    "supplement_error_tail": ""
+  },
+  {
+    "venue": "icml",
+    "mode": "submission",
+    "compile_exit_code": 0,
+    "error_tail": "",
+    "format_check_exit_code": 1,
+    "format_check": {
+      "project": "/Users/myl/Documents/paper/07-research/2026-10-10-顶会顶刊写作风格调研_证据/templates/builds/icml-submission",
+      "entrypoint": "main.tex",
+      "issues": [
+        {
+          "kind": "author-input-pending",
+          "note": "Skeleton is not a finished manuscript"
+        }
+      ],
+      "warnings": [],
+      "main_pages": 1,
+      "total_pages": 3,
+      "word_count_estimates": {},
+      "limits": {
+        "available": true,
+        "directory": "project/submission",
+        "anonymous": true,
+        "main_page_limit": 8,
+        "page_limit_status": "verified",
+        "counting": "Main text unless journal-specific rules explicitly include references",
+        "engine": "pdflatex",
+        "article_type": "original-research",
+        "full_manuscript_page_limit": null,
+        "max_pdf_megabytes": 50,
+        "validation": {
+          "compile": "passed",
+          "unresolved_citations_or_references": false,
+          "visual_review": "reviewed all rendered pages",
+          "rendered_pages": 3,
+          "verified_on": "2026-10-11",
+          "evidence_path": "07-research/2026-10-10-顶会顶刊写作风格调研_证据/templates/render-results.json",
+          "submission_compliance": "pending author content and policy fields"
+        }
+      },
+      "static_check_passed": false,
+      "visual_check": "not-performed-by-this-command",
+      "official_system_check": "not-performed",
+      "semantic_fidelity": "requires-review"
+    }
+  },
+  {
+    "venue": "icml",
+    "mode": "final",
+    "compile_exit_code": 0,
+    "error_tail": "",
+    "format_check_exit_code": 1,
+    "format_check": {
+      "project": "/Users/myl/Documents/paper/07-research/2026-10-10-顶会顶刊写作风格调研_证据/templates/builds/icml-final",
+      "entrypoint": "main.tex",
+      "issues": [
+        {
+          "kind": "author-input-pending",
+          "note": "Skeleton is not a finished manuscript"
+        }
+      ],
+      "warnings": [],
+      "main_pages": 1,
+      "total_pages": 3,
+      "word_count_estimates": {},
+      "limits": {
+        "available": true,
+        "directory": "project/final",
+        "anonymous": false,
+        "main_page_limit": 9,
+        "page_limit_status": "verified",
+        "counting": "Main text unless journal-specific rules explicitly include references",
+        "engine": "pdflatex",
+        "article_type": "original-research",
+        "full_manuscript_page_limit": null,
+        "max_pdf_megabytes": 20,
+        "validation": {
+          "compile": "passed",
+          "unresolved_citations_or_references": false,
+          "visual_review": "reviewed all rendered pages",
+          "rendered_pages": 3,
+          "verified_on": "2026-10-11",
+          "evidence_path": "07-research/2026-10-10-顶会顶刊写作风格调研_证据/templates/render-results.json",
+          "submission_compliance": "pending author content and policy fields"
+        }
+      },
+      "static_check_passed": false,
+      "visual_check": "not-performed-by-this-command",
+      "official_system_check": "not-performed",
+      "semantic_fidelity": "requires-review"
+    }
+  },
+  {
+    "venue": "neurips",
+    "mode": "submission",
+    "compile_exit_code": 0,
+    "error_tail": "",
+    "format_check_exit_code": 1,
+    "format_check": {
+      "project": "/Users/myl/Documents/paper/07-research/2026-10-10-顶会顶刊写作风格调研_证据/templates/builds/neurips-submission",
+      "entrypoint": "main.tex",
+      "issues": [
+        {
+          "kind": "author-input-pending",
+          "note": "Skeleton is not a finished manuscript"
+        }
+      ],
+      "warnings": [],
+      "main_pages": 1,
+      "total_pages": 9,
+      "word_count_estimates": {},
+      "limits": {
+        "available": true,
+        "directory": "project/submission",
+        "anonymous": true,
+        "main_page_limit": 9,
+        "page_limit_status": "verified",
+        "counting": "Main text unless journal-specific rules explicitly include references",
+        "engine": "pdflatex",
+        "article_type": "original-research",
+        "full_manuscript_page_limit": null,
+        "max_pdf_megabytes": null,
+        "validation": {
+          "compile": "passed",
+          "unresolved_citations_or_references": false,
+          "visual_review": "reviewed all rendered pages",
+          "rendered_pages": 9,
+          "verified_on": "2026-10-11",
+          "evidence_path": "07-research/2026-10-10-顶会顶刊写作风格调研_证据/templates/render-results.json",
+          "submission_compliance": "pending author content and policy fields"
+        }
+      },
+      "static_check_passed": false,
+      "visual_check": "not-performed-by-this-command",
+      "official_system_check": "not-performed",
+      "semantic_fidelity": "requires-review"
+    }
+  },
+  {
+    "venue": "neurips",
+    "mode": "final",
+    "compile_exit_code": 0,
+    "error_tail": "",
+    "format_check_exit_code": 1,
+    "format_check": {
+      "project": "/Users/myl/Documents/paper/07-research/2026-10-10-顶会顶刊写作风格调研_证据/templates/builds/neurips-final",
+      "entrypoint": "main.tex",
+      "issues": [
+        {
+          "kind": "author-input-pending",
+          "note": "Skeleton is not a finished manuscript"
+        }
+      ],
+      "warnings": [],
+      "main_pages": 1,
+      "total_pages": 9,
+      "word_count_estimates": {},
+      "limits": {
+        "available": true,
+        "directory": "project/final",
+        "anonymous": false,
+        "main_page_limit": 10,
+        "page_limit_status": "verified",
+        "counting": "Main text unless journal-specific rules explicitly include references",
+        "engine": "pdflatex",
+        "article_type": "original-research",
+        "full_manuscript_page_limit": null,
+        "max_pdf_megabytes": null,
+        "validation": {
+          "compile": "passed",
+          "unresolved_citations_or_references": false,
+          "visual_review": "reviewed all rendered pages",
+          "rendered_pages": 9,
+          "verified_on": "2026-10-11",
+          "evidence_path": "07-research/2026-10-10-顶会顶刊写作风格调研_证据/templates/render-results.json",
+          "submission_compliance": "pending author content and policy fields"
+        }
+      },
+      "static_check_passed": false,
+      "visual_check": "not-performed-by-this-command",
+      "official_system_check": "not-performed",
+      "semantic_fidelity": "requires-review"
+    }
+  },
+  {
+    "venue": "iclr",
+    "mode": "submission",
+    "compile_exit_code": 0,
+    "error_tail": "",
+    "format_check_exit_code": 1,
+    "format_check": {
+      "project": "/Users/myl/Documents/paper/07-research/2026-10-10-顶会顶刊写作风格调研_证据/templates/builds/iclr-submission",
+      "entrypoint": "main.tex",
+      "issues": [
+        {
+          "kind": "author-input-pending",
+          "note": "Skeleton is not a finished manuscript"
+        }
+      ],
+      "warnings": [
+        {
+          "kind": "source-word-count-estimate",
+          "note": "TeX macros may change rendered counts; manually verify"
+        }
+      ],
+      "main_pages": 1,
+      "total_pages": 3,
+      "word_count_estimates": {},
+      "limits": {
+        "available": true,
+        "directory": "project/submission",
+        "anonymous": true,
+        "main_page_limit": 9,
+        "page_limit_status": "verified",
+        "counting": "Main text unless journal-specific rules explicitly include references",
+        "engine": "pdflatex",
+        "article_type": "original-research",
+        "full_manuscript_page_limit": null,
+        "max_pdf_megabytes": null
+      },
+      "static_check_passed": false,
+      "visual_check": "not-performed-by-this-command",
+      "official_system_check": "not-performed",
+      "semantic_fidelity": "requires-review"
+    }
+  },
+  {
+    "venue": "iclr",
+    "mode": "final",
+    "compile_exit_code": 0,
+    "error_tail": "",
+    "format_check_exit_code": 1,
+    "format_check": {
+      "project": "/Users/myl/Documents/paper/07-research/2026-10-10-顶会顶刊写作风格调研_证据/templates/builds/iclr-final",
+      "entrypoint": "main.tex",
+      "issues": [
+        {
+          "kind": "author-input-pending",
+          "note": "Skeleton is not a finished manuscript"
+        }
+      ],
+      "warnings": [
+        {
+          "kind": "source-word-count-estimate",
+          "note": "TeX macros may change rendered counts; manually verify"
+        }
+      ],
+      "main_pages": 1,
+      "total_pages": 3,
+      "word_count_estimates": {},
+      "limits": {
+        "available": true,
+        "directory": "project/final",
+        "anonymous": false,
+        "main_page_limit": 10,
+        "page_limit_status": "verified",
+        "counting": "Main text unless journal-specific rules explicitly include references",
+        "engine": "pdflatex",
+        "article_type": "original-research",
+        "full_manuscript_page_limit": null,
+        "max_pdf_megabytes": null
+      },
+      "static_check_passed": false,
+      "visual_check": "not-performed-by-this-command",
+      "official_system_check": "not-performed",
+      "semantic_fidelity": "requires-review"
+    }
+  },
+  {
+    "venue": "colt",
+    "mode": "submission",
+    "compile_exit_code": 0,
+    "error_tail": "",
+    "format_check_exit_code": 1,
+    "format_check": {
+      "project": "/Users/myl/Documents/paper/07-research/2026-10-10-顶会顶刊写作风格调研_证据/templates/builds/colt-submission",
+      "entrypoint": "main.tex",
+      "issues": [
+        {
+          "kind": "author-input-pending",
+          "note": "Skeleton is not a finished manuscript"
+        }
+      ],
+      "warnings": [],
+      "main_pages": 3,
+      "total_pages": 3,
+      "word_count_estimates": {},
+      "limits": {
+        "available": true,
+        "directory": "project/submission",
+        "anonymous": true,
+        "main_page_limit": 12,
+        "page_limit_status": "verified",
+        "counting": "Main text unless journal-specific rules explicitly include references",
+        "engine": "pdflatex",
+        "article_type": "original-research",
+        "full_manuscript_page_limit": null,
+        "max_pdf_megabytes": null,
+        "validation": {
+          "compile": "passed",
+          "unresolved_citations_or_references": false,
+          "visual_review": "reviewed all rendered pages",
+          "rendered_pages": 3,
+          "verified_on": "2026-10-11",
+          "evidence_path": "07-research/2026-10-10-顶会顶刊写作风格调研_证据/templates/render-results.json",
+          "submission_compliance": "pending author content and policy fields"
+        }
+      },
+      "static_check_passed": false,
+      "visual_check": "not-performed-by-this-command",
+      "official_system_check": "not-performed",
+      "semantic_fidelity": "requires-review"
+    }
+  },
+  {
+    "venue": "colt",
+    "mode": "final",
+    "compile_exit_code": 0,
+    "error_tail": "",
+    "format_check_exit_code": 1,
+    "format_check": {
+      "project": "/Users/myl/Documents/paper/07-research/2026-10-10-顶会顶刊写作风格调研_证据/templates/builds/colt-final",
+      "entrypoint": "main.tex",
+      "issues": [
+        {
+          "kind": "author-input-pending",
+          "note": "Skeleton is not a finished manuscript"
+        }
+      ],
+      "warnings": [
+        {
+          "kind": "page-policy-unverified"
+        }
+      ],
+      "main_pages": 3,
+      "total_pages": 3,
+      "word_count_estimates": {},
+      "limits": {
+        "available": true,
+        "directory": "project/final",
+        "anonymous": false,
+        "main_page_limit": null,
+        "page_limit_status": "requires-target-stage-verification",
+        "counting": "Main text unless journal-specific rules explicitly include references",
+        "engine": "pdflatex",
+        "article_type": "original-research",
+        "full_manuscript_page_limit": null,
+        "max_pdf_megabytes": null,
+        "validation": {
+          "compile": "passed",
+          "unresolved_citations_or_references": false,
+          "visual_review": "reviewed all rendered pages",
+          "rendered_pages": 3,
+          "verified_on": "2026-10-11",
+          "evidence_path": "07-research/2026-10-10-顶会顶刊写作风格调研_证据/templates/render-results.json",
+          "submission_compliance": "pending author content and policy fields"
+        }
+      },
+      "static_check_passed": false,
+      "visual_check": "not-performed-by-this-command",
+      "official_system_check": "not-performed",
+      "semantic_fidelity": "requires-review"
+    }
+  },
+  {
+    "venue": "jmlr",
+    "mode": "submission",
+    "compile_exit_code": 0,
+    "error_tail": "",
+    "format_check_exit_code": 1,
+    "format_check": {
+      "project": "/Users/myl/Documents/paper/07-research/2026-10-10-顶会顶刊写作风格调研_证据/templates/builds/jmlr-submission",
+      "entrypoint": "main.tex",
+      "issues": [
+        {
+          "kind": "author-input-pending",
+          "note": "Skeleton is not a finished manuscript"
+        }
+      ],
+      "warnings": [
+        {
+          "kind": "page-policy-unverified"
+        },
+        {
+          "kind": "source-word-count-estimate",
+          "note": "TeX macros may change rendered counts; manually verify"
+        }
+      ],
+      "main_pages": 2,
+      "total_pages": 3,
+      "word_count_estimates": {
+        "abstract": 33
+      },
+      "limits": {
+        "available": true,
+        "directory": "project/submission",
+        "anonymous": false,
+        "main_page_limit": null,
+        "page_limit_status": "requires-target-stage-verification",
+        "counting": "Main text unless journal-specific rules explicitly include references",
+        "engine": "pdflatex",
+        "article_type": "original-research",
+        "full_manuscript_page_limit": null,
+        "max_pdf_megabytes": null,
+        "validation": {
+          "compile": "passed",
+          "unresolved_citations_or_references": false,
+          "visual_review": "reviewed all rendered pages",
+          "rendered_pages": 3,
+          "verified_on": "2026-10-11",
+          "evidence_path": "07-research/2026-10-10-顶会顶刊写作风格调研_证据/templates/render-results.json",
+          "submission_compliance": "pending author content and policy fields"
+        }
+      },
+      "static_check_passed": false,
+      "visual_check": "not-performed-by-this-command",
+      "official_system_check": "not-performed",
+      "semantic_fidelity": "requires-review"
+    }
+  },
+  {
+    "venue": "jmlr",
+    "mode": "final",
+    "compile_exit_code": 0,
+    "error_tail": "",
+    "format_check_exit_code": 1,
+    "format_check": {
+      "project": "/Users/myl/Documents/paper/07-research/2026-10-10-顶会顶刊写作风格调研_证据/templates/builds/jmlr-final",
+      "entrypoint": "main.tex",
+      "issues": [
+        {
+          "kind": "author-input-pending",
+          "note": "Skeleton is not a finished manuscript"
+        }
+      ],
+      "warnings": [
+        {
+          "kind": "page-policy-unverified"
+        },
+        {
+          "kind": "source-word-count-estimate",
+          "note": "TeX macros may change rendered counts; manually verify"
+        }
+      ],
+      "main_pages": 2,
+      "total_pages": 3,
+      "word_count_estimates": {
+        "abstract": 33
+      },
+      "limits": {
+        "available": true,
+        "directory": "project/final",
+        "anonymous": false,
+        "main_page_limit": null,
+        "page_limit_status": "requires-target-stage-verification",
+        "counting": "Main text unless journal-specific rules explicitly include references",
+        "engine": "pdflatex",
+        "article_type": "original-research",
+        "full_manuscript_page_limit": null,
+        "max_pdf_megabytes": null,
+        "validation": {
+          "compile": "passed",
+          "unresolved_citations_or_references": false,
+          "visual_review": "reviewed all rendered pages",
+          "rendered_pages": 3,
+          "verified_on": "2026-10-11",
+          "evidence_path": "07-research/2026-10-10-顶会顶刊写作风格调研_证据/templates/render-results.json",
+          "submission_compliance": "pending author content and policy fields"
+        }
+      },
+      "static_check_passed": false,
+      "visual_check": "not-performed-by-this-command",
+      "official_system_check": "not-performed",
+      "semantic_fidelity": "requires-review"
+    }
+  },
+  {
+    "venue": "tmlr",
+    "mode": "submission",
+    "compile_exit_code": 0,
+    "error_tail": "",
+    "format_check_exit_code": 1,
+    "format_check": {
+      "project": "/Users/myl/Documents/paper/07-research/2026-10-10-顶会顶刊写作风格调研_证据/templates/builds/tmlr-submission",
+      "entrypoint": "main.tex",
+      "issues": [
+        {
+          "kind": "author-input-pending",
+          "note": "Skeleton is not a finished manuscript"
+        }
+      ],
+      "warnings": [
+        {
+          "kind": "page-policy-unverified"
+        }
+      ],
+      "main_pages": 2,
+      "total_pages": 2,
+      "word_count_estimates": {},
+      "limits": {
+        "available": true,
+        "directory": "project/submission",
+        "anonymous": true,
+        "main_page_limit": null,
+        "page_limit_status": "requires-target-stage-verification",
+        "counting": "Main text unless journal-specific rules explicitly include references",
+        "engine": "pdflatex",
+        "article_type": "original-research",
+        "full_manuscript_page_limit": null,
+        "max_pdf_megabytes": null,
+        "validation": {
+          "compile": "passed",
+          "unresolved_citations_or_references": false,
+          "visual_review": "reviewed all rendered pages",
+          "rendered_pages": 2,
+          "verified_on": "2026-10-11",
+          "evidence_path": "07-research/2026-10-10-顶会顶刊写作风格调研_证据/templates/render-results.json",
+          "submission_compliance": "pending author content and policy fields"
+        }
+      },
+      "static_check_passed": false,
+      "visual_check": "not-performed-by-this-command",
+      "official_system_check": "not-performed",
+      "semantic_fidelity": "requires-review"
+    }
+  },
+  {
+    "venue": "tmlr",
+    "mode": "final",
+    "compile_exit_code": 0,
+    "error_tail": "",
+    "format_check_exit_code": 1,
+    "format_check": {
+      "project": "/Users/myl/Documents/paper/07-research/2026-10-10-顶会顶刊写作风格调研_证据/templates/builds/tmlr-final",
+      "entrypoint": "main.tex",
+      "issues": [
+        {
+          "kind": "author-input-pending",
+          "note": "Skeleton is not a finished manuscript"
+        }
+      ],
+      "warnings": [
+        {
+          "kind": "page-policy-unverified"
+        }
+      ],
+      "main_pages": 2,
+      "total_pages": 2,
+      "word_count_estimates": {},
+      "limits": {
+        "available": true,
+        "directory": "project/final",
+        "anonymous": false,
+        "main_page_limit": null,
+        "page_limit_status": "requires-target-stage-verification",
+        "counting": "Main text unless journal-specific rules explicitly include references",
+        "engine": "pdflatex",
+        "article_type": "original-research",
+        "full_manuscript_page_limit": null,
+        "max_pdf_megabytes": null,
+        "validation": {
+          "compile": "passed",
+          "unresolved_citations_or_references": false,
+          "visual_review": "reviewed all rendered pages",
+          "rendered_pages": 2,
+          "verified_on": "2026-10-11",
+          "evidence_path": "07-research/2026-10-10-顶会顶刊写作风格调研_证据/templates/render-results.json",
+          "submission_compliance": "pending author content and policy fields"
+        }
+      },
+      "static_check_passed": false,
+      "visual_check": "not-performed-by-this-command",
+      "official_system_check": "not-performed",
+      "semantic_fidelity": "requires-review"
+    }
+  },
+  {
+    "venue": "tpami",
+    "mode": "submission",
+    "compile_exit_code": 0,
+    "error_tail": "",
+    "format_check_exit_code": 1,
+    "format_check": {
+      "project": "/Users/myl/Documents/paper/07-research/2026-10-10-顶会顶刊写作风格调研_证据/templates/builds/tpami-submission",
+      "entrypoint": "main.tex",
+      "issues": [
+        {
+          "kind": "author-input-pending",
+          "note": "Skeleton is not a finished manuscript"
+        }
+      ],
+      "warnings": [
+        {
+          "kind": "anonymity-unverified",
+          "note": "Confirm the selected venue and stage policy"
+        },
+        {
+          "kind": "page-policy-unverified"
+        }
+      ],
+      "main_pages": 1,
+      "total_pages": 2,
+      "word_count_estimates": {},
+      "limits": {
+        "available": true,
+        "directory": "project/submission",
+        "anonymous": null,
+        "main_page_limit": null,
+        "page_limit_status": "requires-target-stage-verification",
+        "counting": "Main text unless journal-specific rules explicitly include references",
+        "engine": "pdflatex",
+        "article_type": "original-research",
+        "full_manuscript_page_limit": null,
+        "max_pdf_megabytes": null,
+        "validation": {
+          "compile": "passed",
+          "unresolved_citations_or_references": false,
+          "visual_review": "reviewed all rendered pages",
+          "rendered_pages": 2,
+          "verified_on": "2026-10-11",
+          "evidence_path": "07-research/2026-10-10-顶会顶刊写作风格调研_证据/templates/render-results.json",
+          "submission_compliance": "pending author content and policy fields"
+        }
+      },
+      "static_check_passed": false,
+      "visual_check": "not-performed-by-this-command",
+      "official_system_check": "not-performed",
+      "semantic_fidelity": "requires-review"
+    }
+  },
+  {
+    "venue": "tpami",
+    "mode": "final",
+    "compile_exit_code": 0,
+    "error_tail": "",
+    "format_check_exit_code": 1,
+    "format_check": {
+      "project": "/Users/myl/Documents/paper/07-research/2026-10-10-顶会顶刊写作风格调研_证据/templates/builds/tpami-final",
+      "entrypoint": "main.tex",
+      "issues": [
+        {
+          "kind": "author-input-pending",
+          "note": "Skeleton is not a finished manuscript"
+        }
+      ],
+      "warnings": [
+        {
+          "kind": "page-policy-unverified"
+        }
+      ],
+      "main_pages": 1,
+      "total_pages": 2,
+      "word_count_estimates": {},
+      "limits": {
+        "available": true,
+        "directory": "project/final",
+        "anonymous": false,
+        "main_page_limit": null,
+        "page_limit_status": "requires-target-stage-verification",
+        "counting": "Main text unless journal-specific rules explicitly include references",
+        "engine": "pdflatex",
+        "article_type": "original-research",
+        "full_manuscript_page_limit": null,
+        "max_pdf_megabytes": null,
+        "validation": {
+          "compile": "passed",
+          "unresolved_citations_or_references": false,
+          "visual_review": "reviewed all rendered pages",
+          "rendered_pages": 2,
+          "verified_on": "2026-10-11",
+          "evidence_path": "07-research/2026-10-10-顶会顶刊写作风格调研_证据/templates/render-results.json",
+          "submission_compliance": "pending author content and policy fields"
+        }
+      },
+      "static_check_passed": false,
+      "visual_check": "not-performed-by-this-command",
+      "official_system_check": "not-performed",
+      "semantic_fidelity": "requires-review"
+    }
+  },
+  {
+    "venue": "tnnls",
+    "mode": "submission",
+    "compile_exit_code": 0,
+    "error_tail": "",
+    "format_check_exit_code": 1,
+    "format_check": {
+      "project": "/Users/myl/Documents/paper/07-research/2026-10-10-顶会顶刊写作风格调研_证据/templates/builds/tnnls-submission",
+      "entrypoint": "main.tex",
+      "issues": [
+        {
+          "kind": "author-input-pending",
+          "note": "Skeleton is not a finished manuscript"
+        }
+      ],
+      "warnings": [
+        {
+          "kind": "page-policy-unverified"
+        },
+        {
+          "kind": "source-word-count-estimate",
+          "note": "TeX macros may change rendered counts; manually verify"
+        }
+      ],
+      "main_pages": 1,
+      "total_pages": 2,
+      "word_count_estimates": {},
+      "limits": {
+        "available": true,
+        "directory": "project/submission",
+        "anonymous": true,
+        "main_page_limit": null,
+        "page_limit_status": "requires-target-stage-verification",
+        "counting": "Main text unless journal-specific rules explicitly include references",
+        "engine": "pdflatex",
+        "article_type": "original-research",
+        "full_manuscript_page_limit": 15,
+        "max_pdf_megabytes": null,
+        "validation": {
+          "compile": "passed",
+          "unresolved_citations_or_references": false,
+          "visual_review": "reviewed all rendered pages",
+          "rendered_pages": 2,
+          "verified_on": "2026-10-11",
+          "evidence_path": "07-research/2026-10-10-顶会顶刊写作风格调研_证据/templates/render-results.json",
+          "submission_compliance": "pending author content and policy fields"
+        }
+      },
+      "static_check_passed": false,
+      "visual_check": "not-performed-by-this-command",
+      "official_system_check": "not-performed",
+      "semantic_fidelity": "requires-review"
+    }
+  },
+  {
+    "venue": "tnnls",
+    "mode": "final",
+    "compile_exit_code": 0,
+    "error_tail": "",
+    "format_check_exit_code": 1,
+    "format_check": {
+      "project": "/Users/myl/Documents/paper/07-research/2026-10-10-顶会顶刊写作风格调研_证据/templates/builds/tnnls-final",
+      "entrypoint": "main.tex",
+      "issues": [
+        {
+          "kind": "author-input-pending",
+          "note": "Skeleton is not a finished manuscript"
+        }
+      ],
+      "warnings": [
+        {
+          "kind": "page-policy-unverified"
+        },
+        {
+          "kind": "source-word-count-estimate",
+          "note": "TeX macros may change rendered counts; manually verify"
+        }
+      ],
+      "main_pages": 1,
+      "total_pages": 2,
+      "word_count_estimates": {},
+      "limits": {
+        "available": true,
+        "directory": "project/final",
+        "anonymous": false,
+        "main_page_limit": null,
+        "page_limit_status": "requires-target-stage-verification",
+        "counting": "Main text unless journal-specific rules explicitly include references",
+        "engine": "pdflatex",
+        "article_type": "original-research",
+        "full_manuscript_page_limit": 15,
+        "max_pdf_megabytes": null,
+        "validation": {
+          "compile": "passed",
+          "unresolved_citations_or_references": false,
+          "visual_review": "reviewed all rendered pages",
+          "rendered_pages": 2,
+          "verified_on": "2026-10-11",
+          "evidence_path": "07-research/2026-10-10-顶会顶刊写作风格调研_证据/templates/render-results.json",
+          "submission_compliance": "pending author content and policy fields"
+        }
+      },
+      "static_check_passed": false,
+      "visual_check": "not-performed-by-this-command",
+      "official_system_check": "not-performed",
+      "semantic_fidelity": "requires-review"
+    }
+  },
+  {
+    "venue": "tai",
+    "mode": "submission",
+    "compile_exit_code": 0,
+    "error_tail": "",
+    "format_check_exit_code": 1,
+    "format_check": {
+      "project": "/Users/myl/Documents/paper/07-research/2026-10-10-顶会顶刊写作风格调研_证据/templates/builds/tai-submission",
+      "entrypoint": "main.tex",
+      "issues": [
+        {
+          "kind": "author-input-pending",
+          "note": "Skeleton is not a finished manuscript"
+        },
+        {
+          "kind": "estimated-word-limit",
+          "environment": "IEEEImpStatement",
+          "words": 12,
+          "range": [
+            100,
+            150
+          ]
+        }
+      ],
+      "warnings": [
+        {
+          "kind": "page-policy-unverified"
+        },
+        {
+          "kind": "source-word-count-estimate",
+          "note": "TeX macros may change rendered counts; manually verify"
+        }
+      ],
+      "main_pages": 1,
+      "total_pages": 2,
+      "word_count_estimates": {
+        "abstract": 33,
+        "IEEEImpStatement": 12
+      },
+      "limits": {
+        "available": true,
+        "directory": "project/submission",
+        "anonymous": true,
+        "main_page_limit": null,
+        "page_limit_status": "requires-target-stage-verification",
+        "counting": "Main text unless journal-specific rules explicitly include references",
+        "engine": "pdflatex",
+        "article_type": "original-research",
+        "full_manuscript_page_limit": 15,
+        "max_pdf_megabytes": null,
+        "validation": {
+          "compile": "passed",
+          "unresolved_citations_or_references": false,
+          "visual_review": "reviewed all rendered pages",
+          "rendered_pages": 2,
+          "verified_on": "2026-10-11",
+          "evidence_path": "07-research/2026-10-10-顶会顶刊写作风格调研_证据/templates/render-results.json",
+          "submission_compliance": "pending author content and policy fields"
+        }
+      },
+      "static_check_passed": false,
+      "visual_check": "not-performed-by-this-command",
+      "official_system_check": "not-performed",
+      "semantic_fidelity": "requires-review"
+    }
+  },
+  {
+    "venue": "tai",
+    "mode": "final",
+    "compile_exit_code": 0,
+    "error_tail": "",
+    "format_check_exit_code": 1,
+    "format_check": {
+      "project": "/Users/myl/Documents/paper/07-research/2026-10-10-顶会顶刊写作风格调研_证据/templates/builds/tai-final",
+      "entrypoint": "main.tex",
+      "issues": [
+        {
+          "kind": "author-input-pending",
+          "note": "Skeleton is not a finished manuscript"
+        },
+        {
+          "kind": "estimated-word-limit",
+          "environment": "IEEEImpStatement",
+          "words": 12,
+          "range": [
+            100,
+            150
+          ]
+        }
+      ],
+      "warnings": [
+        {
+          "kind": "page-policy-unverified"
+        },
+        {
+          "kind": "source-word-count-estimate",
+          "note": "TeX macros may change rendered counts; manually verify"
+        }
+      ],
+      "main_pages": 1,
+      "total_pages": 2,
+      "word_count_estimates": {
+        "abstract": 33,
+        "IEEEImpStatement": 12
+      },
+      "limits": {
+        "available": true,
+        "directory": "project/final",
+        "anonymous": false,
+        "main_page_limit": null,
+        "page_limit_status": "requires-target-stage-verification",
+        "counting": "Main text unless journal-specific rules explicitly include references",
+        "engine": "pdflatex",
+        "article_type": "original-research",
+        "full_manuscript_page_limit": 15,
+        "max_pdf_megabytes": null,
+        "validation": {
+          "compile": "passed",
+          "unresolved_citations_or_references": false,
+          "visual_review": "reviewed all rendered pages",
+          "rendered_pages": 2,
+          "verified_on": "2026-10-11",
+          "evidence_path": "07-research/2026-10-10-顶会顶刊写作风格调研_证据/templates/render-results.json",
+          "submission_compliance": "pending author content and policy fields"
+        }
+      },
+      "static_check_passed": false,
+      "visual_check": "not-performed-by-this-command",
+      "official_system_check": "not-performed",
+      "semantic_fidelity": "requires-review"
+    }
+  }
+]

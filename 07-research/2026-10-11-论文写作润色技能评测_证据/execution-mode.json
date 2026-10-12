@@ -1,0 +1,8 @@
+{
+  "E01": "independent agent",
+  "E02": "root-assisted, explicitly authored output, not blind model benchmark",
+  "E03": "root-assisted, explicitly authored output",
+  "E04": "root-assisted, explicitly authored output",
+  "E05": "independent agent, actual executor differs from frozen initial plan; raw request only, rubric withheld",
+  "fixture_status": "synthetic, not research findings"
+}

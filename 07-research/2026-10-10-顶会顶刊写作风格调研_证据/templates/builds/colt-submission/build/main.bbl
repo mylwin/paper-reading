@@ -1,0 +1,15 @@
+\begin{thebibliography}{1}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[{Official author guidelines}(2026)]{formatguide}
+{Official author guidelines}.
+\newblock Author and formatting instructions, 2026.
+\newblock URL \url{https://learningtheory.org/colt2026/cfp.html}.
+\newblock Template-format demonstration only; replace for the research
+  manuscript.
+
+\end{thebibliography}

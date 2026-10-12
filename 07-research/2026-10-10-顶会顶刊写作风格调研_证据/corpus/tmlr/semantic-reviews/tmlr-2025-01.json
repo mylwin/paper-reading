@@ -1,0 +1,136 @@
+{
+  "id": "tmlr-2025-01",
+  "title": "Revisiting CroPA: A Reproducibility Study and Enhancements for Cross-Prompt Adversarial Transferability in Vision-Language Models",
+  "venue": "tmlr",
+  "year": 2025,
+  "split": "derivation",
+  "review_date": "2026-10-11",
+  "reviewer": "Codex root",
+  "mode": "Continuous all-page semantic writing-style reading, including references and embedded appendices; not independent theorem/code verification or experimental reproduction",
+  "full_text_style_review_complete": true,
+  "external_appendix_review_complete": false,
+  "publication_identity_and_acquired_version": "arXiv2506.22982v1; author-deposited TMLR published-header version, not byte-verified against current OpenReview PDF",
+  "publisher_current_byte_equivalence": "not established",
+  "pdf_path": ".claude/skills/paper-writing-shared/tmp/corpus/tmlr/pdf/Revisiting_CroPA_A_Reproducibility_Study_and_Enhancements_for_Cross_Prompt_Adversarial_Transferability_in_Vision_Languag.pdf",
+  "pdf_sha256": "fe326fafd89cdf8298b6eaefc327990b131338c25b671dc85856f9b89afde451",
+  "markdown_path": ".claude/skills/paper-writing-shared/tmp/corpus/tmlr/markdown/Revisiting_CroPA_A_Reproducibility_Study_and_Enhancements_for_Cross_Prompt_Adversarial_Transferability_in_Vision_Languag.md",
+  "markdown_sha256": "5359f7907345169c6bcc80fea2e93803f38e8ce8b70c61de2fd26491313cffcf",
+  "coverage": [
+    {
+      "version": "arXiv2506.22982v1; author-deposited TMLR published-header version, not byte-verified against current OpenReview PDF",
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40
+      ],
+      "section_pages": {
+        "1–4": "Abstract, Introduction, Related Work, scope of reproducibility",
+        "4–14": "original method, extensions, objectives, threat models",
+        "15–22": "Claims1–4 reproduction and extended experiments",
+        "23–26": "Discussion, author communication, broader impact, limitations",
+        "26–32": "References, appendix contents and figures",
+        "32–39": "Appendices A–D: environment, algorithms, prompt roles, training and extra results",
+        "40": "Appendix E: detailed prompt list referred to external supplementary material"
+      },
+      "method": "continuous reading; any truncated tool text reread separately; figures/formulas ambiguous in extraction checked in actual page render"
+    }
+  ],
+  "supplement_audit": {
+    "source": "https://openreview.net/forum?id=5L90cl0xtf",
+    "result": "All40PDF pages read, including embedded appendices. Appendix E refers to a detailed external prompt list. Author repository fixed commit419d92a93a4f2883599d7cddc25ccb30d3303c4e inventoried; prompt-generating functions in utils/eval_tools.py and dataset-loader code read. data/prompt.txt is only a CLI invocation. Repository correspondence with archived OpenReview supplement remains unverified; external supplement completeness therefore false."
+  },
+  "ten_dimensions": {
+    "reader_argument": "p1–4先分复现目标与新增工作，读者可判断哪些发现来自原方法、哪些来自扩展；这不是所有TMLR论文的固定类型。",
+    "title_abstract": "题名直接说明复现与增强；摘要回顾原方法、复现结论及扩展，不隐藏与前人成果的关系。",
+    "introduction": "p2–3用ReproducibilityStudy/ExtendedWork标签划分贡献；p4单列Scope给原始四项主张。",
+    "related_work": "p3–4按攻击转移轴与VLM场景定位，而非泛泛列举模型；事实归属应保留。",
+    "method_theory": "原方法p4–6与扩展p7–14分别解释；攻击对象、prompt/model/image迁移及targeted/untargeted需逐协议对齐，不能用一句统一覆盖。",
+    "evidence": "p15–22逐Claims1–4记录复现，再报告扩展；下述正文/表格/算法矛盾未解决，不将原文表述视为可信规则。",
+    "discussion_limits": "p23–26明确作者沟通、局限与broader impact；给复现偏差解释，应区分观察与待证原因。",
+    "paragraph_language": "复现标签及实验问题提高可追踪性，但all metrics、百分数和算法符号必须与具体证据核对；原文不是语言正确性金标准。",
+    "main_appendix": "40页PDF全读含A–E；E在p40另指详细外部prompt清单，作者仓库函数已读但归档对应未确认，因此只记主文与内置附录完成。",
+    "actionable": "对复现/扩展稿建立原主张—复现协议—结论—新增证据矩阵；遇数字/符号冲突给作者核查项，不静默更改算法或挑有利数字。"
+  },
+  "counterexamples": [
+    {
+      "location": "p18 prose vs p19 Tables3–4",
+      "finding": "all metrics的表述与unknownVQA0.9680→0.8824、0.9880→0.8920及specificVQA0.9457→0.9342不符。",
+      "status": "observable prose/table discrepancy",
+      "editing_rule": "单项退步和整体改善同时保留，不照抄全指标优势。"
+    },
+    {
+      "location": "p20 prose vs p21 Table5 and p23 discussion",
+      "finding": "表中SCMix overall0.7055高于CutMix0.5565，与p20CutMix优于SCMix说法不一致。",
+      "status": "unresolved",
+      "editing_rule": "给作者查询，不自行选择解释原因。"
+    },
+    {
+      "location": "p21 Table6 vs p24 discussion",
+      "finding": "0.8433→0.9685是12.52百分点，相对14.85%；与13.5%的讨论措辞不一致。",
+      "status": "arithmetic check",
+      "editing_rule": "明确百分点/相对百分比并核对摘要正文。"
+    },
+    {
+      "location": "p22 Table8 vs p39 AppendixD.4.5",
+      "finding": "Flamingo迁移至BLIP2/InstructBLIP，DUAP主表0.1013/0.0938、附录0.00/0.00；可能协议不同，当前未清楚对齐。",
+      "status": "protocol correspondence unresolved",
+      "editing_rule": "不得默认为数据错误或擅选有利表；确认targeted/untargeted等配置。"
+    },
+    {
+      "location": "p11 Eqs11–12 vs p33 AppendixB Algorithm3",
+      "finding": "主文Ld=sum(1-cos)被减去，与最小化时促进对齐的解释不直接一致；附录累积cos并用descent，主算法另用ascent。视觉已确认符号。",
+      "status": "objective/algorithm correspondence requires author confirmation; not a correctness proof",
+      "editing_rule": "公式与实现说明冲突单独报出，不静默翻符号。"
+    }
+  ],
+  "confidence": {
+    "paper_observation": "high for documented page content",
+    "venue_generalization": "low; purposive pilot, no frequency estimate, no complete50-paper or heldout validation"
+  },
+  "official_requirement": false,
+  "holdout_validation": null,
+  "previous_status": {
+    "semantic_review_status": "not_reviewed",
+    "version": "official_published_openreview_current",
+    "acquired_version": "author_arxiv_deposit_pending_publication_audit",
+    "version_verification": "pending",
+    "eligibility": null
+  }
+}

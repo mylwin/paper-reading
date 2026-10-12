@@ -1,0 +1,85 @@
+{
+  "updated": "2026-10-11",
+  "template_and_resource_checks": [
+    {
+      "venue": "aaai",
+      "modes_official_hashes_match": true,
+      "profile_exists": true,
+      "archive_hash_matches": true
+    },
+    {
+      "venue": "ijcai",
+      "modes_official_hashes_match": true,
+      "profile_exists": true,
+      "archive_hash_matches": true
+    },
+    {
+      "venue": "icml",
+      "modes_official_hashes_match": true,
+      "profile_exists": true,
+      "archive_hash_matches": true
+    },
+    {
+      "venue": "neurips",
+      "modes_official_hashes_match": true,
+      "profile_exists": true,
+      "archive_hash_matches": true
+    },
+    {
+      "venue": "iclr",
+      "modes_official_hashes_match": true,
+      "profile_exists": true,
+      "archive_hash_matches": true
+    },
+    {
+      "venue": "colt",
+      "modes_official_hashes_match": true,
+      "profile_exists": true,
+      "archive_hash_matches": true
+    },
+    {
+      "venue": "jmlr",
+      "modes_official_hashes_match": true,
+      "profile_exists": true,
+      "archive_hash_matches": true
+    },
+    {
+      "venue": "tmlr",
+      "modes_official_hashes_match": true,
+      "profile_exists": true,
+      "archive_hash_matches": true
+    },
+    {
+      "venue": "tpami",
+      "modes_official_hashes_match": true,
+      "profile_exists": true,
+      "archive_hash_matches": true
+    },
+    {
+      "venue": "tnnls",
+      "modes_official_hashes_match": true,
+      "profile_exists": true,
+      "archive_hash_matches": true
+    },
+    {
+      "venue": "tai",
+      "modes_official_hashes_match": true,
+      "profile_exists": true,
+      "archive_hash_matches": true
+    }
+  ],
+  "main_compile_passed": 22,
+  "supplement_compile_passed": 4,
+  "pdfs_visually_reviewed_and_hash_current": 26,
+  "two_independent_skills": true,
+  "shared_directory_is_support_only": true,
+  "project_tests_passed": 11,
+  "semantic_workflow_evaluation": "pending",
+  "full_corpus_research": "incomplete",
+  "workspace_link_check": {
+    "new_task_links": "no dangling links detected",
+    "preexisting_unrelated_links": 9
+  },
+  "full_corpus_completed_count": 14,
+  "iclr2027_policy": "current AuthorGuidelines and AI policy verified; authoritative media kit compiled/reviewed"
+}

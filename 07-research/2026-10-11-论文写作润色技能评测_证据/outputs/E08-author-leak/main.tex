@@ -1,0 +1,42 @@
+\documentclass[journal]{IEEEtai}
+\usepackage{graphicx,amsmath,amssymb,url}
+\newtheorem{PWTheorem}{Theorem}
+\newcommand{\riskname}{selective risk}
+\def\methodname{Gate}
+\title{A Fixed Confidence Gate for Selective Classification}
+\author{Ada Fixture, Example Institute, ada@example.invalid}
+\markboth{Confidence Gate}{Anonymous submission}
+\begin{document}\maketitle
+\begin{abstract}
+We examine a fixed confidence gate for selective classification using a synthetic
+evaluation fixture. The gate abstains from predictions below a specified confidence
+threshold. We report accuracy among accepted predictions alongside coverage on two
+synthetic datasets. Conditional accuracy increases on one dataset and decreases on
+the other; these observations do not establish an overall accuracy improvement.
+A range bound for selective risk requires positive coverage and bounded loss.
+Statistical uncertainty, runtime, and distribution shift remain unevaluated.
+\end{abstract}
+\begin{IEEEImpStatement}
+Abstaining from uncertain predictions can change both the set of cases a system
+handles and the information available to a decision maker. The synthetic fixture
+here illustrates why conditional accuracy should be considered together with
+coverage: a higher accuracy among accepted cases does not establish better
+performance across all cases. This distinction may help researchers design
+evaluations that expose the tradeoff between selective prediction and abstention.
+The observations do not support deploying the gate in a particular application.
+Only a fixed classifier, a single baseline, and synthetic data are considered;
+distribution shift, statistical uncertainty, latency, and consequences for affected
+people remain unevaluated. Application-specific evidence and an assessment of
+rejected cases would be needed before making deployment decisions.
+\end{IEEEImpStatement}
+\begin{IEEEkeywords}Selective classification, abstention, evaluation, coverage\end{IEEEkeywords}
+\input{sections/body.tex}
+\bibliographystyle{IEEEtran}\bibliography{references}
+\appendix
+\section{Proof of the Range Bound}\label{app:proof}
+Since $0\leq a(X)\ell(h(X),Y)\leq a(X)$, taking expectations gives
+$0\leq\mathbb{E}[a(X)\ell(h(X),Y)]\leq C$. Division by $C>0$ proves
+Theorem~\ref{thm:bounded}. This argument applies to the specified distribution;
+it does not establish a bound under distribution shift.
+
+\end{document}

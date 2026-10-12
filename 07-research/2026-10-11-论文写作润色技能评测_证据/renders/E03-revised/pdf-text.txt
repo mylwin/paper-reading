@@ -1,0 +1,124 @@
+000
+001
+002                          A Fixed Confidence Gate for Selective Classification
+003
+004
+005
+006                                                        Anonymous Authors1
+007
+008
+009                              Abstract                                    or a comparison between Gate and Always. Appendix A
+010          We examine a fixed confidence gate for selec-                   gives the full proof.
+011          tive classification using a synthetic evaluation
+012          fixture. The gate abstains from predictions be-                 3. Synthetic Evaluation
+013          low a specified confidence threshold. We report
+014          accuracy among accepted predictions alongside                   Alpha and Beta each contain 1000 synthetic samples. Both
+015          coverage on two synthetic datasets. Conditional                 methods use the same model and 5 evaluation seeds; results
+016          accuracy increases on one dataset and decreases                 are seed means, with no variance estimates. Table 1 shows
+017          on the other; these observations do not establish               Table 1. Synthetic fixture values. Always accuracy uses all sam-
+018          an overall accuracy improvement. A range bound                  ples; Gate accuracy is conditional on acceptance. These values are
+019          for selective risk requires positive coverage and               not research findings.
+020          bounded loss. Statistical uncertainty, runtime, and
+021                                                                              Dataset    Always (%)       Gate (%)      Coverage (%)
+             distribution shift remain unevaluated.
+022                                                                              Alpha            80.0           84.0              60.0
+023                                                                              Beta             76.0           75.5              58.0
+024   1. Introduction
+025                                                                          a higher conditional accuracy on Alpha and a lower condi-
+026   Selective classification allows a model to abstain from un-            tional accuracy on Beta. Different evaluation populations
+027   certain predictions. We study a fixed confidence gate, rather          prevent interpreting these differences as an overall accuracy
+028   than a learned rejection policy. This synthetic evaluation             improvement. No significance tests, runtime measurements,
+029   asks whether a fixed threshold changes accuracy among                  or distribution-shift evaluations were performed.
+030   accepted predictions. Coverage is reported alongside condi-
+031   tional accuracy because the gate changes which predictions
+      are evaluated.
+                                                                             4. Limitations and Conclusion
+032
+033                                                                          A single baseline and synthetic datasets do not estab-
+034   2. Method                                                              lish state-of-the-art performance. The classifier and data-
+035                                                                          generation details are missing and required for reproducibil-
+036   Gate uses a fixed classifier and accepts a prediction when             ity. The fixed threshold does not guarantee lower risk, and
+037   its maximum class probability is at least 0.8; otherwise, it           deployment benefits remain untested. Formatting uses the
+038   abstains. Always uses the same classifier and accepts every            official author guidelines (for, 2026).
+039   prediction. Neither method retrains the model. For a fixed
+040   classifier h and acceptance function a(x) ∈ {0, 1}, assume
+      0 ≤ ℓ(h(x), y) ≤ 1 and positive coverage C = E[a(X)] >
+                                                                             Impact Statement
+041
+042   0. Selective risk is                                                   This synthetic fixture illustrates how coverage affects the
+043                             E[a(X)ℓ(h(X), Y )]                           interpretation of selective accuracy. Its values are not re-
+044                    Rsel =                      .               (1)       search findings and provide no basis for deployment. Conse-
+                                       C
+045                                                                          quences of rejected predictions and distribution shift remain
+046   Theorem 1 Under these assumptions, 0 ≤ Rsel ≤ 1.                       untested.
+047
+048   The result is a range bound, not a generalization guarantee
+                                                                             References
+049      1
+         Anonymous Institution, Anonymous City, Anonymous Region,
+050   Anonymous Country. Correspondence to: Anonymous Author                 Icml 2026 author instructions. https://icml.cc/
+051   <anon.email@domain.com>.                                                 Conferences/2026/AuthorInstructions,
+052                                                                            2026.
+      Preliminary work. Under review by the International Conference
+053   on Machine Learning (ICML). Do not distribute.
+054
+                                                                         1
+                                                        Confidence Gate Evaluation
+
+055   A. Proof of the Range Bound
+056
+057   Since 0 ≤ a(X)ℓ(h(X), Y ) ≤ a(X), taking expectations
+058   gives 0 ≤ E[a(X)ℓ(h(X), Y )] ≤ C. Division by C > 0
+059   proves Theorem 1. This argument applies to the specified
+060   distribution; it does not establish a bound under distribution
+061   shift.
+062
+063
+064
+065
+066
+067
+068
+069
+070
+071
+072
+073
+074
+075
+076
+077
+078
+079
+080
+081
+082
+083
+084
+085
+086
+087
+088
+089
+090
+091
+092
+093
+094
+095
+096
+097
+098
+099
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+                                                                       2
+

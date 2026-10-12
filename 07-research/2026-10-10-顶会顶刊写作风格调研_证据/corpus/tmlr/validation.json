@@ -1,0 +1,28 @@
+{
+  "venue": "tmlr",
+  "locked": 50,
+  "downloaded": 3,
+  "parsed": 3,
+  "semantic_fulltext_reviewed": 1,
+  "holdout_semantic_validation": "pending",
+  "automated_extraction_is_not_fulltext_review": true,
+  "counts": {
+    "locked": 50,
+    "pdf_acquired": 3,
+    "text_parsed": 3,
+    "main_text_style_reviewed": 2,
+    "full_text_and_relevant_appendix_reviewed": 1,
+    "induction_complete": 1,
+    "holdout_complete": 0
+  },
+  "updated": "2026-10-11",
+  "acceptance_status": "in_progress;50 eligible full reviews per venue and40induction/10holdout validation not achieved",
+  "main_text_review_ids": [
+    "tmlr-2024-01",
+    "tmlr-2025-01"
+  ],
+  "complete_review_ids": [
+    "tmlr-2024-01"
+  ],
+  "version_note": "3 fixed author deposits acquired;2 publication identities confirmed in actual PDF headers,1 accepted current-version identity unresolved. OpenReview byte equivalence unknown;1 external prompt supplement pending."
+}

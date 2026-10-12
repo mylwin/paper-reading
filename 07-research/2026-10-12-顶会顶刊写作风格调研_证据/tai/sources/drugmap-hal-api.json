@@ -1,0 +1,13 @@
+{
+  "response":{
+    "numFound":1,
+    "start":0,
+    "maxScore":5.9520946,
+    "numFoundExact":true,
+    "docs":[{
+      "docid":"5311992",
+      "label_s":"Rangan Das, Swadesh Jana, Anannyo Dey, Pascal Le Corre, Marc Cuggia, et al.. DrugMAP: Deep Multimodal Transformers for Drug-Target Mechanism of Action Prediction. IEEE Transactions on Artificial Intelligence, 2025, pp.1-14. &#x27E8;10.1109/tai.2025.3565671&#x27E9;. &#x27E8;hal-05067564&#x27E9;",
+      "uri_s":"https://hal.science/hal-05067564v1"
+    }]
+  }
+}

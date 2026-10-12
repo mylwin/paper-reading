@@ -1,0 +1,2 @@
+我们在两个公开分类数据集上比较了方法 A 与基线 B，使用相同的训练预算和 3 个随机种子。数据集一的平均准确率由 80.0% 升至 82.0%；数据集二由 76.0% 降至 75.5%。未记录标准差，未做显著性检验，也没有测量运行时间。方法只在固定训练预算下测试，尚未评估分布偏移。
+原稿：Our revolutionary method consistently outperforms all existing methods and is significantly faster.

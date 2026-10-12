@@ -1,0 +1,177 @@
+{
+  "candidate_id": "tai-2024-03-replacement-proposal",
+  "doi": "10.1109/tai.2024.3352533",
+  "title": "Efficient Structure Slimming for Spiking Neural Networks",
+  "review_date": "2026-10-12",
+  "split": "derivation",
+  "registered_in_corpus": false,
+  "review_mode": "Continuous semantic writing-style reading of actual PDF cover and all nine paper pages; no independent theorem verification, code execution or result reproduction.",
+  "full_text_style_review_complete": true,
+  "external_appendix_review_complete": true,
+  "coverage": [
+    {
+      "pdf_pages": "1",
+      "sections": "institution provenance/rights/version cover; excluded from paper-style observations"
+    },
+    {
+      "pdf_pages": "2–4",
+      "paper_pages": "1–3",
+      "sections": "abstract/impact/terms; introduction; all related work beginning"
+    },
+    {
+      "pdf_pages": "5–7",
+      "paper_pages": "4–6",
+      "sections": "remaining motivation; all methods/equations/algorithms; experimental setup/results"
+    },
+    {
+      "pdf_pages": "8–10",
+      "paper_pages": "7–9",
+      "sections": "all remaining experiments/discussion; conclusion; references"
+    }
+  ],
+  "pdf_sha256": "1b4243c3e5fd71310821f345f53cc103545d519120d17aa9433afaf6a8aef3dc",
+  "pdf_file": "../../../.claude/skills/paper-writing-shared/tmp/source-materials/07-research/2026-10-12-顶会顶刊写作风格调研_证据/tai-replacement/snn-slimming-accepted-author.pdf",
+  "text_file": "../../../.claude/skills/paper-writing-shared/tmp/source-materials/07-research/2026-10-12-顶会顶刊写作风格调研_证据/tai-replacement/snn-slimming-accepted-author.txt",
+  "version": "accepted_author_manuscript",
+  "version_audit": "replacement-candidate.json",
+  "supplement_audit": {
+    "references_in_full_text": "none found; all paper pages continuously read",
+    "institution_asset_inventory": "one accepted manuscript link; no separate prose supplement on page",
+    "publisher_inventory": "Xplore inaccessible; no assertion of exhaustive unlisted publisher assets",
+    "result": "no referenced relevant appendix remains unread for the actual accepted deposit"
+  },
+  "visual_check": {
+    "pdf_pages": [
+      2,
+      8,
+      9
+    ],
+    "files": [
+      "renders/pdf-p2.png",
+      "renders/pdf-p8.png",
+      "renders/pdf-p9.png"
+    ],
+    "result": "title/author/front-matter and Tables IV/V visually confirmed; extraction warnings retained in rendering logs"
+  },
+  "ten_dimensions": {
+    "reader_argument": {
+      "pages": "paper 1–3 (PDF 2–4)",
+      "observation": "Bio-inspired motivation is explained to broad AI readers before specialist SNN training/pruning taxonomies; target is sparse, useful deep SNN structure, not an optimizer convergence theorem."
+    },
+    "title_abstract": {
+      "pages": "paper 1 (PDF 2)",
+      "observation": "Title names mechanism and model family. Abstract proceeds biological premise → dense-structure gap → neuron/channel methods with regrowth → datasets → retention/accuracy trade-off. Separate Impact Statement and Index Terms are present; their mandatory status must come from official rules, not sample frequency."
+    },
+    "introduction": {
+      "pages": "paper 1–2 (PDF 2–3)",
+      "observation": "Builds practical computational/embedded-device motivation and ends with three contribution bullets: sparse method, quantitative memory/energy analysis, experiments. Recurring biological premise is a candidate for compression, not a venue requirement."
+    },
+    "related_work": {
+      "pages": "paper 2–4 (PDF 3–5)",
+      "observation": "Early standalone related work divided into Model training, Pruning method, Motivation; ANN vs SNN and unstructured vs structured pruning distinctions justify design choices. No universal TAI section-order claim."
+    },
+    "method_theory": {
+      "pages": "paper 4–5 (PDF 5–6)",
+      "observation": "Main text gives IF charge/fire/reset equations, surrogate function, pruning masks, BN/tdBN, sparsity loss, and two algorithms. Neuron variant prunes/regrows during training; channel variant pretrains with sparsity penalty, prunes, then fine-tunes. These distinct stage maps must survive polishing. No independent convergence theorem is claimed."
+    },
+    "evidence": {
+      "pages": "paper 6–8 (PDF 7–9)",
+      "observation": "Results sections separate settings, pruning granularity, noise, parameter/operation analysis, comparison. Tables expose baseline, retained/pruned configuration, accuracy, fine-tuned accuracy and resources; comparison table explicitly lists architecture/training/time steps/connectivity, enabling fairness bounds. Noise is specified Gaussian test corruptions, not a general robustness theorem."
+    },
+    "discussion_limits": {
+      "pages": "paper 7–9 (PDF 8–10)",
+      "observation": "No dedicated limitations section. Trade-offs are discussed near result comparisons: sparsity may be less than competing models although time steps lower. Conclusion returns biological motivation and deployment potential. Existing tested bounds belong in conclusions; no silent new hardware-deployment claim."
+    },
+    "paragraph_language": {
+      "pages": "paper 1–9 (PDF 2–10)",
+      "observation": "Numbered technical subsections and bold run-in labels aid scanning; explanatory prose is repeated and occasionally grammatically imprecise. Publication is not evidence that repeated generic claims or unqualified significantly are suitable style norms."
+    },
+    "main_appendix": {
+      "pages": "all paper 1–9 (PDF 2–10)",
+      "observation": "All equations, algorithm specifications and empirical tables are in nine-page accepted manuscript; references finish paper 9. No appendix/supplement reference or code link appears in actual full text; institution lists one manuscript asset. No separately referenced prose appendix was identified. Institutional cover is source provenance, not journal-format text."
+    },
+    "actionable": {
+      "pages": "paper 1,4–8 (PDF 2,5–9)",
+      "observation": "For an empirical sparse-model paper, maintain Abstract/Impact/Index Terms as required by official configuration, use a stage-specific method map, expose resource-performance trade-offs and comparison differences, and distinguish estimated energy from measured deployment. Transfer only under the same article type, not all TAI topics."
+    }
+  },
+  "counterexamples": [
+    {
+      "id": "TAI-SNN-C1",
+      "pages": "paper 1 vs 7–8; PDF 2,8–9",
+      "finding": "Abstract about 10% retained parameters with <1% loss is supported by CIFAR10 channel retention 11.13% and 0.60 percentage-point loss. Table V CIFAR100 at 13.06% retained loses 10.06 points. Do not generalize the headline to every dataset/variant or silently treat percentage-point differences as relative percent.",
+      "action": "Scope the summary to dataset, architecture, variant and fine-tuning stage."
+    },
+    {
+      "id": "TAI-SNN-C2",
+      "pages": "paper 7 Table IV and paragraph D; PDF 8",
+      "finding": "Energy numbers derive from synaptic operations and a cited TrueNorth 26 pJ assumption; no documented hardware energy-measurement procedure or actual chip deployment. Large parameter reduction coexists with synaptic-operation counts near 28K across pruned channel settings.",
+      "action": "Name proxy/assumption and separate parameter-memory reductions from energy/latency evidence; do not rewrite as measured deployment."
+    },
+    {
+      "id": "TAI-SNN-C3",
+      "pages": "paper 7 paragraph E vs Table V paper 8; PDF 8–9",
+      "finding": "Prose describes 4.82 times the original; Table V connectivity is 4.82%, and Table IV 0.71M/14.72M = 4.82%. This is a unit conflict in the source, not a linguistic norm.",
+      "action": "Flag author clarification; do not preserve misleading multiplier or fabricate replacement experimental values."
+    },
+    {
+      "id": "TAI-SNN-C4",
+      "pages": "paper 2 vs 4–5; PDF 3,5–6",
+      "finding": "Broad from-scratch wording and pretrained wording are reconciled only by separating neuron dynamic training from channel sparse-pretrain/prune/fine-tune stages.",
+      "action": "Use variant/stage-specific descriptions rather than one uniform chronological claim."
+    },
+    {
+      "id": "TAI-SNN-C5",
+      "pages": "paper 8 Table V; PDF 9",
+      "finding": "Competing entries differ in architectures, training methods, time steps and connectivity. Some competitors have higher absolute accuracy or greater sparsity.",
+      "action": "Do not write universally superior at matched conditions; state observed trade-off and actual comparison settings."
+    },
+    {
+      "id": "TAI-SNN-C6",
+      "pages": "paper 2,6–8; PDF 3,7–9",
+      "finding": "Introduction says significantly, while inspected experimental text/tables do not report repeated-seed count, variance or significance testing.",
+      "action": "Avoid adding statistical-significance claims solely because the accepted paper uses that adjective."
+    }
+  ],
+  "derived_rules": [
+    {
+      "id": "TAI-SNN-R1",
+      "kind": "corpus_observation",
+      "rule": "Separate biological motivation, algorithm implementation and empirically observed resource/accuracy trade-offs.",
+      "support": "paper 1–8",
+      "counterexamples": [
+        "TAI-SNN-C1",
+        "TAI-SNN-C2"
+      ],
+      "condition": "empirical sparse/neuromorphic model manuscript",
+      "confidence": "high for this sample; low as venue-wide tendency; no frequency estimate"
+    },
+    {
+      "id": "TAI-SNN-R2",
+      "kind": "editorial_advice",
+      "rule": "Preserve method-variant stage maps and report fair comparison conditions; use precise retention/accuracy units.",
+      "support": "paper 4–8",
+      "counterexamples": [
+        "TAI-SNN-C3",
+        "TAI-SNN-C4",
+        "TAI-SNN-C5"
+      ],
+      "condition": "compression or resource comparison",
+      "confidence": "high evidence-bound advice; not an official TAI rule"
+    }
+  ],
+  "original_rewrite_examples": [
+    {
+      "facts": "CIFAR10/VGG16 channel pruning+fine-tuning, Table V; 11.13% retained,91.71 baseline,91.11 fine-tuned",
+      "english": "On CIFAR-10, the fine-tuned VGG16 channel-pruning model retained 11.13% of the original parameters, with accuracy decreasing from 91.71% to 91.11% (0.60 percentage points).",
+      "reason": "Original evidence-faithful example bounds headline by dataset, architecture, stage and correct units."
+    },
+    {
+      "facts": "Table IV energy estimation via cited 26pJ synaptic cost; no measured hardware test",
+      "english": "We estimated energy from synaptic-operation counts using the cited per-operation cost; these estimates do not establish measured savings on a deployed device.",
+      "reason": "Editorial original sentence distinguishes proxy evidence from a deployment claim."
+    }
+  ],
+  "holdout_validation": null,
+  "confidence_note": "One independently read accepted original research candidate; contributes no claim about 50-sample TAI frequency or validated holdout generalization."
+}

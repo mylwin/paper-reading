@@ -1,0 +1,155 @@
+{
+  "venue": "aaai",
+  "requested_count": 50,
+  "locked_count": 50,
+  "downloaded_and_parsed_count": 50,
+  "preliminary_style_browse_count": 50,
+  "full_text_and_relevant_appendix_review_count": 4,
+  "holdout_locked_count": 10,
+  "holdout_validation_status": "locked10; complete40induction+10holdoutvalidation notachieved",
+  "independent_statistical_validation": false,
+  "holdout_assessments": [
+    {
+      "id": "aaai-2024-05",
+      "status": "preliminary",
+      "finding": "将价值对齐重表述为人类认知条件下的目标对齐；正文显式说明已知人类模型假设，给问题转换与近似，p.7用规划域的查询次数及耗时评估，结论讨论适用边界。",
+      "appendix_coverage": "Published PDF pages parsed; external supplementary material mentioned but not retrieved/reviewed"
+    },
+    {
+      "id": "aaai-2024-10",
+      "status": "preliminary",
+      "finding": "用依赖删失造成的偏差解释生存分析问题；p.3-4把可识别性条件与参数学习区分，p.5-7使用仿真及观察数据。相关工作靠后，补充材料承担数据细节。",
+      "appendix_coverage": "Published PDF pages parsed; external supplementary material mentioned but not retrieved/reviewed"
+    },
+    {
+      "id": "aaai-2024-15",
+      "status": "preliminary",
+      "finding": "IRV与plurality的比较围绕一维对称投票人口模型，p.3-6以耦合论证、定理及分布图呈现；p.7明确固定候选与选民分布等建模限制。提取文本局部重叠，应视觉复核。",
+      "appendix_coverage": "Published PDF pages parsed; external supplementary material mentioned but not retrieved/reviewed"
+    },
+    {
+      "id": "aaai-2024-20",
+      "status": "preliminary",
+      "finding": "部分可观测下仍安全的action model是中心主张；p.2-4假设、观察及充分性条件，p.5两算法，p.6转换为规划，p.7以精确率/召回率和轨迹量评估，不能把安全改写为完整性。",
+      "appendix_coverage": "No external supplement detected automatically; appendix completeness remains to be checked semantically"
+    },
+    {
+      "id": "aaai-2024-25",
+      "status": "preliminary",
+      "finding": "从WSI长距离依赖到point representation，p.3任务/联邦目标、p.4模块、p.5数据站点及训练、p.6-7分类对比和样本比例；独立站点是泛化证据，位置分析转至Appendix C。",
+      "appendix_coverage": "Published PDF pages parsed; external supplementary material mentioned but not retrieved/reviewed"
+    },
+    {
+      "id": "aaai-2025-05",
+      "status": "preliminary",
+      "finding": "以组件维度表梳理prototype/RBF联系，p.4-5定义classification-by-components，p.6-7准确率和图像原型解释，p.8独立局限与展望；承认部分可解释性，不能改成全模型可解释。",
+      "appendix_coverage": "Published PDF pages parsed; external supplementary material mentioned but not retrieved/reviewed"
+    },
+    {
+      "id": "aaai-2025-10",
+      "status": "preliminary",
+      "finding": "精细时间序列与微控制器资源限制共同定义问题；p.3-4多视角embedding，p.5设置，p.6-7精度/FLOPS/存储/实机，p.8补充基线解释；实验设置指向Appendix B。",
+      "appendix_coverage": "Published PDF pages parsed; external supplementary material mentioned but not retrieved/reviewed"
+    },
+    {
+      "id": "aaai-2025-15",
+      "status": "preliminary",
+      "finding": "区分训练证书与运行时正确性，p.3系统/安全定义，p.4-5监控及修复，p.6研究问题RQ1-RQ3，p.7预测与低质量初始策略边界；运行监控不等于训练过程无条件保证。",
+      "appendix_coverage": "Published PDF pages parsed; external supplementary material mentioned but not retrieved/reviewed"
+    },
+    {
+      "id": "aaai-2025-20",
+      "status": "preliminary",
+      "finding": "从sampling造成信号相关性失真与蒸馏恢复的互补性建立两步骤方案；p.3-4定义和tradeoff，p.5设置，p.6基准表，p.7RD效应分析，不删除GT相关性代价。",
+      "appendix_coverage": "No external supplement detected automatically; appendix completeness remains to be checked semantically"
+    },
+    {
+      "id": "aaai-2025-25",
+      "status": "preliminary",
+      "finding": "先列专家依赖与可扩展性瓶颈，p.3多样schema库，p.4训练与语义一致性，p.5设置，p.6模糊描述和schema解率，p.7人评；高verbal confidence并不保证正确，应保留反例。",
+      "appendix_coverage": "Published PDF pages parsed; external supplementary material mentioned but not retrieved/reviewed"
+    }
+  ],
+  "pending": [
+    "Continuous chapter-level reading",
+    "Referenced external appendices",
+    "Visual repair of aaai-2024-15 text overlap",
+    "Revised confidence after complete review"
+  ],
+  "updated": "2026-10-12",
+  "counts": {
+    "locked": 50,
+    "pdf_acquired": 50,
+    "text_parsed": 50,
+    "main_text_style_reviewed": 5,
+    "full_text_and_relevant_appendix_reviewed": 4,
+    "induction_complete": 4,
+    "holdout_complete": 0
+  },
+  "complete_review_ids": [
+    "aaai-2024-09",
+    "aaai-2024-22",
+    "aaai-2025-12",
+    "aaai-2025-16"
+  ],
+  "main_text_review_ids": [
+    "aaai-2024-06",
+    "aaai-2024-09",
+    "aaai-2024-22",
+    "aaai-2025-12",
+    "aaai-2025-16"
+  ],
+  "acceptance_status": "in_progress;50pervenue and40induction/10heldout acceptance not achieved",
+  "holdout_progress": [
+    {
+      "id": "aaai-2024-05",
+      "review_status": "preliminary published-PDF navigation/prose-excerpt style review",
+      "full_and_appendix_complete": false
+    },
+    {
+      "id": "aaai-2024-10",
+      "review_status": "preliminary published-PDF navigation/prose-excerpt style review",
+      "full_and_appendix_complete": false
+    },
+    {
+      "id": "aaai-2024-15",
+      "review_status": "preliminary published-PDF navigation/prose-excerpt style review",
+      "full_and_appendix_complete": false
+    },
+    {
+      "id": "aaai-2024-20",
+      "review_status": "preliminary published-PDF navigation/prose-excerpt style review",
+      "full_and_appendix_complete": false
+    },
+    {
+      "id": "aaai-2024-25",
+      "review_status": "preliminary published-PDF navigation/prose-excerpt style review",
+      "full_and_appendix_complete": false
+    },
+    {
+      "id": "aaai-2025-05",
+      "review_status": "preliminary published-PDF navigation/prose-excerpt style review",
+      "full_and_appendix_complete": false
+    },
+    {
+      "id": "aaai-2025-10",
+      "review_status": "preliminary published-PDF navigation/prose-excerpt style review",
+      "full_and_appendix_complete": false
+    },
+    {
+      "id": "aaai-2025-15",
+      "review_status": "preliminary published-PDF navigation/prose-excerpt style review",
+      "full_and_appendix_complete": false
+    },
+    {
+      "id": "aaai-2025-20",
+      "review_status": "preliminary published-PDF navigation/prose-excerpt style review",
+      "full_and_appendix_complete": false
+    },
+    {
+      "id": "aaai-2025-25",
+      "review_status": "preliminary published-PDF navigation/prose-excerpt style review",
+      "full_and_appendix_complete": false
+    }
+  ]
+}

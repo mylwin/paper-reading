@@ -1,0 +1,22 @@
+{
+  "date": "2026-10-12",
+  "main_completed": 2,
+  "full_and_relevant_appendix_completed": 0,
+  "locked_manifests_modified": false,
+  "checks": [
+    {
+      "file": "tai-2025-16.json",
+      "ten_dimensions": 10,
+      "all_page_coverage": 12,
+      "sha_matches": true,
+      "counts_main_only": true
+    },
+    {
+      "file": "tai-2025-01.json",
+      "ten_dimensions": 10,
+      "all_page_coverage": 15,
+      "sha_matches": true,
+      "counts_main_only": true
+    }
+  ]
+}

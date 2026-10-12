@@ -1,0 +1,4 @@
+# Preserve source bytes used by official-template and evidence SHA256 manifests.
+.claude/skills/paper-writing-shared/** -text
+07-research/** -text
+.planning/** -text

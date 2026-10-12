@@ -1,0 +1,58 @@
+[
+  {
+    "case": "icml-polished-compile",
+    "command": [
+      "python3",
+      "/Users/myl/Documents/paper/.claude/skills/paper-writing-shared/scripts/project.py",
+      "compile",
+      "--project",
+      "/Users/myl/Documents/paper/07-research/2026-10-11-论文写作润色技能评测_证据/outputs/E10-independent-migration/icml-polished"
+    ],
+    "exit_code": 0,
+    "stdout": "{\"command\": [\"/Library/TeX/texbin/latexmk\", \"-norc\", \"-pdf\", \"-interaction=nonstopmode\", \"-halt-on-error\", \"-file-line-error\", \"-latexoption=-no-shell-escape\", \"-outdir=/Users/myl/Documents/paper/07-research/2026-10-11-论文写作润色技能评测_证据/outputs/E10-independent-migration/icml-polished/build\", \"/Users/myl/Documents/paper/07-research/2026-10-11-论文写作润色技能评测_证据/outputs/E10-independent-migration/icml-polished/article.tex\"], \"entrypoint\": \"article.tex\", \"checked_at\": \"2026-10-11T05:49:07.203456+00:00\", \"exit_code\": 0, \"pdf\": \"/Users/myl/Documents/paper/07-research/2026-10-11-论文写作润色技能评测_证据/outputs/E10-independent-migration/icml-polished/build/article.pdf\", \"input_sha256\": {\"algorithm.sty\": \"93fd0eb31c112eb405833db8f1d7f5d238c7e691b1c05680d7276e68f36d564a\", \"algorithmic.sty\": \"48d18794a5d97c0479a588cc2eac0917992feb9da83acc4631b8f55757d80f9b\", \"article.tex\": \"81eab5e96bbfa8e8e05726cd4e390e72f3075b53a568b9dd69a699e8cc442447\", \"fancyhdr.sty\": \"9130c52f91087abc6d223164ffa587e207e3257fcbcd069ef09ecb5391043f14\", \"icml2026.sty\": \"7cdcf90f6a59c5219e7f15c88f7ed09fcaf598dad91e6cdddc4dc3cb0e397a95\", \"references.bib\": \"54f424b2b7452d478f0f1591077e72a87218701f88e1d3d4b7fb8b48532472b1\", \"sections/body.tex\": \"7d0301c9b127e2de53ef2428463f1eb109d35eb6b62961aa3f4c4502893bf522\"}, \"pdf_sha256\": \"ffd52991234f2758caead5d56e111feebf2c06029fd936fd1256c2dda7097f56\"}\n",
+    "stderr": "",
+    "purpose": "Root rechecks portability of archived project; independent agent records remain in validation-summary.json."
+  },
+  {
+    "case": "icml-polished-check",
+    "command": [
+      "python3",
+      "/Users/myl/Documents/paper/.claude/skills/paper-writing-shared/scripts/project.py",
+      "check",
+      "--project",
+      "/Users/myl/Documents/paper/07-research/2026-10-11-论文写作润色技能评测_证据/outputs/E10-independent-migration/icml-polished"
+    ],
+    "exit_code": 0,
+    "stdout": "{\n  \"project\": \"/Users/myl/Documents/paper/07-research/2026-10-11-论文写作润色技能评测_证据/outputs/E10-independent-migration/icml-polished\",\n  \"entrypoint\": \"article.tex\",\n  \"issues\": [],\n  \"warnings\": [\n    {\n      \"kind\": \"manual-anonymity-review-required\",\n      \"note\": \"Literal author check does not audit acknowledgments, funding, links, assets or PDF metadata\"\n    }\n  ],\n  \"main_pages\": 1,\n  \"total_pages\": 2,\n  \"word_count_estimates\": {},\n  \"limits\": {\n    \"available\": true,\n    \"directory\": \"project/submission\",\n    \"anonymous\": true,\n    \"main_page_limit\": 8,\n    \"page_limit_status\": \"verified\",\n    \"counting\": \"Main text unless journal-specific rules explicitly include references\",\n    \"engine\": \"pdflatex\",\n    \"article_type\": \"original-research\",\n    \"full_manuscript_page_limit\": null,\n    \"max_pdf_megabytes\": 50\n  },\n  \"static_check_passed\": true,\n  \"anonymity_check\": \"partial-literal-author-check; requires-full-review\",\n  \"visual_check\": \"not-performed-by-this-command\",\n  \"official_system_check\": \"not-performed\",\n  \"semantic_fidelity\": \"requires-review\"\n}\n",
+    "stderr": "",
+    "purpose": "Root rechecks portability of archived project; independent agent records remain in validation-summary.json."
+  },
+  {
+    "case": "tai-submission-compile",
+    "command": [
+      "python3",
+      "/Users/myl/Documents/paper/.claude/skills/paper-writing-shared/scripts/project.py",
+      "compile",
+      "--project",
+      "/Users/myl/Documents/paper/07-research/2026-10-11-论文写作润色技能评测_证据/outputs/E10-independent-migration/tai-submission"
+    ],
+    "exit_code": 0,
+    "stdout": "{\"command\": [\"/Library/TeX/texbin/latexmk\", \"-norc\", \"-pdf\", \"-interaction=nonstopmode\", \"-halt-on-error\", \"-file-line-error\", \"-latexoption=-no-shell-escape\", \"-outdir=/Users/myl/Documents/paper/07-research/2026-10-11-论文写作润色技能评测_证据/outputs/E10-independent-migration/tai-submission/build\", \"/Users/myl/Documents/paper/07-research/2026-10-11-论文写作润色技能评测_证据/outputs/E10-independent-migration/tai-submission/article.tex\"], \"entrypoint\": \"article.tex\", \"checked_at\": \"2026-10-11T05:49:08.047626+00:00\", \"exit_code\": 0, \"pdf\": \"/Users/myl/Documents/paper/07-research/2026-10-11-论文写作润色技能评测_证据/outputs/E10-independent-migration/tai-submission/build/article.pdf\", \"input_sha256\": {\"IEEEtai.cls\": \"e46d339baa0c9fbb9913bae0fd5bc6c3b382f08eb67761a24ce6a72570b42564\", \"algorithm.sty\": \"93fd0eb31c112eb405833db8f1d7f5d238c7e691b1c05680d7276e68f36d564a\", \"algorithmic.sty\": \"48d18794a5d97c0479a588cc2eac0917992feb9da83acc4631b8f55757d80f9b\", \"article.tex\": \"f0da0675c26bb45e910cf886c754ae43f499a2009219c6c138f8766259b7dab4\", \"references.bib\": \"54f424b2b7452d478f0f1591077e72a87218701f88e1d3d4b7fb8b48532472b1\", \"sections/body.tex\": \"fa46a9afb483da40f65fe3b0aa2997430459cb39dac3b489483859aa3d7abeb6\"}, \"pdf_sha256\": \"f0598dc117582dcf2201bd7d3d79527c08d6b032fa3a0ff2581341ecd6bbb460\"}\n",
+    "stderr": "",
+    "purpose": "Root rechecks portability of archived project; independent agent records remain in validation-summary.json."
+  },
+  {
+    "case": "tai-submission-check",
+    "command": [
+      "python3",
+      "/Users/myl/Documents/paper/.claude/skills/paper-writing-shared/scripts/project.py",
+      "check",
+      "--project",
+      "/Users/myl/Documents/paper/07-research/2026-10-11-论文写作润色技能评测_证据/outputs/E10-independent-migration/tai-submission"
+    ],
+    "exit_code": 0,
+    "stdout": "{\n  \"project\": \"/Users/myl/Documents/paper/07-research/2026-10-11-论文写作润色技能评测_证据/outputs/E10-independent-migration/tai-submission\",\n  \"entrypoint\": \"article.tex\",\n  \"issues\": [],\n  \"warnings\": [\n    {\n      \"kind\": \"source-word-count-estimate\",\n      \"note\": \"TeX macros may change rendered counts; manually verify\"\n    },\n    {\n      \"kind\": \"manual-anonymity-review-required\",\n      \"note\": \"Literal author check does not audit acknowledgments, funding, links, assets or PDF metadata\"\n    }\n  ],\n  \"main_pages\": 1,\n  \"total_pages\": 1,\n  \"word_count_estimates\": {\n    \"abstract\": 159,\n    \"IEEEImpStatement\": 121\n  },\n  \"limits\": {\n    \"available\": true,\n    \"directory\": \"project/submission\",\n    \"anonymous\": true,\n    \"main_page_limit\": null,\n    \"page_limit_status\": \"verified\",\n    \"counting\": \"full manuscript, including references and appendix; normal 10 pages, maximum 15 pages\",\n    \"engine\": \"pdflatex\",\n    \"article_type\": \"regular\",\n    \"full_manuscript_page_limit\": 15,\n    \"max_pdf_megabytes\": null,\n    \"page_policy_source\": \"local TAI 2026 spec rules.regular_pages, verified_on 2026-10-11\"\n  },\n  \"static_check_passed\": true,\n  \"anonymity_check\": \"partial-literal-author-check; requires-full-review\",\n  \"visual_check\": \"not-performed-by-this-command\",\n  \"official_system_check\": \"not-performed\",\n  \"semantic_fidelity\": \"requires-review\"\n}\n",
+    "stderr": "",
+    "purpose": "Root rechecks portability of archived project; independent agent records remain in validation-summary.json."
+  }
+]

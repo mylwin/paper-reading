@@ -1,0 +1,9 @@
+{
+  "changed": [
+    ".claude/skills/paper-writing-shared/core/latex.md",
+    ".claude/skills/paper-writing-shared/scripts/project.py",
+    ".claude/skills/paper-writing-shared/assets/templates/icml/2026/spec.json"
+  ],
+  "added": [],
+  "scope": "Skill resources were improved during this exploratory evaluation. Independent outputs record their execution; this is not a fixed-version benchmark."
+}

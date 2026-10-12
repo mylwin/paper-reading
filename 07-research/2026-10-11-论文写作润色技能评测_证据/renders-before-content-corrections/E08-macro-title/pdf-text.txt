@@ -1,0 +1,71 @@
+CONFIDENCE GATE                                                                                                                                    1
+
+
+
+
+       A Fixed Confidence Gate for Selective
+Classification With a Very Long Title That Exceeds
+               the Stated Word Limit
+                                                       Anonymous submission
+
+
+
+   Abstract—We examine a fixed confidence gate for selective                            III. S YNTHETIC E VALUATION
+classification using a synthetic evaluation fixture. The gate ab-
+stains from predictions below a specified confidence threshold. We
+                                                                           Alpha and Beta each contain 1000 synthetic samples. Both
+report accuracy among accepted predictions alongside coverage           methods use the same model and 5 evaluation seeds; results
+on two synthetic datasets. Conditional accuracy increases on            are seed means, with no variance estimates. Table I shows
+one dataset and decreases on the other; these observations do
+not establish an overall accuracy improvement. A range bound                                        TABLE I
+for selective risk requires positive coverage and bounded loss.         S YNTHETIC FIXTURE VALUES . A LWAYS ACCURACY USES ALL SAMPLES ;
+                                                                        G ATE ACCURACY IS CONDITIONAL ON ACCEPTANCE . T HESE VALUES ARE
+Statistical uncertainty, runtime, and distribution shift remain
+                                                                                            NOT RESEARCH FINDINGS .
+unevaluated.
+   Impact Statement—Abstaining from uncertain predictions can                     Dataset   Always (%)   Gate (%)     Coverage (%)
+change both the set of cases a system handles and the information                 Alpha           80.0       84.0             60.0
+available to a decision maker. The synthetic fixture here illustrates             Beta            76.0       75.5             58.0
+why conditional accuracy should be considered together with
+coverage: a higher accuracy among accepted cases does not               a higher conditional accuracy on Alpha and a lower con-
+establish better performance across all cases. This distinction         ditional accuracy on Beta. Different evaluation populations
+may help researchers design evaluations that expose the tradeoff
+between selective prediction and abstention. The observations           prevent interpreting these differences as an overall accuracy
+do not support deploying the gate in a particular application.          improvement. No significance tests, runtime measurements, or
+Only a fixed classifier, a single baseline, and synthetic data          distribution-shift evaluations were performed.
+are considered; distribution shift, statistical uncertainty, la-
+tency, and consequences for affected people remain unevaluated.
+Application-specific evidence and an assessment of rejected cases                   IV. L IMITATIONS AND C ONCLUSION
+would be needed before making deployment decisions.                        A single baseline and synthetic datasets do not establish
+   Index Terms—Selective classification, abstention, evaluation,        state-of-the-art performance. The classifier and data-generation
+coverage                                                                details are missing and required for reproducibility. The fixed
+                                                                        threshold does not guarantee lower risk, and deployment
+                       I. I NTRODUCTION                                 benefits remain untested. Formatting uses the official author
+   Selective classification allows a model to abstain from              guidelines [1].
+uncertain predictions. We study a fixed confidence gate, rather
+than a learned rejection policy. This synthetic evaluation asks                                   R EFERENCES
+whether a fixed threshold changes accuracy among accepted               [1] “Icml 2026 author instructions,”   https://icml.cc/Conferences/2026/
+predictions. Coverage is reported alongside conditional accu-               AuthorInstructions, 2026.
+racy because the gate changes which predictions are evaluated.
+                                                                                                   A PPENDIX
+                         II. M ETHOD
+                                                                           Since 0 ≤ a(X)ℓ(h(X), Y ) ≤ a(X), taking expectations
+   Gate uses a fixed classifier and accepts a prediction when
+                                                                        gives 0 ≤ E[a(X)ℓ(h(X), Y )] ≤ C. Division by C > 0
+its maximum class probability is at least 0.8; otherwise, it
+                                                                        proves Theorem 1. This argument applies to the specified
+abstains. Always uses the same classifier and accepts every
+                                                                        distribution; it does not establish a bound under distribution
+prediction. Neither method retrains the model. For a fixed
+                                                                        shift.
+classifier h and acceptance function a(x) ∈ {0, 1}, assume
+0 ≤ ℓ(h(x), y) ≤ 1 and positive coverage C = E[a(X)] > 0.
+Selective risk is
+                         E[a(X)ℓ(h(X), Y )]
+                  Rsel =                     .             (1)
+                                  C
+   Theorem 1: Under these assumptions, 0 ≤ Rsel ≤ 1.
+The result is a range bound, not a generalization guarantee or
+a comparison between Gate and Always. Appendix A gives
+the full proof.
+

@@ -1,0 +1,75 @@
+{
+  "updated": "2026-10-11",
+  "counts": {
+    "locked": 50,
+    "pdf_acquired": 50,
+    "text_parsed": 50,
+    "main_text_style_reviewed": 2,
+    "full_text_and_relevant_appendix_reviewed": 2,
+    "induction_complete": 1,
+    "holdout_complete": 1
+  },
+  "full_text_and_relevant_appendix_review_count": 2,
+  "complete_review_ids": [
+    "ijcai-2024-23",
+    "ijcai-2025-25"
+  ],
+  "main_text_review_ids": [
+    "ijcai-2024-23",
+    "ijcai-2025-25"
+  ],
+  "acceptance_status": "in_progress; 50 complete per venue not achieved",
+  "holdout_validation_status": "locked10; complete40induction+10holdoutvalidation notachieved",
+  "holdout_progress": [
+    {
+      "id": "ijcai-2024-05",
+      "review_status": "pending",
+      "full_and_appendix_complete": false
+    },
+    {
+      "id": "ijcai-2024-10",
+      "review_status": "pending",
+      "full_and_appendix_complete": false
+    },
+    {
+      "id": "ijcai-2024-15",
+      "review_status": "pending",
+      "full_and_appendix_complete": false
+    },
+    {
+      "id": "ijcai-2024-20",
+      "review_status": "pending",
+      "full_and_appendix_complete": false
+    },
+    {
+      "id": "ijcai-2024-25",
+      "review_status": "pending",
+      "full_and_appendix_complete": false
+    },
+    {
+      "id": "ijcai-2025-05",
+      "review_status": "pending",
+      "full_and_appendix_complete": false
+    },
+    {
+      "id": "ijcai-2025-10",
+      "review_status": "pending",
+      "full_and_appendix_complete": false
+    },
+    {
+      "id": "ijcai-2025-15",
+      "review_status": "pending",
+      "full_and_appendix_complete": false
+    },
+    {
+      "id": "ijcai-2025-20",
+      "review_status": "pending",
+      "full_and_appendix_complete": false
+    },
+    {
+      "id": "ijcai-2025-25",
+      "review_status": "continuous published full-text semantic style review complete; referenced external appendix not applicable",
+      "full_and_appendix_complete": true
+    }
+  ]
+}
