@@ -1,0 +1,117 @@
+{
+  "date": "2026-10-12",
+  "note_file": "今日检索.md",
+  "generated_at": "2026-10-12T13:53:11",
+  "skill": "paper-daily",
+  "sources_searched": [
+    "arxiv",
+    "openreview"
+  ],
+  "source_counts": {
+    "arxiv": 200,
+    "openreview": 159
+  },
+  "date_windows": {
+    "recent_30d": {
+      "start": "2026-09-12",
+      "end": "2026-10-12"
+    },
+    "past_year": {
+      "start": "2025-10-12",
+      "end": "2026-09-11"
+    }
+  },
+  "total_unique": 267,
+  "top_papers": [
+    {
+      "title": "From Geometry to Generalization: Why Row Normalization Can Beat Adam and Muon",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2610.11309v1",
+      "note_filename": "From_Geometry_to_Generalization_Why_Row_Normalization_Can_Beat_Adam_and_Muon",
+      "matched_domain": "大模型优化器设计",
+      "score": 7.93
+    },
+    {
+      "title": "Does Muon Need Fine-Grained Spectral Shaping?",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2610.07497v1",
+      "note_filename": "Does_Muon_Need_Fine_Grained_Spectral_Shaping",
+      "matched_domain": "大模型优化器设计",
+      "score": 7.8
+    },
+    {
+      "title": "Training-Loss Guarantees for Muon with Finite-Step Newton--Schulz Orthogonalization",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2610.03306v1",
+      "note_filename": "Training_Loss_Guarantees_for_Muon_with_Finite_Step_Newton_Schulz_Orthogonalization",
+      "matched_domain": "大模型优化器设计",
+      "score": 7.93
+    },
+    {
+      "title": "Orthogonal Witness Control for Muon Optimization via Sigmoid Spectral Reshaping",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2609.33194v1",
+      "note_filename": "Orthogonal_Witness_Control_for_Muon_Optimization_via_Sigmoid_Spectral_Reshaping",
+      "matched_domain": "大模型优化器设计",
+      "score": 7.93
+    },
+    {
+      "title": "Can Representation Learning Decouple from Loss Minimization? Polar Updates Have an Answer",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2609.36240v1",
+      "note_filename": "Can_Representation_Learning_Decouple_from_Loss_Minimization_Polar_Updates_Have_an_Answer",
+      "matched_domain": "大模型优化器设计",
+      "score": 7.87
+    },
+    {
+      "title": "Commutator Memory: Sparse, Path-Local Reading and Steering in Language Models",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2609.34348v1",
+      "note_filename": "Commutator_Memory_Sparse_Path_Local_Reading_and_Steering_in_Language_Models",
+      "matched_domain": "大模型优化器设计",
+      "score": 8.4
+    },
+    {
+      "title": "Benign Overfitting for General Norms and Distributions",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2609.33675v1",
+      "note_filename": "Benign_Overfitting_for_General_Norms_and_Distributions",
+      "matched_domain": "大模型优化器设计",
+      "score": 7.93
+    },
+    {
+      "title": "Does Step Law Transfer to Small-Scale Language Models? An Empirical Recalibration Below 59M Parameters",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2609.27581v1",
+      "note_filename": "Does_Step_Law_Transfer_to_Small_Scale_Language_Models_An_Empirical_Recalibration_Below_59M_Parameters",
+      "matched_domain": "大模型优化器设计",
+      "score": 8.0
+    },
+    {
+      "title": "Sampling Allocation of LinUCB: Optimal Design Limits in the Small-Gap Regime",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2610.06213v1",
+      "note_filename": "Sampling_Allocation_of_LinUCB_Optimal_Design_Limits_in_the_Small_Gap_Regime",
+      "matched_domain": "大模型优化器设计",
+      "score": 8.27
+    },
+    {
+      "title": "LLMs as Adaptive Meta-Solvers: Strategy-Diverse RL for Industrial-Scale Optimization",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2609.34427v1",
+      "note_filename": "LLMs_as_Adaptive_Meta_Solvers_Strategy_Diverse_RL_for_Industrial_Scale_Optimization",
+      "matched_domain": "大模型优化器设计",
+      "score": 8.0
+    }
+  ]
+}
