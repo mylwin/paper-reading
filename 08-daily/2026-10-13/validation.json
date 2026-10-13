@@ -1,0 +1,54 @@
+{
+  "date": "2026-10-13",
+  "status": "passed",
+  "scope": "今日日报、前三PDF与提交范围内索引",
+  "unique_candidates": 264,
+  "known": 82,
+  "recommended": 10,
+  "pdf_downloaded": 3,
+  "pdf_failed": 0,
+  "daily_link_errors": 0,
+  "publication_link_errors": 0,
+  "pdf_checks": [
+    {
+      "title": "Spectrally Targeted Muon",
+      "pages": 9,
+      "bytes": 629309,
+      "first_page_title_checked": true
+    },
+    {
+      "title": "Rounding in Preconditioner Space: Redesigning 4-bit AdamW Optimizer-State Quantization",
+      "pages": 23,
+      "bytes": 686431,
+      "first_page_title_checked": true
+    },
+    {
+      "title": "MoARa: Module-Aware Rank Allocation and Structure-Preserving Decomposition for Low-Rank LLM Pre-training",
+      "pages": 30,
+      "bytes": 3575507,
+      "first_page_title_checked": true
+    }
+  ],
+  "checks": [
+    "修正PowerStep标题别名去重，仅从原第11候选补齐前10；全量列表保留",
+    "保持修正前十的原始分数/摘要，screening_rank/candidate_screening_rank与semantic_rank可追溯",
+    "前三完整翻译核对信息顺序、数字、公式和限定词；原文作者/日期/CC BY 4.0核验",
+    "附录264篇各一次、顺序与编号正确、固定章节布局完整",
+    "所有日报本地链接存在，且为已跟踪或今天将提交的文件",
+    "三PDF魔数/pdfinfo/首页标题通过，无.part",
+    "四阶段工作区索引和提交快照均含三论文与正确待处理状态",
+    "全局9处既有链接问题未变化，新增内容0问题；月份一致性/README0问题"
+  ],
+  "workspace_check": {
+    "preexisting_link_errors": 9,
+    "new_link_errors": 0,
+    "missing_readme": 0,
+    "month_consistency_errors": 0
+  },
+  "source_limitations": [
+    "arXiv 15关键词 OR 检索相关性前200条；前两次429，第三次成功。不是完整枚举。",
+    "OpenReview 15关键词各第一页最多100条，13个查询被截断；日期未知记录保留。",
+    "Semantic Scholar过去一年补充窗口两次429，未获得引用或高影响力候选；不能推断没有高影响力工作。",
+    "Muon可能命中粒子物理，宽泛optimization可能命中推理优化；附录保留误命中但语义复排降级。"
+  ]
+}

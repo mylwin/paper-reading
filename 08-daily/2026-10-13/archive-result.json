@@ -1,0 +1,52 @@
+{
+  "papers_dir": "/Users/myl/Documents/paper/01-raw",
+  "month_dir": "/Users/myl/Documents/paper/01-raw/2026-10",
+  "month": "2026-10",
+  "date": "2026-10-13",
+  "requested": 3,
+  "downloaded": 3,
+  "skipped_existing": 0,
+  "failed": 0,
+  "index_updated": [
+    "/Users/myl/Documents/paper/01-raw/index.md",
+    "/Users/myl/Documents/paper/01-raw/2026-10/README.md",
+    "/Users/myl/Documents/paper/02-markdown/index.md",
+    "/Users/myl/Documents/paper/02-markdown/2026-10/README.md",
+    "/Users/myl/Documents/paper/03-notes/index.md",
+    "/Users/myl/Documents/paper/03-notes/2026-10/README.md",
+    "/Users/myl/Documents/paper/06-translation/index.md",
+    "/Users/myl/Documents/paper/06-translation/2026-10/README.md"
+  ],
+  "archived": [
+    {
+      "title": "Spectrally Targeted Muon",
+      "paper_stem": "Spectrally_Targeted_Muon",
+      "month": "2026-10",
+      "source": "arxiv",
+      "pdf_url": "https://arxiv.org/pdf/2610.10965v1",
+      "path": "/Users/myl/Documents/paper/01-raw/2026-10/Spectrally_Targeted_Muon.pdf",
+      "status": "downloaded",
+      "detail": "614.6 KB"
+    },
+    {
+      "title": "Rounding in Preconditioner Space: Redesigning 4-bit AdamW Optimizer-State Quantization",
+      "paper_stem": "Rounding_in_Preconditioner_Space_Redesigning_4_bit_AdamW_Optimizer_State_Quantization",
+      "month": "2026-10",
+      "source": "arxiv",
+      "pdf_url": "https://arxiv.org/pdf/2610.12444v1",
+      "path": "/Users/myl/Documents/paper/01-raw/2026-10/Rounding_in_Preconditioner_Space_Redesigning_4_bit_AdamW_Optimizer_State_Quantization.pdf",
+      "status": "downloaded",
+      "detail": "670.3 KB"
+    },
+    {
+      "title": "MoARa: Module-Aware Rank Allocation and Structure-Preserving Decomposition for Low-Rank LLM Pre-training",
+      "paper_stem": "MoARa_Module_Aware_Rank_Allocation_and_Structure_Preserving_Decomposition_for_Low_Rank_LLM_Pre_training",
+      "month": "2026-10",
+      "source": "arxiv",
+      "pdf_url": "https://arxiv.org/pdf/2609.15037v1",
+      "path": "/Users/myl/Documents/paper/01-raw/2026-10/MoARa_Module_Aware_Rank_Allocation_and_Structure_Preserving_Decomposition_for_Low_Rank_LLM_Pre_training.pdf",
+      "status": "downloaded",
+      "detail": "3491.7 KB"
+    }
+  ]
+}

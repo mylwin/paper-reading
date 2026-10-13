@@ -1,0 +1,110 @@
+MoARa: Module-Aware Rank Allocation and Structure-Preserving
+Decomposition for Low-Rank LLM Pre-training
+Keunyoung Kim
+Seoul National University
+keunyoung.kim@snu.ac.kr
+
+Nojun Kwak
+Seoul National University
+nojunk@snu.ac.kr
+
+18
+
+Validation perplexity (↓)
+
+Abstract
+
+arXiv:2609.15037v1 [cs.LG] 14 Sep 2026
+
+Low-rank gradient projection reduces the
+optimizer-state memory cost of large language
+model (LLM) pretraining, but the steps and
+wall-clock time needed to reach a target quality remain a meaningful axis for improvement.
+We attribute this to two design choices in existing methods: the projection-rank budget is
+allocated uniformly across Transformer modules with heterogeneous projection sensitivity,
+and projecting a raw gradient attenuates its
+magnitude and direction jointly. We propose
+MoARa, which combines a static profilingbased module-aware projection-rank allocation with a block-wise magnitude–direction
+decomposition; the default block size is set
+in the neighborhood of the attention head dimension. Across five Transformer architectures spanning Llama, Qwen, and DeepSeek
+at 300M to 7B scales, GaLore with MoARa
+reaches standard GaLore’s final perplexity in
+37% fewer steps and 34% less wall-clock time
+on Llama 2 7B, with only 0.2% peak reserved
+memory overhead under standard graph compilation. Across the six low-rank pretraining
+methods we evaluate, module-aware rank allocation alone delivers directionally consistent
+step reductions on all six. On compatible hosts,
+the two-component design reaches up to 41.7%
+step reduction and 37.1% wall-clock reduction.
+
+1
+
+Tail zoom
+∆t = 57.4 h (1.53 × faster)
+
+17
+
+∆Steps = 56k (37.4% fewer)
+PPL 2.8% H
+
+16
+15
+14
+13
+
+GaLore (7B)
+Ours (7B)
+40
+
+60
+
+80
+
+100
+
+120
+
+140
+
+160
+
+Wall-clock training time (hours)
+
+Figure 1: Accelerated pre-training convergence at
+the 7B scale. Validation PPL versus wall-clock time for
+GaLore with MoARa and standard GaLore on Llama 2
+7B; the inset (Tail zoom) marks the convergence-time
+and final-perplexity gains highlighted in the figure.
+
+this overhead substantially raises hardware requirements and limits practical scalability.
+A growing line of work addresses this bottleneck by projecting Adam’s optimizer states into a
+low-dimensional subspace, retaining full-parameter
+learning while substantially reducing optimizerstate memory. Representative methods include
+GaLore (Zhao et al., 2024), which periodically recomputes the projection via SVD, and several subsequent extensions that refine how this subspace
+is maintained (Liang et al., 2024; Robert et al.,
+2025; Rajabi et al., 2025; Zhang et al., 2025b; Chen
+et al., 2025). These methods now approach the
+validation perplexity of full-rank training at substantially lower memory cost, but the number of
+optimization steps and the wall-clock time required
+to reach a given quality target remains a meaningful axis along which low-rank pretraining can be
+made more practical.
+We identify two design limitations that constrain
+the convergence speed of existing methods. First,
+the projection-rank budget is allocated uniformly
+across Transformer modules, implicitly treating the
+seven attention and MLP projections (attn.q/k/v/o
+
+Introduction
+
+Recent advances in large language models (LLMs)
+have been driven by scaling model size, data,
+and training compute, with memory overhead
+emerging as a major systems bottleneck. Under
+Adam (Kingma and Ba, 2015)-style full-parameter
+training, optimizer states alone can consume memory comparable to or exceeding model weights,
+since maintaining 1st- and 2nd-moment statistics
+requires two additional tensors of the same size
+as each parameter. At the billion-parameter scale,
+1
+
+

@@ -1,0 +1,117 @@
+{
+  "date": "2026-10-13",
+  "note_file": "今日检索.md",
+  "generated_at": "2026-10-13T08:14:15",
+  "skill": "paper-daily",
+  "sources_searched": [
+    "arxiv",
+    "openreview"
+  ],
+  "source_counts": {
+    "arxiv": 200,
+    "openreview": 156
+  },
+  "date_windows": {
+    "recent_30d": {
+      "start": "2026-09-13",
+      "end": "2026-10-13"
+    },
+    "past_year": {
+      "start": "2025-10-13",
+      "end": "2026-09-12"
+    }
+  },
+  "total_unique": 264,
+  "top_papers": [
+    {
+      "title": "Spectrally Targeted Muon",
+      "source": "arxiv",
+      "arxiv_id": "2610.10965",
+      "url": "https://arxiv.org/abs/2610.10965v1",
+      "note_filename": "Spectrally_Targeted_Muon",
+      "matched_domain": "大模型优化器设计",
+      "score": 7.4
+    },
+    {
+      "title": "Rounding in Preconditioner Space: Redesigning 4-bit AdamW Optimizer-State Quantization",
+      "source": "arxiv",
+      "arxiv_id": "2610.12444",
+      "url": "https://arxiv.org/abs/2610.12444v1",
+      "note_filename": "Rounding_in_Preconditioner_Space_Redesigning_4_bit_AdamW_Optimizer_State_Quantization",
+      "matched_domain": "大模型优化器设计",
+      "score": 7.4
+    },
+    {
+      "title": "MoARa: Module-Aware Rank Allocation and Structure-Preserving Decomposition for Low-Rank LLM Pre-training",
+      "source": "arxiv",
+      "arxiv_id": "2609.15037",
+      "url": "https://arxiv.org/abs/2609.15037v1",
+      "note_filename": "MoARa_Module_Aware_Rank_Allocation_and_Structure_Preserving_Decomposition_for_Low_Rank_LLM_Pre_training",
+      "matched_domain": "大模型优化器设计",
+      "score": 7.67
+    },
+    {
+      "title": "Why Adaptive Optimizers Underestimate Rare Tokens",
+      "source": "arxiv",
+      "arxiv_id": "2609.37535",
+      "url": "https://arxiv.org/abs/2609.37535v1",
+      "note_filename": "Why_Adaptive_Optimizers_Underestimate_Rare_Tokens",
+      "matched_domain": "大模型优化器设计",
+      "score": 7.4
+    },
+    {
+      "title": "Inner Momentum for Differentially Private Muon",
+      "source": "arxiv",
+      "arxiv_id": "2610.02738",
+      "url": "https://arxiv.org/abs/2610.02738v1",
+      "note_filename": "Inner_Momentum_for_Differentially_Private_Muon",
+      "matched_domain": "大模型优化器设计",
+      "score": 7.67
+    },
+    {
+      "title": "Muon Sublates the Edge of Stability in LLM Pretraining",
+      "source": "arxiv",
+      "arxiv_id": "2609.34915",
+      "url": "https://arxiv.org/abs/2609.34915v1",
+      "note_filename": "Muon_Sublates_the_Edge_of_Stability_in_LLM_Pretraining",
+      "matched_domain": "大模型优化器设计",
+      "score": 7.53
+    },
+    {
+      "title": "Clipped or Unclipped? Finite-Sample Trade-offs for Averaged SGD under Heavy-Tailed Noise",
+      "source": "arxiv",
+      "arxiv_id": "2609.32962",
+      "url": "https://arxiv.org/abs/2609.32962v1",
+      "note_filename": "Clipped_or_Unclipped_Finite_Sample_Trade_offs_for_Averaged_SGD_under_Heavy_Tailed_Noise",
+      "matched_domain": "大模型优化器设计",
+      "score": 7.4
+    },
+    {
+      "title": "A Mesoscopic View of Transformer Weights Through Row and Column Scale Fields",
+      "source": "arxiv",
+      "arxiv_id": "2609.35852",
+      "url": "https://arxiv.org/abs/2609.35852v1",
+      "note_filename": "A_Mesoscopic_View_of_Transformer_Weights_Through_Row_and_Column_Scale_Fields",
+      "matched_domain": "大模型优化器设计",
+      "score": 7.73
+    },
+    {
+      "title": "Physical Muon: Orthogonalization as an Equilibrium Computation",
+      "source": "arxiv",
+      "arxiv_id": "2609.37525",
+      "url": "https://arxiv.org/abs/2609.37525v1",
+      "note_filename": "Physical_Muon_Orthogonalization_as_an_Equilibrium_Computation",
+      "matched_domain": "大模型优化器设计",
+      "score": 7.4
+    },
+    {
+      "title": "A Calibrated Instrument for Measuring How Inference Optimizations Affect Output Quality",
+      "source": "arxiv",
+      "arxiv_id": "2609.18005",
+      "url": "https://arxiv.org/abs/2609.18005v1",
+      "note_filename": "A_Calibrated_Instrument_for_Measuring_How_Inference_Optimizations_Affect_Output_Quality",
+      "matched_domain": "大模型优化器设计",
+      "score": 7.8
+    }
+  ]
+}

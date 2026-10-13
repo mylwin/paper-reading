@@ -1,0 +1,63 @@
+ROUNDING IN P RECONDITIONER S PACE : R EDESIGNING
+4- BIT A DAM W O PTIMIZER -S TATE Q UANTIZATION
+Hanyang Li1∗ Shao Tang2† Daniel Thomas Braithwaite2
+Gregory Dexter2 Leonardo Neves2 Aman Gupta2† Hiroto Udagawa2
+Abhishek Shivanna2 Daniel Silva2 Rohan Ramanath2
+
+arXiv:2610.12444v1 [cs.LG] 8 Oct 2026
+
+1
+
+University of California, Berkeley
+
+2
+
+Nubank
+
+A BSTRACT
+Quantizing AdamW’s optimizer states reduces persistent storage, but quantization
+errors propagate through the moment recurrences and perturb subsequent adaptive updates. We redesign 4-bit optimizer-state quantization for AdamW from
+the perspective of rounding space: the coordinate in which a quantizer chooses
+between adjacent reconstruction levels. For the second moment, a local analysis
+of the quantization cell adjacent to zero shows that small mean state error need
+not imply small mean preconditioner error at the next step. A one-dimensional
+quadratic construction further shows qualitatively different optimization dynamics
+under state-space and preconditioner-space rounding. These results motivate ZeroInclusive Preconditioner-space Stochastic Rounding (ZIP-SR), which retains zero
+in the second-moment codebook and computes stochastic-rounding probabilities in
+preconditioner space. As a complementary route, Zero-Excluding EDEN calibration (ZE-EDEN) uses a zero-excluding second-moment codebook and rescales the
+quantized second-moment block to mitigate the preconditioner distortion caused
+by the positive quantization floor. Both configurations use 4-bit NormalFloat (NF4)
+for the first moment, with targeted stochastic rounding of the LM-head first moment
+during the final 10% of training. Across GPT- and Llama-style pretraining experiments ranging from 130M to 2.7B parameters, both methods reduce TorchAO 4-bit
+AdamW’s mean validation-loss gap to 32-bit AdamW at every evaluated model
+size, with the largest reported gap reduction reaching 70%. In full-parameter
+supervised fine-tuning, both recipes achieve lower validation loss than TorchAO
+while remaining close to 32-bit AdamW on downstream tasks.
+
+1
+
+I NTRODUCTION
+
+Adam (Kingma & Ba, 2015) and AdamW (Loshchilov & Hutter, 2019) are widely used optimizers
+for large-scale neural network training. Their FP32 first- and second-moment buffers require 8
+bytes per parameter, adding substantial memory overhead and motivating research on optimizer-state
+compression. Block-wise dynamic quantization enabled practical 8-bit optimizers, implemented
+in bitsandbytes (Dettmers et al., 2022) and TorchAO (Or et al., 2025). Li et al. (2023) extended
+optimizer-state quantization to 4 bits and identified the zero-point failure, in which mapping a small
+positive second-moment value to zero produces an excessively large update. They showed that
+excluding zero from the second-moment codebook prevents this failure. TorchAO’s 4-bit AdamW
+implements this strictly positive codebook. Subsequent studies likewise exclude zero from the
+second-moment codebook, using either the same linear grid or alternative positive codebooks (Xu
+et al., 2025; Topollai & Choromanska, 2026).
+Our key insight is that the rounding rule is critical to whether zero-point failure occurs with a zeroinclusive codebook. Conventional rounding chooses between neighboring levels by their values
+in second-moment state space, but AdamW transforms the second moment nonlinearly before it
+∗
+
+Work done during Hanyang Li’s internship at Nubank.
+Correspondence to: Shao Tang tang.shao@nubank.com.br,
+Aman Gupta aman.gupta@nubank.com.br.
+†
+
+1
+
+

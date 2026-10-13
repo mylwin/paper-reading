@@ -1,0 +1,76 @@
+[
+  {
+    "title": "Spectrally Targeted Muon",
+    "authors": [
+      "Vishrut Goyal",
+      "Rohan Ramkumar"
+    ],
+    "arxiv_id": "2610.10965",
+    "version": "v1",
+    "submitted_utc": "2026-10-07T22:35:28Z",
+    "source_url": "https://arxiv.org/abs/2610.10965v1",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "verified_fields": [
+      "title",
+      "authors",
+      "submission_date",
+      "version",
+      "abstract",
+      "license"
+    ],
+    "verified_date": "2026-10-13",
+    "method": "读取arXiv原文页面及其view license入口"
+  },
+  {
+    "title": "Rounding in Preconditioner Space: Redesigning 4-bit AdamW Optimizer-State Quantization",
+    "authors": [
+      "Hanyang Li",
+      "Shao Tang",
+      "Daniel Thomas Braithwaite",
+      "Gregory Dexter",
+      "Leonardo Neves",
+      "Aman Gupta",
+      "Hiroto Udagawa",
+      "Abhishek Shivanna",
+      "Daniel Silva",
+      "Rohan Ramanath"
+    ],
+    "arxiv_id": "2610.12444",
+    "version": "v1",
+    "submitted_utc": "2026-10-08T17:58:09Z",
+    "source_url": "https://arxiv.org/abs/2610.12444v1",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "verified_fields": [
+      "title",
+      "authors",
+      "submission_date",
+      "version",
+      "abstract",
+      "license"
+    ],
+    "verified_date": "2026-10-13",
+    "method": "读取arXiv原文页面及其view license入口"
+  },
+  {
+    "title": "MoARa: Module-Aware Rank Allocation and Structure-Preserving Decomposition for Low-Rank LLM Pre-training",
+    "authors": [
+      "Keunyoung Kim",
+      "Nojun Kwak"
+    ],
+    "arxiv_id": "2609.15037",
+    "version": "v1",
+    "submitted_utc": "2026-09-14T04:53:09Z",
+    "source_url": "https://arxiv.org/abs/2609.15037v1",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "verified_fields": [
+      "title",
+      "authors",
+      "submission_date",
+      "version",
+      "abstract",
+      "license"
+    ],
+    "verified_date": "2026-10-13",
+    "method": "读取arXiv原文页面及其view license入口"
+  }
+]

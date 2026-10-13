@@ -1,0 +1,62 @@
+08:06:38 [INFO] Loading config from: /Users/myl/Documents/paper/.claude/skills/config.yaml
+08:06:38 [INFO] max-results=200 top-n=10 days=30
+08:06:38 [INFO] Data sources: ['arxiv', 'openreview']
+08:06:38 [INFO] Configured keywords: 15
+08:06:38 [INFO] Target date: 2026-10-13
+08:06:38 [INFO] Date windows:
+08:06:38 [INFO]   Recent 30 days: 2026-09-13 to 2026-10-13
+08:06:38 [INFO]   Past year (31-365 days): 2025-10-13 to 2026-09-12
+08:06:38 [INFO] ======================================================================
+08:06:38 [INFO] Step 1: Multi-source search (last 30 days) for configured interests
+08:06:38 [INFO] ======================================================================
+08:06:38 [INFO] [arXiv] Keyword search batch 1/1 (15 keywords)
+08:06:38 [INFO] [arXiv] Keyword search: ['large language model optimizer', 'LLM optimizer', 'optimizer design', 'memory-efficient optimizer', 'optimizer state memory', 'adaptive optimization', 'sign-based optimization', 'SignSGD', 'Muon', 'PowerStep', 'gradient clipping', 'parameter-free optimization', 'Polyak stepsize', 'lp-norm steepest descent', 'AdamW']
+08:06:55 [WARNING] [arXiv] Keyword search error (attempt 1/3): HTTP Error 429: Unknown Error
+08:07:29 [WARNING] [arXiv] Keyword search error (attempt 2/3): HTTP Error 429: Unknown Error
+08:08:17 [INFO] [arXiv] Keyword search found 200 papers
+08:08:17 [INFO] [arXiv] Keyword search found 200 papers across all batches
+OpenReview coverage: {"term": "large language model optimizer", "page_limit": 1, "page_size": 100, "retrieved": 100, "in_window": 14, "truncated": true, "status": "ok"}
+OpenReview coverage: {"term": "LLM optimizer", "page_limit": 1, "page_size": 100, "retrieved": 100, "in_window": 5, "truncated": true, "status": "ok"}
+OpenReview coverage: {"term": "optimizer design", "page_limit": 1, "page_size": 100, "retrieved": 100, "in_window": 17, "truncated": true, "status": "ok"}
+OpenReview coverage: {"term": "memory-efficient optimizer", "page_limit": 1, "page_size": 100, "retrieved": 100, "in_window": 17, "truncated": true, "status": "ok"}
+OpenReview coverage: {"term": "optimizer state memory", "page_limit": 1, "page_size": 100, "retrieved": 100, "in_window": 23, "truncated": true, "status": "ok"}
+OpenReview coverage: {"term": "adaptive optimization", "page_limit": 1, "page_size": 100, "retrieved": 100, "in_window": 9, "truncated": true, "status": "ok"}
+OpenReview coverage: {"term": "sign-based optimization", "page_limit": 1, "page_size": 100, "retrieved": 100, "in_window": 6, "truncated": true, "status": "ok"}
+OpenReview coverage: {"term": "SignSGD", "page_limit": 1, "page_size": 100, "retrieved": 93, "in_window": 12, "truncated": false, "status": "ok"}
+OpenReview coverage: {"term": "Muon", "page_limit": 1, "page_size": 100, "retrieved": 100, "in_window": 40, "truncated": true, "status": "ok"}
+OpenReview coverage: {"term": "PowerStep", "page_limit": 1, "page_size": 100, "retrieved": 3, "in_window": 2, "truncated": false, "status": "ok"}
+OpenReview coverage: {"term": "gradient clipping", "page_limit": 1, "page_size": 100, "retrieved": 100, "in_window": 9, "truncated": true, "status": "ok"}
+OpenReview coverage: {"term": "parameter-free optimization", "page_limit": 1, "page_size": 100, "retrieved": 100, "in_window": 6, "truncated": true, "status": "ok"}
+OpenReview coverage: {"term": "Polyak stepsize", "page_limit": 1, "page_size": 100, "retrieved": 100, "in_window": 6, "truncated": true, "status": "ok"}
+OpenReview coverage: {"term": "lp-norm steepest descent", "page_limit": 1, "page_size": 100, "retrieved": 100, "in_window": 9, "truncated": true, "status": "ok"}
+OpenReview coverage: {"term": "AdamW", "page_limit": 1, "page_size": 100, "retrieved": 100, "in_window": 40, "truncated": true, "status": "ok"}
+08:08:33 [INFO] [Sources] Fetched {'arxiv': 200, 'openreview': 156}
+08:08:33 [INFO] Scored 284 recent papers
+08:08:33 [INFO] ======================================================================
+08:08:33 [INFO] Step 2: Searching hot papers (past year) from Semantic Scholar
+08:08:33 [INFO] ======================================================================
+08:08:33 [INFO] [S2] Searching hot papers from 2025-10-13 to 2026-09-12
+08:08:33 [INFO] [S2] Query: 'large language model optimizer LLM optimizer optimizer design'
+08:08:34 [WARNING] [S2] Error (attempt 1/2): 429 Client Error:  for url: https://api.semanticscholar.org/graph/v1/paper/search?query=large+language+model+optimizer+LLM+optimizer+optimizer+design&publicationDateOrYear=2025-10-13%3A2026-09-12&limit=100&fields=title%2Cabstract%2CpublicationDate%2CcitationCount%2CinfluentialCitationCount%2Curl%2Cauthors%2Cauthors.affiliations%2CexternalIds
+08:08:34 [WARNING] [S2] Rate limit hit. Waiting 10 seconds...
+08:08:46 [WARNING] [S2] Error (attempt 2/2): 429 Client Error:  for url: https://api.semanticscholar.org/graph/v1/paper/search?query=large+language+model+optimizer+LLM+optimizer+optimizer+design&publicationDateOrYear=2025-10-13%3A2026-09-12&limit=100&fields=title%2Cabstract%2CpublicationDate%2CcitationCount%2CinfluentialCitationCount%2Curl%2Cauthors%2Cauthors.affiliations%2CexternalIds
+08:08:46 [ERROR] [S2] Failed after 2 attempts
+08:08:49 [WARNING] No hot papers found from Semantic Scholar
+08:08:49 [INFO] ======================================================================
+08:08:49 [INFO] Step 3: Merging and ranking results
+08:08:49 [INFO] ======================================================================
+08:08:49 [INFO] Total unique papers after deduplication: 264
+08:08:49 [INFO] daily history: 322 previously recommended papers
+08:08:49 [INFO] Known-library scan: 81 papers already in library, 247 papers have related prior work
+08:08:49 [INFO] Results saved to: 08-daily/2026-10-13/search_result.json
+08:08:49 [INFO]   1. A Calibrated Instrument for Measuring How Inference Optimiza... (Score: 7.8)
+08:08:49 [INFO]   2. PowerStep: Memory-Efficient Adaptive Optimization via $\ell_... (Score: 7.8)
+08:08:49 [INFO]   3. A Mesoscopic View of Transformer Weights Through Row and Col... (Score: 7.73)
+08:08:49 [INFO]   4. Inner Momentum for Differentially Private Muon... (Score: 7.67)
+08:08:49 [INFO]   5. MoARa: Module-Aware Rank Allocation and Structure-Preserving... (Score: 7.67)
+08:08:49 [INFO]   6. Muon Sublates the Edge of Stability in LLM Pretraining... (Score: 7.53)
+08:08:49 [INFO]   7. Spectrally Targeted Muon... (Score: 7.4)
+08:08:49 [INFO]   8. Rounding in Preconditioner Space: Redesigning 4-bit AdamW Op... (Score: 7.4)
+08:08:49 [INFO]   9. Clipped or Unclipped? Finite-Sample Trade-offs for Averaged ... (Score: 7.4)
+08:08:49 [INFO]   10. Physical Muon: Orthogonalization as an Equilibrium Computati... (Score: 7.4)
+08:08:49 [INFO] （另有 81 篇已在知识库中，未计入推荐）

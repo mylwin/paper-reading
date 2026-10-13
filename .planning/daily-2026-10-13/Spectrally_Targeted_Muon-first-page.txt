@@ -1,0 +1,82 @@
+Spectrally Targeted Muon
+
+Vishrut Goyal 1 Rohan Ramkumar 2
+
+1. Introduction
+
+Abstract
+
+The Muon optimizer for deep learning works by orthogonalizing the update matrix (Jordan et al., 2024b). Unlike many
+other proposed optimizers, this has been highly successful
+empirically for training large language models, especially
+when coupled with weight decay (Liu et al., 2025). This
+is because the matrix can be orthogonalized relatively efficiently, using methods such as Newton-Schulz or Polar
+Express (Amsel et al., 2026).
+
+arXiv:2610.10965v1 [cs.LG] 7 Oct 2026
+
+The Muon optimizer orthogonalizes each update
+matrix, setting all of its singular values to one,
+and has proven highly effective for training large
+language models. It remains unclear, however,
+whether this success comes from amplifying small
+singular directions that gradient descent neglects
+or from suppressing large, degenerate directions
+that disrupt training. We introduce Spectrally Targeted Muon, which orthogonalizes only the singular values above or below a threshold τ , so
+that varying τ interpolates between normalized
+SGD and Muon. It isolates the relevant singular
+subspaces with projections computed by NewtonSchulz iteration on a shifted Gram matrix, so no
+SVD is needed. We evaluate these variants on
+the CIFAR-10 and NanoGPT speedruns, tracking
+the effective rank of gradient, update, and weight
+matrices and a new metric, the alignment of updates with the tangent space of the weight matrix’s isospectral manifold. We find three things.
+First, the small singular values of the momentum are not noise. Orthogonalizing everything
+except the few largest singular values of each matrix nearly matches Muon while touching only a
+small fraction of the momentum, whereas orthogonalizing only the top falls well short even though
+it holds almost all of it. On language models every momentum singular value is far below one,
+so targeted orthogonalization can only amplify,
+and Muon wins by making directions that are too
+small to train on at their raw scale trainable. Second, shrinking the largest singular values is what
+keeps the parameter spectrum flat; this is cheap,
+and it is not what drives the loss. Third, AdamW
+differs from Muon mainly in how slowly it builds
+structure, which explains its slower start and why
+warmup helps AdamW but only hurts Muon.
+
+The orthogonalization step can be thought of as applying the
+matrix sign function to the gradient matrix, which normalizes all the singular values to one, prompting the question
+of whether Muon’s success comes from amplifying small
+but important directions with small singular values ignored
+by standard gradient descent, or from normalizing large, degenerate directions with large singular values that misdirect
+the training.
+In this paper, we will explore a method to target this orthogonalization to singular values either above or below
+a certain threshold τ , and we will also experiment with
+different values for this threshold, thus allowing us to interpolate between SGD and Muon with a spectrally targeted
+version. Specifically, we will apply these Muon variants
+to the two speedrun tasks originally used to show Muon’s
+performance, the CIFAR-10 dataset with a convolutional
+network, and the NanoGPT large language model, just as in
+Jordan et al. (2024b). In addition to standard performance
+metrics, we will examine other metrics more pertinent to the
+linear-algebraic structure of our weight and update matrices. This allows us to explore what characteristics of matrix
+optimizers lead to richer learning.
+
+2. Related Work
+Recent Muon variants like NorMuon and Aurora mitigate
+neural death in Muon via sophisticated row-wise (neuron)
+normalization (Li et al., 2025; Dewulf et al., 2026). In contrast, our approach normalizes singular values to explicitly
+target the weights’ underlying linear structure.
+
+1
+Department of Computer Science, Stanford University
+Department of Electrical Engineering, Stanford University. Correspondence to: Vishrut Goyal <vishrutg@stanford.edu>, Rohan
+Ramkumar <rohansr@stanford.edu>.
+2
+
+While state-of-the-art orthogonalization uses the adaptive
+Polar Express algorithm (Amsel et al., 2026), we instead
+build on Newton-Schulz iterations using both the speedrun
+polynomial which yields singular values distributed as
+1
+
+
