@@ -1,0 +1,35 @@
+10:00:23 [INFO] Loading config from: /Users/myl/Documents/paper/.claude/skills/config.yaml
+10:00:23 [INFO] max-results=200 top-n=10 days=30
+10:00:23 [INFO] Data sources: ['arxiv', 'openreview']
+10:00:23 [INFO] Configured keywords: 15
+10:00:23 [INFO] Target date: 2026-10-14
+10:00:23 [INFO] Date windows:
+10:00:23 [INFO]   Recent 30 days: 2026-09-14 to 2026-10-14
+10:00:23 [INFO]   Past year (31-365 days): 2025-10-14 to 2026-09-13
+10:00:23 [INFO] ======================================================================
+10:00:23 [INFO] Step 1: Multi-source search (last 30 days) for configured interests
+10:00:23 [INFO] ======================================================================
+10:00:23 [INFO] [Sources] Fetched {'arxiv': 200, 'openreview': 156}
+10:00:23 [INFO] Scored 284 recent papers
+10:00:23 [INFO] ======================================================================
+10:00:23 [INFO] Step 2: Searching hot papers (past year) from Semantic Scholar
+10:00:23 [INFO] ======================================================================
+10:00:23 [WARNING] No hot papers found from Semantic Scholar
+10:00:23 [INFO] ======================================================================
+10:00:23 [INFO] Step 3: Merging and ranking results
+10:00:23 [INFO] ======================================================================
+10:00:23 [INFO] Total unique papers after deduplication: 264
+10:00:23 [INFO] daily history: 343 previously recommended papers
+10:00:24 [INFO] Known-library scan: 92 papers already in library, 247 papers have related prior work
+10:00:24 [INFO] Results saved to: 08-daily/2026-10-14/search_result.json
+10:00:24 [INFO]   1. On the Depth Transfer of Neural Optimizers via L-Smoothness... (Score: 7.93)
+10:00:24 [INFO]   2. Robust Parameter-Efficient LLM Adaptation on Analog Hardware... (Score: 7.4)
+10:00:24 [INFO]   3. High-Probability Guarantees for SGD under $β$-Heavy-Tailed G... (Score: 7.4)
+10:00:24 [INFO]   4. On-Policy or Off-Policy Learning? A Systematic Study of Dist... (Score: 7.4)
+10:00:24 [INFO]   5. ExpertMuon-Compass: Alignment-Guided Step Sizes for Mixture-... (Score: 7.4)
+10:00:24 [INFO]   6. Training and Inference Dynamics of PLDR-LLMs: Row-Map Collap... (Score: 7.4)
+10:00:24 [INFO]   7. Privacy-Aligned Personalized Federated Learning with Compact... (Score: 7.4)
+10:00:24 [INFO]   8. Distilling What Matters: Confidence-Aware Selective Distilla... (Score: 7.4)
+10:00:24 [INFO]   9. EasyPPO: Stabilizing the Critic Is Key... (Score: 7.27)
+10:00:24 [INFO]   10. You May Be Running the Wrong Inception Crop... (Score: 7.2)
+10:00:24 [INFO] （另有 92 篇已在知识库中，未计入推荐）

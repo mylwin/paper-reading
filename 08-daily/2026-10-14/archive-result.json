@@ -1,0 +1,52 @@
+{
+  "papers_dir": "/Users/myl/Documents/paper/01-raw",
+  "month_dir": "/Users/myl/Documents/paper/01-raw/2026-10",
+  "month": "2026-10",
+  "date": "2026-10-14",
+  "requested": 3,
+  "downloaded": 3,
+  "skipped_existing": 0,
+  "failed": 0,
+  "index_updated": [
+    "/Users/myl/Documents/paper/01-raw/index.md",
+    "/Users/myl/Documents/paper/01-raw/2026-10/README.md",
+    "/Users/myl/Documents/paper/02-markdown/index.md",
+    "/Users/myl/Documents/paper/02-markdown/2026-10/README.md",
+    "/Users/myl/Documents/paper/03-notes/index.md",
+    "/Users/myl/Documents/paper/03-notes/2026-10/README.md",
+    "/Users/myl/Documents/paper/06-translation/index.md",
+    "/Users/myl/Documents/paper/06-translation/2026-10/README.md"
+  ],
+  "archived": [
+    {
+      "title": "ExpertMuon-Compass: Alignment-Guided Step Sizes for Mixture-of-Experts Training",
+      "paper_stem": "ExpertMuon_Compass_Alignment_Guided_Step_Sizes_for_Mixture_of_Experts_Training",
+      "month": "2026-10",
+      "source": "arxiv",
+      "pdf_url": "https://arxiv.org/pdf/2610.04140v1",
+      "path": "/Users/myl/Documents/paper/01-raw/2026-10/ExpertMuon_Compass_Alignment_Guided_Step_Sizes_for_Mixture_of_Experts_Training.pdf",
+      "status": "downloaded",
+      "detail": "732.3 KB"
+    },
+    {
+      "title": "On the Depth Transfer of Neural Optimizers via L-Smoothness",
+      "paper_stem": "On_the_Depth_Transfer_of_Neural_Optimizers_via_L_Smoothness",
+      "month": "2026-10",
+      "source": "arxiv",
+      "pdf_url": "https://arxiv.org/pdf/2610.14344v1",
+      "path": "/Users/myl/Documents/paper/01-raw/2026-10/On_the_Depth_Transfer_of_Neural_Optimizers_via_L_Smoothness.pdf",
+      "status": "downloaded",
+      "detail": "497.4 KB"
+    },
+    {
+      "title": "High-Probability Guarantees for SGD under $β$-Heavy-Tailed Gradient Noise",
+      "paper_stem": "High_Probability_Guarantees_for_SGD_under_$β$_Heavy_Tailed_Gradient_Noise",
+      "month": "2026-10",
+      "source": "arxiv",
+      "pdf_url": "https://arxiv.org/pdf/2609.32195v1",
+      "path": "/Users/myl/Documents/paper/01-raw/2026-10/High_Probability_Guarantees_for_SGD_under_$β$_Heavy_Tailed_Gradient_Noise.pdf",
+      "status": "downloaded",
+      "detail": "436.6 KB"
+    }
+  ]
+}

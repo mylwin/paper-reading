@@ -1,0 +1,780 @@
+{
+  "target_date": "2026-10-14",
+  "date_windows": {
+    "recent_30d": {
+      "start": "2026-09-14",
+      "end": "2026-10-14"
+    },
+    "past_year": {
+      "start": "2025-10-14",
+      "end": "2026-09-13"
+    }
+  },
+  "sources_searched": [
+    "arxiv",
+    "openreview"
+  ],
+  "source_counts": {
+    "arxiv": 200,
+    "openreview": 156
+  },
+  "papers_by_source": {
+    "arxiv": 170,
+    "openreview": 94
+  },
+  "known_dirs": {
+    "papers": "/Users/myl/Documents/paper/01-raw",
+    "notes": "/Users/myl/Documents/paper/03-notes",
+    "daily": "/Users/myl/Documents/paper/08-daily"
+  },
+  "total_recent": 356,
+  "total_hot": 0,
+  "total_unique": 264,
+  "total_known": 91,
+  "total_candidates": 173,
+  "top_papers": [
+    {
+      "id": "http://arxiv.org/abs/2610.14344v1",
+      "title": "On the Depth Transfer of Neural Optimizers via L-Smoothness",
+      "summary": "Scaling deep learning models efficiently requires predictable performance transfer across compute regimes. Establishing reliable hyperparameter transfer allows optimal training dynamics and structural choices to be discovered on low-cost proxy models, avoiding catastrophic failures during massive-scale training. Existing depth-transfer analyses are architecture-specific and heuristic: hyperparameter transfer is only justified through toy blocks, and both rely on infinite-depth dynamics, a specific initialization, and feature-learning criteria. Building on $L$-smoothness framework of Xu et al. (2026), we understand hyperparameter transfer as how do the Lipschitz and $L$-smoothness constants of the loss scale with the depth $K$? We show that inverse-depth residual branch scaling $α=Θ(1/K)$ is sufficient to make both constants depth-independent at fixed width, uniformly over the bounded parameter domain and for arbitrary $p\\to q$ geometries. Because the bounds depend on each residual branch only through its Lipschitz and smoothness constants, the argument applies to general residual networks (including branches of block depth $\\geq 2$ such as transformer and ResNet blocks) without assumptions on initialization or correlations between layer weights. Since the smoothness constant controls the curvature penalty in the descent inequality, our bounds motivate a learning-rate scale without an additional depth-dependent curvature correction for updates bounded in the prescribed norm. This provides a geometric explanation of inverse-depth residual scaling and its application to the operator-norm geometries associated with AdamW, Muon, and MOGA. Learning-rate sweeps on GPT-2 (depths 2--128) and CIFAR-100 ResNets (8--32 residual blocks) confirm that Muon and MOGA exhibit stable learning-rate transfer under these prescriptions, with a common optimal rate across a 64-fold increase in depth.",
+      "authors": [
+        "Maximilian Wong",
+        "Chenyu Xu",
+        "Jiajin Li",
+        "Yiping Lu"
+      ],
+      "affiliations": [],
+      "published": "2026-10-09T21:43:21Z",
+      "published_date": "2026-10-09 21:43:21+00:00",
+      "updated": "2026-10-09T21:43:21Z",
+      "categories": [
+        "cs.LG",
+        "math.OC"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.14344v1",
+      "url": "http://arxiv.org/abs/2610.14344v1",
+      "source": "arxiv",
+      "scores": {
+        "relevance": 3.0,
+        "recency": 3.0,
+        "impact": 0.0,
+        "evidence": 1.4,
+        "popularity": 0.0,
+        "quality": 1.4,
+        "recommendation": 7.93
+      },
+      "matched_domain": "大模型优化器设计",
+      "matched_keywords": [
+        "Muon",
+        "AdamW",
+        "cs.LG",
+        "math.OC"
+      ],
+      "is_hot_paper": false,
+      "score_type": "research_priority_screening",
+      "assessment_scope": "metadata_and_abstract",
+      "screening_rank": 25,
+      "paper_stem": "On_the_Depth_Transfer_of_Neural_Optimizers_via_L_Smoothness",
+      "already_known": false,
+      "related_papers": [
+        {
+          "title": "A Closed-Form Formula for Consistent Lipschitz Regression on Metric Spaces with Sparse Neural Network Realizations",
+          "stem": "aclosedformformulaforconsistentlipschitzregressiononmetricspaceswithsparseneuralnetworkrealizations",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-24/search_result.json",
+          "shared_terms": [
+            "neural"
+          ],
+          "shared_count": 1
+        },
+        {
+          "title": "A Theoretical Analysis of Generalization Dynamics in Neural Networks under Gradient Descent with Weight Decay",
+          "stem": "atheoreticalanalysisofgeneralizationdynamicsinneuralnetworksundergradientdescentwithweightdecay",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-24/search_result.json",
+          "shared_terms": [
+            "neural"
+          ],
+          "shared_count": 1
+        },
+        {
+          "title": "Blog: Survey of Optimizers",
+          "stem": "blogsurveyofoptimizers",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-24/search_result.json",
+          "shared_terms": [
+            "optimizers"
+          ],
+          "shared_count": 1
+        }
+      ],
+      "note_filename": "On_the_Depth_Transfer_of_Neural_Optimizers_via_L_Smoothness"
+    },
+    {
+      "id": "pyB4n82RVJ",
+      "source": "openreview",
+      "title": "PowerStep: Memory-Efficient Adaptive Optimization via $\\ell_p$-Norm Steepest Descent",
+      "summary": "Adaptive optimizers such as Adam are standard for training Transformers, but storing gradient first and second moments incurs substantial memory overhead. We introduce PowerStep, a memory-efficient optimizer that achieves coordinate-wise adaptivity without storing second-moment statistics. Motivated by $\\ell_p$-norm steepest descent, PowerStep applies a signed-power transform directly to one momentum buffer. We establish a finite-horizon stationarity bound for exact, unregularized updates, with an $O(1/\\sqrt{T})$ term and a noise-dependent residual. Experiments on Transformers from 124M to 235B parameters show competitive validation quality while halving $\\texttt{fp32}$ optimizer-state memory. Combined with uniform $\\texttt{int8}$ quantization, PowerStep remains numerically stable and reduces optimizer-state memory by $\\sim8\\times$ compared to $\\texttt{fp32}$ AdamW. PowerStep thus provides a simple, memory-efficient alternative for large-scale training.",
+      "authors": [],
+      "affiliations": [],
+      "categories": [],
+      "venue": "ICLR 2027 Conference Submission",
+      "pdf_url": "/pdf/325cd2cd1af6306a7f387a6c5363dabe5a1054b9.pdf",
+      "url": "https://openreview.net/forum?id=pyB4n82RVJ",
+      "published": "2026-09-17T10:12:33.028000",
+      "published_date": "2026-09-17 10:12:33.028000",
+      "scores": {
+        "relevance": 3.0,
+        "recency": 3.0,
+        "impact": 0.0,
+        "evidence": 1.2,
+        "popularity": 0.0,
+        "quality": 1.2,
+        "recommendation": 7.8
+      },
+      "matched_domain": "大模型优化器设计",
+      "matched_keywords": [
+        "memory-efficient optimizer",
+        "adaptive optimization",
+        "PowerStep",
+        "AdamW"
+      ],
+      "is_hot_paper": false,
+      "score_type": "research_priority_screening",
+      "assessment_scope": "metadata_and_abstract",
+      "screening_rank": 35,
+      "paper_stem": "PowerStep_Memory_Efficient_Adaptive_Optimization_via_$_ell_p$_Norm_Steepest_Descent",
+      "already_known": false,
+      "related_papers": [
+        {
+          "title": "PowerStep Memory Efficient Adaptive Optimization via lp Norm Steepest Descent",
+          "stem": "powerstepmemoryefficientadaptiveoptimizationvialpnormsteepestdescent",
+          "source": "pdf",
+          "path": "/Users/myl/Documents/paper/01-raw/2026-09/PowerStep_Memory_Efficient_Adaptive_Optimization_via_lp_Norm_Steepest_Descent.pdf",
+          "shared_terms": [
+            "adaptive",
+            "descent",
+            "norm",
+            "powerstep",
+            "steepest"
+          ],
+          "shared_count": 5
+        },
+        {
+          "title": "ABrA-GD: Adaptive Bregman Accelerated Gradient Descent for Relatively Smooth and (Strongly-)Convex Optimization",
+          "stem": "abragdadaptivebregmanacceleratedgradientdescentforrelativelysmoothandstronglyconvexoptimization",
+          "source": "pdf",
+          "path": "/Users/myl/Documents/paper/01-raw/2026-10/ABrA_GD_Adaptive_Bregman_Accelerated_Gradient_Descent_for_Relatively_Smooth_and_(Strongly_)Convex_Optimization.pdf",
+          "shared_terms": [
+            "adaptive",
+            "descent"
+          ],
+          "shared_count": 2
+        },
+        {
+          "title": "ConMeZO Adaptive Descent Direction Sampling for Gradient Free Finetuning of Large Language Models",
+          "stem": "conmezoadaptivedescentdirectionsamplingforgradientfreefinetuningoflargelanguagemodels",
+          "source": "pdf",
+          "path": "/Users/myl/Documents/paper/01-raw/2026-09/ConMeZO_Adaptive_Descent_Direction_Sampling_for_Gradient_Free_Finetuning_of_Large_Language_Models.pdf",
+          "shared_terms": [
+            "adaptive",
+            "descent"
+          ],
+          "shared_count": 2
+        }
+      ],
+      "note_filename": "PowerStep_Memory_Efficient_Adaptive_Optimization_via_$_ell_p$_Norm_Steepest_Descent"
+    },
+    {
+      "id": "http://arxiv.org/abs/2610.05318v1",
+      "title": "Robust Parameter-Efficient LLM Adaptation on Analog Hardware",
+      "summary": "Analog in-memory computing is a promising platform for on-device execution of large language models because it performs matrix--vector multiplications (MVMs) in memory and in parallel, reducing data movement. However, limited digital-to-analog converter precision, input noise, and finite conductance states can degrade model accuracy, while full-model retraining to address these effects can be costly. We develop an optimizer-agnostic, parameter-efficient adaptation method based on Low-Rank Adaptation (LoRA), keeping the pretrained weights stored on analog arrays fixed while training the LoRA weights to adapt to downstream tasks and hardware non-idealities. Reliable adaptation requires handling errors in both forward and backward MVMs and physical weight updates. We use input reshaping to reduce input-induced MVM errors and update accumulation to retain small updates before programming them to finite-state analog devices. Across Llama-3.2-1B-Instruct and Llama-3-8B with both Muon and AdamW, input reshaping improves analog LoRA fine-tuning under noisy MVM computation. Update accumulation separately preserves sub-threshold updates and substantially improves adaptation under finite-resolution programming, including configurations with as few as 20 conductance states. Additional experiments show consistent held-out negative log-likelihood improvements across noisy analog settings.",
+      "authors": [
+        "Jindan Li",
+        "Zhaoxian Wu",
+        "Tianyi Chen"
+      ],
+      "affiliations": [],
+      "published": "2026-10-04T15:39:20Z",
+      "published_date": "2026-10-04 15:39:20+00:00",
+      "updated": "2026-10-04T15:39:20Z",
+      "categories": [
+        "cs.LG"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.05318v1",
+      "url": "http://arxiv.org/abs/2610.05318v1",
+      "source": "arxiv",
+      "scores": {
+        "relevance": 3.0,
+        "recency": 3.0,
+        "impact": 0.0,
+        "evidence": 0.6,
+        "popularity": 0.0,
+        "quality": 0.6,
+        "recommendation": 7.4
+      },
+      "matched_domain": "大模型优化器设计",
+      "matched_keywords": [
+        "Muon",
+        "AdamW",
+        "cs.LG"
+      ],
+      "is_hot_paper": false,
+      "score_type": "research_priority_screening",
+      "assessment_scope": "metadata_and_abstract",
+      "screening_rank": 54,
+      "paper_stem": "Robust_Parameter_Efficient_LLM_Adaptation_on_Analog_Hardware",
+      "already_known": false,
+      "related_papers": [
+        {
+          "title": "Behavior Quotient Learning for Low-Rank Adaptation of LLM Agents",
+          "stem": "behaviorquotientlearningforlowrankadaptationofllmagents",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-17/search_result.json",
+          "shared_terms": [
+            "adaptation",
+            "llm"
+          ],
+          "shared_count": 2
+        },
+        {
+          "title": "Robust and Efficient Zeroth Order LLM Fine Tuning via Adaptive Bayesian Subspace Optimizer",
+          "stem": "robustandefficientzerothorderllmfinetuningviaadaptivebayesiansubspaceoptimizer",
+          "source": "pdf",
+          "path": "/Users/myl/Documents/paper/01-raw/2026-09/Robust_and_Efficient_Zeroth_Order_LLM_Fine_Tuning_via_Adaptive_Bayesian_Subspace_Optimizer.pdf",
+          "shared_terms": [
+            "llm",
+            "robust"
+          ],
+          "shared_count": 2
+        },
+        {
+          "title": "AdaMeZO: Adam-style Zeroth-Order Optimizer for LLM Fine-tuning Without Maintaining the Moments",
+          "stem": "adamezoadamstylezerothorderoptimizerforllmfinetuningwithoutmaintainingthemoments",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-20/search_result.json",
+          "shared_terms": [
+            "llm"
+          ],
+          "shared_count": 1
+        }
+      ],
+      "note_filename": "Robust_Parameter_Efficient_LLM_Adaptation_on_Analog_Hardware"
+    },
+    {
+      "id": "http://arxiv.org/abs/2609.32195v1",
+      "title": "High-Probability Guarantees for SGD under $β$-Heavy-Tailed Gradient Noise",
+      "summary": "Stochastic gradient descent (SGD) is widely used to train machine learning models, but subsampling the training data introduces noise into its updates. The strength and applicability of high-probability guarantees therefore depend critically on how the tails of gradient noise are modeled. Reports of heavy-tailed gradient noise in deep learning motivate relaxing the bounded-noise and sub-Gaussian assumptions commonly used in high-probability analyses of SGD. We use Young functions from Orlicz space theory to describe noise tails in a common framework. We model SGD gradient noise by adopting a Young function that preserves the finiteness of all polynomial moments while allowing tails heavier than sub-Weibull, including lognormal distributions. The resulting class is called $β$-heavy-tailed, with $β$ controlling the tail heaviness. We establish concentration inequalities for $β$-heavy-tailed noise and combine them with a uniform bound on the difference between empirical and population gradients along the SGD trajectory to obtain high-probability bounds on optimization and population-risk stationarity for smooth nonconvex losses under trajectory assumptions. The bounds are not restricted to a particular learning-rate decay rule and make explicit the effects of noise tails and learning-rate schedules. Under the Polyak-Łojasiewicz condition, we bound the risk at the last iterate. We also analyze SGD with gradient clipping under the $β$-heavy-tailed noise model.",
+      "authors": [
+        "Qijun Tong",
+        "Masahiro Ikeda",
+        "Ryota Kawasumi"
+      ],
+      "affiliations": [],
+      "published": "2026-09-26T03:44:13Z",
+      "published_date": "2026-09-26 03:44:13+00:00",
+      "updated": "2026-09-26T03:44:13Z",
+      "categories": [
+        "stat.ML",
+        "cs.LG"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2609.32195v1",
+      "url": "http://arxiv.org/abs/2609.32195v1",
+      "source": "arxiv",
+      "scores": {
+        "relevance": 3.0,
+        "recency": 3.0,
+        "impact": 0.0,
+        "evidence": 0.6,
+        "popularity": 0.0,
+        "quality": 0.6,
+        "recommendation": 7.4
+      },
+      "matched_domain": "大模型优化器设计",
+      "matched_keywords": [
+        "gradient clipping",
+        "cs.LG",
+        "stat.ML"
+      ],
+      "is_hot_paper": false,
+      "score_type": "research_priority_screening",
+      "assessment_scope": "metadata_and_abstract",
+      "screening_rank": 56,
+      "paper_stem": "High_Probability_Guarantees_for_SGD_under_$β$_Heavy_Tailed_Gradient_Noise",
+      "already_known": false,
+      "related_papers": [
+        {
+          "title": "Decentralized SGD under Heavy-Tailed Noise: Optimal Convergence Rates and the Role of Gradient Clipping",
+          "stem": "decentralizedsgdunderheavytailednoiseoptimalconvergenceratesandtheroleofgradientclipping",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-10-08/search_result.json",
+          "shared_terms": [
+            "gradient",
+            "heavy-tailed",
+            "noise",
+            "sgd",
+            "under"
+          ],
+          "shared_count": 5
+        },
+        {
+          "title": "Clipped or Unclipped? Finite-Sample Trade-offs for Averaged SGD under Heavy-Tailed Noise",
+          "stem": "clippedorunclippedfinitesampletradeoffsforaveragedsgdunderheavytailednoise",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-10-13/search_result.json",
+          "shared_terms": [
+            "heavy-tailed",
+            "noise",
+            "sgd",
+            "under"
+          ],
+          "shared_count": 4
+        },
+        {
+          "title": "Convergence of Stochastic Gradient Methods under Heavy-Tailed Noise and Hölder Smoothness",
+          "stem": "convergenceofstochasticgradientmethodsunderheavytailednoiseandhldersmoothness",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-24/search_result.json",
+          "shared_terms": [
+            "gradient",
+            "heavy-tailed",
+            "noise",
+            "under"
+          ],
+          "shared_count": 4
+        }
+      ],
+      "note_filename": "High_Probability_Guarantees_for_SGD_under_$β$_Heavy_Tailed_Gradient_Noise"
+    },
+    {
+      "id": "http://arxiv.org/abs/2609.35259v1",
+      "title": "On-Policy or Off-Policy Learning? A Systematic Study of Distillation Dynamics",
+      "summary": "On-policy learning has been argued to reduce catastrophic forgetting, produce sparser parameter updates, and improve generalisation. However, existing comparisons between supervised fine-tuning and reinforcement learning vary many factors simultaneously, making the contribution of rollout policy difficult to isolate. We study the effect of rollout policy in a controlled strong-to-weak distillation setting, by independently varying rollout policy, token-level KL direction, and learning rate across the Llama3 and Qwen2.5 model families and reasoning tasks spanning scientific, medical, and arithmetic domains. Our analysis reveals a nuanced picture of distillation dynamics in which rollout policy does not necessarily play a central role. Instead, token-level KL direction more clearly shapes task performance and output coverage, while learning rate governs forgetting and update sparsity. Analysis of KL gradients and experiments along a continuous student-teacher rollout-policy spectrum explain this pattern: forward KL is remarkably robust to rollout policy, with its performance stable and strong despite changes to the rollout policy, whereas reverse KL is substantially more sensitive and favours student-generated rollouts. On-policy data nevertheless improves generalisation to harder variants of the Countdown arithmetic task under both KL directions, although this advantage does not reliably persist after subsequent RLVR. Our broader conclusions remain robust to removing gradient clipping, using sampled KL estimators, and training on tasks requiring longer reasoning chains. Overall, our results challenge the view that on-policy rollouts are inherently preferable and show that their value depends critically on the objective, evaluation setting, and optimisation hyperparameters.",
+      "authors": [
+        "Julianna Piskorz",
+        "Antonin Berthon",
+        "Mihaela van der Schaar"
+      ],
+      "affiliations": [],
+      "published": "2026-09-28T14:20:42Z",
+      "published_date": "2026-09-28 14:20:42+00:00",
+      "updated": "2026-09-28T14:20:42Z",
+      "categories": [
+        "cs.LG"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2609.35259v1",
+      "url": "http://arxiv.org/abs/2609.35259v1",
+      "source": "arxiv",
+      "scores": {
+        "relevance": 2.6,
+        "recency": 3.0,
+        "impact": 0.0,
+        "evidence": 1.7,
+        "popularity": 0.0,
+        "quality": 1.7,
+        "recommendation": 7.4
+      },
+      "matched_domain": "大模型优化器设计",
+      "matched_keywords": [
+        "gradient clipping",
+        "cs.LG"
+      ],
+      "is_hot_paper": false,
+      "score_type": "research_priority_screening",
+      "assessment_scope": "metadata_and_abstract",
+      "screening_rank": 57,
+      "paper_stem": "On_Policy_or_Off_Policy_Learning_A_Systematic_Study_of_Distillation_Dynamics",
+      "already_known": false,
+      "related_papers": [
+        {
+          "title": "A Theoretical Analysis of Generalization Dynamics in Neural Networks under Gradient Descent with Weight Decay",
+          "stem": "atheoreticalanalysisofgeneralizationdynamicsinneuralnetworksundergradientdescentwithweightdecay",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-24/search_result.json",
+          "shared_terms": [
+            "dynamics"
+          ],
+          "shared_count": 1
+        },
+        {
+          "title": "Fine-Tuning on Self-Generated and Reward-Weighted Data: Learning Dynamics, Convergence Rates, and Benefits of Off-Policyness",
+          "stem": "finetuningonselfgeneratedandrewardweighteddatalearningdynamicsconvergenceratesandbenefitsofoffpolicynes",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-30/search_result.json",
+          "shared_terms": [
+            "dynamics"
+          ],
+          "shared_count": 1
+        },
+        {
+          "title": "Fine-Tuning on Self-Generated and Reward-Weighted Data: Learning Dynamics, Convergence Rates, and Benefits of Off-Policyness",
+          "stem": "finetuningonselfgeneratedandrewardweighteddatalearningdynamicsconvergenceratesandbenefitsofoffpolicyness",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-30/search_result.json",
+          "shared_terms": [
+            "dynamics"
+          ],
+          "shared_count": 1
+        }
+      ],
+      "note_filename": "On_Policy_or_Off_Policy_Learning_A_Systematic_Study_of_Distillation_Dynamics"
+    },
+    {
+      "id": "http://arxiv.org/abs/2610.04140v1",
+      "title": "ExpertMuon-Compass: Alignment-Guided Step Sizes for Mixture-of-Experts Training",
+      "summary": "Mixture-of-experts (MoE) language models send each token to a few experts, so each expert is trained on a different part of the data, and this part changes during training. With a shared learning rate, Muon applies updates of roughly the same size to expert matrices of the same shape, even when an expert's update is poorly aligned with its current gradient. We here propose ExpertMuon-Compass (Compass), which multiplies the Muon step of each expert by two factors. A family factor compares the cosine between the expert's orthogonalized update and its gradient with the same cosine for the other experts in its layer. A scalar radius aggregates the alignment between corresponding rows of the update and gradient into one step-length multiplier. Compass keeps the update direction and the momentum buffer of Muon. In pretraining on FineWeb-Edu, Compass with Nesterov momentum on all matrices performs as well as or better than Muon, NorMuon, and other optimizers, with weight decay matched to NorMuon in the longer runs. Adding its factors to NorMuon gives the same or a lower loss than NorMuon. Compass is the most effective when the data seen by each expert varies during training, for example, as when the languages of a multilingual corpus arrive in separate blocks. With Compass, the expert load stays balanced, and the router assigns tokens to experts more decisively. We also prove a perturbation bound for the two factors.",
+      "authors": [
+        "Omatharv Bharat Vaidya",
+        "Ashwin Vinod",
+        "Pedram Akbarian",
+        "Aditya Sai Ellendula",
+        "Connor T. Jerzak",
+        "Nhat Ho"
+      ],
+      "affiliations": [],
+      "published": "2026-10-02T23:27:50Z",
+      "published_date": "2026-10-02 23:27:50+00:00",
+      "updated": "2026-10-02T23:27:50Z",
+      "categories": [
+        "cs.LG",
+        "cs.CL",
+        "math.OC"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.04140v1",
+      "url": "http://arxiv.org/abs/2610.04140v1",
+      "source": "arxiv",
+      "scores": {
+        "relevance": 3.0,
+        "recency": 3.0,
+        "impact": 0.0,
+        "evidence": 0.6,
+        "popularity": 0.0,
+        "quality": 0.6,
+        "recommendation": 7.4
+      },
+      "matched_domain": "大模型优化器设计",
+      "matched_keywords": [
+        "Muon",
+        "cs.LG",
+        "cs.CL",
+        "math.OC"
+      ],
+      "is_hot_paper": false,
+      "score_type": "research_priority_screening",
+      "assessment_scope": "metadata_and_abstract",
+      "screening_rank": 58,
+      "paper_stem": "ExpertMuon_Compass_Alignment_Guided_Step_Sizes_for_Mixture_of_Experts_Training",
+      "already_known": false,
+      "related_papers": [
+        {
+          "title": "The Bias of Nonlinear Two Time scale Stochastic Approximation under Constant Step Sizes",
+          "stem": "thebiasofnonlineartwotimescalestochasticapproximationunderconstantstepsizes",
+          "source": "pdf",
+          "path": "/Users/myl/Documents/paper/01-raw/2026-09/The_Bias_of_Nonlinear_Two_Time_scale_Stochastic_Approximation_under_Constant_Step_Sizes.pdf",
+          "shared_terms": [
+            "sizes",
+            "step"
+          ],
+          "shared_count": 2
+        },
+        {
+          "title": "Anytime Training with Schedule Free Spectral Optimization",
+          "stem": "anytimetrainingwithschedulefreespectraloptimization",
+          "source": "pdf",
+          "path": "/Users/myl/Documents/paper/01-raw/2026-10/Anytime_Training_with_Schedule_Free_Spectral_Optimization.pdf",
+          "shared_terms": [
+            "training"
+          ],
+          "shared_count": 1
+        },
+        {
+          "title": "A Tight Surrogate-Based Adaptive Step Size for the Multiobjective Conditional Gradient Method",
+          "stem": "atightsurrogatebasedadaptivestepsizeforthemultiobjectiveconditionalgradientmethod",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-24/search_result.json",
+          "shared_terms": [
+            "step"
+          ],
+          "shared_count": 1
+        }
+      ],
+      "note_filename": "ExpertMuon_Compass_Alignment_Guided_Step_Sizes_for_Mixture_of_Experts_Training"
+    },
+    {
+      "id": "http://arxiv.org/abs/2609.34130v1",
+      "title": "Training and Inference Dynamics of PLDR-LLMs: Row-Map Collapse, Renormalization, and Predictive Reduction",
+      "summary": "This monograph develops a unified account of training and inference in Power Law Decoder Representation language models (PLDR-LLMs). Exact finite work identities decompose changes in the absolute energy of the row-centered learned map into parameter contributions, signed interactions, and numerical observation defects. Positive affine blocking retains restarts at the row-constant face, while the augmented AdamW state supplies the complete dynamical description.\n  Predictive renormalization acts on the complete conditional training law for a single pass over distinct corpus target blocks, retaining optimizer memory, remaining data, schedule, and numerical policy. Autonomous reductions require closure; approximate reductions carry successor and emission errors. Finite-population covariance, matched physical clocks, matrix fluxes, and signed temporal energy connect row dynamics to model-wide observations. Absolute row collapse, relative row concentration, operator stabilization, and predictive accuracy are distinguished.\n  Experiments reveal observer and optimizer dependence, reject the tested autonomous row-state candidates, and support finite conditional prediction and state-specific operator reduction. Independent single-pass families exhibit moving finite fluctuation regions without establishing a thermodynamic critical class. Conditional symmetry, head limits, covariance flows, and readout error budgets specify assumptions needed to transfer scaling laws to inference. The theory separates exact identities, conditional dynamical claims, and finite empirical findings, with proofs, selected formal checks, and compact numerical evidence.",
+      "authors": [
+        "Burc Gokden"
+      ],
+      "affiliations": [],
+      "published": "2026-09-28T02:08:53Z",
+      "published_date": "2026-09-28 02:08:53+00:00",
+      "updated": "2026-09-28T02:08:53Z",
+      "categories": [
+        "cs.LG",
+        "cs.CL"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2609.34130v1",
+      "url": "http://arxiv.org/abs/2609.34130v1",
+      "source": "arxiv",
+      "scores": {
+        "relevance": 3.0,
+        "recency": 3.0,
+        "impact": 0.0,
+        "evidence": 0.6,
+        "popularity": 0.0,
+        "quality": 0.6,
+        "recommendation": 7.4
+      },
+      "matched_domain": "大模型优化器设计",
+      "matched_keywords": [
+        "AdamW",
+        "cs.LG",
+        "cs.CL"
+      ],
+      "is_hot_paper": false,
+      "score_type": "research_priority_screening",
+      "assessment_scope": "metadata_and_abstract",
+      "screening_rank": 59,
+      "paper_stem": "Training_and_Inference_Dynamics_of_PLDR_LLMs_Row_Map_Collapse_Renormalization_and_Predictive_Reduction",
+      "already_known": false,
+      "related_papers": [
+        {
+          "title": "Optimizer-dependent training dynamics converge to the same one-third optimal data scaling",
+          "stem": "optimizerdependenttrainingdynamicsconvergetothesameonethirdoptimaldatascaling",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-10-11/search_result.json",
+          "shared_terms": [
+            "dynamics",
+            "training"
+          ],
+          "shared_count": 2
+        },
+        {
+          "title": "A Calibrated Instrument for Measuring How Inference Optimizations Affect Output Quality",
+          "stem": "acalibratedinstrumentformeasuringhowinferenceoptimizationsaffectoutputquality",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-10-13/search_result.json",
+          "shared_terms": [
+            "inference"
+          ],
+          "shared_count": 1
+        },
+        {
+          "title": "Anytime Training with Schedule Free Spectral Optimization",
+          "stem": "anytimetrainingwithschedulefreespectraloptimization",
+          "source": "pdf",
+          "path": "/Users/myl/Documents/paper/01-raw/2026-10/Anytime_Training_with_Schedule_Free_Spectral_Optimization.pdf",
+          "shared_terms": [
+            "training"
+          ],
+          "shared_count": 1
+        }
+      ],
+      "note_filename": "Training_and_Inference_Dynamics_of_PLDR_LLMs_Row_Map_Collapse_Renormalization_and_Predictive_Reduction"
+    },
+    {
+      "id": "http://arxiv.org/abs/2609.15950v1",
+      "title": "Privacy-Aligned Personalized Federated Learning with Compact Adaptation and Variable-Length Gaussian Communication",
+      "summary": "Record-level differential privacy exposes a structural misalignment in personalized federated learning when client-specific variation is low-dimensional while training repeatedly releases high-dimensional updates. In this paper, we address this misalignment by releasing a private client context once and confining repeated adaptation to a fixed coefficient space. Beyond dimensionality reduction, the factorized generator induces an adaptive optimization geometry that reshapes noisy updates, and controlled ablations show that most of its private-training gain is retained by radial evolution. To further reduce the communication cost, we realize the Gaussian mechanism for coefficient updates directly through variable-length quantization with finite expected code length, so that the quantization error itself serves as the required privacy perturbation rather than extra distortion. Across MNIST and CIFAR-10, our design matches or outperforms full-model private adaptation across privacy budgets and client heterogeneity, while reducing protected uplink by a factor of 2.67 at \\(\\varepsilon=16\\) on CIFAR-10 with comparable future-client accuracy.",
+      "authors": [
+        "Yilin Xu",
+        "Chun Hei Michael Shiu",
+        "Chih Wei Ling",
+        "Linqi Song"
+      ],
+      "affiliations": [],
+      "published": "2026-09-14T17:48:11Z",
+      "published_date": "2026-09-14 17:48:11+00:00",
+      "updated": "2026-09-14T17:48:11Z",
+      "categories": [
+        "cs.LG"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2609.15950v1",
+      "url": "http://arxiv.org/abs/2609.15950v1",
+      "source": "arxiv",
+      "scores": {
+        "relevance": 2.6,
+        "recency": 3.0,
+        "impact": 0.0,
+        "evidence": 1.7,
+        "popularity": 0.0,
+        "quality": 1.7,
+        "recommendation": 7.4
+      },
+      "matched_domain": "大模型优化器设计",
+      "matched_keywords": [
+        "adaptive optimization",
+        "cs.LG"
+      ],
+      "is_hot_paper": false,
+      "score_type": "research_priority_screening",
+      "assessment_scope": "metadata_and_abstract",
+      "screening_rank": 60,
+      "paper_stem": "Privacy_Aligned_Personalized_Federated_Learning_with_Compact_Adaptation_and_Variable_Length_Gaussian_Communication",
+      "already_known": false,
+      "related_papers": [
+        {
+          "title": "Adaptive Phase Switching for Communication Efficient Federated LoRA Fine Tuning",
+          "stem": "adaptivephaseswitchingforcommunicationefficientfederatedlorafinetuning",
+          "source": "pdf",
+          "path": "/Users/myl/Documents/paper/01-raw/2026-09/Adaptive_Phase_Switching_for_Communication_Efficient_Federated_LoRA_Fine_Tuning.pdf",
+          "shared_terms": [
+            "communication",
+            "federated"
+          ],
+          "shared_count": 2
+        },
+        {
+          "title": "Personalized Federated Reinforcement Learning via Model-Agnostic Meta-Learning: Convergence of Exact and Hessian-Free Meta-Policy Gradients",
+          "stem": "personalizedfederatedreinforcementlearningviamodelagnosticmetalearningconvergenceofexactandhessianfreemet",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-28/search_result.json",
+          "shared_terms": [
+            "federated",
+            "personalized"
+          ],
+          "shared_count": 2
+        },
+        {
+          "title": "Personalized Federated Reinforcement Learning via Model-Agnostic Meta-Learning: Convergence of Exact and Hessian-Free Meta-Policy Gradients",
+          "stem": "personalizedfederatedreinforcementlearningviamodelagnosticmetalearningconvergenceofexactandhessianfreemetapolicygradients",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-28/search_result.json",
+          "shared_terms": [
+            "federated",
+            "personalized"
+          ],
+          "shared_count": 2
+        }
+      ],
+      "note_filename": "Privacy_Aligned_Personalized_Federated_Learning_with_Compact_Adaptation_and_Variable_Length_Gaussian_Communication"
+    },
+    {
+      "id": "http://arxiv.org/abs/2609.36734v1",
+      "title": "Distilling What Matters: Confidence-Aware Selective Distillation for Large Language Models",
+      "summary": "Knowledge Distillation (KD) trains a smaller-capacity student model to imitate a larger-capacity teacher model by matching output distributions, implicitly assuming the teacher to be a reliable oracle. In large language models (LLMs), this assumption often fails: teacher predictions can exhibit high entropy and hallucinations, causing standard KD to degrade well-calibrated student priors. We propose CaRE-KD, a confidence-gated distillation framework that replaces static objectives with uncertainty-adaptive optimization. CaRE-KD has two components: a token-level loss (CaRE-Divergence) that adaptively switches between Forward and Reverse KL divergence based on teacher--student confidence, and a batch-level epistemic rejection mechanism (Revival) that suppresses updates when the teacher is more uncertain than the student. We provide a gradient-level analysis showing how this dual-granularity design induces a conditional calibration mechanism that prior static divergences cannot reproduce. Empirically, across eight teacher--student pairs and eleven benchmarks spanning instruction following, chat alignment, code generation, and mathematical reasoning, CaRE-KD delivers consistent gains over strong baselines (Skewed-KL, $α$--$β$ divergence). Highlights include up to $+3.2$ average ROUGE-L on instruction-following tasks, $+2.1$ pass@1 on MBPP, $+1.7$ accuracy on GSM8k, and $+1.8$ accuracy on CollegeMath over the strongest baseline, with consistent gains in LLM-as-a-judge factuality (up to $+2.5$ per task over Skewed-RKL). Revival further acts as a principled, loss-agnostic plug-in that systematically strengthens existing distillation objectives by filtering epistemically unreliable teacher supervision.",
+      "authors": [
+        "Ayan Sengupta",
+        "Vaibhav Seth",
+        "Tanmoy Chakraborty"
+      ],
+      "affiliations": [],
+      "published": "2026-09-29T05:07:47Z",
+      "published_date": "2026-09-29 05:07:47+00:00",
+      "updated": "2026-09-29T05:07:47Z",
+      "categories": [
+        "cs.CL"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2609.36734v1",
+      "url": "http://arxiv.org/abs/2609.36734v1",
+      "source": "arxiv",
+      "scores": {
+        "relevance": 2.6,
+        "recency": 3.0,
+        "impact": 0.0,
+        "evidence": 1.7,
+        "popularity": 0.0,
+        "quality": 1.7,
+        "recommendation": 7.4
+      },
+      "matched_domain": "大模型优化器设计",
+      "matched_keywords": [
+        "adaptive optimization",
+        "cs.CL"
+      ],
+      "is_hot_paper": false,
+      "score_type": "research_priority_screening",
+      "assessment_scope": "metadata_and_abstract",
+      "screening_rank": 62,
+      "paper_stem": "Distilling_What_Matters_Confidence_Aware_Selective_Distillation_for_Large_Language_Models",
+      "already_known": false,
+      "related_papers": [
+        {
+          "title": "ConMeZO Adaptive Descent Direction Sampling for Gradient Free Finetuning of Large Language Models",
+          "stem": "conmezoadaptivedescentdirectionsamplingforgradientfreefinetuningoflargelanguagemodels",
+          "source": "pdf",
+          "path": "/Users/myl/Documents/paper/01-raw/2026-09/ConMeZO_Adaptive_Descent_Direction_Sampling_for_Gradient_Free_Finetuning_of_Large_Language_Models.pdf",
+          "shared_terms": [
+            "language",
+            "large"
+          ],
+          "shared_count": 2
+        },
+        {
+          "title": "Efficient Fine-Tuning of Large Language Models with Zeroth-Order Model Parallelism",
+          "stem": "efficientfinetuningoflargelanguagemodelswithzerothordermodelparallelism",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-22/search_result.json",
+          "shared_terms": [
+            "language",
+            "large"
+          ],
+          "shared_count": 2
+        },
+        {
+          "title": "FZOO Fast Zeroth Order Optimizer for Fine Tuning Large Language Models towards Adam Scale Speed",
+          "stem": "fzoofastzerothorderoptimizerforfinetuninglargelanguagemodelstowardsadamscalespeed",
+          "source": "pdf",
+          "path": "/Users/myl/Documents/paper/01-raw/2026-09/FZOO_Fast_Zeroth_Order_Optimizer_for_Fine_Tuning_Large_Language_Models_towards_Adam_Scale_Speed.pdf",
+          "shared_terms": [
+            "language",
+            "large"
+          ],
+          "shared_count": 2
+        }
+      ],
+      "note_filename": "Distilling_What_Matters_Confidence_Aware_Selective_Distillation_for_Large_Language_Models"
+    },
+    {
+      "id": "http://arxiv.org/abs/2609.36802v1",
+      "title": "EasyPPO: Stabilizing the Critic Is Key",
+      "summary": "A key strength of Proximal Policy Optimization (PPO) is its learned critic, which uses historical trajectories collected during reinforcement learning to estimate expected returns and reduce policy-gradient variance. However, we find that the critic is also a major source of instability in reinforcement learning for large language models (LLMs). We identify two critic failure modes that destabilize PPO. First, filtering truncated rollouts from both actor and critic shifts the policy objective to reward conditioned on completion, allowing truncation to increase even as conditional reward improves. Second, heterogeneous return noise can cause high-variance prompts to dominate critic updates in finite batches. We introduce EasyPPO to address these failures. Actor-only overlong filtering trains the critic on returns from both completed and truncated rollouts. Noise-normalized critic regression weights each prompt's critic loss by the inverse standard deviation of its sampled returns, balancing noise contributions across prompts. Moderately smaller critic mini-batches confine outlier influence to fewer rollouts during gradient clipping. Across continuous-reward coding on FrontierCS, binary-reward mathematical reasoning on AIME24, and multi-turn search on Search-R1, EasyPPO remains stable throughout the full training horizon and consistently outperforms vanilla PPO, VAPO, and HL-Gauss PPO. Its best validation scores show relative gains of 14.89%, 2.28%, and 9.47% over PPO, respectively.",
+      "authors": [
+        "Xuanyi Zhou",
+        "Qiuyang Mang",
+        "Huanzhi Mao",
+        "Dacheng Li",
+        "Wenhao Chai",
+        "Mayank Mishra",
+        "Yichuan Wang",
+        "Karthik Narasimhan",
+        "Alvin Cheung",
+        "Joseph E. Gonzalez"
+      ],
+      "affiliations": [],
+      "published": "2026-09-29T06:15:00Z",
+      "published_date": "2026-09-29 06:15:00+00:00",
+      "updated": "2026-09-29T06:15:00Z",
+      "categories": [
+        "cs.LG"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2609.36802v1",
+      "url": "http://arxiv.org/abs/2609.36802v1",
+      "source": "arxiv",
+      "scores": {
+        "relevance": 2.6,
+        "recency": 3.0,
+        "impact": 0.0,
+        "evidence": 1.5,
+        "popularity": 0.0,
+        "quality": 1.5,
+        "recommendation": 7.27
+      },
+      "matched_domain": "大模型优化器设计",
+      "matched_keywords": [
+        "gradient clipping",
+        "cs.LG"
+      ],
+      "is_hot_paper": false,
+      "score_type": "research_priority_screening",
+      "assessment_scope": "metadata_and_abstract",
+      "screening_rank": 64,
+      "paper_stem": "EasyPPO_Stabilizing_the_Critic_Is_Key",
+      "already_known": false,
+      "note_filename": "EasyPPO_Stabilizing_the_Critic_Is_Key"
+    }
+  ],
+  "snapshot_scope": "candidate_top_ten_and_counts; full source records retained separately"
+}

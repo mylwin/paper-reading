@@ -1,0 +1,51 @@
+High-Probability Guarantees for SGD under β-Heavy-Tailed
+Gradient Noise
+Qijun Tong1
+
+arXiv:2609.32195v1 [stat.ML] 26 Sep 2026
+
+1
+
+Masahiro Ikeda2
+
+Ryota Kawasumi3
+
+The University of Electro-Communications
+2
+The University of Osaka
+3
+Gunma University
+
+Abstract
+Stochastic gradient descent (SGD) is widely used to train machine learning models, but subsampling the
+training data introduces noise into its updates. The strength and applicability of high-probability guarantees therefore depend critically on how the tails of gradient noise are modeled. Reports of heavy-tailed
+gradient noise in deep learning motivate relaxing the bounded-noise and sub-Gaussian assumptions commonly used in high-probability analyses of SGD. We use Young functions from Orlicz space theory to describe noise tails in a common framework. We model SGD gradient noise by adopting a Young function
+that preserves the finiteness of all polynomial moments while allowing tails heavier than sub-Weibull,
+including lognormal distributions. The resulting class is called β-heavy-tailed, with β controlling the
+tail heaviness. We establish concentration inequalities for β-heavy-tailed noise and combine them with a
+uniform bound on the difference between empirical and population gradients along the SGD trajectory to
+obtain high-probability bounds on optimization and population-risk stationarity for smooth nonconvex
+losses under trajectory assumptions. The bounds are not restricted to a particular learning-rate decay rule
+and make explicit the effects of noise tails and learning-rate schedules. Under the Polyak–Łojasiewicz
+condition, we bound the risk at the last iterate. We also analyze SGD with gradient clipping under the
+β-heavy-tailed noise model.
+
+1
+
+Introduction
+
+Stochastic gradient descent (SGD) is a principal optimization algorithm used to train modern machine learning models (Bottou et al., 2018), and characterizing its generalization behavior is a central problem in learning theory. SGD reduces computational cost by computing a gradient from a subset of the training data at
+each step. This introduces a random difference between that gradient and the full-batch gradient over the
+entire training set, referred to as gradient noise. Quantifying how this noise affects convergence and learning
+through successive iterations requires control of its magnitude and the probability of large deviations. Existing analyses therefore impose assumptions such as bounded variance, with boundedness or sub-Gaussian
+tail conditions often used to obtain high-probability guarantees. However, heavy-tailed gradient noise that
+is poorly described by a Gaussian approximation has been reported in deep learning (Simsekli et al., 2019;
+Zhang et al., 2020; Şimşekli, 2025). For quantities distinct from gradient noise itself, near-lognormal distributions have also been reported for the magnitudes of gradients backpropagated through networks (Chmiel
+et al., 2021), and asymptotic lognormality has been established for gradient norms in randomly initialized
+fully connected ReLU networks (Hanin and Nica, 2020). These findings motivate analyzing SGD under
+weaker tail conditions.
+Existing analyses of heavy tails take two approaches. One assumes only a bounded p-th moment for
+some p ∈ (1, 2], allowing infinite variance when p < 2. In this setting, gradient clipping limits the magnitude
+1
+
+

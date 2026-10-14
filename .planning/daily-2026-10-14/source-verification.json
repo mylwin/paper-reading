@@ -1,0 +1,111 @@
+[
+  {
+    "title": "ExpertMuon-Compass: Alignment-Guided Step Sizes for Mixture-of-Experts Training",
+    "url": "https://arxiv.org/abs/2610.04140v1",
+    "status": 200,
+    "metadata": {
+      "citation_title": [
+        "ExpertMuon-Compass: Alignment-Guided Step Sizes for Mixture-of-Experts Training"
+      ],
+      "citation_author": [
+        "Vaidya, Omatharv Bharat",
+        "Vinod, Ashwin",
+        "Akbarian, Pedram",
+        "Ellendula, Aditya Sai",
+        "Jerzak, Connor T.",
+        "Ho, Nhat"
+      ],
+      "citation_date": [
+        "2026/10/02"
+      ],
+      "citation_online_date": [
+        "2026/10/02"
+      ],
+      "citation_pdf_url": [
+        "https://arxiv.org/pdf/2610.04140"
+      ],
+      "citation_arxiv_id": [
+        "2610.04140"
+      ],
+      "citation_abstract": [
+        "Mixture-of-experts (MoE) language models send each token to a few experts, so each expert is trained on a different part of the data, and this part changes during training. With a shared learning rate, Muon applies updates of roughly the same size to expert matrices of the same shape, even when an expert's update is poorly aligned with its current gradient. We here propose ExpertMuon-Compass (Compass), which multiplies the Muon step of each expert by two factors. A family factor compares the cosine between the expert's orthogonalized update and its gradient with the same cosine for the other experts in its layer. A scalar radius aggregates the alignment between corresponding rows of the update and gradient into one step-length multiplier. Compass keeps the update direction and the momentum buffer of Muon. In pretraining on FineWeb-Edu, Compass with Nesterov momentum on all matrices performs as well as or better than Muon, NorMuon, and other optimizers, with weight decay matched to NorMuon in the longer runs. Adding its factors to NorMuon gives the same or a lower loss than NorMuon. Compass is the most effective when the data seen by each expert varies during training, for example, as when the languages of a multilingual corpus arrive in separate blocks. With Compass, the expert load stays balanced, and the router assigns tokens to experts more decisively. We also prove a perturbation bound for the two factors."
+      ]
+    },
+    "license_urls": [
+      "http://creativecommons.org/licenses/by/4.0/"
+    ],
+    "abstract": "Mixture-of-experts (MoE) language models send each token to a few experts, so each expert is trained on a different part of the data, and this part changes during training. With a shared learning rate, Muon applies updates of roughly the same size to expert matrices of the same shape, even when an expert's update is poorly aligned with its current gradient. We here propose ExpertMuon-Compass (Compass), which multiplies the Muon step of each expert by two factors. A family factor compares the cosine between the expert's orthogonalized update and its gradient with the same cosine for the other experts in its layer. A scalar radius aggregates the alignment between corresponding rows of the update and gradient into one step-length multiplier. Compass keeps the update direction and the momentum buffer of Muon. In pretraining on FineWeb-Edu, Compass with Nesterov momentum on all matrices performs as well as or better than Muon, NorMuon, and other optimizers, with weight decay matched to NorMuon in the longer runs. Adding its factors to NorMuon gives the same or a lower loss than NorMuon. Compass is the most effective when the data seen by each expert varies during training, for example, as when the languages of a multilingual corpus arrive in separate blocks. With Compass, the expert load stays balanced, and the router assigns tokens to experts more decisively. We also prove a perturbation bound for the two factors.",
+    "source_summary": "Mixture-of-experts (MoE) language models send each token to a few experts, so each expert is trained on a different part of the data, and this part changes during training. With a shared learning rate, Muon applies updates of roughly the same size to expert matrices of the same shape, even when an expert's update is poorly aligned with its current gradient. We here propose ExpertMuon-Compass (Compass), which multiplies the Muon step of each expert by two factors. A family factor compares the cosine between the expert's orthogonalized update and its gradient with the same cosine for the other experts in its layer. A scalar radius aggregates the alignment between corresponding rows of the update and gradient into one step-length multiplier. Compass keeps the update direction and the momentum buffer of Muon. In pretraining on FineWeb-Edu, Compass with Nesterov momentum on all matrices performs as well as or better than Muon, NorMuon, and other optimizers, with weight decay matched to NorMuon in the longer runs. Adding its factors to NorMuon gives the same or a lower loss than NorMuon. Compass is the most effective when the data seen by each expert varies during training, for example, as when the languages of a multilingual corpus arrive in separate blocks. With Compass, the expert load stays balanced, and the router assigns tokens to experts more decisively. We also prove a perturbation bound for the two factors."
+  },
+  {
+    "title": "On the Depth Transfer of Neural Optimizers via L-Smoothness",
+    "url": "https://arxiv.org/abs/2610.14344v1",
+    "status": 200,
+    "metadata": {
+      "citation_title": [
+        "On the Depth Transfer of Neural Optimizers via L-Smoothness"
+      ],
+      "citation_author": [
+        "Wong, Maximilian",
+        "Xu, Chenyu",
+        "Li, Jiajin",
+        "Lu, Yiping"
+      ],
+      "citation_date": [
+        "2026/10/09"
+      ],
+      "citation_online_date": [
+        "2026/10/09"
+      ],
+      "citation_pdf_url": [
+        "https://arxiv.org/pdf/2610.14344"
+      ],
+      "citation_arxiv_id": [
+        "2610.14344"
+      ],
+      "citation_abstract": [
+        "Scaling deep learning models efficiently requires predictable performance transfer across compute regimes. Establishing reliable hyperparameter transfer allows optimal training dynamics and structural choices to be discovered on low-cost proxy models, avoiding catastrophic failures during massive-scale training. Existing depth-transfer analyses are architecture-specific and heuristic: hyperparameter transfer is only justified through toy blocks, and both rely on infinite-depth dynamics, a specific initialization, and feature-learning criteria. Building on $L$-smoothness framework of Xu et al. (2026), we understand hyperparameter transfer as how do the Lipschitz and $L$-smoothness constants of the loss scale with the depth $K$? We show that inverse-depth residual branch scaling $\\alpha=\\Theta(1/K)$ is sufficient to make both constants depth-independent at fixed width, uniformly over the bounded parameter domain and for arbitrary $p\\to q$ geometries. Because the bounds depend on each residual branch only through its Lipschitz and smoothness constants, the argument applies to general residual networks (including branches of block depth $\\geq 2$ such as transformer and ResNet blocks) without assumptions on initialization or correlations between layer weights. Since the smoothness constant controls the curvature penalty in the descent inequality, our bounds motivate a learning-rate scale without an additional depth-dependent curvature correction for updates bounded in the prescribed norm. This provides a geometric explanation of inverse-depth residual scaling and its application to the operator-norm geometries associated with AdamW, Muon, and MOGA. Learning-rate sweeps on GPT-2 (depths 2--128) and CIFAR-100 ResNets (8--32 residual blocks) confirm that Muon and MOGA exhibit stable learning-rate transfer under these prescriptions, with a common optimal rate across a 64-fold increase in depth."
+      ]
+    },
+    "license_urls": [
+      "http://creativecommons.org/licenses/by/4.0/"
+    ],
+    "abstract": "Scaling deep learning models efficiently requires predictable performance transfer across compute regimes. Establishing reliable hyperparameter transfer allows optimal training dynamics and structural choices to be discovered on low-cost proxy models, avoiding catastrophic failures during massive-scale training. Existing depth-transfer analyses are architecture-specific and heuristic: hyperparameter transfer is only justified through toy blocks, and both rely on infinite-depth dynamics, a specific initialization, and feature-learning criteria. Building on $L$-smoothness framework of Xu et al. (2026), we understand hyperparameter transfer as how do the Lipschitz and $L$-smoothness constants of the loss scale with the depth $K$? We show that inverse-depth residual branch scaling $\\alpha=\\Theta(1/K)$ is sufficient to make both constants depth-independent at fixed width, uniformly over the bounded parameter domain and for arbitrary $p\\to q$ geometries. Because the bounds depend on each residual branch only through its Lipschitz and smoothness constants, the argument applies to general residual networks (including branches of block depth $\\geq 2$ such as transformer and ResNet blocks) without assumptions on initialization or correlations between layer weights. Since the smoothness constant controls the curvature penalty in the descent inequality, our bounds motivate a learning-rate scale without an additional depth-dependent curvature correction for updates bounded in the prescribed norm. This provides a geometric explanation of inverse-depth residual scaling and its application to the operator-norm geometries associated with AdamW, Muon, and MOGA. Learning-rate sweeps on GPT-2 (depths 2--128) and CIFAR-100 ResNets (8--32 residual blocks) confirm that Muon and MOGA exhibit stable learning-rate transfer under these prescriptions, with a common optimal rate across a 64-fold increase in depth.",
+    "source_summary": "Scaling deep learning models efficiently requires predictable performance transfer across compute regimes. Establishing reliable hyperparameter transfer allows optimal training dynamics and structural choices to be discovered on low-cost proxy models, avoiding catastrophic failures during massive-scale training. Existing depth-transfer analyses are architecture-specific and heuristic: hyperparameter transfer is only justified through toy blocks, and both rely on infinite-depth dynamics, a specific initialization, and feature-learning criteria. Building on $L$-smoothness framework of Xu et al. (2026), we understand hyperparameter transfer as how do the Lipschitz and $L$-smoothness constants of the loss scale with the depth $K$? We show that inverse-depth residual branch scaling $α=Θ(1/K)$ is sufficient to make both constants depth-independent at fixed width, uniformly over the bounded parameter domain and for arbitrary $p\\to q$ geometries. Because the bounds depend on each residual branch only through its Lipschitz and smoothness constants, the argument applies to general residual networks (including branches of block depth $\\geq 2$ such as transformer and ResNet blocks) without assumptions on initialization or correlations between layer weights. Since the smoothness constant controls the curvature penalty in the descent inequality, our bounds motivate a learning-rate scale without an additional depth-dependent curvature correction for updates bounded in the prescribed norm. This provides a geometric explanation of inverse-depth residual scaling and its application to the operator-norm geometries associated with AdamW, Muon, and MOGA. Learning-rate sweeps on GPT-2 (depths 2--128) and CIFAR-100 ResNets (8--32 residual blocks) confirm that Muon and MOGA exhibit stable learning-rate transfer under these prescriptions, with a common optimal rate across a 64-fold increase in depth."
+  },
+  {
+    "title": "High-Probability Guarantees for SGD under $β$-Heavy-Tailed Gradient Noise",
+    "url": "https://arxiv.org/abs/2609.32195v1",
+    "status": 200,
+    "metadata": {
+      "citation_title": [
+        "High-Probability Guarantees for SGD under $\\beta$-Heavy-Tailed Gradient Noise"
+      ],
+      "citation_author": [
+        "Tong, Qijun",
+        "Ikeda, Masahiro",
+        "Kawasumi, Ryota"
+      ],
+      "citation_date": [
+        "2026/09/26"
+      ],
+      "citation_online_date": [
+        "2026/09/26"
+      ],
+      "citation_pdf_url": [
+        "https://arxiv.org/pdf/2609.32195"
+      ],
+      "citation_arxiv_id": [
+        "2609.32195"
+      ],
+      "citation_abstract": [
+        "Stochastic gradient descent (SGD) is widely used to train machine learning models, but subsampling the training data introduces noise into its updates. The strength and applicability of high-probability guarantees therefore depend critically on how the tails of gradient noise are modeled. Reports of heavy-tailed gradient noise in deep learning motivate relaxing the bounded-noise and sub-Gaussian assumptions commonly used in high-probability analyses of SGD. We use Young functions from Orlicz space theory to describe noise tails in a common framework. We model SGD gradient noise by adopting a Young function that preserves the finiteness of all polynomial moments while allowing tails heavier than sub-Weibull, including lognormal distributions. The resulting class is called $\\beta$-heavy-tailed, with $\\beta$ controlling the tail heaviness. We establish concentration inequalities for $\\beta$-heavy-tailed noise and combine them with a uniform bound on the difference between empirical and population gradients along the SGD trajectory to obtain high-probability bounds on optimization and population-risk stationarity for smooth nonconvex losses under trajectory assumptions. The bounds are not restricted to a particular learning-rate decay rule and make explicit the effects of noise tails and learning-rate schedules. Under the Polyak-{\\L}ojasiewicz condition, we bound the risk at the last iterate. We also analyze SGD with gradient clipping under the $\\beta$-heavy-tailed noise model."
+      ]
+    },
+    "license_urls": [
+      "http://creativecommons.org/licenses/by/4.0/"
+    ],
+    "abstract": "Stochastic gradient descent (SGD) is widely used to train machine learning models, but subsampling the training data introduces noise into its updates. The strength and applicability of high-probability guarantees therefore depend critically on how the tails of gradient noise are modeled. Reports of heavy-tailed gradient noise in deep learning motivate relaxing the bounded-noise and sub-Gaussian assumptions commonly used in high-probability analyses of SGD. We use Young functions from Orlicz space theory to describe noise tails in a common framework. We model SGD gradient noise by adopting a Young function that preserves the finiteness of all polynomial moments while allowing tails heavier than sub-Weibull, including lognormal distributions. The resulting class is called $\\beta$-heavy-tailed, with $\\beta$ controlling the tail heaviness. We establish concentration inequalities for $\\beta$-heavy-tailed noise and combine them with a uniform bound on the difference between empirical and population gradients along the SGD trajectory to obtain high-probability bounds on optimization and population-risk stationarity for smooth nonconvex losses under trajectory assumptions. The bounds are not restricted to a particular learning-rate decay rule and make explicit the effects of noise tails and learning-rate schedules. Under the Polyak-Łojasiewicz condition, we bound the risk at the last iterate. We also analyze SGD with gradient clipping under the $\\beta$-heavy-tailed noise model.",
+    "source_summary": "Stochastic gradient descent (SGD) is widely used to train machine learning models, but subsampling the training data introduces noise into its updates. The strength and applicability of high-probability guarantees therefore depend critically on how the tails of gradient noise are modeled. Reports of heavy-tailed gradient noise in deep learning motivate relaxing the bounded-noise and sub-Gaussian assumptions commonly used in high-probability analyses of SGD. We use Young functions from Orlicz space theory to describe noise tails in a common framework. We model SGD gradient noise by adopting a Young function that preserves the finiteness of all polynomial moments while allowing tails heavier than sub-Weibull, including lognormal distributions. The resulting class is called $β$-heavy-tailed, with $β$ controlling the tail heaviness. We establish concentration inequalities for $β$-heavy-tailed noise and combine them with a uniform bound on the difference between empirical and population gradients along the SGD trajectory to obtain high-probability bounds on optimization and population-risk stationarity for smooth nonconvex losses under trajectory assumptions. The bounds are not restricted to a particular learning-rate decay rule and make explicit the effects of noise tails and learning-rate schedules. Under the Polyak-Łojasiewicz condition, we bound the risk at the last iterate. We also analyze SGD with gradient clipping under the $β$-heavy-tailed noise model."
+  }
+]

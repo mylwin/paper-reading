@@ -1,0 +1,55 @@
+O N THE D EPTH T RANSFER OF N EURAL O PTIMIZERS VIA
+L-S MOOTHNESS
+A P REPRINT
+
+arXiv:2610.14344v1 [cs.LG] 9 Oct 2026
+
+Maximilian Wong
+University of Chicago
+maxwong7@uchicago.edu
+
+Chenyu Xu
+Peking University
+2400010840@stu.pku.edu.cn
+
+Jiajin Li
+Sauder School of Business
+University of British Columbia
+jiajin.li@sauder.ubc.ca
+
+Yiping Lu
+Beijing International Center for Mathematical Research
+Peking University
+yipinglu@bicmr.pku.edu.cn
+
+A BSTRACT
+Scaling deep learning models efficiently requires predictable performance transfer across compute
+regimes. Establishing reliable hyperparameter transfer allows optimal training dynamics and structural choices to be discovered on low-cost proxy models, avoiding catastrophic failures during
+massive-scale training. Existing depth-transfer analyses are architecture-specific and heuristic: hyperparameter transfer is only justified through toy blocks, and both rely on infinite-depth dynamics,
+a specific initialization, and feature-learning criteria. Building on L-smoothness framework of Xu
+et al. (2026), we understand hyperparameter transfer as how do the Lipschitz and L-smoothness
+constants of the loss scale with the depth K? We show that inverse-depth residual branch scaling
+α = Θ(1/K) is sufficient to make both constants depth-independent at fixed width, uniformly over
+the bounded parameter domain and for arbitrary p → q geometries. Because the bounds depend
+on each residual branch only through its Lipschitz and smoothness constants, the argument applies to general residual networks—including branches of block depth ≥ 2 such as transformer and
+ResNet blocks—without assumptions on initialization or correlations between layer weights. Since
+the smoothness constant controls the curvature penalty in the descent inequality, our bounds motivate a learning-rate scale without an additional depth-dependent curvature correction for updates
+bounded in the prescribed norm. This provides a geometric explanation of inverse-depth residual
+scaling and its application to the operator-norm geometries associated with AdamW, Muon, and
+MOGA. Learning-rate sweeps on GPT-2 (depths 2–128) and CIFAR-100 ResNets (8–32 residual
+blocks) confirm that Muon and MOGA exhibit stable learning-rate transfer under these prescriptions, with a common optimal rate across a 64-fold increase in depth.
+
+1
+
+Introduction
+
+Hyperparameter choices play a central role in the stability, efficiency, and performance of neural network training.
+Finding suitable values often requires many training runs, making hyperparameter tuning increasingly expensive as
+models grow (Yang et al., 2022, 2023a,b; Dey et al., 2025; Xu et al., 2026; Mlodozeniec et al., 2026; Jiang et al., 2026;
+Ma et al., 2026; Shigida et al., 2026). Moreover, settings that work well for a small model may become ineffective at
+a larger scale, limiting the value of inexpensive preliminary experiments. Understanding how hyperparameters should
+change with model size is therefore essential for translating insights from small experiments into reliable and efficient
+training of large models. In practice, many state-of-the-art optimizers show optimal learning rate drifts as depth scales
+up (Figure 1). In this paper, we aim to answer :
+
+

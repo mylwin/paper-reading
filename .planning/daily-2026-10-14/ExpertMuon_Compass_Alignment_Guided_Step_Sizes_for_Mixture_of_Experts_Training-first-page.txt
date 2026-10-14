@@ -1,0 +1,54 @@
+ExpertMuon-Compass: Alignment-Guided
+Step Sizes for Mixture-of-Experts Training
+Omatharv Bharat Vaidya, Ashwin Vinod* , Pedram Akbarian* ,
+Aditya Sai Ellendula* , Connor T. Jerzak, Nhat Ho
+University of Texas at Austin
+
+arXiv:2610.04140v1 [cs.LG] 2 Oct 2026
+
+*
+
+Equal contribution
+
+Abstract
+Mixture-of-experts (MoE) language models send each token to a few experts, so each expert is trained
+on a different part of the data, and this part changes during training. With a shared learning rate, Muon
+applies updates of roughly the same size to expert matrices of the same shape, even when an expert’s update
+is poorly aligned with its current gradient. We here propose ExpertMuon-Compass (Compass), which
+multiplies the Muon step of each expert by two factors. A family factor compares the cosine between
+the expert’s orthogonalized update and its gradient with the same cosine for the other experts in its layer.
+A scalar radius aggregates the alignment between corresponding rows of the update and gradient into
+one step-length multiplier. Compass keeps the update direction and the momentum buffer of Muon. In
+pretraining on FineWeb-Edu, Compass with Nesterov momentum on all matrices performs as well as or
+better than Muon, NorMuon, and other optimizers, with weight decay matched to NorMuon in the longer
+runs. Adding its factors to NorMuon gives the same or a lower loss than NorMuon. Compass is the most
+effective when the data seen by each expert varies during training, for example, as when the languages of a
+multilingual corpus arrive in separate blocks. With Compass, the expert load stays balanced, and the router
+assigns tokens to experts more decisively. We also prove a perturbation bound for the two factors.
+
+1
+
+Introduction
+
+Mixture-of-experts (MoE) language models increase capacity by activating a small subset of expert
+networks for each token (Shazeer et al., 2017; Fedus et al., 2022). The router also decides what an expert
+learns from, since the expert receives gradients only from the tokens assigned to it, and these assignments
+shift during training. Muon (Jordan et al., 2024) is now used to train large MoE models (Liu et al., 2025).
+It orthogonalizes the momentum of a weight matrix before the update, so the update has a nearly fixed
+norm. With a shared learning rate, the expert matrices then move by about the same amount at each step,
+even when an update agrees only weakly with the current gradient. Weak alignment can occur when the
+tokens routed to an expert change while its momentum still reflects earlier tokens.
+Current MoE training handles the experts through the router and the learning rate. Load balancing adjusts
+the router with an auxiliary loss or with bias updates (Fedus et al., 2022; Wang et al., 2024). The learning
+rate is usually shared across all experts (Muennighoff et al., 2025; Liu et al., 2025), and Excitation scales
+an expert’s update by how often it is used (Shaier, 2026). In these approaches, the step size of an expert
+is independent of how well its update agrees with its current gradient. We propose ExpertMuon-Compass
+(Compass), which sets the step of each expert based on this agreement, measured on the orthogonalized
+update that Muon applies. Compass computes the cosine between the update and the gradient of an expert
+matrix and compares it with the cosines of the other experts in the layer. An expert with a below-average
+cosine takes a smaller step than an expert with an above-average cosine, and the factors average to one
+over the experts. A second factor, the scalar radius, aggregates the alignment between corresponding rows
+of the update and gradient into a multiplier that can shorten the step while preserving its direction. Both
+1
+
+
