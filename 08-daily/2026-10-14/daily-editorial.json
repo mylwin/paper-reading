@@ -1,0 +1,193 @@
+{
+  "overview": {
+    "trend": "本次264篇唯一论文中92篇命中已有资产或历史推荐，172篇未命中。前三优先读专家对齐步长、跨深度学习率迁移及β重尾裁剪理论，分别服务于尺度分配、调参迁移与噪声假设审计。这是候选池的摘要初评，不构成全领域趋势统计；前三首次提交为10月2日、10月9日和9月26日。",
+    "hotspots": [
+      {
+        "title": "更新尺度的两个层次",
+        "text": "Compass在同层专家间按对齐调整尺度，深度迁移分析在网络深度间控制曲率尺度。值得设计固定方向/固定预算的分离实验，核验收益来自何处。"
+      },
+      {
+        "title": "裁剪前先审计噪声类",
+        "text": "β重尾允许比次Weibull更重的尾，但所有多项式矩仍有限；与已有有限p阶矩分析应先比较假设，再比较置信度和裁剪偏差。"
+      },
+      {
+        "title": "检索覆盖边界",
+        "text": "arXiv相关性前200条；OpenReview15关键词各首100条、13个查询截断；Semantic Scholar两次429。不能据此推断今日没有新论文；PowerStep标题别名已人工去重。"
+      }
+    ]
+  },
+  "domain_summaries": {
+    "大模型优化器设计": {
+      "summary": "前三以直接可检验的专家步长干预为主，辅以深度迁移与裁剪噪声模型；没有从弱相关候选中强行补出状态内存新方法。元数据命中含弱相关及Muon粒子物理误命中，篇数不等于直接相关工作数量。",
+      "subfields": {
+        "符号与范数几何优化": "Compass保持Muon方向及动量、改变专家步长；深度迁移覆盖Muon/MOGA相关算子范数几何。优先区分方向、尺度与参数化三个因素。",
+        "免调参与梯度裁剪": "逆深度残差缩放提供减少跨深度学习率搜索的条件化依据；β重尾SGD提供裁剪假设与高概率界的核验入口，均不自动等同免调参LLM训练。",
+        "自适应与状态内存": "PowerStep已在库，不重复推荐。模拟LoRA更新累积和PLDR完整AdamW状态带来数值/动力学线索，但本次前十未给出新的通用状态压缩主张。",
+        "大模型训练与优化器设计": "MoE非平稳专家数据是直接目标；蒸馏及EasyPPO提供目标、学习率和裁剪的控制实验借鉴，需与参数更新规则设计区分。",
+        "未细分": "数据增强、蒸馏监督、联邦通信等宽泛命中保留为检索记录；不凭关键词强行解释为LLM优化器贡献。"
+      }
+    }
+  },
+  "top_papers": {
+    "ExpertMuon-Compass: Alignment-Guided Step Sizes for Mixture-of-Experts Training": {
+      "title_zh": "ExpertMuon-Compass：面向混合专家训练的对齐引导步长",
+      "summary": "保持Muon方向和动量不变，以专家间余弦对齐和逐行对齐调节专家步长，直接检验非平稳专家数据下的尺度分配。",
+      "abstract_zh": "混合专家（MoE）语言模型将每个 token 发送给少数几个专家，因此每个专家都在不同的数据子集上训练，而且这个子集在训练期间会变化。在使用共享学习率时，Muon 对形状相同的专家矩阵施加大小大致相同的更新，即使某个专家的更新与其当前梯度的对齐程度很差也是如此。我们在此提出 ExpertMuon-Compass（Compass），它将每个专家的 Muon 步乘以两个因子。一个族因子将该专家的正交化更新与其梯度之间的余弦，同一层其他专家的相应余弦作比较。一个标量半径将更新与梯度对应行之间的对齐聚合为一个步长乘子。Compass 保留 Muon 的更新方向和动量缓冲区。在 FineWeb-Edu 上进行预训练时，对所有矩阵采用 Nesterov 动量的 Compass，其表现与 Muon、NorMuon 及其他优化器相当或更好；在较长的训练中，其权重衰减与 NorMuon 匹配。将其因子添加到 NorMuon 后，损失与 NorMuon 相同或更低。当每个专家所见的数据在训练期间变化时，Compass 最为有效，例如多语言语料中的各语言按不同数据块依次到达的情况。使用 Compass 时，专家负载保持均衡，路由器对专家的 token 分配也更加明确。我们还证明了这两个因子的一个扰动界。",
+      "contributions": [
+        "作者针对共享学习率无法区分专家当前更新对齐程度的问题，提出专家族相对余弦因子和逐行对齐聚合半径。",
+        "在保留Muon方向及动量缓冲区的前提下调节步长，并给出双因子扰动界与数据分布变化场景实验。"
+      ],
+      "method": "对每个专家计算正交化更新与当前梯度的余弦，并相对同层专家归一；再将对应行的对齐聚合成标量半径，两个乘子共同缩放Muon步长。以FineWeb-Edu预训练和语言分块到达场景检验。",
+      "result": "摘要报告采用全矩阵Nesterov动量时表现不劣于Muon、NorMuon及其他优化器，较长训练匹配NorMuon权重衰减；可叠加NorMuon，在专家所见数据变化时收益最明显，并报告负载均衡和路由确定性改善。未给出损失差值、参数规模、开销或多种子统计。",
+      "selection_reason": "直接命中大模型优化器设计，提供“方向不动、只改专家步长”的可拆分干预。可与已有谱定向Muon、调度自由谱优化对照，区分谱方向收益与尺度分配收益；优先读双因子的定义及其消融，再决定是否迁移到稀疏更新或裁剪设计。",
+      "evidence_limit": "仅按arXiv v1题目与摘要作低置信度初评，待全文核验。需核查余弦为负或接近零时的处理、因子的尺度范围、路由和负载均衡损失是否匹配、所有矩阵Nesterov的基线公平性，以及额外计算与通信成本。扰动界不自动构成训练收敛保证，摘要未证明免调参或所有MoE设置均获益。",
+      "reading_decision": "精读"
+    },
+    "On the Depth Transfer of Neural Optimizers via L-Smoothness": {
+      "title_zh": "通过L光滑性分析神经网络优化器的深度迁移",
+      "summary": "用固定宽度下残差支路的逆深度缩放控制损失光滑常数，为Muon/MOGA学习率跨深度迁移提供条件化解释。",
+      "abstract_zh": "高效扩展深度学习模型需要性能能够在不同计算资源条件下可预测地迁移。建立可靠的超参数迁移，可以在低成本代理模型上发现最优训练动力学和结构选择，从而避免大规模训练中的灾难性失败。现有深度迁移分析依赖特定架构且具有启发式性质：超参数迁移仅通过玩具模块得到论证，并且两者都依赖无限深度动力学、特定初始化和特征学习准则。基于 Xu 等人（2026）的 $L$ 光滑性框架，我们将超参数迁移理解为：损失的 Lipschitz 常数和 $L$ 光滑常数如何随深度 $K$ 缩放？我们证明，在固定宽度下，残差支路采用逆深度缩放 $α=Θ(1/K)$ 足以使这两个常数与深度无关，而且这一结论在有界参数域上一致成立，并适用于任意 $p\\to q$ 几何。由于这些界只通过各残差支路的 Lipschitz 常数和光滑常数依赖于该支路，因此该论证适用于一般残差网络（包括模块深度 $\\geq 2$ 的支路，例如 Transformer 和 ResNet 模块），无需对初始化或层间权重相关性作出假设。由于光滑常数控制下降不等式中的曲率惩罚，我们的界为规定范数下有界的更新提供了一种学习率尺度依据，无需额外的、依赖深度的曲率修正。这为逆深度残差缩放及其在与 AdamW、Muon 和 MOGA 相关的算子范数几何中的应用提供了几何解释。在 GPT-2（深度 2--128）和 CIFAR-100 ResNet（8--32 个残差模块）上的学习率扫描证实，在这些规定下，Muon 和 MOGA 展现出稳定的学习率迁移，在深度增加 64 倍时具有共同的最优学习率。",
+      "contributions": [
+        "作者在固定宽度、有界参数域下用残差支路的Lipschitz与光滑常数证明逆深度缩放可消除相应界的深度依赖，覆盖任意p到q几何。",
+        "将该界与有界范数更新的下降不等式联系，解释Muon、MOGA及AdamW相关几何中的学习率尺度，并提供跨深度扫描。"
+      ],
+      "method": "逐支路控制残差网络的Lipschitz/光滑常数，用α=Θ(1/K)抑制深度累积；结合指定范数的更新界讨论学习率曲率项，再在GPT-2和CIFAR-100 ResNet上扫描学习率。",
+      "result": "摘要报告GPT-2深度2--128、ResNet为8--32个残差块，Muon/MOGA在规定缩放下有稳定学习率迁移，64倍深度变化下共同最优学习率。理论限定固定宽度、有界参数域和指定范数有界更新；不等于无条件保证最优学习率一致。",
+      "selection_reason": "为当前免调参兴趣提供减少跨规模重复搜索的直接理论依据，也能审查“优化器几何改善”与“残差参数化改变”各自作用。与专家步长论文互补：前者处理深度尺度，后者处理同层专家异质性。",
+      "evidence_limit": "基于原始摘要的低置信度初评，待全文核验。需核对参数域界与宽度的常数、真实Transformer中的归一化/注意力是否满足假设、更新范数界是否可执行，以及最优学习率的扫描粒度、随机种子与训练预算。下降上界不直接证明统计性能迁移；未报告跨宽度或大规模LLM的普遍免调参结论。",
+      "reading_decision": "精读"
+    },
+    "High-Probability Guarantees for SGD under $β$-Heavy-Tailed Gradient Noise": {
+      "title_zh": "β重尾梯度噪声下SGD的高概率保证",
+      "summary": "在保留全部多项式矩有限的β重尾模型中统一描述学习率与裁剪的高概率界，适合作为裁剪假设审计材料。",
+      "abstract_zh": "随机梯度下降（SGD）广泛用于训练机器学习模型，但对训练数据进行子采样会给其更新引入噪声。因此，高概率保证的强度和适用性关键取决于如何建模梯度噪声的尾部。深度学习中有关重尾梯度噪声的报告，促使我们放宽SGD高概率分析中常用的有界噪声和次高斯假设。我们使用 Orlicz 空间理论中的 Young 函数，在共同框架下描述噪声尾部。我们采用一个 Young 函数来建模SGD梯度噪声，该函数在保留所有多项式矩有限性的同时，允许比次 Weibull 更重的尾部，包括对数正态分布。所得类别称为 $β$ 重尾，其中 $β$ 控制尾部的厚重程度。我们建立了 $β$ 重尾噪声的集中不等式，并将其与沿SGD轨迹的经验梯度和总体梯度之差的一致界结合，在轨迹假设下，为光滑非凸损失给出关于优化驻点性与总体风险驻点性的高概率界。这些界不局限于特定的学习率衰减规则，并明确体现噪声尾部和学习率调度的影响。在 Polyak–Łojasiewicz 条件下，我们对最后一次迭代的风险给出界。我们还在 $β$ 重尾噪声模型下分析了带梯度裁剪的SGD。",
+      "contributions": [
+        "作者用Young函数定义保留所有多项式矩有限、但可重于次Weibull的β重尾类，并推导集中不等式。",
+        "结合沿SGD轨迹的经验/总体梯度一致偏差，给出光滑非凸驻点界、PL条件最后迭代风险界及裁剪SGD分析。"
+      ],
+      "method": "先建立Orlicz/Young函数下的噪声尾部集中工具，再与SGD轨迹上的泛化梯度偏差结合，显式保留学习率序列影响；另分析PL和梯度裁剪设置。",
+      "result": "摘要声称获得优化及总体风险驻点性的高概率界，并覆盖多种学习率衰减、PL最后迭代和裁剪SGD。摘要未列具体收敛阶、常数、裁剪阈值规则或LLM训练实验；不能认定优于有限p阶矩结果。",
+      "selection_reason": "与昨日有限p阶矩下“裁剪或不裁剪”的工作形成明确假设对照，可帮助选择裁剪阈值与学习率分析所需的噪声模型。理论仅作为优化器设计依据；优先查噪声类、轨迹假设和裁剪定理，阅读成本低于通读所有证明。",
+      "evidence_limit": "仅按摘要初步判断，待全文核验。β重尾仍要求全部多项式矩有限，不覆盖一般无限方差噪声。需核对条件尾界是否沿轨迹成立、轨迹有界假设是否循环、样本/维度/置信度依赖、与次Weibull或有限p阶矩界的可比性，以及裁剪阈值是否依赖未知噪声参数。没有LLM证据，不把理论类的放宽写成大模型优化收益。",
+      "reading_decision": "选读"
+    },
+    "Robust Parameter-Efficient LLM Adaptation on Analog Hardware": {
+      "summary": "面向模拟存内计算的LoRA，通过输入重整与更新累积应对MVM误差和有限电导状态；Llama 1B/8B覆盖Muon与AdamW，但属于特定硬件适配，选读更新量化失效模式，摘要未给端到端成本。",
+      "reading_decision": "选读"
+    },
+    "On-Policy or Off-Policy Learning? A Systematic Study of Distillation Dynamics": {
+      "summary": "在受控强到弱蒸馏中拆分rollout策略、KL方向与学习率，后两者分别影响任务表现和遗忘/稀疏性；选读公平优化器对照的实验控制方法，非新优化器。",
+      "reading_decision": "选读"
+    },
+    "EasyPPO: Stabilizing the Critic Is Key": {
+      "summary": "EasyPPO将critic失稳归因于截断筛选和异方差回报，采用actor-only筛选、噪声归一回归及较小critic批量；选读裁剪离群影响，任务级提升不自动归因于优化器更新。",
+      "reading_decision": "选读"
+    },
+    "Distilling What Matters: Confidence-Aware Selective Distillation for Large Language Models": {
+      "summary": "CaRE-KD以置信度切换KL方向并拒绝不可靠教师批次，属于损失/监督选择机制；已有多任务摘要证据，当前优化器设计只列跟踪。",
+      "reading_decision": "跟踪"
+    },
+    "Privacy-Aligned Personalized Federated Learning with Compact Adaptation and Variable-Length Gaussian Communication": {
+      "summary": "通过一次私有上下文释放、固定系数空间适配及变长量化高斯机制减少通信；仅MNIST/CIFAR-10，不能直接支撑LLM优化器状态设计，跟踪径向几何消融。",
+      "reading_decision": "跟踪"
+    },
+    "Training and Inference Dynamics of PLDR-LLMs: Row-Map Collapse, Renormalization, and Predictive Reduction": {
+      "summary": "PLDR专论区分行映射坍缩、优化器状态、观测误差和条件预测，摘要未给通用优化器改进或可比损失数字；阅读成本高，跟踪精确恒等式与负面闭包结果。",
+      "reading_decision": "跟踪"
+    },
+    "You May Be Running the Wrong Inception Crop": {
+      "summary": "Inception crop比较框架采样差异与训练预算，522个ViT-S/16实验可供复现控制参考；AdamW/Scion仅用于稳健性验证，对当前LLM优化器设计弱相关，跟踪。",
+      "reading_decision": "跟踪"
+    }
+  },
+  "semantic_reranking": [
+    {
+      "title": "ExpertMuon-Compass: Alignment-Guided Step Sizes for Mixture-of-Experts Training",
+      "screening_rank": 6,
+      "candidate_screening_rank": 5,
+      "semantic_rank": 1,
+      "reason": "直接命中大模型优化器设计，提供“方向不动、只改专家步长”的可拆分干预。可与已有谱定向Muon、调度自由谱优化对照，区分谱方向收益与尺度分配收益；优先读双因子的定义及其消融，再决定是否迁移到稀疏更新或裁剪设计。",
+      "assessment_scope": "metadata_and_abstract"
+    },
+    {
+      "title": "On the Depth Transfer of Neural Optimizers via L-Smoothness",
+      "screening_rank": 1,
+      "candidate_screening_rank": 1,
+      "semantic_rank": 2,
+      "reason": "为当前免调参兴趣提供减少跨规模重复搜索的直接理论依据，也能审查“优化器几何改善”与“残差参数化改变”各自作用。与专家步长论文互补：前者处理深度尺度，后者处理同层专家异质性。",
+      "assessment_scope": "metadata_and_abstract"
+    },
+    {
+      "title": "High-Probability Guarantees for SGD under $β$-Heavy-Tailed Gradient Noise",
+      "screening_rank": 4,
+      "candidate_screening_rank": 3,
+      "semantic_rank": 3,
+      "reason": "与昨日有限p阶矩下“裁剪或不裁剪”的工作形成明确假设对照，可帮助选择裁剪阈值与学习率分析所需的噪声模型。理论仅作为优化器设计依据；优先查噪声类、轨迹假设和裁剪定理，阅读成本低于通读所有证明。",
+      "assessment_scope": "metadata_and_abstract"
+    },
+    {
+      "title": "Robust Parameter-Efficient LLM Adaptation on Analog Hardware",
+      "screening_rank": 3,
+      "candidate_screening_rank": 2,
+      "semantic_rank": 4,
+      "reason": "面向模拟存内计算的LoRA，通过输入重整与更新累积应对MVM误差和有限电导状态；Llama 1B/8B覆盖Muon与AdamW，但属于特定硬件适配，选读更新量化失效模式，摘要未给端到端成本。",
+      "assessment_scope": "metadata_and_abstract"
+    },
+    {
+      "title": "On-Policy or Off-Policy Learning? A Systematic Study of Distillation Dynamics",
+      "screening_rank": 5,
+      "candidate_screening_rank": 4,
+      "semantic_rank": 5,
+      "reason": "在受控强到弱蒸馏中拆分rollout策略、KL方向与学习率，后两者分别影响任务表现和遗忘/稀疏性；选读公平优化器对照的实验控制方法，非新优化器。",
+      "assessment_scope": "metadata_and_abstract"
+    },
+    {
+      "title": "EasyPPO: Stabilizing the Critic Is Key",
+      "screening_rank": 10,
+      "candidate_screening_rank": 9,
+      "semantic_rank": 6,
+      "reason": "EasyPPO将critic失稳归因于截断筛选和异方差回报，采用actor-only筛选、噪声归一回归及较小critic批量；选读裁剪离群影响，任务级提升不自动归因于优化器更新。",
+      "assessment_scope": "metadata_and_abstract"
+    },
+    {
+      "title": "Distilling What Matters: Confidence-Aware Selective Distillation for Large Language Models",
+      "screening_rank": 9,
+      "candidate_screening_rank": 8,
+      "semantic_rank": 7,
+      "reason": "CaRE-KD以置信度切换KL方向并拒绝不可靠教师批次，属于损失/监督选择机制；已有多任务摘要证据，当前优化器设计只列跟踪。",
+      "assessment_scope": "metadata_and_abstract"
+    },
+    {
+      "title": "Privacy-Aligned Personalized Federated Learning with Compact Adaptation and Variable-Length Gaussian Communication",
+      "screening_rank": 8,
+      "candidate_screening_rank": 7,
+      "semantic_rank": 8,
+      "reason": "通过一次私有上下文释放、固定系数空间适配及变长量化高斯机制减少通信；仅MNIST/CIFAR-10，不能直接支撑LLM优化器状态设计，跟踪径向几何消融。",
+      "assessment_scope": "metadata_and_abstract"
+    },
+    {
+      "title": "Training and Inference Dynamics of PLDR-LLMs: Row-Map Collapse, Renormalization, and Predictive Reduction",
+      "screening_rank": 7,
+      "candidate_screening_rank": 6,
+      "semantic_rank": 9,
+      "reason": "PLDR专论区分行映射坍缩、优化器状态、观测误差和条件预测，摘要未给通用优化器改进或可比损失数字；阅读成本高，跟踪精确恒等式与负面闭包结果。",
+      "assessment_scope": "metadata_and_abstract"
+    },
+    {
+      "title": "You May Be Running the Wrong Inception Crop",
+      "screening_rank": 11,
+      "candidate_screening_rank": 10,
+      "semantic_rank": 10,
+      "reason": "Inception crop比较框架采样差异与训练预算，522个ViT-S/16实验可供复现控制参考；AdamW/Scion仅用于稳健性验证，对当前LLM优化器设计弱相关，跟踪。",
+      "assessment_scope": "metadata_and_abstract"
+    }
+  ],
+  "abstract_translation_audit": {
+    "scope": "前三原始摘要按信息顺序完整翻译，逐项核对方法、比较对象、数字、限定条件及负面边界。",
+    "checked": [
+      "Compass：两个因子/余弦/逐行聚合、保留方向和动量、FineWeb-Edu、全矩阵Nesterov、长训练权重衰减匹配、可叠加NorMuon、语言分块、负载与router、扰动界",
+      "Depth：Xu 2026、固定宽度/有界参数域、alpha Theta(1/K)、任意p到q、模块深度至少2、无需初始化和权重相关假设、有界更新、GPT-2 2--128/ResNet 8--32、64倍深度、Muon与MOGA",
+      "β重尾：全部多项式矩有限、重于次Weibull/含对数正态、Young/Orlicz、经验总体梯度沿轨迹一致界、非凸光滑/轨迹假设、多学习率、PL最后迭代、裁剪分析"
+    ]
+  }
+}

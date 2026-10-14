@@ -1,0 +1,117 @@
+{
+  "date": "2026-10-14",
+  "note_file": "今日检索.md",
+  "generated_at": "2026-10-14T10:03:43",
+  "skill": "paper-daily",
+  "sources_searched": [
+    "arxiv",
+    "openreview"
+  ],
+  "source_counts": {
+    "arxiv": 200,
+    "openreview": 156
+  },
+  "date_windows": {
+    "recent_30d": {
+      "start": "2026-09-14",
+      "end": "2026-10-14"
+    },
+    "past_year": {
+      "start": "2025-10-14",
+      "end": "2026-09-13"
+    }
+  },
+  "total_unique": 264,
+  "top_papers": [
+    {
+      "title": "ExpertMuon-Compass: Alignment-Guided Step Sizes for Mixture-of-Experts Training",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2610.04140v1",
+      "note_filename": "ExpertMuon_Compass_Alignment_Guided_Step_Sizes_for_Mixture_of_Experts_Training",
+      "matched_domain": "大模型优化器设计",
+      "score": 7.4
+    },
+    {
+      "title": "On the Depth Transfer of Neural Optimizers via L-Smoothness",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2610.14344v1",
+      "note_filename": "On_the_Depth_Transfer_of_Neural_Optimizers_via_L_Smoothness",
+      "matched_domain": "大模型优化器设计",
+      "score": 7.93
+    },
+    {
+      "title": "High-Probability Guarantees for SGD under $β$-Heavy-Tailed Gradient Noise",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2609.32195v1",
+      "note_filename": "High_Probability_Guarantees_for_SGD_under_$β$_Heavy_Tailed_Gradient_Noise",
+      "matched_domain": "大模型优化器设计",
+      "score": 7.4
+    },
+    {
+      "title": "Robust Parameter-Efficient LLM Adaptation on Analog Hardware",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2610.05318v1",
+      "note_filename": "Robust_Parameter_Efficient_LLM_Adaptation_on_Analog_Hardware",
+      "matched_domain": "大模型优化器设计",
+      "score": 7.4
+    },
+    {
+      "title": "On-Policy or Off-Policy Learning? A Systematic Study of Distillation Dynamics",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2609.35259v1",
+      "note_filename": "On_Policy_or_Off_Policy_Learning_A_Systematic_Study_of_Distillation_Dynamics",
+      "matched_domain": "大模型优化器设计",
+      "score": 7.4
+    },
+    {
+      "title": "EasyPPO: Stabilizing the Critic Is Key",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2609.36802v1",
+      "note_filename": "EasyPPO_Stabilizing_the_Critic_Is_Key",
+      "matched_domain": "大模型优化器设计",
+      "score": 7.27
+    },
+    {
+      "title": "Distilling What Matters: Confidence-Aware Selective Distillation for Large Language Models",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2609.36734v1",
+      "note_filename": "Distilling_What_Matters_Confidence_Aware_Selective_Distillation_for_Large_Language_Models",
+      "matched_domain": "大模型优化器设计",
+      "score": 7.4
+    },
+    {
+      "title": "Privacy-Aligned Personalized Federated Learning with Compact Adaptation and Variable-Length Gaussian Communication",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2609.15950v1",
+      "note_filename": "Privacy_Aligned_Personalized_Federated_Learning_with_Compact_Adaptation_and_Variable_Length_Gaussian_Communication",
+      "matched_domain": "大模型优化器设计",
+      "score": 7.4
+    },
+    {
+      "title": "Training and Inference Dynamics of PLDR-LLMs: Row-Map Collapse, Renormalization, and Predictive Reduction",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2609.34130v1",
+      "note_filename": "Training_and_Inference_Dynamics_of_PLDR_LLMs_Row_Map_Collapse_Renormalization_and_Predictive_Reduction",
+      "matched_domain": "大模型优化器设计",
+      "score": 7.4
+    },
+    {
+      "title": "You May Be Running the Wrong Inception Crop",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2610.04147v1",
+      "note_filename": "You_May_Be_Running_the_Wrong_Inception_Crop",
+      "matched_domain": "大模型优化器设计",
+      "score": 7.2
+    }
+  ]
+}

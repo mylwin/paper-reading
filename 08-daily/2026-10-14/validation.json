@@ -1,0 +1,55 @@
+{
+  "date": "2026-10-14",
+  "status": "passed",
+  "unique_candidates": 264,
+  "known": 92,
+  "recommended": 10,
+  "pdf_downloaded": 3,
+  "pdf_failed": 0,
+  "daily_link_errors": 0,
+  "publication_link_errors": 0,
+  "pdf_checks": [
+    {
+      "title": "ExpertMuon-Compass: Alignment-Guided Step Sizes for Mixture-of-Experts Training",
+      "pages": 37,
+      "bytes": 749882,
+      "first_page_title_checked": true
+    },
+    {
+      "title": "On the Depth Transfer of Neural Optimizers via L-Smoothness",
+      "pages": 23,
+      "bytes": 509362,
+      "first_page_title_checked": true
+    },
+    {
+      "title": "High-Probability Guarantees for SGD under $β$-Heavy-Tailed Gradient Noise",
+      "pages": 37,
+      "bytes": 447089,
+      "first_page_title_checked": true
+    }
+  ],
+  "checks": [
+    "PowerStep标题别名通过已有PDF核验后去重；原第11候选补齐",
+    "前十逐篇语义复排，原分数/摘要/作者/日期与两套预筛序位保留",
+    "前三完整摘要翻译逐项核对，原文及CC BY 4.0许可核验",
+    "附录264篇各一次、连续编号，章节顺序正确",
+    "日报所有本地链接为真实且已跟踪或本次新增资产",
+    "三PDF魔数、pdfinfo、首页标题通过，无半截文件",
+    "工作区和提交快照的四阶段索引均包含三篇及正确状态",
+    "既有技能修改保持原样，往日未提交PDF排除在提交索引之外"
+  ],
+  "workspace_check": {
+    "preexisting_link_errors": 9,
+    "new_link_errors": 0,
+    "missing_readme": 0,
+    "month_consistency_errors": 0,
+    "detail": "9处旧链接位于10月8日/10月10日研究文档，指向工作区外graduate-thesis-code资料；全局复查确认无新增问题"
+  },
+  "source_limitations": [
+    "arXiv按全部15个配置关键词和分类检索近期窗口，取相关性前200条；非穷尽检索。",
+    "OpenReview按15关键词各取首页100条，13个查询达到上限；日期按API元数据判断，未继续翻页。",
+    "Semantic Scholar过去一年补充请求两次429，引用/高影响力数据未取得；没有补编。",
+    "近期窗口2026-09-14至2026-10-14；今日指检索及入库日，不表示全部论文今日首发。",
+    "PowerStep的LaTeX ell_p标题与已有lp文件名未被自动去重；已核验2026-09原始PDF，补充别名后离线重放原始记录。"
+  ]
+}
