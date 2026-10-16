@@ -1,0 +1,545 @@
+{
+  "Does U-W Ratio Alignment Benefit Muon in LLM Pretraining?": {
+    "title": "Does U-W Ratio Alignment Benefit Muon in LLM Pretraining?",
+    "source": "openreview",
+    "arxiv_id": "",
+    "venue": "Mathematical Foundations and Operational Integration of ML for Uncertainty-Aware Decision-Making Poster",
+    "url": "https://openreview.net/forum?id=HSypqovmmM",
+    "pdf_url": "https://openreview.net/pdf/09c1bd788a860a95fa349ac088d27296463488d8.pdf",
+    "published": "2026-10-05T05:16:09.744000",
+    "authors": [
+      "{'username': '~Xuhe_Zhang1', 'fullname': 'Xuhe Zhang', 'institutions': [{'name': 'University of Pennsylvania', 'domain': 'sas.upenn.edu', 'country': 'US'}]}",
+      "{'username': '~X.Y._Han1', 'fullname': 'X.Y. Han', 'institutions': [{'name': 'University of Chicago', 'domain': 'uchicago.edu', 'country': 'US'}]}"
+    ],
+    "paper_stem": "Does_U_W_Ratio_Alignment_Benefit_Muon_in_LLM_Pretraining",
+    "matched_domain": "大模型优化器设计",
+    "matched_keywords": [
+      "optimizer",
+      "Muon",
+      "optimizer design"
+    ],
+    "already_known": true,
+    "kb_source": "daily",
+    "related_papers": [
+      {
+        "title": "Does U-W Ratio Alignment Benefit Muon in LLM Pretraining?",
+        "stem": "doesuwratioalignmentbenefitmuoninllmpretraining",
+        "source": "daily",
+        "path": "/Users/myl/Documents/paper/08-daily/2026-10-08/search_result.json",
+        "shared_terms": [
+          "alignment",
+          "benefit",
+          "does",
+          "llm",
+          "muon",
+          "pretraining",
+          "ratio",
+          "u-w"
+        ],
+        "shared_count": 8
+      },
+      {
+        "title": "MeqMuon: Matrix-Equilibrating Muon for LLM Pretraining",
+        "stem": "meqmuonmatrixequilibratingmuonforllmpretraining",
+        "source": "pdf",
+        "path": "/Users/myl/Documents/paper/01-raw/2026-10/MeqMuon_Matrix_Equilibrating_Muon_for_LLM_Pretraining.pdf",
+        "shared_terms": [
+          "llm",
+          "muon",
+          "pretraining"
+        ],
+        "shared_count": 3
+      },
+      {
+        "title": "A Zeroth Order Paradigm for LLM Preference Alignment",
+        "stem": "azerothorderparadigmforllmpreferencealignment",
+        "source": "pdf",
+        "path": "/Users/myl/Documents/paper/01-raw/2026-10/A_Zeroth_Order_Paradigm_for_LLM_Preference_Alignment.pdf",
+        "shared_terms": [
+          "alignment",
+          "llm"
+        ],
+        "shared_count": 2
+      }
+    ],
+    "score": 8.27,
+    "summary": "Most of the top-performing entries in the modded-nanogpt optimization benchmark---a leading competitive benchmark for efficient optimizer design in LLM pretraining---now use a \"u/w floor\" rather than decoupled weight decay. The u/w floor imposes a common lower bound on the ratio of the Frobenius norm of a parameter block's update matrix to that of its weight matrix (u-w ratio). The realized u-w ratios concentrate at this bound for most training steps, inducing u-w ratio alignment across blocks. To determine whether this alignment contributes to the u/w floor's empirical advantage, we study MuonL and typed MuonL (t-MuonL), which isolate the alignment effect by rescaling Muon updates while preserving their directions. MuonL assigns a common ratio across all Muon-updated blocks, whereas t-MuonL aligns ratios only among blocks sharing the same Transformer role. For both variants and original Muon, we derive a measurable diagnostic based on the one-step loss decrease and establish covariance-based sufficient conditions under which alignment is beneficial. When the aligned matrix blocks share the same shape, the condition favors alignment when blocks with larger weight norms tend to exhibit greater first-order descent along Muon directions and lower adjusted directional curvatures, provided these gains outweigh the rescaling-factor variance. For alignment across differently shaped blocks, the criterion additionally accounts for matrix dimensions. Diagnostics along a Muon trajectory from the benchmark favor both MuonL and t-MuonL, consistent with independently trained runs in which both achieve lower validation loss than Muon. These results support u-w ratio alignment as a mechanism behind the u/w floor's empirical advantage and a useful intervention for Muon-based LLM pretraining.",
+    "matched_subdomain": "符号与范数几何优化",
+    "score_type": "research_priority_screening",
+    "assessment_scope": "metadata_and_abstract"
+  },
+  "Training-Loss Guarantees for Muon with Finite-Step Newton--Schulz Orthogonalization": {
+    "id": "http://arxiv.org/abs/2610.03306v1",
+    "title": "Training-Loss Guarantees for Muon with Finite-Step Newton--Schulz Orthogonalization",
+    "summary": "Existing convergence analyses of Muon either assume exact orthogonalization or analyze classical Newton--Schulz polynomials, and guarantee only stationarity, so it is unresolved what Muon's five tuned Newton--Schulz steps preserve and whether that suffices to reach a prescribed neural-network training loss. We establish a finite-time training guarantee that accounts for both momentum accumulation before orthogonalization and the tuned finite-step update. For full-batch training of a sufficiently wide two-layer ReLU network with fixed random output weights and a positive-definite limiting neural tangent kernel, we prove that Muon reaches any target empirical squared loss $\\varepsilon>0$ with high probability over initialization. For every momentum parameter $μ\\in[0,1)$, a target-dependent constant learning rate proportional to $(1-μ)\\sqrt{\\varepsilon}$ yields a hitting-time bound of $O((1-μ)^{-1}\\varepsilon^{-1/2})$, with other problem parameters fixed. The sufficient width is independent of both target accuracy and momentum. The analysis shows that the tuned Newton--Schulz map preserves alignment with the momentum buffer while bounding the update's spectral norm. Control of gradient variation near initialization transfers this alignment to the current gradient, ensuring descent until the target is reached without requiring exact orthogonalization. Numerical experiments support these mechanisms at widths below the sufficient theoretical threshold: gradient-update alignment remains above the analytical reference, and all 30 runs across six widths and five student initializations on a fixed teacher-student dataset reach the target loss while maintaining kernel positivity.",
+    "authors": [
+      "Amartya Roy",
+      "Souvik Chakraborty"
+    ],
+    "affiliations": [],
+    "published": "2026-10-02T13:45:57Z",
+    "published_date": "2026-10-02 13:45:57+00:00",
+    "updated": "2026-10-02T13:45:57Z",
+    "categories": [
+      "cs.LG",
+      "cs.AI",
+      "math.OC"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2610.03306v1",
+    "url": "http://arxiv.org/abs/2610.03306v1",
+    "source": "arxiv",
+    "scores": {
+      "relevance": 3.0,
+      "recency": 3.0,
+      "impact": 0.0,
+      "evidence": 1.4,
+      "popularity": 0.0,
+      "quality": 1.4,
+      "recommendation": 7.93
+    },
+    "matched_domain": "大模型优化器设计",
+    "matched_keywords": [
+      "Muon",
+      "cs.LG",
+      "math.OC"
+    ],
+    "is_hot_paper": false,
+    "score_type": "research_priority_screening",
+    "assessment_scope": "metadata_and_abstract",
+    "screening_rank": 24,
+    "paper_stem": "Training_Loss_Guarantees_for_Muon_with_Finite_Step_Newton_Schulz_Orthogonalization",
+    "already_known": false,
+    "related_papers": [
+      {
+        "title": "Muon_with_Finite_Newton_Schulz_The_Smoothing_Benefit_in_Nonsmooth_Nonconvex_Optimization",
+        "path": "/Users/myl/Documents/paper/01-raw/2026-09/Muon_with_Finite_Newton_Schulz_The_Smoothing_Benefit_in_Nonsmooth_Nonconvex_Optimization.pdf",
+        "shared_terms": [
+          "Muon with Finite Newton-Schulz"
+        ]
+      },
+      {
+        "title": "Cost_free_Spectral_Estimation_for_Adaptive_Newton_Schulz_in_Matrix_Optimizers",
+        "path": "/Users/myl/Documents/paper/01-raw/2026-10/Cost_free_Spectral_Estimation_for_Adaptive_Newton_Schulz_in_Matrix_Optimizers.pdf",
+        "shared_terms": [
+          "Cost-free Spectral Estimation"
+        ]
+      }
+    ],
+    "note_filename": "Training_Loss_Guarantees_for_Muon_with_Finite_Step_Newton_Schulz_Orthogonalization",
+    "candidate_screening_rank": 5,
+    "semantic_rank": 3,
+    "archive_status": "downloaded",
+    "archive_detail": "711.5 KB",
+    "archive_path": "/Users/myl/Documents/paper/01-raw/2026-10/Training_Loss_Guarantees_for_Muon_with_Finite_Step_Newton_Schulz_Orthogonalization.pdf"
+  },
+  "Cost-free Spectral Estimation for Adaptive Newton--Schulz in Matrix Optimizers": {
+    "id": "http://arxiv.org/abs/2609.33047v1",
+    "title": "Cost-free Spectral Estimation for Adaptive Newton--Schulz in Matrix Optimizers",
+    "summary": "Matrix optimizers such as Muon transform each momentum matrix through an approximate orthogonalization, typically implemented by a small number of Newton-Schulz matrix multiplications. The quality and cost of this approximation depend strongly on the singular-value spectrum of its input, yet existing implementations use the same fixed polynomial routine for every layer and throughout training. We show that this uniform treatment is unnecessary: the computations in the Newton-Schulz method already reveal enough information to make the method adaptive. The Gram matrices formed inside Newton-Schulz iterations yield spectral moments through inexpensive scalar reductions, requiring no additional matrix multiplications. From these moments, we recover an estimate of the empirical singular-value distribution and use it to select a polynomial routine specialized to the current matrix. This turns Newton--Schulz orthogonalization into a spectrum-adaptive procedure that responds to differences across both layers and training time. On saved momentum matrices, spectral estimation substantially reduces orthogonalization error at a fixed iteration budget or reaches the same accuracy with fewer iterations, and in GPT pretraining up to 1B parameters it lowers the validation loss of two matrix optimizers. Our results suggest that matrix-function operations inside optimizers need not be designed for a conservative worst-case spectrum: they can cheaply measure the spectrum they are already processing and specialize computations accordingly.",
+    "authors": [
+      "Kristi Topollai",
+      "Anna Choromanska"
+    ],
+    "affiliations": [],
+    "published": "2026-09-27T00:22:19Z",
+    "published_date": "2026-09-27 00:22:19+00:00",
+    "updated": "2026-09-27T00:22:19Z",
+    "categories": [
+      "cs.LG"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2609.33047v1",
+    "url": "https://arxiv.org/abs/2609.33047v1",
+    "source": "arxiv",
+    "scores": {
+      "relevance": 3.0,
+      "recency": 3.0,
+      "impact": 0.0,
+      "evidence": 1.4,
+      "popularity": 0.0,
+      "quality": 1.4,
+      "recommendation": 7.93
+    },
+    "matched_domain": "大模型优化器设计",
+    "matched_keywords": [
+      "optimizer",
+      "Muon",
+      "spectral",
+      "cs.LG"
+    ],
+    "is_hot_paper": false,
+    "score_type": "research_priority_screening",
+    "assessment_scope": "metadata_and_abstract",
+    "screening_rank": 63,
+    "paper_stem": "Cost_free_Spectral_Estimation_for_Adaptive_Newton_Schulz_in_Matrix_Optimizers",
+    "already_known": false,
+    "related_papers": [
+      {
+        "title": "Muon with Finite Newton-Schulz: The Smoothing Benefit in Nonsmooth Nonconvex Optimization",
+        "path": "/Users/myl/Documents/paper/01-raw/2026-09/Muon_with_Finite_Newton_Schulz_The_Smoothing_Benefit_in_Nonsmooth_Nonconvex_Optimization.pdf",
+        "shared_terms": [
+          "有限迭代近似的影响"
+        ]
+      }
+    ],
+    "note_filename": "Cost_free_Spectral_Estimation_for_Adaptive_Newton_Schulz_in_Matrix_Optimizers",
+    "candidate_screening_rank": 10,
+    "semantic_rank": 3,
+    "matched_subdomain": "符号与范数几何优化",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "archive_status": "downloaded",
+    "archive_detail": "2695.0 KB",
+    "archive_path": "/Users/myl/Documents/paper/01-raw/2026-10/Cost_free_Spectral_Estimation_for_Adaptive_Newton_Schulz_in_Matrix_Optimizers.pdf"
+  },
+  "The Best Optimizer Depends on Batch Size": {
+    "title": "The Best Optimizer Depends on Batch Size",
+    "source": "arxiv",
+    "arxiv_id": "2610.08975",
+    "venue": "",
+    "url": "http://arxiv.org/abs/2610.08975v1",
+    "pdf_url": "https://arxiv.org/pdf/2610.08975v1",
+    "published": "2026-10-06T18:37:45Z",
+    "authors": [
+      "Xingyu Dang",
+      "Kaiyue Wen",
+      "Sadhika Malladi"
+    ],
+    "paper_stem": "The_Best_Optimizer_Depends_on_Batch_Size",
+    "matched_domain": "大模型优化器设计",
+    "matched_keywords": [
+      "optimizer",
+      "Muon",
+      "cs.LG",
+      "stat.ML"
+    ],
+    "already_known": true,
+    "kb_source": "pdf",
+    "related_papers": [
+      {
+        "title": "The Best Optimizer Depends on Batch Size",
+        "stem": "thebestoptimizerdependsonbatchsize",
+        "source": "pdf",
+        "path": "/Users/myl/Documents/paper/01-raw/2026-10/The_Best_Optimizer_Depends_on_Batch_Size.pdf",
+        "shared_terms": [
+          "batch",
+          "best",
+          "depends",
+          "optimizer",
+          "size"
+        ],
+        "shared_count": 5
+      },
+      {
+        "title": "Deriving Scaling Laws for OpenEuroLLM Models: Learning Rate, Batch Size and Loss",
+        "stem": "derivingscalinglawsforopeneurollmmodelslearningratebatchsizeandloss",
+        "source": "daily",
+        "path": "/Users/myl/Documents/paper/08-daily/2026-09-19/search_result.json",
+        "shared_terms": [
+          "batch",
+          "size"
+        ],
+        "shared_count": 2
+      }
+    ],
+    "score": 7.4,
+    "summary": "A plethora of new adaptive optimizers are designed to efficiently estimate and use minibatch gradient statistics to shape parameter updates, but they are typically benchmarked at a single batch size.\nHyperparameter scaling rules promise to preserve performance as batch size and gradient noise change, suggesting that the best optimizer at one batch size should remain the best at another.\nWe challenge this approach to developing and evaluating optimizers by showing: (1) no principled scaling rule for Muon works consistently across training settings, and (2) the best optimizer for language model pretraining changes with batch size even after extensive hyperparameter tuning.\nTo understand these failures, we analyze a noisy quadratic model and show that the critical batch size beyond which a scaling rule can break down varies across directions in the loss landscape.\nWe further prove that gradient noise drives a bias–variance tradeoff in preconditioning that can reverse optimizer rankings across batch sizes, even under optimal learning rate and momentum tuning.\nTaken together, our results show that principled optimizer design must account for batch size and empirical benchmarking should be performed across batch sizes.",
+    "matched_subdomain": "符号与范数几何优化",
+    "score_type": "research_priority_screening",
+    "assessment_scope": "metadata_and_abstract"
+  },
+  "Anytime Training with Schedule-Free Spectral Optimization": {
+    "title": "Anytime Training with Schedule-Free Spectral Optimization",
+    "source": "openreview",
+    "arxiv_id": "",
+    "venue": "ICLR 2027 Conference Submission",
+    "url": "https://openreview.net/forum?id=aIdrg5gk9T",
+    "pdf_url": "https://openreview.net/pdf/56557c403f0b9b0ab7b214c4b256a89b32f49087.pdf",
+    "published": "2026-09-18T22:39:16.818000",
+    "authors": [],
+    "paper_stem": "Anytime_Training_with_Schedule_Free_Spectral_Optimization",
+    "matched_domain": "大模型优化器设计",
+    "matched_keywords": [
+      "optimizer",
+      "Muon",
+      "AdamW",
+      "spectral"
+    ],
+    "already_known": true,
+    "kb_source": "pdf",
+    "related_papers": [
+      {
+        "title": "Anytime Training with Schedule Free Spectral Optimization",
+        "stem": "anytimetrainingwithschedulefreespectraloptimization",
+        "source": "pdf",
+        "path": "/Users/myl/Documents/paper/01-raw/2026-10/Anytime_Training_with_Schedule_Free_Spectral_Optimization.pdf",
+        "shared_terms": [
+          "anytime",
+          "spectral",
+          "training"
+        ],
+        "shared_count": 3
+      },
+      {
+        "title": "LionMuon: Alternating Spectral and Sign Descent for Efficient Training",
+        "stem": "lionmuonalternatingspectralandsigndescentforefficienttraining",
+        "source": "pdf",
+        "path": "/Users/myl/Documents/paper/01-raw/2026-09/LionMuon_Alternating_Spectral_and_Sign_Descent_for_Efficient_Training.pdf",
+        "shared_terms": [
+          "spectral",
+          "training"
+        ],
+        "shared_count": 2
+      },
+      {
+        "title": "Musec: MomentUm SpEctral Clipping for Stable Muon-type Training",
+        "stem": "musecmomentumspectralclippingforstablemuontypetraining",
+        "source": "daily",
+        "path": "/Users/myl/Documents/paper/08-daily/2026-09-24/search_result.json",
+        "shared_terms": [
+          "spectral",
+          "training"
+        ],
+        "shared_count": 2
+      }
+    ],
+    "score": 8.33,
+    "summary": "Standard neural network training relies on learning-rate schedules tied to a fixed horizon, leading to strong path dependence and costly re-tuning as data availability changes. Schedule-Free (SF) methods address this by removing explicit schedules, yet SF-AdamW, the current state-of-the-art anytime optimizer, consistently underperforms well-tuned AdamW baselines. We propose SF-NorMuon, a schedule-free spectral optimizer that closes this gap: with a single hyperparameter configuration, SF-NorMuon matches or exceeds tuned AdamW on 125M and 772M parameter language models across $1$--$8\\times$ Chinchilla horizons, and trails horizon-aware, cosine-scheduled NorMuon by only $\\sim 0.03$ nats, substantially narrowing the gap between anytime and scheduled spectral optimizers. On the theoretical side, we prove a stationarity guarantee for schedule-free spectral dynamics and identify weight decay at the fast iterate as essential for long-horizon stability. SF-NorMuon enables practitioners to obtain high-quality checkpoints at any point during training without committing to a horizon in advance. Fully matching horizon-aware spectral optimizers without a schedule remains an open problem, which we highlight as a direction for future work. By closing the performance gap with tuned AdamW baselines, SF-NorMuon makes horizon-free optimization more practical, taking a step towards truly open-ended, continual learning.",
+    "matched_subdomain": "符号与范数几何优化",
+    "score_type": "research_priority_screening",
+    "assessment_scope": "metadata_and_abstract"
+  },
+  "Orthogonalization buys a learning rate, not robustness, in RL post-training": {
+    "title": "Orthogonalization buys a learning rate, not robustness, in RL post-training",
+    "source": "openreview",
+    "arxiv_id": "",
+    "venue": "ICLR 2027 Conference Submission",
+    "url": "https://openreview.net/forum?id=ZEQE8bJkZz",
+    "pdf_url": "https://openreview.net/pdf/82eb76303641a6cd5cc821a2cc991fae57158a47.pdf",
+    "published": "2026-09-18T22:20:15.899000",
+    "authors": [],
+    "paper_stem": "Orthogonalization_buys_a_learning_rate_not_robustness_in_RL_post_training",
+    "matched_domain": "大模型优化器设计",
+    "matched_keywords": [
+      "optimizer",
+      "Muon",
+      "AdamW",
+      "spectral"
+    ],
+    "already_known": true,
+    "kb_source": "daily",
+    "related_papers": [
+      {
+        "title": "Orthogonalization buys a learning rate, not robustness, in RL post-training",
+        "stem": "orthogonalizationbuysalearningratenotrobustnessinrlposttraining",
+        "source": "daily",
+        "path": "/Users/myl/Documents/paper/08-daily/2026-10-09/search_result.json",
+        "shared_terms": [
+          "buys",
+          "not",
+          "orthogonalization",
+          "post-training",
+          "rate",
+          "robustness"
+        ],
+        "shared_count": 6
+      }
+    ],
+    "score": 8.2,
+    "summary": "Orthogonalized optimizers such as Muon are reported to collapse in RL with verifiable rewards (RLVR), and the spectral filter Pion to beat AdamW. Step size accounts for Muon's collapse and for Pion's stability. The public Pion code runs Muon at thirteen times AdamW's measured step, and Pion's filter drives toward zero every matrix whose leading direction holds less than 2/3 of the energy. With each matrix's step matched in size to AdamW's, in GRPO on Qwen3, the flat-spectrum orthogonalized step tolerates within 60 steps a 2.0–3.0× larger learning rate at 0.6B and 1.4–2.8× at 1.7B; at 4B it is not determined, and over 200 steps without a penalty it is gone. That margin is not robustness: a flat step moves the layer outputs, on the inputs they receive, about three times less than an AdamW step of the same size. Matched in that output displacement it collapses at least as often as AdamW in 14 of 15 settings, and earlier in 11 of the 12 that differ (p = 0.003 over settings, 0.062 over groups of model, task and horizon); matched at every step in how much it changes the policy, its collapse fraction is within the registered ±25 points of AdamW's, and at thirty-two seeds per arm within a tighter ±20 (+8, 90% interval −4 to +20). At each arm's best learning rate the two end within a point of each other in accuracy (75.7% and 75.6%; under a practitioner's recipe, 72.3% and 71.6%), the flat step getting there sooner. The key tests were registered in advance, and the ones that failed are reported with the rest.",
+    "matched_subdomain": "符号与范数几何优化",
+    "score_type": "research_priority_screening",
+    "assessment_scope": "metadata_and_abstract"
+  },
+  "Optimizing Large Language Models with Chained LMOs": {
+    "id": "http://arxiv.org/abs/2610.10975v1",
+    "title": "Optimizing Large Language Models with Chained LMOs",
+    "summary": "Muon has motivated a growing family of optimizers that compose multiple matrix normalizations, but these methods remain fragmented and lack a unified perspective. We introduce chained linear minimization oracles (chained LMOs), which cast these methods as compositions of LMOs. Despite their empirical success, many chains fall outside the standard LMO framework and can diverge on smooth convex objectives. To explain why composition can nevertheless help, we turn to linear associative memory and show that chaining can improve over Muon under anisotropic embeddings. Empirically, we propose TensorChain, a novel optimizer within the framework that stacks compatible weight matrices across different layers and normalizes the 3d tensor across its axes. In Qwen3 0.6B and 1.7B pretraining, TensorChain outperforms all chained baselines in average token efficiency, with average token savings of 9.6% over Muon at matched validation loss.",
+    "authors": [
+      "Sungyoon Kim",
+      "Kaan Ozkara",
+      "Youngsuk Park"
+    ],
+    "affiliations": [],
+    "published": "2026-10-07T22:56:55Z",
+    "published_date": "2026-10-07 22:56:55+00:00",
+    "updated": "2026-10-07T22:56:55Z",
+    "categories": [
+      "cs.LG",
+      "cs.AI"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2610.10975v1",
+    "url": "https://arxiv.org/abs/2610.10975v1",
+    "source": "arxiv",
+    "scores": {
+      "relevance": 2.78,
+      "recency": 3.0,
+      "impact": 0.0,
+      "evidence": 2.1,
+      "popularity": 0.0,
+      "quality": 2.1,
+      "recommendation": 8.0
+    },
+    "matched_domain": "大模型优化器设计",
+    "matched_keywords": [
+      "optimizer",
+      "Muon",
+      "cs.LG"
+    ],
+    "is_hot_paper": false,
+    "score_type": "research_priority_screening",
+    "assessment_scope": "metadata_and_abstract",
+    "screening_rank": 52,
+    "paper_stem": "Optimizing_Large_Language_Models_with_Chained_LMOs",
+    "already_known": false,
+    "related_papers": [
+      {
+        "title": "LionMuon: Alternating Spectral and Sign Descent for Efficient Training",
+        "path": "/Users/myl/Documents/paper/01-raw/2026-09/LionMuon_Alternating_Spectral_and_Sign_Descent_for_Efficient_Training.pdf",
+        "shared_terms": [
+          "谱方向与符号方向的组合；交替与链式组合不同"
+        ]
+      },
+      {
+        "title": "PowerStep: Memory Efficient Adaptive Optimization via lp-Norm Steepest Descent",
+        "path": "/Users/myl/Documents/paper/03-notes/2026-09/PowerStep_Memory_Efficient_Adaptive_Optimization_via_lp_Norm_Steepest_Descent/精读.md",
+        "shared_terms": [
+          "范数几何与最陡下降"
+        ]
+      }
+    ],
+    "note_filename": "Optimizing_Large_Language_Models_with_Chained_LMOs",
+    "candidate_screening_rank": 6,
+    "semantic_rank": 2,
+    "matched_subdomain": "符号与范数几何优化",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "archive_status": "downloaded",
+    "archive_detail": "3017.4 KB",
+    "archive_path": "/Users/myl/Documents/paper/01-raw/2026-10/Optimizing_Large_Language_Models_with_Chained_LMOs.pdf"
+  },
+  "PowerStep: Memory-Efficient Adaptive Optimization via $\\ell_p$-Norm Steepest Descent": {
+    "title": "PowerStep: Memory-Efficient Adaptive Optimization via $\\ell_p$-Norm Steepest Descent",
+    "source": "openreview",
+    "arxiv_id": "",
+    "venue": "ICLR 2027 Conference Submission",
+    "url": "https://openreview.net/forum?id=pyB4n82RVJ",
+    "pdf_url": "https://openreview.net/pdf/325cd2cd1af6306a7f387a6c5363dabe5a1054b9.pdf",
+    "published": "2026-09-17T10:12:33.028000",
+    "authors": [],
+    "paper_stem": "PowerStep_Memory_Efficient_Adaptive_Optimization_via_$_ell_p$_Norm_Steepest_Descent",
+    "matched_domain": "大模型优化器设计",
+    "matched_keywords": [
+      "optimizer",
+      "AdamW",
+      "memory-efficient optimizer",
+      "adaptive optimization",
+      "PowerStep"
+    ],
+    "already_known": false,
+    "kb_source": "",
+    "related_papers": [
+      {
+        "title": "PowerStep Memory Efficient Adaptive Optimization via lp Norm Steepest Descent",
+        "stem": "powerstepmemoryefficientadaptiveoptimizationvialpnormsteepestdescent",
+        "source": "pdf",
+        "path": "/Users/myl/Documents/paper/01-raw/2026-09/PowerStep_Memory_Efficient_Adaptive_Optimization_via_lp_Norm_Steepest_Descent.pdf",
+        "shared_terms": [
+          "adaptive",
+          "descent",
+          "norm",
+          "powerstep",
+          "steepest"
+        ],
+        "shared_count": 5
+      },
+      {
+        "title": "ABrA-GD: Adaptive Bregman Accelerated Gradient Descent for Relatively Smooth and (Strongly-)Convex Optimization",
+        "stem": "abragdadaptivebregmanacceleratedgradientdescentforrelativelysmoothandstronglyconvexoptimization",
+        "source": "pdf",
+        "path": "/Users/myl/Documents/paper/01-raw/2026-10/ABrA_GD_Adaptive_Bregman_Accelerated_Gradient_Descent_for_Relatively_Smooth_and_(Strongly_)Convex_Optimization.pdf",
+        "shared_terms": [
+          "adaptive",
+          "descent"
+        ],
+        "shared_count": 2
+      },
+      {
+        "title": "ConMeZO Adaptive Descent Direction Sampling for Gradient Free Finetuning of Large Language Models",
+        "stem": "conmezoadaptivedescentdirectionsamplingforgradientfreefinetuningoflargelanguagemodels",
+        "source": "pdf",
+        "path": "/Users/myl/Documents/paper/01-raw/2026-09/ConMeZO_Adaptive_Descent_Direction_Sampling_for_Gradient_Free_Finetuning_of_Large_Language_Models.pdf",
+        "shared_terms": [
+          "adaptive",
+          "descent"
+        ],
+        "shared_count": 2
+      }
+    ],
+    "score": 7.62,
+    "summary": "Adaptive optimizers such as Adam are standard for training Transformers, but storing gradient first and second moments incurs substantial memory overhead. We introduce PowerStep, a memory-efficient optimizer that achieves coordinate-wise adaptivity without storing second-moment statistics. Motivated by $\\ell_p$-norm steepest descent, PowerStep applies a signed-power transform directly to one momentum buffer. We establish a finite-horizon stationarity bound for exact, unregularized updates, with an $O(1/\\sqrt{T})$ term and a noise-dependent residual. Experiments on Transformers from 124M to 235B parameters show competitive validation quality while halving $\\texttt{fp32}$ optimizer-state memory. Combined with uniform $\\texttt{int8}$ quantization, PowerStep remains numerically stable and reduces optimizer-state memory by $\\sim8\\times$ compared to $\\texttt{fp32}$ AdamW. PowerStep thus provides a simple, memory-efficient alternative for large-scale training.",
+    "matched_subdomain": "符号与范数几何优化",
+    "score_type": "research_priority_screening",
+    "assessment_scope": "metadata_and_abstract"
+  },
+  "On the Depth Transfer of Neural Optimizers via L-Smoothness": {
+    "id": "http://arxiv.org/abs/2610.14344v1",
+    "title": "On the Depth Transfer of Neural Optimizers via L-Smoothness",
+    "summary": "Scaling deep learning models efficiently requires predictable performance transfer across compute regimes. Establishing reliable hyperparameter transfer allows optimal training dynamics and structural choices to be discovered on low-cost proxy models, avoiding catastrophic failures during massive-scale training. Existing depth-transfer analyses are architecture-specific and heuristic: hyperparameter transfer is only justified through toy blocks, and both rely on infinite-depth dynamics, a specific initialization, and feature-learning criteria. Building on $L$-smoothness framework of Xu et al. (2026), we understand hyperparameter transfer as how do the Lipschitz and $L$-smoothness constants of the loss scale with the depth $K$? We show that inverse-depth residual branch scaling $α=Θ(1/K)$ is sufficient to make both constants depth-independent at fixed width, uniformly over the bounded parameter domain and for arbitrary $p\\to q$ geometries. Because the bounds depend on each residual branch only through its Lipschitz and smoothness constants, the argument applies to general residual networks (including branches of block depth $\\geq 2$ such as transformer and ResNet blocks) without assumptions on initialization or correlations between layer weights. Since the smoothness constant controls the curvature penalty in the descent inequality, our bounds motivate a learning-rate scale without an additional depth-dependent curvature correction for updates bounded in the prescribed norm. This provides a geometric explanation of inverse-depth residual scaling and its application to the operator-norm geometries associated with AdamW, Muon, and MOGA. Learning-rate sweeps on GPT-2 (depths 2--128) and CIFAR-100 ResNets (8--32 residual blocks) confirm that Muon and MOGA exhibit stable learning-rate transfer under these prescriptions, with a common optimal rate across a 64-fold increase in depth.",
+    "authors": [
+      "Maximilian Wong",
+      "Chenyu Xu",
+      "Jiajin Li",
+      "Yiping Lu"
+    ],
+    "affiliations": [],
+    "published": "2026-10-09T21:43:21Z",
+    "published_date": "2026-10-09 21:43:21+00:00",
+    "updated": "2026-10-09T21:43:21Z",
+    "categories": [
+      "cs.LG",
+      "math.OC"
+    ],
+    "pdf_url": "https://arxiv.org/pdf/2610.14344v1",
+    "url": "http://arxiv.org/abs/2610.14344v1",
+    "source": "arxiv",
+    "scores": {
+      "relevance": 3.0,
+      "recency": 3.0,
+      "impact": 0.0,
+      "evidence": 1.4,
+      "popularity": 0.0,
+      "quality": 1.4,
+      "recommendation": 7.93
+    },
+    "matched_domain": "大模型优化器设计",
+    "matched_keywords": [
+      "Muon",
+      "AdamW",
+      "cs.LG",
+      "math.OC"
+    ],
+    "is_hot_paper": false,
+    "score_type": "research_priority_screening",
+    "assessment_scope": "metadata_and_abstract",
+    "screening_rank": 1,
+    "paper_stem": "On_the_Depth_Transfer_of_Neural_Optimizers_via_L_Smoothness",
+    "already_known": false,
+    "related_papers": [
+      {
+        "title": "Does_Muon_Need_Fine_Grained_Spectral_Shaping",
+        "path": "/Users/myl/Documents/paper/01-raw/2026-10/Does_Muon_Need_Fine_Grained_Spectral_Shaping.pdf",
+        "shared_terms": [
+          "Does Muon Need Fine"
+        ]
+      }
+    ],
+    "note_filename": "On_the_Depth_Transfer_of_Neural_Optimizers_via_L_Smoothness",
+    "candidate_screening_rank": 1,
+    "semantic_rank": 2,
+    "archive_status": "downloaded",
+    "archive_detail": "497.4 KB",
+    "archive_path": "/Users/myl/Documents/paper/01-raw/2026-10/On_the_Depth_Transfer_of_Neural_Optimizers_via_L_Smoothness.pdf",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "source_verified": true
+  }
+}

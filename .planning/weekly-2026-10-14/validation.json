@@ -1,0 +1,34 @@
+{
+  "report": "/Users/myl/Documents/paper/07-research/2026-10-12-第4周周报.md",
+  "status": "passed",
+  "main_window": "2026-10-08~2026-10-14",
+  "supplement_checked_until": "2026-10-16",
+  "archived_papers": 16,
+  "new_notes": 1,
+  "daily_title_strings": 358,
+  "excluded_collector_artifact": "images",
+  "local_links_checked": 33,
+  "broken_local_links": [],
+  "checks": [
+    "16篇Git新增论文都有本地PDF链接",
+    "要求的报告章节完整且有序",
+    "只给唯一新增完整精读沿用八维分数；其余不补造质量分",
+    "三个方向含近邻、最小实验、独立评估、成本与停止条件",
+    "本次计算标为解析机制例子，未声称训练复现",
+    "日期与原窗口/补查窗口分开；收尾新增16日日报已补入附录C；与主窗口分开统计"
+  ],
+  "source_assets_hashes": 40,
+  "source_assets_unchanged": true,
+  "next_due": "2026-10-23",
+  "config_change": "weekly.last_run only, written by collect.py",
+  "review": "Muon与内存证据分别复核；开销模型范围已补70M—410M",
+  "supplement": {
+    "date": "2026-10-16",
+    "local_daily_added_during_final_check": true,
+    "new_pdfs": 3,
+    "unique_in_daily": 265,
+    "included_in_main_window_count": false,
+    "source_snapshot": "supplement-2026-10-16.json"
+  },
+  "report_sha256": "e8a09f7dfd4644e749f2dc05e701e9f3463f2a2508e9a52cd3066bed1f8a2a69"
+}

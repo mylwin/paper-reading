@@ -1,0 +1,1493 @@
+{
+  "skill": "paper-weekly",
+  "generated_at": "2026-10-16T12:14:39",
+  "schedule": {
+    "enabled": true,
+    "interval_days": 7,
+    "start_date": "2026-09-21",
+    "last_run": "2026-10-16",
+    "is_first_run": false,
+    "due": false,
+    "next_due": "2026-10-23",
+    "days_since_last": 0
+  },
+  "week": {
+    "week_no": 4,
+    "week_start": "2026-10-12",
+    "week_end": "2026-10-18",
+    "suggested_filename": "2026-10-12-第4周周报.md"
+  },
+  "theme_first": true,
+  "config_path": "/Users/myl/Documents/paper/.claude/skills/config.yaml",
+  "research_dir": "/Users/myl/Documents/paper/07-research",
+  "report_path": "/Users/myl/Documents/paper/07-research/2026-10-12-第4周周报.md",
+  "domains": [
+    "大模型优化器设计"
+  ],
+  "domain_keywords": {
+    "大模型优化器设计": [
+      "large language model optimizer",
+      "LLM optimizer",
+      "optimizer design",
+      "memory-efficient optimizer",
+      "optimizer state memory",
+      "adaptive optimization",
+      "sign-based optimization",
+      "SignSGD",
+      "Muon",
+      "PowerStep",
+      "gradient clipping",
+      "parameter-free optimization"
+    ]
+  },
+  "window": {
+    "since": "2026-10-10",
+    "until": "2026-10-16"
+  },
+  "workspace": "/Users/myl/Documents/paper",
+  "daily_dirs": [
+    {
+      "date": "2026-10-10",
+      "dir": "/Users/myl/Documents/paper/08-daily/2026-10-10",
+      "search_result": "/Users/myl/Documents/paper/08-daily/2026-10-10/search_result.json",
+      "daily_note": "/Users/myl/Documents/paper/08-daily/2026-10-10/今日检索.md",
+      "total_unique": 306,
+      "titles": [
+        "Pretraining Data Scale Reverses the Muon-AdamW Fine-Tuning Gap",
+        "LoRA-TSD: Tangent-Space Spectral Descent for LoRA via Muon-Style Updates",
+        "DP-FedAdamW: An Efficient Optimizer for Differentially Private Federated Large Models",
+        "COREM: Cosine-Relation Momentum Reshaping with Stateful Writeback",
+        "Minimal-State Optimization: How Little Optimizer Memory Does AdamW’s Accuracy Need?",
+        "What Ages a Gradient? When Optimizer Time and Gradient-Field Relevance Diverge",
+        "Evie-KF: Risk-Sensitive Kronecker-Factored Preconditioning for Adaptive Optimizers",
+        "Stiefel-AdamW: Geometry-Aware AdamW for Linear Factorization Blocks",
+        "Spectral Deflation for Factorization-Free Matrix Filtering in Muon and Semidefinite Programming",
+        "TUON: A Tensor-Aware Optimizer Utilizing Tensor-SVD and Polarization for Large Language Model Pretraining",
+        "HyperTransfer: Understanding the Equivalence  between Base Optimizer and Hyperball",
+        "Sign compression for Muon: SignMuon, MuonSign, and the Limits of Error Feedback",
+        "Gradient Matching Meets Muon: Efficient Online Minibatch Selection for Language Models",
+        "Anytime Training with Schedule-Free Spectral Optimization",
+        "LionMuon: Alternating Spectral and Sign Descent for Efficient Training",
+        "Muon Learns Facts Better: Understanding the Role of Spectral Orthogonalization",
+        "Convergence of Practical Muon with Finite Newton-Schulz Iterations and Nesterov Momentum",
+        "Muon meets Tamed Langevin: Momentum Preconditioning beyond Convex and gradient-Lipschitz Potentials",
+        "Does U-W Ratio Alignment Benefit Muon in LLM Pretraining?",
+        "Muon--Adam Training for Overparameterized Neural Networks: Convergence and Generalization",
+        "Spectral Flattening Is Not Enough: When Muon Improves Learning Rates and Convergence",
+        "Preconditioning Benefits of Spectral Orthogonalization in Muon",
+        "Rethinking Muon Beyond Pretraining: Spectral Failures and High-Pass Remedies for VLA and RLVR",
+        "Generalization Analysis of Muon",
+        "AdamW Scaling Laws from First Principles",
+        "Logarithmic-time Schedules for Scaling Language Models with Momentum",
+        "Optimizer Memory Schedules for Outscaling the Overtraining Axis",
+        "Monarch–Muon: Structure-Aware Muon for Fast and Memory-Efficient Pretraining",
+        "StructMuon: Compact Core Communication by Reusing Muon History Subspaces",
+        "Turbo-Muon: Almost-Orthogonal Pre-Conditioning for Fast Muon Updates",
+        "Orthogonalization buys a learning rate, not robustness, in RL post-training",
+        "The Row Normalization Puzzle in Muon",
+        "Optimizers for Diffusion Models: A Controlled Benchmark",
+        "Muon Is Theoretically Wrong For Convolutions, But Empirically Effective",
+        "The Conflict Between Logic and Memory: Training Conditions for Optimizer-Dependent Rule Acquisition",
+        "NS-ATTENTION: Newton-Schulz Transformations of Attention Outputs in Vision Transformers",
+        "Ember: A Kilobyte-State Optimizer for Token Interfaces",
+        "Rethinking Memory-Efficient Optimizers for LLM Pre-Training",
+        "Reset or Reuse? Understanding How Optimizer Memory Shapes Continual Mixture-of-Experts Learning",
+        "Accelerating Muon with Spectral Residual Correction",
+        "Does Muon's Pretraining Advantage Over Adam Survive Fine-Tuning?",
+        "Understanding and Mitigating AdamW Loss Spikes",
+        "Nonsmooth Optimization via Orthogonalized Momentum",
+        "Exact information accounting for SGD methods",
+        "MuonIO: Principled Norm-Aware Descent for Embedding Tables and Language Model Heads",
+        "Backpropagated Output Momentum: Relocating Optimizer History from Parameters to Task Space",
+        "Clean: Second-order LLM Training at Linear Memory Cost via Nyström Sketching",
+        "Normalize-Then-Precondition: A Hierarchical Approach to Marginal Scale and Interaction Geometry for LLM Training",
+        "Optimizing Large Language Models with Chained LMOs",
+        "When Is Optimizer Memory Federable? Adaptive Synchronization in Federated Learning"
+      ]
+    },
+    {
+      "date": "2026-10-11",
+      "dir": "/Users/myl/Documents/paper/08-daily/2026-10-11",
+      "search_result": "/Users/myl/Documents/paper/08-daily/2026-10-11/search_result.json",
+      "daily_note": "/Users/myl/Documents/paper/08-daily/2026-10-11/今日检索.md",
+      "total_unique": 303,
+      "titles": [
+        "Pretraining Data Scale Reverses the Muon-AdamW Fine-Tuning Gap",
+        "LoRA-TSD: Tangent-Space Spectral Descent for LoRA via Muon-Style Updates",
+        "DP-FedAdamW: An Efficient Optimizer for Differentially Private Federated Large Models",
+        "COREM: Cosine-Relation Momentum Reshaping with Stateful Writeback",
+        "Minimal-State Optimization: How Little Optimizer Memory Does AdamW’s Accuracy Need?",
+        "What Ages a Gradient? When Optimizer Time and Gradient-Field Relevance Diverge",
+        "Evie-KF: Risk-Sensitive Kronecker-Factored Preconditioning for Adaptive Optimizers",
+        "Stiefel-AdamW: Geometry-Aware AdamW for Linear Factorization Blocks",
+        "Spectral Deflation for Factorization-Free Matrix Filtering in Muon and Semidefinite Programming",
+        "TUON: A Tensor-Aware Optimizer Utilizing Tensor-SVD and Polarization for Large Language Model Pretraining",
+        "HyperTransfer: Understanding the Equivalence  between Base Optimizer and Hyperball",
+        "Sign compression for Muon: SignMuon, MuonSign, and the Limits of Error Feedback",
+        "Gradient Matching Meets Muon: Efficient Online Minibatch Selection for Language Models",
+        "Anytime Training with Schedule-Free Spectral Optimization",
+        "LionMuon: Alternating Spectral and Sign Descent for Efficient Training",
+        "Muon Learns Facts Better: Understanding the Role of Spectral Orthogonalization",
+        "Convergence of Practical Muon with Finite Newton-Schulz Iterations and Nesterov Momentum",
+        "Muon meets Tamed Langevin: Momentum Preconditioning beyond Convex and gradient-Lipschitz Potentials",
+        "Does U-W Ratio Alignment Benefit Muon in LLM Pretraining?",
+        "Muon--Adam Training for Overparameterized Neural Networks: Convergence and Generalization",
+        "Spectral Flattening Is Not Enough: When Muon Improves Learning Rates and Convergence",
+        "Rethinking Muon Beyond Pretraining: Spectral Failures and High-Pass Remedies for VLA and RLVR",
+        "Preconditioning Benefits of Spectral Orthogonalization in Muon",
+        "Generalization Analysis of Muon",
+        "AdamW Scaling Laws from First Principles",
+        "Logarithmic-time Schedules for Scaling Language Models with Momentum",
+        "Optimizer Memory Schedules for Outscaling the Overtraining Axis",
+        "Monarch–Muon: Structure-Aware Muon for Fast and Memory-Efficient Pretraining",
+        "StructMuon: Compact Core Communication by Reusing Muon History Subspaces",
+        "Turbo-Muon: Almost-Orthogonal Pre-Conditioning for Fast Muon Updates",
+        "Orthogonalization buys a learning rate, not robustness, in RL post-training",
+        "The Row Normalization Puzzle in Muon",
+        "Optimizers for Diffusion Models: A Controlled Benchmark",
+        "Muon Is Theoretically Wrong For Convolutions, But Empirically Effective",
+        "The Conflict Between Logic and Memory: Training Conditions for Optimizer-Dependent Rule Acquisition",
+        "NS-ATTENTION: Newton-Schulz Transformations of Attention Outputs in Vision Transformers",
+        "Ember: A Kilobyte-State Optimizer for Token Interfaces",
+        "Rethinking Memory-Efficient Optimizers for LLM Pre-Training",
+        "Reset or Reuse? Understanding How Optimizer Memory Shapes Continual Mixture-of-Experts Learning",
+        "Accelerating Muon with Spectral Residual Correction",
+        "Does Muon's Pretraining Advantage Over Adam Survive Fine-Tuning?",
+        "Understanding and Mitigating AdamW Loss Spikes",
+        "Nonsmooth Optimization via Orthogonalized Momentum",
+        "Exact information accounting for SGD methods",
+        "MuonIO: Principled Norm-Aware Descent for Embedding Tables and Language Model Heads",
+        "Backpropagated Output Momentum: Relocating Optimizer History from Parameters to Task Space",
+        "Clean: Second-order LLM Training at Linear Memory Cost via Nyström Sketching",
+        "Normalize-Then-Precondition: A Hierarchical Approach to Marginal Scale and Interaction Geometry for LLM Training",
+        "Optimizing Large Language Models with Chained LMOs",
+        "When Is Optimizer Memory Federable? Adaptive Synchronization in Federated Learning"
+      ]
+    },
+    {
+      "date": "2026-10-12",
+      "dir": "/Users/myl/Documents/paper/08-daily/2026-10-12",
+      "search_result": "/Users/myl/Documents/paper/08-daily/2026-10-12/search_result.json",
+      "daily_note": "/Users/myl/Documents/paper/08-daily/2026-10-12/今日检索.md",
+      "total_unique": 267,
+      "titles": [
+        "Commutator Memory: Sparse, Path-Local Reading and Steering in Language Models",
+        "Stiefel-AdamW: Geometry-Aware AdamW for Linear Factorization Blocks",
+        "Decentralized SGD under Heavy-Tailed Noise: Optimal Convergence Rates and the Role of Gradient Clipping",
+        "The Row Normalization Puzzle in Muon",
+        "Spectral Deflation for Factorization-Free Matrix Filtering in Muon and Semidefinite Programming",
+        "Sampling Allocation of LinUCB: Optimal Design Limits in the Small-Gap Regime",
+        "Muon Learns Facts Better: Understanding the Role of Spectral Orthogonalization",
+        "Convergence of Practical Muon with Finite Newton-Schulz Iterations and Nesterov Momentum",
+        "Nonsmooth Optimization via Orthogonalized Momentum",
+        "Last-Iterate Convergence Rate of Normalized Gradient Descent under Hölder Smoothness",
+        "Muon meets Tamed Langevin: Momentum Preconditioning beyond Convex and gradient-Lipschitz Potentials",
+        "Exact information accounting for SGD methods",
+        "Optimizers for Diffusion Models: A Controlled Benchmark",
+        "Muon Is Theoretically Wrong For Convolutions, But Empirically Effective",
+        "TR-SSQP: A Trust-Region Method for Constrained Stochastic Optimization under Heavy-Tailed Noise",
+        "MuonIO: Principled Norm-Aware Descent for Embedding Tables and Language Model Heads",
+        "Backpropagated Output Momentum: Relocating Optimizer History from Parameters to Task Space",
+        "Normalize-Then-Precondition: A Hierarchical Approach to Marginal Scale and Interaction Geometry for LLM Training",
+        "LLMs as Adaptive Meta-Solvers: Strategy-Diverse RL for Industrial-Scale Optimization",
+        "Does Step Law Transfer to Small-Scale Language Models? An Empirical Recalibration Below 59M Parameters",
+        "OptiSelect: How does the Optimizer Shape Data Curriculum?",
+        "LionMuon: Alternating Spectral and Sign Descent for Efficient Training",
+        "Convergence guarantees for Muon: New parameter regimes and generalizations",
+        "Training-Loss Guarantees for Muon with Finite-Step Newton--Schulz Orthogonalization",
+        "From Geometry to Generalization: Why Row Normalization Can Beat Adam and Muon",
+        "Orthogonal Witness Control for Muon Optimization via Sigmoid Spectral Reshaping",
+        "Benign Overfitting for General Norms and Distributions",
+        "Convergence of Practical Muon",
+        "Can Representation Learning Decouple from Loss Minimization? Polar Updates Have an Answer",
+        "MeqMuon: Matrix-Equilibrating Muon for LLM Pretraining",
+        "Clean: Second-order LLM Training at Linear Memory Cost via Nyström Sketching",
+        "Does Muon Need Fine-Grained Spectral Shaping?",
+        "ORCA: The Annealed Spectral Conditioning Optimizer for Faster, Better LLM Training",
+        "A Calibrated Instrument for Measuring How Inference Optimizations Affect Output Quality",
+        "PowerStep: Memory-Efficient Adaptive Optimization via $\\ell_p$-Norm Steepest Descent",
+        "On the Comparison of Optimizers for Imbalanced Learning",
+        "Second-Moment Stochastic Approximation Methods",
+        "A Mesoscopic View of Transformer Weights Through Row and Column Scale Fields",
+        "AF-Muon: An AdamW-Free Muon Optimizer for Tied-Embedding Models",
+        "Inner Momentum for Differentially Private Muon",
+        "MoARa: Module-Aware Rank Allocation and Structure-Preserving Decomposition for Low-Rank LLM Pre-training",
+        "Optimizing Large Language Models with Chained LMOs",
+        "COREM: Cosine-Relation Momentum Reshaping with Stateful Writeback",
+        "Muon Sublates the Edge of Stability in LLM Pretraining",
+        "TACO: Ternary Absolute-max Column-wise One-sparse Optimizer for LLM Fine-Tuning",
+        "Muon Can Outperform Dedicated Continual Learning Methods",
+        "Spectrally Targeted Muon",
+        "Rounding in Preconditioner Space: Redesigning 4-bit AdamW Optimizer-State Quantization",
+        "Clipped or Unclipped? Finite-Sample Trade-offs for Averaged SGD under Heavy-Tailed Noise",
+        "Physical Muon: Orthogonalization as an Equilibrium Computation"
+      ]
+    },
+    {
+      "date": "2026-10-13",
+      "dir": "/Users/myl/Documents/paper/08-daily/2026-10-13",
+      "search_result": "/Users/myl/Documents/paper/08-daily/2026-10-13/search_result.json",
+      "daily_note": "/Users/myl/Documents/paper/08-daily/2026-10-13/今日检索.md",
+      "total_unique": 264,
+      "titles": [
+        "Commutator Memory: Sparse, Path-Local Reading and Steering in Language Models",
+        "Stiefel-AdamW: Geometry-Aware AdamW for Linear Factorization Blocks",
+        "Decentralized SGD under Heavy-Tailed Noise: Optimal Convergence Rates and the Role of Gradient Clipping",
+        "The Row Normalization Puzzle in Muon",
+        "Spectral Deflation for Factorization-Free Matrix Filtering in Muon and Semidefinite Programming",
+        "Sampling Allocation of LinUCB: Optimal Design Limits in the Small-Gap Regime",
+        "Muon Learns Facts Better: Understanding the Role of Spectral Orthogonalization",
+        "Convergence of Practical Muon with Finite Newton-Schulz Iterations and Nesterov Momentum",
+        "Last-Iterate Convergence Rate of Normalized Gradient Descent under Hölder Smoothness",
+        "Muon meets Tamed Langevin: Momentum Preconditioning beyond Convex and gradient-Lipschitz Potentials",
+        "Exact information accounting for SGD methods",
+        "Optimizers for Diffusion Models: A Controlled Benchmark",
+        "Muon Is Theoretically Wrong For Convolutions, But Empirically Effective",
+        "TR-SSQP: A Trust-Region Method for Constrained Stochastic Optimization under Heavy-Tailed Noise",
+        "MuonIO: Principled Norm-Aware Descent for Embedding Tables and Language Model Heads",
+        "Backpropagated Output Momentum: Relocating Optimizer History from Parameters to Task Space",
+        "Normalize-Then-Precondition: A Hierarchical Approach to Marginal Scale and Interaction Geometry for LLM Training",
+        "LLMs as Adaptive Meta-Solvers: Strategy-Diverse RL for Industrial-Scale Optimization",
+        "Does Step Law Transfer to Small-Scale Language Models? An Empirical Recalibration Below 59M Parameters",
+        "OptiSelect: How does the Optimizer Shape Data Curriculum?",
+        "LionMuon: Alternating Spectral and Sign Descent for Efficient Training",
+        "Convergence guarantees for Muon: New parameter regimes and generalizations",
+        "Training-Loss Guarantees for Muon with Finite-Step Newton--Schulz Orthogonalization",
+        "From Geometry to Generalization: Why Row Normalization Can Beat Adam and Muon",
+        "Orthogonal Witness Control for Muon Optimization via Sigmoid Spectral Reshaping",
+        "Benign Overfitting for General Norms and Distributions",
+        "Convergence of Practical Muon",
+        "Can Representation Learning Decouple from Loss Minimization? Polar Updates Have an Answer",
+        "MeqMuon: Matrix-Equilibrating Muon for LLM Pretraining",
+        "Clean: Second-order LLM Training at Linear Memory Cost via Nyström Sketching",
+        "Does Muon Need Fine-Grained Spectral Shaping?",
+        "ORCA: The Annealed Spectral Conditioning Optimizer for Faster, Better LLM Training",
+        "A Calibrated Instrument for Measuring How Inference Optimizations Affect Output Quality",
+        "PowerStep: Memory-Efficient Adaptive Optimization via $\\ell_p$-Norm Steepest Descent",
+        "On the Comparison of Optimizers for Imbalanced Learning",
+        "Second-Moment Stochastic Approximation Methods",
+        "A Mesoscopic View of Transformer Weights Through Row and Column Scale Fields",
+        "AF-Muon: An AdamW-Free Muon Optimizer for Tied-Embedding Models",
+        "Inner Momentum for Differentially Private Muon",
+        "MoARa: Module-Aware Rank Allocation and Structure-Preserving Decomposition for Low-Rank LLM Pre-training",
+        "Optimizing Large Language Models with Chained LMOs",
+        "COREM: Cosine-Relation Momentum Reshaping with Stateful Writeback",
+        "Muon Sublates the Edge of Stability in LLM Pretraining",
+        "TACO: Ternary Absolute-max Column-wise One-sparse Optimizer for LLM Fine-Tuning",
+        "Muon Can Outperform Dedicated Continual Learning Methods",
+        "Spectrally Targeted Muon",
+        "Rounding in Preconditioner Space: Redesigning 4-bit AdamW Optimizer-State Quantization",
+        "Clipped or Unclipped? Finite-Sample Trade-offs for Averaged SGD under Heavy-Tailed Noise",
+        "Physical Muon: Orthogonalization as an Equilibrium Computation",
+        "Derivative-Free Structured Updates for Muon"
+      ]
+    },
+    {
+      "date": "2026-10-14",
+      "dir": "/Users/myl/Documents/paper/08-daily/2026-10-14",
+      "search_result": "/Users/myl/Documents/paper/08-daily/2026-10-14/search_result.json",
+      "daily_note": "/Users/myl/Documents/paper/08-daily/2026-10-14/今日检索.md",
+      "total_unique": 264,
+      "titles": [
+        "Commutator Memory: Sparse, Path-Local Reading and Steering in Language Models",
+        "Stiefel-AdamW: Geometry-Aware AdamW for Linear Factorization Blocks",
+        "Decentralized SGD under Heavy-Tailed Noise: Optimal Convergence Rates and the Role of Gradient Clipping",
+        "The Row Normalization Puzzle in Muon",
+        "Spectral Deflation for Factorization-Free Matrix Filtering in Muon and Semidefinite Programming",
+        "Sampling Allocation of LinUCB: Optimal Design Limits in the Small-Gap Regime",
+        "Muon Learns Facts Better: Understanding the Role of Spectral Orthogonalization",
+        "Convergence of Practical Muon with Finite Newton-Schulz Iterations and Nesterov Momentum",
+        "Last-Iterate Convergence Rate of Normalized Gradient Descent under Hölder Smoothness",
+        "Muon meets Tamed Langevin: Momentum Preconditioning beyond Convex and gradient-Lipschitz Potentials",
+        "Exact information accounting for SGD methods",
+        "Optimizers for Diffusion Models: A Controlled Benchmark",
+        "Muon Is Theoretically Wrong For Convolutions, But Empirically Effective",
+        "TR-SSQP: A Trust-Region Method for Constrained Stochastic Optimization under Heavy-Tailed Noise",
+        "MuonIO: Principled Norm-Aware Descent for Embedding Tables and Language Model Heads",
+        "Backpropagated Output Momentum: Relocating Optimizer History from Parameters to Task Space",
+        "Normalize-Then-Precondition: A Hierarchical Approach to Marginal Scale and Interaction Geometry for LLM Training",
+        "LLMs as Adaptive Meta-Solvers: Strategy-Diverse RL for Industrial-Scale Optimization",
+        "Does Step Law Transfer to Small-Scale Language Models? An Empirical Recalibration Below 59M Parameters",
+        "OptiSelect: How does the Optimizer Shape Data Curriculum?",
+        "LionMuon: Alternating Spectral and Sign Descent for Efficient Training",
+        "Convergence guarantees for Muon: New parameter regimes and generalizations",
+        "Training-Loss Guarantees for Muon with Finite-Step Newton--Schulz Orthogonalization",
+        "From Geometry to Generalization: Why Row Normalization Can Beat Adam and Muon",
+        "On the Depth Transfer of Neural Optimizers via L-Smoothness",
+        "Orthogonal Witness Control for Muon Optimization via Sigmoid Spectral Reshaping",
+        "Benign Overfitting for General Norms and Distributions",
+        "Convergence of Practical Muon",
+        "Can Representation Learning Decouple from Loss Minimization? Polar Updates Have an Answer",
+        "MeqMuon: Matrix-Equilibrating Muon for LLM Pretraining",
+        "Clean: Second-order LLM Training at Linear Memory Cost via Nyström Sketching",
+        "Does Muon Need Fine-Grained Spectral Shaping?",
+        "ORCA: The Annealed Spectral Conditioning Optimizer for Faster, Better LLM Training",
+        "A Calibrated Instrument for Measuring How Inference Optimizations Affect Output Quality",
+        "PowerStep: Memory-Efficient Adaptive Optimization via $\\ell_p$-Norm Steepest Descent",
+        "On the Comparison of Optimizers for Imbalanced Learning",
+        "Second-Moment Stochastic Approximation Methods",
+        "A Mesoscopic View of Transformer Weights Through Row and Column Scale Fields",
+        "AF-Muon: An AdamW-Free Muon Optimizer for Tied-Embedding Models",
+        "Inner Momentum for Differentially Private Muon",
+        "MoARa: Module-Aware Rank Allocation and Structure-Preserving Decomposition for Low-Rank LLM Pre-training",
+        "Optimizing Large Language Models with Chained LMOs",
+        "COREM: Cosine-Relation Momentum Reshaping with Stateful Writeback",
+        "Muon Sublates the Edge of Stability in LLM Pretraining",
+        "TACO: Ternary Absolute-max Column-wise One-sparse Optimizer for LLM Fine-Tuning",
+        "Muon Can Outperform Dedicated Continual Learning Methods",
+        "Spectrally Targeted Muon",
+        "Rounding in Preconditioner Space: Redesigning 4-bit AdamW Optimizer-State Quantization",
+        "Clipped or Unclipped? Finite-Sample Trade-offs for Averaged SGD under Heavy-Tailed Noise",
+        "Physical Muon: Orthogonalization as an Equilibrium Computation"
+      ]
+    },
+    {
+      "date": "2026-10-16",
+      "dir": "/Users/myl/Documents/paper/08-daily/2026-10-16",
+      "search_result": "/Users/myl/Documents/paper/08-daily/2026-10-16/search_result.json",
+      "daily_note": "/Users/myl/Documents/paper/08-daily/2026-10-16/今日检索.md",
+      "total_unique": 265,
+      "titles": [
+        "Commutator Memory: Sparse, Path-Local Reading and Steering in Language Models",
+        "Stiefel-AdamW: Geometry-Aware AdamW for Linear Factorization Blocks",
+        "Decentralized SGD under Heavy-Tailed Noise: Optimal Convergence Rates and the Role of Gradient Clipping",
+        "The Row Normalization Puzzle in Muon",
+        "Spectral Deflation for Factorization-Free Matrix Filtering in Muon and Semidefinite Programming",
+        "Sampling Allocation of LinUCB: Optimal Design Limits in the Small-Gap Regime",
+        "When Is Muon Optimal? Radial Fragility and Minimax Geometry",
+        "Muon Learns Facts Better: Understanding the Role of Spectral Orthogonalization",
+        "Convergence of Practical Muon with Finite Newton-Schulz Iterations and Nesterov Momentum",
+        "On the Last-Iterate Convergence of Clipped Gradient Methods",
+        "Last-Iterate Convergence Rate of Normalized Gradient Descent under Hölder Smoothness",
+        "Muon meets Tamed Langevin: Momentum Preconditioning beyond Convex and gradient-Lipschitz Potentials",
+        "Exact information accounting for SGD methods",
+        "Optimizers for Diffusion Models: A Controlled Benchmark",
+        "Muon Is Theoretically Wrong For Convolutions, But Empirically Effective",
+        "Long-Horizon RL Needs Muon",
+        "TR-SSQP: A Trust-Region Method for Constrained Stochastic Optimization under Heavy-Tailed Noise",
+        "Clean: Second-order LLM Training at Linear Memory Cost via Nystr{ö}m Sketching",
+        "MuonIO: Principled Norm-Aware Descent for Embedding Tables and Language Model Heads",
+        "Backpropagated Output Momentum: Relocating Optimizer History from Parameters to Task Space",
+        "Normalize-Then-Precondition: A Hierarchical Approach to Marginal Scale and Interaction Geometry for LLM Training",
+        "LLMs as Adaptive Meta-Solvers: Strategy-Diverse RL for Industrial-Scale Optimization",
+        "Does Step Law Transfer to Small-Scale Language Models? An Empirical Recalibration Below 59M Parameters",
+        "OptiSelect: How does the Optimizer Shape Data Curriculum?",
+        "LionMuon: Alternating Spectral and Sign Descent for Efficient Training",
+        "Convergence guarantees for Muon: New parameter regimes and generalizations",
+        "From Parallel to Sequential: Small-Batch Noise Restores Simplicity Bias of Muon",
+        "Training-Loss Guarantees for Muon with Finite-Step Newton--Schulz Orthogonalization",
+        "From Geometry to Generalization: Why Row Normalization Can Beat Adam and Muon",
+        "On the Depth Transfer of Neural Optimizers via L-Smoothness",
+        "Memory-Efficient Subspace Optimization with Residual Correction: From Momentum SGD to Muon",
+        "Orthogonal Witness Control for Muon Optimization via Sigmoid Spectral Reshaping",
+        "Benign Overfitting for General Norms and Distributions",
+        "Convergence of Practical Muon",
+        "When Does Momentum Help in Reinforcement Learning with Verifiable Rewards?",
+        "Can Representation Learning Decouple from Loss Minimization? Polar Updates Have an Answer",
+        "MeqMuon: Matrix-Equilibrating Muon for LLM Pretraining",
+        "When Does Muon Actually Win? A Paired Data-, Time-, and Tuning-Budget Benchmark",
+        "Does Muon Need Fine-Grained Spectral Shaping?",
+        "ORCA: The Annealed Spectral Conditioning Optimizer for Faster, Better LLM Training",
+        "Variational Filtering for Bayesian Last Layers with an Independent Binary Probit Surrogate",
+        "A Calibrated Instrument for Measuring How Inference Optimizations Affect Output Quality",
+        "PowerStep: Memory-Efficient Adaptive Optimization via $\\ell_p$-Norm Steepest Descent",
+        "On the Comparison of Optimizers for Imbalanced Learning",
+        "How Inner Optimizers Shape Replica Scaling",
+        "Second-Moment Stochastic Approximation Methods",
+        "A Mesoscopic View of Transformer Weights Through Row and Column Scale Fields",
+        "Efficient Preconditioned Optimization Methods with Frequent Directions",
+        "AF-Muon: An AdamW-Free Muon Optimizer for Tied-Embedding Models",
+        "Monarch-Muon: Structure-Aware Muon for Fast and Memory-Efficient Pretraining"
+      ]
+    }
+  ],
+  "daily_topics": {
+    "titles_total": 362,
+    "domain_counts": {
+      "大模型优化器设计": 327,
+      "未分类": 35
+    },
+    "by_domain": {
+      "大模型优化器设计": [
+        {
+          "title": "Pretraining Data Scale Reverses the Muon-AdamW Fine-Tuning Gap",
+          "score": 8.67,
+          "source": "openreview",
+          "already_known": true
+        },
+        {
+          "title": "LoRA-TSD: Tangent-Space Spectral Descent for LoRA via Muon-Style Updates",
+          "score": 8.53,
+          "source": "openreview",
+          "already_known": true
+        },
+        {
+          "title": "DP-FedAdamW: An Efficient Optimizer for Differentially Private Federated Large Models",
+          "score": 8.53,
+          "source": "openreview",
+          "already_known": false
+        },
+        {
+          "title": "COREM: Cosine-Relation Momentum Reshaping with Stateful Writeback",
+          "score": 8.4,
+          "source": "arxiv",
+          "already_known": true
+        },
+        {
+          "title": "Minimal-State Optimization: How Little Optimizer Memory Does AdamW’s Accuracy Need?",
+          "score": 8.4,
+          "source": "openreview",
+          "already_known": true
+        },
+        {
+          "title": "What Ages a Gradient? When Optimizer Time and Gradient-Field Relevance Diverge",
+          "score": 8.4,
+          "source": "openreview",
+          "already_known": false
+        },
+        {
+          "title": "Evie-KF: Risk-Sensitive Kronecker-Factored Preconditioning for Adaptive Optimizers",
+          "score": 8.4,
+          "source": "openreview",
+          "already_known": true
+        },
+        {
+          "title": "Stiefel-AdamW: Geometry-Aware AdamW for Linear Factorization Blocks",
+          "score": 8.33,
+          "source": "arxiv",
+          "already_known": true
+        },
+        {
+          "title": "Spectral Deflation for Factorization-Free Matrix Filtering in Muon and Semidefinite Programming",
+          "score": 8.33,
+          "source": "arxiv",
+          "already_known": true
+        },
+        {
+          "title": "TUON: A Tensor-Aware Optimizer Utilizing Tensor-SVD and Polarization for Large Language Model Pretraining",
+          "score": 8.33,
+          "source": "openreview",
+          "already_known": true
+        },
+        {
+          "title": "Sign compression for Muon: SignMuon, MuonSign, and the Limits of Error Feedback",
+          "score": 8.33,
+          "source": "openreview",
+          "already_known": false
+        },
+        {
+          "title": "Gradient Matching Meets Muon: Efficient Online Minibatch Selection for Language Models",
+          "score": 8.33,
+          "source": "openreview",
+          "already_known": false
+        },
+        {
+          "title": "Anytime Training with Schedule-Free Spectral Optimization",
+          "score": 8.33,
+          "source": "openreview",
+          "already_known": true
+        },
+        {
+          "title": "LionMuon: Alternating Spectral and Sign Descent for Efficient Training",
+          "score": 8.33,
+          "source": "openreview",
+          "already_known": true
+        },
+        {
+          "title": "Muon Learns Facts Better: Understanding the Role of Spectral Orthogonalization",
+          "score": 8.27,
+          "source": "arxiv",
+          "already_known": true
+        },
+        {
+          "title": "Convergence of Practical Muon with Finite Newton-Schulz Iterations and Nesterov Momentum",
+          "score": 8.27,
+          "source": "arxiv",
+          "already_known": true
+        },
+        {
+          "title": "Muon meets Tamed Langevin: Momentum Preconditioning beyond Convex and gradient-Lipschitz Potentials",
+          "score": 8.27,
+          "source": "arxiv",
+          "already_known": false
+        },
+        {
+          "title": "Does U-W Ratio Alignment Benefit Muon in LLM Pretraining?",
+          "score": 8.27,
+          "source": "openreview",
+          "already_known": true
+        },
+        {
+          "title": "Muon--Adam Training for Overparameterized Neural Networks: Convergence and Generalization",
+          "score": 8.27,
+          "source": "openreview",
+          "already_known": true
+        },
+        {
+          "title": "Spectral Flattening Is Not Enough: When Muon Improves Learning Rates and Convergence",
+          "score": 8.27,
+          "source": "openreview",
+          "already_known": false
+        },
+        {
+          "title": "Preconditioning Benefits of Spectral Orthogonalization in Muon",
+          "score": 8.27,
+          "source": "openreview",
+          "already_known": true
+        },
+        {
+          "title": "Rethinking Muon Beyond Pretraining: Spectral Failures and High-Pass Remedies for VLA and RLVR",
+          "score": 8.27,
+          "source": "openreview",
+          "already_known": true
+        },
+        {
+          "title": "Generalization Analysis of Muon",
+          "score": 8.27,
+          "source": "openreview",
+          "already_known": true
+        },
+        {
+          "title": "AdamW Scaling Laws from First Principles",
+          "score": 8.27,
+          "source": "openreview",
+          "already_known": false
+        },
+        {
+          "title": "Logarithmic-time Schedules for Scaling Language Models with Momentum",
+          "score": 8.27,
+          "source": "openreview",
+          "already_known": false
+        },
+        {
+          "title": "Optimizer Memory Schedules for Outscaling the Overtraining Axis",
+          "score": 8.2,
+          "source": "openreview",
+          "already_known": true
+        },
+        {
+          "title": "Monarch–Muon: Structure-Aware Muon for Fast and Memory-Efficient Pretraining",
+          "score": 8.2,
+          "source": "openreview",
+          "already_known": true
+        },
+        {
+          "title": "StructMuon: Compact Core Communication by Reusing Muon History Subspaces",
+          "score": 8.2,
+          "source": "openreview",
+          "already_known": true
+        },
+        {
+          "title": "Turbo-Muon: Almost-Orthogonal Pre-Conditioning for Fast Muon Updates",
+          "score": 8.2,
+          "source": "openreview",
+          "already_known": false
+        },
+        {
+          "title": "Orthogonalization buys a learning rate, not robustness, in RL post-training",
+          "score": 8.2,
+          "source": "openreview",
+          "already_known": true
+        }
+      ],
+      "未分类": [
+        {
+          "title": "HyperTransfer: Understanding the Equivalence  between Base Optimizer and Hyperball",
+          "score": 8.33,
+          "source": "openreview",
+          "already_known": true
+        },
+        {
+          "title": "Ember: A Kilobyte-State Optimizer for Token Interfaces",
+          "score": 8.13,
+          "source": "openreview",
+          "already_known": true
+        },
+        {
+          "title": "Reset or Reuse? Understanding How Optimizer Memory Shapes Continual Mixture-of-Experts Learning",
+          "score": 8.13,
+          "source": "openreview",
+          "already_known": true
+        },
+        {
+          "title": "Training-Data Leakage from Optimizer State in Resumable Checkpoints",
+          "score": 7.93,
+          "source": "openreview",
+          "already_known": false
+        },
+        {
+          "title": "Rotate All, Store Few: Decoupling Coverage from Storage for Memory-Efficient Training",
+          "score": 7.8,
+          "source": "openreview",
+          "already_known": false
+        },
+        {
+          "title": "Spectral-Driven Adaptive-Rank Optimizer for Large Language Model Reinforcement Learning with Verifiable Rewards",
+          "score": 7.73,
+          "source": "openreview",
+          "already_known": false
+        },
+        {
+          "title": "SPARQ: A Subspace-Preserving Mixed Precision LMO Optimizer",
+          "score": 7.73,
+          "source": "openreview",
+          "already_known": false
+        },
+        {
+          "title": "The Power of Decaying Steps: Enhancing Attack Stability and Transferability for Sign-based Optimizers",
+          "score": 6.83,
+          "source": "openreview",
+          "already_known": false
+        },
+        {
+          "title": "VERSE: Verified Self-Evolving Optimizer for Agent Harnesses",
+          "score": 6.57,
+          "source": "openreview",
+          "already_known": false
+        },
+        {
+          "title": "P-DORM: Parameter-Wise Dynamic Optimizer-State Reset for Test-Time Adaptation",
+          "score": 6.43,
+          "source": "openreview",
+          "already_known": false
+        },
+        {
+          "title": "On Adaptivity in Zeroth-Order Optimization",
+          "score": 6.43,
+          "source": "openreview",
+          "already_known": false
+        },
+        {
+          "title": "ORACLE: Optimizer-Relative Alignment for Constrained LEarning",
+          "score": 6.3,
+          "source": "openreview",
+          "already_known": false
+        },
+        {
+          "title": "Policy Lag in GRPO: Group-Estimator Bias, Optimizer Memory, and Delayed Feedback",
+          "score": 6.23,
+          "source": "openreview",
+          "already_known": false
+        },
+        {
+          "title": "A Trainable Optimizer",
+          "score": 6.1,
+          "source": "openreview",
+          "already_known": false
+        },
+        {
+          "title": "AdaSign: Turning 1-Bit Worker Votes into Adaptive Updates",
+          "score": 6.1,
+          "source": "openreview",
+          "already_known": false
+        },
+        {
+          "title": "Moving Horizon Estimation for Quadrotors: An $\\mathcal{L}_1$ Adaptive Optimizer Approach",
+          "score": 5.97,
+          "source": "arxiv",
+          "already_known": false
+        },
+        {
+          "title": "Optimizer Memory: Persistence and Intervention Value in Language Model Adaptation",
+          "score": 5.97,
+          "source": "openreview",
+          "already_known": false
+        },
+        {
+          "title": "Optimizer or Precision? Understanding Optimizer–Precision Interactions in PINNs",
+          "score": 5.97,
+          "source": "openreview",
+          "already_known": false
+        },
+        {
+          "title": "Bicameral: Memory-Efficient Transformer via Latent Tensor Rematerialization",
+          "score": 5.97,
+          "source": "openreview",
+          "already_known": false
+        },
+        {
+          "title": "Learnable Randomization as Commitment Against Adaptive Optimizers",
+          "score": 5.9,
+          "source": "arxiv",
+          "already_known": false
+        },
+        {
+          "title": "Optimizing the Optimizer: Language Models Discover Faster Molecular Relaxation",
+          "score": 5.77,
+          "source": "openreview",
+          "already_known": false
+        },
+        {
+          "title": "Optimizing the Optimizer: Language Models Discover Faster Molecular Relaxation Algorithms",
+          "score": 5.77,
+          "source": "openreview",
+          "already_known": false
+        },
+        {
+          "title": "Sign-based optimizers are massless relativistic learners",
+          "score": 5.57,
+          "source": "openreview",
+          "already_known": false
+        },
+        {
+          "title": "Not All Blocks Need Full Momentum: Sharpness-Aware Memory-Efficient Optimization for Transformers",
+          "score": 4.53,
+          "source": "openreview",
+          "already_known": false
+        },
+        {
+          "title": "SafeSchatten: Schatten-Norm-Constrained Steepest Descent in Activation Space for Safe LLM Fine-Tuning",
+          "score": 4.4,
+          "source": "openreview",
+          "already_known": false
+        },
+        {
+          "title": "Anatomy-Aware Dexterity-Driven Design Optimization of Surgical Continuum Robots",
+          "score": 4.33,
+          "source": "arxiv",
+          "already_known": false
+        },
+        {
+          "title": "Optimal Catastrophe Bond Design and its Applications to Climate Change Risk",
+          "score": 4.27,
+          "source": "arxiv",
+          "already_known": false
+        },
+        {
+          "title": "Momentum Acceleration of Normalized Steepest Descent at the Edge of Stability",
+          "score": 4.27,
+          "source": "openreview",
+          "already_known": false
+        },
+        {
+          "title": "FedLore: Communication and Memory Efficient Federated Learning via Shared Gradient Low-Rank Projection",
+          "score": 4.13,
+          "source": "arxiv",
+          "already_known": false
+        },
+        {
+          "title": "Nested Birth-Death Processes and Neural Transducers as Models of Time-Dependent Protein Evolution",
+          "score": 4.13,
+          "source": "openreview",
+          "already_known": false
+        }
+      ]
+    },
+    "top_scored": [
+      {
+        "title": "Pretraining Data Scale Reverses the Muon-AdamW Fine-Tuning Gap",
+        "score": 8.67,
+        "domain": "大模型优化器设计"
+      },
+      {
+        "title": "LoRA-TSD: Tangent-Space Spectral Descent for LoRA via Muon-Style Updates",
+        "score": 8.53,
+        "domain": "大模型优化器设计"
+      },
+      {
+        "title": "DP-FedAdamW: An Efficient Optimizer for Differentially Private Federated Large Models",
+        "score": 8.53,
+        "domain": "大模型优化器设计"
+      },
+      {
+        "title": "What Ages a Gradient? When Optimizer Time and Gradient-Field Relevance Diverge",
+        "score": 8.4,
+        "domain": "大模型优化器设计"
+      },
+      {
+        "title": "Minimal-State Optimization: How Little Optimizer Memory Does AdamW’s Accuracy Need?",
+        "score": 8.4,
+        "domain": "大模型优化器设计"
+      },
+      {
+        "title": "Evie-KF: Risk-Sensitive Kronecker-Factored Preconditioning for Adaptive Optimizers",
+        "score": 8.4,
+        "domain": "大模型优化器设计"
+      },
+      {
+        "title": "COREM: Cosine-Relation Momentum Reshaping with Stateful Writeback",
+        "score": 8.4,
+        "domain": "大模型优化器设计"
+      },
+      {
+        "title": "TUON: A Tensor-Aware Optimizer Utilizing Tensor-SVD and Polarization for Large Language Model Pretraining",
+        "score": 8.33,
+        "domain": "大模型优化器设计"
+      },
+      {
+        "title": "Stiefel-AdamW: Geometry-Aware AdamW for Linear Factorization Blocks",
+        "score": 8.33,
+        "domain": "大模型优化器设计"
+      },
+      {
+        "title": "Spectral Deflation for Factorization-Free Matrix Filtering in Muon and Semidefinite Programming",
+        "score": 8.33,
+        "domain": "大模型优化器设计"
+      },
+      {
+        "title": "Sign compression for Muon: SignMuon, MuonSign, and the Limits of Error Feedback",
+        "score": 8.33,
+        "domain": "大模型优化器设计"
+      },
+      {
+        "title": "LionMuon: Alternating Spectral and Sign Descent for Efficient Training",
+        "score": 8.33,
+        "domain": "大模型优化器设计"
+      },
+      {
+        "title": "HyperTransfer: Understanding the Equivalence  between Base Optimizer and Hyperball",
+        "score": 8.33,
+        "domain": "未分类"
+      },
+      {
+        "title": "Gradient Matching Meets Muon: Efficient Online Minibatch Selection for Language Models",
+        "score": 8.33,
+        "domain": "大模型优化器设计"
+      },
+      {
+        "title": "Anytime Training with Schedule-Free Spectral Optimization",
+        "score": 8.33,
+        "domain": "大模型优化器设计"
+      },
+      {
+        "title": "When Is Muon Optimal? Radial Fragility and Minimax Geometry",
+        "score": 8.27,
+        "domain": "大模型优化器设计"
+      },
+      {
+        "title": "Spectral Flattening Is Not Enough: When Muon Improves Learning Rates and Convergence",
+        "score": 8.27,
+        "domain": "大模型优化器设计"
+      },
+      {
+        "title": "Rethinking Muon Beyond Pretraining: Spectral Failures and High-Pass Remedies for VLA and RLVR",
+        "score": 8.27,
+        "domain": "大模型优化器设计"
+      },
+      {
+        "title": "Preconditioning Benefits of Spectral Orthogonalization in Muon",
+        "score": 8.27,
+        "domain": "大模型优化器设计"
+      },
+      {
+        "title": "On the Last-Iterate Convergence of Clipped Gradient Methods",
+        "score": 8.27,
+        "domain": "大模型优化器设计"
+      },
+      {
+        "title": "Muon--Adam Training for Overparameterized Neural Networks: Convergence and Generalization",
+        "score": 8.27,
+        "domain": "大模型优化器设计"
+      },
+      {
+        "title": "Muon meets Tamed Langevin: Momentum Preconditioning beyond Convex and gradient-Lipschitz Potentials",
+        "score": 8.27,
+        "domain": "大模型优化器设计"
+      },
+      {
+        "title": "Muon Learns Facts Better: Understanding the Role of Spectral Orthogonalization",
+        "score": 8.27,
+        "domain": "大模型优化器设计"
+      },
+      {
+        "title": "Logarithmic-time Schedules for Scaling Language Models with Momentum",
+        "score": 8.27,
+        "domain": "大模型优化器设计"
+      },
+      {
+        "title": "Generalization Analysis of Muon",
+        "score": 8.27,
+        "domain": "大模型优化器设计"
+      },
+      {
+        "title": "Does U-W Ratio Alignment Benefit Muon in LLM Pretraining?",
+        "score": 8.27,
+        "domain": "大模型优化器设计"
+      },
+      {
+        "title": "Convergence of Practical Muon with Finite Newton-Schulz Iterations and Nesterov Momentum",
+        "score": 8.27,
+        "domain": "大模型优化器设计"
+      },
+      {
+        "title": "AdamW Scaling Laws from First Principles",
+        "score": 8.27,
+        "domain": "大模型优化器设计"
+      },
+      {
+        "title": "Turbo-Muon: Almost-Orthogonal Pre-Conditioning for Fast Muon Updates",
+        "score": 8.2,
+        "domain": "大模型优化器设计"
+      },
+      {
+        "title": "StructMuon: Compact Core Communication by Reusing Muon History Subspaces",
+        "score": 8.2,
+        "domain": "大模型优化器设计"
+      }
+    ]
+  },
+  "papers": [
+    {
+      "stem": "expertmuoncompassalignmentguidedstepsizesformixtureofexpertstraining",
+      "files": [
+        {
+          "path": "01-raw/2026-10/ExpertMuon_Compass_Alignment_Guided_Step_Sizes_for_Mixture_of_Experts_Training.pdf",
+          "kind": "git",
+          "root": "01-raw",
+          "git_added": "2026-10-14"
+        }
+      ],
+      "mtime": "",
+      "month": "2026-10",
+      "roots": [
+        "01-raw"
+      ],
+      "priority": 4,
+      "git_added": "2026-10-14",
+      "git_subject": "docs(daily): 归档10月14日优化器论文检索与推荐"
+    },
+    {
+      "stem": "highprobabilityguaranteesforsgdunderheavytailedgradientnoise",
+      "files": [
+        {
+          "path": "01-raw/2026-10/High_Probability_Guarantees_for_SGD_under_$β$_Heavy_Tailed_Gradient_Noise.pdf",
+          "kind": "git",
+          "root": "01-raw",
+          "git_added": "2026-10-14"
+        }
+      ],
+      "mtime": "",
+      "month": "2026-10",
+      "roots": [
+        "01-raw"
+      ],
+      "priority": 4,
+      "git_added": "2026-10-14",
+      "git_subject": "docs(daily): 归档10月14日优化器论文检索与推荐"
+    },
+    {
+      "stem": "onthedepthtransferofneuraloptimizersvialsmoothness",
+      "files": [
+        {
+          "path": "01-raw/2026-10/On_the_Depth_Transfer_of_Neural_Optimizers_via_L_Smoothness.pdf",
+          "kind": "git",
+          "root": "01-raw",
+          "git_added": "2026-10-14"
+        }
+      ],
+      "mtime": "",
+      "month": "2026-10",
+      "roots": [
+        "01-raw"
+      ],
+      "priority": 4,
+      "git_added": "2026-10-14",
+      "git_subject": "docs(daily): 归档10月14日优化器论文检索与推荐"
+    },
+    {
+      "stem": "moaramoduleawarerankallocationandstructurepreservingdecompositionforlowrankllmpretraining",
+      "files": [
+        {
+          "path": "01-raw/2026-10/MoARa_Module_Aware_Rank_Allocation_and_Structure_Preserving_Decomposition_for_Low_Rank_LLM_Pre_training.pdf",
+          "kind": "git",
+          "root": "01-raw",
+          "git_added": "2026-10-13"
+        }
+      ],
+      "mtime": "",
+      "month": "2026-10",
+      "roots": [
+        "01-raw"
+      ],
+      "priority": 4,
+      "git_added": "2026-10-13",
+      "git_subject": "docs(daily): 归档10月13日优化器论文检索与推荐"
+    },
+    {
+      "stem": "roundinginpreconditionerspaceredesigning4bitadamwoptimizerstatequantization",
+      "files": [
+        {
+          "path": "01-raw/2026-10/Rounding_in_Preconditioner_Space_Redesigning_4_bit_AdamW_Optimizer_State_Quantization.pdf",
+          "kind": "git",
+          "root": "01-raw",
+          "git_added": "2026-10-13"
+        }
+      ],
+      "mtime": "",
+      "month": "2026-10",
+      "roots": [
+        "01-raw"
+      ],
+      "priority": 4,
+      "git_added": "2026-10-13",
+      "git_subject": "docs(daily): 归档10月13日优化器论文检索与推荐"
+    },
+    {
+      "stem": "spectrallytargetedmuon",
+      "files": [
+        {
+          "path": "01-raw/2026-10/Spectrally_Targeted_Muon.pdf",
+          "kind": "git",
+          "root": "01-raw",
+          "git_added": "2026-10-13"
+        }
+      ],
+      "mtime": "",
+      "month": "2026-10",
+      "roots": [
+        "01-raw"
+      ],
+      "priority": 4,
+      "git_added": "2026-10-13",
+      "git_subject": "docs(daily): 归档10月13日优化器论文检索与推荐"
+    },
+    {
+      "stem": "doesmuonneedfinegrainedspectralshaping",
+      "files": [
+        {
+          "path": "01-raw/2026-10/Does_Muon_Need_Fine_Grained_Spectral_Shaping.pdf",
+          "kind": "git",
+          "root": "01-raw",
+          "git_added": "2026-10-12"
+        }
+      ],
+      "mtime": "",
+      "month": "2026-10",
+      "roots": [
+        "01-raw"
+      ],
+      "priority": 4,
+      "git_added": "2026-10-12",
+      "git_subject": "docs(daily): 归档10月12日优化器论文检索与推荐"
+    },
+    {
+      "stem": "fromgeometrytogeneralizationwhyrownormalizationcanbeatadamandmuon",
+      "files": [
+        {
+          "path": "01-raw/2026-10/From_Geometry_to_Generalization_Why_Row_Normalization_Can_Beat_Adam_and_Muon.pdf",
+          "kind": "git",
+          "root": "01-raw",
+          "git_added": "2026-10-12"
+        }
+      ],
+      "mtime": "",
+      "month": "2026-10",
+      "roots": [
+        "01-raw"
+      ],
+      "priority": 4,
+      "git_added": "2026-10-12",
+      "git_subject": "docs(daily): 归档10月12日优化器论文检索与推荐"
+    },
+    {
+      "stem": "traininglossguaranteesformuonwithfinitestepnewtonschulzorthogonalization",
+      "files": [
+        {
+          "path": "01-raw/2026-10/Training_Loss_Guarantees_for_Muon_with_Finite_Step_Newton_Schulz_Orthogonalization.pdf",
+          "kind": "git",
+          "root": "01-raw",
+          "git_added": "2026-10-12"
+        }
+      ],
+      "mtime": "",
+      "month": "2026-10",
+      "roots": [
+        "01-raw"
+      ],
+      "priority": 4,
+      "git_added": "2026-10-12",
+      "git_subject": "docs(daily): 归档10月12日优化器论文检索与推荐"
+    },
+    {
+      "stem": "costfreespectralestimationforadaptivenewtonschulzinmatrixoptimizers",
+      "files": [
+        {
+          "path": "01-raw/2026-10/Cost_free_Spectral_Estimation_for_Adaptive_Newton_Schulz_in_Matrix_Optimizers.pdf",
+          "kind": "git",
+          "root": "01-raw",
+          "git_added": "2026-10-11"
+        }
+      ],
+      "mtime": "",
+      "month": "2026-10",
+      "roots": [
+        "01-raw"
+      ],
+      "priority": 4,
+      "git_added": "2026-10-11",
+      "git_subject": "docs(daily): 归档10月11日优化器论文检索与推荐"
+    },
+    {
+      "stem": "optimizinglargelanguagemodelswithchainedlmos",
+      "files": [
+        {
+          "path": "01-raw/2026-10/Optimizing_Large_Language_Models_with_Chained_LMOs.pdf",
+          "kind": "git",
+          "root": "01-raw",
+          "git_added": "2026-10-11"
+        }
+      ],
+      "mtime": "",
+      "month": "2026-10",
+      "roots": [
+        "01-raw"
+      ],
+      "priority": 4,
+      "git_added": "2026-10-11",
+      "git_subject": "docs(daily): 归档10月11日优化器论文检索与推荐"
+    },
+    {
+      "stem": "images",
+      "files": [
+        {
+          "path": "/Users/myl/Documents/paper/02-markdown/2026-10/images/Convergence_of_Muon_with_Newton_Schulz/fig6.png",
+          "kind": "png",
+          "root": "02-markdown"
+        },
+        {
+          "path": "/Users/myl/Documents/paper/02-markdown/2026-10/images/Convergence_of_Muon_with_Newton_Schulz/fig7.png",
+          "kind": "png",
+          "root": "02-markdown"
+        },
+        {
+          "path": "/Users/myl/Documents/paper/02-markdown/2026-10/images/Convergence_of_Muon_with_Newton_Schulz/fig5.png",
+          "kind": "png",
+          "root": "02-markdown"
+        },
+        {
+          "path": "/Users/myl/Documents/paper/02-markdown/2026-10/images/Convergence_of_Muon_with_Newton_Schulz/fig4.png",
+          "kind": "png",
+          "root": "02-markdown"
+        },
+        {
+          "path": "/Users/myl/Documents/paper/02-markdown/2026-10/images/Convergence_of_Muon_with_Newton_Schulz/fig1.png",
+          "kind": "png",
+          "root": "02-markdown"
+        },
+        {
+          "path": "/Users/myl/Documents/paper/02-markdown/2026-10/images/Convergence_of_Muon_with_Newton_Schulz/fig3.png",
+          "kind": "png",
+          "root": "02-markdown"
+        },
+        {
+          "path": "/Users/myl/Documents/paper/02-markdown/2026-10/images/Convergence_of_Muon_with_Newton_Schulz/fig11.png",
+          "kind": "png",
+          "root": "02-markdown"
+        },
+        {
+          "path": "/Users/myl/Documents/paper/02-markdown/2026-10/images/Convergence_of_Muon_with_Newton_Schulz/fig10.png",
+          "kind": "png",
+          "root": "02-markdown"
+        },
+        {
+          "path": "/Users/myl/Documents/paper/02-markdown/2026-10/images/Convergence_of_Muon_with_Newton_Schulz/fig2.png",
+          "kind": "png",
+          "root": "02-markdown"
+        },
+        {
+          "path": "/Users/myl/Documents/paper/02-markdown/2026-10/images/Convergence_of_Muon_with_Newton_Schulz/fig9.png",
+          "kind": "png",
+          "root": "02-markdown"
+        },
+        {
+          "path": "/Users/myl/Documents/paper/02-markdown/2026-10/images/Convergence_of_Muon_with_Newton_Schulz/fig8.png",
+          "kind": "png",
+          "root": "02-markdown"
+        }
+      ],
+      "mtime": "2026-10-10",
+      "month": "2026-10",
+      "roots": [
+        "02-markdown"
+      ],
+      "priority": 3
+    },
+    {
+      "stem": "convergenceofmuonwithnewtonschulz",
+      "files": [
+        {
+          "path": "/Users/myl/Documents/paper/03-notes/2026-10/Convergence_of_Muon_with_Newton_Schulz/精读.md",
+          "kind": "md",
+          "root": "03-notes"
+        },
+        {
+          "path": "/Users/myl/Documents/paper/03-notes/2026-10/Convergence_of_Muon_with_Newton_Schulz/images/fig6.png",
+          "kind": "png",
+          "root": "03-notes"
+        },
+        {
+          "path": "/Users/myl/Documents/paper/03-notes/2026-10/Convergence_of_Muon_with_Newton_Schulz/images/fig7.png",
+          "kind": "png",
+          "root": "03-notes"
+        },
+        {
+          "path": "/Users/myl/Documents/paper/03-notes/2026-10/Convergence_of_Muon_with_Newton_Schulz/images/fig5.png",
+          "kind": "png",
+          "root": "03-notes"
+        },
+        {
+          "path": "/Users/myl/Documents/paper/03-notes/2026-10/Convergence_of_Muon_with_Newton_Schulz/images/fig4.png",
+          "kind": "png",
+          "root": "03-notes"
+        },
+        {
+          "path": "/Users/myl/Documents/paper/03-notes/2026-10/Convergence_of_Muon_with_Newton_Schulz/images/fig1.png",
+          "kind": "png",
+          "root": "03-notes"
+        },
+        {
+          "path": "/Users/myl/Documents/paper/03-notes/2026-10/Convergence_of_Muon_with_Newton_Schulz/images/fig3.png",
+          "kind": "png",
+          "root": "03-notes"
+        },
+        {
+          "path": "/Users/myl/Documents/paper/03-notes/2026-10/Convergence_of_Muon_with_Newton_Schulz/images/fig11.png",
+          "kind": "png",
+          "root": "03-notes"
+        },
+        {
+          "path": "/Users/myl/Documents/paper/03-notes/2026-10/Convergence_of_Muon_with_Newton_Schulz/images/fig10.png",
+          "kind": "png",
+          "root": "03-notes"
+        },
+        {
+          "path": "/Users/myl/Documents/paper/03-notes/2026-10/Convergence_of_Muon_with_Newton_Schulz/images/fig2.png",
+          "kind": "png",
+          "root": "03-notes"
+        },
+        {
+          "path": "/Users/myl/Documents/paper/03-notes/2026-10/Convergence_of_Muon_with_Newton_Schulz/images/fig9.png",
+          "kind": "png",
+          "root": "03-notes"
+        },
+        {
+          "path": "/Users/myl/Documents/paper/03-notes/2026-10/Convergence_of_Muon_with_Newton_Schulz/images/fig8.png",
+          "kind": "png",
+          "root": "03-notes"
+        },
+        {
+          "path": "/Users/myl/Documents/paper/02-markdown/2026-10/Convergence_of_Muon_with_Newton_Schulz.md",
+          "kind": "md",
+          "root": "02-markdown"
+        },
+        {
+          "path": "03-notes/2026-10/Convergence_of_Muon_with_Newton_Schulz/精读.md",
+          "kind": "git",
+          "root": "03-notes",
+          "git_added": "2026-10-10"
+        },
+        {
+          "path": "01-raw/2026-10/Convergence_of_Muon_with_Newton_Schulz.pdf",
+          "kind": "git",
+          "root": "01-raw",
+          "git_added": "2026-10-10"
+        },
+        {
+          "path": "02-markdown/2026-10/Convergence_of_Muon_with_Newton_Schulz.md",
+          "kind": "git",
+          "root": "02-markdown",
+          "git_added": "2026-10-10"
+        }
+      ],
+      "mtime": "2026-10-10",
+      "month": "2026-10",
+      "roots": [
+        "03-notes",
+        "02-markdown",
+        "01-raw"
+      ],
+      "priority": 2,
+      "git_added": "2026-10-10",
+      "git_subject": "docs(notes): 新增Muon有限步NS收敛论文精读与证据审计",
+      "assets": {
+        "06-translation": {
+          "extract": "existence_only",
+          "files": [
+            "双栏对比.pdf"
+          ]
+        }
+      }
+    }
+  ],
+  "papers_total": 13,
+  "daily_total": 6,
+  "reading_log": [],
+  "git_added": {
+    "available": true,
+    "error": null,
+    "commits": 11,
+    "stems": [
+      "convergenceofmuonwithnewtonschulz",
+      "costfreespectralestimationforadaptivenewtonschulzinmatrixoptimizers",
+      "optimizinglargelanguagemodelswithchainedlmos",
+      "doesmuonneedfinegrainedspectralshaping",
+      "fromgeometrytogeneralizationwhyrownormalizationcanbeatadamandmuon",
+      "traininglossguaranteesformuonwithfinitestepnewtonschulzorthogonalization",
+      "moaramoduleawarerankallocationandstructurepreservingdecompositionforlowrankllmpretraining",
+      "roundinginpreconditionerspaceredesigning4bitadamwoptimizerstatequantization",
+      "spectrallytargetedmuon",
+      "expertmuoncompassalignmentguidedstepsizesformixtureofexpertstraining",
+      "highprobabilityguaranteesforsgdunderheavytailedgradientnoise",
+      "onthedepthtransferofneuraloptimizersvialsmoothness"
+    ],
+    "roots": {
+      "01-raw": 12,
+      "03-notes": 1,
+      "02-markdown": 1
+    },
+    "files": [
+      {
+        "stem": "convergenceofmuonwithnewtonschulz",
+        "files": [
+          {
+            "path": "03-notes/2026-10/Convergence_of_Muon_with_Newton_Schulz/精读.md",
+            "root": "03-notes"
+          },
+          {
+            "path": "01-raw/2026-10/Convergence_of_Muon_with_Newton_Schulz.pdf",
+            "root": "01-raw"
+          },
+          {
+            "path": "02-markdown/2026-10/Convergence_of_Muon_with_Newton_Schulz.md",
+            "root": "02-markdown"
+          }
+        ],
+        "first_commit_date": "2026-10-10",
+        "commit_subject": "docs(notes): 新增Muon有限步NS收敛论文精读与证据审计",
+        "month": "2026-10"
+      },
+      {
+        "stem": "costfreespectralestimationforadaptivenewtonschulzinmatrixoptimizers",
+        "files": [
+          {
+            "path": "01-raw/2026-10/Cost_free_Spectral_Estimation_for_Adaptive_Newton_Schulz_in_Matrix_Optimizers.pdf",
+            "root": "01-raw"
+          }
+        ],
+        "first_commit_date": "2026-10-11",
+        "commit_subject": "docs(daily): 归档10月11日优化器论文检索与推荐",
+        "month": "2026-10"
+      },
+      {
+        "stem": "optimizinglargelanguagemodelswithchainedlmos",
+        "files": [
+          {
+            "path": "01-raw/2026-10/Optimizing_Large_Language_Models_with_Chained_LMOs.pdf",
+            "root": "01-raw"
+          }
+        ],
+        "first_commit_date": "2026-10-11",
+        "commit_subject": "docs(daily): 归档10月11日优化器论文检索与推荐",
+        "month": "2026-10"
+      },
+      {
+        "stem": "doesmuonneedfinegrainedspectralshaping",
+        "files": [
+          {
+            "path": "01-raw/2026-10/Does_Muon_Need_Fine_Grained_Spectral_Shaping.pdf",
+            "root": "01-raw"
+          }
+        ],
+        "first_commit_date": "2026-10-12",
+        "commit_subject": "docs(daily): 归档10月12日优化器论文检索与推荐",
+        "month": "2026-10"
+      },
+      {
+        "stem": "fromgeometrytogeneralizationwhyrownormalizationcanbeatadamandmuon",
+        "files": [
+          {
+            "path": "01-raw/2026-10/From_Geometry_to_Generalization_Why_Row_Normalization_Can_Beat_Adam_and_Muon.pdf",
+            "root": "01-raw"
+          }
+        ],
+        "first_commit_date": "2026-10-12",
+        "commit_subject": "docs(daily): 归档10月12日优化器论文检索与推荐",
+        "month": "2026-10"
+      },
+      {
+        "stem": "traininglossguaranteesformuonwithfinitestepnewtonschulzorthogonalization",
+        "files": [
+          {
+            "path": "01-raw/2026-10/Training_Loss_Guarantees_for_Muon_with_Finite_Step_Newton_Schulz_Orthogonalization.pdf",
+            "root": "01-raw"
+          }
+        ],
+        "first_commit_date": "2026-10-12",
+        "commit_subject": "docs(daily): 归档10月12日优化器论文检索与推荐",
+        "month": "2026-10"
+      },
+      {
+        "stem": "moaramoduleawarerankallocationandstructurepreservingdecompositionforlowrankllmpretraining",
+        "files": [
+          {
+            "path": "01-raw/2026-10/MoARa_Module_Aware_Rank_Allocation_and_Structure_Preserving_Decomposition_for_Low_Rank_LLM_Pre_training.pdf",
+            "root": "01-raw"
+          }
+        ],
+        "first_commit_date": "2026-10-13",
+        "commit_subject": "docs(daily): 归档10月13日优化器论文检索与推荐",
+        "month": "2026-10"
+      },
+      {
+        "stem": "roundinginpreconditionerspaceredesigning4bitadamwoptimizerstatequantization",
+        "files": [
+          {
+            "path": "01-raw/2026-10/Rounding_in_Preconditioner_Space_Redesigning_4_bit_AdamW_Optimizer_State_Quantization.pdf",
+            "root": "01-raw"
+          }
+        ],
+        "first_commit_date": "2026-10-13",
+        "commit_subject": "docs(daily): 归档10月13日优化器论文检索与推荐",
+        "month": "2026-10"
+      },
+      {
+        "stem": "spectrallytargetedmuon",
+        "files": [
+          {
+            "path": "01-raw/2026-10/Spectrally_Targeted_Muon.pdf",
+            "root": "01-raw"
+          }
+        ],
+        "first_commit_date": "2026-10-13",
+        "commit_subject": "docs(daily): 归档10月13日优化器论文检索与推荐",
+        "month": "2026-10"
+      },
+      {
+        "stem": "expertmuoncompassalignmentguidedstepsizesformixtureofexpertstraining",
+        "files": [
+          {
+            "path": "01-raw/2026-10/ExpertMuon_Compass_Alignment_Guided_Step_Sizes_for_Mixture_of_Experts_Training.pdf",
+            "root": "01-raw"
+          }
+        ],
+        "first_commit_date": "2026-10-14",
+        "commit_subject": "docs(daily): 归档10月14日优化器论文检索与推荐",
+        "month": "2026-10"
+      },
+      {
+        "stem": "highprobabilityguaranteesforsgdunderheavytailedgradientnoise",
+        "files": [
+          {
+            "path": "01-raw/2026-10/High_Probability_Guarantees_for_SGD_under_$β$_Heavy_Tailed_Gradient_Noise.pdf",
+            "root": "01-raw"
+          }
+        ],
+        "first_commit_date": "2026-10-14",
+        "commit_subject": "docs(daily): 归档10月14日优化器论文检索与推荐",
+        "month": "2026-10"
+      },
+      {
+        "stem": "onthedepthtransferofneuraloptimizersvialsmoothness",
+        "files": [
+          {
+            "path": "01-raw/2026-10/On_the_Depth_Transfer_of_Neural_Optimizers_via_L_Smoothness.pdf",
+            "root": "01-raw"
+          }
+        ],
+        "first_commit_date": "2026-10-14",
+        "commit_subject": "docs(daily): 归档10月14日优化器论文检索与推荐",
+        "month": "2026-10"
+      }
+    ]
+  }
+}

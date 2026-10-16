@@ -1,0 +1,66 @@
+[
+  {
+    "date": "2026-10-08",
+    "unique_in_day": 224,
+    "source_limitations": null,
+    "path": "/Users/myl/Documents/paper/08-daily/2026-10-08/search_result.json"
+  },
+  {
+    "date": "2026-10-09",
+    "unique_in_day": 310,
+    "source_limitations": null,
+    "path": "/Users/myl/Documents/paper/08-daily/2026-10-09/search_result.json"
+  },
+  {
+    "date": "2026-10-10",
+    "unique_in_day": 306,
+    "source_limitations": null,
+    "path": "/Users/myl/Documents/paper/08-daily/2026-10-10/search_result.json"
+  },
+  {
+    "date": "2026-10-11",
+    "unique_in_day": 303,
+    "source_limitations": {
+      "arxiv": "最近30天按相关性最多200条，非穷尽",
+      "openreview": "15个配置关键词逐词第1页100条，有截断；日期缺失条目保留",
+      "semantic_scholar": "近一年请求2次HTTP429，无补充结果或引用量",
+      "focus": "optimizer,Muon,AdamW,preconditioner,spectral,optimizer state；在同一池上重预筛，未新增主题",
+      "assessment_scope": "metadata_and_abstract"
+    },
+    "path": "/Users/myl/Documents/paper/08-daily/2026-10-11/search_result.json"
+  },
+  {
+    "date": "2026-10-12",
+    "unique_in_day": 267,
+    "source_limitations": {
+      "arxiv": "15个配置关键词OR查询，按相关性最多200条，非穷尽；部分Muon为粒子物理误命中",
+      "openreview": "15关键词各查询第一页100条，存在截断；日期缺失候选保留",
+      "semantic_scholar": "过去一年补充两次HTTP429，引用信号不可得，不推断不存在高影响力论文",
+      "assessment": "只依据元数据与摘要，低置信度初评；今日新增推荐不等于今日首发"
+    },
+    "path": "/Users/myl/Documents/paper/08-daily/2026-10-12/search_result.json"
+  },
+  {
+    "date": "2026-10-13",
+    "unique_in_day": 264,
+    "source_limitations": [
+      "arXiv 15关键词 OR 检索相关性前200条；前两次429，第三次成功。不是完整枚举。",
+      "OpenReview 15关键词各第一页最多100条，13个查询被截断；日期未知记录保留。",
+      "Semantic Scholar过去一年补充窗口两次429，未获得引用或高影响力候选；不能推断没有高影响力工作。",
+      "Muon可能命中粒子物理，宽泛optimization可能命中推理优化；附录保留误命中但语义复排降级。"
+    ],
+    "path": "/Users/myl/Documents/paper/08-daily/2026-10-13/search_result.json"
+  },
+  {
+    "date": "2026-10-14",
+    "unique_in_day": 264,
+    "source_limitations": [
+      "arXiv按全部15个配置关键词和分类检索近期窗口，取相关性前200条；非穷尽检索。",
+      "OpenReview按15关键词各取首页100条，13个查询达到上限；日期按API元数据判断，未继续翻页。",
+      "Semantic Scholar过去一年补充请求两次429，引用/高影响力数据未取得；没有补编。",
+      "近期窗口2026-09-14至2026-10-14；今日指检索及入库日，不表示全部论文今日首发。",
+      "PowerStep的LaTeX ell_p标题与已有lp文件名未被自动去重；已核验2026-09原始PDF，补充别名后离线重放原始记录。"
+    ],
+    "path": "/Users/myl/Documents/paper/08-daily/2026-10-14/search_result.json"
+  }
+]

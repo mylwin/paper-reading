@@ -1,0 +1,32 @@
+{
+  "type": "analytical_counterexample_not_training",
+  "objective": "f(x,y)=0.5*x^2+50*y^2",
+  "point": [
+    1.0,
+    0.001
+  ],
+  "gradient": [
+    1.0,
+    0.1
+  ],
+  "notes": [
+    "两个方向分别为对角矩阵I和diag(1,0.1)，最优射线下降量对方向整体缩放不变",
+    "说明polar逼近误差与训练目标下降不等价，不代表有限NS在LLM上优于精确polar"
+  ],
+  "results": [
+    {
+      "direction": "exact_polar",
+      "gradient_alignment": 1.1,
+      "directional_curvature": 101.0,
+      "optimal_radius": 0.010891089108910892,
+      "exact_loss_decrease": 0.005990099009900991
+    },
+    {
+      "direction": "unflattened_gradient",
+      "gradient_alignment": 1.01,
+      "directional_curvature": 2.0,
+      "optimal_radius": 0.505,
+      "exact_loss_decrease": 0.255025
+    }
+  ]
+}

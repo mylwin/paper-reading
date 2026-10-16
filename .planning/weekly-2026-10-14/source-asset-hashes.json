@@ -1,0 +1,162 @@
+[
+  {
+    "path": "/Users/myl/Documents/paper/01-raw/2026-10/ExpertMuon_Compass_Alignment_Guided_Step_Sizes_for_Mixture_of_Experts_Training.pdf",
+    "sha256": "5554f569871eeaac511c10d2e9547f25aa9721ea5c4b10580e98932b68b6e2da"
+  },
+  {
+    "path": "/Users/myl/Documents/paper/01-raw/2026-10/High_Probability_Guarantees_for_SGD_under_$β$_Heavy_Tailed_Gradient_Noise.pdf",
+    "sha256": "eb07cdd31afcec25612274106d08ec88c5bdcefc3c7dadb0b2d7c02c23af1b72"
+  },
+  {
+    "path": "/Users/myl/Documents/paper/01-raw/2026-10/On_the_Depth_Transfer_of_Neural_Optimizers_via_L_Smoothness.pdf",
+    "sha256": "5e5cb0b0279f3e71de67eacdd6f3a11db79058b61114f81b1801e8974f9e4c20"
+  },
+  {
+    "path": "/Users/myl/Documents/paper/01-raw/2026-10/MoARa_Module_Aware_Rank_Allocation_and_Structure_Preserving_Decomposition_for_Low_Rank_LLM_Pre_training.pdf",
+    "sha256": "d5f393c1707f34e688ad8b86dee96991e62c09d05d22a61dcdcf906d743a3c0d"
+  },
+  {
+    "path": "/Users/myl/Documents/paper/01-raw/2026-10/Rounding_in_Preconditioner_Space_Redesigning_4_bit_AdamW_Optimizer_State_Quantization.pdf",
+    "sha256": "f518f894838cca319f075c82d6d559d1a95ce8324d5ffb9143ca89f5759b6247"
+  },
+  {
+    "path": "/Users/myl/Documents/paper/01-raw/2026-10/Spectrally_Targeted_Muon.pdf",
+    "sha256": "107bd736761d05d2d5ba89fa6992542554638f48787ae42fa63f104966b0ea60"
+  },
+  {
+    "path": "/Users/myl/Documents/paper/01-raw/2026-10/Does_Muon_Need_Fine_Grained_Spectral_Shaping.pdf",
+    "sha256": "c5e8c5e591b42ee7f405d0755bc3f41cf2144f9e8881fecc974458d14639e0a7"
+  },
+  {
+    "path": "/Users/myl/Documents/paper/01-raw/2026-10/From_Geometry_to_Generalization_Why_Row_Normalization_Can_Beat_Adam_and_Muon.pdf",
+    "sha256": "1648142ff9b2ab1aa62c337de5824bb56cc62a1db8504173e452caa93b354784"
+  },
+  {
+    "path": "/Users/myl/Documents/paper/01-raw/2026-10/Training_Loss_Guarantees_for_Muon_with_Finite_Step_Newton_Schulz_Orthogonalization.pdf",
+    "sha256": "0dddc15d2ea60c0143c1feb52d08e9917892f3826830249a7f0ca6a3e0563982"
+  },
+  {
+    "path": "/Users/myl/Documents/paper/01-raw/2026-10/Cost_free_Spectral_Estimation_for_Adaptive_Newton_Schulz_in_Matrix_Optimizers.pdf",
+    "sha256": "5c4539d4017bbe7d7adc8be388a7ac4870b971f6314ca5f65a8402bea3325d3f"
+  },
+  {
+    "path": "/Users/myl/Documents/paper/01-raw/2026-10/Optimizing_Large_Language_Models_with_Chained_LMOs.pdf",
+    "sha256": "d46d09d5f354466dfce1d3e377fc538dc9fb7368d425fed21c99dad8b803c7b7"
+  },
+  {
+    "path": "/Users/myl/Documents/paper/02-markdown/2026-10/images/Convergence_of_Muon_with_Newton_Schulz/fig6.png",
+    "sha256": "67a3dd54db87e8dde6ff8bd1f924fd965c2840b2bff61241f42b56fe54a89a87"
+  },
+  {
+    "path": "/Users/myl/Documents/paper/02-markdown/2026-10/images/Convergence_of_Muon_with_Newton_Schulz/fig7.png",
+    "sha256": "1a4d0f333579ebbde28039929c002db5d83148e2e31d7f8023faba5d1e7998c3"
+  },
+  {
+    "path": "/Users/myl/Documents/paper/02-markdown/2026-10/images/Convergence_of_Muon_with_Newton_Schulz/fig5.png",
+    "sha256": "f61ab10345fbe85900fc1f01086c955a5cd1184b5c972be79369a1c5484870bb"
+  },
+  {
+    "path": "/Users/myl/Documents/paper/02-markdown/2026-10/images/Convergence_of_Muon_with_Newton_Schulz/fig4.png",
+    "sha256": "d2c6aefcff0bdea8b01fb5fd3c42aa7bdea0ed938f86e7d24972771675c6549a"
+  },
+  {
+    "path": "/Users/myl/Documents/paper/02-markdown/2026-10/images/Convergence_of_Muon_with_Newton_Schulz/fig1.png",
+    "sha256": "abc5597aba2421e999229ba08dc7ad64e6b2d13d96f84a9d4bcc207b21e4d738"
+  },
+  {
+    "path": "/Users/myl/Documents/paper/02-markdown/2026-10/images/Convergence_of_Muon_with_Newton_Schulz/fig3.png",
+    "sha256": "e4fc7fc3608a202eb15625eff11b1ee752b6ab7266688316fa0e65d515286f83"
+  },
+  {
+    "path": "/Users/myl/Documents/paper/02-markdown/2026-10/images/Convergence_of_Muon_with_Newton_Schulz/fig11.png",
+    "sha256": "04bf51db5db0e7031b181097cd6e2a2efb0c56eefce79c431444d408c4735d3d"
+  },
+  {
+    "path": "/Users/myl/Documents/paper/02-markdown/2026-10/images/Convergence_of_Muon_with_Newton_Schulz/fig10.png",
+    "sha256": "e7b2af9221161d8d9eb16389aad4385328fcf5e054341ea9d8eecff8f5e9b283"
+  },
+  {
+    "path": "/Users/myl/Documents/paper/02-markdown/2026-10/images/Convergence_of_Muon_with_Newton_Schulz/fig2.png",
+    "sha256": "fd28211723e4fb8e2cc21cdb44e567ea1cf4d2e56b9b49070393ea747041124b"
+  },
+  {
+    "path": "/Users/myl/Documents/paper/02-markdown/2026-10/images/Convergence_of_Muon_with_Newton_Schulz/fig9.png",
+    "sha256": "57116a049772a757c0ecbfcaa9c7b4ccdafb739018ee0d88bce85a12663796c8"
+  },
+  {
+    "path": "/Users/myl/Documents/paper/02-markdown/2026-10/images/Convergence_of_Muon_with_Newton_Schulz/fig8.png",
+    "sha256": "4b96c7ed7125dd32111ef33f765d5a06cbd739bbffbdc70dea69000f732864d3"
+  },
+  {
+    "path": "/Users/myl/Documents/paper/03-notes/2026-10/Convergence_of_Muon_with_Newton_Schulz/精读.md",
+    "sha256": "518191035fab3aa1b250e8386d51a54866604e98422d837a75be24376a9e8bee"
+  },
+  {
+    "path": "/Users/myl/Documents/paper/03-notes/2026-10/Convergence_of_Muon_with_Newton_Schulz/images/fig6.png",
+    "sha256": "67a3dd54db87e8dde6ff8bd1f924fd965c2840b2bff61241f42b56fe54a89a87"
+  },
+  {
+    "path": "/Users/myl/Documents/paper/03-notes/2026-10/Convergence_of_Muon_with_Newton_Schulz/images/fig7.png",
+    "sha256": "1a4d0f333579ebbde28039929c002db5d83148e2e31d7f8023faba5d1e7998c3"
+  },
+  {
+    "path": "/Users/myl/Documents/paper/03-notes/2026-10/Convergence_of_Muon_with_Newton_Schulz/images/fig5.png",
+    "sha256": "f61ab10345fbe85900fc1f01086c955a5cd1184b5c972be79369a1c5484870bb"
+  },
+  {
+    "path": "/Users/myl/Documents/paper/03-notes/2026-10/Convergence_of_Muon_with_Newton_Schulz/images/fig4.png",
+    "sha256": "d2c6aefcff0bdea8b01fb5fd3c42aa7bdea0ed938f86e7d24972771675c6549a"
+  },
+  {
+    "path": "/Users/myl/Documents/paper/03-notes/2026-10/Convergence_of_Muon_with_Newton_Schulz/images/fig1.png",
+    "sha256": "abc5597aba2421e999229ba08dc7ad64e6b2d13d96f84a9d4bcc207b21e4d738"
+  },
+  {
+    "path": "/Users/myl/Documents/paper/03-notes/2026-10/Convergence_of_Muon_with_Newton_Schulz/images/fig3.png",
+    "sha256": "e4fc7fc3608a202eb15625eff11b1ee752b6ab7266688316fa0e65d515286f83"
+  },
+  {
+    "path": "/Users/myl/Documents/paper/03-notes/2026-10/Convergence_of_Muon_with_Newton_Schulz/images/fig11.png",
+    "sha256": "04bf51db5db0e7031b181097cd6e2a2efb0c56eefce79c431444d408c4735d3d"
+  },
+  {
+    "path": "/Users/myl/Documents/paper/03-notes/2026-10/Convergence_of_Muon_with_Newton_Schulz/images/fig10.png",
+    "sha256": "e7b2af9221161d8d9eb16389aad4385328fcf5e054341ea9d8eecff8f5e9b283"
+  },
+  {
+    "path": "/Users/myl/Documents/paper/03-notes/2026-10/Convergence_of_Muon_with_Newton_Schulz/images/fig2.png",
+    "sha256": "fd28211723e4fb8e2cc21cdb44e567ea1cf4d2e56b9b49070393ea747041124b"
+  },
+  {
+    "path": "/Users/myl/Documents/paper/03-notes/2026-10/Convergence_of_Muon_with_Newton_Schulz/images/fig9.png",
+    "sha256": "57116a049772a757c0ecbfcaa9c7b4ccdafb739018ee0d88bce85a12663796c8"
+  },
+  {
+    "path": "/Users/myl/Documents/paper/03-notes/2026-10/Convergence_of_Muon_with_Newton_Schulz/images/fig8.png",
+    "sha256": "4b96c7ed7125dd32111ef33f765d5a06cbd739bbffbdc70dea69000f732864d3"
+  },
+  {
+    "path": "/Users/myl/Documents/paper/02-markdown/2026-10/Convergence_of_Muon_with_Newton_Schulz.md",
+    "sha256": "575f35b9fe214b0c29f866673c2cf15c06b429a92520e7e9b3b5c3c448ad3d71"
+  },
+  {
+    "path": "/Users/myl/Documents/paper/01-raw/2026-10/Convergence_of_Muon_with_Newton_Schulz.pdf",
+    "sha256": "b600ad285ba2e86d6dadaba73b323ba48354c46e59b3f9dbfd713dae76a4b0f8"
+  },
+  {
+    "path": "/Users/myl/Documents/paper/01-raw/2026-10/Anytime_Training_with_Schedule_Free_Spectral_Optimization.pdf",
+    "sha256": "fcdbabe27a06501039374cf61d99346d2eef21b58332612012393ae15b7547ae"
+  },
+  {
+    "path": "/Users/myl/Documents/paper/01-raw/2026-10/DGA_Muon_Decoupled_Geometry_Aligned_Adaptive_Scaling_for_Muon.pdf",
+    "sha256": "1288b1cb241c4fc64049ed590f085e42c7592f2864f850216287d051e1590777"
+  },
+  {
+    "path": "/Users/myl/Documents/paper/01-raw/2026-10/ORCA_The_Annealed_Spectral_Conditioning_Optimizer_for_Faster_Better_LLM_Training.pdf",
+    "sha256": "cbffae1395c807e61c8c520f661aa50af631e7d8c24b38bea230e2cafb8c8ffb"
+  },
+  {
+    "path": "/Users/myl/Documents/paper/01-raw/2026-10/The_Best_Optimizer_Depends_on_Batch_Size.pdf",
+    "sha256": "eb04e922c7c6b2b0ab4a1161320eb6453e2a23b048e4949ca2f3b8b8a21f7115"
+  }
+]

@@ -1,0 +1,849 @@
+{
+  "source": "08-daily/2026-10-16/search_result.json",
+  "source_sha256": "e1044127b35a75af57dbdc494db95101dee6d5033f155901cda60362b50b8c3b",
+  "counts": {
+    "total_unique": 265,
+    "total_known": 97,
+    "total_candidates": 168
+  },
+  "top_papers": [
+    {
+      "id": "http://arxiv.org/abs/2610.19844v1",
+      "title": "Memory-Efficient Subspace Optimization with Residual Correction: From Momentum SGD to Muon",
+      "summary": "Memory-efficient subspace optimization has emerged as a practical approach to reducing the memory cost of LLM training while preserving optimization performance. Previous algorithms typically rely on the leading singular subspace of stochastic gradients, yet the gradient noise may dominate the subspace in later training stages and can prevent convergence. To overcome this limitation, we adopt a residual correction framework, which maintains the optimizer states in the subspace and adds the orthogonal residual gradient to the parameter update. We first integrate this scheme into momentum SGD to develop SMRC, which attains an $O(T^{-1/4})$ convergence rate for a fixed orthonormal basis, matching that of full-space momentum SGD. Our analysis introduces a subspace virtual iterate to resolve the coupling between the momentum and the residual correction. Furthermore, we extend SMRC to a multi-stage variant which periodically recomputes bases to track the evolving dominant subspace and retains the same rate. Since each basis refresh breaks the consistency of the virtual iterates, we devise a boundary correction approach that aligns them across stages. Beyond momentum SGD, we incorporate our framework into Muon and propose PMRC, which applies the matrix sign to the projected momentum. Through a weighted momentum tracking analysis that accounts for the residual gradient, we establish an $O(T^{-1/4})$ convergence rate for PMRC, which matches the rate of full-space Muon. We also design a multi-stage PMRC with periodically refreshed bases, which maintains a convergence rate of the same order. Extensive experimental results confirm the effectiveness and efficiency of our algorithms.",
+      "authors": [
+        "Sifan Yang",
+        "Hongyi Tao",
+        "Dingzhi Yu",
+        "Haomin Bai",
+        "Wei Jiang",
+        "Silin Gao",
+        "Pi Bu",
+        "Lijun Zhang"
+      ],
+      "affiliations": [],
+      "published": "2026-10-14T09:12:57Z",
+      "published_date": "2026-10-14 09:12:57+00:00",
+      "updated": "2026-10-14T09:12:57Z",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.19844v1",
+      "url": "http://arxiv.org/abs/2610.19844v1",
+      "source": "arxiv",
+      "scores": {
+        "relevance": 3.0,
+        "recency": 3.0,
+        "impact": 0.0,
+        "evidence": 1.4,
+        "popularity": 0.0,
+        "quality": 1.4,
+        "recommendation": 7.93
+      },
+      "matched_domain": "大模型优化器设计",
+      "matched_keywords": [
+        "Muon",
+        "cs.LG"
+      ],
+      "is_hot_paper": false,
+      "score_type": "research_priority_screening",
+      "assessment_scope": "metadata_and_abstract",
+      "screening_rank": 5,
+      "paper_stem": "Memory_Efficient_Subspace_Optimization_with_Residual_Correction_From_Momentum_SGD_to_Muon",
+      "already_known": false,
+      "related_papers": [
+        {
+          "title": "PowerStep: Memory-Efficient Adaptive Optimization via lp-Norm Steepest Descent",
+          "path": "/Users/myl/Documents/paper/03-notes/2026-09/PowerStep_Memory_Efficient_Adaptive_Optimization_via_lp_Norm_Steepest_Descent/精读.md",
+          "stem": "PowerStep_Memory_Efficient_Adaptive_Optimization_via_lp_Norm_Steepest_Descent",
+          "source": "note",
+          "shared_terms": [
+            "optimizer state memory"
+          ],
+          "relationship": "互补：比较免存二阶状态与子空间状态加正交残差的两种内存设计，不能仅凭摘要断言谁更优。"
+        },
+        {
+          "title": "Accelerating Muon with Spectral Residual Correction",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-10-11/search_result.json",
+          "stem": "Accelerating_Muon_with_Spectral_Residual_Correction",
+          "source": "daily",
+          "shared_terms": [
+            "Muon",
+            "residual correction"
+          ],
+          "relationship": "待对照：同涉Muon残差修正，但此处是否为相同残差定义与分析对象需读全文。"
+        }
+      ],
+      "note_filename": "Memory_Efficient_Subspace_Optimization_with_Residual_Correction_From_Momentum_SGD_to_Muon",
+      "candidate_screening_rank": 5,
+      "semantic_rank": 1,
+      "formal_recommendation": true,
+      "source_verified": true,
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "archive_status": "downloaded",
+      "archive_detail": "687.7 KB",
+      "archive_path": "/Users/myl/Documents/paper/01-raw/2026-10/Memory_Efficient_Subspace_Optimization_with_Residual_Correction_From_Momentum_SGD_to_Muon.pdf",
+      "archive_month": "2026-10",
+      "matched_subdomain": "自适应与状态内存"
+    },
+    {
+      "id": "http://arxiv.org/abs/2610.16868v1",
+      "title": "From Parallel to Sequential: Small-Batch Noise Restores Simplicity Bias of Muon",
+      "summary": "Simplicity bias, which can arise from sequential feature learning during training, has been proposed as a general explanation for the success of deep learning. An important driver of this phenomenon is saddle-to-saddle behavior, in which the gradient flow trajectory remains close to a sequence of saddle manifolds while learning one feature at a time. However, Muon, a state-of-the-art optimizer based on spectral descent, does not exhibit such dynamics in the full-batch setting and instead learns features in parallel. How is it then that Muon is so successful in deep learning settings? We show that stochastic gradient noise fundamentally changes this behavior: small-batch noise restores sequential feature learning, providing a mechanism for simplicity bias that is absent from full-batch Muon. We explain this transition through stochastic smoothing of the spectral descent operator underlying Muon. When gradients are small relative to the noise scale, the expected spectral update becomes approximately proportional to the actual gradient, which restores gradient-flow-like dynamics. We formalize this mechanism for deep linear models by deriving the effective continuous dynamics of noisy spectral descent. Experiments on low-rank matrix reconstruction, vision transformers, and large language models (LLMs) support these findings.",
+      "authors": [
+        "Tom Jacobs",
+        "Rebekka Burkholz"
+      ],
+      "affiliations": [],
+      "published": "2026-10-12T14:33:39Z",
+      "published_date": "2026-10-12 14:33:39+00:00",
+      "updated": "2026-10-12T14:33:39Z",
+      "categories": [
+        "cs.LG"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.16868v1",
+      "url": "http://arxiv.org/abs/2610.16868v1",
+      "source": "arxiv",
+      "scores": {
+        "relevance": 3.0,
+        "recency": 3.0,
+        "impact": 0.0,
+        "evidence": 1.4,
+        "popularity": 0.0,
+        "quality": 1.4,
+        "recommendation": 7.93
+      },
+      "matched_domain": "大模型优化器设计",
+      "matched_keywords": [
+        "Muon",
+        "cs.LG"
+      ],
+      "is_hot_paper": false,
+      "score_type": "research_priority_screening",
+      "assessment_scope": "metadata_and_abstract",
+      "screening_rank": 4,
+      "paper_stem": "From_Parallel_to_Sequential_Small_Batch_Noise_Restores_Simplicity_Bias_of_Muon",
+      "already_known": false,
+      "related_papers": [
+        {
+          "title": "Muon with Finite Newton-Schulz: The Smoothing Benefit in Nonsmooth Nonconvex Optimization",
+          "path": "/Users/myl/Documents/paper/01-raw/2026-09/Muon_with_Finite_Newton_Schulz_The_Smoothing_Benefit_in_Nonsmooth_Nonconvex_Optimization.pdf",
+          "stem": "Muon_with_Finite_Newton_Schulz_The_Smoothing_Benefit_in_Nonsmooth_Nonconvex_Optimization",
+          "source": "pdf",
+          "shared_terms": [
+            "Muon",
+            "smoothing"
+          ],
+          "relationship": "互补：有限Newton–Schulz近似与小批量随机噪声属于不同的平滑来源，应分开控制。"
+        },
+        {
+          "title": "Convergence of Muon with Newton-Schulz",
+          "path": "/Users/myl/Documents/paper/03-notes/2026-10/Convergence_of_Muon_with_Newton_Schulz/精读.md",
+          "stem": "Convergence_of_Muon_with_Newton_Schulz",
+          "source": "note",
+          "shared_terms": [
+            "Muon",
+            "spectral descent"
+          ],
+          "relationship": "互补：将已有离散实现收敛分析与新文连续噪声动力学对照，具体假设并不自动兼容。"
+        }
+      ],
+      "note_filename": "From_Parallel_to_Sequential_Small_Batch_Noise_Restores_Simplicity_Bias_of_Muon",
+      "candidate_screening_rank": 4,
+      "semantic_rank": 2,
+      "formal_recommendation": true,
+      "source_verified": true,
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "archive_status": "downloaded",
+      "archive_detail": "1598.9 KB",
+      "archive_path": "/Users/myl/Documents/paper/01-raw/2026-10/From_Parallel_to_Sequential_Small_Batch_Noise_Restores_Simplicity_Bias_of_Muon.pdf",
+      "archive_month": "2026-10",
+      "matched_subdomain": "符号与范数几何优化"
+    },
+    {
+      "id": "http://arxiv.org/abs/2610.19064v1",
+      "title": "How Inner Optimizers Shape Replica Scaling",
+      "summary": "Training large language models (LLMs) across geographically distributed and poorly interconnected compute pools or data centers has become a topic of significant interest. This has led to increased study of local optimization methods such as DiLoco for LLMs, especially those that use local (or inner) adaptive or preconditioned optimizers, which are critical for high-performance LLM training. However, a central challenge remains: it is well known that increasing the number of model replicas (replica scaling) while fixing the total training budget leads to monotonically decreasing performance. Existing work has empirically demonstrated that the choice of inner optimizer (Muon v.s. AdamW) can significantly improve this trend, but offers only limited explanation of the performance difference. In this work, we consider a range of inner-optimizers and identify two important factors that impact replica scaling: (1) the covariance structure of the pseudo-gradients and (2) the impact of batch size on the pseudogradient's noise scale. Based on these insights, we theoretically and empirically demonstrate that whitening-based pre-conditioning is a powerful inner-optimizer desideratum. Our empirical evaluation extends the results to reveal that whitening-based inner-optimizers achieve strong replica scaling (for 8-96 replicas), with performance relative to DP improving as parameters and data are scaled.",
+      "authors": [
+        "Eugene Belilovsky",
+        "Stefan Horoi",
+        "Edouard Oyallon",
+        "Benjamin Thérien"
+      ],
+      "affiliations": [],
+      "published": "2026-10-13T19:00:27Z",
+      "published_date": "2026-10-13 19:00:27+00:00",
+      "updated": "2026-10-13T19:00:27Z",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.19064v1",
+      "url": "http://arxiv.org/abs/2610.19064v1",
+      "source": "arxiv",
+      "scores": {
+        "relevance": 3.0,
+        "recency": 3.0,
+        "impact": 0.0,
+        "evidence": 1.1,
+        "popularity": 0.0,
+        "quality": 1.1,
+        "recommendation": 7.73
+      },
+      "matched_domain": "大模型优化器设计",
+      "matched_keywords": [
+        "Muon",
+        "AdamW",
+        "cs.LG"
+      ],
+      "is_hot_paper": false,
+      "score_type": "research_priority_screening",
+      "assessment_scope": "metadata_and_abstract",
+      "screening_rank": 10,
+      "paper_stem": "How_Inner_Optimizers_Shape_Replica_Scaling",
+      "already_known": false,
+      "related_papers": [
+        {
+          "title": "SignMuon: Communication-Efficient Distributed Muon for LLM Pretraining",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-10-13/search_result.json",
+          "stem": "SignMuon_Communication_Efficient_Distributed_Muon_for_LLM_Pretraining",
+          "source": "daily",
+          "shared_terms": [
+            "distributed LLM training",
+            "Muon"
+          ],
+          "relationship": "互补：通信压缩与局部训练内部优化器白化是不同路线；需区分通信成本与固定总预算下的模型性能。"
+        }
+      ],
+      "note_filename": "How_Inner_Optimizers_Shape_Replica_Scaling",
+      "candidate_screening_rank": 9,
+      "semantic_rank": 3,
+      "formal_recommendation": true,
+      "source_verified": true,
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "archive_status": "downloaded",
+      "archive_detail": "607.3 KB",
+      "archive_path": "/Users/myl/Documents/paper/01-raw/2026-10/How_Inner_Optimizers_Shape_Replica_Scaling.pdf",
+      "archive_month": "2026-10",
+      "matched_subdomain": "大模型训练与优化器设计"
+    },
+    {
+      "id": "http://arxiv.org/abs/2610.20413v1",
+      "title": "When Does Momentum Help in Reinforcement Learning with Verifiable Rewards?",
+      "summary": "Momentum is a classical tool for accelerating convex optimization and a standard component of modern large language model training. Yet recent empirical work has questioned the usefulness of first-moment momentum in reinforcement learning with verifiable rewards (RLVR). We study this question through a bandit formulation of RLVR with bias-corrected exponential moving average (EMA) momentum, where the EMA coefficient $β$ controls how quickly the weights on past gradients decay. When policy gradients are evaluated exactly, we prove that increasing $β$ within a range that prevents overshoot strictly accelerates optimization. When gradients are estimated from sampled responses, a positive expected gain can be obscured by sampling fluctuations. We show that as the learning rate $η$ decreases, the expected gain with fixed $β$ vanishes faster than these fluctuations, whereas increasing $β$ to keep $η/(1-β)$ within the safe regime preserves a nonvanishing gain that eventually dominates them. Bandit simulations quantitatively validate these predictions. RLVR experiments on Qwen3-4B-Base using SGD with EMA and AdamW support our principle of choosing larger coefficients in practical LLM post-training. On Qwen2.5-32B with AdamW, simply increasing $β_1$ improves mean validation accuracy by nearly $2$ percentage points over the conventional choice, demonstrating the principle's effectiveness at a larger model scale.",
+      "authors": [
+        "Kaifei Wang",
+        "Zikang Shan",
+        "Liwei Wang",
+        "Yinyu Ye",
+        "Han Zhong"
+      ],
+      "affiliations": [],
+      "published": "2026-10-14T16:11:14Z",
+      "published_date": "2026-10-14 16:11:14+00:00",
+      "updated": "2026-10-14T16:11:14Z",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "math.OC",
+        "stat.ML"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.20413v1",
+      "url": "http://arxiv.org/abs/2610.20413v1",
+      "source": "arxiv",
+      "scores": {
+        "relevance": 3.0,
+        "recency": 3.0,
+        "impact": 0.0,
+        "evidence": 1.3,
+        "popularity": 0.0,
+        "quality": 1.3,
+        "recommendation": 7.87
+      },
+      "matched_domain": "大模型优化器设计",
+      "matched_keywords": [
+        "AdamW",
+        "cs.LG",
+        "math.OC",
+        "stat.ML"
+      ],
+      "is_hot_paper": false,
+      "score_type": "research_priority_screening",
+      "assessment_scope": "metadata_and_abstract",
+      "screening_rank": 6,
+      "paper_stem": "When_Does_Momentum_Help_in_Reinforcement_Learning_with_Verifiable_Rewards",
+      "already_known": false,
+      "related_papers": [
+        {
+          "title": "Understanding MARS When Scaling Momentum Correction Provably Helps",
+          "stem": "understandingmarswhenscalingmomentumcorrectionprovablyhelps",
+          "source": "pdf",
+          "path": "/Users/myl/Documents/paper/01-raw/2026-07/Understanding_MARS_When_Scaling_Momentum_Correction_Provably_Helps.pdf",
+          "shared_terms": [
+            "momentum",
+            "when"
+          ],
+          "shared_count": 2
+        },
+        {
+          "title": "Amortized Low-Rank Adaptation for Model-Based Reinforcement Learning",
+          "stem": "amortizedlowrankadaptationformodelbasedreinforcementlearning",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-17/search_result.json",
+          "shared_terms": [
+            "reinforcement"
+          ],
+          "shared_count": 1
+        },
+        {
+          "title": "A pullback corrected scalar auxiliary variable optimizer with momentum and adaptive mobility",
+          "stem": "apullbackcorrectedscalarauxiliaryvariableoptimizerwithmomentumandadaptivemobility",
+          "source": "pdf",
+          "path": "/Users/myl/Documents/paper/01-raw/2026-09/A_pullback_corrected_scalar_auxiliary_variable_optimizer_with_momentum_and_adaptive_mobility.pdf",
+          "shared_terms": [
+            "momentum"
+          ],
+          "shared_count": 1
+        }
+      ],
+      "note_filename": "When_Does_Momentum_Help_in_Reinforcement_Learning_with_Verifiable_Rewards",
+      "candidate_screening_rank": 6,
+      "semantic_rank": 4,
+      "formal_recommendation": true
+    },
+    {
+      "id": "http://arxiv.org/abs/2610.16792v1",
+      "title": "Efficient Preconditioned Optimization Methods with Frequent Directions",
+      "summary": "Adaptive optimization methods have received considerable attention in recent years due to their strong empirical performance. However, they generally require maintaining a preconditioning matrix, which incurs prohibitive computational overhead in large-scale applications. To address these limitations, we investigate the acceleration of preconditioned optimization methods through frequent directions (FD), a widely used matrix sketching technique. We first propose FTSL by integrating FD with adaptive subgradient methods under the primal-dual framework and adding back the cumulative information discarded by FD. FTSL obtains a tighter regret bound than existing state-of-the-art results. We then apply a doubling trick that further reduces the time complexity of FTSL, while maintaining the same regret guarantee. We also consider optimization over matrix-valued decision variables and exploit their structural properties to construct sketched preconditioners. We develop FTSL-Shampoo by adapting FD to Shampoo and give a novel analysis under the primal-dual framework. To further mitigate its computational complexity, we design one-sided variants of FTSL-Shampoo under both mirror descent and primal-dual frameworks. Our algorithms not only reduce the computational cost of FTSL-Shampoo, but also achieve tighter regret bounds. We extend our methods to offline stochastic convex optimization and exploit smoothness to achieve faster convergence rates. Finally, we introduce practical variants of our algorithms and empirically demonstrate their efficiency and effectiveness across a broad range of tasks.",
+      "authors": [
+        "Sifan Yang",
+        "Yuanyu Wan",
+        "Yibo Wang",
+        "Lijun Zhang"
+      ],
+      "affiliations": [],
+      "published": "2026-10-12T13:47:25Z",
+      "published_date": "2026-10-12 13:47:25+00:00",
+      "updated": "2026-10-12T13:47:25Z",
+      "categories": [
+        "cs.LG"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.16792v1",
+      "url": "http://arxiv.org/abs/2610.16792v1",
+      "source": "arxiv",
+      "scores": {
+        "relevance": 2.6,
+        "recency": 3.0,
+        "impact": 0.0,
+        "evidence": 2.2,
+        "popularity": 0.0,
+        "quality": 2.2,
+        "recommendation": 7.73
+      },
+      "matched_domain": "大模型优化器设计",
+      "matched_keywords": [
+        "adaptive optimization",
+        "cs.LG"
+      ],
+      "is_hot_paper": false,
+      "score_type": "research_priority_screening",
+      "assessment_scope": "metadata_and_abstract",
+      "screening_rank": 11,
+      "paper_stem": "Efficient_Preconditioned_Optimization_Methods_with_Frequent_Directions",
+      "already_known": false,
+      "related_papers": [
+        {
+          "title": "PaZO Preconditioned Accelerated Zeroth Order Optimization for Fine Tuning LLMs",
+          "stem": "pazopreconditionedacceleratedzerothorderoptimizationforfinetuningllms",
+          "source": "pdf",
+          "path": "/Users/myl/Documents/paper/01-raw/2026-09/PaZO_Preconditioned_Accelerated_Zeroth_Order_Optimization_for_Fine_Tuning_LLMs.pdf",
+          "shared_terms": [
+            "preconditioned"
+          ],
+          "shared_count": 1
+        },
+        {
+          "title": "Preconditioned Hyperbolic Smoothing Modified L-BFGS Algorithms for Finite Minimax Problems",
+          "stem": "preconditionedhyperbolicsmoothingmodifiedlbfgsalgorithmsforfiniteminimaxproblems",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-24/search_result.json",
+          "shared_terms": [
+            "preconditioned"
+          ],
+          "shared_count": 1
+        },
+        {
+          "title": "Preconditioned Three-Term Conjugate Gradient Framework for Nonconvex Finite Minimax Problems",
+          "stem": "preconditionedthreetermconjugategradientframeworkfornonconvexfiniteminimaxproblems",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-24/search_result.json",
+          "shared_terms": [
+            "preconditioned"
+          ],
+          "shared_count": 1
+        }
+      ],
+      "note_filename": "Efficient_Preconditioned_Optimization_Methods_with_Frequent_Directions",
+      "candidate_screening_rank": 10,
+      "semantic_rank": 5,
+      "formal_recommendation": true
+    },
+    {
+      "id": "http://arxiv.org/abs/2610.21026v1",
+      "title": "On the Last-Iterate Convergence of Clipped Gradient Methods",
+      "summary": "In stochastic (strongly) convex optimization, establishing last-iterate convergence guarantees for first-order methods has recently garnered increasing attention, as this not only deepens the theoretical understanding of these algorithms but also aligns more closely with practice. Notably, people have demonstrated that one of the most famous, simple, and popular methods, Stochastic Gradient Descent ($\\mathtt{SGD}$), provably achieves last-iterate convergence. However, the existing results may have limited applicability, since they typically rely on strong conditions on the gradient noise (e.g., an exponentially decaying tail) rather than the more realistic heavy-tailed noise. Unfortunately, when faced with heavy-tailed noise, $\\mathtt{SGD}$ is known to exhibit undesirable behavior or even fail to converge. To address the challenge of heavy-tailed noise, people have proposed $\\mathtt{Clipped}\\text{-}\\mathtt{SGD}$, an algorithm that combines $\\mathtt{SGD}$ with a simple mechanism, gradient clipping. Although $\\mathtt{Clipped}\\text{-}\\mathtt{SGD}$ performs well in practice, its last-iterate convergence property remains highly underexplored. In this work, we prove the first optimal last-iterate rates in high probability for $\\mathtt{Clipped}\\text{-}\\mathtt{SGD}$ under heavy-tailed noise, thereby closing a gap in the literature.",
+      "authors": [
+        "Zijian Liu"
+      ],
+      "affiliations": [],
+      "published": "2026-10-14T23:46:40Z",
+      "published_date": "2026-10-14 23:46:40+00:00",
+      "updated": "2026-10-14T23:46:40Z",
+      "categories": [
+        "math.OC",
+        "cs.LG",
+        "stat.ML"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.21026v1",
+      "url": "http://arxiv.org/abs/2610.21026v1",
+      "source": "arxiv",
+      "scores": {
+        "relevance": 3.0,
+        "recency": 3.0,
+        "impact": 0.0,
+        "evidence": 1.9,
+        "popularity": 0.0,
+        "quality": 1.9,
+        "recommendation": 8.27
+      },
+      "matched_domain": "大模型优化器设计",
+      "matched_keywords": [
+        "gradient clipping",
+        "cs.LG",
+        "math.OC",
+        "stat.ML"
+      ],
+      "is_hot_paper": false,
+      "score_type": "research_priority_screening",
+      "assessment_scope": "metadata_and_abstract",
+      "screening_rank": 2,
+      "paper_stem": "On_the_Last_Iterate_Convergence_of_Clipped_Gradient_Methods",
+      "already_known": false,
+      "related_papers": [
+        {
+          "title": "Almost Sure Convergence Analysis of Stochastic Gradient Methods with Clipping and Additive Noise",
+          "stem": "almostsureconvergenceanalysisofstochasticgradientmethodswithclippingandadditivenoise",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-21/search_result.json",
+          "shared_terms": [
+            "convergence",
+            "gradient"
+          ],
+          "shared_count": 2
+        },
+        {
+          "title": "Convergence of Stochastic Gradient Methods under Heavy-Tailed Noise and Hölder Smoothness",
+          "stem": "convergenceofstochasticgradientmethodsunderheavytailednoiseandhldersmoothness",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-24/search_result.json",
+          "shared_terms": [
+            "convergence",
+            "gradient"
+          ],
+          "shared_count": 2
+        },
+        {
+          "title": "Convergence of Stochastic Gradient Methods under Heavy-Tailed Noise and H\\\"{o}lder Smoothness",
+          "stem": "convergenceofstochasticgradientmethodsunderheavytailednoiseandholdersmoothness",
+          "source": "pdf",
+          "path": "/Users/myl/Documents/paper/01-raw/2026-10/Convergence_of_Stochastic_Gradient_Methods_under_Heavy_Tailed_Noise_and_H_{o}lder_Smoothness.pdf",
+          "shared_terms": [
+            "convergence",
+            "gradient"
+          ],
+          "shared_count": 2
+        }
+      ],
+      "note_filename": "On_the_Last_Iterate_Convergence_of_Clipped_Gradient_Methods",
+      "candidate_screening_rank": 2,
+      "semantic_rank": 6,
+      "formal_recommendation": true
+    },
+    {
+      "id": "http://arxiv.org/abs/2610.21549v1",
+      "title": "When Is Muon Optimal? Radial Fragility and Minimax Geometry",
+      "summary": "Muon replaces a matrix gradient by an approximate polar factor and has shown strong empirical performance in neural-network training. The Isotropic Curvature Model (ICM) provides a curvature-based explanation for this update by asking when gradient orthogonalization minimizes a one-step local-loss surrogate. We investigate the stability of this explanation when the fixed input radius of the ICM is replaced by a general radial law. We introduce the Random-Radius Isotropic Curvature Model (RR-ICM) and the Polar-Factor Admissibility Set, which encodes exact scaled-polar optimality as a geometric condition on the positive polar factor of the gradient. We derive an exact characterization of this set for arbitrary radial laws and show that all nonscalar admissible responses arise from radial atoms aligned with curvature kinks. Consequently, every atomless radial law exhibits zero-capacity rigidity: exact scaled-polar optimality is possible only when the gradient is already a scaled column isometry. To connect the curvature-based framework with the established spectral geometry of Muon, we introduce the Minimax RR-ICM by replacing directional averaging with worst-case optimization over probability laws on the sphere. We prove that every nonzero global minimizer lies on the polar ray of the gradient, while its scale is determined by a one-dimensional convex problem. The corresponding admissibility geometry is a positive-semidefinite trace slab, in sharp contrast to the spherical-zonoid geometry of the RR-ICM. Together, these results expose the radial fragility of average-curvature explanations and provide a new minimax variational characterization of Muon's polar direction.",
+      "authors": [
+        "Ao Xu"
+      ],
+      "affiliations": [],
+      "published": "2026-10-15T09:13:19Z",
+      "published_date": "2026-10-15 09:13:19+00:00",
+      "updated": "2026-10-15T09:13:19Z",
+      "categories": [
+        "stat.ML",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.21549v1",
+      "url": "http://arxiv.org/abs/2610.21549v1",
+      "source": "arxiv",
+      "scores": {
+        "relevance": 3.0,
+        "recency": 3.0,
+        "impact": 0.0,
+        "evidence": 1.9,
+        "popularity": 0.0,
+        "quality": 1.9,
+        "recommendation": 8.27
+      },
+      "matched_domain": "大模型优化器设计",
+      "matched_keywords": [
+        "Muon",
+        "cs.LG",
+        "stat.ML"
+      ],
+      "is_hot_paper": false,
+      "score_type": "research_priority_screening",
+      "assessment_scope": "metadata_and_abstract",
+      "screening_rank": 1,
+      "paper_stem": "When_Is_Muon_Optimal_Radial_Fragility_and_Minimax_Geometry",
+      "already_known": false,
+      "related_papers": [
+        {
+          "title": "From Geometry to Generalization: Why Row Normalization Can Beat Adam and Muon",
+          "stem": "fromgeometrytogeneralizationwhyrownormalizationcanbeatadamandmuon",
+          "source": "pdf",
+          "path": "/Users/myl/Documents/paper/01-raw/2026-10/From_Geometry_to_Generalization_Why_Row_Normalization_Can_Beat_Adam_and_Muon.pdf",
+          "shared_terms": [
+            "geometry",
+            "muon"
+          ],
+          "shared_count": 2
+        },
+        {
+          "title": "Matching Multi-Loop Complexities with a Single Loop: Optimal Optimization Stationarity and Best-Known Game Stationarity in Nonconvex--Concave Minimax Optimization",
+          "stem": "matchingmultiloopcomplexitieswithasingleloopoptimaloptimizationstationarityandbestknowngamestationarityi",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-24/search_result.json",
+          "shared_terms": [
+            "minimax",
+            "optimal"
+          ],
+          "shared_count": 2
+        },
+        {
+          "title": "Matching Multi-Loop Complexities with a Single Loop: Optimal Optimization Stationarity and Best-Known Game Stationarity in Nonconvex--Concave Minimax Optimization",
+          "stem": "matchingmultiloopcomplexitieswithasingleloopoptimaloptimizationstationarityandbestknowngamestationarityinnonconvexconcaveminimaxoptimization",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-24/search_result.json",
+          "shared_terms": [
+            "minimax",
+            "optimal"
+          ],
+          "shared_count": 2
+        }
+      ],
+      "note_filename": "When_Is_Muon_Optimal_Radial_Fragility_and_Minimax_Geometry",
+      "candidate_screening_rank": 1,
+      "semantic_rank": 7,
+      "formal_recommendation": true
+    },
+    {
+      "id": "http://arxiv.org/abs/2610.20256v1",
+      "title": "Long-Horizon RL Needs Muon",
+      "summary": "Long-horizon agents must coordinate reasoning, tool use, and environment feedback over extended interactions. Learning from sparse outcome rewards requires weighting trajectories of different lengths and updating the policy while rollouts are still being collected. We examine a single-rollout asynchronous recipe combining Muon, token-averaged loss, truncated importance sampling, and auxiliary length and tool-error penalties. Single-rollout sampling allows asynchronous learning without waiting for multiple trajectories for the same issue. We study optimizer choices and recipe components for repository-level issue resolution across two model families. The evaluated training runs show higher training success with the full recipe than with the baselines.",
+      "authors": [
+        "Kai Ruan",
+        "Jinghao Lin",
+        "Tao Chen",
+        "Ziqi Zhou",
+        "Qianshan Wei",
+        "Zihe Huang"
+      ],
+      "affiliations": [],
+      "published": "2026-10-14T14:25:54Z",
+      "published_date": "2026-10-14 14:25:54+00:00",
+      "updated": "2026-10-14T14:25:54Z",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.20256v1",
+      "url": "http://arxiv.org/abs/2610.20256v1",
+      "source": "arxiv",
+      "scores": {
+        "relevance": 3.0,
+        "recency": 3.0,
+        "impact": 0.0,
+        "evidence": 1.7,
+        "popularity": 0.0,
+        "quality": 1.7,
+        "recommendation": 8.13
+      },
+      "matched_domain": "大模型优化器设计",
+      "matched_keywords": [
+        "Muon",
+        "cs.LG"
+      ],
+      "is_hot_paper": false,
+      "score_type": "research_priority_screening",
+      "assessment_scope": "metadata_and_abstract",
+      "screening_rank": 3,
+      "paper_stem": "Long_Horizon_RL_Needs_Muon",
+      "already_known": false,
+      "related_papers": [
+        {
+          "title": "Accelerating Muon with Spectral Residual Correction",
+          "stem": "acceleratingmuonwithspectralresidualcorrection",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-10-11/search_result.json",
+          "shared_terms": [
+            "muon"
+          ],
+          "shared_count": 1
+        },
+        {
+          "title": "AF-Muon: An AdamW-Free Muon Optimizer for Tied-Embedding Models",
+          "stem": "afmuonanadamwfreemuonoptimizerfortiedembeddingmodels",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-10-04/search_result.json",
+          "shared_terms": [
+            "muon"
+          ],
+          "shared_count": 1
+        },
+        {
+          "title": "Convergence guarantees for Muon: New parameter regimes and generalizations",
+          "stem": "convergenceguaranteesformuonnewparameterregimesandgeneralizations",
+          "source": "pdf",
+          "path": "/Users/myl/Documents/paper/01-raw/2026-10/Convergence_guarantees_for_Muon_New_parameter_regimes_and_generalizations.pdf",
+          "shared_terms": [
+            "muon"
+          ],
+          "shared_count": 1
+        }
+      ],
+      "note_filename": "Long_Horizon_RL_Needs_Muon",
+      "candidate_screening_rank": 3,
+      "semantic_rank": 8,
+      "formal_recommendation": true
+    },
+    {
+      "id": "http://arxiv.org/abs/2610.21555v1",
+      "title": "When Does Muon Actually Win? A Paired Data-, Time-, and Tuning-Budget Benchmark",
+      "summary": "Muon's gains in data efficiency motivate evaluating its performance under explicit data, time, and tuning budgets. On a single A100 GPU, we compare a reference single-device Muon implementation with AdamW across 17.7M- and 33.6M-parameter causal language models and 2.70M-parameter vision transformers. A common 23-candidate development budget selects configurations evaluated with five matched seeds, full validation trajectories, optimizer-step timing, and a frozen one-shot test. Muon reduces validation-loss area under the curve by 3.25--22.44\\% at equal data and lowers test loss in all 20 primary pairs. In this configuration, Muon improves time-normalized loss area} by 19.68--22.31\\% on vision, while AdamW is better by 3.38--6.96\\% on language. The full Muon optimizer call, including auxiliary AdamW updates, consumes 56.1--69.6\\% of training time, compared with 6.1--9.1\\% for the AdamW baseline. Muon also has higher expected regret under restricted access to these candidate pools. These results characterize small models with reference kernels; their wall-clock ordering does not establish a ranking for larger models or optimized implementations.",
+      "authors": [
+        "Mushir Akhtar",
+        "Hazem N. Nounou",
+        "Majdi Mansouri",
+        "Mohamed N. Nounou"
+      ],
+      "affiliations": [],
+      "published": "2026-10-15T09:15:49Z",
+      "published_date": "2026-10-15 09:15:49+00:00",
+      "updated": "2026-10-15T09:15:49Z",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.21555v1",
+      "url": "http://arxiv.org/abs/2610.21555v1",
+      "source": "arxiv",
+      "scores": {
+        "relevance": 3.0,
+        "recency": 3.0,
+        "impact": 0.0,
+        "evidence": 1.2,
+        "popularity": 0.0,
+        "quality": 1.2,
+        "recommendation": 7.8
+      },
+      "matched_domain": "大模型优化器设计",
+      "matched_keywords": [
+        "Muon",
+        "AdamW",
+        "cs.LG"
+      ],
+      "is_hot_paper": false,
+      "score_type": "research_priority_screening",
+      "assessment_scope": "metadata_and_abstract",
+      "screening_rank": 7,
+      "paper_stem": "When_Does_Muon_Actually_Win_A_Paired_Data_Time_and_Tuning_Budget_Benchmark",
+      "already_known": false,
+      "related_papers": [
+        {
+          "title": "Does Muon Need Fine-Grained Spectral Shaping?",
+          "stem": "doesmuonneedfinegrainedspectralshaping",
+          "source": "pdf",
+          "path": "/Users/myl/Documents/paper/01-raw/2026-10/Does_Muon_Need_Fine_Grained_Spectral_Shaping.pdf",
+          "shared_terms": [
+            "does",
+            "muon"
+          ],
+          "shared_count": 2
+        },
+        {
+          "title": "Does U-W Ratio Alignment Benefit Muon in LLM Pretraining?",
+          "stem": "doesuwratioalignmentbenefitmuoninllmpretraining",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-10-08/search_result.json",
+          "shared_terms": [
+            "does",
+            "muon"
+          ],
+          "shared_count": 2
+        },
+        {
+          "title": "Spectral Flattening Is Not Enough: When Muon Improves Learning Rates and Convergence",
+          "stem": "spectralflatteningisnotenoughwhenmuonimproveslearningratesandconvergence",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-10-10/search_result.json",
+          "shared_terms": [
+            "muon",
+            "when"
+          ],
+          "shared_count": 2
+        }
+      ],
+      "note_filename": "When_Does_Muon_Actually_Win_A_Paired_Data_Time_and_Tuning_Budget_Benchmark",
+      "candidate_screening_rank": 7,
+      "semantic_rank": 9,
+      "formal_recommendation": false,
+      "editorial_exclusion": "原始页面注明Workshop，命中配置excluded_keywords"
+    },
+    {
+      "id": "http://arxiv.org/abs/2610.16578v1",
+      "title": "Variational Filtering for Bayesian Last Layers with an Independent Binary Probit Surrogate",
+      "summary": "Modern deep classifiers trained by gradient descent need many passes over the data to become accurate, and even then are not always well calibrated; post-hoc temperature scaling corrects calibration after training but cannot influence training-time accuracy or convergence. We propose a variational filtering algorithm for the last layer of deep classifiers, whose parameters are treated as the latent state of a linear-Gaussian state-space model. Each mini-batch is assimilated by an exact prediction step followed by a closed-form variational update, made conjugate by an independent binary probit (IBProbit) surrogate for the categorical likelihood. The filter's process noise stabilises the updates under feature drift and keeps the predictive distribution from collapsing to a point estimate, allowing the same procedure to be used for linear probing on a frozen backbone and for full-network fine-tuning. We evaluate on DINOv3 backbones against two baselines tuned under an identical protocol: AdamW with cross-entropy and post-hoc temperature scaling, and Variational Bayesian Last Layers (VBLL). As a linear probe on frozen features, IBProbit attains the best accuracy and negative log-likelihood on all five downstream tasks at the largest backbone, and on two of the five at the smallest. In out-of-distribution detection with CIFAR probes on the largest backbone, IBProbit reduces the false-positive rate at 95\\% true-positive rate by a factor of 1.4 to 3.2 relative to the better of the two baselines, on all three dataset pairs. When the whole network is fine-tuned on ImageNet-1k, IBProbit reaches the final performance of the cross-entropy baseline in half the wall-clock time.",
+      "authors": [
+        "Dimitrije Markovic",
+        "Conor Heins",
+        "Alexander Tschantz",
+        "Christopher L. Buckley"
+      ],
+      "affiliations": [],
+      "published": "2026-10-12T11:00:05Z",
+      "published_date": "2026-10-12 11:00:05+00:00",
+      "updated": "2026-10-12T11:00:05Z",
+      "categories": [
+        "stat.ML",
+        "cs.CV",
+        "cs.LG"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.16578v1",
+      "url": "http://arxiv.org/abs/2610.16578v1",
+      "source": "arxiv",
+      "scores": {
+        "relevance": 3.0,
+        "recency": 3.0,
+        "impact": 0.0,
+        "evidence": 1.2,
+        "popularity": 0.0,
+        "quality": 1.2,
+        "recommendation": 7.8
+      },
+      "matched_domain": "大模型优化器设计",
+      "matched_keywords": [
+        "AdamW",
+        "cs.LG",
+        "stat.ML"
+      ],
+      "is_hot_paper": false,
+      "score_type": "research_priority_screening",
+      "assessment_scope": "metadata_and_abstract",
+      "screening_rank": 8,
+      "paper_stem": "Variational_Filtering_for_Bayesian_Last_Layers_with_an_Independent_Binary_Probit_Surrogate",
+      "already_known": false,
+      "related_papers": [
+        {
+          "title": "An Adaptive Linesearch-free Method for Monotone Variational Inequalities under Local Lipschitz Continuity",
+          "stem": "anadaptivelinesearchfreemethodformonotonevariationalinequalitiesunderlocallipschitzcontinuity",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-24/search_result.json",
+          "shared_terms": [
+            "variational"
+          ],
+          "shared_count": 1
+        },
+        {
+          "title": "A Parameter-Free Adaptive Reflected Gradient Method for Monotone Variational Inequalities",
+          "stem": "aparameterfreeadaptivereflectedgradientmethodformonotonevariationalinequalities",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-24/search_result.json",
+          "shared_terms": [
+            "variational"
+          ],
+          "shared_count": 1
+        },
+        {
+          "title": "Certified Residual Quasi-Newton Methods for Distributed Variational Inequalities",
+          "stem": "certifiedresidualquasinewtonmethodsfordistributedvariationalinequalities",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-24/search_result.json",
+          "shared_terms": [
+            "variational"
+          ],
+          "shared_count": 1
+        }
+      ],
+      "note_filename": "Variational_Filtering_for_Bayesian_Last_Layers_with_an_Independent_Binary_Probit_Surrogate",
+      "candidate_screening_rank": 8,
+      "semantic_rank": 10,
+      "formal_recommendation": true
+    }
+  ],
+  "archive": {
+    "papers_dir": "/Users/myl/Documents/paper/01-raw",
+    "month_dir": "/Users/myl/Documents/paper/01-raw/2026-10",
+    "month": "2026-10",
+    "date": "2026-10-16",
+    "requested": 3,
+    "downloaded": 3,
+    "skipped_existing": 0,
+    "failed": 0,
+    "index_updated": [
+      "/Users/myl/Documents/paper/01-raw/index.md",
+      "/Users/myl/Documents/paper/01-raw/2026-10/README.md",
+      "/Users/myl/Documents/paper/02-markdown/index.md",
+      "/Users/myl/Documents/paper/02-markdown/2026-10/README.md",
+      "/Users/myl/Documents/paper/03-notes/index.md",
+      "/Users/myl/Documents/paper/03-notes/2026-10/README.md",
+      "/Users/myl/Documents/paper/06-translation/index.md",
+      "/Users/myl/Documents/paper/06-translation/2026-10/README.md"
+    ],
+    "archived": [
+      {
+        "title": "Memory-Efficient Subspace Optimization with Residual Correction: From Momentum SGD to Muon",
+        "paper_stem": "Memory_Efficient_Subspace_Optimization_with_Residual_Correction_From_Momentum_SGD_to_Muon",
+        "month": "2026-10",
+        "source": "arxiv",
+        "pdf_url": "https://arxiv.org/pdf/2610.19844v1",
+        "path": "/Users/myl/Documents/paper/01-raw/2026-10/Memory_Efficient_Subspace_Optimization_with_Residual_Correction_From_Momentum_SGD_to_Muon.pdf",
+        "status": "downloaded",
+        "detail": "687.7 KB"
+      },
+      {
+        "title": "From Parallel to Sequential: Small-Batch Noise Restores Simplicity Bias of Muon",
+        "paper_stem": "From_Parallel_to_Sequential_Small_Batch_Noise_Restores_Simplicity_Bias_of_Muon",
+        "month": "2026-10",
+        "source": "arxiv",
+        "pdf_url": "https://arxiv.org/pdf/2610.16868v1",
+        "path": "/Users/myl/Documents/paper/01-raw/2026-10/From_Parallel_to_Sequential_Small_Batch_Noise_Restores_Simplicity_Bias_of_Muon.pdf",
+        "status": "downloaded",
+        "detail": "1598.9 KB"
+      },
+      {
+        "title": "How Inner Optimizers Shape Replica Scaling",
+        "paper_stem": "How_Inner_Optimizers_Shape_Replica_Scaling",
+        "month": "2026-10",
+        "source": "arxiv",
+        "pdf_url": "https://arxiv.org/pdf/2610.19064v1",
+        "path": "/Users/myl/Documents/paper/01-raw/2026-10/How_Inner_Optimizers_Shape_Replica_Scaling.pdf",
+        "status": "downloaded",
+        "detail": "607.3 KB"
+      }
+    ]
+  }
+}

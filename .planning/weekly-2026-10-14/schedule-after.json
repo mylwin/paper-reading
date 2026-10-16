@@ -1,0 +1,20 @@
+{
+  "due": false,
+  "schedule": {
+    "enabled": true,
+    "interval_days": 7,
+    "start_date": "2026-09-21",
+    "last_run": "2026-10-16",
+    "is_first_run": false,
+    "due": false,
+    "next_due": "2026-10-23",
+    "days_since_last": 0
+  },
+  "week": {
+    "week_no": 4,
+    "week_start": "2026-10-12",
+    "week_end": "2026-10-18",
+    "suggested_filename": "2026-10-12-第4周周报.md"
+  },
+  "message": "未到期：距上次分析 0 天（间隔 7 天），下次 2026-10-23"
+}

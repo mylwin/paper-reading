@@ -1,0 +1,334 @@
+"""Write the weekly synthesis without changing source paper assets."""
+import json
+from pathlib import Path
+ROOT=Path(__file__).resolve().parents[2];RUN=Path(__file__).parent
+M=json.loads((RUN/'weekly_manifest.json').read_text());REC=json.loads((RUN/'weekly-paper-records.json').read_text());OUT=Path(M['report_path'])
+assert not OUT.exists(),f'Refusing to overwrite {OUT}'
+BODY=r'''---
+title: "第4周研究周报：从谱形状改造转向收益、计算与状态预算的可识别控制"
+date: 2026-10-16
+period: "2026-10-08 ~ 2026-10-14"
+supplement_checked_until: 2026-10-16
+supplement_new_pdfs: 3
+week: 第4周
+nominal_week: "2026-10-12 ~ 2026-10-18"
+domains: [大模型优化器设计]
+papers_archived: 16
+notes_new: 1
+parsed_papers_new: 1
+interactive_reading_records: 0
+tags: [weekly-review, Muon, optimizer-design, research-decision]
+---
+
+# 第4周研究周报：从谱形状改造转向收益、计算与状态预算的可识别控制
+
+> 主窗口为 **2026年10月8—14日**；10月16日继续任务时补查至当日。文件名沿用周期脚本的第4周起始日，不将10月17—18日算入观察。补查初期未见15—16日新增；最终校验时工作区出现10月16日日报与3篇新归档，已单列附录C，不与主窗口统计混合。以下研究建议为可证伪假设，尚未完成训练验证，也未确认具有可投稿的新颖性。
+
+## 本周执行摘要
+
+主窗口归档16篇原文，新增解析和精读各1篇，核心积累是有限步Newton–Schulz（NS）的收敛审计；归档数量明显多于已经审计的论文数量。新增证据同时讨论了谱方向、更新尺度、内层计算和持久状态，因而“换一个谱函数再比较最终loss”的方案已面临较密集的近邻。现有结果支持在指定配方中保留或放大小奇异方向，但不能把它直接解释为所有小方向都有信号，也不能由更小polar误差推出更好的训练表现。最值得改变当前研究设计的是：**把真实下降、曲率与批量噪声，以及实际毫秒/字节预算纳入同一套因果对照**。建议先推进低成本的“按训练效用分配NS预算”诊断，并保留“按实际更新失真分配低比特状态”作为替代路线；跨batch的谱增益控制作为高风险候选，须先证实样本外预测能力。已有自适应NS、8bit Muon、低秩残差修正和坐标/谱幂组合均应作为强基线，不能再单独作为创新点。下阶段只选一条路线进入闭环训练，先在70M—350M排错和证伪，再过1B门槛，最后决定是否投入7B。收尾新增的10月16日日报另补3篇原文，其中小batch噪声论文进一步要求将噪声与谱增益联合验证，见附录C。
+
+| 口径 | 本周实际情况 | 解释 |
+|---|---|---|
+| 主窗口日报 | 7天，10/8—10/14 | 从日报JSON聚合题目，不重复通读所有日报 |
+| 本周提交的新原文 | 16篇 | Git新增真实PDF，论文主干去重 |
+| 新增解析 / 精读 | 1 / 1 | 都是 Convergence of Muon with Newton–Schulz |
+| 清单原始论文条目 | 17 | `images`为解析图片目录伪条目，排除后16篇 |
+| 原始标题字符串 | 358 | 大模型优化器设计326、未分类32；包含标题变体与弱相关命中 |
+| 互动精读 / 04疑问记录 | 本窗口清单中均无 | 不从自动笔记推断个人掌握程度 |
+| 10月16日补充 | 1天日报、3篇新归档 | 独立统计，不与主窗口重复相加 |
+| 翻译资产 | 新精读论文有双栏对比PDF | 只核验清单存在性，未读取翻译正文 |
+| Git日志记录 | 脚本返回14 | 不是14项研究进展，也不等于14篇论文 |
+
+## 一、本周证据边界
+
+**主题唯一来自共享配置：大模型优化器设计。** 理论文献只用于优化器设计依据，没有另设泛化的理论推荐主题。
+
+- **完整阅读的本地精读**：[有限步NS精读与证明审计](<../03-notes/2026-10/Convergence_of_Muon_with_Newton_Schulz/精读.md>)。该笔记覆盖方法、主定理、关键证明及实验审计；本次复核其边界，不宣称重新形式化验证全部证明。
+- **原始论文正文定点核验**：Cost-free Spectral Estimation、Training-Loss Guarantees、Chained LMOs、Depth Transfer、AMO v2，以及BulkBoost、DGA-Muon v2、ZIP-SR/ZE-EDEN、MoARa的方法、相关实验或限制段落。它们提供局部证据，不等于完成这些论文的全文评审。
+- **其他一手材料**：Batch Size论文的作者项目页；GefenMuon作者源码与Gram Newton–Schulz作者仓库。核验实现路径和协议，不代表已运行或复现性能。
+- **摘要级材料**：ExpertMuon-Compass、Spectrally Targeted Muon，以及PMRC、No Subspace to Track等补充近邻。只用来定位问题和排查宽泛的新颖性，不据此给全文质量分。16篇本地新增原文并非16篇都已精读。
+- **本次计算**：一个可解析的二维二次函数反例，说明polar逼近与实际下降不是同一目标；未运行GPU训练或7B实验。
+
+来源与过程可追溯至[主窗口清单](<../.planning/weekly-2026-10-14/weekly_manifest.json>)、[截至16日清单](<../.planning/weekly-2026-10-14/manifest-through-2026-10-16.json>)、[逐日日源覆盖](<../.planning/weekly-2026-10-14/daily-coverage.json>)、[Muon正文证据](<../.planning/weekly-2026-10-14/muon-evidence.md>)和[状态内存证据](<../.planning/weekly-2026-10-14/memory-evidence.md>)。
+
+### 检索边界与统计纠偏
+
+358是按**原始标题字符串**聚合的检索分布，不是358篇本周首发论文。窗口内多日报重复查询最近30天；arXiv常取相关性前200条，OpenReview存在分页截断，Semantic Scholar多次429导致引用补充不可得。`Muon`还会命中粒子物理，未分类中也有训练优化器的相关工作。与上周533个标题相比，数据源、focus和分类口径并不完全可比，因此不称本周热度下降或某路线升温。10月10日日报属于本地检索记录；已提交原文数量另按Git统计。10月16日补充记录不纳入主窗口358个标题字符串。
+
+## 二、研究问题地图
+
+### 1. 问题—假设—方法—本周证据
+
+| 核心问题 | 常见假设或方法家族 | 本周新增/复核证据 | 尚未解决 |
+|---|---|---|---|
+| 哪些谱方向值得放大？ | exact polar、两带gain、阈值子空间、谱幂 | BulkBoost的受控单步干预；Spectrally Targeted的摘要线索 | 信号/噪声解释是否跨任务、batch和阶段稳定；局部收益如何预测长程收益 |
+| 更新方向确定后，步幅怎样选？ | DGA/NorMuon、专家对齐半径、APS/曲率反馈 | DGA方法与配方对照；Compass的MoE特定主张；Depth Transfer的深度条件 | 尺度、日程、几何的因果贡献能否分离；控制器能否超过等预算重调LR |
+| 每步值得花多少NS计算？ | 固定NS、PE、AMO、谱矩拟合、PRISM | 有限NS审计、Cost-free正文、AMO v2 | 以polar误差最优是否等于训练效用最优；真实延迟、精度与多项式如何联合控制 |
+| 如何降低状态而不损伤更新？ | 单状态幂、量化、低秩投影、模块预算 | ZIP-SR、MoARa及GefenMuon代码 | 同字节预算下哪个失真指标有预测力；低比特误差经过NS后怎样改变 |
+| 组合归一化是否保留下降性质？ | chained LMO、行列归一化、TensorChain | Chained LMOs给出非LMO与反向对齐反例 | 特定训练优势怎样与最坏情形风险兼容；哪些组合值得独立验证 |
+
+### 2. 重点论文定位
+
+| 工作 | 类型 | 可支持的最强局部结论 | 相对近邻的增量 | 边界与置信度 |
+|---|---|---|---|---|
+| Convergence of Muon with NS | 理论算法＋实证 | Taylor-NS谱残差可以接入下降界 | 相对exact-polar与inexact-LMO，显式展开q/次数/起始谱的影响 | 统一谱误差条件、常用系数不覆盖；中，详见八维表 |
+| Cost-free Spectral Estimation | 数值算法＋训练实证 | 重用Gram中间量估谱，按预测RMS误差选例程 | 相对固定PE；与AMO/PRISM的测量、选择方式不同 | 拟合不唯一、低尾漏检、训练效用不由RMS自动保证；局部证据中 |
+| BulkBoost | 机制实证＋方法 | 特定checkpoint上两带gain干预可改进单步损失 | 相对只做统一谱压平，隔离bulk/spike相对分配 | 6状态中的单步证据、Gaussian噪声参照、实现成本；中 |
+| DGA-Muon v2 | 方法＋条件理论 | 按正确侧对角缩放保留相应行/列正交 | 相对NorMuon等解耦梯度统计与几何缩放 | exact-polar理论；性能比较含日程差异；几何结论中，收益归因低 |
+| Training-Loss Guarantees | 理论算法 | tuned NS5在特定宽两层网络达到目标训练损失 | 相对驻点界，转向目标损失hitting time | full batch、固定输出权重、NTK条件、精确算术；中 |
+| ZIP-SR / ZE-EDEN | 数值分析＋实证 | 二阶矩状态误差与预条件器误差可分离 | 相对仅在状态空间舍入，改变舍入概率/码本校准 | 一阶矩码本、head后期SR亦贡献收益；中 |
+| MoARa | 方法＋系统实证 | 模块rank预算与幅值/方向分解在部分host有效 | 相对均匀rank，不改变总rank的模块分配 | 同rank不同字节、短上下文、host不兼容；中 |
+| ExpertMuon-Compass | 方法候选，摘要级 | 专家间对齐可用于调节Muon步幅的作者主张 | 与同层专家异质性直接相关 | 未核验完整实验，不能外推dense或7B；低 |
+
+### 3. 共识、互补与分歧
+
+**谱逼近与训练目标是不同评价对象。** [Cost-free §4.4、Tables 3–4及F.1](https://arxiv.org/html/2609.33047v1)在160M—1B非embedding参数、20B tokens设置上比较例程，且将输出重标到固定范数；因此更接近方向效应的对照。其160M固定PE从6增到8步未再降低最终验证loss，而5步自适应例程可更好。Appendix C.6/Table 11又显示，有限矩拟合会漏掉孤立小奇异值。这支持“选择应由任务目标检验”，不支持“极分解越准越好”或“估谱完全无成本”。
+
+**小方向的作用证据互补，尚非普遍定律。** [Spectrally Targeted摘要](https://arxiv.org/abs/2610.10965v1)提供阈值干预的机制线索；[BulkBoost §3、Appendix E.2/Table 7](https://arxiv.org/html/2610.07497v1)在6个Pythia-70M状态中，5个受益于bulk相对增益，但更新前线性预测均偏好相反分配。后者是单步结果，不直接证明8步或长程收益。这是对“用一次梯度对齐直接控制gain”的实质限制，而非两篇互相矛盾。
+
+**几何论证与配方优势需要不同对照。** [DGA §4.2、§6.3及Appendix A/Table 1](https://arxiv.org/html/2610.06578v2)证明的正交结构有条件含义；DGA与NorMuon比较同时改变matrix LR、warmup、warmdown和末端LR。它支持完整配方可行，尚不能把全部收益归给几何。最小判别实验是“算法×日程”交叉，每种算法再获得相同调参预算。
+
+**batch不是只改变一个LR比例。** [Batch Size作者项目页及协议](https://batch-size-scaling.com/)在固定token预算和逐batch重调下报告优化器排名变化，并展示局部sharp-subspace干预。该干预的局部惩罚恢复不是端到端训练加速。建议改变batch时重新比较强基线，不能把单batch下的赢家当通用算法排序。
+
+**训练损失理论与LLM泛化仍有间隔。** [Training-Loss Guarantees §2.2、Theorem 3.1和§6](https://arxiv.org/html/2610.03306v1)覆盖tuned NS5的输入对齐与谱范数界，说明未必要接近exact polar；但full-batch两层ReLU、固定输出层和NTK假设，不能直接解释Transformer的随机训练。它补上了另一类理论场景，不消除旧Taylor-NS分析中的统一谱条件问题。
+
+**组合有效不意味着可继承原算法保证。** [Chained LMOs §2及Propositions 1、5，§5.2/Table 2](https://arxiv.org/html/2610.10975v1)指出部分链式归一化不是任何固定集合的LMO，甚至可负向对齐；其TensorChain训练结果提供另一种结构化证据。两者可以同时成立。因此坐标幂、行列归一化与polar的顺序必须作为算法定义，不能凭每个组件单独合理就推出组合合理。
+
+## 三、主张—证据综合与研究评价
+
+| 研究命题 | 支持证据 | 限制或替代解释 | 当前判断 | 下一条判别证据 |
+|---|---|---|---|---|
+| 统一NS5不是所有模块的最优计算分配 | Cost-free §3–5；AMO v2 §3.2 | 自适应分配已有人做；更准不是训练更优 | 已有条件性支持 | 同毫秒预算比较训练效用选择与RMS选择 |
+| 预更新alignment可以直接在线决定bulk增益 | BulkBoost有相关诊断工具 | E.2的paired预测方向与单步收益相反 | 当前不足以支持 | 独立batch、有限位移、K=8分支能否改善排序 |
+| DGA的最终收益全部来自解耦几何 | 正交结构推导和完整recipe表现 | 日程、LR、warmdown亦变化 | 不支持强因果表述 | 算法×日程交叉与等搜索预算 |
+| 相同rank表示相同内存成本 | MoARa同rank配置 | 7B持久状态增加17.4%，峰值reserved却仅增0.2% | 不成立 | 统计状态张量、量化metadata、临时峰值与全模型字节 |
+| 更新相关空间比状态MSE更适合量化设计 | ZIP-SR局部分析与受控干预 | NF4一阶矩、head SR亦有效，不能一因归总效 | 有动机，需按组件识别 | 固定码本和规则，仅替换预算分配目标 |
+| 8bit Muon、低秩加残差是空白 | -- | GefenMuon代码；PMRC摘要已有这些方向 | 不支持作为宽泛创新 | 查清具体误差准则、状态传输和真实预算区别 |
+| 低成本代理的LR一定跨深度迁移 | Depth Transfer Theorems 1–2及§4.1 | 固定宽度256、特定残差缩放、有限LR扫描；正文图按训练loss选点 | 仅在条件内有依据 | 固定参数化后再试跨batch/宽度的独立验证loss |
+
+### 八维评价：本周唯一新增完整精读
+
+以下分数沿用并复核本地审计，**不是给摘要候选新增的质量分**。对象为Convergence of Muon with Newton–Schulz；[原文](https://arxiv.org/html/2601.19156v1)，[完整笔记](<../03-notes/2026-10/Convergence_of_Muon_with_Newton_Schulz/精读.md>)。
+
+| 维度 | 分数/5 | 证据位置与依据 | 置信度 |
+|---|---:|---|---|
+| 问题重要性与界定 | 4 | §3–4：有限近似与exact polar的差距是真实问题 | 高 |
+| 原创性与净增量 | 3.5 | Theorem 2；相对[Inexact Muon §2–3](https://arxiv.org/html/2510.19933v1)，新增Taylor谱误差的显式控制 | 中 |
+| 技术正确性与严谨性 | 2.5 | Remark 1、Appendices B/D：逐点间隙不足以推出与T无关的统一常数；部分证明可修补 | 中 |
+| 证据强度与替代解释 | 3 | Fig.1、Tables 2–8、F–H：有实验，但共享超参、小训练语料等限制归因 | 中 |
+| 可复现性与透明度 | 2.5 | F/G：缺少部分分布式批量、代码及验证轨迹信息 | 中 |
+| 外推边界与稳健性 | 2 | H.4：常用非Taylor系数不在该单调性证明内；理论与工程范围不同 | 高 |
+| 研究生成力 | 4 | 下降式与残差可用于预算/步长设计；不是已验证控制器 | 中高 |
+| 当前课题契合度 | 4.5 | 直接服务近似方向、APS与谱计算成本研究 | 高 |
+
+前七维按共享15/20/20/20/10/5/10%加权，均值3.15，映射后按0.5分舍入为 **5.5/10，中等置信度**；第八维不混入学术价值。其余正文仅定点核验，统一保留“待全文核验”与阅读决策，不用缺失的证据补出总分。
+
+### 一个已核算的机制反例：exact polar不等于更大真实下降
+
+这是本次分析者构造，**不是论文实验或LLM训练结果**。在对角参数子空间取 $f(x,y)=x^2/2+50y^2$，点 $(1,0.001)$ 的梯度为 $(1,0.1)$。比较exact-polar方向 $d_A=(1,1)$ 与未压平方向 $d_B=(1,0.1)$。对每个方向使用其各自最优射线步长，精确二次函数的下降量为
+
+$$
+\Delta f(d)=\frac{\langle g,d\rangle^2}{2d^\top H d}.
+$$
+
+| 方向 | 一阶内积 | 方向曲率 | 最优射线下降量 |
+|---|---:|---:|---:|
+| $d_A$，exact polar | 1.10 | 101 | 0.0059901 |
+| $d_B$，未压平梯度 | 1.01 | 2 | 0.255025 |
+
+每个方向单独乘正数不改变最优射线下降量，因此该对比不靠任意的幅度选择。它只证明“polar误差最小”不是“特定目标函数上下降最大”的充分条件，不能据此断言LLM中少步NS总优于exact polar。[核算记录](<../.planning/weekly-2026-10-14/descent-counterexample.json>)。
+
+## 四、针对性分析：个人理解与能力瓶颈
+
+**本周没有互动式精读记录。** 清单中没有04疑问文件或08-reading问答，无法判断哪些公式已经独立掌握、哪些仍需讲解。已有精读笔记是证据材料，不等于用户已掌握其内容。
+
+下面列的是推进研究需要检查的知识，不是臆测的个人卡点：
+
+| 研究所需区分 | 可追溯来源 | 最小自查 |
+|---|---|---|
+| 逐步谱误差与统一谱常数 | 有限NS笔记“逐点谱间隙不等于统一谱间隙” | 说明每个t均小于1为何不能推出与T无关的sup小于1 |
+| 动量对齐、当前梯度对齐、更新后收益 | BulkBoost Appendix E.2；有限NS Appendix B | 用上面的二次例子分别算一阶内积与真实下降，解释差别 |
+| 坐标幂与谱幂、变换顺序 | 既有[Lp/APS审计](<2026-10-08-Lp_APS与Muon结合_文献审计与具体研究方案.md>)；Chained LMOs §2 | 给出polar后逐元素幂破坏半正交结构的2×2例子 |
+| 状态误差与实际update误差 | ZIP-SR §3；GefenMuon状态路径 | 画出写回量化/下一步解码/动量/NS/尺度的时间顺序，不把延后误差错算到当前步 |
+
+## 五、对当前课题的影响
+
+### 1. 问题定义与理论
+
+建议把问题写为：**在给定token、时间、持久状态和搜索预算下，怎样选择有可重复训练效用的更新几何与精度？** 这延续上周“响应匹配后再比较指数”和10月8日“方向不变先校准半径”的路线，本周增加的是更明确的强近邻与失败证据。
+
+理论先研究可核验的小命题：设 $D$ 是已经实现的更新方向，$a=\langle\nabla f,D\rangle>0$，且射线曲率有真实上界 $L_D$，则
+
+$$
+f(W-\eta D)\le f(W)-\eta a+\frac{\eta^2L_D}{2},
+\qquad 0<\eta<2a/L_D.
+$$
+
+这里 $L_D$ 已包含方向的尺度；若用全局Frobenius光滑常数L，则应写 $L_D=L\|D\|_F^2$。经验割线估计不是自动成立的上界，随机batch估计也不是总体目标的下降保证。不要以这个确定性不等式宣称已经解决噪声、动量滞后、未知曲率或免调参收敛。
+
+### 2. 方法与结构
+
+先固定方向族、辅助参数路由和日程，再改变NS例程、两带gain或状态位宽中的一个因素。尤其以下宽泛方案已被覆盖：
+
+- 按模块改变NS预算：AMO；重用谱矩选择例程：Cost-free；随机sketch拟合：PRISM。
+- 给Muon增加标量/行列自适应：DGA、NorMuon、Compass等；单状态幂与Muon混合也已有PowerStep相关路线。
+- 8bit Muon：GefenMuon；低秩Muon加残差与周期基刷新：PMRC摘要已有。
+
+潜在增量必须落在**控制目标、可靠性、真实预算或可识别机制**上，不能只更换方法名称。
+
+### 3. 实验与评估
+
+至少同时报告固定token的验证交叉熵、到预注册目标loss的总时间、峰值allocated/reserved显存、持久状态字节与总调参成本。验证数据固定且不参与在线控制；训练校准数据与最终验证集分开。使用配对初始化和数据顺序，保留每种子的差值，不能把同一checkpoint上多批样本当作多个独立训练种子。
+
+先用batch为 $B/2,B,2B$ 中两个检验迁移，每种算法在每个batch获得相同搜索预算。LR、momentum、weight decay、warmup/warmdown、clip、embedding/head/norm的辅助优化器、Nesterov定义与矩阵尺度必须记录；对模块机制给固定recipe消融，对实用性能再给公平调优对照。
+
+### 4. 工程与7B路线
+
+[MoARa Tables 2–3、Appendix E.3](https://arxiv.org/html/2609.15037v1)提醒我们区分同rank、状态字节和峰值reserved；7B的主要结果对应seq=256，不能当作长上下文7B保证。更改模块预算还会改变分片通信、kernel批处理和编译路径。
+
+[Gram Newton–Schulz作者仓库](https://github.com/Dao-AILab/gram-newton-schulz)当前列出的加速内核要求Hopper/Blackwell、CUDA12.9+；若实际只有A100，应先使用兼容实现并计时，不能把H100上的收益直接复制到现有平台。NS局部省时要放回全训练步中核算。若优化器只占总步时的比例p，即使它快2倍，总步时理想下降也只有p/2；profiling与通信还会吃掉这部分收益。
+
+所有GPU小时估算以真实硬件的短程吞吐为依据，本报告不预订算力、不启动长训练，也不凭纸面比例承诺7B收益。
+
+## 六、研究机会组合
+
+以下门槛是预先约定的决策标准，**不是预测效果或论文已有结果**。新颖性尚待完整近邻与代码核查。
+
+| 优先级 | 可证伪假设 | 至少两个直接近邻 | 最小验证 | 继续指标 | 停止条件 | 成本 |
+|---|---|---|---|---|---|---|
+| A：先做 | 独立batch上的有限位移效用，比polar RMS更能选择NS计算预算 | Cost-free、AMO v2；并查PRISM | 冻结3个checkpoint，按算子类型分别干预q与步幅，再做短分支 | 样本外选择优于RMS/固定计划，且等时间收益成立 | 选择只拟合同batch、退化为LR重调或profiling抵消收益 | 离线低；闭环中 |
+| B：并行备选 | 同字节预算下，按NS后真实update失真分配精度优于按动量MSE分配 | GefenMuon、ZIP-SR；预算近邻MoARa | 连续梯度重放，比较均匀8bit、MSE、随机与update目标 | 中位update误差降20%、p99不恶化，再检验训练收益 | 仅靠多占字节/高精度影子状态获益，或update误差不预测loss | 离线低；kernel中 |
+| C：高风险 | 跨batch有限步反馈可稳健控制bulk相对增益与总步幅 | BulkBoost、DGA；加入固定NorMuon | 12状态×12配置×9步初筛，严格分离校准与评估 | K=0至K=8仍有预测性；两个batch/语料等时长获益 | 预测反向、仅LR/日程解释或探测成本超过收益 | 中高 |
+
+### A. 从“逼近更准”改为“有用下降/毫秒”的NS预算
+
+**改什么。** 先保持同一多项式家族，按attention与MLP算子类型测试 $q\in\{3,5,7\}$；把方向重标到同一矩阵范数，再独立测试步幅倍率 $\{0.5,1,1.5\}$。只对一个算子族做干预，其他组保持基线，避免把许多局部收益直接相加。后续才比较同q不同PE例程。
+
+**为什么值得检验。** Cost-free已经优化谱RMS，AMO已经做observe-then-commit的算子预算；“自适应q”本身不新。尚可检验的区别是：选择目标能否从谱误差变成**独立训练校准batch上的有限位移效用，并纳入整步延迟**，且能跨checkpoint和batch外推。这是对现有控制目标的研究，不是已证明新算法。
+
+**最小实验。** 从同一基线轨迹取早/中/晚3个checkpoint，每点8份独立训练batch，4份选择、4份独立评分；校准不接触最终验证集。每个算子类型至多9个(q,步幅)方案，先做K=0真实loss变化，再仅将前两名与固定q5、RMS选择保留到K=8的共同数据分支。分支前恢复完整权重、动量、辅助状态和随机数；不得重复累计动量。只在选择排序稳定后，把计划固定到下一阶段，以减少每步同步和额外NS。
+
+**公平基线。** 固定q3/q5/q7、同日程LR重调、AMO v2算子分配、Cost-free的同候选RMS选择；可实现时PRISM/PE作为计算内核对照。先在相同核实现上识别选择目标，再允许各自强实现比较实用速度。AMO已考虑真实矩阵成本，因此“从相同q数改为成本加权”亦不能单独宣称创新。[AMO v2 §3.2、§4.3、§5.1](https://arxiv.org/html/2605.17806v2)、[PRISM原文定位](https://arxiv.org/abs/2601.22137)。
+
+**门槛。** 初筛若无法在独立batch和K=8上优于固定/RMS计划，停止。训练先导至少3个配对种子；以等token平均改善≥0.01 nats/token，或同质量总时间减少≥5%为目标，同时检查不确定性。若只能减小polar误差、实际等时间无收益，或仍需要每步探测才能有效，不扩到7B。3种子只是先导，差值不稳定时增加验证，不用单次最好结果决策。
+
+### B. 按真实更新失真分配状态精度
+
+**改什么。** 在同一量化器、块大小和舍入规则下，以Muon的实际输出更新作为失真目标，而非仅重建动量。候选位宽4/8/16bit，预算满足
+
+$$
+\sum_l\left(n_l b_l/8+\mathrm{scaleBytes}_l+\mathrm{metadataBytes}_l\right)
+\le \mathrm{uniform8Bytes}.
+$$
+
+16bit保护必须由其他模块降到4bit支付；不能常驻全量FP32影子动量或误差残差后仍称相同预算。未有4bit kernel时先用离线解码重放判断必要性，不能从模拟的字节数推出吞吐收益。
+
+**为什么值得检验。** [ZIP-SR §3、§4.2、§5.1/Table 3](https://arxiv.org/html/2610.12444v1)已表明状态误差与更新相关误差可以不同，且head特定SR已有先例；[GefenMuon源码](https://github.com/ndvbd/Gefen/blob/main/gefen_muon.py)已有8bit动量。因此只把“矩阵非线性映射后的失真、严格字节预算、模块分配”作为待验证区别，并继续核查已有量化Muon是否已做同类准则。
+
+**最小实验。** 对350M基线早/中/晚各100个连续梯度step重放，采用同一历史解码状态，分别评估量化递推与参考递推经过相同Nesterov、NS、形状增益和尺度后的更新。报告相对误差、方向夹角、径向误差和p99；当前更新后才量化写回时，应从下一步追踪影响。比较全8bit、按MSE分配、随机同预算分配和按update分配；FP32只在离线作参考。
+
+**门槛与训练。** 中位update误差相对MSE分配降低至少20%、p99不恶化，才进入350M、seq2048、固定1B tokens的三配对种子先导；计入profiling和metadata，固定embedding/head/norm辅助优化器。目标为平均验证loss改善≥0.005 nats/token或同质量总时间减少≥5%，额外总时长不超过3%。若误差改进不转化为训练收益、字节超预算或高精度保护的损失被低精度模块抵消，就停止。
+
+### C. 跨batch的两带gain与步幅可靠性控制
+
+**改什么。** 不直接用一次pre-update alignment作为gain控制律。固定bulk/spike划分方法和NS，实现 $\rho\in\{0.75,1,1.25,1.5\}$ 与步幅 $a\in\{0.8,1,1.2\}$ 的受控分支；每矩阵范数先匹配，再由a单独改变总步幅。校准信号来自独立训练样本上的有限位移收益；证据不足时回退 $\rho=1$。
+
+**为什么高风险。** BulkBoost已有两带设计和噪声校准，DGA已有梯度统计缩放，故两者都必须是直接近邻。潜在区别仅是跨batch、有限步效用和退化风险约束。BulkBoost Appendix G.2/Table 14在70M—410M设置中的static/adaptive每步开销约为Muon的1.19—1.27/1.36—1.50倍，不能先假定加控制会低成本。
+
+**初筛预算。** 2语料×2阶段×3batch共12个状态，每状态12组(ρ,a)，每组当前更新+8步共同后续数据，共1296训练步，另计校准与独立验证。K=0和K=8分别报告，区间按checkpoint分组，不把同一状态多batch伪装成独立训练重复。先确认离线预测，再考虑每128步稀疏探测；该周期是工程候选，不是理论推导的最优值。
+
+**门槛。** 至少两个batch与两个语料上，等墙钟优于固定BulkBoost、同日程DGA与仅调LR，且额外总开销≤10%；否则停止闭环控制或保留为负面机制结果。特别是K=0收益不能外推K=8时，不再直接扩成长训练。
+
+方向C还需对照补充的[Small-Batch Noise原文](https://arxiv.org/html/2610.16868v1)，区分谱增益与噪声诱导的学习顺序；附录C给出条件与判别实验。
+
+### 暂缓的路线
+
+- **“低秩Muon＋残差＋周期换基”**：外部补查的[PMRC/SMRC摘要](https://arxiv.org/abs/2610.19844v1)已覆盖这些组件及boundary correction。未读证明，不能引用其率为自己的理论；先核验[No Subspace to Track](https://arxiv.org/abs/2607.05872v2)、LDAdam与PMRC的具体状态处理再谈增量。
+- **“Muon隐藏层＋PowerStep辅助参数”或简单谱幂拼接**：与上周和10月8日审计已指出的路线重叠。更换输出头优化器可以作工程对照，不作为主创新。
+- **只追求更准polar、更大有效秩或更低训练loss**：这些都可以作为诊断，单独不能支持验证收益、鲁棒性或时间收益。
+
+## 七、下周研究计划
+
+计划从本次完成日10月16日起安排，到10月23日复查；这是行动清单，不自动运行实验。
+
+### 补基础与证据
+
+- [ ] 联读有限NS笔记的Appendix B/D/H.4审计与Training-Loss Guarantees §2.2/3.1，写清“接近polar”和“足够下降”两套条件。
+- [ ] 阅读BulkBoost Appendix E.2的更新前/更新后对齐差别，用二维反例自查曲率项的作用。
+- [ ] 精读AMO v2 §3.2与Cost-free §4.4，逐项对照候选集、观测周期、优化目标、回退与成本，先排除重复设计。
+- [ ] 查Gefen量化写回的确切时序，并冻结代码commit；读ZIP-SR Table 3的单组件和混合组件对照。
+
+### 推进研究与决策
+
+- [ ] **先做A的冻结checkpoint诊断**：3阶段、按算子族逐一干预，独立选择/评分batch，K=0后只保留少量候选做K=8；记录额外前向、NS、状态恢复和总时间。
+- [ ] **B仅先重放**：3×100连续梯度step，严守同字节预算；若update目标未超过MSE和随机目标，不写新kernel。
+- [ ] A/B初筛后只选一条进入完整先导；每种算法获得相同LR搜索次数，至少3个配对种子，固定token与验证集。
+- [ ] 若收益只是日程/幅度重调，结论应写“已有基线可解释”，终止复杂控制器；若K=0不预测K=8，调整机制问题而不是继续堆组件。
+- [ ] 在70M—350M通过后，先做1B吞吐/内存与seq2048对照；只有时间和质量均有证据才评估7B，不能从350M单次结果直接迁移。
+
+## 八、阅读与项目组合决策
+
+| 对象 | 决策 | 具体用途 | 预计工作量 | 下一检查点 |
+|---|---|---|---|---|
+| AMO v2＋Cost-free | 必读 | 校验NS预算方向是否有真正新增目标 | 方法/实现对照约半天 | 现有算法是否已支持拟议控制目标 |
+| BulkBoost Appendix E.2/G＋DGA Appendix A | 必读 | 明确对齐代理失败与日程混杂 | 半天，先不跑训练 | 能否设计可识别、能预测K=8的信号 |
+| 有限NS精读＋Training-Loss Guarantees | 精读 | 学会选择足够的下降条件 | 1天左右，不假定已掌握 | 条件是否覆盖采用的真实NS/Nesterov/数值实现 |
+| ZIP-SR＋GefenMuon | 精读 | 准确定义量化后的update与状态字节 | 半天到1天 | 同预算update误差是否可改善 |
+| MoARa＋PMRC＋LDAdam近邻 | 选读/跟踪 | 排除低秩重复并校验预算 | 先核验方法和memory表 | 是否有超出既有残差/坐标传输的实际问题 |
+| Compass | 选读 | 若转MoE再核验专家异质性 | 先方法和路由/负载消融 | dense主线目前是否真需要MoE复杂度 |
+| Small-Batch Noise原文 | 精读 | 核查噪声平滑、实际动量与seq512实验的边界 | 半天到1天 | 能否在相同预算下区分噪声、LR与谱增益 |
+| 跨batch谱gain控制 | 高风险跟踪 | 研究有限位移反馈可靠性 | 先1296步以内初筛 | 不通过K=8或成本门槛则停止 |
+| 直接7B大规模搜索 | 暂缓 | 等前级证据再投入 | -- | 先导和1B门槛均通过 |
+
+## 同主题历史
+
+- [第3周周报](<2026-10-05-第3周周报.md>)：本次将“响应校准单状态幂”延续为更新效用与预算问题，加入NS分配、量化误差与强近邻限制；未重复运行上周Gaussian实验。
+- [10月8日Lp/APS与Muon审计](<2026-10-08-Lp_APS与Muon结合_文献审计与具体研究方案.md>)：延续固定方向先校准半径的路线，并将原来的冻结checkpoint判别扩展到NS预算；旧报告引用的外部训练日志本次未重新读取，不当作本周新实验。
+- [10月10日Muon综述](<2026-10-10-Muon优化器近三年研究综述与APS_Lp可行性探索.md>)：本次按明确的一周窗口重组证据，重点补齐BulkBoost、DGA配方、量化/低秩预算及16日补查。
+
+## 附录A：本周16篇新增原文的可核验登记
+
+月份均为2026-10；日期是首次提交入库记录，不是论文首发日。阅读层级仅描述本次覆盖，不把归档视为精读。
+
+| 入库提交日 | 论文 | 本地原文 | 本次覆盖 |
+|---|---|---|---|
+'''
+levels={
+'convergenceofmuonwithnewtonschulz':'本地完整精读＋原文边界复核',
+'costfreespectralestimationforadaptivenewtonschulzinmatrixoptimizers':'原文方法/实验/限制定点核验',
+'traininglossguaranteesformuonwithfinitestepnewtonschulzorthogonalization':'原文模型、算法、主结论和限制定点核验',
+'doesmuonneedfinegrainedspectralshaping':'原文方法、Appendix E.2/G定点核验',
+'dgamuondecoupledgeometryalignedadaptivescalingformuon':'原文v2方法/配方表定点核验',
+'moaramoduleawarerankallocationandstructurepreservingdecompositionforlowrankllmpretraining':'原文方法/内存/上下文边界定点核验',
+'roundinginpreconditionerspaceredesigning4bitadamwoptimizerstatequantization':'原文局部分析/组件消融定点核验',
+'optimizinglargelanguagemodelswithchainedlmos':'原文机制、反例及实验定位',
+'onthedepthtransferofneuraloptimizersvialsmoothness':'原文假设/定理与实验协议定点核验',
+'bestoptimizerdependsonbatchsize':'作者项目页与摘要；非完整原文审计',
+}
+for x in M['git_added']['files']:
+ stem=x['stem'];p=REC.get(stem,{});asset=next((f['path'] for f in x['files'] if f['root']=='01-raw'),None)
+ assert asset and (ROOT/asset).is_file()
+ title=p.get('title') or 'Convergence of Muon with Newton–Schulz';url=p.get('url') or 'https://arxiv.org/abs/2601.19156v1'
+ cover=levels.get(stem,'题目/摘要级定位，待全文核验')
+ if stem=='thebestoptimizerdependsonbatchsize':cover='作者项目页与摘要；非完整原文审计'
+ BODY+=f"| {x['first_commit_date']} | [{title.replace('|',chr(92)+'|')}]({url}) | [PDF](<../{asset}>) | {cover} |\n"
+BODY+='''
+## 附录B：外部补查与可复核实现
+
+这些工作不追加进“主窗口16篇本地归档”的数量。PMRC在10月16日又有本地归档，见附录C，不能重复计数。
+
+| 来源 | 本次核验层级 | 用途 |
+|---|---|---|
+| [AMO v2](https://arxiv.org/html/2605.17806v2) | 方法与预算段正文 | 自适应NS与算子预算的强近邻 |
+| [PRISM](https://arxiv.org/abs/2601.22137) | 官方摘要与作者仓库定位 | 排除“随机sketch＋自适应例程”的宽泛新颖性 |
+| [PRISM作者代码](https://github.com/s-h-yang/PRISM) | 实现入口核验，未运行 | 后续冻结commit做基线 |
+| [Gefen作者代码](https://github.com/ndvbd/Gefen) | gefen_muon.py量化状态路径 | 8bit Muon已有实现，不复述未复现的性能主张 |
+| [Gram NS作者代码](https://github.com/Dao-AILab/gram-newton-schulz) | 算法与硬件要求 | 核实现基线与平台兼容性 |
+| [No Subspace to Track v2](https://arxiv.org/abs/2607.05872v2) | 摘要级 | 子空间追踪/动量坐标传输的新颖性防撞 |
+| [PMRC/SMRC v1](https://arxiv.org/abs/2610.19844v1) | 摘要级，首发10月14日 | 残差修正与周期换基已被提出，证明待审核 |
+
+本次未启动训练、未复现作者性能。研究假设的继续门槛只是为了尽早证伪；通过门槛后仍需更多种子、数据与相关工作核验，不能直接宣布算法有效或原创。
+'''
+BODY += '\n## 附录C：10月16日新增日报的补充证据\n\n收尾校验期间工作区新增了[10月16日检索结果](<../08-daily/2026-10-16/search_result.json>)，因此补入该日信息，不改变10月8—14日主窗口的统计。该日检索265篇唯一论文、97篇历史命中、168篇候选；前十保留一篇Workshop误入记录，正式阅读建议为9篇。该次计数与主窗口358个原始题目字符串存在重叠，**不能相加为623篇**。三篇PDF已落盘，但不计入主窗口16篇。补充快照见[记录](<../.planning/weekly-2026-10-14/supplement-2026-10-16.json>)。\n\n| 补充归档论文 | 一手来源与本次层级 | 对本报告决策的影响 |\n|---|---|---|\n| Memory-Efficient Subspace Optimization with Residual Correction: From Momentum SGD to Muon | [官方摘要](https://arxiv.org/abs/2610.19844v1)；[本地PDF](<../01-raw/2026-10/Memory_Efficient_Subspace_Optimization_with_Residual_Correction_From_Momentum_SGD_to_Muon.pdf>)；未审计证明/实验 | “低秩状态＋残差＋周期换基”已有PMRC/SMRC覆盖，应优先核验其boundary correction，继续暂缓宽泛重复方案 |\n| From Parallel to Sequential: Small-Batch Noise Restores Simplicity Bias of Muon | [原文§3–4、§6、Appendix G](https://arxiv.org/html/2610.16868v1)定点核验；[本地PDF](<../01-raw/2026-10/From_Parallel_to_Sequential_Small_Batch_Noise_Restores_Simplicity_Bias_of_Muon.pdf>) | 增加了噪声平滑谱算子、改变学习顺序的机制；更应把batch与谱控制共同检验，不能只最大化更新秩 |\n| How Inner Optimizers Shape Replica Scaling | [官方摘要](https://arxiv.org/abs/2610.19064v1)；[本地PDF](<../01-raw/2026-10/How_Inner_Optimizers_Shape_Replica_Scaling.pdf>)；未核验完整协议 | 伪梯度协方差、噪声尺度和内部白化成为分布式近邻；当前没有多副本实测，不另开昂贵路线 |\n\n**小batch论文的具体边界。** Theorem 4.2的连续动力学建立在白化数据、奇异向量对齐、平衡初始化及特定噪声结构上；无动量spectral flow与实际LLM实现不同。Appendix G语言实验使用162M模型、3.2B tokens、seq512和D-Muon，比较B=256/512/1024及LR缩放；模型有效秩变化不是所有规模上的泛化保证。该结果为方向C提供新的直接近邻，也限制了“简单降低噪声或把所有弱方向放大必定更好”的解释。本文不声称已经完成其完整理论审计。\n\n**新增的判别实验。** 在C原有两带gain×batch分支中，加入归一化梯度/SGDM与Muon的对照，匹配实际更新幅度、token、数据次序和LR搜索预算；观察子空间重建或层权重的有效秩随时间变化，并以独立验证loss检验。先在低秩矩阵重建复核顺序学习，再决定是否扩大LLM试验；不能仅因有效秩较低就判断更好。batch改变的是噪声、步数和动量时间尺度的组合，原研究计划仍要求跨batch公平调优。\n\n10月16日前十还出现了配对时间/数据/调参预算基准等候选；本次仅由日报元数据定位，部分远程页面未成功取得，不引用其具体数值，也不据此新增算法排名。它们应进入下一轮全文核验，而不是被当成已复现证据。\n'
+OUT.write_text(BODY,encoding='utf-8');print(OUT)
