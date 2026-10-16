@@ -1,0 +1,52 @@
+{
+  "papers_dir": "/Users/myl/Documents/paper/01-raw",
+  "month_dir": "/Users/myl/Documents/paper/01-raw/2026-10",
+  "month": "2026-10",
+  "date": "2026-10-16",
+  "requested": 3,
+  "downloaded": 3,
+  "skipped_existing": 0,
+  "failed": 0,
+  "index_updated": [
+    "/Users/myl/Documents/paper/01-raw/index.md",
+    "/Users/myl/Documents/paper/01-raw/2026-10/README.md",
+    "/Users/myl/Documents/paper/02-markdown/index.md",
+    "/Users/myl/Documents/paper/02-markdown/2026-10/README.md",
+    "/Users/myl/Documents/paper/03-notes/index.md",
+    "/Users/myl/Documents/paper/03-notes/2026-10/README.md",
+    "/Users/myl/Documents/paper/06-translation/index.md",
+    "/Users/myl/Documents/paper/06-translation/2026-10/README.md"
+  ],
+  "archived": [
+    {
+      "title": "Memory-Efficient Subspace Optimization with Residual Correction: From Momentum SGD to Muon",
+      "paper_stem": "Memory_Efficient_Subspace_Optimization_with_Residual_Correction_From_Momentum_SGD_to_Muon",
+      "month": "2026-10",
+      "source": "arxiv",
+      "pdf_url": "https://arxiv.org/pdf/2610.19844v1",
+      "path": "/Users/myl/Documents/paper/01-raw/2026-10/Memory_Efficient_Subspace_Optimization_with_Residual_Correction_From_Momentum_SGD_to_Muon.pdf",
+      "status": "downloaded",
+      "detail": "687.7 KB"
+    },
+    {
+      "title": "From Parallel to Sequential: Small-Batch Noise Restores Simplicity Bias of Muon",
+      "paper_stem": "From_Parallel_to_Sequential_Small_Batch_Noise_Restores_Simplicity_Bias_of_Muon",
+      "month": "2026-10",
+      "source": "arxiv",
+      "pdf_url": "https://arxiv.org/pdf/2610.16868v1",
+      "path": "/Users/myl/Documents/paper/01-raw/2026-10/From_Parallel_to_Sequential_Small_Batch_Noise_Restores_Simplicity_Bias_of_Muon.pdf",
+      "status": "downloaded",
+      "detail": "1598.9 KB"
+    },
+    {
+      "title": "How Inner Optimizers Shape Replica Scaling",
+      "paper_stem": "How_Inner_Optimizers_Shape_Replica_Scaling",
+      "month": "2026-10",
+      "source": "arxiv",
+      "pdf_url": "https://arxiv.org/pdf/2610.19064v1",
+      "path": "/Users/myl/Documents/paper/01-raw/2026-10/How_Inner_Optimizers_Shape_Replica_Scaling.pdf",
+      "status": "downloaded",
+      "detail": "607.3 KB"
+    }
+  ]
+}

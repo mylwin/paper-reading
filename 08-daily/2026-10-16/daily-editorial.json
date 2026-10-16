@@ -1,0 +1,193 @@
+{
+  "assessment_scope": "metadata_and_abstract",
+  "confidence": "低；尚未全文评审",
+  "overview": {
+    "trend": "本次近期窗口为2026-09-16至2026-10-16，补充窗口为2025-10-16至2026-09-15。仅据本次命中摘要，优化器设计线索从谱更新本身，延伸到子空间压缩后残差如何补偿、批量噪声如何改变学习路径，以及内部白化如何影响副本扩展；这是候选池的局部观察，不能代表领域整体趋势。前三篇以状态内存、噪声机制和分布式训练构成互补阅读组合。arXiv取相关性前200条；OpenReview逐配置关键词取首页100条，存在截断；Semantic Scholar两次429，过去一年高影响力补充未取得结果。265篇唯一论文中97篇命中已有记录，168篇进入预筛候选池；前十保留一篇Workshop误入项并明确排除正式推荐，因此正式阅读建议9篇。",
+    "hotspots": [
+      {
+        "title": "子空间状态与残差补偿",
+        "text": "SMRC/PMRC把状态留在低维空间，补回正交梯度；摘要声称固定基与刷新基均保留全空间同阶收敛，实际显存与刷新代价尚待核验。"
+      },
+      {
+        "title": "噪声与几何的耦合",
+        "text": "小批量噪声被用于解释Muon由并行到顺序的特征学习变化；RLVR动量候选则将收益与采样波动及有效步幅联系。"
+      },
+      {
+        "title": "内部优化器与副本扩展",
+        "text": "DiLoco类训练的伪梯度协方差与噪声尺度为内部白化预条件提供选择线索，摘要报告覆盖8–96副本。"
+      }
+    ]
+  },
+  "domain_summaries": {
+    "大模型优化器设计": {
+      "summary": "优先阅读直接改变更新机制、状态内存或训练配置的论文。前三分别对应SMRC/PMRC压缩补偿、Muon噪声平滑机制和局部训练内部优化器。重尾裁剪、FD草图和RLVR动量作为定点选读；贝叶斯分类末层及多组件RL配方降级跟踪。关键词Muon还带来粒子物理误命中，附录保留并标记，不能计作本研究方向证据。",
+      "subfields": {
+        "符号与范数几何优化": "新线索集中于谱更新的随机平滑、局部最优解释的假设边界，以及子空间矩阵符号；含Muon粒子物理误命中，需看附录状态。",
+        "免调参与梯度裁剪": "末次迭代裁剪SGD属于直接相关理论依据，但摘要缺少具体收敛阶和阈值条件，尚不能据此宣称得到免调参算法。",
+        "自适应与状态内存": "SMRC/PMRC与FD草图提供压缩状态及预条件成本的不同路线；仅出现AdamW比较项的论文需另判直接相关性。",
+        "大模型训练与优化器设计": "内部优化器的白化属性与副本扩展、RLVR的动量系数选择值得选读；多组件配方需要分离优化器的独立作用。"
+      }
+    }
+  },
+  "top_papers": {
+    "Memory-Efficient Subspace Optimization with Residual Correction: From Momentum SGD to Muon": {
+      "summary": "初步判断：在子空间中保留状态并补回正交残差，以SMRC/PMRC连接内存节约和全空间同阶收敛。",
+      "selection_reason": "直接回答状态内存压缩后的丢失方向如何补偿，含固定基与刷新基两种分析，是对已读PowerStep之外压缩机制的新增信息，优先精读。",
+      "reading_decision": "精读",
+      "title_zh": "带残差校正的内存高效子空间优化：从动量SGD到Muon",
+      "abstract_zh": "内存高效的子空间优化已成为一种实用方法，可在保持优化性能的同时降低大语言模型（LLM）训练的内存成本。以往算法通常依赖随机梯度的主导奇异子空间，然而在训练后期，梯度噪声可能主导该子空间，并可能阻碍收敛。为克服这一局限，我们采用残差校正框架：将优化器状态保留在子空间中，并在参数更新中加入正交残差梯度。我们首先将这一方案融入动量SGD，得到SMRC；对于固定的标准正交基，SMRC达到$O(T^{-1/4})$的收敛速率，与全空间动量SGD一致。我们的分析引入子空间虚拟迭代点，以解决动量与残差校正之间的耦合。此外，我们将SMRC扩展为多阶段变体，周期性地重新计算基，以跟踪不断变化的主导子空间，并保持相同的收敛速率。由于每次基刷新都会破坏虚拟迭代点的一致性，我们设计了一种边界校正方法，使它们在阶段之间对齐。除动量SGD外，我们还将该框架融入Muon，提出PMRC，对投影后的动量应用矩阵符号运算。通过考虑残差梯度的加权动量跟踪分析，我们为PMRC建立了$O(T^{-1/4})$的收敛速率，与全空间Muon的速率一致。我们还设计了周期性刷新基的多阶段PMRC，其收敛速率保持同阶。大量实验结果证实了我们算法的有效性与效率。",
+      "contributions": [
+        "作者提出将低维优化器状态与全空间正交残差梯度结合的校正框架，并分别构造SMRC与PMRC。",
+        "摘要报告：通过子空间虚拟迭代点、阶段边界校正和加权动量跟踪分析，固定基与周期刷新基版本均达到与对应全空间方法同阶的收敛速率。"
+      ],
+      "method": "子空间内累计动量；正交方向以残差梯度校正；PMRC对投影动量执行矩阵符号运算；基刷新时以边界校正保持分析中虚拟轨迹的一致性。以上为摘要描述。",
+      "result": "摘要明确报告SMRC和PMRC的$O(T^{-1/4})$速率，以及刷新基变体同阶；实验仅作定性有效性与效率声明，没有给出显存比例、吞吐、模型规模或统计误差，不能补写数字。",
+      "evidence_limit": "仅核验题目、作者、日期、完整摘要及许可，初步判断置信度低。需核对光滑性与噪声假设、收敛度量及常数的秩/维度依赖；检查残差全空间计算和基刷新是否抵消状态内存收益；对照GaLore、全空间Muon、AdamW及已读PowerStep时保持数据和训练预算一致。拟先看算法及主定理，再检查显存/时间表与刷新消融。"
+    },
+    "From Parallel to Sequential: Small-Batch Noise Restores Simplicity Bias of Muon": {
+      "summary": "初步判断：小批量噪声可能通过谱算子的随机平滑恢复顺序特征学习，为Muon的批量效应提供机制假设。",
+      "selection_reason": "为已有Muon谱几何阅读补充批量和噪声如何改变特征学习顺序的可检验机制，与纯确定性收敛理论不同，优先精读。",
+      "reading_decision": "精读",
+      "title_zh": "从并行到顺序：小批量噪声恢复Muon的简单性偏置",
+      "abstract_zh": "简单性偏置可能源于训练过程中的顺序特征学习，并已被提出作为深度学习成功的一种一般性解释。这一现象的一个重要驱动因素是鞍点到鞍点行为：梯度流轨迹在每次学习一个特征的同时，始终接近一系列鞍点流形。然而，基于谱下降的先进优化器Muon在全批量设置下并不呈现这种动力学，而是并行学习特征。那么，Muon为何仍能在深度学习场景中如此成功？我们表明，随机梯度噪声从根本上改变了这种行为：小批量噪声恢复了顺序特征学习，为全批量Muon所不具备的简单性偏置提供了一种机制。我们通过对Muon所依据的谱下降算子进行随机平滑来解释这一转变。当梯度相对于噪声尺度较小时，期望谱更新变得近似与实际梯度成正比，从而恢复类似梯度流的动力学。我们通过推导带噪声谱下降的有效连续动力学，在深度线性模型中形式化这一机制。在低秩矩阵重构、视觉Transformer以及大语言模型（LLM）上的实验支持这些发现。",
+      "contributions": [
+        "作者区分全批量Muon的并行特征学习与噪声诱导的顺序学习，提出可用于设计批量消融的机制假设。",
+        "摘要报告在深度线性模型中推导带噪谱下降的有效连续动力学，并以低秩矩阵重构、ViT和LLM实验支持。"
+      ],
+      "method": "对谱下降算子取随机噪声下的期望；在梯度小于噪声尺度时，将其近似为与真实梯度成比例的更新，连接顺序学习与梯度流。理论模型和实际Muon的对应范围待正文确认。",
+      "result": "摘要给出机制和三个实验场景，没有给出损失、泛化误差、训练成本的定量改善；只能据此判断存在理论与实验核验入口，不能称其已证明现实LLM上的泛化改善。",
+      "evidence_limit": "当前为摘要初评，待全文核验噪声分布、独立性、各向同性及小梯度条件；连续极限与有限步长、有限Newton–Schulz、动量实现的差异；批量消融是否同时改变学习率与总token数；顺序特征学习指标与泛化收益是否有独立证据。拟先读深度线性模型推导，再看固定总token预算的批量/噪声消融。"
+    },
+    "How Inner Optimizers Shape Replica Scaling": {
+      "summary": "初步判断：内部预条件器的白化能力可能改善固定总预算下的副本扩展，需核验DP基线和总预算口径。",
+      "selection_reason": "把内部优化器设计连接到伪梯度协方差、噪声尺度及8–96副本扩展，为跨计算池训练提供设计判据，与单机状态压缩形成互补。",
+      "reading_decision": "选读",
+      "title_zh": "内部优化器如何塑造副本扩展能力",
+      "abstract_zh": "在地理位置分散且互联较差的计算池或数据中心之间训练大语言模型（LLM），已成为一个受到广泛关注的话题。这推动了对DiLoco等LLM局部优化方法的进一步研究，尤其是使用局部（或内部）自适应优化器或预条件优化器的方法，因为这些优化器对高性能LLM训练至关重要。然而，一个核心挑战依然存在：众所周知，在固定总训练预算的同时增加模型副本数量（副本扩展），会导致性能单调下降。已有工作通过实证表明，内部优化器的选择（Muon与AdamW）可以显著改善这一趋势，但对性能差异的解释仍然有限。在本研究中，我们考察了一系列内部优化器，并识别出影响副本扩展的两个重要因素：（1）伪梯度的协方差结构；（2）批量大小对伪梯度噪声尺度的影响。基于这些认识，我们从理论和实证两方面表明，基于白化的预条件是一项有力的内部优化器设计要求。我们的实证评估进一步揭示：基于白化的内部优化器在8–96个副本范围内实现了较强的副本扩展能力，并且随着参数量和数据规模增加，其相对于数据并行（DP）的性能有所改善。",
+      "contributions": [
+        "作者将副本扩展差异归因线索组织为伪梯度协方差结构和批量对噪声尺度的作用。",
+        "摘要声称以理论及8–96副本实证支持内部白化预条件这一设计判据，而非仅列出Muon与AdamW性能对比。"
+      ],
+      "method": "在固定总预算的局部训练设置中比较内部优化器，分析跨副本伪梯度的协方差与噪声尺度，将白化预条件作为候选设计原则。局部步数、同步规则和外部优化器需从全文查明。",
+      "result": "摘要报告8–96副本，以及随参数和数据规模增加相对DP表现改善；没有给出模型参数量、token量、通信节约或收益百分比，不能把副本数等同于墙钟加速倍数。",
+      "evidence_limit": "当前判断限于元数据与摘要。待核验固定预算按token、FLOPs还是时间计量；DP/AdamW/Muon的调参与同步预算是否公平；协方差白化的理论假设及跨副本相关性；效果能否排除批量变化的解释；实际弱网络的端到端收益及内存代价。拟先查总预算对照表，再读伪梯度定义和白化消融。"
+    },
+    "When Does Momentum Help in Reinforcement Learning with Verifiable Rewards?": {
+      "summary": "初步判断：RLVR动量收益受有效步幅与采样波动共同影响，增大动量的参数范围和跨规模稳定性需复核。",
+      "selection_reason": "把动量收益与学习率及采样噪声联系，并报告32B模型上的近2个百分点验证增益；优先选读参数规则和消融，避免把bandit结论直接外推。",
+      "reading_decision": "选读"
+    },
+    "Efficient Preconditioned Optimization Methods with Frequent Directions": {
+      "summary": "初步判断：以FD草图与累计残差信息设计FTSL及Shampoo变体，计算收益和理论假设待全文核验。",
+      "selection_reason": "FD草图、被丢弃累计信息的补偿和单侧Shampoo构成不同于Muon的预条件设计路线；先查计算复杂度与遗憾界，作为替代方案选读。",
+      "reading_decision": "选读"
+    },
+    "On the Last-Iterate Convergence of Clipped Gradient Methods": {
+      "summary": "初步判断：给出重尾噪声下裁剪SGD的高概率末次迭代保证，具体收敛阶、阈值和可实现调参条件待核验。",
+      "selection_reason": "直接命中重尾噪声下裁剪机制的理论依据；研究域为凸/强凸，摘要没有具体阶和假设，定点选读末次迭代定理。",
+      "reading_decision": "选读"
+    },
+    "When Is Muon Optimal? Radial Fragility and Minimax Geometry": {
+      "summary": "初步判断：审计Muon局部最优解释对径向分布的依赖，定理的适用范围及与训练的联系待全文核验。",
+      "selection_reason": "RR-ICM审计Muon最优性解释的径向分布假设，理论信息增益明确；但一阶局部代理与实际训练间仍有距离，先选读模型与反例。",
+      "reading_decision": "选读"
+    },
+    "Long-Horizon RL Needs Muon": {
+      "summary": "跟踪：长程异步RL组合Muon与多项损失及采样机制，摘要不足以识别优化器的独立贡献。",
+      "selection_reason": "涉及Muon的长程异步RL配方，但摘要仅报告两模型族训练成功率提高，未给数字，多个配方组件的独立作用待辨认，暂跟踪。",
+      "reading_decision": "跟踪"
+    },
+    "When Does Muon Actually Win? A Paired Data-, Time-, and Tuning-Budget Benchmark": {
+      "summary": "排除正式推荐：原始页面注明Workshop；其预算对照可作为资料线索，配置排除词已在人工复排中标记。",
+      "selection_reason": "一手页面注明Workshop，命中配置的排除词workshop；保留于预筛前十供审计，不作为正式阅读推荐或PDF归档对象。",
+      "reading_decision": "跟踪"
+    },
+    "Variational Filtering for Bayesian Last Layers with an Independent Binary Probit Surrogate": {
+      "summary": "跟踪：贝叶斯末层过滤面向分类任务，对当前通用大模型优化器设计的边际信息增益较低。",
+      "selection_reason": "方法集中于DINOv3分类器末层的贝叶斯过滤，与通用LLM优化器设计的直接关系较弱，降级跟踪，不因提及AdamW而提高优先级。",
+      "reading_decision": "跟踪"
+    }
+  },
+  "semantic_reranking": [
+    {
+      "title": "Memory-Efficient Subspace Optimization with Residual Correction: From Momentum SGD to Muon",
+      "screening_rank": 5,
+      "candidate_screening_rank": 5,
+      "semantic_rank": 1,
+      "reason": "直接回答状态内存压缩后的丢失方向如何补偿，含固定基与刷新基两种分析，是对已读PowerStep之外压缩机制的新增信息，优先精读。",
+      "formal_recommendation": true
+    },
+    {
+      "title": "From Parallel to Sequential: Small-Batch Noise Restores Simplicity Bias of Muon",
+      "screening_rank": 4,
+      "candidate_screening_rank": 4,
+      "semantic_rank": 2,
+      "reason": "为已有Muon谱几何阅读补充批量和噪声如何改变特征学习顺序的可检验机制，与纯确定性收敛理论不同，优先精读。",
+      "formal_recommendation": true
+    },
+    {
+      "title": "How Inner Optimizers Shape Replica Scaling",
+      "screening_rank": 10,
+      "candidate_screening_rank": 9,
+      "semantic_rank": 3,
+      "reason": "把内部优化器设计连接到伪梯度协方差、噪声尺度及8–96副本扩展，为跨计算池训练提供设计判据，与单机状态压缩形成互补。",
+      "formal_recommendation": true
+    },
+    {
+      "title": "When Does Momentum Help in Reinforcement Learning with Verifiable Rewards?",
+      "screening_rank": 6,
+      "candidate_screening_rank": 6,
+      "semantic_rank": 4,
+      "reason": "把动量收益与学习率及采样噪声联系，并报告32B模型上的近2个百分点验证增益；优先选读参数规则和消融，避免把bandit结论直接外推。",
+      "formal_recommendation": true
+    },
+    {
+      "title": "Efficient Preconditioned Optimization Methods with Frequent Directions",
+      "screening_rank": 11,
+      "candidate_screening_rank": 10,
+      "semantic_rank": 5,
+      "reason": "FD草图、被丢弃累计信息的补偿和单侧Shampoo构成不同于Muon的预条件设计路线；先查计算复杂度与遗憾界，作为替代方案选读。",
+      "formal_recommendation": true
+    },
+    {
+      "title": "On the Last-Iterate Convergence of Clipped Gradient Methods",
+      "screening_rank": 2,
+      "candidate_screening_rank": 2,
+      "semantic_rank": 6,
+      "reason": "直接命中重尾噪声下裁剪机制的理论依据；研究域为凸/强凸，摘要没有具体阶和假设，定点选读末次迭代定理。",
+      "formal_recommendation": true
+    },
+    {
+      "title": "When Is Muon Optimal? Radial Fragility and Minimax Geometry",
+      "screening_rank": 1,
+      "candidate_screening_rank": 1,
+      "semantic_rank": 7,
+      "reason": "RR-ICM审计Muon最优性解释的径向分布假设，理论信息增益明确；但一阶局部代理与实际训练间仍有距离，先选读模型与反例。",
+      "formal_recommendation": true
+    },
+    {
+      "title": "Long-Horizon RL Needs Muon",
+      "screening_rank": 3,
+      "candidate_screening_rank": 3,
+      "semantic_rank": 8,
+      "reason": "涉及Muon的长程异步RL配方，但摘要仅报告两模型族训练成功率提高，未给数字，多个配方组件的独立作用待辨认，暂跟踪。",
+      "formal_recommendation": true
+    },
+    {
+      "title": "When Does Muon Actually Win? A Paired Data-, Time-, and Tuning-Budget Benchmark",
+      "screening_rank": 7,
+      "candidate_screening_rank": 7,
+      "semantic_rank": 9,
+      "reason": "一手页面注明Workshop，命中配置的排除词workshop；保留于预筛前十供审计，不作为正式阅读推荐或PDF归档对象。",
+      "formal_recommendation": false
+    },
+    {
+      "title": "Variational Filtering for Bayesian Last Layers with an Independent Binary Probit Surrogate",
+      "screening_rank": 8,
+      "candidate_screening_rank": 8,
+      "semantic_rank": 10,
+      "reason": "方法集中于DINOv3分类器末层的贝叶斯过滤，与通用LLM优化器设计的直接关系较弱，降级跟踪，不因提及AdamW而提高优先级。",
+      "formal_recommendation": true
+    }
+  ]
+}

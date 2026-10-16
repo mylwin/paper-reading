@@ -1,0 +1,117 @@
+{
+  "date": "2026-10-16",
+  "note_file": "今日检索.md",
+  "generated_at": "2026-10-16T12:13:23",
+  "skill": "paper-daily",
+  "sources_searched": [
+    "arxiv",
+    "openreview"
+  ],
+  "source_counts": {
+    "arxiv": 200,
+    "openreview": 146
+  },
+  "date_windows": {
+    "recent_30d": {
+      "start": "2026-09-16",
+      "end": "2026-10-16"
+    },
+    "past_year": {
+      "start": "2025-10-16",
+      "end": "2026-09-15"
+    }
+  },
+  "total_unique": 265,
+  "top_papers": [
+    {
+      "title": "Memory-Efficient Subspace Optimization with Residual Correction: From Momentum SGD to Muon",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2610.19844v1",
+      "note_filename": "Memory_Efficient_Subspace_Optimization_with_Residual_Correction_From_Momentum_SGD_to_Muon",
+      "matched_domain": "大模型优化器设计",
+      "score": 7.93
+    },
+    {
+      "title": "From Parallel to Sequential: Small-Batch Noise Restores Simplicity Bias of Muon",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2610.16868v1",
+      "note_filename": "From_Parallel_to_Sequential_Small_Batch_Noise_Restores_Simplicity_Bias_of_Muon",
+      "matched_domain": "大模型优化器设计",
+      "score": 7.93
+    },
+    {
+      "title": "How Inner Optimizers Shape Replica Scaling",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2610.19064v1",
+      "note_filename": "How_Inner_Optimizers_Shape_Replica_Scaling",
+      "matched_domain": "大模型优化器设计",
+      "score": 7.73
+    },
+    {
+      "title": "When Does Momentum Help in Reinforcement Learning with Verifiable Rewards?",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2610.20413v1",
+      "note_filename": "When_Does_Momentum_Help_in_Reinforcement_Learning_with_Verifiable_Rewards",
+      "matched_domain": "大模型优化器设计",
+      "score": 7.87
+    },
+    {
+      "title": "Efficient Preconditioned Optimization Methods with Frequent Directions",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2610.16792v1",
+      "note_filename": "Efficient_Preconditioned_Optimization_Methods_with_Frequent_Directions",
+      "matched_domain": "大模型优化器设计",
+      "score": 7.73
+    },
+    {
+      "title": "On the Last-Iterate Convergence of Clipped Gradient Methods",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2610.21026v1",
+      "note_filename": "On_the_Last_Iterate_Convergence_of_Clipped_Gradient_Methods",
+      "matched_domain": "大模型优化器设计",
+      "score": 8.27
+    },
+    {
+      "title": "When Is Muon Optimal? Radial Fragility and Minimax Geometry",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2610.21549v1",
+      "note_filename": "When_Is_Muon_Optimal_Radial_Fragility_and_Minimax_Geometry",
+      "matched_domain": "大模型优化器设计",
+      "score": 8.27
+    },
+    {
+      "title": "Long-Horizon RL Needs Muon",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2610.20256v1",
+      "note_filename": "Long_Horizon_RL_Needs_Muon",
+      "matched_domain": "大模型优化器设计",
+      "score": 8.13
+    },
+    {
+      "title": "When Does Muon Actually Win? A Paired Data-, Time-, and Tuning-Budget Benchmark",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2610.21555v1",
+      "note_filename": "When_Does_Muon_Actually_Win_A_Paired_Data_Time_and_Tuning_Budget_Benchmark",
+      "matched_domain": "大模型优化器设计",
+      "score": 7.8
+    },
+    {
+      "title": "Variational Filtering for Bayesian Last Layers with an Independent Binary Probit Surrogate",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2610.16578v1",
+      "note_filename": "Variational_Filtering_for_Bayesian_Last_Layers_with_an_Independent_Binary_Probit_Surrogate",
+      "matched_domain": "大模型优化器设计",
+      "score": 7.8
+    }
+  ]
+}
