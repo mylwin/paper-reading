@@ -1,0 +1,353 @@
+[
+  {
+    "title": "When Is Muon Optimal? Radial Fragility and Minimax Geometry",
+    "url": "https://arxiv.org/abs/2610.21549v1",
+    "status": 200,
+    "metadata": {
+      "citation_title": [
+        "When Is Muon Optimal? Radial Fragility and Minimax Geometry"
+      ],
+      "citation_author": [
+        "Xu, Ao"
+      ],
+      "citation_date": [
+        "2026/10/15"
+      ],
+      "citation_online_date": [
+        "2026/10/15"
+      ],
+      "citation_pdf_url": [
+        "https://arxiv.org/pdf/2610.21549"
+      ],
+      "citation_arxiv_id": [
+        "2610.21549"
+      ],
+      "citation_abstract": [
+        "Muon replaces a matrix gradient by an approximate polar factor and has shown strong empirical performance in neural-network training. The Isotropic Curvature Model (ICM) provides a curvature-based explanation for this update by asking when gradient orthogonalization minimizes a one-step local-loss surrogate. We investigate the stability of this explanation when the fixed input radius of the ICM is replaced by a general radial law. We introduce the Random-Radius Isotropic Curvature Model (RR-ICM) and the Polar-Factor Admissibility Set, which encodes exact scaled-polar optimality as a geometric condition on the positive polar factor of the gradient. We derive an exact characterization of this set for arbitrary radial laws and show that all nonscalar admissible responses arise from radial atoms aligned with curvature kinks. Consequently, every atomless radial law exhibits zero-capacity rigidity: exact scaled-polar optimality is possible only when the gradient is already a scaled column isometry. To connect the curvature-based framework with the established spectral geometry of Muon, we introduce the Minimax RR-ICM by replacing directional averaging with worst-case optimization over probability laws on the sphere. We prove that every nonzero global minimizer lies on the polar ray of the gradient, while its scale is determined by a one-dimensional convex problem. The corresponding admissibility geometry is a positive-semidefinite trace slab, in sharp contrast to the spherical-zonoid geometry of the RR-ICM. Together, these results expose the radial fragility of average-curvature explanations and provide a new minimax variational characterization of Muon's polar direction."
+      ]
+    },
+    "license_urls": [],
+    "abstract": "Muon replaces a matrix gradient by an approximate polar factor and has shown strong empirical performance in neural-network training. The Isotropic Curvature Model (ICM) provides a curvature-based explanation for this update by asking when gradient orthogonalization minimizes a one-step local-loss surrogate. We investigate the stability of this explanation when the fixed input radius of the ICM is replaced by a general radial law. We introduce the Random-Radius Isotropic Curvature Model (RR-ICM) and the Polar-Factor Admissibility Set, which encodes exact scaled-polar optimality as a geometric condition on the positive polar factor of the gradient. We derive an exact characterization of this set for arbitrary radial laws and show that all nonscalar admissible responses arise from radial atoms aligned with curvature kinks. Consequently, every atomless radial law exhibits zero-capacity rigidity: exact scaled-polar optimality is possible only when the gradient is already a scaled column isometry. To connect the curvature-based framework with the established spectral geometry of Muon, we introduce the Minimax RR-ICM by replacing directional averaging with worst-case optimization over probability laws on the sphere. We prove that every nonzero global minimizer lies on the polar ray of the gradient, while its scale is determined by a one-dimensional convex problem. The corresponding admissibility geometry is a positive-semidefinite trace slab, in sharp contrast to the spherical-zonoid geometry of the RR-ICM. Together, these results expose the radial fragility of average-curvature explanations and provide a new minimax variational characterization of Muon's polar direction.",
+    "source_summary": "Muon replaces a matrix gradient by an approximate polar factor and has shown strong empirical performance in neural-network training. The Isotropic Curvature Model (ICM) provides a curvature-based explanation for this update by asking when gradient orthogonalization minimizes a one-step local-loss surrogate. We investigate the stability of this explanation when the fixed input radius of the ICM is replaced by a general radial law. We introduce the Random-Radius Isotropic Curvature Model (RR-ICM) and the Polar-Factor Admissibility Set, which encodes exact scaled-polar optimality as a geometric condition on the positive polar factor of the gradient. We derive an exact characterization of this set for arbitrary radial laws and show that all nonscalar admissible responses arise from radial atoms aligned with curvature kinks. Consequently, every atomless radial law exhibits zero-capacity rigidity: exact scaled-polar optimality is possible only when the gradient is already a scaled column isometry. To connect the curvature-based framework with the established spectral geometry of Muon, we introduce the Minimax RR-ICM by replacing directional averaging with worst-case optimization over probability laws on the sphere. We prove that every nonzero global minimizer lies on the polar ray of the gradient, while its scale is determined by a one-dimensional convex problem. The corresponding admissibility geometry is a positive-semidefinite trace slab, in sharp contrast to the spherical-zonoid geometry of the RR-ICM. Together, these results expose the radial fragility of average-curvature explanations and provide a new minimax variational characterization of Muon's polar direction."
+  },
+  {
+    "title": "On the Last-Iterate Convergence of Clipped Gradient Methods",
+    "url": "https://arxiv.org/abs/2610.21026v1",
+    "status": 200,
+    "metadata": {
+      "citation_title": [
+        "On the Last-Iterate Convergence of Clipped Gradient Methods"
+      ],
+      "citation_author": [
+        "Liu, Zijian"
+      ],
+      "citation_date": [
+        "2026/10/14"
+      ],
+      "citation_online_date": [
+        "2026/10/14"
+      ],
+      "citation_pdf_url": [
+        "https://arxiv.org/pdf/2610.21026"
+      ],
+      "citation_arxiv_id": [
+        "2610.21026"
+      ],
+      "citation_abstract": [
+        "In stochastic (strongly) convex optimization, establishing last-iterate convergence guarantees for first-order methods has recently garnered increasing attention, as this not only deepens the theoretical understanding of these algorithms but also aligns more closely with practice. Notably, people have demonstrated that one of the most famous, simple, and popular methods, Stochastic Gradient Descent ($\\mathtt{SGD}$), provably achieves last-iterate convergence. However, the existing results may have limited applicability, since they typically rely on strong conditions on the gradient noise (e.g., an exponentially decaying tail) rather than the more realistic heavy-tailed noise. Unfortunately, when faced with heavy-tailed noise, $\\mathtt{SGD}$ is known to exhibit undesirable behavior or even fail to converge. To address the challenge of heavy-tailed noise, people have proposed $\\mathtt{Clipped}\\text{-}\\mathtt{SGD}$, an algorithm that combines $\\mathtt{SGD}$ with a simple mechanism, gradient clipping. Although $\\mathtt{Clipped}\\text{-}\\mathtt{SGD}$ performs well in practice, its last-iterate convergence property remains highly underexplored. In this work, we prove the first optimal last-iterate rates in high probability for $\\mathtt{Clipped}\\text{-}\\mathtt{SGD}$ under heavy-tailed noise, thereby closing a gap in the literature."
+      ]
+    },
+    "license_urls": [],
+    "abstract": "In stochastic (strongly) convex optimization, establishing last-iterate convergence guarantees for first-order methods has recently garnered increasing attention, as this not only deepens the theoretical understanding of these algorithms but also aligns more closely with practice. Notably, people have demonstrated that one of the most famous, simple, and popular methods, Stochastic Gradient Descent ($\\mathtt{SGD}$), provably achieves last-iterate convergence. However, the existing results may have limited applicability, since they typically rely on strong conditions on the gradient noise (e.g., an exponentially decaying tail) rather than the more realistic heavy-tailed noise. Unfortunately, when faced with heavy-tailed noise, $\\mathtt{SGD}$ is known to exhibit undesirable behavior or even fail to converge. To address the challenge of heavy-tailed noise, people have proposed $\\mathtt{Clipped}\\text{-}\\mathtt{SGD}$, an algorithm that combines $\\mathtt{SGD}$ with a simple mechanism, gradient clipping. Although $\\mathtt{Clipped}\\text{-}\\mathtt{SGD}$ performs well in practice, its last-iterate convergence property remains highly underexplored. In this work, we prove the first optimal last-iterate rates in high probability for $\\mathtt{Clipped}\\text{-}\\mathtt{SGD}$ under heavy-tailed noise, thereby closing a gap in the literature.",
+    "source_summary": "In stochastic (strongly) convex optimization, establishing last-iterate convergence guarantees for first-order methods has recently garnered increasing attention, as this not only deepens the theoretical understanding of these algorithms but also aligns more closely with practice. Notably, people have demonstrated that one of the most famous, simple, and popular methods, Stochastic Gradient Descent ($\\mathtt{SGD}$), provably achieves last-iterate convergence. However, the existing results may have limited applicability, since they typically rely on strong conditions on the gradient noise (e.g., an exponentially decaying tail) rather than the more realistic heavy-tailed noise. Unfortunately, when faced with heavy-tailed noise, $\\mathtt{SGD}$ is known to exhibit undesirable behavior or even fail to converge. To address the challenge of heavy-tailed noise, people have proposed $\\mathtt{Clipped}\\text{-}\\mathtt{SGD}$, an algorithm that combines $\\mathtt{SGD}$ with a simple mechanism, gradient clipping. Although $\\mathtt{Clipped}\\text{-}\\mathtt{SGD}$ performs well in practice, its last-iterate convergence property remains highly underexplored. In this work, we prove the first optimal last-iterate rates in high probability for $\\mathtt{Clipped}\\text{-}\\mathtt{SGD}$ under heavy-tailed noise, thereby closing a gap in the literature."
+  },
+  {
+    "title": "Long-Horizon RL Needs Muon",
+    "url": "https://arxiv.org/abs/2610.20256v1",
+    "status": 200,
+    "metadata": {
+      "citation_title": [
+        "Long-Horizon RL Needs Muon"
+      ],
+      "citation_author": [
+        "Ruan, Kai",
+        "Lin, Jinghao",
+        "Chen, Tao",
+        "Zhou, Ziqi",
+        "Wei, Qianshan",
+        "Huang, Zihe"
+      ],
+      "citation_date": [
+        "2026/10/14"
+      ],
+      "citation_online_date": [
+        "2026/10/14"
+      ],
+      "citation_pdf_url": [
+        "https://arxiv.org/pdf/2610.20256"
+      ],
+      "citation_arxiv_id": [
+        "2610.20256"
+      ],
+      "citation_abstract": [
+        "Long-horizon agents must coordinate reasoning, tool use, and environment feedback over extended interactions. Learning from sparse outcome rewards requires weighting trajectories of different lengths and updating the policy while rollouts are still being collected. We examine a single-rollout asynchronous recipe combining Muon, token-averaged loss, truncated importance sampling, and auxiliary length and tool-error penalties. Single-rollout sampling allows asynchronous learning without waiting for multiple trajectories for the same issue. We study optimizer choices and recipe components for repository-level issue resolution across two model families. The evaluated training runs show higher training success with the full recipe than with the baselines."
+      ]
+    },
+    "license_urls": [
+      "http://creativecommons.org/licenses/by/4.0/"
+    ],
+    "abstract": "Long-horizon agents must coordinate reasoning, tool use, and environment feedback over extended interactions. Learning from sparse outcome rewards requires weighting trajectories of different lengths and updating the policy while rollouts are still being collected. We examine a single-rollout asynchronous recipe combining Muon, token-averaged loss, truncated importance sampling, and auxiliary length and tool-error penalties. Single-rollout sampling allows asynchronous learning without waiting for multiple trajectories for the same issue. We study optimizer choices and recipe components for repository-level issue resolution across two model families. The evaluated training runs show higher training success with the full recipe than with the baselines.",
+    "source_summary": "Long-horizon agents must coordinate reasoning, tool use, and environment feedback over extended interactions. Learning from sparse outcome rewards requires weighting trajectories of different lengths and updating the policy while rollouts are still being collected. We examine a single-rollout asynchronous recipe combining Muon, token-averaged loss, truncated importance sampling, and auxiliary length and tool-error penalties. Single-rollout sampling allows asynchronous learning without waiting for multiple trajectories for the same issue. We study optimizer choices and recipe components for repository-level issue resolution across two model families. The evaluated training runs show higher training success with the full recipe than with the baselines."
+  },
+  {
+    "title": "From Parallel to Sequential: Small-Batch Noise Restores Simplicity Bias of Muon",
+    "url": "https://arxiv.org/abs/2610.16868v1",
+    "status": 200,
+    "metadata": {
+      "citation_title": [
+        "From Parallel to Sequential: Small-Batch Noise Restores Simplicity Bias of Muon"
+      ],
+      "citation_author": [
+        "Jacobs, Tom",
+        "Burkholz, Rebekka"
+      ],
+      "citation_date": [
+        "2026/10/12"
+      ],
+      "citation_online_date": [
+        "2026/10/12"
+      ],
+      "citation_pdf_url": [
+        "https://arxiv.org/pdf/2610.16868"
+      ],
+      "citation_arxiv_id": [
+        "2610.16868"
+      ],
+      "citation_abstract": [
+        "Simplicity bias, which can arise from sequential feature learning during training, has been proposed as a general explanation for the success of deep learning. An important driver of this phenomenon is saddle-to-saddle behavior, in which the gradient flow trajectory remains close to a sequence of saddle manifolds while learning one feature at a time. However, Muon, a state-of-the-art optimizer based on spectral descent, does not exhibit such dynamics in the full-batch setting and instead learns features in parallel. How is it then that Muon is so successful in deep learning settings? We show that stochastic gradient noise fundamentally changes this behavior: small-batch noise restores sequential feature learning, providing a mechanism for simplicity bias that is absent from full-batch Muon. We explain this transition through stochastic smoothing of the spectral descent operator underlying Muon. When gradients are small relative to the noise scale, the expected spectral update becomes approximately proportional to the actual gradient, which restores gradient-flow-like dynamics. We formalize this mechanism for deep linear models by deriving the effective continuous dynamics of noisy spectral descent. Experiments on low-rank matrix reconstruction, vision transformers, and large language models (LLMs) support these findings."
+      ]
+    },
+    "license_urls": [
+      "http://creativecommons.org/licenses/by/4.0/"
+    ],
+    "abstract": "Simplicity bias, which can arise from sequential feature learning during training, has been proposed as a general explanation for the success of deep learning. An important driver of this phenomenon is saddle-to-saddle behavior, in which the gradient flow trajectory remains close to a sequence of saddle manifolds while learning one feature at a time. However, Muon, a state-of-the-art optimizer based on spectral descent, does not exhibit such dynamics in the full-batch setting and instead learns features in parallel. How is it then that Muon is so successful in deep learning settings? We show that stochastic gradient noise fundamentally changes this behavior: small-batch noise restores sequential feature learning, providing a mechanism for simplicity bias that is absent from full-batch Muon. We explain this transition through stochastic smoothing of the spectral descent operator underlying Muon. When gradients are small relative to the noise scale, the expected spectral update becomes approximately proportional to the actual gradient, which restores gradient-flow-like dynamics. We formalize this mechanism for deep linear models by deriving the effective continuous dynamics of noisy spectral descent. Experiments on low-rank matrix reconstruction, vision transformers, and large language models (LLMs) support these findings.",
+    "source_summary": "Simplicity bias, which can arise from sequential feature learning during training, has been proposed as a general explanation for the success of deep learning. An important driver of this phenomenon is saddle-to-saddle behavior, in which the gradient flow trajectory remains close to a sequence of saddle manifolds while learning one feature at a time. However, Muon, a state-of-the-art optimizer based on spectral descent, does not exhibit such dynamics in the full-batch setting and instead learns features in parallel. How is it then that Muon is so successful in deep learning settings? We show that stochastic gradient noise fundamentally changes this behavior: small-batch noise restores sequential feature learning, providing a mechanism for simplicity bias that is absent from full-batch Muon. We explain this transition through stochastic smoothing of the spectral descent operator underlying Muon. When gradients are small relative to the noise scale, the expected spectral update becomes approximately proportional to the actual gradient, which restores gradient-flow-like dynamics. We formalize this mechanism for deep linear models by deriving the effective continuous dynamics of noisy spectral descent. Experiments on low-rank matrix reconstruction, vision transformers, and large language models (LLMs) support these findings."
+  },
+  {
+    "title": "Memory-Efficient Subspace Optimization with Residual Correction: From Momentum SGD to Muon",
+    "url": "https://arxiv.org/abs/2610.19844v1",
+    "status": 200,
+    "metadata": {
+      "citation_title": [
+        "Memory-Efficient Subspace Optimization with Residual Correction: From Momentum SGD to Muon"
+      ],
+      "citation_author": [
+        "Yang, Sifan",
+        "Tao, Hongyi",
+        "Yu, Dingzhi",
+        "Bai, Haomin",
+        "Jiang, Wei",
+        "Gao, Silin",
+        "Bu, Pi",
+        "Zhang, Lijun"
+      ],
+      "citation_date": [
+        "2026/10/14"
+      ],
+      "citation_online_date": [
+        "2026/10/14"
+      ],
+      "citation_pdf_url": [
+        "https://arxiv.org/pdf/2610.19844"
+      ],
+      "citation_arxiv_id": [
+        "2610.19844"
+      ],
+      "citation_abstract": [
+        "Memory-efficient subspace optimization has emerged as a practical approach to reducing the memory cost of LLM training while preserving optimization performance. Previous algorithms typically rely on the leading singular subspace of stochastic gradients, yet the gradient noise may dominate the subspace in later training stages and can prevent convergence. To overcome this limitation, we adopt a residual correction framework, which maintains the optimizer states in the subspace and adds the orthogonal residual gradient to the parameter update. We first integrate this scheme into momentum SGD to develop SMRC, which attains an $O(T^{-1/4})$ convergence rate for a fixed orthonormal basis, matching that of full-space momentum SGD. Our analysis introduces a subspace virtual iterate to resolve the coupling between the momentum and the residual correction. Furthermore, we extend SMRC to a multi-stage variant which periodically recomputes bases to track the evolving dominant subspace and retains the same rate. Since each basis refresh breaks the consistency of the virtual iterates, we devise a boundary correction approach that aligns them across stages. Beyond momentum SGD, we incorporate our framework into Muon and propose PMRC, which applies the matrix sign to the projected momentum. Through a weighted momentum tracking analysis that accounts for the residual gradient, we establish an $O(T^{-1/4})$ convergence rate for PMRC, which matches the rate of full-space Muon. We also design a multi-stage PMRC with periodically refreshed bases, which maintains a convergence rate of the same order. Extensive experimental results confirm the effectiveness and efficiency of our algorithms."
+      ]
+    },
+    "license_urls": [
+      "http://creativecommons.org/licenses/by/4.0/"
+    ],
+    "abstract": "Memory-efficient subspace optimization has emerged as a practical approach to reducing the memory cost of LLM training while preserving optimization performance. Previous algorithms typically rely on the leading singular subspace of stochastic gradients, yet the gradient noise may dominate the subspace in later training stages and can prevent convergence. To overcome this limitation, we adopt a residual correction framework, which maintains the optimizer states in the subspace and adds the orthogonal residual gradient to the parameter update. We first integrate this scheme into momentum SGD to develop SMRC, which attains an $O(T^{-1/4})$ convergence rate for a fixed orthonormal basis, matching that of full-space momentum SGD. Our analysis introduces a subspace virtual iterate to resolve the coupling between the momentum and the residual correction. Furthermore, we extend SMRC to a multi-stage variant which periodically recomputes bases to track the evolving dominant subspace and retains the same rate. Since each basis refresh breaks the consistency of the virtual iterates, we devise a boundary correction approach that aligns them across stages. Beyond momentum SGD, we incorporate our framework into Muon and propose PMRC, which applies the matrix sign to the projected momentum. Through a weighted momentum tracking analysis that accounts for the residual gradient, we establish an $O(T^{-1/4})$ convergence rate for PMRC, which matches the rate of full-space Muon. We also design a multi-stage PMRC with periodically refreshed bases, which maintains a convergence rate of the same order. Extensive experimental results confirm the effectiveness and efficiency of our algorithms.",
+    "source_summary": "Memory-efficient subspace optimization has emerged as a practical approach to reducing the memory cost of LLM training while preserving optimization performance. Previous algorithms typically rely on the leading singular subspace of stochastic gradients, yet the gradient noise may dominate the subspace in later training stages and can prevent convergence. To overcome this limitation, we adopt a residual correction framework, which maintains the optimizer states in the subspace and adds the orthogonal residual gradient to the parameter update. We first integrate this scheme into momentum SGD to develop SMRC, which attains an $O(T^{-1/4})$ convergence rate for a fixed orthonormal basis, matching that of full-space momentum SGD. Our analysis introduces a subspace virtual iterate to resolve the coupling between the momentum and the residual correction. Furthermore, we extend SMRC to a multi-stage variant which periodically recomputes bases to track the evolving dominant subspace and retains the same rate. Since each basis refresh breaks the consistency of the virtual iterates, we devise a boundary correction approach that aligns them across stages. Beyond momentum SGD, we incorporate our framework into Muon and propose PMRC, which applies the matrix sign to the projected momentum. Through a weighted momentum tracking analysis that accounts for the residual gradient, we establish an $O(T^{-1/4})$ convergence rate for PMRC, which matches the rate of full-space Muon. We also design a multi-stage PMRC with periodically refreshed bases, which maintains a convergence rate of the same order. Extensive experimental results confirm the effectiveness and efficiency of our algorithms."
+  },
+  {
+    "title": "When Does Momentum Help in Reinforcement Learning with Verifiable Rewards?",
+    "url": "https://arxiv.org/abs/2610.20413v1",
+    "status": 200,
+    "metadata": {
+      "citation_title": [
+        "When Does Momentum Help in Reinforcement Learning with Verifiable Rewards?"
+      ],
+      "citation_author": [
+        "Wang, Kaifei",
+        "Shan, Zikang",
+        "Wang, Liwei",
+        "Ye, Yinyu",
+        "Zhong, Han"
+      ],
+      "citation_date": [
+        "2026/10/14"
+      ],
+      "citation_online_date": [
+        "2026/10/14"
+      ],
+      "citation_pdf_url": [
+        "https://arxiv.org/pdf/2610.20413"
+      ],
+      "citation_arxiv_id": [
+        "2610.20413"
+      ],
+      "citation_abstract": [
+        "Momentum is a classical tool for accelerating convex optimization and a standard component of modern large language model training. Yet recent empirical work has questioned the usefulness of first-moment momentum in reinforcement learning with verifiable rewards (RLVR). We study this question through a bandit formulation of RLVR with bias-corrected exponential moving average (EMA) momentum, where the EMA coefficient $\\beta$ controls how quickly the weights on past gradients decay. When policy gradients are evaluated exactly, we prove that increasing $\\beta$ within a range that prevents overshoot strictly accelerates optimization. When gradients are estimated from sampled responses, a positive expected gain can be obscured by sampling fluctuations. We show that as the learning rate $\\eta$ decreases, the expected gain with fixed $\\beta$ vanishes faster than these fluctuations, whereas increasing $\\beta$ to keep $\\eta/(1-\\beta)$ within the safe regime preserves a nonvanishing gain that eventually dominates them. Bandit simulations quantitatively validate these predictions. RLVR experiments on Qwen3-4B-Base using SGD with EMA and AdamW support our principle of choosing larger coefficients in practical LLM post-training. On Qwen2.5-32B with AdamW, simply increasing $\\beta_1$ improves mean validation accuracy by nearly $2$ percentage points over the conventional choice, demonstrating the principle's effectiveness at a larger model scale."
+      ]
+    },
+    "license_urls": [],
+    "abstract": "Momentum is a classical tool for accelerating convex optimization and a standard component of modern large language model training. Yet recent empirical work has questioned the usefulness of first-moment momentum in reinforcement learning with verifiable rewards (RLVR). We study this question through a bandit formulation of RLVR with bias-corrected exponential moving average (EMA) momentum, where the EMA coefficient $\\beta$ controls how quickly the weights on past gradients decay. When policy gradients are evaluated exactly, we prove that increasing $\\beta$ within a range that prevents overshoot strictly accelerates optimization. When gradients are estimated from sampled responses, a positive expected gain can be obscured by sampling fluctuations. We show that as the learning rate $\\eta$ decreases, the expected gain with fixed $\\beta$ vanishes faster than these fluctuations, whereas increasing $\\beta$ to keep $\\eta/(1-\\beta)$ within the safe regime preserves a nonvanishing gain that eventually dominates them. Bandit simulations quantitatively validate these predictions. RLVR experiments on Qwen3-4B-Base using SGD with EMA and AdamW support our principle of choosing larger coefficients in practical LLM post-training. On Qwen2.5-32B with AdamW, simply increasing $\\beta_1$ improves mean validation accuracy by nearly $2$ percentage points over the conventional choice, demonstrating the principle's effectiveness at a larger model scale.",
+    "source_summary": "Momentum is a classical tool for accelerating convex optimization and a standard component of modern large language model training. Yet recent empirical work has questioned the usefulness of first-moment momentum in reinforcement learning with verifiable rewards (RLVR). We study this question through a bandit formulation of RLVR with bias-corrected exponential moving average (EMA) momentum, where the EMA coefficient $β$ controls how quickly the weights on past gradients decay. When policy gradients are evaluated exactly, we prove that increasing $β$ within a range that prevents overshoot strictly accelerates optimization. When gradients are estimated from sampled responses, a positive expected gain can be obscured by sampling fluctuations. We show that as the learning rate $η$ decreases, the expected gain with fixed $β$ vanishes faster than these fluctuations, whereas increasing $β$ to keep $η/(1-β)$ within the safe regime preserves a nonvanishing gain that eventually dominates them. Bandit simulations quantitatively validate these predictions. RLVR experiments on Qwen3-4B-Base using SGD with EMA and AdamW support our principle of choosing larger coefficients in practical LLM post-training. On Qwen2.5-32B with AdamW, simply increasing $β_1$ improves mean validation accuracy by nearly $2$ percentage points over the conventional choice, demonstrating the principle's effectiveness at a larger model scale."
+  },
+  {
+    "title": "When Does Muon Actually Win? A Paired Data-, Time-, and Tuning-Budget Benchmark",
+    "url": "https://arxiv.org/abs/2610.21555v1",
+    "status": 200,
+    "metadata": {
+      "citation_title": [
+        "When Does Muon Actually Win? A Paired Data-, Time-, and Tuning-Budget Benchmark"
+      ],
+      "citation_author": [
+        "Akhtar, Mushir",
+        "Nounou, Hazem N.",
+        "Mansouri, Majdi",
+        "Nounou, Mohamed N."
+      ],
+      "citation_date": [
+        "2026/10/15"
+      ],
+      "citation_online_date": [
+        "2026/10/15"
+      ],
+      "citation_pdf_url": [
+        "https://arxiv.org/pdf/2610.21555"
+      ],
+      "citation_arxiv_id": [
+        "2610.21555"
+      ],
+      "citation_abstract": [
+        "Muon's gains in data efficiency motivate evaluating its performance under explicit data, time, and tuning budgets. On a single A100 GPU, we compare a reference single-device Muon implementation with AdamW across 17.7M- and 33.6M-parameter causal language models and 2.70M-parameter vision transformers. A common 23-candidate development budget selects configurations evaluated with five matched seeds, full validation trajectories, optimizer-step timing, and a frozen one-shot test. Muon reduces validation-loss area under the curve by 3.25--22.44\\% at equal data and lowers test loss in all 20 primary pairs. In this configuration, Muon improves time-normalized loss area} by 19.68--22.31\\% on vision, while AdamW is better by 3.38--6.96\\% on language. The full Muon optimizer call, including auxiliary AdamW updates, consumes 56.1--69.6\\% of training time, compared with 6.1--9.1\\% for the AdamW baseline. Muon also has higher expected regret under restricted access to these candidate pools. These results characterize small models with reference kernels; their wall-clock ordering does not establish a ranking for larger models or optimized implementations."
+      ]
+    },
+    "license_urls": [],
+    "abstract": "Muon's gains in data efficiency motivate evaluating its performance under explicit data, time, and tuning budgets. On a single A100 GPU, we compare a reference single-device Muon implementation with AdamW across 17.7M- and 33.6M-parameter causal language models and 2.70M-parameter vision transformers. A common 23-candidate development budget selects configurations evaluated with five matched seeds, full validation trajectories, optimizer-step timing, and a frozen one-shot test. Muon reduces validation-loss area under the curve by 3.25--22.44\\% at equal data and lowers test loss in all 20 primary pairs. In this configuration, Muon improves time-normalized loss area} by 19.68--22.31\\% on vision, while AdamW is better by 3.38--6.96\\% on language. The full Muon optimizer call, including auxiliary AdamW updates, consumes 56.1--69.6\\% of training time, compared with 6.1--9.1\\% for the AdamW baseline. Muon also has higher expected regret under restricted access to these candidate pools. These results characterize small models with reference kernels; their wall-clock ordering does not establish a ranking for larger models or optimized implementations.",
+    "source_summary": "Muon's gains in data efficiency motivate evaluating its performance under explicit data, time, and tuning budgets. On a single A100 GPU, we compare a reference single-device Muon implementation with AdamW across 17.7M- and 33.6M-parameter causal language models and 2.70M-parameter vision transformers. A common 23-candidate development budget selects configurations evaluated with five matched seeds, full validation trajectories, optimizer-step timing, and a frozen one-shot test. Muon reduces validation-loss area under the curve by 3.25--22.44\\% at equal data and lowers test loss in all 20 primary pairs. In this configuration, Muon improves time-normalized loss area} by 19.68--22.31\\% on vision, while AdamW is better by 3.38--6.96\\% on language. The full Muon optimizer call, including auxiliary AdamW updates, consumes 56.1--69.6\\% of training time, compared with 6.1--9.1\\% for the AdamW baseline. Muon also has higher expected regret under restricted access to these candidate pools. These results characterize small models with reference kernels; their wall-clock ordering does not establish a ranking for larger models or optimized implementations."
+  },
+  {
+    "title": "Variational Filtering for Bayesian Last Layers with an Independent Binary Probit Surrogate",
+    "url": "https://arxiv.org/abs/2610.16578v1",
+    "status": 200,
+    "metadata": {
+      "citation_title": [
+        "Variational Filtering for Bayesian Last Layers with an Independent Binary Probit Surrogate"
+      ],
+      "citation_author": [
+        "Markovic, Dimitrije",
+        "Heins, Conor",
+        "Tschantz, Alexander",
+        "Buckley, Christopher L."
+      ],
+      "citation_date": [
+        "2026/10/12"
+      ],
+      "citation_online_date": [
+        "2026/10/12"
+      ],
+      "citation_pdf_url": [
+        "https://arxiv.org/pdf/2610.16578"
+      ],
+      "citation_arxiv_id": [
+        "2610.16578"
+      ],
+      "citation_abstract": [
+        "Modern deep classifiers trained by gradient descent need many passes over the data to become accurate, and even then are not always well calibrated; post-hoc temperature scaling corrects calibration after training but cannot influence training-time accuracy or convergence. We propose a variational filtering algorithm for the last layer of deep classifiers, whose parameters are treated as the latent state of a linear-Gaussian state-space model. Each mini-batch is assimilated by an exact prediction step followed by a closed-form variational update, made conjugate by an independent binary probit (IBProbit) surrogate for the categorical likelihood. The filter's process noise stabilises the updates under feature drift and keeps the predictive distribution from collapsing to a point estimate, allowing the same procedure to be used for linear probing on a frozen backbone and for full-network fine-tuning. We evaluate on DINOv3 backbones against two baselines tuned under an identical protocol: AdamW with cross-entropy and post-hoc temperature scaling, and Variational Bayesian Last Layers (VBLL). As a linear probe on frozen features, IBProbit attains the best accuracy and negative log-likelihood on all five downstream tasks at the largest backbone, and on two of the five at the smallest. In out-of-distribution detection with CIFAR probes on the largest backbone, IBProbit reduces the false-positive rate at 95\\% true-positive rate by a factor of 1.4 to 3.2 relative to the better of the two baselines, on all three dataset pairs. When the whole network is fine-tuned on ImageNet-1k, IBProbit reaches the final performance of the cross-entropy baseline in half the wall-clock time."
+      ]
+    },
+    "license_urls": [
+      "http://creativecommons.org/licenses/by/4.0/"
+    ],
+    "abstract": "Modern deep classifiers trained by gradient descent need many passes over the data to become accurate, and even then are not always well calibrated; post-hoc temperature scaling corrects calibration after training but cannot influence training-time accuracy or convergence. We propose a variational filtering algorithm for the last layer of deep classifiers, whose parameters are treated as the latent state of a linear-Gaussian state-space model. Each mini-batch is assimilated by an exact prediction step followed by a closed-form variational update, made conjugate by an independent binary probit (IBProbit) surrogate for the categorical likelihood. The filter's process noise stabilises the updates under feature drift and keeps the predictive distribution from collapsing to a point estimate, allowing the same procedure to be used for linear probing on a frozen backbone and for full-network fine-tuning. We evaluate on DINOv3 backbones against two baselines tuned under an identical protocol: AdamW with cross-entropy and post-hoc temperature scaling, and Variational Bayesian Last Layers (VBLL). As a linear probe on frozen features, IBProbit attains the best accuracy and negative log-likelihood on all five downstream tasks at the largest backbone, and on two of the five at the smallest. In out-of-distribution detection with CIFAR probes on the largest backbone, IBProbit reduces the false-positive rate at 95\\% true-positive rate by a factor of 1.4 to 3.2 relative to the better of the two baselines, on all three dataset pairs. When the whole network is fine-tuned on ImageNet-1k, IBProbit reaches the final performance of the cross-entropy baseline in half the wall-clock time.",
+    "source_summary": "Modern deep classifiers trained by gradient descent need many passes over the data to become accurate, and even then are not always well calibrated; post-hoc temperature scaling corrects calibration after training but cannot influence training-time accuracy or convergence. We propose a variational filtering algorithm for the last layer of deep classifiers, whose parameters are treated as the latent state of a linear-Gaussian state-space model. Each mini-batch is assimilated by an exact prediction step followed by a closed-form variational update, made conjugate by an independent binary probit (IBProbit) surrogate for the categorical likelihood. The filter's process noise stabilises the updates under feature drift and keeps the predictive distribution from collapsing to a point estimate, allowing the same procedure to be used for linear probing on a frozen backbone and for full-network fine-tuning. We evaluate on DINOv3 backbones against two baselines tuned under an identical protocol: AdamW with cross-entropy and post-hoc temperature scaling, and Variational Bayesian Last Layers (VBLL). As a linear probe on frozen features, IBProbit attains the best accuracy and negative log-likelihood on all five downstream tasks at the largest backbone, and on two of the five at the smallest. In out-of-distribution detection with CIFAR probes on the largest backbone, IBProbit reduces the false-positive rate at 95\\% true-positive rate by a factor of 1.4 to 3.2 relative to the better of the two baselines, on all three dataset pairs. When the whole network is fine-tuned on ImageNet-1k, IBProbit reaches the final performance of the cross-entropy baseline in half the wall-clock time."
+  },
+  {
+    "title": "How Inner Optimizers Shape Replica Scaling",
+    "url": "https://arxiv.org/abs/2610.19064v1",
+    "status": 200,
+    "metadata": {
+      "citation_title": [
+        "How Inner Optimizers Shape Replica Scaling"
+      ],
+      "citation_author": [
+        "Belilovsky, Eugene",
+        "Horoi, Stefan",
+        "Oyallon, Edouard",
+        "Thérien, Benjamin"
+      ],
+      "citation_date": [
+        "2026/10/13"
+      ],
+      "citation_online_date": [
+        "2026/10/13"
+      ],
+      "citation_pdf_url": [
+        "https://arxiv.org/pdf/2610.19064"
+      ],
+      "citation_arxiv_id": [
+        "2610.19064"
+      ],
+      "citation_abstract": [
+        "Training large language models (LLMs) across geographically distributed and poorly interconnected compute pools or data centers has become a topic of significant interest. This has led to increased study of local optimization methods such as DiLoco for LLMs, especially those that use local (or inner) adaptive or preconditioned optimizers, which are critical for high-performance LLM training. However, a central challenge remains: it is well known that increasing the number of model replicas (replica scaling) while fixing the total training budget leads to monotonically decreasing performance. Existing work has empirically demonstrated that the choice of inner optimizer (Muon v.s. AdamW) can significantly improve this trend, but offers only limited explanation of the performance difference. In this work, we consider a range of inner-optimizers and identify two important factors that impact replica scaling: (1) the covariance structure of the pseudo-gradients and (2) the impact of batch size on the pseudogradient's noise scale. Based on these insights, we theoretically and empirically demonstrate that whitening-based pre-conditioning is a powerful inner-optimizer desideratum. Our empirical evaluation extends the results to reveal that whitening-based inner-optimizers achieve strong replica scaling (for 8-96 replicas), with performance relative to DP improving as parameters and data are scaled."
+      ]
+    },
+    "license_urls": [
+      "http://creativecommons.org/licenses/by/4.0/"
+    ],
+    "abstract": "Training large language models (LLMs) across geographically distributed and poorly interconnected compute pools or data centers has become a topic of significant interest. This has led to increased study of local optimization methods such as DiLoco for LLMs, especially those that use local (or inner) adaptive or preconditioned optimizers, which are critical for high-performance LLM training. However, a central challenge remains: it is well known that increasing the number of model replicas (replica scaling) while fixing the total training budget leads to monotonically decreasing performance. Existing work has empirically demonstrated that the choice of inner optimizer (Muon v.s. AdamW) can significantly improve this trend, but offers only limited explanation of the performance difference. In this work, we consider a range of inner-optimizers and identify two important factors that impact replica scaling: (1) the covariance structure of the pseudo-gradients and (2) the impact of batch size on the pseudogradient's noise scale. Based on these insights, we theoretically and empirically demonstrate that whitening-based pre-conditioning is a powerful inner-optimizer desideratum. Our empirical evaluation extends the results to reveal that whitening-based inner-optimizers achieve strong replica scaling (for 8-96 replicas), with performance relative to DP improving as parameters and data are scaled.",
+    "source_summary": "Training large language models (LLMs) across geographically distributed and poorly interconnected compute pools or data centers has become a topic of significant interest. This has led to increased study of local optimization methods such as DiLoco for LLMs, especially those that use local (or inner) adaptive or preconditioned optimizers, which are critical for high-performance LLM training. However, a central challenge remains: it is well known that increasing the number of model replicas (replica scaling) while fixing the total training budget leads to monotonically decreasing performance. Existing work has empirically demonstrated that the choice of inner optimizer (Muon v.s. AdamW) can significantly improve this trend, but offers only limited explanation of the performance difference. In this work, we consider a range of inner-optimizers and identify two important factors that impact replica scaling: (1) the covariance structure of the pseudo-gradients and (2) the impact of batch size on the pseudogradient's noise scale. Based on these insights, we theoretically and empirically demonstrate that whitening-based pre-conditioning is a powerful inner-optimizer desideratum. Our empirical evaluation extends the results to reveal that whitening-based inner-optimizers achieve strong replica scaling (for 8-96 replicas), with performance relative to DP improving as parameters and data are scaled."
+  },
+  {
+    "title": "Efficient Preconditioned Optimization Methods with Frequent Directions",
+    "url": "https://arxiv.org/abs/2610.16792v1",
+    "status": 200,
+    "metadata": {
+      "citation_title": [
+        "Efficient Preconditioned Optimization Methods with Frequent Directions"
+      ],
+      "citation_author": [
+        "Yang, Sifan",
+        "Wan, Yuanyu",
+        "Wang, Yibo",
+        "Zhang, Lijun"
+      ],
+      "citation_date": [
+        "2026/10/12"
+      ],
+      "citation_online_date": [
+        "2026/10/12"
+      ],
+      "citation_pdf_url": [
+        "https://arxiv.org/pdf/2610.16792"
+      ],
+      "citation_arxiv_id": [
+        "2610.16792"
+      ],
+      "citation_abstract": [
+        "Adaptive optimization methods have received considerable attention in recent years due to their strong empirical performance. However, they generally require maintaining a preconditioning matrix, which incurs prohibitive computational overhead in large-scale applications. To address these limitations, we investigate the acceleration of preconditioned optimization methods through frequent directions (FD), a widely used matrix sketching technique. We first propose FTSL by integrating FD with adaptive subgradient methods under the primal-dual framework and adding back the cumulative information discarded by FD. FTSL obtains a tighter regret bound than existing state-of-the-art results. We then apply a doubling trick that further reduces the time complexity of FTSL, while maintaining the same regret guarantee. We also consider optimization over matrix-valued decision variables and exploit their structural properties to construct sketched preconditioners. We develop FTSL-Shampoo by adapting FD to Shampoo and give a novel analysis under the primal-dual framework. To further mitigate its computational complexity, we design one-sided variants of FTSL-Shampoo under both mirror descent and primal-dual frameworks. Our algorithms not only reduce the computational cost of FTSL-Shampoo, but also achieve tighter regret bounds. We extend our methods to offline stochastic convex optimization and exploit smoothness to achieve faster convergence rates. Finally, we introduce practical variants of our algorithms and empirically demonstrate their efficiency and effectiveness across a broad range of tasks."
+      ]
+    },
+    "license_urls": [
+      "http://creativecommons.org/licenses/by/4.0/"
+    ],
+    "abstract": "Adaptive optimization methods have received considerable attention in recent years due to their strong empirical performance. However, they generally require maintaining a preconditioning matrix, which incurs prohibitive computational overhead in large-scale applications. To address these limitations, we investigate the acceleration of preconditioned optimization methods through frequent directions (FD), a widely used matrix sketching technique. We first propose FTSL by integrating FD with adaptive subgradient methods under the primal-dual framework and adding back the cumulative information discarded by FD. FTSL obtains a tighter regret bound than existing state-of-the-art results. We then apply a doubling trick that further reduces the time complexity of FTSL, while maintaining the same regret guarantee. We also consider optimization over matrix-valued decision variables and exploit their structural properties to construct sketched preconditioners. We develop FTSL-Shampoo by adapting FD to Shampoo and give a novel analysis under the primal-dual framework. To further mitigate its computational complexity, we design one-sided variants of FTSL-Shampoo under both mirror descent and primal-dual frameworks. Our algorithms not only reduce the computational cost of FTSL-Shampoo, but also achieve tighter regret bounds. We extend our methods to offline stochastic convex optimization and exploit smoothness to achieve faster convergence rates. Finally, we introduce practical variants of our algorithms and empirically demonstrate their efficiency and effectiveness across a broad range of tasks.",
+    "source_summary": "Adaptive optimization methods have received considerable attention in recent years due to their strong empirical performance. However, they generally require maintaining a preconditioning matrix, which incurs prohibitive computational overhead in large-scale applications. To address these limitations, we investigate the acceleration of preconditioned optimization methods through frequent directions (FD), a widely used matrix sketching technique. We first propose FTSL by integrating FD with adaptive subgradient methods under the primal-dual framework and adding back the cumulative information discarded by FD. FTSL obtains a tighter regret bound than existing state-of-the-art results. We then apply a doubling trick that further reduces the time complexity of FTSL, while maintaining the same regret guarantee. We also consider optimization over matrix-valued decision variables and exploit their structural properties to construct sketched preconditioners. We develop FTSL-Shampoo by adapting FD to Shampoo and give a novel analysis under the primal-dual framework. To further mitigate its computational complexity, we design one-sided variants of FTSL-Shampoo under both mirror descent and primal-dual frameworks. Our algorithms not only reduce the computational cost of FTSL-Shampoo, but also achieve tighter regret bounds. We extend our methods to offline stochastic convex optimization and exploit smoothness to achieve faster convergence rates. Finally, we introduce practical variants of our algorithms and empirically demonstrate their efficiency and effectiveness across a broad range of tasks."
+  }
+]

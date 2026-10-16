@@ -1,0 +1,309 @@
+Preprint
+
+H OW I NNER O PTIMIZERS S HAPE R EPLICA S CALING
+Eugene Belilovsky1,2
+1
+
+Mila
+
+2
+
+Stefan Horoi1,3
+
+Concordia University
+
+3
+
+Edouard Oyallon4
+
+Université de Montréal
+
+4
+
+Benjamin Thérien1,3
+
+CNRS
+
+Training large language models (LLMs) across geographically distributed and
+poorly interconnected compute pools or data centers has become a topic of significant interest. This has led to increased study of local optimization methods such as
+DiLoco for LLMs, especially those that use local (or inner) adaptive or preconditioned optimizers, which are critical for high-performance LLM training. However,
+a central challenge remains: it is well known that increasing the number of model
+replicas (replica scaling) while fixing the total training budget leads to monotonically decreasing performance. Existing work has empirically demonstrated that the
+choice of inner optimizer (Muon v.s. AdamW) can significantly improve this trend,
+but offers only limited explanation of the performance difference. In this work,
+we consider a range of inner-optimizers and identify two important factors that
+impact replica scaling: (1) the covariance structure of the pseudo-gradients and
+(2) the impact of batch size on the pseudogradient’s noise scale. Based on these
+insights, we theoretically and empirically demonstrate that whitening-based preconditioning is a powerful inner-optimizer desideratum. Our empirical evaluation
+extends the results to reveal that whitening-based inner-optimizers achieve strong
+replica scaling (for 8 − 96 replicas), with performance relative to DP improving as
+parameters and data are scaled.
+
+1
+
+I NTRODUCTION
+
+1
+
+178M
+178M
+178M
+178M
+
+512M
+512M
+512M
+512M
+
+% change from own DDP
+% change from own DDP
+% change from own DDP
+% change from own DDP
+
+%
+change
+from
+own
+DDP
+% change
+change from
+from own
+own DDP
+DDP
+%
+
+Final Val. Loss / SUDS
+Final Val. Loss / SUDS
+Final Val. Loss / SUDS
+Final Val. Loss / SUDS
+
+The computational scale of language-model training inSOAP
+SOAP
+SOAP
+SOAP
+SU
+S SPlus
+Muon
+Muon
+Muon
+Muon
+AdamW
+AdamW
+AdamW
+AdamW
+creasingly exceeds the capacity of a single site. Training
+12%
+12%
+12%
+12%
+SOAP
+SOAP
+SUDS
+Muon
+AdamW
+AdamW
+178M
+178M
+512M
+512M
+SOAP
+SUDS
+Muon
+AdamW
+178M
+512M
+across geographically separated
+clustersSUDS
+can pool Muon
+other1.10
+1.10
+1.10
+1.10
+wise fragmented resources, but the connectivity between
+12%
+12%
+12%
+1.08
+1.08
+1.08
+1.08
+these clusters is poor,1.10
+leading
+to significant communica1.10
+1.10
+8%
+8%
+8%
+8%
+1.06
+1.06
+1.06
+1.06
+tion bottlenecks. Local
+optimization methods address this
+1.08
+1.08
+1.08
+constraint by allowing replicas to optimize independently
+8%
+8%
+8%
+1.04
+1.04
+1.04
+1.04
+1.06
+1.06
+1.06 parameter or pseudo-gradient
+for several steps between
+4%
+4%
+4%
+4%
+1.02
+1.02
+1.02
+1.02
+averages (Douillard et
+al., 2023; 2025; Liu et al., 2024)
+1.04
+1.04
+1.04
+1.00
+1.00
+1.00
+1.00
+4%
+4%
+often drastically reducing
+the frequency of communica4%
+1.02
+1.02
+1.02
+0%
+0%
+0%
+0%
+tion.
+0.98
+0.98
+0.98
+0.98
+1.00
+1.00
+1.00
+8 8 8816
+16
+16
+1632
+32
+32
+3264
+64
+64
+96
+64
+96
+96
+96
+1 1 11
+A central difficulty in
+practical local optimization is 1 1 11
+Replicas
+Replicas
+Replicas
+Replicas
+RRRR
+0%
+0%
+0%
+replica scaling: at a 0.98
+fixed
+token
+budget,
+increasing
+the
+0.98
+0.98
+16
+16
+32
+64
+64
+96
+96
+111
+888 16
+16
+32
+64
+96
+96
+number of replicas often 111
+degrades the888final
+model
+per16 32
+32
+64
+96
+16 32
+32 64
+64
+96
+Replicas
+Replicas
+RR non-local
+Replicas
+Replicas
+RRR
+Replicas
+Replicas
+formance (Charles et al., 2025) relative
+toRits
+data-parallel (DP) counterpart. This can limit the broad Figure 1: Local optimization performance
+applicability of these methods. It has been shown that the as replicas are scaled. Each local optimizer is
+replica scaling can improve with increasing model size compared to its own DP baseline, to eliminate
+(Charles et al., 2025). Recent empirical results show that confounding replica scaling with absolute loss.
+Optimizers that whiten the pseudogradient comodifying either the inner optimizer (Thérien et al., 2025) variance achieve the strongest worker scaling.
+or the outer aggregation rule (Horoi et al., 2026) can fur- SPlus is the best proxy for whitening. We note
+ther improve the scalability and efficiency of distributed that SOAP’s stronger absolute performance
+training. However, the impact of inner optimizers on sometimes leads to the best results despite its
+scaling is not well understood. More broadly, the primary poorer worker scaling. Notably, we also obsources of divergence from standard non-local training serve a strong scaling trend relative to DP for
+all inner-optimizers.
+are not well understood.
+Final
+Val.
+Loss
+SUDS
+Final Val.
+Val. Loss
+Loss /// SUDS
+SUDS
+Final
+
+arXiv:2610.19064v1 [cs.LG] 13 Oct 2026
+
+A BSTRACT
+
+8 8 8816
+16
+16
+1632
+32
+32
+3264
+64
+64
+96
+64
+96
+96
+96
+
+Replicas
+Replicas
+Replicas
+Replicas
+RRRR
+
+

@@ -1,0 +1,61 @@
+Preprint
+
+arXiv:2610.19844v1 [cs.LG] 14 Oct 2026
+
+M EMORY-E FFICIENT S UBSPACE O PTIMIZATION WITH
+R ESIDUAL C ORRECTION : F ROM M OMENTUM SGD TO
+M UON
+Sifan Yang1,2,3 , Hongyi Tao1,2 , Dingzhi Yu1,2 , Haomin Bai1,2 , Wei Jiang4,1 , Silin Gao3 ,
+Pi Bu3 , Lijun Zhang1,2,∗
+1
+State Key Laboratory of Novel Software Technology, Nanjing University
+2
+School of Artificial Intelligence, Nanjing University
+3
+Alibaba Token Hub, Alibaba Group
+4
+School of Computer Science and Engineering, Nanjing University of Science and Technology
+
+A BSTRACT
+Memory-efficient subspace optimization has emerged as a practical approach to
+reducing the memory cost of LLM training while preserving optimization performance. Previous algorithms typically rely on the leading singular subspace of
+stochastic gradients, yet the gradient noise may dominate the subspace in later
+training stages and can prevent convergence. To overcome this limitation, we
+adopt a residual correction framework, which maintains the optimizer states in the
+subspace and adds the orthogonal residual gradient to the parameter update. We
+first integrate this scheme into momentum SGD to develop SMRC, which attains
+an O(T −1/4 ) convergence rate for a fixed orthonormal basis, matching that of
+full-space momentum SGD. Our analysis introduces a subspace virtual iterate to
+resolve the coupling between the momentum and the residual correction. Furthermore, we extend SMRC to a multi-stage variant which periodically recomputes
+bases to track the evolving dominant subspace and retains the same rate. Since
+each basis refresh breaks the consistency of the virtual iterates, we devise a boundary correction approach that aligns them across stages. Beyond momentum SGD,
+we incorporate our framework into Muon and propose PMRC, which applies the
+matrix sign to the projected momentum. Through a weighted momentum tracking
+analysis that accounts for the residual gradient, we establish an O(T −1/4 ) convergence rate for PMRC, which matches the rate of full-space Muon. We also
+design a multi-stage PMRC with periodically refreshed bases, which maintains a
+convergence rate of the same order. Extensive experimental results confirm the
+effectiveness and efficiency of our algorithms.
+
+1
+
+I NTRODUCTION
+
+Large language models (LLMs) (Vaswani et al., 2017; Brown et al., 2020; OpenAI, 2023; Bai
+et al., 2023; Guo et al., 2025; Team et al., 2025) have demonstrated strong capabilities in dialogue
+(Thoppilan et al., 2022), language understanding (Chowdhery et al., 2023), mathematical reasoning
+(Lewkowycz et al., 2022) and code generation (Chen et al., 2021). As model scale grows, training
+imposes substantial computational and memory demands (Brown et al., 2020; Chowdhery et al.,
+2023; Touvron et al., 2023). The widely used AdamW optimizer (Kingma & Ba, 2015; Loshchilov
+& Hutter, 2019) further increases memory consumption, since its first- and second-moment estimates are each as large as the model itself. To alleviate the memory overhead, recent work has
+explored different forms of memory-efficient training, ranging from restricting the set of trainable
+parameters (Houlsby et al., 2019; Ben Zaken et al., 2022; Hu et al., 2022; Zhang et al., 2023; Pan
+et al., 2024) to maintaining optimizer states in low-dimensional subspaces (Zhao et al., 2024; He
+et al., 2025; Chen et al., 2025a; Pan et al., 2025a). In this work, we focus on memory-efficient
+subspace optimization, which reduces optimization memory by maintaining the optimizer states in
+∗
+
+Lijun Zhang is the corresponding author.
+
+1
+
+

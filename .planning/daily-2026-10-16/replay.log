@@ -1,0 +1,35 @@
+12:06:26 [INFO] Loading config from: /Users/myl/Documents/paper/.claude/skills/config.yaml
+12:06:26 [INFO] max-results=200 top-n=10 days=30
+12:06:26 [INFO] Data sources: ['arxiv', 'openreview']
+12:06:26 [INFO] Configured keywords: 15
+12:06:26 [INFO] Target date: 2026-10-16
+12:06:26 [INFO] Date windows:
+12:06:26 [INFO]   Recent 30 days: 2026-09-16 to 2026-10-16
+12:06:26 [INFO]   Past year (31-365 days): 2025-10-16 to 2026-09-15
+12:06:26 [INFO] ======================================================================
+12:06:26 [INFO] Step 1: Multi-source search (last 30 days) for configured interests
+12:06:26 [INFO] ======================================================================
+12:06:26 [INFO] [Sources] Fetched {'arxiv': 200, 'openreview': 146}
+12:06:26 [INFO] Scored 288 recent papers
+12:06:26 [INFO] ======================================================================
+12:06:26 [INFO] Step 2: Searching hot papers (past year) from Semantic Scholar
+12:06:26 [INFO] ======================================================================
+12:06:26 [WARNING] No hot papers found from Semantic Scholar
+12:06:26 [INFO] ======================================================================
+12:06:26 [INFO] Step 3: Merging and ranking results
+12:06:26 [INFO] ======================================================================
+12:06:26 [INFO] Total unique papers after deduplication: 265
+12:06:26 [INFO] daily history: 353 previously recommended papers
+12:06:27 [INFO] Known-library scan: 97 papers already in library, 251 papers have related prior work
+12:06:27 [INFO] Results saved to: 08-daily/2026-10-16/search_result.json
+12:06:27 [INFO]   1. When Is Muon Optimal? Radial Fragility and Minimax Geometry... (Score: 8.27)
+12:06:27 [INFO]   2. On the Last-Iterate Convergence of Clipped Gradient Methods... (Score: 8.27)
+12:06:27 [INFO]   3. Long-Horizon RL Needs Muon... (Score: 8.13)
+12:06:27 [INFO]   4. From Parallel to Sequential: Small-Batch Noise Restores Simp... (Score: 7.93)
+12:06:27 [INFO]   5. Memory-Efficient Subspace Optimization with Residual Correct... (Score: 7.93)
+12:06:27 [INFO]   6. When Does Momentum Help in Reinforcement Learning with Verif... (Score: 7.87)
+12:06:27 [INFO]   7. When Does Muon Actually Win? A Paired Data-, Time-, and Tuni... (Score: 7.8)
+12:06:27 [INFO]   8. Variational Filtering for Bayesian Last Layers with an Indep... (Score: 7.8)
+12:06:27 [INFO]   9. How Inner Optimizers Shape Replica Scaling... (Score: 7.73)
+12:06:27 [INFO]   10. Efficient Preconditioned Optimization Methods with Frequent ... (Score: 7.73)
+12:06:27 [INFO] （另有 97 篇已在知识库中，未计入推荐）

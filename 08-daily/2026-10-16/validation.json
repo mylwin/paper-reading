@@ -1,0 +1,62 @@
+{
+  "date": "2026-10-16",
+  "status": "passed",
+  "unique_papers": 265,
+  "known": 97,
+  "screening_candidates": 168,
+  "screening_top_n": 10,
+  "formal_reading_suggestions": 9,
+  "excluded_workshop": 1,
+  "pdf_downloaded": 3,
+  "pdf_failed": 0,
+  "daily_local_links_checked": 43,
+  "daily_link_errors": 0,
+  "publication_link_errors": 0,
+  "pdf_checks": [
+    {
+      "title": "Memory-Efficient Subspace Optimization with Residual Correction: From Momentum SGD to Muon",
+      "pages": 34,
+      "bytes": 704179,
+      "title_metadata_matches": true,
+      "first_page_checked": true
+    },
+    {
+      "title": "From Parallel to Sequential: Small-Batch Noise Restores Simplicity Bias of Muon",
+      "pages": 27,
+      "bytes": 1637249,
+      "title_metadata_matches": true,
+      "first_page_checked": true
+    },
+    {
+      "title": "How Inner Optimizers Shape Replica Scaling",
+      "pages": 25,
+      "bytes": 621925,
+      "title_metadata_matches": true,
+      "first_page_checked": true
+    }
+  ],
+  "checks": [
+    "前十摘要逐篇复排，原分数、摘要、作者、日期及修正前后预筛名次保留",
+    "前三完整中文摘要与原文逐句核对；方法名、条件、公式、8–96副本及证据边界保留",
+    "前三摘要页面、PDF标题和CC BY 4.0许可核验；仅首页身份检查，不冒充全文评审",
+    "附录265篇各一次、连续编号，物理同词误命中与Workshop排除项明确标记",
+    "本地链接均为真实且已跟踪或本次新增资产；相关论文指向精读/PDF/实际包含论文的历史日报",
+    "三PDF魔数、页数、首页标题通过，无半截文件",
+    "四阶段工作区索引和提交快照均登记三篇与正确状态",
+    "提交索引保留HEAD全部已有行且仅新增本次3篇；往日未提交PDF未纳入"
+  ],
+  "workspace_check": {
+    "preexisting_link_errors": 9,
+    "new_link_errors": 0,
+    "missing_readme": 0,
+    "month_consistency_errors": 0,
+    "detail": "9处既有链接位于10月8日/10月10日研究文档，指向工作区外graduate-thesis-code资料；保留原样"
+  },
+  "source_limitations": [
+    "arXiv按相关性最多200条，不代表近期完整论文集。",
+    "OpenReview按配置15关键词分别读取首页100条，截断详情见openreview-coverage.json；接口不保证仅按标题摘要匹配，MuON等同词异义仍保留于全量列表。",
+    "Semantic Scholar过去一年补充查询两次返回429，未获得引用及高影响力补充；不据此断言不存在高影响力论文。",
+    "PowerStep的LaTeX ell_p标题与已有lp主干不同，经真实PDF确认别名后离线重放去重，修正前后预筛均保留。",
+    "预筛前十含一篇原始页面注明Workshop的论文；人工标记排除正式推荐，保留其原预筛分数与名次供审计。"
+  ]
+}
