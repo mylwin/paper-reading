@@ -1,0 +1,803 @@
+{
+  "target_date": "2026-10-17",
+  "date_windows": {
+    "recent_30d": {
+      "start": "2026-09-17",
+      "end": "2026-10-17"
+    },
+    "past_year": {
+      "start": "2025-10-17",
+      "end": "2026-09-16"
+    }
+  },
+  "sources_searched": [
+    "arxiv",
+    "openreview"
+  ],
+  "source_counts": {
+    "arxiv": 200,
+    "openreview": 136
+  },
+  "papers_by_source": {
+    "arxiv": 179,
+    "openreview": 80
+  },
+  "total_recent": 336,
+  "total_hot": 0,
+  "total_unique": 259,
+  "total_known": 103,
+  "total_candidates": 156,
+  "top_papers": [
+    {
+      "id": "http://arxiv.org/abs/2610.16523v1",
+      "title": "EAU: Environment-Agent-User Co-evolution for Training User-Centric Agents",
+      "summary": "Training LLM agents to interact with users over multiple turns is challenging because the learning signal depends not only on the agent, but also on the user simulator and environment, which jointly shape the agent's experience. Simulated users can be stochastic or inconsistent, while environments may contain unreliable tools, incomplete state coverage, and incorrect verifiers. Prior work mainly addresses the resulting instability through reward shaping or denser supervision, while treating these components as fixed. We instead introduce EAU, a meta-agent framework for environment--agent--user co-evolution. During training, EAU monitors trajectories, tool traces, rewards, and training statistics; diagnoses failures and uninformative interactions; and proposes targeted modifications to the user simulator, environment, reward design, and RL configuration. Validated changes are hot-swapped into the ongoing run, allowing the training setup to evolve together with the policy. These adaptations also persist across runs, so later training can build on previously discovered improvements rather than restarting from a fixed setup. We enable this process through an editable symbolic representation of user and environment dynamics, while the agent remains a neural LLM optimized with RL. Across three interactive-agent benchmarks and two backbone models, EAU consistently outperforms prior RL methods, improving the overall score over the strongest baseline by 14.7--15.0% and increasing successful task completion on ColBench by up to 36.7%, showing that co-evolving the training system with the policy can substantially improve multi-turn RL.",
+      "authors": [
+        "Min Cai",
+        "Dan Zhang",
+        "Gao Xing",
+        "Libin Ma",
+        "Zhaohui Xu",
+        "Xi Ye"
+      ],
+      "affiliations": [],
+      "published": "2026-10-12T10:11:38Z",
+      "published_date": "2026-10-12 10:11:38+00:00",
+      "updated": "2026-10-12T10:11:38Z",
+      "categories": [
+        "cs.AI",
+        "cs.CL",
+        "cs.LG"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.16523v1",
+      "url": "http://arxiv.org/abs/2610.16523v1",
+      "source": "arxiv",
+      "scores": {
+        "relevance": 3.0,
+        "recency": 3.0,
+        "impact": 0.0,
+        "evidence": 1.6,
+        "popularity": 0.0,
+        "quality": 1.6,
+        "recommendation": 8.07
+      },
+      "matched_domain": "大模型优化器设计",
+      "matched_keywords": [
+        "cs.LG",
+        "cs.CL"
+      ],
+      "is_hot_paper": false,
+      "score_type": "research_priority_screening",
+      "assessment_scope": "metadata_and_abstract",
+      "screening_rank": 21,
+      "paper_stem": "EAU_Environment_Agent_User_Co_evolution_for_Training_User_Centric_Agents",
+      "already_known": false,
+      "related_papers": [
+        {
+          "title": "Anytime Training with Schedule Free Spectral Optimization",
+          "stem": "anytimetrainingwithschedulefreespectraloptimization",
+          "source": "pdf",
+          "path": "/Users/myl/Documents/paper/01-raw/2026-10/Anytime_Training_with_Schedule_Free_Spectral_Optimization.pdf",
+          "shared_terms": [
+            "training"
+          ],
+          "shared_count": 1
+        },
+        {
+          "title": "Behavior Quotient Learning for Low-Rank Adaptation of LLM Agents",
+          "stem": "behaviorquotientlearningforlowrankadaptationofllmagents",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-17/search_result.json",
+          "shared_terms": [
+            "agents"
+          ],
+          "shared_count": 1
+        },
+        {
+          "title": "Clean: Second-order LLM Training at Linear Memory Cost via Nyström Sketching",
+          "stem": "cleansecondorderllmtrainingatlinearmemorycostvianystrmsketching",
+          "source": "pdf",
+          "path": "/Users/myl/Documents/paper/01-raw/2026-10/Clean_Second_order_LLM_Training_at_Linear_Memory_Cost_via_Nyström_Sketching.pdf",
+          "shared_terms": [
+            "training"
+          ],
+          "shared_count": 1
+        }
+      ],
+      "note_filename": "EAU_Environment_Agent_User_Co_evolution_for_Training_User_Centric_Agents"
+    },
+    {
+      "id": "pyB4n82RVJ",
+      "source": "openreview",
+      "title": "PowerStep: Memory-Efficient Adaptive Optimization via $\\ell_p$-Norm Steepest Descent",
+      "summary": "Adaptive optimizers such as Adam are standard for training Transformers, but storing gradient first and second moments incurs substantial memory overhead. We introduce PowerStep, a memory-efficient optimizer that achieves coordinate-wise adaptivity without storing second-moment statistics. Motivated by $\\ell_p$-norm steepest descent, PowerStep applies a signed-power transform directly to one momentum buffer. We establish a finite-horizon stationarity bound for exact, unregularized updates, with an $O(1/\\sqrt{T})$ term and a noise-dependent residual. Experiments on Transformers from 124M to 235B parameters show competitive validation quality while halving $\\texttt{fp32}$ optimizer-state memory. Combined with uniform $\\texttt{int8}$ quantization, PowerStep remains numerically stable and reduces optimizer-state memory by $\\sim8\\times$ compared to $\\texttt{fp32}$ AdamW. PowerStep thus provides a simple, memory-efficient alternative for large-scale training.",
+      "authors": [],
+      "affiliations": [],
+      "categories": [],
+      "venue": "ICLR 2027 Conference Submission",
+      "pdf_url": "/pdf/325cd2cd1af6306a7f387a6c5363dabe5a1054b9.pdf",
+      "url": "https://openreview.net/forum?id=pyB4n82RVJ",
+      "published": "2026-09-17T10:12:33.028000",
+      "published_date": "2026-09-17 10:12:33.028000",
+      "scores": {
+        "relevance": 3.0,
+        "recency": 3.0,
+        "impact": 0.0,
+        "evidence": 1.2,
+        "popularity": 0.0,
+        "quality": 1.2,
+        "recommendation": 7.8
+      },
+      "matched_domain": "大模型优化器设计",
+      "matched_keywords": [
+        "memory-efficient optimizer",
+        "adaptive optimization",
+        "PowerStep",
+        "AdamW"
+      ],
+      "is_hot_paper": false,
+      "score_type": "research_priority_screening",
+      "assessment_scope": "metadata_and_abstract",
+      "screening_rank": 43,
+      "paper_stem": "PowerStep_Memory_Efficient_Adaptive_Optimization_via_$_ell_p$_Norm_Steepest_Descent",
+      "already_known": false,
+      "related_papers": [
+        {
+          "title": "PowerStep Memory Efficient Adaptive Optimization via lp Norm Steepest Descent",
+          "stem": "powerstepmemoryefficientadaptiveoptimizationvialpnormsteepestdescent",
+          "source": "pdf",
+          "path": "/Users/myl/Documents/paper/01-raw/2026-09/PowerStep_Memory_Efficient_Adaptive_Optimization_via_lp_Norm_Steepest_Descent.pdf",
+          "shared_terms": [
+            "adaptive",
+            "descent",
+            "norm",
+            "powerstep",
+            "steepest"
+          ],
+          "shared_count": 5
+        },
+        {
+          "title": "ABrA-GD: Adaptive Bregman Accelerated Gradient Descent for Relatively Smooth and (Strongly-)Convex Optimization",
+          "stem": "abragdadaptivebregmanacceleratedgradientdescentforrelativelysmoothandstronglyconvexoptimization",
+          "source": "pdf",
+          "path": "/Users/myl/Documents/paper/01-raw/2026-10/ABrA_GD_Adaptive_Bregman_Accelerated_Gradient_Descent_for_Relatively_Smooth_and_(Strongly_)Convex_Optimization.pdf",
+          "shared_terms": [
+            "adaptive",
+            "descent"
+          ],
+          "shared_count": 2
+        },
+        {
+          "title": "ConMeZO Adaptive Descent Direction Sampling for Gradient Free Finetuning of Large Language Models",
+          "stem": "conmezoadaptivedescentdirectionsamplingforgradientfreefinetuningoflargelanguagemodels",
+          "source": "pdf",
+          "path": "/Users/myl/Documents/paper/01-raw/2026-09/ConMeZO_Adaptive_Descent_Direction_Sampling_for_Gradient_Free_Finetuning_of_Large_Language_Models.pdf",
+          "shared_terms": [
+            "adaptive",
+            "descent"
+          ],
+          "shared_count": 2
+        }
+      ],
+      "note_filename": "PowerStep_Memory_Efficient_Adaptive_Optimization_via_$_ell_p$_Norm_Steepest_Descent"
+    },
+    {
+      "id": "http://arxiv.org/abs/2610.17285v1",
+      "title": "Which Geometry on Which Layer? Measured Sign-Spectral Assignment in Mixed-Optimizer Training",
+      "summary": "Modern neural-network training uses mixed recipes, assigning AdamW-like or sign-based updates to embedding and output layers and spectral updates to hidden matrices. These assignments are usually fixed by layer type, without a clear criterion for selecting the appropriate geometry. We turn sign-versus-spectral assignment into a measurable, layerwise decision problem. For ideal memoryless steps, we derive a finite-batch ratio of conservative descent-lemma lower bounds for spectral and sign updates. Its closed form separates signal efficiency from a geometry-dependent global curvature factor. In the positive-signal regime, the same smoothness assumption gives two-sided bounds that determine which step has the larger conditional expected decrease when the ratio crosses explicit noise-dependent thresholds. We then derive a local directional quadratic score from gradient alignments and Hessian-vector products and use it in Generalized-Scion (G-Scion) to control layerwise routing. In a controlled input-rank experiment, including directional curvature matches the measured same-iterate ordering in all seven aggregate settings, whereas the curvature-free proxy selects the opposite geometry. On 31M GPT-2, the output score routes the output layer from spectral warmup to sign, and G-Scion improves validation loss over fixed Scion in memoryless and matched-momentum comparisons. ViT-B/16 results further show that a spectral edge assignment can outperform fixed Scion outside language modelling. These results suggest that optimizer geometry need not be hard-coded by layer type and are a first step toward understanding how it should be assigned.",
+      "authors": [
+        "Hiroki Naganuma",
+        "Laura Gomezjurado",
+        "Mahdi Ghaznavi",
+        "Ganesh Talluri",
+        "Atsushi Nitanda",
+        "Seng Pei Liew",
+        "Ryuichiro Hataya",
+        "Ioannis Mitliagkas"
+      ],
+      "affiliations": [],
+      "published": "2026-10-12T18:41:35Z",
+      "published_date": "2026-10-12 18:41:35+00:00",
+      "updated": "2026-10-12T18:41:35Z",
+      "categories": [
+        "cs.LG"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.17285v1",
+      "url": "http://arxiv.org/abs/2610.17285v1",
+      "source": "arxiv",
+      "scores": {
+        "relevance": 2.6,
+        "recency": 3.0,
+        "impact": 0.0,
+        "evidence": 2.0,
+        "popularity": 0.0,
+        "quality": 2.0,
+        "recommendation": 7.6
+      },
+      "matched_domain": "大模型优化器设计",
+      "matched_keywords": [
+        "AdamW",
+        "cs.LG"
+      ],
+      "is_hot_paper": false,
+      "score_type": "research_priority_screening",
+      "assessment_scope": "metadata_and_abstract",
+      "screening_rank": 54,
+      "paper_stem": "Which_Geometry_on_Which_Layer_Measured_Sign_Spectral_Assignment_in_Mixed_Optimizer_Training",
+      "already_known": false,
+      "related_papers": [
+        {
+          "title": "Normalize-Then-Precondition: A Hierarchical Approach to Marginal Scale and Interaction Geometry for LLM Training",
+          "stem": "normalizethenpreconditionahierarchicalapproachtomarginalscaleandinteractiongeometryforllmtraining",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-10-03/search_result.json",
+          "shared_terms": [
+            "geometry",
+            "training"
+          ],
+          "shared_count": 2
+        },
+        {
+          "title": "Anytime Training with Schedule Free Spectral Optimization",
+          "stem": "anytimetrainingwithschedulefreespectraloptimization",
+          "source": "pdf",
+          "path": "/Users/myl/Documents/paper/01-raw/2026-10/Anytime_Training_with_Schedule_Free_Spectral_Optimization.pdf",
+          "shared_terms": [
+            "training"
+          ],
+          "shared_count": 1
+        },
+        {
+          "title": "Centered Permutation Prefixes for SGD with Random Reshuffling: Sharp Rates, Hölder Geometry, and Composite Proximal Extensions",
+          "stem": "centeredpermutationprefixesforsgdwithrandomreshufflingsharprateshldergeometryandcompositeproximalextensi",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-24/search_result.json",
+          "shared_terms": [
+            "geometry"
+          ],
+          "shared_count": 1
+        }
+      ],
+      "note_filename": "Which_Geometry_on_Which_Layer_Measured_Sign_Spectral_Assignment_in_Mixed_Optimizer_Training"
+    },
+    {
+      "id": "http://arxiv.org/abs/2610.20112v1",
+      "title": "From Spectral to Frobenius: When Muon Loses Its Spectral Implicit Bias",
+      "summary": "Prior work on implicit bias shows that gradient descent selects the Frobenius max-margin direction on linearly separable problems, whereas Fan et al. (2025) established spectral max-margin behavior for spectral-norm steepest descent methods, including idealized Muon with exact orthogonalization. In practice, however, Muon approximates orthogonalization using finite Newton-Schulz iterations and a positive stabilization constant. We prove that these implementation choices cause Muon to select the Frobenius rather than the spectral max-margin direction in linear classification with separable data. We also establish this behavior for both exponential moving average and Nesterov-style momentum. The key technical ingredient is a summable perturbation argument showing that the resulting parameter trajectories remain at bounded distance from those of gradient descent. We then disentangle the roles of Newton-Schulz iteration count, the stabilization constant, and the Newton-Schulz polynomial, revealing distinct asymptotic behaviors, including directions that achieve neither Frobenius nor spectral max-margin. Finally, we show that Muon can recover its spectral max-margin bias with Newton-Schulz iterations growing logarithmically over training.",
+      "authors": [
+        "Yongtao Wu",
+        "Mahdi Mansouri",
+        "Zhenyu Zhu"
+      ],
+      "affiliations": [],
+      "published": "2026-10-14T12:42:35Z",
+      "published_date": "2026-10-14 12:42:35+00:00",
+      "updated": "2026-10-14T12:42:35Z",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.20112v1",
+      "url": "http://arxiv.org/abs/2610.20112v1",
+      "source": "arxiv",
+      "scores": {
+        "relevance": 3.0,
+        "recency": 3.0,
+        "impact": 0.0,
+        "evidence": 0.8,
+        "popularity": 0.0,
+        "quality": 0.8,
+        "recommendation": 7.53
+      },
+      "matched_domain": "大模型优化器设计",
+      "matched_keywords": [
+        "Muon",
+        "cs.LG"
+      ],
+      "is_hot_paper": false,
+      "score_type": "research_priority_screening",
+      "assessment_scope": "metadata_and_abstract",
+      "screening_rank": 56,
+      "paper_stem": "From_Spectral_to_Frobenius_When_Muon_Loses_Its_Spectral_Implicit_Bias",
+      "already_known": false,
+      "related_papers": [
+        {
+          "title": "Overfitting of Spectral Gradient Descent: How Matrix Geometry shapes Generalization and Implicit Bias",
+          "stem": "overfittingofspectralgradientdescenthowmatrixgeometryshapesgeneralizationandimplicitbias",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-30/search_result.json",
+          "shared_terms": [
+            "bias",
+            "implicit",
+            "spectral"
+          ],
+          "shared_count": 3
+        },
+        {
+          "title": "Spectral Flattening Is Not Enough: When Muon Improves Learning Rates and Convergence",
+          "stem": "spectralflatteningisnotenoughwhenmuonimproveslearningratesandconvergence",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-10-10/search_result.json",
+          "shared_terms": [
+            "muon",
+            "spectral",
+            "when"
+          ],
+          "shared_count": 3
+        },
+        {
+          "title": "When Muon Meets Task Interference: A Spectral Perspective on Continual Learning and Model Merging",
+          "stem": "whenmuonmeetstaskinterferenceaspectralperspectiveoncontinuallearningandmodelmerging",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-24/search_result.json",
+          "shared_terms": [
+            "muon",
+            "spectral",
+            "when"
+          ],
+          "shared_count": 3
+        }
+      ],
+      "note_filename": "From_Spectral_to_Frobenius_When_Muon_Loses_Its_Spectral_Implicit_Bias"
+    },
+    {
+      "id": "http://arxiv.org/abs/2610.21337v1",
+      "title": "Does On-Policy Distillation Need to Complete Every Rollout?",
+      "summary": "On-policy distillation (OPD) effectively transfers capabilities from a teacher to a student through feedback on student-generated rollouts. However, generating complete student rollouts and computing teacher feedback for every token make OPD computationally expensive. We introduce Stochastic Truncated On-Policy Distillation (STOPD), which accelerates OPD by randomly truncating student rollouts and correcting the resulting sampling bias with blockwise inverse-probability weighting (IPW). At each training step, we sample a stopping position for each rollout before generation and let the student generate until that position or natural termination. We obtain teacher feedback on every generated token and use blockwise IPW to compensate for the lower probability of retaining later tokens while controlling the weights. We prove that this weighting preserves Vanilla OPD's gradient sum in expectation and derive one-step update-error bounds for SGD, Adam, and Muon. We evaluate STOPD across multiple teacher-student model pairs, task domains, and optimizers. STOPD reduces generated tokens by 25-48% while maintaining accuracy comparable to Vanilla OPD, achieving 1.3-2.2x training speedups.",
+      "authors": [
+        "Zhengxin Zhang",
+        "Maosen Tang",
+        "Ning Wang",
+        "Changhao Li",
+        "Jingren Zhou",
+        "Bo Dai",
+        "Sainyam Galhotra",
+        "Alex Townsend",
+        "Claire Cardie"
+      ],
+      "affiliations": [],
+      "published": "2026-10-15T06:22:08Z",
+      "published_date": "2026-10-15 06:22:08+00:00",
+      "updated": "2026-10-15T06:22:08Z",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.21337v1",
+      "url": "http://arxiv.org/abs/2610.21337v1",
+      "source": "arxiv",
+      "scores": {
+        "relevance": 2.6,
+        "recency": 3.0,
+        "impact": 0.0,
+        "evidence": 1.8,
+        "popularity": 0.0,
+        "quality": 1.8,
+        "recommendation": 7.47
+      },
+      "matched_domain": "大模型优化器设计",
+      "matched_keywords": [
+        "Muon",
+        "cs.LG"
+      ],
+      "is_hot_paper": false,
+      "score_type": "research_priority_screening",
+      "assessment_scope": "metadata_and_abstract",
+      "screening_rank": 57,
+      "paper_stem": "Does_On_Policy_Distillation_Need_to_Complete_Every_Rollout",
+      "already_known": false,
+      "related_papers": [
+        {
+          "title": "Does Muon Need Fine-Grained Spectral Shaping?",
+          "stem": "doesmuonneedfinegrainedspectralshaping",
+          "source": "pdf",
+          "path": "/Users/myl/Documents/paper/01-raw/2026-10/Does_Muon_Need_Fine_Grained_Spectral_Shaping.pdf",
+          "shared_terms": [
+            "does",
+            "need"
+          ],
+          "shared_count": 2
+        },
+        {
+          "title": "How Much Rank Does LoRA Need? Rank-Error Bounds for Transformer Attention",
+          "stem": "howmuchrankdoesloraneedrankerrorboundsfortransformerattention",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-21/search_result.json",
+          "shared_terms": [
+            "does",
+            "need"
+          ],
+          "shared_count": 2
+        },
+        {
+          "title": "Minimal-State Optimization: How Little Optimizer Memory Does AdamW’s Accuracy Need?",
+          "stem": "minimalstateoptimizationhowlittleoptimizermemorydoesadamwsaccuracyneed",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-10-09/search_result.json",
+          "shared_terms": [
+            "does",
+            "need"
+          ],
+          "shared_count": 2
+        }
+      ],
+      "note_filename": "Does_On_Policy_Distillation_Need_to_Complete_Every_Rollout"
+    },
+    {
+      "id": "http://arxiv.org/abs/2610.17588v1",
+      "title": "Taming Softmax at the Limits of Muon: A Unified Approach through Hilbert Geometry",
+      "summary": "Muon controls weight updates through the RMS movement of a linear layer's output. This implicitly treats the linear output as a proxy for the full module, including the nonlinearity that follows. This proxy can be misleading for softmax, where the RMS shift in activations does not faithfully measure the change in the output distribution. We propose Hilbert distance as a natural metric for bounding changes in these output distributions. Hilbert distance bounds changes in cross-entropy loss and limits probability redistribution. For softmax, it takes the form of the variation seminorm of the preactivation perturbation, allowing probability constraints to be expressed as parameter constraints. Formulating the steepest descent problem with a Hilbert distance constraint brings two recently proposed methods under a unified mathematical framework. For the LM head, solving a row-wise approximation to the resulting diameter-constrained problem leads us to RowNorm \\citep{pethick2025trainingdeeplearningmodels}. For scaled dot-product attention, the same principle yields the first-order query--key steepest descent problem underlying Compositional Muon \\citep{keigwin2026compositional}. These connections motivate using Hilbert distance as a guiding principle for optimizer design in softmax modules.",
+      "authors": [
+        "Aditya Somasundaram",
+        "Charles Guille-Escuret",
+        "Alexander Moreno",
+        "Zhengzhong Liu",
+        "Eric Xing"
+      ],
+      "affiliations": [],
+      "published": "2026-10-13T02:07:50Z",
+      "published_date": "2026-10-13 02:07:50+00:00",
+      "updated": "2026-10-13T02:07:50Z",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.17588v1",
+      "url": "http://arxiv.org/abs/2610.17588v1",
+      "source": "arxiv",
+      "scores": {
+        "relevance": 3.0,
+        "recency": 3.0,
+        "impact": 0.0,
+        "evidence": 0.6,
+        "popularity": 0.0,
+        "quality": 0.6,
+        "recommendation": 7.4
+      },
+      "matched_domain": "大模型优化器设计",
+      "matched_keywords": [
+        "optimizer design",
+        "Muon",
+        "cs.LG"
+      ],
+      "is_hot_paper": false,
+      "score_type": "research_priority_screening",
+      "assessment_scope": "metadata_and_abstract",
+      "screening_rank": 62,
+      "paper_stem": "Taming_Softmax_at_the_Limits_of_Muon_A_Unified_Approach_through_Hilbert_Geometry",
+      "already_known": false,
+      "related_papers": [
+        {
+          "title": "From Geometry to Generalization: Why Row Normalization Can Beat Adam and Muon",
+          "stem": "fromgeometrytogeneralizationwhyrownormalizationcanbeatadamandmuon",
+          "source": "pdf",
+          "path": "/Users/myl/Documents/paper/01-raw/2026-10/From_Geometry_to_Generalization_Why_Row_Normalization_Can_Beat_Adam_and_Muon.pdf",
+          "shared_terms": [
+            "geometry",
+            "muon"
+          ],
+          "shared_count": 2
+        },
+        {
+          "title": "Sign compression for Muon: SignMuon, MuonSign, and the Limits of Error Feedback",
+          "stem": "signcompressionformuonsignmuonmuonsignandthelimitsoferrorfeedback",
+          "source": "pdf",
+          "path": "/Users/myl/Documents/paper/01-raw/2026-10/Sign_compression_for_Muon_SignMuon_MuonSign_and_the_Limits_of_Error_Feedback.pdf",
+          "shared_terms": [
+            "limits",
+            "muon"
+          ],
+          "shared_count": 2
+        },
+        {
+          "title": "When Is Muon Optimal? Radial Fragility and Minimax Geometry",
+          "stem": "whenismuonoptimalradialfragilityandminimaxgeometry",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-10-16/search_result.json",
+          "shared_terms": [
+            "geometry",
+            "muon"
+          ],
+          "shared_count": 2
+        }
+      ],
+      "note_filename": "Taming_Softmax_at_the_Limits_of_Muon_A_Unified_Approach_through_Hilbert_Geometry"
+    },
+    {
+      "id": "http://arxiv.org/abs/2610.18294v1",
+      "title": "Which Optimizer Leaks Most? Optimizer Implicit Bias as a Training-Data Privacy Controller",
+      "summary": "Releasing a neural network checkpoint can leak information about its training data, and existing reconstruction results rely on gradient-descent training. We ask whether the choice of optimizer affects the ability to recover the training data. Extending work connecting Karush--Kuhn--Tucker conditions to training-data reconstruction, we show that the implicit biases of popular optimizers (SGD, Adam, Muon) leave very different fingerprints of the training data. We argue that the key distinction is the \\emph{weight-specificity} of these implicit biases, namely how much continuous information about the final weights the optimizer-dependent target of the stationarity conditions encodes. The limiting stationarity conditions for models trained with SGD and Muon retain enough weight-specific information to reconstruct training examples in practice. For Adam in the $\\ell_\\infty$ implicit-bias regime, the optimizer-dependent part of these conditions encodes only a discrete pattern of maximal coordinates and their signs, and at nondegenerate KKT points the conditions are too few to identify the training set to first order. Experiments on MNIST and CIFAR-10 support these claims: models trained with Muon can yield stronger reconstructions at much lower training cost than models trained with SGD, although this advantage depends on the training regime and architecture, and models trained with Adam appear consistently more resistant to the evaluated attacks.",
+      "authors": [
+        "Sagi Habani",
+        "Yehonathan Refael",
+        "Ofir Lindenbaum"
+      ],
+      "affiliations": [],
+      "published": "2026-10-13T12:42:00Z",
+      "published_date": "2026-10-13 12:42:00+00:00",
+      "updated": "2026-10-13T12:42:00Z",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.18294v1",
+      "url": "http://arxiv.org/abs/2610.18294v1",
+      "source": "arxiv",
+      "scores": {
+        "relevance": 2.6,
+        "recency": 3.0,
+        "impact": 0.0,
+        "evidence": 1.4,
+        "popularity": 0.0,
+        "quality": 1.4,
+        "recommendation": 7.2
+      },
+      "matched_domain": "大模型优化器设计",
+      "matched_keywords": [
+        "Muon",
+        "cs.LG"
+      ],
+      "is_hot_paper": false,
+      "score_type": "research_priority_screening",
+      "assessment_scope": "metadata_and_abstract",
+      "screening_rank": 78,
+      "paper_stem": "Which_Optimizer_Leaks_Most_Optimizer_Implicit_Bias_as_a_Training_Data_Privacy_Controller",
+      "already_known": false,
+      "related_papers": [
+        {
+          "title": "Overfitting of Spectral Gradient Descent: How Matrix Geometry shapes Generalization and Implicit Bias",
+          "stem": "overfittingofspectralgradientdescenthowmatrixgeometryshapesgeneralizationandimplicitbias",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-30/search_result.json",
+          "shared_terms": [
+            "bias",
+            "implicit"
+          ],
+          "shared_count": 2
+        },
+        {
+          "title": "AdaMeZO: Adam-style Zeroth-Order Optimizer for LLM Fine-tuning Without Maintaining the Moments",
+          "stem": "adamezoadamstylezerothorderoptimizerforllmfinetuningwithoutmaintainingthemoments",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-20/search_result.json",
+          "shared_terms": [
+            "optimizer"
+          ],
+          "shared_count": 1
+        },
+        {
+          "title": "AF-Muon: An AdamW-Free Muon Optimizer for Tied-Embedding Models",
+          "stem": "afmuonanadamwfreemuonoptimizerfortiedembeddingmodels",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-10-04/search_result.json",
+          "shared_terms": [
+            "optimizer"
+          ],
+          "shared_count": 1
+        }
+      ],
+      "note_filename": "Which_Optimizer_Leaks_Most_Optimizer_Implicit_Bias_as_a_Training_Data_Privacy_Controller"
+    },
+    {
+      "id": "http://arxiv.org/abs/2610.18085v1",
+      "title": "Same Function, Different Trajectory: No Standard Optimizer Is Equivariant to Transformer Reparameterization",
+      "summary": "We show that two Transformers representing the same function can follow different training trajectories. For example, doubling a query matrix and halving its key matrix preserves the model's function but changes the gradient scales seen by the optimizer. Our theoretical analysis establishes that standard block-local first-order optimizers fail to scale updates with parameters under a shared learning rate. For AdamW, transforming the first- and second-moment estimates alone does not correct the mismatch between parameter and update scales. To make runs restarted from equivalent checkpoints follow the same trajectory, we balance matrix pairs and transform their moment estimates together, bringing distinct but equivalent training states to the same starting point. To correct scale imbalance between paired Transformer matrices without changing predictions, we propose Symmetry-Aware Gradient Geometry Stabilization (SAGGS), which periodically equalizes the Frobenius norms of exact symmetry pairs, and its damped variant, Soft SAGGS. SAGGS reduces perplexity (PPL) by $0.374\\pm0.026$ at 101M parameters on WikiText-103, and Soft SAGGS reduces PPL by $0.780\\pm0.040$ in a 31M modern-architecture replication, both under scale imbalance. In a 123.8M checkpoint-resume experiment, reciprocally rescaling matrix pairs barely changes validation loss at restart but increases final PPL by $3.78\\pm0.42$; hard and soft rebalancing recover to within $0.02$ PPL of the control.",
+      "authors": [
+        "Bum Jun Kim"
+      ],
+      "affiliations": [],
+      "published": "2026-10-13T10:08:15Z",
+      "published_date": "2026-10-13 10:08:15+00:00",
+      "updated": "2026-10-13T10:08:15Z",
+      "categories": [
+        "cs.LG",
+        "cs.NE"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.18085v1",
+      "url": "http://arxiv.org/abs/2610.18085v1",
+      "source": "arxiv",
+      "scores": {
+        "relevance": 2.6,
+        "recency": 3.0,
+        "impact": 0.0,
+        "evidence": 1.4,
+        "popularity": 0.0,
+        "quality": 1.4,
+        "recommendation": 7.2
+      },
+      "matched_domain": "大模型优化器设计",
+      "matched_keywords": [
+        "AdamW",
+        "cs.LG"
+      ],
+      "is_hot_paper": false,
+      "score_type": "research_priority_screening",
+      "assessment_scope": "metadata_and_abstract",
+      "screening_rank": 80,
+      "paper_stem": "Same_Function_Different_Trajectory_No_Standard_Optimizer_Is_Equivariant_to_Transformer_Reparameterization",
+      "already_known": false,
+      "related_papers": [
+        {
+          "title": "Same Flow, Different Paths: Variance Reduction in Flow Matching",
+          "stem": "sameflowdifferentpathsvariancereductioninflowmatching",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-24/search_result.json",
+          "shared_terms": [
+            "different",
+            "same"
+          ],
+          "shared_count": 2
+        },
+        {
+          "title": "AdaMeZO: Adam-style Zeroth-Order Optimizer for LLM Fine-tuning Without Maintaining the Moments",
+          "stem": "adamezoadamstylezerothorderoptimizerforllmfinetuningwithoutmaintainingthemoments",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-20/search_result.json",
+          "shared_terms": [
+            "optimizer"
+          ],
+          "shared_count": 1
+        },
+        {
+          "title": "AF-Muon: An AdamW-Free Muon Optimizer for Tied-Embedding Models",
+          "stem": "afmuonanadamwfreemuonoptimizerfortiedembeddingmodels",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-10-04/search_result.json",
+          "shared_terms": [
+            "optimizer"
+          ],
+          "shared_count": 1
+        }
+      ],
+      "note_filename": "Same_Function_Different_Trajectory_No_Standard_Optimizer_Is_Equivariant_to_Transformer_Reparameterization"
+    },
+    {
+      "id": "http://arxiv.org/abs/2609.36816v1",
+      "title": "Towards Better Training Signal: Advantage Clipped Policy Optimization",
+      "summary": "Reinforcement learning (RL) has become a cornerstone for improving the reasoning capabilities of large language models (LLMs), but the need for on-policy data substantially limits training efficiency. Reusing off-policy data through importance sampling (IS) can improve efficiency but introduce considerable instability. Hence, algorithms such as PPO and GRPO widely adopt IS-ratio clipping to stabilize training. However, training stability and gradient estimate are mainly determined by the product of IS ratio and advantage. To further stabilize training, we propose ACPO, which clips the product of the IS ratio and the advantage, leading to more stable gradient estimates. We also establish a connection between ACPO and gradient clipping in policy mirror descent (PMD), which is a standard technique to stabilize optimization process, and prove the convergence of clipped-PMD under the standard RL setting. Experiments on widely used mathematical reasoning benchmarks show that ACPO consistently outperforms PPO and GRPO in both accuracy and training efficiency, delivering 4-6 percentage points gains on standard math benchmarks, with Qwen3-8B+PPO. Hence, ACPO is a practical and effective alternative to conventional IS-ratio clipping for RL post-training of LLMs.",
+      "authors": [
+        "Ruichuan Huang",
+        "Jinghan Liu",
+        "Congliang Chen"
+      ],
+      "affiliations": [],
+      "published": "2026-09-29T06:28:30Z",
+      "published_date": "2026-09-29 06:28:30+00:00",
+      "updated": "2026-09-29T06:28:30Z",
+      "categories": [
+        "cs.LG"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2609.36816v1",
+      "url": "http://arxiv.org/abs/2609.36816v1",
+      "source": "arxiv",
+      "scores": {
+        "relevance": 2.6,
+        "recency": 3.0,
+        "impact": 0.0,
+        "evidence": 1.2,
+        "popularity": 0.0,
+        "quality": 1.2,
+        "recommendation": 7.07
+      },
+      "matched_domain": "大模型优化器设计",
+      "matched_keywords": [
+        "gradient clipping",
+        "cs.LG"
+      ],
+      "is_hot_paper": false,
+      "score_type": "research_priority_screening",
+      "assessment_scope": "metadata_and_abstract",
+      "screening_rank": 82,
+      "paper_stem": "Towards_Better_Training_Signal_Advantage_Clipped_Policy_Optimization",
+      "already_known": false,
+      "related_papers": [
+        {
+          "title": "Anytime Training with Schedule Free Spectral Optimization",
+          "stem": "anytimetrainingwithschedulefreespectraloptimization",
+          "source": "pdf",
+          "path": "/Users/myl/Documents/paper/01-raw/2026-10/Anytime_Training_with_Schedule_Free_Spectral_Optimization.pdf",
+          "shared_terms": [
+            "training"
+          ],
+          "shared_count": 1
+        },
+        {
+          "title": "Clean: Second-order LLM Training at Linear Memory Cost via Nyström Sketching",
+          "stem": "cleansecondorderllmtrainingatlinearmemorycostvianystrmsketching",
+          "source": "pdf",
+          "path": "/Users/myl/Documents/paper/01-raw/2026-10/Clean_Second_order_LLM_Training_at_Linear_Memory_Cost_via_Nyström_Sketching.pdf",
+          "shared_terms": [
+            "training"
+          ],
+          "shared_count": 1
+        },
+        {
+          "title": "Clipped or Unclipped? Finite-Sample Trade-offs for Averaged SGD under Heavy-Tailed Noise",
+          "stem": "clippedorunclippedfinitesampletradeoffsforaveragedsgdunderheavytailednoise",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-10-13/search_result.json",
+          "shared_terms": [
+            "clipped"
+          ],
+          "shared_count": 1
+        }
+      ],
+      "note_filename": "Towards_Better_Training_Signal_Advantage_Clipped_Policy_Optimization"
+    },
+    {
+      "id": "http://arxiv.org/abs/2610.00423v2",
+      "title": "The Life Cycle of a Massive Activation: Stochastic Birth, Weight-Decay-Driven Growth, and Competitive Consolidation",
+      "summary": "Massive activations, residual-stream coordinates with magnitudes far larger than typical activations, are associated with attention sinks in transformers, but how their scale is regulated during training remains incompletely understood. Combining training-trajectory analyses and controlled interventions, we trace their emergence, growth, and consolidation. Sink-carrying channels vary across random seeds but stabilize early within each run. Over longer training, surrounding channels erode and the sink concentrates onto a few redundant carriers. Across ablations, gradient attenuation follows the sink token's collective root-mean-square magnitude rather than any single channel, making collective scale central to understanding their effects. Our central result is that weight decay causally controls the turnover of global activation scale. In controlled continuations, removing decay near the peak allows this scale to keep rising, whereas retaining it produces decline even at constant learning rate. We develop a balance model for the rise and peak of massive-activation magnitude, in which AdamW-preconditioned growth opposes weight decay. Sweeping the decay coefficient $λ$ shifts peak timing approximately log-linearly and yields peak magnitudes scaling approximately as $λ^{-1/2}$, consistent with this balance. Optimizer measurements further show that preconditioning sustains the large-channel cohort against decay even when raw maintaining forces are too small to do so. Together, these findings connect the observed life cycle to scale-regulating training dynamics and establish weight decay as a training-time lever on activation magnitude.",
+      "authors": [
+        "S. Aaron McClendon",
+        "Jorge Gallego-Feliciano",
+        "Antonios Saravanos"
+      ],
+      "affiliations": [],
+      "published": "2026-09-30T15:28:07Z",
+      "published_date": "2026-09-30 15:28:07+00:00",
+      "updated": "2026-10-05T13:17:42Z",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.00423v2",
+      "url": "http://arxiv.org/abs/2610.00423v2",
+      "source": "arxiv",
+      "scores": {
+        "relevance": 2.6,
+        "recency": 3.0,
+        "impact": 0.0,
+        "evidence": 1.2,
+        "popularity": 0.0,
+        "quality": 1.2,
+        "recommendation": 7.07
+      },
+      "matched_domain": "大模型优化器设计",
+      "matched_keywords": [
+        "AdamW",
+        "cs.LG"
+      ],
+      "is_hot_paper": false,
+      "score_type": "research_priority_screening",
+      "assessment_scope": "metadata_and_abstract",
+      "screening_rank": 83,
+      "paper_stem": "The_Life_Cycle_of_a_Massive_Activation_Stochastic_Birth_Weight_Decay_Driven_Growth_and_Competitive_Consolidation",
+      "already_known": false,
+      "related_papers": [
+        {
+          "title": "Adam under Generalized Smoothness with Second Moment Type Stochastic Gradients",
+          "stem": "adamundergeneralizedsmoothnesswithsecondmomenttypestochasticgradients",
+          "source": "pdf",
+          "path": "/Users/myl/Documents/paper/01-raw/2026-09/Adam_under_Generalized_Smoothness_with_Second_Moment_Type_Stochastic_Gradients.pdf",
+          "shared_terms": [
+            "stochastic"
+          ],
+          "shared_count": 1
+        },
+        {
+          "title": "Almost Sure Convergence Analysis of Stochastic Gradient Methods with Clipping and Additive Noise",
+          "stem": "almostsureconvergenceanalysisofstochasticgradientmethodswithclippingandadditivenoise",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-21/search_result.json",
+          "shared_terms": [
+            "stochastic"
+          ],
+          "shared_count": 1
+        },
+        {
+          "title": "An $Ω(κ y^8ε^{ 6})$ Lower Bound for Stochastic NC SC Bilevel Optimization with First order Oracles",
+          "stem": "any86lowerboundforstochasticncscbileveloptimizationwithfirstorderoracles",
+          "source": "pdf",
+          "path": "/Users/myl/Documents/paper/01-raw/2026-09/An_$Ω(κ_y^8ε^{_6})$_Lower_Bound_for_Stochastic_NC_SC_Bilevel_Optimization_with_First_order_Oracles.pdf",
+          "shared_terms": [
+            "stochastic"
+          ],
+          "shared_count": 1
+        }
+      ],
+      "note_filename": "The_Life_Cycle_of_a_Massive_Activation_Stochastic_Birth_Weight_Decay_Driven_Growth_and_Competitive_Consolidation"
+    }
+  ],
+  "snapshot_scope": "screening_top_10_and_counts; full source records archived separately"
+}

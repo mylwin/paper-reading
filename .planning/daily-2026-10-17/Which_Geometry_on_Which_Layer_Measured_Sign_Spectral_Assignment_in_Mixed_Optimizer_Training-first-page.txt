@@ -1,0 +1,63 @@
+Preprint
+
+W HICH G EOMETRY ON W HICH L AYER ?
+M EASURED S IGN –S PECTRAL A SSIGNMENT
+IN M IXED -O PTIMIZER T RAINING
+Hiroki Naganuma∗ † 1,2 Laura Gomezjurado∗ 3 Mahdi Ghaznavi1,2
+Ganesh Talluri4 Atsushi Nitanda5,6 Seng Pei Liew7
+Ryuichiro Hataya7 Ioannis Mitliagkas1,2
+1
+
+Mila 2 Université de Montréal 3 Stanford University
+Arizona State University 5 A∗ STAR 6 Nanyang Technological University
+7
+SB Intuitions Corp.
+
+arXiv:2610.17285v1 [cs.LG] 12 Oct 2026
+
+4
+
+A BSTRACT
+Modern training of large neural networks now commonly uses mixed recipes,
+assigning AdamW-like or sign-based updates to embedding and output layers and
+spectral updates to hidden matrices. These assignments are fixed by layer type
+for the entire run and are largely inherited heuristics that must be re-tuned across
+architectures and training regimes, without a clear criterion for selecting the appropriate geometry, that is, the norm under which the steepest descent step is taken.
+We turn the sign-versus-spectral assignment into a measurable, layerwise decision
+problem. For ideal memoryless steps, we derive the finite-batch geometry ratio
+RLB (W ; B) := Bspec (W )/Bsign (W ), where Bspec and Bsign are conservative
+descent-lemma lower bounds for the specified spectral and sign steps. Its closed
+form separates signal efficiency from a geometry-dependent global curvature factor.
+In the positive-signal regime, the same smoothness assumption gives two-sided
+bounds that determine which step has the larger conditional expected decrease
+when the ratio crosses explicit noise-dependent thresholds. We then derive a local
+directional quadratic score from gradient alignments and Hessian–vector products and use it in Generalized-Scion (G-Scion) to control layerwise routing. In a
+controlled input-rank experimental setup, including directional curvature matches
+the measured same-iterate ordering in all seven aggregate settings, whereas the
+curvature-free proxy selects the opposite geometry. On 31M GPT-2, the output
+score routes the output layer from spectral warmup to sign, and G-Scion improves
+validation loss over fixed Scion in memoryless and matched-momentum comparisons. ViT-B/16 results further show that a spectral edge assignment can outperform
+fixed Scion outside language modelling. These results suggest that optimizer geometry need not be hard-coded by layer type, and they are a first step toward
+understanding how it should be assigned.
+
+1
+
+I NTRODUCTION
+
+The training of large-scale neural networks has entered the era of mixed optimizers (Liu et al., 2025;
+Zeng et al., 2025). State-of-the-art recipes no longer apply a single update rule to every weight matrix;
+instead, they partition the model by layer type, typically applying AdamW or sign-based methods
+such as SignSGD (Kingma & Ba, 2015; Bernstein et al., 2018) to embedding and output layers, while
+reserving spectral methods like Muon (Jordan, 2024) for hidden weight matrices.
+Current practice relies on inherited conventions, e.g., a recipe that works for a 7B language model is
+ported to a vision transformer or a multimodal architecture under the assumption that “embeddinglike” and “hidden-like” roles remain invariant. When these recipes fail, practitioners must resort
+to exhaustive hyperparameter sweeps to re-validate the mix. This points to a gap in optimization
+∗
+†
+
+Equal contribution.
+Now at NVIDIA
+
+1
+
+

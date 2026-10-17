@@ -1,0 +1,11 @@
+悬空链接 9 处：
+  - 07-research/2026-10-08-Lp_APS与Muon结合_文献审计与具体研究方案.md:73 -> ../../graduate-thesis-code/reproduction/Preconditioned_Inexact_Stochastic_ADMM_for_Deep_Models/runs/fig2/nano/muon/full-v2/run_summary.json
+  - 07-research/2026-10-08-Lp_APS与Muon结合_文献审计与具体研究方案.md:74 -> ../../graduate-thesis-code/reproduction/Preconditioned_Inexact_Stochastic_ADMM_for_Deep_Models/runs/fig2/nano/lp-sgdma%28优化参数%29/full/run_summary.json
+  - 07-research/2026-10-08-Lp_APS与Muon结合_文献审计与具体研究方案.md:75 -> ../../graduate-thesis-code/reproduction/Preconditioned_Inexact_Stochastic_ADMM_for_Deep_Models/runs/fig2/nano/lp-sgda%28优化参数%29/full/train_metrics.jsonl
+  - 07-research/2026-10-08-Lp_APS与Muon结合_文献审计与具体研究方案.md:76 -> ../../graduate-thesis-code/reproduction/Preconditioned_Inexact_Stochastic_ADMM_for_Deep_Models/code/power_aps_optimizers.py
+  - 07-research/2026-10-08-Lp_APS与Muon结合_文献审计与具体研究方案.md:76 -> ../../graduate-thesis-code/reproduction/Preconditioned_Inexact_Stochastic_ADMM_for_Deep_Models/code/internal_optimizers.py
+  - 07-research/2026-10-08-Lp_APS与Muon结合_文献审计与具体研究方案.md:77 -> ../../graduate-thesis-code/reproduction/Preconditioned_Inexact_Stochastic_ADMM_for_Deep_Models/code/NanoGPT/train_gpt_sisa_lower_no_2ndgradient.py
+  - 07-research/2026-10-10-Muon优化器近三年研究综述与APS_Lp可行性探索.md:50 -> /Users/myl/Documents/graduate-thesis-code/reusable_optimizers/pisa/power_aps.py:132
+  - 07-research/2026-10-10-Muon优化器近三年研究综述与APS_Lp可行性探索.md:50 -> /Users/myl/Documents/graduate-thesis-code/reusable_optimizers/pisa/muon.py:28
+  - 07-research/2026-10-10-Muon优化器近三年研究综述与APS_Lp可行性探索.md:93 -> /Users/myl/Documents/graduate-thesis-code/reusable_optimizers/pisa/muon.py:53
+检查完成：问题 9 处（悬空链接 9 / 缺 README 0 / 一致性 0）

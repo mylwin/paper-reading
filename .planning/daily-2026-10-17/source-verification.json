@@ -1,0 +1,354 @@
+[
+  {
+    "title": "EAU: Environment-Agent-User Co-evolution for Training User-Centric Agents",
+    "url": "https://arxiv.org/abs/2610.16523v1",
+    "status": 200,
+    "metadata": {
+      "citation_title": [
+        "EAU: Environment-Agent-User Co-evolution for Training User-Centric Agents"
+      ],
+      "citation_author": [
+        "Cai, Min",
+        "Zhang, Dan",
+        "Xing, Gao",
+        "Ma, Libin",
+        "Xu, Zhaohui",
+        "Ye, Xi"
+      ],
+      "citation_date": [
+        "2026/10/12"
+      ],
+      "citation_online_date": [
+        "2026/10/12"
+      ],
+      "citation_pdf_url": [
+        "https://arxiv.org/pdf/2610.16523"
+      ],
+      "citation_arxiv_id": [
+        "2610.16523"
+      ],
+      "citation_abstract": [
+        "Training LLM agents to interact with users over multiple turns is challenging because the learning signal depends not only on the agent, but also on the user simulator and environment, which jointly shape the agent's experience. Simulated users can be stochastic or inconsistent, while environments may contain unreliable tools, incomplete state coverage, and incorrect verifiers. Prior work mainly addresses the resulting instability through reward shaping or denser supervision, while treating these components as fixed. We instead introduce EAU, a meta-agent framework for environment--agent--user co-evolution. During training, EAU monitors trajectories, tool traces, rewards, and training statistics; diagnoses failures and uninformative interactions; and proposes targeted modifications to the user simulator, environment, reward design, and RL configuration. Validated changes are hot-swapped into the ongoing run, allowing the training setup to evolve together with the policy. These adaptations also persist across runs, so later training can build on previously discovered improvements rather than restarting from a fixed setup. We enable this process through an editable symbolic representation of user and environment dynamics, while the agent remains a neural LLM optimized with RL. Across three interactive-agent benchmarks and two backbone models, EAU consistently outperforms prior RL methods, improving the overall score over the strongest baseline by 14.7--15.0% and increasing successful task completion on ColBench by up to 36.7%, showing that co-evolving the training system with the policy can substantially improve multi-turn RL."
+      ]
+    },
+    "license_urls": [
+      "http://creativecommons.org/licenses/by/4.0/"
+    ],
+    "abstract": "Training LLM agents to interact with users over multiple turns is challenging because the learning signal depends not only on the agent, but also on the user simulator and environment, which jointly shape the agent's experience. Simulated users can be stochastic or inconsistent, while environments may contain unreliable tools, incomplete state coverage, and incorrect verifiers. Prior work mainly addresses the resulting instability through reward shaping or denser supervision, while treating these components as fixed. We instead introduce EAU, a meta-agent framework for environment--agent--user co-evolution. During training, EAU monitors trajectories, tool traces, rewards, and training statistics; diagnoses failures and uninformative interactions; and proposes targeted modifications to the user simulator, environment, reward design, and RL configuration. Validated changes are hot-swapped into the ongoing run, allowing the training setup to evolve together with the policy. These adaptations also persist across runs, so later training can build on previously discovered improvements rather than restarting from a fixed setup. We enable this process through an editable symbolic representation of user and environment dynamics, while the agent remains a neural LLM optimized with RL. Across three interactive-agent benchmarks and two backbone models, EAU consistently outperforms prior RL methods, improving the overall score over the strongest baseline by 14.7--15.0% and increasing successful task completion on ColBench by up to 36.7%, showing that co-evolving the training system with the policy can substantially improve multi-turn RL.",
+    "source_summary": "Training LLM agents to interact with users over multiple turns is challenging because the learning signal depends not only on the agent, but also on the user simulator and environment, which jointly shape the agent's experience. Simulated users can be stochastic or inconsistent, while environments may contain unreliable tools, incomplete state coverage, and incorrect verifiers. Prior work mainly addresses the resulting instability through reward shaping or denser supervision, while treating these components as fixed. We instead introduce EAU, a meta-agent framework for environment--agent--user co-evolution. During training, EAU monitors trajectories, tool traces, rewards, and training statistics; diagnoses failures and uninformative interactions; and proposes targeted modifications to the user simulator, environment, reward design, and RL configuration. Validated changes are hot-swapped into the ongoing run, allowing the training setup to evolve together with the policy. These adaptations also persist across runs, so later training can build on previously discovered improvements rather than restarting from a fixed setup. We enable this process through an editable symbolic representation of user and environment dynamics, while the agent remains a neural LLM optimized with RL. Across three interactive-agent benchmarks and two backbone models, EAU consistently outperforms prior RL methods, improving the overall score over the strongest baseline by 14.7--15.0% and increasing successful task completion on ColBench by up to 36.7%, showing that co-evolving the training system with the policy can substantially improve multi-turn RL."
+  },
+  {
+    "title": "Which Geometry on Which Layer? Measured Sign-Spectral Assignment in Mixed-Optimizer Training",
+    "url": "https://arxiv.org/abs/2610.17285v1",
+    "status": 200,
+    "metadata": {
+      "citation_title": [
+        "Which Geometry on Which Layer? Measured Sign-Spectral Assignment in Mixed-Optimizer Training"
+      ],
+      "citation_author": [
+        "Naganuma, Hiroki",
+        "Gomezjurado, Laura",
+        "Ghaznavi, Mahdi",
+        "Talluri, Ganesh",
+        "Nitanda, Atsushi",
+        "Liew, Seng Pei",
+        "Hataya, Ryuichiro",
+        "Mitliagkas, Ioannis"
+      ],
+      "citation_date": [
+        "2026/10/12"
+      ],
+      "citation_online_date": [
+        "2026/10/12"
+      ],
+      "citation_pdf_url": [
+        "https://arxiv.org/pdf/2610.17285"
+      ],
+      "citation_arxiv_id": [
+        "2610.17285"
+      ],
+      "citation_abstract": [
+        "Modern neural-network training uses mixed recipes, assigning AdamW-like or sign-based updates to embedding and output layers and spectral updates to hidden matrices. These assignments are usually fixed by layer type, without a clear criterion for selecting the appropriate geometry. We turn sign-versus-spectral assignment into a measurable, layerwise decision problem. For ideal memoryless steps, we derive a finite-batch ratio of conservative descent-lemma lower bounds for spectral and sign updates. Its closed form separates signal efficiency from a geometry-dependent global curvature factor. In the positive-signal regime, the same smoothness assumption gives two-sided bounds that determine which step has the larger conditional expected decrease when the ratio crosses explicit noise-dependent thresholds. We then derive a local directional quadratic score from gradient alignments and Hessian-vector products and use it in Generalized-Scion (G-Scion) to control layerwise routing. In a controlled input-rank experiment, including directional curvature matches the measured same-iterate ordering in all seven aggregate settings, whereas the curvature-free proxy selects the opposite geometry. On 31M GPT-2, the output score routes the output layer from spectral warmup to sign, and G-Scion improves validation loss over fixed Scion in memoryless and matched-momentum comparisons. ViT-B/16 results further show that a spectral edge assignment can outperform fixed Scion outside language modelling. These results suggest that optimizer geometry need not be hard-coded by layer type and are a first step toward understanding how it should be assigned."
+      ]
+    },
+    "license_urls": [
+      "http://creativecommons.org/licenses/by/4.0/"
+    ],
+    "abstract": "Modern neural-network training uses mixed recipes, assigning AdamW-like or sign-based updates to embedding and output layers and spectral updates to hidden matrices. These assignments are usually fixed by layer type, without a clear criterion for selecting the appropriate geometry. We turn sign-versus-spectral assignment into a measurable, layerwise decision problem. For ideal memoryless steps, we derive a finite-batch ratio of conservative descent-lemma lower bounds for spectral and sign updates. Its closed form separates signal efficiency from a geometry-dependent global curvature factor. In the positive-signal regime, the same smoothness assumption gives two-sided bounds that determine which step has the larger conditional expected decrease when the ratio crosses explicit noise-dependent thresholds. We then derive a local directional quadratic score from gradient alignments and Hessian-vector products and use it in Generalized-Scion (G-Scion) to control layerwise routing. In a controlled input-rank experiment, including directional curvature matches the measured same-iterate ordering in all seven aggregate settings, whereas the curvature-free proxy selects the opposite geometry. On 31M GPT-2, the output score routes the output layer from spectral warmup to sign, and G-Scion improves validation loss over fixed Scion in memoryless and matched-momentum comparisons. ViT-B/16 results further show that a spectral edge assignment can outperform fixed Scion outside language modelling. These results suggest that optimizer geometry need not be hard-coded by layer type and are a first step toward understanding how it should be assigned.",
+    "source_summary": "Modern neural-network training uses mixed recipes, assigning AdamW-like or sign-based updates to embedding and output layers and spectral updates to hidden matrices. These assignments are usually fixed by layer type, without a clear criterion for selecting the appropriate geometry. We turn sign-versus-spectral assignment into a measurable, layerwise decision problem. For ideal memoryless steps, we derive a finite-batch ratio of conservative descent-lemma lower bounds for spectral and sign updates. Its closed form separates signal efficiency from a geometry-dependent global curvature factor. In the positive-signal regime, the same smoothness assumption gives two-sided bounds that determine which step has the larger conditional expected decrease when the ratio crosses explicit noise-dependent thresholds. We then derive a local directional quadratic score from gradient alignments and Hessian-vector products and use it in Generalized-Scion (G-Scion) to control layerwise routing. In a controlled input-rank experiment, including directional curvature matches the measured same-iterate ordering in all seven aggregate settings, whereas the curvature-free proxy selects the opposite geometry. On 31M GPT-2, the output score routes the output layer from spectral warmup to sign, and G-Scion improves validation loss over fixed Scion in memoryless and matched-momentum comparisons. ViT-B/16 results further show that a spectral edge assignment can outperform fixed Scion outside language modelling. These results suggest that optimizer geometry need not be hard-coded by layer type and are a first step toward understanding how it should be assigned."
+  },
+  {
+    "title": "From Spectral to Frobenius: When Muon Loses Its Spectral Implicit Bias",
+    "url": "https://arxiv.org/abs/2610.20112v1",
+    "status": 200,
+    "metadata": {
+      "citation_title": [
+        "From Spectral to Frobenius: When Muon Loses Its Spectral Implicit Bias"
+      ],
+      "citation_author": [
+        "Wu, Yongtao",
+        "Mansouri, Mahdi",
+        "Zhu, Zhenyu"
+      ],
+      "citation_date": [
+        "2026/10/14"
+      ],
+      "citation_online_date": [
+        "2026/10/14"
+      ],
+      "citation_pdf_url": [
+        "https://arxiv.org/pdf/2610.20112"
+      ],
+      "citation_arxiv_id": [
+        "2610.20112"
+      ],
+      "citation_abstract": [
+        "Prior work on implicit bias shows that gradient descent selects the Frobenius max-margin direction on linearly separable problems, whereas Fan et al. (2025) established spectral max-margin behavior for spectral-norm steepest descent methods, including idealized Muon with exact orthogonalization. In practice, however, Muon approximates orthogonalization using finite Newton-Schulz iterations and a positive stabilization constant. We prove that these implementation choices cause Muon to select the Frobenius rather than the spectral max-margin direction in linear classification with separable data. We also establish this behavior for both exponential moving average and Nesterov-style momentum. The key technical ingredient is a summable perturbation argument showing that the resulting parameter trajectories remain at bounded distance from those of gradient descent. We then disentangle the roles of Newton-Schulz iteration count, the stabilization constant, and the Newton-Schulz polynomial, revealing distinct asymptotic behaviors, including directions that achieve neither Frobenius nor spectral max-margin. Finally, we show that Muon can recover its spectral max-margin bias with Newton-Schulz iterations growing logarithmically over training."
+      ]
+    },
+    "license_urls": [],
+    "abstract": "Prior work on implicit bias shows that gradient descent selects the Frobenius max-margin direction on linearly separable problems, whereas Fan et al. (2025) established spectral max-margin behavior for spectral-norm steepest descent methods, including idealized Muon with exact orthogonalization. In practice, however, Muon approximates orthogonalization using finite Newton-Schulz iterations and a positive stabilization constant. We prove that these implementation choices cause Muon to select the Frobenius rather than the spectral max-margin direction in linear classification with separable data. We also establish this behavior for both exponential moving average and Nesterov-style momentum. The key technical ingredient is a summable perturbation argument showing that the resulting parameter trajectories remain at bounded distance from those of gradient descent. We then disentangle the roles of Newton-Schulz iteration count, the stabilization constant, and the Newton-Schulz polynomial, revealing distinct asymptotic behaviors, including directions that achieve neither Frobenius nor spectral max-margin. Finally, we show that Muon can recover its spectral max-margin bias with Newton-Schulz iterations growing logarithmically over training.",
+    "source_summary": "Prior work on implicit bias shows that gradient descent selects the Frobenius max-margin direction on linearly separable problems, whereas Fan et al. (2025) established spectral max-margin behavior for spectral-norm steepest descent methods, including idealized Muon with exact orthogonalization. In practice, however, Muon approximates orthogonalization using finite Newton-Schulz iterations and a positive stabilization constant. We prove that these implementation choices cause Muon to select the Frobenius rather than the spectral max-margin direction in linear classification with separable data. We also establish this behavior for both exponential moving average and Nesterov-style momentum. The key technical ingredient is a summable perturbation argument showing that the resulting parameter trajectories remain at bounded distance from those of gradient descent. We then disentangle the roles of Newton-Schulz iteration count, the stabilization constant, and the Newton-Schulz polynomial, revealing distinct asymptotic behaviors, including directions that achieve neither Frobenius nor spectral max-margin. Finally, we show that Muon can recover its spectral max-margin bias with Newton-Schulz iterations growing logarithmically over training."
+  },
+  {
+    "title": "Does On-Policy Distillation Need to Complete Every Rollout?",
+    "url": "https://arxiv.org/abs/2610.21337v1",
+    "status": 200,
+    "metadata": {
+      "citation_title": [
+        "Does On-Policy Distillation Need to Complete Every Rollout?"
+      ],
+      "citation_author": [
+        "Zhang, Zhengxin",
+        "Tang, Maosen",
+        "Wang, Ning",
+        "Li, Changhao",
+        "Zhou, Jingren",
+        "Dai, Bo",
+        "Galhotra, Sainyam",
+        "Townsend, Alex",
+        "Cardie, Claire"
+      ],
+      "citation_date": [
+        "2026/10/15"
+      ],
+      "citation_online_date": [
+        "2026/10/15"
+      ],
+      "citation_pdf_url": [
+        "https://arxiv.org/pdf/2610.21337"
+      ],
+      "citation_arxiv_id": [
+        "2610.21337"
+      ],
+      "citation_abstract": [
+        "On-policy distillation (OPD) effectively transfers capabilities from a teacher to a student through feedback on student-generated rollouts. However, generating complete student rollouts and computing teacher feedback for every token make OPD computationally expensive. We introduce Stochastic Truncated On-Policy Distillation (STOPD), which accelerates OPD by randomly truncating student rollouts and correcting the resulting sampling bias with blockwise inverse-probability weighting (IPW). At each training step, we sample a stopping position for each rollout before generation and let the student generate until that position or natural termination. We obtain teacher feedback on every generated token and use blockwise IPW to compensate for the lower probability of retaining later tokens while controlling the weights. We prove that this weighting preserves Vanilla OPD's gradient sum in expectation and derive one-step update-error bounds for SGD, Adam, and Muon. We evaluate STOPD across multiple teacher-student model pairs, task domains, and optimizers. STOPD reduces generated tokens by 25-48% while maintaining accuracy comparable to Vanilla OPD, achieving 1.3-2.2x training speedups."
+      ]
+    },
+    "license_urls": [
+      "http://creativecommons.org/licenses/by-sa/4.0/"
+    ],
+    "abstract": "On-policy distillation (OPD) effectively transfers capabilities from a teacher to a student through feedback on student-generated rollouts. However, generating complete student rollouts and computing teacher feedback for every token make OPD computationally expensive. We introduce Stochastic Truncated On-Policy Distillation (STOPD), which accelerates OPD by randomly truncating student rollouts and correcting the resulting sampling bias with blockwise inverse-probability weighting (IPW). At each training step, we sample a stopping position for each rollout before generation and let the student generate until that position or natural termination. We obtain teacher feedback on every generated token and use blockwise IPW to compensate for the lower probability of retaining later tokens while controlling the weights. We prove that this weighting preserves Vanilla OPD's gradient sum in expectation and derive one-step update-error bounds for SGD, Adam, and Muon. We evaluate STOPD across multiple teacher-student model pairs, task domains, and optimizers. STOPD reduces generated tokens by 25-48% while maintaining accuracy comparable to Vanilla OPD, achieving 1.3-2.2x training speedups.",
+    "source_summary": "On-policy distillation (OPD) effectively transfers capabilities from a teacher to a student through feedback on student-generated rollouts. However, generating complete student rollouts and computing teacher feedback for every token make OPD computationally expensive. We introduce Stochastic Truncated On-Policy Distillation (STOPD), which accelerates OPD by randomly truncating student rollouts and correcting the resulting sampling bias with blockwise inverse-probability weighting (IPW). At each training step, we sample a stopping position for each rollout before generation and let the student generate until that position or natural termination. We obtain teacher feedback on every generated token and use blockwise IPW to compensate for the lower probability of retaining later tokens while controlling the weights. We prove that this weighting preserves Vanilla OPD's gradient sum in expectation and derive one-step update-error bounds for SGD, Adam, and Muon. We evaluate STOPD across multiple teacher-student model pairs, task domains, and optimizers. STOPD reduces generated tokens by 25-48% while maintaining accuracy comparable to Vanilla OPD, achieving 1.3-2.2x training speedups."
+  },
+  {
+    "title": "Taming Softmax at the Limits of Muon: A Unified Approach through Hilbert Geometry",
+    "url": "https://arxiv.org/abs/2610.17588v1",
+    "status": 200,
+    "metadata": {
+      "citation_title": [
+        "Taming Softmax at the Limits of Muon: A Unified Approach through Hilbert Geometry"
+      ],
+      "citation_author": [
+        "Somasundaram, Aditya",
+        "Guille-Escuret, Charles",
+        "Moreno, Alexander",
+        "Liu, Zhengzhong",
+        "Xing, Eric"
+      ],
+      "citation_date": [
+        "2026/10/13"
+      ],
+      "citation_online_date": [
+        "2026/10/13"
+      ],
+      "citation_pdf_url": [
+        "https://arxiv.org/pdf/2610.17588"
+      ],
+      "citation_arxiv_id": [
+        "2610.17588"
+      ],
+      "citation_abstract": [
+        "Muon controls weight updates through the RMS movement of a linear layer's output. This implicitly treats the linear output as a proxy for the full module, including the nonlinearity that follows. This proxy can be misleading for softmax, where the RMS shift in activations does not faithfully measure the change in the output distribution. We propose Hilbert distance as a natural metric for bounding changes in these output distributions. Hilbert distance bounds changes in cross-entropy loss and limits probability redistribution. For softmax, it takes the form of the variation seminorm of the preactivation perturbation, allowing probability constraints to be expressed as parameter constraints. Formulating the steepest descent problem with a Hilbert distance constraint brings two recently proposed methods under a unified mathematical framework. For the LM head, solving a row-wise approximation to the resulting diameter-constrained problem leads us to RowNorm \\citep{pethick2025trainingdeeplearningmodels}. For scaled dot-product attention, the same principle yields the first-order query--key steepest descent problem underlying Compositional Muon \\citep{keigwin2026compositional}. These connections motivate using Hilbert distance as a guiding principle for optimizer design in softmax modules."
+      ]
+    },
+    "license_urls": [
+      "http://creativecommons.org/licenses/by/4.0/"
+    ],
+    "abstract": "Muon controls weight updates through the RMS movement of a linear layer's output. This implicitly treats the linear output as a proxy for the full module, including the nonlinearity that follows. This proxy can be misleading for softmax, where the RMS shift in activations does not faithfully measure the change in the output distribution. We propose Hilbert distance as a natural metric for bounding changes in these output distributions. Hilbert distance bounds changes in cross-entropy loss and limits probability redistribution. For softmax, it takes the form of the variation seminorm of the preactivation perturbation, allowing probability constraints to be expressed as parameter constraints. Formulating the steepest descent problem with a Hilbert distance constraint brings two recently proposed methods under a unified mathematical framework. For the LM head, solving a row-wise approximation to the resulting diameter-constrained problem leads us to RowNorm \\citep{pethick2025trainingdeeplearningmodels}. For scaled dot-product attention, the same principle yields the first-order query--key steepest descent problem underlying Compositional Muon \\citep{keigwin2026compositional}. These connections motivate using Hilbert distance as a guiding principle for optimizer design in softmax modules.",
+    "source_summary": "Muon controls weight updates through the RMS movement of a linear layer's output. This implicitly treats the linear output as a proxy for the full module, including the nonlinearity that follows. This proxy can be misleading for softmax, where the RMS shift in activations does not faithfully measure the change in the output distribution. We propose Hilbert distance as a natural metric for bounding changes in these output distributions. Hilbert distance bounds changes in cross-entropy loss and limits probability redistribution. For softmax, it takes the form of the variation seminorm of the preactivation perturbation, allowing probability constraints to be expressed as parameter constraints. Formulating the steepest descent problem with a Hilbert distance constraint brings two recently proposed methods under a unified mathematical framework. For the LM head, solving a row-wise approximation to the resulting diameter-constrained problem leads us to RowNorm \\citep{pethick2025trainingdeeplearningmodels}. For scaled dot-product attention, the same principle yields the first-order query--key steepest descent problem underlying Compositional Muon \\citep{keigwin2026compositional}. These connections motivate using Hilbert distance as a guiding principle for optimizer design in softmax modules."
+  },
+  {
+    "title": "Which Optimizer Leaks Most? Optimizer Implicit Bias as a Training-Data Privacy Controller",
+    "url": "https://arxiv.org/abs/2610.18294v1",
+    "status": 200,
+    "metadata": {
+      "citation_title": [
+        "Which Optimizer Leaks Most? Optimizer Implicit Bias as a Training-Data Privacy Controller"
+      ],
+      "citation_author": [
+        "Habani, Sagi",
+        "Refael, Yehonathan",
+        "Lindenbaum, Ofir"
+      ],
+      "citation_date": [
+        "2026/10/13"
+      ],
+      "citation_online_date": [
+        "2026/10/13"
+      ],
+      "citation_pdf_url": [
+        "https://arxiv.org/pdf/2610.18294"
+      ],
+      "citation_arxiv_id": [
+        "2610.18294"
+      ],
+      "citation_abstract": [
+        "Releasing a neural network checkpoint can leak information about its training data, and existing reconstruction results rely on gradient-descent training. We ask whether the choice of optimizer affects the ability to recover the training data. Extending work connecting Karush--Kuhn--Tucker conditions to training-data reconstruction, we show that the implicit biases of popular optimizers (SGD, Adam, Muon) leave very different fingerprints of the training data. We argue that the key distinction is the \\emph{weight-specificity} of these implicit biases, namely how much continuous information about the final weights the optimizer-dependent target of the stationarity conditions encodes. The limiting stationarity conditions for models trained with SGD and Muon retain enough weight-specific information to reconstruct training examples in practice. For Adam in the $\\ell_\\infty$ implicit-bias regime, the optimizer-dependent part of these conditions encodes only a discrete pattern of maximal coordinates and their signs, and at nondegenerate KKT points the conditions are too few to identify the training set to first order. Experiments on MNIST and CIFAR-10 support these claims: models trained with Muon can yield stronger reconstructions at much lower training cost than models trained with SGD, although this advantage depends on the training regime and architecture, and models trained with Adam appear consistently more resistant to the evaluated attacks."
+      ]
+    },
+    "license_urls": [],
+    "abstract": "Releasing a neural network checkpoint can leak information about its training data, and existing reconstruction results rely on gradient-descent training. We ask whether the choice of optimizer affects the ability to recover the training data. Extending work connecting Karush--Kuhn--Tucker conditions to training-data reconstruction, we show that the implicit biases of popular optimizers (SGD, Adam, Muon) leave very different fingerprints of the training data. We argue that the key distinction is the \\emph{weight-specificity} of these implicit biases, namely how much continuous information about the final weights the optimizer-dependent target of the stationarity conditions encodes. The limiting stationarity conditions for models trained with SGD and Muon retain enough weight-specific information to reconstruct training examples in practice. For Adam in the $\\ell_\\infty$ implicit-bias regime, the optimizer-dependent part of these conditions encodes only a discrete pattern of maximal coordinates and their signs, and at nondegenerate KKT points the conditions are too few to identify the training set to first order. Experiments on MNIST and CIFAR-10 support these claims: models trained with Muon can yield stronger reconstructions at much lower training cost than models trained with SGD, although this advantage depends on the training regime and architecture, and models trained with Adam appear consistently more resistant to the evaluated attacks.",
+    "source_summary": "Releasing a neural network checkpoint can leak information about its training data, and existing reconstruction results rely on gradient-descent training. We ask whether the choice of optimizer affects the ability to recover the training data. Extending work connecting Karush--Kuhn--Tucker conditions to training-data reconstruction, we show that the implicit biases of popular optimizers (SGD, Adam, Muon) leave very different fingerprints of the training data. We argue that the key distinction is the \\emph{weight-specificity} of these implicit biases, namely how much continuous information about the final weights the optimizer-dependent target of the stationarity conditions encodes. The limiting stationarity conditions for models trained with SGD and Muon retain enough weight-specific information to reconstruct training examples in practice. For Adam in the $\\ell_\\infty$ implicit-bias regime, the optimizer-dependent part of these conditions encodes only a discrete pattern of maximal coordinates and their signs, and at nondegenerate KKT points the conditions are too few to identify the training set to first order. Experiments on MNIST and CIFAR-10 support these claims: models trained with Muon can yield stronger reconstructions at much lower training cost than models trained with SGD, although this advantage depends on the training regime and architecture, and models trained with Adam appear consistently more resistant to the evaluated attacks."
+  },
+  {
+    "title": "Same Function, Different Trajectory: No Standard Optimizer Is Equivariant to Transformer Reparameterization",
+    "url": "https://arxiv.org/abs/2610.18085v1",
+    "status": 200,
+    "metadata": {
+      "citation_title": [
+        "Same Function, Different Trajectory: No Standard Optimizer Is Equivariant to Transformer Reparameterization"
+      ],
+      "citation_author": [
+        "Kim, Bum Jun"
+      ],
+      "citation_date": [
+        "2026/10/13"
+      ],
+      "citation_online_date": [
+        "2026/10/13"
+      ],
+      "citation_pdf_url": [
+        "https://arxiv.org/pdf/2610.18085"
+      ],
+      "citation_arxiv_id": [
+        "2610.18085"
+      ],
+      "citation_abstract": [
+        "We show that two Transformers representing the same function can follow different training trajectories. For example, doubling a query matrix and halving its key matrix preserves the model's function but changes the gradient scales seen by the optimizer. Our theoretical analysis establishes that standard block-local first-order optimizers fail to scale updates with parameters under a shared learning rate. For AdamW, transforming the first- and second-moment estimates alone does not correct the mismatch between parameter and update scales. To make runs restarted from equivalent checkpoints follow the same trajectory, we balance matrix pairs and transform their moment estimates together, bringing distinct but equivalent training states to the same starting point. To correct scale imbalance between paired Transformer matrices without changing predictions, we propose Symmetry-Aware Gradient Geometry Stabilization (SAGGS), which periodically equalizes the Frobenius norms of exact symmetry pairs, and its damped variant, Soft SAGGS. SAGGS reduces perplexity (PPL) by $0.374\\pm0.026$ at 101M parameters on WikiText-103, and Soft SAGGS reduces PPL by $0.780\\pm0.040$ in a 31M modern-architecture replication, both under scale imbalance. In a 123.8M checkpoint-resume experiment, reciprocally rescaling matrix pairs barely changes validation loss at restart but increases final PPL by $3.78\\pm0.42$; hard and soft rebalancing recover to within $0.02$ PPL of the control."
+      ]
+    },
+    "license_urls": [],
+    "abstract": "We show that two Transformers representing the same function can follow different training trajectories. For example, doubling a query matrix and halving its key matrix preserves the model's function but changes the gradient scales seen by the optimizer. Our theoretical analysis establishes that standard block-local first-order optimizers fail to scale updates with parameters under a shared learning rate. For AdamW, transforming the first- and second-moment estimates alone does not correct the mismatch between parameter and update scales. To make runs restarted from equivalent checkpoints follow the same trajectory, we balance matrix pairs and transform their moment estimates together, bringing distinct but equivalent training states to the same starting point. To correct scale imbalance between paired Transformer matrices without changing predictions, we propose Symmetry-Aware Gradient Geometry Stabilization (SAGGS), which periodically equalizes the Frobenius norms of exact symmetry pairs, and its damped variant, Soft SAGGS. SAGGS reduces perplexity (PPL) by $0.374\\pm0.026$ at 101M parameters on WikiText-103, and Soft SAGGS reduces PPL by $0.780\\pm0.040$ in a 31M modern-architecture replication, both under scale imbalance. In a 123.8M checkpoint-resume experiment, reciprocally rescaling matrix pairs barely changes validation loss at restart but increases final PPL by $3.78\\pm0.42$; hard and soft rebalancing recover to within $0.02$ PPL of the control.",
+    "source_summary": "We show that two Transformers representing the same function can follow different training trajectories. For example, doubling a query matrix and halving its key matrix preserves the model's function but changes the gradient scales seen by the optimizer. Our theoretical analysis establishes that standard block-local first-order optimizers fail to scale updates with parameters under a shared learning rate. For AdamW, transforming the first- and second-moment estimates alone does not correct the mismatch between parameter and update scales. To make runs restarted from equivalent checkpoints follow the same trajectory, we balance matrix pairs and transform their moment estimates together, bringing distinct but equivalent training states to the same starting point. To correct scale imbalance between paired Transformer matrices without changing predictions, we propose Symmetry-Aware Gradient Geometry Stabilization (SAGGS), which periodically equalizes the Frobenius norms of exact symmetry pairs, and its damped variant, Soft SAGGS. SAGGS reduces perplexity (PPL) by $0.374\\pm0.026$ at 101M parameters on WikiText-103, and Soft SAGGS reduces PPL by $0.780\\pm0.040$ in a 31M modern-architecture replication, both under scale imbalance. In a 123.8M checkpoint-resume experiment, reciprocally rescaling matrix pairs barely changes validation loss at restart but increases final PPL by $3.78\\pm0.42$; hard and soft rebalancing recover to within $0.02$ PPL of the control."
+  },
+  {
+    "title": "Towards Better Training Signal: Advantage Clipped Policy Optimization",
+    "url": "https://arxiv.org/abs/2609.36816v1",
+    "status": 200,
+    "metadata": {
+      "citation_title": [
+        "Towards Better Training Signal: Advantage Clipped Policy Optimization"
+      ],
+      "citation_author": [
+        "Huang, Ruichuan",
+        "Liu, Jinghan",
+        "Chen, Congliang"
+      ],
+      "citation_date": [
+        "2026/09/29"
+      ],
+      "citation_online_date": [
+        "2026/09/29"
+      ],
+      "citation_pdf_url": [
+        "https://arxiv.org/pdf/2609.36816"
+      ],
+      "citation_arxiv_id": [
+        "2609.36816"
+      ],
+      "citation_abstract": [
+        "Reinforcement learning (RL) has become a cornerstone for improving the reasoning capabilities of large language models (LLMs), but the need for on-policy data substantially limits training efficiency. Reusing off-policy data through importance sampling (IS) can improve efficiency but introduce considerable instability. Hence, algorithms such as PPO and GRPO widely adopt IS-ratio clipping to stabilize training. However, training stability and gradient estimate are mainly determined by the product of IS ratio and advantage. To further stabilize training, we propose ACPO, which clips the product of the IS ratio and the advantage, leading to more stable gradient estimates. We also establish a connection between ACPO and gradient clipping in policy mirror descent (PMD), which is a standard technique to stabilize optimization process, and prove the convergence of clipped-PMD under the standard RL setting. Experiments on widely used mathematical reasoning benchmarks show that ACPO consistently outperforms PPO and GRPO in both accuracy and training efficiency, delivering 4-6 percentage points gains on standard math benchmarks, with Qwen3-8B+PPO. Hence, ACPO is a practical and effective alternative to conventional IS-ratio clipping for RL post-training of LLMs."
+      ]
+    },
+    "license_urls": [],
+    "abstract": "Reinforcement learning (RL) has become a cornerstone for improving the reasoning capabilities of large language models (LLMs), but the need for on-policy data substantially limits training efficiency. Reusing off-policy data through importance sampling (IS) can improve efficiency but introduce considerable instability. Hence, algorithms such as PPO and GRPO widely adopt IS-ratio clipping to stabilize training. However, training stability and gradient estimate are mainly determined by the product of IS ratio and advantage. To further stabilize training, we propose ACPO, which clips the product of the IS ratio and the advantage, leading to more stable gradient estimates. We also establish a connection between ACPO and gradient clipping in policy mirror descent (PMD), which is a standard technique to stabilize optimization process, and prove the convergence of clipped-PMD under the standard RL setting. Experiments on widely used mathematical reasoning benchmarks show that ACPO consistently outperforms PPO and GRPO in both accuracy and training efficiency, delivering 4-6 percentage points gains on standard math benchmarks, with Qwen3-8B+PPO. Hence, ACPO is a practical and effective alternative to conventional IS-ratio clipping for RL post-training of LLMs.",
+    "source_summary": "Reinforcement learning (RL) has become a cornerstone for improving the reasoning capabilities of large language models (LLMs), but the need for on-policy data substantially limits training efficiency. Reusing off-policy data through importance sampling (IS) can improve efficiency but introduce considerable instability. Hence, algorithms such as PPO and GRPO widely adopt IS-ratio clipping to stabilize training. However, training stability and gradient estimate are mainly determined by the product of IS ratio and advantage. To further stabilize training, we propose ACPO, which clips the product of the IS ratio and the advantage, leading to more stable gradient estimates. We also establish a connection between ACPO and gradient clipping in policy mirror descent (PMD), which is a standard technique to stabilize optimization process, and prove the convergence of clipped-PMD under the standard RL setting. Experiments on widely used mathematical reasoning benchmarks show that ACPO consistently outperforms PPO and GRPO in both accuracy and training efficiency, delivering 4-6 percentage points gains on standard math benchmarks, with Qwen3-8B+PPO. Hence, ACPO is a practical and effective alternative to conventional IS-ratio clipping for RL post-training of LLMs."
+  },
+  {
+    "title": "The Life Cycle of a Massive Activation: Stochastic Birth, Weight-Decay-Driven Growth, and Competitive Consolidation",
+    "url": "https://arxiv.org/abs/2610.00423v2",
+    "status": 200,
+    "metadata": {
+      "citation_title": [
+        "The Life Cycle of a Massive Activation: Stochastic Birth, Weight-Decay-Driven Growth, and Competitive Consolidation"
+      ],
+      "citation_author": [
+        "McClendon, S. Aaron",
+        "Gallego-Feliciano, Jorge",
+        "Saravanos, Antonios"
+      ],
+      "citation_date": [
+        "2026/09/30"
+      ],
+      "citation_online_date": [
+        "2026/10/05"
+      ],
+      "citation_pdf_url": [
+        "https://arxiv.org/pdf/2610.00423"
+      ],
+      "citation_arxiv_id": [
+        "2610.00423"
+      ],
+      "citation_abstract": [
+        "Massive activations, residual-stream coordinates with magnitudes far larger than typical activations, are associated with attention sinks in transformers, but how their scale is regulated during training remains incompletely understood. Combining training-trajectory analyses and controlled interventions, we trace their emergence, growth, and consolidation. Sink-carrying channels vary across random seeds but stabilize early within each run. Over longer training, surrounding channels erode and the sink concentrates onto a few redundant carriers. Across ablations, gradient attenuation follows the sink token's collective root-mean-square magnitude rather than any single channel, making collective scale central to understanding their effects. Our central result is that weight decay causally controls the turnover of global activation scale. In controlled continuations, removing decay near the peak allows this scale to keep rising, whereas retaining it produces decline even at constant learning rate. We develop a balance model for the rise and peak of massive-activation magnitude, in which AdamW-preconditioned growth opposes weight decay. Sweeping the decay coefficient $\\lambda$ shifts peak timing approximately log-linearly and yields peak magnitudes scaling approximately as $\\lambda^{-1/2}$, consistent with this balance. Optimizer measurements further show that preconditioning sustains the large-channel cohort against decay even when raw maintaining forces are too small to do so. Together, these findings connect the observed life cycle to scale-regulating training dynamics and establish weight decay as a training-time lever on activation magnitude."
+      ]
+    },
+    "license_urls": [
+      "http://creativecommons.org/licenses/by/4.0/"
+    ],
+    "abstract": "Massive activations, residual-stream coordinates with magnitudes far larger than typical activations, are associated with attention sinks in transformers, but how their scale is regulated during training remains incompletely understood. Combining training-trajectory analyses and controlled interventions, we trace their emergence, growth, and consolidation. Sink-carrying channels vary across random seeds but stabilize early within each run. Over longer training, surrounding channels erode and the sink concentrates onto a few redundant carriers. Across ablations, gradient attenuation follows the sink token's collective root-mean-square magnitude rather than any single channel, making collective scale central to understanding their effects. Our central result is that weight decay causally controls the turnover of global activation scale. In controlled continuations, removing decay near the peak allows this scale to keep rising, whereas retaining it produces decline even at constant learning rate. We develop a balance model for the rise and peak of massive-activation magnitude, in which AdamW-preconditioned growth opposes weight decay. Sweeping the decay coefficient $\\lambda$ shifts peak timing approximately log-linearly and yields peak magnitudes scaling approximately as $\\lambda^{-1/2}$, consistent with this balance. Optimizer measurements further show that preconditioning sustains the large-channel cohort against decay even when raw maintaining forces are too small to do so. Together, these findings connect the observed life cycle to scale-regulating training dynamics and establish weight decay as a training-time lever on activation magnitude.",
+    "source_summary": "Massive activations, residual-stream coordinates with magnitudes far larger than typical activations, are associated with attention sinks in transformers, but how their scale is regulated during training remains incompletely understood. Combining training-trajectory analyses and controlled interventions, we trace their emergence, growth, and consolidation. Sink-carrying channels vary across random seeds but stabilize early within each run. Over longer training, surrounding channels erode and the sink concentrates onto a few redundant carriers. Across ablations, gradient attenuation follows the sink token's collective root-mean-square magnitude rather than any single channel, making collective scale central to understanding their effects. Our central result is that weight decay causally controls the turnover of global activation scale. In controlled continuations, removing decay near the peak allows this scale to keep rising, whereas retaining it produces decline even at constant learning rate. We develop a balance model for the rise and peak of massive-activation magnitude, in which AdamW-preconditioned growth opposes weight decay. Sweeping the decay coefficient $λ$ shifts peak timing approximately log-linearly and yields peak magnitudes scaling approximately as $λ^{-1/2}$, consistent with this balance. Optimizer measurements further show that preconditioning sustains the large-channel cohort against decay even when raw maintaining forces are too small to do so. Together, these findings connect the observed life cycle to scale-regulating training dynamics and establish weight decay as a training-time lever on activation magnitude."
+  },
+  {
+    "title": "Muon Under Gradient Noise and the Limits of Orthogonalization Near Optima",
+    "url": "https://arxiv.org/abs/2609.32861v1",
+    "status": 200,
+    "metadata": {
+      "citation_title": [
+        "Muon Under Gradient Noise and the Limits of Orthogonalization Near Optima"
+      ],
+      "citation_author": [
+        "Xie, Xiaohui"
+      ],
+      "citation_date": [
+        "2026/09/26"
+      ],
+      "citation_online_date": [
+        "2026/09/26"
+      ],
+      "citation_pdf_url": [
+        "https://arxiv.org/pdf/2609.32861"
+      ],
+      "citation_arxiv_id": [
+        "2609.32861"
+      ],
+      "citation_abstract": [
+        "Muon replaces the momentum buffer of each weight matrix by its orthogonal polar factor. We ask what this orthogonalization does near an optimum, where minibatch noise dominates the gradient. Under a Gaussian noise model, the expected Muon update becomes a scaled gradient step, so a linear method with a suitably matched learning rate reproduces Muon's first-order mean response. The stochastic update is a different matter: after the response is matched, Muon retains a nonlinear residual that is uncorrelated with the input noise and contributes additional covariance. A Hermite expansion shows how momentum acts on this residual. Its higher-order components decorrelate faster than the linear component, so momentum suppresses the residual's accumulated covariance relative to the linear part, but never eliminates it. In a local quadratic surrogate that evaluates the residual on the stationary noise buffer, the residual adds stationary covariance and raises the stationary loss floor at every stable step size, while leaving the contraction dynamics unchanged. Simulations of the full nonlinear recursion on quadratics and measurements on frozen transformer gradients support each step of this picture. Together, the results make a theoretical case for replacing orthogonalization by response-matched momentum SGD once optimization becomes noise-dominated."
+      ]
+    },
+    "license_urls": [],
+    "abstract": "Muon replaces the momentum buffer of each weight matrix by its orthogonal polar factor. We ask what this orthogonalization does near an optimum, where minibatch noise dominates the gradient. Under a Gaussian noise model, the expected Muon update becomes a scaled gradient step, so a linear method with a suitably matched learning rate reproduces Muon's first-order mean response. The stochastic update is a different matter: after the response is matched, Muon retains a nonlinear residual that is uncorrelated with the input noise and contributes additional covariance. A Hermite expansion shows how momentum acts on this residual. Its higher-order components decorrelate faster than the linear component, so momentum suppresses the residual's accumulated covariance relative to the linear part, but never eliminates it. In a local quadratic surrogate that evaluates the residual on the stationary noise buffer, the residual adds stationary covariance and raises the stationary loss floor at every stable step size, while leaving the contraction dynamics unchanged. Simulations of the full nonlinear recursion on quadratics and measurements on frozen transformer gradients support each step of this picture. Together, the results make a theoretical case for replacing orthogonalization by response-matched momentum SGD once optimization becomes noise-dominated.",
+    "source_summary": "Muon replaces the momentum buffer of each weight matrix by its orthogonal polar factor. We ask what this orthogonalization does near an optimum, where minibatch noise dominates the gradient. Under a Gaussian noise model, the expected Muon update becomes a scaled gradient step, so a linear method with a suitably matched learning rate reproduces Muon's first-order mean response. The stochastic update is a different matter: after the response is matched, Muon retains a nonlinear residual that is uncorrelated with the input noise and contributes additional covariance. A Hermite expansion shows how momentum acts on this residual. Its higher-order components decorrelate faster than the linear component, so momentum suppresses the residual's accumulated covariance relative to the linear part, but never eliminates it. In a local quadratic surrogate that evaluates the residual on the stationary noise buffer, the residual adds stationary covariance and raises the stationary loss floor at every stable step size, while leaving the contraction dynamics unchanged. Simulations of the full nonlinear recursion on quadratics and measurements on frozen transformer gradients support each step of this picture. Together, the results make a theoretical case for replacing orthogonalization by response-matched momentum SGD once optimization becomes noise-dominated."
+  }
+]

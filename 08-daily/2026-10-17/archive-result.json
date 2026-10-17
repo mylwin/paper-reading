@@ -1,0 +1,52 @@
+{
+  "papers_dir": "/Users/myl/Documents/paper/01-raw",
+  "month_dir": "/Users/myl/Documents/paper/01-raw/2026-10",
+  "month": "2026-10",
+  "date": "2026-10-17",
+  "requested": 3,
+  "downloaded": 3,
+  "skipped_existing": 0,
+  "failed": 0,
+  "index_updated": [
+    "/Users/myl/Documents/paper/01-raw/index.md",
+    "/Users/myl/Documents/paper/01-raw/2026-10/README.md",
+    "/Users/myl/Documents/paper/02-markdown/index.md",
+    "/Users/myl/Documents/paper/02-markdown/2026-10/README.md",
+    "/Users/myl/Documents/paper/03-notes/index.md",
+    "/Users/myl/Documents/paper/03-notes/2026-10/README.md",
+    "/Users/myl/Documents/paper/06-translation/index.md",
+    "/Users/myl/Documents/paper/06-translation/2026-10/README.md"
+  ],
+  "archived": [
+    {
+      "title": "Which Geometry on Which Layer? Measured Sign-Spectral Assignment in Mixed-Optimizer Training",
+      "paper_stem": "Which_Geometry_on_Which_Layer_Measured_Sign_Spectral_Assignment_in_Mixed_Optimizer_Training",
+      "month": "2026-10",
+      "source": "arxiv",
+      "pdf_url": "https://arxiv.org/pdf/2610.17285v1",
+      "path": "/Users/myl/Documents/paper/01-raw/2026-10/Which_Geometry_on_Which_Layer_Measured_Sign_Spectral_Assignment_in_Mixed_Optimizer_Training.pdf",
+      "status": "downloaded",
+      "detail": "596.8 KB"
+    },
+    {
+      "title": "From Spectral to Frobenius: When Muon Loses Its Spectral Implicit Bias",
+      "paper_stem": "From_Spectral_to_Frobenius_When_Muon_Loses_Its_Spectral_Implicit_Bias",
+      "month": "2026-10",
+      "source": "arxiv",
+      "pdf_url": "https://arxiv.org/pdf/2610.20112v1",
+      "path": "/Users/myl/Documents/paper/01-raw/2026-10/From_Spectral_to_Frobenius_When_Muon_Loses_Its_Spectral_Implicit_Bias.pdf",
+      "status": "downloaded",
+      "detail": "453.6 KB"
+    },
+    {
+      "title": "Muon Under Gradient Noise and the Limits of Orthogonalization Near Optima",
+      "paper_stem": "Muon_Under_Gradient_Noise_and_the_Limits_of_Orthogonalization_Near_Optima",
+      "month": "2026-10",
+      "source": "arxiv",
+      "pdf_url": "https://arxiv.org/pdf/2609.32861v1",
+      "path": "/Users/myl/Documents/paper/01-raw/2026-10/Muon_Under_Gradient_Noise_and_the_Limits_of_Orthogonalization_Near_Optima.pdf",
+      "status": "downloaded",
+      "detail": "1162.7 KB"
+    }
+  ]
+}

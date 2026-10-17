@@ -1,0 +1,57 @@
+From Spectral to Frobenius:
+When Muon Loses Its Spectral Implicit Bias
+Yongtao Wu
+
+YONGTAOWU @ RUC . EDU . CN
+
+Renmin University of China
+
+Mahdi Mansouri
+
+UNI . MAHDI . MANSOURI @ GMAIL . COM
+
+The University of Hong Kong
+
+arXiv:2610.20112v1 [cs.LG] 14 Oct 2026
+
+Zhenyu Zhu
+
+ZZHENYU @ HKU . HK
+
+The University of Hong Kong
+
+Abstract
+Prior work on implicit bias shows that gradient descent selects the Frobenius max-margin direction
+on linearly separable problems, whereas Fan et al. (2025) established spectral max-margin behavior
+for spectral-norm steepest descent methods, including idealized Muon with exact orthogonalization.
+In practice, however, Muon approximates orthogonalization using finite Newton–Schulz iterations
+and a positive stabilization constant. We prove that these implementation choices cause Muon
+to select the Frobenius rather than the spectral max-margin direction in linear classification with
+separable data. We also establish this behavior for both exponential moving average and Nesterovstyle momentum. The key technical ingredient is a summable perturbation argument showing that
+the resulting parameter trajectories remain at bounded distance from those of gradient descent.
+We then disentangle the roles of Newton–Schulz iteration count, the stabilization constant, and
+the Newton–Schulz polynomial, revealing distinct asymptotic behaviors, including directions that
+achieve neither Frobenius nor spectral max-margin. Finally, we show that Muon can recover its
+spectral max-margin bias with Newton–Schulz iterations growing logarithmically over training.
+Keywords: implicit bias, Muon, Newton–Schulz iterations, max-margin, stabilization
+
+1. Introduction
+Optimization algorithms can favor different solutions even when minimizing the same training
+objective, a phenomenon known as implicit bias (Neyshabur et al., 2014; Gunasekar et al., 2017). A
+classical example arises in linear classification with separable data, where logistic and exponential
+losses can approach zero only as the parameter norm diverges. In this setting, the limiting direction
+of the parameters becomes the object of interest. Gradient descent converges in direction to the
+Euclidean max-margin classifier (Soudry et al., 2018; Nacson et al., 2019a; Ji et al., 2020; Ji and
+Telgarsky, 2021), whereas steepest descent under different norms can select different max-margin
+solutions (Gunasekar et al., 2018; Wang et al., 2023).
+Muon, an optimizer that has attracted considerable attention for large language model training
+(Jordan et al., 2024; Liu et al., 2025), orthogonalizes matrix-valued updates rather than following
+conventional gradient directions. Ignoring momentum for simplicity, its idealized update maps a
+gradient matrix G = U ΣV ⊤ to its polar factor U V ⊤ . This update corresponds to steepest descent
+under the spectral norm, in contrast to the Frobenius-norm geometry of standard gradient descent.
+Recent work has studied the implicit bias of Muon with exact orthogonalization, establishing spectral
+*. Correspondence to: zzhenyu@hku.hk.
+
+© Y. Wu, M. Mansouri & Z. Zhu.
+
+

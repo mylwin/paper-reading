@@ -1,0 +1,68 @@
+{
+  "date": "2026-10-17",
+  "status": "passed",
+  "unique_papers": 259,
+  "known": 104,
+  "screening_candidates": 155,
+  "recommendations": 10,
+  "physics_false_positives_marked": 32,
+  "pdf_downloaded": 3,
+  "pdf_failed": 0,
+  "daily_local_links_checked": 46,
+  "new_link_errors": 0,
+  "publication_link_errors": 0,
+  "pdf_checks": [
+    {
+      "title": "Which Geometry on Which Layer? Measured Sign-Spectral Assignment in Mixed-Optimizer Training",
+      "pages": 35,
+      "bytes": 611109,
+      "sha256": "ab168244aa948aa5d7089c66bc6f7c0a2d905d2d47d3a67373e9dd4577c28efc",
+      "first_page_identity_checked": true,
+      "parser_warnings": "Syntax Error (763): Unterminated string\nSyntax Error (771): End of file inside dictionary\nSyntax Error (771): Illegal character ')'\nSyntax Error (763): Unterminated string\nSyntax Error (771): End of file inside dictionary\nSyntax Error (771): Illegal character ')'\nSyntax Error (763): Unterminated string\nSyntax Error (771): End of file inside dictionary\nSyntax Error (771): Illegal character ')'\nSyntax Error (763): Unterminated string\nSyntax Error (771): End of file inside dictionary\nSyntax Error (771): Illegal character ')'\nSyntax Error (763): Unterminated string\nSyntax Error (771): End of file inside dictionary\nSyntax Error (771): Illegal character ')'\nSyntax Error (763): Unterminated string\nSyntax Error (771): End of file inside dictionary\nSyntax Error (771): Illegal character ')'\nSyntax Error (763): Unterminated string\nSyntax Error (771): End of file inside dictionary\nSyntax Error (771): Illegal character ')'",
+      "first_page_render_verified": true
+    },
+    {
+      "title": "From Spectral to Frobenius: When Muon Loses Its Spectral Implicit Bias",
+      "pages": 37,
+      "bytes": 464464,
+      "sha256": "7362d0ff0044dbcffb3a7e3cdf5e71ff455318e660d7a94b76af27067dcd83df",
+      "first_page_identity_checked": true,
+      "parser_warnings": "",
+      "first_page_render_verified": false
+    },
+    {
+      "title": "Muon Under Gradient Noise and the Limits of Orthogonalization Near Optima",
+      "pages": 30,
+      "bytes": 1190632,
+      "sha256": "62ab9d24d44294acc429568d667c62e9e4627c4e5619cec8332f0995e4d871ce",
+      "first_page_identity_checked": true,
+      "parser_warnings": "",
+      "first_page_render_verified": false
+    }
+  ],
+  "checks": [
+    "保留脚本预筛分数与screening_rank，仅复排前十并补充候选名次及语义名次",
+    "前三摘要与arXiv原页面逐字匹配；完整译文逐句核对方法、数字、比较及条件",
+    "259条附录各出现一次且连续编号，32条粒子物理误命中已标明",
+    "所有本地访问与相关论文链接为真实文件，且为已跟踪或本次新增资料",
+    "三份PDF魔数、页数、首页身份核验；第一篇首页成功渲染，保留原文件解析警告",
+    "四阶段索引登记正确状态；仅本次三篇增量进入提交快照",
+    "无关已有改动逐文件SHA256保持不变"
+  ],
+  "workspace_check": {
+    "preexisting_link_errors": 9,
+    "new_link_errors": 0,
+    "missing_readme": 0,
+    "month_consistency_errors": 0,
+    "detail": "9处既有问题位于10月8日/10月10日研究文档，指向工作区外graduate-thesis-code资料"
+  },
+  "source_limitations": [
+    "arXiv按相关性取前200条，不代表近期全部论文。",
+    "OpenReview以配置15个关键词分别取首页100条，存在截断；覆盖见openreview-coverage.json。",
+    "Semantic Scholar补充查询两次429，未获得过去一年高影响力与引用数据，不代表没有相关论文。",
+    "PowerStep的LaTeX ell_p标题与已有lp主干不同，按既有真实PDF确认别名后重放去重；分数未变。",
+    "初始预筛和别名修正后的预筛分别保留；screening_rank保留脚本原全量预筛名次，candidate_screening_rank为去重候选前十名次。",
+    "主题/细分字段来自配置关键词命中，Muon粒子物理误命中保留全量记录但不推荐。",
+    "前十摘要逐一阅读并语义复排；所有研究判断限于摘要，不是全文质量评价。"
+  ]
+}

@@ -1,0 +1,48 @@
+arXiv:2609.32861v1 [cs.LG] 26 Sep 2026
+
+Muon Under Gradient Noise and the Limits of Orthogonalization
+Near Optima
+Xiaohui Xie
+Department of Computer Science
+University of California, Irvine
+xhx@uci.edu
+
+Abstract
+Muon replaces the momentum buffer of each weight matrix by its orthogonal polar factor. We ask
+what this orthogonalization does near an optimum, where minibatch noise dominates the gradient.
+Under a Gaussian noise model, the expected Muon update becomes a scaled gradient step, so a linear
+method with a suitably matched learning rate reproduces Muon’s first-order mean response. The
+stochastic update is a different matter: after the response is matched, Muon retains a nonlinear
+residual that is uncorrelated with the input noise and contributes additional covariance. A Hermite
+expansion shows how momentum acts on this residual. Its higher-order components decorrelate faster
+than the linear component, so momentum suppresses the residual’s accumulated covariance relative to
+the linear part, but never eliminates it. In a local quadratic surrogate that evaluates the residual on
+the stationary noise buffer, the residual adds stationary covariance and raises the stationary loss floor
+at every stable step size, while leaving the contraction dynamics unchanged. Simulations of the full
+nonlinear recursion on quadratics and measurements on frozen transformer gradients support each
+step of this picture. Together, the results make a theoretical case for replacing orthogonalization by
+response-matched momentum SGD once optimization becomes noise-dominated.
+
+1
+
+Introduction
+
+Muon [9, 15] updates each weight matrix with the orthogonal polar factor of its momentum buffer:
+if the buffer has singular value decomposition U ΛV ⊤ , the update direction is U V ⊤ . Every singular
+direction of the buffer then moves with unit weight. When the gradient carries signal in many
+directions, this equalization is the purpose of the method. Near an optimum the situation changes.
+The mean gradient becomes small, the minibatch gradient is dominated by sampling noise, and the
+polar map spends its effect on noise. This paper studies what orthogonalization does in that regime.
+We organize the analysis around four questions, each answered by one section.
+1. What does Muon do in expectation near a noise-dominated optimum? Gaussian noise smooths
+the polar map. For a small mean gradient, the expected update is proportional to that gradient,
+with a constant that depends only on the matrix shape and the noise scale. In the mean, Muon
+is therefore a gradient step (Section 3).
+2. After matching that mean response, what fluctuation remains? A linear method can be calibrated
+to have the same local response as Muon. A Gaussian projection shows that Muon’s update
+equals this calibrated linear update plus a nonlinear residual. The residual is uncorrelated with
+the input noise, adds no first-order response, and contributes positive semidefinite covariance
+(Section 4).
+1
+
+
