@@ -1,0 +1,117 @@
+{
+  "date": "2026-10-17",
+  "note_file": "今日检索.md",
+  "generated_at": "2026-10-17T18:40:52",
+  "skill": "paper-daily",
+  "sources_searched": [
+    "arxiv",
+    "openreview"
+  ],
+  "source_counts": {
+    "arxiv": 200,
+    "openreview": 136
+  },
+  "date_windows": {
+    "recent_30d": {
+      "start": "2026-09-17",
+      "end": "2026-10-17"
+    },
+    "past_year": {
+      "start": "2025-10-17",
+      "end": "2026-09-16"
+    }
+  },
+  "total_unique": 259,
+  "top_papers": [
+    {
+      "title": "Which Geometry on Which Layer? Measured Sign-Spectral Assignment in Mixed-Optimizer Training",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2610.17285v1",
+      "note_filename": "Which_Geometry_on_Which_Layer_Measured_Sign_Spectral_Assignment_in_Mixed_Optimizer_Training",
+      "matched_domain": "大模型优化器设计",
+      "score": 7.6
+    },
+    {
+      "title": "From Spectral to Frobenius: When Muon Loses Its Spectral Implicit Bias",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2610.20112v1",
+      "note_filename": "From_Spectral_to_Frobenius_When_Muon_Loses_Its_Spectral_Implicit_Bias",
+      "matched_domain": "大模型优化器设计",
+      "score": 7.53
+    },
+    {
+      "title": "Muon Under Gradient Noise and the Limits of Orthogonalization Near Optima",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2609.32861v1",
+      "note_filename": "Muon_Under_Gradient_Noise_and_the_Limits_of_Orthogonalization_Near_Optima",
+      "matched_domain": "大模型优化器设计",
+      "score": 7.0
+    },
+    {
+      "title": "Taming Softmax at the Limits of Muon: A Unified Approach through Hilbert Geometry",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2610.17588v1",
+      "note_filename": "Taming_Softmax_at_the_Limits_of_Muon_A_Unified_Approach_through_Hilbert_Geometry",
+      "matched_domain": "大模型优化器设计",
+      "score": 7.4
+    },
+    {
+      "title": "Same Function, Different Trajectory: No Standard Optimizer Is Equivariant to Transformer Reparameterization",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2610.18085v1",
+      "note_filename": "Same_Function_Different_Trajectory_No_Standard_Optimizer_Is_Equivariant_to_Transformer_Reparameterization",
+      "matched_domain": "大模型优化器设计",
+      "score": 7.2
+    },
+    {
+      "title": "The Life Cycle of a Massive Activation: Stochastic Birth, Weight-Decay-Driven Growth, and Competitive Consolidation",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2610.00423v2",
+      "note_filename": "The_Life_Cycle_of_a_Massive_Activation_Stochastic_Birth_Weight_Decay_Driven_Growth_and_Competitive_Consolidation",
+      "matched_domain": "大模型优化器设计",
+      "score": 7.07
+    },
+    {
+      "title": "Which Optimizer Leaks Most? Optimizer Implicit Bias as a Training-Data Privacy Controller",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2610.18294v1",
+      "note_filename": "Which_Optimizer_Leaks_Most_Optimizer_Implicit_Bias_as_a_Training_Data_Privacy_Controller",
+      "matched_domain": "大模型优化器设计",
+      "score": 7.2
+    },
+    {
+      "title": "Does On-Policy Distillation Need to Complete Every Rollout?",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2610.21337v1",
+      "note_filename": "Does_On_Policy_Distillation_Need_to_Complete_Every_Rollout",
+      "matched_domain": "大模型优化器设计",
+      "score": 7.47
+    },
+    {
+      "title": "Towards Better Training Signal: Advantage Clipped Policy Optimization",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2609.36816v1",
+      "note_filename": "Towards_Better_Training_Signal_Advantage_Clipped_Policy_Optimization",
+      "matched_domain": "大模型优化器设计",
+      "score": 7.07
+    },
+    {
+      "title": "EAU: Environment-Agent-User Co-evolution for Training User-Centric Agents",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2610.16523v1",
+      "note_filename": "EAU_Environment_Agent_User_Co_evolution_for_Training_User_Centric_Agents",
+      "matched_domain": "大模型优化器设计",
+      "score": 8.07
+    }
+  ]
+}
