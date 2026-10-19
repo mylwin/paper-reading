@@ -1,0 +1,806 @@
+{
+  "target_date": "2026-10-19",
+  "date_windows": {
+    "recent_30d": {
+      "start": "2026-09-19",
+      "end": "2026-10-19"
+    },
+    "past_year": {
+      "start": "2025-10-19",
+      "end": "2026-09-18"
+    }
+  },
+  "sources_searched": [
+    "arxiv",
+    "openreview"
+  ],
+  "source_counts": {
+    "arxiv": 200,
+    "openreview": 68
+  },
+  "papers_by_source": {
+    "arxiv": 176,
+    "openreview": 37
+  },
+  "total_recent": 268,
+  "total_hot": 0,
+  "total_unique": 213,
+  "total_known": 90,
+  "total_candidates": 123,
+  "top_papers": [
+    {
+      "id": "http://arxiv.org/abs/2610.22976v1",
+      "title": "Towards Hyperparameter Transfer for Differentially Private Optimization",
+      "summary": "Scaling laws and hyperparameter tuning remain central challenges in training large-scale models, particularly under differential privacy (DP), where optimization is further complicated by noise injection and per-sample gradient clipping. While Maximal Update Parametrization ($μ$P) allows for zero-shot hyperparameter transfer in standard training, we show that it fails under DP constraints due to the distinct spectral properties of high-dimensional noise versus low-rank gradients. In this work, we introduce DP-$μ$P, a theoretically grounded framework that extends $μ$P to the privacy-preserving setting. By analyzing the interaction between gradient clipping, noise injection, and feature learning, we derive a Signal-to-Noise Ratio (SNR) condition that governs layer-wise learning rate scaling. Combining this with our proposed spectral scaling formulation, we provide specific scaling rules for DP-SGD, DP-Adam, and DP-Muon optimizers. Empirically, we demonstrate that DP-$μ$P enables effective zero-shot transfer of learning rates across model widths on diverse architectures (MLP, ViT, GPT-2), matching or exceeding the performance of individually tuned baselines while significantly reducing computational costs.",
+      "authors": [
+        "Tianze Wang",
+        "Zhiqi Bu",
+        "Linjun Zhang"
+      ],
+      "affiliations": [],
+      "published": "2026-10-16T05:51:00Z",
+      "published_date": "2026-10-16 05:51:00+00:00",
+      "updated": "2026-10-16T05:51:00Z",
+      "categories": [
+        "cs.LG",
+        "cs.CR",
+        "stat.ML"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.22976v1",
+      "url": "http://arxiv.org/abs/2610.22976v1",
+      "source": "arxiv",
+      "scores": {
+        "relevance": 3.0,
+        "recency": 3.0,
+        "impact": 0.0,
+        "evidence": 2.3,
+        "popularity": 0.0,
+        "quality": 2.3,
+        "recommendation": 8.53
+      },
+      "matched_domain": "大模型优化器设计",
+      "matched_keywords": [
+        "Muon",
+        "gradient clipping",
+        "cs.LG",
+        "stat.ML"
+      ],
+      "is_hot_paper": false,
+      "score_type": "research_priority_screening",
+      "assessment_scope": "metadata_and_abstract",
+      "screening_rank": 1,
+      "paper_stem": "Towards_Hyperparameter_Transfer_for_Differentially_Private_Optimization",
+      "already_known": false,
+      "related_papers": [
+        {
+          "title": "DP-FedAdamW: An Efficient Optimizer for Differentially Private Federated Large Models",
+          "stem": "dpfedadamwanefficientoptimizerfordifferentiallyprivatefederatedlargemodels",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-10-10/search_result.json",
+          "shared_terms": [
+            "differentially",
+            "private"
+          ],
+          "shared_count": 2
+        },
+        {
+          "title": "Inner Momentum for Differentially Private Muon",
+          "stem": "innermomentumfordifferentiallyprivatemuon",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-10-13/search_result.json",
+          "shared_terms": [
+            "differentially",
+            "private"
+          ],
+          "shared_count": 2
+        },
+        {
+          "title": "Does Step Law Transfer to Small-Scale Language Models? An Empirical Recalibration Below 59M Parameters",
+          "stem": "doessteplawtransfertosmallscalelanguagemodelsanempiricalrecalibrationbelow59mparameters",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-10-12/search_result.json",
+          "shared_terms": [
+            "transfer"
+          ],
+          "shared_count": 1
+        }
+      ],
+      "note_filename": "Towards_Hyperparameter_Transfer_for_Differentially_Private_Optimization"
+    },
+    {
+      "id": "http://arxiv.org/abs/2610.23571v1",
+      "title": "BMuon: Budgeting Muon's Spectral Geometry for Structured Compressibility",
+      "summary": "Muon has emerged as a strong optimizer for neural network training and admits an interpretation as steepest descent under a spectral-norm geometry. Yet we find that Muon-trained Transformers can degrade sharply when their MLP hidden channels are pruned after training. To reconcile Muon's optimization performance with structured compressibility, we introduce Budget Muon (BMuon), which modifies Muon's spectral geometry so that hidden channels across blocks compete for a shared allocation budget. The resulting oracle is exactly normalized steepest descent under a family of norms that interpolate between Muon's geometry and structured sparse geometries. Our principal sparsity control is an interpretable global channel-allocation budget, rather than a setting-dependent sparsity-penalty coefficient. For linear factorization models, we show that Muon admits minimum-cost exact representations with redundant hidden width, whereas under the BMuon oracle geometry and a sufficiently scarce budget, every minimum-cost representation is width-minimal. For practical training, we derive a minorization-maximization surrogate for the exact allocation problem. On ImageNet-1K with ViT-S/16, BMuon improves over Muon under gradual structured MLP pruning, and its learned allocations provide a more effective pruning criterion than weight magnitude. On a 1B-parameter LLaMA-style model trained on FineWeb, BMuon improves over Muon under post-training MLP channel pruning.",
+      "authors": [
+        "Rida Assalouh",
+        "Tom Jacobs",
+        "Rebekka Burkholz",
+        "Yani Ioannou",
+        "Umut Şimşekli"
+      ],
+      "affiliations": [],
+      "published": "2026-10-16T14:52:56Z",
+      "published_date": "2026-10-16 14:52:56+00:00",
+      "updated": "2026-10-16T14:52:56Z",
+      "categories": [
+        "cs.LG"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.23571v1",
+      "url": "http://arxiv.org/abs/2610.23571v1",
+      "source": "arxiv",
+      "scores": {
+        "relevance": 3.0,
+        "recency": 3.0,
+        "impact": 0.0,
+        "evidence": 1.4,
+        "popularity": 0.0,
+        "quality": 1.4,
+        "recommendation": 7.93
+      },
+      "matched_domain": "大模型优化器设计",
+      "matched_keywords": [
+        "Muon",
+        "cs.LG"
+      ],
+      "is_hot_paper": false,
+      "score_type": "research_priority_screening",
+      "assessment_scope": "metadata_and_abstract",
+      "screening_rank": 26,
+      "paper_stem": "BMuon_Budgeting_Muon's_Spectral_Geometry_for_Structured_Compressibility",
+      "already_known": false,
+      "related_papers": [
+        {
+          "title": "Overfitting of Spectral Gradient Descent: How Matrix Geometry shapes Generalization and Implicit Bias",
+          "stem": "overfittingofspectralgradientdescenthowmatrixgeometryshapesgeneralizationandimplicitbias",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-30/search_result.json",
+          "shared_terms": [
+            "geometry",
+            "spectral"
+          ],
+          "shared_count": 2
+        },
+        {
+          "title": "Accelerating Muon with Spectral Residual Correction",
+          "stem": "acceleratingmuonwithspectralresidualcorrection",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-10-11/search_result.json",
+          "shared_terms": [
+            "spectral"
+          ],
+          "shared_count": 1
+        },
+        {
+          "title": "Anytime Training with Schedule Free Spectral Optimization",
+          "stem": "anytimetrainingwithschedulefreespectraloptimization",
+          "source": "pdf",
+          "path": "/Users/myl/Documents/paper/01-raw/2026-10/Anytime_Training_with_Schedule_Free_Spectral_Optimization.pdf",
+          "shared_terms": [
+            "spectral"
+          ],
+          "shared_count": 1
+        }
+      ],
+      "note_filename": "BMuon_Budgeting_Muon's_Spectral_Geometry_for_Structured_Compressibility"
+    },
+    {
+      "id": "http://arxiv.org/abs/2610.22650v1",
+      "title": "The Ephemeral Cost of Switching Optimizers Across LLM Training Stages",
+      "summary": "Recent work suggests that switching optimizers between pretraining and subsequent training stages incurs a performance cost, but systematic investigation of this phenomenon is lacking. We study the mismatch between AdamW and Muon optimizers by pretraining 1.2B Llama-3 models from scratch while varying the proportion of updates taken with each optimizer, and similarly interpolating between the two optimizers during continued pretraining and supervised fine-tuning (SFT). Surprisingly, we find little evidence of a meaningful optimizer mismatch penalty: final performance is largely explained by the independent effects of the pretraining and post-training optimizers, with downstream performance generally improving as the proportion of Muon updates during SFT increases. Although matching the pretraining optimizer can reduce forgetting during SFT, this does not translate into improved final benchmark performance. We further evaluate AdamW and Muon for task-general SFT of open-weight models, across the Llama and Qwen families up to 14B parameters, where Muon remains competitive with AdamW, despite these models having been pretrained with AdamW. Together, our results suggest that the choice of optimizer for post-training can be made largely independently of the optimizer used during pretraining.",
+      "authors": [
+        "Xinyu Zhao",
+        "Davis Wertheimer",
+        "Ashutosh Sharma",
+        "Rameswar Panda",
+        "Paul Pu Liang"
+      ],
+      "affiliations": [],
+      "published": "2026-10-15T21:10:20Z",
+      "published_date": "2026-10-15 21:10:20+00:00",
+      "updated": "2026-10-15T21:10:20Z",
+      "categories": [
+        "cs.LG"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.22650v1",
+      "url": "http://arxiv.org/abs/2610.22650v1",
+      "source": "arxiv",
+      "scores": {
+        "relevance": 3.0,
+        "recency": 3.0,
+        "impact": 0.0,
+        "evidence": 1.1,
+        "popularity": 0.0,
+        "quality": 1.1,
+        "recommendation": 7.73
+      },
+      "matched_domain": "大模型优化器设计",
+      "matched_keywords": [
+        "Muon",
+        "AdamW",
+        "cs.LG"
+      ],
+      "is_hot_paper": false,
+      "score_type": "research_priority_screening",
+      "assessment_scope": "metadata_and_abstract",
+      "screening_rank": 43,
+      "paper_stem": "The_Ephemeral_Cost_of_Switching_Optimizers_Across_LLM_Training_Stages",
+      "already_known": false,
+      "related_papers": [
+        {
+          "title": "Clean: Second-order LLM Training at Linear Memory Cost via Nyström Sketching",
+          "stem": "cleansecondorderllmtrainingatlinearmemorycostvianystrmsketching",
+          "source": "pdf",
+          "path": "/Users/myl/Documents/paper/01-raw/2026-10/Clean_Second_order_LLM_Training_at_Linear_Memory_Cost_via_Nyström_Sketching.pdf",
+          "shared_terms": [
+            "cost",
+            "llm",
+            "training"
+          ],
+          "shared_count": 3
+        },
+        {
+          "title": "Normalize-Then-Precondition: A Hierarchical Approach to Marginal Scale and Interaction Geometry for LLM Training",
+          "stem": "normalizethenpreconditionahierarchicalapproachtomarginalscaleandinteractiongeometryforllmtraining",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-10-03/search_result.json",
+          "shared_terms": [
+            "llm",
+            "training"
+          ],
+          "shared_count": 2
+        },
+        {
+          "title": "ORCA: The Annealed Spectral Conditioning Optimizer for Faster, Better LLM Training",
+          "stem": "orcatheannealedspectralconditioningoptimizerforfasterbetterllmtraining",
+          "source": "pdf",
+          "path": "/Users/myl/Documents/paper/01-raw/2026-10/ORCA_The_Annealed_Spectral_Conditioning_Optimizer_for_Faster_Better_LLM_Training.pdf",
+          "shared_terms": [
+            "llm",
+            "training"
+          ],
+          "shared_count": 2
+        }
+      ],
+      "note_filename": "The_Ephemeral_Cost_of_Switching_Optimizers_Across_LLM_Training_Stages"
+    },
+    {
+      "id": "http://arxiv.org/abs/2610.23434v1",
+      "title": "Bridging Compressed Communication and Local Steps via Spectral Method in Federated Learning",
+      "summary": "Federated Learning (FL) enables collaborative training of complex models across large-scale networks of edge devices while keeping data localized. However, data heterogeneity and high communication overhead remain fundamental bottlenecks. Recently, the spectral optimizer Muon has demonstrated remarkable advantages over Adam-like methods in centralized training. While recent efforts have attempted to transition Muon to FL, naive integrations into traditional architectures fail short. Crucially, existing approaches do not support the the communication compression and local steps --- the two foundational techniques of efficient FL. To address this limitation, we introduce a novel spectral FL method that utilizes both local updates and compression. We establish rigorous convergence guarantees under mild assumptions, notably eliminating the restrictive bounded heterogeneity condition. Empirical evaluation on standard image classification benchmarks validates the efficiency and robustness of our approach.",
+      "authors": [
+        "Dmitriy Bystrov",
+        "George Chirkov",
+        "Daniil Medyakov",
+        "Dmitry Bylinkin",
+        "Aleksandr Beznosikov"
+      ],
+      "affiliations": [],
+      "published": "2026-10-16T13:19:03Z",
+      "published_date": "2026-10-16 13:19:03+00:00",
+      "updated": "2026-10-16T13:19:03Z",
+      "categories": [
+        "cs.LG"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.23434v1",
+      "url": "http://arxiv.org/abs/2610.23434v1",
+      "source": "arxiv",
+      "scores": {
+        "relevance": 2.6,
+        "recency": 3.0,
+        "impact": 0.0,
+        "evidence": 1.4,
+        "popularity": 0.0,
+        "quality": 1.4,
+        "recommendation": 7.2
+      },
+      "matched_domain": "大模型优化器设计",
+      "matched_keywords": [
+        "Muon",
+        "cs.LG"
+      ],
+      "is_hot_paper": false,
+      "score_type": "research_priority_screening",
+      "assessment_scope": "metadata_and_abstract",
+      "screening_rank": 80,
+      "paper_stem": "Bridging_Compressed_Communication_and_Local_Steps_via_Spectral_Method_in_Federated_Learning",
+      "already_known": false,
+      "related_papers": [
+        {
+          "title": "Adaptive Phase Switching for Communication Efficient Federated LoRA Fine Tuning",
+          "stem": "adaptivephaseswitchingforcommunicationefficientfederatedlorafinetuning",
+          "source": "pdf",
+          "path": "/Users/myl/Documents/paper/01-raw/2026-09/Adaptive_Phase_Switching_for_Communication_Efficient_Federated_LoRA_Fine_Tuning.pdf",
+          "shared_terms": [
+            "communication",
+            "federated"
+          ],
+          "shared_count": 2
+        },
+        {
+          "title": "Privacy-Aligned Personalized Federated Learning with Compact Adaptation and Variable-Length Gaussian Communication",
+          "stem": "privacyalignedpersonalizedfederatedlearningwithcompactadaptationandvariablelengthgaussiancommunication",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-10-14/search_result.json",
+          "shared_terms": [
+            "communication",
+            "federated"
+          ],
+          "shared_count": 2
+        },
+        {
+          "title": "Accelerating Muon with Spectral Residual Correction",
+          "stem": "acceleratingmuonwithspectralresidualcorrection",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-10-11/search_result.json",
+          "shared_terms": [
+            "spectral"
+          ],
+          "shared_count": 1
+        }
+      ],
+      "note_filename": "Bridging_Compressed_Communication_and_Local_Steps_via_Spectral_Method_in_Federated_Learning"
+    },
+    {
+      "id": "http://arxiv.org/abs/2610.01172v1",
+      "title": "Learning Rate Transfer for Hybrid Transformer-SSM Architectures",
+      "summary": "We study learning rate (LR) scaling for hybrid architectures combining Transformer and State-Space Model (SSM) blocks, a class adopted by several recent production language models. In particular, we focus on the gap between the theoretical scaling rules derived for SSMs under zero-order-hold (ZOH) discretization at infinite width with growing state size, and the field-standard practical implementations using simplified-ZOH Mamba at fixed state size. Surprisingly, in this practical regime hybrid architectures achieve a near-zero LR transfer gap across widths 256-2048 and depths 4-32 up to billion-parameter scale using only the original $μ$P prescription, even though SSM operations fall outside its Tensor Programs representability conditions and every parameterization we test fails the standard coordinate-check diagnostic of $μ$P correctness. We attribute this to a two-condition decomposition of LR transfer in hybrid architectures: a global update-to-weight invariance, enforced by $μ$P's initialization and LR scaling; and a local per-component balance, provided by AdamW's per-parameter normalization. Our observations show that the optimal LR is invariant to width up to 8$\\times$, that this width invariance holds across depth, sequence length, batch size, and Transformer-to-SSM ratio, and that it transfers to Nemotron-H, a production hybrid outside our custom architecture set. We hope these findings fill the gap between theoretical scaling rules and practical hybrid implementations, and stimulate further research toward bridging it.",
+      "authors": [
+        "Jimin Seo",
+        "Gyubok Lee",
+        "Yeonsik Jo",
+        "Kiwoong Yoo",
+        "Yeongoon Kim",
+        "Minhae Oh",
+        "Jin Woo Koo",
+        "Suhwan Kim",
+        "Nakyung Lee",
+        "Minsik Seol",
+        "Idris Nechnech",
+        "Jaehyeon Kim",
+        "Giho Lee",
+        "Jungwoo Lee"
+      ],
+      "affiliations": [],
+      "published": "2026-10-01T06:46:03Z",
+      "published_date": "2026-10-01 06:46:03+00:00",
+      "updated": "2026-10-01T06:46:03Z",
+      "categories": [
+        "cs.LG"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.01172v1",
+      "url": "http://arxiv.org/abs/2610.01172v1",
+      "source": "arxiv",
+      "scores": {
+        "relevance": 2.6,
+        "recency": 3.0,
+        "impact": 0.0,
+        "evidence": 1.1,
+        "popularity": 0.0,
+        "quality": 1.1,
+        "recommendation": 7.0
+      },
+      "matched_domain": "大模型优化器设计",
+      "matched_keywords": [
+        "AdamW",
+        "cs.LG"
+      ],
+      "is_hot_paper": false,
+      "score_type": "research_priority_screening",
+      "assessment_scope": "metadata_and_abstract",
+      "screening_rank": 85,
+      "paper_stem": "Learning_Rate_Transfer_for_Hybrid_Transformer_SSM_Architectures",
+      "already_known": false,
+      "related_papers": [
+        {
+          "title": "Deriving Scaling Laws for OpenEuroLLM Models: Learning Rate, Batch Size and Loss",
+          "stem": "derivingscalinglawsforopeneurollmmodelslearningratebatchsizeandloss",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-19/search_result.json",
+          "shared_terms": [
+            "rate"
+          ],
+          "shared_count": 1
+        },
+        {
+          "title": "Does Step Law Transfer to Small-Scale Language Models? An Empirical Recalibration Below 59M Parameters",
+          "stem": "doessteplawtransfertosmallscalelanguagemodelsanempiricalrecalibrationbelow59mparameters",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-10-12/search_result.json",
+          "shared_terms": [
+            "transfer"
+          ],
+          "shared_count": 1
+        },
+        {
+          "title": "Last Iterate Convergence Rate of Normalized Gradient Descent under Hölder Smoothness",
+          "stem": "lastiterateconvergencerateofnormalizedgradientdescentunderhldersmoothness",
+          "source": "pdf",
+          "path": "/Users/myl/Documents/paper/01-raw/2026-10/Last_Iterate_Convergence_Rate_of_Normalized_Gradient_Descent_under_Hölder_Smoothness.pdf",
+          "shared_terms": [
+            "rate"
+          ],
+          "shared_count": 1
+        }
+      ],
+      "note_filename": "Learning_Rate_Transfer_for_Hybrid_Transformer_SSM_Architectures"
+    },
+    {
+      "id": "http://arxiv.org/abs/2610.04249v1",
+      "title": "Optimizer Geometry Sets the Pace: Spectral Learning Dynamics in Matrix Factorization",
+      "summary": "Recent successes of matrix- and curvature-based optimizers have renewed interest in how update geometry shapes learning. These methods normalize or precondition updates, changing how different components progress during training. In deep matrix factorization, the geometry that slows gradient descent (GD) favors low-rank solutions by delaying the emergence of small singular modes. This raises the question of what remains of that spectral bias when normalization or curvature correction weakens or removes the slowdown. We study how optimizer geometry and depth jointly govern this behavior through a common framework for singular mode dynamics. Under explicit balance and alignment assumptions, we derive birth, saturation, and decay laws for Euclidean GD, coordinate-wise updates of SignGD and an instantaneous Adam approximation, spectral updates of Muon and cumulative Shampoo, and a block curvature model of K-FAC. The resulting picture is not a simple ordering from stronger to weaker low-rank bias. To highlight, SignGD and ideal Muon eliminate the divergent birth barrier and drive unsupported modes to zero in finite time. Cumulative Shampoo initially retains GD's depth-dependent barrier, then accumulated gradients produce a catch-up phase while making previously active modes increasingly persistent. Undamped K-FAC cancels the factorization-induced slowdown while preserving the ordering of the target singular values, whereas positive damping introduces a spectral threshold below which the slow GD phase laws reappear. These results give normalization, accumulated state, damping, and depth a direct interpretation as controls determining when modes emerge, persist, and disappear during training.",
+      "authors": [
+        "Mahalakshmi Sabanayagam",
+        "Simon Lucey"
+      ],
+      "affiliations": [],
+      "published": "2026-10-03T03:17:59Z",
+      "published_date": "2026-10-03 03:17:59+00:00",
+      "updated": "2026-10-03T03:17:59Z",
+      "categories": [
+        "cs.LG"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.04249v1",
+      "url": "http://arxiv.org/abs/2610.04249v1",
+      "source": "arxiv",
+      "scores": {
+        "relevance": 2.6,
+        "recency": 3.0,
+        "impact": 0.0,
+        "evidence": 1.1,
+        "popularity": 0.0,
+        "quality": 1.1,
+        "recommendation": 7.0
+      },
+      "matched_domain": "大模型优化器设计",
+      "matched_keywords": [
+        "Muon",
+        "cs.LG"
+      ],
+      "is_hot_paper": false,
+      "score_type": "research_priority_screening",
+      "assessment_scope": "metadata_and_abstract",
+      "screening_rank": 86,
+      "paper_stem": "Optimizer_Geometry_Sets_the_Pace_Spectral_Learning_Dynamics_in_Matrix_Factorization",
+      "already_known": false,
+      "related_papers": [
+        {
+          "title": "Overfitting of Spectral Gradient Descent: How Matrix Geometry shapes Generalization and Implicit Bias",
+          "stem": "overfittingofspectralgradientdescenthowmatrixgeometryshapesgeneralizationandimplicitbias",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-30/search_result.json",
+          "shared_terms": [
+            "geometry",
+            "matrix",
+            "spectral"
+          ],
+          "shared_count": 3
+        },
+        {
+          "title": "Beyond the Matrix Sign: Quadratic Spectral Descent",
+          "stem": "beyondthematrixsignquadraticspectraldescent",
+          "source": "pdf",
+          "path": "/Users/myl/Documents/paper/01-raw/2026-09/Beyond_the_Matrix_Sign_Quadratic_Spectral_Descent.pdf",
+          "shared_terms": [
+            "matrix",
+            "spectral"
+          ],
+          "shared_count": 2
+        },
+        {
+          "title": "Cost-free Spectral Estimation for Adaptive Newton--Schulz in Matrix Optimizers",
+          "stem": "costfreespectralestimationforadaptivenewtonschulzinmatrixoptimizers",
+          "source": "pdf",
+          "path": "/Users/myl/Documents/paper/01-raw/2026-10/Cost_free_Spectral_Estimation_for_Adaptive_Newton_Schulz_in_Matrix_Optimizers.pdf",
+          "shared_terms": [
+            "matrix",
+            "spectral"
+          ],
+          "shared_count": 2
+        }
+      ],
+      "note_filename": "Optimizer_Geometry_Sets_the_Pace_Spectral_Learning_Dynamics_in_Matrix_Factorization"
+    },
+    {
+      "id": "http://arxiv.org/abs/2610.13789v1",
+      "title": "Randomized Momentum Transport with Cheap Predictors",
+      "summary": "Momentum methods such as STORM and second-order momentum track the gradient by adding a transport correction to momentum, at the cost of an extra oracle call per iteration. We introduce randomized momentum transport, which evaluates the correction with probability $q$ and otherwise uses a cheap prediction, with importance weighting that preserves the conditional mean and adds $(q^{-1}-1)$ times the prediction loss to the variance. Under transport-bias, second-moment, and residual-control assumptions, linear minimization oracle (LMO) updates, including normalized, sign, and exact spectral (Muon) directions, retain an $O(T^{-1/3})$ stationarity bound for each fixed $q>0$ with a single-gradient initialization. For unnormalized STORM, some $q<1$ lowers the leading coefficient of our sufficient gradient budget if and only if the gradient-difference noise modulus exceeds the smoothness constant, by at most about $10\\%$. An online diagonal predictor admits a regret-to-convergence guarantee. At approximately equal oracle cost, querying a quarter of the corrections lowers the final training loss by $18$ to $43\\%$ on MNIST1D and raises the test accuracy of Hessian-vector transport on CIFAR-10 by $1.5$ points.",
+      "authors": [
+        "El Mahdi Chayti",
+        "Martin Jaggi"
+      ],
+      "affiliations": [],
+      "published": "2026-10-09T16:04:53Z",
+      "published_date": "2026-10-09 16:04:53+00:00",
+      "updated": "2026-10-09T16:04:53Z",
+      "categories": [
+        "cs.LG",
+        "math.OC"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.13789v1",
+      "url": "http://arxiv.org/abs/2610.13789v1",
+      "source": "arxiv",
+      "scores": {
+        "relevance": 3.0,
+        "recency": 3.0,
+        "impact": 0.0,
+        "evidence": 0.0,
+        "popularity": 0.0,
+        "quality": 0.0,
+        "recommendation": 7.0
+      },
+      "matched_domain": "大模型优化器设计",
+      "matched_keywords": [
+        "Muon",
+        "cs.LG",
+        "math.OC"
+      ],
+      "is_hot_paper": false,
+      "score_type": "research_priority_screening",
+      "assessment_scope": "metadata_and_abstract",
+      "screening_rank": 88,
+      "paper_stem": "Randomized_Momentum_Transport_with_Cheap_Predictors",
+      "already_known": false,
+      "related_papers": [
+        {
+          "title": "A pullback corrected scalar auxiliary variable optimizer with momentum and adaptive mobility",
+          "stem": "apullbackcorrectedscalarauxiliaryvariableoptimizerwithmomentumandadaptivemobility",
+          "source": "pdf",
+          "path": "/Users/myl/Documents/paper/01-raw/2026-09/A_pullback_corrected_scalar_auxiliary_variable_optimizer_with_momentum_and_adaptive_mobility.pdf",
+          "shared_terms": [
+            "momentum"
+          ],
+          "shared_count": 1
+        },
+        {
+          "title": "A Riemannian Inertial Adaptive Gradient Method with Momentum Restart",
+          "stem": "ariemannianinertialadaptivegradientmethodwithmomentumrestart",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-29/search_result.json",
+          "shared_terms": [
+            "momentum"
+          ],
+          "shared_count": 1
+        },
+        {
+          "title": "Backpropagated Output Momentum: Relocating Optimizer History from Parameters to Task Space",
+          "stem": "backpropagatedoutputmomentumrelocatingoptimizerhistoryfromparameterstotaskspace",
+          "source": "pdf",
+          "path": "/Users/myl/Documents/paper/01-raw/2026-09/Backpropagated_Output_Momentum_Relocating_Optimizer_History_from_Parameters_to_Task_Space.pdf",
+          "shared_terms": [
+            "momentum"
+          ],
+          "shared_count": 1
+        }
+      ],
+      "note_filename": "Randomized_Momentum_Transport_with_Cheap_Predictors"
+    },
+    {
+      "id": "http://arxiv.org/abs/2610.01515v1",
+      "title": "FedMIX-P: Mixing Local and Global Preconditioners for Federated Vision and Language Model Training",
+      "summary": "Adaptive preconditioners accelerate model training, but heterogeneous client geometries can bias federated updates even when gradients are evaluated at the same model. Round-start synchronization alone cannot prevent this mismatch from reappearing during local training. We propose \\texttt{FedMIX-P}, which mixes shared and local preconditioners at every local step, retaining local adaptation while reducing mean-squared operator mismatch by a factor of $λ^2$. For smooth nonconvex objectives with stochastic gradients and partial participation, we establish an $O(R^{-1/2})$ stationarity bound using suitable stepsizes and a horizon-dependent mixing weight, without requiring local preconditioners to converge to one another. A two-client counterexample shows that fixed positive mixing can preserve a nonstationary fixed point. The theory covers bounded linear symmetric positive-definite preconditioners. Experiments with SOAP, Sophia, and Muon variants across vision and language tasks show improvements over corresponding local optimizers, including accuracy gains of up to $19.47$ percentage points and lower validation loss for 60M--350M language models. Full nonlinear and momentum-based updates require separate analysis.",
+      "authors": [
+        "Junkang Liu"
+      ],
+      "affiliations": [],
+      "published": "2026-10-01T11:50:34Z",
+      "published_date": "2026-10-01 11:50:34+00:00",
+      "updated": "2026-10-01T11:50:34Z",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.01515v1",
+      "url": "http://arxiv.org/abs/2610.01515v1",
+      "source": "arxiv",
+      "scores": {
+        "relevance": 2.6,
+        "recency": 3.0,
+        "impact": 0.0,
+        "evidence": 1.1,
+        "popularity": 0.0,
+        "quality": 1.1,
+        "recommendation": 7.0
+      },
+      "matched_domain": "大模型优化器设计",
+      "matched_keywords": [
+        "Muon",
+        "cs.LG"
+      ],
+      "is_hot_paper": false,
+      "score_type": "research_priority_screening",
+      "assessment_scope": "metadata_and_abstract",
+      "screening_rank": 89,
+      "paper_stem": "FedMIX_P_Mixing_Local_and_Global_Preconditioners_for_Federated_Vision_and_Language_Model_Training",
+      "already_known": false,
+      "related_papers": [
+        {
+          "title": "StoSignSGD- Unbiased Structural Stochasticity Fixes  SignSGD for Training Large Language Models",
+          "stem": "stosignsgdunbiasedstructuralstochasticityfixessignsgdfortraininglargelanguagemodels",
+          "source": "pdf",
+          "path": "/Users/myl/Documents/paper/01-raw/2026-09/StoSignSGD- Unbiased Structural Stochasticity Fixes  SignSGD for Training Large Language Models.pdf",
+          "shared_terms": [
+            "language",
+            "training"
+          ],
+          "shared_count": 2
+        },
+        {
+          "title": "Adaptive Phase Switching for Communication Efficient Federated LoRA Fine Tuning",
+          "stem": "adaptivephaseswitchingforcommunicationefficientfederatedlorafinetuning",
+          "source": "pdf",
+          "path": "/Users/myl/Documents/paper/01-raw/2026-09/Adaptive_Phase_Switching_for_Communication_Efficient_Federated_LoRA_Fine_Tuning.pdf",
+          "shared_terms": [
+            "federated"
+          ],
+          "shared_count": 1
+        },
+        {
+          "title": "An Adaptive Linesearch-free Method for Monotone Variational Inequalities under Local Lipschitz Continuity",
+          "stem": "anadaptivelinesearchfreemethodformonotonevariationalinequalitiesunderlocallipschitzcontinuity",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-24/search_result.json",
+          "shared_terms": [
+            "local"
+          ],
+          "shared_count": 1
+        }
+      ],
+      "note_filename": "FedMIX_P_Mixing_Local_and_Global_Preconditioners_for_Federated_Vision_and_Language_Model_Training"
+    },
+    {
+      "id": "http://arxiv.org/abs/2609.24233v1",
+      "title": "Adaptive Forgetting for Nonstationary Optimization: Towards Robust EEG Decoding",
+      "summary": "Electroencephalography (EEG) provides non-invasive monitoring of brain activity and is widely used in emotion recognition, motor imagery and sleep staging. Although within-subject decoding has achieved considerable progress, cross-subject generalization remains a central challenge in practical applications. EEG decoders are typically trained with Adam/AdamW under a fixed second-moment decay coefficient, even though cross-subject learning involves low signal-to-noise ratios, subject variability, and gradient nonstationarity. A fixed coefficient implicitly assumes that gradient statistics are homogeneous across layers and time, which can limit model's adaptability to cross-subject EEG signals and degrade generalization. To address these issues, we propose AFOR, a tensor-wise adaptive optimizer that converts the fixed second-moment decay coefficient into a dynamic coefficient estimated online from local gradient state. AFOR combines a Residual-Alignment Signal Scorer (RASS) and an Adaptive Forgetting Controller (AFC). RASS summarizes local gradient residuals and directional agreement into a signal-quality score, and AFC maps this score through self-referential normalization to a bounded per-step decay coefficient, with cumulative-product initialization correction maintaining consistency under time-varying decay.\n  Under a strict cross-subject protocol on three EEG benchmarks that cover three representative fields, AFOR achieves the best average performance among the compared optimizers, improving the mean test accuracy over Adam by 3.00%, 2.07%, and 4.38%, respectively.",
+      "authors": [
+        "Hongyu Zhu",
+        "Lin Chen",
+        "Jing Chen",
+        "Yuting Zhou",
+        "Mingsheng Shang"
+      ],
+      "affiliations": [],
+      "published": "2026-09-21T07:56:33Z",
+      "published_date": "2026-09-21 07:56:33+00:00",
+      "updated": "2026-09-21T07:56:33Z",
+      "categories": [
+        "cs.LG",
+        "cs.HC"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2609.24233v1",
+      "url": "http://arxiv.org/abs/2609.24233v1",
+      "source": "arxiv",
+      "scores": {
+        "relevance": 2.6,
+        "recency": 3.0,
+        "impact": 0.0,
+        "evidence": 1.0,
+        "popularity": 0.0,
+        "quality": 1.0,
+        "recommendation": 6.93
+      },
+      "matched_domain": "大模型优化器设计",
+      "matched_keywords": [
+        "AdamW",
+        "cs.LG"
+      ],
+      "is_hot_paper": false,
+      "score_type": "research_priority_screening",
+      "assessment_scope": "metadata_and_abstract",
+      "screening_rank": 91,
+      "paper_stem": "Adaptive_Forgetting_for_Nonstationary_Optimization_Towards_Robust_EEG_Decoding",
+      "already_known": false,
+      "related_papers": [
+        {
+          "title": "Robust and Efficient Zeroth Order LLM Fine Tuning via Adaptive Bayesian Subspace Optimizer",
+          "stem": "robustandefficientzerothorderllmfinetuningviaadaptivebayesiansubspaceoptimizer",
+          "source": "pdf",
+          "path": "/Users/myl/Documents/paper/01-raw/2026-09/Robust_and_Efficient_Zeroth_Order_LLM_Fine_Tuning_via_Adaptive_Bayesian_Subspace_Optimizer.pdf",
+          "shared_terms": [
+            "adaptive",
+            "robust"
+          ],
+          "shared_count": 2
+        },
+        {
+          "title": "ABrA-GD: Adaptive Bregman Accelerated Gradient Descent for Relatively Smooth and (Strongly-)Convex Optimization",
+          "stem": "abragdadaptivebregmanacceleratedgradientdescentforrelativelysmoothandstronglyconvexoptimization",
+          "source": "pdf",
+          "path": "/Users/myl/Documents/paper/01-raw/2026-10/ABrA_GD_Adaptive_Bregman_Accelerated_Gradient_Descent_for_Relatively_Smooth_and_(Strongly_)Convex_Optimization.pdf",
+          "shared_terms": [
+            "adaptive"
+          ],
+          "shared_count": 1
+        },
+        {
+          "title": "Adaptive Phase Switching for Communication Efficient Federated LoRA Fine Tuning",
+          "stem": "adaptivephaseswitchingforcommunicationefficientfederatedlorafinetuning",
+          "source": "pdf",
+          "path": "/Users/myl/Documents/paper/01-raw/2026-09/Adaptive_Phase_Switching_for_Communication_Efficient_Federated_LoRA_Fine_Tuning.pdf",
+          "shared_terms": [
+            "adaptive"
+          ],
+          "shared_count": 1
+        }
+      ],
+      "note_filename": "Adaptive_Forgetting_for_Nonstationary_Optimization_Towards_Robust_EEG_Decoding"
+    },
+    {
+      "id": "http://arxiv.org/abs/2610.15373v1",
+      "title": "In-Place Indic Tokenizer Expansion and Continual Pretraining of Nemotron-3-Nano-30B-A3B",
+      "summary": "We adapted Nemotron-3-Nano-30B-A3B for eight Indian languages without changing its backbone architecture. We expanded the vocabulary in place from 131,072 to 163,072 entries using continued byte-pair encoding and AdaptMix rebalancing, reducing tokens per word by 38.6%. We initialized new input and output rows by averaging their original constituent rows, then trained them on 90% Indic and 10% English text before updating the backbone. Continual pretraining then progressed through broad training, high-quality annealing, and long-context training over approximately 1.27 trillion tokens. The annealed checkpoint gained 12.9 points on the Indic MILU benchmark but lost 3.4 on English MMLU. We also report practical negative results. Direct token addition underperformed continued byte-pair encoding. AdamW weight decay changed rows intended to stay fixed. Perplexity on an Indic-heavy holdout did not select the learning rate that best preserved English performance.",
+      "authors": [
+        "Avinash Benki",
+        "Prasanjith Pasunuti",
+        "Sutanshu Saksena Raj",
+        "Parijat Chatterjee",
+        "Nayanjit Sarkar",
+        "Daksh Maan"
+      ],
+      "affiliations": [],
+      "published": "2026-10-11T05:53:00Z",
+      "published_date": "2026-10-11 05:53:00+00:00",
+      "updated": "2026-10-11T05:53:00Z",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.15373v1",
+      "url": "http://arxiv.org/abs/2610.15373v1",
+      "source": "arxiv",
+      "scores": {
+        "relevance": 2.6,
+        "recency": 3.0,
+        "impact": 0.0,
+        "evidence": 1.0,
+        "popularity": 0.0,
+        "quality": 1.0,
+        "recommendation": 6.93
+      },
+      "matched_domain": "大模型优化器设计",
+      "matched_keywords": [
+        "AdamW",
+        "cs.CL"
+      ],
+      "is_hot_paper": false,
+      "score_type": "research_priority_screening",
+      "assessment_scope": "metadata_and_abstract",
+      "screening_rank": 92,
+      "paper_stem": "In_Place_Indic_Tokenizer_Expansion_and_Continual_Pretraining_of_Nemotron_3_Nano_30B_A3B",
+      "already_known": false,
+      "related_papers": [
+        {
+          "title": "Curvature-Conditioned Multiscale Momentum with Sphere Constraints for LLM Pretraining",
+          "stem": "curvatureconditionedmultiscalemomentumwithsphereconstraintsforllmpretraining",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-24/search_result.json",
+          "shared_terms": [
+            "pretraining"
+          ],
+          "shared_count": 1
+        },
+        {
+          "title": "Does Muon's Pretraining Advantage Over Adam Survive Fine-Tuning?",
+          "stem": "doesmuonspretrainingadvantageoveradamsurvivefinetuning",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-10-11/search_result.json",
+          "shared_terms": [
+            "pretraining"
+          ],
+          "shared_count": 1
+        },
+        {
+          "title": "Does U-W Ratio Alignment Benefit Muon in LLM Pretraining?",
+          "stem": "doesuwratioalignmentbenefitmuoninllmpretraining",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-10-08/search_result.json",
+          "shared_terms": [
+            "pretraining"
+          ],
+          "shared_count": 1
+        }
+      ],
+      "note_filename": "In_Place_Indic_Tokenizer_Expansion_and_Continual_Pretraining_of_Nemotron_3_Nano_30B_A3B"
+    }
+  ],
+  "snapshot_scope": "original screening top ten and counts"
+}

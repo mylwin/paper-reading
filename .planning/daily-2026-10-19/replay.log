@@ -1,0 +1,35 @@
+11:56:50 [INFO] Loading config from: /Users/myl/Documents/paper/.claude/skills/config.yaml
+11:56:50 [INFO] max-results=200 top-n=10 days=30
+11:56:50 [INFO] Data sources: ['arxiv', 'openreview']
+11:56:50 [INFO] Configured keywords: 15
+11:56:50 [INFO] Target date: 2026-10-19
+11:56:50 [INFO] Date windows:
+11:56:50 [INFO]   Recent 30 days: 2026-09-19 to 2026-10-19
+11:56:50 [INFO]   Past year (31-365 days): 2025-10-19 to 2026-09-18
+11:56:50 [INFO] ======================================================================
+11:56:50 [INFO] Step 1: Multi-source search (last 30 days) for configured interests
+11:56:50 [INFO] ======================================================================
+11:56:50 [INFO] [Sources] Fetched {'arxiv': 200, 'openreview': 68}
+11:56:50 [INFO] Scored 225 recent papers
+11:56:50 [INFO] ======================================================================
+11:56:50 [INFO] Step 2: Searching hot papers (past year) from Semantic Scholar
+11:56:50 [INFO] ======================================================================
+11:56:50 [WARNING] No hot papers found from Semantic Scholar
+11:56:50 [INFO] ======================================================================
+11:56:50 [INFO] Step 3: Merging and ranking results
+11:56:50 [INFO] ======================================================================
+11:56:50 [INFO] Total unique papers after deduplication: 213
+11:56:50 [INFO] daily history: 362 previously recommended papers
+11:56:50 [INFO] Known-library scan: 90 papers already in library, 200 papers have related prior work
+11:56:50 [INFO] Results saved to: 08-daily/2026-10-19/search_result.json
+11:56:50 [INFO]   1. Towards Hyperparameter Transfer for Differentially Private O... (Score: 8.53)
+11:56:50 [INFO]   2. BMuon: Budgeting Muon's Spectral Geometry for Structured Com... (Score: 7.93)
+11:56:50 [INFO]   3. The Ephemeral Cost of Switching Optimizers Across LLM Traini... (Score: 7.73)
+11:56:50 [INFO]   4. Bridging Compressed Communication and Local Steps via Spectr... (Score: 7.2)
+11:56:50 [INFO]   5. Learning Rate Transfer for Hybrid Transformer-SSM Architectu... (Score: 7.0)
+11:56:50 [INFO]   6. Optimizer Geometry Sets the Pace: Spectral Learning Dynamics... (Score: 7.0)
+11:56:50 [INFO]   7. Randomized Momentum Transport with Cheap Predictors... (Score: 7.0)
+11:56:50 [INFO]   8. FedMIX-P: Mixing Local and Global Preconditioners for Federa... (Score: 7.0)
+11:56:50 [INFO]   9. Adaptive Forgetting for Nonstationary Optimization: Towards ... (Score: 6.93)
+11:56:50 [INFO]   10. In-Place Indic Tokenizer Expansion and Continual Pretraining... (Score: 6.93)
+11:56:50 [INFO] （另有 90 篇已在知识库中，未计入推荐）

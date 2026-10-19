@@ -1,0 +1,61 @@
+The Ephemeral Cost of Switching Optimizers
+Across LLM Training Stages
+
+arXiv:2610.22650v1 [cs.LG] 15 Oct 2026
+
+Xinyu Zhao ∗
+MIT
+
+Davis Wertheimer
+MIT-IBM Watson AI Lab
+
+Rameswar Panda
+MIT-IBM Watson AI Lab
+
+Ashutosh Sharma
+MIT-IBM Watson AI Lab
+Paul Pu Liang
+MIT
+
+Abstract
+Recent work suggests that switching optimizers between pretraining and subsequent training stages incurs a performance cost, but systematic investigation of
+this phenomenon is lacking. We study the mismatch between AdamW and Muon
+optimizers by pretraining 1.2B Llama-3 models from scratch while varying the proportion of updates taken with each optimizer, and similarly interpolating between
+the two optimizers during continued pretraining and supervised fine-tuning (SFT).
+Surprisingly, we find little evidence of a meaningful optimizer mismatch penalty:
+final performance is largely explained by the independent effects of the pretraining
+and post-training optimizers, with downstream performance generally improving
+as the proportion of Muon updates during SFT increases. Although matching the
+pretraining optimizer can reduce forgetting during SFT, this does not translate into
+improved final benchmark performance. We further evaluate AdamW and Muon
+for task-general SFT of open-weight models, across the Llama and Qwen families
+up to 14B parameters, where Muon remains competitive with AdamW, despite
+these models having been pretrained with AdamW. Together, our results suggest
+that the choice of optimizer for post-training can be made largely independently of
+the optimizer used during pretraining. Our code is released here.
+
+1
+
+Introduction
+
+AdamW [Loshchilov and Hutter, 2019] has been the de facto optimizer for training most large
+language models. However, recent results have shown that Muon [Jordan et al., 2024] can outperform
+AdamW at scale in LLM pretraining [Liu et al., 2025, Khona et al., 2026]. Yet it remains an open
+question whether Muon is also a better optimizer for supervised post-training stages, and whether
+switching optimizers between training stages is detrimental to final performance. Prior work has
+suggested such a penalty for using a different optimizer for SFT [Qu et al., 2026], due to differing
+regularization effects [Liu et al., 2026] or implicit biases [Qu et al., 2026]. It has been unclear whether
+this effect is limited to greater forgetting during task-specific fine-tuning (“forgetting cost"), or also
+extends to degraded final benchmark performance (“performance cost") following the larger-scale,
+multi-task SFT stage typical in foundation model training.
+In this work, we examine whether there is a cost to switching between AdamW and Muon across LLM
+training stages. We train our own 1.2B Llama-3 models from scratch while varying the proportion of
+AdamW and Muon updates used during pretraining, continued pretraining, and task-general SFT,
+allowing us to separate the effect of optimizer mismatch from each optimizer’s independent effect, as
+well as that of the underlying data shift. We additionally evaluate AdamW and Muon for task-general
+SFT of released open-weight models up to 14B parameters.
+∗ Work done during an internship at MIT-IBM Watson AI Lab. Correspondence to: lxz@mit.edu
+
+Preprint.
+
+

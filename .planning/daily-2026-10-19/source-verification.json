@@ -1,0 +1,374 @@
+[
+  {
+    "comments": "54 pages, 6 figures",
+    "title": "BMuon: Budgeting Muon's Spectral Geometry for Structured Compressibility",
+    "url": "https://arxiv.org/abs/2610.23571v1",
+    "status": 200,
+    "metadata": {
+      "citation_title": [
+        "BMuon: Budgeting Muon's Spectral Geometry for Structured Compressibility"
+      ],
+      "citation_author": [
+        "Assalouh, Rida",
+        "Jacobs, Tom",
+        "Burkholz, Rebekka",
+        "Ioannou, Yani",
+        "Şimşekli, Umut"
+      ],
+      "citation_date": [
+        "2026/10/16"
+      ],
+      "citation_online_date": [
+        "2026/10/16"
+      ],
+      "citation_pdf_url": [
+        "https://arxiv.org/pdf/2610.23571"
+      ],
+      "citation_arxiv_id": [
+        "2610.23571"
+      ],
+      "citation_abstract": [
+        "Muon has emerged as a strong optimizer for neural network training and admits an interpretation as steepest descent under a spectral-norm geometry. Yet we find that Muon-trained Transformers can degrade sharply when their MLP hidden channels are pruned after training. To reconcile Muon's optimization performance with structured compressibility, we introduce Budget Muon (BMuon), which modifies Muon's spectral geometry so that hidden channels across blocks compete for a shared allocation budget. The resulting oracle is exactly normalized steepest descent under a family of norms that interpolate between Muon's geometry and structured sparse geometries. Our principal sparsity control is an interpretable global channel-allocation budget, rather than a setting-dependent sparsity-penalty coefficient. For linear factorization models, we show that Muon admits minimum-cost exact representations with redundant hidden width, whereas under the BMuon oracle geometry and a sufficiently scarce budget, every minimum-cost representation is width-minimal. For practical training, we derive a minorization-maximization surrogate for the exact allocation problem. On ImageNet-1K with ViT-S/16, BMuon improves over Muon under gradual structured MLP pruning, and its learned allocations provide a more effective pruning criterion than weight magnitude. On a 1B-parameter LLaMA-style model trained on FineWeb, BMuon improves over Muon under post-training MLP channel pruning."
+      ]
+    },
+    "license_urls": [
+      "http://creativecommons.org/licenses/by/4.0/"
+    ],
+    "abstract": "Muon has emerged as a strong optimizer for neural network training and admits an interpretation as steepest descent under a spectral-norm geometry. Yet we find that Muon-trained Transformers can degrade sharply when their MLP hidden channels are pruned after training. To reconcile Muon's optimization performance with structured compressibility, we introduce Budget Muon (BMuon), which modifies Muon's spectral geometry so that hidden channels across blocks compete for a shared allocation budget. The resulting oracle is exactly normalized steepest descent under a family of norms that interpolate between Muon's geometry and structured sparse geometries. Our principal sparsity control is an interpretable global channel-allocation budget, rather than a setting-dependent sparsity-penalty coefficient. For linear factorization models, we show that Muon admits minimum-cost exact representations with redundant hidden width, whereas under the BMuon oracle geometry and a sufficiently scarce budget, every minimum-cost representation is width-minimal. For practical training, we derive a minorization-maximization surrogate for the exact allocation problem. On ImageNet-1K with ViT-S/16, BMuon improves over Muon under gradual structured MLP pruning, and its learned allocations provide a more effective pruning criterion than weight magnitude. On a 1B-parameter LLaMA-style model trained on FineWeb, BMuon improves over Muon under post-training MLP channel pruning.",
+    "source_summary": "Muon has emerged as a strong optimizer for neural network training and admits an interpretation as steepest descent under a spectral-norm geometry. Yet we find that Muon-trained Transformers can degrade sharply when their MLP hidden channels are pruned after training. To reconcile Muon's optimization performance with structured compressibility, we introduce Budget Muon (BMuon), which modifies Muon's spectral geometry so that hidden channels across blocks compete for a shared allocation budget. The resulting oracle is exactly normalized steepest descent under a family of norms that interpolate between Muon's geometry and structured sparse geometries. Our principal sparsity control is an interpretable global channel-allocation budget, rather than a setting-dependent sparsity-penalty coefficient. For linear factorization models, we show that Muon admits minimum-cost exact representations with redundant hidden width, whereas under the BMuon oracle geometry and a sufficiently scarce budget, every minimum-cost representation is width-minimal. For practical training, we derive a minorization-maximization surrogate for the exact allocation problem. On ImageNet-1K with ViT-S/16, BMuon improves over Muon under gradual structured MLP pruning, and its learned allocations provide a more effective pruning criterion than weight magnitude. On a 1B-parameter LLaMA-style model trained on FineWeb, BMuon improves over Muon under post-training MLP channel pruning."
+  },
+  {
+    "comments": "Accepted to the Transitioning from Pre-Training to Post-Training Workshop at NeurIPS 2026",
+    "title": "The Ephemeral Cost of Switching Optimizers Across LLM Training Stages",
+    "url": "https://arxiv.org/abs/2610.22650v1",
+    "status": 200,
+    "metadata": {
+      "citation_title": [
+        "The Ephemeral Cost of Switching Optimizers Across LLM Training Stages"
+      ],
+      "citation_author": [
+        "Zhao, Xinyu",
+        "Wertheimer, Davis",
+        "Sharma, Ashutosh",
+        "Panda, Rameswar",
+        "Liang, Paul Pu"
+      ],
+      "citation_date": [
+        "2026/10/15"
+      ],
+      "citation_online_date": [
+        "2026/10/15"
+      ],
+      "citation_pdf_url": [
+        "https://arxiv.org/pdf/2610.22650"
+      ],
+      "citation_arxiv_id": [
+        "2610.22650"
+      ],
+      "citation_abstract": [
+        "Recent work suggests that switching optimizers between pretraining and subsequent training stages incurs a performance cost, but systematic investigation of this phenomenon is lacking. We study the mismatch between AdamW and Muon optimizers by pretraining 1.2B Llama-3 models from scratch while varying the proportion of updates taken with each optimizer, and similarly interpolating between the two optimizers during continued pretraining and supervised fine-tuning (SFT). Surprisingly, we find little evidence of a meaningful optimizer mismatch penalty: final performance is largely explained by the independent effects of the pretraining and post-training optimizers, with downstream performance generally improving as the proportion of Muon updates during SFT increases. Although matching the pretraining optimizer can reduce forgetting during SFT, this does not translate into improved final benchmark performance. We further evaluate AdamW and Muon for task-general SFT of open-weight models, across the Llama and Qwen families up to 14B parameters, where Muon remains competitive with AdamW, despite these models having been pretrained with AdamW. Together, our results suggest that the choice of optimizer for post-training can be made largely independently of the optimizer used during pretraining."
+      ]
+    },
+    "license_urls": [],
+    "abstract": "Recent work suggests that switching optimizers between pretraining and subsequent training stages incurs a performance cost, but systematic investigation of this phenomenon is lacking. We study the mismatch between AdamW and Muon optimizers by pretraining 1.2B Llama-3 models from scratch while varying the proportion of updates taken with each optimizer, and similarly interpolating between the two optimizers during continued pretraining and supervised fine-tuning (SFT). Surprisingly, we find little evidence of a meaningful optimizer mismatch penalty: final performance is largely explained by the independent effects of the pretraining and post-training optimizers, with downstream performance generally improving as the proportion of Muon updates during SFT increases. Although matching the pretraining optimizer can reduce forgetting during SFT, this does not translate into improved final benchmark performance. We further evaluate AdamW and Muon for task-general SFT of open-weight models, across the Llama and Qwen families up to 14B parameters, where Muon remains competitive with AdamW, despite these models having been pretrained with AdamW. Together, our results suggest that the choice of optimizer for post-training can be made largely independently of the optimizer used during pretraining.",
+    "source_summary": "Recent work suggests that switching optimizers between pretraining and subsequent training stages incurs a performance cost, but systematic investigation of this phenomenon is lacking. We study the mismatch between AdamW and Muon optimizers by pretraining 1.2B Llama-3 models from scratch while varying the proportion of updates taken with each optimizer, and similarly interpolating between the two optimizers during continued pretraining and supervised fine-tuning (SFT). Surprisingly, we find little evidence of a meaningful optimizer mismatch penalty: final performance is largely explained by the independent effects of the pretraining and post-training optimizers, with downstream performance generally improving as the proportion of Muon updates during SFT increases. Although matching the pretraining optimizer can reduce forgetting during SFT, this does not translate into improved final benchmark performance. We further evaluate AdamW and Muon for task-general SFT of open-weight models, across the Llama and Qwen families up to 14B parameters, where Muon remains competitive with AdamW, despite these models having been pretrained with AdamW. Together, our results suggest that the choice of optimizer for post-training can be made largely independently of the optimizer used during pretraining."
+  },
+  {
+    "comments": "",
+    "title": "Randomized Momentum Transport with Cheap Predictors",
+    "url": "https://arxiv.org/abs/2610.13789v1",
+    "status": 200,
+    "metadata": {
+      "citation_title": [
+        "Randomized Momentum Transport with Cheap Predictors"
+      ],
+      "citation_author": [
+        "Chayti, El Mahdi",
+        "Jaggi, Martin"
+      ],
+      "citation_date": [
+        "2026/10/09"
+      ],
+      "citation_online_date": [
+        "2026/10/09"
+      ],
+      "citation_pdf_url": [
+        "https://arxiv.org/pdf/2610.13789"
+      ],
+      "citation_arxiv_id": [
+        "2610.13789"
+      ],
+      "citation_abstract": [
+        "Momentum methods such as STORM and second-order momentum track the gradient by adding a transport correction to momentum, at the cost of an extra oracle call per iteration. We introduce randomized momentum transport, which evaluates the correction with probability $q$ and otherwise uses a cheap prediction, with importance weighting that preserves the conditional mean and adds $(q^{-1}-1)$ times the prediction loss to the variance. Under transport-bias, second-moment, and residual-control assumptions, linear minimization oracle (LMO) updates, including normalized, sign, and exact spectral (Muon) directions, retain an $O(T^{-1/3})$ stationarity bound for each fixed $q>0$ with a single-gradient initialization. For unnormalized STORM, some $q<1$ lowers the leading coefficient of our sufficient gradient budget if and only if the gradient-difference noise modulus exceeds the smoothness constant, by at most about $10\\%$. An online diagonal predictor admits a regret-to-convergence guarantee. At approximately equal oracle cost, querying a quarter of the corrections lowers the final training loss by $18$ to $43\\%$ on MNIST1D and raises the test accuracy of Hessian-vector transport on CIFAR-10 by $1.5$ points."
+      ]
+    },
+    "license_urls": [
+      "http://creativecommons.org/licenses/by/4.0/"
+    ],
+    "abstract": "Momentum methods such as STORM and second-order momentum track the gradient by adding a transport correction to momentum, at the cost of an extra oracle call per iteration. We introduce randomized momentum transport, which evaluates the correction with probability $q$ and otherwise uses a cheap prediction, with importance weighting that preserves the conditional mean and adds $(q^{-1}-1)$ times the prediction loss to the variance. Under transport-bias, second-moment, and residual-control assumptions, linear minimization oracle (LMO) updates, including normalized, sign, and exact spectral (Muon) directions, retain an $O(T^{-1/3})$ stationarity bound for each fixed $q>0$ with a single-gradient initialization. For unnormalized STORM, some $q<1$ lowers the leading coefficient of our sufficient gradient budget if and only if the gradient-difference noise modulus exceeds the smoothness constant, by at most about $10\\%$. An online diagonal predictor admits a regret-to-convergence guarantee. At approximately equal oracle cost, querying a quarter of the corrections lowers the final training loss by $18$ to $43\\%$ on MNIST1D and raises the test accuracy of Hessian-vector transport on CIFAR-10 by $1.5$ points.",
+    "source_summary": "Momentum methods such as STORM and second-order momentum track the gradient by adding a transport correction to momentum, at the cost of an extra oracle call per iteration. We introduce randomized momentum transport, which evaluates the correction with probability $q$ and otherwise uses a cheap prediction, with importance weighting that preserves the conditional mean and adds $(q^{-1}-1)$ times the prediction loss to the variance. Under transport-bias, second-moment, and residual-control assumptions, linear minimization oracle (LMO) updates, including normalized, sign, and exact spectral (Muon) directions, retain an $O(T^{-1/3})$ stationarity bound for each fixed $q>0$ with a single-gradient initialization. For unnormalized STORM, some $q<1$ lowers the leading coefficient of our sufficient gradient budget if and only if the gradient-difference noise modulus exceeds the smoothness constant, by at most about $10\\%$. An online diagonal predictor admits a regret-to-convergence guarantee. At approximately equal oracle cost, querying a quarter of the corrections lowers the final training loss by $18$ to $43\\%$ on MNIST1D and raises the test accuracy of Hessian-vector transport on CIFAR-10 by $1.5$ points."
+  },
+  {
+    "comments": "Accepted at NeurIPS 2026",
+    "title": "Towards Hyperparameter Transfer for Differentially Private Optimization",
+    "url": "https://arxiv.org/abs/2610.22976v1",
+    "status": 200,
+    "metadata": {
+      "citation_title": [
+        "Towards Hyperparameter Transfer for Differentially Private Optimization"
+      ],
+      "citation_author": [
+        "Wang, Tianze",
+        "Bu, Zhiqi",
+        "Zhang, Linjun"
+      ],
+      "citation_date": [
+        "2026/10/16"
+      ],
+      "citation_online_date": [
+        "2026/10/16"
+      ],
+      "citation_pdf_url": [
+        "https://arxiv.org/pdf/2610.22976"
+      ],
+      "citation_arxiv_id": [
+        "2610.22976"
+      ],
+      "citation_abstract": [
+        "Scaling laws and hyperparameter tuning remain central challenges in training large-scale models, particularly under differential privacy (DP), where optimization is further complicated by noise injection and per-sample gradient clipping. While Maximal Update Parametrization ($\\mu$P) allows for zero-shot hyperparameter transfer in standard training, we show that it fails under DP constraints due to the distinct spectral properties of high-dimensional noise versus low-rank gradients. In this work, we introduce DP-$\\mu$P, a theoretically grounded framework that extends $\\mu$P to the privacy-preserving setting. By analyzing the interaction between gradient clipping, noise injection, and feature learning, we derive a Signal-to-Noise Ratio (SNR) condition that governs layer-wise learning rate scaling. Combining this with our proposed spectral scaling formulation, we provide specific scaling rules for DP-SGD, DP-Adam, and DP-Muon optimizers. Empirically, we demonstrate that DP-$\\mu$P enables effective zero-shot transfer of learning rates across model widths on diverse architectures (MLP, ViT, GPT-2), matching or exceeding the performance of individually tuned baselines while significantly reducing computational costs."
+      ]
+    },
+    "license_urls": [
+      "http://creativecommons.org/licenses/by/4.0/"
+    ],
+    "abstract": "Scaling laws and hyperparameter tuning remain central challenges in training large-scale models, particularly under differential privacy (DP), where optimization is further complicated by noise injection and per-sample gradient clipping. While Maximal Update Parametrization ($\\mu$P) allows for zero-shot hyperparameter transfer in standard training, we show that it fails under DP constraints due to the distinct spectral properties of high-dimensional noise versus low-rank gradients. In this work, we introduce DP-$\\mu$P, a theoretically grounded framework that extends $\\mu$P to the privacy-preserving setting. By analyzing the interaction between gradient clipping, noise injection, and feature learning, we derive a Signal-to-Noise Ratio (SNR) condition that governs layer-wise learning rate scaling. Combining this with our proposed spectral scaling formulation, we provide specific scaling rules for DP-SGD, DP-Adam, and DP-Muon optimizers. Empirically, we demonstrate that DP-$\\mu$P enables effective zero-shot transfer of learning rates across model widths on diverse architectures (MLP, ViT, GPT-2), matching or exceeding the performance of individually tuned baselines while significantly reducing computational costs.",
+    "source_summary": "Scaling laws and hyperparameter tuning remain central challenges in training large-scale models, particularly under differential privacy (DP), where optimization is further complicated by noise injection and per-sample gradient clipping. While Maximal Update Parametrization ($μ$P) allows for zero-shot hyperparameter transfer in standard training, we show that it fails under DP constraints due to the distinct spectral properties of high-dimensional noise versus low-rank gradients. In this work, we introduce DP-$μ$P, a theoretically grounded framework that extends $μ$P to the privacy-preserving setting. By analyzing the interaction between gradient clipping, noise injection, and feature learning, we derive a Signal-to-Noise Ratio (SNR) condition that governs layer-wise learning rate scaling. Combining this with our proposed spectral scaling formulation, we provide specific scaling rules for DP-SGD, DP-Adam, and DP-Muon optimizers. Empirically, we demonstrate that DP-$μ$P enables effective zero-shot transfer of learning rates across model widths on diverse architectures (MLP, ViT, GPT-2), matching or exceeding the performance of individually tuned baselines while significantly reducing computational costs."
+  },
+  {
+    "comments": "Under review",
+    "title": "Optimizer Geometry Sets the Pace: Spectral Learning Dynamics in Matrix Factorization",
+    "url": "https://arxiv.org/abs/2610.04249v1",
+    "status": 200,
+    "metadata": {
+      "citation_title": [
+        "Optimizer Geometry Sets the Pace: Spectral Learning Dynamics in Matrix Factorization"
+      ],
+      "citation_author": [
+        "Sabanayagam, Mahalakshmi",
+        "Lucey, Simon"
+      ],
+      "citation_date": [
+        "2026/10/03"
+      ],
+      "citation_online_date": [
+        "2026/10/03"
+      ],
+      "citation_pdf_url": [
+        "https://arxiv.org/pdf/2610.04249"
+      ],
+      "citation_arxiv_id": [
+        "2610.04249"
+      ],
+      "citation_abstract": [
+        "Recent successes of matrix- and curvature-based optimizers have renewed interest in how update geometry shapes learning. These methods normalize or precondition updates, changing how different components progress during training. In deep matrix factorization, the geometry that slows gradient descent (GD) favors low-rank solutions by delaying the emergence of small singular modes. This raises the question of what remains of that spectral bias when normalization or curvature correction weakens or removes the slowdown. We study how optimizer geometry and depth jointly govern this behavior through a common framework for singular mode dynamics. Under explicit balance and alignment assumptions, we derive birth, saturation, and decay laws for Euclidean GD, coordinate-wise updates of SignGD and an instantaneous Adam approximation, spectral updates of Muon and cumulative Shampoo, and a block curvature model of K-FAC. The resulting picture is not a simple ordering from stronger to weaker low-rank bias. To highlight, SignGD and ideal Muon eliminate the divergent birth barrier and drive unsupported modes to zero in finite time. Cumulative Shampoo initially retains GD's depth-dependent barrier, then accumulated gradients produce a catch-up phase while making previously active modes increasingly persistent. Undamped K-FAC cancels the factorization-induced slowdown while preserving the ordering of the target singular values, whereas positive damping introduces a spectral threshold below which the slow GD phase laws reappear. These results give normalization, accumulated state, damping, and depth a direct interpretation as controls determining when modes emerge, persist, and disappear during training."
+      ]
+    },
+    "license_urls": [
+      "http://creativecommons.org/licenses/by/4.0/"
+    ],
+    "abstract": "Recent successes of matrix- and curvature-based optimizers have renewed interest in how update geometry shapes learning. These methods normalize or precondition updates, changing how different components progress during training. In deep matrix factorization, the geometry that slows gradient descent (GD) favors low-rank solutions by delaying the emergence of small singular modes. This raises the question of what remains of that spectral bias when normalization or curvature correction weakens or removes the slowdown. We study how optimizer geometry and depth jointly govern this behavior through a common framework for singular mode dynamics. Under explicit balance and alignment assumptions, we derive birth, saturation, and decay laws for Euclidean GD, coordinate-wise updates of SignGD and an instantaneous Adam approximation, spectral updates of Muon and cumulative Shampoo, and a block curvature model of K-FAC. The resulting picture is not a simple ordering from stronger to weaker low-rank bias. To highlight, SignGD and ideal Muon eliminate the divergent birth barrier and drive unsupported modes to zero in finite time. Cumulative Shampoo initially retains GD's depth-dependent barrier, then accumulated gradients produce a catch-up phase while making previously active modes increasingly persistent. Undamped K-FAC cancels the factorization-induced slowdown while preserving the ordering of the target singular values, whereas positive damping introduces a spectral threshold below which the slow GD phase laws reappear. These results give normalization, accumulated state, damping, and depth a direct interpretation as controls determining when modes emerge, persist, and disappear during training.",
+    "source_summary": "Recent successes of matrix- and curvature-based optimizers have renewed interest in how update geometry shapes learning. These methods normalize or precondition updates, changing how different components progress during training. In deep matrix factorization, the geometry that slows gradient descent (GD) favors low-rank solutions by delaying the emergence of small singular modes. This raises the question of what remains of that spectral bias when normalization or curvature correction weakens or removes the slowdown. We study how optimizer geometry and depth jointly govern this behavior through a common framework for singular mode dynamics. Under explicit balance and alignment assumptions, we derive birth, saturation, and decay laws for Euclidean GD, coordinate-wise updates of SignGD and an instantaneous Adam approximation, spectral updates of Muon and cumulative Shampoo, and a block curvature model of K-FAC. The resulting picture is not a simple ordering from stronger to weaker low-rank bias. To highlight, SignGD and ideal Muon eliminate the divergent birth barrier and drive unsupported modes to zero in finite time. Cumulative Shampoo initially retains GD's depth-dependent barrier, then accumulated gradients produce a catch-up phase while making previously active modes increasingly persistent. Undamped K-FAC cancels the factorization-induced slowdown while preserving the ordering of the target singular values, whereas positive damping introduces a spectral threshold below which the slow GD phase laws reappear. These results give normalization, accumulated state, damping, and depth a direct interpretation as controls determining when modes emerge, persist, and disappear during training."
+  },
+  {
+    "comments": "Accepted at NeurIPS 2026. 42 pages, 14 figures",
+    "title": "Learning Rate Transfer for Hybrid Transformer-SSM Architectures",
+    "url": "https://arxiv.org/abs/2610.01172v1",
+    "status": 200,
+    "metadata": {
+      "citation_title": [
+        "Learning Rate Transfer for Hybrid Transformer-SSM Architectures"
+      ],
+      "citation_author": [
+        "Seo, Jimin",
+        "Lee, Gyubok",
+        "Jo, Yeonsik",
+        "Yoo, Kiwoong",
+        "Kim, Yeongoon",
+        "Oh, Minhae",
+        "Koo, Jin Woo",
+        "Kim, Suhwan",
+        "Lee, Nakyung",
+        "Seol, Minsik",
+        "Nechnech, Idris",
+        "Kim, Jaehyeon",
+        "Lee, Giho",
+        "Lee, Jungwoo"
+      ],
+      "citation_date": [
+        "2026/10/01"
+      ],
+      "citation_online_date": [
+        "2026/10/01"
+      ],
+      "citation_pdf_url": [
+        "https://arxiv.org/pdf/2610.01172"
+      ],
+      "citation_arxiv_id": [
+        "2610.01172"
+      ],
+      "citation_abstract": [
+        "We study learning rate (LR) scaling for hybrid architectures combining Transformer and State-Space Model (SSM) blocks, a class adopted by several recent production language models. In particular, we focus on the gap between the theoretical scaling rules derived for SSMs under zero-order-hold (ZOH) discretization at infinite width with growing state size, and the field-standard practical implementations using simplified-ZOH Mamba at fixed state size. Surprisingly, in this practical regime hybrid architectures achieve a near-zero LR transfer gap across widths 256-2048 and depths 4-32 up to billion-parameter scale using only the original $\\mu$P prescription, even though SSM operations fall outside its Tensor Programs representability conditions and every parameterization we test fails the standard coordinate-check diagnostic of $\\mu$P correctness. We attribute this to a two-condition decomposition of LR transfer in hybrid architectures: a global update-to-weight invariance, enforced by $\\mu$P's initialization and LR scaling; and a local per-component balance, provided by AdamW's per-parameter normalization. Our observations show that the optimal LR is invariant to width up to 8$\\times$, that this width invariance holds across depth, sequence length, batch size, and Transformer-to-SSM ratio, and that it transfers to Nemotron-H, a production hybrid outside our custom architecture set. We hope these findings fill the gap between theoretical scaling rules and practical hybrid implementations, and stimulate further research toward bridging it."
+      ]
+    },
+    "license_urls": [],
+    "abstract": "We study learning rate (LR) scaling for hybrid architectures combining Transformer and State-Space Model (SSM) blocks, a class adopted by several recent production language models. In particular, we focus on the gap between the theoretical scaling rules derived for SSMs under zero-order-hold (ZOH) discretization at infinite width with growing state size, and the field-standard practical implementations using simplified-ZOH Mamba at fixed state size. Surprisingly, in this practical regime hybrid architectures achieve a near-zero LR transfer gap across widths 256-2048 and depths 4-32 up to billion-parameter scale using only the original $\\mu$P prescription, even though SSM operations fall outside its Tensor Programs representability conditions and every parameterization we test fails the standard coordinate-check diagnostic of $\\mu$P correctness. We attribute this to a two-condition decomposition of LR transfer in hybrid architectures: a global update-to-weight invariance, enforced by $\\mu$P's initialization and LR scaling; and a local per-component balance, provided by AdamW's per-parameter normalization. Our observations show that the optimal LR is invariant to width up to 8$\\times$, that this width invariance holds across depth, sequence length, batch size, and Transformer-to-SSM ratio, and that it transfers to Nemotron-H, a production hybrid outside our custom architecture set. We hope these findings fill the gap between theoretical scaling rules and practical hybrid implementations, and stimulate further research toward bridging it.",
+    "source_summary": "We study learning rate (LR) scaling for hybrid architectures combining Transformer and State-Space Model (SSM) blocks, a class adopted by several recent production language models. In particular, we focus on the gap between the theoretical scaling rules derived for SSMs under zero-order-hold (ZOH) discretization at infinite width with growing state size, and the field-standard practical implementations using simplified-ZOH Mamba at fixed state size. Surprisingly, in this practical regime hybrid architectures achieve a near-zero LR transfer gap across widths 256-2048 and depths 4-32 up to billion-parameter scale using only the original $μ$P prescription, even though SSM operations fall outside its Tensor Programs representability conditions and every parameterization we test fails the standard coordinate-check diagnostic of $μ$P correctness. We attribute this to a two-condition decomposition of LR transfer in hybrid architectures: a global update-to-weight invariance, enforced by $μ$P's initialization and LR scaling; and a local per-component balance, provided by AdamW's per-parameter normalization. Our observations show that the optimal LR is invariant to width up to 8$\\times$, that this width invariance holds across depth, sequence length, batch size, and Transformer-to-SSM ratio, and that it transfers to Nemotron-H, a production hybrid outside our custom architecture set. We hope these findings fill the gap between theoretical scaling rules and practical hybrid implementations, and stimulate further research toward bridging it."
+  },
+  {
+    "comments": "",
+    "title": "FedMIX-P: Mixing Local and Global Preconditioners for Federated Vision and Language Model Training",
+    "url": "https://arxiv.org/abs/2610.01515v1",
+    "status": 200,
+    "metadata": {
+      "citation_title": [
+        "FedMIX-P: Mixing Local and Global Preconditioners for Federated Vision and Language Model Training"
+      ],
+      "citation_author": [
+        "Liu, Junkang"
+      ],
+      "citation_date": [
+        "2026/10/01"
+      ],
+      "citation_online_date": [
+        "2026/10/01"
+      ],
+      "citation_pdf_url": [
+        "https://arxiv.org/pdf/2610.01515"
+      ],
+      "citation_arxiv_id": [
+        "2610.01515"
+      ],
+      "citation_abstract": [
+        "Adaptive preconditioners accelerate model training, but heterogeneous client geometries can bias federated updates even when gradients are evaluated at the same model. Round-start synchronization alone cannot prevent this mismatch from reappearing during local training. We propose \\texttt{FedMIX-P}, which mixes shared and local preconditioners at every local step, retaining local adaptation while reducing mean-squared operator mismatch by a factor of $\\lambda^2$. For smooth nonconvex objectives with stochastic gradients and partial participation, we establish an $O(R^{-1/2})$ stationarity bound using suitable stepsizes and a horizon-dependent mixing weight, without requiring local preconditioners to converge to one another. A two-client counterexample shows that fixed positive mixing can preserve a nonstationary fixed point. The theory covers bounded linear symmetric positive-definite preconditioners. Experiments with SOAP, Sophia, and Muon variants across vision and language tasks show improvements over corresponding local optimizers, including accuracy gains of up to $19.47$ percentage points and lower validation loss for 60M--350M language models. Full nonlinear and momentum-based updates require separate analysis."
+      ]
+    },
+    "license_urls": [
+      "http://creativecommons.org/licenses/by/4.0/"
+    ],
+    "abstract": "Adaptive preconditioners accelerate model training, but heterogeneous client geometries can bias federated updates even when gradients are evaluated at the same model. Round-start synchronization alone cannot prevent this mismatch from reappearing during local training. We propose \\texttt{FedMIX-P}, which mixes shared and local preconditioners at every local step, retaining local adaptation while reducing mean-squared operator mismatch by a factor of $\\lambda^2$. For smooth nonconvex objectives with stochastic gradients and partial participation, we establish an $O(R^{-1/2})$ stationarity bound using suitable stepsizes and a horizon-dependent mixing weight, without requiring local preconditioners to converge to one another. A two-client counterexample shows that fixed positive mixing can preserve a nonstationary fixed point. The theory covers bounded linear symmetric positive-definite preconditioners. Experiments with SOAP, Sophia, and Muon variants across vision and language tasks show improvements over corresponding local optimizers, including accuracy gains of up to $19.47$ percentage points and lower validation loss for 60M--350M language models. Full nonlinear and momentum-based updates require separate analysis.",
+    "source_summary": "Adaptive preconditioners accelerate model training, but heterogeneous client geometries can bias federated updates even when gradients are evaluated at the same model. Round-start synchronization alone cannot prevent this mismatch from reappearing during local training. We propose \\texttt{FedMIX-P}, which mixes shared and local preconditioners at every local step, retaining local adaptation while reducing mean-squared operator mismatch by a factor of $λ^2$. For smooth nonconvex objectives with stochastic gradients and partial participation, we establish an $O(R^{-1/2})$ stationarity bound using suitable stepsizes and a horizon-dependent mixing weight, without requiring local preconditioners to converge to one another. A two-client counterexample shows that fixed positive mixing can preserve a nonstationary fixed point. The theory covers bounded linear symmetric positive-definite preconditioners. Experiments with SOAP, Sophia, and Muon variants across vision and language tasks show improvements over corresponding local optimizers, including accuracy gains of up to $19.47$ percentage points and lower validation loss for 60M--350M language models. Full nonlinear and momentum-based updates require separate analysis."
+  },
+  {
+    "comments": "",
+    "title": "Bridging Compressed Communication and Local Steps via Spectral Method in Federated Learning",
+    "url": "https://arxiv.org/abs/2610.23434v1",
+    "status": 200,
+    "metadata": {
+      "citation_title": [
+        "Bridging Compressed Communication and Local Steps via Spectral Method in Federated Learning"
+      ],
+      "citation_author": [
+        "Bystrov, Dmitriy",
+        "Chirkov, George",
+        "Medyakov, Daniil",
+        "Bylinkin, Dmitry",
+        "Beznosikov, Aleksandr"
+      ],
+      "citation_date": [
+        "2026/10/16"
+      ],
+      "citation_online_date": [
+        "2026/10/16"
+      ],
+      "citation_pdf_url": [
+        "https://arxiv.org/pdf/2610.23434"
+      ],
+      "citation_arxiv_id": [
+        "2610.23434"
+      ],
+      "citation_abstract": [
+        "Federated Learning (FL) enables collaborative training of complex models across large-scale networks of edge devices while keeping data localized. However, data heterogeneity and high communication overhead remain fundamental bottlenecks. Recently, the spectral optimizer Muon has demonstrated remarkable advantages over Adam-like methods in centralized training. While recent efforts have attempted to transition Muon to FL, naive integrations into traditional architectures fail short. Crucially, existing approaches do not support the the communication compression and local steps --- the two foundational techniques of efficient FL. To address this limitation, we introduce a novel spectral FL method that utilizes both local updates and compression. We establish rigorous convergence guarantees under mild assumptions, notably eliminating the restrictive bounded heterogeneity condition. Empirical evaluation on standard image classification benchmarks validates the efficiency and robustness of our approach."
+      ]
+    },
+    "license_urls": [
+      "http://creativecommons.org/licenses/by/4.0/"
+    ],
+    "abstract": "Federated Learning (FL) enables collaborative training of complex models across large-scale networks of edge devices while keeping data localized. However, data heterogeneity and high communication overhead remain fundamental bottlenecks. Recently, the spectral optimizer Muon has demonstrated remarkable advantages over Adam-like methods in centralized training. While recent efforts have attempted to transition Muon to FL, naive integrations into traditional architectures fail short. Crucially, existing approaches do not support the the communication compression and local steps --- the two foundational techniques of efficient FL. To address this limitation, we introduce a novel spectral FL method that utilizes both local updates and compression. We establish rigorous convergence guarantees under mild assumptions, notably eliminating the restrictive bounded heterogeneity condition. Empirical evaluation on standard image classification benchmarks validates the efficiency and robustness of our approach.",
+    "source_summary": "Federated Learning (FL) enables collaborative training of complex models across large-scale networks of edge devices while keeping data localized. However, data heterogeneity and high communication overhead remain fundamental bottlenecks. Recently, the spectral optimizer Muon has demonstrated remarkable advantages over Adam-like methods in centralized training. While recent efforts have attempted to transition Muon to FL, naive integrations into traditional architectures fail short. Crucially, existing approaches do not support the the communication compression and local steps --- the two foundational techniques of efficient FL. To address this limitation, we introduce a novel spectral FL method that utilizes both local updates and compression. We establish rigorous convergence guarantees under mild assumptions, notably eliminating the restrictive bounded heterogeneity condition. Empirical evaluation on standard image classification benchmarks validates the efficiency and robustness of our approach."
+  },
+  {
+    "comments": "Submitted",
+    "title": "Adaptive Forgetting for Nonstationary Optimization: Towards Robust EEG Decoding",
+    "url": "https://arxiv.org/abs/2609.24233v1",
+    "status": 200,
+    "metadata": {
+      "citation_title": [
+        "Adaptive Forgetting for Nonstationary Optimization: Towards Robust EEG Decoding"
+      ],
+      "citation_author": [
+        "Zhu, Hongyu",
+        "Chen, Lin",
+        "Chen, Jing",
+        "Zhou, Yuting",
+        "Shang, Mingsheng"
+      ],
+      "citation_date": [
+        "2026/09/21"
+      ],
+      "citation_online_date": [
+        "2026/09/21"
+      ],
+      "citation_pdf_url": [
+        "https://arxiv.org/pdf/2609.24233"
+      ],
+      "citation_arxiv_id": [
+        "2609.24233"
+      ],
+      "citation_abstract": [
+        "Electroencephalography (EEG) provides non-invasive monitoring of brain activity and is widely used in emotion recognition, motor imagery and sleep staging. Although within-subject decoding has achieved considerable progress, cross-subject generalization remains a central challenge in practical applications. EEG decoders are typically trained with Adam/AdamW under a fixed second-moment decay coefficient, even though cross-subject learning involves low signal-to-noise ratios, subject variability, and gradient nonstationarity. A fixed coefficient implicitly assumes that gradient statistics are homogeneous across layers and time, which can limit model's adaptability to cross-subject EEG signals and degrade generalization. To address these issues, we propose AFOR, a tensor-wise adaptive optimizer that converts the fixed second-moment decay coefficient into a dynamic coefficient estimated online from local gradient state. AFOR combines a Residual-Alignment Signal Scorer (RASS) and an Adaptive Forgetting Controller (AFC). RASS summarizes local gradient residuals and directional agreement into a signal-quality score, and AFC maps this score through self-referential normalization to a bounded per-step decay coefficient, with cumulative-product initialization correction maintaining consistency under time-varying decay. Under a strict cross-subject protocol on three EEG benchmarks that cover three representative fields, AFOR achieves the best average performance among the compared optimizers, improving the mean test accuracy over Adam by 3.00%, 2.07%, and 4.38%, respectively."
+      ]
+    },
+    "license_urls": [],
+    "abstract": "Electroencephalography (EEG) provides non-invasive monitoring of brain activity and is widely used in emotion recognition, motor imagery and sleep staging. Although within-subject decoding has achieved considerable progress, cross-subject generalization remains a central challenge in practical applications. EEG decoders are typically trained with Adam/AdamW under a fixed second-moment decay coefficient, even though cross-subject learning involves low signal-to-noise ratios, subject variability, and gradient nonstationarity. A fixed coefficient implicitly assumes that gradient statistics are homogeneous across layers and time, which can limit model's adaptability to cross-subject EEG signals and degrade generalization. To address these issues, we propose AFOR, a tensor-wise adaptive optimizer that converts the fixed second-moment decay coefficient into a dynamic coefficient estimated online from local gradient state. AFOR combines a Residual-Alignment Signal Scorer (RASS) and an Adaptive Forgetting Controller (AFC). RASS summarizes local gradient residuals and directional agreement into a signal-quality score, and AFC maps this score through self-referential normalization to a bounded per-step decay coefficient, with cumulative-product initialization correction maintaining consistency under time-varying decay.\nUnder a strict cross-subject protocol on three EEG benchmarks that cover three representative fields, AFOR achieves the best average performance among the compared optimizers, improving the mean test accuracy over Adam by 3.00%, 2.07%, and 4.38%, respectively.",
+    "source_summary": "Electroencephalography (EEG) provides non-invasive monitoring of brain activity and is widely used in emotion recognition, motor imagery and sleep staging. Although within-subject decoding has achieved considerable progress, cross-subject generalization remains a central challenge in practical applications. EEG decoders are typically trained with Adam/AdamW under a fixed second-moment decay coefficient, even though cross-subject learning involves low signal-to-noise ratios, subject variability, and gradient nonstationarity. A fixed coefficient implicitly assumes that gradient statistics are homogeneous across layers and time, which can limit model's adaptability to cross-subject EEG signals and degrade generalization. To address these issues, we propose AFOR, a tensor-wise adaptive optimizer that converts the fixed second-moment decay coefficient into a dynamic coefficient estimated online from local gradient state. AFOR combines a Residual-Alignment Signal Scorer (RASS) and an Adaptive Forgetting Controller (AFC). RASS summarizes local gradient residuals and directional agreement into a signal-quality score, and AFC maps this score through self-referential normalization to a bounded per-step decay coefficient, with cumulative-product initialization correction maintaining consistency under time-varying decay.\n  Under a strict cross-subject protocol on three EEG benchmarks that cover three representative fields, AFOR achieves the best average performance among the compared optimizers, improving the mean test accuracy over Adam by 3.00%, 2.07%, and 4.38%, respectively."
+  },
+  {
+    "comments": "Accepted at the GlobalSouthAI Workshop, NeurIPS 2026",
+    "title": "In-Place Indic Tokenizer Expansion and Continual Pretraining of Nemotron-3-Nano-30B-A3B",
+    "url": "https://arxiv.org/abs/2610.15373v1",
+    "status": 200,
+    "metadata": {
+      "citation_title": [
+        "In-Place Indic Tokenizer Expansion and Continual Pretraining of Nemotron-3-Nano-30B-A3B"
+      ],
+      "citation_author": [
+        "Benki, Avinash",
+        "Pasunuti, Prasanjith",
+        "Raj, Sutanshu Saksena",
+        "Chatterjee, Parijat",
+        "Sarkar, Nayanjit",
+        "Maan, Daksh"
+      ],
+      "citation_date": [
+        "2026/10/11"
+      ],
+      "citation_online_date": [
+        "2026/10/11"
+      ],
+      "citation_pdf_url": [
+        "https://arxiv.org/pdf/2610.15373"
+      ],
+      "citation_arxiv_id": [
+        "2610.15373"
+      ],
+      "citation_abstract": [
+        "We adapted Nemotron-3-Nano-30B-A3B for eight Indian languages without changing its backbone architecture. We expanded the vocabulary in place from 131,072 to 163,072 entries using continued byte-pair encoding and AdaptMix rebalancing, reducing tokens per word by 38.6%. We initialized new input and output rows by averaging their original constituent rows, then trained them on 90% Indic and 10% English text before updating the backbone. Continual pretraining then progressed through broad training, high-quality annealing, and long-context training over approximately 1.27 trillion tokens. The annealed checkpoint gained 12.9 points on the Indic MILU benchmark but lost 3.4 on English MMLU. We also report practical negative results. Direct token addition underperformed continued byte-pair encoding. AdamW weight decay changed rows intended to stay fixed. Perplexity on an Indic-heavy holdout did not select the learning rate that best preserved English performance."
+      ]
+    },
+    "license_urls": [
+      "http://creativecommons.org/licenses/by/4.0/"
+    ],
+    "abstract": "We adapted Nemotron-3-Nano-30B-A3B for eight Indian languages without changing its backbone architecture. We expanded the vocabulary in place from 131,072 to 163,072 entries using continued byte-pair encoding and AdaptMix rebalancing, reducing tokens per word by 38.6%. We initialized new input and output rows by averaging their original constituent rows, then trained them on 90% Indic and 10% English text before updating the backbone. Continual pretraining then progressed through broad training, high-quality annealing, and long-context training over approximately 1.27 trillion tokens. The annealed checkpoint gained 12.9 points on the Indic MILU benchmark but lost 3.4 on English MMLU. We also report practical negative results. Direct token addition underperformed continued byte-pair encoding. AdamW weight decay changed rows intended to stay fixed. Perplexity on an Indic-heavy holdout did not select the learning rate that best preserved English performance.",
+    "source_summary": "We adapted Nemotron-3-Nano-30B-A3B for eight Indian languages without changing its backbone architecture. We expanded the vocabulary in place from 131,072 to 163,072 entries using continued byte-pair encoding and AdaptMix rebalancing, reducing tokens per word by 38.6%. We initialized new input and output rows by averaging their original constituent rows, then trained them on 90% Indic and 10% English text before updating the backbone. Continual pretraining then progressed through broad training, high-quality annealing, and long-context training over approximately 1.27 trillion tokens. The annealed checkpoint gained 12.9 points on the Indic MILU benchmark but lost 3.4 on English MMLU. We also report practical negative results. Direct token addition underperformed continued byte-pair encoding. AdamW weight decay changed rows intended to stay fixed. Perplexity on an Indic-heavy holdout did not select the learning rate that best preserved English performance."
+  }
+]

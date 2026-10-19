@@ -1,0 +1,55 @@
+11:55:52 [INFO] Loading config from: /Users/myl/Documents/paper/.claude/skills/config.yaml
+11:55:52 [INFO] max-results=200 top-n=10 days=30
+11:55:52 [INFO] Data sources: ['arxiv', 'openreview']
+11:55:52 [INFO] Configured keywords: 15
+11:55:52 [INFO] Target date: 2026-10-19
+11:55:52 [INFO] Date windows:
+11:55:52 [INFO]   Recent 30 days: 2026-09-19 to 2026-10-19
+11:55:52 [INFO]   Past year (31-365 days): 2025-10-19 to 2026-09-18
+11:55:52 [INFO] ======================================================================
+11:55:52 [INFO] Step 1: Multi-source search (last 30 days) for configured interests
+11:55:52 [INFO] ======================================================================
+11:55:52 [INFO] [arXiv] Keyword search batch 1/1 (15 keywords)
+11:55:52 [INFO] [arXiv] Keyword search: ['large language model optimizer', 'LLM optimizer', 'optimizer design', 'memory-efficient optimizer', 'optimizer state memory', 'adaptive optimization', 'sign-based optimization', 'SignSGD', 'Muon', 'PowerStep', 'gradient clipping', 'parameter-free optimization', 'Polyak stepsize', 'lp-norm steepest descent', 'AdamW']
+11:55:56 [INFO] [arXiv] Keyword search found 200 papers
+11:55:56 [INFO] [arXiv] Keyword search found 200 papers across all batches
+OpenReview coverage: {"term": "large language model optimizer", "page_limit": 1, "page_size": 100, "retrieved": 100, "in_window": 5, "truncated": true, "status": "ok"}
+OpenReview coverage: {"term": "LLM optimizer", "page_limit": 1, "page_size": 100, "retrieved": 100, "in_window": 1, "truncated": true, "status": "ok"}
+OpenReview coverage: {"term": "optimizer design", "page_limit": 1, "page_size": 100, "retrieved": 100, "in_window": 6, "truncated": true, "status": "ok"}
+OpenReview coverage: {"term": "memory-efficient optimizer", "page_limit": 1, "page_size": 100, "retrieved": 100, "in_window": 6, "truncated": true, "status": "ok"}
+OpenReview coverage: {"term": "optimizer state memory", "page_limit": 1, "page_size": 100, "retrieved": 100, "in_window": 11, "truncated": true, "status": "ok"}
+OpenReview coverage: {"term": "adaptive optimization", "page_limit": 1, "page_size": 100, "retrieved": 100, "in_window": 4, "truncated": true, "status": "ok"}
+OpenReview coverage: {"term": "sign-based optimization", "page_limit": 1, "page_size": 100, "retrieved": 100, "in_window": 2, "truncated": true, "status": "ok"}
+OpenReview coverage: {"term": "SignSGD", "page_limit": 1, "page_size": 100, "retrieved": 93, "in_window": 7, "truncated": false, "status": "ok"}
+OpenReview coverage: {"term": "Muon", "page_limit": 1, "page_size": 100, "retrieved": 100, "in_window": 17, "truncated": true, "status": "ok"}
+OpenReview coverage: {"term": "PowerStep", "page_limit": 1, "page_size": 100, "retrieved": 3, "in_window": 0, "truncated": false, "status": "ok"}
+OpenReview coverage: {"term": "gradient clipping", "page_limit": 1, "page_size": 100, "retrieved": 100, "in_window": 6, "truncated": true, "status": "ok"}
+OpenReview coverage: {"term": "parameter-free optimization", "page_limit": 1, "page_size": 100, "retrieved": 100, "in_window": 2, "truncated": true, "status": "ok"}
+OpenReview coverage: {"term": "Polyak stepsize", "page_limit": 1, "page_size": 100, "retrieved": 100, "in_window": 4, "truncated": true, "status": "ok"}
+OpenReview coverage: {"term": "lp-norm steepest descent", "page_limit": 1, "page_size": 100, "retrieved": 100, "in_window": 5, "truncated": true, "status": "ok"}
+OpenReview coverage: {"term": "AdamW", "page_limit": 1, "page_size": 100, "retrieved": 100, "in_window": 20, "truncated": true, "status": "ok"}
+11:56:10 [INFO] [Sources] Fetched {'arxiv': 200, 'openreview': 68}
+11:56:10 [INFO] Scored 225 recent papers
+11:56:10 [INFO] ======================================================================
+11:56:10 [INFO] Step 2: Searching hot papers (past year) from Semantic Scholar
+11:56:10 [INFO] ======================================================================
+11:56:10 [INFO] [S2] Searching hot papers from 2025-10-19 to 2026-09-18
+11:56:10 [INFO] [S2] Query: 'large language model optimizer LLM optimizer optimizer design'
+11:56:12 [WARNING] [S2] Error (attempt 1/2): 429 Client Error:  for url: https://api.semanticscholar.org/graph/v1/paper/search?query=large+language+model+optimizer+LLM+optimizer+optimizer+design&publicationDateOrYear=2025-10-19%3A2026-09-18&limit=100&fields=title%2Cabstract%2CpublicationDate%2CcitationCount%2CinfluentialCitationCount%2Curl%2Cauthors%2Cauthors.affiliations%2CexternalIds
+11:56:12 [WARNING] [S2] Rate limit hit. Waiting 10 seconds...
+11:56:25 [WARNING] [S2] Error (attempt 2/2): 429 Client Error:  for url: https://api.semanticscholar.org/graph/v1/paper/search?query=large+language+model+optimizer+LLM+optimizer+optimizer+design&publicationDateOrYear=2025-10-19%3A2026-09-18&limit=100&fields=title%2Cabstract%2CpublicationDate%2CcitationCount%2CinfluentialCitationCount%2Curl%2Cauthors%2Cauthors.affiliations%2CexternalIds
+11:56:25 [ERROR] [S2] Failed after 2 attempts
+11:56:28 [WARNING] No hot papers found from Semantic Scholar
+11:56:28 [INFO] ======================================================================
+11:56:28 [INFO] Step 3: Merging and ranking results
+11:56:28 [INFO] ======================================================================
+11:56:28 [INFO] Total unique papers after deduplication: 213
+11:56:29 [INFO] daily history: 362 previously recommended papers
+11:56:29 [WARNING] 扫描已存在论文失败，本次不去重：name 'aliasearch' is not defined
+Traceback (most recent call last):
+  File "/Users/myl/Documents/paper/.planning/daily-2026-10-19/search_bounded.py", line 92, in <module>
+    status = search.main()
+  File "/Users/myl/Documents/paper/.claude/skills/paper-daily/scripts/search_arxiv.py", line 1710, in main
+    related = find_related_papers(paper, known.get('reference') or {}, limit=3)
+                                         ^^^^^
+UnboundLocalError: cannot access local variable 'known' where it is not associated with a value

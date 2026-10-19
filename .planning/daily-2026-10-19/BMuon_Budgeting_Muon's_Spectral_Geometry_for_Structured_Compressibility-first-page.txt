@@ -1,0 +1,55 @@
+BMuon: Budgeting Muon’s Spectral Geometry for
+Structured Compressibility
+Rida Assalouh
+
+rida.assalouh@polytechnique.edu
+Inria, Paris, France
+École polytechnique, Institut Polytechnique de Paris, Palaiseau, France
+
+Tom Jacobs
+
+tom.jacobs@cispa.de
+
+arXiv:2610.23571v1 [cs.LG] 16 Oct 2026
+
+CISPA Helmholtz Center for Information Security, Saarbrücken, Germany
+
+Rebekka Burkholz
+
+burkholz@cispa.de
+
+CISPA Helmholtz Center for Information Security, Saarbrücken, Germany
+
+Yani Ioannou
+
+yani.ioannou@ucalgary.ca
+Schulich School of Engineering, University of Calgary, Calgary, Alberta, Canada
+Hotchkiss Brain Institute, University of Calgary, Calgary, Alberta, Canada
+
+Umut Şimşekli
+
+umut.simsekli@inria.fr
+Inria – Département d’Informatique de l’École Normale Supérieure, PSL Research University –
+CNRS, Paris, France
+
+Abstract
+Muon has emerged as a strong optimizer for neural network training and admits an interpretation as steepest descent under a spectral-norm geometry. Yet we find that Muon-trained
+Transformers can degrade sharply when their MLP hidden channels are pruned after training. To reconcile Muon’s optimization performance with structured compressibility, we
+introduce Budget Muon (BMuon), which modifies Muon’s spectral geometry so that hidden channels across blocks compete for a shared allocation budget. The resulting oracle
+is exactly normalized steepest descent under a family of norms that interpolate between
+Muon’s geometry and structured sparse geometries. Our principal sparsity control is an
+interpretable global channel-allocation budget, rather than a setting-dependent sparsitypenalty coefficient. For linear factorization models, we show that Muon admits minimumcost exact representations with redundant hidden width, whereas under the BMuon oracle
+geometry and a sufficiently scarce budget, every minimum-cost representation is widthminimal. For practical training, we derive a minorization-maximization surrogate for the
+exact allocation problem. On ImageNet-1K with ViT-S/16, BMuon improves over Muon
+under gradual structured MLP pruning, and its learned allocations provide a more effective
+pruning criterion than weight magnitude. On a 1B-parameter LLaMA-style model trained
+on FineWeb, BMuon improves over Muon under post-training MLP channel pruning.
+Code: https://github.com/RidaAssalouh/BMuon
+Keywords: Muon, steepest descent, spectral norm, structured pruning, structured sparsity, optimization geometry, Transformers
+
+1 Introduction
+Modern Transformer models incur substantial memory and computational costs at inference
+time, motivating compression for more efficient deployment (Kwon et al., 2022). Pruning
+is a natural approach to this problem, but practical gains depend on the sparsity structure:
+
+

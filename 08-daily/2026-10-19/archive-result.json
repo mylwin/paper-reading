@@ -1,0 +1,59 @@
+{
+  "papers_dir": "/Users/myl/Documents/paper/01-raw",
+  "month_dir": "/Users/myl/Documents/paper/01-raw/2026-10",
+  "month": "2026-10",
+  "date": "2026-10-19",
+  "requested": 3,
+  "downloaded": 3,
+  "skipped_existing": 0,
+  "failed": 0,
+  "index_updated": [
+    "/Users/myl/Documents/paper/01-raw/index.md",
+    "/Users/myl/Documents/paper/01-raw/2026-10/README.md",
+    "/Users/myl/Documents/paper/02-markdown/index.md",
+    "/Users/myl/Documents/paper/02-markdown/2026-10/README.md",
+    "/Users/myl/Documents/paper/03-notes/index.md",
+    "/Users/myl/Documents/paper/03-notes/2026-10/README.md",
+    "/Users/myl/Documents/paper/06-translation/index.md",
+    "/Users/myl/Documents/paper/06-translation/2026-10/README.md"
+  ],
+  "archived": [
+    {
+      "title": "BMuon: Budgeting Muon's Spectral Geometry for Structured Compressibility",
+      "paper_stem": "BMuon_Budgeting_Muon's_Spectral_Geometry_for_Structured_Compressibility",
+      "month": "2026-10",
+      "source": "arxiv",
+      "pdf_url": "https://arxiv.org/pdf/2610.23571v1",
+      "path": "/Users/myl/Documents/paper/01-raw/2026-10/BMuon_Budgeting_Muon's_Spectral_Geometry_for_Structured_Compressibility.pdf",
+      "status": "downloaded",
+      "detail": "645.4 KB"
+    },
+    {
+      "title": "Randomized Momentum Transport with Cheap Predictors",
+      "paper_stem": "Randomized_Momentum_Transport_with_Cheap_Predictors",
+      "month": "2026-10",
+      "source": "arxiv",
+      "pdf_url": "https://arxiv.org/pdf/2610.13789v1",
+      "path": "/Users/myl/Documents/paper/01-raw/2026-10/Randomized_Momentum_Transport_with_Cheap_Predictors.pdf",
+      "status": "downloaded",
+      "detail": "639.7 KB"
+    },
+    {
+      "title": "Towards Hyperparameter Transfer for Differentially Private Optimization",
+      "paper_stem": "Towards_Hyperparameter_Transfer_for_Differentially_Private_Optimization",
+      "month": "2026-10",
+      "source": "arxiv",
+      "pdf_url": "https://arxiv.org/pdf/2610.22976v1",
+      "path": "/Users/myl/Documents/paper/01-raw/2026-10/Towards_Hyperparameter_Transfer_for_Differentially_Private_Optimization.pdf",
+      "status": "downloaded",
+      "detail": "1110.8 KB"
+    }
+  ],
+  "note": "合并本次归档各轮结果；两篇先前下载在第二轮按已存在规则跳过，Workshop临时下载已移出工作区且不入库。",
+  "excluded_during_verification": [
+    {
+      "title": "The Ephemeral Cost of Switching Optimizers Across LLM Training Stages",
+      "reason": "配置排除workshop；已移出工作区，未入库"
+    }
+  ]
+}

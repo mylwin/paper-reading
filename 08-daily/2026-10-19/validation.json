@@ -1,0 +1,71 @@
+{
+  "date": "2026-10-19",
+  "status": "passed",
+  "unique_papers": 213,
+  "known": 90,
+  "screening_candidates": 123,
+  "screening_top_n": 10,
+  "recommendations": 8,
+  "excluded_workshop": 2,
+  "physics_false_positives_marked": 31,
+  "pdf_downloaded": 3,
+  "pdf_failed": 0,
+  "daily_local_links_checked": 45,
+  "new_link_errors": 0,
+  "publication_link_errors": 0,
+  "pdf_checks": [
+    {
+      "title": "BMuon: Budgeting Muon's Spectral Geometry for Structured Compressibility",
+      "pages": 54,
+      "bytes": 660931,
+      "sha256": "bfc1360fac8af6f2b93a713f0efc84376df937f18e35b11a472f15f95225ed46",
+      "first_page_identity_checked": true,
+      "parser_warnings": "",
+      "first_page_text_checked": true
+    },
+    {
+      "title": "Randomized Momentum Transport with Cheap Predictors",
+      "pages": 28,
+      "bytes": 655058,
+      "sha256": "9fe6d1e99ac71450fc475b009237c652346e9883170394a75268c522b4704682",
+      "first_page_identity_checked": true,
+      "parser_warnings": "",
+      "first_page_text_checked": true
+    },
+    {
+      "title": "Towards Hyperparameter Transfer for Differentially Private Optimization",
+      "pages": 31,
+      "bytes": 1137433,
+      "sha256": "2608a1a55e4bb5199f9ac8c5db810249b1191a1e07114c64431d9e1ef734421e",
+      "first_page_identity_checked": true,
+      "parser_warnings": "",
+      "first_page_text_checked": true
+    }
+  ],
+  "checks": [
+    "保留脚本预筛分数与screening_rank，仅复排前十并补充候选名次及语义名次",
+    "前三摘要与arXiv原页面匹配；DP摘要仅μ与LaTeX记法不同；完整译文逐句核对数字、条件与方法",
+    "213条附录各出现一次且连续编号，31条粒子物理误命中和2条Workshop排除项已标明",
+    "所有本地访问与相关论文链接为真实文件，且为已跟踪或本次新增资料",
+    "三份PDF魔数、页数、首页身份核验；pdfinfo无解析警告；Workshop临时文件已移出入库目录",
+    "四阶段索引登记正确状态；仅本次三篇增量进入提交快照",
+    "无关已有改动逐文件SHA256保持不变"
+  ],
+  "workspace_check": {
+    "preexisting_link_errors": 9,
+    "new_link_errors": 0,
+    "missing_readme": 0,
+    "month_consistency_errors": 0,
+    "detail": "9处既有问题位于10月8日/10月10日研究文档，指向工作区外graduate-thesis-code资料"
+  },
+  "source_limitations": [
+    "arXiv相关性前200条，非窗口内全部论文。",
+    "OpenReview按15配置关键词分别取首页100条，多数存在截断，覆盖详见openreview-coverage.json。",
+    "Semantic Scholar过去一年补充两次429，未取得高影响力与引用数据，不代表无相关论文。",
+    "按现有真实PowerStep PDF核验过的LaTeX ell_p标题别名去重；当天输出不作为历史。原始HTTP记录离线重放，未修改技能评分。",
+    "screening_rank保留脚本全量预筛名次；candidate_screening_rank为历史去重后的原前十名次；semantic_rank为人工阅读次序。",
+    "Muon粒子物理误命中保留全量记录但标记不推荐；大方向和细分计数为关键词匹配，不等于直接相关论文数。",
+    "两篇原始页面注明Workshop，按配置排除正式推荐；保留原预筛信息，不从会场标签推断质量。",
+    "所有研究结论限于题目与摘要；PDF仅核验身份和可读性，未进行全文评审。"
+  ]
+}

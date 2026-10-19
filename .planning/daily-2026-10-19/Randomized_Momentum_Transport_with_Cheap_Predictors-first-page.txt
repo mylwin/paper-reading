@@ -1,0 +1,83 @@
+Randomized Momentum Transport with Cheap Predictors
+
+El Mahdi Chayti
+Martin Jaggi
+Machine Learning and Optimization Laboratory (MLO), EPFL
+
+arXiv:2610.13789v1 [cs.LG] 9 Oct 2026
+
+Abstract
+Momentum methods such as STORM and
+second-order momentum track the gradient
+by adding a transport correction to momentum, at the cost of an extra oracle call per
+iteration. We introduce randomized momentum transport, which evaluates the correction with probability q and otherwise uses
+a cheap prediction, with importance weighting that preserves the conditional mean and
+adds (q −1 − 1) times the prediction loss to
+the variance. Under transport-bias, secondmoment, and residual-control assumptions,
+linear minimization oracle (LMO) updates,
+including normalized, sign, and exact spectral (Muon) directions, retain an O(T −1/3 )
+stationarity bound for each fixed q > 0 with
+a single-gradient initialization. For unnormalized STORM, some q < 1 lowers the leading
+coefficient of our sufficient gradient budget if
+and only if the gradient-difference noise modulus exceeds the smoothness constant, by at
+most about 10%. An online diagonal predictor admits a regret-to-convergence guarantee.
+At approximately equal oracle cost, querying a quarter of the corrections lowers the
+final training loss by 18 to 43% on MNIST1D
+and raises the test accuracy of Hessian-vector
+transport on CIFAR-10 by 1.5 points.
+
+1
+
+INTRODUCTION
+
+Momentum averages stochastic gradients across iterations. As the parameters move, this average must
+also track the change of the gradient. STORM adds
+the difference of two gradients evaluated on the same
+sample at consecutive iterates (Cutkosky and Orabona,
+2019); second-order momentum adds a Hessian-vector
+product (HVP) (Salehkaleybar et al., 2024; Tran and
+Cutkosky, 2022). Each correction costs one extra oracle
+call per iteration. We study how often the correction
+needs to be evaluated.
+
+Let Ct be the correction at iteration t, an estimate of
+the gradient change ∇f (xt ) − ∇f (xt−1 ), and let Bt
+be a cheap prediction of Ct . We use the randomized
+transport estimator
+bt = Bt + Jt (Ct − Bt ),
+C
+q
+
+Jt ∼ Bernoulli(q), (1)
+
+with Jt drawn independently of (Ct , Bt ). The correction is evaluated only when Jt = 1. The estimator has
+the conditional mean of Ct , and its conditional variance
+exceeds that of Ct by exactly (q −1 − 1)Et ∥Ct − Bt ∥2 ,
+where Et denotes expectation given the past. The prediction loss therefore sets the variance cost of querying
+less often.
+Contributions.
+• Randomized transport. The estimator (1)
+keeps the conditional mean of the correction and
+its covariance with the fresh gradient, and adds
+exactly (q −1 − 1)Et ∥Ct − Bt ∥2 to its variance
+(Lemma 1).
+• LMO convergence. For gradient-difference and
+HVP transport with LMO directions, decreasing
+momentum weights, and a single-gradient initialization, the dual-norm stationarity measure of the
+LMO set is O(T −1/3 ) after T iterations for fixed
+q > 0. The bound holds at every T with explicit
+constants; q enters only through q −1 − 1 times
+the average prediction loss, and the initial error
+contributes O(T −1 ) (Theorem 2, Corollary 3).
+• Gradient budget of randomized STORM.
+For unnormalized STORM with a zero predictor,
+which uses 1 + q gradients per iteration in expectation, we give an explicit finite-horizon gradient
+budget to reach expected gradient norm ε, with a
+leading term of order ε−3 . Some q < 1 lowers this
+term if and only if the gradient-difference noise
+modulus δ exceeds the smoothness constant L, and
+by at most about 10% (Theorem 4, Proposition 5).
+• Learned predictor. A diagonal predictor with
+O(d) state, trained only on queried corrections,
+
+

@@ -1,0 +1,61 @@
+arXiv:2610.22976v1 [cs.LG] 16 Oct 2026
+
+Towards Hyperparameter Transfer for Differentially
+Private Optimization
+
+Tianze Wang
+Department of Statistics
+Rutgers University
+tianze.wang@rutgers.edu
+
+Zhiqi Bu∗
+Independent Researcher
+woodyx218@gmail.com
+
+Linjun Zhang∗
+Department of Statistics
+Rutgers University
+zlj11112222@gmail.com
+
+Abstract
+Scaling laws and hyperparameter tuning remain central challenges in training largescale models, particularly under differential privacy (DP), where optimization is
+further complicated by noise injection and per-sample gradient clipping. While
+Maximal Update Parametrization (µP) allows for zero-shot hyperparameter transfer
+in standard training, we show that it fails under DP constraints due to the distinct
+spectral properties of high-dimensional noise versus low-rank gradients. In this
+work, we introduce DP-µP, a theoretically grounded framework that extends µP
+to the privacy-preserving setting. By analyzing the interaction between gradient
+clipping, noise injection, and feature learning, we derive a Signal-to-Noise Ratio
+(SNR) condition that governs layer-wise learning rate scaling. Combining this with
+our proposed spectral scaling formulation, we provide specific scaling rules for
+DP-SGD, DP-Adam, and DP-Muon optimizers. Empirically, we demonstrate that
+DP-µP enables effective zero-shot transfer of learning rates across model widths on
+diverse architectures (MLP, ViT, GPT-2), matching or exceeding the performance
+of individually tuned baselines while significantly reducing computational costs.
+
+1
+
+Introduction
+
+The success of large-scale models such as GPT [33, 3], LLaMA [37], Qwen [41], and DeepSeek
+[24], trained with billions of parameters and trillions of tokens, has underscored the importance of
+effective hyperparameter tuning [19, 18, 21]. Empirically, model performance is sensitive to choices
+like learning rate, momentum, and weight decay, necessitating fine-grained and computationally
+intensive tuning. However, the resources used for tuning hyperparameters grow exponentially with
+model size under grid or random search, posing a development for scalable model training [34, 11].
+Maximal Update Parametrization (µP) [42] has emerged as a compelling solution to hyperparameter
+tuning in large-scale models. By reparameterizing neural networks to preserve update magnitudes
+across widths [43, 44], µP enables zero-shot transfer of hyperparameters, such as learning rate, from
+small models to significantly larger ones without performance degradation. µP achieves this by
+ensuring consistent layer-wise updates that stabilize activations and weights across both training
+iterations and model layers. In contrast to empirical scaling laws, which can be inaccurate, modelspecific, or computationally expensive, µP offers a theoretically grounded, architecture-agnostic
+framework for scalable training and robust feature learning [45].
+In this work, we investigate µP in differentially private (DP) optimization [1] to enable hyperparameter
+(learning rate) transfer in privacy-preserving deep learning. To put this into perspective, a well-known
+empirical tradeoff exists between model utility and privacy risk. On the one hand, larger models
+typically achieve better performance in tasks such as image classification and language modeling
+∗ Co-corresponding authors.
+
+40th Conference on Neural Information Processing Systems (NeurIPS 2026).
+
+
