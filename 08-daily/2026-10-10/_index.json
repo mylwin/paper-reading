@@ -1,0 +1,119 @@
+{
+  "date": "2026-10-10",
+  "note_file": "今日检索.md",
+  "generated_at": "2026-10-10T14:23:40",
+  "skill": "paper-daily",
+  "sources_searched": [
+    "arxiv",
+    "openreview",
+    "semantic_scholar"
+  ],
+  "source_counts": {
+    "arxiv": 200,
+    "openreview": 167,
+    "semantic_scholar": 0
+  },
+  "date_windows": {
+    "recent_30d": {
+      "start": "2026-09-10",
+      "end": "2026-10-10"
+    },
+    "past_year": {
+      "start": "2025-10-10",
+      "end": "2026-09-09"
+    }
+  },
+  "total_unique": 306,
+  "top_papers": [
+    {
+      "title": "Logarithmic-time Schedules for Scaling Language Models with Momentum",
+      "source": "openreview",
+      "arxiv_id": "2602.05298",
+      "url": "https://openreview.net/forum?id=wpOhKsgCy9",
+      "note_filename": "Logarithmic_time_Schedules_for_Scaling_Language_Models_with_Momentum",
+      "matched_domain": "大模型优化器设计",
+      "score": 8.27
+    },
+    {
+      "title": "Sign compression for Muon: SignMuon, MuonSign, and the Limits of Error Feedback",
+      "source": "openreview",
+      "arxiv_id": "2607.29674",
+      "url": "https://openreview.net/forum?id=AH3QAPtL1Y",
+      "note_filename": "Sign_compression_for_Muon_SignMuon_MuonSign_and_the_Limits_of_Error_Feedback",
+      "matched_domain": "大模型优化器设计",
+      "score": 8.33
+    },
+    {
+      "title": "Spectral Flattening Is Not Enough: When Muon Improves Learning Rates and Convergence",
+      "source": "openreview",
+      "arxiv_id": "",
+      "url": "https://openreview.net/forum?id=PI7PN0x6oA",
+      "note_filename": "Spectral_Flattening_Is_Not_Enough_When_Muon_Improves_Learning_Rates_and_Convergence",
+      "matched_domain": "大模型优化器设计",
+      "score": 8.27
+    },
+    {
+      "title": "AdamW Scaling Laws from First Principles",
+      "source": "openreview",
+      "arxiv_id": "",
+      "url": "https://openreview.net/forum?id=9O4Y8F7mp7",
+      "note_filename": "AdamW_Scaling_Laws_from_First_Principles",
+      "matched_domain": "大模型优化器设计",
+      "score": 8.27
+    },
+    {
+      "title": "What Ages a Gradient? When Optimizer Time and Gradient-Field Relevance Diverge",
+      "source": "openreview",
+      "arxiv_id": "",
+      "url": "https://openreview.net/forum?id=o6cF1FGXSr",
+      "note_filename": "What_Ages_a_Gradient_When_Optimizer_Time_and_Gradient_Field_Relevance_Diverge",
+      "matched_domain": "大模型优化器设计",
+      "score": 8.4
+    },
+    {
+      "title": "Turbo-Muon: Almost-Orthogonal Pre-Conditioning for Fast Muon Updates",
+      "source": "openreview",
+      "arxiv_id": "",
+      "url": "https://openreview.net/forum?id=K4XVD6wq8Q",
+      "note_filename": "Turbo_Muon_Almost_Orthogonal_Pre_Conditioning_for_Fast_Muon_Updates",
+      "matched_domain": "大模型优化器设计",
+      "score": 8.2
+    },
+    {
+      "title": "Gradient Matching Meets Muon: Efficient Online Minibatch Selection for Language Models",
+      "source": "openreview",
+      "arxiv_id": "",
+      "url": "https://openreview.net/forum?id=lWNRa6JetZ",
+      "note_filename": "Gradient_Matching_Meets_Muon_Efficient_Online_Minibatch_Selection_for_Language_Models",
+      "matched_domain": "大模型优化器设计",
+      "score": 8.33
+    },
+    {
+      "title": "DP-FedAdamW: An Efficient Optimizer for Differentially Private Federated Large Models",
+      "source": "openreview",
+      "arxiv_id": "",
+      "url": "https://openreview.net/forum?id=58RdFZpPSG",
+      "note_filename": "DP_FedAdamW_An_Efficient_Optimizer_for_Differentially_Private_Federated_Large_Models",
+      "matched_domain": "大模型优化器设计",
+      "score": 8.53
+    },
+    {
+      "title": "Muon Is Theoretically Wrong For Convolutions, But Empirically Effective",
+      "source": "arxiv",
+      "arxiv_id": "2610.07103",
+      "url": "http://arxiv.org/abs/2610.07103v1",
+      "note_filename": "Muon_Is_Theoretically_Wrong_For_Convolutions_But_Empirically_Effective",
+      "matched_domain": "大模型优化器设计",
+      "score": 8.13
+    },
+    {
+      "title": "Muon meets Tamed Langevin: Momentum Preconditioning beyond Convex and gradient-Lipschitz Potentials",
+      "source": "arxiv",
+      "arxiv_id": "2610.02158",
+      "url": "http://arxiv.org/abs/2610.02158v1",
+      "note_filename": "Muon_meets_Tamed_Langevin_Momentum_Preconditioning_beyond_Convex_and_gradient_Lipschitz_Potentials",
+      "matched_domain": "大模型优化器设计",
+      "score": 8.27
+    }
+  ]
+}

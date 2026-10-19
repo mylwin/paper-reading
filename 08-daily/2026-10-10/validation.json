@@ -1,0 +1,20 @@
+{
+  "date": "2026-10-10",
+  "unique_candidates": 306,
+  "known_excluded": 62,
+  "recommendations": 10,
+  "semantic_reranking": "10篇题目与摘要；保留预筛分数",
+  "complete_abstract_translations": 3,
+  "appendix_rows": 306,
+  "pdf_downloaded": 2,
+  "pdf_failed": 1,
+  "relative_links_check": "0问题",
+  "month_consistency_check": "0问题",
+  "source_limitations": [
+    "arXiv 200条上限",
+    "OpenReview每词第1页100条",
+    "Semantic Scholar HTTP429",
+    "OpenReview PDF HTTP403",
+    "ADana归档早期arXiv v2，模型规模与投稿摘要不同"
+  ]
+}
