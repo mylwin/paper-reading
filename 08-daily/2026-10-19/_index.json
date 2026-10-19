@@ -1,0 +1,117 @@
+{
+  "date": "2026-10-19",
+  "note_file": "今日检索.md",
+  "generated_at": "2026-10-19T12:02:15",
+  "skill": "paper-daily",
+  "sources_searched": [
+    "arxiv",
+    "openreview"
+  ],
+  "source_counts": {
+    "arxiv": 200,
+    "openreview": 68
+  },
+  "date_windows": {
+    "recent_30d": {
+      "start": "2026-09-19",
+      "end": "2026-10-19"
+    },
+    "past_year": {
+      "start": "2025-10-19",
+      "end": "2026-09-18"
+    }
+  },
+  "total_unique": 213,
+  "top_papers": [
+    {
+      "title": "BMuon: Budgeting Muon's Spectral Geometry for Structured Compressibility",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2610.23571v1",
+      "note_filename": "BMuon_Budgeting_Muon's_Spectral_Geometry_for_Structured_Compressibility",
+      "matched_domain": "大模型优化器设计",
+      "score": 7.93
+    },
+    {
+      "title": "Randomized Momentum Transport with Cheap Predictors",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2610.13789v1",
+      "note_filename": "Randomized_Momentum_Transport_with_Cheap_Predictors",
+      "matched_domain": "大模型优化器设计",
+      "score": 7.0
+    },
+    {
+      "title": "Towards Hyperparameter Transfer for Differentially Private Optimization",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2610.22976v1",
+      "note_filename": "Towards_Hyperparameter_Transfer_for_Differentially_Private_Optimization",
+      "matched_domain": "大模型优化器设计",
+      "score": 8.53
+    },
+    {
+      "title": "Optimizer Geometry Sets the Pace: Spectral Learning Dynamics in Matrix Factorization",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2610.04249v1",
+      "note_filename": "Optimizer_Geometry_Sets_the_Pace_Spectral_Learning_Dynamics_in_Matrix_Factorization",
+      "matched_domain": "大模型优化器设计",
+      "score": 7.0
+    },
+    {
+      "title": "Learning Rate Transfer for Hybrid Transformer-SSM Architectures",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2610.01172v1",
+      "note_filename": "Learning_Rate_Transfer_for_Hybrid_Transformer_SSM_Architectures",
+      "matched_domain": "大模型优化器设计",
+      "score": 7.0
+    },
+    {
+      "title": "FedMIX-P: Mixing Local and Global Preconditioners for Federated Vision and Language Model Training",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2610.01515v1",
+      "note_filename": "FedMIX_P_Mixing_Local_and_Global_Preconditioners_for_Federated_Vision_and_Language_Model_Training",
+      "matched_domain": "大模型优化器设计",
+      "score": 7.0
+    },
+    {
+      "title": "Bridging Compressed Communication and Local Steps via Spectral Method in Federated Learning",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2610.23434v1",
+      "note_filename": "Bridging_Compressed_Communication_and_Local_Steps_via_Spectral_Method_in_Federated_Learning",
+      "matched_domain": "大模型优化器设计",
+      "score": 7.2
+    },
+    {
+      "title": "Adaptive Forgetting for Nonstationary Optimization: Towards Robust EEG Decoding",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2609.24233v1",
+      "note_filename": "Adaptive_Forgetting_for_Nonstationary_Optimization_Towards_Robust_EEG_Decoding",
+      "matched_domain": "大模型优化器设计",
+      "score": 6.93
+    },
+    {
+      "title": "The Ephemeral Cost of Switching Optimizers Across LLM Training Stages",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2610.22650v1",
+      "note_filename": "The_Ephemeral_Cost_of_Switching_Optimizers_Across_LLM_Training_Stages",
+      "matched_domain": "大模型优化器设计",
+      "score": 7.73
+    },
+    {
+      "title": "In-Place Indic Tokenizer Expansion and Continual Pretraining of Nemotron-3-Nano-30B-A3B",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2610.15373v1",
+      "note_filename": "In_Place_Indic_Tokenizer_Expansion_and_Continual_Pretraining_of_Nemotron_3_Nano_30B_A3B",
+      "matched_domain": "大模型优化器设计",
+      "score": 6.93
+    }
+  ]
+}
