@@ -1,6 +1,9 @@
 ---
-name: paper-daily
 description: 多源检索每日论文，按研究相关性与摘要证据做候选预筛，再从博士/博士后视角语义复排；归档优先论文 PDF 并写出带选择理由和待核验项的日报。Use when the user asks to start the day, create today's paper brief, or generate research-grade paper recommendations for a specified date.
+metadata:
+  targets:
+    - codex
+name: paper-daily
 ---
 
 # 目标

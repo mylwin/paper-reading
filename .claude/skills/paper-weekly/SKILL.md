@@ -1,6 +1,9 @@
 ---
-name: paper-weekly
 description: 周期性（默认每 7 天）以博士/博士后研究视角综合新增论文与精读证据，构建问题地图、主张-证据矩阵、研究缺口和可证伪的下一步计划，输出到 07-research。Use for weekly research reviews, evidence synthesis, reading progress, research-gap analysis, or deciding what to test next.
+metadata:
+  targets:
+    - codex
+name: paper-weekly
 ---
 
 # paper-weekly —— 周期研究现状与优化方向分析

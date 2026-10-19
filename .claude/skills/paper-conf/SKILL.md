@@ -1,6 +1,9 @@
 ---
-name: paper-conf
 description: 通过 DBLP 与 Semantic Scholar 搜索 CVPR、ICCV、ECCV、ICLR、AAAI、NeurIPS、ICML 等顶会论文，经候选预筛和研究人员语义复排后生成年度推荐笔记。Use when the user asks for a conference/year paper list, top-conference recommendations, or papers filtered by venue.
+metadata:
+  targets:
+    - codex
+name: paper-conf
 ---
 
 # 目标

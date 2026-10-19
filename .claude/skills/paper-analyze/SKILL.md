@@ -1,7 +1,10 @@
 ---
-name: paper-analyze
-description: 对单篇论文进行研究级精读：保留英文原版摘要及对应中文翻译，另写充分展开的方法、实验或理论分析、近邻对比、证据审计和研究评价，生成图文与公式可渲染的 Markdown 笔记。适用于论文精读、打分、批判性评价和复现判断 / Produce a detailed, evidence-backed paper analysis with the original abstract, faithful translation, and a portable Markdown note.
 allowed-tools: Read, Write, Bash, WebFetch
+description: 对单篇论文进行研究级精读：保留英文原版摘要及对应中文翻译，另写充分展开的方法、实验或理论分析、近邻对比、证据审计和研究评价，生成图文与公式可渲染的 Markdown 笔记。适用于论文精读、打分、批判性评价和复现判断 / Produce a detailed, evidence-backed paper analysis with the original abstract, faithful translation, and a portable Markdown note.
+metadata:
+  targets:
+    - codex
+name: paper-analyze
 ---
 
 # 论文深度分析 Skill

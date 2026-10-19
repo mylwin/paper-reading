@@ -1,6 +1,9 @@
 ---
-name: paper-interests
 description: 对话式维护论文推荐的研究主题——询问用户最近关注的方向，扩散补充成完整关键词集合，用户确认后写入共享配置文件。Use when the user wants to change what papers get recommended, says their research interests changed, or wants to add/remove a research topic.
+metadata:
+  targets:
+    - codex
+name: paper-interests
 ---
 
 # paper-interests —— 研究主题维护
