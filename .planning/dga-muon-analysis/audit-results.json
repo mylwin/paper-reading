@@ -1,0 +1,95 @@
+{
+  "seed": 20261019,
+  "scope": "Synthetic algebra checks; not LLM training replication",
+  "matrices": [
+    {
+      "shape": [
+        4,
+        9
+      ],
+      "polar_row_energy_range": 1.5543122344752192e-15,
+      "aligned_gram_offdiag": 7.294754578696896e-16,
+      "opposite_gram_offdiag": 1.0425286530424294,
+      "aligned_inner_product": 10.810648803174896,
+      "opposite_inner_product": 10.479786646910414,
+      "lower_alignment_bound": 4.166630248344596
+    },
+    {
+      "shape": [
+        5,
+        5
+      ],
+      "polar_row_energy_range": 1.5543122344752192e-15,
+      "aligned_gram_offdiag": 2.4224918012221752e-15,
+      "opposite_gram_offdiag": 1.4880998716192204,
+      "aligned_inner_product": 13.159161731363362,
+      "opposite_inner_product": 12.034663932939404,
+      "lower_alignment_bound": 4.518602296565126
+    },
+    {
+      "shape": [
+        9,
+        4
+      ],
+      "polar_row_energy_range": 0.822270382058916,
+      "aligned_gram_offdiag": 2.094142390430058e-15,
+      "opposite_gram_offdiag": 0.7998516587290815,
+      "aligned_inner_product": 9.127515454060951,
+      "opposite_inner_product": 9.164069246174485,
+      "lower_alignment_bound": 3.8749555371748365
+    }
+  ],
+  "nonmonotonic_residual_example": [
+    {
+      "orthogonality_residual_2": 0.19999999999999973,
+      "row_scale_range": 0.0
+    },
+    {
+      "orthogonality_residual_2": 0.10000000000000009,
+      "row_scale_range": 0.14231226007337572
+    }
+  ],
+  "loss_rescaling": {
+    "gradient_multiplier": 10,
+    "update_norm_ratio": 0.09999999999999995
+  },
+  "sum_mean": {
+    "width": 5,
+    "scale_ratio_mean_over_sum": [
+      2.23606797749979,
+      2.23606797749979,
+      2.23606797749979
+    ]
+  },
+  "reported_result_recalculation": {
+    "BPB_absolute_reduction": 0.0014000000000000679,
+    "BPB_relative_reduction_pct": 0.2021952628538515,
+    "train_loss_absolute_reduction": 0.009100000000000108,
+    "train_loss_relative_reduction_pct": 0.39914031317163506,
+    "CORE_absolute_gain": 0.01469999999999999,
+    "CORE_relative_gain_pct": 4.9966009517335115
+  },
+  "score": {
+    "dimensions_1_to_5": [
+      4,
+      3,
+      3,
+      2,
+      2,
+      2,
+      4
+    ],
+    "weights": [
+      0.15,
+      0.2,
+      0.2,
+      0.2,
+      0.1,
+      0.05,
+      0.1
+    ],
+    "weighted_mean": 2.9000000000000004,
+    "unrounded_0_to_10": 4.750000000000001,
+    "rounded_to_half": 5.0
+  }
+}

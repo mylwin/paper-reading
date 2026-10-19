@@ -1,0 +1,767 @@
+{
+  "notes": [
+    {
+      "content": {
+        "venue": {
+          "value": "ICLR 2027 Conference Submission"
+        },
+        "keywords": {
+          "value": [
+            "Optimization",
+            "Muon"
+          ]
+        },
+        "primary_area": {
+          "value": "other topics in machine learning (i.e., none of the above)"
+        },
+        "abstract": {
+          "value": "Muon updates matrix-valued parameters by flattening the singular values of each gradient while preserving its singular directions. Despite its practical success, the mechanisms governing its learning-rate capacity and convergence remain insufficiently understood. We analyze deterministic, full-batch Muon through its exact polar update. First, we derive a descent-preserving learning-rate threshold and show that it is controlled by the block-size-weighted average singular scale of the gradient matrices. This characterization makes the role of gradient magnitude explicit and reveals how objective scaling affects the admissible step size. We then analyze Muon's convergence behavior and identify the spectral properties that govern its convergence rate. Our analysis shows that flattening the spectrum within individual parameter blocks is not sufficient to determine global convergence, because scale differences across blocks remain influential. Together, these results provide a theoretical account of how spectral flattening governs the learning-rate capacity and convergence behavior of Muon."
+        },
+        "_bibtex": {
+          "value": "@inproceedings{\nanonymous2026spectral,\ntitle={Spectral Flattening Is Not Enough: When Muon Improves Learning Rates and Convergence},\nauthor={Anonymous},\nbooktitle={Submitted to The Fifteenth International Conference on Learning Representations},\nyear={2026},\nurl={https://openreview.net/forum?id=PI7PN0x6oA},\nnote={under review}\n}"
+        },
+        "title": {
+          "value": "Spectral Flattening Is Not Enough: When Muon Improves Learning Rates and Convergence"
+        },
+        "pdf": {
+          "value": "/pdf/dec5e13480318cd95d7e31d710564073e269e784.pdf"
+        },
+        "venueid": {
+          "value": "ICLR.cc/2027/Conference/Submission"
+        }
+      },
+      "tmdate": 1791232232784,
+      "tcdate": 1789707739508,
+      "writers": [
+        "ICLR.cc/2027/Conference",
+        "ICLR.cc/2027/Conference/Submission37339/Authors"
+      ],
+      "signatures": [
+        "ICLR.cc/2027/Conference/Submission37339/Authors"
+      ],
+      "forum": "PI7PN0x6oA",
+      "license": "CC BY 4.0",
+      "number": 37339,
+      "cdate": 1789707739508,
+      "readers": [
+        "everyone"
+      ],
+      "invitations": [
+        "ICLR.cc/2027/Conference/-/Submission",
+        "ICLR.cc/2027/Conference/-/Submission_Change_Before_Bidding",
+        "ICLR.cc/2027/Conference/Submission37339/-/Full_Submission",
+        "ICLR.cc/2027/Conference/-/Submission_Change_Before_Reviewing",
+        "ICLR.cc/2027/Conference/-/Edit"
+      ],
+      "mdate": 1791232232784,
+      "odate": 1791031328286,
+      "domain": "ICLR.cc/2027/Conference",
+      "id": "PI7PN0x6oA",
+      "version": 2
+    },
+    {
+      "content": {
+        "TLDR": {
+          "value": "Generalized Muon optimizer with an explicit novel construction for any rational spectral power. Strong downstream task performance. Insights on pretrain vs finetune dichotomy."
+        },
+        "venue": {
+          "value": "COLM 2026"
+        },
+        "code_of_ethics": {
+          "value": "I acknowledge that I and all co-authors of this work have read and commit to adhering to the COLM Code of Ethics on https://colmweb.org/CoE.html"
+        },
+        "LLM_usage": {
+          "value": "In accordance with the Policy on the use of Large Language Models in the Call for Papers https://colmweb.org/cfp.html, I certify that my submission discloses any substantive use of LLMs in the research and paper-writing process."
+        },
+        "keywords": {
+          "value": [
+            "Generalized Muon optimizer"
+          ]
+        },
+        "supplementary_material": {
+          "value": "/attachment/fa4daf2cea6eff8814c6db7afdc09618715320b9.zip"
+        },
+        "abstract": {
+          "value": "Muon is an increasingly widely used optimizer that replaces a gradient $G=USV^\\top$ with its polar factor $UV^\\top$, thereby flattening the singular spectrum. However, full flattening discards singular-value information that may matter for adaptation. We introduce Muon$^p$, a Muon-style optimizer that instead uses fractional spectral-power updates $US^pV^\\top$ for rational $p\\in(0,1)$, interpolating between Muon and gradient descent. \nTo make it practical, we prove that fractional spectral powers cannot be computed by any fixed univariate polynomial iteration, and furthermore derive low-degree odd bivariate recurrences that approximate $US^pV^\\top$ using only matrix multiplications, preserving Muon’s matrix-multiplication-only structure and compute complexity. \nWe show that Muon$^p$  maximizes the linear improvement in loss under the Schatten $q$-norm for $q=1+\\frac{1}{p}$.\nEmpirically, Muon$^p$  is especially effective for finetuning: on billion-scale models, Muon$^p$  improves validation perplexity and downstream task performance. We further analyze when Muon$^p$ is less suitable, through the lens of spectral geometry. Our results reveal important insights on when preserving the singular spectrum can bring significant gains, and introduce a principled way to achieve them. Our code is publicly available at https://github.com/princeton-pli/muon-p."
+        },
+        "_bibtex": {
+          "value": "@inproceedings{\ndong2026muonp,\ntitle={Muon{\\textasciicircum}p: Muon with Fractional Spectral Powers},\nauthor={Yihe Dong and Will Sawin},\nbooktitle={Third Conference on Language Modeling},\nyear={2026},\nurl={https://openreview.net/forum?id=g7a9CMRL8N}\n}"
+        },
+        "title": {
+          "value": "Muon^p: Muon with Fractional Spectral Powers"
+        },
+        "pdf": {
+          "value": "/pdf/e01aa96828464523271c099f0e94eda4325ef569.pdf"
+        },
+        "venueid": {
+          "value": "colmweb.org/COLM/2026/Conference"
+        },
+        "paperhash": {
+          "value": "dong|muon^p_muon_with_fractional_spectral_powers"
+        },
+        "authorids": {
+          "value": [
+            "~Yihe_Dong1",
+            "~Will_Sawin1"
+          ]
+        },
+        "author_guide": {
+          "value": "I certify that this submission complies with the submission instructions as described on https://colmweb.org/AuthorGuide.html"
+        },
+        "authors": {
+          "value": [
+            "Yihe Dong",
+            "Will Sawin"
+          ]
+        }
+      },
+      "tmdate": 1787537176230,
+      "pdate": 1783543395124,
+      "tcdate": 1774558968655,
+      "writers": [
+        "colmweb.org/COLM/2026/Conference",
+        "colmweb.org/COLM/2026/Conference/Submission2419/Authors"
+      ],
+      "signatures": [
+        "colmweb.org/COLM/2026/Conference/Submission2419/Authors"
+      ],
+      "forum": "g7a9CMRL8N",
+      "license": "CC BY 4.0",
+      "number": 2419,
+      "cdate": 1774558968655,
+      "readers": [
+        "everyone"
+      ],
+      "invitations": [
+        "colmweb.org/COLM/2026/Conference/-/Submission",
+        "colmweb.org/COLM/2026/Conference/-/Post_Submission",
+        "colmweb.org/COLM/2026/Conference/Submission2419/-/Full_Submission",
+        "colmweb.org/COLM/2026/Conference/-/Edit",
+        "colmweb.org/COLM/2026/Conference/Submission2419/-/Camera_Ready"
+      ],
+      "mdate": 1787537176230,
+      "odate": 1787537176204,
+      "domain": "colmweb.org/COLM/2026/Conference",
+      "id": "g7a9CMRL8N",
+      "version": 2
+    },
+    {
+      "content": {
+        "venue": {
+          "value": "ICLR 2027 Conference Submission"
+        },
+        "keywords": {
+          "value": [
+            "Muon",
+            "nonsmooth analysis",
+            "nonconvex optimization"
+          ]
+        },
+        "supplementary_material": {
+          "value": "/attachment/63905310008fefb0f76d84f80f2e663e03212201.zip"
+        },
+        "primary_area": {
+          "value": "optimization"
+        },
+        "abstract": {
+          "value": "Muon has emerged as a highly effective optimizer for large language model training, often achieving superior convergence and performance compared with the widely adopted Adam and AdamW optimizers. Nevertheless, Muon is prone to training instability due to its spectral flattening, manifested by loss spikes and unbounded growth of model weights. Existing approaches primarily rely on weight or attention-logit clipping, which require architecture-specific modifications and do not directly address instability across all model components. We propose MomentUm SpEctral Clipping (Musec), which replaces Muon's spectral flattening with spectral clipping: rather than setting all singular values of the momentum matrix to approximately one, Musec clips singular values that exceed a threshold while preserving the underlying spectral structure of the momentum. Our strategy provides an optimizer-level, architecture-agnostic mechanism for stabilizing Muon training. Theoretically, we establish convergence guarantees for Musec in nonconvex nonsmooth stochastic optimization. Practically, we develop Soft Musec, an efficient implementation that uses a smooth spectral saturation function approximated by coupled Newton--Schulz iterations. Empirically, Soft Musec consistently improves training stability over existing Muon variants across a wide range of learning rates and model sizes, remaining stable in settings where existing Muon variants diverge while matching their performance under well-tuned configurations."
+        },
+        "_bibtex": {
+          "value": "@inproceedings{\nanonymous2026musec,\ntitle={Musec: MomentUm SpEctral Clipping for  Stable Muon-type Training},\nauthor={Anonymous},\nbooktitle={Submitted to The Fifteenth International Conference on Learning Representations},\nyear={2026},\nurl={https://openreview.net/forum?id=8vk0s7RPix},\nnote={under review}\n}"
+        },
+        "title": {
+          "value": "Musec: MomentUm SpEctral Clipping for  Stable Muon-type Training"
+        },
+        "pdf": {
+          "value": "/pdf/39345653a9f78fa54e1ac3f4cea65228a0bd48cd.pdf"
+        },
+        "venueid": {
+          "value": "ICLR.cc/2027/Conference/Submission"
+        }
+      },
+      "tmdate": 1791225941143,
+      "tcdate": 1789051115643,
+      "writers": [
+        "ICLR.cc/2027/Conference",
+        "ICLR.cc/2027/Conference/Submission13303/Authors"
+      ],
+      "signatures": [
+        "ICLR.cc/2027/Conference/Submission13303/Authors"
+      ],
+      "forum": "8vk0s7RPix",
+      "license": "CC BY 4.0",
+      "number": 13303,
+      "cdate": 1789051115643,
+      "readers": [
+        "everyone"
+      ],
+      "invitations": [
+        "ICLR.cc/2027/Conference/-/Submission",
+        "ICLR.cc/2027/Conference/-/Submission_Change_Before_Bidding",
+        "ICLR.cc/2027/Conference/Submission13303/-/Full_Submission",
+        "ICLR.cc/2027/Conference/-/Submission_Change_Before_Reviewing",
+        "ICLR.cc/2027/Conference/-/Edit"
+      ],
+      "mdate": 1791225941143,
+      "odate": 1791031328286,
+      "domain": "ICLR.cc/2027/Conference",
+      "id": "8vk0s7RPix",
+      "version": 2
+    },
+    {
+      "content": {
+        "venue": {
+          "value": "ICLR 2027 Conference Submission"
+        },
+        "TLDR": {
+          "value": "We characterize Muon’s spectral dynamics and noise sensitivity, deriving conditions for spectral flattening and critical batch size while probing its regime-dependent behavior in language and vision."
+        },
+        "keywords": {
+          "value": [
+            "Muon",
+            "Training Dynamics",
+            "Pretraining Theory",
+            "Implicit Regularization",
+            "Matrix Completion"
+          ]
+        },
+        "primary_area": {
+          "value": "optimization"
+        },
+        "abstract": {
+          "value": "Muon replaces a matrix gradient \\(G=U\\Sigma V^\\top\\) by its polar factor \\(UV^\\top\\). This keeps the singular directions selected by the gradient, but makes the update spectrum flat. We study the optimization bias created by this operation. In an underdetermined regression model, we derive exact singular-value dynamics for a projected polar flow and identify a measurement-dependent condition under which the normalized spectrum moves toward equal nonzero singular values. At fixed Frobenius norm, the pairwise spectral functional is minimized by a flat spectrum, whereas nuclear-norm minimization favors spectral concentration. Controlled matrix-sensing experiments separate the effect from simple gradient rescaling, show that norm-matched gradient descent does not reproduce Muon, and recover the predicted flattening trend across broad ablations. In small NanoGPT pretraining, Muon preserves stable rank, has a broad learning-rate plateau, and improves validation loss relative to AdamW; in a matched small-ViT control, the ranking reverses. The resulting picture is regime-dependent: Muon is not universally superior, but its flat-spectrum bias can help when many spectral directions need to remain active."
+        },
+        "_bibtex": {
+          "value": "@inproceedings{\nanonymous2026the,\ntitle={The Spectral Dynamics and Noise Geometry of Muon},\nauthor={Anonymous},\nbooktitle={Submitted to The Fifteenth International Conference on Learning Representations},\nyear={2026},\nurl={https://openreview.net/forum?id=dNTrWDpSWf},\nnote={under review}\n}"
+        },
+        "title": {
+          "value": "The Spectral Dynamics and Noise Geometry of Muon"
+        },
+        "pdf": {
+          "value": "/pdf/4d04f41f4f24df1c28753fa4822f9a98261ef5e6.pdf"
+        },
+        "venueid": {
+          "value": "ICLR.cc/2027/Conference/Submission"
+        }
+      },
+      "tmdate": 1791234543807,
+      "tcdate": 1789780960946,
+      "writers": [
+        "ICLR.cc/2027/Conference",
+        "ICLR.cc/2027/Conference/Submission51469/Authors"
+      ],
+      "signatures": [
+        "ICLR.cc/2027/Conference/Submission51469/Authors"
+      ],
+      "forum": "dNTrWDpSWf",
+      "license": "CC BY 4.0",
+      "number": 51469,
+      "cdate": 1789780960946,
+      "readers": [
+        "everyone"
+      ],
+      "invitations": [
+        "ICLR.cc/2027/Conference/-/Submission",
+        "ICLR.cc/2027/Conference/-/Submission_Change_Before_Bidding",
+        "ICLR.cc/2027/Conference/Submission51469/-/Full_Submission",
+        "ICLR.cc/2027/Conference/-/Submission_Change_Before_Reviewing",
+        "ICLR.cc/2027/Conference/-/Edit"
+      ],
+      "mdate": 1791234543807,
+      "odate": 1791031328286,
+      "domain": "ICLR.cc/2027/Conference",
+      "id": "dNTrWDpSWf",
+      "version": 2
+    },
+    {
+      "content": {
+        "TLDR": {
+          "value": "Long-horizon meta-objectives induce Muon-like spectral flattening of matrix updates, revealing when and why spectrum-aware optimizers emerge from terminal training loss."
+        },
+        "venue": {
+          "value": "ICLR 2027 Conference Submission"
+        },
+        "keywords": {
+          "value": [
+            "meta-optimization",
+            "Muon",
+            "spectral flattening",
+            "deep linear networks",
+            "optimizer analysis"
+          ]
+        },
+        "supplementary_material": {
+          "value": "/attachment/7fcf8b0c36ef80b56fea58472c5923e3e12849c0.zip"
+        },
+        "primary_area": {
+          "value": "optimization"
+        },
+        "abstract": {
+          "value": "Muon accelerates matrix optimization by flattening the singular spectrum of gradient updates. But why should spectral flattening be a good optimization strategy, and can it arise without being explicitly prescribed? We approach these questions from a meta-optimization perspective, where update transformations are evaluated by their consequences for future learning rather than immediate descent alone. In controlled matrix-factorization problems, we find that extending the optimization horizon systematically shifts the preferred update toward flatter spectra. This shift reflects a long-term trade-off: spectrum-aware updates may sacrifice short-term progress along dominant directions while improving the optimization of modes that gradient descent leaves behind. We connect this behavior to the evolution of error modes and show how spectral flattening creates more balanced learning dynamics. Our results interpret Muon-like flattening as an emergent strategy for improving the geometry of subsequent optimization. This perspective suggests a path toward learning spectrum-aware optimizers directly from long-horizon objectives."
+        },
+        "_bibtex": {
+          "value": "@inproceedings{\nanonymous2026longhorizon,\ntitle={Long-Horizon Meta-Objectives Induce Spectral Flattening},\nauthor={Anonymous},\nbooktitle={Submitted to The Fifteenth International Conference on Learning Representations},\nyear={2026},\nurl={https://openreview.net/forum?id=j7OOgZTIUj},\nnote={under review}\n}"
+        },
+        "title": {
+          "value": "Long-Horizon Meta-Objectives Induce Spectral Flattening"
+        },
+        "pdf": {
+          "value": "/pdf/655515c73f72cbdd9d17afb5d07c9d1419ff4fd4.pdf"
+        },
+        "venueid": {
+          "value": "ICLR.cc/2027/Conference/Submission"
+        }
+      },
+      "tmdate": 1791235512578,
+      "tcdate": 1789814333134,
+      "writers": [
+        "ICLR.cc/2027/Conference",
+        "ICLR.cc/2027/Conference/Submission60141/Authors"
+      ],
+      "signatures": [
+        "ICLR.cc/2027/Conference/Submission60141/Authors"
+      ],
+      "forum": "j7OOgZTIUj",
+      "license": "CC BY 4.0",
+      "number": 60141,
+      "cdate": 1789814333134,
+      "readers": [
+        "everyone"
+      ],
+      "invitations": [
+        "ICLR.cc/2027/Conference/-/Submission",
+        "ICLR.cc/2027/Conference/-/Submission_Change_Before_Bidding",
+        "ICLR.cc/2027/Conference/Submission60141/-/Full_Submission",
+        "ICLR.cc/2027/Conference/-/Submission_Change_Before_Reviewing",
+        "ICLR.cc/2027/Conference/-/Edit"
+      ],
+      "mdate": 1791235512578,
+      "odate": 1791031328286,
+      "domain": "ICLR.cc/2027/Conference",
+      "id": "j7OOgZTIUj",
+      "version": 2
+    },
+    {
+      "content": {
+        "TLDR": {
+          "value": "Spectral allocation explains why SGD < Adam < Muon and suggests how to improve Muon, leading to SAMuon."
+        },
+        "venue": {
+          "value": "ICLR 2027 Conference Submission"
+        },
+        "keywords": {
+          "value": [
+            "Muon",
+            "Optimiser",
+            "Deep Learning",
+            "Curvature"
+          ]
+        },
+        "supplementary_material": {
+          "value": "/attachment/21426051b37e6b54307034a91ecf817f622effcd.zip"
+        },
+        "primary_area": {
+          "value": "optimization"
+        },
+        "abstract": {
+          "value": "Muon accelerates language-model pretraining, but why its uniform spectral scaling works and where it falls short remain unclear. We probe singular directions of momentum buffers at training checkpoints and estimate their per-rank loss-optimal step sizes on held-out batches. Across models and training stages, we observe a stable spectral profile. The loss-optimal step size is relatively flat across the step-size-tolerant bulk but drops sharply at the leading direction, termed the step-size-sensitive head. This profile provides a spectral-allocation account of the performance ordering from SGD through Adam to Muon. It also suggests that Muon still underuses the tolerant bulk. We introduce Spectral-Aware Muon (SAMuon), which holds the head at the same scale as Muon while increasing the scale of the bulk using a static spectral prior. SAMuon follows the measured profile, whereas SAMuon-lite uses a simpler two-level approximation. Neither variant adds persistent optimiser state. Under idealised exact whitening, both variants retain the asymptotic convergence rates of Muon. Across evaluated language-model settings with 124M to 1B parameters, both variants achieve lower final validation loss than tuned AdamW and Muon (Scion implementation). SAMuon reaches the same validation loss as Muon using 13.3% to 24.0% fewer training tokens. SAMuon-lite retains most of this improvement and runs at nearly the same wall-clock speed as Muon in the measured 1B-model setting."
+        },
+        "_bibtex": {
+          "value": "@inproceedings{\nanonymous2026spectral,\ntitle={Spectral Allocation: Why Muon Outperforms Adam, and How to Improve Muon},\nauthor={Anonymous},\nbooktitle={Submitted to The Fifteenth International Conference on Learning Representations},\nyear={2026},\nurl={https://openreview.net/forum?id=7GjR48w00Q},\nnote={under review}\n}"
+        },
+        "title": {
+          "value": "Spectral Allocation: Why Muon Outperforms Adam, and How to Improve Muon"
+        },
+        "pdf": {
+          "value": "/pdf/048563edbbd3f9a3011749216385467d8d7e6eb0.pdf"
+        },
+        "venueid": {
+          "value": "ICLR.cc/2027/Conference/Submission"
+        }
+      },
+      "tmdate": 1791230760995,
+      "tcdate": 1789610339926,
+      "writers": [
+        "ICLR.cc/2027/Conference",
+        "ICLR.cc/2027/Conference/Submission27539/Authors"
+      ],
+      "signatures": [
+        "ICLR.cc/2027/Conference/Submission27539/Authors"
+      ],
+      "forum": "7GjR48w00Q",
+      "license": "CC BY 4.0",
+      "number": 27539,
+      "cdate": 1789610339926,
+      "readers": [
+        "everyone"
+      ],
+      "invitations": [
+        "ICLR.cc/2027/Conference/-/Submission",
+        "ICLR.cc/2027/Conference/-/Submission_Change_Before_Bidding",
+        "ICLR.cc/2027/Conference/Submission27539/-/Full_Submission",
+        "ICLR.cc/2027/Conference/-/Submission_Change_Before_Reviewing",
+        "ICLR.cc/2027/Conference/-/Edit"
+      ],
+      "mdate": 1791230760995,
+      "odate": 1791031328286,
+      "domain": "ICLR.cc/2027/Conference",
+      "id": "7GjR48w00Q",
+      "version": 2
+    },
+    {
+      "content": {
+        "venue": {
+          "value": "ICLR 2027 Conference Submission"
+        },
+        "keywords": {
+          "value": [
+            "optimization",
+            "Muon",
+            "spectral reshaping",
+            "Newton-Schulz iteration",
+            "large language models"
+          ]
+        },
+        "supplementary_material": {
+          "value": "/attachment/7350484f86ccdbfbffc2310942efeae47eb1db5c.zip"
+        },
+        "primary_area": {
+          "value": "optimization"
+        },
+        "abstract": {
+          "value": "Matrix-valued optimizers such as Muon exploit the spectral structure of neural network updates through Newton--Schulz orthogonalization, but their near-flattening of the singular spectrum discards relative magnitude information across gradient modes. We introduce \\emph{Soren} (\\textbf{S}pectral \\textbf{O}rthogonal \\textbf{Re}shapi\\textbf{n}g), a matrix-valued optimizer that preserves the singular subspaces of the gradient while applying a bounded, monotone sigmoid transformation to its singular values. This smoothly compresses dominant modes without fully flattening the spectrum. We interpret Soren as a positive-definite preconditioned gradient method and establish convergence guarantees under relative smoothness and metric Polyak--{\\L}ojasiewicz geometry. To avoid explicit singular value decomposition, we further develop a finite-depth Soft Newton--Schulz (SNS) polynomial realization of the sigmoid spectral map and characterize how its spectral approximation affects the induced convergence geometry. Experiments across LLM pre-training, supervised fine-tuning, and direct preference optimization demonstrate the effectiveness and robustness of Soren against established optimizers."
+        },
+        "_bibtex": {
+          "value": "@inproceedings{\nanonymous2026orthogonal,\ntitle={Orthogonal Witness Control for Muon Optimization via Sigmoid Spectral Reshaping},\nauthor={Anonymous},\nbooktitle={Submitted to The Fifteenth International Conference on Learning Representations},\nyear={2026},\nurl={https://openreview.net/forum?id=rseM9HVC7i},\nnote={under review}\n}"
+        },
+        "title": {
+          "value": "Orthogonal Witness Control for Muon Optimization via Sigmoid Spectral Reshaping"
+        },
+        "pdf": {
+          "value": "/pdf/0bf7ea4a3ff1ce0b33696e00ad71d30022cc6b5a.pdf"
+        },
+        "venueid": {
+          "value": "ICLR.cc/2027/Conference/Submission"
+        }
+      },
+      "tmdate": 1791232956863,
+      "tcdate": 1789726017460,
+      "writers": [
+        "ICLR.cc/2027/Conference",
+        "ICLR.cc/2027/Conference/Submission40994/Authors"
+      ],
+      "signatures": [
+        "ICLR.cc/2027/Conference/Submission40994/Authors"
+      ],
+      "forum": "rseM9HVC7i",
+      "license": "CC BY 4.0",
+      "number": 40994,
+      "cdate": 1789726017460,
+      "readers": [
+        "everyone"
+      ],
+      "invitations": [
+        "ICLR.cc/2027/Conference/-/Submission",
+        "ICLR.cc/2027/Conference/-/Submission_Change_Before_Bidding",
+        "ICLR.cc/2027/Conference/Submission40994/-/Full_Submission",
+        "ICLR.cc/2027/Conference/-/Submission_Change_Before_Reviewing",
+        "ICLR.cc/2027/Conference/-/Edit"
+      ],
+      "mdate": 1791232956863,
+      "odate": 1791031328286,
+      "domain": "ICLR.cc/2027/Conference",
+      "id": "rseM9HVC7i",
+      "version": 2
+    },
+    {
+      "content": {
+        "data_release": {
+          "value": "We authorize the release of our submission and author names to the public in the event of acceptance."
+        },
+        "TLDR": {
+          "value": "We introduce Muon-OGD, a new algorithm that prevents Large Language Models from forgetting past knowledge during continual learning by strictly confining new parameter updates to orthogonal subspaces."
+        },
+        "venue": {
+          "value": "CL4FMAgents @ NeurIPS 2026"
+        },
+        "email_sharing": {
+          "value": "We authorize the sharing of all author emails with Program Chairs."
+        },
+        "pdf": {
+          "value": "/pdf/70de555a50fd0b89acc8355dffcabe881eb6885b.pdf"
+        },
+        "keywords": {
+          "value": [
+            "continual learning",
+            "LLM post-training",
+            "orthogonal gradient descent",
+            "spectral norm",
+            "geometry-aware optimization"
+          ]
+        },
+        "venueid": {
+          "value": "NeurIPS.cc/2026/Workshop/CL4FMAgents"
+        },
+        "paperhash": {
+          "value": "lu|muonogd_muonbased_spectral_orthogonal_gradient_projection_for_llm_continual_learning"
+        },
+        "abstract": {
+          "value": "A central challenge in continual learning for large language models (LLMs) is catastrophic forgetting, where adapting to new tasks can substantially degrade performance on previously learned ones. Existing projection-based methods mitigate such interference by restricting parameter updates to subspaces that are orthogonal to directions associated with past tasks. However, these methods are typically formulated under Euclidean parameter geometry, with update magnitudes and projections governed by the Frobenius norm. The recent empirical success of the Muon optimizer, which applies orthogonalized matrix updates and admits a spectral-norm interpretation, suggests that Frobenius geometry may not be the most effective choice for matrix-valued LLM parameters. Motivated by this observation, we propose Muon-OGD, a spectral-norm-aware continual learning framework that integrates Muon-style operator-norm geometry with orthogonal projection constraints. Our method formulates each update as a spectral-norm-constrained optimization problem with linear non-interference constraints, and solves it efficiently through dual iterations and Newton--Schulz matrix-sign approximations. By applying orthogonalized momentum updates that avoid protected directions associated with prior tasks, Muon-OGD aims to improve the stability--plasticity trade-off in sequential LLM adaptation. We evaluate the proposed method on standard continual learning benchmarks, TRACE, and domain-specific curricula using both encoder--decoder and decoder-only architectures. Empirically, Muon-OGD consistently improves over sequential fine-tuning and competitive orthogonal-gradient baselines, while remaining computationally scalable. These results suggest that spectral-norm-aware update geometry provides a practical and effective alternative to Frobenius-norm projection for continual learning in LLMs."
+        },
+        "_bibtex": {
+          "value": "@inproceedings{\nlu2026muonogd,\ntitle={Muon-{OGD}: Muon-based Spectral Orthogonal Gradient Projection for {LLM} Continual Learning},\nauthor={binghang lu and Zheyuan Deng and Runyu Zhang and Bing Hu and Yunhan Zhao and Yuan Tian and Changhong Mou and Guang Lin and Xiaomin Li},\nbooktitle={NeurIPS 2026 Workshop on Continual Learning in the Era of Foundation Models and Embodied Agents},\nyear={2026},\nurl={https://openreview.net/forum?id=jRvd5To0aR}\n}"
+        },
+        "title": {
+          "value": "Muon-OGD: Muon-based Spectral Orthogonal Gradient Projection for LLM Continual Learning"
+        },
+        "authors": {
+          "value": [
+            {
+              "username": "~binghang_lu1",
+              "fullname": "binghang lu",
+              "institutions": [
+                {
+                  "name": "Purdue University",
+                  "domain": "purdue.edu",
+                  "country": "US"
+                }
+              ]
+            },
+            {
+              "username": "~Zheyuan_Deng2",
+              "fullname": "Zheyuan Deng",
+              "institutions": [
+                {
+                  "name": "Brown University",
+                  "domain": "brown.edu",
+                  "country": "US"
+                }
+              ]
+            },
+            {
+              "username": "~Runyu_Zhang1",
+              "fullname": "Runyu Zhang",
+              "institutions": []
+            },
+            {
+              "username": "~Bing_Hu7",
+              "fullname": "Bing Hu",
+              "institutions": [
+                {
+                  "name": "Google",
+                  "domain": "google.com",
+                  "country": "US"
+                }
+              ]
+            },
+            {
+              "username": "~Yunhan_Zhao1",
+              "fullname": "Yunhan Zhao",
+              "institutions": [
+                {
+                  "name": "Google",
+                  "domain": "google.com",
+                  "country": "US"
+                }
+              ]
+            },
+            {
+              "username": "~Yuan_Tian31",
+              "fullname": "Yuan Tian",
+              "institutions": [
+                {
+                  "name": "Research Lab",
+                  "domain": "pg.com",
+                  "country": "US"
+                }
+              ]
+            },
+            {
+              "username": "~Changhong_Mou1",
+              "fullname": "Changhong Mou",
+              "institutions": [
+                {
+                  "name": "Utah State University",
+                  "domain": "usu.edu",
+                  "country": "US"
+                }
+              ]
+            },
+            {
+              "username": "~Guang_Lin1",
+              "fullname": "Guang Lin",
+              "institutions": [
+                {
+                  "name": "Purdue University",
+                  "domain": "purdue.edu",
+                  "country": "US"
+                }
+              ]
+            },
+            {
+              "username": "~Xiaomin_Li3",
+              "fullname": "Xiaomin Li",
+              "institutions": [
+                {
+                  "name": "Microsoft",
+                  "domain": "microsoft.com",
+                  "country": "US"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "tmdate": 1791125401210,
+      "pdate": 1791125400254,
+      "tcdate": 1786670800961,
+      "writers": [
+        "NeurIPS.cc/2026/Workshop/CL4FMAgents",
+        "NeurIPS.cc/2026/Workshop/CL4FMAgents/Submission6/Authors"
+      ],
+      "signatures": [
+        "NeurIPS.cc/2026/Workshop/CL4FMAgents/Submission6/Authors"
+      ],
+      "forum": "jRvd5To0aR",
+      "license": "CC BY 4.0",
+      "number": 6,
+      "cdate": 1786670800961,
+      "readers": [
+        "everyone"
+      ],
+      "invitations": [
+        "NeurIPS.cc/2026/Workshop/CL4FMAgents/-/Submission",
+        "NeurIPS.cc/2026/Workshop/CL4FMAgents/-/Submission_Change_Before_Bidding",
+        "NeurIPS.cc/2026/Workshop/CL4FMAgents/-/Submission_Change_Before_Reviewing",
+        "NeurIPS.cc/2026/Workshop/CL4FMAgents/-/Submission_Release"
+      ],
+      "mdate": 1791125401210,
+      "odate": 1791125400254,
+      "domain": "NeurIPS.cc/2026/Workshop/CL4FMAgents",
+      "id": "jRvd5To0aR",
+      "version": 2
+    },
+    {
+      "content": {
+        "venue": {
+          "value": "ICLR 2027 Conference Submission"
+        },
+        "keywords": {
+          "value": [
+            "Muon",
+            "momentum orthogonalization",
+            "Noisy data",
+            "Noisy labels"
+          ]
+        },
+        "primary_area": {
+          "value": "foundation or frontier models, including LLMs"
+        },
+        "abstract": {
+          "value": "Muon has become a promising optimizer for accelerating neural network training by flattening the momentum update spectrum (momentum orthogonalization). Because it often improves model capabilities, the literature has focused on its theoretical understanding and applications while largely overlooking the underlying costs and drawbacks of the acceleration mechanism behind Muon. Our analysis reveals a fundamental tradeoff behind Muon’s speed: this mechanism alters implicit biases that help neural networks generalize in non-synthetic, noisy data settings, degrading performance in real-world environments. In practice, by equalizing the singular values of the update step, momentum orthogonalization assigns equal weight to update directions driven by the \"clean\" data distribution and those driven by rare, weak, or purely noisy data examples. We develop a theoretical account of this tradeoff, showing that spectral equalization encourages high-rank learning (while gradient-based methods are usually known as low-rank learners), removes the natural separation between signal and noise during training, and can move optimization away from simple solutions. We further identify asymmetric label corruption as a realistic failure mode: corrupted examples create coherent but weak directions that Muon promotes relative to Stochastic Gradient Descent (SGD). Experiments with Vision Transformers on CIFAR-100 support this prediction. Muon matches AdamW on clean data but underperforms SGD under label corruption, with a larger gap under asymmetric than symmetric noise. These findings motivate a new direction for optimizer design that retains the speed of spectral equalization while preserving the robustness of amplitude-sensitive learning."
+        },
+        "_bibtex": {
+          "value": "@inproceedings{\nanonymous2026the,\ntitle={The Illusion of Speed: Uncovering the Trade-Offs of Muon{\\textquoteright}s Spectral Flattening},\nauthor={Anonymous},\nbooktitle={Submitted to The Fifteenth International Conference on Learning Representations},\nyear={2026},\nurl={https://openreview.net/forum?id=Z7Lh1u62F7},\nnote={under review}\n}"
+        },
+        "title": {
+          "value": "The Illusion of Speed: Uncovering the Trade-Offs of Muon’s Spectral Flattening"
+        },
+        "pdf": {
+          "value": "/pdf/4e7e6e8cf881b6e063e079d583e3bd91052da73d.pdf"
+        },
+        "venueid": {
+          "value": "ICLR.cc/2027/Conference/Submission"
+        }
+      },
+      "tmdate": 1791233660611,
+      "tcdate": 1789746435558,
+      "writers": [
+        "ICLR.cc/2027/Conference",
+        "ICLR.cc/2027/Conference/Submission45279/Authors"
+      ],
+      "signatures": [
+        "ICLR.cc/2027/Conference/Submission45279/Authors"
+      ],
+      "forum": "Z7Lh1u62F7",
+      "license": "CC BY 4.0",
+      "number": 45279,
+      "cdate": 1789746435558,
+      "readers": [
+        "everyone"
+      ],
+      "invitations": [
+        "ICLR.cc/2027/Conference/-/Submission",
+        "ICLR.cc/2027/Conference/-/Submission_Change_Before_Bidding",
+        "ICLR.cc/2027/Conference/Submission45279/-/Full_Submission",
+        "ICLR.cc/2027/Conference/-/Submission_Change_Before_Reviewing",
+        "ICLR.cc/2027/Conference/-/Edit"
+      ],
+      "mdate": 1791233660611,
+      "odate": 1791031328286,
+      "domain": "ICLR.cc/2027/Conference",
+      "id": "Z7Lh1u62F7",
+      "version": 2
+    },
+    {
+      "content": {
+        "venue": {
+          "value": "ICLR 2027 Conference Submission"
+        },
+        "keywords": {
+          "value": [
+            "Muon",
+            "preconditioning effect",
+            "matrix factorization"
+          ]
+        },
+        "primary_area": {
+          "value": "optimization"
+        },
+        "abstract": {
+          "value": "The Muon optimizer has achieved strong empirical performance in large language model training, yet the role of spectral orthogonalization in its effectiveness remains poorly understood. We study its preconditioning effect through two case studies: matrix factorization and in-context linear regression in an infinite-prompt Gaussian softmax-attention model. For both problems, we prove that exact-polar \\muon attains logarithmic iteration complexity independent of the relevant condition number, for every fixed momentum parameter $0\\leq\\mu<1$ under suitable initialization and stepsize conditions. We also establish condition-number-dependent lower bounds for gradient descent and standard full-batch Adam on separate hard instances. On a common locally initialized matrix-factorization instance, we further separate Muon's logarithmic dependence on the condition number from stabilized Adam's square-root dependence, assuming bounded scalar learning rates. Our analysis reduces the convergence argument to scalar dynamics in the spectral domain, revealing how orthogonalization balances progress across modes. These results identify spectral orthogonalization as the source of the preconditioning effect, which arises even without momentum."
+        },
+        "_bibtex": {
+          "value": "@inproceedings{\nanonymous2026preconditioning,\ntitle={Preconditioning Benefits of Spectral Orthogonalization in Muon},\nauthor={Anonymous},\nbooktitle={Submitted to The Fifteenth International Conference on Learning Representations},\nyear={2026},\nurl={https://openreview.net/forum?id=DIoUssxjoe},\nnote={under review}\n}"
+        },
+        "title": {
+          "value": "Preconditioning Benefits of Spectral Orthogonalization in Muon"
+        },
+        "pdf": {
+          "value": "/pdf/85ba9643fb92c0ea66cfeabd599a543a5be20177.pdf"
+        },
+        "venueid": {
+          "value": "ICLR.cc/2027/Conference/Submission"
+        }
+      },
+      "tmdate": 1791233494185,
+      "tcdate": 1789742721376,
+      "writers": [
+        "ICLR.cc/2027/Conference",
+        "ICLR.cc/2027/Conference/Submission44301/Authors"
+      ],
+      "signatures": [
+        "ICLR.cc/2027/Conference/Submission44301/Authors"
+      ],
+      "forum": "DIoUssxjoe",
+      "license": "CC BY 4.0",
+      "number": 44301,
+      "cdate": 1789742721376,
+      "readers": [
+        "everyone"
+      ],
+      "invitations": [
+        "ICLR.cc/2027/Conference/-/Submission",
+        "ICLR.cc/2027/Conference/-/Submission_Change_Before_Bidding",
+        "ICLR.cc/2027/Conference/Submission44301/-/Full_Submission",
+        "ICLR.cc/2027/Conference/-/Submission_Change_Before_Reviewing",
+        "ICLR.cc/2027/Conference/-/Edit"
+      ],
+      "mdate": 1791233494185,
+      "odate": 1791031328286,
+      "domain": "ICLR.cc/2027/Conference",
+      "id": "DIoUssxjoe",
+      "version": 2
+    }
+  ],
+  "count": 10000
+}

@@ -1,0 +1,795 @@
+{
+  "notes": [
+    {
+      "content": {
+        "TLDR": {
+          "value": "We introduce scalable schedules for momentum and weight-decay in AdamW-type algorithms yielding significant compute gains at scale."
+        },
+        "venue": {
+          "value": "ICLR 2027 Conference Submission"
+        },
+        "keywords": {
+          "value": [
+            "momentum",
+            "optimization",
+            "scaling"
+          ]
+        },
+        "primary_area": {
+          "value": "foundation or frontier models, including LLMs"
+        },
+        "abstract": {
+          "value": "In practice, the hyperparameters $(\\beta_1,\\beta_2)$ and weight-decay $\\lambda$ in AdamW are typically kept at fixed values. Is there any reason to do otherwise? We show that for large-scale language model training, the answer is yes: by exploiting the power-law structure of language data, one can design time-varying schedules for $(\\beta_1,\\beta_2,\\lambda)$ that deliver substantial performance gains. We study logarithmic-time scheduling, in which the optimizer’s gradient memory horizon grows with training time. Although naïve variants of this are unstable, we show that suitable damping mechanisms restore stability while preserving the benefits of longer memory. Based on this, we present ADana, an AdamW-like optimizer that couples log-time schedules with explicit damping to balance stability and performance. We empirically evaluate ADana across transformer scalings (45M to 4.4B parameters), comparing against AdamW, Muon, and Ademamix. When properly tuned, ADana achieves up to 40\\% compute efficiency relative to a tuned AdamW, with gains that persist—and even improve—as model scale increases. We further show that similar benefits arise when applying logarithmic-time scheduling to Ademamix, and that logarithmic-time weight-decay alone can yield significant improvements. Finally, we present variants of ADana that mitigate potential failure modes and improve robustness."
+        },
+        "_bibtex": {
+          "value": "@inproceedings{\nanonymous2026logarithmictime,\ntitle={Logarithmic-time Schedules for Scaling Language Models with Momentum},\nauthor={Anonymous},\nbooktitle={Submitted to The Fifteenth International Conference on Learning Representations},\nyear={2026},\nurl={https://openreview.net/forum?id=wpOhKsgCy9},\nnote={under review}\n}"
+        },
+        "title": {
+          "value": "Logarithmic-time Schedules for Scaling Language Models with Momentum"
+        },
+        "pdf": {
+          "value": "/pdf/7a16f309b1b87fcf800c7c7098d45832193bfeb6.pdf"
+        },
+        "venueid": {
+          "value": "ICLR.cc/2027/Conference/Submission"
+        }
+      },
+      "tmdate": 1791232008584,
+      "tcdate": 1789697073168,
+      "writers": [
+        "ICLR.cc/2027/Conference",
+        "ICLR.cc/2027/Conference/Submission35777/Authors"
+      ],
+      "signatures": [
+        "ICLR.cc/2027/Conference/Submission35777/Authors"
+      ],
+      "forum": "wpOhKsgCy9",
+      "license": "CC BY 4.0",
+      "number": 35777,
+      "cdate": 1789697073168,
+      "readers": [
+        "everyone"
+      ],
+      "invitations": [
+        "ICLR.cc/2027/Conference/-/Submission",
+        "ICLR.cc/2027/Conference/-/Submission_Change_Before_Bidding",
+        "ICLR.cc/2027/Conference/Submission35777/-/Full_Submission",
+        "ICLR.cc/2027/Conference/-/Submission_Change_Before_Reviewing",
+        "ICLR.cc/2027/Conference/-/Edit"
+      ],
+      "mdate": 1791232008584,
+      "odate": 1791031328286,
+      "domain": "ICLR.cc/2027/Conference",
+      "id": "wpOhKsgCy9",
+      "version": 2
+    },
+    {
+      "content": {
+        "venue": {
+          "value": "CVPR 2026, Test-Time Scaling for Computer Vision"
+        },
+        "venueid": {
+          "value": "OpenReview.net/Archive"
+        },
+        "paperhash": {
+          "value": "chanda|rethinking_dense_optical_flow_without_testtime_scaling"
+        },
+        "authorids": {
+          "value": [
+            "~Praroop_Chanda1",
+            "~Suryansh_Kumar1"
+          ]
+        },
+        "abstract": {
+          "value": "Recent progress in dense optical flow has been driven by increasingly complex architectures and multi-step refinement for test-time scaling. While these approaches achieve strong benchmark performance, they also require substantial computation during inference. This raises a fundamental question: Is scaling test-time computation the only way to improve dense optical flow accuracy? We argue that it is not. Instead, powerful visual semantic and geometric priors encoded in modern foundation models can reduce, if not overcome, the need for computationally expensive iterative refinement at test-time. In this paper, we present a framework that estimates dense optical flow in a single forward pass, leveraging pretrained foundation representations, while avoiding iterative refinement and additional inference-time computation, thus offering an alternative to test-time scaling. Our method extracts visual semantic features from a frozen DINO-v2 backbone and combines them with geometric cues from a monocular depth foundation model. We fuse these complementary priors into a unified representation and apply a global matching formulation to estimate dense correspondences without recurrent updates or test-time optimization. Despite avoiding iterative refinement, our approach achieves strong cross-dataset generalization across challenging benchmarks. On Sintel Final, we obtain $\\textbf{2.81 EPE}$ without refinement, significantly improving over state-of-the-art (SOTA) SEA-RAFT under comparable training conditions and outperforming RAFT, GMFlow (without refinement), and recent FlowSeek in the same setting. These results suggest that strong foundation priors can substitute for test-time scaling, offering a computationally efficient alternative to refinement-heavy pipelines."
+        },
+        "title": {
+          "value": "Rethinking Dense Optical Flow without Test-Time Scaling"
+        },
+        "authors": {
+          "value": [
+            "Praroop Chanda",
+            "Suryansh Kumar"
+          ]
+        }
+      },
+      "tmdate": 1778190025993,
+      "pdate": 1780506000000,
+      "tcdate": 1778190025993,
+      "writers": [
+        "~Praroop_Chanda1",
+        "~Suryansh_Kumar1"
+      ],
+      "signatures": [
+        "~Praroop_Chanda1"
+      ],
+      "forum": "5a1uXnGENN",
+      "license": "CC BY 4.0",
+      "number": 49784,
+      "cdate": 1778190025993,
+      "readers": [
+        "everyone"
+      ],
+      "invitations": [
+        "OpenReview.net/Archive/-/Direct_Upload"
+      ],
+      "mdate": 1778190025993,
+      "domain": "OpenReview.net/Archive",
+      "id": "5a1uXnGENN",
+      "version": 2
+    },
+    {
+      "content": {
+        "venue": {
+          "value": "Submitted to ICLR 2026"
+        },
+        "keywords": {
+          "value": [
+            "Optimization",
+            "Adam",
+            "Momentum"
+          ]
+        },
+        "supplementary_material": {
+          "value": "/attachment/ef89ac66c46ab2b287f6e36e81e0ef009229b591.zip"
+        },
+        "primary_area": {
+          "value": "optimization"
+        },
+        "abstract": {
+          "value": "We introduce Adaptive Momentum Scaling (AMS), a general optimization framework that decouples the direction and magnitude of parameter updates by separately tracking the sign and scale of momentum. AMS unifies and extends existing optimizers; in particular, we show that it recovers Adam and Cautious Adam as special cases through appropriate hyperparameter choices. Building on this framework, we develop Gradient Descent with Adaptive Momentum Scaling (Grams), a novel optimizer that leverages gradient direction for updates while using momentum exclusively for adaptive magnitude scaling. This design enables Grams to achieve more effective loss descent than conventional momentum-based and cautious methods. We provide theoretical guarantees for Grams, including discrete-time descent analysis, and further connect its dynamics to Hamiltonian descent. Empirically, Grams consistently outperforms widely-used optimizers such as Adam, Lion, and their cautious variants across a range of tasks, including pre-training and fine-tuning large language models. Our results demonstrate that AMS and Grams offers a principled and scalable solution for modern deep learning optimization."
+        },
+        "_bibtex": {
+          "value": "@misc{\ncao2026decoupling,\ntitle={Decoupling Sign and Magnitude in Optimization with Adaptive Momentum Scaling},\nauthor={Yang Cao and Xiaoyu Li and Zhao Song},\nyear={2026},\nurl={https://openreview.net/forum?id=RPly1hhiUG}\n}"
+        },
+        "title": {
+          "value": "Decoupling Sign and Magnitude in Optimization with Adaptive Momentum Scaling"
+        },
+        "pdf": {
+          "value": "/pdf/d9cd8d9a7169449358f85530f4628a59564f5e54.pdf"
+        },
+        "venueid": {
+          "value": "ICLR.cc/2026/Conference/Rejected_Submission"
+        },
+        "paperhash": {
+          "value": "cao|decoupling_sign_and_magnitude_in_optimization_with_adaptive_momentum_scaling"
+        },
+        "authorids": {
+          "value": [
+            "~Yang_Cao26",
+            "~Xiaoyu_Li12",
+            "~Zhao_Song3"
+          ]
+        },
+        "authors": {
+          "value": [
+            "Yang Cao",
+            "Xiaoyu Li",
+            "Zhao Song"
+          ]
+        }
+      },
+      "tmdate": 1770805020704,
+      "tcdate": 1758241583684,
+      "writers": [
+        "ICLR.cc/2026/Conference",
+        "ICLR.cc/2026/Conference/Submission14682/Authors"
+      ],
+      "signatures": [
+        "ICLR.cc/2026/Conference/Submission14682/Authors"
+      ],
+      "forum": "RPly1hhiUG",
+      "license": "CC BY 4.0",
+      "number": 14682,
+      "cdate": 1758241583684,
+      "readers": [
+        "everyone"
+      ],
+      "invitations": [
+        "ICLR.cc/2026/Conference/-/Submission",
+        "ICLR.cc/2026/Conference/-/Post_Submission",
+        "ICLR.cc/2026/Conference/Submission14682/-/Full_Submission",
+        "ICLR.cc/2026/Conference/-/Edit"
+      ],
+      "mdate": 1770805020704,
+      "odate": 1759896705795,
+      "domain": "ICLR.cc/2026/Conference",
+      "id": "RPly1hhiUG",
+      "version": 2
+    },
+    {
+      "content": {
+        "venue": {
+          "value": "TIME 2025 Oral"
+        },
+        "pdf": {
+          "value": "/pdf/d45ec13295f70e004234c095f8f1c2433f752ee5.pdf"
+        },
+        "keywords": {
+          "value": [
+            "Language language models",
+            "Videos",
+            "Temporal",
+            "Interaction"
+          ]
+        },
+        "venueid": {
+          "value": "ACM.org/TheWebConf/2025/Workshop/TIME"
+        },
+        "paperhash": {
+          "value": "ding|do_language_models_understand_time"
+        },
+        "authorids": {
+          "value": [
+            "~Xi_Ding1",
+            "~Lei_Wang20"
+          ]
+        },
+        "abstract": {
+          "value": "Large language models (LLMs) have revolutionized video-based computer vision applications, including action recognition, anomaly detection, and video summarization. Videos inherently pose unique challenges, combining spatial complexity with temporal dynamics that are absent in static images or textual data. Current approaches to video understanding with LLMs often rely on pretrained video encoders to extract spatiotemporal features and text encoders to capture semantic meaning. These representations are integrated within LLM frameworks, enabling multimodal reasoning across diverse video tasks. However, the critical question persists: Can LLMs truly understand the concept of time, and how effectively can they reason about temporal relationships in videos? This work critically examines the role of LLMs in video processing, with a specific focus on their temporal reasoning capabilities. We identify key limitations in the interaction between LLMs and pretrained encoders, revealing gaps in their ability to model long-term dependencies and abstract temporal concepts such as causality and event progression. Furthermore, we analyze challenges posed by existing video datasets, including biases, lack of temporal annotations, and domain-specific limitations that constrain the temporal understanding of LLMs. To address these gaps, we explore promising future directions, including the co-evolution of LLMs and encoders, the development of enriched datasets with explicit temporal labels, and innovative architectures for integrating spatial, temporal, and semantic reasoning. By addressing these challenges, we aim to advance the temporal comprehension of LLMs, unlocking their full potential in video analysis and beyond."
+        },
+        "_bibtex": {
+          "value": "@inproceedings{\nding2025do,\ntitle={Do Language Models Understand Time?},\nauthor={Xi Ding and Lei Wang},\nbooktitle={The First International Workshop on Transformative Insights in Multifaceted Evaluation at The Web Conference 2025},\nyear={2025},\nurl={https://openreview.net/forum?id=GBWUkGxx1a}\n}"
+        },
+        "title": {
+          "value": "Do Language Models Understand Time?"
+        },
+        "authors": {
+          "value": [
+            "Xi Ding",
+            "Lei Wang"
+          ]
+        }
+      },
+      "tmdate": 1741828295809,
+      "pdate": 1737986835662,
+      "tcdate": 1734526198004,
+      "writers": [
+        "ACM.org/TheWebConf/2025/Workshop/TIME",
+        "ACM.org/TheWebConf/2025/Workshop/TIME/Submission2/Authors"
+      ],
+      "signatures": [
+        "ACM.org/TheWebConf/2025/Workshop/TIME/Submission2/Authors"
+      ],
+      "forum": "GBWUkGxx1a",
+      "license": "CC BY 4.0",
+      "number": 2,
+      "cdate": 1734526198004,
+      "readers": [
+        "everyone"
+      ],
+      "invitations": [
+        "ACM.org/TheWebConf/2025/Workshop/TIME/-/Submission",
+        "ACM.org/TheWebConf/2025/Workshop/TIME/-/Post_Submission",
+        "ACM.org/TheWebConf/2025/Workshop/TIME/-/Edit",
+        "ACM.org/TheWebConf/2025/Workshop/TIME/Submission2/-/Camera-Ready"
+      ],
+      "mdate": 1741828295809,
+      "odate": 1737990417092,
+      "domain": "ACM.org/TheWebConf/2025/Workshop/TIME",
+      "id": "GBWUkGxx1a",
+      "version": 2
+    },
+    {
+      "content": {
+        "venue": {
+          "value": "CoRR 2025"
+        },
+        "pdf": {
+          "value": "http://arxiv.org/pdf/2507.14958v1"
+        },
+        "venueid": {
+          "value": "dblp.org/journals/CORR/2025"
+        },
+        "paperhash": {
+          "value": "yan|mur_momentum_uncertainty_guided_reasoning_for_large_language_models"
+        },
+        "authorids": {
+          "value": [
+            "https://dblp.org/search/pid/api?q=author:Hang_Yan_0010:",
+            "https://dblp.org/search/pid/api?q=author:Fangzhi_Xu:",
+            "~Rongman_Xu3",
+            "https://dblp.org/search/pid/api?q=author:Yifei_Li_0006:",
+            "~Jian_Zhang52",
+            "https://dblp.org/search/pid/api?q=author:Haoran_Luo_0001:",
+            "https://dblp.org/search/pid/api?q=author:Xiaobao_Wu:",
+            "https://dblp.org/search/pid/api?q=author:Luu_Anh_Tuan:",
+            "https://dblp.org/search/pid/api?q=author:Haiteng_Zhao:",
+            "~Qika_Lin1",
+            "~Jun_Liu10"
+          ]
+        },
+        "html": {
+          "value": "https://doi.org/10.48550/arXiv.2507.14958"
+        },
+        "_bibtex": {
+          "value": "@article{DBLP:journals/corr/abs-2507-14958,\n  publtype={informal},\n  author={Hang Yan and Fangzhi Xu and Rongman Xu and Yifei Li and Jian Zhang and Haoran Luo and Xiaobao Wu and Luu Anh Tuan and Haiteng Zhao and Qika Lin and Jun Liu},\n  title={MUR: Momentum Uncertainty guided Reasoning for Large Language Models},\n  year={2025},\n  month={July},\n  cdate={1751328000000},\n  journal={CoRR},\n  volume={abs/2507.14958},\n  url={https://doi.org/10.48550/arXiv.2507.14958}\n}\n"
+        },
+        "abstract": {
+          "value": "Large Language Models (LLMs) have achieved impressive performance on reasoning-intensive tasks, yet optimizing their reasoning efficiency remains an open challenge. While Test-Time Scaling (TTS) improves reasoning quality, it often leads to overthinking, wasting tokens on redundant computations. This work investigates how to efficiently and adaptively guide LLM test-time scaling without additional training. Inspired by the concept of momentum in physics, we propose Momentum Uncertainty-guided Reasoning (MUR), which dynamically allocates thinking budgets to critical reasoning steps by tracking and aggregating stepwise uncertainty over time. To support flexible inference-time control, we introduce gamma-control, a simple mechanism that tunes the reasoning budget via a single hyperparameter. We provide in-depth theoretical proof to support the superiority of MUR in terms of stability and biases. MUR is comprehensively evaluated against various TTS methods across four challenging benchmarks (MATH-500, AIME24, AIME25, and GPQA-diamond) using different sizes of recent Qwen3 models (1.7B, 4B, and 8B). Results demonstrate that MUR reduces computation by over 50% on average while improving accuracy by 0.62-3.37%."
+        },
+        "title": {
+          "value": "MUR: Momentum Uncertainty guided Reasoning for Large Language Models"
+        },
+        "authors": {
+          "value": [
+            "Hang Yan",
+            "Fangzhi Xu",
+            "Rongman Xu",
+            "Yifei Li",
+            "Jian Zhang",
+            "Haoran Luo",
+            "Xiaobao Wu",
+            "Luu Anh Tuan",
+            "Haiteng Zhao",
+            "Qika Lin",
+            "Jun Liu"
+          ]
+        }
+      },
+      "tmdate": 1784686700268,
+      "pdate": 1735689600000,
+      "externalIds": [
+        "dblp:journals/corr/abs-2507-14958"
+      ],
+      "tcdate": 1762264514767,
+      "writers": [
+        "~"
+      ],
+      "signatures": [
+        "~Jun_Liu10"
+      ],
+      "forum": "rFtqzgM2XW",
+      "license": "CC BY-SA 4.0",
+      "number": 653889,
+      "cdate": 1751328000000,
+      "readers": [
+        "everyone"
+      ],
+      "invitations": [
+        "DBLP.org/-/Record",
+        "DBLP.org/-/Edit",
+        "DBLP.org/-/Author_Coreference"
+      ],
+      "mdate": 1784686700268,
+      "domain": "DBLP.org",
+      "id": "rFtqzgM2XW",
+      "version": 2
+    },
+    {
+      "content": {
+        "TLDR": {
+          "value": "We find a power-law relationship between the optimal momentum hyperparameter and learning rate which maximizes generalization."
+        },
+        "venue": {
+          "value": "Submitted to ICLR 2024"
+        },
+        "code_of_ethics": {
+          "value": "I acknowledge that I and all co-authors of this work have read and commit to adhering to the ICLR Code of Ethics."
+        },
+        "keywords": {
+          "value": [
+            "stochastic gradient descent",
+            "momentum",
+            "power-law scaling"
+          ]
+        },
+        "primary_area": {
+          "value": "optimization"
+        },
+        "submission_guidelines": {
+          "value": "I certify that this submission complies with the submission instructions as described on https://iclr.cc/Conferences/2024/AuthorGuide."
+        },
+        "abstract": {
+          "value": "Commonly used optimization algorithms often show a trade-off between good generalization and fast training times. For instance, stochastic gradient descent (SGD) tends to have good generalization; however, adaptive gradient methods have superior training times. Momentum can help accelerate training with SGD, but so far there has been no principled way to select the momentum hyperparameter. Here we study training dynamics arising from the interplay between SGD with label noise and momentum in the training of overparametrized neural networks. We find that scaling the momentum hyperparameter $1-\\beta$ with the learning rate to the power of $2/3$ maximally accelerates training, without sacrificing generalization. To analytically derive this result we develop an architecture-independent framework, where the main assumption is the existence of a degenerate manifold of global minimizers, as is natural in overparametrized models. Training dynamics display the emergence of two characteristic timescales that are well-separated for generic values of the hyperparameters. The maximum acceleration of training is reached when these two timescales meet, which in turn determines the scaling limit we propose. Our experiments in matrix-sensing, a 6-layer MLP on FashionMNIST and ResNet-18 on CIFAR10 validate this scaling for the time to convergence, and additionally for the momentum hyperparameter which maximizes generalization."
+        },
+        "_bibtex": {
+          "value": "@misc{\ncowsik2024flatter,\ntitle={Flatter, Faster: Scaling Momentum for Optimal Speedup of {SGD}},\nauthor={Aditya Cowsik and Tankut Can and Paolo Glorioso},\nyear={2024},\nurl={https://openreview.net/forum?id=bHOcs4PBgR}\n}"
+        },
+        "title": {
+          "value": "Flatter, Faster: Scaling Momentum for Optimal Speedup of SGD"
+        },
+        "pdf": {
+          "value": "/pdf/c9f826b2348823dd2a818d60c7eac293c6fd0bb7.pdf"
+        },
+        "venueid": {
+          "value": "ICLR.cc/2024/Conference/Rejected_Submission"
+        },
+        "paperhash": {
+          "value": "cowsik|flatter_faster_scaling_momentum_for_optimal_speedup_of_sgd"
+        },
+        "authorids": {
+          "value": [
+            "~Aditya_Cowsik1",
+            "~Tankut_Can1",
+            "~Paolo_Glorioso1"
+          ]
+        },
+        "anonymous_url": {
+          "value": "I certify that there is no URL (e.g., github page) that could be used to find authors' identity."
+        },
+        "no_acknowledgement_section": {
+          "value": "I certify that there is no acknowledgement section in this submission for double blind review."
+        },
+        "authors": {
+          "value": [
+            "Aditya Cowsik",
+            "Tankut Can",
+            "Paolo Glorioso"
+          ]
+        }
+      },
+      "tmdate": 1707625760348,
+      "tcdate": 1695499136210,
+      "writers": [
+        "ICLR.cc/2024/Conference",
+        "ICLR.cc/2024/Conference/Submission8160/Authors"
+      ],
+      "signatures": [
+        "ICLR.cc/2024/Conference/Submission8160/Authors"
+      ],
+      "forum": "bHOcs4PBgR",
+      "number": 8160,
+      "cdate": 1695499136210,
+      "readers": [
+        "everyone"
+      ],
+      "invitations": [
+        "ICLR.cc/2024/Conference/-/Submission",
+        "ICLR.cc/2024/Conference/-/Post_Submission",
+        "ICLR.cc/2024/Conference/Submission8160/-/Revision",
+        "ICLR.cc/2024/Conference/Submission8160/-/Rebuttal_Revision",
+        "ICLR.cc/2024/Conference/-/Edit"
+      ],
+      "mdate": 1707625760348,
+      "odate": 1697213872796,
+      "domain": "ICLR.cc/2024/Conference",
+      "id": "bHOcs4PBgR",
+      "version": 2
+    },
+    {
+      "content": {
+        "TLDR": {
+          "value": "We developed a new optimizer, HomM, that achieves finite-time convergence by  blending momentum and scaling."
+        },
+        "venue": {
+          "value": "Submitted to ICLR 2026"
+        },
+        "keywords": {
+          "value": [
+            "optimization",
+            "homogeneity",
+            "finite-time",
+            "scaling"
+          ]
+        },
+        "supplementary_material": {
+          "value": "/attachment/2052d12d2b808ee10b0f3f533d2a7392657dd3e2.zip"
+        },
+        "primary_area": {
+          "value": "optimization"
+        },
+        "abstract": {
+          "value": "We introduce HomM, a homogeneous momentum optimizer derived from a perspective of continuous-time dynamical systems. HomM integrates homogeneity (scaling) and momentum, achieving finite-time convergence to an optimal solution under standard assumptions for both convex and non-convex objectives. To bridge theory and practice, we propose a semi-implicit discretization of the continuous-time HomM. Additionally, we present a unified framework for understanding adaptive optimizers through the lens of homogeneity, highlighting comparisons with HomM. Empirical evaluations on deep learning benchmarks show that HomM outperforms widely used momentum-based baselines, including SGD with momentum and Nesterov acceleration, as well as adaptive methods such as Adam and Lion."
+        },
+        "_bibtex": {
+          "value": "@misc{\nzhou2026homm,\ntitle={HomM: Homogeneous Momentum Optimizer with Finite-Time Convergence},\nauthor={Yu Zhou and Masaaki Nagahara},\nyear={2026},\nurl={https://openreview.net/forum?id=fHYzKTywr8}\n}"
+        },
+        "title": {
+          "value": "HomM: Homogeneous Momentum Optimizer with Finite-Time Convergence"
+        },
+        "pdf": {
+          "value": "/pdf/5111c81853ad2e05dd89c8ee3146fd8d4e3b36b9.pdf"
+        },
+        "venueid": {
+          "value": "ICLR.cc/2026/Conference/Rejected_Submission"
+        },
+        "paperhash": {
+          "value": "zhou|homm_homogeneous_momentum_optimizer_with_finitetime_convergence"
+        },
+        "authorids": {
+          "value": [
+            "~Yu_Zhou36",
+            "~Masaaki_Nagahara1"
+          ]
+        },
+        "authors": {
+          "value": [
+            "Yu Zhou",
+            "Masaaki Nagahara"
+          ]
+        }
+      },
+      "tmdate": 1770804943523,
+      "tcdate": 1758166696841,
+      "writers": [
+        "ICLR.cc/2026/Conference",
+        "ICLR.cc/2026/Conference/Submission10311/Authors"
+      ],
+      "signatures": [
+        "ICLR.cc/2026/Conference/Submission10311/Authors"
+      ],
+      "forum": "fHYzKTywr8",
+      "license": "CC BY 4.0",
+      "number": 10311,
+      "cdate": 1758166696841,
+      "readers": [
+        "everyone"
+      ],
+      "invitations": [
+        "ICLR.cc/2026/Conference/-/Submission",
+        "ICLR.cc/2026/Conference/-/Post_Submission",
+        "ICLR.cc/2026/Conference/Submission10311/-/Full_Submission",
+        "ICLR.cc/2026/Conference/Submission10311/-/Rebuttal_Revision",
+        "ICLR.cc/2026/Conference/-/Edit"
+      ],
+      "mdate": 1770804943523,
+      "odate": 1759896705795,
+      "domain": "ICLR.cc/2026/Conference",
+      "id": "fHYzKTywr8",
+      "version": 2
+    },
+    {
+      "content": {
+        "venue": {
+          "value": "ICLR 2027 Conference Submission"
+        },
+        "keywords": {
+          "value": [
+            "Optimization",
+            "momentum",
+            "scaling laws"
+          ]
+        },
+        "primary_area": {
+          "value": "optimization"
+        },
+        "abstract": {
+          "value": "We show that optimizer memory schedules can produce an increasing token-efficiency advantage over AdamW as Transformer training horizons grow. We compare AdamW, Muon, SOAP, and ADANA across four model sizes from 51M to 458M parameters and overtraining (OT) factors from 1x to 256x, sweeping the base learning rate at every setting. We introduce a timescale-based momentum cooldown rule that shortens optimizer memory during terminal learning rate decay, producing large long-horizon gains for ADANA that compound with log-time weight decay. With these schedules, ADANA outscales AdamW with a scaling advantage close to that predicted by DANA theory on power-law random features. Longer horizons generally favor longer fixed memory, but ADANA's scaling advantage persists after tuning AdamW's fixed memory separately at each horizon. Muon's token-efficiency advantage over AdamW is roughly constant across OT factors, while SOAP gains further at high OT. ADANA begins behind both matrix-preconditioned optimizers but surpasses Muon and becomes competitive with SOAP at our highest OT factors. These results establish training horizon as an essential axis for optimizer evaluation and design."
+        },
+        "_bibtex": {
+          "value": "@inproceedings{\nanonymous2026optimizer,\ntitle={Optimizer Memory Schedules for Outscaling the Overtraining Axis},\nauthor={Anonymous},\nbooktitle={Submitted to The Fifteenth International Conference on Learning Representations},\nyear={2026},\nurl={https://openreview.net/forum?id=P2VtelR5KS},\nnote={under review}\n}"
+        },
+        "title": {
+          "value": "Optimizer Memory Schedules for Outscaling the Overtraining Axis"
+        },
+        "pdf": {
+          "value": "/pdf/e9f0be1e656c5680b498d2370dab4f25096e4d1b.pdf"
+        },
+        "venueid": {
+          "value": "ICLR.cc/2027/Conference/Submission"
+        }
+      },
+      "tmdate": 1791234399720,
+      "tcdate": 1789775012356,
+      "writers": [
+        "ICLR.cc/2027/Conference",
+        "ICLR.cc/2027/Conference/Submission50432/Authors"
+      ],
+      "signatures": [
+        "ICLR.cc/2027/Conference/Submission50432/Authors"
+      ],
+      "forum": "P2VtelR5KS",
+      "license": "CC BY 4.0",
+      "number": 50432,
+      "cdate": 1789775012356,
+      "readers": [
+        "everyone"
+      ],
+      "invitations": [
+        "ICLR.cc/2027/Conference/-/Submission",
+        "ICLR.cc/2027/Conference/-/Submission_Change_Before_Bidding",
+        "ICLR.cc/2027/Conference/Submission50432/-/Full_Submission",
+        "ICLR.cc/2027/Conference/-/Submission_Change_Before_Reviewing",
+        "ICLR.cc/2027/Conference/-/Edit"
+      ],
+      "mdate": 1791234399720,
+      "odate": 1791031328286,
+      "domain": "ICLR.cc/2027/Conference",
+      "id": "P2VtelR5KS",
+      "version": 2
+    },
+    {
+      "content": {
+        "venue": {
+          "value": "ACL (1) 2026"
+        },
+        "pdf": {
+          "value": "https://aclanthology.org/2026.acl-long.1058.pdf"
+        },
+        "venueid": {
+          "value": "OpenReview.net/Public_Article"
+        },
+        "paperhash": {
+          "value": "yan|mur_momentum_uncertainty_guided_reasoning_for_large_language_models"
+        },
+        "html": {
+          "value": "https://aclanthology.org/2026.acl-long.1058/"
+        },
+        "_bibtex": {
+          "value": "@inproceedings{DBLP:conf/acl/YanXXLZLWLZLL26,\n  author={Hang Yan and Fangzhi Xu and Rongman Xu and Yifei Li and Jian Zhang and Haoran Luo and Xiaobao Wu and Anh Tuan Luu and Haiteng Zhao and Qika Lin and Jun Liu},\n  title={MUR: Momentum Uncertainty guided Reasoning for Large Language Models},\n  year={2026},\n  cdate={1767225600000},\n  pages={23078-23103},\n  url={https://aclanthology.org/2026.acl-long.1058/},\n  booktitle={ACL (1)},\n  crossref={conf/acl/2026-1}\n}\n"
+        },
+        "abstract": {
+          "value": "Large Language Models (LLMs) have achieved impressive performance on reasoning-intensive tasks, yet optimizing their reasoning efficiency remains an open challenge. While Test-Time Scaling (TTS) improves reasoning quality, it often leads to overthinking—wasting tokens on redundant computations. This work investigates how to efficiently and adaptively guide LLM TTS without additional training. Inspired by the concept of momentum in physics, we propose Momentum Uncertainty-guided Reasoning (MUR), which dynamically allocates thinking budgets to critical reasoning steps by tracking and aggregating step-wise uncertainty over time. To support flexible inference-time control, we introduce -control, a simple mechanism that tunes the reasoning budget via a single hyperparameter. We provide in-depth theoretical proof to support the superiority of MUR in terms of stability and biases. MUR is comprehensively evaluated against various TTS methods across four challenging benchmarks (MATH-500, AIME24, AIME25, and GPQA-diamond) using different sizes of recent Qwen3 models (1.7B, 4B, and 8B). Results demonstrate that MUR reduces computation by over 45% on average while improving accuracy by 0.33–3.46%."
+        },
+        "title": {
+          "value": "MUR: Momentum Uncertainty guided Reasoning for Large Language Models"
+        },
+        "authors": {
+          "value": [
+            {
+              "fullname": "Hang Yan",
+              "username": ""
+            },
+            {
+              "fullname": "Fangzhi Xu",
+              "username": ""
+            },
+            {
+              "fullname": "Rongman Xu",
+              "username": "~Rongman_Xu3"
+            },
+            {
+              "fullname": "Yifei Li",
+              "username": ""
+            },
+            {
+              "fullname": "Jian Zhang",
+              "username": ""
+            },
+            {
+              "fullname": "Haoran Luo",
+              "username": ""
+            },
+            {
+              "fullname": "Xiaobao Wu",
+              "username": ""
+            },
+            {
+              "fullname": "Anh Tuan Luu",
+              "username": ""
+            },
+            {
+              "fullname": "Haiteng Zhao",
+              "username": ""
+            },
+            {
+              "fullname": "Qika Lin",
+              "username": ""
+            },
+            {
+              "fullname": "Jun Liu",
+              "username": ""
+            }
+          ]
+        }
+      },
+      "tmdate": 1784686702787,
+      "pdate": 1798675200000,
+      "externalIds": [
+        "dblp:conf/acl/YanXXLZLWLZLL26"
+      ],
+      "tcdate": 1784686700161,
+      "writers": [
+        "~",
+        "OpenReview.net/Public_Article/DBLP.org",
+        "OpenReview.net/Support"
+      ],
+      "signatures": [
+        "~Rongman_Xu3"
+      ],
+      "forum": "g8L7qcIHr9",
+      "license": "CC BY-SA 4.0",
+      "number": 86906,
+      "cdate": 1767225600000,
+      "readers": [
+        "everyone"
+      ],
+      "invitations": [
+        "OpenReview.net/Public_Article/DBLP.org/-/Record",
+        "OpenReview.net/Public_Article/-/Edit"
+      ],
+      "mdate": 1784686702787,
+      "domain": "OpenReview.net/Public_Article",
+      "id": "g8L7qcIHr9",
+      "version": 2
+    },
+    {
+      "content": {
+        "venue": {
+          "value": "ICLR 2026 Conference Withdrawn Submission"
+        },
+        "keywords": {
+          "value": [
+            "momentum uncertainty",
+            "test-time scaling",
+            "LLM Reasoning"
+          ]
+        },
+        "supplementary_material": {
+          "value": "/attachment/18e95d1c90b9421d9634904ac935d14b04d8ee70.zip"
+        },
+        "primary_area": {
+          "value": "applications to computer vision, audio, language, and other modalities"
+        },
+        "abstract": {
+          "value": "Large Language Models (LLMs) have achieved impressive performance on reasoning-intensive tasks, yet optimizing their reasoning efficiency remains an open challenge. \nWhile Test-Time Scaling (TTS) improves reasoning quality, it often leads to overthinking—wasting tokens on redundant computations.\nThis work investigates how to efficiently and adaptively guide LLM TTS without additional training. \nInspired by the concept of momentum in physics, we propose Momentum Uncertainty-guided Reasoning (MUR), which dynamically allocates thinking budgets to critical reasoning steps by tracking and aggregating step-wise uncertainty over time.\nTo support flexible inference-time control, we introduce $\\gamma$-control, a simple mechanism that tunes the reasoning budget via a single hyperparameter.\nWe provide in-depth theoretical proof to support the superiority of MUR in terms of stability and biases.\nMUR is comprehensively evaluated against various TTS methods across four challenging benchmarks (MATH-500, AIME24, AIME25, and GPQA-diamond) using different sizes of recent Qwen3 models (1.7B, 4B, and 8B).\nResults demonstrate that MUR reduces computation by over 45% on average while improving accuracy by 0.33–3.46%."
+        },
+        "_bibtex": {
+          "value": "@misc{\nyan2025mur,\ntitle={{MUR}: Momentum Uncertainty guided Reasoning for Large Language Models},\nauthor={Hang Yan and Fangzhi Xu and Rongman Xu and Yifei Li and Jian Zhang and Haoran Luo and Xiaobao Wu and Anh Tuan Luu and Haiteng Zhao and Qika Lin and Jun Liu},\nyear={2025},\nurl={https://openreview.net/forum?id=5fUVJ2cHid}\n}"
+        },
+        "title": {
+          "value": "MUR: Momentum Uncertainty guided Reasoning for Large Language Models"
+        },
+        "pdf": {
+          "value": "/pdf/e0311b20efa4d39c184aa71ff4f6a803249bc21e.pdf"
+        },
+        "venueid": {
+          "value": "ICLR.cc/2026/Conference/Withdrawn_Submission"
+        },
+        "paperhash": {
+          "value": "yan|mur_momentum_uncertainty_guided_reasoning_for_large_language_models"
+        },
+        "authorids": {
+          "value": [
+            "~Hang_Yan4",
+            "~Fangzhi_Xu1",
+            "~Rongman_Xu3",
+            "~Yifei_Li18",
+            "~Jian_Zhang52",
+            "~Haoran_Luo1",
+            "~Xiaobao_Wu1",
+            "~Anh_Tuan_Luu2",
+            "~Haiteng_Zhao1",
+            "~Qika_Lin1",
+            "~Jun_Liu10"
+          ]
+        },
+        "authors": {
+          "value": [
+            "Hang Yan",
+            "Fangzhi Xu",
+            "Rongman Xu",
+            "Yifei Li",
+            "Jian Zhang",
+            "Haoran Luo",
+            "Xiaobao Wu",
+            "Anh Tuan Luu",
+            "Haiteng Zhao",
+            "Qika Lin",
+            "Jun Liu"
+          ]
+        }
+      },
+      "tmdate": 1767075225195,
+      "tcdate": 1757164124969,
+      "writers": [
+        "ICLR.cc/2026/Conference",
+        "ICLR.cc/2026/Conference/Submission2614/Authors"
+      ],
+      "signatures": [
+        "ICLR.cc/2026/Conference/Submission2614/Authors"
+      ],
+      "forum": "5fUVJ2cHid",
+      "license": "CC BY 4.0",
+      "number": 2614,
+      "cdate": 1757164124969,
+      "readers": [
+        "everyone"
+      ],
+      "invitations": [
+        "ICLR.cc/2026/Conference/-/Submission",
+        "ICLR.cc/2026/Conference/-/Post_Submission",
+        "ICLR.cc/2026/Conference/Submission2614/-/Full_Submission",
+        "ICLR.cc/2026/Conference/Submission2614/-/Rebuttal_Revision",
+        "ICLR.cc/2026/Conference/-/Withdrawn_Submission"
+      ],
+      "mdate": 1767075225195,
+      "odate": 1759896705795,
+      "domain": "ICLR.cc/2026/Conference",
+      "id": "5fUVJ2cHid",
+      "version": 2
+    }
+  ],
+  "count": 10000
+}

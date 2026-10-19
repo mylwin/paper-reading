@@ -1,0 +1,120 @@
+{
+  "papers_dir": "/Users/myl/Documents/paper/01-raw",
+  "month_dir": "/Users/myl/Documents/paper/01-raw/2026-10",
+  "month": "2026-10",
+  "date": "2026-10-10",
+  "requested": 3,
+  "downloaded": 2,
+  "skipped_existing": 0,
+  "failed": 1,
+  "index_updated": [
+    "/Users/myl/Documents/paper/01-raw/index.md",
+    "/Users/myl/Documents/paper/01-raw/2026-10/README.md",
+    "/Users/myl/Documents/paper/02-markdown/index.md",
+    "/Users/myl/Documents/paper/02-markdown/2026-10/README.md",
+    "/Users/myl/Documents/paper/03-notes/index.md",
+    "/Users/myl/Documents/paper/03-notes/2026-10/README.md",
+    "/Users/myl/Documents/paper/06-translation/index.md",
+    "/Users/myl/Documents/paper/06-translation/2026-10/README.md"
+  ],
+  "archived": [
+    {
+      "title": "Logarithmic-time Schedules for Scaling Language Models with Momentum",
+      "paper_stem": "Logarithmic_time_Schedules_for_Scaling_Language_Models_with_Momentum",
+      "month": "2026-10",
+      "source": "arxiv",
+      "pdf_url": "https://arxiv.org/pdf/2602.05298v2",
+      "path": "/Users/myl/Documents/paper/01-raw/2026-10/Logarithmic_time_Schedules_for_Scaling_Language_Models_with_Momentum.pdf",
+      "status": "downloaded",
+      "detail": "8494.9 KB",
+      "discovery_source": "openreview"
+    },
+    {
+      "title": "Sign compression for Muon: SignMuon, MuonSign, and the Limits of Error Feedback",
+      "paper_stem": "Sign_compression_for_Muon_SignMuon_MuonSign_and_the_Limits_of_Error_Feedback",
+      "month": "2026-10",
+      "source": "arxiv",
+      "pdf_url": "https://arxiv.org/pdf/2607.29674v1",
+      "path": "/Users/myl/Documents/paper/01-raw/2026-10/Sign_compression_for_Muon_SignMuon_MuonSign_and_the_Limits_of_Error_Feedback.pdf",
+      "status": "downloaded",
+      "detail": "1823.2 KB",
+      "discovery_source": "openreview"
+    },
+    {
+      "title": "Spectral Flattening Is Not Enough: When Muon Improves Learning Rates and Convergence",
+      "paper_stem": "Spectral_Flattening_Is_Not_Enough_When_Muon_Improves_Learning_Rates_and_Convergence",
+      "month": "2026-10",
+      "source": "openreview",
+      "pdf_url": "https://openreview.net/pdf/dec5e13480318cd95d7e31d710564073e269e784.pdf",
+      "path": "/Users/myl/Documents/paper/01-raw/2026-10/Spectral_Flattening_Is_Not_Enough_When_Muon_Improves_Learning_Rates_and_Convergence.pdf",
+      "status": "failed",
+      "detail": "HTTP 403"
+    }
+  ],
+  "attempts": [
+    {
+      "stage": "OpenReview",
+      "downloaded": 0,
+      "failed": 3,
+      "archived": [
+        {
+          "title": "Logarithmic-time Schedules for Scaling Language Models with Momentum",
+          "paper_stem": "Logarithmic_time_Schedules_for_Scaling_Language_Models_with_Momentum",
+          "month": "2026-10",
+          "source": "openreview",
+          "pdf_url": "https://openreview.net/pdf/7a16f309b1b87fcf800c7c7098d45832193bfeb6.pdf",
+          "path": "/Users/myl/Documents/paper/01-raw/2026-10/Logarithmic_time_Schedules_for_Scaling_Language_Models_with_Momentum.pdf",
+          "status": "failed",
+          "detail": "HTTP 403"
+        },
+        {
+          "title": "Sign compression for Muon: SignMuon, MuonSign, and the Limits of Error Feedback",
+          "paper_stem": "Sign_compression_for_Muon_SignMuon_MuonSign_and_the_Limits_of_Error_Feedback",
+          "month": "2026-10",
+          "source": "openreview",
+          "pdf_url": "https://openreview.net/pdf?id=AH3QAPtL1Y",
+          "path": "/Users/myl/Documents/paper/01-raw/2026-10/Sign_compression_for_Muon_SignMuon_MuonSign_and_the_Limits_of_Error_Feedback.pdf",
+          "status": "failed",
+          "detail": "HTTP 403"
+        },
+        {
+          "title": "Spectral Flattening Is Not Enough: When Muon Improves Learning Rates and Convergence",
+          "paper_stem": "Spectral_Flattening_Is_Not_Enough_When_Muon_Improves_Learning_Rates_and_Convergence",
+          "month": "2026-10",
+          "source": "openreview",
+          "pdf_url": "https://openreview.net/pdf/dec5e13480318cd95d7e31d710564073e269e784.pdf",
+          "path": "/Users/myl/Documents/paper/01-raw/2026-10/Spectral_Flattening_Is_Not_Enough_When_Muon_Improves_Learning_Rates_and_Convergence.pdf",
+          "status": "failed",
+          "detail": "HTTP 403"
+        }
+      ]
+    },
+    {
+      "stage": "arXiv fallback",
+      "downloaded": 2,
+      "failed": 0,
+      "archived": [
+        {
+          "title": "Logarithmic-time Schedules for Scaling Language Models with Momentum",
+          "paper_stem": "Logarithmic_time_Schedules_for_Scaling_Language_Models_with_Momentum",
+          "month": "2026-10",
+          "source": "openreview",
+          "pdf_url": "https://arxiv.org/pdf/2602.05298v2",
+          "path": "/Users/myl/Documents/paper/01-raw/2026-10/Logarithmic_time_Schedules_for_Scaling_Language_Models_with_Momentum.pdf",
+          "status": "downloaded",
+          "detail": "8494.9 KB"
+        },
+        {
+          "title": "Sign compression for Muon: SignMuon, MuonSign, and the Limits of Error Feedback",
+          "paper_stem": "Sign_compression_for_Muon_SignMuon_MuonSign_and_the_Limits_of_Error_Feedback",
+          "month": "2026-10",
+          "source": "openreview",
+          "pdf_url": "https://arxiv.org/pdf/2607.29674v1",
+          "path": "/Users/myl/Documents/paper/01-raw/2026-10/Sign_compression_for_Muon_SignMuon_MuonSign_and_the_Limits_of_Error_Feedback.pdf",
+          "status": "downloaded",
+          "detail": "1823.2 KB"
+        }
+      ]
+    }
+  ]
+}

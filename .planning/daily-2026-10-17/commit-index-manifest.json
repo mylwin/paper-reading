@@ -1,0 +1,45 @@
+{
+  "snapshot_root": "/private/tmp/paper-daily-20261017-indexes-g86wjs97",
+  "indexes": [
+    {
+      "path": "01-raw/index.md",
+      "snapshot": "/private/tmp/paper-daily-20261017-indexes-g86wjs97/01-raw/index.md",
+      "changed": true
+    },
+    {
+      "path": "01-raw/2026-10/README.md",
+      "snapshot": "/private/tmp/paper-daily-20261017-indexes-g86wjs97/01-raw/2026-10/README.md",
+      "changed": true
+    },
+    {
+      "path": "02-markdown/index.md",
+      "snapshot": "/private/tmp/paper-daily-20261017-indexes-g86wjs97/02-markdown/index.md",
+      "changed": true
+    },
+    {
+      "path": "02-markdown/2026-10/README.md",
+      "snapshot": "/private/tmp/paper-daily-20261017-indexes-g86wjs97/02-markdown/2026-10/README.md",
+      "changed": true
+    },
+    {
+      "path": "03-notes/index.md",
+      "snapshot": "/private/tmp/paper-daily-20261017-indexes-g86wjs97/03-notes/index.md",
+      "changed": true
+    },
+    {
+      "path": "03-notes/2026-10/README.md",
+      "snapshot": "/private/tmp/paper-daily-20261017-indexes-g86wjs97/03-notes/2026-10/README.md",
+      "changed": true
+    },
+    {
+      "path": "06-translation/index.md",
+      "snapshot": "/private/tmp/paper-daily-20261017-indexes-g86wjs97/06-translation/index.md",
+      "changed": true
+    },
+    {
+      "path": "06-translation/2026-10/README.md",
+      "snapshot": "/private/tmp/paper-daily-20261017-indexes-g86wjs97/06-translation/2026-10/README.md",
+      "changed": true
+    }
+  ]
+}
