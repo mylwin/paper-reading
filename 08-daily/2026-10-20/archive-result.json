@@ -1,0 +1,52 @@
+{
+  "papers_dir": "/Users/myl/Documents/paper/01-raw",
+  "month_dir": "/Users/myl/Documents/paper/01-raw/2026-10",
+  "month": "2026-10",
+  "date": "2026-10-20",
+  "requested": 3,
+  "downloaded": 3,
+  "skipped_existing": 0,
+  "failed": 0,
+  "index_updated": [
+    "/Users/myl/Documents/paper/01-raw/index.md",
+    "/Users/myl/Documents/paper/01-raw/2026-10/README.md",
+    "/Users/myl/Documents/paper/02-markdown/index.md",
+    "/Users/myl/Documents/paper/02-markdown/2026-10/README.md",
+    "/Users/myl/Documents/paper/03-notes/index.md",
+    "/Users/myl/Documents/paper/03-notes/2026-10/README.md",
+    "/Users/myl/Documents/paper/06-translation/index.md",
+    "/Users/myl/Documents/paper/06-translation/2026-10/README.md"
+  ],
+  "archived": [
+    {
+      "title": "Ori: Drift-Aware Streaming $k$-PCA for Very Low-Rank LLM Training",
+      "paper_stem": "Ori_Drift_Aware_Streaming_$k$_PCA_for_Very_Low_Rank_LLM_Training",
+      "month": "2026-10",
+      "source": "arxiv",
+      "pdf_url": "https://arxiv.org/pdf/2610.22794",
+      "path": "/Users/myl/Documents/paper/01-raw/2026-10/Ori_Drift_Aware_Streaming_$k$_PCA_for_Very_Low_Rank_LLM_Training.pdf",
+      "status": "downloaded",
+      "detail": "529.2 KB"
+    },
+    {
+      "title": "NBCLT: Parameter-Agnostic Norm-Ball Clipped Local Training",
+      "paper_stem": "NBCLT_Parameter_Agnostic_Norm_Ball_Clipped_Local_Training",
+      "month": "2026-10",
+      "source": "arxiv",
+      "pdf_url": "https://arxiv.org/pdf/2610.17913",
+      "path": "/Users/myl/Documents/paper/01-raw/2026-10/NBCLT_Parameter_Agnostic_Norm_Ball_Clipped_Local_Training.pdf",
+      "status": "downloaded",
+      "detail": "793.4 KB"
+    },
+    {
+      "title": "AURA: Angular Update Rate Adaptation for training complex-valued neural networks",
+      "paper_stem": "AURA_Angular_Update_Rate_Adaptation_for_training_complex_valued_neural_networks",
+      "month": "2026-10",
+      "source": "arxiv",
+      "pdf_url": "https://arxiv.org/pdf/2609.25914",
+      "path": "/Users/myl/Documents/paper/01-raw/2026-10/AURA_Angular_Update_Rate_Adaptation_for_training_complex_valued_neural_networks.pdf",
+      "status": "downloaded",
+      "detail": "2285.4 KB"
+    }
+  ]
+}

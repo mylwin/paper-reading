@@ -1,0 +1,50 @@
+Ori: Drift-Aware Streaming k-PCA for Very
+Low-Rank LLM Training
+
+arXiv:2610.22794v1 [cs.LG] 16 Oct 2026
+
+Xinyu Luo1∗ Jincheng Zhou1∗ Mengbo Wang1,2 Zilin Shen1 Nadia Atallah Lanman2,3
+Petros Drineas1 Bruno Ribeiro1 Brian Bullins1
+{luo466, zhou791, wang4887, shen624, natallah,
+pdrineas, ribeiro, bbullins}@purdue.edu
+
+Abstract
+A prominent family of low-rank LLM optimizers, pioneered by GaLore, performs gradient-subspace projection: at each step, they project the gradient into
+a low-dimensional subspace and map the update back to the full model. Most
+existing work either recomputes the gradient subspace at certain intervals, or
+performs post-hoc adaptation to catch up to the moving subspace. In this work,
+we explicitly identify in practice the slow, stable manner in which LLM gradient subspaces drift across time. To this end, we propose Ori, a novel lowrank optimizer for training LLMs that captures the shifting principal gradient
+directions over time to achieve state-of-the-art accuracy under stringent lowrank constraints. Ori employs a streaming k-PCA algorithm inspired by Oja++,
+whose low per-step cost enables high-frequency, on-the-fly subspace tracking.
+In practice, Ori reduces the performance gap of the state-of-the-art low-rank
+optimizers to full-rank optimizers by up to 69.3% on a 1B LLaMA pretraining task, and achieves the best performance on 10 out of 16 task scenarios in
+Roberta-Base fine-tuning. Together, these contributions allow Ori to further
+push the performance and efficiency frontiers of gradient-projecting optimizers, narrowing the gap to full-rank training for LLMs. Code can be found at
+https://anonymous.4open.science/r/Ori-Submission-2132.
+
+1
+
+Introduction
+
+Training large language models (LLMs) under strict memory budgets has motivated a variety of
+low-rank optimization methods that restrict either the weights or the gradients to a low-dimensional
+subspace [10, 39, 20]. This broad field is primarily divided into two families. Weight-subspace
+methods, such as LoRA, adapt the model weights directly [10, 14]. More recently, gradient-subspace
+methods, pioneered by GaLore [39], project the gradients into a low-rank subspace before the
+optimizer step. The latter approach and its subsequent works have proven particularly effective,
+demonstrating superior memory savings and performance by focusing on the dynamics of the
+optimizer itself [39, 38, 14, 8, 5, 28].
+Yet most gradient-subspace methods in this promising family face a core technical challenge: that
+the principal gradient directions, instead of being static, evolve as the model weights are updated
+throughout training. Consequently, the success of any such method hinges on how effectively it
+adapts to this changing subspace. GaLore tackles this by periodically recomputing the entire subspace
+from scratch via an expensive SVD [39], a process that acts as a “cold restart” and discards prior
+subspace information. More recent methods, such as Online Subspace Descent (OSD) [15], move
+∗ Equal contribution.
+1 Department of Computer Science, Purdue University.
+2 Purdue Institute for Cancer Research, Purdue University.
+3 Department of Comparative Pathobiology, Purdue University.
+
+Preprint.
+
+

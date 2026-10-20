@@ -1,0 +1,113 @@
+[
+  {
+    "comments": "",
+    "title": "Ori: Drift-Aware Streaming $k$-PCA for Very Low-Rank LLM Training",
+    "url": "https://arxiv.org/abs/2610.22794",
+    "status": 200,
+    "metadata": {
+      "citation_title": [
+        "Ori: Drift-Aware Streaming $k$-PCA for Very Low-Rank LLM Training"
+      ],
+      "citation_author": [
+        "Luo, Xinyu",
+        "Zhou, Jincheng",
+        "Wang, Mengbo",
+        "Shen, Zilin",
+        "Lanman, Nadia Atallah",
+        "Drineas, Petros",
+        "Ribeiro, Bruno",
+        "Bullins, Brian"
+      ],
+      "citation_date": [
+        "2026/10/16"
+      ],
+      "citation_online_date": [
+        "2026/10/16"
+      ],
+      "citation_pdf_url": [
+        "https://arxiv.org/pdf/2610.22794"
+      ],
+      "citation_arxiv_id": [
+        "2610.22794"
+      ],
+      "citation_abstract": [
+        "A prominent family of low-rank LLM optimizers, pioneered by GaLore, performs gradient-subspace projection: at each step, they project the gradient into a low-dimensional subspace and map the update back to the full model. Most existing work either recomputes the gradient subspace at certain intervals, or performs post-hoc adaptation to catch up to the moving subspace. In this work, we explicitly identify in practice the slow, stable manner in which LLM gradient subspaces drift across time. To this end, we propose Ori, a novel low-rank optimizer for training LLMs that captures the shifting principal gradient directions over time to achieve state-of-the-art accuracy under stringent low-rank constraints. Ori employs a streaming $k$-PCA algorithm inspired by Oja++, whose low per-step cost enables high-frequency, on-the-fly subspace tracking. In practice, Ori reduces the performance gap of the state-of-the-art low-rank optimizers to full-rank optimizers by up to 69.3\\% on a 1B LLaMA pretraining task, and achieves the best performance on 10 out of 16 task scenarios in Roberta-Base fine-tuning. Together, these contributions allow Ori to further push the performance and efficiency frontiers of gradient-projecting optimizers, narrowing the gap to full-rank training for LLMs. Code can be found at https://anonymous.4open.science/r/Ori-Submission-2132."
+      ]
+    },
+    "license_urls": [
+      "http://creativecommons.org/licenses/by/4.0/"
+    ],
+    "abstract": "A prominent family of low-rank LLM optimizers, pioneered by GaLore, performs gradient-subspace projection: at each step, they project the gradient into a low-dimensional subspace and map the update back to the full model. Most existing work either recomputes the gradient subspace at certain intervals, or performs post-hoc adaptation to catch up to the moving subspace. In this work, we explicitly identify in practice the slow, stable manner in which LLM gradient subspaces drift across time. To this end, we propose Ori, a novel low-rank optimizer for training LLMs that captures the shifting principal gradient directions over time to achieve state-of-the-art accuracy under stringent low-rank constraints. Ori employs a streaming $k$-PCA algorithm inspired by Oja++, whose low per-step cost enables high-frequency, on-the-fly subspace tracking. In practice, Ori reduces the performance gap of the state-of-the-art low-rank optimizers to full-rank optimizers by up to 69.3\\% on a 1B LLaMA pretraining task, and achieves the best performance on 10 out of 16 task scenarios in Roberta-Base fine-tuning. Together, these contributions allow Ori to further push the performance and efficiency frontiers of gradient-projecting optimizers, narrowing the gap to full-rank training for LLMs. Code can be found at this https URL.",
+    "source_summary": "A prominent family of low-rank LLM optimizers, pioneered by GaLore, performs gradient-subspace projection: at each step, they project the gradient into a low-dimensional subspace and map the update back to the full model. Most existing work either recomputes the gradient subspace at certain intervals, or performs post-hoc adaptation to catch up to the moving subspace. In this work, we explicitly identify in practice the slow, stable manner in which LLM gradient subspaces drift across time. To this end, we propose Ori, a novel low-rank optimizer for training LLMs that captures the shifting principal gradient directions over time to achieve state-of-the-art accuracy under stringent low-rank constraints. Ori employs a streaming $k$-PCA algorithm inspired by Oja++, whose low per-step cost enables high-frequency, on-the-fly subspace tracking. In practice, Ori reduces the performance gap of the state-of-the-art low-rank optimizers to full-rank optimizers by up to 69.3\\% on a 1B LLaMA pretraining task, and achieves the best performance on 10 out of 16 task scenarios in Roberta-Base fine-tuning. Together, these contributions allow Ori to further push the performance and efficiency frontiers of gradient-projecting optimizers, narrowing the gap to full-rank training for LLMs. Code can be found at https://anonymous.4open.science/r/Ori-Submission-2132."
+  },
+  {
+    "comments": "",
+    "title": "NBCLT: Parameter-Agnostic Norm-Ball Clipped Local Training",
+    "url": "https://arxiv.org/abs/2610.17913",
+    "status": 200,
+    "metadata": {
+      "citation_title": [
+        "NBCLT: Parameter-Agnostic Norm-Ball Clipped Local Training"
+      ],
+      "citation_author": [
+        "Pan, Linxuan",
+        "Yang, Shucheng",
+        "Yang, Junchi"
+      ],
+      "citation_date": [
+        "2026/10/13"
+      ],
+      "citation_online_date": [
+        "2026/10/13"
+      ],
+      "citation_pdf_url": [
+        "https://arxiv.org/pdf/2610.17913"
+      ],
+      "citation_arxiv_id": [
+        "2610.17913"
+      ],
+      "citation_abstract": [
+        "Distributed learning with multiple local steps reduces communication but aggravates drift, and its practical performance often depends on carefully tuned hyperparameters under heterogeneous data and communication constraints. At the same time, recent Muon-type optimizers suggest that constraining updates within suitable norm balls provides a simple way to encode geometric priors into optimization. In this work, we propose NBCLT (Norm-Ball Clipped Local Training), a unified local-training framework for both federated learning (FL) and decentralized learning (DL). NBCLT combines a predict-and-correct local update rule with Euclidean projections onto flexible norm balls, thereby performing norm-ball clipping under flexible update geometries while retaining a simple implementation. In FL, its problem-parameter-free regime achieves $\\mathcal{O}(\\epsilon^{-2})$ communication complexity and $\\mathcal{O}(\\epsilon^{-4})$ total stochastic-gradient complexity without assuming bounded heterogeneity, when the per-round local-computation budget is scaled appropriately with the horizon. In DL, NBCLT is compatible with both static and time-varying mixing and preserves these accuracy exponents under the analogous computation scaling, up to fixed network constants and an additive initialization cost."
+      ]
+    },
+    "license_urls": [
+      "http://creativecommons.org/licenses/by/4.0/"
+    ],
+    "abstract": "Distributed learning with multiple local steps reduces communication but aggravates drift, and its practical performance often depends on carefully tuned hyperparameters under heterogeneous data and communication constraints. At the same time, recent Muon-type optimizers suggest that constraining updates within suitable norm balls provides a simple way to encode geometric priors into optimization. In this work, we propose NBCLT (Norm-Ball Clipped Local Training), a unified local-training framework for both federated learning (FL) and decentralized learning (DL). NBCLT combines a predict-and-correct local update rule with Euclidean projections onto flexible norm balls, thereby performing norm-ball clipping under flexible update geometries while retaining a simple implementation. In FL, its problem-parameter-free regime achieves $\\mathcal{O}(\\epsilon^{-2})$ communication complexity and $\\mathcal{O}(\\epsilon^{-4})$ total stochastic-gradient complexity without assuming bounded heterogeneity, when the per-round local-computation budget is scaled appropriately with the horizon. In DL, NBCLT is compatible with both static and time-varying mixing and preserves these accuracy exponents under the analogous computation scaling, up to fixed network constants and an additive initialization cost.",
+    "source_summary": "Distributed learning with multiple local steps reduces communication but aggravates drift, and its practical performance often depends on carefully tuned hyperparameters under heterogeneous data and communication constraints. At the same time, recent Muon-type optimizers suggest that constraining updates within suitable norm balls provides a simple way to encode geometric priors into optimization. In this work, we propose NBCLT (Norm-Ball Clipped Local Training), a unified local-training framework for both federated learning (FL) and decentralized learning (DL). NBCLT combines a predict-and-correct local update rule with Euclidean projections onto flexible norm balls, thereby performing norm-ball clipping under flexible update geometries while retaining a simple implementation. In FL, its problem-parameter-free regime achieves $\\mathcal{O}(ε^{-2})$ communication complexity and $\\mathcal{O}(ε^{-4})$ total stochastic-gradient complexity without assuming bounded heterogeneity, when the per-round local-computation budget is scaled appropriately with the horizon. In DL, NBCLT is compatible with both static and time-varying mixing and preserves these accuracy exponents under the analogous computation scaling, up to fixed network constants and an additive initialization cost."
+  },
+  {
+    "comments": "",
+    "title": "AURA: Angular Update Rate Adaptation for training complex-valued neural networks",
+    "url": "https://arxiv.org/abs/2609.25914",
+    "status": 200,
+    "metadata": {
+      "citation_title": [
+        "AURA: Angular Update Rate Adaptation for training complex-valued neural networks"
+      ],
+      "citation_author": [
+        "Ballini, Enrico",
+        "Engsig-Karup, Allan Peter",
+        "Andriollo, Tito"
+      ],
+      "citation_date": [
+        "2026/09/22"
+      ],
+      "citation_online_date": [
+        "2026/09/22"
+      ],
+      "citation_pdf_url": [
+        "https://arxiv.org/pdf/2609.25914"
+      ],
+      "citation_arxiv_id": [
+        "2609.25914"
+      ],
+      "citation_abstract": [
+        "Complex-valued neural networks (CVNNs) are increasingly adopted for complex-valued data; however, they are often trained with first-order optimizers inherited from the real-valued case. The efficiency of these methods depends largely on the step size, and their step-size rules ignore the angular information available in the complex plane. We address step-size adaptation in the complex domain by introducing AURA (Angular Update Rate Adaptation), a per-parameter step-size adaptation that can be added on top of any first-order optimizer, and removed from it, without altering its update direction. AURA measures the agreement between consecutive updates of each complex parameter, in length, alignment, and sense of rotation, and enlarges the step when they are consistent and reduces it when they are not. It requires no additional gradient evaluations and only inexpensive vector operations per step. We combine AURA with Adam and Muon and compare the resulting methods with well-known first-order optimizers on four test cases of increasing complexity, ranging from the approximation of scalar complex functions to physics-informed training. Fully connected neural networks are used throughout this work. All hyperparameters other than the step size are held fixed across test cases; for one case, we also tune the hyperparameters of each optimizer under the same budget. Our empirical tests show that AURA improves the convergence of its base optimizer in most cases with a small per-step overhead, and we identify the conditions under which it fails to do so."
+      ]
+    },
+    "license_urls": [],
+    "abstract": "Complex-valued neural networks (CVNNs) are increasingly adopted for complex-valued data; however, they are often trained with first-order optimizers inherited from the real-valued case. The efficiency of these methods depends largely on the step size, and their step-size rules ignore the angular information available in the complex plane. We address step-size adaptation in the complex domain by introducing AURA (Angular Update Rate Adaptation), a per-parameter step-size adaptation that can be added on top of any first-order optimizer, and removed from it, without altering its update direction. AURA measures the agreement between consecutive updates of each complex parameter, in length, alignment, and sense of rotation, and enlarges the step when they are consistent and reduces it when they are not. It requires no additional gradient evaluations and only inexpensive vector operations per step. We combine AURA with Adam and Muon and compare the resulting methods with well-known first-order optimizers on four test cases of increasing complexity, ranging from the approximation of scalar complex functions to physics-informed training. Fully connected neural networks are used throughout this work. All hyperparameters other than the step size are held fixed across test cases; for one case, we also tune the hyperparameters of each optimizer under the same budget. Our empirical tests show that AURA improves the convergence of its base optimizer in most cases with a small per-step overhead, and we identify the conditions under which it fails to do so.",
+    "source_summary": "Complex-valued neural networks (CVNNs) are increasingly adopted for complex-valued data; however, they are often trained with first-order optimizers inherited from the real-valued case. The efficiency of these methods depends largely on the step size, and their step-size rules ignore the angular information available in the complex plane. We address step-size adaptation in the complex domain by introducing AURA (Angular Update Rate Adaptation), a per-parameter step-size adaptation that can be added on top of any first-order optimizer, and removed from it, without altering its update direction. AURA measures the agreement between consecutive updates of each complex parameter, in length, alignment, and sense of rotation, and enlarges the step when they are consistent and reduces it when they are not. It requires no additional gradient evaluations and only inexpensive vector operations per step. We combine AURA with Adam and Muon and compare the resulting methods with well-known first-order optimizers on four test cases of increasing complexity, ranging from the approximation of scalar complex functions to physics-informed training. Fully connected neural networks are used throughout this work. All hyperparameters other than the step size are held fixed across test cases; for one case, we also tune the hyperparameters of each optimizer under the same budget. Our empirical tests show that AURA improves the convergence of its base optimizer in most cases with a small per-step overhead, and we identify the conditions under which it fails to do so."
+  }
+]

@@ -1,0 +1,66 @@
+{
+  "date": "2026-10-20",
+  "status": "passed",
+  "unique_papers": 156,
+  "known": 70,
+  "candidates": 86,
+  "screening_top_n": 10,
+  "formal_recommendations": 4,
+  "excluded_in_top10": {
+    "workshop": 4,
+    "physics": 2
+  },
+  "physics_false_positives_marked": 60,
+  "pdf_downloaded": 3,
+  "pdf_failed": 0,
+  "daily_local_links_checked": 46,
+  "new_link_errors": 0,
+  "pdf_checks": [
+    {
+      "title": "Ori: Drift-Aware Streaming $k$-PCA for Very Low-Rank LLM Training",
+      "pages": 27,
+      "bytes": 541929,
+      "sha256": "24ec394e3907c5cce5876f04a2a94117ab4d74d40de97e5ede943bc389f49412",
+      "identity": "首页arXiv编号、标题与作者核验",
+      "pdfinfo_warnings": ""
+    },
+    {
+      "title": "NBCLT: Parameter-Agnostic Norm-Ball Clipped Local Training",
+      "pages": 64,
+      "bytes": 812479,
+      "sha256": "dfda432e37303ffa60519e6e933cf6ecce3e61abaf0e19e5f3c1f5ea77977c7a",
+      "identity": "首页arXiv编号、标题与作者核验",
+      "pdfinfo_warnings": ""
+    },
+    {
+      "title": "AURA: Angular Update Rate Adaptation for training complex-valued neural networks",
+      "pages": 22,
+      "bytes": 2340231,
+      "sha256": "60026a5979e0453e0add0a686cc7a586531154dff8a8198556a4daeef84d8f22",
+      "identity": "首页arXiv编号、标题与作者核验",
+      "pdfinfo_warnings": ""
+    }
+  ],
+  "workspace_check": {
+    "preexisting_link_errors": 9,
+    "new_link_errors": 0,
+    "missing_readme": 0,
+    "month_consistency_errors": 0
+  },
+  "checks": [
+    "前十逐篇语义复排，保留脚本分数和screening_rank",
+    "前三完整中译人工逐句检查，数字、方法、限定条件已保留；脚本核对关键锚点",
+    "arXiv原摘要核对：NBCLT仅epsilon记法不同；Ori源网页超链接锚文本与实际URL等价",
+    "PDF魔数、页数、首页身份核验；AURA提取时有字体类型警告，仍成功提取",
+    "156条附录各出现一次，连续编号；其他7项明确标注排除项",
+    "本地链接均为真实已跟踪或本次新增文件；未链接未提交的MUON2精读",
+    "四阶段索引状态正确；提交快照仅添加本次三篇，已有表格行无改写"
+  ],
+  "source_limitations": [
+    "arXiv export API首次503、后续429/超时；官方普通搜索页15词中8词成功、7词SSL失败。普通页面会返回旧论文的近期修订，未将此直接当首发日期。",
+    "arXiv完整15词高级检索502；短查询Muon/SignSGD/gradient clipping按首次提交日期取得143条。普通页结果仅保留该首发过滤集合，或2026-10编号的记录；其他无法核验窗口的9月记录保守排除。标题/摘要再按15配置关键词字面匹配，使用技能原评分筛选并限200；最终输入134条。各关键词首页上限200，非穷尽检索。",
+    "OpenReview逐关键词首页上限100，14词成功、AdamW词429；并集窗口内35条。日期是OpenReview记录日期，不代表论文首次公开日期。详情接口403挑战，未绕过；本次前三均取自已核验的arXiv页面及PDF。",
+    "Semantic Scholar两次429，过去一年高影响力补充未取得结果；未以旧论文近期修订冒充高影响力补充。",
+    "预筛前十保留审计，其中2条粒子物理误命中、4条Workshop按配置排除，正式阅读建议4项；不从第十一名补选。"
+  ]
+}

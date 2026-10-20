@@ -1,0 +1,131 @@
+[
+  {
+    "term": "large language model optimizer",
+    "url": "https://arxiv.org/search/?query=large+language+model+optimizer&searchtype=all&abstracts=show&order=-announced_date_first&size=200",
+    "limit": 200,
+    "order": "newest announcement",
+    "status": "ok",
+    "page_records": 200,
+    "in_window": 200
+  },
+  {
+    "term": "LLM optimizer",
+    "url": "https://arxiv.org/search/?query=LLM+optimizer&searchtype=all&abstracts=show&order=-announced_date_first&size=200",
+    "limit": 200,
+    "order": "newest announcement",
+    "status": "ok",
+    "page_records": 200,
+    "in_window": 199
+  },
+  {
+    "term": "optimizer design",
+    "url": "https://arxiv.org/search/?query=optimizer+design&searchtype=all&abstracts=show&order=-announced_date_first&size=200",
+    "limit": 200,
+    "order": "newest announcement",
+    "status": "ok",
+    "page_records": 200,
+    "in_window": 200
+  },
+  {
+    "term": "memory-efficient optimizer",
+    "url": "https://arxiv.org/search/?query=memory-efficient+optimizer&searchtype=all&abstracts=show&order=-announced_date_first&size=200",
+    "limit": 200,
+    "order": "newest announcement",
+    "status": "ok",
+    "page_records": 200,
+    "in_window": 172
+  },
+  {
+    "term": "optimizer state memory",
+    "url": "https://arxiv.org/search/?query=optimizer+state+memory&searchtype=all&abstracts=show&order=-announced_date_first&size=200",
+    "limit": 200,
+    "order": "newest announcement",
+    "status": "ok",
+    "page_records": 200,
+    "in_window": 194
+  },
+  {
+    "term": "adaptive optimization",
+    "url": "https://arxiv.org/search/?query=adaptive+optimization&searchtype=all&abstracts=show&order=-announced_date_first&size=200",
+    "limit": 200,
+    "order": "newest announcement",
+    "status": "ok",
+    "page_records": 200,
+    "in_window": 199
+  },
+  {
+    "term": "sign-based optimization",
+    "url": "https://arxiv.org/search/?query=sign-based+optimization&searchtype=all&abstracts=show&order=-announced_date_first&size=200",
+    "limit": 200,
+    "order": "newest announcement",
+    "status": "ok",
+    "page_records": 200,
+    "in_window": 57
+  },
+  {
+    "term": "SignSGD",
+    "url": "https://arxiv.org/search/?query=SignSGD&searchtype=all&abstracts=show&order=-announced_date_first&size=200",
+    "limit": 200,
+    "order": "newest announcement",
+    "status": "ok",
+    "page_records": 71,
+    "in_window": 2
+  },
+  {
+    "term": "Muon",
+    "url": "https://arxiv.org/search/?query=Muon&searchtype=all&abstracts=show&order=-announced_date_first&size=200",
+    "limit": 200,
+    "order": "newest announcement",
+    "status": "ok",
+    "page_records": 200,
+    "in_window": 142
+  },
+  {
+    "term": "PowerStep",
+    "url": "https://arxiv.org/search/?query=PowerStep&searchtype=all&abstracts=show&order=-announced_date_first&size=200",
+    "limit": 200,
+    "order": "newest announcement",
+    "status": "failed",
+    "detail": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1032)>"
+  },
+  {
+    "term": "gradient clipping",
+    "url": "https://arxiv.org/search/?query=gradient+clipping&searchtype=all&abstracts=show&order=-announced_date_first&size=200",
+    "limit": 200,
+    "order": "newest announcement",
+    "status": "failed",
+    "detail": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1032)>"
+  },
+  {
+    "term": "parameter-free optimization",
+    "url": "https://arxiv.org/search/?query=parameter-free+optimization&searchtype=all&abstracts=show&order=-announced_date_first&size=200",
+    "limit": 200,
+    "order": "newest announcement",
+    "status": "failed",
+    "detail": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1032)>"
+  },
+  {
+    "term": "Polyak stepsize",
+    "url": "https://arxiv.org/search/?query=Polyak+stepsize&searchtype=all&abstracts=show&order=-announced_date_first&size=200",
+    "limit": 200,
+    "order": "newest announcement",
+    "status": "failed",
+    "detail": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1032)>"
+  },
+  {
+    "term": "lp-norm steepest descent",
+    "url": "https://arxiv.org/search/?query=lp-norm+steepest+descent&searchtype=all&abstracts=show&order=-announced_date_first&size=200",
+    "limit": 200,
+    "order": "newest announcement",
+    "status": "failed",
+    "detail": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1032)>"
+  },
+  {
+    "term": "AdamW",
+    "url": "https://arxiv.org/search/?query=AdamW&searchtype=all&abstracts=show&order=-announced_date_first&size=200",
+    "limit": 200,
+    "order": "newest announcement",
+    "status": "failed",
+    "detail": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1032)>"
+  }
+]

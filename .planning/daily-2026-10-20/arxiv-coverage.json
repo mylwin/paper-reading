@@ -1,0 +1,35 @@
+[
+  {
+    "keywords": [
+      "large language model optimizer",
+      "LLM optimizer",
+      "optimizer design",
+      "memory-efficient optimizer",
+      "optimizer state memory"
+    ],
+    "records": 0,
+    "limit": 100
+  },
+  {
+    "keywords": [
+      "adaptive optimization",
+      "sign-based optimization",
+      "SignSGD",
+      "Muon",
+      "PowerStep"
+    ],
+    "records": 0,
+    "limit": 100
+  },
+  {
+    "keywords": [
+      "gradient clipping",
+      "parameter-free optimization",
+      "Polyak stepsize",
+      "lp-norm steepest descent",
+      "AdamW"
+    ],
+    "records": 0,
+    "limit": 100
+  }
+]

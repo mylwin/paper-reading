@@ -1,0 +1,62 @@
+[
+  {
+    "title": "Closure Masks for Hardware-Compatible 2:4 Sparse Muon",
+    "status": "failed",
+    "detail": "HTTP Error 403: Forbidden",
+    "url": "https://api2.openreview.net/notes?id=2UXrES8YZk"
+  },
+  {
+    "title": "Muon Under Covariate Shift: Spectral Learning and Temporal Stability",
+    "status": "failed",
+    "detail": "HTTP Error 403: Forbidden",
+    "url": "https://api2.openreview.net/notes?id=cEWt9vXlng"
+  },
+  {
+    "title": "Muon Moves the Boundary of Transformer Trainability",
+    "status": "failed",
+    "detail": "HTTP Error 403: Forbidden",
+    "url": "https://api2.openreview.net/notes?id=almDOnmgmt"
+  },
+  {
+    "title": "AdasignSGD: Turning 1-Bit Worker Votes into Adaptive Updates",
+    "status": "failed",
+    "detail": "HTTP Error 403: Forbidden",
+    "url": "https://api2.openreview.net/notes?id=GmTQ4EumjJ"
+  },
+  {
+    "title": "Muon+: Towards More Effective Muon via One Additional Normalization Step for LLM Pre-training",
+    "status": "failed",
+    "detail": "HTTP Error 403: Forbidden",
+    "url": "https://api2.openreview.net/notes?id=fC4h4QceUh"
+  },
+  {
+    "title": "Muon-OGD: Muon-based Spectral Orthogonal Gradient Projection for LLM Continual Learning",
+    "status": "failed",
+    "detail": "HTTP Error 403: Forbidden",
+    "url": "https://api2.openreview.net/notes?id=jRvd5To0aR"
+  },
+  {
+    "title": "Optimizer Update Geometry: How Parameter Groups Shape Curvature Exposure",
+    "status": "failed",
+    "detail": "HTTP Error 403: Forbidden",
+    "url": "https://api2.openreview.net/notes?id=TaFyEJ4yNr"
+  },
+  {
+    "title": "Zero-order Parameter-free Optimization for LMO-based Methods: Novel Approach for Efficient Fine-tuning",
+    "status": "failed",
+    "detail": "HTTP Error 403: Forbidden",
+    "url": "https://api2.openreview.net/notes?id=qXVywqIg8G"
+  },
+  {
+    "title": "Can Muon Adapt Its Stepsize Without Knowing the Solution Distance?",
+    "status": "failed",
+    "detail": "HTTP Error 403: Forbidden",
+    "url": "https://api2.openreview.net/notes?id=Ghfc8IRXdy"
+  },
+  {
+    "title": "Same Training Loss, Different Recovery: Optimizer-Dependent Solution Selection in Matrix Sensing",
+    "status": "failed",
+    "detail": "HTTP Error 403: Forbidden",
+    "url": "https://api2.openreview.net/notes?id=3pujdNCHGG"
+  }
+]

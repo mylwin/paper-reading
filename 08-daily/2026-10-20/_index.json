@@ -1,0 +1,117 @@
+{
+  "date": "2026-10-20",
+  "note_file": "今日检索.md",
+  "generated_at": "2026-10-20T08:23:08",
+  "skill": "paper-daily",
+  "sources_searched": [
+    "arxiv",
+    "openreview"
+  ],
+  "source_counts": {
+    "arxiv": 134,
+    "openreview": 35
+  },
+  "date_windows": {
+    "recent_30d": {
+      "start": "2026-09-20",
+      "end": "2026-10-20"
+    },
+    "past_year": {
+      "start": "2025-10-20",
+      "end": "2026-09-19"
+    }
+  },
+  "total_unique": 156,
+  "top_papers": [
+    {
+      "title": "Ori: Drift-Aware Streaming $k$-PCA for Very Low-Rank LLM Training",
+      "source": "arxiv",
+      "arxiv_id": "2610.22794",
+      "url": "https://arxiv.org/abs/2610.22794",
+      "note_filename": "Ori_Drift_Aware_Streaming_$k$_PCA_for_Very_Low_Rank_LLM_Training",
+      "matched_domain": "大模型优化器设计",
+      "score": 6.67
+    },
+    {
+      "title": "NBCLT: Parameter-Agnostic Norm-Ball Clipped Local Training",
+      "source": "arxiv",
+      "arxiv_id": "2610.17913",
+      "url": "https://arxiv.org/abs/2610.17913",
+      "note_filename": "NBCLT_Parameter_Agnostic_Norm_Ball_Clipped_Local_Training",
+      "matched_domain": "大模型优化器设计",
+      "score": 6.67
+    },
+    {
+      "title": "AURA: Angular Update Rate Adaptation for training complex-valued neural networks",
+      "source": "arxiv",
+      "arxiv_id": "2609.25914",
+      "url": "https://arxiv.org/abs/2609.25914",
+      "note_filename": "AURA_Angular_Update_Rate_Adaptation_for_training_complex_valued_neural_networks",
+      "matched_domain": "大模型优化器设计",
+      "score": 7.0
+    },
+    {
+      "title": "Muon+: Towards More Effective Muon via One Additional Normalization Step for LLM Pre-training",
+      "source": "openreview",
+      "arxiv_id": "",
+      "url": "https://openreview.net/forum?id=fC4h4QceUh",
+      "note_filename": "Muon+_Towards_More_Effective_Muon_via_One_Additional_Normalization_Step_for_LLM_Pre_training",
+      "matched_domain": "大模型优化器设计",
+      "score": 4.67
+    },
+    {
+      "title": "Closure Masks for Hardware-Compatible 2:4 Sparse Muon",
+      "source": "openreview",
+      "arxiv_id": "",
+      "url": "https://openreview.net/forum?id=2UXrES8YZk",
+      "note_filename": "Closure_Masks_for_Hardware_Compatible_2_4_Sparse_Muon",
+      "matched_domain": "大模型优化器设计",
+      "score": 5.23
+    },
+    {
+      "title": "Muon Under Covariate Shift: Spectral Learning and Temporal Stability",
+      "source": "openreview",
+      "arxiv_id": "",
+      "url": "https://openreview.net/forum?id=cEWt9vXlng",
+      "note_filename": "Muon_Under_Covariate_Shift_Spectral_Learning_and_Temporal_Stability",
+      "matched_domain": "大模型优化器设计",
+      "score": 5.17
+    },
+    {
+      "title": "Muon Moves the Boundary of Transformer Trainability",
+      "source": "openreview",
+      "arxiv_id": "",
+      "url": "https://openreview.net/forum?id=almDOnmgmt",
+      "note_filename": "Muon_Moves_the_Boundary_of_Transformer_Trainability",
+      "matched_domain": "大模型优化器设计",
+      "score": 5.03
+    },
+    {
+      "title": "AdasignSGD: Turning 1-Bit Worker Votes into Adaptive Updates",
+      "source": "openreview",
+      "arxiv_id": "",
+      "url": "https://openreview.net/forum?id=GmTQ4EumjJ",
+      "note_filename": "AdasignSGD_Turning_1_Bit_Worker_Votes_into_Adaptive_Updates",
+      "matched_domain": "大模型优化器设计",
+      "score": 4.83
+    },
+    {
+      "title": "PINNing the pion: conformal deep learning for $F_π(s)$ and the $(g-2)_μ$ hadronic contribution",
+      "source": "arxiv",
+      "arxiv_id": "2609.40008",
+      "url": "https://arxiv.org/abs/2609.40008",
+      "note_filename": "PINNing_the_pion_conformal_deep_learning_for_$F_π(s)$_and_the_$(g_2)_μ$_hadronic_contribution",
+      "matched_domain": "大模型优化器设计",
+      "score": 6.67
+    },
+    {
+      "title": "Machine-learning-based neutrino-event generation constrained by experimental measurements",
+      "source": "arxiv",
+      "arxiv_id": "2610.20870",
+      "url": "https://arxiv.org/abs/2610.20870",
+      "note_filename": "Machine_learning_based_neutrino_event_generation_constrained_by_experimental_measurements",
+      "matched_domain": "大模型优化器设计",
+      "score": 6.27
+    }
+  ]
+}

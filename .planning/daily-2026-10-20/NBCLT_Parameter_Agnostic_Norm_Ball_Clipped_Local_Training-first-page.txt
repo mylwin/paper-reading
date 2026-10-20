@@ -1,0 +1,67 @@
+arXiv:2610.17913v1 [cs.LG] 13 Oct 2026
+
+NBCLT: Parameter-Agnostic Norm-Ball
+Clipped Local Training
+Linxuan Pan
+
+Shucheng Yang
+
+Junchi Yang
+
+panlinxuan@link.cuhk.edu.cn
+
+yangsc@mail.sim.ac.cn
+
+yangjunchi@cuhk.edu.cn
+
+Abstract
+Distributed learning with multiple local steps reduces communication but aggravates drift, and
+its practical performance often depends on carefully tuned hyperparameters under heterogeneous
+data and communication constraints. At the same time, recent Muon-type optimizers suggest
+that constraining updates within suitable norm balls provides a simple way to encode geometric
+priors into optimization. In this work, we propose NBCLT (Norm-Ball Clipped Local Training),
+a unified local-training framework for both federated learning (FL) and decentralized learning
+(DL). NBCLT combines a predict-and-correct local update rule with Euclidean projections onto
+flexible norm balls, thereby performing norm-ball clipping under flexible update geometries while
+retaining a simple implementation. In FL, its problem-parameter-free regime achieves O(ϵ−2 )
+communication complexity and O(ϵ−4 ) total stochastic-gradient complexity without assuming
+bounded heterogeneity, when the per-round local-computation budget is scaled appropriately
+with the horizon. In DL, NBCLT is compatible with both static and time-varying mixing and
+preserves these accuracy exponents under the analogous computation scaling, up to fixed network
+constants and an additive initialization cost.
+
+1
+
+Introduction
+
+Machine learning has achieved significant progress in domains such as computer vision, natural
+language processing, and scientific discovery [3, 11, 26, 27, 32]. To address requirements arising
+from data privacy, system topology, and communication constraints, several distributed learning
+paradigms have been developed. Federated Learning (FL) studies training over decentralized and
+typically non-IID data under a central coordinator [14, 21], while Decentralized Learning (DL)
+removes the coordinator and relies on peer-to-peer communication over a network [17]. Throughout
+this paper, we use distributed learning to encompass both settings.
+Formally, a distributed system comprises M nodes (e.g., clients, workers, or organizations). Node
+i ∈ [M ] holds a local objective fi (x) = Eξi ∼Di [ℓ(x; ξi )], and the global model is trained by solving
+M
+1 X
+min f (x) :=
+fi (x) .
+x∈X
+M i=1
+
+"
+
+#
+
+(1)
+
+In distributed optimization, two challenges are fundamental. First, communication is often the
+dominant systems bottleneck, which makes multiple local updates between synchronization rounds
+highly desirable in both FL [21, 29] and DL [8]. Second, local training amplifies drift caused by
+data heterogeneity or imperfect consensus. To reduce this drift, FL algorithms use control variates
+or momentum corrections, as in SCAFFOLD [12] and momentum-based FL methods [4], while
+DL methods rely on mechanisms such as gradient tracking or Exact Diffusion [1, 20]. Yet their
+1
+
+
