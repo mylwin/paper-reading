@@ -1,0 +1,33 @@
+{
+  "date": "2026-10-19",
+  "source_version": "2604.09967v2",
+  "english_abstract_verified": true,
+  "abstract_OCR_repairs": [
+    "Newton– Schulz → Newton–Schulz",
+    "Adamstyle → Adam-style",
+    "Mixtureof-Experts → Mixture-of-Experts"
+  ],
+  "image_assets": 20,
+  "image_hashes_match_source": true,
+  "all_note_local_links_resolve": true,
+  "formula_count": 61,
+  "formula_commands": [
+    "Sigma",
+    "Vert",
+    "beta",
+    "epsilon",
+    "eta",
+    "frac",
+    "mathcal",
+    "min",
+    "nabla",
+    "nu",
+    "phi",
+    "sqrt",
+    "sum",
+    "times",
+    "top"
+  ],
+  "chinese_char_count": 8816,
+  "LLM_training_reproduced": false
+}
