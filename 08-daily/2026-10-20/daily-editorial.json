@@ -1,0 +1,201 @@
+{
+  "assessment_scope": "metadata_and_abstract",
+  "confidence": "低；基于题目和摘要的初步判断，待全文核验",
+  "overview": {
+    "trend": "检索日期2026-10-20，近期窗口2026-09-20至2026-10-20。156条唯一记录中70条命中已有PDF、笔记或历史推荐，86条未命中候选。预筛前十经逐篇题目/摘要复排后，排除2条粒子物理误命中与4条Workshop，保留4项阅读建议，前三为Ori、NBCLT和AURA。仅就这组摘要，可关注低秩状态预算、范数球裁剪与步长幅度自适应三条线索；该样本不足以证明全领域趋势。来源覆盖受限：arXiv采用官方HTML恢复并保守核验首发窗口，OpenReview部分首页截断，Semantic Scholar限流无年度补充；详见今日落盘和检索覆盖记录。",
+    "hotspots": [
+      {
+        "title": "低秩状态预算与子空间漂移",
+        "text": "Ori直接面向1B LLM预训练，先比较跟踪频率、秩预算和残差校正；差距缩小比例与训练加速不同。"
+      },
+      {
+        "title": "裁剪几何与本地计算预算",
+        "text": "NBCLT连接预测校正、范数球投影与通信复杂度，问题参数无关结论依赖本地计算随时域缩放。"
+      },
+      {
+        "title": "步长幅度与方向规则的分工",
+        "text": "AURA利用复值连续更新的一致性；Muon+提供极分解后归一化的对照。任务、几何和尺度各异，不能合并成统一实证结论。"
+      }
+    ]
+  },
+  "domain_summaries": {
+    "大模型优化器设计": {
+      "summary": "直接LLM优化器设计优先Ori；NBCLT按定理条件选读，AURA按复值幅度自适应机制选读。Muon+属于较早工作的近期OpenReview提交，定点比较归一化；预筛中的粒子物理与Workshop排除项只作审计。主题计数是关键词命中量，含同词异义，不等于直接相关工作量。",
+      "subfields": {
+        "符号与范数几何优化": "NBCLT的范数球欧氏投影、AURA的方向/幅度区分以及Muon+的极分解后归一化值得分别对照；OPT/DynaFront相关候选按配置排除。",
+        "免调参与梯度裁剪": "NBCLT不依赖问题参数的设置有预算缩放条件；不能据摘要写成所有超参数无需选择。",
+        "自适应与状态内存": "Ori提供低成本主子空间连续跟踪，重点查严格低秩下的精度、状态量和额外正交化代价；AURA摘要未给LLM结果。",
+        "大模型训练与优化器设计": "Ori为直接预训练/微调证据；其他任务中的机制需先小规模验证，不能直接外推大型Transformer。",
+        "未细分": "宽泛训练词及Muon同词异义只支持检索命中；附录状态标记用于区分相关性。"
+      }
+    }
+  },
+  "top_papers": {
+    "Ori: Drift-Aware Streaming $k$-PCA for Very Low-Rank LLM Training": {
+      "title_zh": "Ori：面向极低秩大语言模型训练的漂移感知流式 k-PCA",
+      "summary": "用低成本流式主成分跟踪替代低秩优化器的间歇子空间重算，直接针对极低秩 LLM 训练的精度损失。",
+      "abstract_zh": "由 GaLore 开创的一类重要低秩 LLM 优化器执行梯度子空间投影：在每一步，它们把梯度投影到低维子空间，并把更新映射回完整模型。现有工作大多要么以一定间隔重新计算梯度子空间，要么事后进行适应以追赶移动的子空间。在本工作中，我们在实践中明确识别出 LLM 梯度子空间随时间缓慢、稳定漂移的方式。为此，我们提出 Ori，一种用于训练 LLM 的新型低秩优化器，它持续捕捉随时间变化的主要梯度方向，从而在严格的低秩约束下达到当前最优的准确率。Ori 采用受 Oja++ 启发的流式 $k$-PCA 算法，其较低的单步成本支持高频、在线的子空间跟踪。在实践中，在 1B LLaMA 预训练任务上，Ori 将当前最优低秩优化器与全秩优化器之间的性能差距最多缩小了 69.3%，并在 Roberta-Base 微调的 16 个任务场景中的 10 个取得最佳性能。这些贡献共同使 Ori 进一步推进了梯度投影优化器的性能与效率边界，缩小了它们与 LLM 全秩训练之间的差距。代码可见 https://anonymous.4open.science/r/Ori-Submission-2132。",
+      "contributions": [
+        "作者识别梯度主子空间缓慢漂移，并据此设计持续跟踪的低秩更新。",
+        "以受 Oja++ 启发的流式 k-PCA 降低高频子空间维护的单步成本。"
+      ],
+      "method": "先核对子空间漂移的测量和低秩更新公式，再检查流式 k-PCA 的跟踪频率、秩预算和状态开销；摘要中的核心机制是持续跟踪，而非固定间隔全量重算。",
+      "result": "摘要报告 1B LLaMA 预训练中相对全秩训练的性能差距最多缩小 69.3%，Roberta-Base 微调 16 个场景中 10 个最佳。69.3% 是差距缩小比例，不能解释成困惑度下降 69.3% 或端到端加速。",
+      "selection_reason": "直接命中优化器状态内存与低秩 LLM 训练；可与已有子空间残差校正工作比较“更好跟踪”与“补回投影误差”的净增量。先读更新规则和秩相同的基线，阅读收益明确。",
+      "evidence_limit": "初步判断，仅题目与摘要，待全文核验。需查极低秩的具体秩、全秩/低秩基线的调参公平性、子空间正交化成本、峰值显存、墙钟时间、随机种子和各任务差距的分母；摘要未给状态内存或端到端加速数字。",
+      "reading_decision": "精读"
+    },
+    "NBCLT: Parameter-Agnostic Norm-Ball Clipped Local Training": {
+      "title_zh": "NBCLT：不依赖问题参数的范数球裁剪本地训练",
+      "summary": "用预测校正与可选范数球投影统一本地训练，研究免问题参数与通信复杂度之间的条件关系。",
+      "abstract_zh": "具有多个本地步骤的分布式学习能够减少通信，但会加剧漂移，而且在数据异质性和通信约束下，其实际表现往往依赖精心调节的超参数。与此同时，近期 Muon 类优化器表明，把更新限制在适当的范数球内，是将几何先验编码进优化的一种简单方法。在本工作中，我们提出 NBCLT（Norm-Ball Clipped Local Training，范数球裁剪本地训练），这是一个同时面向联邦学习（FL）和去中心化学习（DL）的统一本地训练框架。NBCLT 将预测校正式本地更新规则与到可灵活选择的范数球上的欧氏投影结合起来，从而在保持实现简单的同时，在灵活的更新几何下执行范数球裁剪。在 FL 中，当每轮本地计算预算随迭代总时域适当缩放时，其不依赖问题参数的设置无需假设异质性有界，即可实现 $\\mathcal{O}(ε^{-2})$ 的通信复杂度和 $\\mathcal{O}(ε^{-4})$ 的总随机梯度复杂度。在 DL 中，NBCLT 同时兼容静态和时变混合，并在类似的计算量缩放下保持这些关于精度的指数，仅相差固定网络常数和一个加性的初始化成本。",
+      "contributions": [
+        "作者将预测校正与范数球欧氏投影结合，在联邦与去中心化场景统一表达裁剪更新。",
+        "摘要声称在本地计算预算适当随时域缩放时，不需有界异质性假设即可保持通信与梯度复杂度指数。"
+      ],
+      "method": "先读预测校正项和范数球投影的精确定义，再对照不同几何的投影代价；将通信轮数、本地步数和总梯度调用量放在同一预算下核算。",
+      "result": "摘要给出 FL 通信 O(ε^{-2})、总随机梯度 O(ε^{-4})，并声称 DL 在固定网络常数和加性初始化成本之外保持精度指数；未报告 LLM 实验或实际训练提速。",
+      "selection_reason": "与免调参、裁剪和范数几何均有直接机制联系，可补充现有分布式优化器阅读；价值在于检查免问题参数结论所需的预算缩放，不应直接把本地训练定理外推到普通 LLM 预训练。",
+      "evidence_limit": "初步判断，仅摘要，待全文核验。“不依赖问题参数”不等于没有超参数；需查平滑性/噪声假设、时域与精度是否已知、范数球半径如何选、本地预算缩放的实现成本、网络常数和初始化成本。摘要没有实证支撑规模或硬件效率的描述。",
+      "reading_decision": "选读"
+    },
+    "AURA: Angular Update Rate Adaptation for training complex-valued neural networks": {
+      "title_zh": "AURA：用于复值神经网络训练的角度更新速率自适应",
+      "summary": "利用相邻复值更新的长度、对齐和旋转方向一致性调整逐参数步长，提供保持更新方向的自适应机制对照。",
+      "abstract_zh": "复值神经网络（CVNN）正越来越多地用于复值数据；然而，它们通常使用从实值情形沿用而来的一阶优化器进行训练。这些方法的效率在很大程度上取决于步长，而它们的步长规则忽略了复平面中可用的角度信息。我们通过引入 AURA（Angular Update Rate Adaptation，角度更新速率自适应）来处理复数域中的步长自适应问题；它是一种逐参数步长适应机制，可以叠加到任何一阶优化器上，也可以从中移除，而不改变该优化器的更新方向。AURA 从长度、对齐和旋转方向三个方面度量每个复值参数的连续更新之间的一致性，并在它们一致时增大步长，在不一致时减小步长。它不需要额外的梯度计算，每一步只需要开销较低的向量运算。我们将 AURA 与 Adam 和 Muon 结合，并在四个复杂性逐渐增加的测试案例上，将所得方法与常见一阶优化器进行比较，案例范围从标量复函数的近似到物理信息训练。本工作始终使用全连接神经网络。除步长之外，所有超参数在各测试案例之间保持固定；对其中一个案例，我们还在相同预算下调节了各优化器的超参数。我们的实证测试表明，AURA 在大多数案例中以较小的单步开销改善了基础优化器的收敛表现，同时我们也识别出它无法带来改善的条件。",
+      "contributions": [
+        "作者提出利用复值连续更新的长度、对齐和旋转方向一致性进行逐参数步长调整。",
+        "将机制与 Adam/Muon 组合，在四类全连接网络问题中比较，并报告存在失效条件。"
+      ],
+      "method": "将步长幅度自适应与基础方向规则分开，先检查逐参数缩放是否保持作者所定义的方向，再阅读一致性度量、缩放上下界和失效案例。",
+      "result": "摘要报告四个从复函数近似到物理信息训练的案例，大多数改善基础优化器收敛且单步开销较小；未给量化提升、LLM 证据或收敛阶。",
+      "selection_reason": "为步长自适应提供不同于二阶矩的连续方向一致性信号，可与当前 Muon 设计作机制对照；复值全连接任务与实值 Transformer 存在明显迁移距离，排在直接 LLM 方案之后。",
+      "evidence_limit": "初步判断，仅摘要，待全文核验。需明确“更新方向”指单个复参数还是整体矩阵，以及逐参数尺度如何影响 Muon 的谱结构；核对全部调参预算、失败条件、开销与统计误差。不能把 CVNN 结果写成 LLM 收益或免调参保证。",
+      "reading_decision": "选读"
+    },
+    "Muon+: Towards More Effective Muon via One Additional Normalization Step for LLM Pre-training": {
+      "summary": "极分解后归一化直接关联Muon设计，适合定点对照；此为较早arXiv工作的近期OpenReview提交，不能称今日新发现的算法。",
+      "selection_reason": "极分解后归一化直接关联Muon设计，适合定点对照；此为较早arXiv工作的近期OpenReview提交，不能称今日新发现的算法。",
+      "reading_decision": "选读",
+      "evidence_limit": "题目与摘要初评；待全文核验。"
+    },
+    "Closure Masks for Hardware-Compatible 2:4 Sparse Muon": {
+      "summary": "闭包支持条件与稀疏更新直接相关，但OPT 2026经官网核验为Workshop，按配置排除正式推荐。",
+      "selection_reason": "闭包支持条件与稀疏更新直接相关，但OPT 2026经官网核验为Workshop，按配置排除正式推荐。",
+      "reading_decision": "跟踪",
+      "evidence_limit": "题目与摘要初评；待全文核验。"
+    },
+    "Muon Under Covariate Shift: Spectral Learning and Temporal Stability": {
+      "summary": "协变量漂移与轨迹稳定性可补机制线索，但OPT 2026为Workshop，按配置排除。",
+      "selection_reason": "协变量漂移与轨迹稳定性可补机制线索，但OPT 2026为Workshop，按配置排除。",
+      "reading_decision": "跟踪",
+      "evidence_limit": "题目与摘要初评；待全文核验。"
+    },
+    "Muon Moves the Boundary of Transformer Trainability": {
+      "summary": "可训练边界和有限NS截断有诊断价值，但DynaFront经主办方页面核验为Workshop，按配置排除。",
+      "selection_reason": "可训练边界和有限NS截断有诊断价值，但DynaFront经主办方页面核验为Workshop，按配置排除。",
+      "reading_decision": "跟踪",
+      "evidence_limit": "题目与摘要初评；待全文核验。"
+    },
+    "AdasignSGD: Turning 1-Bit Worker Votes into Adaptive Updates": {
+      "summary": "符号投票差额与更新幅度直接相关且有LLM/硬件数字，但OPT 2026为Workshop，按配置排除。",
+      "selection_reason": "符号投票差额与更新幅度直接相关且有LLM/硬件数字，但OPT 2026为Workshop，按配置排除。",
+      "reading_decision": "跟踪",
+      "evidence_limit": "题目与摘要初评；待全文核验。"
+    },
+    "PINNing the pion: conformal deep learning for $F_π(s)$ and the $(g-2)_μ$ hadronic contribution": {
+      "summary": "Muon在本文指粒子，核心是π介子形状因子及g-2；并非优化器研究，排除。",
+      "selection_reason": "Muon在本文指粒子，核心是π介子形状因子及g-2；并非优化器研究，排除。",
+      "reading_decision": "跟踪",
+      "evidence_limit": "题目与摘要初评；待全文核验。"
+    },
+    "Machine-learning-based neutrino-event generation constrained by experimental measurements": {
+      "summary": "Muon是中微子散射输出粒子运动学，未研究Muon优化器，词义误命中，排除。",
+      "selection_reason": "Muon是中微子散射输出粒子运动学，未研究Muon优化器，词义误命中，排除。",
+      "reading_decision": "跟踪",
+      "evidence_limit": "题目与摘要初评；待全文核验。"
+    }
+  },
+  "semantic_reranking": [
+    {
+      "title": "Ori: Drift-Aware Streaming $k$-PCA for Very Low-Rank LLM Training",
+      "screening_rank": 65,
+      "candidate_screening_rank": 2,
+      "semantic_rank": 1,
+      "reason": "直接研究极低秩LLM训练，子空间跟踪机制和1B预训练提供明确核验入口，列为第一。",
+      "formal_recommendation": true
+    },
+    {
+      "title": "NBCLT: Parameter-Agnostic Norm-Ball Clipped Local Training",
+      "screening_rank": 66,
+      "candidate_screening_rank": 3,
+      "semantic_rank": 2,
+      "reason": "免问题参数、范数球裁剪和本地更新有直接机制联系；将通信收益与本地计算预算分开审查，列第二。",
+      "formal_recommendation": true
+    },
+    {
+      "title": "AURA: Angular Update Rate Adaptation for training complex-valued neural networks",
+      "screening_rank": 63,
+      "candidate_screening_rank": 1,
+      "semantic_rank": 3,
+      "reason": "复值步长机制有可迁移线索，但实值Transformer适用性未证实，排在直接LLM状态压缩与裁剪几何方案之后。",
+      "formal_recommendation": true
+    },
+    {
+      "title": "Muon+: Towards More Effective Muon via One Additional Normalization Step for LLM Pre-training",
+      "screening_rank": 80,
+      "candidate_screening_rank": 10,
+      "semantic_rank": 4,
+      "reason": "极分解后归一化直接关联Muon设计，适合定点对照；此为较早arXiv工作的近期OpenReview提交，不能称今日新发现的算法。",
+      "formal_recommendation": true
+    },
+    {
+      "title": "Closure Masks for Hardware-Compatible 2:4 Sparse Muon",
+      "screening_rank": 73,
+      "candidate_screening_rank": 6,
+      "semantic_rank": 5,
+      "reason": "闭包支持条件与稀疏更新直接相关，但OPT 2026经官网核验为Workshop，按配置排除正式推荐。",
+      "formal_recommendation": false
+    },
+    {
+      "title": "Muon Under Covariate Shift: Spectral Learning and Temporal Stability",
+      "screening_rank": 75,
+      "candidate_screening_rank": 7,
+      "semantic_rank": 6,
+      "reason": "协变量漂移与轨迹稳定性可补机制线索，但OPT 2026为Workshop，按配置排除。",
+      "formal_recommendation": false
+    },
+    {
+      "title": "Muon Moves the Boundary of Transformer Trainability",
+      "screening_rank": 76,
+      "candidate_screening_rank": 8,
+      "semantic_rank": 7,
+      "reason": "可训练边界和有限NS截断有诊断价值，但DynaFront经主办方页面核验为Workshop，按配置排除。",
+      "formal_recommendation": false
+    },
+    {
+      "title": "AdasignSGD: Turning 1-Bit Worker Votes into Adaptive Updates",
+      "screening_rank": 79,
+      "candidate_screening_rank": 9,
+      "semantic_rank": 8,
+      "reason": "符号投票差额与更新幅度直接相关且有LLM/硬件数字，但OPT 2026为Workshop，按配置排除。",
+      "formal_recommendation": false
+    },
+    {
+      "title": "PINNing the pion: conformal deep learning for $F_π(s)$ and the $(g-2)_μ$ hadronic contribution",
+      "screening_rank": 67,
+      "candidate_screening_rank": 4,
+      "semantic_rank": 9,
+      "reason": "Muon在本文指粒子，核心是π介子形状因子及g-2；并非优化器研究，排除。",
+      "formal_recommendation": false
+    },
+    {
+      "title": "Machine-learning-based neutrino-event generation constrained by experimental measurements",
+      "screening_rank": 68,
+      "candidate_screening_rank": 5,
+      "semantic_rank": 10,
+      "reason": "Muon是中微子散射输出粒子运动学，未研究Muon优化器，词义误命中，排除。",
+      "formal_recommendation": false
+    }
+  ]
+}
