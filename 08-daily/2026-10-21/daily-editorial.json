@@ -1,0 +1,208 @@
+{
+  "assessment_scope": "metadata_and_abstract",
+  "confidence": "低；题目和摘要初步判断，待全文核验",
+  "overview": {
+    "trend": "近期窗口为2026-09-21至2026-10-21。合并去重204篇（arXiv 182、OpenReview 22），100篇命中已有资产或历史推荐，104篇未命中。逐篇审阅预筛前10后保留9项正式阅读建议，另1项因LLM optimizer词义不同排除并留作审计。前三选择MuPACE、Adam/Shampoo/Muon统计视角和AdamPM，覆盖步长、统计预条件与状态内存。该关键词样本不能证明全领域趋势，MuPACE等新记录也不全是检索日首发。年度高影响力补充因Semantic Scholar两次429缺失。 全量列表中另按标题标记62项粒子物理等非优化器误命中；不从第11名补选。",
+    "hotspots": [
+      {
+        "title": "方向与步长分工",
+        "text": "MuPACE保持Muon更新方向，只用元学习调全局步长；需要把省去每任务扫参的收益与元训练总成本一起核算。"
+      },
+      {
+        "title": "统计白化与几何结构",
+        "text": "统计视角提出MND-Muon并报告与NorMuon的竞争结果；T-MUON则将更新定义在张量谱范数几何上，两者改变的对象不同。"
+      },
+      {
+        "title": "减少状态与降低算子成本",
+        "text": "AdamPM压缩二阶矩状态；Polar Switch降低正交化内核耗时。状态缩减比例和内核加速都不能直接当作整体训练收益。"
+      }
+    ]
+  },
+  "domain_summaries": {
+    "大模型优化器设计": {
+      "summary": "先读能影响现有设计的三类机制：MuPACE的轨迹条件步长、MND-Muon的统计白化、AdamPM的二阶矩池化。其次定点读T-MUON张量几何、Polar Switch内核、恒定步长稳定性。DP与重尾裁剪只作为优化器设计的直接理论依据，不另建主题。计数包含宽泛词和Muon同词异义，不能等同于直接相关论文量。",
+      "subfields": {
+        "符号与范数几何优化": "MuPACE、MND-Muon、T-MUON分别改步长、预条件和张量几何；恒定步长与Edge-of-Stability论文提供边界审查。Muon单词也会命中粒子物理，分类计数仅代表自动命中。",
+        "免调参与梯度裁剪": "MuPACE减少逐任务步长选择，但依赖元训练；DP-Muon研究裁剪对正交化方向的影响，弱L^α论文研究重尾条件下的裁剪偏差，不能直接外推非凸预训练。",
+        "自适应与状态内存": "AdamPM通过共享相邻二阶矩降低该部分状态；与PowerStep、低比特AdamW比较时须统一总状态、精度格式和吞吐。",
+        "大模型训练与优化器设计": "本轮直接LLM训练证据主要来自LoRA微调、GPT预训练和矩池化；元学习任务外推与模型规模外推需分别核验。",
+        "未细分": "仅分类或宽泛关键词命中的记录保留全量追溯，不自动转成阅读优先级；LLM用于黑盒搜索的候选明确排除。"
+      }
+    }
+  },
+  "top_papers": {
+    "MuPACE: Learning to Pace Muon for LoRA Fine-Tuning": {
+      "title_zh": "MuPACE：学习为LoRA微调调节Muon的步伐",
+      "abstract_zh": "学习率调度通常在训练开始前就已固定，然而，在使用低秩适配器（LoRA）微调大语言模型时，合适的尺度会随模型、任务和适配器配置而显著变化。实践者针对每个新问题重新调节调度，但即便经过调节的调度，也无法响应其遇到的训练动态。我们转而在不同LoRA微调问题之间摊销学习率选择的成本。我们保持基础优化器Muon不变，使其归一化更新确定方向，并且只对全局步长进行元学习。我们的方法MuPACE是一个小型循环策略，在微调运行的分布上进行元训练；它以观测到的轨迹为条件，对一个可解释的解析调度输出有界调整。在64个微调问题上，与采用一个表现较强的共享默认设置的标准固定调度相比，MuPACE在64–78%的问题上表现更好，并且与为每个任务调节峰值后的同类调度表现相当。MuPACE仅在至多16层的模型上进行元训练，即可一次性迁移到深达64层模型上的未见任务，例如Qwen3-32B和Qwen3.8-27B；在这些模型上，单次运行仍能与经过参数扫描的调度保持竞争力。",
+      "summary": "保持Muon方向规则，通过轨迹条件循环策略调节全局步长，把逐任务学习率选择转为跨任务元训练。",
+      "contributions": [
+        "作者将Muon方向规则与全局步长分离，元学习策略仅输出解析调度的有界修正。",
+        "摘要报告跨64个LoRA问题以及从至多16层到深达64层模型的迁移比较。"
+      ],
+      "method": "在多个LoRA微调运行上元训练小型循环策略，读取训练轨迹并修正解析学习率调度；先查策略输入、状态成本、步长边界与元目标。",
+      "result": "摘要报告在64个微调问题中的64–78%上优于共享默认固定调度，与逐任务调峰值的调度相当；迁移到Qwen3-32B和Qwen3.8-27B的未见任务后，单次运行仍能竞争扫参结果。64–78%是胜出的问题比例，不是准确率提升。",
+      "selection_reason": "直接针对Muon+LoRA的步长选择，与当前免调参目标最接近；把方向固定而只学习全局步长，适合与现有PowerStep和解析步长方案对照。元训练成本与未见任务迁移是主要核验点。",
+      "evidence_limit": "初步判断，仅题目与摘要，待全文核验。需查训练/测试任务隔离、策略是否见过目标分布、元训练及扫参总算力、任务与随机种子的方差、LoRA秩与学习率基线公平性。“减少逐任务调参”不等于无超参数或无需元训练；不能据LoRA结果推断全参数预训练收益。",
+      "reading_decision": "精读"
+    },
+    "A Statistical Viewpoint on Adam, Shampoo and Muon": {
+      "title_zh": "从统计视角理解Adam、Shampoo与Muon",
+      "abstract_zh": "我们为随机优化方法的设计提供新的统计视角。通过用正态分布建模梯度，我们认为应当使用梯度的协方差对随机梯度进行白化。我们给出一种在线估计梯度均值与方差的方法，它基于正则化似然，或者等价地，基于最大后验估计。随后，我们展示如何在同一框架内使用协方差的结构化近似，包括对角近似和Kronecker因子分解近似。对角近似得到一种与Adam非常接近、且实践表现同样好的方法。Kronecker近似得到新的MN方法，它是Shampoo与KL-Shampoo的一种变体。我们还通过将同一统计框架应用于梯度方向而非完整梯度，重新得到Muon。将这一做法与白化步骤结合，我们得到MN-Muon，即一种新的预条件Muon版本。我们在Chinchilla尺度的GPT-2类模型上的实验表明，MN的对角实现MND，在稳定性、最终验证损失和耗时方面，均优于Distributed Shampoo和KL-Shampoo的实现。MN-Muon的对角实现MND-Muon在24组成对GPT-small运行中的21组优于Muon，并在GPT-medium上取得更低的最佳验证损失，且在所测试的六个学习率下保持稳定。然而，我们发现NorMuon与MND-Muon表现相当，并在GPT-medium以及FineWeb上的GPT-small、批大小512设置中，取得略低的验证损失。",
+      "summary": "以梯度及梯度方向的统计白化连接Adam、Shampoo与Muon，并给出可与MUON2、NorMuon对照的预条件变体。",
+      "contributions": [
+        "作者用正则化似然/最大后验估计在线跟踪梯度统计，并通过对角与Kronecker近似连接不同优化器。",
+        "对梯度方向应用统计模型并结合白化，提出MN-Muon及其对角实现MND-Muon。"
+      ],
+      "method": "分别核对完整梯度与方向的概率模型，再逐项比较MN/MND、MN-Muon/MND-Muon的协方差近似、更新顺序和状态量；与已读MUON2比较白化位置及尺度恢复。",
+      "result": "摘要报告MND优于两种Shampoo实现的稳定性、损失及耗时；MND-Muon在24组GPT-small成对运行中21组优于Muon，并在GPT-medium的六个测试学习率下保持稳定。但NorMuon表现相当且在两类指定设置中略优；不存在摘要支持的全面胜出结论。",
+      "selection_reason": "从梯度统计连接Adam、Shampoo与Muon，能与已精读MUON2对照预条件器的净增量；摘要同时披露NorMuon反例，比较入口清楚。",
+      "evidence_limit": "初步判断，仅题目与摘要，待全文核验。正态模型是设计假设，不是已验证的真实梯度分布；需查相关性与非平稳性、先验/正则的调节成本、分解近似误差、与MUON2/NorMuon更新的区别、成对实验预算、随机种子和显存开销。Chinchilla尺度并非无限规模证据。",
+      "reading_decision": "精读"
+    },
+    "AdamPM: Memory-Efficient LLM Optimization via Moment Pooling": {
+      "title_zh": "AdamPM：通过矩池化实现内存高效的大语言模型优化",
+      "abstract_zh": "Adam凭借其较强的优化表现与训练稳定性，被广泛用于训练大语言模型（LLM），但其对一阶矩和二阶矩的逐元素估计会产生可观的内存开销。尽管已有许多内存高效优化器，其中不少方法会引入额外的计算开销，或需要额外调节超参数。因此，Adam仍然是LLM预训练中占主导且可靠的选择。我们提出AdamPM（Adam with Pooled Moments，采用池化矩的Adam），它是Adam的一种简单且内存高效的变体：沿行或列维度将相邻矩条目分组，并用单个共享均值表示每个组。AdamPM能够较好地沿用Adam的超参数设置，并以更低的内存开销方便地集成到现有Adam优化器实现中。我们系统研究了一阶矩与二阶矩估计的池化，并确定二阶矩池化是有效的设计。当组大小为$s$时，AdamPM将二阶矩内存降至原需求的$1/s$。语言模型预训练、微调和多模态学习上的大量实验表明，AdamPM在显著减少优化器状态内存的同时，保持模型表现与训练速度。我们的代码位于https://github.com/jixiaowei95/AdamPM。",
+      "summary": "把相邻二阶矩共享为组均值，以较小实现改动减少Adam状态内存，并检验能否沿用原有超参数。",
+      "contributions": [
+        "作者系统比较一阶与二阶矩池化，报告二阶矩池化为有效选择。",
+        "以大小为s的行/列分组将二阶矩存储降为1/s，提供预训练、微调和多模态实证线索。"
+      ],
+      "method": "按行或列分组相邻矩条目，用共享均值近似逐元素状态；重点读池化和指数移动平均的先后、广播更新、边界组处理及AdamW权重衰减兼容性。",
+      "result": "摘要报告二阶矩内存降至1/s，并在三类任务中维持模型表现和训练速度。该比例只针对二阶矩，不是整个优化器、总显存或训练成本缩减至1/s；摘要未给统一端到端节省百分比。",
+      "selection_reason": "直接命中优化器状态内存；二阶矩池化实现简洁，适合与PowerStep及4-bit AdamW对照内存、吞吐与损失，形成独立于Muon几何的阅读分支。",
+      "evidence_limit": "初步判断，仅题目与摘要，待全文核验。需查组大小s及方向的调节、矩估计偏差、第一阶矩保留成本、混合精度与主权重占用、分布式分片兼容、峰值显存及端到端时间。摘要没有提供具体损失差、任务规模或统计误差，不能据此断言无精度损失。",
+      "reading_decision": "精读"
+    },
+    "T-MUON: Tensorizing Muon via t-SVD for Large Language Model Pre-training": {
+      "summary": "以M-transform/t-SVD组织Transformer梯度，报告51M—1.3B预训练收益；先核验恒等变换与张量分组消融，作为直接竞争方案选读。",
+      "selection_reason": "直接研究LLM预训练中的张量范数几何，理论与51M—1.3B实验都有核验线索；定点读张量化和identity变换，今日让位于步长、预条件与内存三条互补线。",
+      "evidence_limit": "题目与摘要初评，待全文核验。",
+      "reading_decision": "选读"
+    },
+    "Polar Switch: Fast Muon Orthogonalization with Polynomial Circuits": {
+      "summary": "用多项式电路降低正交化成本，摘要给出15.5–18.7%及8.6–16.2%内核耗时下降；需补端到端收益和半精度约束，选读。",
+      "selection_reason": "聚焦Muon正交化内核，速度和精度报告具体；需分开内核加速与端到端训练收益，作为可实现系统分支排第四、第五梯队。",
+      "evidence_limit": "题目与摘要初评，待全文核验。",
+      "reading_decision": "选读"
+    },
+    "Constant Step Sizes for Muon-Type Spectral Optimizers on Strongly Convex Quadratics": {
+      "summary": "以增益与更新长度区分强凸二次问题的三种恒定步长行为；可诊断归一化设计，不能直接视为LLM收敛定理，选读。",
+      "selection_reason": "用强凸二次模型隔离增益、更新长度与恒定步长，直接帮助诊断Muon缩放设计；外推非凸随机LLM训练前需查定理条件。",
+      "evidence_limit": "题目与摘要初评，待全文核验。",
+      "reading_decision": "选读"
+    },
+    "How Does Muon Work in Private Deep Learning? Scalable Differentially Private Training via Orthogonalization": {
+      "summary": "DP-Muon把裁剪主效应分解为LMO不敏感的正缩放；语言模型最优优化器随批大小变化，隐私需求相关时选读。",
+      "selection_reason": "裁剪与LMO的机制直接相关，但主要约束为差分隐私；摘要报告语言模型大批量下DP-Adam更优，适合有隐私需求时选读。",
+      "evidence_limit": "题目与摘要初评，待全文核验。",
+      "reading_decision": "选读"
+    },
+    "Weak-$L^α$ Noise, Strong Guarantees: Gradient Clipping under Affine Heavy Tails": {
+      "summary": "弱L^α假设放宽重尾矩条件并刻画裁剪偏差邻域；仅作为裁剪设计理论依据，凸性与加性/乘性项需核验，选读。",
+      "selection_reason": "弱L^α尾条件与裁剪偏差邻域给裁剪设计提供直接理论依据；当前研究无独立理论主题，且凸/Pareto实验距LLM较远，按条件定点选读。",
+      "evidence_limit": "题目与摘要初评，待全文核验。",
+      "reading_decision": "选读"
+    },
+    "Muon Operates Beyond the Edge of Stability": {
+      "summary": "CIFAR-10显示Muon稳定区域可越过经典对角预条件阈值；精确边界仍未知，与已有稳定性阅读相比信息增量待核验，跟踪。",
+      "selection_reason": "CIFAR-10的稳定性线索可与已有Edge-of-Stability记录对照，但相关性不证明因果，且摘要明确精确边界仍开放，新增信息与迁移收益需核验。",
+      "evidence_limit": "题目与摘要初评，待全文核验。",
+      "reading_decision": "跟踪"
+    },
+    "An important Bottleneck in LLM Optimizers: Principle-Level Local Optima": {
+      "summary": "【语义排除，不计正式推荐】LLM执行黑盒搜索的原理层坍缩，不是训练LLM权重的优化器；保留预筛审计。",
+      "selection_reason": "语义排除：这里的LLM optimizer是由LLM执行分子/节点/内核搜索，不是训练LLM权重的优化器；保留预筛审计，不计入9篇正式阅读建议。",
+      "evidence_limit": "题目与摘要初评，待全文核验。",
+      "reading_decision": "跟踪"
+    }
+  },
+  "semantic_reranking": [
+    {
+      "title": "MuPACE: Learning to Pace Muon for LoRA Fine-Tuning",
+      "screening_rank": 19,
+      "candidate_screening_rank": 2,
+      "semantic_rank": 1,
+      "formal_recommendation": true,
+      "reason": "直接针对Muon+LoRA的步长选择，与当前免调参目标最接近；把方向固定而只学习全局步长，适合与现有PowerStep和解析步长方案对照。元训练成本与未见任务迁移是主要核验点。"
+    },
+    {
+      "title": "A Statistical Viewpoint on Adam, Shampoo and Muon",
+      "screening_rank": 43,
+      "candidate_screening_rank": 6,
+      "semantic_rank": 2,
+      "formal_recommendation": true,
+      "reason": "从梯度统计连接Adam、Shampoo与Muon，能与已精读MUON2对照预条件器的净增量；摘要同时披露NorMuon反例，比较入口清楚。"
+    },
+    {
+      "title": "AdamPM: Memory-Efficient LLM Optimization via Moment Pooling",
+      "screening_rank": 96,
+      "candidate_screening_rank": 10,
+      "semantic_rank": 3,
+      "formal_recommendation": true,
+      "reason": "直接命中优化器状态内存；二阶矩池化实现简洁，适合与PowerStep及4-bit AdamW对照内存、吞吐与损失，形成独立于Muon几何的阅读分支。"
+    },
+    {
+      "title": "T-MUON: Tensorizing Muon via t-SVD for Large Language Model Pre-training",
+      "screening_rank": 24,
+      "candidate_screening_rank": 3,
+      "semantic_rank": 4,
+      "formal_recommendation": true,
+      "reason": "直接研究LLM预训练中的张量范数几何，理论与51M—1.3B实验都有核验线索；定点读张量化和identity变换，今日让位于步长、预条件与内存三条互补线。"
+    },
+    {
+      "title": "Polar Switch: Fast Muon Orthogonalization with Polynomial Circuits",
+      "screening_rank": 72,
+      "candidate_screening_rank": 9,
+      "semantic_rank": 5,
+      "formal_recommendation": true,
+      "reason": "聚焦Muon正交化内核，速度和精度报告具体；需分开内核加速与端到端训练收益，作为可实现系统分支排第四、第五梯队。"
+    },
+    {
+      "title": "Constant Step Sizes for Muon-Type Spectral Optimizers on Strongly Convex Quadratics",
+      "screening_rank": 50,
+      "candidate_screening_rank": 8,
+      "semantic_rank": 6,
+      "formal_recommendation": true,
+      "reason": "用强凸二次模型隔离增益、更新长度与恒定步长，直接帮助诊断Muon缩放设计；外推非凸随机LLM训练前需查定理条件。"
+    },
+    {
+      "title": "How Does Muon Work in Private Deep Learning? Scalable Differentially Private Training via Orthogonalization",
+      "screening_rank": 5,
+      "candidate_screening_rank": 1,
+      "semantic_rank": 7,
+      "formal_recommendation": true,
+      "reason": "裁剪与LMO的机制直接相关，但主要约束为差分隐私；摘要报告语言模型大批量下DP-Adam更优，适合有隐私需求时选读。"
+    },
+    {
+      "title": "Weak-$L^α$ Noise, Strong Guarantees: Gradient Clipping under Affine Heavy Tails",
+      "screening_rank": 38,
+      "candidate_screening_rank": 5,
+      "semantic_rank": 8,
+      "formal_recommendation": true,
+      "reason": "弱L^α尾条件与裁剪偏差邻域给裁剪设计提供直接理论依据；当前研究无独立理论主题，且凸/Pareto实验距LLM较远，按条件定点选读。"
+    },
+    {
+      "title": "Muon Operates Beyond the Edge of Stability",
+      "screening_rank": 27,
+      "candidate_screening_rank": 4,
+      "semantic_rank": 9,
+      "formal_recommendation": true,
+      "reason": "CIFAR-10的稳定性线索可与已有Edge-of-Stability记录对照，但相关性不证明因果，且摘要明确精确边界仍开放，新增信息与迁移收益需核验。"
+    },
+    {
+      "title": "An important Bottleneck in LLM Optimizers: Principle-Level Local Optima",
+      "screening_rank": 49,
+      "candidate_screening_rank": 7,
+      "semantic_rank": 10,
+      "formal_recommendation": false,
+      "reason": "语义排除：这里的LLM optimizer是由LLM执行分子/节点/内核搜索，不是训练LLM权重的优化器；保留预筛审计，不计入9篇正式阅读建议。"
+    }
+  ],
+  "source_limitations": [
+    "arXiv官方API按15个配置关键词和submittedDate检索2026-09-21至2026-10-21，按相关性返回前200条，不是穷尽检索；词Muon可能命中粒子物理，附录计数为关键词样本。",
+    "原脚本OpenReview把前6个关键词拼成单次查询且持续分页，耗时过长而停止；随后逐15关键词各取首100条并按pdate/cdate/tcdate过滤，排除日期缺失项，得到40条。OpenReview记录日期不等于首次公开日期。",
+    "Semantic Scholar年度窗口2025-10-21至2026-09-20两次HTTP 429，年度高影响力补充为0；这不表示该窗口没有相关论文。",
+    "仅对预筛前10逐篇进行摘要语义复排；其中1篇任务词义不符排除，保留在第10位审计；前三分析仅为摘要初评，PDF归档并不等于完成全文评价。",
+    "索引刷新时排除旧README示例被误读出的paper_stem表头伪记录；已撤回的暂存归档不登记。索引由sync_indexes.refresh统一写出。"
+  ]
+}

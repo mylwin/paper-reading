@@ -1,0 +1,53 @@
+{
+  "papers_dir": "/Users/myl/Documents/paper/01-raw",
+  "month_dir": "/Users/myl/Documents/paper/01-raw/2026-10",
+  "month": "2026-10",
+  "date": "2026-10-21",
+  "requested": 3,
+  "downloaded": 3,
+  "skipped_existing": 0,
+  "failed": 0,
+  "index_updated": [
+    "/Users/myl/Documents/paper/01-raw/index.md",
+    "/Users/myl/Documents/paper/01-raw/2026-10/README.md",
+    "/Users/myl/Documents/paper/02-markdown/index.md",
+    "/Users/myl/Documents/paper/02-markdown/2026-10/README.md",
+    "/Users/myl/Documents/paper/03-notes/index.md",
+    "/Users/myl/Documents/paper/03-notes/2026-10/README.md",
+    "/Users/myl/Documents/paper/06-translation/index.md",
+    "/Users/myl/Documents/paper/06-translation/2026-10/README.md"
+  ],
+  "archived": [
+    {
+      "title": "MuPACE: Learning to Pace Muon for LoRA Fine-Tuning",
+      "paper_stem": "MuPACE_Learning_to_Pace_Muon_for_LoRA_Fine_Tuning",
+      "month": "2026-10",
+      "source": "arxiv",
+      "pdf_url": "https://arxiv.org/pdf/2610.28072v1",
+      "path": "/Users/myl/Documents/paper/01-raw/2026-10/MuPACE_Learning_to_Pace_Muon_for_LoRA_Fine_Tuning.pdf",
+      "status": "downloaded",
+      "detail": "本次前一批次已下载；再次归档时存在即跳过，未覆盖",
+      "verification_status": "exists"
+    },
+    {
+      "title": "A Statistical Viewpoint on Adam, Shampoo and Muon",
+      "paper_stem": "A_Statistical_Viewpoint_on_Adam_Shampoo_and_Muon",
+      "month": "2026-10",
+      "source": "arxiv",
+      "pdf_url": "https://arxiv.org/pdf/2610.24839v1",
+      "path": "/Users/myl/Documents/paper/01-raw/2026-10/A_Statistical_Viewpoint_on_Adam_Shampoo_and_Muon.pdf",
+      "status": "downloaded",
+      "detail": "7089.6 KB"
+    },
+    {
+      "title": "AdamPM: Memory-Efficient LLM Optimization via Moment Pooling",
+      "paper_stem": "AdamPM_Memory_Efficient_LLM_Optimization_via_Moment_Pooling",
+      "month": "2026-10",
+      "source": "arxiv",
+      "pdf_url": "https://arxiv.org/pdf/2610.24598v1",
+      "path": "/Users/myl/Documents/paper/01-raw/2026-10/AdamPM_Memory_Efficient_LLM_Optimization_via_Moment_Pooling.pdf",
+      "status": "downloaded",
+      "detail": "374.0 KB"
+    }
+  ]
+}
