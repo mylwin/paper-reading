@@ -1,0 +1,44 @@
+{
+  "workspace": "/Users/myl/Documents/paper",
+  "papers": 107,
+  "months": [
+    "2026-07",
+    "2026-08",
+    "2026-09",
+    "2026-10"
+  ],
+  "changed": [
+    "/Users/myl/Documents/paper/01-raw/index.md",
+    "/Users/myl/Documents/paper/01-raw/2026-10/README.md",
+    "/Users/myl/Documents/paper/02-markdown/index.md",
+    "/Users/myl/Documents/paper/02-markdown/2026-10/README.md",
+    "/Users/myl/Documents/paper/03-notes/index.md",
+    "/Users/myl/Documents/paper/03-notes/2026-10/README.md",
+    "/Users/myl/Documents/paper/06-translation/index.md",
+    "/Users/myl/Documents/paper/06-translation/2026-10/README.md"
+  ],
+  "dry_run": false,
+  "selected": {
+    "paper_stem": "Stochastic_Polyak_Step_sizes_and_Momentum_Convergence_Guarantees_and_Practical_Performance",
+    "title": "Stochastic Polyak Step-sizes and Momentum: Convergence Guarantees and Practical Performance",
+    "archive_date": "2026-10-21",
+    "archive_month": "2026-10",
+    "source": "用户提供；ICLR 2025",
+    "raw_path": "/Users/myl/Documents/paper/01-raw/2026-10/Stochastic_Polyak_Step_sizes_and_Momentum_Convergence_Guarantees_and_Practical_Performance.pdf",
+    "markdown_path": null,
+    "notes_path": "/Users/myl/Documents/paper/03-notes/2026-10/Stochastic_Polyak_Step_sizes_and_Momentum_Convergence_Guarantees_and_Practical_Performance",
+    "translation_path": null,
+    "parse_status": "未解析",
+    "reading_status": "已精读",
+    "translation_status": "未翻译",
+    "reading_start": "2026-10-21",
+    "reading_finish": "2026-10-21",
+    "priority": "--",
+    "translation_forms": [],
+    "parse_error": "--",
+    "months_seen": [
+      "2026-10"
+    ],
+    "translation_finish": "--"
+  }
+}

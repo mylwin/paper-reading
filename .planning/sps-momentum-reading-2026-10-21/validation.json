@@ -1,0 +1,49 @@
+{
+  "note": "/Users/myl/Documents/paper/03-notes/2026-10/Stochastic_Polyak_Step_sizes_and_Momentum_Convergence_Guarantees_and_Practical_Performance/精读.md",
+  "characters": 28440,
+  "display_equations": 60,
+  "local_links_checked": 9,
+  "original_figures": 6,
+  "proof_excerpt": 1,
+  "pdf_sha256_unchanged": true,
+  "equation26_check": {
+    "left": 9,
+    "claimed_right": 3,
+    "safe_bound": 9
+  },
+  "indexes": {
+    "01-raw/index.md": {
+      "new_paper_present": true,
+      "existing_rows_preserved": true
+    },
+    "01-raw/2026-10/README.md": {
+      "new_paper_present": true,
+      "existing_rows_preserved": true
+    },
+    "02-markdown/index.md": {
+      "new_paper_present": true,
+      "existing_rows_preserved": true
+    },
+    "02-markdown/2026-10/README.md": {
+      "new_paper_present": true,
+      "existing_rows_preserved": true
+    },
+    "03-notes/index.md": {
+      "new_paper_present": true,
+      "existing_rows_preserved": true
+    },
+    "03-notes/2026-10/README.md": {
+      "new_paper_present": true,
+      "existing_rows_preserved": true
+    },
+    "06-translation/index.md": {
+      "new_paper_present": true,
+      "existing_rows_preserved": true
+    },
+    "06-translation/2026-10/README.md": {
+      "new_paper_present": true,
+      "existing_rows_preserved": true
+    }
+  },
+  "errors": []
+}

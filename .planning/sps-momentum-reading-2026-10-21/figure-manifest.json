@@ -1,0 +1,84 @@
+{
+  "source": "01-raw/2026-10/Stochastic_Polyak_Step_sizes_and_Momentum_Convergence_Guarantees_and_Practical_Performance.pdf",
+  "sha256": "a16b65e6245a47ba1cafa8070a720014bb47280e398a77a4be508c66c900dff1",
+  "dpi": 300,
+  "figures": [
+    {
+      "file": "fig1.png",
+      "page": 4,
+      "rectangle_top_left_points": [
+        285,
+        531,
+        504,
+        630
+      ],
+      "caption": "原文图 1：直接加入动量与修正步长的比较"
+    },
+    {
+      "file": "fig2.png",
+      "page": 9,
+      "rectangle_top_left_points": [
+        265,
+        388,
+        503,
+        497
+      ],
+      "caption": "原文图 2：确定性最小二乘与步长轨迹"
+    },
+    {
+      "file": "fig3.png",
+      "page": 10,
+      "rectangle_top_left_points": [
+        107,
+        365,
+        290,
+        453
+      ],
+      "caption": "原文图 3：vowel 训练损失与训练准确率"
+    },
+    {
+      "file": "fig4.png",
+      "page": 10,
+      "rectangle_top_left_points": [
+        293,
+        365,
+        474,
+        453
+      ],
+      "caption": "原文图 4：letter 的衰减步长比较"
+    },
+    {
+      "file": "fig5.png",
+      "page": 10,
+      "rectangle_top_left_points": [
+        107,
+        590,
+        290,
+        692
+      ],
+      "caption": "原文图 5：ResNet34 / CIFAR10"
+    },
+    {
+      "file": "fig6.png",
+      "page": 10,
+      "rectangle_top_left_points": [
+        293,
+        590,
+        474,
+        692
+      ],
+      "caption": "原文图 6：ResNet34 / CIFAR100"
+    },
+    {
+      "file": "eq26.png",
+      "page": 30,
+      "rectangle_top_left_points": [
+        103,
+        612,
+        508,
+        732
+      ],
+      "caption": "附录 D.2 式 (26) 及其上下文"
+    }
+  ]
+}
