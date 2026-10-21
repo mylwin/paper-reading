@@ -1,0 +1,157 @@
+{
+  "arxiv": {
+    "status": "ok",
+    "keywords": [
+      "large language model optimizer",
+      "LLM optimizer",
+      "optimizer design",
+      "memory-efficient optimizer",
+      "optimizer state memory",
+      "adaptive optimization",
+      "sign-based optimization",
+      "SignSGD",
+      "Muon",
+      "PowerStep",
+      "gradient clipping",
+      "parameter-free optimization",
+      "Polyak stepsize",
+      "lp-norm steepest descent",
+      "AdamW"
+    ],
+    "raw_count": 200,
+    "max_results": 200,
+    "date_field": "submittedDate",
+    "retrieved_on": "2026-10-21"
+  },
+  "openreview": [
+    {
+      "keyword": "large language model optimizer",
+      "status": "ok",
+      "returned": 100,
+      "url": "https://api2.openreview.net/notes/search?term=large+language+model+optimizer&limit=100&offset=0&content=all&source=forum",
+      "page_limit": 100
+    },
+    {
+      "keyword": "LLM optimizer",
+      "status": "ok",
+      "returned": 100,
+      "url": "https://api2.openreview.net/notes/search?term=LLM+optimizer&limit=100&offset=0&content=all&source=forum",
+      "page_limit": 100
+    },
+    {
+      "keyword": "optimizer design",
+      "status": "ok",
+      "returned": 100,
+      "url": "https://api2.openreview.net/notes/search?term=optimizer+design&limit=100&offset=0&content=all&source=forum",
+      "page_limit": 100
+    },
+    {
+      "keyword": "memory-efficient optimizer",
+      "status": "ok",
+      "returned": 100,
+      "url": "https://api2.openreview.net/notes/search?term=memory-efficient+optimizer&limit=100&offset=0&content=all&source=forum",
+      "page_limit": 100
+    },
+    {
+      "keyword": "optimizer state memory",
+      "status": "ok",
+      "returned": 100,
+      "url": "https://api2.openreview.net/notes/search?term=optimizer+state+memory&limit=100&offset=0&content=all&source=forum",
+      "page_limit": 100
+    },
+    {
+      "keyword": "adaptive optimization",
+      "status": "ok",
+      "returned": 100,
+      "url": "https://api2.openreview.net/notes/search?term=adaptive+optimization&limit=100&offset=0&content=all&source=forum",
+      "page_limit": 100
+    },
+    {
+      "keyword": "sign-based optimization",
+      "status": "ok",
+      "returned": 100,
+      "url": "https://api2.openreview.net/notes/search?term=sign-based+optimization&limit=100&offset=0&content=all&source=forum",
+      "page_limit": 100
+    },
+    {
+      "keyword": "SignSGD",
+      "status": "ok",
+      "returned": 93,
+      "url": "https://api2.openreview.net/notes/search?term=SignSGD&limit=100&offset=0&content=all&source=forum",
+      "page_limit": 100
+    },
+    {
+      "keyword": "Muon",
+      "status": "ok",
+      "returned": 100,
+      "url": "https://api2.openreview.net/notes/search?term=Muon&limit=100&offset=0&content=all&source=forum",
+      "page_limit": 100
+    },
+    {
+      "keyword": "PowerStep",
+      "status": "ok",
+      "returned": 3,
+      "url": "https://api2.openreview.net/notes/search?term=PowerStep&limit=100&offset=0&content=all&source=forum",
+      "page_limit": 100
+    },
+    {
+      "keyword": "gradient clipping",
+      "status": "ok",
+      "returned": 100,
+      "url": "https://api2.openreview.net/notes/search?term=gradient+clipping&limit=100&offset=0&content=all&source=forum",
+      "page_limit": 100
+    },
+    {
+      "keyword": "parameter-free optimization",
+      "status": "ok",
+      "returned": 100,
+      "url": "https://api2.openreview.net/notes/search?term=parameter-free+optimization&limit=100&offset=0&content=all&source=forum",
+      "page_limit": 100
+    },
+    {
+      "keyword": "Polyak stepsize",
+      "status": "ok",
+      "returned": 100,
+      "url": "https://api2.openreview.net/notes/search?term=Polyak+stepsize&limit=100&offset=0&content=all&source=forum",
+      "page_limit": 100
+    },
+    {
+      "keyword": "lp-norm steepest descent",
+      "status": "ok",
+      "returned": 100,
+      "url": "https://api2.openreview.net/notes/search?term=lp-norm+steepest+descent&limit=100&offset=0&content=all&source=forum",
+      "page_limit": 100
+    },
+    {
+      "keyword": "AdamW",
+      "status": "ok",
+      "returned": 100,
+      "url": "https://api2.openreview.net/notes/search?term=AdamW&limit=100&offset=0&content=all&source=forum",
+      "page_limit": 100
+    }
+  ],
+  "notes": "OpenReview每词首100条，日期不可核验的条目排除；非穷尽检索。",
+  "semantic_scholar": {
+    "status": "rate_limited",
+    "http_status": 429,
+    "attempts": 2,
+    "returned": 0,
+    "window": {
+      "start": "2025-10-21",
+      "end": "2026-09-20"
+    }
+  },
+  "combined": {
+    "source_counts": {
+      "arxiv": 200,
+      "openreview": 40
+    },
+    "papers_by_source": {
+      "arxiv": 182,
+      "openreview": 22
+    },
+    "total_unique": 204,
+    "total_known": 100,
+    "total_candidates": 104
+  }
+}

@@ -1,0 +1,117 @@
+{
+  "date": "2026-10-21",
+  "note_file": "今日检索.md",
+  "generated_at": "2026-10-21T10:21:55",
+  "skill": "paper-daily",
+  "sources_searched": [
+    "arxiv",
+    "openreview"
+  ],
+  "source_counts": {
+    "arxiv": 200,
+    "openreview": 40
+  },
+  "date_windows": {
+    "recent_30d": {
+      "start": "2026-09-21",
+      "end": "2026-10-21"
+    },
+    "past_year": {
+      "start": "2025-10-21",
+      "end": "2026-09-20"
+    }
+  },
+  "total_unique": 204,
+  "top_papers": [
+    {
+      "title": "MuPACE: Learning to Pace Muon for LoRA Fine-Tuning",
+      "source": "arxiv",
+      "arxiv_id": "2610.28072",
+      "url": "http://arxiv.org/abs/2610.28072v1",
+      "note_filename": "MuPACE_Learning_to_Pace_Muon_for_LoRA_Fine_Tuning",
+      "matched_domain": "大模型优化器设计",
+      "score": 8.07
+    },
+    {
+      "title": "A Statistical Viewpoint on Adam, Shampoo and Muon",
+      "source": "arxiv",
+      "arxiv_id": "2610.24839",
+      "url": "http://arxiv.org/abs/2610.24839v1",
+      "note_filename": "A_Statistical_Viewpoint_on_Adam_Shampoo_and_Muon",
+      "matched_domain": "大模型优化器设计",
+      "score": 7.8
+    },
+    {
+      "title": "AdamPM: Memory-Efficient LLM Optimization via Moment Pooling",
+      "source": "arxiv",
+      "arxiv_id": "2610.24598",
+      "url": "http://arxiv.org/abs/2610.24598v1",
+      "note_filename": "AdamPM_Memory_Efficient_LLM_Optimization_via_Moment_Pooling",
+      "matched_domain": "大模型优化器设计",
+      "score": 6.87
+    },
+    {
+      "title": "T-MUON: Tensorizing Muon via t-SVD for Large Language Model Pre-training",
+      "source": "arxiv",
+      "arxiv_id": "2610.24938",
+      "url": "http://arxiv.org/abs/2610.24938v1",
+      "note_filename": "T_MUON_Tensorizing_Muon_via_t_SVD_for_Large_Language_Model_Pre_training",
+      "matched_domain": "大模型优化器设计",
+      "score": 7.93
+    },
+    {
+      "title": "Polar Switch: Fast Muon Orthogonalization with Polynomial Circuits",
+      "source": "arxiv",
+      "arxiv_id": "2610.26742",
+      "url": "http://arxiv.org/abs/2610.26742v1",
+      "note_filename": "Polar_Switch_Fast_Muon_Orthogonalization_with_Polynomial_Circuits",
+      "matched_domain": "大模型优化器设计",
+      "score": 7.4
+    },
+    {
+      "title": "Constant Step Sizes for Muon-Type Spectral Optimizers on Strongly Convex Quadratics",
+      "source": "arxiv",
+      "arxiv_id": "2610.27747",
+      "url": "http://arxiv.org/abs/2610.27747v1",
+      "note_filename": "Constant_Step_Sizes_for_Muon_Type_Spectral_Optimizers_on_Strongly_Convex_Quadratics",
+      "matched_domain": "大模型优化器设计",
+      "score": 7.73
+    },
+    {
+      "title": "How Does Muon Work in Private Deep Learning? Scalable Differentially Private Training via Orthogonalization",
+      "source": "arxiv",
+      "arxiv_id": "2610.24736",
+      "url": "http://arxiv.org/abs/2610.24736v1",
+      "note_filename": "How_Does_Muon_Work_in_Private_Deep_Learning_Scalable_Differentially_Private_Training_via_Orthogonalization",
+      "matched_domain": "大模型优化器设计",
+      "score": 8.27
+    },
+    {
+      "title": "Weak-$L^α$ Noise, Strong Guarantees: Gradient Clipping under Affine Heavy Tails",
+      "source": "arxiv",
+      "arxiv_id": "2610.28107",
+      "url": "http://arxiv.org/abs/2610.28107v1",
+      "note_filename": "Weak_$L^α$_Noise_Strong_Guarantees_Gradient_Clipping_under_Affine_Heavy_Tails",
+      "matched_domain": "大模型优化器设计",
+      "score": 7.87
+    },
+    {
+      "title": "Muon Operates Beyond the Edge of Stability",
+      "source": "arxiv",
+      "arxiv_id": "2610.24305",
+      "url": "http://arxiv.org/abs/2610.24305v1",
+      "note_filename": "Muon_Operates_Beyond_the_Edge_of_Stability",
+      "matched_domain": "大模型优化器设计",
+      "score": 7.93
+    },
+    {
+      "title": "An important Bottleneck in LLM Optimizers: Principle-Level Local Optima",
+      "source": "arxiv",
+      "arxiv_id": "2610.24291",
+      "url": "http://arxiv.org/abs/2610.24291v1",
+      "note_filename": "An_important_Bottleneck_in_LLM_Optimizers_Principle_Level_Local_Optima",
+      "matched_domain": "大模型优化器设计",
+      "score": 7.73
+    }
+  ]
+}
