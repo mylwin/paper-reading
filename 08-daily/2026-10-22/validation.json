@@ -1,0 +1,64 @@
+{
+  "date": "2026-10-22",
+  "status": "passed_with_preexisting_workspace_link_errors",
+  "unique_papers": 202,
+  "known": 107,
+  "candidates": 95,
+  "screening_top_n": 10,
+  "formal_recommendations": 6,
+  "semantic_exclusions": 4,
+  "pdf_downloaded": 3,
+  "pdf_failed": 0,
+  "pdf_checks": [
+    {
+      "title": "Hybrid Momentum Methods for Optimizing Deep Learning Models",
+      "pages": 39,
+      "bytes": 6611484,
+      "sha256": "4fe1414ad96cd44982049b6cb9090af00efbea0073eb5c5397bd8b5174ecc987",
+      "identity": "首页标题与arXiv编号一致",
+      "pdfinfo_warnings": ""
+    },
+    {
+      "title": "CAST: History-Adaptive Spectral Clipping for LLM Pretraining",
+      "pages": 14,
+      "bytes": 990731,
+      "sha256": "d37aa4bb2ea0b123203544dc0eb5916e614fc3fa515e62f7cda5924c36380350",
+      "identity": "首页标题与arXiv编号一致",
+      "pdfinfo_warnings": ""
+    },
+    {
+      "title": "Towards Easier-to-Tune Training Algorithms: New Results from AlgoPerf",
+      "pages": 31,
+      "bytes": 1984472,
+      "sha256": "36ee00c70d627101f171586417eebf4ddc103ede7c6424ff96b268a4868f8622",
+      "identity": "首页标题与arXiv编号一致",
+      "pdfinfo_warnings": ""
+    }
+  ],
+  "daily_local_links_checked": 49,
+  "new_link_errors": 0,
+  "workspace_check": {
+    "preexisting_link_errors": 9,
+    "remaining_link_errors": 9,
+    "new_link_errors": 0,
+    "missing_readme": 0,
+    "month_consistency_errors": 0
+  },
+  "checks": [
+    "前十逐篇摘要语义复排，脚本分数及screening_rank未改写",
+    "前三完整中译逐句人工复核；程序核对段落、数字、模型与方法锚点",
+    "前三arXiv官方摘要页的题目、作者、版本与摘要已核对；修正AlgoPerf单一作者拆分并保留原始作者列表",
+    "PDF魔数、页数、首页标题与arXiv编号通过；文本提取有字体类型警告但成功完成",
+    "附录202条连续编号且每篇仅出现一次，4篇语义排除明确标记",
+    "四阶段八份索引表格各仅新增三行，原有表格行无改写；刷新幂等",
+    "本次新增本地链接全通过，旧库9处断链与执行前完全一致"
+  ],
+  "source_limitations": [
+    "arXiv官方API以15个配置关键词查询submittedDate窗口，按相关性返回前200条；查询未施加category过滤，且Muon会命中粒子物理。因此这是有界关键词样本，202篇不是直接相关论文总量。",
+    "OpenReview默认拼接查询持续翻页而中止，随后逐15关键词各取第一页至多100条，14项成功、AdamW一项HTTP 429。只保留pdate/cdate/tcdate可解析且在窗口内的记录，合并36篇；该日期未必等于首次公开日期。",
+    "Semantic Scholar年度窗口2025-10-22至2026-09-21，两次HTTP 429，年度高影响力补充为0，不代表没有相关论文。",
+    "10篇预筛候选均逐篇审阅题目和摘要，6篇保留阅读建议、4篇语义排除；top_papers仍保留10项供审计，正式推荐数量另记，不从第11名补选。",
+    "前三分析仅为摘要初评，已核对arXiv官方摘要页。PDF归档和首页身份校验不等于完成全文评审。",
+    "全库链接检查在本次执行前已有9项悬空链接，均位于旧07-research文档；本次只要求新增文件与链接无新增问题，并单独记录基线。"
+  ]
+}

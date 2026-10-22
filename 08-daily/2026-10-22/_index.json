@@ -1,0 +1,117 @@
+{
+  "date": "2026-10-22",
+  "note_file": "今日检索.md",
+  "generated_at": "2026-10-22T10:09:59",
+  "skill": "paper-daily",
+  "sources_searched": [
+    "arxiv",
+    "openreview"
+  ],
+  "source_counts": {
+    "arxiv": 200,
+    "openreview": 36
+  },
+  "date_windows": {
+    "recent_30d": {
+      "start": "2026-09-22",
+      "end": "2026-10-22"
+    },
+    "past_year": {
+      "start": "2025-10-22",
+      "end": "2026-09-21"
+    }
+  },
+  "total_unique": 202,
+  "top_papers": [
+    {
+      "title": "Hybrid Momentum Methods for Optimizing Deep Learning Models",
+      "source": "arxiv",
+      "arxiv_id": "2610.27674",
+      "url": "http://arxiv.org/abs/2610.27674v2",
+      "note_filename": "Hybrid_Momentum_Methods_for_Optimizing_Deep_Learning_Models",
+      "matched_domain": "大模型优化器设计",
+      "score": 6.67
+    },
+    {
+      "title": "CAST: History-Adaptive Spectral Clipping for LLM Pretraining",
+      "source": "arxiv",
+      "arxiv_id": "2610.19761",
+      "url": "http://arxiv.org/abs/2610.19761v1",
+      "note_filename": "CAST_History_Adaptive_Spectral_Clipping_for_LLM_Pretraining",
+      "matched_domain": "大模型优化器设计",
+      "score": 6.67
+    },
+    {
+      "title": "Towards Easier-to-Tune Training Algorithms: New Results from AlgoPerf",
+      "source": "arxiv",
+      "arxiv_id": "2610.13036",
+      "url": "http://arxiv.org/abs/2610.13036v1",
+      "note_filename": "Towards_Easier_to_Tune_Training_Algorithms_New_Results_from_AlgoPerf",
+      "matched_domain": "大模型优化器设计",
+      "score": 6.67
+    },
+    {
+      "title": "How Does Orthogonalization Adapt to the Neural Network Hessian Structure? A Gradient Self Outer-Product Analysis at Initialization",
+      "source": "arxiv",
+      "arxiv_id": "2610.28975",
+      "url": "http://arxiv.org/abs/2610.28975v1",
+      "note_filename": "How_Does_Orthogonalization_Adapt_to_the_Neural_Network_Hessian_Structure_A_Gradient_Self_Outer_Product_Analysis_at_Initi",
+      "matched_domain": "大模型优化器设计",
+      "score": 7.4
+    },
+    {
+      "title": "Arithmetic Simplicity in Stochastic Gradient Methods",
+      "source": "arxiv",
+      "arxiv_id": "2609.32240",
+      "url": "http://arxiv.org/abs/2609.32240v1",
+      "note_filename": "Arithmetic_Simplicity_in_Stochastic_Gradient_Methods",
+      "matched_domain": "大模型优化器设计",
+      "score": 6.67
+    },
+    {
+      "title": "From Generic to Dedicated: A Novel Optimizer for Online Continual Learning",
+      "source": "arxiv",
+      "arxiv_id": "2610.27835",
+      "url": "http://arxiv.org/abs/2610.27835v1",
+      "note_filename": "From_Generic_to_Dedicated_A_Novel_Optimizer_for_Online_Continual_Learning",
+      "matched_domain": "大模型优化器设计",
+      "score": 6.67
+    },
+    {
+      "title": "Dynamics of Hidden Learning Structure",
+      "source": "arxiv",
+      "arxiv_id": "2610.29054",
+      "url": "http://arxiv.org/abs/2610.29054v1",
+      "note_filename": "Dynamics_of_Hidden_Learning_Structure",
+      "matched_domain": "大模型优化器设计",
+      "score": 7.73
+    },
+    {
+      "title": "Optimal Design for Active Preference Learning with Biased LLM Judges",
+      "source": "arxiv",
+      "arxiv_id": "2609.38860",
+      "url": "http://arxiv.org/abs/2609.38860v1",
+      "note_filename": "Optimal_Design_for_Active_Preference_Learning_with_Biased_LLM_Judges",
+      "matched_domain": "大模型优化器设计",
+      "score": 6.77
+    },
+    {
+      "title": "Protecting Sensitive Data in Image Synthesis via PAC-Private Adaptation for Diffusion Models",
+      "source": "arxiv",
+      "arxiv_id": "2610.04038",
+      "url": "http://arxiv.org/abs/2610.04038v1",
+      "note_filename": "Protecting_Sensitive_Data_in_Image_Synthesis_via_PAC_Private_Adaptation_for_Diffusion_Models",
+      "matched_domain": "大模型优化器设计",
+      "score": 6.67
+    },
+    {
+      "title": "RFChipAgent: Multi-Agentic AI Flow for Analog/RF Chip Design",
+      "source": "arxiv",
+      "arxiv_id": "2610.10858",
+      "url": "http://arxiv.org/abs/2610.10858v1",
+      "note_filename": "RFChipAgent_Multi_Agentic_AI_Flow_for_Analog_RF_Chip_Design",
+      "matched_domain": "大模型优化器设计",
+      "score": 6.67
+    }
+  ]
+}
