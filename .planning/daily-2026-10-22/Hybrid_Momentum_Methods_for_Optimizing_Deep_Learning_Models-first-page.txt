@@ -1,0 +1,68 @@
+Hybrid Momentum Methods for Optimizing Deep Learning Models
+Haifeng Xu1 * Yijin Ren2 * Chenyu Zhou3
+Qi Deng3 Dongdong Ge3 Yinyu Ye3,4,5
+
+arXiv:2610.27674v2 [cs.LG] 21 Oct 2026
+
+1
+
+Shanghai University of Finance and Economics
+2
+Columbia University
+3
+Shanghai Jiao Tong University
+4
+SIMIS
+5
+Stanford University
+
+fengs10@outlook.com yr2549@columbia.edu chenyuzhou@sjtu.edu.cn
+qdeng24@sjtu.edu.cn ddge@sjtu.edu.cn yinyu-ye@stanford.edu
+
+Abstract
+Momentum is central to stochastic optimization in deep learning, including the training of large language models.
+Classical momentum methods typically rely on a fast exponential moving average (EMA) scheme, which discounts
+past gradients on a fixed timescale and may underweight older gradients that remain informative. This creates a
+trade-off between retaining long-term history and adapting to recent changes. We introduce Hybrid Momentum
+(HyM), which combines a linearly weighted average of past gradients with a geometrically discounted fast momentum.
+The former assigns weights proportional to the gradients’ iteration indices and retains a growing span of history,
+while the latter emphasizes recent gradients. This hybrid construction is modular and can be combined with adaptive
+preconditioning and other update transformations. In particular, we propose HyMUON, which applies Newton–Schulz
+orthogonalization to the hybrid direction. Illustrative examples and controlled experiments demonstrate the benefits of
+combining gradient information across these two timescales. Across image classification, machine translation, and
+language modeling, HyM and HyMUON match or improve upon strong baselines. HyMUON improves over Muon on
+IWSLT14, and in both the 100k- and 600k-step GPT-2 124M OpenWebText regimes. For LLaMA-1.3B pretraining on
+C4, HyMUON achieves a final validation loss of 2.777, compared with 2.903 for Muon.
+
+1
+
+Introduction
+
+Momentum methods improve stochastic optimization by combining the current gradient with information from earlier
+updates. In deep learning, this history is usually maintained through exponential moving averaging (EMA), which
+assigns geometrically decaying weights to past gradients, as in Heavy-Ball momentum and commonly used Nesterov
+updates [Polyak, 1964, Sutskever et al., 2013]. EMA emphasizes recent gradients while strongly reducing the influence
+of older gradients on subsequent updates. When gradient contributions that reduce a particular target loss occur
+intermittently across mini-batches, retaining a longer history may help accumulate these contributions.
+By combining momentum with iterate averaging, Defazio et al. [2024] proposed the Schedule-Free method, which
+achieves strong empirical performance without a prescribed schedule for learning rate decay. The empirical success of
+Schedule-Free optimization motivates revisiting how this history is accumulated. To see how its averaging mechanism
+retains past gradients, consider the Schedule-Free SGD recurrence with a constant step size
+yt = (1 − β)zt + βxt ,
+zt+1 = zt − ηgt ,
+xt+1 = (1 − ct+1 )xt + ct+1 zt+1 ,
+
+(1)
+
+where zt is the base iterate, xt is the averaged iterate, and yt is the training iterate. Here ct+1 = 1/(t + 1), z1 = x1 ,
+and gt is a stochastic gradient evaluated at yt . Eliminating xt and zt gives a representation using one sequence that
+exposes its gradient memory [Morwani et al., 2025]:
+nt = (1 − ct )nt−1 + gt ,
+yt+1 = yt − η[βct+1 nt + (1 − β)gt ],
+* Haifeng Xu and Yijin Ren contributed equally.
+
+1
+
+(2)
+
+

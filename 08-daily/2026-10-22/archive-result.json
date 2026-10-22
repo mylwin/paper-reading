@@ -1,0 +1,52 @@
+{
+  "papers_dir": "/Users/myl/Documents/paper/01-raw",
+  "month_dir": "/Users/myl/Documents/paper/01-raw/2026-10",
+  "month": "2026-10",
+  "date": "2026-10-22",
+  "requested": 3,
+  "downloaded": 3,
+  "skipped_existing": 0,
+  "failed": 0,
+  "index_updated": [
+    "/Users/myl/Documents/paper/01-raw/index.md",
+    "/Users/myl/Documents/paper/01-raw/2026-10/README.md",
+    "/Users/myl/Documents/paper/02-markdown/index.md",
+    "/Users/myl/Documents/paper/02-markdown/2026-10/README.md",
+    "/Users/myl/Documents/paper/03-notes/index.md",
+    "/Users/myl/Documents/paper/03-notes/2026-10/README.md",
+    "/Users/myl/Documents/paper/06-translation/index.md",
+    "/Users/myl/Documents/paper/06-translation/2026-10/README.md"
+  ],
+  "archived": [
+    {
+      "title": "Hybrid Momentum Methods for Optimizing Deep Learning Models",
+      "paper_stem": "Hybrid_Momentum_Methods_for_Optimizing_Deep_Learning_Models",
+      "month": "2026-10",
+      "source": "arxiv",
+      "pdf_url": "https://arxiv.org/pdf/2610.27674v2",
+      "path": "/Users/myl/Documents/paper/01-raw/2026-10/Hybrid_Momentum_Methods_for_Optimizing_Deep_Learning_Models.pdf",
+      "status": "downloaded",
+      "detail": "6456.5 KB"
+    },
+    {
+      "title": "CAST: History-Adaptive Spectral Clipping for LLM Pretraining",
+      "paper_stem": "CAST_History_Adaptive_Spectral_Clipping_for_LLM_Pretraining",
+      "month": "2026-10",
+      "source": "arxiv",
+      "pdf_url": "https://arxiv.org/pdf/2610.19761v1",
+      "path": "/Users/myl/Documents/paper/01-raw/2026-10/CAST_History_Adaptive_Spectral_Clipping_for_LLM_Pretraining.pdf",
+      "status": "downloaded",
+      "detail": "967.5 KB"
+    },
+    {
+      "title": "Towards Easier-to-Tune Training Algorithms: New Results from AlgoPerf",
+      "paper_stem": "Towards_Easier_to_Tune_Training_Algorithms_New_Results_from_AlgoPerf",
+      "month": "2026-10",
+      "source": "arxiv",
+      "pdf_url": "https://arxiv.org/pdf/2610.13036v1",
+      "path": "/Users/myl/Documents/paper/01-raw/2026-10/Towards_Easier_to_Tune_Training_Algorithms_New_Results_from_AlgoPerf.pdf",
+      "status": "downloaded",
+      "detail": "1938.0 KB"
+    }
+  ]
+}

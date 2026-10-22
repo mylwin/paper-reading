@@ -1,0 +1,113 @@
+CAST: History-Adaptive Spectral Clipping for LLM Pretraining
+Jiacheng Li, Jianchao Tan∗ ,
+Kefeng Zhang, Yuchen Xie, Xunliang Cai
+Meituan, Beijing, China
+{lijiacheng14, tanjianchao02}@meituan.com
+
+1
+
+1.90
+1.88
+
+1.8738
+1.8856
+1.8864
+1.8872
+1.8937
+1.8947
+1.8962
+1.9022
+1.9034
+1.9139
+
+1.92
+
+ST
+AG
+C
+-co
+nsta
+n
+Ad t
+aGC
+Z
+SSC Clip
+-co
+Glo sine
+Cli balGC
+pBy
+Val
+ue
+G
+Gra
+dPo S
+wer
+
+1.86
+
+SSC
+
+CA
+
+Soft spectral clipping (SSC) reduces gradient
+singular values, but its effect depends on the
+gradient scale and clipping threshold. We introduce CAST (Clipping with Adaptive Scales
+and Thresholds), a history-adaptive extension
+of SSC. AdamW’s previous second moment
+sets row and column scales. An exponential
+moving average of the clipped output’s estimated spectral norm sets each matrix’s threshold. CAST restores the original coordinates before the AdamW update. We train a mixture-ofexperts (MoE) model with 19.08B total parameters for 83.89B tokens. CAST achieves lower
+training and mean validation losses than nine
+gradient-processing baselines, with the fewest
+relative gradient spikes. It reaches the best
+baseline’s final smoothed training loss in 7.2%
+fewer steps.
+
+Mean validation loss
+
+arXiv:2610.19761v1 [cs.LG] 14 Oct 2026
+
+Abstract
+
+Figure 1: Validation loss after 5,000 steps: unweighted
+mean over 20 subsets (one run per method; seed 48).
+GS: GradientStabilizer. The vertical axis is truncated.
+Full comparison: Table 1.
+
+Introduction
+
+Gradient clipping(Zhang et al., 2020) controls
+large gradients during language model(Team et al.,
+2025b; Brown et al., 2020; Liu et al., 2024; Yang
+et al., 2025; DeepSeek-AI et al., 2026; Team
+et al., 2025a, 2026) pretraining (Pascanu et al.,
+2013). When applied before AdamW, it also
+changes the moment estimates used by later updates (Loshchilov and Hutter, 2019). The clipping
+rule therefore affects both the current update and
+the optimizer’s state over time.
+Global norm clipping rescales the whole gradient by a single factor. This limits the influence
+of an unusually large gradient while preserving its
+direction. A matrix gradient can be large mainly
+along a few directions. Rescaling the entire matrix
+then also weakens other directions, even when their
+magnitudes are already moderate. Spectral clipping controls the gradient magnitude in each singular direction. SPECTRA(Jiang et al., 2026) develops a smooth spectral transformation for appli∗
+
+Corresponding author.
+
+cation before or after a base optimizer(Loshchilov
+and Hutter, 2019; Kingma and Ba, 2017; Jordan
+et al., 2024). We use pre-optimizer SSC (SSCPre) because CAST also acts on gradients before
+AdamW. We label its constant and cosine threshold schedules SSC-constant and SSC-cosine.
+A clipping threshold is meaningful only relative to the gradient scale. Persistent differences in
+row and column magnitudes affect the spectrum on
+which clipping acts. An unusually large value in
+one part of a matrix may be routine in another, and
+the overall scale can change over training. A fixed
+threshold may therefore apply different clipping
+strengths as the gradient scale changes. SPECTRA’s decaying pre-clipping threshold shows the
+value of adjusting this threshold during training.
+Such a schedule depends on the training step. A
+history-based rule can instead respond to changes
+in each matrix. We therefore use each matrix’s history to set its gradient scale and clipping threshold.
+We introduce CAST (Clipping with Adaptive
+
+

@@ -1,0 +1,76 @@
+Towards Easier-to-Tune Training Algorithms: New Results from
+AlgoPerf
+Priya Kasimbeg1 Ahmed Khaled1 Aahlad Chandrabhatta1 Yifan Wang1
+Andy Liu2 Niccolò Ajroldi5 David Tweedle3 Xingyu (Alice) Yang6
+Isaac Patole Frank Schneider4 George E. Dahl1
+
+arXiv:2610.13036v1 [cs.LG] 9 Oct 2026
+
+1
+
+Google
+
+2
+
+AI For Tomorrow
+
+3
+
+Cohere∗
+
+4
+
+University of Tübingen
+
+5
+
+Ellis Institute Tübingen
+
+6
+
+Goodfire†
+
+September 2026
+
+Abstract
+Evaluating deep learning optimizer is challenging because confounding factors such as hyperparameter
+tuning and optimizer-model co-design often obscure true algorithmic performance. We present results
+of the updated AlgoPerf v1 benchmark, in which we evaluate a new set of training algorithms on
+wall-clock time-to-target across nine workloads on fixed hardware. This report focuses on the results
+of the benchmark’s self-tuning ruleset, which requires submissions to use a single configuration across
+all workloads. Out of the 13 submissions in PyTorch and JAX, Schedule-Free AdamW ranked first. In
+addition to the wall-clock scores, we also analyze the trade-offs between step efficiency and wall-clock
+execution, revealing that matrix-preconditioned and two-loop methods achieve good sample efficiency
+but require more aggressive computational optimizations to be competitive in runtime. Finally, our
+hyperparameter saliency and retention analyses show that the learning rate and momentum are highly
+sensitive across domains and algorithms, highlighting the need for methods that are more robust against
+hyperparameter tuning and can generalize well to new tasks.
+
+1
+
+Introduction
+
+Neural network training often relies on fragile empirical recipes governed by brittle hyperparameter tuning
+procedures and massive computational budgets. Even though training algorithms, optimizers, and their
+accompanying training recipes are such a crucial part of the neural network pipeline, it is very difficult to
+determine what the true state of the art is in training algorithms. Much of the literature on new optimizers
+suffers from confounding factors like weak baselines, optimizer-model co-design, limited testing across different
+tasks and obscured tuning recipes.
+The AlgoPerf: Training Algorithms benchmark [Dahl et al., 2023] was designed to largely eliminate
+these confounding factors and measure practical speed-ups in neural network training achieved solely by
+improving the underlying training algorithms. The benchmark was originally launched as a competition with
+two rulesets. In the external tuning ruleset, submissions provided workload-agnostic hyperparameter search
+spaces and then were scored based on a sample from their hyperparameter space, while in the self-tuning
+ruleset, the submissions were scored without any hyperparameter sampling. In both rulesets, submissions are
+compared on time-to-result across multiple deep learning workloads, training on fixed hardware. The results
+of the AlgoPerf competition [Kasimbeg et al., 2025] ranked the Distributed Shampoo [Shi et al., 2023]
+algorithm first on the external-tuning leaderboard, while Schedule-Free AdamW [Defazio et al., 2024] placed
+first on the self-tuning leaderboard. Since then, there has been a renewed interest in second-order methods
+like Muon [Jordan et al., 2024b] and momentum-based or EMA methods like SNOO [Kallusky et al., 2025]
+and AdEMAMix [Pagliardini et al., 2025].
+∗ Work done while an independent researcher.
+† Work done while at Meta FAIR.
+
+1
+
+

@@ -1,0 +1,663 @@
+[
+  {
+    "id": "CoJyzt86JH",
+    "source": "openreview",
+    "title": "Nested Birth-Death Processes and Neural Transducers as Models of Time-Dependent Protein Evolution",
+    "summary": "The evolution of biomolecular sequences is typically modeled as two types of events: point substitutions, which change individual residues, and short insertions and deletions (indels), which add or remove consecutive residues. TKF92 [1] is the gold-standard model of molecular evolution that accounts for both. It describes sequence evolution with nested stochastic processes. An outer birth-death process models indels (and, therefore, changes in sequence length), while an inner Markov chain models substitutions at individual sites. Although TKF92 is mathematically tractable and easy to interpret, it assumes that the rates of substitutions and indels are independent of the surrounding sequence context. This is biologically unrealistic; whether a mutation can occur often depends on the local structural and biochemical environment. We introduce context-dependent substitution and indel rates into the TKF92 framework using two complementary strategies: 1. classical machine learning, via hierarchically nested latent class mixtures; and 2. modern deep learning, via a modified neural transducer [2].\n\nWe curate approximately 1.2 million pairwise protein sequence alignments from nearly 20,000 protein families\nin Pfam [3], a large database of protein alignments across all kingdoms of life. We use this dataset to train and\nevaluate two models. “Mixture of Domain Classes” (MixDom) extends TKF92 with latent classes at the domain,\nfragment, and site levels. Each domain class coordinates its own indel rates and substitution parameters, effectively giving the model a short window of sequence context. “Neural TKF” is a neural transducer that calculates the same TKF92 likelihood but replaces fixed parameters with values predicted from neural sequence embeddings. All models are trained with the Adam optimizer and evaluated using per-column perplexity on held-out alignments. Neural TKF provides the best overall fit to the pairwise alignment dataset, consistently outperforming neural networks that lack the inductive bias of evolutionary modeling. Despite having only approximately 29,000 parameters, MixDom achieves likelihoods competitive with Neural TKF models containing tens of millions of parameters. MixDom also performs particularly well on challenging alignments, including those with many gaps or substantial evolutionary divergence. These results suggest that incorporating evolutionary structure into machine learning models can provide improvement over purely neural approaches.\n\nMixDom and Neural TK provide complementary approaches to modeling protein evolution. Both produce\ninterpretable substitution and indel rates, which makes them useful for predicting possible future mutations. They are also directly compatible with standard dynamic programming algorithms, including Forward-Backward and Viterbi. In addition, both models can simulate realistic evolutionary trajectories, providing useful benchmarks for phylogenetic methods. Neural TKF has an additional advantage: it can incorporate embeddings from modern protein language models (autoregressive or otherwise) by combining those embeddings with the model's existing representations. MixDom can likewise be extended to capture coevolutionary dependencies in a statistically principled way, similar to Potts models [4].\n\nMore broadly, these results demonstrate that biological inductive biases and modern machine learning can be\ncombined to build models that are both expressive and interpretable. Future work will extend these AI-based\nevolutionary models to applications in statistical phylogenetics and bioengineering.\n\n[1] Thorne, J. L., Kishino, H., and Felsenstein, J. 1992. https://doi.org/10.1007/BF00163848. \n[2] Graves, A. 2012. https://doi.org/10.48550/arXiv.1211.3711. \n[3] Sonnhammer, E. L., Eddy, S. R., and Durbin, R. 1997. https://doi.org/10.1002/(SICI)1097-0134(199707)28:3<405::AID-PROT10>3.0.CO;2-L. \n[4] Levy, R. M., Haldane, A., and Flynn, W. F. 2017. https://doi.org/10.1016/j.sbi.2016.11.004.",
+    "authors": [
+      "{'username': '~Annabel_Large1', 'fullname': 'Annabel Large', 'institutions': [{'name': 'University of California, Berkeley', 'domain': 'berkeley.edu', 'country': 'US'}]}",
+      "{'username': '~Ian_Holmes1', 'fullname': 'Ian Holmes', 'institutions': [{'name': 'University of California Berkeley', 'domain': 'berkeley.edu'}]}"
+    ],
+    "affiliations": [],
+    "categories": [],
+    "venue": "WiML @ NeurIPS 2026",
+    "pdf_url": "/pdf/ab414c48c5e1e3988267e2b3d050e7b235473395.pdf",
+    "url": "https://openreview.net/forum?id=CoJyzt86JH",
+    "published": "2026-09-30T20:59:57.596000",
+    "published_date": "2026-09-30 20:59:57.596000"
+  },
+  {
+    "id": "LN21rs7D6l",
+    "source": "openreview",
+    "title": "Variational inference in coupled models of amino acid substitution",
+    "summary": "We investigate the use of Expectation-Maximization (EM) and variational Bayes for inferring rates and interactions under models of molecular coevolution. We first review EM theory for continuous-time Markov chains (CTMCs) and develop it for coevolutionary models, exploiting exchangeability and reversibility symmetries to constrain the parameter dimension. We fit several paired amino-acid coevolutionary models to structural alignments and compare the results to previous work. Our richest model trained on pooled coevolutionary data has explanatory power comparable to CherryML's Q2 matrix (also trained on pooled data), with half the parameters, exploiting the Klein four-group symmetry of reversibly exchangeable flux. We observe that pooling of training data can lead to a form of Simpson's Paradox: a mixture model, whose components experience Potts energy-modulated substitution modeled via continuous-time Bayesian networks (CTBNs), resolves interaction signals that wash out when a single such component tries to capture everything. The interactions include correlated and anticorrelated hydropathy and volume-packing in coevolving amino-acid pairs, as well as the anticorrelated acid/base compensation that was detected by CherryML's Q2. We next assess an evidence lower bound (ELBO) for CTBNs built from the same EM statistics, in which the coupling contracts onto per-site bridge quantities at a cost polynomial, rather than exponential, in cluster size. The ELBO is the natural homogeneous initializer for the state of the art in variational modeling of CTBNs, the Euler-Lagrange equations derived by Cohn et al. (JMLR, 2010). This ELBO is computed efficiently for a Potts model by Gauss-Legendre quadrature. Compared to integrating the Euler-Lagrange ODEs, it is competitive in accuracy, faster, simpler, and better-conditioned.",
+    "authors": [
+      "{'username': '~Annabel_Large1', 'fullname': 'Annabel Large', 'institutions': [{'name': 'University of California, Berkeley', 'domain': 'berkeley.edu', 'country': 'US'}]}",
+      "{'username': '~Ian_Holmes1', 'fullname': 'Ian Holmes', 'institutions': [{'name': 'University of California Berkeley', 'domain': 'berkeley.edu'}]}"
+    ],
+    "affiliations": [],
+    "categories": [],
+    "venue": "NeurIPS 2026 Workshop STODY Poster",
+    "pdf_url": "/pdf/fa156b97eee208209f2e5802c7fb56d8a3e87e5f.pdf",
+    "url": "https://openreview.net/forum?id=LN21rs7D6l",
+    "published": "2026-10-04T20:35:15.179000",
+    "published_date": "2026-10-04 20:35:15.179000"
+  },
+  {
+    "id": "XVlmIA4FUo",
+    "source": "openreview",
+    "title": "Optimizing the Optimizer: Language Models Discover Faster Molecular Relaxation",
+    "summary": "Geometry optimization is a principal cost in many quantum-chemical workflows: each optimization step requires one force evaluation, and at the density-functional level that evaluation dominates the wall time.\nDecades of analytical work have produced a set of optimizers, and we ask whether a language model can improve on the best of them with autoresearch.\nAn agent rewrites the optimizer itself to minimize force-call counts, restrained by two admission gates that reject premature stopping and improvements that do not generalize to unseen molecules.\nStarting from Sella, the fastest open-source optimizer available, the search produces AutoSella, a family of three optimizers.\nAll of them deliver consistent force-call reductions relative to Sella across held-out molecular benchmarks and potentials not used during the search.\nMost notably, at the \\texttt{r2SCAN-3c} DFT level, the best variant requires only $73.5$--$89.7\\%$ of Sella's force calls while achieving essentially the same energy reduction, even though the agent used no DFT gradients.",
+    "authors": [
+      "{'username': '~Artem_Tsypin1', 'fullname': 'Artem Tsypin', 'institutions': [{'name': 'AXXX', 'domain': 'axxx.tech', 'country': 'RU'}]}",
+      "{'username': '~Vladimir_Deshchenya1', 'fullname': 'Vladimir Deshchenya', 'institutions': [{'name': 'AXXX', 'domain': 'axxx.tech', 'country': 'RU'}]}",
+      "{'username': '~Kuzma_Khrabrov1', 'fullname': 'Kuzma Khrabrov', 'institutions': [{'name': 'AXXX', 'domain': 'axxx.tech', 'country': 'RU'}]}",
+      "{'username': '~Denis_Potapov1', 'fullname': 'Denis Potapov', 'institutions': [{'name': 'AXXX', 'domain': 'axxx.tech', 'country': 'RU'}]}",
+      "{'username': '~Artur_Kadurin1', 'fullname': 'Artur Kadurin', 'institutions': [{'name': 'AXXX', 'domain': 'axxx.tech', 'country': 'RU'}]}",
+      "{'username': '~Michael_G._Medvedev1', 'fullname': 'Michael G. Medvedev', 'institutions': [{'name': 'N.D. Zelinsky Institute of Organic Chemistry of Russian Academy of Sciences', 'domain': 'zioc.ru', 'country': 'RU'}]}"
+    ],
+    "affiliations": [],
+    "categories": [],
+    "venue": "ML4Molecules 2026 Oral",
+    "pdf_url": "https://openreview.net/pdf?id=XVlmIA4FUo",
+    "url": "https://openreview.net/forum?id=XVlmIA4FUo",
+    "published": "2026-10-07T02:47:02.096000",
+    "published_date": "2026-10-07 02:47:02.096000"
+  },
+  {
+    "id": "oaRJuCrcCO",
+    "source": "openreview",
+    "title": "Optimizer Memory Schedules for Outscaling the Overtraining Axis",
+    "summary": "Optimizer comparisons are often made at a single training horizon, even though deployed language models are increasingly trained far beyond the compute-optimal token budget. We study AdamW, ADANA, Muon, and SOAP across 51M--253M parameter models and overtraining (OT) factors from $1\\times$ to $256\\times$, independently sweeping the base learning rate at every setting. Muon and SOAP provide large short-horizon gains over AdamW, whereas ADANA improves relative to AdamW as training length increases. Longer horizons also favor longer fixed optimizer memory, but ADANA's scaling advantage persists after tuning AdamW's fixed memory\nseparately at each horizon. With log-time weight decay and a momentum cooldown that shortens memory during terminal learning-rate decay, ADANA's equivalent-OT scaling against AdamW has fitted slopes $1.15$--$1.20$, close to the $2-\\kappa=1.15$ effective-clock reference from DANA theory. ADANA begins behind Muon and SOAP but closes these gaps with additional training. These results suggest that training horizon is an essential axis for optimizer evaluation and that scheduled memory provides a distinct route to optimizer outscaling.",
+    "authors": [
+      "{'username': '~Katie_E_Everett1', 'fullname': 'Katie Everett', 'institutions': [{'name': 'Massachusetts Institute of Technology', 'domain': 'mit.edu', 'country': 'US'}]}",
+      "{'username': '~Shikai_Qiu1', 'fullname': 'Shikai Qiu', 'institutions': [{'name': 'New York University', 'domain': 'nyu.edu'}]}"
+    ],
+    "affiliations": [],
+    "categories": [],
+    "venue": "OPT 2026 Poster",
+    "pdf_url": "https://openreview.net/pdf?id=oaRJuCrcCO",
+    "url": "https://openreview.net/forum?id=oaRJuCrcCO",
+    "published": "2026-10-02T06:06:27.812000",
+    "published_date": "2026-10-02 06:06:27.812000"
+  },
+  {
+    "id": "uyYM0lHArz",
+    "source": "openreview",
+    "title": "Optimizer or Precision? Understanding Optimizer–Precision Interactions in PINNs",
+    "summary": "Physics-informed neural networks (PINNs) have been shown to reach low training loss without recovering an accurate solution, and recent work has attributed some of these failures to insufficient arithmetic precision. Those studies evaluate precision under L-BFGS, leaving open whether the observed sensitivity is general to low-precision training or specific to the optimizer. In this work, we separate the two factors across eight configurations on four PDE benchmarks, varying precision, optimizer, and scheduled switches between them. Across 32 runs, Adam-terminating configurations remain substantially less accurate, while every run reaching low solution error terminates in L-BFGS. Among static runs, doubling precision changes Adam error by at most $1.25\\times$, compared with as much as $17.7\\times$ under L-BFGS. At fixed FP64, changing from Adam to L-BFGS lowers error on all four benchmarks. Under the equal-weight main setup, beginning in FP32 Adam and switching to FP64 L-BFGS improves on full FP64 L-BFGS on three of four benchmarks. Our results show that arithmetic precision and optimizer choice interact strongly in PINN training, with the largest precision effects arising under L-BFGS.",
+    "authors": [
+      "{'username': '~Michael_Tarekegn1', 'fullname': 'Michael Tarekegn', 'institutions': [{'name': 'Algoverse AI Research', 'domain': 'algoverseairesearch.org', 'country': 'US'}]}",
+      "{'username': '~Chloe_Wu1', 'fullname': 'Chloe Wu', 'institutions': [{'name': 'Algoverse AI Research', 'domain': 'algoverseairesearch.org', 'country': 'US'}]}",
+      "{'username': '~Trisha_Sharma1', 'fullname': 'Trisha Sharma', 'institutions': [{'name': 'Algoverse AI Research', 'domain': 'algoverseairesearch.org', 'country': 'US'}]}",
+      "{'username': '~Shivank_Garg1', 'fullname': 'Shivank Garg', 'institutions': [{'name': 'Algoverse AI Research', 'domain': 'algoverseairesearch.org', 'country': 'IN'}]}"
+    ],
+    "affiliations": [],
+    "categories": [],
+    "venue": "OPT 2026 Poster",
+    "pdf_url": "https://openreview.net/pdf?id=uyYM0lHArz",
+    "url": "https://openreview.net/forum?id=uyYM0lHArz",
+    "published": "2026-10-02T06:06:27.812000",
+    "published_date": "2026-10-02 06:06:27.812000"
+  },
+  {
+    "id": "24Tbm5hU4W",
+    "source": "openreview",
+    "title": "Ember: A Kilobyte-State Optimizer for Token Interfaces",
+    "summary": "Language models learn continuous programs over discrete symbols, with the embedding table and LM-head acting as the read/write interface between them. We show that this interface has gradient geometry distinct from dense hidden weights which can be exploited to improve the Pareto frontier across supervised finetuning, RL, and pretraining, while only utilizing kilobytes of optimizer state. We introduce Ember, a lightweight optimizer for embedding and LM-head matrices that utilizes O(V+D) optimizer VRAM, instead of Adam's O(2VD), and forgoes the need to shard both token table optimizer states. We provide empirical evidence that Ember scales effectively across batch size and parameter count. We provide a principled view on the surprisingly narrow space of optimizers that suffice for Transformer training. Finally, we open-source our distributed Ember implementation that merges cleanly with existing ZeRO/FSDP setups to support further research (code to be released).",
+    "authors": [
+      "{'username': '~Kathan_Shah1', 'fullname': 'Kathan Shah', 'institutions': []}"
+    ],
+    "affiliations": [],
+    "categories": [],
+    "venue": "OPT 2026 Poster",
+    "pdf_url": "https://openreview.net/pdf?id=24Tbm5hU4W",
+    "url": "https://openreview.net/forum?id=24Tbm5hU4W",
+    "published": "2026-10-02T06:06:27.812000",
+    "published_date": "2026-10-02 06:06:27.812000"
+  },
+  {
+    "id": "TOUrP5VzcN",
+    "source": "openreview",
+    "title": "Monarch–Muon: Structure-Aware Muon for Fast and Memory-Efficient Pretraining",
+    "summary": "Matrix-aware optimizers such as Muon improve language-model pretraining, but they orthogonalize dense momentum matrices, so both the optimizer state and the optimizer step scale with the full weight.\nWe introduce Monarch--Muon, which moves the matrix-aware update onto a Monarch-structured parameterization.\nWe show that the Muon trust-region subproblem separates exactly over block-diagonal factors, so the optimizer never forms or orthogonalizes a dense matrix and instead runs independent Newton--Schulz iterations on the trainable Monarch blocks.\nThe reduction comes from structured connectivity rather than a rank constraint, so the represented weights remain full-rank.\nWe prove nonconvex convergence for the true factor gradient under explicit smoothness and stochastic-gradient assumptions, including a finite-step Newton--Schulz alignment bound that needs no positive lower bound on the nonzero singular values.\nThe block count sets the trade-off directly: Monarch-Muon remove 10\\% of the trainable parameters for a 2.3\\% increase in validation loss over dense Muon, and four blocks remove 37\\% for 4.7\\%.\nOptimizer state memory falls by 4.1x against dense AdamW and 2.2x against dense Muon at 6.89B, and the margin widens monotonically with hidden dimension, from 1.9x at 257M to 4.1x at 6.89B, so Monarch--Muon holds the lowest optimizer state of every method we measure at all five scales.\nStep time at 6.89B drops from 2986.9 ms to 1638.6 ms against dense Muon, and under TP=2 tensor parallelism the optimizer phase runs 3.3x faster than duplicated dense Muon at 34.93 GB peak memory against 54.45 GB.",
+    "authors": [
+      "{'username': '~Kabirov_Ruslan1', 'fullname': 'Kabirov Ruslan', 'institutions': [{'name': 'Independent', 'domain': 'independent.com', 'country': 'RU'}]}",
+      "{'username': '~Alexander_Miasnikov1', 'fullname': 'Alexander Miasnikov', 'institutions': [{'name': 'Moscow Independent Research Institute of Artificial Intelligence', 'domain': 'miriai.org', 'country': 'RU'}, {'name': 'Basic Research of Artificial Intelligence Laboratory (BRAIn Lab)', 'domain': 'independent.com', 'country': 'RU'}, {'name': 'Innopolis University', 'domain': 'innopolis.university', 'country': 'RU'}]}",
+      "{'username': '~Dmitrii_Vlashchuk1', 'fullname': 'Dmitrii Vlashchuk', 'institutions': [{'name': 'Moscow Independent Research Institute of Artificial Intelligence', 'domain': 'miriai.org', 'country': 'RU'}, {'name': 'Basic Research of Artificial Intelligence Laboratory (BRAIn Lab)', 'domain': 'independent.com', 'country': 'RU'}]}",
+      "{'username': '~Gleb_Molodtsov1', 'fullname': 'Gleb Molodtsov', 'institutions': [{'name': 'Moscow Independent Research Institute of Artificial Intelligence', 'domain': 'miriai.org', 'country': 'RU'}, {'name': 'Basic Research of Artificial Intelligence Laboratory', 'domain': 'brainlab-ai.com', 'country': 'RU'}]}",
+      "{'username': '~Vladimir_Aletov1', 'fullname': 'Vladimir Aletov', 'institutions': [{'name': 'Moscow Independent Research Institute of Artificial Intelligence', 'domain': 'miriai.org', 'country': 'RU'}]}",
+      "{'username': '~Nail_Bashirov1', 'fullname': 'Nail Bashirov', 'institutions': [{'name': 'Moscow Independent Research Institute of Artificial Intelligence', 'domain': 'miriai.org', 'country': 'RU'}]}",
+      "{'username': '~Aleksandr_Shestakov1', 'fullname': 'Aleksandr Shestakov', 'institutions': [{'name': 'Mohamed bin Zayed University of Artificial Intelligence', 'domain': 'mbzuai.ac.ae', 'country': 'AE'}]}",
+      "{'username': '~Daniil_Tikhonov1', 'fullname': 'Daniil Tikhonov', 'institutions': [{'name': 'Moscow Independent Research Institute of Artificial Intelligence', 'domain': 'miriai.org', 'country': 'RU'}]}",
+      "{'username': '~Maxim_Krutikov1', 'fullname': 'Maxim Krutikov', 'institutions': [{'name': 'Higher School of Economics, Higher School of Economics', 'domain': 'edu.hse.ru', 'country': 'RU'}]}",
+      "{'username': '~Aleksandr_Beznosikov1', 'fullname': 'Aleksandr Beznosikov', 'institutions': [{'name': 'Moscow Independent Research Institute of Artificial Intelligence', 'domain': 'miriai.org', 'country': 'RU'}, {'name': 'Basic Research of Artificial Intelligence Laboratory (BRAIn Lab)', 'domain': 'independent.com', 'country': 'RU'}, {'name': 'Innopolis University', 'domain': 'innopolis.ru', 'country': 'RU'}]}"
+    ],
+    "affiliations": [],
+    "categories": [],
+    "venue": "OPT 2026 Poster",
+    "pdf_url": "https://openreview.net/pdf?id=TOUrP5VzcN",
+    "url": "https://openreview.net/forum?id=TOUrP5VzcN",
+    "published": "2026-10-02T06:06:27.812000",
+    "published_date": "2026-10-02 06:06:27.812000"
+  },
+  {
+    "id": "xJnSQIEmhb",
+    "source": "openreview",
+    "title": "Rounding in Preconditioner Space: Redesigning 4-bit AdamW Optimizer-State Quantization",
+    "summary": "Quantizing AdamW's optimizer states reduces persistent storage, but quantization errors propagate through the moment recurrences and perturb subsequent adaptive updates. We redesign 4-bit optimizer-state quantization for AdamW from the perspective of \\emph{rounding space}: the coordinate in which a quantizer chooses between adjacent reconstruction levels. For the second-moment, a local analysis of the quantization cell adjacent to zero shows that small mean state error does not ensure a small mean error in the next-step preconditioner. A one-dimensional quadratic construction further shows qualitatively different optimization dynamics under state-space and preconditioner-space rounding. These results motivate Zero-Inclusive Preconditioner-space Stochastic Rounding (\\textbf{ZIP-SR}), which retains zero in the second-moment codebook and computes stochastic-rounding probabilities in preconditioner space. As a complementary route, Zero-Excluding EDEN calibration (\\textbf{ZE-EDEN}) uses a zero-excluding second-moment codebook and rescales the quantized second-moment block to mitigate the preconditioner distortion caused by the positive quantization floor. Both configurations use 4-bit NormalFloat (NF4) for the first moment, with targeted stochastic rounding of the LM-head first moment during the final 10% of training. Across GPT- and Llama-style pretraining experiments ranging from \\textbf{130M} to \\textbf{2.7B} parameters, both methods reduce TorchAO 4-bit AdamW's validation-loss gap to 32-bit AdamW at every evaluated scale, with the largest reported gap reduction reaching \\textbf{70%}. In full-parameter supervised fine-tuning, both recipes achieve lower validation loss than TorchAO while remaining close to 32-bit AdamW on downstream tasks.",
+    "authors": [
+      "{'username': '~Hanyang_Li5', 'fullname': 'Hanyang Li', 'institutions': [{'name': 'University of California, Berkeley', 'domain': 'berkeley.edu', 'country': 'US'}]}",
+      "{'username': '~Shao_Tang1', 'fullname': 'Shao Tang', 'institutions': [{'name': 'Nubank', 'domain': 'nubank.com.br', 'country': 'US'}]}",
+      "{'username': '~Daniel_Thomas_Braithwaite1', 'fullname': 'Daniel Thomas Braithwaite', 'institutions': [{'name': 'Nubank', 'domain': 'nubank.com.br', 'country': 'AU'}]}",
+      "{'username': '~Gregory_Dexter1', 'fullname': 'Gregory Dexter', 'institutions': [{'name': 'Nubank', 'domain': 'nubank.com.br', 'country': 'BR'}]}",
+      "{'username': '~Leonardo_Neves1', 'fullname': 'Leonardo Neves', 'institutions': [{'name': 'Nubank', 'domain': 'nubank.com.br', 'country': 'US'}]}",
+      "{'username': '~Aman_Gupta1', 'fullname': 'Aman Gupta', 'institutions': [{'name': 'Nubank', 'domain': 'nubank.com.br', 'country': 'US'}]}",
+      "{'username': '~Hiroto_Udagawa1', 'fullname': 'Hiroto Udagawa', 'institutions': [{'name': 'Nubank', 'domain': 'nubank.com.br', 'country': 'US'}]}",
+      "{'username': '~Abhishek_Shivanna1', 'fullname': 'Abhishek Shivanna', 'institutions': [{'name': 'Nubank', 'domain': 'nubank.com.br', 'country': 'US'}]}",
+      "{'username': '~Daniel_Silva2', 'fullname': 'Daniel Silva', 'institutions': [{'name': 'Nubank', 'domain': 'nubank.com.br', 'country': 'US'}]}",
+      "{'username': '~Rohan_Ramanath1', 'fullname': 'Rohan Ramanath', 'institutions': [{'name': 'Nubank', 'domain': 'nubank.com.br', 'country': 'US'}]}"
+    ],
+    "affiliations": [],
+    "categories": [],
+    "venue": "OPT 2026 Poster",
+    "pdf_url": "https://openreview.net/pdf?id=xJnSQIEmhb",
+    "url": "https://openreview.net/forum?id=xJnSQIEmhb",
+    "published": "2026-10-02T06:06:27.812000",
+    "published_date": "2026-10-02 06:06:27.812000"
+  },
+  {
+    "id": "F2RyxmsgAT",
+    "source": "openreview",
+    "title": "Primal-Dual Adaptive Subgradient Methods",
+    "summary": "We propose adaptive primal-dual subgradient methods for constrained convex optimization. Our first method applies an AdaGrad-style step-sizes to the dual problem and recovers primal solutions by averaging the associated Fenchel-type oracle outputs. It achieves $\\widetilde{\\mathcal{O}}(T^{-1/2})$ convergence for the dual objective residual, primal objective residual, and feasibility gap in the nonsmooth regime, while automatically improving to $\\mathcal{O}(T^{-1})$ when the dual objective is smooth. We further develop an accelerated variant, which retains the $\\widetilde{\\mathcal{O}}(T^{-1/2})$ nonsmooth rate while achieving $\\mathcal{O}(T^{-2})$ convergence in the smooth regime under mild assumptions. These guarantees require no prior knowledge of the underlying regularity. We demonstrate the empirical performance of the proposed methods on optimal transport and semidefinite relaxation of the Max-Cut problem.",
+    "authors": [
+      "{'username': '~Karthik_Prakhya1', 'fullname': 'Karthik Prakhya', 'institutions': [{'name': 'Umea University', 'domain': 'umu.se'}]}",
+      "{'username': '~Zimeng_Wang1', 'fullname': 'Zimeng Wang', 'institutions': [{'name': 'Umea University', 'domain': 'umu.se', 'country': 'SE'}]}",
+      "{'username': '~Alp_Yurtsever2', 'fullname': 'Alp Yurtsever', 'institutions': [{'name': 'Umeå University', 'domain': 'umu.se', 'country': 'SE'}]}"
+    ],
+    "affiliations": [],
+    "categories": [],
+    "venue": "OPT 2026 Poster",
+    "pdf_url": "https://openreview.net/pdf?id=F2RyxmsgAT",
+    "url": "https://openreview.net/forum?id=F2RyxmsgAT",
+    "published": "2026-10-02T06:06:27.812000",
+    "published_date": "2026-10-02 06:06:27.812000"
+  },
+  {
+    "id": "xufLAG1KfO",
+    "source": "openreview",
+    "title": "TEI: Adaptive Bottleneck Optimization of Agent Harnesses and Prompts",
+    "summary": "Self-improving agents need reliable loops for updating harnesses and prompts, with explicit checks on candidate quality and regressions. We introduce the Target-Evaluate-Improve (TEI) Loop, a framework for jointly searching harness and natural-language prompt edits using bottleneck diagnosis and paired rubric-score checks. An adaptive variant retargets the bottleneck. In a study of 30 coding agents from the SWE-bench leaderboard archive, TEI used each agent's baseline diagnosis and produced modified artifacts for 26 agents; a direction-hidden model judge preferred revised repository excerpts over baselines in 84.6% of votes after one repair and retest. Diagnosis-guided proposals achieved higher rubric scores than matched random proposals in a ten-agent control. Against adapted GEPA, ACE, AHE, and MIPRO, a post-run four-comparator subset yielded an estimated 65% artifact preference for the larger-budget frozen TEI reference. These exploratory comparisons are not budget-matched. Random-search and adversarial controls test sensitivity to evaluator and selection effects.",
+    "authors": [
+      "{'username': '~Anni_Zimina1', 'fullname': 'Anni Zimina', 'institutions': [{'name': 'Stanford University', 'domain': 'stanford.edu', 'country': 'US'}]}",
+      "{'username': '~Orkhan_Javadli1', 'fullname': 'Orkhan Javadli', 'institutions': [{'name': 'Massachusetts Institute of Technology', 'domain': 'mit.edu', 'country': 'US'}]}",
+      "{'username': '~Yegor_Denisov-Blanch1', 'fullname': 'Yegor Denisov-Blanch', 'institutions': [{'name': 'Stanford University', 'domain': 'stanford.edu', 'country': 'US'}]}"
+    ],
+    "affiliations": [],
+    "categories": [],
+    "venue": "CL4FMAgents @ NeurIPS 2026",
+    "pdf_url": "/pdf/cdb5c5da4dae9ca644a24a43b1429a437d977c8b.pdf",
+    "url": "https://openreview.net/forum?id=xufLAG1KfO",
+    "published": "2026-10-04T22:50:00.254000",
+    "published_date": "2026-10-04 22:50:00.254000"
+  },
+  {
+    "id": "MRDbc0C4pl",
+    "source": "openreview",
+    "title": "CAST: History-Adaptive Spectral Clipping for LLM Pretraining",
+    "summary": "Soft spectral clipping (SSC) reduces gradient singular values, but its effect depends on the gradient scale and clipping threshold.\nWe introduce $\\\\textbf{CAST}$ (Clipping with Adaptive Scales and Thresholds), a history-adaptive extension of SSC.\nAdamW's previous second moment sets row and column scales.\nAn exponential moving average of the clipped output's estimated spectral norm sets each matrix's threshold.\nCAST restores the original coordinates before the AdamW update.\nWe train a mixture-of-experts (MoE) model with $\\\\textbf{19.08B}$ total parameters for $\\\\textbf{83.89B}$ tokens.\nCAST achieves lower training and mean validation losses than nine gradient-processing baselines, with the fewest relative gradient spikes.\nIt reaches the best baseline's final smoothed training loss in $\\textbf{7.2\\\\%}$ fewer steps.",
+    "authors": [],
+    "affiliations": [],
+    "categories": [],
+    "venue": "ACL ARR 2026 October Submission",
+    "pdf_url": "/pdf/2459bae014af5f0ba3f30f597603cb1fe139d92c.pdf",
+    "url": "https://openreview.net/forum?id=MRDbc0C4pl",
+    "published": "2026-10-12T20:21:54.867000",
+    "published_date": "2026-10-12 20:21:54.867000"
+  },
+  {
+    "id": "GmTQ4EumjJ",
+    "source": "openreview",
+    "title": "AdasignSGD: Turning 1-Bit Worker Votes into Adaptive Updates",
+    "summary": "Momentum-sign methods reduce synchronization traffic in distributed AI training by transmitting each worker’s local momentum with one bit per coordinate. However, these methods discard local momentum magnitudes and often fail to match the optimization quality of full-precision methods.\nWe introduce AdasignSGD, which uses the majority sign to determine the update direction and the vote margin to set the update magnitude, taking larger steps on coordinates with stronger worker agreement. In C4 language-model pretraining, AdasignSGD outperforms all evaluated 1-bit worker-sign baselines in validation perplexity across 13 model and training-budget settings from 60M to 1B parameters. Its gap to dense AdamW narrows with model scale.\nAt 1B, AdasignSGD closely matches AdamW in validation perplexity while\ndelivering a $1.46\\times$ complete-step speedup over fused AdamW on 32 H200\nGPUs. AdasignSGD uses one model-sized momentum state while incurring only $14.1\\%$ of FP32 dense-DDP\nmodel-sized traffic at 128 workers.\nOn 128 P100 GPUs, AdasignSGD delivers a $4.39\\times$\ncomplete-step speedup over AdamW for the 350M model. Together, these results show that one-bit worker votes can be turned into\nadaptive updates that combine strong optimization quality with a smaller\nmemory footprint and faster distributed training steps at scale.",
+    "authors": [
+      "{'username': '~Xiaoyuan_Liang2', 'fullname': 'Xiaoyuan Liang', 'institutions': [{'name': 'California Institute of Technology', 'domain': 'caltech.edu', 'country': 'US'}]}",
+      "{'username': '~Sebastian_Loeschcke1', 'fullname': 'Sebastian Loeschcke', 'institutions': [{'name': 'University of Copenhagen', 'domain': 'diku.dk', 'country': 'DK'}]}",
+      "{'username': '~Thorsten_Kurth1', 'fullname': 'Thorsten Kurth', 'institutions': [{'name': 'NVIDIA', 'domain': 'nvidia.com', 'country': 'CH'}]}",
+      "{'username': '~Mads_Toftrup1', 'fullname': 'Mads Toftrup', 'institutions': [{'name': 'Aarhus University', 'domain': 'cs.au.dk', 'country': 'DK'}]}",
+      "{'username': '~Boris_Bonev1', 'fullname': 'Boris Bonev', 'institutions': [{'name': 'NVIDIA', 'domain': 'nvidia.com', 'country': 'CH'}]}",
+      "{'username': '~Anima_Anandkumar1', 'fullname': 'Anima Anandkumar', 'institutions': [{'name': 'California Institute of Technology', 'domain': 'caltech.edu', 'country': 'US'}]}"
+    ],
+    "affiliations": [],
+    "categories": [],
+    "venue": "OPT 2026 Poster",
+    "pdf_url": "https://openreview.net/pdf?id=GmTQ4EumjJ",
+    "url": "https://openreview.net/forum?id=GmTQ4EumjJ",
+    "published": "2026-10-02T06:06:27.812000",
+    "published_date": "2026-10-02 06:06:27.812000"
+  },
+  {
+    "id": "AH3QAPtL1Y",
+    "source": "openreview",
+    "title": "Sign compression for Muon: SignMuon, MuonSign, and the Limits of Error Feedback",
+    "summary": "SignMuon compresses the Muon update to one bit per parameter by taking the elementwise sign of the Muon Linear Minimization Oracle (LMO) direction: the most direct way to give a matrix-aware optimizer a one-bit budget. It outperforms SignSGD empirically, yet it can ascend even on a linear function. Signing the gradient before the oracle rather than after does not repair this: we exhibit a small explicit instance on which sign-before (MuonUSign) and sign-on-both-sides (MuonSign) ascend as well, so no placement of the sign around the oracle descends in general. Error feedback does not repair sign-after either: applied to the *output* of the oracle it fails for every smoothness constant, step size and momentum. Applied to the *gradient* it does work, and EF21-MuonUSign and EF21-MuonSign attain the standard $\\mathcal{O}(T^{-1/2})$ rate for the squared gradient norm on smooth nonconvex problems, the latter at one bit in each direction. Our experiments then reverse this order: across CIFAR-10, its federated split and the nanoGPT speedrun the strongest compressed method is sign-*after*, precisely the placement we prove divergent, with the provably convergent variants behind it.",
+    "authors": [
+      "{'username': '~Maria_Smirnova1', 'fullname': 'Maria Smirnova', 'institutions': [{'name': 'Moscow Independent Research Institute of Artificial Intelligence', 'domain': 'miriai.org', 'country': 'RU'}]}",
+      "{'username': '~Alexey_Kravatskiy1', 'fullname': 'Alexey Kravatskiy', 'institutions': [{'name': 'Moscow Independent Research Institute of Artificial Intelligence', 'domain': 'miriai.org', 'country': 'RU'}]}"
+    ],
+    "affiliations": [],
+    "categories": [],
+    "venue": "OPT 2026 Poster",
+    "pdf_url": "https://openreview.net/pdf?id=AH3QAPtL1Y",
+    "url": "https://openreview.net/forum?id=AH3QAPtL1Y",
+    "published": "2026-10-02T06:06:27.812000",
+    "published_date": "2026-10-02 06:06:27.812000"
+  },
+  {
+    "id": "1sTcYib5Kt",
+    "source": "openreview",
+    "title": "Differentially Private Clipping-Free Stochastic Sign Descent",
+    "summary": "Federated learning allows clients to train a model collaboratively while keeping the data decentralized. For real-world applications, two important conditions must be met: first, training must be differentially private so as not to compromise clients' data, and, second, communication costs must be minimized, especially if the model is large. While SignSGD is memory-effective and at the same time reduces communication costs by transmitting only signs of the gradients, it is not differentially private per se. We propose a differentially private modification of SignSGD that fixes this issue. Instead of clipping the gradients and then noising them coordinate-wise to ensure differential privacy, we randomize sign as a mapping from $\\mathbb{R}^d$ to $\\lbrace\\pm1\\rbrace^d$. Our tight privacy estimation shows that this approach delivers better privacy guarantees than adding Gaussian or logistic noise to the clipped gradients, both in terms of $(\\varepsilon, 0)$ privacy and the upper bound on $\\delta$ for a fixed $\\varepsilon$ budget. We empirically demonstrate that these theoretical advantages of our scheme lead to a feasible differentially private algorithm for federated learning problems. A privacy audit supports the guarantees of DP-SignSGD and ours, but rejects that of DP-SignLoSGD, matching an error we find in the accounting behind it.",
+    "authors": [
+      "{'username': '~Alexey_Kravatskiy1', 'fullname': 'Alexey Kravatskiy', 'institutions': [{'name': 'Moscow Independent Research Institute of Artificial Intelligence', 'domain': 'miriai.org', 'country': 'RU'}]}",
+      "{'username': '~Anton_Pliusnin1', 'fullname': 'Anton Pliusnin', 'institutions': [{'name': 'Moscow Independent Research Institute of Artificial Intelligence', 'domain': 'miriai.org', 'country': 'RU'}]}",
+      "{'username': '~Savelii_Chezhegov1', 'fullname': 'Savelii Chezhegov', 'institutions': [{'name': 'Moscow Independent Research Institute of Artificial Intelligence', 'domain': 'miriai.org', 'country': 'RU'}]}",
+      "{'username': '~Aleksandr_Shestakov1', 'fullname': 'Aleksandr Shestakov', 'institutions': [{'name': 'Mohamed bin Zayed University of Artificial Intelligence', 'domain': 'mbzuai.ac.ae', 'country': 'AE'}]}",
+      "{'username': '~Daniil_Medyakov1', 'fullname': 'Daniil Medyakov', 'institutions': [{'name': 'Moscow Independent Research Institute of Artificial Intelligence', 'domain': 'miriai.org', 'country': 'RU'}]}",
+      "{'username': '~Aleksandr_Beznosikov1', 'fullname': 'Aleksandr Beznosikov', 'institutions': [{'name': 'Moscow Independent Research Institute of Artificial Intelligence', 'domain': 'miriai.org', 'country': 'RU'}]}"
+    ],
+    "affiliations": [],
+    "categories": [],
+    "venue": "OPT 2026 Poster",
+    "pdf_url": "https://openreview.net/pdf?id=1sTcYib5Kt",
+    "url": "https://openreview.net/forum?id=1sTcYib5Kt",
+    "published": "2026-10-02T06:06:27.812000",
+    "published_date": "2026-10-02 06:06:27.812000"
+  },
+  {
+    "id": "3pujdNCHGG",
+    "source": "openreview",
+    "title": "Same Training Loss, Different Recovery: Optimizer-Dependent Solution Selection in Matrix Sensing",
+    "summary": "In an overparameterized problem, exact minimization of the training objective does not guarantee recovery of the ground truth solution. A simple non-convex example is low-rank matrix sensing, where the solution can be planted, and recovery can be measured directly. We compare SGD, Global RMS, RMSProp, SignSGD, and Muon using matched initializations and minibatches. All five methods reach almost zero training loss, but the matrix solutions they find are very different. SGD reaches a high-effective-rank interpolating solution early, whereas RMSProp and Muon reduce the training loss more slowly and recover the target by the final checkpoint. To compare the solutions found by the different methods, we follow the size and direction of the updates and rotate the whole problem. Global RMS keeps the update parallel to the gradient but does not recover, while momentum-free SignSGD changes its direction but also does not recover. The rotated runs further show that basis dependence is not what separates the methods. In this experiment, none of these properties predicts recovery on its own. We still do not know why RMSProp and Muon select the planted solution in this experiment.",
+    "authors": [
+      "{'username': '~Luca_Stümper2', 'fullname': 'Luca Stümper', 'institutions': [{'name': 'Eberhard-Karls-Universität Tübingen', 'domain': 'uni-tuebingen.de', 'country': 'DE'}]}",
+      "{'username': '~Antonio_Orvieto3', 'fullname': 'Antonio Orvieto', 'institutions': [{'name': 'ELLIS Institute Tübingen, Max Planck Institute for Intelligent Systems, Tübingen AI Center, Tübingen, Germany', 'domain': 'tue.ellis.eu', 'country': 'DE'}]}"
+    ],
+    "affiliations": [],
+    "categories": [],
+    "venue": "OPT 2026 Poster",
+    "pdf_url": "https://openreview.net/pdf?id=3pujdNCHGG",
+    "url": "https://openreview.net/forum?id=3pujdNCHGG",
+    "published": "2026-10-02T06:06:27.812000",
+    "published_date": "2026-10-02 06:06:27.812000"
+  },
+  {
+    "id": "HSypqovmmM",
+    "source": "openreview",
+    "title": "Does U-W Ratio Alignment Benefit Muon in LLM Pretraining?",
+    "summary": "Most of the top-performing entries in the **modded-nanogpt** optimization benchmark—a leading competitive benchmark for efficient optimizer design in LLM pretraining—use a “u/w floor”. The u/w floor imposes a common lower bound on the ratio of the Frobenius norm of a parameter block's update matrix to that of its weight matrix (u-w ratio). It aligns the u-w ratios of most weight blocks in a model architecture to a common value on most training steps. To study whether this alignment contributes to the u/w floor's empirical advantage, we remove the u/w floor and directly enforce u-w ratio alignment on Muon updates. This yields *MuonL*, which assigns a common ratio to all Muon-updated blocks, and *typed MuonL (t-MuonL)*, which aligns only blocks with the same Transformer role. To assess these policies independently of particular learning-rate values, we derive a measurable local diagnostic from a theoretical model of one-step loss decrease. The analysis yields covariance-based sufficient conditions for when u-w ratio alignment benefits Muon. If the aligned matrix blocks share the same shape, the condition favors alignment when blocks with larger weight norms tend to exhibit greater first-order descent along Muon directions and lower adjusted directional curvatures. For alignment across differently shaped blocks, the condition additionally accounts for matrix dimensions. We then evaluate the diagnostic at checkpoints along Muon training trajectories, using each checkpoint as a starting point to compare Muon's one-step decrease with the counterfactual decreases under MuonL and t-MuonL. Controlled runs using the same training configurations corroborate the diagnostic, with lower final validation losses for MuonL or t-MuonL than for Muon. These results support u-w ratio alignment as a mechanism underlying the u/w floor's empirical advantage and a useful intervention for Muon-based LLM pretraining.",
+    "authors": [
+      "{'username': '~Xuhe_Zhang1', 'fullname': 'Xuhe Zhang', 'institutions': [{'name': 'University of Pennsylvania', 'domain': 'sas.upenn.edu', 'country': 'US'}]}",
+      "{'username': '~X.Y._Han1', 'fullname': 'X.Y. Han', 'institutions': [{'name': 'University of Chicago', 'domain': 'uchicago.edu', 'country': 'US'}]}"
+    ],
+    "affiliations": [],
+    "categories": [],
+    "venue": "Mathematical Foundations and Operational Integration of ML for Uncertainty-Aware Decision-Making Poster",
+    "pdf_url": "/pdf/2222137a4dfbd484c6318dcea2792f415740703e.pdf",
+    "url": "https://openreview.net/forum?id=HSypqovmmM",
+    "published": "2026-10-05T05:16:09.744000",
+    "published_date": "2026-10-05 05:16:09.744000"
+  },
+  {
+    "id": "cEWt9vXlng",
+    "source": "openreview",
+    "title": "Muon Under Covariate Shift: Spectral Learning and Temporal Stability",
+    "summary": "Muon's advantage over AdamW and momentum SGD can grow under covariate shift,\neven when their in-distribution errors are similar. We investigate this\nbehavior through controlled regression experiments and an aligned matrix\nmodel, which shows how spectral updates learn directions that source-weighted\ngradients underemphasize. Because generalization also depends on sensitivity\nto training data, we complement this account with an analysis of neighboring\ntraining trajectories. Across controlled nonlinear tasks and real tabular\ndatasets, Muon produces smaller accumulated prediction perturbations, yet a\nlarger fraction of these perturbations persists until training ends. This\nbalance usually favors Muon, but synthetic counterexamples show that\npersistence can outweigh the reduction in magnitude and reverse the stability\nordering. Understanding optimizer-dependent generalization therefore requires\nexamining both the directions learned and how perturbations accumulate over\ntraining.",
+    "authors": [
+      "{'username': '~Feoktistov_Dmitrii1', 'fullname': 'Dmitrii Feoktistov', 'institutions': [{'name': 'Yandex', 'domain': 'yandex-team.ru', 'country': 'RU'}, {'name': 'Lomonosov Moscow State University', 'domain': 'msu.ru', 'country': 'RU'}]}",
+      "{'username': '~Andrey_Veprikov1', 'fullname': 'Andrey Veprikov', 'institutions': [{'name': 'Mohamed bin Zayed University of Artificial Intelligence', 'domain': 'mbzuai.ac.ae', 'country': 'AE'}]}",
+      "{'username': '~Aleksandr_Beznosikov1', 'fullname': 'Aleksandr Beznosikov', 'institutions': [{'name': 'Basic Research of Artificial Intelligence Laboratory (BRAIn Lab)', 'domain': 'independent.com', 'country': 'RU'}]}"
+    ],
+    "affiliations": [],
+    "categories": [],
+    "venue": "OPT 2026 Poster",
+    "pdf_url": "https://openreview.net/pdf?id=cEWt9vXlng",
+    "url": "https://openreview.net/forum?id=cEWt9vXlng",
+    "published": "2026-10-02T06:06:27.812000",
+    "published_date": "2026-10-02 06:06:27.812000"
+  },
+  {
+    "id": "almDOnmgmt",
+    "source": "openreview",
+    "title": "Muon Moves the Boundary of Transformer Trainability",
+    "summary": "Muon has moved from small-model studies into trillion-parameter training, but that transition required a new control for attention-logit instability. We study how Muon’s spectral map changes the boundary between runs that learn and runs that do not. Our control is $T_p(M)=U\\Sigma^pV^\\top$ at fixed root-mean-square (RMS) update magnitude: $p=0$ is the polar map, $p=1$ is raw momentum, and intermediate values partially flatten the spectrum. Locally, flattening changes the update condition number from $\\kappa$ to $\\kappa^p$ while increasing weak-direction sensitivity as $\\kappa^{1-p}$. Finite Newton–Schulz depth limits this sensitivity below a cutoff proportional to $3.4445^{-k}$; the measured cutoff slope agrees within $0.2%$. In a tanh-network toy, $p$ changes the box-counting dimension of the trainability boundary from $1.86$ at $p=0$ to $1.37$ at $p=1$. One Newton–Schulz step comes within $0.02$ of the exact-polar dimension, and the measured dimension grows with training horizon for the four plotted controls. In Transformers, the same exponent changes model-size transfer. Rates calibrated on a 10M-parameter model are reused without retuning on a 30M model; $p=0.75$ learns on all three tested seeds, while AdamW and $p\\in{0,0.5,1}$ diverge on all three. Near the 10M Muon boundary, 20 of 25 seed-aligned cells mix learning and nonlearning outcomes, and 103 of 200 labels change between 128 and 256 updates. Thus the toy supports measured noninteger boundary geometry, whereas the Transformer evidence supports a probabilistic, horizon-dependent boundary rather than a fractal-dimension claim.",
+    "authors": [
+      "{'username': '~Srinivas_Raghav_V_C1', 'fullname': 'Srinivas Raghav V C', 'institutions': [{'name': 'Indian Institute of Information Technology Kottayam, Indian Institute of Information Technology Kottayam', 'domain': 'iiitkottayam.ac.in', 'country': 'IN'}]}"
+    ],
+    "affiliations": [],
+    "categories": [],
+    "venue": "DynaFront@NeurIPS26 Poster",
+    "pdf_url": "/pdf/b22507a8349cf9b0c02da297dda460bb365d2c11.pdf",
+    "url": "https://openreview.net/forum?id=almDOnmgmt",
+    "published": "2026-10-15T02:30:11.388000",
+    "published_date": "2026-10-15 02:30:11.388000"
+  },
+  {
+    "id": "2UXrES8YZk",
+    "source": "openreview",
+    "title": "Closure Masks for Hardware-Compatible 2:4 Sparse Muon",
+    "summary": "Muon is a promising alternative to AdamW, using matrix-valued updates that approximate spectral-norm steepest descent. Can these benefits survive hardware-compatible sparse training? Generic 2:4 sparsity is poorly matched to Muon: its polynomial orthogonalization creates off-support entries, and projecting them away distorts the update geometry that distinguishes Muon from elementwise optimizers. We introduce closure masks, binary masks satisfying the Boolean condition $SS^\\top S \\le S$, under which Muon’s finite odd-polynomial iteration remains exactly on support. Our construction is transposable 2:4 and alternates partitions across layers to avoid persistent channel separation. Across four GPT-NeoX-style configurations from 31M to 1B parameters, closure reduces validation loss by 5.5–19.4\\% relative to balanced random transposable 2:4 under Muon, with no consistent advantage under AdamW. At 160M and 1B, closure-Muon outperforms dense AdamW; at 1B, it remains within 1.7\\% of dense Muon. On Llama-3.2-1B, closure improves Muon validation loss by 9.6\\%. Diagnostics show zero support leakage and reduced spectral distortion, while isolated Sparse Tensor Core GEMMs achieve $1.29$–$1.52\\times$ speedups. Thus, hardware sparsity need not discard Muon’s matrix geometry: the sparse constraint can be designed around the optimizer.",
+    "authors": [
+      "{'username': '~Doyoon_Kim3', 'fullname': 'Doyoon Kim', 'institutions': [{'name': 'Pohang University of Science and Technology', 'domain': 'postech.ac.kr', 'country': 'KR'}]}",
+      "{'username': '~Namhoon_Lee1', 'fullname': 'Namhoon Lee', 'institutions': [{'name': 'Pohang University of Science and Technology', 'domain': 'postech.ac.kr', 'country': 'KR'}]}"
+    ],
+    "affiliations": [],
+    "categories": [],
+    "venue": "OPT 2026 Poster",
+    "pdf_url": "https://openreview.net/pdf?id=2UXrES8YZk",
+    "url": "https://openreview.net/forum?id=2UXrES8YZk",
+    "published": "2026-10-02T06:06:27.812000",
+    "published_date": "2026-10-02 06:06:27.812000"
+  },
+  {
+    "id": "gNbXXHpbcH",
+    "source": "openreview",
+    "title": "AF-Muon: An AdamW-Free Muon Optimizer for Tied-Embedding Models",
+    "summary": "Muon trains matrix parameters with a spectral-norm steepest-descent update, but modern token models also contain tied vocabulary tables whose geometry is neither an ordinary dense matrix nor a one-dimensional auxiliary parameter. A tied table receives structurally different gradients from sparse token lookups and dense output classification, and in fully shared encoder--decoder models it may serve encoder input, decoder input, and output roles simultaneously. We propose AF-Muon, an AdamW-free Muon variant that keeps Muon's matrix update, replaces AdamW on tied token tables with a support-aware finite-cap linear minimization oracle, and updates one-dimensional auxiliary parameters with an RMS-normalized direction. Across decoder-only language models, fully shared T5-style models, ImageGPT-style image-token modeling, protein language modeling, and sparse MoE models, AF-Muon improves validation loss over Hybrid Muon and a SCION-style Sign endpoint. Long-horizon and sensitivity studies show that the gains are not a short-horizon artifact or a fragile hyperparameter choice. The results identify tied token tables as a distinct optimizer geometry and show that a simple finite-cap rule gives a robust AdamW-free extension of Muon across models, modalities, and architectures.",
+    "authors": [
+      "{'username': '~Arash_Lagzian1', 'fullname': 'Arash Lagzian', 'institutions': [{'name': 'National University of Singapore', 'domain': 'nus.edu.sg', 'country': 'SG'}]}",
+      "{'username': '~Paniz_Halvachi1', 'fullname': 'Paniz Halvachi', 'institutions': [{'name': 'Massachusetts Institute of Technology', 'domain': 'mit.edu', 'country': 'US'}]}",
+      "{'username': '~Junming_Zhang2', 'fullname': 'Junming Zhang', 'institutions': [{'name': 'Shanghai Jiao Tong University', 'domain': 'sjtu.edu.cn', 'country': 'CN'}]}",
+      "{'username': '~Zhouhan_Lin1', 'fullname': 'Zhouhan Lin', 'institutions': [{'name': 'Shanghai Jiao Tong University', 'domain': 'sjtu.edu.cn', 'country': 'CN'}]}",
+      "{'username': '~Dianbo_Liu2', 'fullname': 'Dianbo Liu', 'institutions': [{'name': 'National University of Singapore', 'domain': 'nus.edu.sg', 'country': 'SG'}]}"
+    ],
+    "affiliations": [],
+    "categories": [],
+    "venue": "OPT 2026 Poster",
+    "pdf_url": "https://openreview.net/pdf?id=gNbXXHpbcH",
+    "url": "https://openreview.net/forum?id=gNbXXHpbcH",
+    "published": "2026-10-02T06:06:27.812000",
+    "published_date": "2026-10-02 06:06:27.812000"
+  },
+  {
+    "id": "fC4h4QceUh",
+    "source": "openreview",
+    "title": "Muon+: Towards More Effective Muon via One Additional Normalization Step for LLM Pre-training",
+    "summary": "Muon has recently emerged as a strong optimizer for large language model pre-training, orthogonalizing the momentum matrix via Newton--Schulz polar iterations. A natural intuition is that polar iterations, by flattening the singular spectrum to all ones, should also eliminate column- and row-wise norm imbalance in the update. We show that this is not true in practice: practical polar steps can instead amplify the imbalance. We term this the post-polar imbalanced update problem, and prove that such imbalance alters the second-order term in a blockwise descent analysis, weakening Muon's per-step descent guarantee. Motivated by this analysis, we propose Muon+, a one-line fix that inserts a single normalization step after polar orthogonalization. Muon+ adds no optimizer state. Across pre-training experiments on GPT and LLaMA models from 60M to 7B parameters, spanning both compute-optimal budgets and extended token-to-parameter ratios up to approximately 200, Muon+ consistently outperforms Muon in terms of training and validation perplexity, leading to significant overall pre-training speedup.",
+    "authors": [],
+    "affiliations": [],
+    "categories": [],
+    "venue": "ACL ARR 2026 October Submission",
+    "pdf_url": "/pdf/7a0ed88e60559347f14d3cc00924c2d758ef3232.pdf",
+    "url": "https://openreview.net/forum?id=fC4h4QceUh",
+    "published": "2026-10-12T10:11:43.582000",
+    "published_date": "2026-10-12 10:11:43.582000"
+  },
+  {
+    "id": "jRvd5To0aR",
+    "source": "openreview",
+    "title": "Muon-OGD: Muon-based Spectral Orthogonal Gradient Projection for LLM Continual Learning",
+    "summary": "A central challenge in continual learning for large language models (LLMs) is catastrophic forgetting, where adapting to new tasks can substantially degrade performance on previously learned ones. Existing projection-based methods mitigate such interference by restricting parameter updates to subspaces that are orthogonal to directions associated with past tasks. However, these methods are typically formulated under Euclidean parameter geometry, with update magnitudes and projections governed by the Frobenius norm. The recent empirical success of the Muon optimizer, which applies orthogonalized matrix updates and admits a spectral-norm interpretation, suggests that Frobenius geometry may not be the most effective choice for matrix-valued LLM parameters. Motivated by this observation, we propose Muon-OGD, a spectral-norm-aware continual learning framework that integrates Muon-style operator-norm geometry with orthogonal projection constraints. Our method formulates each update as a spectral-norm-constrained optimization problem with linear non-interference constraints, and solves it efficiently through dual iterations and Newton--Schulz matrix-sign approximations. By applying orthogonalized momentum updates that avoid protected directions associated with prior tasks, Muon-OGD aims to improve the stability--plasticity trade-off in sequential LLM adaptation. We evaluate the proposed method on standard continual learning benchmarks, TRACE, and domain-specific curricula using both encoder--decoder and decoder-only architectures. Empirically, Muon-OGD consistently improves over sequential fine-tuning and competitive orthogonal-gradient baselines, while remaining computationally scalable. These results suggest that spectral-norm-aware update geometry provides a practical and effective alternative to Frobenius-norm projection for continual learning in LLMs.",
+    "authors": [
+      "{'username': '~binghang_lu1', 'fullname': 'binghang lu', 'institutions': [{'name': 'Purdue University', 'domain': 'purdue.edu', 'country': 'US'}]}",
+      "{'username': '~Zheyuan_Deng2', 'fullname': 'Zheyuan Deng', 'institutions': [{'name': 'Brown University', 'domain': 'brown.edu', 'country': 'US'}]}",
+      "{'username': '~Runyu_Zhang1', 'fullname': 'Runyu Zhang', 'institutions': []}",
+      "{'username': '~Bing_Hu7', 'fullname': 'Bing Hu', 'institutions': [{'name': 'Google', 'domain': 'google.com', 'country': 'US'}]}",
+      "{'username': '~Yunhan_Zhao1', 'fullname': 'Yunhan Zhao', 'institutions': [{'name': 'Google', 'domain': 'google.com', 'country': 'US'}]}",
+      "{'username': '~Yuan_Tian31', 'fullname': 'Yuan Tian', 'institutions': [{'name': 'Research Lab', 'domain': 'pg.com', 'country': 'US'}]}",
+      "{'username': '~Changhong_Mou1', 'fullname': 'Changhong Mou', 'institutions': [{'name': 'Utah State University', 'domain': 'usu.edu', 'country': 'US'}]}",
+      "{'username': '~Guang_Lin1', 'fullname': 'Guang Lin', 'institutions': [{'name': 'Purdue University', 'domain': 'purdue.edu', 'country': 'US'}]}",
+      "{'username': '~Xiaomin_Li3', 'fullname': 'Xiaomin Li', 'institutions': [{'name': 'Microsoft', 'domain': 'microsoft.com', 'country': 'US'}]}"
+    ],
+    "affiliations": [],
+    "categories": [],
+    "venue": "CL4FMAgents @ NeurIPS 2026",
+    "pdf_url": "/pdf/069159be5682b3cc1d8cdbb018544a793ad2dbd0.pdf",
+    "url": "https://openreview.net/forum?id=jRvd5To0aR",
+    "published": "2026-10-04T22:50:00.254000",
+    "published_date": "2026-10-04 22:50:00.254000"
+  },
+  {
+    "id": "x2Tt4fuXMI",
+    "source": "openreview",
+    "title": "When Does Muon Actually Win? A Paired Data-, Time-, and Tuning-Budget Benchmark",
+    "summary": "Muon's gains in data efficiency motivate evaluating its performance under explicit data, time, and tuning budgets. On a single A100 GPU, we compare a reference single-device Muon implementation with AdamW across 17.7M- and 33.6M-parameter causal language models and 2.70M-parameter vision transformers. A common 23-candidate development budget selects configurations evaluated with five matched seeds, full validation trajectories, optimizer-step timing, and a frozen one-shot test. Muon reduces validation-loss area under the curve by 3.25--22.44\\% at equal data and lowers test loss in all 20 primary pairs. In this configuration, Muon improves time-normalized loss area by 19.68--22.31\\% on vision, while AdamW is better by 3.38--6.96\\% on language. The full Muon optimizer call, including auxiliary AdamW updates, consumes 56.1--69.6\\% of training time, compared with 6.1--9.1\\% for the AdamW baseline. Muon also has higher expected regret under restricted access to these candidate pools. These results characterize small models with reference kernels; their wall-clock ordering does not establish a ranking for larger models or optimized implementations.",
+    "authors": [
+      "{'username': '~Mushir_Akhtar1', 'fullname': 'Mushir Akhtar', 'institutions': []}",
+      "{'username': '~Hazem_N._Nounou1', 'fullname': 'Hazem N. Nounou', 'institutions': [{'name': 'Hamad Bin Khalifa University', 'domain': 'hbku.edu.qa', 'country': 'QA'}]}",
+      "{'username': '~Majdi_Mansouri1', 'fullname': 'Majdi Mansouri', 'institutions': [{'name': 'Sultan Qaboos University', 'domain': 'squ.edu.om', 'country': 'OM'}]}",
+      "{'username': '~Mohamed_N._Nounou1', 'fullname': 'Mohamed N. Nounou', 'institutions': [{'name': 'Hamad Bin Khalifa University', 'domain': 'hbku.edu.qa', 'country': 'QA'}]}"
+    ],
+    "affiliations": [],
+    "categories": [],
+    "venue": "OPT 2026 Poster",
+    "pdf_url": "https://openreview.net/pdf?id=x2Tt4fuXMI",
+    "url": "https://openreview.net/forum?id=x2Tt4fuXMI",
+    "published": "2026-10-02T06:06:27.812000",
+    "published_date": "2026-10-02 06:06:27.812000"
+  },
+  {
+    "id": "GPYH0UPouD",
+    "source": "openreview",
+    "title": "Does Muon's Pretraining Advantage Over Adam Survive Fine-Tuning?",
+    "summary": "Matrix-aware optimisers such as Muon perform normalised steepest descent in the spectral norm and have been reported to outperform Adam for large-scale language model pretraining. Whether these gains transfer to fine-tuning is less clear: fine-tuning starts from a pretrained solution, uses far smaller datasets, and runs over a much shorter horizon. Additionally, Muon acts only on two-dimensional weight matrices, so embeddings, the language-model head, normalisation scales and biases must be updated by an auxiliary AdamW group with its own learning rate. We study full-parameter fine-tuning of Qwen3-4B under a fixed data budget, sweeping the Muon learning rate, the auxiliary learning rate, weight decay and batch size as separate experimental axes. We find that the initialisation of these hyperparameters accounts for most of the gap: at the default auxiliary rate Muon trails Adam by $0.113$ NLL, but once the auxiliary rate is tuned the two optimisers are indistinguishable ($1.8745$ versus $1.8714$), and this holds across four datasets. Both learning rates grow with batch size at approximately the square-root rate (fitted exponent $0.59$, $r^2 = 0.83$); when only the Muon rate is retuned, performance degrades monotonically with batch size, which may account for part of the reported large-batch weakness of Muon. Decoupled weight decay, by contrast, has no measurable effect (mean paired $\\Delta$NLL $= -0.0003$, $95\\%$ CI $[-0.0022, +0.0016]$). Our results indicate that, in the fine-tuning regime, Muon matches Adam's performance once both of its hyperparameters are tuned.",
+    "authors": [
+      "{'username': '~Glory_Bagai1', 'fullname': 'Glory Bagai', 'institutions': [{'name': 'Federal University of Technology, Minna', 'domain': 'futminna.edu.ng', 'country': 'NG'}]}",
+      "{'username': '~Jonas_Geiping1', 'fullname': 'Jonas Geiping', 'institutions': [{'name': 'ELLIS Institute Tübingen', 'domain': 'tue.ellis.eu', 'country': 'DE'}]}",
+      "{'username': '~Antonio_Orvieto3', 'fullname': 'Antonio Orvieto', 'institutions': [{'name': 'ELLIS Institute Tübingen, Max Planck Institute for Intelligent Systems, Tübingen AI Center, Tübingen, Germany', 'domain': 'tue.ellis.eu', 'country': 'DE'}]}"
+    ],
+    "affiliations": [],
+    "categories": [],
+    "venue": "OPT 2026 Poster",
+    "pdf_url": "https://openreview.net/pdf?id=GPYH0UPouD",
+    "url": "https://openreview.net/forum?id=GPYH0UPouD",
+    "published": "2026-10-02T06:06:27.812000",
+    "published_date": "2026-10-02 06:06:27.812000"
+  },
+  {
+    "id": "YYu3i6xoxg",
+    "source": "openreview",
+    "title": "How Does Muon Work in Private Deep Learning? Scalable Differentially Private Training via Orthogonalization",
+    "summary": "Training deep neural networks requires optimizers that balance computational efficiency with formal data privacy. While orthogonalized update rules, such as the recently introduced Muon optimizer, have shown strong empirical performance and scalability, their integration with Differential Privacy (DP) remains underexplored. In this paper, we propose convergence analyses of Muon's orthogonalized updates through the lens of a Linear Minimization Oracle (LMO) and establish theoretical convergence guarantees under $(\\epsilon, \\delta)$-DP constraints. Empirically, we compare DP-Muon with DP-SGD and DP-Adam on language modeling over a wide grid of learning rates, momentum, and batch sizes, and find that the ranking of optimizers changes markedly under privacy: Muon's large-batch advantage in standard training does not carry over to the private setting, where DP-Muon is instead the strongest method at small batch sizes while DP-Adam dominates in the large-batch regime that is optimal for private training.",
+    "authors": [
+      "{'username': '~Alexander_Gaponov1', 'fullname': 'Alexander Gaponov', 'institutions': [{'name': 'King Abdullah University of Science and Technology', 'domain': 'kaust.edu.sa', 'country': 'SA'}]}",
+      "{'username': '~Grigory_Malinovsky1', 'fullname': 'Grigory Malinovsky', 'institutions': [{'name': 'King Abdullah University of Science and Technology', 'domain': 'kaust.edu.sa', 'country': 'SA'}]}",
+      "{'username': '~Egor_Shulgin1', 'fullname': 'Egor Shulgin', 'institutions': [{'name': 'KAUST', 'domain': 'kaust.edu.sa', 'country': 'SA'}]}",
+      "{'username': '~Peter_Richtárik1', 'fullname': 'Peter Richtárik', 'institutions': [{'name': 'King Abdullah University of Science and Technology (KAUST)', 'domain': 'kaust.edu.sa', 'country': 'SA'}]}"
+    ],
+    "affiliations": [],
+    "categories": [],
+    "venue": "OPT 2026 Poster",
+    "pdf_url": "https://openreview.net/pdf?id=YYu3i6xoxg",
+    "url": "https://openreview.net/forum?id=YYu3i6xoxg",
+    "published": "2026-10-02T06:06:27.812000",
+    "published_date": "2026-10-02 06:06:27.812000"
+  },
+  {
+    "id": "TaFyEJ4yNr",
+    "source": "openreview",
+    "title": "Optimizer Update Geometry: How Parameter Groups Shape Curvature Exposure",
+    "summary": "We measure loss curvature along the updates of five tuned optimizers during separate pretraining runs of a $162$M-parameter Transformer. At each checkpoint, we construct the next optimizer update on a fixed probe batch. The generalized Gauss--Newton quadratic model expresses the predicted one-step decrease through gradient scale, alignment with the negative gradient, and curvature along the update. We call the last quantity \\emph{curvature exposure}. Muon has the lowest exposure, roughly one-tenth of SOAP's. To understand why, we separate the direction within each parameter tensor from that tensor's share of squared update norm. After normalizing by each matrix's mean curvature, Muon and SOAP have the lowest within-matrix exposures. Their much larger difference is in how squared update norm is distributed across tensors. Muon applies its matrix rule to $60$ weight matrices and AdamW to the remaining tensors. These matrices contain $52.4\\%$ of the parameters but receive only $5.4\\%$ of the squared update norm. They are also sharper on average than the remaining tensors, which produces Muon's negative covariance between squared-update share and diagonal curvature. We derive and verify that Muon's squared matrix-update norm scales with fan-out. The quadratic model and the measured probe-batch loss reduction give nearly identical local rankings, but neither matches final validation loss.",
+    "authors": [
+      "{'username': '~Georg_Tirpitz1', 'fullname': 'Georg Tirpitz', 'institutions': [{'name': 'Eberhard-Karls-Universität Tübingen', 'domain': 'uni-tuebingen.de', 'country': 'DE'}]}",
+      "{'username': '~Antonio_Orvieto3', 'fullname': 'Antonio Orvieto', 'institutions': [{'name': 'ELLIS Institute Tübingen, Max Planck Institute for Intelligent Systems, Tübingen AI Center, Tübingen, Germany', 'domain': 'tue.ellis.eu', 'country': 'DE'}]}"
+    ],
+    "affiliations": [],
+    "categories": [],
+    "venue": "OPT 2026 Poster",
+    "pdf_url": "https://openreview.net/pdf?id=TaFyEJ4yNr",
+    "url": "https://openreview.net/forum?id=TaFyEJ4yNr",
+    "published": "2026-10-02T06:06:27.812000",
+    "published_date": "2026-10-02 06:06:27.812000"
+  },
+  {
+    "id": "XEVhS9MMgC",
+    "source": "openreview",
+    "title": "Gradient Clipping on Separable Data: Asymptotic Alignment and Persistent Bias",
+    "summary": "Can gradient clipping change the asymptotic classifier selected by training on separable data? It depends. For per-example clipping at the empirical median of the current per-example gradient norms, we construct an exact separable family in which the integer $r\\ge2$ controls sample multiplicity. The threshold tends to zero while a rare, maximum-margin-relevant example remains clipped at every positive iterate; duplicating geometrically redundant constraints leaves the Euclidean hard-margin feasible set unchanged but changes the limiting separator, whose normalized-margin ratio is $\\sqrt{2/(r^2+1)}\\to0$. In contrast, asymptotic updates are aligned with a fixed steepest-descent geometry preserving its max-margin implicit bias under suitable step conditions. Fixed-threshold generalized gradient norm clipping (GGNC) is a concrete positive case: it only rescales the norm-specific steepest-descent direction and then after that it becomes inactive. Experiments reproduce the exact law, show finite-horizon separation under modest perturbations, and match the predicted transient-to-inactive behavior of fixed clipping.",
+    "authors": [
+      "{'username': '~Mahdi_Mansouri1', 'fullname': 'Mahdi Mansouri', 'institutions': [{'name': 'University of Hong Kong', 'domain': 'hku.hk', 'country': 'HK'}]}",
+      "{'username': '~Nima_Mollaei1', 'fullname': 'Nima Mollaei', 'institutions': [{'name': 'University of Hong Kong', 'domain': 'hku.hk', 'country': 'HK'}]}",
+      "{'username': '~Yongtao_Wu1', 'fullname': 'Yongtao Wu', 'institutions': [{'name': 'Swiss Federal Institute of Technology Lausanne', 'domain': 'epfl.ch', 'country': 'CH'}]}"
+    ],
+    "affiliations": [],
+    "categories": [],
+    "venue": "OPT 2026 Poster",
+    "pdf_url": "https://openreview.net/pdf?id=XEVhS9MMgC",
+    "url": "https://openreview.net/forum?id=XEVhS9MMgC",
+    "published": "2026-10-02T06:06:27.812000",
+    "published_date": "2026-10-02 06:06:27.812000"
+  },
+  {
+    "id": "ykJF8GeIBx",
+    "source": "openreview",
+    "title": "Adaptive Quantile Clipping under Heavy-Tailed Noise and Differential Privacy",
+    "summary": "Gradient clipping plays an important role in stochastic optimization with heavy-tailed noise or under differential privacy constraints,\nbut its performance depends heavily on the choice of its threshold.\nIn this paper, we study \\emph{quantile clipping}, a scale-independent alternative that sets the clipping threshold to a fixed quantile of the gradient-norm distribution.\nWe show that in the heavy-tailed noise setting, quantile clipping achieves the optimal convergence rate of $\\mathcal{O}(T^{\\frac{-2(p - 1)}{3p - 2}})$.\nFurthermore, we consider its practical implementation in the form of \\emph{online quantile clipping} \\citep{andrew2021differentially}, and show that it achieves the same convergence rate.\nFinally, we derive a formal differential privacy stationarity floor for online quantile clipping, providing a utility--privacy tradeoff guarantee.",
+    "authors": [
+      "{'username': '~Ayoub_El_Gourari1', 'fullname': 'Ayoub El Gourari', 'institutions': [{'name': 'École Polytechnique', 'domain': 'polytechnique.edu', 'country': 'FR'}]}",
+      "{'username': '~Anastasia_Koloskova2', 'fullname': 'Anastasia Koloskova', 'institutions': [{'name': 'University of Zurich', 'domain': 'uzh.ch', 'country': 'CH'}]}"
+    ],
+    "affiliations": [],
+    "categories": [],
+    "venue": "OPT 2026 Poster",
+    "pdf_url": "https://openreview.net/pdf?id=ykJF8GeIBx",
+    "url": "https://openreview.net/forum?id=ykJF8GeIBx",
+    "published": "2026-10-02T06:06:27.812000",
+    "published_date": "2026-10-02 06:06:27.812000"
+  },
+  {
+    "id": "daPUJXQxky",
+    "source": "openreview",
+    "title": "Curvature-Aware Clipping: Mitigating Bias in DPSGD via Approximate Second-Order Information",
+    "summary": "Differentially Private Stochastic Gradient Descent (DPSGD) has become the de facto standard for training deep neural networks with rigorous privacy guarantees. However, the utility of DPSGD is constrained by gradient clipping bias and DP noise. While existing work has tried to address these issues, the geometric misalignment caused by clipping bias remains a critical challenge. To bridge this gap, we propose a novel framework, Curvature-Aware Differentially Private Stochastic Gradient Descent (CA-DPSGD), which leverages approximate second-order information to construct an optimal, curvature-aware clipping space. CA-DPSGD integrates a rectified estimator for the curvature matrix and is coupled with an anisotropic noise mechanism to ensure privacy guarantees. Extensive empirical experiments demonstrate that our approach outperforms state-of-the-art clipping methods.",
+    "authors": [
+      "{'username': '~Xincheng_Xu2', 'fullname': 'Xincheng Xu', 'institutions': [{'name': 'Australian National University', 'domain': 'anu.edu.au', 'country': 'AU'}]}",
+      "{'username': '~Thilina_Ranbaduge1', 'fullname': 'Thilina Ranbaduge', 'institutions': [{'name': 'CSIRO', 'domain': 'csiro.au', 'country': 'AU'}]}",
+      "{'username': '~Thierry_Rakotoarivelo1', 'fullname': 'Thierry Rakotoarivelo', 'institutions': [{'name': 'CSIRO', 'domain': 'csiro.au'}]}",
+      "{'username': '~David_Smith12', 'fullname': 'David Smith', 'institutions': [{'name': 'CSIRO Data61', 'domain': 'data61.csiro.au'}]}"
+    ],
+    "affiliations": [],
+    "categories": [],
+    "venue": "OPT 2026 Poster",
+    "pdf_url": "https://openreview.net/pdf?id=daPUJXQxky",
+    "url": "https://openreview.net/forum?id=daPUJXQxky",
+    "published": "2026-10-02T06:06:27.812000",
+    "published_date": "2026-10-02 06:06:27.812000"
+  },
+  {
+    "id": "qXVywqIg8G",
+    "source": "openreview",
+    "title": "Zero-order Parameter-free Optimization for LMO-based Methods: Novel Approach for Efficient Fine-tuning",
+    "summary": "Fine-tuning large language models (LLMs) has become a central application of modern optimization, enabling pretrained models to adapt to diverse downstream tasks and domain-specific data. A major obstacle in large-scale fine-tuning is the memory overhead of backpropagation, which requires storing activations, gradients, and optimizer states. Zeroth-order (ZO) optimization offers a memory-efficient alternative, but its performance is highly sensitive to the stepsize and smoothing parameter, often requiring costly task-specific tuning. Parameter-free (PF) optimization addresses this issue by adapting algorithmic parameters without prior knowledge of problem-dependent constants. Moreover, large-scale fine-tuning can benefit from geometry-aware updates that account for the heterogeneous structure of parameter blocks, which can be modeled through methods that exploit linear minimization oracle (LMO). In this work, we study PF adaptation for LMO-based ZO optimization and introduce $\\texttt{AdaNAGED}$, a method that unifies gradient-free training, adaptive tuning, and non-Euclidean update geometry. We establish convergence guarantees and validate the method on large-scale LLM fine-tuning task with $\\texttt{OPT}-1.3\\mathrm{B}$ model.",
+    "authors": [
+      "{'username': '~Bystrov_Dmitriy1', 'fullname': 'Dmitriy Bystrov', 'institutions': [{'name': 'Moscow Independent Research Institute of Artificial Intelligence', 'domain': 'miriai.org', 'country': 'RU'}]}",
+      "{'username': '~Daniil_Medyakov1', 'fullname': 'Daniil Medyakov', 'institutions': [{'name': 'Moscow Independent Research Institute of Artificial Intelligence', 'domain': 'miriai.org', 'country': 'RU'}]}",
+      "{'username': '~Dmitry_Bylinkin1', 'fullname': 'Dmitry Bylinkin', 'institutions': [{'name': 'Moscow Independent Research Institute of Artificial Intelligence', 'domain': 'miriai.org', 'country': 'RU'}]}",
+      "{'username': '~Aleksandr_Beznosikov1', 'fullname': 'Aleksandr Beznosikov', 'institutions': [{'name': 'Moscow Independent Research Institute of Artificial Intelligence', 'domain': 'miriai.org', 'country': 'RU'}]}"
+    ],
+    "affiliations": [],
+    "categories": [],
+    "venue": "OPT 2026 Poster",
+    "pdf_url": "https://openreview.net/pdf?id=qXVywqIg8G",
+    "url": "https://openreview.net/forum?id=qXVywqIg8G",
+    "published": "2026-10-02T06:06:27.812000",
+    "published_date": "2026-10-02 06:06:27.812000"
+  },
+  {
+    "id": "Ghfc8IRXdy",
+    "source": "openreview",
+    "title": "Can Muon Adapt Its Stepsize Without Knowing the Solution Distance?",
+    "summary": "Matrix gradient orthogonalization has proved effective in neural-network training, and its trust-region interpretation explains how Muon chooses a normalized direction. It does not determine how far to move along that direction, so a stepsize must still be tuned. Existing theoretical choices may also require the unknown distance $D = \\\\lVert x_0 - x^\\\\star \\\\rVert$ from the initialization to a solution. We develop stochastic Muon methods that choose this directional stepsize without knowing $D$. We formulate directional stepsize selection as a one-dimensional online-learning problem driven by stochastic gradient feedback. For smooth non-convex objectives, a closed-form follow-the-regularized-leader rule gives an expected $O(T^{-1/4})$ stationarity guarantee. For smooth star-convex objectives, a weighted FTRL rule selects the directional stepsizes and, together with a one-gradient-delayed Nesterov direction, yields an expected last-iterate rate of $\\\\widetilde{O}(T^{-1/3})$. Its parameters use the horizon and smoothness, but neither $D$ nor the oracle variance. On a controlled non-convex matrix problem, the adaptive method eventually outperforms fixed-stepsize Muon baselines retuned for each horizon. On GPT-124M and WikiText-103, practical implementations of both methods achieve validation losses comparable to tuned Muon under matched training conditions.",
+    "authors": [
+      "{'username': '~Yury_Demidovich1', 'fullname': 'Yury Demidovich', 'institutions': [{'name': 'King Abdullah University of Science and Technology', 'domain': 'kaust.edu.sa'}]}",
+      "{'username': '~Abhishek_Chakraborty2', 'fullname': 'Abhishek Chakraborty', 'institutions': [{'name': 'Arizona State University', 'domain': 'asu.edu', 'country': 'US'}]}",
+      "{'username': '~Grigory_Malinovsky1', 'fullname': 'Grigory Malinovsky', 'institutions': [{'name': 'King Abdullah University of Science and Technology', 'domain': 'kaust.edu.sa', 'country': 'SA'}]}",
+      "{'username': '~Angelia_Nedich1', 'fullname': 'Angelia Nedich', 'institutions': [{'name': 'Arizona State University', 'domain': 'asu.edu'}]}",
+      "{'username': '~Peter_Richtárik1', 'fullname': 'Peter Richtárik', 'institutions': [{'name': 'King Abdullah University of Science and Technology (KAUST)', 'domain': 'kaust.edu.sa', 'country': 'SA'}]}"
+    ],
+    "affiliations": [],
+    "categories": [],
+    "venue": "OPT 2026 Poster",
+    "pdf_url": "https://openreview.net/pdf?id=Ghfc8IRXdy",
+    "url": "https://openreview.net/forum?id=Ghfc8IRXdy",
+    "published": "2026-10-02T06:06:27.812000",
+    "published_date": "2026-10-02 06:06:27.812000"
+  },
+  {
+    "id": "wochAox9Mf",
+    "source": "openreview",
+    "title": "Sharp Stationary Gaussian Approximation for Constant-Stepsize SGD",
+    "summary": "We prove a sharp Gaussian approximation for the invariant law of constant-stepsize SGD with bounded additive noise generated by an exogenous uniformly ergodic Markov chain. For a smooth, strongly convex objective with a Lipschitz Hessian and nondegenerate long-run noise covariance, the centered iterate normalized by the square root of the stepsize is $O(\\sqrt{\\alpha})$-close in 1-Wasserstein distance to its limiting Gaussian. The proof combines blockwise Gaussian comparison with long-run contraction. A four-state example gives a matching lower bound although the one-time noise marginal is symmetric and every nonzero-lag autocovariance vanishes. In this example, an adjacent third-order mixed moment produces the leading correction.",
+    "authors": [
+      "{'username': '~Junghoon_Seo1', 'fullname': 'Junghoon Seo', 'institutions': [{'name': 'PIT IN Cop.', 'domain': 'pitin-ev.com', 'country': 'KR'}]}"
+    ],
+    "affiliations": [],
+    "categories": [],
+    "venue": "OPT 2026 Poster",
+    "pdf_url": "https://openreview.net/pdf?id=wochAox9Mf",
+    "url": "https://openreview.net/forum?id=wochAox9Mf",
+    "published": "2026-10-02T06:06:27.812000",
+    "published_date": "2026-10-02 06:06:27.812000"
+  },
+  {
+    "id": "rlfErDSz0K",
+    "source": "openreview",
+    "title": "General convergence rates of stochastic heavy ball with Polyak step size and Armijo line search",
+    "summary": "Polyak step size (PS) and Armijo line search (ALS) have received increasing attention in stochastic optimization in recent years, with encouraging empirical performance and theoretical guarantees.\nHowever, their convergence properties for stochastic heavy ball (SHB) methods remain relatively limited.\nIn this work, we bridge this gap by establishing general convergence guarantees for SHB equipped with PS and ALS.\nTo enable a unified analysis, we first introduce a slightly modified Armijo rule that more closely parallels the Polyak step size.\nBuilding on a decoupling technique for the SHB iterates, we establish convergence rates for both step-size rules under substantially more general assumptions.\nSpecifically, without assuming interpolation or imposing restrictive conditions on the momentum parameter, we establish convergence guarantees in expectation for SHB with PS or ALS on both convex and non-convex objectives.\nUnder interpolation, we further provide almost sure last-iterate convergence for both settings.\nThese results complement and extend the existing theoretical understanding of adaptive step-size rules for stochastic heavy ball methods.",
+    "authors": [
+      "{'username': '~Jiawei_Zhang16', 'fullname': 'Jiawei Zhang', 'institutions': [{'name': 'Tsinghua University', 'domain': 'mails.tsinghua.edu.cn', 'country': 'CN'}]}",
+      "{'username': '~Yuantao_Gu1', 'fullname': 'Yuantao Gu', 'institutions': [{'name': 'Tsinghua University, Tsinghua University', 'domain': 'tsinghua.edu.cn', 'country': 'CN'}]}"
+    ],
+    "affiliations": [],
+    "categories": [],
+    "venue": "OPT 2026 Poster",
+    "pdf_url": "https://openreview.net/pdf?id=rlfErDSz0K",
+    "url": "https://openreview.net/forum?id=rlfErDSz0K",
+    "published": "2026-10-02T06:06:27.812000",
+    "published_date": "2026-10-02 06:06:27.812000"
+  },
+  {
+    "id": "1bJLED6L96",
+    "source": "openreview",
+    "title": "Power Steepest Mirror Flow: Disentangling Mirror and Steepest Geometries in Deep Linear Networks",
+    "summary": "Mirror descent and steepest descent impose geometry differently: one\nmoves the gradient into a dual space determined by a potential; the other\nreshapes the update direction through regularization. When the mirror\npotential and the steepest regularizer are both drawn from the\nSchatten-power family, with power exponents chosen independently, what does\neach geometry control? We answer this in an exactly solvable deep linear\nmatrix factorization model, deriving the spectral dynamics of power\nsteepest mirror flow (Power-SMF), a two-parameter family that combines\nboth. The resulting dynamics reveal complementary roles: the steepest exponent governs convergence near the target, whereas, at fixed steepest exponent and depth, the mirror exponent tunes emergence from small initialization and the order in which modes are learned.",
+    "authors": [
+      "{'username': '~Mohammad_Moshtaghifar1', 'fullname': 'Mohammad Moshtaghifar', 'institutions': [{'name': 'University of British Columbia', 'domain': 'cs.ubc.ca', 'country': 'CA'}]}",
+      "{'username': '~Connall_Garrod1', 'fullname': 'Connall Garrod', 'institutions': [{'name': 'University of Oxford', 'domain': 'oxford.ac.uk', 'country': 'GB'}]}",
+      "{'username': '~Mark_Schmidt1', 'fullname': 'Mark Schmidt', 'institutions': [{'name': 'University of British Columbia', 'domain': 'ubc.ca', 'country': 'CA'}]}",
+      "{'username': '~Christos_Thrampoulidis1', 'fullname': 'Christos Thrampoulidis', 'institutions': [{'name': 'University of British Columbia', 'domain': 'ubc.ca', 'country': 'CA'}]}"
+    ],
+    "affiliations": [],
+    "categories": [],
+    "venue": "OPT 2026 Poster",
+    "pdf_url": "https://openreview.net/pdf?id=1bJLED6L96",
+    "url": "https://openreview.net/forum?id=1bJLED6L96",
+    "published": "2026-10-02T06:06:27.812000",
+    "published_date": "2026-10-02 06:06:27.812000"
+  },
+  {
+    "id": "BuBnVFam3k",
+    "source": "openreview",
+    "title": "LoRA-TSD: Tangent-Space Spectral Descent for LoRA via Muon-Style Updates",
+    "summary": "Low-rank adaptation (LoRA) fine-tunes large models through two low-rank\n  factors, but independent factor updates ignore the geometry of their induced\n  weight update. We introduce LoRA-TSD, which performs Muon-style spectral-norm\n  steepest descent in the tangent space of the fixed-rank manifold. A LoRA-native\n  retraction maps this direction back to the factors without full weight matrices\n  and is up to $2.8\\times$ cheaper than the truncated-SVD retraction used by prior\n  manifold methods. The Frobenius-norm surrogate recovers LoRA-Pro. We prove the\n  first global convergence guarantees for LoRA-Pro and LoRA-TSD in terms of the\n  tangent-projected gradient, which is computable from factor gradients alone.\n  Across six commonsense and natural-language-inference\n  benchmarks with Llama-3.2-1B, Llama-3.1-8B, and Qwen3-32B, LoRA-TSD\n  outperforms all evaluated LoRA optimizers and remains robust across adapter\n  ranks. Code is available at https://anonymous.4open.science/r/LoRA-TSD-36D3.",
+    "authors": [
+      "{'username': '~Dmitrii_Andriianov1', 'fullname': 'Dmitrii Andriianov', 'institutions': [{'name': 'Moscow Independent Research Institute of Artificial Intelligence', 'domain': 'miriai.org', 'country': 'RU'}]}",
+      "{'username': '~Andrey_Veprikov1', 'fullname': 'Andrey Veprikov', 'institutions': [{'name': 'Moscow Independent Research Institute of Artificial Intelligence', 'domain': 'miriai.org', 'country': 'RU'}]}",
+      "{'username': '~Aleksandr_Beznosikov1', 'fullname': 'Aleksandr Beznosikov', 'institutions': [{'name': 'Moscow Independent Research Institute of Artificial Intelligence', 'domain': 'miriai.org', 'country': 'RU'}]}"
+    ],
+    "affiliations": [],
+    "categories": [],
+    "venue": "OPT 2026 Poster",
+    "pdf_url": "https://openreview.net/pdf?id=BuBnVFam3k",
+    "url": "https://openreview.net/forum?id=BuBnVFam3k",
+    "published": "2026-10-02T06:06:27.812000",
+    "published_date": "2026-10-02 06:06:27.812000"
+  },
+  {
+    "id": "AM39VRpD6v",
+    "source": "openreview",
+    "title": "Improved Convergence Rates for Stochastic Multi-Gradient Descent: A Human-Verified AI Proof",
+    "summary": "For smooth nonconvex stochastic multi-objective optimization, stochastic multi-gradient descent (SMG) computes an approximate steepest common descent direction from stochastic gradients. Under standard smoothness and variance assumptions, this paper establishes an $\\widetilde{O}(T^{-1})$ bound on the expected squared empirical Pareto-stationarity (PS) measure at the randomized output after $T$ iterations. With a constant stepsize and linearly growing mini-batches, this improves on the $\\widetilde{O}(T^{-1/4})$ bound of Chen et al. (2024) without requiring bounded gradients. Here, $\\widetilde{O}$ suppresses logarithmic factors. The key is to exploit Lipschitz continuity of the PS measure, defined by the norm of the multi-gradient descent algorithm (MGDA) direction, rather than Hölder continuity of the direction itself. The $\\Theta(T^2)$ sampled-gradient cost gives a corresponding $\\widetilde{O}(N^{-1/2})$ sample rate for a fixed number of objectives. Appendix D extends the analysis to exact-MGDA variants of MoCo and MoCo+. The proof arose during graduate homework preparation: ChatGPT 5.4 Thinking Extended generated the initial SMG proof strategy from an author-written prompt and mathematical context; the author then verified, corrected, and reorganized the argument and manually drafted the comparison with the prior proof.",
+    "authors": [
+      "{'username': '~Lisha_Chen1', 'fullname': 'Lisha Chen'}"
+    ],
+    "affiliations": [],
+    "categories": [],
+    "venue": "NeurIPS 2026 Workshop MATH-AI Poster",
+    "pdf_url": "/pdf/a37f367b1153871ee2a372c4677cc79b8483a64c.pdf",
+    "url": "https://openreview.net/forum?id=AM39VRpD6v",
+    "published": "2026-10-04T11:21:00.361000",
+    "published_date": "2026-10-04 11:21:00.361000"
+  }
+]
