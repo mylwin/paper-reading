@@ -1,0 +1,117 @@
+{
+  "date": "2026-10-23",
+  "note_file": "今日检索.md",
+  "generated_at": "2026-10-23T14:41:48",
+  "skill": "paper-daily",
+  "sources_searched": [
+    "arxiv",
+    "openreview"
+  ],
+  "source_counts": {
+    "arxiv": 200,
+    "openreview": 40
+  },
+  "date_windows": {
+    "recent_30d": {
+      "start": "2026-09-23",
+      "end": "2026-10-23"
+    },
+    "past_year": {
+      "start": "2025-10-23",
+      "end": "2026-09-22"
+    }
+  },
+  "total_unique": 204,
+  "top_papers": [
+    {
+      "title": "A Quadratic Lens on Muon's Polar Update: Benefits, Pitfalls, and the Role of Newton-Schulz",
+      "source": "arxiv",
+      "arxiv_id": "2610.30280",
+      "url": "http://arxiv.org/abs/2610.30280v1",
+      "note_filename": "A_Quadratic_Lens_on_Muon's_Polar_Update_Benefits_Pitfalls_and_the_Role_of_Newton_Schulz",
+      "matched_domain": "大模型优化器设计",
+      "score": 7.73
+    },
+    {
+      "title": "StructZO: Structured Zeroth-Order Optimization for Memory-Efficient LLM Fine-Tuning",
+      "source": "arxiv",
+      "arxiv_id": "2610.16451",
+      "url": "http://arxiv.org/abs/2610.16451v1",
+      "note_filename": "StructZO_Structured_Zeroth_Order_Optimization_for_Memory_Efficient_LLM_Fine_Tuning",
+      "matched_domain": "大模型优化器设计",
+      "score": 6.23
+    },
+    {
+      "title": "Structure-Aware Numerical Stabilization for Half-Precision Proximal Policy Optimization",
+      "source": "arxiv",
+      "arxiv_id": "2610.13306",
+      "url": "http://arxiv.org/abs/2610.13306v1",
+      "note_filename": "Structure_Aware_Numerical_Stabilization_for_Half_Precision_Proximal_Policy_Optimization",
+      "matched_domain": "大模型优化器设计",
+      "score": 6.3
+    },
+    {
+      "title": "IQuest-Q1: Advancing Foundation Capabilities for Agentic CLI Systems",
+      "source": "arxiv",
+      "arxiv_id": "2610.30949",
+      "url": "http://arxiv.org/abs/2610.30949v1",
+      "note_filename": "IQuest_Q1_Advancing_Foundation_Capabilities_for_Agentic_CLI_Systems",
+      "matched_domain": "大模型优化器设计",
+      "score": 6.47
+    },
+    {
+      "title": "Width and Depth Limits Commute During Training",
+      "source": "arxiv",
+      "arxiv_id": "2610.30729",
+      "url": "http://arxiv.org/abs/2610.30729v1",
+      "note_filename": "Width_and_Depth_Limits_Commute_During_Training",
+      "matched_domain": "大模型优化器设计",
+      "score": 7.53
+    },
+    {
+      "title": "Freeze the Decoder, Heal the Encoder: Parameter-Efficient Adaptation for SVD-Based KV-Cache Compression",
+      "source": "arxiv",
+      "arxiv_id": "2610.10552",
+      "url": "http://arxiv.org/abs/2610.10552v1",
+      "note_filename": "Freeze_the_Decoder_Heal_the_Encoder_Parameter_Efficient_Adaptation_for_SVD_Based_KV_Cache_Compression",
+      "matched_domain": "大模型优化器设计",
+      "score": 5.83
+    },
+    {
+      "title": "Reward-Driven Learning under Prompt-Level Differential Privacy",
+      "source": "arxiv",
+      "arxiv_id": "2610.07212",
+      "url": "http://arxiv.org/abs/2610.07212v1",
+      "note_filename": "Reward_Driven_Learning_under_Prompt_Level_Differential_Privacy",
+      "matched_domain": "大模型优化器设计",
+      "score": 6.17
+    },
+    {
+      "title": "RoSA: Rotational Sparse Adaptation for Memory-Efficient Fine-Tuning",
+      "source": "arxiv",
+      "arxiv_id": "2610.06243",
+      "url": "http://arxiv.org/abs/2610.06243v1",
+      "note_filename": "RoSA_Rotational_Sparse_Adaptation_for_Memory_Efficient_Fine_Tuning",
+      "matched_domain": "大模型优化器设计",
+      "score": 5.57
+    },
+    {
+      "title": "Multiplicative Gradient Method for Log-Homogeneous Optimization: A Unified Mirror-Descent Framework",
+      "source": "arxiv",
+      "arxiv_id": "2610.16335",
+      "url": "http://arxiv.org/abs/2610.16335v1",
+      "note_filename": "Multiplicative_Gradient_Method_for_Log_Homogeneous_Optimization_A_Unified_Mirror_Descent_Framework",
+      "matched_domain": "大模型优化器设计",
+      "score": 5.9
+    },
+    {
+      "title": "Rigidity of the ball for Hartree-type energies and second shape derivative via a continuity argument",
+      "source": "arxiv",
+      "arxiv_id": "2610.29958",
+      "url": "http://arxiv.org/abs/2610.29958v1",
+      "note_filename": "Rigidity_of_the_ball_for_Hartree_type_energies_and_second_shape_derivative_via_a_continuity_argument",
+      "matched_domain": "大模型优化器设计",
+      "score": 5.5
+    }
+  ]
+}
