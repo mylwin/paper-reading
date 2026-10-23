@@ -1,0 +1,62 @@
+{
+  "date": "2026-10-23",
+  "status": "passed_with_preexisting_workspace_link_errors",
+  "unique_papers": 204,
+  "known": 118,
+  "candidates": 86,
+  "screening_top_n": 10,
+  "formal_recommendations": 8,
+  "semantic_exclusions": 2,
+  "pdf_downloaded": 3,
+  "pdf_failed": 0,
+  "pdf_checks": [
+    {
+      "title": "A Quadratic Lens on Muon's Polar Update: Benefits, Pitfalls, and the Role of Newton-Schulz",
+      "pages": 47,
+      "bytes": 1875833,
+      "sha256": "0cc1c178bf10d0b00665150acc5e6a8299be456c159bda48270e5e6043f5af4a",
+      "identity": "首页标题与arXiv编号一致",
+      "pdfinfo_warnings": ""
+    },
+    {
+      "title": "StructZO: Structured Zeroth-Order Optimization for Memory-Efficient LLM Fine-Tuning",
+      "pages": 20,
+      "bytes": 560715,
+      "sha256": "1be1b3a92524db44fa275e6f0b54b9ffe90413d12a38089e621a6344dff01400",
+      "identity": "首页标题与arXiv编号一致",
+      "pdfinfo_warnings": ""
+    },
+    {
+      "title": "Structure-Aware Numerical Stabilization for Half-Precision Proximal Policy Optimization",
+      "pages": 9,
+      "bytes": 2933145,
+      "sha256": "e03b57efabb12c0046b0a5dc115618b56496843a957fcc05abf0c53cc293020b",
+      "identity": "首页标题与arXiv编号一致",
+      "pdfinfo_warnings": ""
+    }
+  ],
+  "daily_local_links_checked": 55,
+  "new_link_errors": 0,
+  "workspace_check": {
+    "preexisting_link_errors": 9,
+    "remaining_link_errors": 9,
+    "new_link_errors": 0,
+    "missing_readme": 0,
+    "month_consistency_errors": 0
+  },
+  "checks": [
+    "前十逐篇摘要语义复排，脚本分数及screening_rank未改写",
+    "前三完整中译逐句人工复核；程序核对段落、数字、模型与方法锚点",
+    "前三arXiv官方摘要页的题目、作者、版本与摘要已核对；未改写源摘要、分数或作者列表",
+    "PDF魔数、页数、首页标题与arXiv编号通过，首页文本成功提取",
+    "附录204条连续编号且每篇仅出现一次，2篇语义排除明确标记",
+    "四阶段八份索引表格各仅新增三行，原有表格行无改写；刷新幂等",
+    "本次新增本地链接全通过，旧库9处断链与执行前完全一致"
+  ],
+  "source_limitations": [
+    "arXiv按15个配置关键词、submittedDate窗口检索相关性前200条，未施加category过滤；含Muon同名物理等误命中，为有界关键词样本。",
+    "OpenReview逐15关键词各取第一页至多100条，仅保留可解析日期且在窗口内的记录，合并40条；记录日期未必等于首次公开日期，非穷尽检索。",
+    "Semantic Scholar年度窗口2025-10-23至2026-09-22，两次HTTP 429；0条补充不代表无相关论文。",
+    "前十全部保留用于审计，8项直接或条件性阅读建议、2项语义排除；前三仅摘要初评，PDF归档不是全文评审。"
+  ]
+}

@@ -1,0 +1,44 @@
+import json
+from pathlib import Path
+R=Path(__file__).resolve().parents[2];D=R/'08-daily/2026-10-23';d=json.loads((D/'search_result.json').read_text());p=d['top_papers']
+translations=[
+'''Muon沿近似正交化的方向更新矩阵值参数，并且训练大语言模型时往往比AdamW更快，但正交化何时以及为何有效仍不清楚。我们在矩阵二次问题上研究Muon核心的正交化更新PolarGD；在这些问题上，可以对优化器进行闭式分析，并在线搜索下比较更新方向，以消除学习率调节的影响。
+
+  当梯度远非低秩且其最大奇异方向具有高曲率时，正交化会带来收益。只要误差矩阵各行相互正交且范数相等，无论Hessian如何，PolarGD都能一步到达极小点，而梯度下降则要求所有Hessian特征值相等；此外，与符号下降不同，PolarGD不受问题旋转的影响。
+
+  在多步迭代中，PolarGD相当于由当前迭代点进行预条件的梯度下降，因此其速度由迭代点的条件性而非Hessian的条件性支配。这既解释了快速收敛的情形，也解释了一种由迭代点极小奇异值引起的缓慢情形；在后一情形中，PolarGD比梯度下降慢得多。
+
+  最后，Muon所采用的少量Newton–Schulz迭代对这些极小奇异值的处理方式与梯度下降相同，因此较少的迭代次数可能比精确正交化收敛得更快；在一个使用Muon训练的Transformer中，注意力矩阵约四分之一的奇异值落在这一情形内。''',
+'''大规模微调大语言模型日益受到反向传播内存成本的限制。零阶（Zeroth-Order，ZO）优化器仅依赖前向函数求值，从而减轻这一负担，但它们与Adam等一阶（first-order，FO）优化器之间仍存在显著的性能差距。
+
+  我们认为，这一差距并非仅由缺乏显式梯度造成：一阶微调还受益于信息丰富的低秩优化几何、大规模信号聚合以及条件良好的更新方向。受此启发，我们提出StructZO，一个面向内存高效LLM微调的结构化零阶优化框架。
+
+  StructZO在由激活诱导的信息丰富子空间内进行大量查询的ZO估计，并在将结果映射回原始参数之前，对所得低维空间更新施加谱控制。这使ZO能够在紧凑、感知几何的空间中聚合有用的方向信号，同时避免反向传播的激活与优化器状态内存成本。
+
+  我们从理论上证明，当诱导子空间捕获到集中的优化相关方向时，StructZO将有效ZO估计维度从$mn$降到$mr$，剩余投影误差由激活Gram矩阵的谱尾部支配。
+
+  实验上，在OPT系列与Llama3.1-8B的多种下游任务中，相较于最强的已有ZO基线，StructZO的平均相对提升最高达$8.7%$，单个任务的相对提升最高达$26.9%$，同时与FO-Adam的平均差距保持在$1.5%$以内。这些结果表明，结构化且受到谱控制的ZO更新能够大幅缩小ZO与FO优化之间的差距。''',
+'''资源受限平台上的本地在线训练需要较低的计算与训练状态开销。我们研究半精度近端策略优化（proximal policy optimization，PPO）在消费级GPU上的数值稳定性和计算效率。直接将PPO训练转换为FP16并不可靠，因为数值误差会通过策略更新和后续数据收集形成反馈，而PPO会反复将当前策略与固定的行为策略进行比较。
+
+  我们提出包含三个结构感知模块的PPO-FP16。全局标量保护稳定在一个小批量或一次参数更新中共享的统计量。策略变化残差保护提取并保留当前策略与行为策略之间的微小差异。高效持久更新保护在减少状态存储的同时，稳定优化器状态与参数回写。这些改动保持PPO目标、超参数和训练预算不变。
+
+  在六个连续控制任务与五个随机种子上，PPO-FP16在四种方法中取得最低的平均回报AUC排名（1.90），并在30个环境—种子比较中的17个排名第一。九种性能配置中的八种取得1.16至2.03倍的PPO更新加速。相较于Full FP32 Adam，优化器状态内存减少71.7%至74.9%，峰值已分配GPU内存最多减少44.5%。
+
+  结果表明，保护一小组结构上重要的量，可以在无需重新调参的情况下实现稳定、高效的FP16 PPO。'''
+]
+analyses=[
+('从二次问题审视Muon的极分解更新：收益、陷阱与Newton–Schulz的作用','通过矩阵二次问题和线搜索隔离Muon方向收益，揭示精确正交化的慢区间及有限Newton–Schulz的缓解作用。', ['作者刻画正交化有利的梯度谱与曲率情形，并比较一步收敛和旋转不变性。','用迭代点的小奇异值解释慢区间，提出有限Newton–Schulz可能优于精确正交化的机制。'], '在可闭式分析的矩阵二次模型上，用线搜索排除学习率调节影响，再比较PolarGD、梯度下降、符号下降与有限步Newton–Schulz。','摘要报告特定正交等范数误差行条件下的一步极小化、迭代点条件性控制的多步行为，以及一个Muon Transformer中约四分之一注意力矩阵奇异值处于相关区间。','直接命中Muon几何设计；正交化越精确未必越快这一机制可指导Newton–Schulz步数与谱尾处理消融。','需核验Hessian与矩阵二次问题的精确定义、线搜索是否可实现、慢区间成立条件、迭代点与误差矩阵的区别及Transformer测量协议。不能把二次模型结论当成一般随机非凸LLM收敛保证；arXiv备注称较短版本曾在workshop报告，当前分析对象为完整预印本。','精读'),
+('StructZO：面向内存高效LLM微调的结构化零阶优化','在激活诱导子空间内聚合大量零阶查询，再做谱控制，以减少估计维度并逼近一阶微调表现。',['作者结合激活诱导子空间与低维谱控制来构造ZO更新。','给出mn到mr的有效维度缩减及由激活Gram谱尾控制的投影误差线索。'],'在激活子空间中进行多查询ZO估计，对低维更新施加谱处理后映回参数；核查查询数、子空间更新和激活存储预算。','摘要报告OPT系列与Llama3.1-8B上，相对ZO基线平均提升最高8.7%、单任务最高26.9%，与FO-Adam平均差距在1.5%以内；这些数值不是统一准确率百分点提升。','直接研究LLM优化器设计与低维几何，可与已有Ori、MeZO及低秩零阶方法对照，形成独立于Muon的一条机制路线。','需查子空间捕获假设、谱尾项与r的选择、函数查询总数、token和墙钟预算、激活缓存与优化器状态的完整内存核算；摘要没有给相同时间预算结果或误差条，不能由维度缩减推出端到端加速。','精读'),
+('面向半精度近端策略优化的结构感知数值稳定化','选择性保护全局标量、策略残差与持久状态，在PPO中检验低精度更新的稳定性和状态内存收益。',['作者提出三种针对PPO结构的保护机制，声称保留目标、超参数与训练预算。','摘要提供六任务五种子的回报排名、更新加速与显存结果。'],'分开保护共享标量、当前/行为策略微小差异及优化器状态和参数回写；先核对持久状态精度格式和每模块消融。','摘要报告平均return-AUC排名1.90、30项比较中17项第一；8/9配置更新加速1.16–2.03倍，状态内存减少71.7–74.9%，峰值分配内存最多减少44.5%。','状态精度与回写机制可为优化器内存设计提供具体实现线索；与前两篇的几何和估计机制互补，但作为条件性迁移阅读，不当作LLM训练实证。','需核对六任务难度、硬件与计时边界、四方法预算、FP32主权重和残差存储是否计入、五种子不确定性；连续控制PPO结果不能直接外推大语言模型PPO/RLVR或预训练。','选读')]
+E={'assessment_scope':'metadata_and_abstract','confidence':'低；摘要初步判断，待全文核验','overview':{'trend':'窗口2026-09-23至2026-10-23；合并去重204篇（arXiv 182、OpenReview 22），118篇已在库或历史推荐，86篇未命中。逐篇审阅预筛前十，8项保留直接或条件性阅读建议，2项研究对象不符作语义排除，不从第11名补选。前三为PolarGD二次模型分析、StructZO与PPO-FP16，覆盖谱几何、低维零阶估计和状态精度；PPO仅提供迁移线索。入库日期不等于首发日期。关键词Muon含粒子物理误命中，计数不是直接相关论文数量。年度Semantic Scholar补充因429缺失。','hotspots':[{'title':'谱尾与有限正交化','text':'PolarGD分析指出极小奇异值可能导致精确正交化变慢；有限Newton–Schulz的作用应与当前谱处理设计对照。'},{'title':'子空间信号聚合','text':'StructZO将多查询估计与激活子空间结合，需同时核算估计误差、谱尾、查询成本和内存。'},{'title':'状态精度与比较公平性','text':'PPO-FP16给出状态内存核算线索；KV-cache healing候选提醒共享学习率可能扭曲不同参数量方案的比较。'}]},'domain_summaries':{'大模型优化器设计':{'summary':'直接机制优先：先检查PolarGD/有限Newton–Schulz和StructZO的谱控制，再选读PPO状态保护。IQuest-Q1提供大规模训练上下文而非优化器独立消融；裁剪、PEFT与隐私候选按适用条件定点阅读。','subfields':{'符号与范数几何优化':'PolarGD刻画精确与有限正交化差异，IQuest-Q1使用Muon但摘要未隔离其收益。','免调参与梯度裁剪':'宽深极限论文依赖裁剪条件，RLVR按prompt聚合后裁剪；两者问题设定不同，不能直接转为免调参结论。','自适应与状态内存':'StructZO从估计子空间减少状态需求，PPO-FP16从数值格式与回写减少状态；RoSA和KV-cache healing改变可训练部分。','大模型训练与优化器设计':'IQuest-Q1的320B总参数、15B激活提供尺度背景；模型报告中的组合训练收益不等于Muon单独收益。','未细分':'保留宽泛关键词命中供追溯；乘性梯度统一框架与Hartree形状优化不计正式阅读建议。'}}},'top_papers':{}}
+for x,tr,a in zip(p[:3],translations,analyses):
+ title,summary,contributions,method,result,reason,limit,decision=a
+ E['top_papers'][x['title']]={'title_zh':title,'abstract_zh':tr,'summary':summary,'contributions':contributions,'method':method,'result':result,'selection_reason':reason,'evidence_limit':'初步判断，仅题目与摘要，待全文核验。'+limit,'reading_decision':decision}
+rest=[('320B总参数/15B激活的IQuest-Q1将Muon、SplitNorm与muP组合，适合核查训练尺度与稳定区间，不把总体能力归因于单个优化器。','模型报告只能提供组合训练上下文；优先定点读优化器、学习率与稳定性消融。','选读'),('在线性残差网络有限训练时域内，裁剪支持宽深联合路径的L²收敛；无裁剪仅有概率收敛，作为裁剪与参数化依据选读。','直接关注裁剪与尺度条件，但线性网络、有限步数与无限尺度限制需核验，非通用LLM训练结论。','选读'),('KV-cache healing显示不同可训练参数量使用共享学习率可制造假优势；逐方案调参后精度持平，仍节省3倍参数与状态。','可直接改进优化器/PEFT评测公平性；证据覆盖单压缩率及有限骨干，不能概括所有KV压缩。','选读'),('按prompt聚合梯度后裁剪并加噪的私有RLVR在ε=8下保留奖励收益；仅隐私训练需求相关时选读。','裁剪粒度有迁移线索，但隐私预算、LoRA与RLVR目标限制其对预训练优化器的直接性。','选读'),('RoSA轮换后层可训练块并逐步冻结底层，减少状态和反传成本；与优化器内部状态压缩分开核算。','属于训练参数调度的相邻路线，摘要缺少量化比较和端到端成本，按需跟踪。','跟踪'),('【语义排除】统一概率单纯形上的对数齐次乘性梯度问题；摘要未给LLM优化器设计的直接连接。','应用为Lewis权重、投资组合、设计及通信误差指数，当前不设独立一般优化理论推荐主题。','跟踪'),('【语义排除】Hartree非局部能量的球刚性与形状二阶变分，不属于模型权重优化器设计。','仅optimal design等词产生宽泛命中，研究对象与当前方向不符。','跟踪')]
+for x,(s,r,dec) in zip(p[3:],rest):E['top_papers'][x['title']]={'summary':s,'selection_reason':r,'evidence_limit':'题目与摘要初评，待全文核验。','reading_decision':dec}
+limits=['arXiv按15个配置关键词、submittedDate窗口检索相关性前200条，未施加category过滤；含Muon同名物理等误命中，为有界关键词样本。','OpenReview逐15关键词各取第一页至多100条，仅保留可解析日期且在窗口内的记录，合并40条；记录日期未必等于首次公开日期，非穷尽检索。','Semantic Scholar年度窗口2025-10-23至2026-09-22，两次HTTP 429；0条补充不代表无相关论文。','前十全部保留用于审计，8项直接或条件性阅读建议、2项语义排除；前三仅摘要初评，PDF归档不是全文评审。']
+E['source_limitations']=limits;E['semantic_reranking']=[{'title':x['title'],'screening_rank':x['screening_rank'],'candidate_screening_rank':x['candidate_screening_rank'],'semantic_rank':x['semantic_rank'],'formal_recommendation':x['formal_recommendation'],'reason':E['top_papers'][x['title']]['selection_reason']} for x in p]
+d['search_limitations']=limits;d['formal_recommendation_count']=8
+for x in p[:3]:x['source_verified']=True;x['source_verification_url']=x['url'].replace('http:','https:')
+(D/'daily-editorial.json').write_text(json.dumps(E,ensure_ascii=False,indent=2)+'\n');(D/'search_result.json').write_text(json.dumps(d,ensure_ascii=False,indent=2)+'\n')
+(D/'source-coverage.json').write_text(json.dumps({'arxiv':{'returned':200,'keyword_count':15,'category_filter':False},'openreview':json.loads((R/'.planning/daily-2026-10-23/openreview-coverage.json').read_text()),'limitations':limits},ensure_ascii=False,indent=2)+'\n')

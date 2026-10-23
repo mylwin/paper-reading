@@ -1,0 +1,52 @@
+{
+  "papers_dir": "/Users/myl/Documents/paper/01-raw",
+  "month_dir": "/Users/myl/Documents/paper/01-raw/2026-10",
+  "month": "2026-10",
+  "date": "2026-10-23",
+  "requested": 3,
+  "downloaded": 3,
+  "skipped_existing": 0,
+  "failed": 0,
+  "index_updated": [
+    "/Users/myl/Documents/paper/01-raw/index.md",
+    "/Users/myl/Documents/paper/01-raw/2026-10/README.md",
+    "/Users/myl/Documents/paper/02-markdown/index.md",
+    "/Users/myl/Documents/paper/02-markdown/2026-10/README.md",
+    "/Users/myl/Documents/paper/03-notes/index.md",
+    "/Users/myl/Documents/paper/03-notes/2026-10/README.md",
+    "/Users/myl/Documents/paper/06-translation/index.md",
+    "/Users/myl/Documents/paper/06-translation/2026-10/README.md"
+  ],
+  "archived": [
+    {
+      "title": "A Quadratic Lens on Muon's Polar Update: Benefits, Pitfalls, and the Role of Newton-Schulz",
+      "paper_stem": "A_Quadratic_Lens_on_Muon's_Polar_Update_Benefits_Pitfalls_and_the_Role_of_Newton_Schulz",
+      "month": "2026-10",
+      "source": "arxiv",
+      "pdf_url": "https://arxiv.org/pdf/2610.30280v1",
+      "path": "/Users/myl/Documents/paper/01-raw/2026-10/A_Quadratic_Lens_on_Muon's_Polar_Update_Benefits_Pitfalls_and_the_Role_of_Newton_Schulz.pdf",
+      "status": "downloaded",
+      "detail": "1831.9 KB"
+    },
+    {
+      "title": "StructZO: Structured Zeroth-Order Optimization for Memory-Efficient LLM Fine-Tuning",
+      "paper_stem": "StructZO_Structured_Zeroth_Order_Optimization_for_Memory_Efficient_LLM_Fine_Tuning",
+      "month": "2026-10",
+      "source": "arxiv",
+      "pdf_url": "https://arxiv.org/pdf/2610.16451v1",
+      "path": "/Users/myl/Documents/paper/01-raw/2026-10/StructZO_Structured_Zeroth_Order_Optimization_for_Memory_Efficient_LLM_Fine_Tuning.pdf",
+      "status": "downloaded",
+      "detail": "547.6 KB"
+    },
+    {
+      "title": "Structure-Aware Numerical Stabilization for Half-Precision Proximal Policy Optimization",
+      "paper_stem": "Structure_Aware_Numerical_Stabilization_for_Half_Precision_Proximal_Policy_Optimization",
+      "month": "2026-10",
+      "source": "arxiv",
+      "pdf_url": "https://arxiv.org/pdf/2610.13306v1",
+      "path": "/Users/myl/Documents/paper/01-raw/2026-10/Structure_Aware_Numerical_Stabilization_for_Half_Precision_Proximal_Policy_Optimization.pdf",
+      "status": "downloaded",
+      "detail": "2864.4 KB"
+    }
+  ]
+}

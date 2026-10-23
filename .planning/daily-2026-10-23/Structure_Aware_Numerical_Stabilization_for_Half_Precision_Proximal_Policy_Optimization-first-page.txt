@@ -1,0 +1,98 @@
+Structure-Aware Numerical Stabilization for Half-Precision
+Proximal Policy Optimization
+Linxuan Wu
+
+Liang Chen
+
+Institute of Automation, Chinese Academy of Sciences
+School of Artificial Intelligence, University of Chinese
+Academy of Sciences
+Beijing, China
+
+Institute of Automation, Chinese Academy of Sciences
+School of Artificial Intelligence, University of Chinese
+Academy of Sciences
+Beijing, China
+and compatible hardware can provide higher arithmetic throughput [20]. In continuous-control tasks, PPO often uses compact actor–
+critic networks, making it a promising candidate for deployment on
+resource-constrained edge devices. Yet half-precision PPO is difficult to stabilize. Each policy update changes subsequent actions and
+the data used for later updates. PPO also performs several optimization epochs on each rollout and uses a probability ratio between the
+current and behavior policies in its clipped objective [24]. When the
+policy change is much smaller than either absolute log-probability,
+FP16 rounding can change the ratio and clipping decision. We study
+this numerical and computational problem on commodity GPUs as
+a step toward eventual use on resource-constrained platforms.
+SAC-FP16 showed that algorithm-specific numerical reformulation can stabilize half-precision SAC training [3]. SAC and PPO,
+however, have different objectives and data flows. SAC uses replay
+and a maximum-entropy objective, whereas PPO collects an onpolicy rollout and performs multiple updates relative to the fixed
+behavior policy that generated it. In PPO, errors in batch-level aggregate statistics, such as means, variances, and gradient norms, can
+affect an entire minibatch, small differences between the current
+and behavior policies determine clipping decisions, and gradients
+must pass through Adam states and the discrete FP16 parameter
+grid before producing persistent policy changes.
+We therefore propose PPO-FP16. It preserves the PPO network
+architecture, objective, hyperparameters, and training budget
+while reorganizing three error-propagation paths. Module A,
+global scalar protection, stabilizes shared statistics through
+selective FP32 reductions and scale rearrangement. Module B,
+policy-change residual protection, extracts differences between Gaussian policies before forming absolute log-probabilities
+and performs clipping in the log domain. Module C, efficient
+persistent-update protection, builds on hAdam’s root-secondmoment representation. It introduces SHARP (Structured Halfprecision Adam with Root-state Preconditioning), which shares
+second-moment state across parameter groups, and selectively
+compensates FP16 writeback of the log-standard-deviation. The
+residual-domain policy calculation and SHARP’s structured state
+sharing are our main new designs.
+Our contributions are:
+
+arXiv:2610.13306v1 [cs.LG] 9 Oct 2026
+
+Abstract
+Local online training on resource-constrained platforms requires
+low computational and training-state overhead. We study the numerical stability and computational efficiency of half-precision
+proximal policy optimization (PPO) on commodity GPUs. Directly
+converting PPO training to FP16 is unreliable because numerical
+errors feed back through policy updates and subsequent data collection, while PPO repeatedly compares a current policy with a
+fixed behavior policy. We propose PPO-FP16 with three structureaware modules. Global scalar protection stabilizes statistics shared
+across a minibatch or parameter update. Policy-change residual
+protection extracts and preserves small differences between the
+current and behavior policies. Efficient persistent-update protection
+stabilizes optimizer state and parameter writeback while reducing
+state storage. These changes preserve the PPO objective, hyperparameters, and training budget. Across six continuous-control
+tasks and five seeds, PPO-FP16 achieves the lowest mean returnAUC rank (1.90) among the four methods and ranks first in 17
+of 30 environment–seed comparisons. Eight of nine performance
+configurations yield 1.16–2.03× faster PPO updates. Relative to
+Full FP32 Adam, optimizer-state memory falls by 71.7–74.9%, and
+peak allocated GPU memory falls by up to 44.5%. The results show
+that protecting a small set of structurally important quantities can
+deliver stable, efficient FP16 PPO without retuning.
+
+CCS Concepts
+• Computing methodologies → Reinforcement learning.
+
+Keywords
+reinforcement learning, proximal policy optimization, lowprecision training, FP16, numerical stability
+
+1
+
+Introduction
+
+Reinforcement learning (RL) agents adapt their policies through
+continued interaction with an environment. This ability is valuable
+in robotics, autonomous systems, and control. An agent trained in
+simulation may need further training after deployment to accommodate differences in hardware, sensor noise, or task conditions.
+Local adaptation is especially useful when data cannot easily be
+uploaded, communication adds latency, or the device must operate
+independently for long periods. These resource-constrained settings motivate lower computational, memory, and energy costs for
+training [37].
+Low-precision training offers a direct way to reduce these costs.
+FP16 parameters and states use half the storage of FP32 values,
+
+• We identify three sensitive error-propagation paths in FP16
+PPO through stage-by-stage comparisons on fixed training data and numerical stress tests: shared statistics, small
+policy changes, and persistent parameter updates.
+• We propose a structure-aware FP16 PPO design with three
+complementary protection modules while preserving the
+PPO objective and training configuration.
+1
+
+

@@ -1,0 +1,60 @@
+S TRUCT ZO: S TRUCTURED Z EROTH -O RDER O PTIMIZATION FOR
+M EMORY-E FFICIENT LLM F INE -T UNING
+
+arXiv:2610.16451v1 [cs.LG] 12 Oct 2026
+
+Xuanlin Yang
+Peking University
+2401112159@stu.pku.edu.cn
+
+Jia Li
+Beijing Normal University
+jiali.gm@gmail.com
+
+Zhouchen Lin
+Peking University
+ZLIN@pku.edu.cn
+
+A BSTRACT
+Fine-tuning large language models at scale is increasingly limited by the memory cost of backpropagation. Zeroth-Order (ZO) optimizers reduce this burden by relying only on forward function
+evaluations, but they still exhibit a substantial performance gap to first-order (FO) optimizers such as
+Adam. In this work, we argue that this gap does not arise solely from the absence of explicit gradients:
+FO fine-tuning also benefits from informative low-rank optimization geometry, large-scale signal
+aggregation, and well-conditioned update directions. Motivated by this perspective, we introduce
+StructZO, a structured Zeroth-Order optimization framework for memory-efficient LLM fine-tuning.
+StructZO performs large-query ZO estimation within an activation-induced informative subspace and
+applies spectral control to the resulting reduced-space update before mapping it back to the original
+parameters. This unified update procedure enables ZO optimization to aggregate useful directional
+signals in a compact, geometry-aware space while avoiding the activation and optimizer-state memory
+costs of backpropagation. We provide a theoretical analysis showing that, when the induced subspace
+captures concentrated optimization-relevant directions, StructZO reduces the effective ZO estimation
+dimension from mn to mr, with the remaining projection error governed by the spectral tail of the
+activation Gram matrix. Empirically, across OPT-series and Llama3.1-8B on diverse downstream
+fine-tuning tasks, StructZO improves over the strongest existing ZO baselines by up to 8.7% relative
+on average across model settings and up to 26.9% relative on individual tasks, while remaining
+within 1.5% of FO-Adam on average. These results suggest that in the evaluated fine-tuning settings,
+structured and spectrally controlled ZO updates can substantially narrow the gap between ZO and FO
+optimization.
+
+1
+
+Introduction
+
+Fine-tuning large language models (LLMs) has become a central component in adapting large pretrained models to
+downstream tasks [1]. While first-order (FO) optimizers such as Adam [2] and AdamW [3] are commonly used in
+fine-tuning, they require full backpropagation through the model and therefore incur substantial memory overhead from
+storing intermediate activations and optimizer states. These limitations have driven increasing interest in parameterand memory-efficient fine-tuning methods [4, 5, 6, 7]. Zeroth-Order (ZO) optimization [8], exemplified by MeZO [9],
+provides a promising alternative by replacing gradient computation with forward-pass-only perturbation estimates. As
+a result, MeZO reduces memory consumption close to the inference level, making full-parameter LLM fine-tuning
+feasible under tight memory budgets.
+Despite this memory advantage, ZO fine-tuning still suffers from slow convergence and a persistent performance
+gap to first-order methods, largely due to noisy estimates in high-dimensional and ill-conditioned parameter spaces.
+Since MeZO, recent work has improved ZO fine-tuning from several perspectives, including low-rank structure or
+subspace [10, 11, 12], alternative sampling distributions [13, 14], momentum and variance-reduction techniques [15, 16],
+multi-sample estimators [17], and Hessian- or curvature-informed updates [18, 19]. These advances show that the naive
+full-space random estimator is far from optimal. However, most existing methods still focus primarily on improving the
+gradient estimation itself, while remaining limited by query efficiency, search-space quality, or update conditioning.
+In contrast, FO fine-tuning benefits from more than gradient access alone: it also exploits informative optimization
+geometry, aggregates rich derivative signals, and applies well-conditioned update transformations. This motivates the
+
+

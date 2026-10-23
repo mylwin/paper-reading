@@ -1,0 +1,55 @@
+A Quadratic Lens on Muon’s Polar Update: Benefits,
+Pitfalls, and the Role of Newton–Schulz†
+Egor Shulgin1,2,∗,‡ , Sam Laing3,4,∗ , Antonio Orvieto3 , and Peter Richtárik1
+1
+
+King Abdullah University of Science and Technology (KAUST), Saudi Arabia
+Mohamed bin Zayed University of Artificial Intelligence (MBZUAI), United Arab Emirates
+3
+ELLIS Institute Tübingen and MPI for Intelligent Systems, Tübingen AI Center, Germany
+4
+OpenEuroLLM
+
+arXiv:2610.30280v1 [cs.LG] 21 Oct 2026
+
+2
+
+Abstract
+Muon updates matrix-valued parameters along approximately orthogonalized directions and often
+trains large language models faster than AdamW, yet it remains unclear when and why orthogonalization
+helps. We study PolarGD, the orthogonalized update at the core of Muon, on matrix quadratics, where
+optimizers can be analyzed in closed form, and compare update directions under line search to remove
+the effect of learning-rate tuning. Orthogonalization pays off when the gradient is far from low rank and
+its largest singular directions see high curvature. PolarGD reaches the minimizer in one step whenever
+the rows of the error are orthogonal with equal norms, for any Hessian, whereas gradient descent needs
+all Hessian eigenvalues to be equal; and unlike sign descent, PolarGD is unaffected by rotations of the
+problem. Over many steps, PolarGD acts as gradient descent preconditioned by the current iterate, so its
+speed is governed by the conditioning of the iterate rather than of the Hessian. This explains fast regimes
+as well as a slow one, caused by tiny singular values of the iterate, in which PolarGD is much slower
+than gradient descent. Finally, the few Newton–Schulz iterations used in Muon treat these tiny singular
+values as gradient descent does, so fewer iterations can converge faster than exact orthogonalization; in a
+transformer trained with Muon, about a quarter of the singular values of the attention matrices fall in
+this regime.
+
+1
+
+Introduction
+
+Muon (Jordan et al., 2024b) has emerged as a strong optimizer for training large neural networks. It has
+matched or outperformed AdamW in language-model pretraining, from speedrun benchmarks (Jordan et al.,
+2024a) to large-scale training (Liu et al., 2025; Shah et al., 2025), and standard optimizers more broadly in
+vision (Jordan et al., 2024b; Pethick et al., 2025), diffusion (Schaipp, 2025), and tabular models (Gorishniy
+et al., 2026). For two-dimensional parameter blocks, Muon approximately orthogonalizes the momentum
+matrix with a few Newton–Schulz iterations, that is, it steps along an approximation of the polar factor
+polar(G) = U V ⊤ of G = U ΣG V ⊤ . The same direction is shared by a broader family of matrix optimizers. It is
+the steepest-descent direction for the spectral norm, used in stochastic spectral descent (Carlson et al., 2015a,
+2016, 2015b) and revisited by Bernstein and Newhouse (2024). It is also the linear-minimization-oracle (LMO)
+direction of norm-constrained methods (Pethick et al., 2025), and Shampoo (Gupta et al., 2018) reduces to it
+when preconditioner accumulation is switched off (Bernstein and Newhouse, 2024). Controlled benchmarks
+∗ Equal contribution. Correspondence to Egor Shulgin, shulgin.yegor@gmail.com.
+† A shorter version of this work was presented at the ICML 2026 Workshop on High-dimensional Learning Dynamics.
+‡ The initial versions of this work were completed while Egor Shulgin was at KAUST.
+
+1
+
+
