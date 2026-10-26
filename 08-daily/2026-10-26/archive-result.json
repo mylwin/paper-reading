@@ -1,0 +1,116 @@
+{
+  "papers_dir": "/Users/myl/Documents/paper/01-raw",
+  "month_dir": "/Users/myl/Documents/paper/01-raw/2026-10",
+  "month": "2026-10",
+  "date": "2026-10-26",
+  "requested": 3,
+  "downloaded": 1,
+  "skipped_existing": 0,
+  "failed": 2,
+  "index_updated": [
+    "/Users/myl/Documents/paper/01-raw/index.md",
+    "/Users/myl/Documents/paper/01-raw/2026-10/README.md",
+    "/Users/myl/Documents/paper/02-markdown/index.md",
+    "/Users/myl/Documents/paper/02-markdown/2026-10/README.md",
+    "/Users/myl/Documents/paper/03-notes/index.md",
+    "/Users/myl/Documents/paper/03-notes/2026-10/README.md",
+    "/Users/myl/Documents/paper/06-translation/index.md",
+    "/Users/myl/Documents/paper/06-translation/2026-10/README.md"
+  ],
+  "archived": [
+    {
+      "title": "Can Muon Adapt Its Stepsize Without Knowing the Solution Distance?",
+      "paper_stem": "Can_Muon_Adapt_Its_Stepsize_Without_Knowing_the_Solution_Distance",
+      "month": "2026-10",
+      "source": "openreview",
+      "pdf_url": "https://openreview.net/pdf?id=Ghfc8IRXdy",
+      "path": "/Users/myl/Documents/paper/01-raw/2026-10/Can_Muon_Adapt_Its_Stepsize_Without_Knowing_the_Solution_Distance.pdf",
+      "status": "failed",
+      "detail": "HTTP 403"
+    },
+    {
+      "title": "Zero-order Parameter-free Optimization for LMO-based Methods: Novel Approach for Efficient Fine-tuning",
+      "paper_stem": "Zero_order_Parameter_free_Optimization_for_LMO_based_Methods_Novel_Approach_for_Efficient_Fine_tuning",
+      "month": "2026-10",
+      "source": "openreview",
+      "pdf_url": "https://arxiv.org/pdf/2606.14970v2",
+      "path": "/Users/myl/Documents/paper/01-raw/2026-10/Zero_order_Parameter_free_Optimization_for_LMO_based_Methods_Novel_Approach_for_Efficient_Fine_tuning.pdf",
+      "status": "downloaded",
+      "detail": "660.5 KB"
+    },
+    {
+      "title": "Optimizer Update Geometry: How Parameter Groups Shape Curvature Exposure",
+      "paper_stem": "Optimizer_Update_Geometry_How_Parameter_Groups_Shape_Curvature_Exposure",
+      "month": "2026-10",
+      "source": "openreview",
+      "pdf_url": "https://openreview.net/pdf?id=TaFyEJ4yNr",
+      "path": "/Users/myl/Documents/paper/01-raw/2026-10/Optimizer_Update_Geometry_How_Parameter_Groups_Shape_Curvature_Exposure.pdf",
+      "status": "failed",
+      "detail": "HTTP 403"
+    }
+  ],
+  "initial_attempts": [
+    {
+      "title": "Can Muon Adapt Its Stepsize Without Knowing the Solution Distance?",
+      "paper_stem": "Can_Muon_Adapt_Its_Stepsize_Without_Knowing_the_Solution_Distance",
+      "month": "2026-10",
+      "source": "openreview",
+      "pdf_url": "https://openreview.net/pdf?id=Ghfc8IRXdy",
+      "path": "/Users/myl/Documents/paper/01-raw/2026-10/Can_Muon_Adapt_Its_Stepsize_Without_Knowing_the_Solution_Distance.pdf",
+      "status": "failed",
+      "detail": "HTTP 403"
+    },
+    {
+      "title": "Zero-order Parameter-free Optimization for LMO-based Methods: Novel Approach for Efficient Fine-tuning",
+      "paper_stem": "Zero_order_Parameter_free_Optimization_for_LMO_based_Methods_Novel_Approach_for_Efficient_Fine_tuning",
+      "month": "2026-10",
+      "source": "openreview",
+      "pdf_url": "https://openreview.net/pdf?id=qXVywqIg8G",
+      "path": "/Users/myl/Documents/paper/01-raw/2026-10/Zero_order_Parameter_free_Optimization_for_LMO_based_Methods_Novel_Approach_for_Efficient_Fine_tuning.pdf",
+      "status": "failed",
+      "detail": "HTTP 403"
+    },
+    {
+      "title": "Optimizer Update Geometry: How Parameter Groups Shape Curvature Exposure",
+      "paper_stem": "Optimizer_Update_Geometry_How_Parameter_Groups_Shape_Curvature_Exposure",
+      "month": "2026-10",
+      "source": "openreview",
+      "pdf_url": "https://openreview.net/pdf?id=TaFyEJ4yNr",
+      "path": "/Users/myl/Documents/paper/01-raw/2026-10/Optimizer_Update_Geometry_How_Parameter_Groups_Shape_Curvature_Exposure.pdf",
+      "status": "failed",
+      "detail": "HTTP 403"
+    }
+  ],
+  "recovery": {
+    "papers_dir": "/Users/myl/Documents/paper/01-raw",
+    "month_dir": "/Users/myl/Documents/paper/01-raw/2026-10",
+    "month": "2026-10",
+    "date": "2026-10-26",
+    "requested": 1,
+    "downloaded": 1,
+    "skipped_existing": 0,
+    "failed": 0,
+    "index_updated": [
+      "/Users/myl/Documents/paper/01-raw/index.md",
+      "/Users/myl/Documents/paper/01-raw/2026-10/README.md",
+      "/Users/myl/Documents/paper/02-markdown/index.md",
+      "/Users/myl/Documents/paper/02-markdown/2026-10/README.md",
+      "/Users/myl/Documents/paper/03-notes/index.md",
+      "/Users/myl/Documents/paper/03-notes/2026-10/README.md",
+      "/Users/myl/Documents/paper/06-translation/index.md",
+      "/Users/myl/Documents/paper/06-translation/2026-10/README.md"
+    ],
+    "archived": [
+      {
+        "title": "Zero-order Parameter-free Optimization for LMO-based Methods: Novel Approach for Efficient Fine-tuning",
+        "paper_stem": "Zero_order_Parameter_free_Optimization_for_LMO_based_Methods_Novel_Approach_for_Efficient_Fine_tuning",
+        "month": "2026-10",
+        "source": "openreview",
+        "pdf_url": "https://arxiv.org/pdf/2606.14970v2",
+        "path": "/Users/myl/Documents/paper/01-raw/2026-10/Zero_order_Parameter_free_Optimization_for_LMO_based_Methods_Novel_Approach_for_Efficient_Fine_tuning.pdf",
+        "status": "downloaded",
+        "detail": "660.5 KB"
+      }
+    ]
+  }
+}

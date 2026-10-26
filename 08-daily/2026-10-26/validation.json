@@ -1,0 +1,45 @@
+{
+  "date": "2026-10-26",
+  "status": "passed_with_preexisting_workspace_link_errors",
+  "unique_papers": 29,
+  "known": 18,
+  "candidates": 11,
+  "screening_top_n": 10,
+  "formal_recommendations": 10,
+  "pdf_downloaded": 1,
+  "pdf_failed": 2,
+  "pdf_checks": [
+    {
+      "title": "Zero-order Parameter-free Optimization for LMO-based Methods: Novel Approach for Efficient Fine-tuning",
+      "pages": 29,
+      "bytes": 676308,
+      "sha256": "c4e192a013154e6662bb9a75a2b79cc2b68c714ac56a819b155a8d4318e6e02c",
+      "identity": "首页标题与arXiv编号一致"
+    }
+  ],
+  "daily_local_links_checked": 15,
+  "new_link_errors": 0,
+  "workspace_check": {
+    "preexisting_link_errors": 9,
+    "remaining_link_errors": 9,
+    "new_link_errors": 0,
+    "missing_readme": 0,
+    "month_consistency_errors": 0
+  },
+  "checks": [
+    "前十逐篇摘要复排，分数和screening_rank保持不变",
+    "前三完整中译逐句人工复核，程序检查方法/数字锚点",
+    "AdaNAGED恢复PDF魔数、29页、首页标题与arXiv编号通过；另两篇403如实登记",
+    "附录每篇一次、编号连续；本地链接真实存在",
+    "八份索引各仅新增一行，原有表格行无改写",
+    "全库断链与执行前一致；新增断链0"
+  ],
+  "source_limitations": [
+    "arXiv官方API三次请求依次503、503、429；官方网站全部15关键词高级检索恢复尝试502。arXiv源计数0代表不可用，不代表无相关新论文。",
+    "OpenReview逐15关键词各取首100条，按pdate/cdate/tcdate窗口过滤，合并40条、评分后去重29条；这是有界记录检索，记录日期不能认定首发日期。",
+    "Semantic Scholar年度窗口2025-10-26至2026-09-25两次429，高影响力补充不可用。",
+    "OpenReview前三篇forum页有浏览器验证，notes接口与PDF均403；题目、原始作者与摘要依据可用的官方搜索API原始响应。已额外核对AdaNAGED的arXiv官方摘要。",
+    "AdaNAGED同题同作者同摘要的arXiv版本于2026-06-12首次提交，2026-06-22更新；本轮属于新发现旧文。",
+    "分数与screening_rank保留原值；作者字段将官方搜索响应中的序列化资料解析为fullname，raw_authors保留原始值。"
+  ]
+}

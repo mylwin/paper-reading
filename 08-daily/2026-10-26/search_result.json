@@ -1,0 +1,2830 @@
+{
+  "target_date": "2026-10-26",
+  "date_windows": {
+    "recent_30d": {
+      "start": "2026-09-26",
+      "end": "2026-10-26"
+    },
+    "past_year": {
+      "start": "2025-10-26",
+      "end": "2026-09-25"
+    }
+  },
+  "sources_searched": [
+    "arxiv",
+    "openreview"
+  ],
+  "source_counts": {
+    "arxiv": 0,
+    "openreview": 40
+  },
+  "papers_by_source": {
+    "openreview": 29
+  },
+  "known_dirs": {
+    "papers": "/Users/myl/Documents/paper/01-raw",
+    "notes": "/Users/myl/Documents/paper/03-notes",
+    "daily": "/Users/myl/Documents/paper/08-daily"
+  },
+  "total_recent": 40,
+  "total_hot": 0,
+  "total_unique": 29,
+  "total_known": 18,
+  "total_candidates": 11,
+  "all_papers": [
+    {
+      "title": "LionMuon: Alternating Spectral and Sign Descent for Efficient Training",
+      "source": "openreview",
+      "arxiv_id": "",
+      "venue": "OPT 2026 Poster",
+      "url": "https://openreview.net/forum?id=mL9KXFpqcx",
+      "pdf_url": "https://openreview.net/pdf?id=mL9KXFpqcx",
+      "published": "2026-10-02T06:06:27.812000",
+      "authors": [
+        "Arman Bolatov",
+        "Artem Riabinin",
+        "Nikita Maksimovich Kornilov",
+        "Andrey Veprikov",
+        "Samuel Horváth",
+        "Martin Takáč",
+        "Aleksandr Beznosikov"
+      ],
+      "paper_stem": "LionMuon_Alternating_Spectral_and_Sign_Descent_for_Efficient_Training",
+      "matched_domain": "大模型优化器设计",
+      "matched_keywords": [
+        "optimizer state memory",
+        "Muon",
+        "AdamW"
+      ],
+      "already_known": true,
+      "kb_source": "pdf",
+      "related_papers": [
+        {
+          "title": "LionMuon: Alternating Spectral and Sign Descent for Efficient Training",
+          "stem": "lionmuonalternatingspectralandsigndescentforefficienttraining",
+          "source": "pdf",
+          "path": "/Users/myl/Documents/paper/01-raw/2026-09/LionMuon_Alternating_Spectral_and_Sign_Descent_for_Efficient_Training.pdf",
+          "shared_terms": [
+            "alternating",
+            "descent",
+            "lionmuon",
+            "sign",
+            "spectral",
+            "training"
+          ],
+          "shared_count": 6
+        },
+        {
+          "title": "Beyond the Matrix Sign: Quadratic Spectral Descent",
+          "stem": "beyondthematrixsignquadraticspectraldescent",
+          "source": "pdf",
+          "path": "/Users/myl/Documents/paper/01-raw/2026-09/Beyond_the_Matrix_Sign_Quadratic_Spectral_Descent.pdf",
+          "shared_terms": [
+            "descent",
+            "sign",
+            "spectral"
+          ],
+          "shared_count": 3
+        },
+        {
+          "title": "Anytime Training with Schedule Free Spectral Optimization",
+          "stem": "anytimetrainingwithschedulefreespectraloptimization",
+          "source": "pdf",
+          "path": "/Users/myl/Documents/paper/01-raw/2026-10/Anytime_Training_with_Schedule_Free_Spectral_Optimization.pdf",
+          "shared_terms": [
+            "spectral",
+            "training"
+          ],
+          "shared_count": 2
+        }
+      ],
+      "score": 6.87,
+      "raw_authors": [
+        "{'username': '~Arman_Bolatov1', 'fullname': 'Arman Bolatov', 'institutions': [{'name': 'CISPA Helmholtz Center for Information Security', 'domain': 'cispa.de', 'country': 'DE'}]}",
+        "{'username': '~Artem_Riabinin1', 'fullname': 'Artem Riabinin', 'institutions': [{'name': 'Kandinsky Lab', 'domain': 'kandinskylab.ai', 'country': 'RU'}]}",
+        "{'username': '~Nikita_Maksimovich_Kornilov1', 'fullname': 'Nikita Maksimovich Kornilov', 'institutions': [{'name': 'Applied AI Institute', 'domain': 'applied-ai.ru', 'country': 'RU'}]}",
+        "{'username': '~Andrey_Veprikov1', 'fullname': 'Andrey Veprikov', 'institutions': [{'name': 'Basic Research of Artificial Intelligence Laboratory (BRAIn Lab)', 'domain': 'independent.com', 'country': 'RU'}, {'name': 'Moscow Independent Research Institute of Artificial Intelligence', 'domain': 'miriai.org', 'country': 'RU'}]}",
+        "{'username': '~Samuel_Horváth1', 'fullname': 'Samuel Horváth', 'institutions': [{'name': 'MBZUAI', 'domain': 'mbzuai.ac.ae', 'country': 'AE'}]}",
+        "{'username': '~Martin_Takáč1', 'fullname': 'Martin Takáč', 'institutions': [{'name': 'Mohamed bin Zayed University of Artificial Intelligence', 'domain': 'mbzuai.ac.ae', 'country': 'AE'}]}",
+        "{'username': '~Aleksandr_Beznosikov1', 'fullname': 'Aleksandr Beznosikov', 'institutions': [{'name': 'Moscow Independent Research Institute of Artificial Intelligence', 'domain': 'miriai.org', 'country': 'RU'}, {'name': 'Basic Research of Artificial Intelligence Laboratory (BRAIn Lab)', 'domain': 'independent.com', 'country': 'RU'}]}"
+      ]
+    },
+    {
+      "title": "Monarch–Muon: Structure-Aware Muon for Fast and Memory-Efficient Pretraining",
+      "source": "openreview",
+      "arxiv_id": "",
+      "venue": "OPT 2026 Poster",
+      "url": "https://openreview.net/forum?id=TOUrP5VzcN",
+      "pdf_url": "https://openreview.net/pdf?id=TOUrP5VzcN",
+      "published": "2026-10-02T06:06:27.812000",
+      "authors": [
+        "Kabirov Ruslan",
+        "Alexander Miasnikov",
+        "Dmitrii Vlashchuk",
+        "Gleb Molodtsov",
+        "Vladimir Aletov",
+        "Nail Bashirov",
+        "Aleksandr Shestakov",
+        "Daniil Tikhonov",
+        "Maxim Krutikov",
+        "Aleksandr Beznosikov"
+      ],
+      "paper_stem": "Monarch–Muon_Structure_Aware_Muon_for_Fast_and_Memory_Efficient_Pretraining",
+      "matched_domain": "大模型优化器设计",
+      "matched_keywords": [
+        "optimizer state memory",
+        "Muon",
+        "AdamW"
+      ],
+      "already_known": true,
+      "kb_source": "daily",
+      "related_papers": [
+        {
+          "title": "Monarch–Muon: Structure-Aware Muon for Fast and Memory-Efficient Pretraining",
+          "stem": "monarchmuonstructureawaremuonforfastandmemoryefficientpretraining",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-10-04/search_result.json",
+          "shared_terms": [
+            "memory-efficient",
+            "monarch",
+            "muon",
+            "pretraining",
+            "structure-aware"
+          ],
+          "shared_count": 5
+        },
+        {
+          "title": "Does U-W Ratio Alignment Benefit Muon in LLM Pretraining?",
+          "stem": "doesuwratioalignmentbenefitmuoninllmpretraining",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-10-08/search_result.json",
+          "shared_terms": [
+            "muon",
+            "pretraining"
+          ],
+          "shared_count": 2
+        },
+        {
+          "title": "Memory-Efficient Subspace Optimization with Residual Correction: From Momentum SGD to Muon",
+          "stem": "memoryefficientsubspaceoptimizationwithresidualcorrectionfrommomentumsgdtomuon",
+          "source": "pdf",
+          "path": "/Users/myl/Documents/paper/01-raw/2026-10/Memory_Efficient_Subspace_Optimization_with_Residual_Correction_From_Momentum_SGD_to_Muon.pdf",
+          "shared_terms": [
+            "memory-efficient",
+            "muon"
+          ],
+          "shared_count": 2
+        }
+      ],
+      "score": 6.73,
+      "raw_authors": [
+        "{'username': '~Kabirov_Ruslan1', 'fullname': 'Kabirov Ruslan', 'institutions': [{'name': 'Independent', 'domain': 'independent.com', 'country': 'RU'}]}",
+        "{'username': '~Alexander_Miasnikov1', 'fullname': 'Alexander Miasnikov', 'institutions': [{'name': 'Moscow Independent Research Institute of Artificial Intelligence', 'domain': 'miriai.org', 'country': 'RU'}, {'name': 'Basic Research of Artificial Intelligence Laboratory (BRAIn Lab)', 'domain': 'independent.com', 'country': 'RU'}, {'name': 'Innopolis University', 'domain': 'innopolis.university', 'country': 'RU'}]}",
+        "{'username': '~Dmitrii_Vlashchuk1', 'fullname': 'Dmitrii Vlashchuk', 'institutions': [{'name': 'Moscow Independent Research Institute of Artificial Intelligence', 'domain': 'miriai.org', 'country': 'RU'}, {'name': 'Basic Research of Artificial Intelligence Laboratory (BRAIn Lab)', 'domain': 'independent.com', 'country': 'RU'}]}",
+        "{'username': '~Gleb_Molodtsov1', 'fullname': 'Gleb Molodtsov', 'institutions': [{'name': 'Moscow Independent Research Institute of Artificial Intelligence', 'domain': 'miriai.org', 'country': 'RU'}, {'name': 'Basic Research of Artificial Intelligence Laboratory', 'domain': 'brainlab-ai.com', 'country': 'RU'}]}",
+        "{'username': '~Vladimir_Aletov1', 'fullname': 'Vladimir Aletov', 'institutions': [{'name': 'Moscow Independent Research Institute of Artificial Intelligence', 'domain': 'miriai.org', 'country': 'RU'}]}",
+        "{'username': '~Nail_Bashirov1', 'fullname': 'Nail Bashirov', 'institutions': [{'name': 'Moscow Independent Research Institute of Artificial Intelligence', 'domain': 'miriai.org', 'country': 'RU'}]}",
+        "{'username': '~Aleksandr_Shestakov1', 'fullname': 'Aleksandr Shestakov', 'institutions': [{'name': 'Mohamed bin Zayed University of Artificial Intelligence', 'domain': 'mbzuai.ac.ae', 'country': 'AE'}]}",
+        "{'username': '~Daniil_Tikhonov1', 'fullname': 'Daniil Tikhonov', 'institutions': [{'name': 'Moscow Independent Research Institute of Artificial Intelligence', 'domain': 'miriai.org', 'country': 'RU'}]}",
+        "{'username': '~Maxim_Krutikov1', 'fullname': 'Maxim Krutikov', 'institutions': [{'name': 'Higher School of Economics, Higher School of Economics', 'domain': 'edu.hse.ru', 'country': 'RU'}]}",
+        "{'username': '~Aleksandr_Beznosikov1', 'fullname': 'Aleksandr Beznosikov', 'institutions': [{'name': 'Moscow Independent Research Institute of Artificial Intelligence', 'domain': 'miriai.org', 'country': 'RU'}, {'name': 'Basic Research of Artificial Intelligence Laboratory (BRAIn Lab)', 'domain': 'independent.com', 'country': 'RU'}, {'name': 'Innopolis University', 'domain': 'innopolis.ru', 'country': 'RU'}]}"
+      ]
+    },
+    {
+      "title": "Sign compression for Muon: SignMuon, MuonSign, and the Limits of Error Feedback",
+      "source": "openreview",
+      "arxiv_id": "",
+      "venue": "OPT 2026 Poster",
+      "url": "https://openreview.net/forum?id=AH3QAPtL1Y",
+      "pdf_url": "https://openreview.net/pdf?id=AH3QAPtL1Y",
+      "published": "2026-10-02T06:06:27.812000",
+      "authors": [
+        "Maria Smirnova",
+        "Alexey Kravatskiy"
+      ],
+      "paper_stem": "Sign_compression_for_Muon_SignMuon_MuonSign_and_the_Limits_of_Error_Feedback",
+      "matched_domain": "大模型优化器设计",
+      "matched_keywords": [
+        "SignSGD",
+        "Muon"
+      ],
+      "already_known": true,
+      "kb_source": "pdf",
+      "related_papers": [
+        {
+          "title": "Sign compression for Muon: SignMuon, MuonSign, and the Limits of Error Feedback",
+          "stem": "signcompressionformuonsignmuonmuonsignandthelimitsoferrorfeedback",
+          "source": "pdf",
+          "path": "/Users/myl/Documents/paper/01-raw/2026-10/Sign_compression_for_Muon_SignMuon_MuonSign_and_the_Limits_of_Error_Feedback.pdf",
+          "shared_terms": [
+            "compression",
+            "error",
+            "feedback",
+            "limits",
+            "muon",
+            "muonsign",
+            "sign",
+            "signmuon"
+          ],
+          "shared_count": 8
+        },
+        {
+          "title": "Muon Under Gradient Noise and the Limits of Orthogonalization Near Optima",
+          "stem": "muonundergradientnoiseandthelimitsoforthogonalizationnearoptima",
+          "source": "pdf",
+          "path": "/Users/myl/Documents/paper/01-raw/2026-10/Muon_Under_Gradient_Noise_and_the_Limits_of_Orthogonalization_Near_Optima.pdf",
+          "shared_terms": [
+            "limits",
+            "muon"
+          ],
+          "shared_count": 2
+        },
+        {
+          "title": "Taming Softmax at the Limits of Muon: A Unified Approach through Hilbert Geometry",
+          "stem": "tamingsoftmaxatthelimitsofmuonaunifiedapproachthroughhilbertgeometry",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-10-17/search_result.json",
+          "shared_terms": [
+            "limits",
+            "muon"
+          ],
+          "shared_count": 2
+        }
+      ],
+      "score": 5.77,
+      "raw_authors": [
+        "{'username': '~Maria_Smirnova1', 'fullname': 'Maria Smirnova', 'institutions': [{'name': 'Moscow Independent Research Institute of Artificial Intelligence', 'domain': 'miriai.org', 'country': 'RU'}]}",
+        "{'username': '~Alexey_Kravatskiy1', 'fullname': 'Alexey Kravatskiy', 'institutions': [{'name': 'Moscow Independent Research Institute of Artificial Intelligence', 'domain': 'miriai.org', 'country': 'RU'}]}"
+      ]
+    },
+    {
+      "title": "AF-Muon: An AdamW-Free Muon Optimizer for Tied-Embedding Models",
+      "source": "openreview",
+      "arxiv_id": "",
+      "venue": "OPT 2026 Poster",
+      "url": "https://openreview.net/forum?id=gNbXXHpbcH",
+      "pdf_url": "https://openreview.net/pdf?id=gNbXXHpbcH",
+      "published": "2026-10-02T06:06:27.812000",
+      "authors": [
+        "Arash Lagzian",
+        "Paniz Halvachi",
+        "Junming Zhang",
+        "Zhouhan Lin",
+        "Dianbo Liu"
+      ],
+      "paper_stem": "AF_Muon_An_AdamW_Free_Muon_Optimizer_for_Tied_Embedding_Models",
+      "matched_domain": "大模型优化器设计",
+      "matched_keywords": [
+        "Muon",
+        "AdamW"
+      ],
+      "already_known": true,
+      "kb_source": "daily",
+      "related_papers": [
+        {
+          "title": "AF-Muon: An AdamW-Free Muon Optimizer for Tied-Embedding Models",
+          "stem": "afmuonanadamwfreemuonoptimizerfortiedembeddingmodels",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-10-04/search_result.json",
+          "shared_terms": [
+            "adamw-free",
+            "af-muon",
+            "muon",
+            "optimizer",
+            "tied-embedding"
+          ],
+          "shared_count": 5
+        },
+        {
+          "title": "Accelerating Muon with Spectral Residual Correction",
+          "stem": "acceleratingmuonwithspectralresidualcorrection",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-10-11/search_result.json",
+          "shared_terms": [
+            "muon"
+          ],
+          "shared_count": 1
+        },
+        {
+          "title": "AdaMeZO: Adam-style Zeroth-Order Optimizer for LLM Fine-tuning Without Maintaining the Moments",
+          "stem": "adamezoadamstylezerothorderoptimizerforllmfinetuningwithoutmaintainingthemoments",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-20/search_result.json",
+          "shared_terms": [
+            "optimizer"
+          ],
+          "shared_count": 1
+        }
+      ],
+      "score": 5.57,
+      "raw_authors": [
+        "{'username': '~Arash_Lagzian1', 'fullname': 'Arash Lagzian', 'institutions': [{'name': 'National University of Singapore', 'domain': 'nus.edu.sg', 'country': 'SG'}]}",
+        "{'username': '~Paniz_Halvachi1', 'fullname': 'Paniz Halvachi', 'institutions': [{'name': 'Massachusetts Institute of Technology', 'domain': 'mit.edu', 'country': 'US'}]}",
+        "{'username': '~Junming_Zhang2', 'fullname': 'Junming Zhang', 'institutions': [{'name': 'Shanghai Jiao Tong University', 'domain': 'sjtu.edu.cn', 'country': 'CN'}]}",
+        "{'username': '~Zhouhan_Lin1', 'fullname': 'Zhouhan Lin', 'institutions': [{'name': 'Shanghai Jiao Tong University', 'domain': 'sjtu.edu.cn', 'country': 'CN'}]}",
+        "{'username': '~Dianbo_Liu2', 'fullname': 'Dianbo Liu', 'institutions': [{'name': 'National University of Singapore', 'domain': 'nus.edu.sg', 'country': 'SG'}]}"
+      ]
+    },
+    {
+      "title": "Does Muon's Pretraining Advantage Over Adam Survive Fine-Tuning?",
+      "source": "openreview",
+      "arxiv_id": "",
+      "venue": "OPT 2026 Poster",
+      "url": "https://openreview.net/forum?id=GPYH0UPouD",
+      "pdf_url": "https://openreview.net/pdf?id=GPYH0UPouD",
+      "published": "2026-10-02T06:06:27.812000",
+      "authors": [
+        "Glory Bagai",
+        "Jonas Geiping",
+        "Antonio Orvieto"
+      ],
+      "paper_stem": "Does_Muon's_Pretraining_Advantage_Over_Adam_Survive_Fine_Tuning",
+      "matched_domain": "大模型优化器设计",
+      "matched_keywords": [
+        "Muon",
+        "AdamW"
+      ],
+      "already_known": true,
+      "kb_source": "daily",
+      "related_papers": [
+        {
+          "title": "Does Muon's Pretraining Advantage Over Adam Survive Fine-Tuning?",
+          "stem": "doesmuonspretrainingadvantageoveradamsurvivefinetuning",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-10-11/search_result.json",
+          "shared_terms": [
+            "adam",
+            "advantage",
+            "does",
+            "fine-tuning",
+            "muon's",
+            "over",
+            "pretraining",
+            "survive"
+          ],
+          "shared_count": 8
+        },
+        {
+          "title": "Does U-W Ratio Alignment Benefit Muon in LLM Pretraining?",
+          "stem": "doesuwratioalignmentbenefitmuoninllmpretraining",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-10-08/search_result.json",
+          "shared_terms": [
+            "does",
+            "pretraining"
+          ],
+          "shared_count": 2
+        },
+        {
+          "title": "Pretraining Data Scale Reverses the Muon-AdamW Fine-Tuning Gap",
+          "stem": "pretrainingdatascalereversesthemuonadamwfinetuninggap",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-10-04/search_result.json",
+          "shared_terms": [
+            "fine-tuning",
+            "pretraining"
+          ],
+          "shared_count": 2
+        }
+      ],
+      "score": 5.57,
+      "raw_authors": [
+        "{'username': '~Glory_Bagai1', 'fullname': 'Glory Bagai', 'institutions': [{'name': 'Federal University of Technology, Minna', 'domain': 'futminna.edu.ng', 'country': 'NG'}]}",
+        "{'username': '~Jonas_Geiping1', 'fullname': 'Jonas Geiping', 'institutions': [{'name': 'ELLIS Institute Tübingen', 'domain': 'tue.ellis.eu', 'country': 'DE'}]}",
+        "{'username': '~Antonio_Orvieto3', 'fullname': 'Antonio Orvieto', 'institutions': [{'name': 'ELLIS Institute Tübingen, Max Planck Institute for Intelligent Systems, Tübingen AI Center, Tübingen, Germany', 'domain': 'tue.ellis.eu', 'country': 'DE'}]}"
+      ]
+    },
+    {
+      "title": "Does U-W Ratio Alignment Benefit Muon in LLM Pretraining?",
+      "source": "openreview",
+      "arxiv_id": "",
+      "venue": "Mathematical Foundations and Operational Integration of ML for Uncertainty-Aware Decision-Making Poster",
+      "url": "https://openreview.net/forum?id=HSypqovmmM",
+      "pdf_url": "/pdf/2222137a4dfbd484c6318dcea2792f415740703e.pdf",
+      "published": "2026-10-05T05:16:09.744000",
+      "authors": [
+        "Xuhe Zhang",
+        "X.Y. Han"
+      ],
+      "paper_stem": "Does_U_W_Ratio_Alignment_Benefit_Muon_in_LLM_Pretraining",
+      "matched_domain": "大模型优化器设计",
+      "matched_keywords": [
+        "optimizer design",
+        "Muon"
+      ],
+      "already_known": true,
+      "kb_source": "daily",
+      "related_papers": [
+        {
+          "title": "Does U-W Ratio Alignment Benefit Muon in LLM Pretraining?",
+          "stem": "doesuwratioalignmentbenefitmuoninllmpretraining",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-10-08/search_result.json",
+          "shared_terms": [
+            "alignment",
+            "benefit",
+            "does",
+            "llm",
+            "muon",
+            "pretraining",
+            "ratio",
+            "u-w"
+          ],
+          "shared_count": 8
+        },
+        {
+          "title": "MeqMuon: Matrix-Equilibrating Muon for LLM Pretraining",
+          "stem": "meqmuonmatrixequilibratingmuonforllmpretraining",
+          "source": "pdf",
+          "path": "/Users/myl/Documents/paper/01-raw/2026-10/MeqMuon_Matrix_Equilibrating_Muon_for_LLM_Pretraining.pdf",
+          "shared_terms": [
+            "llm",
+            "muon",
+            "pretraining"
+          ],
+          "shared_count": 3
+        },
+        {
+          "title": "Muon Sublates the Edge of Stability in LLM Pretraining",
+          "stem": "muonsublatestheedgeofstabilityinllmpretraining",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-10-13/search_result.json",
+          "shared_terms": [
+            "llm",
+            "muon",
+            "pretraining"
+          ],
+          "shared_count": 3
+        }
+      ],
+      "score": 5.37,
+      "raw_authors": [
+        "{'username': '~Xuhe_Zhang1', 'fullname': 'Xuhe Zhang', 'institutions': [{'name': 'University of Pennsylvania', 'domain': 'sas.upenn.edu', 'country': 'US'}]}",
+        "{'username': '~X.Y._Han1', 'fullname': 'X.Y. Han', 'institutions': [{'name': 'University of Chicago', 'domain': 'uchicago.edu', 'country': 'US'}]}"
+      ]
+    },
+    {
+      "title": "Closure Masks for Hardware-Compatible 2:4 Sparse Muon",
+      "source": "openreview",
+      "arxiv_id": "",
+      "venue": "OPT 2026 Poster",
+      "url": "https://openreview.net/forum?id=2UXrES8YZk",
+      "pdf_url": "https://openreview.net/pdf?id=2UXrES8YZk",
+      "published": "2026-10-02T06:06:27.812000",
+      "authors": [
+        "Doyoon Kim",
+        "Namhoon Lee"
+      ],
+      "paper_stem": "Closure_Masks_for_Hardware_Compatible_2_4_Sparse_Muon",
+      "matched_domain": "大模型优化器设计",
+      "matched_keywords": [
+        "Muon",
+        "AdamW"
+      ],
+      "already_known": true,
+      "kb_source": "daily",
+      "related_papers": [
+        {
+          "title": "Closure Masks for Hardware-Compatible 2:4 Sparse Muon",
+          "stem": "closuremasksforhardwarecompatible24sparsemuon",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-10-20/search_result.json",
+          "shared_terms": [
+            "closure",
+            "hardware-compatible",
+            "masks",
+            "muon",
+            "sparse"
+          ],
+          "shared_count": 5
+        },
+        {
+          "title": "Accelerating Muon with Spectral Residual Correction",
+          "stem": "acceleratingmuonwithspectralresidualcorrection",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-10-11/search_result.json",
+          "shared_terms": [
+            "muon"
+          ],
+          "shared_count": 1
+        },
+        {
+          "title": "A Closed-Form Formula for Consistent Lipschitz Regression on Metric Spaces with Sparse Neural Network Realizations",
+          "stem": "aclosedformformulaforconsistentlipschitzregressiononmetricspaceswithsparseneuralnetworkrealizations",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-24/search_result.json",
+          "shared_terms": [
+            "sparse"
+          ],
+          "shared_count": 1
+        }
+      ],
+      "score": 5.23,
+      "raw_authors": [
+        "{'username': '~Doyoon_Kim3', 'fullname': 'Doyoon Kim', 'institutions': [{'name': 'Pohang University of Science and Technology', 'domain': 'postech.ac.kr', 'country': 'KR'}]}",
+        "{'username': '~Namhoon_Lee1', 'fullname': 'Namhoon Lee', 'institutions': [{'name': 'Pohang University of Science and Technology', 'domain': 'postech.ac.kr', 'country': 'KR'}]}"
+      ]
+    },
+    {
+      "title": "When Does Muon Actually Win? A Paired Data-, Time-, and Tuning-Budget Benchmark",
+      "source": "openreview",
+      "arxiv_id": "",
+      "venue": "OPT 2026 Poster",
+      "url": "https://openreview.net/forum?id=x2Tt4fuXMI",
+      "pdf_url": "https://openreview.net/pdf?id=x2Tt4fuXMI",
+      "published": "2026-10-02T06:06:27.812000",
+      "authors": [
+        "Mushir Akhtar",
+        "Hazem N. Nounou",
+        "Majdi Mansouri",
+        "Mohamed N. Nounou"
+      ],
+      "paper_stem": "When_Does_Muon_Actually_Win_A_Paired_Data_Time_and_Tuning_Budget_Benchmark",
+      "matched_domain": "大模型优化器设计",
+      "matched_keywords": [
+        "Muon",
+        "AdamW"
+      ],
+      "already_known": true,
+      "kb_source": "daily",
+      "related_papers": [
+        {
+          "title": "When Does Muon Actually Win? A Paired Data-, Time-, and Tuning-Budget Benchmark",
+          "stem": "whendoesmuonactuallywinapaireddatatimeandtuningbudgetbenchmark",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-10-16/search_result.json",
+          "shared_terms": [
+            "actually",
+            "benchmark",
+            "data-",
+            "does",
+            "muon",
+            "paired",
+            "time-",
+            "tuning-budget",
+            "when",
+            "win"
+          ],
+          "shared_count": 10
+        },
+        {
+          "title": "Does Muon Need Fine-Grained Spectral Shaping?",
+          "stem": "doesmuonneedfinegrainedspectralshaping",
+          "source": "pdf",
+          "path": "/Users/myl/Documents/paper/01-raw/2026-10/Does_Muon_Need_Fine_Grained_Spectral_Shaping.pdf",
+          "shared_terms": [
+            "does",
+            "muon"
+          ],
+          "shared_count": 2
+        },
+        {
+          "title": "Does U-W Ratio Alignment Benefit Muon in LLM Pretraining?",
+          "stem": "doesuwratioalignmentbenefitmuoninllmpretraining",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-10-08/search_result.json",
+          "shared_terms": [
+            "does",
+            "muon"
+          ],
+          "shared_count": 2
+        }
+      ],
+      "score": 5.23,
+      "raw_authors": [
+        "{'username': '~Mushir_Akhtar1', 'fullname': 'Mushir Akhtar', 'institutions': []}",
+        "{'username': '~Hazem_N._Nounou1', 'fullname': 'Hazem N. Nounou', 'institutions': [{'name': 'Hamad Bin Khalifa University', 'domain': 'hbku.edu.qa', 'country': 'QA'}]}",
+        "{'username': '~Majdi_Mansouri1', 'fullname': 'Majdi Mansouri', 'institutions': [{'name': 'Sultan Qaboos University', 'domain': 'squ.edu.om', 'country': 'OM'}]}",
+        "{'username': '~Mohamed_N._Nounou1', 'fullname': 'Mohamed N. Nounou', 'institutions': [{'name': 'Hamad Bin Khalifa University', 'domain': 'hbku.edu.qa', 'country': 'QA'}]}"
+      ]
+    },
+    {
+      "title": "Muon Under Covariate Shift: Spectral Learning and Temporal Stability",
+      "source": "openreview",
+      "arxiv_id": "",
+      "venue": "OPT 2026 Poster",
+      "url": "https://openreview.net/forum?id=cEWt9vXlng",
+      "pdf_url": "https://openreview.net/pdf?id=cEWt9vXlng",
+      "published": "2026-10-02T06:06:27.812000",
+      "authors": [
+        "Dmitrii Feoktistov",
+        "Andrey Veprikov",
+        "Aleksandr Beznosikov"
+      ],
+      "paper_stem": "Muon_Under_Covariate_Shift_Spectral_Learning_and_Temporal_Stability",
+      "matched_domain": "大模型优化器设计",
+      "matched_keywords": [
+        "Muon",
+        "AdamW"
+      ],
+      "already_known": true,
+      "kb_source": "daily",
+      "related_papers": [
+        {
+          "title": "Muon Under Covariate Shift: Spectral Learning and Temporal Stability",
+          "stem": "muonundercovariateshiftspectrallearningandtemporalstability",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-10-20/search_result.json",
+          "shared_terms": [
+            "covariate",
+            "muon",
+            "shift",
+            "spectral",
+            "stability",
+            "temporal",
+            "under"
+          ],
+          "shared_count": 7
+        },
+        {
+          "title": "Accelerating Muon with Spectral Residual Correction",
+          "stem": "acceleratingmuonwithspectralresidualcorrection",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-10-11/search_result.json",
+          "shared_terms": [
+            "muon",
+            "spectral"
+          ],
+          "shared_count": 2
+        },
+        {
+          "title": "Does Muon Need Fine-Grained Spectral Shaping?",
+          "stem": "doesmuonneedfinegrainedspectralshaping",
+          "source": "pdf",
+          "path": "/Users/myl/Documents/paper/01-raw/2026-10/Does_Muon_Need_Fine_Grained_Spectral_Shaping.pdf",
+          "shared_terms": [
+            "muon",
+            "spectral"
+          ],
+          "shared_count": 2
+        }
+      ],
+      "score": 5.17,
+      "raw_authors": [
+        "{'username': '~Feoktistov_Dmitrii1', 'fullname': 'Dmitrii Feoktistov', 'institutions': [{'name': 'Yandex', 'domain': 'yandex-team.ru', 'country': 'RU'}, {'name': 'Lomonosov Moscow State University', 'domain': 'msu.ru', 'country': 'RU'}]}",
+        "{'username': '~Andrey_Veprikov1', 'fullname': 'Andrey Veprikov', 'institutions': [{'name': 'Mohamed bin Zayed University of Artificial Intelligence', 'domain': 'mbzuai.ac.ae', 'country': 'AE'}]}",
+        "{'username': '~Aleksandr_Beznosikov1', 'fullname': 'Aleksandr Beznosikov', 'institutions': [{'name': 'Basic Research of Artificial Intelligence Laboratory (BRAIn Lab)', 'domain': 'independent.com', 'country': 'RU'}]}"
+      ]
+    },
+    {
+      "title": "Muon Moves the Boundary of Transformer Trainability",
+      "source": "openreview",
+      "arxiv_id": "",
+      "venue": "DynaFront@NeurIPS26 Poster",
+      "url": "https://openreview.net/forum?id=almDOnmgmt",
+      "pdf_url": "/pdf/b22507a8349cf9b0c02da297dda460bb365d2c11.pdf",
+      "published": "2026-10-15T02:30:11.388000",
+      "authors": [
+        "Srinivas Raghav V C"
+      ],
+      "paper_stem": "Muon_Moves_the_Boundary_of_Transformer_Trainability",
+      "matched_domain": "大模型优化器设计",
+      "matched_keywords": [
+        "Muon",
+        "AdamW"
+      ],
+      "already_known": true,
+      "kb_source": "daily",
+      "related_papers": [
+        {
+          "title": "Muon Moves the Boundary of Transformer Trainability",
+          "stem": "muonmovestheboundaryoftransformertrainability",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-10-20/search_result.json",
+          "shared_terms": [
+            "boundary",
+            "moves",
+            "muon",
+            "trainability",
+            "transformer"
+          ],
+          "shared_count": 5
+        },
+        {
+          "title": "Accelerating Muon with Spectral Residual Correction",
+          "stem": "acceleratingmuonwithspectralresidualcorrection",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-10-11/search_result.json",
+          "shared_terms": [
+            "muon"
+          ],
+          "shared_count": 1
+        },
+        {
+          "title": "AF-Muon: An AdamW-Free Muon Optimizer for Tied-Embedding Models",
+          "stem": "afmuonanadamwfreemuonoptimizerfortiedembeddingmodels",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-10-04/search_result.json",
+          "shared_terms": [
+            "muon"
+          ],
+          "shared_count": 1
+        }
+      ],
+      "score": 5.03,
+      "raw_authors": [
+        "{'username': '~Srinivas_Raghav_V_C1', 'fullname': 'Srinivas Raghav V C', 'institutions': [{'name': 'Indian Institute of Information Technology Kottayam, Indian Institute of Information Technology Kottayam', 'domain': 'iiitkottayam.ac.in', 'country': 'IN'}]}"
+      ]
+    },
+    {
+      "title": "LoRA-TSD: Tangent-Space Spectral Descent for LoRA via Muon-Style Updates",
+      "source": "openreview",
+      "arxiv_id": "",
+      "venue": "OPT 2026 Poster",
+      "url": "https://openreview.net/forum?id=BuBnVFam3k",
+      "pdf_url": "https://openreview.net/pdf?id=BuBnVFam3k",
+      "published": "2026-10-02T06:06:27.812000",
+      "authors": [
+        "Dmitrii Andriianov",
+        "Andrey Veprikov",
+        "Aleksandr Beznosikov"
+      ],
+      "paper_stem": "LoRA_TSD_Tangent_Space_Spectral_Descent_for_LoRA_via_Muon_Style_Updates",
+      "matched_domain": "大模型优化器设计",
+      "matched_keywords": [
+        "Muon"
+      ],
+      "already_known": true,
+      "kb_source": "daily",
+      "related_papers": [
+        {
+          "title": "LoRA-TSD: Tangent-Space Spectral Descent for LoRA via Muon-Style Updates",
+          "stem": "loratsdtangentspacespectraldescentforloraviamuonstyleupdates",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-17/search_result.json",
+          "shared_terms": [
+            "descent",
+            "lora",
+            "lora-tsd",
+            "muon-style",
+            "spectral",
+            "tangent-space",
+            "updates"
+          ],
+          "shared_count": 7
+        },
+        {
+          "title": "Beyond the Matrix Sign: Quadratic Spectral Descent",
+          "stem": "beyondthematrixsignquadraticspectraldescent",
+          "source": "pdf",
+          "path": "/Users/myl/Documents/paper/01-raw/2026-09/Beyond_the_Matrix_Sign_Quadratic_Spectral_Descent.pdf",
+          "shared_terms": [
+            "descent",
+            "spectral"
+          ],
+          "shared_count": 2
+        },
+        {
+          "title": "LionMuon: Alternating Spectral and Sign Descent for Efficient Training",
+          "stem": "lionmuonalternatingspectralandsigndescentforefficienttraining",
+          "source": "pdf",
+          "path": "/Users/myl/Documents/paper/01-raw/2026-09/LionMuon_Alternating_Spectral_and_Sign_Descent_for_Efficient_Training.pdf",
+          "shared_terms": [
+            "descent",
+            "spectral"
+          ],
+          "shared_count": 2
+        }
+      ],
+      "score": 4.87,
+      "raw_authors": [
+        "{'username': '~Dmitrii_Andriianov1', 'fullname': 'Dmitrii Andriianov', 'institutions': [{'name': 'Moscow Independent Research Institute of Artificial Intelligence', 'domain': 'miriai.org', 'country': 'RU'}]}",
+        "{'username': '~Andrey_Veprikov1', 'fullname': 'Andrey Veprikov', 'institutions': [{'name': 'Moscow Independent Research Institute of Artificial Intelligence', 'domain': 'miriai.org', 'country': 'RU'}]}",
+        "{'username': '~Aleksandr_Beznosikov1', 'fullname': 'Aleksandr Beznosikov', 'institutions': [{'name': 'Moscow Independent Research Institute of Artificial Intelligence', 'domain': 'miriai.org', 'country': 'RU'}]}"
+      ]
+    },
+    {
+      "title": "Optimizer Memory Schedules for Outscaling the Overtraining Axis",
+      "source": "openreview",
+      "arxiv_id": "",
+      "venue": "OPT 2026 Poster",
+      "url": "https://openreview.net/forum?id=oaRJuCrcCO",
+      "pdf_url": "https://openreview.net/pdf?id=oaRJuCrcCO",
+      "published": "2026-10-02T06:06:27.812000",
+      "authors": [
+        "Katie Everett",
+        "Shikai Qiu"
+      ],
+      "paper_stem": "Optimizer_Memory_Schedules_for_Outscaling_the_Overtraining_Axis",
+      "matched_domain": "大模型优化器设计",
+      "matched_keywords": [
+        "Muon",
+        "AdamW"
+      ],
+      "already_known": true,
+      "kb_source": "daily",
+      "related_papers": [
+        {
+          "title": "Optimizer Memory Schedules for Outscaling the Overtraining Axis",
+          "stem": "optimizermemoryschedulesforoutscalingtheovertrainingaxis",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-24/search_result.json",
+          "shared_terms": [
+            "axis",
+            "memory",
+            "optimizer",
+            "outscaling",
+            "overtraining",
+            "schedules"
+          ],
+          "shared_count": 6
+        },
+        {
+          "title": "Minimal-State Optimization: How Little Optimizer Memory Does AdamW’s Accuracy Need?",
+          "stem": "minimalstateoptimizationhowlittleoptimizermemorydoesadamwsaccuracyneed",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-10-09/search_result.json",
+          "shared_terms": [
+            "memory",
+            "optimizer"
+          ],
+          "shared_count": 2
+        },
+        {
+          "title": "Reset or Reuse? Understanding How Optimizer Memory Shapes Continual Mixture-of-Experts Learning",
+          "stem": "resetorreuseunderstandinghowoptimizermemoryshapescontinualmixtureofexpertslearning",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-10-09/search_result.json",
+          "shared_terms": [
+            "memory",
+            "optimizer"
+          ],
+          "shared_count": 2
+        }
+      ],
+      "score": 4.83,
+      "raw_authors": [
+        "{'username': '~Katie_E_Everett1', 'fullname': 'Katie Everett', 'institutions': [{'name': 'Massachusetts Institute of Technology', 'domain': 'mit.edu', 'country': 'US'}]}",
+        "{'username': '~Shikai_Qiu1', 'fullname': 'Shikai Qiu', 'institutions': [{'name': 'New York University', 'domain': 'nyu.edu'}]}"
+      ]
+    },
+    {
+      "title": "AdasignSGD: Turning 1-Bit Worker Votes into Adaptive Updates",
+      "source": "openreview",
+      "arxiv_id": "",
+      "venue": "OPT 2026 Poster",
+      "url": "https://openreview.net/forum?id=GmTQ4EumjJ",
+      "pdf_url": "https://openreview.net/pdf?id=GmTQ4EumjJ",
+      "published": "2026-10-02T06:06:27.812000",
+      "authors": [
+        "Xiaoyuan Liang",
+        "Sebastian Loeschcke",
+        "Thorsten Kurth",
+        "Mads Toftrup",
+        "Boris Bonev",
+        "Anima Anandkumar"
+      ],
+      "paper_stem": "AdasignSGD_Turning_1_Bit_Worker_Votes_into_Adaptive_Updates",
+      "matched_domain": "大模型优化器设计",
+      "matched_keywords": [
+        "SignSGD",
+        "AdamW"
+      ],
+      "already_known": true,
+      "kb_source": "daily",
+      "related_papers": [
+        {
+          "title": "AdasignSGD: Turning 1-Bit Worker Votes into Adaptive Updates",
+          "stem": "adasignsgdturning1bitworkervotesintoadaptiveupdates",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-10-20/search_result.json",
+          "shared_terms": [
+            "adaptive",
+            "adasignsgd",
+            "bit",
+            "into",
+            "turning",
+            "updates",
+            "votes",
+            "worker"
+          ],
+          "shared_count": 8
+        },
+        {
+          "title": "ABrA-GD: Adaptive Bregman Accelerated Gradient Descent for Relatively Smooth and (Strongly-)Convex Optimization",
+          "stem": "abragdadaptivebregmanacceleratedgradientdescentforrelativelysmoothandstronglyconvexoptimization",
+          "source": "pdf",
+          "path": "/Users/myl/Documents/paper/01-raw/2026-10/ABrA_GD_Adaptive_Bregman_Accelerated_Gradient_Descent_for_Relatively_Smooth_and_(Strongly_)Convex_Optimization.pdf",
+          "shared_terms": [
+            "adaptive"
+          ],
+          "shared_count": 1
+        },
+        {
+          "title": "Adaptive Forgetting for Nonstationary Optimization: Towards Robust EEG Decoding",
+          "stem": "adaptiveforgettingfornonstationaryoptimizationtowardsrobusteegdecoding",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-10-19/search_result.json",
+          "shared_terms": [
+            "adaptive"
+          ],
+          "shared_count": 1
+        }
+      ],
+      "score": 4.83,
+      "raw_authors": [
+        "{'username': '~Xiaoyuan_Liang2', 'fullname': 'Xiaoyuan Liang', 'institutions': [{'name': 'California Institute of Technology', 'domain': 'caltech.edu', 'country': 'US'}]}",
+        "{'username': '~Sebastian_Loeschcke1', 'fullname': 'Sebastian Loeschcke', 'institutions': [{'name': 'University of Copenhagen', 'domain': 'diku.dk', 'country': 'DK'}]}",
+        "{'username': '~Thorsten_Kurth1', 'fullname': 'Thorsten Kurth', 'institutions': [{'name': 'NVIDIA', 'domain': 'nvidia.com', 'country': 'CH'}]}",
+        "{'username': '~Mads_Toftrup1', 'fullname': 'Mads Toftrup', 'institutions': [{'name': 'Aarhus University', 'domain': 'cs.au.dk', 'country': 'DK'}]}",
+        "{'username': '~Boris_Bonev1', 'fullname': 'Boris Bonev', 'institutions': [{'name': 'NVIDIA', 'domain': 'nvidia.com', 'country': 'CH'}]}",
+        "{'username': '~Anima_Anandkumar1', 'fullname': 'Anima Anandkumar', 'institutions': [{'name': 'California Institute of Technology', 'domain': 'caltech.edu', 'country': 'US'}]}"
+      ]
+    },
+    {
+      "title": "Muon+: Towards More Effective Muon via One Additional Normalization Step for LLM Pre-training",
+      "source": "openreview",
+      "arxiv_id": "",
+      "venue": "ACL ARR 2026 October Submission",
+      "url": "https://openreview.net/forum?id=fC4h4QceUh",
+      "pdf_url": "/pdf/7a0ed88e60559347f14d3cc00924c2d758ef3232.pdf",
+      "published": "2026-10-12T10:11:43.582000",
+      "authors": [],
+      "paper_stem": "Muon+_Towards_More_Effective_Muon_via_One_Additional_Normalization_Step_for_LLM_Pre_training",
+      "matched_domain": "大模型优化器设计",
+      "matched_keywords": [
+        "Muon"
+      ],
+      "already_known": true,
+      "kb_source": "daily",
+      "related_papers": [
+        {
+          "title": "Muon+: Towards More Effective Muon via One Additional Normalization Step for LLM Pre-training",
+          "stem": "muontowardsmoreeffectivemuonviaoneadditionalnormalizationstepforllmpretraining",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-10-20/search_result.json",
+          "shared_terms": [
+            "additional",
+            "effective",
+            "llm",
+            "more",
+            "muon",
+            "normalization",
+            "one",
+            "pre-training",
+            "step"
+          ],
+          "shared_count": 9
+        },
+        {
+          "title": "Does U-W Ratio Alignment Benefit Muon in LLM Pretraining?",
+          "stem": "doesuwratioalignmentbenefitmuoninllmpretraining",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-10-08/search_result.json",
+          "shared_terms": [
+            "llm",
+            "muon"
+          ],
+          "shared_count": 2
+        },
+        {
+          "title": "FedSubMuon: Communication-Efficient Federated LLM Fine-Tuning via Structured Subspace Muon",
+          "stem": "fedsubmuoncommunicationefficientfederatedllmfinetuningviastructuredsubspacemuon",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-18/search_result.json",
+          "shared_terms": [
+            "llm",
+            "muon"
+          ],
+          "shared_count": 2
+        }
+      ],
+      "score": 4.67
+    },
+    {
+      "title": "Muon-OGD: Muon-based Spectral Orthogonal Gradient Projection for LLM Continual Learning",
+      "source": "openreview",
+      "arxiv_id": "",
+      "venue": "CL4FMAgents @ NeurIPS 2026",
+      "url": "https://openreview.net/forum?id=jRvd5To0aR",
+      "pdf_url": "/pdf/069159be5682b3cc1d8cdbb018544a793ad2dbd0.pdf",
+      "published": "2026-10-04T22:50:00.254000",
+      "authors": [
+        "binghang lu",
+        "Zheyuan Deng",
+        "Runyu Zhang",
+        "Bing Hu",
+        "Yunhan Zhao",
+        "Yuan Tian",
+        "Changhong Mou",
+        "Guang Lin",
+        "Xiaomin Li"
+      ],
+      "paper_stem": "Muon_OGD_Muon_based_Spectral_Orthogonal_Gradient_Projection_for_LLM_Continual_Learning",
+      "matched_domain": "大模型优化器设计",
+      "matched_keywords": [
+        "Muon"
+      ],
+      "already_known": false,
+      "kb_source": "",
+      "related_papers": [
+        {
+          "title": "CAST: History-Adaptive Spectral Clipping for LLM Pretraining",
+          "stem": "casthistoryadaptivespectralclippingforllmpretraining",
+          "source": "pdf",
+          "path": "/Users/myl/Documents/paper/01-raw/2026-10/CAST_History_Adaptive_Spectral_Clipping_for_LLM_Pretraining.pdf",
+          "shared_terms": [
+            "llm",
+            "spectral"
+          ],
+          "shared_count": 2
+        },
+        {
+          "title": "HELENE Hessian Layer wise Clipping and Gradient Annealing for Accelerating Fine tuning LLM with Zeroth order Optimizatio",
+          "stem": "helenehessianlayerwiseclippingandgradientannealingforacceleratingfinetuningllmwithzerothorderoptimizatio",
+          "source": "pdf",
+          "path": "/Users/myl/Documents/paper/01-raw/2026-09/HELENE_Hessian_Layer_wise_Clipping_and_Gradient_Annealing_for_Accelerating_Fine_tuning_LLM_with_Zeroth_order_Optimizatio.pdf",
+          "shared_terms": [
+            "gradient",
+            "llm"
+          ],
+          "shared_count": 2
+        },
+        {
+          "title": "ORCA: The Annealed Spectral Conditioning Optimizer for Faster, Better LLM Training",
+          "stem": "orcatheannealedspectralconditioningoptimizerforfasterbetterllmtraining",
+          "source": "pdf",
+          "path": "/Users/myl/Documents/paper/01-raw/2026-10/ORCA_The_Annealed_Spectral_Conditioning_Optimizer_for_Faster_Better_LLM_Training.pdf",
+          "shared_terms": [
+            "llm",
+            "spectral"
+          ],
+          "shared_count": 2
+        }
+      ],
+      "score": 4.13,
+      "raw_authors": [
+        "{'username': '~binghang_lu1', 'fullname': 'binghang lu', 'institutions': [{'name': 'Purdue University', 'domain': 'purdue.edu', 'country': 'US'}]}",
+        "{'username': '~Zheyuan_Deng2', 'fullname': 'Zheyuan Deng', 'institutions': [{'name': 'Brown University', 'domain': 'brown.edu', 'country': 'US'}]}",
+        "{'username': '~Runyu_Zhang1', 'fullname': 'Runyu Zhang', 'institutions': []}",
+        "{'username': '~Bing_Hu7', 'fullname': 'Bing Hu', 'institutions': [{'name': 'Google', 'domain': 'google.com', 'country': 'US'}]}",
+        "{'username': '~Yunhan_Zhao1', 'fullname': 'Yunhan Zhao', 'institutions': [{'name': 'Google', 'domain': 'google.com', 'country': 'US'}]}",
+        "{'username': '~Yuan_Tian31', 'fullname': 'Yuan Tian', 'institutions': [{'name': 'Research Lab', 'domain': 'pg.com', 'country': 'US'}]}",
+        "{'username': '~Changhong_Mou1', 'fullname': 'Changhong Mou', 'institutions': [{'name': 'Utah State University', 'domain': 'usu.edu', 'country': 'US'}]}",
+        "{'username': '~Guang_Lin1', 'fullname': 'Guang Lin', 'institutions': [{'name': 'Purdue University', 'domain': 'purdue.edu', 'country': 'US'}]}",
+        "{'username': '~Xiaomin_Li3', 'fullname': 'Xiaomin Li', 'institutions': [{'name': 'Microsoft', 'domain': 'microsoft.com', 'country': 'US'}]}"
+      ]
+    },
+    {
+      "title": "Optimizer Update Geometry: How Parameter Groups Shape Curvature Exposure",
+      "source": "openreview",
+      "arxiv_id": "",
+      "venue": "OPT 2026 Poster",
+      "url": "https://openreview.net/forum?id=TaFyEJ4yNr",
+      "pdf_url": "https://openreview.net/pdf?id=TaFyEJ4yNr",
+      "published": "2026-10-02T06:06:27.812000",
+      "authors": [
+        "Georg Tirpitz",
+        "Antonio Orvieto"
+      ],
+      "paper_stem": "Optimizer_Update_Geometry_How_Parameter_Groups_Shape_Curvature_Exposure",
+      "matched_domain": "大模型优化器设计",
+      "matched_keywords": [
+        "Muon",
+        "AdamW"
+      ],
+      "already_known": false,
+      "kb_source": "",
+      "related_papers": [
+        {
+          "title": "OptiSelect: How does the Optimizer Shape Data Curriculum?",
+          "stem": "optiselecthowdoestheoptimizershapedatacurriculum",
+          "source": "pdf",
+          "path": "/Users/myl/Documents/paper/01-raw/2026-10/OptiSelect_How_does_the_Optimizer_Shape_Data_Curriculum.pdf",
+          "shared_terms": [
+            "how",
+            "optimizer",
+            "shape"
+          ],
+          "shared_count": 3
+        },
+        {
+          "title": "How Inner Optimizers Shape Replica Scaling",
+          "stem": "howinneroptimizersshapereplicascaling",
+          "source": "pdf",
+          "path": "/Users/myl/Documents/paper/01-raw/2026-10/How_Inner_Optimizers_Shape_Replica_Scaling.pdf",
+          "shared_terms": [
+            "how",
+            "shape"
+          ],
+          "shared_count": 2
+        },
+        {
+          "title": "Minimal-State Optimization: How Little Optimizer Memory Does AdamW’s Accuracy Need?",
+          "stem": "minimalstateoptimizationhowlittleoptimizermemorydoesadamwsaccuracyneed",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-10-09/search_result.json",
+          "shared_terms": [
+            "how",
+            "optimizer"
+          ],
+          "shared_count": 2
+        }
+      ],
+      "score": 4.1,
+      "raw_authors": [
+        "{'username': '~Georg_Tirpitz1', 'fullname': 'Georg Tirpitz', 'institutions': [{'name': 'Eberhard-Karls-Universität Tübingen', 'domain': 'uni-tuebingen.de', 'country': 'DE'}]}",
+        "{'username': '~Antonio_Orvieto3', 'fullname': 'Antonio Orvieto', 'institutions': [{'name': 'ELLIS Institute Tübingen, Max Planck Institute for Intelligent Systems, Tübingen AI Center, Tübingen, Germany', 'domain': 'tue.ellis.eu', 'country': 'DE'}]}"
+      ]
+    },
+    {
+      "title": "Zero-order Parameter-free Optimization for LMO-based Methods: Novel Approach for Efficient Fine-tuning",
+      "source": "openreview",
+      "arxiv_id": "",
+      "venue": "OPT 2026 Poster",
+      "url": "https://openreview.net/forum?id=qXVywqIg8G",
+      "pdf_url": "https://openreview.net/pdf?id=qXVywqIg8G",
+      "published": "2026-10-02T06:06:27.812000",
+      "authors": [
+        "Dmitriy Bystrov",
+        "Daniil Medyakov",
+        "Dmitry Bylinkin",
+        "Aleksandr Beznosikov"
+      ],
+      "paper_stem": "Zero_order_Parameter_free_Optimization_for_LMO_based_Methods_Novel_Approach_for_Efficient_Fine_tuning",
+      "matched_domain": "大模型优化器设计",
+      "matched_keywords": [
+        "parameter-free optimization"
+      ],
+      "already_known": false,
+      "kb_source": "",
+      "related_papers": [
+        {
+          "title": "AdaMeZO: Adam-style Zeroth-Order Optimizer for LLM Fine-tuning Without Maintaining the Moments",
+          "stem": "adamezoadamstylezerothorderoptimizerforllmfinetuningwithoutmaintainingthemoments",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-20/search_result.json",
+          "shared_terms": [
+            "fine-tuning"
+          ],
+          "shared_count": 1
+        },
+        {
+          "title": "AGZO: Activation-Guided Zeroth-Order Optimization for LLM Fine-Tuning",
+          "stem": "agzoactivationguidedzerothorderoptimizationforllmfinetuning",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-20/search_result.json",
+          "shared_terms": [
+            "fine-tuning"
+          ],
+          "shared_count": 1
+        },
+        {
+          "title": "A Parameter-Free Adaptive Reflected Gradient Method for Monotone Variational Inequalities",
+          "stem": "aparameterfreeadaptivereflectedgradientmethodformonotonevariationalinequalities",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-24/search_result.json",
+          "shared_terms": [
+            "parameter-free"
+          ],
+          "shared_count": 1
+        }
+      ],
+      "score": 4.07,
+      "raw_authors": [
+        "{'username': '~Bystrov_Dmitriy1', 'fullname': 'Dmitriy Bystrov', 'institutions': [{'name': 'Moscow Independent Research Institute of Artificial Intelligence', 'domain': 'miriai.org', 'country': 'RU'}]}",
+        "{'username': '~Daniil_Medyakov1', 'fullname': 'Daniil Medyakov', 'institutions': [{'name': 'Moscow Independent Research Institute of Artificial Intelligence', 'domain': 'miriai.org', 'country': 'RU'}]}",
+        "{'username': '~Dmitry_Bylinkin1', 'fullname': 'Dmitry Bylinkin', 'institutions': [{'name': 'Moscow Independent Research Institute of Artificial Intelligence', 'domain': 'miriai.org', 'country': 'RU'}]}",
+        "{'username': '~Aleksandr_Beznosikov1', 'fullname': 'Aleksandr Beznosikov', 'institutions': [{'name': 'Moscow Independent Research Institute of Artificial Intelligence', 'domain': 'miriai.org', 'country': 'RU'}]}"
+      ]
+    },
+    {
+      "title": "Can Muon Adapt Its Stepsize Without Knowing the Solution Distance?",
+      "source": "openreview",
+      "arxiv_id": "",
+      "venue": "OPT 2026 Poster",
+      "url": "https://openreview.net/forum?id=Ghfc8IRXdy",
+      "pdf_url": "https://openreview.net/pdf?id=Ghfc8IRXdy",
+      "published": "2026-10-02T06:06:27.812000",
+      "authors": [
+        "Yury Demidovich",
+        "Abhishek Chakraborty",
+        "Grigory Malinovsky",
+        "Angelia Nedich",
+        "Peter Richtárik"
+      ],
+      "paper_stem": "Can_Muon_Adapt_Its_Stepsize_Without_Knowing_the_Solution_Distance",
+      "matched_domain": "大模型优化器设计",
+      "matched_keywords": [
+        "Muon"
+      ],
+      "already_known": false,
+      "kb_source": "",
+      "related_papers": [
+        {
+          "title": "From Geometry to Generalization: Why Row Normalization Can Beat Adam and Muon",
+          "stem": "fromgeometrytogeneralizationwhyrownormalizationcanbeatadamandmuon",
+          "source": "pdf",
+          "path": "/Users/myl/Documents/paper/01-raw/2026-10/From_Geometry_to_Generalization_Why_Row_Normalization_Can_Beat_Adam_and_Muon.pdf",
+          "shared_terms": [
+            "can",
+            "muon"
+          ],
+          "shared_count": 2
+        },
+        {
+          "title": "Muon Can Outperform Dedicated Continual Learning Methods",
+          "stem": "muoncanoutperformdedicatedcontinuallearningmethods",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-24/search_result.json",
+          "shared_terms": [
+            "can",
+            "muon"
+          ],
+          "shared_count": 2
+        },
+        {
+          "title": "Accelerating Muon with Spectral Residual Correction",
+          "stem": "acceleratingmuonwithspectralresidualcorrection",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-10-11/search_result.json",
+          "shared_terms": [
+            "muon"
+          ],
+          "shared_count": 1
+        }
+      ],
+      "score": 4.07,
+      "raw_authors": [
+        "{'username': '~Yury_Demidovich1', 'fullname': 'Yury Demidovich', 'institutions': [{'name': 'King Abdullah University of Science and Technology', 'domain': 'kaust.edu.sa'}]}",
+        "{'username': '~Abhishek_Chakraborty2', 'fullname': 'Abhishek Chakraborty', 'institutions': [{'name': 'Arizona State University', 'domain': 'asu.edu', 'country': 'US'}]}",
+        "{'username': '~Grigory_Malinovsky1', 'fullname': 'Grigory Malinovsky', 'institutions': [{'name': 'King Abdullah University of Science and Technology', 'domain': 'kaust.edu.sa', 'country': 'SA'}]}",
+        "{'username': '~Angelia_Nedich1', 'fullname': 'Angelia Nedich', 'institutions': [{'name': 'Arizona State University', 'domain': 'asu.edu'}]}",
+        "{'username': '~Peter_Richtárik1', 'fullname': 'Peter Richtárik', 'institutions': [{'name': 'King Abdullah University of Science and Technology (KAUST)', 'domain': 'kaust.edu.sa', 'country': 'SA'}]}"
+      ]
+    },
+    {
+      "title": "Non-Interfering Asymmetric AdamW Updates for Constrained Exploration of Equifinality in Hybrid Models",
+      "source": "openreview",
+      "arxiv_id": "",
+      "venue": "Sim2Sci 2026",
+      "url": "https://openreview.net/forum?id=8vIKKcK9b6",
+      "pdf_url": "/pdf/dd72841b1a17148359cd38ac39f05d2b43be53fc.pdf",
+      "published": "2026-10-03T08:27:39.040000",
+      "authors": [
+        "Ekaterina Gikalo",
+        "Zavud Baghirov",
+        "Christian Reimers",
+        "Markus Reichstein",
+        "Martin Jung",
+        "Marco Körner"
+      ],
+      "paper_stem": "Non_Interfering_Asymmetric_AdamW_Updates_for_Constrained_Exploration_of_Equifinality_in_Hybrid_Models",
+      "matched_domain": "大模型优化器设计",
+      "matched_keywords": [
+        "AdamW"
+      ],
+      "already_known": false,
+      "kb_source": "",
+      "related_papers": [
+        {
+          "title": "AdamW Scaling Laws from First Principles",
+          "stem": "adamwscalinglawsfromfirstprinciples",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-10-10/search_result.json",
+          "shared_terms": [
+            "adamw"
+          ],
+          "shared_count": 1
+        },
+        {
+          "title": "AdasignSGD: Turning 1-Bit Worker Votes into Adaptive Updates",
+          "stem": "adasignsgdturning1bitworkervotesintoadaptiveupdates",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-10-20/search_result.json",
+          "shared_terms": [
+            "updates"
+          ],
+          "shared_count": 1
+        },
+        {
+          "title": "Anytime-Feasible Gradient Descent for Constrained Optimization Under Gradient Uncertainty",
+          "stem": "anytimefeasiblegradientdescentforconstrainedoptimizationundergradientuncertainty",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-25/search_result.json",
+          "shared_terms": [
+            "constrained"
+          ],
+          "shared_count": 1
+        }
+      ],
+      "score": 4.07,
+      "raw_authors": [
+        "{'username': '~Ekaterina_Gikalo1', 'fullname': 'Ekaterina Gikalo', 'institutions': [{'name': 'Max-Planck Institute', 'domain': 'mpg.de', 'country': 'DE'}]}",
+        "{'username': '~Zavud_Baghirov1', 'fullname': 'Zavud Baghirov', 'institutions': [{'name': 'MPI-BGC', 'domain': 'bgc-jena.mpg.de', 'country': 'DE'}]}",
+        "{'username': '~Christian_Reimers2', 'fullname': 'Christian Reimers', 'institutions': [{'name': 'Max-Planck-Institute for Biogeochemistry', 'domain': 'bgc-jena.mpg.de', 'country': 'DE'}]}",
+        "{'username': '~Markus_Reichstein1', 'fullname': 'Markus Reichstein', 'institutions': [{'name': 'Max-Planck Institute', 'domain': 'mpg.de', 'country': 'DE'}]}",
+        "{'username': '~Martin_Jung1', 'fullname': 'Martin Jung', 'institutions': [{'name': 'Max-Planck Institute', 'domain': 'mpg.de', 'country': 'DE'}]}",
+        "{'username': '~Marco_Körner2', 'fullname': 'Marco Körner', 'institutions': [{'name': 'German Aerospace Center (DLR)', 'domain': 'dlr.de', 'country': 'DE'}, {'name': 'Technical University Munich', 'domain': 'tum.de', 'country': 'DE'}]}"
+      ]
+    },
+    {
+      "title": "Same Training Loss, Different Recovery: Optimizer-Dependent Solution Selection in Matrix Sensing",
+      "source": "openreview",
+      "arxiv_id": "",
+      "venue": "OPT 2026 Poster",
+      "url": "https://openreview.net/forum?id=3pujdNCHGG",
+      "pdf_url": "https://openreview.net/pdf?id=3pujdNCHGG",
+      "published": "2026-10-02T06:06:27.812000",
+      "authors": [
+        "Luca Stümper",
+        "Antonio Orvieto"
+      ],
+      "paper_stem": "Same_Training_Loss_Different_Recovery_Optimizer_Dependent_Solution_Selection_in_Matrix_Sensing",
+      "matched_domain": "大模型优化器设计",
+      "matched_keywords": [
+        "SignSGD",
+        "Muon"
+      ],
+      "already_known": false,
+      "kb_source": "",
+      "related_papers": [
+        {
+          "title": "Optimizer-dependent training dynamics converge to the same one-third optimal data scaling",
+          "stem": "optimizerdependenttrainingdynamicsconvergetothesameonethirdoptimaldatascaling",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-10-11/search_result.json",
+          "shared_terms": [
+            "optimizer-dependent",
+            "same",
+            "training"
+          ],
+          "shared_count": 3
+        },
+        {
+          "title": "Same Flow, Different Paths: Variance Reduction in Flow Matching",
+          "stem": "sameflowdifferentpathsvariancereductioninflowmatching",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-24/search_result.json",
+          "shared_terms": [
+            "different",
+            "same"
+          ],
+          "shared_count": 2
+        },
+        {
+          "title": "Same Function, Different Trajectory: No Standard Optimizer Is Equivariant to Transformer Reparameterization",
+          "stem": "samefunctiondifferenttrajectorynostandardoptimizerisequivarianttotransformerreparameterization",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-10-17/search_result.json",
+          "shared_terms": [
+            "different",
+            "same"
+          ],
+          "shared_count": 2
+        }
+      ],
+      "score": 4.03,
+      "raw_authors": [
+        "{'username': '~Luca_Stümper2', 'fullname': 'Luca Stümper', 'institutions': [{'name': 'Eberhard-Karls-Universität Tübingen', 'domain': 'uni-tuebingen.de', 'country': 'DE'}]}",
+        "{'username': '~Antonio_Orvieto3', 'fullname': 'Antonio Orvieto', 'institutions': [{'name': 'ELLIS Institute Tübingen, Max Planck Institute for Intelligent Systems, Tübingen AI Center, Tübingen, Germany', 'domain': 'tue.ellis.eu', 'country': 'DE'}]}"
+      ]
+    },
+    {
+      "title": "Rounding in Preconditioner Space: Redesigning 4-bit AdamW Optimizer-State Quantization",
+      "source": "openreview",
+      "arxiv_id": "",
+      "venue": "OPT 2026 Poster",
+      "url": "https://openreview.net/forum?id=xJnSQIEmhb",
+      "pdf_url": "https://openreview.net/pdf?id=xJnSQIEmhb",
+      "published": "2026-10-02T06:06:27.812000",
+      "authors": [
+        "Hanyang Li",
+        "Shao Tang",
+        "Daniel Thomas Braithwaite",
+        "Gregory Dexter",
+        "Leonardo Neves",
+        "Aman Gupta",
+        "Hiroto Udagawa",
+        "Abhishek Shivanna",
+        "Daniel Silva",
+        "Rohan Ramanath"
+      ],
+      "paper_stem": "Rounding_in_Preconditioner_Space_Redesigning_4_bit_AdamW_Optimizer_State_Quantization",
+      "matched_domain": "大模型优化器设计",
+      "matched_keywords": [
+        "AdamW"
+      ],
+      "already_known": true,
+      "kb_source": "pdf",
+      "related_papers": [
+        {
+          "title": "Rounding in Preconditioner Space: Redesigning 4-bit AdamW Optimizer-State Quantization",
+          "stem": "roundinginpreconditionerspaceredesigning4bitadamwoptimizerstatequantization",
+          "source": "pdf",
+          "path": "/Users/myl/Documents/paper/01-raw/2026-10/Rounding_in_Preconditioner_Space_Redesigning_4_bit_AdamW_Optimizer_State_Quantization.pdf",
+          "shared_terms": [
+            "adamw",
+            "bit",
+            "optimizer-state",
+            "preconditioner",
+            "quantization",
+            "redesigning",
+            "rounding",
+            "space"
+          ],
+          "shared_count": 8
+        },
+        {
+          "title": "AdamW Scaling Laws from First Principles",
+          "stem": "adamwscalinglawsfromfirstprinciples",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-10-10/search_result.json",
+          "shared_terms": [
+            "adamw"
+          ],
+          "shared_count": 1
+        },
+        {
+          "title": "AdasignSGD: Turning 1-Bit Worker Votes into Adaptive Updates",
+          "stem": "adasignsgdturning1bitworkervotesintoadaptiveupdates",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-10-20/search_result.json",
+          "shared_terms": [
+            "bit"
+          ],
+          "shared_count": 1
+        }
+      ],
+      "score": 4.0,
+      "raw_authors": [
+        "{'username': '~Hanyang_Li5', 'fullname': 'Hanyang Li', 'institutions': [{'name': 'University of California, Berkeley', 'domain': 'berkeley.edu', 'country': 'US'}]}",
+        "{'username': '~Shao_Tang1', 'fullname': 'Shao Tang', 'institutions': [{'name': 'Nubank', 'domain': 'nubank.com.br', 'country': 'US'}]}",
+        "{'username': '~Daniel_Thomas_Braithwaite1', 'fullname': 'Daniel Thomas Braithwaite', 'institutions': [{'name': 'Nubank', 'domain': 'nubank.com.br', 'country': 'AU'}]}",
+        "{'username': '~Gregory_Dexter1', 'fullname': 'Gregory Dexter', 'institutions': [{'name': 'Nubank', 'domain': 'nubank.com.br', 'country': 'BR'}]}",
+        "{'username': '~Leonardo_Neves1', 'fullname': 'Leonardo Neves', 'institutions': [{'name': 'Nubank', 'domain': 'nubank.com.br', 'country': 'US'}]}",
+        "{'username': '~Aman_Gupta1', 'fullname': 'Aman Gupta', 'institutions': [{'name': 'Nubank', 'domain': 'nubank.com.br', 'country': 'US'}]}",
+        "{'username': '~Hiroto_Udagawa1', 'fullname': 'Hiroto Udagawa', 'institutions': [{'name': 'Nubank', 'domain': 'nubank.com.br', 'country': 'US'}]}",
+        "{'username': '~Abhishek_Shivanna1', 'fullname': 'Abhishek Shivanna', 'institutions': [{'name': 'Nubank', 'domain': 'nubank.com.br', 'country': 'US'}]}",
+        "{'username': '~Daniel_Silva2', 'fullname': 'Daniel Silva', 'institutions': [{'name': 'Nubank', 'domain': 'nubank.com.br', 'country': 'US'}]}",
+        "{'username': '~Rohan_Ramanath1', 'fullname': 'Rohan Ramanath', 'institutions': [{'name': 'Nubank', 'domain': 'nubank.com.br', 'country': 'US'}]}"
+      ]
+    },
+    {
+      "title": "How Does Muon Work in Private Deep Learning? Scalable Differentially Private Training via Orthogonalization",
+      "source": "openreview",
+      "arxiv_id": "",
+      "venue": "OPT 2026 Poster",
+      "url": "https://openreview.net/forum?id=YYu3i6xoxg",
+      "pdf_url": "https://openreview.net/pdf?id=YYu3i6xoxg",
+      "published": "2026-10-02T06:06:27.812000",
+      "authors": [
+        "Alexander Gaponov",
+        "Grigory Malinovsky",
+        "Egor Shulgin",
+        "Peter Richtárik"
+      ],
+      "paper_stem": "How_Does_Muon_Work_in_Private_Deep_Learning_Scalable_Differentially_Private_Training_via_Orthogonalization",
+      "matched_domain": "大模型优化器设计",
+      "matched_keywords": [
+        "Muon"
+      ],
+      "already_known": true,
+      "kb_source": "daily",
+      "related_papers": [
+        {
+          "title": "How Does Muon Work in Private Deep Learning? Scalable Differentially Private Training via Orthogonalization",
+          "stem": "howdoesmuonworkinprivatedeeplearningscalabledifferentiallyprivatetrainingviaorthogonalization",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-10-21/search_result.json",
+          "shared_terms": [
+            "deep",
+            "differentially",
+            "does",
+            "how",
+            "muon",
+            "orthogonalization",
+            "private",
+            "scalable",
+            "training",
+            "work"
+          ],
+          "shared_count": 10
+        },
+        {
+          "title": "How Does Orthogonalization Adapt to the Neural Network Hessian Structure? A Gradient Self Outer-Product Analysis at Initialization",
+          "stem": "howdoesorthogonalizationadapttotheneuralnetworkhessianstructureagradientselfouterproductanalysisatiniti",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-10-22/search_result.json",
+          "shared_terms": [
+            "does",
+            "how",
+            "orthogonalization"
+          ],
+          "shared_count": 3
+        },
+        {
+          "title": "How Does Orthogonalization Adapt to the Neural Network Hessian Structure? A Gradient Self Outer-Product Analysis at Initialization",
+          "stem": "howdoesorthogonalizationadapttotheneuralnetworkhessianstructureagradientselfouterproductanalysisatinitialization",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-10-22/search_result.json",
+          "shared_terms": [
+            "does",
+            "how",
+            "orthogonalization"
+          ],
+          "shared_count": 3
+        }
+      ],
+      "score": 3.73,
+      "raw_authors": [
+        "{'username': '~Alexander_Gaponov1', 'fullname': 'Alexander Gaponov', 'institutions': [{'name': 'King Abdullah University of Science and Technology', 'domain': 'kaust.edu.sa', 'country': 'SA'}]}",
+        "{'username': '~Grigory_Malinovsky1', 'fullname': 'Grigory Malinovsky', 'institutions': [{'name': 'King Abdullah University of Science and Technology', 'domain': 'kaust.edu.sa', 'country': 'SA'}]}",
+        "{'username': '~Egor_Shulgin1', 'fullname': 'Egor Shulgin', 'institutions': [{'name': 'KAUST', 'domain': 'kaust.edu.sa', 'country': 'SA'}]}",
+        "{'username': '~Peter_Richtárik1', 'fullname': 'Peter Richtárik', 'institutions': [{'name': 'King Abdullah University of Science and Technology (KAUST)', 'domain': 'kaust.edu.sa', 'country': 'SA'}]}"
+      ]
+    },
+    {
+      "title": "Differentially Private Clipping-Free Stochastic Sign Descent",
+      "source": "openreview",
+      "arxiv_id": "",
+      "venue": "OPT 2026 Poster",
+      "url": "https://openreview.net/forum?id=1sTcYib5Kt",
+      "pdf_url": "https://openreview.net/pdf?id=1sTcYib5Kt",
+      "published": "2026-10-02T06:06:27.812000",
+      "authors": [
+        "Alexey Kravatskiy",
+        "Anton Pliusnin",
+        "Savelii Chezhegov",
+        "Aleksandr Shestakov",
+        "Daniil Medyakov",
+        "Aleksandr Beznosikov"
+      ],
+      "paper_stem": "Differentially_Private_Clipping_Free_Stochastic_Sign_Descent",
+      "matched_domain": "大模型优化器设计",
+      "matched_keywords": [
+        "SignSGD"
+      ],
+      "already_known": false,
+      "kb_source": "",
+      "related_papers": [
+        {
+          "title": "A Stochastic Riemannian Alternating Descent Ascent Method for Nonsmooth Composite Expectation Optimization on Riemannian Manifolds",
+          "stem": "astochasticriemannianalternatingdescentascentmethodfornonsmoothcompositeexpectationoptimizationonriemannian",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-25/search_result.json",
+          "shared_terms": [
+            "descent",
+            "stochastic"
+          ],
+          "shared_count": 2
+        },
+        {
+          "title": "A Stochastic Riemannian Alternating Descent Ascent Method for Nonsmooth Composite Expectation Optimization on Riemannian Manifolds",
+          "stem": "astochasticriemannianalternatingdescentascentmethodfornonsmoothcompositeexpectationoptimizationonriemannianmanifolds",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-25/search_result.json",
+          "shared_terms": [
+            "descent",
+            "stochastic"
+          ],
+          "shared_count": 2
+        },
+        {
+          "title": "Beyond the Matrix Sign: Quadratic Spectral Descent",
+          "stem": "beyondthematrixsignquadraticspectraldescent",
+          "source": "pdf",
+          "path": "/Users/myl/Documents/paper/01-raw/2026-09/Beyond_the_Matrix_Sign_Quadratic_Spectral_Descent.pdf",
+          "shared_terms": [
+            "descent",
+            "sign"
+          ],
+          "shared_count": 2
+        }
+      ],
+      "score": 3.53,
+      "raw_authors": [
+        "{'username': '~Alexey_Kravatskiy1', 'fullname': 'Alexey Kravatskiy', 'institutions': [{'name': 'Moscow Independent Research Institute of Artificial Intelligence', 'domain': 'miriai.org', 'country': 'RU'}]}",
+        "{'username': '~Anton_Pliusnin1', 'fullname': 'Anton Pliusnin', 'institutions': [{'name': 'Moscow Independent Research Institute of Artificial Intelligence', 'domain': 'miriai.org', 'country': 'RU'}]}",
+        "{'username': '~Savelii_Chezhegov1', 'fullname': 'Savelii Chezhegov', 'institutions': [{'name': 'Moscow Independent Research Institute of Artificial Intelligence', 'domain': 'miriai.org', 'country': 'RU'}]}",
+        "{'username': '~Aleksandr_Shestakov1', 'fullname': 'Aleksandr Shestakov', 'institutions': [{'name': 'Mohamed bin Zayed University of Artificial Intelligence', 'domain': 'mbzuai.ac.ae', 'country': 'AE'}]}",
+        "{'username': '~Daniil_Medyakov1', 'fullname': 'Daniil Medyakov', 'institutions': [{'name': 'Moscow Independent Research Institute of Artificial Intelligence', 'domain': 'miriai.org', 'country': 'RU'}]}",
+        "{'username': '~Aleksandr_Beznosikov1', 'fullname': 'Aleksandr Beznosikov', 'institutions': [{'name': 'Moscow Independent Research Institute of Artificial Intelligence', 'domain': 'miriai.org', 'country': 'RU'}]}"
+      ]
+    },
+    {
+      "title": "Adaptive Quantile Clipping under Heavy-Tailed Noise and Differential Privacy",
+      "source": "openreview",
+      "arxiv_id": "",
+      "venue": "OPT 2026 Poster",
+      "url": "https://openreview.net/forum?id=ykJF8GeIBx",
+      "pdf_url": "https://openreview.net/pdf?id=ykJF8GeIBx",
+      "published": "2026-10-02T06:06:27.812000",
+      "authors": [
+        "Ayoub El Gourari",
+        "Anastasia Koloskova"
+      ],
+      "paper_stem": "Adaptive_Quantile_Clipping_under_Heavy_Tailed_Noise_and_Differential_Privacy",
+      "matched_domain": "大模型优化器设计",
+      "matched_keywords": [
+        "gradient clipping"
+      ],
+      "already_known": false,
+      "kb_source": "",
+      "related_papers": [
+        {
+          "title": "Asymptotic Anytime-Valid Quantile Inference under Local Differential Privacy",
+          "stem": "asymptoticanytimevalidquantileinferenceunderlocaldifferentialprivacy",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-25/search_result.json",
+          "shared_terms": [
+            "differential",
+            "privacy",
+            "quantile",
+            "under"
+          ],
+          "shared_count": 4
+        },
+        {
+          "title": "Decentralized SGD under Heavy-Tailed Noise: Optimal Convergence Rates and the Role of Gradient Clipping",
+          "stem": "decentralizedsgdunderheavytailednoiseoptimalconvergenceratesandtheroleofgradientclipping",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-10-08/search_result.json",
+          "shared_terms": [
+            "clipping",
+            "heavy-tailed",
+            "noise",
+            "under"
+          ],
+          "shared_count": 4
+        },
+        {
+          "title": "Clipped or Unclipped? Finite-Sample Trade-offs for Averaged SGD under Heavy-Tailed Noise",
+          "stem": "clippedorunclippedfinitesampletradeoffsforaveragedsgdunderheavytailednoise",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-10-13/search_result.json",
+          "shared_terms": [
+            "heavy-tailed",
+            "noise",
+            "under"
+          ],
+          "shared_count": 3
+        }
+      ],
+      "score": 3.47,
+      "raw_authors": [
+        "{'username': '~Ayoub_El_Gourari1', 'fullname': 'Ayoub El Gourari', 'institutions': [{'name': 'École Polytechnique', 'domain': 'polytechnique.edu', 'country': 'FR'}]}",
+        "{'username': '~Anastasia_Koloskova2', 'fullname': 'Anastasia Koloskova', 'institutions': [{'name': 'University of Zurich', 'domain': 'uzh.ch', 'country': 'CH'}]}"
+      ]
+    },
+    {
+      "title": "Curvature-Aware Clipping: Mitigating Bias in DPSGD via Approximate Second-Order Information",
+      "source": "openreview",
+      "arxiv_id": "",
+      "venue": "OPT 2026 Poster",
+      "url": "https://openreview.net/forum?id=daPUJXQxky",
+      "pdf_url": "https://openreview.net/pdf?id=daPUJXQxky",
+      "published": "2026-10-02T06:06:27.812000",
+      "authors": [
+        "Xincheng Xu",
+        "Thilina Ranbaduge",
+        "Thierry Rakotoarivelo",
+        "David Smith"
+      ],
+      "paper_stem": "Curvature_Aware_Clipping_Mitigating_Bias_in_DPSGD_via_Approximate_Second_Order_Information",
+      "matched_domain": "大模型优化器设计",
+      "matched_keywords": [
+        "gradient clipping"
+      ],
+      "already_known": true,
+      "kb_source": "daily",
+      "related_papers": [
+        {
+          "title": "Curvature-Aware Clipping: Mitigating Bias in DPSGD via Approximate Second-Order Information",
+          "stem": "curvatureawareclippingmitigatingbiasindpsgdviaapproximatesecondorderinformation",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-10-02/search_result.json",
+          "shared_terms": [
+            "approximate",
+            "bias",
+            "clipping",
+            "curvature-aware",
+            "dpsgd",
+            "information",
+            "mitigating",
+            "second-order"
+          ],
+          "shared_count": 8
+        },
+        {
+          "title": "Almost Sure Convergence Analysis of Stochastic Gradient Methods with Clipping and Additive Noise",
+          "stem": "almostsureconvergenceanalysisofstochasticgradientmethodswithclippingandadditivenoise",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-21/search_result.json",
+          "shared_terms": [
+            "clipping"
+          ],
+          "shared_count": 1
+        },
+        {
+          "title": "Beyond Client Averaging: A Client-Independent Second-Order Stationary-Bias Component in Stochastic SCAFFOLD",
+          "stem": "beyondclientaveragingaclientindependentsecondorderstationarybiascomponentinstochasticscaffold",
+          "source": "pdf",
+          "path": "/Users/myl/Documents/paper/01-raw/2026-09/Beyond_Client_Averaging_A_Client_Independent_Second_Order_Stationary_Bias_Component_in_Stochastic_SCAFFOLD.pdf",
+          "shared_terms": [
+            "second-order"
+          ],
+          "shared_count": 1
+        }
+      ],
+      "score": 3.4,
+      "raw_authors": [
+        "{'username': '~Xincheng_Xu2', 'fullname': 'Xincheng Xu', 'institutions': [{'name': 'Australian National University', 'domain': 'anu.edu.au', 'country': 'AU'}]}",
+        "{'username': '~Thilina_Ranbaduge1', 'fullname': 'Thilina Ranbaduge', 'institutions': [{'name': 'CSIRO', 'domain': 'csiro.au', 'country': 'AU'}]}",
+        "{'username': '~Thierry_Rakotoarivelo1', 'fullname': 'Thierry Rakotoarivelo', 'institutions': [{'name': 'CSIRO', 'domain': 'csiro.au'}]}",
+        "{'username': '~David_Smith12', 'fullname': 'David Smith', 'institutions': [{'name': 'CSIRO Data61', 'domain': 'data61.csiro.au'}]}"
+      ]
+    },
+    {
+      "title": "Gradient Clipping on Separable Data: Asymptotic Alignment and Persistent Bias",
+      "source": "openreview",
+      "arxiv_id": "",
+      "venue": "OPT 2026 Poster",
+      "url": "https://openreview.net/forum?id=XEVhS9MMgC",
+      "pdf_url": "https://openreview.net/pdf?id=XEVhS9MMgC",
+      "published": "2026-10-02T06:06:27.812000",
+      "authors": [
+        "Mahdi Mansouri",
+        "Nima Mollaei",
+        "Yongtao Wu"
+      ],
+      "paper_stem": "Gradient_Clipping_on_Separable_Data_Asymptotic_Alignment_and_Persistent_Bias",
+      "matched_domain": "大模型优化器设计",
+      "matched_keywords": [
+        "gradient clipping"
+      ],
+      "already_known": false,
+      "kb_source": "",
+      "related_papers": [
+        {
+          "title": "Almost Sure Convergence Analysis of Stochastic Gradient Methods with Clipping and Additive Noise",
+          "stem": "almostsureconvergenceanalysisofstochasticgradientmethodswithclippingandadditivenoise",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-21/search_result.json",
+          "shared_terms": [
+            "clipping",
+            "gradient"
+          ],
+          "shared_count": 2
+        },
+        {
+          "title": "Curvature-Aware Clipping: Mitigating Bias in DPSGD via Approximate Second-Order Information",
+          "stem": "curvatureawareclippingmitigatingbiasindpsgdviaapproximatesecondorderinformation",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-10-02/search_result.json",
+          "shared_terms": [
+            "bias",
+            "clipping"
+          ],
+          "shared_count": 2
+        },
+        {
+          "title": "Decentralized SGD under Heavy-Tailed Noise: Optimal Convergence Rates and the Role of Gradient Clipping",
+          "stem": "decentralizedsgdunderheavytailednoiseoptimalconvergenceratesandtheroleofgradientclipping",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-10-08/search_result.json",
+          "shared_terms": [
+            "clipping",
+            "gradient"
+          ],
+          "shared_count": 2
+        }
+      ],
+      "score": 3.33,
+      "raw_authors": [
+        "{'username': '~Mahdi_Mansouri1', 'fullname': 'Mahdi Mansouri', 'institutions': [{'name': 'University of Hong Kong', 'domain': 'hku.hk', 'country': 'HK'}]}",
+        "{'username': '~Nima_Mollaei1', 'fullname': 'Nima Mollaei', 'institutions': [{'name': 'University of Hong Kong', 'domain': 'hku.hk', 'country': 'HK'}]}",
+        "{'username': '~Yongtao_Wu1', 'fullname': 'Yongtao Wu', 'institutions': [{'name': 'Swiss Federal Institute of Technology Lausanne', 'domain': 'epfl.ch', 'country': 'CH'}]}"
+      ]
+    },
+    {
+      "title": "CheckJump: Checked Macro-Steps for Language-Model Training",
+      "source": "openreview",
+      "arxiv_id": "",
+      "venue": "ACL ARR 2026 October Submission",
+      "url": "https://openreview.net/forum?id=LjeDfQrtoO",
+      "pdf_url": "/pdf/9f899caffe7fb2d61aeb23bc9ff9d589ec6709d7.pdf",
+      "published": "2026-10-13T18:36:07.178000",
+      "authors": [],
+      "paper_stem": "CheckJump_Checked_Macro_Steps_for_Language_Model_Training",
+      "matched_domain": "大模型优化器设计",
+      "matched_keywords": [
+        "AdamW"
+      ],
+      "already_known": false,
+      "kb_source": "",
+      "related_papers": [
+        {
+          "title": "Anytime Training with Schedule Free Spectral Optimization",
+          "stem": "anytimetrainingwithschedulefreespectraloptimization",
+          "source": "pdf",
+          "path": "/Users/myl/Documents/paper/01-raw/2026-10/Anytime_Training_with_Schedule_Free_Spectral_Optimization.pdf",
+          "shared_terms": [
+            "training"
+          ],
+          "shared_count": 1
+        },
+        {
+          "title": "AURA: Angular Update Rate Adaptation for training complex-valued neural networks",
+          "stem": "auraangularupdaterateadaptationfortrainingcomplexvaluedneuralnetworks",
+          "source": "pdf",
+          "path": "/Users/myl/Documents/paper/01-raw/2026-10/AURA_Angular_Update_Rate_Adaptation_for_training_complex_valued_neural_networks.pdf",
+          "shared_terms": [
+            "training"
+          ],
+          "shared_count": 1
+        },
+        {
+          "title": "Clean: Second-order LLM Training at Linear Memory Cost via Nyström Sketching",
+          "stem": "cleansecondorderllmtrainingatlinearmemorycostvianystrmsketching",
+          "source": "pdf",
+          "path": "/Users/myl/Documents/paper/01-raw/2026-10/Clean_Second_order_LLM_Training_at_Linear_Memory_Cost_via_Nyström_Sketching.pdf",
+          "shared_terms": [
+            "training"
+          ],
+          "shared_count": 1
+        }
+      ],
+      "score": 3.27
+    },
+    {
+      "title": "CAST: History-Adaptive Spectral Clipping for LLM Pretraining",
+      "source": "openreview",
+      "arxiv_id": "",
+      "venue": "ACL ARR 2026 October Submission",
+      "url": "https://openreview.net/forum?id=MRDbc0C4pl",
+      "pdf_url": "/pdf/2459bae014af5f0ba3f30f597603cb1fe139d92c.pdf",
+      "published": "2026-10-12T20:21:54.867000",
+      "authors": [],
+      "paper_stem": "CAST_History_Adaptive_Spectral_Clipping_for_LLM_Pretraining",
+      "matched_domain": "大模型优化器设计",
+      "matched_keywords": [
+        "AdamW"
+      ],
+      "already_known": true,
+      "kb_source": "pdf",
+      "related_papers": [
+        {
+          "title": "CAST: History-Adaptive Spectral Clipping for LLM Pretraining",
+          "stem": "casthistoryadaptivespectralclippingforllmpretraining",
+          "source": "pdf",
+          "path": "/Users/myl/Documents/paper/01-raw/2026-10/CAST_History_Adaptive_Spectral_Clipping_for_LLM_Pretraining.pdf",
+          "shared_terms": [
+            "cast",
+            "clipping",
+            "history-adaptive",
+            "llm",
+            "pretraining",
+            "spectral"
+          ],
+          "shared_count": 6
+        },
+        {
+          "title": "Curvature-Conditioned Multiscale Momentum with Sphere Constraints for LLM Pretraining",
+          "stem": "curvatureconditionedmultiscalemomentumwithsphereconstraintsforllmpretraining",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-24/search_result.json",
+          "shared_terms": [
+            "llm",
+            "pretraining"
+          ],
+          "shared_count": 2
+        },
+        {
+          "title": "Does U-W Ratio Alignment Benefit Muon in LLM Pretraining?",
+          "stem": "doesuwratioalignmentbenefitmuoninllmpretraining",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-10-08/search_result.json",
+          "shared_terms": [
+            "llm",
+            "pretraining"
+          ],
+          "shared_count": 2
+        }
+      ],
+      "score": 3.0
+    },
+    {
+      "title": "Gradient Conflict in Multimodal Pretraining",
+      "source": "openreview",
+      "arxiv_id": "",
+      "venue": "OPT 2026 Poster",
+      "url": "https://openreview.net/forum?id=tfm2yVelk1",
+      "pdf_url": "https://openreview.net/pdf?id=tfm2yVelk1",
+      "published": "2026-10-02T06:06:27.812000",
+      "authors": [
+        "Sreya Roy Chowdhury",
+        "Sofiia Kononovych",
+        "Ge Shan",
+        "Sahar Rajabi",
+        "Sirisha Rambhatla"
+      ],
+      "paper_stem": "Gradient_Conflict_in_Multimodal_Pretraining",
+      "matched_domain": "大模型优化器设计",
+      "matched_keywords": [
+        "AdamW"
+      ],
+      "already_known": false,
+      "kb_source": "",
+      "related_papers": [
+        {
+          "title": "ABrA-GD: Adaptive Bregman Accelerated Gradient Descent for Relatively Smooth and (Strongly-)Convex Optimization",
+          "stem": "abragdadaptivebregmanacceleratedgradientdescentforrelativelysmoothandstronglyconvexoptimization",
+          "source": "pdf",
+          "path": "/Users/myl/Documents/paper/01-raw/2026-10/ABrA_GD_Adaptive_Bregman_Accelerated_Gradient_Descent_for_Relatively_Smooth_and_(Strongly_)Convex_Optimization.pdf",
+          "shared_terms": [
+            "gradient"
+          ],
+          "shared_count": 1
+        },
+        {
+          "title": "Accelerated Gradient Flow with Endogenous Gradient-Memory Anchor: Selection and Restoring Damping",
+          "stem": "acceleratedgradientflowwithendogenousgradientmemoryanchorselectionandrestoringdamping",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-24/search_result.json",
+          "shared_terms": [
+            "gradient"
+          ],
+          "shared_count": 1
+        },
+        {
+          "title": "AdamX: Cosine similarity meets gradient descent",
+          "stem": "adamxcosinesimilaritymeetsgradientdescent",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-24/search_result.json",
+          "shared_terms": [
+            "gradient"
+          ],
+          "shared_count": 1
+        }
+      ],
+      "score": 3.0,
+      "raw_authors": [
+        "{'username': '~Sreya_Roy_Chowdhury1', 'fullname': 'Sreya Roy Chowdhury', 'institutions': [{'name': 'University of Waterloo', 'domain': 'uwaterloo.ca', 'country': 'CA'}]}",
+        "{'username': '~Sofiia_Kononovych1', 'fullname': 'Sofiia Kononovych', 'institutions': [{'name': 'National University  of Kyiv-Mohyla Academy', 'domain': 'ukma.edu.ua', 'country': 'UA'}]}",
+        "{'username': '~Ge_Shan1', 'fullname': 'Ge Shan', 'institutions': [{'name': 'University of Waterloo', 'domain': 'uwaterloo.ca', 'country': 'CA'}]}",
+        "{'username': '~Sahar_Rajabi1', 'fullname': 'Sahar Rajabi', 'institutions': [{'name': 'University of Waterloo', 'domain': 'uwaterloo.ca', 'country': 'CA'}]}",
+        "{'username': '~Sirisha_Rambhatla1', 'fullname': 'Sirisha Rambhatla', 'institutions': [{'name': 'University of Waterloo', 'domain': 'uwaterloo.ca', 'country': 'CA'}]}"
+      ]
+    }
+  ],
+  "top_papers": [
+    {
+      "id": "Ghfc8IRXdy",
+      "source": "openreview",
+      "title": "Can Muon Adapt Its Stepsize Without Knowing the Solution Distance?",
+      "summary": "Matrix gradient orthogonalization has proved effective in neural-network training, and its trust-region interpretation explains how Muon chooses a normalized direction. It does not determine how far to move along that direction, so a stepsize must still be tuned. Existing theoretical choices may also require the unknown distance $D = \\\\lVert x_0 - x^\\\\star \\\\rVert$ from the initialization to a solution. We develop stochastic Muon methods that choose this directional stepsize without knowing $D$. We formulate directional stepsize selection as a one-dimensional online-learning problem driven by stochastic gradient feedback. For smooth non-convex objectives, a closed-form follow-the-regularized-leader rule gives an expected $O(T^{-1/4})$ stationarity guarantee. For smooth star-convex objectives, a weighted FTRL rule selects the directional stepsizes and, together with a one-gradient-delayed Nesterov direction, yields an expected last-iterate rate of $\\\\widetilde{O}(T^{-1/3})$. Its parameters use the horizon and smoothness, but neither $D$ nor the oracle variance. On a controlled non-convex matrix problem, the adaptive method eventually outperforms fixed-stepsize Muon baselines retuned for each horizon. On GPT-124M and WikiText-103, practical implementations of both methods achieve validation losses comparable to tuned Muon under matched training conditions.",
+      "authors": [
+        "Yury Demidovich",
+        "Abhishek Chakraborty",
+        "Grigory Malinovsky",
+        "Angelia Nedich",
+        "Peter Richtárik"
+      ],
+      "affiliations": [],
+      "categories": [],
+      "venue": "OPT 2026 Poster",
+      "pdf_url": "https://openreview.net/pdf?id=Ghfc8IRXdy",
+      "url": "https://openreview.net/forum?id=Ghfc8IRXdy",
+      "published": "2026-10-02T06:06:27.812000",
+      "published_date": "2026-10-02 06:06:27.812000",
+      "scores": {
+        "relevance": 1.0,
+        "recency": 3.0,
+        "impact": 0.0,
+        "evidence": 1.1,
+        "popularity": 0.0,
+        "quality": 1.1,
+        "recommendation": 4.07
+      },
+      "matched_domain": "大模型优化器设计",
+      "matched_keywords": [
+        "Muon"
+      ],
+      "is_hot_paper": false,
+      "score_type": "research_priority_screening",
+      "assessment_scope": "metadata_and_abstract",
+      "screening_rank": 18,
+      "paper_stem": "Can_Muon_Adapt_Its_Stepsize_Without_Knowing_the_Solution_Distance",
+      "already_known": false,
+      "related_papers": [
+        {
+          "title": "From Geometry to Generalization: Why Row Normalization Can Beat Adam and Muon",
+          "stem": "fromgeometrytogeneralizationwhyrownormalizationcanbeatadamandmuon",
+          "source": "pdf",
+          "path": "/Users/myl/Documents/paper/01-raw/2026-10/From_Geometry_to_Generalization_Why_Row_Normalization_Can_Beat_Adam_and_Muon.pdf",
+          "shared_terms": [
+            "can",
+            "muon"
+          ],
+          "shared_count": 2
+        },
+        {
+          "title": "Muon Can Outperform Dedicated Continual Learning Methods",
+          "stem": "muoncanoutperformdedicatedcontinuallearningmethods",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-24/search_result.json",
+          "shared_terms": [
+            "can",
+            "muon"
+          ],
+          "shared_count": 2
+        },
+        {
+          "title": "Accelerating Muon with Spectral Residual Correction",
+          "stem": "acceleratingmuonwithspectralresidualcorrection",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-10-11/search_result.json",
+          "shared_terms": [
+            "muon"
+          ],
+          "shared_count": 1
+        }
+      ],
+      "note_filename": "Can_Muon_Adapt_Its_Stepsize_Without_Knowing_the_Solution_Distance",
+      "candidate_screening_rank": 4,
+      "semantic_rank": 1,
+      "formal_recommendation": true,
+      "archive_status": "failed",
+      "archive_detail": "HTTP 403",
+      "archive_path": "/Users/myl/Documents/paper/01-raw/2026-10/Can_Muon_Adapt_Its_Stepsize_Without_Knowing_the_Solution_Distance.pdf",
+      "raw_authors": [
+        "{'username': '~Yury_Demidovich1', 'fullname': 'Yury Demidovich', 'institutions': [{'name': 'King Abdullah University of Science and Technology', 'domain': 'kaust.edu.sa'}]}",
+        "{'username': '~Abhishek_Chakraborty2', 'fullname': 'Abhishek Chakraborty', 'institutions': [{'name': 'Arizona State University', 'domain': 'asu.edu', 'country': 'US'}]}",
+        "{'username': '~Grigory_Malinovsky1', 'fullname': 'Grigory Malinovsky', 'institutions': [{'name': 'King Abdullah University of Science and Technology', 'domain': 'kaust.edu.sa', 'country': 'SA'}]}",
+        "{'username': '~Angelia_Nedich1', 'fullname': 'Angelia Nedich', 'institutions': [{'name': 'Arizona State University', 'domain': 'asu.edu'}]}",
+        "{'username': '~Peter_Richtárik1', 'fullname': 'Peter Richtárik', 'institutions': [{'name': 'King Abdullah University of Science and Technology (KAUST)', 'domain': 'kaust.edu.sa', 'country': 'SA'}]}"
+      ],
+      "source_verified": true,
+      "source_verification_scope": "官方search API原始响应；独立notes/PDF接口403，非全文核验"
+    },
+    {
+      "id": "qXVywqIg8G",
+      "source": "openreview",
+      "title": "Zero-order Parameter-free Optimization for LMO-based Methods: Novel Approach for Efficient Fine-tuning",
+      "summary": "Fine-tuning large language models (LLMs) has become a central application of modern optimization, enabling pretrained models to adapt to diverse downstream tasks and domain-specific data. A major obstacle in large-scale fine-tuning is the memory overhead of backpropagation, which requires storing activations, gradients, and optimizer states. Zeroth-order (ZO) optimization offers a memory-efficient alternative, but its performance is highly sensitive to the stepsize and smoothing parameter, often requiring costly task-specific tuning. Parameter-free (PF) optimization addresses this issue by adapting algorithmic parameters without prior knowledge of problem-dependent constants. Moreover, large-scale fine-tuning can benefit from geometry-aware updates that account for the heterogeneous structure of parameter blocks, which can be modeled through methods that exploit linear minimization oracle (LMO). In this work, we study PF adaptation for LMO-based ZO optimization and introduce $\\texttt{AdaNAGED}$, a method that unifies gradient-free training, adaptive tuning, and non-Euclidean update geometry. We establish convergence guarantees and validate the method on large-scale LLM fine-tuning task with $\\texttt{OPT}-1.3\\mathrm{B}$ model.",
+      "authors": [
+        "Dmitriy Bystrov",
+        "Daniil Medyakov",
+        "Dmitry Bylinkin",
+        "Aleksandr Beznosikov"
+      ],
+      "affiliations": [],
+      "categories": [],
+      "venue": "OPT 2026 Poster",
+      "pdf_url": "https://openreview.net/pdf?id=qXVywqIg8G",
+      "url": "https://openreview.net/forum?id=qXVywqIg8G",
+      "published": "2026-10-02T06:06:27.812000",
+      "published_date": "2026-10-02 06:06:27.812000",
+      "scores": {
+        "relevance": 1.0,
+        "recency": 3.0,
+        "impact": 0.0,
+        "evidence": 1.1,
+        "popularity": 0.0,
+        "quality": 1.1,
+        "recommendation": 4.07
+      },
+      "matched_domain": "大模型优化器设计",
+      "matched_keywords": [
+        "parameter-free optimization"
+      ],
+      "is_hot_paper": false,
+      "score_type": "research_priority_screening",
+      "assessment_scope": "metadata_and_abstract",
+      "screening_rank": 17,
+      "paper_stem": "Zero_order_Parameter_free_Optimization_for_LMO_based_Methods_Novel_Approach_for_Efficient_Fine_tuning",
+      "already_known": false,
+      "related_papers": [
+        {
+          "title": "AdaMeZO: Adam-style Zeroth-Order Optimizer for LLM Fine-tuning Without Maintaining the Moments",
+          "stem": "adamezoadamstylezerothorderoptimizerforllmfinetuningwithoutmaintainingthemoments",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-20/search_result.json",
+          "shared_terms": [
+            "fine-tuning"
+          ],
+          "shared_count": 1
+        },
+        {
+          "title": "AGZO: Activation-Guided Zeroth-Order Optimization for LLM Fine-Tuning",
+          "stem": "agzoactivationguidedzerothorderoptimizationforllmfinetuning",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-20/search_result.json",
+          "shared_terms": [
+            "fine-tuning"
+          ],
+          "shared_count": 1
+        },
+        {
+          "title": "A Parameter-Free Adaptive Reflected Gradient Method for Monotone Variational Inequalities",
+          "stem": "aparameterfreeadaptivereflectedgradientmethodformonotonevariationalinequalities",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-24/search_result.json",
+          "shared_terms": [
+            "parameter-free"
+          ],
+          "shared_count": 1
+        }
+      ],
+      "note_filename": "Zero_order_Parameter_free_Optimization_for_LMO_based_Methods_Novel_Approach_for_Efficient_Fine_tuning",
+      "candidate_screening_rank": 3,
+      "semantic_rank": 2,
+      "formal_recommendation": true,
+      "archive_status": "downloaded",
+      "archive_detail": "OpenReview HTTP 403；从已核验arXiv版本恢复：660.5 KB",
+      "archive_path": "/Users/myl/Documents/paper/01-raw/2026-10/Zero_order_Parameter_free_Optimization_for_LMO_based_Methods_Novel_Approach_for_Efficient_Fine_tuning.pdf",
+      "raw_authors": [
+        "{'username': '~Bystrov_Dmitriy1', 'fullname': 'Dmitriy Bystrov', 'institutions': [{'name': 'Moscow Independent Research Institute of Artificial Intelligence', 'domain': 'miriai.org', 'country': 'RU'}]}",
+        "{'username': '~Daniil_Medyakov1', 'fullname': 'Daniil Medyakov', 'institutions': [{'name': 'Moscow Independent Research Institute of Artificial Intelligence', 'domain': 'miriai.org', 'country': 'RU'}]}",
+        "{'username': '~Dmitry_Bylinkin1', 'fullname': 'Dmitry Bylinkin', 'institutions': [{'name': 'Moscow Independent Research Institute of Artificial Intelligence', 'domain': 'miriai.org', 'country': 'RU'}]}",
+        "{'username': '~Aleksandr_Beznosikov1', 'fullname': 'Aleksandr Beznosikov', 'institutions': [{'name': 'Moscow Independent Research Institute of Artificial Intelligence', 'domain': 'miriai.org', 'country': 'RU'}]}"
+      ],
+      "source_verified": true,
+      "source_verification_scope": "官方search API原始响应；独立notes/PDF接口403，非全文核验",
+      "alternate_pdf_url": "https://arxiv.org/pdf/2606.14970v2",
+      "alternate_source_url": "https://arxiv.org/abs/2606.14970",
+      "first_publication_date_verified": "2026-06-12",
+      "archive_pdf_url": "https://arxiv.org/pdf/2606.14970v2"
+    },
+    {
+      "id": "TaFyEJ4yNr",
+      "source": "openreview",
+      "title": "Optimizer Update Geometry: How Parameter Groups Shape Curvature Exposure",
+      "summary": "We measure loss curvature along the updates of five tuned optimizers during separate pretraining runs of a $162$M-parameter Transformer. At each checkpoint, we construct the next optimizer update on a fixed probe batch. The generalized Gauss--Newton quadratic model expresses the predicted one-step decrease through gradient scale, alignment with the negative gradient, and curvature along the update. We call the last quantity \\emph{curvature exposure}. Muon has the lowest exposure, roughly one-tenth of SOAP's. To understand why, we separate the direction within each parameter tensor from that tensor's share of squared update norm. After normalizing by each matrix's mean curvature, Muon and SOAP have the lowest within-matrix exposures. Their much larger difference is in how squared update norm is distributed across tensors. Muon applies its matrix rule to $60$ weight matrices and AdamW to the remaining tensors. These matrices contain $52.4\\%$ of the parameters but receive only $5.4\\%$ of the squared update norm. They are also sharper on average than the remaining tensors, which produces Muon's negative covariance between squared-update share and diagonal curvature. We derive and verify that Muon's squared matrix-update norm scales with fan-out. The quadratic model and the measured probe-batch loss reduction give nearly identical local rankings, but neither matches final validation loss.",
+      "authors": [
+        "Georg Tirpitz",
+        "Antonio Orvieto"
+      ],
+      "affiliations": [],
+      "categories": [],
+      "venue": "OPT 2026 Poster",
+      "pdf_url": "https://openreview.net/pdf?id=TaFyEJ4yNr",
+      "url": "https://openreview.net/forum?id=TaFyEJ4yNr",
+      "published": "2026-10-02T06:06:27.812000",
+      "published_date": "2026-10-02 06:06:27.812000",
+      "scores": {
+        "relevance": 1.2,
+        "recency": 3.0,
+        "impact": 0.0,
+        "evidence": 0.6,
+        "popularity": 0.0,
+        "quality": 0.6,
+        "recommendation": 4.1
+      },
+      "matched_domain": "大模型优化器设计",
+      "matched_keywords": [
+        "Muon",
+        "AdamW"
+      ],
+      "is_hot_paper": false,
+      "score_type": "research_priority_screening",
+      "assessment_scope": "metadata_and_abstract",
+      "screening_rank": 16,
+      "paper_stem": "Optimizer_Update_Geometry_How_Parameter_Groups_Shape_Curvature_Exposure",
+      "already_known": false,
+      "related_papers": [
+        {
+          "title": "OptiSelect: How does the Optimizer Shape Data Curriculum?",
+          "stem": "optiselecthowdoestheoptimizershapedatacurriculum",
+          "source": "pdf",
+          "path": "/Users/myl/Documents/paper/01-raw/2026-10/OptiSelect_How_does_the_Optimizer_Shape_Data_Curriculum.pdf",
+          "shared_terms": [
+            "how",
+            "optimizer",
+            "shape"
+          ],
+          "shared_count": 3
+        },
+        {
+          "title": "How Inner Optimizers Shape Replica Scaling",
+          "stem": "howinneroptimizersshapereplicascaling",
+          "source": "pdf",
+          "path": "/Users/myl/Documents/paper/01-raw/2026-10/How_Inner_Optimizers_Shape_Replica_Scaling.pdf",
+          "shared_terms": [
+            "how",
+            "shape"
+          ],
+          "shared_count": 2
+        },
+        {
+          "title": "Minimal-State Optimization: How Little Optimizer Memory Does AdamW’s Accuracy Need?",
+          "stem": "minimalstateoptimizationhowlittleoptimizermemorydoesadamwsaccuracyneed",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-10-09/search_result.json",
+          "shared_terms": [
+            "how",
+            "optimizer"
+          ],
+          "shared_count": 2
+        }
+      ],
+      "note_filename": "Optimizer_Update_Geometry_How_Parameter_Groups_Shape_Curvature_Exposure",
+      "candidate_screening_rank": 2,
+      "semantic_rank": 3,
+      "formal_recommendation": true,
+      "archive_status": "failed",
+      "archive_detail": "HTTP 403",
+      "archive_path": "/Users/myl/Documents/paper/01-raw/2026-10/Optimizer_Update_Geometry_How_Parameter_Groups_Shape_Curvature_Exposure.pdf",
+      "raw_authors": [
+        "{'username': '~Georg_Tirpitz1', 'fullname': 'Georg Tirpitz', 'institutions': [{'name': 'Eberhard-Karls-Universität Tübingen', 'domain': 'uni-tuebingen.de', 'country': 'DE'}]}",
+        "{'username': '~Antonio_Orvieto3', 'fullname': 'Antonio Orvieto', 'institutions': [{'name': 'ELLIS Institute Tübingen, Max Planck Institute for Intelligent Systems, Tübingen AI Center, Tübingen, Germany', 'domain': 'tue.ellis.eu', 'country': 'DE'}]}"
+      ],
+      "source_verified": true,
+      "source_verification_scope": "官方search API原始响应；独立notes/PDF接口403，非全文核验"
+    },
+    {
+      "id": "jRvd5To0aR",
+      "source": "openreview",
+      "title": "Muon-OGD: Muon-based Spectral Orthogonal Gradient Projection for LLM Continual Learning",
+      "summary": "A central challenge in continual learning for large language models (LLMs) is catastrophic forgetting, where adapting to new tasks can substantially degrade performance on previously learned ones. Existing projection-based methods mitigate such interference by restricting parameter updates to subspaces that are orthogonal to directions associated with past tasks. However, these methods are typically formulated under Euclidean parameter geometry, with update magnitudes and projections governed by the Frobenius norm. The recent empirical success of the Muon optimizer, which applies orthogonalized matrix updates and admits a spectral-norm interpretation, suggests that Frobenius geometry may not be the most effective choice for matrix-valued LLM parameters. Motivated by this observation, we propose Muon-OGD, a spectral-norm-aware continual learning framework that integrates Muon-style operator-norm geometry with orthogonal projection constraints. Our method formulates each update as a spectral-norm-constrained optimization problem with linear non-interference constraints, and solves it efficiently through dual iterations and Newton--Schulz matrix-sign approximations. By applying orthogonalized momentum updates that avoid protected directions associated with prior tasks, Muon-OGD aims to improve the stability--plasticity trade-off in sequential LLM adaptation. We evaluate the proposed method on standard continual learning benchmarks, TRACE, and domain-specific curricula using both encoder--decoder and decoder-only architectures. Empirically, Muon-OGD consistently improves over sequential fine-tuning and competitive orthogonal-gradient baselines, while remaining computationally scalable. These results suggest that spectral-norm-aware update geometry provides a practical and effective alternative to Frobenius-norm projection for continual learning in LLMs.",
+      "authors": [
+        "binghang lu",
+        "Zheyuan Deng",
+        "Runyu Zhang",
+        "Bing Hu",
+        "Yunhan Zhao",
+        "Yuan Tian",
+        "Changhong Mou",
+        "Guang Lin",
+        "Xiaomin Li"
+      ],
+      "affiliations": [],
+      "categories": [],
+      "venue": "CL4FMAgents @ NeurIPS 2026",
+      "pdf_url": "/pdf/069159be5682b3cc1d8cdbb018544a793ad2dbd0.pdf",
+      "url": "https://openreview.net/forum?id=jRvd5To0aR",
+      "published": "2026-10-04T22:50:00.254000",
+      "published_date": "2026-10-04 22:50:00.254000",
+      "scores": {
+        "relevance": 1.0,
+        "recency": 3.0,
+        "impact": 0.0,
+        "evidence": 1.2,
+        "popularity": 0.0,
+        "quality": 1.2,
+        "recommendation": 4.13
+      },
+      "matched_domain": "大模型优化器设计",
+      "matched_keywords": [
+        "Muon"
+      ],
+      "is_hot_paper": false,
+      "score_type": "research_priority_screening",
+      "assessment_scope": "metadata_and_abstract",
+      "screening_rank": 15,
+      "paper_stem": "Muon_OGD_Muon_based_Spectral_Orthogonal_Gradient_Projection_for_LLM_Continual_Learning",
+      "already_known": false,
+      "related_papers": [
+        {
+          "title": "CAST: History-Adaptive Spectral Clipping for LLM Pretraining",
+          "stem": "casthistoryadaptivespectralclippingforllmpretraining",
+          "source": "pdf",
+          "path": "/Users/myl/Documents/paper/01-raw/2026-10/CAST_History_Adaptive_Spectral_Clipping_for_LLM_Pretraining.pdf",
+          "shared_terms": [
+            "llm",
+            "spectral"
+          ],
+          "shared_count": 2
+        },
+        {
+          "title": "HELENE Hessian Layer wise Clipping and Gradient Annealing for Accelerating Fine tuning LLM with Zeroth order Optimizatio",
+          "stem": "helenehessianlayerwiseclippingandgradientannealingforacceleratingfinetuningllmwithzerothorderoptimizatio",
+          "source": "pdf",
+          "path": "/Users/myl/Documents/paper/01-raw/2026-09/HELENE_Hessian_Layer_wise_Clipping_and_Gradient_Annealing_for_Accelerating_Fine_tuning_LLM_with_Zeroth_order_Optimizatio.pdf",
+          "shared_terms": [
+            "gradient",
+            "llm"
+          ],
+          "shared_count": 2
+        },
+        {
+          "title": "ORCA: The Annealed Spectral Conditioning Optimizer for Faster, Better LLM Training",
+          "stem": "orcatheannealedspectralconditioningoptimizerforfasterbetterllmtraining",
+          "source": "pdf",
+          "path": "/Users/myl/Documents/paper/01-raw/2026-10/ORCA_The_Annealed_Spectral_Conditioning_Optimizer_for_Faster_Better_LLM_Training.pdf",
+          "shared_terms": [
+            "llm",
+            "spectral"
+          ],
+          "shared_count": 2
+        }
+      ],
+      "note_filename": "Muon_OGD_Muon_based_Spectral_Orthogonal_Gradient_Projection_for_LLM_Continual_Learning",
+      "candidate_screening_rank": 1,
+      "semantic_rank": 4,
+      "formal_recommendation": true,
+      "raw_authors": [
+        "{'username': '~binghang_lu1', 'fullname': 'binghang lu', 'institutions': [{'name': 'Purdue University', 'domain': 'purdue.edu', 'country': 'US'}]}",
+        "{'username': '~Zheyuan_Deng2', 'fullname': 'Zheyuan Deng', 'institutions': [{'name': 'Brown University', 'domain': 'brown.edu', 'country': 'US'}]}",
+        "{'username': '~Runyu_Zhang1', 'fullname': 'Runyu Zhang', 'institutions': []}",
+        "{'username': '~Bing_Hu7', 'fullname': 'Bing Hu', 'institutions': [{'name': 'Google', 'domain': 'google.com', 'country': 'US'}]}",
+        "{'username': '~Yunhan_Zhao1', 'fullname': 'Yunhan Zhao', 'institutions': [{'name': 'Google', 'domain': 'google.com', 'country': 'US'}]}",
+        "{'username': '~Yuan_Tian31', 'fullname': 'Yuan Tian', 'institutions': [{'name': 'Research Lab', 'domain': 'pg.com', 'country': 'US'}]}",
+        "{'username': '~Changhong_Mou1', 'fullname': 'Changhong Mou', 'institutions': [{'name': 'Utah State University', 'domain': 'usu.edu', 'country': 'US'}]}",
+        "{'username': '~Guang_Lin1', 'fullname': 'Guang Lin', 'institutions': [{'name': 'Purdue University', 'domain': 'purdue.edu', 'country': 'US'}]}",
+        "{'username': '~Xiaomin_Li3', 'fullname': 'Xiaomin Li', 'institutions': [{'name': 'Microsoft', 'domain': 'microsoft.com', 'country': 'US'}]}"
+      ]
+    },
+    {
+      "id": "LjeDfQrtoO",
+      "source": "openreview",
+      "title": "CheckJump: Checked Macro-Steps for Language-Model Training",
+      "summary": "Adam pays a full gradient for every step. CheckJump wraps Adam, proposes a long jump along the recent average of its updates, and keeps it only if the loss decreases on the current batch and does not increase on a fresh batch. Every probe and check is billed. Across 30 compute-matched experiments, including 18 English language tasks, the pooled best-validation-loss gap against AdamW, with both optimizers tuned in the same narrow search box, is +0.00% (95\\% CI $[-0.63,+0.64]$); a post hoc TOST places it within $\\pm1\\%$ ($p=0.0016$), but this does not establish equivalence on each task. In 11 GLUE experiments most accepted jumps are undone and the loss gap is within $\\pm0.0075$. On a character-level language model (\\emph{War and Peace}), CheckJump saves 85 and 125 units at the 50\\% and 75\\% loss targets, about 17\\% of each target's nominal budget; three graph tasks save 115--130 units at the 25\\% target. On these four tasks, 92--98\\% of accepted jumps survive the fresh-batch check. A real direction beats a random one ($p=0.0045$), but the controls do not separate the full gain over AdamW from the effect of tuning. The fresh-batch check limits batch-level loss increases, not population or validation risk.",
+      "authors": [],
+      "affiliations": [],
+      "categories": [],
+      "venue": "ACL ARR 2026 October Submission",
+      "pdf_url": "/pdf/9f899caffe7fb2d61aeb23bc9ff9d589ec6709d7.pdf",
+      "url": "https://openreview.net/forum?id=LjeDfQrtoO",
+      "published": "2026-10-13T18:36:07.178000",
+      "published_date": "2026-10-13 18:36:07.178000",
+      "scores": {
+        "relevance": 0.6,
+        "recency": 3.0,
+        "impact": 0.0,
+        "evidence": 1.0,
+        "popularity": 0.0,
+        "quality": 1.0,
+        "recommendation": 3.27
+      },
+      "matched_domain": "大模型优化器设计",
+      "matched_keywords": [
+        "AdamW"
+      ],
+      "is_hot_paper": false,
+      "score_type": "research_priority_screening",
+      "assessment_scope": "metadata_and_abstract",
+      "screening_rank": 27,
+      "paper_stem": "CheckJump_Checked_Macro_Steps_for_Language_Model_Training",
+      "already_known": false,
+      "related_papers": [
+        {
+          "title": "Anytime Training with Schedule Free Spectral Optimization",
+          "stem": "anytimetrainingwithschedulefreespectraloptimization",
+          "source": "pdf",
+          "path": "/Users/myl/Documents/paper/01-raw/2026-10/Anytime_Training_with_Schedule_Free_Spectral_Optimization.pdf",
+          "shared_terms": [
+            "training"
+          ],
+          "shared_count": 1
+        },
+        {
+          "title": "AURA: Angular Update Rate Adaptation for training complex-valued neural networks",
+          "stem": "auraangularupdaterateadaptationfortrainingcomplexvaluedneuralnetworks",
+          "source": "pdf",
+          "path": "/Users/myl/Documents/paper/01-raw/2026-10/AURA_Angular_Update_Rate_Adaptation_for_training_complex_valued_neural_networks.pdf",
+          "shared_terms": [
+            "training"
+          ],
+          "shared_count": 1
+        },
+        {
+          "title": "Clean: Second-order LLM Training at Linear Memory Cost via Nyström Sketching",
+          "stem": "cleansecondorderllmtrainingatlinearmemorycostvianystrmsketching",
+          "source": "pdf",
+          "path": "/Users/myl/Documents/paper/01-raw/2026-10/Clean_Second_order_LLM_Training_at_Linear_Memory_Cost_via_Nyström_Sketching.pdf",
+          "shared_terms": [
+            "training"
+          ],
+          "shared_count": 1
+        }
+      ],
+      "note_filename": "CheckJump_Checked_Macro_Steps_for_Language_Model_Training",
+      "candidate_screening_rank": 10,
+      "semantic_rank": 5,
+      "formal_recommendation": true
+    },
+    {
+      "id": "ykJF8GeIBx",
+      "source": "openreview",
+      "title": "Adaptive Quantile Clipping under Heavy-Tailed Noise and Differential Privacy",
+      "summary": "Gradient clipping plays an important role in stochastic optimization with heavy-tailed noise or under differential privacy constraints,\nbut its performance depends heavily on the choice of its threshold.\nIn this paper, we study \\emph{quantile clipping}, a scale-independent alternative that sets the clipping threshold to a fixed quantile of the gradient-norm distribution.\nWe show that in the heavy-tailed noise setting, quantile clipping achieves the optimal convergence rate of $\\mathcal{O}(T^{\\frac{-2(p - 1)}{3p - 2}})$.\nFurthermore, we consider its practical implementation in the form of \\emph{online quantile clipping} \\citep{andrew2021differentially}, and show that it achieves the same convergence rate.\nFinally, we derive a formal differential privacy stationarity floor for online quantile clipping, providing a utility--privacy tradeoff guarantee.",
+      "authors": [
+        "Ayoub El Gourari",
+        "Anastasia Koloskova"
+      ],
+      "affiliations": [],
+      "categories": [],
+      "venue": "OPT 2026 Poster",
+      "pdf_url": "https://openreview.net/pdf?id=ykJF8GeIBx",
+      "url": "https://openreview.net/forum?id=ykJF8GeIBx",
+      "published": "2026-10-02T06:06:27.812000",
+      "published_date": "2026-10-02 06:06:27.812000",
+      "scores": {
+        "relevance": 0.6,
+        "recency": 3.0,
+        "impact": 0.0,
+        "evidence": 1.3,
+        "popularity": 0.0,
+        "quality": 1.3,
+        "recommendation": 3.47
+      },
+      "matched_domain": "大模型优化器设计",
+      "matched_keywords": [
+        "gradient clipping"
+      ],
+      "is_hot_paper": false,
+      "score_type": "research_priority_screening",
+      "assessment_scope": "metadata_and_abstract",
+      "screening_rank": 24,
+      "paper_stem": "Adaptive_Quantile_Clipping_under_Heavy_Tailed_Noise_and_Differential_Privacy",
+      "already_known": false,
+      "related_papers": [
+        {
+          "title": "Asymptotic Anytime-Valid Quantile Inference under Local Differential Privacy",
+          "stem": "asymptoticanytimevalidquantileinferenceunderlocaldifferentialprivacy",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-25/search_result.json",
+          "shared_terms": [
+            "differential",
+            "privacy",
+            "quantile",
+            "under"
+          ],
+          "shared_count": 4
+        },
+        {
+          "title": "Decentralized SGD under Heavy-Tailed Noise: Optimal Convergence Rates and the Role of Gradient Clipping",
+          "stem": "decentralizedsgdunderheavytailednoiseoptimalconvergenceratesandtheroleofgradientclipping",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-10-08/search_result.json",
+          "shared_terms": [
+            "clipping",
+            "heavy-tailed",
+            "noise",
+            "under"
+          ],
+          "shared_count": 4
+        },
+        {
+          "title": "Clipped or Unclipped? Finite-Sample Trade-offs for Averaged SGD under Heavy-Tailed Noise",
+          "stem": "clippedorunclippedfinitesampletradeoffsforaveragedsgdunderheavytailednoise",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-10-13/search_result.json",
+          "shared_terms": [
+            "heavy-tailed",
+            "noise",
+            "under"
+          ],
+          "shared_count": 3
+        }
+      ],
+      "note_filename": "Adaptive_Quantile_Clipping_under_Heavy_Tailed_Noise_and_Differential_Privacy",
+      "candidate_screening_rank": 8,
+      "semantic_rank": 6,
+      "formal_recommendation": true,
+      "raw_authors": [
+        "{'username': '~Ayoub_El_Gourari1', 'fullname': 'Ayoub El Gourari', 'institutions': [{'name': 'École Polytechnique', 'domain': 'polytechnique.edu', 'country': 'FR'}]}",
+        "{'username': '~Anastasia_Koloskova2', 'fullname': 'Anastasia Koloskova', 'institutions': [{'name': 'University of Zurich', 'domain': 'uzh.ch', 'country': 'CH'}]}"
+      ]
+    },
+    {
+      "id": "XEVhS9MMgC",
+      "source": "openreview",
+      "title": "Gradient Clipping on Separable Data: Asymptotic Alignment and Persistent Bias",
+      "summary": "Can gradient clipping change the asymptotic classifier selected by training on separable data? It depends. For per-example clipping at the empirical median of the current per-example gradient norms, we construct an exact separable family in which the integer $r\\ge2$ controls sample multiplicity. The threshold tends to zero while a rare, maximum-margin-relevant example remains clipped at every positive iterate; duplicating geometrically redundant constraints leaves the Euclidean hard-margin feasible set unchanged but changes the limiting separator, whose normalized-margin ratio is $\\sqrt{2/(r^2+1)}\\to0$. In contrast, asymptotic updates are aligned with a fixed steepest-descent geometry preserving its max-margin implicit bias under suitable step conditions. Fixed-threshold generalized gradient norm clipping (GGNC) is a concrete positive case: it only rescales the norm-specific steepest-descent direction and then after that it becomes inactive. Experiments reproduce the exact law, show finite-horizon separation under modest perturbations, and match the predicted transient-to-inactive behavior of fixed clipping.",
+      "authors": [
+        "Mahdi Mansouri",
+        "Nima Mollaei",
+        "Yongtao Wu"
+      ],
+      "affiliations": [],
+      "categories": [],
+      "venue": "OPT 2026 Poster",
+      "pdf_url": "https://openreview.net/pdf?id=XEVhS9MMgC",
+      "url": "https://openreview.net/forum?id=XEVhS9MMgC",
+      "published": "2026-10-02T06:06:27.812000",
+      "published_date": "2026-10-02 06:06:27.812000",
+      "scores": {
+        "relevance": 1.0,
+        "recency": 3.0,
+        "impact": 0.0,
+        "evidence": 0.0,
+        "popularity": 0.0,
+        "quality": 0.0,
+        "recommendation": 3.33
+      },
+      "matched_domain": "大模型优化器设计",
+      "matched_keywords": [
+        "gradient clipping"
+      ],
+      "is_hot_paper": false,
+      "score_type": "research_priority_screening",
+      "assessment_scope": "metadata_and_abstract",
+      "screening_rank": 26,
+      "paper_stem": "Gradient_Clipping_on_Separable_Data_Asymptotic_Alignment_and_Persistent_Bias",
+      "already_known": false,
+      "related_papers": [
+        {
+          "title": "Almost Sure Convergence Analysis of Stochastic Gradient Methods with Clipping and Additive Noise",
+          "stem": "almostsureconvergenceanalysisofstochasticgradientmethodswithclippingandadditivenoise",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-21/search_result.json",
+          "shared_terms": [
+            "clipping",
+            "gradient"
+          ],
+          "shared_count": 2
+        },
+        {
+          "title": "Curvature-Aware Clipping: Mitigating Bias in DPSGD via Approximate Second-Order Information",
+          "stem": "curvatureawareclippingmitigatingbiasindpsgdviaapproximatesecondorderinformation",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-10-02/search_result.json",
+          "shared_terms": [
+            "bias",
+            "clipping"
+          ],
+          "shared_count": 2
+        },
+        {
+          "title": "Decentralized SGD under Heavy-Tailed Noise: Optimal Convergence Rates and the Role of Gradient Clipping",
+          "stem": "decentralizedsgdunderheavytailednoiseoptimalconvergenceratesandtheroleofgradientclipping",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-10-08/search_result.json",
+          "shared_terms": [
+            "clipping",
+            "gradient"
+          ],
+          "shared_count": 2
+        }
+      ],
+      "note_filename": "Gradient_Clipping_on_Separable_Data_Asymptotic_Alignment_and_Persistent_Bias",
+      "candidate_screening_rank": 9,
+      "semantic_rank": 7,
+      "formal_recommendation": true,
+      "raw_authors": [
+        "{'username': '~Mahdi_Mansouri1', 'fullname': 'Mahdi Mansouri', 'institutions': [{'name': 'University of Hong Kong', 'domain': 'hku.hk', 'country': 'HK'}]}",
+        "{'username': '~Nima_Mollaei1', 'fullname': 'Nima Mollaei', 'institutions': [{'name': 'University of Hong Kong', 'domain': 'hku.hk', 'country': 'HK'}]}",
+        "{'username': '~Yongtao_Wu1', 'fullname': 'Yongtao Wu', 'institutions': [{'name': 'Swiss Federal Institute of Technology Lausanne', 'domain': 'epfl.ch', 'country': 'CH'}]}"
+      ]
+    },
+    {
+      "id": "3pujdNCHGG",
+      "source": "openreview",
+      "title": "Same Training Loss, Different Recovery: Optimizer-Dependent Solution Selection in Matrix Sensing",
+      "summary": "In an overparameterized problem, exact minimization of the training objective does not guarantee recovery of the ground truth solution. A simple non-convex example is low-rank matrix sensing, where the solution can be planted, and recovery can be measured directly. We compare SGD, Global RMS, RMSProp, SignSGD, and Muon using matched initializations and minibatches. All five methods reach almost zero training loss, but the matrix solutions they find are very different. SGD reaches a high-effective-rank interpolating solution early, whereas RMSProp and Muon reduce the training loss more slowly and recover the target by the final checkpoint. To compare the solutions found by the different methods, we follow the size and direction of the updates and rotate the whole problem. Global RMS keeps the update parallel to the gradient but does not recover, while momentum-free SignSGD changes its direction but also does not recover. The rotated runs further show that basis dependence is not what separates the methods. In this experiment, none of these properties predicts recovery on its own. We still do not know why RMSProp and Muon select the planted solution in this experiment.",
+      "authors": [
+        "Luca Stümper",
+        "Antonio Orvieto"
+      ],
+      "affiliations": [],
+      "categories": [],
+      "venue": "OPT 2026 Poster",
+      "pdf_url": "https://openreview.net/pdf?id=3pujdNCHGG",
+      "url": "https://openreview.net/forum?id=3pujdNCHGG",
+      "published": "2026-10-02T06:06:27.812000",
+      "published_date": "2026-10-02 06:06:27.812000",
+      "scores": {
+        "relevance": 1.2,
+        "recency": 3.0,
+        "impact": 0.0,
+        "evidence": 0.5,
+        "popularity": 0.0,
+        "quality": 0.5,
+        "recommendation": 4.03
+      },
+      "matched_domain": "大模型优化器设计",
+      "matched_keywords": [
+        "SignSGD",
+        "Muon"
+      ],
+      "is_hot_paper": false,
+      "score_type": "research_priority_screening",
+      "assessment_scope": "metadata_and_abstract",
+      "screening_rank": 20,
+      "paper_stem": "Same_Training_Loss_Different_Recovery_Optimizer_Dependent_Solution_Selection_in_Matrix_Sensing",
+      "already_known": false,
+      "related_papers": [
+        {
+          "title": "Optimizer-dependent training dynamics converge to the same one-third optimal data scaling",
+          "stem": "optimizerdependenttrainingdynamicsconvergetothesameonethirdoptimaldatascaling",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-10-11/search_result.json",
+          "shared_terms": [
+            "optimizer-dependent",
+            "same",
+            "training"
+          ],
+          "shared_count": 3
+        },
+        {
+          "title": "Same Flow, Different Paths: Variance Reduction in Flow Matching",
+          "stem": "sameflowdifferentpathsvariancereductioninflowmatching",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-24/search_result.json",
+          "shared_terms": [
+            "different",
+            "same"
+          ],
+          "shared_count": 2
+        },
+        {
+          "title": "Same Function, Different Trajectory: No Standard Optimizer Is Equivariant to Transformer Reparameterization",
+          "stem": "samefunctiondifferenttrajectorynostandardoptimizerisequivarianttotransformerreparameterization",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-10-17/search_result.json",
+          "shared_terms": [
+            "different",
+            "same"
+          ],
+          "shared_count": 2
+        }
+      ],
+      "note_filename": "Same_Training_Loss_Different_Recovery_Optimizer_Dependent_Solution_Selection_in_Matrix_Sensing",
+      "candidate_screening_rank": 6,
+      "semantic_rank": 8,
+      "formal_recommendation": true,
+      "raw_authors": [
+        "{'username': '~Luca_Stümper2', 'fullname': 'Luca Stümper', 'institutions': [{'name': 'Eberhard-Karls-Universität Tübingen', 'domain': 'uni-tuebingen.de', 'country': 'DE'}]}",
+        "{'username': '~Antonio_Orvieto3', 'fullname': 'Antonio Orvieto', 'institutions': [{'name': 'ELLIS Institute Tübingen, Max Planck Institute for Intelligent Systems, Tübingen AI Center, Tübingen, Germany', 'domain': 'tue.ellis.eu', 'country': 'DE'}]}"
+      ]
+    },
+    {
+      "id": "1sTcYib5Kt",
+      "source": "openreview",
+      "title": "Differentially Private Clipping-Free Stochastic Sign Descent",
+      "summary": "Federated learning allows clients to train a model collaboratively while keeping the data decentralized. For real-world applications, two important conditions must be met: first, training must be differentially private so as not to compromise clients' data, and, second, communication costs must be minimized, especially if the model is large. While SignSGD is memory-effective and at the same time reduces communication costs by transmitting only signs of the gradients, it is not differentially private per se. We propose a differentially private modification of SignSGD that fixes this issue. Instead of clipping the gradients and then noising them coordinate-wise to ensure differential privacy, we randomize sign as a mapping from $\\mathbb{R}^d$ to $\\lbrace\\pm1\\rbrace^d$. Our tight privacy estimation shows that this approach delivers better privacy guarantees than adding Gaussian or logistic noise to the clipped gradients, both in terms of $(\\varepsilon, 0)$ privacy and the upper bound on $\\delta$ for a fixed $\\varepsilon$ budget. We empirically demonstrate that these theoretical advantages of our scheme lead to a feasible differentially private algorithm for federated learning problems. A privacy audit supports the guarantees of DP-SignSGD and ours, but rejects that of DP-SignLoSGD, matching an error we find in the accounting behind it.",
+      "authors": [
+        "Alexey Kravatskiy",
+        "Anton Pliusnin",
+        "Savelii Chezhegov",
+        "Aleksandr Shestakov",
+        "Daniil Medyakov",
+        "Aleksandr Beznosikov"
+      ],
+      "affiliations": [],
+      "categories": [],
+      "venue": "OPT 2026 Poster",
+      "pdf_url": "https://openreview.net/pdf?id=1sTcYib5Kt",
+      "url": "https://openreview.net/forum?id=1sTcYib5Kt",
+      "published": "2026-10-02T06:06:27.812000",
+      "published_date": "2026-10-02 06:06:27.812000",
+      "scores": {
+        "relevance": 0.6,
+        "recency": 3.0,
+        "impact": 0.0,
+        "evidence": 1.4,
+        "popularity": 0.0,
+        "quality": 1.4,
+        "recommendation": 3.53
+      },
+      "matched_domain": "大模型优化器设计",
+      "matched_keywords": [
+        "SignSGD"
+      ],
+      "is_hot_paper": false,
+      "score_type": "research_priority_screening",
+      "assessment_scope": "metadata_and_abstract",
+      "screening_rank": 23,
+      "paper_stem": "Differentially_Private_Clipping_Free_Stochastic_Sign_Descent",
+      "already_known": false,
+      "related_papers": [
+        {
+          "title": "A Stochastic Riemannian Alternating Descent Ascent Method for Nonsmooth Composite Expectation Optimization on Riemannian Manifolds",
+          "stem": "astochasticriemannianalternatingdescentascentmethodfornonsmoothcompositeexpectationoptimizationonriemannian",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-25/search_result.json",
+          "shared_terms": [
+            "descent",
+            "stochastic"
+          ],
+          "shared_count": 2
+        },
+        {
+          "title": "A Stochastic Riemannian Alternating Descent Ascent Method for Nonsmooth Composite Expectation Optimization on Riemannian Manifolds",
+          "stem": "astochasticriemannianalternatingdescentascentmethodfornonsmoothcompositeexpectationoptimizationonriemannianmanifolds",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-25/search_result.json",
+          "shared_terms": [
+            "descent",
+            "stochastic"
+          ],
+          "shared_count": 2
+        },
+        {
+          "title": "Beyond the Matrix Sign: Quadratic Spectral Descent",
+          "stem": "beyondthematrixsignquadraticspectraldescent",
+          "source": "pdf",
+          "path": "/Users/myl/Documents/paper/01-raw/2026-09/Beyond_the_Matrix_Sign_Quadratic_Spectral_Descent.pdf",
+          "shared_terms": [
+            "descent",
+            "sign"
+          ],
+          "shared_count": 2
+        }
+      ],
+      "note_filename": "Differentially_Private_Clipping_Free_Stochastic_Sign_Descent",
+      "candidate_screening_rank": 7,
+      "semantic_rank": 9,
+      "formal_recommendation": true,
+      "raw_authors": [
+        "{'username': '~Alexey_Kravatskiy1', 'fullname': 'Alexey Kravatskiy', 'institutions': [{'name': 'Moscow Independent Research Institute of Artificial Intelligence', 'domain': 'miriai.org', 'country': 'RU'}]}",
+        "{'username': '~Anton_Pliusnin1', 'fullname': 'Anton Pliusnin', 'institutions': [{'name': 'Moscow Independent Research Institute of Artificial Intelligence', 'domain': 'miriai.org', 'country': 'RU'}]}",
+        "{'username': '~Savelii_Chezhegov1', 'fullname': 'Savelii Chezhegov', 'institutions': [{'name': 'Moscow Independent Research Institute of Artificial Intelligence', 'domain': 'miriai.org', 'country': 'RU'}]}",
+        "{'username': '~Aleksandr_Shestakov1', 'fullname': 'Aleksandr Shestakov', 'institutions': [{'name': 'Mohamed bin Zayed University of Artificial Intelligence', 'domain': 'mbzuai.ac.ae', 'country': 'AE'}]}",
+        "{'username': '~Daniil_Medyakov1', 'fullname': 'Daniil Medyakov', 'institutions': [{'name': 'Moscow Independent Research Institute of Artificial Intelligence', 'domain': 'miriai.org', 'country': 'RU'}]}",
+        "{'username': '~Aleksandr_Beznosikov1', 'fullname': 'Aleksandr Beznosikov', 'institutions': [{'name': 'Moscow Independent Research Institute of Artificial Intelligence', 'domain': 'miriai.org', 'country': 'RU'}]}"
+      ]
+    },
+    {
+      "id": "8vIKKcK9b6",
+      "source": "openreview",
+      "title": "Non-Interfering Asymmetric AdamW Updates for Constrained Exploration of Equifinality in Hybrid Models",
+      "summary": "Hybrid models let neural networks supply the unresolved parameters of a process-based simulator, and are fitted to observations that constrain aggregate fluxes and storages but not the internal partitioning that produces them.\nSuch a fit is equifinal: configurations indistinguishable in the observed aggregates can disagree substantially about the unobserved internals, and therefore about the mechanism they attribute to the same data.\nWe study evapotranspiration, whose total flux is observed while its split into transpiration and evaporation is not.\nA model ensemble built from random seeds alone spans only a narrow band of the partitionings the data admit.\nWe produce the spread deliberately, training members under auxiliary repulsion on transpiration, subject to the fit to observations not degrading.\nNon-interference is usually arranged by making the auxiliary gradient orthogonal to the main one, but under AdamW the applied step is a preconditioned momentum direction, so orthogonality between raw gradients no longer implies it.\nWe introduce Non-interfering Asymmetric Network Optimization (NANO), an update whose first-order effect on the main loss is exactly that of the main objective alone, whose auxiliary step is bounded, and which concentrates repulsion in the coordinates the main gradient leaves idle.",
+      "authors": [
+        "Ekaterina Gikalo",
+        "Zavud Baghirov",
+        "Christian Reimers",
+        "Markus Reichstein",
+        "Martin Jung",
+        "Marco Körner"
+      ],
+      "affiliations": [],
+      "categories": [],
+      "venue": "Sim2Sci 2026",
+      "pdf_url": "/pdf/dd72841b1a17148359cd38ac39f05d2b43be53fc.pdf",
+      "url": "https://openreview.net/forum?id=8vIKKcK9b6",
+      "published": "2026-10-03T08:27:39.040000",
+      "published_date": "2026-10-03 08:27:39.040000",
+      "scores": {
+        "relevance": 1.0,
+        "recency": 3.0,
+        "impact": 0.0,
+        "evidence": 1.1,
+        "popularity": 0.0,
+        "quality": 1.1,
+        "recommendation": 4.07
+      },
+      "matched_domain": "大模型优化器设计",
+      "matched_keywords": [
+        "AdamW"
+      ],
+      "is_hot_paper": false,
+      "score_type": "research_priority_screening",
+      "assessment_scope": "metadata_and_abstract",
+      "screening_rank": 19,
+      "paper_stem": "Non_Interfering_Asymmetric_AdamW_Updates_for_Constrained_Exploration_of_Equifinality_in_Hybrid_Models",
+      "already_known": false,
+      "related_papers": [
+        {
+          "title": "AdamW Scaling Laws from First Principles",
+          "stem": "adamwscalinglawsfromfirstprinciples",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-10-10/search_result.json",
+          "shared_terms": [
+            "adamw"
+          ],
+          "shared_count": 1
+        },
+        {
+          "title": "AdasignSGD: Turning 1-Bit Worker Votes into Adaptive Updates",
+          "stem": "adasignsgdturning1bitworkervotesintoadaptiveupdates",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-10-20/search_result.json",
+          "shared_terms": [
+            "updates"
+          ],
+          "shared_count": 1
+        },
+        {
+          "title": "Anytime-Feasible Gradient Descent for Constrained Optimization Under Gradient Uncertainty",
+          "stem": "anytimefeasiblegradientdescentforconstrainedoptimizationundergradientuncertainty",
+          "source": "daily",
+          "path": "/Users/myl/Documents/paper/08-daily/2026-09-25/search_result.json",
+          "shared_terms": [
+            "constrained"
+          ],
+          "shared_count": 1
+        }
+      ],
+      "note_filename": "Non_Interfering_Asymmetric_AdamW_Updates_for_Constrained_Exploration_of_Equifinality_in_Hybrid_Models",
+      "candidate_screening_rank": 5,
+      "semantic_rank": 10,
+      "formal_recommendation": true,
+      "raw_authors": [
+        "{'username': '~Ekaterina_Gikalo1', 'fullname': 'Ekaterina Gikalo', 'institutions': [{'name': 'Max-Planck Institute', 'domain': 'mpg.de', 'country': 'DE'}]}",
+        "{'username': '~Zavud_Baghirov1', 'fullname': 'Zavud Baghirov', 'institutions': [{'name': 'MPI-BGC', 'domain': 'bgc-jena.mpg.de', 'country': 'DE'}]}",
+        "{'username': '~Christian_Reimers2', 'fullname': 'Christian Reimers', 'institutions': [{'name': 'Max-Planck-Institute for Biogeochemistry', 'domain': 'bgc-jena.mpg.de', 'country': 'DE'}]}",
+        "{'username': '~Markus_Reichstein1', 'fullname': 'Markus Reichstein', 'institutions': [{'name': 'Max-Planck Institute', 'domain': 'mpg.de', 'country': 'DE'}]}",
+        "{'username': '~Martin_Jung1', 'fullname': 'Martin Jung', 'institutions': [{'name': 'Max-Planck Institute', 'domain': 'mpg.de', 'country': 'DE'}]}",
+        "{'username': '~Marco_Körner2', 'fullname': 'Marco Körner', 'institutions': [{'name': 'German Aerospace Center (DLR)', 'domain': 'dlr.de', 'country': 'DE'}, {'name': 'Technical University Munich', 'domain': 'tum.de', 'country': 'DE'}]}"
+      ]
+    }
+  ],
+  "search_limitations": [
+    "arXiv官方API三次请求依次503、503、429；官方网站全部15关键词高级检索恢复尝试502。arXiv源计数0代表不可用，不代表无相关新论文。",
+    "OpenReview逐15关键词各取首100条，按pdate/cdate/tcdate窗口过滤，合并40条、评分后去重29条；这是有界记录检索，记录日期不能认定首发日期。",
+    "Semantic Scholar年度窗口2025-10-26至2026-09-25两次429，高影响力补充不可用。",
+    "OpenReview前三篇forum页有浏览器验证，notes接口与PDF均403；题目、原始作者与摘要依据可用的官方搜索API原始响应。已额外核对AdaNAGED的arXiv官方摘要。",
+    "AdaNAGED同题同作者同摘要的arXiv版本于2026-06-12首次提交，2026-06-22更新；本轮属于新发现旧文。",
+    "分数与screening_rank保留原值；作者字段将官方搜索响应中的序列化资料解析为fullname，raw_authors保留原始值。"
+  ],
+  "formal_recommendation_count": 10,
+  "sources_attempted": [
+    "arxiv",
+    "openreview",
+    "semantic_scholar"
+  ]
+}

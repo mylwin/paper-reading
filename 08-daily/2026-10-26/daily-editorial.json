@@ -1,0 +1,236 @@
+{
+  "assessment_scope": "metadata_and_abstract",
+  "confidence": "低；官方搜索API摘要初评，待全文核验",
+  "overview": {
+    "trend": "本轮窗口为2026-09-26至2026-10-26。arXiv API三次503/429，官网恢复检索502，未获得可用批量结果；Semantic Scholar年度窗口两次429。因此有效候选仅来自OpenReview：40条源记录，过滤和去重后29篇，18篇命中已有记录，11篇未命中。前十均逐篇摘要审阅，以Muon方向步长、AdaNAGED零阶免调参和参数分组曲率暴露为前三。本轮是覆盖受限的阅读队列，不足以概括全领域趋势。OpenReview记录日期不等于首发日期：AdaNAGED的同题arXiv版本早在6月发布。",
+    "hotspots": [
+      {
+        "title": "方向步长的先验依赖",
+        "text": "FTRL型Muon避免未知解距离，但时域与光滑性仍参与参数选择；比较时应逐项列出所需先验。"
+      },
+      {
+        "title": "无梯度与非欧氏几何",
+        "text": "AdaNAGED把PF与LMO型ZO结合；摘要没有查询预算和端到端数字，需与StructZO、Ori等在同等资源下比较。"
+      },
+      {
+        "title": "局部指标的解释边界",
+        "text": "曲率暴露与matrix sensing候选都提醒：局部下降、训练损失与最终验证/恢复表现是不同终点。CheckJump摘要也保留了调参混杂和等价性限制。"
+      }
+    ]
+  },
+  "domain_summaries": {
+    "大模型优化器设计": {
+      "summary": "优先阅读直接影响方向—步长分工及评测归因的三篇；Muon-OGD和CheckJump提供可实现机制，量化裁剪偏差与隐私符号方法按适用条件选读。本轮仅OpenReview有效，不把日期命中或候选分数解释为新颖性与全文质量。",
+      "subfields": {
+        "符号与范数几何优化": "FTRL型Muon研究方向步长，Muon-OGD加入持续学习非干扰约束；矩阵感知实验保留“机制尚未解释”的边界。",
+        "免调参与梯度裁剪": "AdaNAGED与FTRL-Muon分别减少不同先验依赖；分位数裁剪和可分数据反例提示阈值自适应还会影响隐式偏差。",
+        "自适应与状态内存": "参数分组曲率暴露与NANO关注真实更新而非原始梯度；CheckJump要求将所有检查计入成本。",
+        "大模型训练与优化器设计": "语言模型证据分别限于GPT-124M/WikiText-103、OPT-1.3B及162M Transformer，不能外推超大规模。",
+        "未细分": "剩余记录按原始关键词归类追溯，缺失来源不被旧日报补齐为新检索。"
+      }
+    }
+  },
+  "top_papers": {
+    "Can Muon Adapt Its Stepsize Without Knowing the Solution Distance?": {
+      "title_zh": "Muon能否在不知道解距离的情况下自适应选择步长？",
+      "abstract_zh": "矩阵梯度正交化已被证明对神经网络训练有效，其信赖域解释说明了Muon如何选择归一化方向。但它没有确定沿该方向移动多远，因此仍然需要调节步长。现有理论选择还可能依赖从初始化点到某个解的未知距离$D=\\lVert x_0-x^\\star\\rVert$。\n\n  我们提出无需知道$D$即可选择这一方向步长的随机Muon方法。我们将方向步长选择表述为一个由随机梯度反馈驱动的一维在线学习问题。对于光滑非凸目标，一个具有闭式形式的正则化跟随领导者（follow-the-regularized-leader，FTRL）规则给出期望$O(T^{-1/4})$的驻点保证。对于光滑星凸目标，一个加权FTRL规则选择方向步长，并与延迟一个梯度的Nesterov方向结合，给出期望的末次迭代速率$\\widetilde{O}(T^{-1/3})$。其参数使用迭代时域和光滑性，但既不使用$D$，也不使用随机预言机方差。\n\n  在一个受控的非凸矩阵问题上，该自适应方法最终优于针对每个迭代时域重新调参的固定步长Muon基线。在GPT-124M与WikiText-103上，在匹配的训练条件下，这两种方法的实用实现都取得了与经过调参的Muon相当的验证损失。",
+      "summary": "以一维在线学习选择Muon方向步长，避免依赖未知解距离，但仍使用时域与光滑性参数。",
+      "contributions": [
+        "作者将方向与步长分离，提出闭式FTRL与加权FTRL两种随机Muon步长规则。",
+        "摘要给出非凸驻点与星凸末次迭代速率，并报告小型语言模型上的匹配训练比较。"
+      ],
+      "method": "以随机梯度反馈驱动一维在线学习；星凸版本搭配一个梯度延迟的Nesterov方向。先查实际步长公式、平滑性常数来源及与理论实现的差异。",
+      "result": "摘要报告光滑非凸期望O(T^{-1/4})驻点保证、光滑星凸期望末次迭代速率Õ(T^{-1/3})；GPT-124M/WikiText-103验证损失与调参Muon相当，未声称全面优于。",
+      "selection_reason": "直接命中Muon的免调参步长问题，可与PowerStep和MuPACE对照“方向规则、步长、所需先验”三部分。",
+      "evidence_limit": "初步判断，待全文核验。仅依据官方OpenReview搜索API题目与摘要；独立notes接口和PDF返回403。需查梯度假设、时域/光滑性依赖、未知方差的处理、训练和扫参预算及随机种子。“不知道D”不等于完全无参数。",
+      "reading_decision": "精读",
+      "translation_check_anchors": [
+        "D",
+        "FTRL",
+        "T^{-1/4}",
+        "T^{-1/3}",
+        "Nesterov",
+        "GPT-124M",
+        "WikiText-103"
+      ]
+    },
+    "Zero-order Parameter-free Optimization for LMO-based Methods: Novel Approach for Efficient Fine-tuning": {
+      "title_zh": "基于LMO方法的零阶免调参优化：高效微调的新方法",
+      "abstract_zh": "大语言模型（LLM）微调已成为现代优化的核心应用，使预训练模型能够适应多样的下游任务与领域特定数据。大规模微调的一项主要障碍是反向传播的内存开销，因为它需要存储激活、梯度和优化器状态。\n\n  零阶（zeroth-order，ZO）优化提供了一种内存高效的替代方案，但其表现对步长与平滑参数高度敏感，往往需要代价高昂的逐任务调参。免调参（parameter-free，PF）优化通过在不预先知道问题相关常数的情况下自适应调整算法参数来应对这一问题。\n\n  此外，大规模微调可以受益于考虑参数块异质结构的几何感知更新，这可以通过利用线性最小化预言机（linear minimization oracle，LMO）的方法来建模。在本工作中，我们研究基于LMO的ZO优化的PF自适应，并提出$\\texttt{AdaNAGED}$，一种统一无梯度训练、自适应调节和非欧氏更新几何的方法。\n\n  我们建立了收敛保证，并在采用$\\texttt{OPT}-1.3\\mathrm{B}$模型的大规模LLM微调任务上验证该方法。",
+      "summary": "AdaNAGED将零阶估计、免调参自适应与非欧氏LMO更新结合，作为低内存训练路线对照。",
+      "contributions": [
+        "作者将PF自适应与LMO型ZO方法结合，提出AdaNAGED。",
+        "摘要声称收敛保证，并给出OPT-1.3B微调验证入口。"
+      ],
+      "method": "用线性最小化预言机描述异质参数块的更新几何，同时自适应处理零阶算法参数；优先读步长与平滑参数的实际自适应规则。",
+      "result": "摘要仅报告建立收敛保证和OPT-1.3B实验，没有具体速率、任务名、精度差、函数查询数或端到端显存收益，均待全文核验。",
+      "selection_reason": "直接交叉命中免调参、LMO几何与内存高效微调；可与刚入库的StructZO对照如何选择估计空间、方向和步长。",
+      "evidence_limit": "初步判断，待全文核验。OpenReview摘要与arXiv:2606.14970题目、作者和摘要对应。arXiv首次提交为6月12日，6月22日修订；属于本轮发现的旧文，不是10月新首发。须核验PF仍需的设计常数、ZO查询预算、平滑偏差、LMO计算代价及基线公平性。",
+      "reading_decision": "精读",
+      "translation_check_anchors": [
+        "ZO",
+        "PF",
+        "LMO",
+        "AdaNAGED",
+        "OPT",
+        "1.3"
+      ]
+    },
+    "Optimizer Update Geometry: How Parameter Groups Shape Curvature Exposure": {
+      "title_zh": "优化器更新几何：参数分组如何塑造曲率暴露",
+      "abstract_zh": "我们测量了一个162M参数Transformer的不同预训练运行中，五种经过调参的优化器沿其更新方向的损失曲率。在每个检查点，我们在固定的探测批次上构造下一步优化器更新。广义Gauss–Newton二次模型通过梯度尺度、与负梯度的对齐程度，以及沿更新方向的曲率来表达预测的单步下降。我们将最后一项称为“曲率暴露”。Muon的暴露最低，大约为SOAP的十分之一。\n\n  为理解原因，我们将每个参数张量内部的方向与该张量所占的更新范数平方份额分离。以每个矩阵的平均曲率归一化之后，Muon与SOAP具有最低的矩阵内暴露。两者更大的差异在于更新范数平方如何分配到各个张量上。Muon对60个权重矩阵应用其矩阵规则，并对其余张量应用AdamW。这些矩阵包含52.4%的参数，但只获得5.4%的更新范数平方份额。它们平均也比其余张量更尖锐，这使Muon的更新平方份额与对角曲率之间呈负协方差。\n\n  我们推导并验证了Muon矩阵更新的范数平方随fan-out缩放。二次模型与测得的探测批次损失下降给出几乎相同的局部排名，但两者均与最终验证损失的排名不一致。",
+      "summary": "把张量内部方向与跨张量更新份额分开，诊断Muon的局部低曲率暴露为何不等同于最终验证收益。",
+      "contributions": [
+        "作者将预测单步下降分为梯度尺度、对齐与曲率暴露，并分离张量内外因素。",
+        "报告混合Muon/AdamW参数分组的更新份额与曲率关系，同时披露局部排名不预测最终验证损失。"
+      ],
+      "method": "在五种调参优化器的162M Transformer检查点上，用固定探测批次与广义Gauss–Newton模型分解更新；核对分组、曲率归一化与fan-out缩放定义。",
+      "result": "摘要报告Muon暴露约为SOAP的1/10；60个矩阵占参数52.4%而仅占更新范数平方5.4%。局部模型排名与实际探测下降接近，但两者均不匹配最终验证损失排名。",
+      "selection_reason": "可直接改变Muon比较的归因方式：分组权重与组内方向必须分开控制，避免把混合优化器分配策略的收益都归到正交化。",
+      "evidence_limit": "初步判断，待全文核验。仅官方搜索API摘要初评，notes与PDF403，未做全文评价。需检查五种优化器的调参预算、曲率算子近似、probe batch代表性、归一化方式、种子和最终损失。约1/10仅指特定局部暴露指标。",
+      "reading_decision": "精读",
+      "translation_check_anchors": [
+        "162M",
+        "Gauss–Newton",
+        "SOAP",
+        "十分之一",
+        "60",
+        "52.4%",
+        "5.4%",
+        "fan-out"
+      ]
+    },
+    "Muon-OGD: Muon-based Spectral Orthogonal Gradient Projection for LLM Continual Learning": {
+      "summary": "Muon-OGD将谱范数约束与历史方向非干扰结合，通过对偶迭代和Newton–Schulz求解；持续学习需求相关时选读。",
+      "selection_reason": "更新几何直接相关，但需单独核验保护子空间、对偶收敛和新增计算代价。",
+      "reading_decision": "选读",
+      "evidence_limit": "仅官方搜索API题目与摘要，待全文核验。"
+    },
+    "CheckJump: Checked Macro-Steps for Language-Model Training": {
+      "summary": "CheckJump计入全部探测成本后汇总损失差为+0.00%，部分任务省预算；逐任务等价性和调参归因仍未建立。",
+      "selection_reason": "摘要同时报告控制实验无法分离调参收益，适合审查宏步提案的净收益。",
+      "reading_decision": "选读",
+      "evidence_limit": "仅官方搜索API题目与摘要，待全文核验。"
+    },
+    "Adaptive Quantile Clipping under Heavy-Tailed Noise and Differential Privacy": {
+      "summary": "在线分位数裁剪在重尾噪声下报告最优率并给出DP驻点下限；需核验噪声阶p、分位点与私有估计条件。",
+      "selection_reason": "直接为阈值自适应设计提供依据，但摘要未提供LLM训练实证。",
+      "reading_decision": "选读",
+      "evidence_limit": "仅官方搜索API题目与摘要，待全文核验。"
+    },
+    "Gradient Clipping on Separable Data: Asymptotic Alignment and Persistent Bias": {
+      "summary": "中位数逐样本裁剪可改变可分数据的极限分类器，固定阈值GGNC给出正例；适合检查裁剪隐式偏差。",
+      "selection_reason": "明确反例与正例的边界，需区分逐样本、全局及范数特定裁剪。",
+      "reading_decision": "选读",
+      "evidence_limit": "仅官方搜索API题目与摘要，待全文核验。"
+    },
+    "Same Training Loss, Different Recovery: Optimizer-Dependent Solution Selection in Matrix Sensing": {
+      "summary": "矩阵感知中相同近零训练损失对应不同恢复结果，单独方向改变或旋转依赖均不能解释；作为机制诊断选读。",
+      "selection_reason": "提供可控反例与匹配初始化/批次，但摘要明确RMSProp与Muon恢复原因仍未知。",
+      "reading_decision": "选读",
+      "evidence_limit": "仅官方搜索API题目与摘要，待全文核验。"
+    },
+    "Differentially Private Clipping-Free Stochastic Sign Descent": {
+      "summary": "随机化符号映射替代裁剪加噪以满足DP并减少通信；隐私审计报告另一方法核算错误，需查完整会计证明。",
+      "selection_reason": "直接设计SignSGD更新，但主要约束是联邦隐私，按需求定点阅读。",
+      "reading_decision": "选读",
+      "evidence_limit": "仅官方搜索API题目与摘要，待全文核验。"
+    },
+    "Non-Interfering Asymmetric AdamW Updates for Constrained Exploration of Equifinality in Hybrid Models": {
+      "summary": "NANO在预条件动量更新层面保持主目标一阶效应，将辅助排斥限制到主梯度空闲坐标；作为多目标机制迁移线索。",
+      "selection_reason": "应用是混合蒸散模型；可迁移的是AdamW更新非干扰规则，不把该领域实证当LLM收益。",
+      "reading_decision": "选读",
+      "evidence_limit": "仅官方搜索API题目与摘要，待全文核验。"
+    }
+  },
+  "source_limitations": [
+    "arXiv官方API三次请求依次503、503、429；官方网站全部15关键词高级检索恢复尝试502。arXiv源计数0代表不可用，不代表无相关新论文。",
+    "OpenReview逐15关键词各取首100条，按pdate/cdate/tcdate窗口过滤，合并40条、评分后去重29条；这是有界记录检索，记录日期不能认定首发日期。",
+    "Semantic Scholar年度窗口2025-10-26至2026-09-25两次429，高影响力补充不可用。",
+    "OpenReview前三篇forum页有浏览器验证，notes接口与PDF均403；题目、原始作者与摘要依据可用的官方搜索API原始响应。已额外核对AdaNAGED的arXiv官方摘要。",
+    "AdaNAGED同题同作者同摘要的arXiv版本于2026-06-12首次提交，2026-06-22更新；本轮属于新发现旧文。",
+    "分数与screening_rank保留原值；作者字段将官方搜索响应中的序列化资料解析为fullname，raw_authors保留原始值。"
+  ],
+  "semantic_reranking": [
+    {
+      "title": "Can Muon Adapt Its Stepsize Without Knowing the Solution Distance?",
+      "screening_rank": 18,
+      "candidate_screening_rank": 4,
+      "semantic_rank": 1,
+      "formal_recommendation": true,
+      "reason": "直接命中Muon的免调参步长问题，可与PowerStep和MuPACE对照“方向规则、步长、所需先验”三部分。"
+    },
+    {
+      "title": "Zero-order Parameter-free Optimization for LMO-based Methods: Novel Approach for Efficient Fine-tuning",
+      "screening_rank": 17,
+      "candidate_screening_rank": 3,
+      "semantic_rank": 2,
+      "formal_recommendation": true,
+      "reason": "直接交叉命中免调参、LMO几何与内存高效微调；可与刚入库的StructZO对照如何选择估计空间、方向和步长。"
+    },
+    {
+      "title": "Optimizer Update Geometry: How Parameter Groups Shape Curvature Exposure",
+      "screening_rank": 16,
+      "candidate_screening_rank": 2,
+      "semantic_rank": 3,
+      "formal_recommendation": true,
+      "reason": "可直接改变Muon比较的归因方式：分组权重与组内方向必须分开控制，避免把混合优化器分配策略的收益都归到正交化。"
+    },
+    {
+      "title": "Muon-OGD: Muon-based Spectral Orthogonal Gradient Projection for LLM Continual Learning",
+      "screening_rank": 15,
+      "candidate_screening_rank": 1,
+      "semantic_rank": 4,
+      "formal_recommendation": true,
+      "reason": "更新几何直接相关，但需单独核验保护子空间、对偶收敛和新增计算代价。"
+    },
+    {
+      "title": "CheckJump: Checked Macro-Steps for Language-Model Training",
+      "screening_rank": 27,
+      "candidate_screening_rank": 10,
+      "semantic_rank": 5,
+      "formal_recommendation": true,
+      "reason": "摘要同时报告控制实验无法分离调参收益，适合审查宏步提案的净收益。"
+    },
+    {
+      "title": "Adaptive Quantile Clipping under Heavy-Tailed Noise and Differential Privacy",
+      "screening_rank": 24,
+      "candidate_screening_rank": 8,
+      "semantic_rank": 6,
+      "formal_recommendation": true,
+      "reason": "直接为阈值自适应设计提供依据，但摘要未提供LLM训练实证。"
+    },
+    {
+      "title": "Gradient Clipping on Separable Data: Asymptotic Alignment and Persistent Bias",
+      "screening_rank": 26,
+      "candidate_screening_rank": 9,
+      "semantic_rank": 7,
+      "formal_recommendation": true,
+      "reason": "明确反例与正例的边界，需区分逐样本、全局及范数特定裁剪。"
+    },
+    {
+      "title": "Same Training Loss, Different Recovery: Optimizer-Dependent Solution Selection in Matrix Sensing",
+      "screening_rank": 20,
+      "candidate_screening_rank": 6,
+      "semantic_rank": 8,
+      "formal_recommendation": true,
+      "reason": "提供可控反例与匹配初始化/批次，但摘要明确RMSProp与Muon恢复原因仍未知。"
+    },
+    {
+      "title": "Differentially Private Clipping-Free Stochastic Sign Descent",
+      "screening_rank": 23,
+      "candidate_screening_rank": 7,
+      "semantic_rank": 9,
+      "formal_recommendation": true,
+      "reason": "直接设计SignSGD更新，但主要约束是联邦隐私，按需求定点阅读。"
+    },
+    {
+      "title": "Non-Interfering Asymmetric AdamW Updates for Constrained Exploration of Equifinality in Hybrid Models",
+      "screening_rank": 19,
+      "candidate_screening_rank": 5,
+      "semantic_rank": 10,
+      "formal_recommendation": true,
+      "reason": "应用是混合蒸散模型；可迁移的是AdamW更新非干扰规则，不把该领域实证当LLM收益。"
+    }
+  ]
+}

@@ -1,0 +1,117 @@
+{
+  "date": "2026-10-26",
+  "note_file": "今日检索.md",
+  "generated_at": "2026-10-26T10:46:45",
+  "skill": "paper-daily",
+  "sources_searched": [
+    "arxiv",
+    "openreview"
+  ],
+  "source_counts": {
+    "arxiv": 0,
+    "openreview": 40
+  },
+  "date_windows": {
+    "recent_30d": {
+      "start": "2026-09-26",
+      "end": "2026-10-26"
+    },
+    "past_year": {
+      "start": "2025-10-26",
+      "end": "2026-09-25"
+    }
+  },
+  "total_unique": 29,
+  "top_papers": [
+    {
+      "title": "Can Muon Adapt Its Stepsize Without Knowing the Solution Distance?",
+      "source": "openreview",
+      "arxiv_id": "",
+      "url": "https://openreview.net/forum?id=Ghfc8IRXdy",
+      "note_filename": "Can_Muon_Adapt_Its_Stepsize_Without_Knowing_the_Solution_Distance",
+      "matched_domain": "大模型优化器设计",
+      "score": 4.07
+    },
+    {
+      "title": "Zero-order Parameter-free Optimization for LMO-based Methods: Novel Approach for Efficient Fine-tuning",
+      "source": "openreview",
+      "arxiv_id": "",
+      "url": "https://openreview.net/forum?id=qXVywqIg8G",
+      "note_filename": "Zero_order_Parameter_free_Optimization_for_LMO_based_Methods_Novel_Approach_for_Efficient_Fine_tuning",
+      "matched_domain": "大模型优化器设计",
+      "score": 4.07
+    },
+    {
+      "title": "Optimizer Update Geometry: How Parameter Groups Shape Curvature Exposure",
+      "source": "openreview",
+      "arxiv_id": "",
+      "url": "https://openreview.net/forum?id=TaFyEJ4yNr",
+      "note_filename": "Optimizer_Update_Geometry_How_Parameter_Groups_Shape_Curvature_Exposure",
+      "matched_domain": "大模型优化器设计",
+      "score": 4.1
+    },
+    {
+      "title": "Muon-OGD: Muon-based Spectral Orthogonal Gradient Projection for LLM Continual Learning",
+      "source": "openreview",
+      "arxiv_id": "",
+      "url": "https://openreview.net/forum?id=jRvd5To0aR",
+      "note_filename": "Muon_OGD_Muon_based_Spectral_Orthogonal_Gradient_Projection_for_LLM_Continual_Learning",
+      "matched_domain": "大模型优化器设计",
+      "score": 4.13
+    },
+    {
+      "title": "CheckJump: Checked Macro-Steps for Language-Model Training",
+      "source": "openreview",
+      "arxiv_id": "",
+      "url": "https://openreview.net/forum?id=LjeDfQrtoO",
+      "note_filename": "CheckJump_Checked_Macro_Steps_for_Language_Model_Training",
+      "matched_domain": "大模型优化器设计",
+      "score": 3.27
+    },
+    {
+      "title": "Adaptive Quantile Clipping under Heavy-Tailed Noise and Differential Privacy",
+      "source": "openreview",
+      "arxiv_id": "",
+      "url": "https://openreview.net/forum?id=ykJF8GeIBx",
+      "note_filename": "Adaptive_Quantile_Clipping_under_Heavy_Tailed_Noise_and_Differential_Privacy",
+      "matched_domain": "大模型优化器设计",
+      "score": 3.47
+    },
+    {
+      "title": "Gradient Clipping on Separable Data: Asymptotic Alignment and Persistent Bias",
+      "source": "openreview",
+      "arxiv_id": "",
+      "url": "https://openreview.net/forum?id=XEVhS9MMgC",
+      "note_filename": "Gradient_Clipping_on_Separable_Data_Asymptotic_Alignment_and_Persistent_Bias",
+      "matched_domain": "大模型优化器设计",
+      "score": 3.33
+    },
+    {
+      "title": "Same Training Loss, Different Recovery: Optimizer-Dependent Solution Selection in Matrix Sensing",
+      "source": "openreview",
+      "arxiv_id": "",
+      "url": "https://openreview.net/forum?id=3pujdNCHGG",
+      "note_filename": "Same_Training_Loss_Different_Recovery_Optimizer_Dependent_Solution_Selection_in_Matrix_Sensing",
+      "matched_domain": "大模型优化器设计",
+      "score": 4.03
+    },
+    {
+      "title": "Differentially Private Clipping-Free Stochastic Sign Descent",
+      "source": "openreview",
+      "arxiv_id": "",
+      "url": "https://openreview.net/forum?id=1sTcYib5Kt",
+      "note_filename": "Differentially_Private_Clipping_Free_Stochastic_Sign_Descent",
+      "matched_domain": "大模型优化器设计",
+      "score": 3.53
+    },
+    {
+      "title": "Non-Interfering Asymmetric AdamW Updates for Constrained Exploration of Equifinality in Hybrid Models",
+      "source": "openreview",
+      "arxiv_id": "",
+      "url": "https://openreview.net/forum?id=8vIKKcK9b6",
+      "note_filename": "Non_Interfering_Asymmetric_AdamW_Updates_for_Constrained_Exploration_of_Equifinality_in_Hybrid_Models",
+      "matched_domain": "大模型优化器设计",
+      "score": 4.07
+    }
+  ]
+}
