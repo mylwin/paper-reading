@@ -1,0 +1,290 @@
+{
+  "id": "icml-2024-c8c985f6",
+  "venue": "icml",
+  "year": 2024,
+  "split": "induction",
+  "title": "Learning Causal Dynamics Models in Object-Oriented Environments",
+  "authors": "Zhongwei Yu, Jingqing Ruan, Dengpeng Xing",
+  "pdf_path": ".claude/skills/paper-writing-shared/tmp/corpus/icml/pdf/Learning Causal Dynamics Models in Object-Oriented Environments.pdf",
+  "markdown_path": ".claude/skills/paper-writing-shared/tmp/corpus/icml/markdown/Learning Causal Dynamics Models in Object-Oriented Environments.md",
+  "pdf_sha256": "bd9c462ee61e7ec04a85f1b14f6432b1cb6c4cd5ce3f66d10837d2afe42cbfa5",
+  "review_date": "2026-10-23",
+  "paper_type": "object-oriented causal dynamics framework with population identifiability/complexity analysis and synthetic, StarCraft and asymmetric simulated prediction/planning experiments",
+  "semantic_review_status": "complete_writing_focused_review",
+  "full_text_style_review_complete": true,
+  "external_appendix_review_complete": true,
+  "count_eligible_full_text_and_relevant_appendix": true,
+  "coverage": [
+    {
+      "asset": "locked official PMLR PDF",
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42
+      ],
+      "sections": "Abstract/Intro/Related2.1–2.3/Prelim3.1–3.2/Method4.1–4.5/Exp5.1–5.6/Conclusion/Ack/Impact/References; A/B.1–B.4/C.1–C.4/D.1–D.4/E.1–E.5/F/G.1–G.3.2/H.1–H.7.2/I–I.1/J; all11figures14tables3algorithms and complete theoremproofs includingC.13/D.7/F.1–4",
+      "method": "continuous42page text read plus34originalpageimages directlyinspected; glyph warnings resolved via originalpages"
+    }
+  ],
+  "version_audit": {
+    "official_landing": "https://proceedings.mlr.press/v235/yu24j.html",
+    "official_pdf": "https://raw.githubusercontent.com/mlresearch/v235/main/assets/yu24j/yu24j.pdf",
+    "version": "official proceedings PDF; exact bytes locked by SHA256",
+    "identity": "title/authors/PMLR235/year/lockedSHA",
+    "new_network_fetch": false,
+    "qualification": "cachedofficialPDF; no originalsource redownload; proof/implementationqueries separate"
+  },
+  "supplement_audit": {
+    "status": "A–J all related definitions/proofs/implementation/environments/additionalexperiments/noise/hyperparameters/weaknesses in same42pagePDF fully read",
+    "external_scientific_appendix_referenced": false,
+    "code_artifacts": "code and environmentdocumentation links not executed/audited; no unreviewed external scientific fulltext appendix used"
+  },
+  "ten_dimensions": {
+    "reader_argument": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp1–4"
+      ],
+      "observation": "针对CDM随变量数扩展困难，以OOP启发已知classes/objects共享因果与参数，读者需FMDP/条件独立/结构识别知识。",
+      "editorial_advice": "研究先验结构给定的模型学习，不是从像素学习对象/类别或无混杂任意现实因果发现。",
+      "applicability": "42页正文/文献及A–J全部科学附录连续读完，34原页核验全部科学图表/算法/证明与末页超参/局限。写作组织和证据边界审阅，另作C.13有限Gaussian toy分析，未运行作者代码/复现实验/独立认证全部定理引文。ICML36归纳先导，正式留出未用。",
+      "confidence": {
+        "paper_specific": "high for inspected structure/settings/negativecases; proofqueries separate",
+        "venue_wide": "low;36/50 pilot"
+      }
+    },
+    "title_abstract": {
+      "category": "corpus_observation",
+      "positions": [
+        "p1"
+      ],
+      "observation": "任务+模型+环境的直接题名，摘要既有潜力→规模限制→对象共享→变数量学习→四项定性结果，不强制新缩写/数值摘要。",
+      "editorial_advice": "large-scale为本文12–66变量/最多22物体等相对基准规模，不等视觉机器人/互联网规模普适验证。",
+      "applicability": "42页正文/文献及A–J全部科学附录连续读完，34原页核验全部科学图表/算法/证明与末页超参/局限。写作组织和证据边界审阅，另作C.13有限Gaussian toy分析，未运行作者代码/复现实验/独立认证全部定理引文。ICML36归纳先导，正式留出未用。",
+      "confidence": {
+        "paper_specific": "high for inspected structure/settings/negativecases; proofqueries separate",
+        "venue_wide": "low;36/50 pilot"
+      }
+    },
+    "introduction": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp1–2"
+      ],
+      "observation": "从CDM应用价值到unknownCG学习成本，再人类对象分类类比引出共享模型，贡献沿model/theory/empiric/code陈述，未强制独立编号贡献节。",
+      "editorial_advice": "类比仅动机；独立转移/faithfulness/两类symmetry是识别范围，不以natural为由删假设。",
+      "applicability": "42页正文/文献及A–J全部科学附录连续读完，34原页核验全部科学图表/算法/证明与末页超参/局限。写作组织和证据边界审阅，另作C.13有限Gaussian toy分析，未运行作者代码/复现实验/独立认证全部定理引文。ICML36归纳先导，正式留出未用。",
+      "confidence": {
+        "paper_specific": "high for inspected structure/settings/negativecases; proofqueries separate",
+        "venue_wide": "low;36/50 pilot"
+      }
+    },
+    "related_work": {
+      "category": "corpus_observation",
+      "positions": [
+        "p2/14–27"
+      ],
+      "observation": "按causality+RL、OO-RL、relationalcausaldiscovery三脉络组织，比较macro/microcausality、homogeneousOCR/typedobjects、显式关系先验；因果基础与全定义在附录。",
+      "editorial_advice": "先验不同的baseline要标注，Bayesian factorization/observationalCI本身不等无条件的干预因果认证；不抄未独立核验firstclaim。",
+      "applicability": "42页正文/文献及A–J全部科学附录连续读完，34原页核验全部科学图表/算法/证明与末页超参/局限。写作组织和证据边界审阅，另作C.13有限Gaussian toy分析，未运行作者代码/复现实验/独立认证全部定理引文。ICML36归纳先导，正式留出未用。",
+      "confidence": {
+        "paper_specific": "high for inspected structure/settings/negativecases; proofqueries separate",
+        "venue_wide": "low;36/50 pilot"
+      }
+    },
+    "method_theory": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp2–6/14–32"
+      ],
+      "observation": "CDM/FMDP→时间二部图识别→OOMDP/result/causationsymmetry→OOCG局部/全局边→共享fieldattention→类CMI→随机/全图/估计图三AILL损失→身份GRU非对称扩展。B–F给基础、C.12严格识别、D.6类级检验、D.7表达性构造、实现和复杂度证明。",
+      "editorial_advice": "population识别不等有限样本神经CMI一致/校准保证；learnedthreshold和结构先验保留。augmented近似OOCG不等真实图，噪声C.13另有scopequery。",
+      "applicability": "42页正文/文献及A–J全部科学附录连续读完，34原页核验全部科学图表/算法/证明与末页超参/局限。写作组织和证据边界审阅，另作C.13有限Gaussian toy分析，未运行作者代码/复现实验/独立认证全部定理引文。ICML36归纳先导，正式留出未用。",
+      "confidence": {
+        "paper_specific": "high for inspected structure/settings/negativecases; proofqueries separate",
+        "venue_wide": "low;36/50 pilot"
+      }
+    },
+    "evidence": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp6–9/33–42"
+      ],
+      "observation": "按结构准确率/发现耗时/AILL预测/已知reward规划/变物体数迁移分别评测，Block/Mouse/两StarCraft加非对称AsymBlock/Walker和噪声Block5；5seeds。附录构造、baseline公平性、完整表和超参。",
+      "editorial_advice": "i.d./初始化shift/47seen53unseen任务/强弱PPO collector四域区分；StarCraft无GT或独立OOD，Walker无规划回报。不从均值最佳推显著性。",
+      "applicability": "42页正文/文献及A–J全部科学附录连续读完，34原页核验全部科学图表/算法/证明与末页超参/局限。写作组织和证据边界审阅，另作C.13有限Gaussian toy分析，未运行作者代码/复现实验/独立认证全部定理引文。ICML36归纳先导，正式留出未用。",
+      "confidence": {
+        "paper_specific": "high for inspected structure/settings/negativecases; proofqueries separate",
+        "venue_wide": "low;36/50 pilot"
+      }
+    },
+    "discussion_limits": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp8–9/38–42"
+      ],
+      "observation": "正文讨论两类泛化误差与OO先验+causality互补，DZB负例解释，结论及Jweaknessfuture明确表征、confounder、POMDP/nonMarkov边界。",
+      "editorial_advice": "解释为作者假说，稠密图/规划难不等独立归因实证；更好预测不保证更好policy。",
+      "applicability": "42页正文/文献及A–J全部科学附录连续读完，34原页核验全部科学图表/算法/证明与末页超参/局限。写作组织和证据边界审阅，另作C.13有限Gaussian toy分析，未运行作者代码/复现实验/独立认证全部定理引文。ICML36归纳先导，正式留出未用。",
+      "confidence": {
+        "paper_specific": "high for inspected structure/settings/negativecases; proofqueries separate",
+        "venue_wide": "low;36/50 pilot"
+      }
+    },
+    "paragraph_language": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp3–9/17–32"
+      ],
+      "observation": "定义/定理后解释作用再给实例/overview/公式，实验按测量对象而非单一排行榜组织，附录补严谨定义与证据。",
+      "editorial_advice": "理论证明、神经近似、直觉适用与经验观察不同语气；强词sound/guarantee/always/robust须带全部条件，standardvariances不可擅改成95%CI。",
+      "applicability": "42页正文/文献及A–J全部科学附录连续读完，34原页核验全部科学图表/算法/证明与末页超参/局限。写作组织和证据边界审阅，另作C.13有限Gaussian toy分析，未运行作者代码/复现实验/独立认证全部定理引文。ICML36归纳先导，正式留出未用。",
+      "confidence": {
+        "paper_specific": "high for inspected structure/settings/negativecases; proofqueries separate",
+        "venue_wide": "low;36/50 pilot"
+      }
+    },
+    "main_appendix": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp1–42"
+      ],
+      "observation": "正文1–9含ack/impact，refs9–12，A13–14符号，B14–17因果基础，C17–23CDM证明，D23–27OO理论，E27–31实现/算法，F29–32复杂度，G32–36环境，H36–41扩展实验，I41–42噪声/超参，J41–42局限；11图14表3算法全读。",
+      "editorial_advice": "结论后长附录有实质新非对称/噪声证据，不能正文读完即计全读。源Definition*、mask/attention公式/统计单位问题列查询，不当官方格式。",
+      "applicability": "42页正文/文献及A–J全部科学附录连续读完，34原页核验全部科学图表/算法/证明与末页超参/局限。写作组织和证据边界审阅，另作C.13有限Gaussian toy分析，未运行作者代码/复现实验/独立认证全部定理引文。ICML36归纳先导，正式留出未用。",
+      "confidence": {
+        "paper_specific": "high for inspected structure/settings/negativecases; proofqueries separate",
+        "venue_wide": "low;36/50 pilot"
+      }
+    },
+    "actionable": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp3–9/17–42"
+      ],
+      "observation": "将结构可识别性、近似检验器、预测和决策回报分开论证；公开先验/分布shift/无GT任务/资源比较与反例，正文保留关键限制、附录给细则。",
+      "editorial_advice": "原创改写：Under the stated factorization, faithfulness and symmetry conditions, the analysis concerns identification of shared causal structure. The neural implementation is evaluated separately: OOD prediction gains do not imply uniformly higher planning returns, and graphs in StarCraft and asymmetric tasks are not certified ground truth.",
+      "applicability": "42页正文/文献及A–J全部科学附录连续读完，34原页核验全部科学图表/算法/证明与末页超参/局限。写作组织和证据边界审阅，另作C.13有限Gaussian toy分析，未运行作者代码/复现实验/独立认证全部定理引文。ICML36归纳先导，正式留出未用。",
+      "confidence": {
+        "paper_specific": "high for inspected structure/settings/negativecases; proofqueries separate",
+        "venue_wide": "low;36/50 pilot"
+      }
+    }
+  },
+  "counterexamples": [
+    {
+      "position": "pp3–6/17–27/41–42 theoreticalscope",
+      "finding": "givenclasses/attributes/fullstate、independentnextvariables conditional(S,A)、Markov及动态faithfulness、result/causationsymmetry下识别时间二部图，不是仅稀疏即可真因果。Bfaithfulness一般只有Markovequivalence，不给任意DAG唯一方向；时间顺序和受限图族需明确。C.12/定理3.2是population oracleCIT，不证明神经logratio模型一致性、epsilon有限样本错误率或multiple-testing控制；估计CMI还可负。"
+    },
+    {
+      "position": "pp18–27 proofqueries",
+      "finding": "C.7任意faithfulDAG需限制时间图族；C.11用给S独立却AssumptionC.8给(S,A)，共同action可使next关联，需补A条件。C.12跨p/p*从条件分布相同推全support一致，覆盖/正性/faithful存在应显式，确定性恒量/可变count未自动涵盖。D.2换对象后的qfaithfulness非trivial、{p,q}未定义应{a,b}、过少同类对象/空global集合须单独处理；D.7ID增加是表达性构造而非有限神经训练或新数量泛化保证。未独立认证或否定全部定理。"
+    },
+    {
+      "position": "pp21–22/41 C.13 noisequery",
+      "finding": "未知噪声若给定即可还原不表示观测的noisyconditioning堵住真混杂路径。独立解析toy：Z,u,v独立单位Gaussian，W=Z+u，Ynext=Z+v，无W→Ynext；全部观测加独立varianceτ Gaussian噪声，Cov(What,Yhat|Zhat)=τ/(1+τ)>0，但Cov(W,Ynext|Z)=0。3τ精确有理数计算见本批noise-boundary-check.json/check_noise_boundary.py。C.13 Eq34分解/独立噪声条件化和backdoor阻断须追加假设或收窄，不能推广任意独立可恢复noise。此toy非作者实验复现/全部理论认证，Block5noise .01单一强度经验不认证普适鲁棒性。"
+    },
+    {
+      "position": "pp5/27–31 implementationqueries",
+      "finding": "E.1说mask非parent但分段式印刷是有arrow时置0，需核代码/漏notarrow，不能照抄。attention分母r≠i而目标j、h求和j≠i但i自由，需统一目标索引；无其他对象/某类0实例对softmax和AILL分母处理未给。Alg1输入(st,at,at+1)应st+1，globalCMI式7Oj/O混用；training末graph与最终predictor可能差一轮，超参缺optimizer/lr/batchsize/完整collectorupdates需代码。NN输出mean/standardvariance与N(µ,σ)记号及sigma正性不清，未运行实现。"
+    },
+    {
+      "position": "pp7–9/38–41 empiricallimits",
+      "finding": "Block2图accuracy99.7而非100，其他三设置100；StarCraft无GT只CMS各seed一致/DZB最高likelihood seed展示，不能称真实因果恢复。Block5ID OOFULL19.8>OOCDM19.5，DZBreturn269.8>266.2；WalkerIDOOFULL+10.7>OOCDM+10.2，OOD反过来9.0>8.0；结构/预测/回报不可合并。5seeds作者称standardvariances含义不明，极差AILL部分省去离散度、Table13两项残留±，不补confidence/significance。"
+    },
+    {
+      "position": "pp8–9/29/37–42 transfer/planning",
+      "finding": "Mousecounts food3–6/monster1–5/trap1–5共100组合，47seen53unseen随机划分，zero-shot是范围内未见组合无再训练，不是更大数量外推/任意新类。Block/MouseOOD是初始化/相关性shift，StarCraft无独立OOD；Walker用弱PPO收集train/ID、强PPO测试，非所有任务uniformrandom，且不展示Walker规划。规划给真实rewardfunction，CEM5轮/500samples100elite/H20，未学习reward或端到端无先验RL；所谓counterfactualrollout非完整干预/反事实识别检验。"
+    },
+    {
+      "position": "pp5/7/29–32/37–42 resourceanddata",
+      "finding": "理论OOCDM O(nN k)预测/O(nmN k)发现/O(m²)weights，m总fields、n总vars、N总objects、hiddenwidth固定；N~n时预测仍平方，非任意线性扩展。weights非activation/全训练内存。Table2GRADER4CPU其余GPU，DZB用20k而其余200k；WalkerGRADER10k其余100k，且并非所有任务最快(Block2CDL1.4s<OO2.1s)。Table9OO不是每任务最小如Block2GNN66.4K<401.6K，单位bytes非parameters。Mouse28/29、CMS44/表示属性组多scalar的计数口径、Table2CMD typo需核。"
+    },
+    {
+      "position": "pp33–42 sourceclarity",
+      "finding": "BlockGaussianactions与H.1uniform描述需统一；Mousefood N(1,.01)声称比每步hunger下降1更慢需核；rewardEq45缺括号，CMS reward非负式46与Table4负均值需解释额外stepcost/normalization。Walker field/group/scalar计数与表n16、AsymBlockn40/fields8需说明单位。Jpartialobservability/confounder/nonMarkov皆future，不能把IDauxiliary替代这些限制。论文版式Definition*、印刷和不确定量表述不复制为官方模板要求。"
+    }
+  ],
+  "visual_review": {
+    "pages": [
+      4,
+      5,
+      7,
+      8,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42
+    ],
+    "source": "115dpi originalpagePopplerimages directlyviewed; all11scientificfigures14tables3algorithms/alltheoremproofs and finalhyperparameters",
+    "policy": "delete34renders+duplicateextract after registration; canonicalPDF/primaryMD only ignoredskilltmp"
+  },
+  "official_requirements": [],
+  "holdout_validation": null,
+  "review_limitations": "42页正文/文献及A–J全部科学附录连续读完，34原页核验全部科学图表/算法/证明与末页超参/局限。写作组织和证据边界审阅，另作C.13有限Gaussian toy分析，未运行作者代码/复现实验/独立认证全部定理引文。ICML36归纳先导，正式留出未用。"
+}

@@ -1,0 +1,175 @@
+{
+  "date": "2026-10-21",
+  "scope": "ICMLreadingledger,ruleapplicability,source/split/storageandarchivedtemplateintegrity;notproofcorrectness,replication,newcompileorindependentbehavior/holdoutvalidation",
+  "passed": 20,
+  "total": 21,
+  "checks": [
+    {
+      "check": "two unique2025inductionIDs were previously pending",
+      "passed": true
+    },
+    {
+      "check": "only the two ICML records changed",
+      "passed": true
+    },
+    {
+      "check": "previous four ICML reviews retained exactly",
+      "passed": true
+    },
+    {
+      "check": "six review entries agree with six complete records",
+      "passed": true
+    },
+    {
+      "check": "all50lockedICMLPDFhashes and primary parsed files valid",
+      "passed": true,
+      "details": []
+    },
+    {
+      "check": "all11venueyear and40induction10holdout allocations unchanged",
+      "passed": true,
+      "details": [
+        {
+          "venue": "colt",
+          "passed": true
+        },
+        {
+          "venue": "ijcai",
+          "passed": true
+        },
+        {
+          "venue": "tpami",
+          "passed": true
+        },
+        {
+          "venue": "jmlr",
+          "passed": true
+        },
+        {
+          "venue": "neurips",
+          "passed": true
+        },
+        {
+          "venue": "icml",
+          "passed": true
+        },
+        {
+          "venue": "aaai",
+          "passed": true
+        },
+        {
+          "venue": "iclr",
+          "passed": true
+        },
+        {
+          "venue": "tnnls",
+          "passed": true
+        },
+        {
+          "venue": "tai",
+          "passed": true
+        },
+        {
+          "venue": "tmlr",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "check": "knowledge base, locked manifests, old skills and IJCAI batch unchanged",
+      "passed": false,
+      "details": {
+        "protected_files": 491,
+        "mismatches": [
+          "01-raw/index.md",
+          "01-raw/2026-10/README.md",
+          "02-markdown/index.md",
+          "02-markdown/2026-10/README.md",
+          "03-notes/index.md",
+          "03-notes/2026-10/README.md",
+          "06-translation/index.md",
+          "06-translation/2026-10/README.md"
+        ]
+      }
+    },
+    {
+      "check": "icml-2025-1bf35893 continuous coverage and ten-dimensional evidence",
+      "passed": true
+    },
+    {
+      "check": "icml-2025-94972568 continuous coverage and ten-dimensional evidence",
+      "passed": true
+    },
+    {
+      "check": "new reading covers27pages and14visualchecks",
+      "passed": true
+    },
+    {
+      "check": "live progress agrees with batchsnapshot,28full and522remaining",
+      "passed": true
+    },
+    {
+      "check": "ten other venue progress rows unchanged",
+      "passed": true
+    },
+    {
+      "check": "ICML6full,4in2024and2in2025,0holdout",
+      "passed": true
+    },
+    {
+      "check": "rule matrix is two induction applicability audits,not heldout pass claim",
+      "passed": true
+    },
+    {
+      "check": "five archived ICML official dependencies match declared hashes",
+      "passed": true,
+      "details": []
+    },
+    {
+      "check": "official guideline section unchanged,no new policy inference",
+      "passed": true
+    },
+    {
+      "check": "all prior evaluation/research/IJCAI frozen evidence preserved",
+      "passed": true,
+      "details": [
+        {
+          "archive": "2026-10-11-论文写作润色技能评测_证据",
+          "files": 654,
+          "bad": []
+        },
+        {
+          "archive": "2026-10-12-顶会顶刊写作风格调研_证据",
+          "files": 90,
+          "bad": []
+        },
+        {
+          "archive": "2026-10-21-顶会顶刊写作风格全文续研_证据",
+          "files": 12,
+          "bad": []
+        }
+      ]
+    },
+    {
+      "check": "938researchassets remain ignored and untracked",
+      "passed": true
+    },
+    {
+      "check": "no files staged; no Git write actions performed",
+      "passed": true,
+      "details": {
+        "staged_paths": [],
+        "git_write_actions": []
+      }
+    },
+    {
+      "check": "14renders and2duplicateextracts removed;originalPDFs retained",
+      "passed": true
+    },
+    {
+      "check": "new report,profileandprogresslinks resolve",
+      "passed": true,
+      "details": []
+    }
+  ]
+}

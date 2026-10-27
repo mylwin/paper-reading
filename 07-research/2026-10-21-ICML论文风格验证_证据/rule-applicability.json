@@ -1,0 +1,182 @@
+{
+  "date": "2026-10-21",
+  "kind": "induction applicability audit,not independent behavior or holdout evaluation",
+  "baseline_rules": "ICMLprofile10dimensionsfromfour2024inductionpapers",
+  "new_evidence": "twoalreadylocked2025inductionpaperswithdifferentcontributiontypes",
+  "papers": [
+    {
+      "id": "icml-2025-1bf35893",
+      "split": "induction",
+      "rule_results": [
+        {
+          "rule": "reader_argument",
+          "assessment": "supported_with_conditions",
+          "positions": [
+            "pp1–3"
+          ],
+          "scope": "图算法理论稿；不能把edge-neighboring写成保护节点身份的node-DP。"
+        },
+        {
+          "rule": "title_abstract",
+          "assessment": "supported_with_conditions",
+          "positions": [
+            "p1 Abstract; p2 Theorem1.1; p3 Table1"
+          ],
+          "scope": "表中不同pure/approx DP、multiplicative error与runtime不可只按指数排名。"
+        },
+        {
+          "rule": "introduction",
+          "assessment": "supports_flexible_structure",
+          "positions": [
+            "pp2–4, Theorem1.1/Table1/TechnicalContribution"
+          ],
+          "scope": "“稠密”在分解中是满足扩展性的子图条件，不等于任意高边数图都能直接套第二方法。"
+        },
+        {
+          "rule": "related_work",
+          "assessment": "supports_flexible_location",
+          "positions": [
+            "p2 §1.1; pp3–4 technical overview"
+          ],
+          "scope": "非负边权与稀疏性影响可比性，不能删掉Table1脚注。"
+        },
+        {
+          "rule": "method_theory",
+          "assessment": "supported_with_conditions",
+          "positions": [
+            "pp4–8, Theorems2.2–4.2; Algorithms1–2; Lemmas4.3–4.4"
+          ],
+          "scope": "已读显示证明及引用工具归属，未独立重证定理或审计引用论文全部前提。"
+        },
+        {
+          "rule": "evidence",
+          "assessment": "empirical_experiment_rule_not_applicable",
+          "positions": [
+            "pp2–8, Table1/Fig1/§3–4"
+          ],
+          "scope": "不将从作者稿读出的结论认证为数学正确；n、ε、δ、γ依赖保持原样。"
+        },
+        {
+          "rule": "discussion_limits",
+          "assessment": "supported_with_conditions",
+          "positions": [
+            "p9 Conclusion/Impact; pp13–14 AppendixB"
+          ],
+          "scope": "Max-Cut与最大二分不同常数，Max-k-Cut有额外k依赖；Impact原句不是外部无风险认证。"
+        },
+        {
+          "rule": "paragraph_language",
+          "assessment": "supported_with_conditions",
+          "positions": [
+            "pp3–8"
+          ],
+          "scope": "文本抽取会丢绝对值和根号范围，先对原图核验再写公式。"
+        },
+        {
+          "rule": "main_appendix",
+          "assessment": "supported_with_conditions",
+          "positions": [
+            "pp1–14"
+          ],
+          "scope": "相关科学附录均在同一锁定PDF，未发现另指外部稿件附录；没有新网络核查。"
+        },
+        {
+          "rule": "actionable",
+          "assessment": "supported_with_conditions",
+          "positions": [
+            "pp2–5; AppendixA/B"
+          ],
+          "scope": "仅在用户材料有这些条件时适用；不把此例当作独立验证的研究结果。"
+        }
+      ]
+    },
+    {
+      "id": "icml-2025-94972568",
+      "split": "induction",
+      "rule_results": [
+        {
+          "rule": "reader_argument",
+          "assessment": "supported_with_conditions",
+          "positions": [
+            "pp1–4"
+          ],
+          "scope": "数学推理任务样本；不把已选零成功prefix的结果推广成任意输入的因果规律。"
+        },
+        {
+          "rule": "title_abstract",
+          "assessment": "supported_with_conditions",
+          "positions": [
+            "p1 Abstract; p2 contributions"
+          ],
+          "scope": "0.002%来自特定前向次数模型，不是墙钟、FLOPs或显存实测比。"
+        },
+        {
+          "rule": "introduction",
+          "assessment": "supported_with_conditions",
+          "positions": [
+            "pp1–2; pp5–6"
+          ],
+          "scope": "“关键token”不等于所有人工标注错误token；不更名合并术语。"
+        },
+        {
+          "rule": "related_work",
+          "assessment": "supports_flexible_location",
+          "positions": [
+            "pp8–9, §4 RelatedWork"
+          ],
+          "scope": "标题代理stratum是representation_application，真实类型为诊断加训练方法，不能按标题代理推断论文类型。"
+        },
+        {
+          "rule": "method_theory",
+          "assessment": "requires_explicit_assumption_scope",
+          "positions": [
+            "pp5–7, Eq1/cDPO/Fig3; p12 AppendixA.1"
+          ],
+          "scope": "同方差Gaussian示意不是一般神经轨迹分布定理，也不是cDPO全局收敛/准确率保证。"
+        },
+        {
+          "rule": "evidence",
+          "assessment": "requires_cost_and_protocol_qualification",
+          "positions": [
+            "pp2–8; p13 Tables4–6"
+          ],
+          "scope": "Table3有p<0.005标记，但未据此独立验证检验类型、比较对象或统计可靠性；cDPO学习率4e-5而基线2e-5。"
+        },
+        {
+          "rule": "discussion_limits",
+          "assessment": "requires_limited_generalization",
+          "positions": [
+            "pp7–9; p13 Tables4–6"
+          ],
+          "scope": "不能从数学数据推导模型绝无隐私/偏差等问题；不需要因此新增无关的产品审批流程。"
+        },
+        {
+          "rule": "paragraph_language",
+          "assessment": "requires_comparator_specific_strength",
+          "positions": [
+            "pp4–9"
+          ],
+          "scope": "Llama3-8B MATH500为19.6对19.4，不能称每个设置都大幅提升；相同数据不等于所有超参数相同。"
+        },
+        {
+          "rule": "main_appendix",
+          "assessment": "supported_with_conditions",
+          "positions": [
+            "pp1–13"
+          ],
+          "scope": "附录均在同一锁定PDF，未发现另指外部科学附录；没有新网页或代码核验。"
+        },
+        {
+          "rule": "actionable",
+          "assessment": "supported_with_conditions",
+          "positions": [
+            "pp3–8; AppendixA/B"
+          ],
+          "scope": "示例仅演示证据范围；不能将默认beta改成消融最优点或补造公平控制实验。"
+        }
+      ]
+    }
+  ],
+  "conclusion": "flexiblechapterorder/evidencetypedorganizationretain;addcost/protocol/assumptionqualifications;noICMLuniquenessclaim",
+  "venue_confidence": "remainslow;6/50reviewed,0/10holdout"
+}

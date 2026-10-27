@@ -1,0 +1,297 @@
+{
+  "id": "icml-2024-2ff98956",
+  "venue": "icml",
+  "year": 2024,
+  "split": "induction",
+  "title": "StableMask: Refining Causal Masking in Decoder-only Transformer",
+  "authors": "Qingyu Yin, Xuzheng He, Xiang Zhuang, Yu Zhao, Jianhua Yao, Xiaoyu Shen, Qiang Zhang",
+  "pdf_path": ".claude/skills/paper-writing-shared/tmp/corpus/icml/pdf/StableMask- Refining Causal Masking in Decoder-only Transformer.pdf",
+  "markdown_path": ".claude/skills/paper-writing-shared/tmp/corpus/icml/markdown/StableMask- Refining Causal Masking in Decoder-only Transformer.md",
+  "pdf_sha256": "74b101bb951b80345c53828eaf6e500e27835396b4c5ea9d98ec95a251892a92",
+  "review_date": "2026-10-22",
+  "started_review_date": "2026-10-21",
+  "paper_type": "attention-mask architecture method with constructive positional-representation theory and language-model empirical evaluation",
+  "semantic_review_status": "complete_writing_focused_review",
+  "full_text_style_review_complete": true,
+  "external_appendix_review_complete": true,
+  "count_eligible_full_text_and_relevant_appendix": true,
+  "coverage": [
+    {
+      "asset": "lockedofficialPMLRPDF",
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "sections": "Abstract;Introduction;Preliminary;Problem;Method4.1–4.4;Experiments5.1–5.6;RelatedWork;Conclusion;Acknowledgement/Impact/References;A/B/C/D/E/F;Gheadingonly",
+      "method": "continuousall20pagesincludingallavailableproofs/settingsand15criticaloriginalpagevisuals"
+    },
+    {
+      "asset": ".claude/skills/paper-writing-shared/tmp/corpus/icml/supplements/icml-2024-2ff98956-arxiv-v1.pdf",
+      "pages": [
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25
+      ],
+      "sections": "authorpreprintFsevenfullpageattention-headimagepanels;mapsbyheadingtofinalG",
+      "method": "allsevenimagepagesdirectview;28headpanels;fulltextparseblankonimagepages;noOCRsubstitution"
+    }
+  ],
+  "version_audit": {
+    "official_landing": "https://proceedings.mlr.press/v235/yin24a.html",
+    "official_pdf": "https://raw.githubusercontent.com/mlresearch/v235/main/assets/yin24a/yin24a.pdf",
+    "version": "official proceedings PDF; exact bytes locked by SHA256",
+    "identity": "title/authors/PMLR235header/yearandSHAchecked",
+    "new_network_fetch": true,
+    "source_chain": [
+      "https://proceedings.mlr.press/v235/yin24a.html",
+      "https://github.com/MikaStars39/StableMask",
+      "https://arxiv.org/abs/2402.04779",
+      "https://arxiv.org/html/2402.04779v1"
+    ],
+    "qualification": "only scientificsupplement-sourcechecked;officialsubmissionrequirementsnotreverified"
+  },
+  "supplement_sources": [
+    {
+      "path": ".claude/skills/paper-writing-shared/tmp/corpus/icml/supplements/icml-2024-2ff98956-arxiv-v1.pdf",
+      "sha256": "dfb6a040b3adfe1caa27ec8837668ef18ffb2c73818e5021821a5e8086bfb33d",
+      "parse_path": ".claude/skills/paper-writing-shared/tmp/corpus/icml/supplements/icml-2024-2ff98956-arxiv-v1.txt",
+      "parse_sha256": "5a3c573a0697dce8283c21a0abb531d2b5b18810367aafcac6cf8202e6318577",
+      "source_url": "https://arxiv.org/pdf/2402.04779v1",
+      "version": "author preprint v1 dated2024-02-07;notfinalproceedingstypesetting",
+      "total_pages": 25,
+      "reviewed_pages": [
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25
+      ],
+      "manual_visual_review_complete": true,
+      "scope": "only F seven figurepages supplemental to finalG;do not claim all25authorversionpagesreviewed"
+    }
+  ],
+  "supplement_audit": {
+    "status": "finalA–Ffullyread;finalGheadingonly;relatedauthorv1Fsevenfigurepagesacquiredandallvisuallyread",
+    "mapping": "same visualization heading and authorlinkedversion;preprintF versus finalG,not byteidentical supplements",
+    "code_artifacts": "notexecuted;CUDA pseudocode read but not numericallytested",
+    "qualification": "authorversion used only to supplement missingillustrations,not justify finalformat or replace mainresults"
+  },
+  "ten_dimensions": {
+    "reader_argument": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp1–4 Fig1"
+      ],
+      "observation": "从softmax行归一化造成多余注意力和相同输入时RPE的绝对位置辨识问题入手；诊断、构造与应用验证三种证据并行。",
+      "editorial_advice": "保留“相同token、仅RPE、没有特殊BOS破坏对称”的边界；不能写成任何RPE模型在任何真实序列都无法感知位置。",
+      "applicability": "正式20页及相关作者版7页可视化的写作/证据范围审阅；不独立重证理论、审计CUDA/数值稳定性、复现训练或核实各引用。arXiv旧版仅补正式版G缺图，不替代录用版主文或模板。",
+      "confidence": {
+        "paper_specific": "highforinspectedorganization/printedclaims;notindependentvalidity",
+        "venue_wide": "low;pilot14/50"
+      }
+    },
+    "title_abstract": {
+      "category": "corpus_observation",
+      "positions": [
+        "p1 Abstract;pp5,16–17 C"
+      ],
+      "observation": "标题用机制名和decoder-only范围，摘要由两个问题到parameter-free mask与理论/经验支撑，再提推理整合。",
+      "editorial_advice": "parameter-free指不新增可学习参数，仍有γ超参数和额外计算；构造存在性与优化训练成功不是同一保证。",
+      "applicability": "正式20页及相关作者版7页可视化的写作/证据范围审阅；不独立重证理论、审计CUDA/数值稳定性、复现训练或核实各引用。arXiv旧版仅补正式版G缺图，不替代录用版主文或模板。",
+      "confidence": {
+        "paper_specific": "highforinspectedorganization/printedclaims;notindependentvalidity",
+        "venue_wide": "low;pilot14/50"
+      }
+    },
+    "introduction": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp1–2 contributions"
+      ],
+      "observation": "先分两种失效和既有替代方案，再给四项贡献：问题、StableMask、跨任务/位置编码验证、硬件实现。",
+      "editorial_advice": "贡献分别绑定诊断图、位置定理、实证表与推理实现，不能将硬件兼容性当无额外成本。",
+      "applicability": "正式20页及相关作者版7页可视化的写作/证据范围审阅；不独立重证理论、审计CUDA/数值稳定性、复现训练或核实各引用。arXiv旧版仅补正式版G缺图，不替代录用版主文或模板。",
+      "confidence": {
+        "paper_specific": "highforinspectedorganization/printedclaims;notindependentvalidity",
+        "venue_wide": "low;pilot14/50"
+      }
+    },
+    "related_work": {
+      "category": "corpus_observation",
+      "positions": [
+        "p8 §6;pp2–3"
+      ],
+      "observation": "独立相关工作放实验后；softmax替代、attention sink、register/人工token等围绕失效机制组织。",
+      "editorial_advice": "技术比较限制在所述版本和所测配置，避免把相邻方法未讨论的性质写成已证不可能。",
+      "applicability": "正式20页及相关作者版7页可视化的写作/证据范围审阅；不独立重证理论、审计CUDA/数值稳定性、复现训练或核实各引用。arXiv旧版仅补正式版G缺图，不替代录用版主文或模板。",
+      "confidence": {
+        "paper_specific": "highforinspectedorganization/printedclaims;notindependentvalidity",
+        "venue_wide": "low;pilot14/50"
+      }
+    },
+    "method_theory": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp4–6 Eqs7–11/Theorem4.1;pp12–18 A/B/C/D"
+      ],
+      "observation": "先规定三需求，再以常数上三角伪logit、softmax后清零维持因果；C用一个head和两隐藏维构造位置函数，FFN还原索引；A/B给信息论说明与合成反例。",
+      "editorial_advice": "存在特定权重不保证训练必得或任意长度精确恢复；causal isotropy被脚注明说很强、仅作说明。保留两次mask位置，不能重归一化下三角而破坏机制。",
+      "applicability": "正式20页及相关作者版7页可视化的写作/证据范围审阅；不独立重证理论、审计CUDA/数值稳定性、复现训练或核实各引用。arXiv旧版仅补正式版G缺图，不替代录用版主文或模板。",
+      "confidence": {
+        "paper_specific": "highforinspectedorganization/printedclaims;notindependentvalidity",
+        "venue_wide": "low;pilot14/50"
+      }
+    },
+    "evidence": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp3,6–8 Tables1–3/Figs1,4,5;pp15,19–20 B/E/F"
+      ],
+      "observation": "71M–1.4B、WikiText/MiniPile/Pile预训练与六下游任务，结合位置合成任务、AT/伪值消融、window外推和SM-I延迟。",
+      "editorial_advice": "PPL越低与下游任务分数分开。PIQA67.1和ARCC25.6为并列，不写所有任务严格提升。原表±没有在已读部分清楚定义统计口径，不能擅自补std/CI或显著检验。",
+      "applicability": "正式20页及相关作者版7页可视化的写作/证据范围审阅；不独立重证理论、审计CUDA/数值稳定性、复现训练或核实各引用。arXiv旧版仅补正式版G缺图，不替代录用版主文或模板。",
+      "confidence": {
+        "paper_specific": "highforinspectedorganization/printedclaims;notindependentvalidity",
+        "venue_wide": "low;pilot14/50"
+      }
+    },
+    "discussion_limits": {
+      "category": "corpus_observation",
+      "positions": [
+        "p5 §4.3;p9 conclusion;pp14–15 B"
+      ],
+      "observation": "原始SM随序列变长须重算、无法KV cache；suffix/logsumexp改写才可缓存。结论承认额外计算和绝对位置校准；B承认BOS可破同输入对称。",
+      "editorial_advice": "“即插即用”限定已训练模型/实现设置，不能静默改成无训练改造既有checkpoint；window实测外推不等于任意长上下文性能保证。",
+      "applicability": "正式20页及相关作者版7页可视化的写作/证据范围审阅；不独立重证理论、审计CUDA/数值稳定性、复现训练或核实各引用。arXiv旧版仅补正式版G缺图，不替代录用版主文或模板。",
+      "confidence": {
+        "paper_specific": "highforinspectedorganization/printedclaims;notindependentvalidity",
+        "venue_wide": "low;pilot14/50"
+      }
+    },
+    "paragraph_language": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp4–9;pp16–20"
+      ],
+      "observation": "技术段按需求→公式→后果组织，理论符号与经验解释混写处需分开。摘要泛化措辞比定理范围更宽。",
+      "editorial_advice": "优化时把prove留给具体存在构造；Γ/τ、表标题与公式索引不一致列作者核对，不能悄悄改数学或表数。",
+      "applicability": "正式20页及相关作者版7页可视化的写作/证据范围审阅；不独立重证理论、审计CUDA/数值稳定性、复现训练或核实各引用。arXiv旧版仅补正式版G缺图，不替代录用版主文或模板。",
+      "confidence": {
+        "paper_specific": "highforinspectedorganization/printedclaims;notindependentvalidity",
+        "venue_wide": "low;pilot14/50"
+      }
+    },
+    "main_appendix": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp1–20;authorv1 pp19–25"
+      ],
+      "observation": "录用版A/B理论背景与合成设置、C完整构造、D融合推导和伪代码、Eγ选择、F训练配置；正文引G但末页只有标题。作者版同题F含7页纯图补读。",
+      "editorial_advice": "核对引用的补充实际存在；作者补图的版本/编号单独标记。头图是示例注意力形态，缺少统一色标/样本与配对对照，不能从图数估计全head比例。",
+      "applicability": "正式20页及相关作者版7页可视化的写作/证据范围审阅；不独立重证理论、审计CUDA/数值稳定性、复现训练或核实各引用。arXiv旧版仅补正式版G缺图，不替代录用版主文或模板。",
+      "confidence": {
+        "paper_specific": "highforinspectedorganization/printedclaims;notindependentvalidity",
+        "venue_wide": "low;pilot14/50"
+      }
+    },
+    "actionable": {
+      "category": "corpus_observation",
+      "positions": [
+        "p7 Table2;p8 Fig5;pp16–20"
+      ],
+      "observation": "位置存在性、PPL变化、下游并列和延迟可用不同材料支持；可执行版SM-I与原始SM区别决定成本结论。",
+      "editorial_advice": "原创示例：The construction shows that suitable weights can encode position under the stated assumptions. The reported language-model gains and cache-compatible inference measurements are separate empirical results, with ties in some downstream tasks.",
+      "applicability": "正式20页及相关作者版7页可视化的写作/证据范围审阅；不独立重证理论、审计CUDA/数值稳定性、复现训练或核实各引用。arXiv旧版仅补正式版G缺图，不替代录用版主文或模板。",
+      "confidence": {
+        "paper_specific": "highforinspectedorganization/printedclaims;notindependentvalidity",
+        "venue_wide": "low;pilot14/50"
+      }
+    }
+  },
+  "counterexamples": [
+    {
+      "position": "p7 Table2",
+      "finding": "PIQA67.1与ARCC25.6并列，其他提升幅度有限；不能称所有下游严格或显著提升。"
+    },
+    {
+      "position": "pp5–6;pp16–17 TheoremC.1",
+      "finding": "原SM不支持KV缓存，SM-I才提供后缀改写；位置定理是存在性构造，依赖两embedding维、一个head及其他head不干扰，不能写成学习算法保证或一般性能定理。"
+    },
+    {
+      "position": "pp12,14–15 A/B",
+      "finding": "causal isotropy严格且仅说明用途；BOS可破同输入对称，不是所有RPE现实输入一律无法编码位置。"
+    },
+    {
+      "position": "p6 τ;p19 Table5",
+      "finding": "τ定义为剩余指数和的log但文字称n到N时τ为0，空和/log边界需核对；γ搜索表标题却写τ，列为作者核对，不静默修正。"
+    },
+    {
+      "position": "p18 Eq36/Algorithm1",
+      "finding": "原页online-softmax累积使用exp差的逆因子，伪代码局部P/D/输入B命名不一致；本轮读懂组织但未数值审计，不据录用认定实现正确。"
+    },
+    {
+      "position": "finalp20 G;authorv1 pp19–25",
+      "finding": "正式PDF缺可视化内容；作者版补图无完整实验标签/色标或配对基线，支持头形态例示，不支持全模型DA均被消除的频率结论。"
+    }
+  ],
+  "visual_review": {
+    "pages": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20
+    ],
+    "source": "115dpiPopplerrendersdirectview_image",
+    "additional_asset": {
+      "path": ".claude/skills/paper-writing-shared/tmp/corpus/icml/supplements/icml-2024-2ff98956-arxiv-v1.pdf",
+      "pages": [
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25
+      ]
+    },
+    "policy": "22regenerablerendersplusduplicatemainextractdeleteafterrecord;keepcanonicalsourcePDF/parse"
+  },
+  "holdout_validation": null,
+  "official_requirements": [],
+  "review_limitations": "正式20页及相关作者版7页可视化的写作/证据范围审阅；不独立重证理论、审计CUDA/数值稳定性、复现训练或核实各引用。arXiv旧版仅补正式版G缺图，不替代录用版主文或模板。"
+}

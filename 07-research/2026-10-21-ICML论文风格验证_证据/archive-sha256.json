@@ -1,0 +1,15 @@
+{
+  "../2026-10-10-顶会顶刊写作风格调研_证据/corpus/icml/semantic-reviews/icml-2025-1bf35893.json": "cd42efae1d734576aac904c0bf9fe227c1239d80c72579e34ea37bc923868d32",
+  "../2026-10-10-顶会顶刊写作风格调研_证据/corpus/icml/semantic-reviews/icml-2025-94972568.json": "801e66e4f705badd2c971e2cc64f7a8300fca81bb902d962a0f2e231280618d5",
+  "README.md": "9946054918f4a34bcdd20e3944dc3ed7673827fd4eb725ea5976595b920b0ee5",
+  "batch-ledger.json": "f0e5ae485e6adaeec873bafb4eb1e2387d9175bfb300d5adb7219176993aa95e",
+  "cleanup-result.json": "c87a38ec5b0e619cf020511f22e5fc03be2a2f8d00cd042d3c526397b90168bd",
+  "concurrent-knowledge-index-changes.json": "b156e71bee416b93b06dc74887fb03221b17d17620cd3651d76646cc09d9251b",
+  "progress-after.json": "015daf482976efe0b021573d1bbcd3f73033ecfd36ced6725e98a211efbb4f2a",
+  "progress-before.json": "2d8e9b2c6b3c55d991830928432e8420c811cf0b3c63bae36c936b46c800a232",
+  "rule-applicability.json": "4b44662e8e720298357082fed19813f8fb682527e3b699a754ffc95b3b7880a6",
+  "selected-batch.json": "4b5a6bd0d6188ee55f1c4e1118eb02496e27fa56cbe26e3ceb61575cc73327f4",
+  "temporary-artifact-manifest.json": "c77abb309e5773d8ef00fbae31133d4e79fa21c5c63fa61d97d098d8d2d5e4fe",
+  "validation-before-concurrent-index-audit.json": "c33970bafd0ef33b2000aad93e89e99a0c0ca0b0afac23f97d4d9a29e0c2336f",
+  "validation.json": "eeb752039e0e007ec0b3a10ccc7207b6522b0c693f4f0f06378000ebe6f0a6de"
+}

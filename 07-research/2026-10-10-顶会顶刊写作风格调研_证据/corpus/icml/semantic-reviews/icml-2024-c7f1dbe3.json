@@ -1,0 +1,261 @@
+{
+  "id": "icml-2024-c7f1dbe3",
+  "venue": "icml",
+  "year": 2024,
+  "split": "induction",
+  "title": "Neural Collapse meets Differential Privacy: Curious behaviors of NoisyGD with Near-Perfect Representation Learning",
+  "authors": "Chendi Wang, Yuqing Zhu, Weijie J Su, Yu-Xiang Wang",
+  "pdf_path": ".claude/skills/paper-writing-shared/tmp/corpus/icml/pdf/Neural Collapse meets Differential Privacy- Curious behaviors of NoisyGD with Near-Perfect Representation Learning.pdf",
+  "markdown_path": ".claude/skills/paper-writing-shared/tmp/corpus/icml/markdown/Neural Collapse meets Differential Privacy- Curious behaviors of NoisyGD with Near-Perfect Representation Learning.md",
+  "pdf_sha256": "46633846de24279e6be7b20ba5df176a3e338e53a0763b0b6c2b84a19c1883a8",
+  "review_date": "2026-10-22",
+  "paper_type": "structured-distribution differential-privacy classification theory with neural-collapse feature model, perturbation analyses and illustrative synthetic/CIFAR10 experiments",
+  "semantic_review_status": "complete_writing_focused_review",
+  "full_text_style_review_complete": true,
+  "external_appendix_review_complete": true,
+  "count_eligible_full_text_and_relevant_appendix": true,
+  "coverage": [
+    {
+      "asset": "locked official PMLR PDF",
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27
+      ],
+      "sections": "Abstract; Introduction1/1.1; Preliminaries2; Bounds3.1.1/3.1.2 and robustness3.2.1/3.2.2; Solutions4.1/4.2; Experiments5.1–5.3; Discussion6; Acknowledgement/Impact/References; A/B/C.1–C.4/D.1–D.2/E.1–E.2/F.1–F.4/G.1–G.2/H.1–H.2/I; Figures1–4/Tables1–2; all stated proofs/calculations",
+      "method": "continuous27page text read; initial p3 combined-output truncation reread separately;20 originalpage images inspected to confirm dense formulas and all empirical curves"
+    }
+  ],
+  "version_audit": {
+    "official_landing": "https://proceedings.mlr.press/v235/wang24cu.html",
+    "official_pdf": "https://raw.githubusercontent.com/mlresearch/v235/main/assets/wang24cu/wang24cu.pdf",
+    "version": "official proceedings PDF; exact bytes locked by SHA256",
+    "identity": "title/authors/PMLR235/year plus lockedSHA",
+    "new_network_fetch": false,
+    "qualification": "cached official paper; no current policy or external reference validation"
+  },
+  "supplement_audit": {
+    "status": "A–I scientific appendices all within same27pagePDF fully read",
+    "external_scientific_appendix_referenced": false,
+    "code_artifacts": "no implementation executed; referenced books/DP accounting libraries not independently audited"
+  },
+  "ten_dimensions": {
+    "reader_argument": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp1–4"
+      ],
+      "observation": "从公开预训练下私有末层微调经验与最坏维度依赖的张力，转到layer-peeled/NC分布假设，明说研究特定私有线性分类。",
+      "editorial_advice": "0-1总体误分类、surrogate excess risk及所有参数训练分开；结构化假设下结果不推翻distribution-free下界。",
+      "applicability": "27页正文、文献与A–I所有附录连续阅读，20关键原页视觉核验。仅写作组织及主张证据边界审阅，不独立重证概率/DP/样本复杂度、运行代码、认证隐私会计或复现实验。ICML22篇归纳先导，正式留出未用。",
+      "confidence": {
+        "paper_specific": "high for inspected printed organization and scope; mathematical validity not independently certified",
+        "venue_wide": "low;22/50 pilot"
+      }
+    },
+    "title_abstract": {
+      "category": "corpus_observation",
+      "positions": [
+        "p1"
+      ],
+      "observation": "题名用理论现象与隐私交叉加Curious Behaviors限定，摘要按解释目标、NC模型、阈值保证、特征观察、扰动和缓解组织。",
+      "editorial_advice": "没有强制数字提升。near-perfect与条件阈值是关键，不将representation学习成功当定理已证明；摘要的PCA收益需正文说明非DP预处理。",
+      "applicability": "27页正文、文献与A–I所有附录连续阅读，20关键原页视觉核验。仅写作组织及主张证据边界审阅，不独立重证概率/DP/样本复杂度、运行代码、认证隐私会计或复现实验。ICML22篇归纳先导，正式留出未用。",
+      "confidence": {
+        "paper_specific": "high for inspected printed organization and scope; mathematical validity not independently certified",
+        "venue_wide": "low;22/50 pilot"
+      }
+    },
+    "introduction": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp1–3/Fig2/Table1"
+      ],
+      "observation": "两个研究问题串联维度独立与扰动鲁棒，五贡献涵盖直接0-1理论、β、攻击/不平衡、实证与缓解；早置feature散点和复杂度表。",
+      "editorial_advice": "理论命题、经验β代理和解决建议分别配证据；ViT优于ResNet50是两模型CIFAR10比较，不能因β小就宣称普遍因果解释。",
+      "applicability": "27页正文、文献与A–I所有附录连续阅读，20关键原页视觉核验。仅写作组织及主张证据边界审阅，不独立重证概率/DP/样本复杂度、运行代码、认证隐私会计或复现实验。ICML22篇归纳先导，正式留出未用。",
+      "confidence": {
+        "paper_specific": "high for inspected printed organization and scope; mathematical validity not independently certified",
+        "venue_wide": "low;22/50 pilot"
+      }
+    },
+    "related_work": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp1/3–4; p7; pp25–27"
+      ],
+      "observation": "相关工作整合进引言、prelim、Beyond distribution-free、DP-PCA方案和后续GaussianDP讨论，没有独立Related Work。",
+      "editorial_advice": "引用定义与已有隐私会计/NC结果需明确归属；扩展到随机初始化、NoisySGD、合成数据是未完成方向，不包装为本文证明。",
+      "applicability": "27页正文、文献与A–I所有附录连续阅读，20关键原页视觉核验。仅写作组织及主张证据边界审阅，不独立重证概率/DP/样本复杂度、运行代码、认证隐私会计或复现实验。ICML22篇归纳先导，正式留出未用。",
+      "confidence": {
+        "paper_specific": "high for inspected printed organization and scope; mathematical validity not independently certified",
+        "venue_wide": "low;22/50 pilot"
+      }
+    },
+    "method_theory": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp3–8 Thms3.1–3.3/4.1; pp13–27 B–I"
+      ],
+      "observation": "定义add/remove邻接ρ-zCDP、β为特征到ETF的L∞距离；主分析binary、零初始化单步NoisyGD，区分随机/确定偏移、训练/测试/对抗扰动。附录给投影多步、perfect multiclass、类子集迁移与随机初始化表达式。",
+      "editorial_advice": "i.i.d.对称中心偏移及坐标独立加强条件不能删。p是特征维度而非全骨干规模；β≤p^-1/2、强条件GD p^-1/4等保留。多步总kρ不可当固定ρ，PCA需M>0/投影误差等完整条件，不仅ββ0p≤1口号。",
+      "applicability": "27页正文、文献与A–I所有附录连续阅读，20关键原页视觉核验。仅写作组织及主张证据边界审阅，不独立重证概率/DP/样本复杂度、运行代码、认证隐私会计或复现实验。ICML22篇归纳先导，正式留出未用。",
+      "confidence": {
+        "paper_specific": "high for inspected printed organization and scope; mathematical validity not independently certified",
+        "venue_wide": "low;22/50 pilot"
+      }
+    },
+    "evidence": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp2/8–9 Figs2–4; p13 A"
+      ],
+      "observation": "synthetic K10/n10000/(1,1e-4)DP考查平衡/偏移；ImageNet ViT提768维CIFAR10特征，抽坐标或复制改变维度，10epoch NoisySGD，图3b(2,1e-5)；variance0.1 Gaussian test扰动。PCA同时扰动train/test，k10/50/100对照。",
+      "editorial_advice": "非不同规模骨干重训，也非所有层微调；图4用私有特征普通PCA而非DP-PCA，不认证整流水线DP。k100无效是反例，不能写任意降维保证。曲线未给误差线/重复次数，不补显著性。",
+      "applicability": "27页正文、文献与A–I所有附录连续阅读，20关键原页视觉核验。仅写作组织及主张证据边界审阅，不独立重证概率/DP/样本复杂度、运行代码、认证隐私会计或复现实验。ICML22篇归纳先导，正式留出未用。",
+      "confidence": {
+        "paper_specific": "high for inspected printed organization and scope; mathematical validity not independently certified",
+        "venue_wide": "low;22/50 pilot"
+      }
+    },
+    "discussion_limits": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp8–9 §6; pp25–27 H/I"
+      ],
+      "observation": "讨论强调NC存在依赖预训练与下游，类相近更collapse、all-layerDP诱导低秩均为猜想；随机初始化与NoisySGD扩展非平凡。",
+      "editorial_advice": "非NC任务、任意迁移、subsampling会计、DP合成数据/实际攻击鲁棒都不能扩张为已证；any learning rate只在理想单步正学习率上下文，不用来建议任意训练学习率。",
+      "applicability": "27页正文、文献与A–I所有附录连续阅读，20关键原页视觉核验。仅写作组织及主张证据边界审阅，不独立重证概率/DP/样本复杂度、运行代码、认证隐私会计或复现实验。ICML22篇归纳先导，正式留出未用。",
+      "confidence": {
+        "paper_specific": "high for inspected printed organization and scope; mathematical validity not independently certified",
+        "venue_wide": "low;22/50 pilot"
+      }
+    },
+    "paragraph_language": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp2–9"
+      ],
+      "observation": "先问题再条件定理/remark，分别写training/test及random/adversarial，将实证拆为perfect合成、真实扰动、PCA缓解；结尾用speculate/conjecture标未来。",
+      "editorial_advice": "dimension-independent是条件化误分类/样本量结论，不代表计算成本无维度或隐私零损失。证明上界不推出精确误差；经验支持不等于证明真实特征满足全假设。",
+      "applicability": "27页正文、文献与A–I所有附录连续阅读，20关键原页视觉核验。仅写作组织及主张证据边界审阅，不独立重证概率/DP/样本复杂度、运行代码、认证隐私会计或复现实验。ICML22篇归纳先导，正式留出未用。",
+      "confidence": {
+        "paper_specific": "high for inspected printed organization and scope; mathematical validity not independently certified",
+        "venue_wide": "low;22/50 pilot"
+      }
+    },
+    "main_appendix": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp1–27"
+      ],
+      "observation": "正文1–9，Impact延至10、refs10–12；A13 β代理，B13定义，C13–18复杂度/证明与多步，D18–19训练扰动，E19–20测试，F20–24多类/迁移，G24–25缓解证明，H25–26随机初始，I27扩展。",
+      "editorial_advice": "所有相关科学附录在同27页PDF已读；重要非DP-PCA/多步预算/NC依赖应留主文。现无独立实验配置附录，不能据证明篇幅充足就宣称实验完全可复现。",
+      "applicability": "27页正文、文献与A–I所有附录连续阅读，20关键原页视觉核验。仅写作组织及主张证据边界审阅，不独立重证概率/DP/样本复杂度、运行代码、认证隐私会计或复现实验。ICML22篇归纳先导，正式留出未用。",
+      "confidence": {
+        "paper_specific": "high for inspected printed organization and scope; mathematical validity not independently certified",
+        "venue_wide": "low;22/50 pilot"
+      }
+    },
+    "actionable": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp5–9; pp13–27"
+      ],
+      "observation": "将对象、分布/初始化、扰动范围、privacy budget、0-1目标、代理特征统计、PCA来源与维度模拟分别报告；逐符号回查样本量汇总表。",
+      "editorial_advice": "原创示例：Under the stated near-collapse feature assumptions, the analysis gives dimension-independent misclassification bounds for one-step NoisyGD. CIFAR-10 experiments illustrate related trends using subsampled or duplicated features; the private-feature PCA ablation measures utility without establishing an end-to-end DP pipeline.",
+      "applicability": "27页正文、文献与A–I所有附录连续阅读，20关键原页视觉核验。仅写作组织及主张证据边界审阅，不独立重证概率/DP/样本复杂度、运行代码、认证隐私会计或复现实验。ICML22篇归纳先导，正式留出未用。",
+      "confidence": {
+        "paper_specific": "high for inspected printed organization and scope; mathematical validity not independently certified",
+        "venue_wide": "low;22/50 pilot"
+      }
+    }
+  },
+  "counterexamples": [
+    {
+      "position": "p8 §5.3; p9 Fig4; p7 §4.1",
+      "finding": "理论建议public projection或DP-PCA；实验明确用private feature covariance普通PCA。效用曲线不证明整个预处理/微调系统DP，不能抹掉该来源差异。K10用k10而文字/图注说K−1，需作者对齐；k100不能改善鲁棒。"
+    },
+    {
+      "position": "p2 Fig2; p13 A; pp4–5/13 B/C",
+      "finding": "经验β由单位L2特征距经验类均值估计，并非距已知理想ETF；散点中位数不认证uniform β上界。A把ETF余弦写正1/(K−1)，含all i,j而对角应另论；坐标旋转/正交分解后L∞界是否保持需说明，不将real数据确证全NC假设。"
+    },
+    {
+      "position": "pp5–6 Thm3.2/3.3; p3 Table1; p14 Table2; p16 C.2",
+      "finding": "Table1 NoisyGD项pβ²与Table2 max{pβ²,1}、Thm3.2的(1+β²p)²及隐私项尺度不同。C.2最终sample complexity未开方，与前exp(−n²...)和正文也不一；p6有n而非n²及确定偏移临界分母，须作者核对，不静默选公式。"
+    },
+    {
+      "position": "pp16–18 C.4",
+      "finding": "多步投影算法给每步ρ、总kρ，不能写更多步免费增强同隐私预算。χ²范数tail的σ²/常数、union bound写with probability ke^-t、t=n²+log(1/k)及步长令C=1/2的关系需核对。阅读证明结构不等于证明已正确重证。"
+    },
+    {
+      "position": "pp20–24 F.1–F.4",
+      "finding": "多类使用union bound但定理等式、Gaussian差方差/系数、F.4 Φ正号与负指数上界、二分类tail指数及上下界常数需作者核对；类不平衡鲁棒仅perfect binary重参数化，不推广多类偏移。"
+    },
+    {
+      "position": "p7 Thm4.1; pp24–25 G.2",
+      "finding": "投影误差β0小于β只是启发条件，完整Mβ,β0,p还需正。G.2首项(1+Δ1)²≤(1−β0)²方向、投影矩阵维度/转置与均值n归一化应统一；PCA概率界写高概率或失败概率含义不清，不能生成无条件降维定理。"
+    },
+    {
+      "position": "pp8–9 Figs3–4; p27 I",
+      "finding": "10epoch NoisySGD实证不是零初始化单步NoisyGD证明对象；Gaussian variance0.1也不等于固定L∞有界扰动。p通过原768维特征抽取/复制模拟，不代表模型宽度或新预训练规模。未交代全seed/误差条、batch/LR/clipping/accountant细节，不能称显著普适或完全复现。"
+    },
+    {
+      "position": "pp8/24 G.1; pp25–27 H/I",
+      "finding": "去均值的私有预处理会耦合数据，需完整相邻敏感度而非将其一概视为免费后处理；类不平衡时常数依赖α。G.1中心化等式再等于未中心化Mk+v的符号需对齐。随机初始化仅表达式，NoisySGD subsampling及合成数据都是未来工作。"
+    }
+  ],
+  "visual_review": {
+    "pages": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      13,
+      14,
+      16,
+      17,
+      18,
+      20,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27
+    ],
+    "source": "115dpi original-page Poppler images directly viewed",
+    "policy": "delete20renders+duplicateextract after record; sourcePDF/primaryMD retained only ignoredskilltmp"
+  },
+  "official_requirements": [],
+  "holdout_validation": null,
+  "review_limitations": "27页正文、文献与A–I所有附录连续阅读，20关键原页视觉核验。仅写作组织及主张证据边界审阅，不独立重证概率/DP/样本复杂度、运行代码、认证隐私会计或复现实验。ICML22篇归纳先导，正式留出未用。"
+}

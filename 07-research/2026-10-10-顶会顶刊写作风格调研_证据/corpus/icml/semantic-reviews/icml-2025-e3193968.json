@@ -1,0 +1,280 @@
+{
+  "id": "icml-2025-e3193968",
+  "venue": "icml",
+  "year": 2025,
+  "split": "induction",
+  "title": "A Manifold Perspective on the Statistical Generalization of Graph Neural Networks",
+  "authors": "Zhiyang Wang, Juan Cervino, Alejandro Ribeiro",
+  "pdf_path": ".claude/skills/paper-writing-shared/tmp/corpus/icml/pdf/A Manifold Perspective on the Statistical Generalization of Graph Neural Networks.pdf",
+  "markdown_path": ".claude/skills/paper-writing-shared/tmp/corpus/icml/markdown/A Manifold Perspective on the Statistical Generalization of Graph Neural Networks.md",
+  "pdf_sha256": "52ad7a5e1411488635b91827a5d6cff12148e61879d46bded0db330d1bcce2a9",
+  "review_date": "2026-10-23",
+  "paper_type": "manifold-spectral statistical generalization analysis of GNNs with synthetic controls, citation/coauthor/heterophily node experiments and point-cloud graph diagnostics",
+  "semantic_review_status": "complete_writing_focused_review",
+  "full_text_style_review_complete": true,
+  "external_appendix_review_complete": true,
+  "count_eligible_full_text_and_relevant_appendix": true,
+  "coverage": [
+    {
+      "asset": "locked official PMLR PDF",
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38
+      ],
+      "sections": "Abstract/Introduction/Related2.1–2.2/Prelim3.1–3.2/Generalization4.1–4.2/Experiments5/Conclusion6/Impact/References/Contents; A/B/C/D/E/F/G/H/I/J.1/J.2/J.3.1–J.3.8, Theorems1–2/Propositions1–3/Corollary1, allscientificfigures/Table1–9 and finalRomanpanels",
+      "method": "continuous38page text read plus32originalpageimages directlyinspected; full scientificproofs/plots/tables not counted from parse or captions alone"
+    }
+  ],
+  "version_audit": {
+    "official_landing": "https://proceedings.mlr.press/v267/wang25k.html",
+    "official_pdf": "https://raw.githubusercontent.com/mlresearch/v267/main/assets/wang25k/wang25k.pdf",
+    "version": "official proceedings PDF; exact bytes locked by SHA256",
+    "identity": "title/authors/PMLR267/year and lockedSHA",
+    "new_network_fetch": false,
+    "qualification": "cachedofficialPDF; source proof/formatqueries retained, not independent proof or numerical replication"
+  },
+  "supplement_audit": {
+    "status": "A–J including J.3.8 all related proofs/assumptiondiscussions/completeexperiments in same38pagePDF fully read",
+    "external_scientific_appendix_referenced": false,
+    "code_artifacts": "dataset loader snippets read, not executed or revalidated against current API; external cited proofs not independently certified"
+  },
+  "ten_dimensions": {
+    "reader_argument": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp1–3"
+      ],
+      "observation": "以已有GNN界随图规模变坏与经验相反为缺口，提出graph-to-manifold spectral bridge，读者需Laplacian/spectrum/统计学习；解释已有GNN而非提出性能榜单模型。",
+      "editorial_advice": "空间采样模型上的图-流形风险差别不等任意现实图/任意分布外测试保证；不存在新架构不应为了模板硬补方法性能贡献。",
+      "applicability": "38页正文/文献/目录及A–J.3.8全部相关科学附录连续读完，32原页核验含完整证明、全部科学图表和末页拟合。写作组织/主张证据边界审阅，不执行作者代码、复现实验、独立认证所有证明或核验全部参考文献。ICML34篇归纳先导，正式留出未用。",
+      "confidence": {
+        "paper_specific": "high for inspected reported assumptions/structure/empiricallimits; unresolved proofqueries separate",
+        "venue_wide": "low;34/50 pilot"
+      }
+    },
+    "title_abstract": {
+      "category": "corpus_observation",
+      "positions": [
+        "p1"
+      ],
+      "observation": "Perspective题名明确研究视角和理论对象；摘要缺口→模型/分析域→N/CL依赖→node/graph两任务→设计含义→合成与现实验证，无必需数值摘要。",
+      "editorial_advice": "线性是log-log经验/上界趋势，不是GA=常数−N或严格每加节点改善；linearCL是所给上界依赖，不能写实际gap或测试accuracy必单调。",
+      "applicability": "38页正文/文献/目录及A–J.3.8全部相关科学附录连续读完，32原页核验含完整证明、全部科学图表和末页拟合。写作组织/主张证据边界审阅，不执行作者代码、复现实验、独立认证所有证明或核验全部参考文献。ICML34篇归纳先导，正式留出未用。",
+      "confidence": {
+        "paper_specific": "high for inspected reported assumptions/structure/empiricallimits; unresolved proofqueries separate",
+        "venue_wide": "low;34/50 pilot"
+      }
+    },
+    "introduction": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp1–2/Fig1 p3"
+      ],
+      "observation": "先常见任务定位、定义generalization对象，再四贡献按两定理、参数依赖、tradeoff、实证排列；syntheticchair早图同时演示N和CL两个轴。",
+      "editorial_advice": "贡献必须可追到证据；小bound只限制gap，trainingrisk/approximation可变，不能由平滑得到每任务更高accuracy。单graph每manifold不等每类一图泛化到任意新对象。",
+      "applicability": "38页正文/文献/目录及A–J.3.8全部相关科学附录连续读完，32原页核验含完整证明、全部科学图表和末页拟合。写作组织/主张证据边界审阅，不执行作者代码、复现实验、独立认证所有证明或核验全部参考文献。ICML34篇归纳先导，正式留出未用。",
+      "confidence": {
+        "paper_specific": "high for inspected reported assumptions/structure/empiricallimits; unresolved proofqueries separate",
+        "venue_wide": "low;34/50 pilot"
+      }
+    },
+    "related_work": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp2–3/25 G"
+      ],
+      "observation": "正文按node/graph-level已有界和manifoldNN两脉络，对照degree/size/limitmodel依赖；附录补graphon与transferability并说明不同目标。",
+      "editorial_advice": "对比不同生成假设、任务和风险而非只比公式是否含N。graphon无限度/不可视化/更现实等为作者定位，未独立认证，不能复制为全领域优劣结论。",
+      "applicability": "38页正文/文献/目录及A–J.3.8全部相关科学附录连续读完，32原页核验含完整证明、全部科学图表和末页拟合。写作组织/主张证据边界审阅，不执行作者代码、复现实验、独立认证所有证明或核验全部参考文献。ICML34篇归纳先导，正式留出未用。",
+      "confidence": {
+        "paper_specific": "high for inspected reported assumptions/structure/empiricallimits; unresolved proofqueries separate",
+        "venue_wide": "low;34/50 pilot"
+      }
+    },
+    "method_theory": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp3–7/15–25"
+      ],
+      "observation": "紧凑光滑流形、有界正Lipschitz密度、iid点→Gaussian/epsilongraph→Laplacian、bandlimitedf、谱衰减/导数约束、nonlinearity/loss条件→node及有限manifoldset的graph风险界。附录OT等质量分区、谱收敛、局部Lipschitz、两定理与两图corollary形成证明链。",
+      "editorial_advice": "保留d2/≥3、N/Nk、bandwidth/gap/geometry及F^L/CL，d1未给；K项风险是sum非自动平均/任意新manifold。非放大/输入归一化在证明使用需显式。polynomialgraph vs heatMNN、非线性后bandlimit及标签/score条件缺口须查询，不作已认证通用数学知识。",
+      "applicability": "38页正文/文献/目录及A–J.3.8全部相关科学附录连续读完，32原页核验含完整证明、全部科学图表和末页拟合。写作组织/主张证据边界审阅，不执行作者代码、复现实验、独立认证所有证明或核验全部参考文献。ICML34篇归纳先导，正式留出未用。",
+      "confidence": {
+        "paper_specific": "high for inspected reported assumptions/structure/empiricallimits; unresolved proofqueries separate",
+        "venue_wide": "low;34/50 pilot"
+      }
+    },
+    "evidence": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp3/7–8/25–38"
+      ],
+      "observation": "chair固定权重/CL与N扫描、8nodebenchmarks GCN训练、ModelNet10/40图任务附录；node10独立runs、graph5随机分区均值STD，层数/width、train/test指标、谱regularizer网格、fit斜率/截距/Pearson完整保留。",
+      "editorial_advice": "syntheticfixedweights不是学得优化效果；actualGCN/原图划分和iid几何采样定理设置不同。gap/accuracy/CE、sumloss与meanpooloutput差分别报告。拟合Arxiv/Amazon/Roman仅选trainaccuracy<95%等子域，全域外推并非检验；弱相关/非单调保留。",
+      "applicability": "38页正文/文献/目录及A–J.3.8全部相关科学附录连续读完，32原页核验含完整证明、全部科学图表和末页拟合。写作组织/主张证据边界审阅，不执行作者代码、复现实验、独立认证所有证明或核验全部参考文献。ICML34篇归纳先导，正式留出未用。",
+      "confidence": {
+        "paper_specific": "high for inspected reported assumptions/structure/empiricallimits; unresolved proofqueries separate",
+        "venue_wide": "low;34/50 pilot"
+      }
+    },
+    "discussion_limits": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp6–8/25 H/I/28–38"
+      ],
+      "observation": "正文在定理后讨论平滑-辨别力tradeoff，结论总结解释性；附录H/I论证假设合理性，J列完整实验。未设独立Limitations章。",
+      "editorial_advice": "需要主动合并smoothmanifold、固定生成族、bandlimited/nonamplifying、eigengap和loss等边界。小CL gap改善可能同时underfit，Fig4过强regularizer准确率下降；有限谱图不证明manifold假设/低频信号，不能把假设讨论升级为实证认证。",
+      "applicability": "38页正文/文献/目录及A–J.3.8全部相关科学附录连续读完，32原页核验含完整证明、全部科学图表和末页拟合。写作组织/主张证据边界审阅，不执行作者代码、复现实验、独立认证所有证明或核验全部参考文献。ICML34篇归纳先导，正式留出未用。",
+      "confidence": {
+        "paper_specific": "high for inspected reported assumptions/structure/empiricallimits; unresolved proofqueries separate",
+        "venue_wide": "low;34/50 pilot"
+      }
+    },
+    "paragraph_language": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp4–8"
+      ],
+      "observation": "定义→assumptions→theorem→几段解释依赖与tradeoff，再第二任务复用框架；主文短proofpointer与长附录推导配套，图把loss/accuracy/gap三类并置。",
+      "editorial_advice": "supH的统一界、单训练H的经验、相关性fit和necessary设计建议不混同；sufficientupperbound不能证明平滑是所有GNN泛化的必要条件，更不保证存在唯一最优CL。",
+      "applicability": "38页正文/文献/目录及A–J.3.8全部相关科学附录连续读完，32原页核验含完整证明、全部科学图表和末页拟合。写作组织/主张证据边界审阅，不执行作者代码、复现实验、独立认证所有证明或核验全部参考文献。ICML34篇归纳先导，正式留出未用。",
+      "confidence": {
+        "paper_specific": "high for inspected reported assumptions/structure/empiricallimits; unresolved proofqueries separate",
+        "venue_wide": "low;34/50 pilot"
+      }
+    },
+    "main_appendix": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp1–38"
+      ],
+      "observation": "正文1–8、Impact/refs9–12、目录13–14；A15采样/inducing、B15–19收敛、C19–20局部连续、D21–22节点证明、E23两图corollary、F24图证明、G/H/I25比较与假设、J25–38所有实验与8子节。",
+      "editorial_advice": "阅读全文及末页Roman拟合已读。图3大拼图不能替代J逐图/表阅读，表1–9和Figures1–20/22及p37无完整caption的Roman面板核验。源图hyperlink边框、??引用、caption缺项不作为官方LaTeX要求。外部证明引用未独立重读，未引用未读科学全文附录。",
+      "applicability": "38页正文/文献/目录及A–J.3.8全部相关科学附录连续读完，32原页核验含完整证明、全部科学图表和末页拟合。写作组织/主张证据边界审阅，不执行作者代码、复现实验、独立认证所有证明或核验全部参考文献。ICML34篇归纳先导，正式留出未用。",
+      "confidence": {
+        "paper_specific": "high for inspected reported assumptions/structure/empiricallimits; unresolved proofqueries separate",
+        "venue_wide": "low;34/50 pilot"
+      }
+    },
+    "actionable": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp5–8/15–38"
+      ],
+      "observation": "理论写作先列图采样/风险/函数类，再分清保持模型常数时N依赖；用matchedsyntheticcontrol和realgraph趋势分别验证，拟合注明选择域与统计口径，附反例/完整train/test曲线。",
+      "editorial_advice": "原创改写：The bound concerns graphs sampled from the specified manifold family under spectral and regularity assumptions. Experiments exhibit decreasing gaps in several regimes, but some loss fits are weak and stronger spectral regularization can lower test accuracy. These observations support a qualified trade-off rather than a universal rule that smoother or larger GNNs always predict better.",
+      "applicability": "38页正文/文献/目录及A–J.3.8全部相关科学附录连续读完，32原页核验含完整证明、全部科学图表和末页拟合。写作组织/主张证据边界审阅，不执行作者代码、复现实验、独立认证所有证明或核验全部参考文献。ICML34篇归纳先导，正式留出未用。",
+      "confidence": {
+        "paper_specific": "high for inspected reported assumptions/structure/empiricallimits; unresolved proofqueries separate",
+        "venue_wide": "low;34/50 pilot"
+      }
+    }
+  },
+  "counterexamples": [
+    {
+      "position": "pp4–8/15–25 theoremscope",
+      "finding": "有限compact smooth M、正密度、iid采样、Gaussian或epsilon核、bandlimitedf与固定谱函数类、d2/≥3前提，不涵盖任意网络/OOD manifold或d1。Theorem2对固定K流形风险求和，按Nk提高几何逼近不等更多独立traininggraphs的iid PAC界；onepermanifold不等onepercategory识别未见CAD对象。C1/C2含信号norm/eigengap/bandwidth，C3需uniform空间正则，不能只说仅几何常数或总参数无依赖。"
+    },
+    {
+      "position": "pp5–8/25/28/30–38 empiricalscope",
+      "finding": "缩小CL减少给定gap上界，不能证明实际gap每次下降、测试risk单调或平滑必要；Fig4高regularizer准确率下降。CiteSeer Table4 loss r=-.5924/- .7981/- .2562等明显弱，Physicsloss约.759–.828、CS多<.9，不能全体称相关>.9。node10runs与graph5partitionsSTD分开，Fig1mean±STD但synthetic重复数未完整给；不补CI/significance。"
+    },
+    {
+      "position": "pp7–8/27–38 fits",
+      "finding": "Arxiv/Amazon/Roman只选训练accuracy<95%的非过拟合点拟合；Cora/CiteSeer/PubMed等全训练accuracy100%用全点，不同域不同斜率，未用预留样本检验拟合。Fig20/22虚线向小N外推accuracygap>100%为幂律拟合外推而非实测值，更不能作为全域物理bound。Eq113 y=slog(n)+p对y是否loggap未明写，须与坐标/表斜率统一；正文trainingloss/error<95%应核accuracy，testerrordecreases与accuracy受损文案需统一。"
+    },
+    {
+      "position": "pp3–5/19/25/28 filters/architecture",
+      "finding": "图filter polynomial Σh_kL^k，MNN却Σh_ke^{-kL}，同H代数等价及谱响应共享需明确graphshift是否应为heatoperator。非零有限polynomial在整个正半轴不能O(lambda^{-d})衰减，AS1的域/finitegraph限制待核。Eq114 R(h)是有限谱段导数trianglebound，不自动满足AS1带lambda^{-d-1}及非放大。sigmoid(0)=.5不满足AS2零归一；accuracy0/1 loss非Lipschitz，CE是否按logits归一满足AS3要说明。GCN实验不能当逐项假设已验证。"
+    },
+    {
+      "position": "pp15–19 B spectralproof",
+      "finding": "离散欧式内积与empirical1/N内积/特征归一化约定需要一致；固定f样本向量范数通常随N而变，p19设graphnorm1对主界额外1/sqrtN影响需说明。lambda1=0却从i1用lambda^{-d}和Weyl i^{-2}、重复特征值theta_i=0、特征子空间对齐及sign缺省需分离处理。Eq47由lambda差界使用(1+C sqrtε)^{-d}上界方向需核；Prop2固定有限K不能直接当全尾i>M统一谱界。Eq59 tailM^{-1}去掉而C2依目标精度及eigengap、CL在式39丢失、MNN中间nonlinear后不保bandlimit、替换f=INx分段函数仍bandlimited等为待作者澄清，不独立认证完整率。"
+    },
+    {
+      "position": "pp19–24 C/D/E/F proofs",
+      "finding": "C式74把层间非线性拿掉合成线性filters，需补严格空间Lipschitz推导而非仅sigma scalar1-Lipschitz。D式83→84把integral ell(stepoutput,g(x))换sample ell(outputxi,gxi)，只stepoutput不保证g在Vi常值，标签正则/额外误差未说明；Eq87 f换INx仍需补逼近。g只L2、main无标签连续条件，supH需uniformconstants。E两图不同epsilon与联合概率预算、F每Nk的unionbudget、normalizedvsunnormalizednorm及LF^{L-1}因子需统一。这些是源证明查询，不把本次语义审阅写成已重证定理或主结果已否证。"
+    },
+    {
+      "position": "pp25–38 dataset/figureevidence",
+      "finding": "真实nodegraph未验证iid geometricgraph构造，分trainlabel/独立子图如何处理crossedges不够明；top100Laplacian特征值按降序衰减本身不证低维流形或输入信号低频能量。ModelNet40打印38400/9600的统计单位/版本、CoauthorCS/Physics表名与loadermapping需来源核对；Amazon/Roman loader命名为作者片段非当前API验证。Fig8为averagegraphoutput差非分类accuracy，ModelNet10未单列同等结果图，chair定权重未充分给网络/采样重复细节；RTX3090约100GPU小时为作者预算非本次复现。G仍有??refs、p37Roman图缺完整caption、Fig11次序/图例及超出样本域拟合要保原页定位，不照搬排版缺陷。"
+    }
+  ],
+  "visual_review": {
+    "pages": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38
+    ],
+    "source": "115dpi originalpagePopplerimages directlyviewed; all scientific diagrams/plotgrids/dataandfit tables/proofquerypages and finalRomanfits",
+    "policy": "delete32renders+duplicateextract after registration; canonicalPDF/primaryMD retained only ignoredskilltmp"
+  },
+  "official_requirements": [],
+  "holdout_validation": null,
+  "review_limitations": "38页正文/文献/目录及A–J.3.8全部相关科学附录连续读完，32原页核验含完整证明、全部科学图表和末页拟合。写作组织/主张证据边界审阅，不执行作者代码、复现实验、独立认证所有证明或核验全部参考文献。ICML34篇归纳先导，正式留出未用。"
+}

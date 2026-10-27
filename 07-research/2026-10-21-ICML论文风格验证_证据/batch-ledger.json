@@ -1,0 +1,34 @@
+{
+  "date": "2026-10-21",
+  "focus": "ICML",
+  "before_full": 26,
+  "new_full": 2,
+  "after_full": 28,
+  "icml_before": 4,
+  "icml_after": 6,
+  "papers": [
+    {
+      "id": "icml-2025-1bf35893",
+      "venue": "icml",
+      "year": 2025,
+      "split": "induction",
+      "full_and_appendix_complete": true,
+      "new_pdf_acquisition": false,
+      "pdf_path": ".claude/skills/paper-writing-shared/tmp/corpus/icml/pdf/Breaking the $n^1.5$ Additive Error Barrier for Private and Efficient Graph Sparsification via Private Expander Decomposition.pdf",
+      "pdf_sha256": "51d400d53b2ffd0a8b9223cd6ea197d70dc71137c6dff3295242fcfcb6a67e20",
+      "review_record": "07-research/2026-10-10-顶会顶刊写作风格调研_证据/corpus/icml/semantic-reviews/icml-2025-1bf35893.json"
+    },
+    {
+      "id": "icml-2025-94972568",
+      "venue": "icml",
+      "year": 2025,
+      "split": "induction",
+      "full_and_appendix_complete": true,
+      "new_pdf_acquisition": false,
+      "pdf_path": ".claude/skills/paper-writing-shared/tmp/corpus/icml/pdf/Critical Tokens Matter- Token-Level Contrastive Estimation Enhances LLM’s Reasoning Capability.pdf",
+      "pdf_sha256": "055600faacb30a94a7195665ceee3681fbc8c828aaf7b19a84ea3941b2344974",
+      "review_record": "07-research/2026-10-10-顶会顶刊写作风格调研_证据/corpus/icml/semantic-reviews/icml-2025-94972568.json"
+    }
+  ],
+  "qualification": "all27PDFpagesreadincludingappendices;notproofaudit,replication,orindependentheldoutvalidation"
+}

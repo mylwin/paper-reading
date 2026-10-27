@@ -1,0 +1,222 @@
+{
+  "id": "icml-2024-ccca6fde",
+  "venue": "icml",
+  "year": 2024,
+  "split": "induction",
+  "title": "Guiding LLMs The Right Way: Fast, Non-Invasive Constrained Generation",
+  "authors": "Luca Beurer-Kellner, Marc Fischer, Martin Vechev",
+  "pdf_path": ".claude/skills/paper-writing-shared/tmp/corpus/icml/pdf/Guiding LLMs The Right Way- Fast, Non-Invasive Constrained Generation.pdf",
+  "markdown_path": ".claude/skills/paper-writing-shared/tmp/corpus/icml/markdown/Guiding LLMs The Right Way- Fast, Non-Invasive Constrained Generation.md",
+  "pdf_sha256": "0a1632440e8566549c13ea56f95197b4cf33cc1d031a72c5d34e5dc7ebc23ec2",
+  "review_date": "2026-10-21",
+  "paper_type": "LLM constrained-decoding algorithm/system with formal-language construction and empirical task/efficiency evaluation",
+  "semantic_review_status": "complete_writing_focused_review",
+  "full_text_style_review_complete": true,
+  "external_appendix_review_complete": true,
+  "count_eligible_full_text_and_relevant_appendix": true,
+  "coverage": [
+    {
+      "asset": "lockedofficialPMLRPDF",
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "sections": "Abstract;Introduction;Challenges2;DOMINO3.1–3.6;Experiments4.1–4.4;Conclusion;Impact;References;AppendixA/B/C/DincludingD.1",
+      "method": "continuousall16pagesincludingreferencesandscientificappendices;targetedoriginalvisualverification"
+    }
+  ],
+  "version_audit": {
+    "official_landing": "https://proceedings.mlr.press/v235/beurer-kellner24a.html",
+    "official_pdf": "https://raw.githubusercontent.com/mlresearch/v235/main/assets/beurer-kellner24a/beurer-kellner24a.pdf",
+    "version": "official proceedings PDF; exact bytes locked by SHA256",
+    "identity": "title/authors/PMLR235header/yearandSHAverified",
+    "new_network_fetch": false
+  },
+  "supplement_audit": {
+    "status": "A–D scientificappendicesallreadinsamePDF;noidentifiedexternaltextappendixpointer",
+    "code_artifacts": "linkedcodeunexecuted;notacodeaudit",
+    "qualification": "no freshwebpageaudit;doesnotexcludeunlistedmaterial"
+  },
+  "ten_dimensions": {
+    "reader_argument": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp1–3,Fig1,Definition2.1"
+      ],
+      "observation": "从格式约束引入subword桥接token错配，再以最小干预连接正确性和效率；读者需区分语法合法与任务答对。",
+      "editorial_advice": "先用失败例定位失效环节，明确syntax validity与semantic accuracy分别评价。",
+      "applicability": "组织与主张边界审阅，不是代码执行、形式化正确性证明、独立复现或最新官方投稿规范核验；有限模型/语法/解码设置不能外推所有LLM。",
+      "confidence": {
+        "paper_specific": "highforinspectedtext/tables;notindependentcorrectness",
+        "venue_wide": "low;pilot9/50"
+      }
+    },
+    "title_abstract": {
+      "category": "corpus_observation",
+      "positions": [
+        "p1 Abstract;pp8–9 Tables2–3"
+      ],
+      "observation": "标题直接写速度和non-invasive，摘要按问题、损害、对齐算法、预计算/推测、有限速度结论组织。",
+      "editorial_advice": "摘要速度需保留具体benchmark、后端与预计算口径；almost2×不是所有任务上界或统一收益。",
+      "applicability": "组织与主张边界审阅，不是代码执行、形式化正确性证明、独立复现或最新官方投稿规范核验；有限模型/语法/解码设置不能外推所有LLM。",
+      "confidence": {
+        "paper_specific": "highforinspectedtext/tables;notindependentcorrectness",
+        "venue_wide": "low;pilot9/50"
+      }
+    },
+    "introduction": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp1–2 contributions"
+      ],
+      "observation": "图1先展示合法但内容改变的JSON，三项贡献分别对应挑战、算法和验证章节。",
+      "editorial_advice": "贡献句分别接可检查的定义、构造和实验，不把格式约束写成推理正确性的保证。",
+      "applicability": "组织与主张边界审阅，不是代码执行、形式化正确性证明、独立复现或最新官方投稿规范核验；有限模型/语法/解码设置不能外推所有LLM。",
+      "confidence": {
+        "paper_specific": "highforinspectedtext/tables;notindependentcorrectness",
+        "venue_wide": "low;pilot9/50"
+      }
+    },
+    "related_work": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp2–4 §2/Table1/Fig2"
+      ],
+      "observation": "没有独立Related Work章；挑战章节按regex/CFG、在线解析和模板组织相邻方法，表格脚注保留实现例外。",
+      "editorial_advice": "可以用问题驱动的技术比较代替固定章节；方法支持范围应绑定被测版本。困惑度差异本身不是准确率证据。",
+      "applicability": "组织与主张边界审阅，不是代码执行、形式化正确性证明、独立复现或最新官方投稿规范核验；有限模型/语法/解码设置不能外推所有LLM。",
+      "confidence": {
+        "paper_specific": "highforinspectedtext/tables;notindependentcorrectness",
+        "venue_wide": "low;pilot9/50"
+      }
+    },
+    "method_theory": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp4–7 Lemma3.1/Figs3–4/Algorithm2"
+      ],
+      "observation": "先CFG/NFA背景，再scanner、词表对齐subterminal树、在线parser，最后预计算/机会掩码/计数式推测。LR覆盖LG不等于语法等价；k0可保证语法而k∞支持最小干预。",
+      "editorial_advice": "分别定义lookahead k与推测长度s；有限k不能一律称fully aligned；同语法请求复用离线结构的条件需保留。",
+      "applicability": "组织与主张边界审阅，不是代码执行、形式化正确性证明、独立复现或最新官方投稿规范核验；有限模型/语法/解码设置不能外推所有LLM。",
+      "confidence": {
+        "paper_specific": "highforinspectedtext/tables;notindependentcorrectness",
+        "venue_wide": "low;pilot9/50"
+      }
+    },
+    "evidence": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp7–9 Tables2–4/Fig5;pp15–16 Table5"
+      ],
+      "observation": "分开报告任务准确率、格式合法率、困惑度和吞吐；两模型、两后端、具体GPU、5-shot及400样本等条件明确。速度不含1–5秒预计算，C约20秒；10次预热后100次、128token上限、温度1。",
+      "editorial_advice": "报告冷启动与稳态成本的区别，语法预先已知是关键前提；保留同后端比较及百分比/百分点。Table4 Llama基线.155与Table2 .262不能悄悄合并。",
+      "applicability": "组织与主张边界审阅，不是代码执行、形式化正确性证明、独立复现或最新官方投稿规范核验；有限模型/语法/解码设置不能外推所有LLM。",
+      "confidence": {
+        "paper_specific": "highforinspectedtext/tables;notindependentcorrectness",
+        "venue_wide": "low;pilot9/50"
+      }
+    },
+    "discussion_limits": {
+      "category": "corpus_observation",
+      "positions": [
+        "p9 §4.4;pp8–9;pp15–16"
+      ],
+      "observation": "专门限制段承认大实体语法预计算昂贵、动态或依输入语法尚不兼容；语法合法输出也可因context/output截断而不完整。",
+      "editorial_advice": "将未来JIT设想与当前支持能力分开；C任务加速模式仍仅.78×/.85×，不能称所有任务更快。",
+      "applicability": "组织与主张边界审阅，不是代码执行、形式化正确性证明、独立复现或最新官方投稿规范核验；有限模型/语法/解码设置不能外推所有LLM。",
+      "confidence": {
+        "paper_specific": "highforinspectedtext/tables;notindependentcorrectness",
+        "venue_wide": "low;pilot9/50"
+      }
+    },
+    "paragraph_language": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp2–9;pp13–16"
+      ],
+      "observation": "小标题按技术功能组织，每段多为问题→机制→后果；论断强度有边界，Table5正文best包含Llama与GUIDANCE并列。原算法有变量/长度疑点。",
+      "editorial_advice": "编辑时保留ties、部分条件和语法版本；源稿疑似Algorithm1 v′/α′及Algorithm3去前缀长度问题须列作者核对，不静默改数学。",
+      "applicability": "组织与主张边界审阅，不是代码执行、形式化正确性证明、独立复现或最新官方投稿规范核验；有限模型/语法/解码设置不能外推所有LLM。",
+      "confidence": {
+        "paper_specific": "highforinspectedtext/tables;notindependentcorrectness",
+        "venue_wide": "low;pilot9/50"
+      }
+    },
+    "main_appendix": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp1–16;AppendicesA–D"
+      ],
+      "observation": "主文pp1–9，p10影响与文献起；附录pp13–16含空白自由模板、贪心重分词算法、所有语法/提示、结构化输出例和PTB解析扩展结果。",
+      "editorial_advice": "C只是附录定义的简化C语法，不能扩大为完整C语义保证；附录D.1用F1而非准确率，需与主表口径区分。",
+      "applicability": "组织与主张边界审阅，不是代码执行、形式化正确性证明、独立复现或最新官方投稿规范核验；有限模型/语法/解码设置不能外推所有LLM。",
+      "confidence": {
+        "paper_specific": "highforinspectedtext/tables;notindependentcorrectness",
+        "venue_wide": "low;pilot9/50"
+      }
+    },
+    "actionable": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp8–9 Tables2–4;pp13–16 A–D"
+      ],
+      "observation": "设计论证同时维护干预、质量和速度三条证据链；模板空白自由化在准确率/吞吐间有取舍。",
+      "editorial_advice": "原创示例：With a pre-specified grammar, the method preserves task accuracy in the reported settings. Throughput gains exclude grammar precomputation and vary with the output structure.",
+      "applicability": "组织与主张边界审阅，不是代码执行、形式化正确性证明、独立复现或最新官方投稿规范核验；有限模型/语法/解码设置不能外推所有LLM。",
+      "confidence": {
+        "paper_specific": "highforinspectedtext/tables;notindependentcorrectness",
+        "venue_wide": "low;pilot9/50"
+      }
+    }
+  },
+  "counterexamples": [
+    {
+      "position": "pp8–9 Tables2–4",
+      "finding": "格式合法不保证答案正确；吞吐有低于1×的C与无schema设置，且计时排除预计算。Table2 Llama GSM .262和Table4 .155基线不同，协议待作者澄清。"
+    },
+    {
+      "position": "p8 Table2/Fig5;pp15–16 Table5",
+      "finding": "格式合法率未达100可由输出/上下文截断解释。低困惑度可来自重复。CP Llama DOMINO/GUIDANCE F1同为.115，不是严格胜出。"
+    },
+    {
+      "position": "p6 §3.4;p9 §4.4",
+      "finding": "k0的合法性不等于最小干预；有限k影响准确率；当前动态/输入相关语法未支持。"
+    },
+    {
+      "position": "p2 Algorithm1;p13 Algorithm3",
+      "finding": "原页可见v′先参与掩码且decode写α′；Algorithm3注释去t但切片写|o|。只登记待作者核对，未静默修复。"
+    }
+  ],
+  "visual_review": {
+    "pages": [
+      1,
+      2,
+      5,
+      8,
+      9,
+      13,
+      14,
+      15,
+      16
+    ],
+    "source": "100dpiPopplerrendersdirectview_image",
+    "policy": "delete regenerable images after canonical record"
+  },
+  "holdout_validation": null,
+  "official_requirements": [],
+  "review_limitations": "组织与主张边界审阅，不是代码执行、形式化正确性证明、独立复现或最新官方投稿规范核验；有限模型/语法/解码设置不能外推所有LLM。"
+}

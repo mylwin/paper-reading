@@ -1,0 +1,11 @@
+{
+  "../../2026-10-10-顶会顶刊写作风格调研_证据/corpus/icml/semantic-reviews/icml-2025-2a7aabb2.json": "c0cbe33cf27581ffbb683ee7dedfeb7bcb90c1eec537958cdb2e9283775956b6",
+  "arithmetic-check.json": "380eba765a20479bfaa6dfd957e200bed33a931d00850b3f31c3029d0c15758d",
+  "batch-ledger.json": "c7338d4e525c0cd7c45dc887fb27227ba8a775cb714c4fe35409344ae0fe6e5f",
+  "check_arithmetic.py": "abad07e5b38c7d1776211ef8420a03f87c449f70f52c0b12d0d8501cdec750fc",
+  "cleanup-result.json": "cb5c3bab95ca519e645155411a34c46ec2e14a56398603a7075599d808b45b0b",
+  "progress-after.json": "b944654bc14f0042b6af783e4b7347b0757223a182c400cf3289caccbffe2a0d",
+  "state.json": "6e3c49661ef5aa727dec200cc6a27f618e098450d530aff922bb2fa10372b048",
+  "temporary-artifact-manifest.json": "2c793d3632358f56183798b37bcc152200bfadc68c8ac3ccff6bbc6ea6b29321",
+  "validation.json": "4e5d2eec3af12a0f0390c421a9f47d1f2d3846705281b9639425d28894ed3d44"
+}

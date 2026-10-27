@@ -1,0 +1,173 @@
+{
+  "date": "2026-10-21",
+  "batch": "icml-010",
+  "status": "registered",
+  "selection": "same locked sample;processingorderonly",
+  "before": {
+    "updated": "2026-10-21",
+    "status": "in_progress",
+    "venues": [
+      {
+        "venue": "aaai",
+        "locked": 50,
+        "pdf_acquired": 50,
+        "text_parsed": 50,
+        "main_text_style_reviewed": 5,
+        "full_text_and_relevant_appendix_reviewed": 4,
+        "induction_complete": 4,
+        "holdout_complete": 0
+      },
+      {
+        "venue": "colt",
+        "locked": 50,
+        "pdf_acquired": 50,
+        "text_parsed": 50,
+        "main_text_style_reviewed": 2,
+        "full_text_and_relevant_appendix_reviewed": 1,
+        "induction_complete": 0,
+        "holdout_complete": 1
+      },
+      {
+        "venue": "iclr",
+        "locked": 50,
+        "pdf_acquired": 50,
+        "text_parsed": 50,
+        "main_text_style_reviewed": 1,
+        "full_text_and_relevant_appendix_reviewed": 1,
+        "induction_complete": 1,
+        "holdout_complete": 0
+      },
+      {
+        "venue": "icml",
+        "locked": 50,
+        "pdf_acquired": 50,
+        "text_parsed": 50,
+        "main_text_style_reviewed": 9,
+        "full_text_and_relevant_appendix_reviewed": 9,
+        "induction_complete": 9,
+        "holdout_complete": 0
+      },
+      {
+        "venue": "ijcai",
+        "locked": 50,
+        "pdf_acquired": 50,
+        "text_parsed": 50,
+        "main_text_style_reviewed": 5,
+        "full_text_and_relevant_appendix_reviewed": 5,
+        "induction_complete": 4,
+        "holdout_complete": 1
+      },
+      {
+        "venue": "jmlr",
+        "locked": 50,
+        "pdf_acquired": 50,
+        "text_parsed": 50,
+        "main_text_style_reviewed": 4,
+        "full_text_and_relevant_appendix_reviewed": 4,
+        "induction_complete": 3,
+        "holdout_complete": 1
+      },
+      {
+        "venue": "neurips",
+        "locked": 50,
+        "pdf_acquired": 50,
+        "text_parsed": 50,
+        "main_text_style_reviewed": 2,
+        "full_text_and_relevant_appendix_reviewed": 2,
+        "induction_complete": 2,
+        "holdout_complete": 0
+      },
+      {
+        "venue": "tai",
+        "locked": 50,
+        "pdf_acquired": 24,
+        "text_parsed": 24,
+        "main_text_style_reviewed": 4,
+        "full_text_and_relevant_appendix_reviewed": 2,
+        "induction_complete": 2,
+        "holdout_complete": 0
+      },
+      {
+        "venue": "tmlr",
+        "locked": 50,
+        "pdf_acquired": 3,
+        "text_parsed": 3,
+        "main_text_style_reviewed": 2,
+        "full_text_and_relevant_appendix_reviewed": 1,
+        "induction_complete": 1,
+        "holdout_complete": 0
+      },
+      {
+        "venue": "tnnls",
+        "locked": 50,
+        "pdf_acquired": 26,
+        "text_parsed": 26,
+        "main_text_style_reviewed": 1,
+        "full_text_and_relevant_appendix_reviewed": 1,
+        "induction_complete": 0,
+        "holdout_complete": 1
+      },
+      {
+        "venue": "tpami",
+        "locked": 50,
+        "pdf_acquired": 26,
+        "text_parsed": 26,
+        "main_text_style_reviewed": 1,
+        "full_text_and_relevant_appendix_reviewed": 1,
+        "induction_complete": 1,
+        "holdout_complete": 0
+      }
+    ],
+    "totals": {
+      "locked": 550,
+      "pdf_acquired": 429,
+      "text_parsed": 429,
+      "main_text_style_reviewed": 36,
+      "full_text_and_relevant_appendix_reviewed": 31,
+      "induction_complete": 27,
+      "holdout_complete": 4
+    },
+    "remaining_full_review": 519,
+    "qualification": "Continuous PDF prose/style review is not proof/code audit or experiment replication. Accepted author/published-header deposits may support writing organization, not final typesetting. Referenced unreviewed external appendices excluded from full count.",
+    "known_ineligible_locked_slots": 0,
+    "eligibility_note": "550 active positions after one documented nonresearch slot repair; original lock/history preserved. This is not certification of every remaining candidate qualification.",
+    "excluded_historical_nonresearch_records": 1
+  },
+  "papers": [
+    {
+      "title": "GaussianPro: 3D Gaussian Splatting with Progressive Propagation",
+      "authors": "Kai Cheng, Xiaoxiao Long, Kaizhi Yang, Yao Yao, Wei Yin, Yuexin Ma, Wenping Wang, Xuejin Chen",
+      "landing_url": "https://proceedings.mlr.press/v235/cheng24f.html",
+      "pdf_url": "https://raw.githubusercontent.com/mlresearch/v235/main/assets/cheng24f/cheng24f.pdf",
+      "venue": "icml",
+      "year": 2024,
+      "track": "main conference research",
+      "official_listing_url": "https://proceedings.mlr.press/v235/",
+      "sampling_stratum": "representation_application",
+      "paper_type": "pending semantic classification",
+      "split": "induction",
+      "id": "icml-2024-cea7b10d",
+      "paper_stem": "GaussianPro- 3D Gaussian Splatting with Progressive Propagation",
+      "asset_reused": false,
+      "pdf_path": ".claude/skills/paper-writing-shared/tmp/corpus/icml/pdf/GaussianPro- 3D Gaussian Splatting with Progressive Propagation.pdf",
+      "pdf_sha256": "7f1810adca2d24a5930278b5bb5aae9d8a1d2377f5692d7bed2227cfe556090a",
+      "pdf_version": "official proceedings PDF; exact bytes locked by SHA256",
+      "download_status": "available",
+      "markdown_path": ".claude/skills/paper-writing-shared/tmp/corpus/icml/markdown/GaussianPro- 3D Gaussian Splatting with Progressive Propagation.md",
+      "parse_status": "complete text extraction",
+      "semantic_review_status": "pending",
+      "reviewed_pages": [],
+      "appendix_review_status": "pending",
+      "structure": [],
+      "claims": [],
+      "counterexamples": [],
+      "semantic_review": null,
+      "transient_extraction": ".claude/skills/paper-writing-shared/tmp/full-review/icml-010/icml-2024-cea7b10d.txt",
+      "page_count": 18
+    }
+  ],
+  "cache": ".claude/skills/paper-writing-shared/tmp/full-review/icml-010",
+  "baseline_records_sha256": "6818a4e8bc05d048aab14776c6b15648b5f4d3b080057acdb59c50be3afd686b",
+  "baseline_icml_profile_sha256": "6b700f65b39bd3ea5f3f59c79cb1e55557072f7c8211ab21471b9ecde0916104",
+  "after_full": 32
+}

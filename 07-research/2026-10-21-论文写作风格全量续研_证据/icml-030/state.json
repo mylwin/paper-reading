@@ -1,0 +1,173 @@
+{
+  "date": "2026-10-22",
+  "batch": "icml-030",
+  "status": "registered",
+  "selection": "same locked sample;processingorderonly",
+  "before": {
+    "updated": "2026-10-22",
+    "status": "in_progress",
+    "venues": [
+      {
+        "venue": "aaai",
+        "locked": 50,
+        "pdf_acquired": 50,
+        "text_parsed": 50,
+        "main_text_style_reviewed": 5,
+        "full_text_and_relevant_appendix_reviewed": 4,
+        "induction_complete": 4,
+        "holdout_complete": 0
+      },
+      {
+        "venue": "colt",
+        "locked": 50,
+        "pdf_acquired": 50,
+        "text_parsed": 50,
+        "main_text_style_reviewed": 2,
+        "full_text_and_relevant_appendix_reviewed": 1,
+        "induction_complete": 0,
+        "holdout_complete": 1
+      },
+      {
+        "venue": "iclr",
+        "locked": 50,
+        "pdf_acquired": 50,
+        "text_parsed": 50,
+        "main_text_style_reviewed": 1,
+        "full_text_and_relevant_appendix_reviewed": 1,
+        "induction_complete": 1,
+        "holdout_complete": 0
+      },
+      {
+        "venue": "icml",
+        "locked": 50,
+        "pdf_acquired": 50,
+        "text_parsed": 50,
+        "main_text_style_reviewed": 29,
+        "full_text_and_relevant_appendix_reviewed": 29,
+        "induction_complete": 29,
+        "holdout_complete": 0
+      },
+      {
+        "venue": "ijcai",
+        "locked": 50,
+        "pdf_acquired": 50,
+        "text_parsed": 50,
+        "main_text_style_reviewed": 5,
+        "full_text_and_relevant_appendix_reviewed": 5,
+        "induction_complete": 4,
+        "holdout_complete": 1
+      },
+      {
+        "venue": "jmlr",
+        "locked": 50,
+        "pdf_acquired": 50,
+        "text_parsed": 50,
+        "main_text_style_reviewed": 4,
+        "full_text_and_relevant_appendix_reviewed": 4,
+        "induction_complete": 3,
+        "holdout_complete": 1
+      },
+      {
+        "venue": "neurips",
+        "locked": 50,
+        "pdf_acquired": 50,
+        "text_parsed": 50,
+        "main_text_style_reviewed": 2,
+        "full_text_and_relevant_appendix_reviewed": 2,
+        "induction_complete": 2,
+        "holdout_complete": 0
+      },
+      {
+        "venue": "tai",
+        "locked": 50,
+        "pdf_acquired": 24,
+        "text_parsed": 24,
+        "main_text_style_reviewed": 4,
+        "full_text_and_relevant_appendix_reviewed": 2,
+        "induction_complete": 2,
+        "holdout_complete": 0
+      },
+      {
+        "venue": "tmlr",
+        "locked": 50,
+        "pdf_acquired": 3,
+        "text_parsed": 3,
+        "main_text_style_reviewed": 2,
+        "full_text_and_relevant_appendix_reviewed": 1,
+        "induction_complete": 1,
+        "holdout_complete": 0
+      },
+      {
+        "venue": "tnnls",
+        "locked": 50,
+        "pdf_acquired": 26,
+        "text_parsed": 26,
+        "main_text_style_reviewed": 1,
+        "full_text_and_relevant_appendix_reviewed": 1,
+        "induction_complete": 0,
+        "holdout_complete": 1
+      },
+      {
+        "venue": "tpami",
+        "locked": 50,
+        "pdf_acquired": 26,
+        "text_parsed": 26,
+        "main_text_style_reviewed": 1,
+        "full_text_and_relevant_appendix_reviewed": 1,
+        "induction_complete": 1,
+        "holdout_complete": 0
+      }
+    ],
+    "totals": {
+      "locked": 550,
+      "pdf_acquired": 429,
+      "text_parsed": 429,
+      "main_text_style_reviewed": 56,
+      "full_text_and_relevant_appendix_reviewed": 51,
+      "induction_complete": 47,
+      "holdout_complete": 4
+    },
+    "remaining_full_review": 499,
+    "qualification": "Continuous PDF prose/style review is not proof/code audit or experiment replication. Accepted author/published-header deposits may support writing organization, not final typesetting. Referenced unreviewed external appendices excluded from full count.",
+    "known_ineligible_locked_slots": 0,
+    "eligibility_note": "550 active positions after one documented nonresearch slot repair; original lock/history preserved. This is not certification of every remaining candidate qualification.",
+    "excluded_historical_nonresearch_records": 1
+  },
+  "papers": [
+    {
+      "title": "Pessimism Meets Risk: Risk-Sensitive Offline Reinforcement Learning",
+      "authors": "Dake Zhang, Boxiang Lyu, Shuang Qiu, Mladen Kolar, Tong Zhang",
+      "landing_url": "https://proceedings.mlr.press/v235/zhang24aq.html",
+      "pdf_url": "https://raw.githubusercontent.com/mlresearch/v235/main/assets/zhang24aq/zhang24aq.pdf",
+      "venue": "icml",
+      "year": 2024,
+      "track": "main conference research",
+      "official_listing_url": "https://proceedings.mlr.press/v235/",
+      "sampling_stratum": "decision_rl",
+      "paper_type": "pending semantic classification",
+      "split": "induction",
+      "id": "icml-2024-10e608ae",
+      "paper_stem": "Pessimism Meets Risk- Risk-Sensitive Offline Reinforcement Learning",
+      "asset_reused": false,
+      "pdf_path": ".claude/skills/paper-writing-shared/tmp/corpus/icml/pdf/Pessimism Meets Risk- Risk-Sensitive Offline Reinforcement Learning.pdf",
+      "pdf_sha256": "00d84a1f477d3d6a9655fe0f419f888609b75f312537c668d1b4b5578110a6ce",
+      "pdf_version": "official proceedings PDF; exact bytes locked by SHA256",
+      "download_status": "available",
+      "markdown_path": ".claude/skills/paper-writing-shared/tmp/corpus/icml/markdown/Pessimism Meets Risk- Risk-Sensitive Offline Reinforcement Learning.md",
+      "parse_status": "complete text extraction",
+      "semantic_review_status": "pending",
+      "reviewed_pages": [],
+      "appendix_review_status": "pending",
+      "structure": [],
+      "claims": [],
+      "counterexamples": [],
+      "semantic_review": null,
+      "transient_extraction": ".claude/skills/paper-writing-shared/tmp/full-review/icml-030/icml-2024-10e608ae.txt",
+      "page_count": 31
+    }
+  ],
+  "cache": ".claude/skills/paper-writing-shared/tmp/full-review/icml-030",
+  "baseline_records_sha256": "d2720f4bb2722948e03b7ab536b163dfb6378d1d2027610209d34a5d2284730a",
+  "baseline_icml_profile_sha256": "2889618007464f413cf3ee2bc16687ad9f50db9fde73c44066b27970ee089bec",
+  "after_full": 52
+}

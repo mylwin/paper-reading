@@ -1,0 +1,128 @@
+{
+  "date": "2026-10-21",
+  "classification": "external concurrent index updates;preserved,noindexwritesbythisbatch",
+  "evidence": "indexes acquired2026-10-21dateddaily-paperrowsduringthisrun;08-daily/2026-10-21andnewunrelatedPDFsappeared;thisbatchwritesonlyskillreferences,researchrecords,planningandskilltmp",
+  "qualification": "do not attribute the external writer identity; baseline original PDF/parsed/note/translation hashes checked independently",
+  "indices": [
+    {
+      "path": "01-raw/index.md",
+      "baseline_sha256": "35bc6ee99e38f272ed89da4b8b82db654a57843b55922ddd51205f7359b670e9",
+      "current_sha256": "074b8a8618ab360cd7dd1b464e41063b4ad6977a88cb1edf632e38c224e2839b",
+      "added_table_rows": [
+        "| 2026-10 | 2026-10-21 | A Statistical Viewpoint on Adam, Shampoo and Muon | A_Statistical_Viewpoint_on_Adam_Shampoo_and_Muon | arxiv | [PDF](2026-10/A_Statistical_Viewpoint_on_Adam_Shampoo_and_Muon.pdf) | 未解析 | 未精读 | 未翻译 |",
+        "| 2026-10 | 2026-10-21 | AdamPM: Memory-Efficient LLM Optimization via Moment Pooling | AdamPM_Memory_Efficient_LLM_Optimization_via_Moment_Pooling | arxiv | [PDF](2026-10/AdamPM_Memory_Efficient_LLM_Optimization_via_Moment_Pooling.pdf) | 未解析 | 未精读 | 未翻译 |",
+        "| 2026-10 | 2026-10-21 | How Does Muon Work in Private Deep Learning? Scalable Differentially Private Training via Orthogonalization | How_Does_Muon_Work_in_Private_Deep_Learning_Scalable_Differentially_Private_Training_via_Orthogonalization | arxiv | 未入库 | 未解析 | 未精读 | 未翻译 |",
+        "| 2026-10 | 2026-10-21 | MuPACE: Learning to Pace Muon for LoRA Fine-Tuning | MuPACE_Learning_to_Pace_Muon_for_LoRA_Fine_Tuning | arxiv | [PDF](2026-10/MuPACE_Learning_to_Pace_Muon_for_LoRA_Fine_Tuning.pdf) | 未解析 | 未精读 | 未翻译 |",
+        "| 2026-10 | 2026-10-21 | T-MUON: Tensorizing Muon via t-SVD for Large Language Model Pre-training | T_MUON_Tensorizing_Muon_via_t_SVD_for_Large_Language_Model_Pre_training | arxiv | 未入库 | 未解析 | 未精读 | 未翻译 |"
+      ],
+      "removed_table_rows": [],
+      "new_icml_titles_absent": true,
+      "migration_stems_added": []
+    },
+    {
+      "path": "01-raw/2026-10/README.md",
+      "baseline_sha256": "4d9421e4712f6185c22b5648e163bacff091f9573cab0f05188f4d466df75059",
+      "current_sha256": "a10ec14eb7214cc91e9e08934f29836d085f1db639cfa06bf16b4f8edfa976ab",
+      "added_table_rows": [
+        "| 2026-10-21 | A Statistical Viewpoint on Adam, Shampoo and Muon | A_Statistical_Viewpoint_on_Adam_Shampoo_and_Muon | arxiv | [PDF](A_Statistical_Viewpoint_on_Adam_Shampoo_and_Muon.pdf) |",
+        "| 2026-10-21 | AdamPM: Memory-Efficient LLM Optimization via Moment Pooling | AdamPM_Memory_Efficient_LLM_Optimization_via_Moment_Pooling | arxiv | [PDF](AdamPM_Memory_Efficient_LLM_Optimization_via_Moment_Pooling.pdf) |",
+        "| 2026-10-21 | How Does Muon Work in Private Deep Learning? Scalable Differentially Private Training via Orthogonalization | How_Does_Muon_Work_in_Private_Deep_Learning_Scalable_Differentially_Private_Training_via_Orthogonalization | arxiv | 未入库 |",
+        "| 2026-10-21 | MuPACE: Learning to Pace Muon for LoRA Fine-Tuning | MuPACE_Learning_to_Pace_Muon_for_LoRA_Fine_Tuning | arxiv | [PDF](MuPACE_Learning_to_Pace_Muon_for_LoRA_Fine_Tuning.pdf) |",
+        "| 2026-10-21 | T-MUON: Tensorizing Muon via t-SVD for Large Language Model Pre-training | T_MUON_Tensorizing_Muon_via_t_SVD_for_Large_Language_Model_Pre_training | arxiv | 未入库 |"
+      ],
+      "removed_table_rows": [],
+      "new_icml_titles_absent": true,
+      "migration_stems_added": []
+    },
+    {
+      "path": "02-markdown/index.md",
+      "baseline_sha256": "e7ee18a696d3d2f982bbf1ca7bb94872cd4fa4348666d4c8631a27961a3a4c30",
+      "current_sha256": "04295a477dacf4012a9a46ebd5bbd790ee104d28fcd7e02215aec678e5cd9e4e",
+      "added_table_rows": [
+        "| 2026-10 | A Statistical Viewpoint on Adam, Shampoo and Muon | A_Statistical_Viewpoint_on_Adam_Shampoo_and_Muon | 未解析 | -- | 2026-10-21 | -- |",
+        "| 2026-10 | AdamPM: Memory-Efficient LLM Optimization via Moment Pooling | AdamPM_Memory_Efficient_LLM_Optimization_via_Moment_Pooling | 未解析 | -- | 2026-10-21 | -- |",
+        "| 2026-10 | How Does Muon Work in Private Deep Learning? Scalable Differentially Private Training via Orthogonalization | How_Does_Muon_Work_in_Private_Deep_Learning_Scalable_Differentially_Private_Training_via_Orthogonalization | 未解析 | -- | 2026-10-21 | -- |",
+        "| 2026-10 | MuPACE: Learning to Pace Muon for LoRA Fine-Tuning | MuPACE_Learning_to_Pace_Muon_for_LoRA_Fine_Tuning | 未解析 | -- | 2026-10-21 | -- |",
+        "| 2026-10 | T-MUON: Tensorizing Muon via t-SVD for Large Language Model Pre-training | T_MUON_Tensorizing_Muon_via_t_SVD_for_Large_Language_Model_Pre_training | 未解析 | -- | 2026-10-21 | -- |"
+      ],
+      "removed_table_rows": [],
+      "new_icml_titles_absent": true,
+      "migration_stems_added": []
+    },
+    {
+      "path": "02-markdown/2026-10/README.md",
+      "baseline_sha256": "2184f0b95a9778ba43ae46de0a407a70cca6483634194c841d88935d2d37cb10",
+      "current_sha256": "0dafe167a3c8406f76503fdcc3a7be39e4ae785e5d9187e04ff672ec74c0966a",
+      "added_table_rows": [
+        "| 未解析 | A Statistical Viewpoint on Adam, Shampoo and Muon | A_Statistical_Viewpoint_on_Adam_Shampoo_and_Muon | -- | 2026-10-21 | -- |",
+        "| 未解析 | AdamPM: Memory-Efficient LLM Optimization via Moment Pooling | AdamPM_Memory_Efficient_LLM_Optimization_via_Moment_Pooling | -- | 2026-10-21 | -- |",
+        "| 未解析 | How Does Muon Work in Private Deep Learning? Scalable Differentially Private Training via Orthogonalization | How_Does_Muon_Work_in_Private_Deep_Learning_Scalable_Differentially_Private_Training_via_Orthogonalization | -- | 2026-10-21 | -- |",
+        "| 未解析 | MuPACE: Learning to Pace Muon for LoRA Fine-Tuning | MuPACE_Learning_to_Pace_Muon_for_LoRA_Fine_Tuning | -- | 2026-10-21 | -- |",
+        "| 未解析 | T-MUON: Tensorizing Muon via t-SVD for Large Language Model Pre-training | T_MUON_Tensorizing_Muon_via_t_SVD_for_Large_Language_Model_Pre_training | -- | 2026-10-21 | -- |"
+      ],
+      "removed_table_rows": [],
+      "new_icml_titles_absent": true,
+      "migration_stems_added": []
+    },
+    {
+      "path": "03-notes/index.md",
+      "baseline_sha256": "7685f28e79b5382eb6b7cc2f75d409f427fc723ca6b5efd774521b8a4ff9ac9b",
+      "current_sha256": "459e041ce691c07d1c222b3dbf4e50dc2096544246ae16b334b665e1f089c01e",
+      "added_table_rows": [
+        "| 2026-10 | A Statistical Viewpoint on Adam, Shampoo and Muon | A_Statistical_Viewpoint_on_Adam_Shampoo_and_Muon | 未精读 | -- | -- | -- | -- |",
+        "| 2026-10 | AdamPM: Memory-Efficient LLM Optimization via Moment Pooling | AdamPM_Memory_Efficient_LLM_Optimization_via_Moment_Pooling | 未精读 | -- | -- | -- | -- |",
+        "| 2026-10 | How Does Muon Work in Private Deep Learning? Scalable Differentially Private Training via Orthogonalization | How_Does_Muon_Work_in_Private_Deep_Learning_Scalable_Differentially_Private_Training_via_Orthogonalization | 未精读 | -- | -- | -- | -- |",
+        "| 2026-10 | MuPACE: Learning to Pace Muon for LoRA Fine-Tuning | MuPACE_Learning_to_Pace_Muon_for_LoRA_Fine_Tuning | 未精读 | -- | -- | -- | -- |",
+        "| 2026-10 | T-MUON: Tensorizing Muon via t-SVD for Large Language Model Pre-training | T_MUON_Tensorizing_Muon_via_t_SVD_for_Large_Language_Model_Pre_training | 未精读 | -- | -- | -- | -- |"
+      ],
+      "removed_table_rows": [],
+      "new_icml_titles_absent": true,
+      "migration_stems_added": []
+    },
+    {
+      "path": "03-notes/2026-10/README.md",
+      "baseline_sha256": "e7b06e9c2b3db094f800da61b2695c2113a493a785d8d1843caec06ba9114676",
+      "current_sha256": "10d467e2e252a51b76035fb5b2f0fd9f39982cbf550bd0b63f3ae792882aa54f",
+      "added_table_rows": [
+        "| 未精读 | A Statistical Viewpoint on Adam, Shampoo and Muon | A_Statistical_Viewpoint_on_Adam_Shampoo_and_Muon | -- | -- | -- | -- |",
+        "| 未精读 | AdamPM: Memory-Efficient LLM Optimization via Moment Pooling | AdamPM_Memory_Efficient_LLM_Optimization_via_Moment_Pooling | -- | -- | -- | -- |",
+        "| 未精读 | How Does Muon Work in Private Deep Learning? Scalable Differentially Private Training via Orthogonalization | How_Does_Muon_Work_in_Private_Deep_Learning_Scalable_Differentially_Private_Training_via_Orthogonalization | -- | -- | -- | -- |",
+        "| 未精读 | MuPACE: Learning to Pace Muon for LoRA Fine-Tuning | MuPACE_Learning_to_Pace_Muon_for_LoRA_Fine_Tuning | -- | -- | -- | -- |",
+        "| 未精读 | T-MUON: Tensorizing Muon via t-SVD for Large Language Model Pre-training | T_MUON_Tensorizing_Muon_via_t_SVD_for_Large_Language_Model_Pre_training | -- | -- | -- | -- |"
+      ],
+      "removed_table_rows": [],
+      "new_icml_titles_absent": true,
+      "migration_stems_added": []
+    },
+    {
+      "path": "06-translation/index.md",
+      "baseline_sha256": "30017da011ff2da890f7411cf7237154d9c1140013b1dc56e09aff741cbcec28",
+      "current_sha256": "240394587429a9567c8add5f1b236d51fd88ebdd6b1abbe95e2374efc6001c08",
+      "added_table_rows": [
+        "| 2026-10 | A Statistical Viewpoint on Adam, Shampoo and Muon | A_Statistical_Viewpoint_on_Adam_Shampoo_and_Muon | 未翻译 | -- | -- | -- |",
+        "| 2026-10 | AdamPM: Memory-Efficient LLM Optimization via Moment Pooling | AdamPM_Memory_Efficient_LLM_Optimization_via_Moment_Pooling | 未翻译 | -- | -- | -- |",
+        "| 2026-10 | How Does Muon Work in Private Deep Learning? Scalable Differentially Private Training via Orthogonalization | How_Does_Muon_Work_in_Private_Deep_Learning_Scalable_Differentially_Private_Training_via_Orthogonalization | 未翻译 | -- | -- | -- |",
+        "| 2026-10 | MuPACE: Learning to Pace Muon for LoRA Fine-Tuning | MuPACE_Learning_to_Pace_Muon_for_LoRA_Fine_Tuning | 未翻译 | -- | -- | -- |",
+        "| 2026-10 | T-MUON: Tensorizing Muon via t-SVD for Large Language Model Pre-training | T_MUON_Tensorizing_Muon_via_t_SVD_for_Large_Language_Model_Pre_training | 未翻译 | -- | -- | -- |"
+      ],
+      "removed_table_rows": [],
+      "new_icml_titles_absent": true,
+      "migration_stems_added": []
+    },
+    {
+      "path": "06-translation/2026-10/README.md",
+      "baseline_sha256": "4637b9b7a01dd85b815ee8bb8856aff57b4afa95619f13d740c853e18b54f57f",
+      "current_sha256": "a7c9716e7e47daaae2d95e5324f7ae0e6f142c7e94619d0806a94f377c48b0aa",
+      "added_table_rows": [
+        "| 未翻译 | A Statistical Viewpoint on Adam, Shampoo and Muon | A_Statistical_Viewpoint_on_Adam_Shampoo_and_Muon | -- | -- | -- |",
+        "| 未翻译 | AdamPM: Memory-Efficient LLM Optimization via Moment Pooling | AdamPM_Memory_Efficient_LLM_Optimization_via_Moment_Pooling | -- | -- | -- |",
+        "| 未翻译 | How Does Muon Work in Private Deep Learning? Scalable Differentially Private Training via Orthogonalization | How_Does_Muon_Work_in_Private_Deep_Learning_Scalable_Differentially_Private_Training_via_Orthogonalization | -- | -- | -- |",
+        "| 未翻译 | MuPACE: Learning to Pace Muon for LoRA Fine-Tuning | MuPACE_Learning_to_Pace_Muon_for_LoRA_Fine_Tuning | -- | -- | -- |",
+        "| 未翻译 | T-MUON: Tensorizing Muon via t-SVD for Large Language Model Pre-training | T_MUON_Tensorizing_Muon_via_t_SVD_for_Large_Language_Model_Pre_training | -- | -- | -- |"
+      ],
+      "removed_table_rows": [],
+      "new_icml_titles_absent": true,
+      "migration_stems_added": []
+    }
+  ]
+}

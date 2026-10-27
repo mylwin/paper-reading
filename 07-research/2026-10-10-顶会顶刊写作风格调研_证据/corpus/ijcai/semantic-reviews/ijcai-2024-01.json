@@ -1,0 +1,222 @@
+{
+  "id": "ijcai-2024-01",
+  "venue": "ijcai",
+  "year": 2024,
+  "split": "induction",
+  "title": "Discriminative Feature Decoupling Enhancement for Speech Forgery Detection",
+  "authors": "Yijun Bei, Xing Zhou, Erteng Liu, Yang Gao, Sen Lin, Kewei Gao, Zunlei Feng",
+  "review_date": "2026-10-21",
+  "mode": "continuous all-page semantic writing-style review plus targeted original-page visual verification; not independent proof or experiment audit",
+  "full_text_style_review_complete": true,
+  "external_appendix_review_complete": true,
+  "count_eligible_full_text_and_relevant_appendix": true,
+  "pdf_path": ".claude/skills/paper-writing-shared/tmp/corpus/ijcai/pdf/Discriminative Feature Decoupling Enhancement for Speech Forgery Detection.pdf",
+  "markdown_path": ".claude/skills/paper-writing-shared/tmp/corpus/ijcai/markdown/Discriminative Feature Decoupling Enhancement for Speech Forgery Detection.md",
+  "pdf_sha256": "434e2cda7545440c52b0263aa65950ed93cc00d28856831dc576f0ffe8091614",
+  "version_audit": {
+    "version": "IJCAI published main-track paper",
+    "official_landing": "https://www.ijcai.org/proceedings/2024/38",
+    "official_pdf": "https://www.ijcai.org/proceedings/2024/0038.pdf",
+    "printed_pages": "340–348",
+    "identity": "stored title/authors match fullPDF and IJCAI24/25 headers; lockedSHA checked",
+    "new_network_fetch": false
+  },
+  "coverage": [
+    {
+      "asset": "locked official published PDF",
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "sections": "Abstract; Introduction; Related Work2.1–2.2; Methodology3.1–3.2 and equations1–5; Experiments4.1–4.4 and Tables1–4; Conclusion; Acknowledgments; References",
+      "reading": "all9pages continuously, including displayed proofs/examples and references; first2papers text-read before user pause, final visual review after resume"
+    }
+  ],
+  "supplement_audit": {
+    "status": "not_applicable_no_referenced_external_scientific_appendix_in_consultedPDF",
+    "external_text_appendix_referenced": false,
+    "scope": "all nine pages including notes and references inspected; no separate manuscript supplement pointer detected",
+    "qualification": "does not establish that no unlisted material exists; standard prior-work citations are not counted as this paper appendix; no new landing-page/network audit"
+  },
+  "ten_dimensions": {
+    "reader_argument": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp1–2"
+      ],
+      "observation": "读者先接触语音伪造风险、混合特征干扰及人声/环境声差异；目标由泛应用动机收束到特定检测流程。",
+      "editorial_advice": "起草时用能指向具体模块的技术缺口收束背景；压缩重复风险叙述，不能将解耦写成已证明的可辨识性。",
+      "applicability": "经验方法稿；应用背景的篇幅不是整个IJCAI的固定偏好。",
+      "confidence": {
+        "paper_specific": "high for checked textual/visual organization, not theorem correctness",
+        "venue_wide": "low;5/50 pilot samples cannot establish prevalence"
+      }
+    },
+    "title_abstract": {
+      "category": "corpus_observation",
+      "positions": [
+        "p1 Abstract; p2 contributions"
+      ],
+      "observation": "标题以技术操作和任务命名，摘要按冗余缺口→解耦→两类聚合→FoR结果组织；贡献是连贯段落而非强制列表。",
+      "editorial_advice": "数字陈述注明数据集、指标和比较对象；accuracy差值区分百分点与相对百分比。",
+      "applicability": "只观察本样本；“over5%”须结合Table1的比较基准，不能直接移植用户结果。",
+      "confidence": {
+        "paper_specific": "high for checked textual/visual organization, not theorem correctness",
+        "venue_wide": "low;5/50 pilot samples cannot establish prevalence"
+      }
+    },
+    "introduction": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp1–2"
+      ],
+      "observation": "引言从两类既有检测方法进入伪造背景成分与特征差异，再对应交换解耦、时间/频谱聚合和图识别。",
+      "editorial_advice": "将每个技术缺口映射到方法与后续消融，减少仅强调novel/effective的句子。",
+      "applicability": "其问题设定是前景/背景分解；不是机器学习所有论文的通用前提。",
+      "confidence": {
+        "paper_specific": "high for checked textual/visual organization, not theorem correctness",
+        "venue_wide": "low;5/50 pilot samples cannot establish prevalence"
+      }
+    },
+    "related_work": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp2–3, Related Work"
+      ],
+      "observation": "独立Related Work分为Forgery Audio Detection与Feature Decoupling，分别交代任务近邻和借用工具。",
+      "editorial_advice": "按任务与技术来源分轴；使用跨领域工具时说明继承部分和本稿新增用途。",
+      "applicability": "与25-01把文献整合在引言的写法不同，不能要求IJCAI一律独立相关工作。",
+      "confidence": {
+        "paper_specific": "high for checked textual/visual organization, not theorem correctness",
+        "venue_wide": "low;5/50 pilot samples cannot establish prevalence"
+      }
+    },
+    "method_theory": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp3–5, Fig1; §3.1–3.2"
+      ],
+      "observation": "框架图先连接合成语音有监督交换、真实语音自监督双交换，再以冻结编码器提取人声/背景特征，经过不同方向聚合和异构图识别；给出损失与输入输出。",
+      "editorial_advice": "区分辅助预训练数据、检测数据、训练损失和冻结步骤；公式后解释操作目的。",
+      "applicability": "图展示工作流，不独立证明分解语义或学习出的因果机制。",
+      "confidence": {
+        "paper_specific": "high for checked textual/visual organization, not theorem correctness",
+        "venue_wide": "low;5/50 pilot samples cannot establish prevalence"
+      }
+    },
+    "evidence": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp5–7, Tables1–4, §4.1–4.4"
+      ],
+      "observation": "先列数据与设置、总体比较、分攻击类别，再比较聚合策略和替换后端输入特征；两数据集、十二种比较方法的Table1与四种后端的Table4回答不同问题。",
+      "editorial_advice": "先写每张表验证的问题，再报结果与例外；保留4秒预处理、V100、两阶段训练和FoR缺少Min-tDCF的原因。",
+      "applicability": "没有重新运行实验，也未发现多seed/置信区间证据，不能把significant自动译成统计显著。",
+      "confidence": {
+        "paper_specific": "high for checked textual/visual organization, not theorem correctness",
+        "venue_wide": "low;5/50 pilot samples cannot establish prevalence"
+      }
+    },
+    "discussion_limits": {
+      "category": "corpus_observation",
+      "positions": [
+        "p6 attack-specific discussion; p7 Conclusion"
+      ],
+      "observation": "正文承认A16/A19的局部失败并联系波形拼接/滤波；结论回顾模块与未来多媒体特征研究，没有独立Limitations章。",
+      "editorial_advice": "将已观察失败与推测解释区分；未来扩展仍写未来，不将机制解释提高成已验证因果结论。",
+      "applicability": "未发现独立局限章节不代表投稿时可省略目标年份必需栏目。",
+      "confidence": {
+        "paper_specific": "high for checked textual/visual organization, not theorem correctness",
+        "venue_wide": "low;5/50 pilot samples cannot establish prevalence"
+      }
+    },
+    "paragraph_language": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp6–7"
+      ],
+      "observation": "多数类别优于基线与整体指标更好在表格中有对应，但“最差组合”和“最优操作”等较强量词超出某些指标支持范围。",
+      "editorial_advice": "润色时按具体数据集、攻击类别、指标收窄范围；不照搬发表稿的强烈形容词。",
+      "applicability": "Table3反向聚合仅部分FoR指标最差；ASV中双时间聚合更差。",
+      "confidence": {
+        "paper_specific": "high for checked textual/visual organization, not theorem correctness",
+        "venue_wide": "low;5/50 pilot samples cannot establish prevalence"
+      }
+    },
+    "main_appendix": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp1–9"
+      ],
+      "observation": "正式PDF有七页正文/致谢和两页文献；核心方法、实验设置、局部失败、四表一图直接在正文，无被本稿引用的外部科学附录。",
+      "editorial_advice": "保留足以解释核心操作和实验边界的信息；不机械增加或删去附录。",
+      "applicability": "未访问新的官网页面；只确认所读PDF无附录指针，不断言不存在未列出的资料。",
+      "confidence": {
+        "paper_specific": "high for checked textual/visual organization, not theorem correctness",
+        "venue_wide": "low;5/50 pilot samples cannot establish prevalence"
+      }
+    },
+    "actionable": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp5–7"
+      ],
+      "observation": "总体胜出、分类别例外、聚合消融与后端替换是不同证据层级。",
+      "editorial_advice": "原创示例：The method improves the aggregate metrics, while the attack-specific results reveal cases where the baselines remain stronger.",
+      "applicability": "仅演示写法，不能作为用户稿件的事实；后端替换改进不自动等同完整DEEM与该后端的差值。",
+      "confidence": {
+        "paper_specific": "high for checked textual/visual organization, not theorem correctness",
+        "venue_wide": "low;5/50 pilot samples cannot establish prevalence"
+      }
+    }
+  },
+  "counterexamples": [
+    {
+      "position": "p6 Table2",
+      "finding": "A16/A19的DEEM EER高于RawGAT-ST及AASIST；A09/A13/A17也不支持逐类别全面占优。",
+      "editorial_action": "总体指标与子类别表现分开报告。"
+    },
+    {
+      "position": "p7 Table3",
+      "finding": "At(Fb)+As(Fh)的FoR ACC最低，但ASV ACC/EER的最低表现来自双时间聚合；“最差”不能跨全部指标推广。",
+      "editorial_action": "为比较加数据集/指标范围，保留原数值。"
+    },
+    {
+      "position": "p5 Table1; p7 Table4",
+      "finding": "Table1比较完整模型，Table4比较给后端替换输入特征的变化；数值不得默认是同一比较。AASIST的1.13→1.07差为0.06个百分点，而Table4报告减0.07，端点/口径尚未明确。",
+      "editorial_action": "记录待作者核对的比较口径，不直接把0.07改成0.06。"
+    },
+    {
+      "position": "p7 Table4 and prose",
+      "finding": "Min-tDCF数值变化在表中没有百分号，段落却出现0.0284%的写法。",
+      "editorial_action": "保留指标原定义并标记单位疑点；不要自行转成百分比。"
+    }
+  ],
+  "visual_review": {
+    "pages": [
+      3,
+      5,
+      6,
+      7
+    ],
+    "findings": [
+      "p3 Fig1核实单次/双次交换与两个聚合方向。",
+      "p5 Table1和p6 Table2核实列名、EER方向与局部失败。",
+      "p7 Tables3/4核实聚合下标、变化量及不同实验口径；未凭抽取顺序拼接表格。"
+    ],
+    "temporary_render_manifest": "07-research/2026-10-21-顶会顶刊写作风格全文续研_证据/temporary-artifact-manifest.json",
+    "image_policy": "generated images remain in ignored skilltmp and are deleted after evidence notes saved; regenerate with manifest command and lockedPDF"
+  },
+  "official_requirements": [],
+  "holdout_validation": null,
+  "generalization_warning": "induction sample; no new official format rule or independent holdout validation; no frequency estimate",
+  "original_rewrite": "The method improves the aggregate metrics, while the attack-specific results reveal cases where the baselines remain stronger.",
+  "paper_type": "empirical speech-forgery detection method with representation ablation and classifier transfer"
+}

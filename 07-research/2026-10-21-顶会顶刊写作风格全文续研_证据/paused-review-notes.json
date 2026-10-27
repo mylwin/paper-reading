@@ -1,0 +1,135 @@
+{
+  "date": "2026-10-21",
+  "status": "paused_by_user",
+  "resume_condition": "仅在用户给出新任务或明确要求继续后执行；不自行续作或创建新定时任务。",
+  "confirmed_full_reviews": 23,
+  "target": 550,
+  "remaining_confirmed_full_reviews": 527,
+  "new_counted_full_reviews": 0,
+  "qualification": "本轮已连续阅读两篇正式PDF的全部九页，但尚未完成表格/公式视觉核验及逐篇正式登记，不将阅读中间进度加入完整审阅计数。未修改锁定清单、归纳/留出划分、venue规则或知识库。",
+  "papers": [
+    {
+      "id": "ijcai-2024-01",
+      "title": "Discriminative Feature Decoupling Enhancement for Speech Forgery Detection",
+      "split": "induction",
+      "status": "all_pages_text_read_pending_finalization",
+      "pages_text_read": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "coverage": "摘要；引言；Related Work两轴；Methodology §3.1–3.2及公式1–5；Experiments §4.1–4.4、Tables1–4；Conclusion；Acknowledgments；References。",
+      "observations": [
+        {
+          "position": "PDF pp1–3",
+          "finding": "引言从应用风险、混合特征冗余到人声/背景差异，贡献为交换解耦和两个维度聚合；Related Work按伪造检测与解耦分轴。"
+        },
+        {
+          "position": "PDF pp3–5, Fig1, §3",
+          "finding": "整体图连接有监督合成语音交换、自监督真实语音双交换、冻结编码器后的聚合与异构图识别。应分别说明辅助数据训练与检测训练，不能合成单一监督流程。"
+        },
+        {
+          "position": "PDF pp5–6, Table1, §4.1–4.3",
+          "finding": "两个benchmark和十二个比较方法，四秒裁剪/补零、V100、两阶段损失与epoch；FoR无ASV数据不能计算Min-tDCF。总体表更好不意味着所有攻击类别更好。"
+        },
+        {
+          "position": "PDF p6, Table2",
+          "finding": "A16、A19低于两种基线；A09、A13、A17等也提示不能宣称所有攻击类别占优。正文对部分差异用comparable，不能升级为普遍优势。"
+        },
+        {
+          "position": "PDF p7, Table3",
+          "finding": "反向聚合组合在FoR ACC最低，但ASV其他组合更差，正文“最差操作”不能扩写为所有数据集/指标均最差。"
+        },
+        {
+          "position": "PDF p7, Table4 versus p5 Table1",
+          "finding": "提升数值和指标单位需谨慎。AASIST表1 EER 1.13到1.07与表4减0.07显示待核对差异；Min-tDCF是成本指标，不能沿用正文百分比措辞。"
+        },
+        {
+          "position": "PDF p7, Conclusion",
+          "finding": "七页正文与致谢、两页参考文献；未在连续阅读的正文发现外部文本附录指针。未进行新的官方页面或代码核查。"
+        }
+      ],
+      "next_checks": [
+        "渲染并核对PDF pp3、5–7的图、表及聚合符号；尤其Table3/4。",
+        "确认实际PDF与文中的外部材料边界；不声称已查网页或运行代码。",
+        "完成十维审阅记录、反例和证据边界后，再决定是否计完整。"
+      ]
+    },
+    {
+      "id": "ijcai-2025-01",
+      "title": "Parameterized Approximation Algorithm for Doubly Constrained Fair Clustering",
+      "split": "induction",
+      "status": "all_pages_text_read_pending_finalization",
+      "pages_text_read": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "coverage": "摘要、引言及贡献、Theorem1/Table1；Definitions2/3/5/8与Theorem4；算法概览；Algorithm1；Lemmas6/7/9/10及给出的证明和LP约束；运行时间；Conclusions；Acknowledgments；References。",
+      "observations": [
+        {
+          "position": "PDF pp1–3, Abstract/Theorem1/Table1",
+          "finding": "核心推进是双公平k-median在参数依赖中去掉颜色数，以随机(4+ε)近似和group fairness加性1违反为条件；不等于严格满足全部公平约束，也不是全局多项式时间。"
+        },
+        {
+          "position": "PDF pp1–2",
+          "finding": "相关工作整合于引言，按两种公平性及其算法参数比较，再提出是否可仅以k参数化的问题；贡献采用列表并有显式主定理。"
+        },
+        {
+          "position": "PDF pp3–5, §3–4.1",
+          "finding": "单独算法概览之后给两阶段伪代码：无公平coreset、leaders/半径枚举、两拟阵的子模改进函数、再求weighted assignment。保留记录的颜色计数，不能把color-agnostic写成删除所有颜色信息。"
+        },
+        {
+          "position": "PDF pp5–7, Lemmas6/7/9/10, LP",
+          "finding": "引理依赖链连接单调子模、中心代价、赋值代价、LP和舍入；无实证实验，也无独立Related Work节。理论证据不应被经验稿模板替代。"
+        },
+        {
+          "position": "PDF p5 final line versus p6 Lemma7 proof",
+          "finding": "文本抽取中子模近似出现Δ(H)≤1/2Δ(H*)，后续代价证明却使用相应下界；需视觉核对，不能静默改符号或据此断言整篇定理错误。"
+        },
+        {
+          "position": "PDF p4 Algorithm1 versus p5 §4.1",
+          "finding": "d_min/d_max在算法行2与后文最小/最大描述疑似互换；Ni的距离对象在概览与伪代码也需核对原版。这是待核验问题。"
+        },
+        {
+          "position": "PDF pp6–7",
+          "finding": "误差参数O(ηδ)及运行时间简化需保留原式并标记独立证明未核验，不能因已发表而当作公式正确性的认证。"
+        },
+        {
+          "position": "PDF pp7–9",
+          "finding": "正文结论p7；p8致谢与参考文献，p9参考文献结束。未在连续阅读正文发现外部附录指针；未重新查阅网页或审计被引用文献的原证明。"
+        }
+      ],
+      "next_checks": [
+        "渲染核对pp3–7的定理、伪代码、子模不等号、参数和运行时间。",
+        "核对加性违反限定在摘要、贡献、定理、结论中的保留情况，记录压缩不能丢失的条件。",
+        "完成有位置证据的十维记录；这是写作组织审阅，不是独立正确性证明。"
+      ]
+    },
+    {
+      "id": "ijcai-2025-02",
+      "title": "Strategies, Credences, and Shannon Entropy: Reasoning about Strategic Uncertainty in Stochastic Environments",
+      "split": "induction",
+      "status": "selected_extracted_not_read",
+      "pages_text_read": [],
+      "next_checks": [
+        "从PDF第一页开始连续阅读；当前只做选样与抽取，不能计已读。"
+      ]
+    }
+  ],
+  "raw_text_cache": ".claude/skills/paper-writing-shared/tmp/review-2026-10-21/",
+  "baseline": ".planning/venue-writing-fulltext-2026-10-21/baseline.json",
+  "selected_batch": "07-research/2026-10-21-顶会顶刊写作风格全文续研_证据/selected-batch.json"
+}

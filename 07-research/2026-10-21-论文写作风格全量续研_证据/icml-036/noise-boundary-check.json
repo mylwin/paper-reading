@@ -1,0 +1,25 @@
+{
+  "date": "2026-10-23",
+  "source_query": "icml-2024-c8c985f6 pp21–22 Theorem C.13/Eq32",
+  "setup": "Z,u,v independent N(0,1); W=Z+u; Y_next=Z+v; inputs=(Z,W), no W->Y_next. Add independent Gaussian measurement noises of variance tau to all variables. True next transition is conditionally independent (one output; additional independent output can be appended).",
+  "calculation": "Cov(What,Yhat|Zhat)=Cov(What,Yhat)-Cov(What,Zhat)*Cov(Zhat,Yhat)/Var(Zhat)=1-1/(1+tau). Gaussian nonzero conditional covariance implies conditional dependence.",
+  "cases": [
+    {
+      "measurement_noise_variance": "1/10000",
+      "true_conditional_covariance_W_Y_given_Z": "0",
+      "observed_conditional_covariance_What_Yhat_given_Zhat": "1/10001"
+    },
+    {
+      "measurement_noise_variance": "1/100",
+      "true_conditional_covariance_W_Y_given_Z": "0",
+      "observed_conditional_covariance_What_Yhat_given_Zhat": "1/101"
+    },
+    {
+      "measurement_noise_variance": "1",
+      "true_conditional_covariance_W_Y_given_Z": "0",
+      "observed_conditional_covariance_What_Yhat_given_Zhat": "1/2"
+    }
+  ],
+  "interpretation": "Noisy conditioning can leave an unblocked fork through latent true Z; restorability if the unobserved noise were given is insufficient for this observed-variable calculation. Query the additional scope/assumptions of C.13; do not use its broad restorable-noise claim as a certified writing rule.",
+  "qualification": "Independent analytic toy boundary check, not author experiment replication, independent full theorem certification or verdict on all main results."
+}

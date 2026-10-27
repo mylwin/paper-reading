@@ -1,0 +1,280 @@
+{
+  "id": "icml-2024-56926c9a",
+  "venue": "icml",
+  "year": 2024,
+  "split": "induction",
+  "title": "Configurable Mirror Descent: Towards a Unification of Decision Making",
+  "authors": "Pengdeng Li, Shuxin Li, Chang Yang, Xinrun Wang, Shuyue Hu, Xiao Huang, Hau Chan, Bo An",
+  "pdf_path": ".claude/skills/paper-writing-shared/tmp/corpus/icml/pdf/Configurable Mirror Descent- Towards a Unification of Decision Making.pdf",
+  "markdown_path": ".claude/skills/paper-writing-shared/tmp/corpus/icml/markdown/Configurable Mirror Descent- Towards a Unification of Decision Making.md",
+  "pdf_sha256": "c5087b5e7185532f2f382bac017d2a642a1baf30952d351d142463c69d03b3e6",
+  "review_date": "2026-10-23",
+  "paper_type": "configurable mirror-descent framework with small-game benchmark, empirical multi-category/metric study and one-step KKT derivations",
+  "semantic_review_status": "complete_writing_focused_review",
+  "full_text_style_review_complete": true,
+  "external_appendix_review_complete": true,
+  "count_eligible_full_text_and_relevant_appendix": true,
+  "coverage": [
+    {
+      "asset": "locked official PMLR PDF",
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40
+      ],
+      "sections": "Abstract/Introduction/RealWorldMotivation/Related/Prelim/POSG/MD/GMD/CMD/GameBench/ExperimentsRQ1–6/Limitations/Future/Conclusions/Ack/Impact/References; A/B/C/D.1–D.4/E.1–E.3/F.1–F.9.2; all26figures9tables4algorithms/Prop5.1 fullproof",
+      "method": "continuous all40page text read plus30originalpageimages directlyinspected; NUL chartglyph extraction not used as plot evidence"
+    }
+  ],
+  "version_audit": {
+    "official_landing": "https://proceedings.mlr.press/v235/li24an.html",
+    "official_pdf": "https://raw.githubusercontent.com/mlresearch/v235/main/assets/li24an/li24an.pdf",
+    "version": "official proceedings PDF; exact bytes locked by SHA256",
+    "identity": "title/authors/PMLR235/year and lockedSHA",
+    "new_network_fetch": false,
+    "qualification": "cachedofficialPDF; sourcequeries separate, no independent proof or replication"
+  },
+  "supplement_audit": {
+    "status": "A–F.9.2 all relevant derivations/gameconstructions/metrics/full experiments in same40pagePDF fully read",
+    "external_scientific_appendix_referenced": false,
+    "code_artifacts": "A links code; not run or audited, external citedproofs not independently re-proved"
+  },
+  "ten_dimensions": {
+    "reader_argument": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp1–4"
+      ],
+      "observation": "四类决策的共同POSG模型与不同解概念/指标；D1–D4算法、D5–D6基准两组设计要求贯穿全文。",
+      "editorial_advice": "覆盖类别不等解决所有任务；机器人例为动机，不是部署或深度RL实验。",
+      "applicability": "40页及A–F.9.2全部相关科学附录连续读完，30原页核验含全部图表/算法/推导及末页内存表。仅写作组织和主张证据边界审阅，未运行代码、复现实验或独立认证完整证明/全部引文。35篇ICML归纳先导，正式留出未用。",
+      "confidence": {
+        "paper_specific": "high for inspected structure/settings/boundaries; unresolved queries separate",
+        "venue_wide": "low;35/50 pilot"
+      }
+    },
+    "title_abstract": {
+      "category": "corpus_observation",
+      "positions": [
+        "p1"
+      ],
+      "observation": "Towards/preliminary限定统一目标，类别→缺口→三挑战→GMD/CMD/GameBench三贡献→定性结果，不要求摘要必有数值提升。",
+      "editorial_advice": "统一可配置框架不是同一已训练策略迁移，更非所有POSG收敛定理。",
+      "applicability": "40页及A–F.9.2全部相关科学附录连续读完，30原页核验含全部图表/算法/推导及末页内存表。仅写作组织和主张证据边界审阅，未运行代码、复现实验或独立认证完整证明/全部引文。35篇ICML归纳先导，正式留出未用。",
+      "confidence": {
+        "paper_specific": "high for inspected structure/settings/boundaries; unresolved queries separate",
+        "venue_wide": "low;35/50 pilot"
+      }
+    },
+    "introduction": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp1–2/Fig1"
+      ],
+      "observation": "单列问题句、六desiderata、三编号贡献对应机制和基准；另设RealWorldMotivation后related/prelim。",
+      "editorial_advice": "可借鉴设计要求与贡献/RQ映射；不强制每篇故事、大写ALL或问题句。",
+      "applicability": "40页及A–F.9.2全部相关科学附录连续读完，30原页核验含全部图表/算法/推导及末页内存表。仅写作组织和主张证据边界审阅，未运行代码、复现实验或独立认证完整证明/全部引文。35篇ICML归纳先导，正式留出未用。",
+      "confidence": {
+        "paper_specific": "high for inspected structure/settings/boundaries; unresolved queries separate",
+        "venue_wide": "low;35/50 pilot"
+      }
+    },
+    "related_work": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp2–3/15–16"
+      ],
+      "observation": "正文decisionmaking/MD/超参三脉络，B按四任务族扩充，比较适用类别、更新规则与目标。",
+      "editorial_advice": "正文不能绝对称所有既有MD/PPO不能跨类，B已有independentPPO例外；anyBregman须保实际数学限定。",
+      "applicability": "40页及A–F.9.2全部相关科学附录连续读完，30原页核验含全部图表/算法/推导及末页内存表。仅写作组织和主张证据边界审阅，未运行代码、复现实验或独立认证完整证明/全部引文。35篇ICML归纳先导，正式留出未用。",
+      "confidence": {
+        "paper_specific": "high for inspected structure/settings/boundaries; unresolved queries separate",
+        "venue_wide": "low;35/50 pilot"
+      }
+    },
+    "method_theory": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp3–6/17–22"
+      ],
+      "observation": "POSG/指标→多历史正则GMD→KKT/一维Newton/投影→MC/方向DRS；D给全部推导、MD/MMD特例、EUbaseline及五MC。",
+      "editorial_advice": "Prop5.1仅单步子问题变换不是CMD收敛证明；可分解/导数可逆/内点/数值可行性保留，公式查询另列。",
+      "applicability": "40页及A–F.9.2全部相关科学附录连续读完，30原页核验含全部图表/算法/推导及末页内存表。仅写作组织和主张证据边界审阅，未运行代码、复现实验或独立认证完整证明/全部引文。35篇ICML归纳先导，正式留出未用。",
+      "confidence": {
+        "paper_specific": "high for inspected structure/settings/boundaries; unresolved queries separate",
+        "venue_wide": "low;35/50 pilot"
+      }
+    },
+    "evidence": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp7–8/24–40"
+      ],
+      "observation": "RQ1–6对应覆盖/baseline/MC/Bregman/目标/资源；五组15小游戏，默认entropy+initialmagnet，按游戏从六M/μ组合选择。CMD3seeds，其他作者称确定性；全曲线/参数轨迹/资源表。",
+      "editorial_advice": "迭代/评估预算/wallclock分开，MCC用100次MMD-KL团队近似BR，不是精确NashConv证书；阴影统计口径未明不补CI。",
+      "applicability": "40页及A–F.9.2全部相关科学附录连续读完，30原页核验含全部图表/算法/推导及末页内存表。仅写作组织和主张证据边界审阅，未运行代码、复现实验或独立认证完整证明/全部引文。35篇ICML归纳先导，正式留出未用。",
+      "confidence": {
+        "paper_specific": "high for inspected structure/settings/boundaries; unresolved queries separate",
+        "venue_wide": "low;35/50 pilot"
+      }
+    },
+    "discussion_limits": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp8–10/35–40"
+      ],
+      "observation": "专节列MC成本、缺CMD理论率、解析ψ限制、小规模基准，再列neuralBregman/deep/LLM未来。",
+      "editorial_advice": "SW提高不保证NE；magnet可使简单任务减速，MCCGoofspiel无magnet更好。ImpactStatement发表实例不替代最新官方要求。",
+      "applicability": "40页及A–F.9.2全部相关科学附录连续读完，30原页核验含全部图表/算法/推导及末页内存表。仅写作组织和主张证据边界审阅，未运行代码、复现实验或独立认证完整证明/全部引文。35篇ICML归纳先导，正式留出未用。",
+      "confidence": {
+        "paper_specific": "high for inspected structure/settings/boundaries; unresolved queries separate",
+        "venue_wide": "low;35/50 pilot"
+      }
+    },
+    "paragraph_language": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp4–9/18–22/30–40"
+      ],
+      "observation": "路线图、粗体功能标题、定义命题算法解释紧邻；实验问题→图→takeaway/反例→附录。",
+      "editorial_advice": "competitive or better须保留比较域；significantly/necessary/ALL不能从有限曲线推成普适证明或每任务最佳。",
+      "applicability": "40页及A–F.9.2全部相关科学附录连续读完，30原页核验含全部图表/算法/推导及末页内存表。仅写作组织和主张证据边界审阅，未运行代码、复现实验或独立认证完整证明/全部引文。35篇ICML归纳先导，正式留出未用。",
+      "confidence": {
+        "paper_specific": "high for inspected structure/settings/boundaries; unresolved queries separate",
+        "venue_wide": "low;35/50 pilot"
+      }
+    },
+    "main_appendix": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp1–40"
+      ],
+      "observation": "正文1–9；ack/impact/refs10–14；A代码15，Brelated15–16，Cnotation17，D18–22方法，E23–25游戏/指标，F26–40实验F.1–F.9.2。全部26figures/9tables/4algorithms读完。",
+      "editorial_advice": "Alg2简化须指向Alg4warmup/κ；Fig11预算轴caption、源公式和排印问题不复制为官方LaTeX规则。无未读外部科学全文附录。",
+      "applicability": "40页及A–F.9.2全部相关科学附录连续读完，30原页核验含全部图表/算法/推导及末页内存表。仅写作组织和主张证据边界审阅，未运行代码、复现实验或独立认证完整证明/全部引文。35篇ICML归纳先导，正式留出未用。",
+      "confidence": {
+        "paper_specific": "high for inspected structure/settings/boundaries; unresolved queries separate",
+        "venue_wide": "low;35/50 pilot"
+      }
+    },
+    "actionable": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp1–9/18–40"
+      ],
+      "observation": "框架稿先定义设计要求再映射模块与RQ，公开默认配置/pergame搜索/评估近似，反例及资源成本并列。",
+      "editorial_advice": "原创改写：CMD provides a configurable update framework evaluated on 15 small games spanning the stated categories. The results concern empirical learning curves under game-specific settings; team-response estimates in MCC games are approximate, and fewer iterations do not establish a wall-clock advantage or general convergence guarantee.",
+      "applicability": "40页及A–F.9.2全部相关科学附录连续读完，30原页核验含全部图表/算法/推导及末页内存表。仅写作组织和主张证据边界审阅，未运行代码、复现实验或独立认证完整证明/全部引文。35篇ICML归纳先导，正式留出未用。",
+      "confidence": {
+        "paper_specific": "high for inspected structure/settings/boundaries; unresolved queries separate",
+        "venue_wide": "low;35/50 pilot"
+      }
+    }
+  },
+  "counterexamples": [
+    {
+      "position": "pp1–9/23–26 benchmarkscope",
+      "finding": "OpenSpiel15小构造、1–3players/6–936decisionpoints，singleagent固定uniform背景，MCC2vs1奖励改造；不是Atari/完整版Hanabi/真实扑克/football/deployment。M/μ按游戏3×2搜索，CCE另选(3,.01)，用户指定目标；不是固定参数、singlecheckpoint或zero-shot。deepRL/LLM为未来，robot为动机。"
+    },
+    {
+      "position": "pp3/25 E.3 metrics",
+      "finding": "MCC团队BR从当前策略开始MMD-KL100步，作者称也可叫betterresponse，无近似误差界；小估计gap不保证真最优偏离gap小，也无单调保证。团队平均reward与Vteam相对单人缩放需明。NashConv为收益偏离不是策略空间距离。CCE joint/product替换符号与相关装置、独立GMD如何产生相关jointpolicy需解释，不能视任意CCE生成已证。"
+    },
+    {
+      "position": "pp5/18–19 KKT/Newton",
+      "finding": "Eq9−Bϕ导数应负，Eq10a/11a却+，Eq12(A−λ)/B对应负号；已核原页。Eq3/8约束误写πk非优化变量π。convex本身不保证ψ′可逆，需严格凸/可微及逆域。π≥epsilon作为原非负约束内点与真下界活跃集不是同一问题；clip-normalize不自动等价KKT。x²/ex逆域有界，randomλNewton未给bracket/safeguard/residual/停止标准，C50不自动收敛合法。Table1anyBregman强于可分解/可逆限定。"
+    },
+    {
+      "position": "pp5/19–22 numericalqueries",
+      "finding": "max(epsilon,π)后归一化总和可>1，不能确保每项≥epsilon或一般Bregman精确投影。EU式25印刷分母sum max+ζ只加一次、分子每项+ζ，多动作总和不等1，须核代码/括号。movingmagnetηtilde仅>0不足保证凸组合。Table4中间alpha0与正文(0,1]矛盾，Eq14magnet索引重用；数值求解vs闭式同objective不自动成为不同exact更新。Newton随机init与其他methods称无随机性需说明。warmup文字k<M/Alg4k≤M，以及D候选/DRS2D评估数应统一。"
+    },
+    {
+      "position": "pp7–9/26–38 empiricalcounterexamples",
+      "finding": "CMD3种子，阴影未定义STD/SE/CI，不推95%CI/显著性。LeducM1无效；CFR+短程更好且Leduc末点更小；GLD在MCCKuhnA更低但其他任务失败。magnet减慢简单任务、MCCGoofspiel无magnet更低，CCEGoofspiel同现象。x²/ex部分更好但也宽阴影/不稳；非全任务胜出。参数轨迹为机制线索不是因果证明/普适最优超参。"
+    },
+    {
+      "position": "pp9/28/39–40 resources",
+      "finding": "F.3宣称横轴乘D5，但DRS正负2D、κ10及最终GMD/BR成本未统一，不能视严格总交互预算；Fig11轴/caption仍Iteration。Table8LeducCMDDRS6.8897s vs MMDKL.0422s、MCCKuhnA6.9054s vs .0021s，明显成本；κ是否摊销未明，不直接推全程耗时。Table9Leduc59.063MB vs CFR26.262MB，是作者机器测量非渐近阶。24corei9/A4000，未复现。"
+    },
+    {
+      "position": "pp3/21–22/36–38 objectives",
+      "finding": "DRS/RS/GLD按minimizeL写，SW正sumreturn应maximize，切换需负号/方向配置，单说换L不充分。BattleshipSW提高但NashConv不收敛，非maximumwelfare equilibriumselection已解。CCE仅三人Kuhn/Goofspiel，SW仅3general-sum，非15游戏全部指标交叉。Q从h=t+1却conditiona_t、绝对γ与V下标应统一，列源查询，非本次已重证/否证主结果。"
+    }
+  ],
+  "visual_review": {
+    "pages": [
+      1,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40
+    ],
+    "source": "115dpi originalpagePopplerimages directlyviewed; all26scientificfigures9tables4algorithms and KKT/querypages",
+    "policy": "delete30renders+duplicateextract; retain canonicalPDF/primaryMD only ignoredskilltmp"
+  },
+  "official_requirements": [],
+  "holdout_validation": null,
+  "review_limitations": "40页及A–F.9.2全部相关科学附录连续读完，30原页核验含全部图表/算法/推导及末页内存表。仅写作组织和主张证据边界审阅，未运行代码、复现实验或独立认证完整证明/全部引文。35篇ICML归纳先导，正式留出未用。"
+}

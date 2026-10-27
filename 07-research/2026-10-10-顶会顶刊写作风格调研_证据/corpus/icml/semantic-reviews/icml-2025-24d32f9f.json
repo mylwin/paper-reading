@@ -1,0 +1,242 @@
+{
+  "id": "icml-2025-24d32f9f",
+  "venue": "icml",
+  "year": 2025,
+  "split": "induction",
+  "title": "Certification for Differentially Private Prediction in Gradient-Based Training",
+  "authors": "Matthew Robert Wicker, Philip Sosnin, Igor Shilov, Adrianna Janik, Mark Niklas Mueller, Yves-Alexandre De Montjoye, Adrian Weller, Calvin Tsay",
+  "pdf_path": ".claude/skills/paper-writing-shared/tmp/corpus/icml/pdf/Certification for Differentially Private Prediction in Gradient-Based Training.pdf",
+  "markdown_path": ".claude/skills/paper-writing-shared/tmp/corpus/icml/markdown/Certification for Differentially Private Prediction in Gradient-Based Training.md",
+  "pdf_sha256": "840a5295e7cb6f35edeef6440dd6b864a7db283314bbf74753ebe8e41f928dbb",
+  "review_date": "2026-10-22",
+  "paper_type": "privacy certification method with interval training bounds, smooth-sensitivity mechanisms and binary classification experiments",
+  "semantic_review_status": "complete_writing_focused_review",
+  "full_text_style_review_complete": true,
+  "external_appendix_review_complete": true,
+  "count_eligible_full_text_and_relevant_appendix": true,
+  "coverage": [
+    {
+      "asset": "locked official PMLR PDF",
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "sections": "Abstract; Introduction; RelatedWork; Definitions; ParameterSpaceBounds; PrivatePrediction; Experiments; Conclusion; Impact; References; A/B/C/D.1–D.7/E.1–E.4",
+      "method": "continuous all20pages read including all scientific appendices; 16 critical original page images inspected"
+    }
+  ],
+  "version_audit": {
+    "official_landing": "https://proceedings.mlr.press/v267/wicker25a.html",
+    "official_pdf": "https://raw.githubusercontent.com/mlresearch/v267/main/assets/wicker25a/wicker25a.pdf",
+    "version": "official proceedings PDF; exact bytes locked by SHA256",
+    "identity": "title/authors/PMLR267header/year and locked SHA",
+    "new_network_fetch": false,
+    "qualification": "cached source; not current official submission-rule verification"
+  },
+  "supplement_audit": {
+    "status": "all relevant A–E scientific appendices contained in same20pagePDF and fully read",
+    "external_scientific_appendix_referenced": false,
+    "code_artifacts": "AppendixE link redacted for anonymity; not accessed/executed"
+  },
+  "ten_dimensions": {
+    "reader_argument": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp1–3 Fig1; p7"
+      ],
+      "observation": "以私有预测而非私有训练为对象，no-box信任边界把训练数据、非私有参数和认证区间留在服务内部，只输出加噪标签。",
+      "editorial_advice": "明确查询对象、邻接定义与访问方式；预测DP不能写成允许公开非私有模型参数。",
+      "applicability": "20页正文、参考文献及A–E相关附录连续审阅并核看16原页；这是写作组织/主张证据边界审阅，不是独立DP证明认证、代码审计、实验复现或最新格式核查。venue推论仅15/50先导，不估计全会频率。",
+      "confidence": {
+        "paper_specific": "high for inspected organization and printed claims; no independent proof certification",
+        "venue_wide": "low; pilot15/50"
+      }
+    },
+    "title_abstract": {
+      "category": "corpus_observation",
+      "positions": [
+        "p1"
+      ],
+      "observation": "题名以Certification和gradient-based training标定对象，摘要从全局敏感度过松到局部参数可达界与smooth sensitivity，再列医疗/NLP验证。",
+      "editorial_advice": "理论机制、敏感度界变紧和效用提升分别陈述；orders-of-magnitude不能推广到所有隐私预算/查询量。",
+      "applicability": "20页正文、参考文献及A–E相关附录连续审阅并核看16原页；这是写作组织/主张证据边界审阅，不是独立DP证明认证、代码审计、实验复现或最新格式核查。venue推论仅15/50先导，不估计全会频率。",
+      "confidence": {
+        "paper_specific": "high for inspected organization and printed claims; no independent proof certification",
+        "venue_wide": "low; pilot15/50"
+      }
+    },
+    "introduction": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp1–2"
+      ],
+      "observation": "训练DP效用代价→预测输出隐私→局部敏感度困难，贡献分参数界、稳定性/敏感度联系和实验。",
+      "editorial_advice": "各贡献分别绑定算法、条件性结论和证据，不将实测收益写成理论保证。",
+      "applicability": "20页正文、参考文献及A–E相关附录连续审阅并核看16原页；这是写作组织/主张证据边界审阅，不是独立DP证明认证、代码审计、实验复现或最新格式核查。venue推论仅15/50先导，不估计全会频率。",
+      "confidence": {
+        "paper_specific": "high for inspected organization and printed claims; no independent proof certification",
+        "venue_wide": "low; pilot15/50"
+      }
+    },
+    "related_work": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp2–3 §2; p12 A"
+      ],
+      "observation": "正文先交代DP/私有预测/PATE，附录扩展unlearning与adversarial certification，围绕工具与问题差异组织。",
+      "editorial_advice": "相关工具可借用边界计算不等于本文已部署遗忘或完整大模型认证。",
+      "applicability": "20页正文、参考文献及A–E相关附录连续审阅并核看16原页；这是写作组织/主张证据边界审阅，不是独立DP证明认证、代码审计、实验复现或最新格式核查。venue推论仅15/50先导，不估计全会频率。",
+      "confidence": {
+        "paper_specific": "high for inspected organization and printed claims; no independent proof certification",
+        "venue_wide": "low; pilot15/50"
+      }
+    },
+    "method_theory": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp3–7 Algorithms1/Theorems4.5/4.6/5.1/5.3; pp12–18 B–D"
+      ],
+      "observation": "从GS/LS/平滑敏感度到参数区间，再到标签稳定性及单模型/集成响应；固定初始化和数据顺序，元素级clip，区间仅充分证据。B给前/反传播，C给k网格，D逐项证明。",
+      "editorial_advice": "不能把未认证写成已证明不稳定。保留binary/no-box/训练和邻接假设，坐标clip不改称L2 DP-SGD。D.6点态上界替换数据依赖噪声须进一步核实跨相邻数据集的平滑性或隐私论证，不作为独立验证的DP事实；D.4和集成K不一致列作者核对。",
+      "applicability": "20页正文、参考文献及A–E相关附录连续审阅并核看16原页；这是写作组织/主张证据边界审阅，不是独立DP证明认证、代码审计、实验复现或最新格式核查。venue推论仅15/50先导，不估计全会频率。",
+      "confidence": {
+        "paper_specific": "high for inspected organization and printed claims; no independent proof certification",
+        "venue_wide": "low; pilot15/50"
+      }
+    },
+    "evidence": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp7–9 Figs2–5/Table1; pp18–20 E"
+      ],
+      "observation": "单查询预算、集成规模、固定总预算随Q变化，以及公共数据蒸馏学生分别评估；医疗仅敏感Drusen微调，IMDB用冻结GPT-2嵌入训练1×100分类器。附录AMEX考察深度与最小批量。",
+      "editorial_advice": "三主数据集与第四AMEX容量消融分开；稳定覆盖率不是准确率。大Q或较大集成并非总是SS占优，OCT学生DP-SGD81.2而最好SS19.8；不宣传普遍优越。AGT每次2–4倍、k网格总20–40倍和IMDB55秒vs25秒须保留。",
+      "applicability": "20页正文、参考文献及A–E相关附录连续审阅并核看16原页；这是写作组织/主张证据边界审阅，不是独立DP证明认证、代码审计、实验复现或最新格式核查。venue推论仅15/50先导，不估计全会频率。",
+      "confidence": {
+        "paper_specific": "high for inspected organization and printed claims; no independent proof certification",
+        "venue_wide": "low; pilot15/50"
+      }
+    },
+    "discussion_limits": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp5–6 §4.3; pp9,19–20"
+      ],
+      "observation": "大批量、少epoch、区间随深度变松、交叉熵多类扩展更弱及查询组合成本均显式解释；AMEX四层为95%覆盖k50需百万级batch且未研究精度损失。",
+      "editorial_advice": "公共预训练假设不扩张到全流水线隐私；计算为常数因子不等于开销可忽略。早停是认证与精度权衡，非一般训练建议。",
+      "applicability": "20页正文、参考文献及A–E相关附录连续审阅并核看16原页；这是写作组织/主张证据边界审阅，不是独立DP证明认证、代码审计、实验复现或最新格式核查。venue推论仅15/50先导，不估计全会频率。",
+      "confidence": {
+        "paper_specific": "high for inspected organization and printed claims; no independent proof certification",
+        "venue_wide": "low; pilot15/50"
+      }
+    },
+    "paragraph_language": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp3–7; pp15–18"
+      ],
+      "observation": "按定义→界→算法→充分条件→噪声机制→实验推进；先声明limitations再给响应机制。",
+      "editorial_advice": "区分作者声称、已读数学步骤与独立成立；证明/公式疑点显式列出，不静默修正或用录用背书证明。",
+      "applicability": "20页正文、参考文献及A–E相关附录连续审阅并核看16原页；这是写作组织/主张证据边界审阅，不是独立DP证明认证、代码审计、实验复现或最新格式核查。venue推论仅15/50先导，不估计全会频率。",
+      "confidence": {
+        "paper_specific": "high for inspected organization and printed claims; no independent proof certification",
+        "venue_wide": "low; pilot15/50"
+      }
+    },
+    "main_appendix": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp1–20"
+      ],
+      "observation": "主文1–9，文献9–11；A相关12，B区间前/后传播12–14，C网格14–15，D证明15–18，E配置和附加实验18–20。E代码链接仍为redacted for anonymity。",
+      "editorial_advice": "关键假设不能都留附录；核对主附公式和可复现链接。已读全部相关文字附录，不声称代码可访问或执行。",
+      "applicability": "20页正文、参考文献及A–E相关附录连续审阅并核看16原页；这是写作组织/主张证据边界审阅，不是独立DP证明认证、代码审计、实验复现或最新格式核查。venue推论仅15/50先导，不估计全会频率。",
+      "confidence": {
+        "paper_specific": "high for inspected organization and printed claims; no independent proof certification",
+        "venue_wide": "low; pilot15/50"
+      }
+    },
+    "actionable": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp7–9; pp17–20"
+      ],
+      "observation": "同一实验叙述需分别指明认证的模型部分、数据隐私范围、Q预算、噪声机制与经验效用。",
+      "editorial_advice": "原创示例：The certificate covers the classifier under the stated initialization, training and access assumptions. Reported privacy–utility gains depend on the query budget; the GPT-2 experiment certifies a downstream classifier rather than full-model fine-tuning. 机制证明的待核对点仍须另列。",
+      "applicability": "20页正文、参考文献及A–E相关附录连续审阅并核看16原页；这是写作组织/主张证据边界审阅，不是独立DP证明认证、代码审计、实验复现或最新格式核查。venue推论仅15/50先导，不估计全会频率。",
+      "confidence": {
+        "paper_specific": "high for inspected organization and printed claims; no independent proof certification",
+        "venue_wide": "low; pilot15/50"
+      }
+    }
+  },
+  "counterexamples": [
+    {
+      "position": "pp4–6",
+      "finding": "区间只给稳定充分条件，失败不能推断不稳定；大批量/少epoch/浅网限制须保留，坐标clip与L2梯度裁剪不同。"
+    },
+    {
+      "position": "p17 D.6",
+      "finding": "作者以增加噪声不会降低隐私为由允许任意SS上界。数据依赖尺度的点态上界不自动保证平滑性；须核对相邻数据集间的尺度控制/隐私证明。本轮不认证该论证成立，也不自行宣判整个方法无DP。"
+    },
+    {
+      "position": "p7 Theorem5.3 vs p18 D.7",
+      "finding": "正文K含+n−1，附录K只求n个最小k之和；同票定义取1，翻转票数/边界需逐例核对。公式差异保留为作者问题。"
+    },
+    {
+      "position": "p16 D.4; p13 softmax bounds",
+      "finding": "D.4删除后b−k归一化、后续b分母和SEMax范围衔接需说明；softmax上下界都标pL。不得静默修正文或把抽取错误解释为已证定理。"
+    },
+    {
+      "position": "pp8–9 Figs4/5/Table1",
+      "finding": "查询数量和集成规模会改变优劣，OCT蒸馏DP-SGD81.2 vs最好SS19.8，反驳所有设置占优；Blobs1.0表值口径待核对，不擅改。"
+    },
+    {
+      "position": "p19 E.2/E.3; p20 E.4",
+      "finding": "GPT-2为公共预训练冻结嵌入+小分类器；Drusen仅微调敏感数据。AMEX95%为稳定覆盖非准确率，四层百万batch并未评估相应效用。"
+    }
+  ],
+  "visual_review": {
+    "pages": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20
+    ],
+    "source": "115dpi Poppler original-page images viewed",
+    "policy": "delete16renders and duplicate text only after record; keep sourcePDF and primaryMD in ignored skilltmp"
+  },
+  "holdout_validation": null,
+  "official_requirements": [],
+  "review_limitations": "20页正文、参考文献及A–E相关附录连续审阅并核看16原页；这是写作组织/主张证据边界审阅，不是独立DP证明认证、代码审计、实验复现或最新格式核查。venue推论仅15/50先导，不估计全会频率。"
+}

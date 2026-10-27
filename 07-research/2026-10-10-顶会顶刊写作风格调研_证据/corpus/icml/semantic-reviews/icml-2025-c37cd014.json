@@ -1,0 +1,237 @@
+{
+  "id": "icml-2025-c37cd014",
+  "venue": "icml",
+  "year": 2025,
+  "split": "induction",
+  "title": "Minerva: A Programmable Memory Test Benchmark for Language Models",
+  "authors": "Menglin Xia, Victor Rühle, Saravan Rajmohan, Reza Shokri",
+  "pdf_path": ".claude/skills/paper-writing-shared/tmp/corpus/icml/pdf/Minerva- A Programmable Memory Test Benchmark for Language Models.pdf",
+  "markdown_path": ".claude/skills/paper-writing-shared/tmp/corpus/icml/markdown/Minerva- A Programmable Memory Test Benchmark for Language Models.md",
+  "pdf_sha256": "fb04d37fdb55eb3b2b0393e7b1ce886b21129c46db953aaba40950501d5f02ed",
+  "review_date": "2026-10-21",
+  "paper_type": "programmable synthetic LLM context-memory benchmark and diagnostic empirical evaluation",
+  "semantic_review_status": "complete_writing_focused_review",
+  "full_text_style_review_complete": true,
+  "external_appendix_review_complete": true,
+  "count_eligible_full_text_and_relevant_appendix": true,
+  "coverage": [
+    {
+      "asset": "lockedofficialPMLRPDF",
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ],
+      "sections": "Abstract;Introduction1;Benchmark2/Table1;Evaluation3.1–3.5 including all atomic/composite/variation results;RelatedWork4;Conclusion5;Impact;References;A alltemplates;B full taskgrid;C allmetrics;D all length/prompt variation",
+      "method": "continuousall19pagesincludingA–D;13criticaloriginalpagesvisuallyinspected"
+    }
+  ],
+  "version_audit": {
+    "official_landing": "https://proceedings.mlr.press/v267/xia25c.html",
+    "official_pdf": "https://raw.githubusercontent.com/mlresearch/v267/main/assets/xia25c/xia25c.pdf",
+    "version": "official proceedings PDF; exact bytes locked by SHA256",
+    "identity": "title/authors/PMLR267header/yearandSHAchecked",
+    "new_network_fetch": false
+  },
+  "supplement_audit": {
+    "status": "A–D fullyreadinsamePDF;noidentifiedexternaltextappendixpointer",
+    "code_artifacts": "linked generator/data notexecuted/downloaded;notreplication",
+    "qualification": "no freshwebpageaudit;doesnotexcludeunlistedmaterial"
+  },
+  "ten_dimensions": {
+    "reader_argument": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp1–3"
+      ],
+      "observation": "以助理context视为memory，提出单项检索不能代表所有上下文使用；显式区分基础记忆操作与复杂推理，原子隔离只声称尽可能做到。",
+      "editorial_advice": "先定义能力构念与可观测任务，不能把行为任务诊断写成已定位神经机制或所有认知能力。",
+      "applicability": "九个指定版本模型、1110合成测试快照及有限长度/提示变体的写作与证据边界审阅；没有独立执行生成器/模型推理、复算置信区间或因果识别。不是现实医疗/助理任务或当前模型排行榜验证。",
+      "confidence": {
+        "paper_specific": "highforinspectedorganization/printednumbers;notindependentvalidity",
+        "venue_wide": "low;pilot12/50"
+      }
+    },
+    "title_abstract": {
+      "category": "corpus_observation",
+      "positions": [
+        "p1 Abstract"
+      ],
+      "observation": "标题突出Programmable/Benchmark，摘要依问题、静态测试缺陷、生成框架、原子与组合类别、可解释评估组织，无硬塞单个领先分数。",
+      "editorial_advice": "基准稿可突出覆盖维度和生成规则，仍需在正文给有限快照与模型版本；programmable不等于当前实验证据无限规模。",
+      "applicability": "九个指定版本模型、1110合成测试快照及有限长度/提示变体的写作与证据边界审阅；没有独立执行生成器/模型推理、复算置信区间或因果识别。不是现实医疗/助理任务或当前模型排行榜验证。",
+      "confidence": {
+        "paper_specific": "highforinspectedorganization/printednumbers;notindependentvalidity",
+        "venue_wide": "low;pilot12/50"
+      }
+    },
+    "introduction": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp1–2"
+      ],
+      "observation": "连续自然段用邮件/日历等动机、结构扁平化和跨分区状态需求解释测试设计，没有独立贡献bullet清单。",
+      "editorial_advice": "不强制贡献列表；让任务设计与后续测试有明确回链。金融/医疗示例是动机，未做对应真实部署评估。",
+      "applicability": "九个指定版本模型、1110合成测试快照及有限长度/提示变体的写作与证据边界审阅；没有独立执行生成器/模型推理、复算置信区间或因果识别。不是现实医疗/助理任务或当前模型排行榜验证。",
+      "confidence": {
+        "paper_specific": "highforinspectedorganization/printednumbers;notindependentvalidity",
+        "venue_wide": "low;pilot12/50"
+      }
+    },
+    "related_work": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp8–9 §4"
+      ],
+      "observation": "结果之后设Related Work，分通用LLM评测、上下文利用、人与认知测试类比；后者是设计灵感而非心理学等价证明。",
+      "editorial_advice": "可以在读者已了解新基准后定位差异；不要把所有静态数据集都说成必然已污染或本稿证明避免过拟合。",
+      "applicability": "九个指定版本模型、1110合成测试快照及有限长度/提示变体的写作与证据边界审阅；没有独立执行生成器/模型推理、复算置信区间或因果识别。不是现实医疗/助理任务或当前模型排行榜验证。",
+      "confidence": {
+        "paper_specific": "highforinspectedorganization/printednumbers;notindependentvalidity",
+        "venue_wide": "low;pilot12/50"
+      }
+    },
+    "method_theory": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp2–4 Table1;pp12–18 A/B/C"
+      ],
+      "observation": "按六类原子与两类组合操作建任务，明确词语/序列、组、状态和互动；模板、难度参数、样本数、评分规则接入可生成基准，没有新模型训练或定理。",
+      "editorial_advice": "保留Theory of Mind具体定义为多agent集合交互状态跟踪，不能拓展为完整社会认知评估；参数网格与计分器比杜撰算法定理更重要。",
+      "applicability": "九个指定版本模型、1110合成测试快照及有限长度/提示变体的写作与证据边界审阅；没有独立执行生成器/模型推理、复算置信区间或因果识别。不是现实医疗/助理任务或当前模型排行榜验证。",
+      "confidence": {
+        "paper_specific": "highforinspectedorganization/printednumbers;notindependentvalidity",
+        "venue_wide": "low;pilot12/50"
+      }
+    },
+    "evidence": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp3–9 Tables2–8/Figs1–6;pp16–19 Tables10–12"
+      ],
+      "observation": "九模型在1110固定快照，默认约4k，state按200/100步约1.5k；temperature0、top_p1、4096输出上限。分能力结果、错误类型、gibberish、长度与提示变体。",
+      "editorial_advice": "逐任务注明exact match/ROUGE-L F1或recall/Jaccard；不能把雷达图异质分数统一叫accuracy。保留样本10/40/50等规模、95%CI及模型版本，不将局部比较写成统计显著。",
+      "applicability": "九个指定版本模型、1110合成测试快照及有限长度/提示变体的写作与证据边界审阅；没有独立执行生成器/模型推理、复算置信区间或因果识别。不是现实医疗/助理任务或当前模型排行榜验证。",
+      "confidence": {
+        "paper_specific": "highforinspectedorganization/printednumbers;notindependentvalidity",
+        "venue_wide": "low;pilot12/50"
+      }
+    },
+    "discussion_limits": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp1–3,8–10,19"
+      ],
+      "observation": "限制散在原子隔离资格、短context主设置和有限提示变体；结论认为不只是long-context问题。附录承认较大prompt变化可影响结果。",
+      "editorial_advice": "长上下文失败不证明唯一瓶颈来自内存；训练/结构/同意偏好解释使用suggest/may。提示影响小只限所测变体，不推成prompt无关。",
+      "applicability": "九个指定版本模型、1110合成测试快照及有限长度/提示变体的写作与证据边界审阅；没有独立执行生成器/模型推理、复算置信区间或因果识别。不是现实医疗/助理任务或当前模型排行榜验证。",
+      "confidence": {
+        "paper_specific": "highforinspectedorganization/printednumbers;notindependentvalidity",
+        "venue_wide": "low;pilot12/50"
+      }
+    },
+    "paragraph_language": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp3–9;pp19"
+      ],
+      "observation": "大多数段落按任务→对比结果→输出错误→可能解释；出现“all decline”等强概括但表里有正差值。",
+      "editorial_advice": "用具体模型/任务收窄总称，不把模型大小相关性当已识别原因；构念名称与机制证据分开。数据源内部标签和不完整模板列待核对。",
+      "applicability": "九个指定版本模型、1110合成测试快照及有限长度/提示变体的写作与证据边界审阅；没有独立执行生成器/模型推理、复算置信区间或因果识别。不是现实医疗/助理任务或当前模型排行榜验证。",
+      "confidence": {
+        "paper_specific": "highforinspectedorganization/printednumbers;notindependentvalidity",
+        "venue_wide": "low;pilot12/50"
+      }
+    },
+    "main_appendix": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp1–19"
+      ],
+      "observation": "正文到p9结论/影响、文献pp10–11；A模板pp12–16，B难度与样本计数pp16–18，C评分p18，D额外长度/提示p18–19。",
+      "editorial_advice": "正文需展示能力定义、关键失败与设置，完整模板和评分器回链附录；若声称prompt鲁棒性，D中较大变动例不可删。",
+      "applicability": "九个指定版本模型、1110合成测试快照及有限长度/提示变体的写作与证据边界审阅；没有独立执行生成器/模型推理、复算置信区间或因果识别。不是现实医疗/助理任务或当前模型排行榜验证。",
+      "confidence": {
+        "paper_specific": "highforinspectedorganization/printednumbers;notindependentvalidity",
+        "venue_wide": "low;pilot12/50"
+      }
+    },
+    "actionable": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp5–9;pp16–19"
+      ],
+      "observation": "良好检索与编辑/状态失败共存；部分模型组合分数反高于单状态分数且Jaccard受多余输出影响。类别合计200+105+175+260+210+50+110=1110，但细项网格有待解释。",
+      "editorial_advice": "原创示例：On the fixed synthetic snapshot, strong retrieval scores coexist with weaker editing and state-tracking scores. These task-specific measurements characterize the evaluated model versions and do not establish a unique cause of failure.",
+      "applicability": "九个指定版本模型、1110合成测试快照及有限长度/提示变体的写作与证据边界审阅；没有独立执行生成器/模型推理、复算置信区间或因果识别。不是现实医疗/助理任务或当前模型排行榜验证。",
+      "confidence": {
+        "paper_specific": "highforinspectedorganization/printednumbers;notindependentvalidity",
+        "venue_wide": "low;pilot12/50"
+      }
+    }
+  },
+  "counterexamples": [
+    {
+      "position": "p6 Table4;p7 prose",
+      "finding": "Group association相对membership，Mistral/Phi-small/Phi-medium差值+.07/+.03/+.12；alternating亦有正差值，不能把正文all decline当逐模型严格结论。"
+    },
+    {
+      "position": "pp7–8 Tables5–6",
+      "finding": "Mistral/Phi-small的组合Theory of Mind Jaccard高于单set state，正文承认异常及多余答案影响；不同任务复杂度不是单调性能定律。"
+    },
+    {
+      "position": "p19 Table11",
+      "finding": "Phi-small String search .90到.98回升，长度增长不导致每模型每任务单调下降；检索与编辑/状态指标异质。"
+    },
+    {
+      "position": "p9 Table8;p19 Table12/variants",
+      "finding": "有限微小提示变体不能证明提示无关。Check association Var2原页只给Given the context，信息不完整；Quantity零分CI只印(0.00)，计算法未在已读文本交代，待作者提供而不自行补造。"
+    },
+    {
+      "position": "p6 Table4;p7 Iterate paragraph",
+      "finding": "Iterate比较行括号写Iterate(last)，正文称改为first的对照；标签/对照方向应作者确认，不能静默交换结果。"
+    },
+    {
+      "position": "pp16–18 Table10",
+      "finding": "类别小计加总1110一致，Processing data blocks列5种blocks、turns10、samples5却报50；是否隐含额外条件未说明，保留为复现所需作者核对项。Patch120有明确脚注，不误读为1202。"
+    }
+  ],
+  "visual_review": {
+    "pages": [
+      1,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      12,
+      15,
+      16,
+      17,
+      18,
+      19
+    ],
+    "source": "110dpiPopplerrendersdirectview_image",
+    "policy": "delete regenerable files after record"
+  },
+  "holdout_validation": null,
+  "official_requirements": [],
+  "review_limitations": "九个指定版本模型、1110合成测试快照及有限长度/提示变体的写作与证据边界审阅；没有独立执行生成器/模型推理、复算置信区间或因果识别。不是现实医疗/助理任务或当前模型排行榜验证。"
+}

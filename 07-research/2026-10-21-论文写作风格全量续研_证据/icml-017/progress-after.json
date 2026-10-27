@@ -1,0 +1,130 @@
+{
+  "updated": "2026-10-22",
+  "status": "in_progress",
+  "venues": [
+    {
+      "venue": "aaai",
+      "locked": 50,
+      "pdf_acquired": 50,
+      "text_parsed": 50,
+      "main_text_style_reviewed": 5,
+      "full_text_and_relevant_appendix_reviewed": 4,
+      "induction_complete": 4,
+      "holdout_complete": 0
+    },
+    {
+      "venue": "colt",
+      "locked": 50,
+      "pdf_acquired": 50,
+      "text_parsed": 50,
+      "main_text_style_reviewed": 2,
+      "full_text_and_relevant_appendix_reviewed": 1,
+      "induction_complete": 0,
+      "holdout_complete": 1
+    },
+    {
+      "venue": "iclr",
+      "locked": 50,
+      "pdf_acquired": 50,
+      "text_parsed": 50,
+      "main_text_style_reviewed": 1,
+      "full_text_and_relevant_appendix_reviewed": 1,
+      "induction_complete": 1,
+      "holdout_complete": 0
+    },
+    {
+      "venue": "icml",
+      "locked": 50,
+      "pdf_acquired": 50,
+      "text_parsed": 50,
+      "main_text_style_reviewed": 17,
+      "full_text_and_relevant_appendix_reviewed": 17,
+      "induction_complete": 17,
+      "holdout_complete": 0
+    },
+    {
+      "venue": "ijcai",
+      "locked": 50,
+      "pdf_acquired": 50,
+      "text_parsed": 50,
+      "main_text_style_reviewed": 5,
+      "full_text_and_relevant_appendix_reviewed": 5,
+      "induction_complete": 4,
+      "holdout_complete": 1
+    },
+    {
+      "venue": "jmlr",
+      "locked": 50,
+      "pdf_acquired": 50,
+      "text_parsed": 50,
+      "main_text_style_reviewed": 4,
+      "full_text_and_relevant_appendix_reviewed": 4,
+      "induction_complete": 3,
+      "holdout_complete": 1
+    },
+    {
+      "venue": "neurips",
+      "locked": 50,
+      "pdf_acquired": 50,
+      "text_parsed": 50,
+      "main_text_style_reviewed": 2,
+      "full_text_and_relevant_appendix_reviewed": 2,
+      "induction_complete": 2,
+      "holdout_complete": 0
+    },
+    {
+      "venue": "tai",
+      "locked": 50,
+      "pdf_acquired": 24,
+      "text_parsed": 24,
+      "main_text_style_reviewed": 4,
+      "full_text_and_relevant_appendix_reviewed": 2,
+      "induction_complete": 2,
+      "holdout_complete": 0
+    },
+    {
+      "venue": "tmlr",
+      "locked": 50,
+      "pdf_acquired": 3,
+      "text_parsed": 3,
+      "main_text_style_reviewed": 2,
+      "full_text_and_relevant_appendix_reviewed": 1,
+      "induction_complete": 1,
+      "holdout_complete": 0
+    },
+    {
+      "venue": "tnnls",
+      "locked": 50,
+      "pdf_acquired": 26,
+      "text_parsed": 26,
+      "main_text_style_reviewed": 1,
+      "full_text_and_relevant_appendix_reviewed": 1,
+      "induction_complete": 0,
+      "holdout_complete": 1
+    },
+    {
+      "venue": "tpami",
+      "locked": 50,
+      "pdf_acquired": 26,
+      "text_parsed": 26,
+      "main_text_style_reviewed": 1,
+      "full_text_and_relevant_appendix_reviewed": 1,
+      "induction_complete": 1,
+      "holdout_complete": 0
+    }
+  ],
+  "totals": {
+    "locked": 550,
+    "pdf_acquired": 429,
+    "text_parsed": 429,
+    "main_text_style_reviewed": 44,
+    "full_text_and_relevant_appendix_reviewed": 39,
+    "induction_complete": 35,
+    "holdout_complete": 4
+  },
+  "remaining_full_review": 511,
+  "qualification": "Continuous PDF prose/style review is not proof/code audit or experiment replication. Accepted author/published-header deposits may support writing organization, not final typesetting. Referenced unreviewed external appendices excluded from full count.",
+  "known_ineligible_locked_slots": 0,
+  "eligibility_note": "550 active positions after one documented nonresearch slot repair; original lock/history preserved. This is not certification of every remaining candidate qualification.",
+  "excluded_historical_nonresearch_records": 1
+}

@@ -1,0 +1,237 @@
+{
+  "id": "icml-2024-3c86a8a5",
+  "venue": "icml",
+  "year": 2024,
+  "split": "induction",
+  "title": "Double Variance Reduction: A Smoothing Trick for Composite Optimization Problems without First-Order Gradient",
+  "authors": "Hao Di, Haishan Ye, Yueling Zhang, Xiangyu Chang, Guang Dai, Ivor Tsang",
+  "pdf_path": ".claude/skills/paper-writing-shared/tmp/corpus/icml/pdf/Double Variance Reduction- A Smoothing Trick for Composite Optimization Problems without First-Order Gradient.pdf",
+  "markdown_path": ".claude/skills/paper-writing-shared/tmp/corpus/icml/markdown/Double Variance Reduction- A Smoothing Trick for Composite Optimization Problems without First-Order Gradient.md",
+  "pdf_sha256": "abfee3e9b2cebc448445f2c2d95761133af1a612863126e7075f2a6d9e9ee3b7",
+  "review_date": "2026-10-21",
+  "paper_type": "theory-led zeroth-order strongly-convex composite finite-sum optimization with logistic-regression numerical evidence",
+  "semantic_review_status": "complete_writing_focused_review",
+  "full_text_style_review_complete": true,
+  "external_appendix_review_complete": true,
+  "count_eligible_full_text_and_relevant_appendix": true,
+  "coverage": [
+    {
+      "asset": "lockedofficialPMLRPDF",
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ],
+      "sections": "Abstract;Introduction/Notation;RelatedWork2;Method3.1–3.2/Algorithm1;Convergence4 all lemmas/corollaries/Theorem4.6;Experiment5;Conclusion6;Acknowledgement/Impact/References;A all usefullemmas;B allmissingproofs;C all hyperparameter settings",
+      "method": "continuousall19pagesincludingproofs;13criticaloriginalpagesviewed"
+    }
+  ],
+  "version_audit": {
+    "official_landing": "https://proceedings.mlr.press/v235/di24b.html",
+    "official_pdf": "https://raw.githubusercontent.com/mlresearch/v235/main/assets/di24b/di24b.pdf",
+    "version": "official proceedings PDF; exact bytes locked by SHA256",
+    "identity": "title/authors/PMLR235yearandSHAchecked",
+    "new_network_fetch": false
+  },
+  "supplement_audit": {
+    "status": "A/B/C fullyreadinsamePDF;noidentifiedseparateexternaltextappendix",
+    "code_artifacts": "notexecuted;notnumericalreplication",
+    "qualification": "no freshwebpageaudit;doesnotexcludeunlistedmaterial"
+  },
+  "ten_dimensions": {
+    "reader_argument": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp1–4"
+      ],
+      "observation": "开篇给有限和f加非光滑凸ψ，fi为µ强凸/L光滑；用最优点∇f可能非零解释随机方向方差为何不自动消失。",
+      "editorial_advice": "先定义问题/oracle/最优性条件再谈两种方差，不能把光滑部分的梯度非零说成整个复合目标不满足最优性。",
+      "applicability": "写作组织、定理条件和主张边界的连续全文审阅；并未独立重证所有代数步骤/条件期望、验证文献下界、运行代码或复现实验。不将语义读完等同正确性认证。",
+      "confidence": {
+        "paper_specific": "highforinspectedorganization/printedconditions;notproofvalidity",
+        "venue_wide": "low;pilot11/50"
+      }
+    },
+    "title_abstract": {
+      "category": "corpus_observation",
+      "positions": [
+        "p1 Abstract;p7 Cor4.7"
+      ],
+      "observation": "标题明确复合优化与无FO梯度；摘要把坐标成本、均值技巧、期望每步O1与总O(d(n+κ)log(1/ε))并列。",
+      "editorial_advice": "保留dimension、n、condition number、期望量词和强凸条件；optimal是作者与已有SVRG量级对齐的表述，本稿没有新增匹配下界证明。",
+      "applicability": "写作组织、定理条件和主张边界的连续全文审阅；并未独立重证所有代数步骤/条件期望、验证文献下界、运行代码或复现实验。不将语义读完等同正确性认证。",
+      "confidence": {
+        "paper_specific": "highforinspectedorganization/printedconditions;notproofvalidity",
+        "venue_wide": "low;pilot11/50"
+      }
+    },
+    "introduction": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp1–2/Table1"
+      ],
+      "observation": "用现有SVRG只能降采样噪声的缺口，推到全坐标估计的成本，再给双方差估计器和两项贡献。",
+      "editorial_advice": "贡献→算法/复杂度表→定理对应；LLM/ResNet等是引用的应用动机，不是本文测试。FO与ZO表中SZO换算不能当原生FO查询次数。",
+      "applicability": "写作组织、定理条件和主张边界的连续全文审阅；并未独立重证所有代数步骤/条件期望、验证文献下界、运行代码或复现实验。不将语义读完等同正确性认证。",
+      "confidence": {
+        "paper_specific": "highforinspectedorganization/printedconditions;notproofvalidity",
+        "venue_wide": "low;pilot11/50"
+      }
+    },
+    "related_work": {
+      "category": "corpus_observation",
+      "positions": [
+        "p3 §2"
+      ],
+      "observation": "按Variance Reduction、ZO Optimization、ZO Variance Reduction三个主题串联，涵盖非凸先例但本文定理以强凸复合设置为主。",
+      "editorial_advice": "区分引用结果的设定，不能因相关工作提到nonconvex就替正文定理推广到一般神经网络。",
+      "applicability": "写作组织、定理条件和主张边界的连续全文审阅；并未独立重证所有代数步骤/条件期望、验证文献下界、运行代码或复现实验。不将语义读完等同正确性认证。",
+      "confidence": {
+        "paper_specific": "highforinspectedorganization/printedconditions;notproofvalidity",
+        "venue_wide": "low;pilot11/50"
+      }
+    },
+    "method_theory": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp3–7 Algorithm1/Lemmas3.1,3.5/4.1–4.4/Theorem4.6/Cor4.7;pp11–18 A/B"
+      ],
+      "observation": "随机Gaussian估计有平滑偏差；均值h与SVRG校正配合loopless快照更新；三项Lyapunov分别跟踪x、h和快照梯度误差，主文逐项递推再合并。",
+      "editorial_advice": "保留u/uk不同方向、共用uk的差分、p1/n和η1/((40d+63)L)。固定v收敛界含δ/σ残差，目标精度要求v随ε缩小。主定理直接控制Lyapunov；文称as well as F不应未经说明就改成任意非光滑F gap定理。",
+      "applicability": "写作组织、定理条件和主张边界的连续全文审阅；并未独立重证所有代数步骤/条件期望、验证文献下界、运行代码或复现实验。不将语义读完等同正确性认证。",
+      "confidence": {
+        "paper_specific": "highforinspectedorganization/printedconditions;notproofvalidity",
+        "venue_wide": "low;pilot11/50"
+      }
+    },
+    "evidence": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp7–8/Table2/Fig1;p19 C"
+      ],
+      "observation": "四个LIBSVM二元逻辑回归加L2/L1；曲线y为log objective gap，x为SZO/(n*d)；相同评估预算及样本/方向batch，方法各自网格。",
+      "editorial_advice": "不要改写为墙钟速度、预测精度或LLM效果。covtype/gisette附录改为周期更新而非严格随机loopless流程，说明理论/实现差别；没有误差条不可补写显著优于。",
+      "applicability": "写作组织、定理条件和主张边界的连续全文审阅；并未独立重证所有代数步骤/条件期望、验证文献下界、运行代码或复现实验。不将语义读完等同正确性认证。",
+      "confidence": {
+        "paper_specific": "highforinspectedorganization/printedconditions;notproofvalidity",
+        "venue_wide": "low;pilot11/50"
+      }
+    },
+    "discussion_limits": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp4–8;p19 C"
+      ],
+      "observation": "主要限制散在问题与偏差界，不设独立Limitations；实验ZPSVRG是随机方向实现；固定v1e-3，两个数据集周期快照。",
+      "editorial_advice": "保留有限比较对象和残差；没有独立局限章也需在语言优化中留下假设，不能将constrained应用潜力当已完成任意约束实验。",
+      "applicability": "写作组织、定理条件和主张边界的连续全文审阅；并未独立重证所有代数步骤/条件期望、验证文献下界、运行代码或复现实验。不将语义读完等同正确性认证。",
+      "confidence": {
+        "paper_specific": "highforinspectedorganization/printedconditions;notproofvalidity",
+        "venue_wide": "low;pilot11/50"
+      }
+    },
+    "paragraph_language": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp4–7;pp11–18"
+      ],
+      "observation": "定义→引理→误差解释→算法→递推→复杂度形成渐进论证，局部符号不一致需原页核对。",
+      "editorial_advice": "near-unbiased不可缩成unbiased，期望不能缩成每一次。主文γ≤0与附录正系数、prox定义η/2及后续η更新、ψ/Ψ/i/n等疑点列作者核对而不静默修正。",
+      "applicability": "写作组织、定理条件和主张边界的连续全文审阅；并未独立重证所有代数步骤/条件期望、验证文献下界、运行代码或复现实验。不将语义读完等同正确性认证。",
+      "confidence": {
+        "paper_specific": "highforinspectedorganization/printedconditions;notproofvalidity",
+        "venue_wide": "low;pilot11/50"
+      }
+    },
+    "main_appendix": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp1–19 A/B/C"
+      ],
+      "observation": "主文pp1–8，p9影响与文献至10；A标准不等式/高斯矩，B从估计器到主定理与几何级数的完整推导，C四数据集搜索与周期更新。",
+      "editorial_advice": "正文保留决定保证的条件和偏差项，标准引理可附录但须注明来源和完整条件；不能只读结论与曲线就计全文完成。",
+      "applicability": "写作组织、定理条件和主张边界的连续全文审阅；并未独立重证所有代数步骤/条件期望、验证文献下界、运行代码或复现实验。不将语义读完等同正确性认证。",
+      "confidence": {
+        "paper_specific": "highforinspectedorganization/printedconditions;notproofvalidity",
+        "venue_wide": "low;pilot11/50"
+      }
+    },
+    "actionable": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp7–8;p18–19"
+      ],
+      "observation": "多指标复杂度和辅助状态证明可组织理论方法稿；图中gisette两方法早期接近，末尾差距来自更低残差。",
+      "editorial_advice": "原创示例：For strongly convex smooth finite sums with a convex proximal term, the reported bound contracts a Lyapunov error up to a smoothing-dependent residual. Its expected per-step oracle cost is constant, while total query complexity retains its dimension dependence.",
+      "applicability": "写作组织、定理条件和主张边界的连续全文审阅；并未独立重证所有代数步骤/条件期望、验证文献下界、运行代码或复现实验。不将语义读完等同正确性认证。",
+      "confidence": {
+        "paper_specific": "highforinspectedorganization/printedconditions;notproofvalidity",
+        "venue_wide": "low;pilot11/50"
+      }
+    }
+  },
+  "counterexamples": [
+    {
+      "position": "p7 Theorem4.6/Cor4.7",
+      "finding": "定理期望Lyapunov界含非零δ、σ且v须依ε选；每步期望O1并非总复杂度无d，也不是固定v精确收敛的保证。"
+    },
+    {
+      "position": "p19 C",
+      "finding": "covtype/gisette实验周期更新w/h，与Algorithm1随机概率更新有差别；不同方法学习率网格不同但预算/batch相同；不能声称所有实验均严格按主定理p1/n执行。"
+    },
+    {
+      "position": "p1 motivation;pp7–8 experiments",
+      "finding": "LLM微调和ResNet训练是引用背景；实验证据仅四个二元逻辑回归集与SZO横轴，非LLM/墙钟/准确率基准。"
+    },
+    {
+      "position": "p3 prox definition;p7 afterCor4.5;p13 fixedpoint;p18 Theorem4.6proof",
+      "finding": "原页prox二次系数η/2与后续η-gradient步的惯例/固定点需核对；主文γ≤0但证明舍去−λC使用λ>0。不静默改公式，未据此裁定全定理正误。"
+    },
+    {
+      "position": "p11 LemmaA.3;pp11–12 Lemma3.1proof",
+      "finding": "引理局部仅写L-smooth，使用凸函数型下界及非负Hessian；全局强凸背景必须保留，不能抽出为任意非凸L-smooth引理。"
+    },
+    {
+      "position": "p12 Cor3.2proof;p15 Lemma4.3proof;p8 Fig1",
+      "finding": "可见s(x,u)被移出期望、∇fi/∇f符号不一致；Lemma4.3展开某行∇f与∇fi不一致。Fig1首面板ZPGD与其他PGD标签不同。保留为作者核对项，不默默统一或认证结果。"
+    }
+  ],
+  "visual_review": {
+    "pages": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      11,
+      12,
+      13,
+      15,
+      18,
+      19
+    ],
+    "source": "110dpiPopplerrendersdirectview_image",
+    "policy": "delete regenerable files after canonicalrecord"
+  },
+  "holdout_validation": null,
+  "official_requirements": [],
+  "review_limitations": "写作组织、定理条件和主张边界的连续全文审阅；并未独立重证所有代数步骤/条件期望、验证文献下界、运行代码或复现实验。不将语义读完等同正确性认证。"
+}

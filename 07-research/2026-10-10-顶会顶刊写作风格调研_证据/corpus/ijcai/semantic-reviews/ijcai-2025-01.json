@@ -1,0 +1,223 @@
+{
+  "id": "ijcai-2025-01",
+  "venue": "ijcai",
+  "year": 2025,
+  "split": "induction",
+  "title": "Parameterized Approximation Algorithm for Doubly Constrained Fair Clustering",
+  "authors": "Xiaoliang Wu, Qilong Feng, Junyu Huang, Jianxin Wang",
+  "review_date": "2026-10-21",
+  "mode": "continuous all-page semantic writing-style review plus targeted original-page visual verification; not independent proof or experiment audit",
+  "full_text_style_review_complete": true,
+  "external_appendix_review_complete": true,
+  "count_eligible_full_text_and_relevant_appendix": true,
+  "pdf_path": ".claude/skills/paper-writing-shared/tmp/corpus/ijcai/pdf/Parameterized Approximation Algorithm for Doubly Constrained Fair Clustering.pdf",
+  "markdown_path": ".claude/skills/paper-writing-shared/tmp/corpus/ijcai/markdown/Parameterized Approximation Algorithm for Doubly Constrained Fair Clustering.md",
+  "pdf_sha256": "ea13e00ca2c93191a66435c1ce36e2c16a5fafb98583175729a2b6c4876b5423",
+  "version_audit": {
+    "version": "IJCAI published main-track paper",
+    "official_landing": "https://www.ijcai.org/proceedings/2025/67",
+    "official_pdf": "https://www.ijcai.org/proceedings/2025/0067.pdf",
+    "printed_pages": "592–600",
+    "identity": "stored title/authors match fullPDF and IJCAI24/25 headers; lockedSHA checked",
+    "new_network_fetch": false
+  },
+  "coverage": [
+    {
+      "asset": "locked official published PDF",
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "sections": "Abstract; Introduction and Contributions; Theorem1/Table1; Preliminaries; Algorithm overview; Algorithm1; Lemmas6/7/9/10 and displayed proofs; weighted assignment LP; Running Time; Conclusions; Acknowledgments; References",
+      "reading": "all9pages continuously, including displayed proofs/examples and references; first2papers text-read before user pause, final visual review after resume"
+    }
+  ],
+  "supplement_audit": {
+    "status": "not_applicable_no_referenced_external_scientific_appendix_in_consultedPDF",
+    "external_text_appendix_referenced": false,
+    "scope": "all nine pages including notes and references inspected; no separate manuscript supplement pointer detected",
+    "qualification": "does not establish that no unlisted material exists; standard prior-work citations are not counted as this paper appendix; no new landing-page/network audit"
+  },
+  "ten_dimensions": {
+    "reader_argument": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp1–2"
+      ],
+      "observation": "读者需要区分群体公平与设施代表性公平，再理解双约束与参数依赖的瓶颈；研究问题是能否仅以设施数k参数化。",
+      "editorial_advice": "把优化目标、两类公平约束与所去除的参数依赖先说明，再报近似比。",
+      "applicability": "纯理论近似算法样本；不能用应用引言暗示已做公平性部署测试。",
+      "confidence": {
+        "paper_specific": "high for checked textual/visual organization, not theorem correctness",
+        "venue_wide": "low;5/50 pilot samples cannot establish prevalence"
+      }
+    },
+    "title_abstract": {
+      "category": "corpus_observation",
+      "positions": [
+        "p1 Abstract; pp2–3 Theorem1"
+      ],
+      "observation": "题名聚焦参数化近似和双公平聚类；摘要说明既有方法依赖设施数及颜色数，新结果保持(4+ε)近似和公平加性1违反。",
+      "editorial_advice": "摘要中的保证应与主定理同条件；保留随机性、k-median目标、违反量及f(k,ε)n^O(1)运行时间。",
+      "applicability": "FPT(k)不是任意输入下多项式时间；独立于颜色数指参数化部分，不是算法完全不使用颜色信息。",
+      "confidence": {
+        "paper_specific": "high for checked textual/visual organization, not theorem correctness",
+        "venue_wide": "low;5/50 pilot samples cannot establish prevalence"
+      }
+    },
+    "introduction": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp1–2, §1.1"
+      ],
+      "observation": "引言按原k-median、各类公平、已有参数化结果推进到一个明确问题；两条贡献之后紧接正式主定理和比较表。",
+      "editorial_advice": "贡献项对应新结构、保证和定理；比较表保持目标、约束和参数可比。",
+      "applicability": "只支持这篇的论证顺序，不能把2项贡献或显式问句规定为venue要求。",
+      "confidence": {
+        "paper_specific": "high for checked textual/visual organization, not theorem correctness",
+        "venue_wide": "low;5/50 pilot samples cannot establish prevalence"
+      }
+    },
+    "related_work": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp1–3"
+      ],
+      "observation": "相关文献在引言按公平定义、目标和参数组织，§3再次说明继承的leaders/半径框架与被替换的颜色枚举。",
+      "editorial_advice": "在技术接口处说明继承关系和具体差异，避免泛称所有旧工作都需同样假设。",
+      "applicability": "没有独立Related Work；本结果与k-center、Euclidean情形不能只比近似数字。",
+      "confidence": {
+        "paper_specific": "high for checked textual/visual organization, not theorem correctness",
+        "venue_wide": "low;5/50 pilot samples cannot establish prevalence"
+      }
+    },
+    "method_theory": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp3–7, Algorithm1; Lemmas6–10"
+      ],
+      "observation": "先独立概览，再给无公平coreset、leaders/距离枚举、虚拟设施、子模优化、带权赋值和LP舍入的两阶段路线；引理按代价与约束依赖串联。",
+      "editorial_advice": "在引理前说明用途，伪代码与文字使用同一符号；必要的颜色计数仍保留以恢复群体约束。",
+      "applicability": "阅读全部显示证明不等于独立证明正确性；原版有可定位符号冲突，另记录待核验。",
+      "confidence": {
+        "paper_specific": "high for checked textual/visual organization, not theorem correctness",
+        "venue_wide": "low;5/50 pilot samples cannot establish prevalence"
+      }
+    },
+    "evidence": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp3–7, Table1/LP/§4.3"
+      ],
+      "observation": "证据是主定理、子模与成本引理、LP约束和时间分析；没有数据集、消融或经验性能图。",
+      "editorial_advice": "按保证与证明依赖组织证据；不能为贴合固定写作模板补造实验或运行速度。",
+      "applicability": "Table1是理论结果比较，不是实证排行榜；不声称已检验引用定理全部前提。",
+      "confidence": {
+        "paper_specific": "high for checked textual/visual organization, not theorem correctness",
+        "venue_wide": "low;5/50 pilot samples cannot establish prevalence"
+      }
+    },
+    "discussion_limits": {
+      "category": "corpus_observation",
+      "positions": [
+        "p7, Lemma10/Conclusions"
+      ],
+      "observation": "Lemma10明确群体公平加性1违反，结论较简短聚焦近似比和k参数化，没有重复全部限制。",
+      "editorial_advice": "压缩或迁移时将主定理限定带回摘要和结论，不能把略写变成无违反的严格公平。",
+      "applicability": "“fairness constraints”在不同阶段分别指设施配额和群体比例；不能合并成同一条件。",
+      "confidence": {
+        "paper_specific": "high for checked textual/visual organization, not theorem correctness",
+        "venue_wide": "low;5/50 pilot samples cannot establish prevalence"
+      }
+    },
+    "paragraph_language": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp4–7"
+      ],
+      "observation": "先解释阶段目标再引定义、引理和证明；说明主要用triangle inequality、转换及舍入。",
+      "editorial_advice": "公式后说明对象和依赖；发现上下文矛盾时提出作者待核验，不以流畅化改动不等号。",
+      "applicability": "发表稿的符号或语言问题不是可模仿风格；未据此裁定整个理论错误。",
+      "confidence": {
+        "paper_specific": "high for checked textual/visual organization, not theorem correctness",
+        "venue_wide": "low;5/50 pilot samples cannot establish prevalence"
+      }
+    },
+    "main_appendix": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp1–9"
+      ],
+      "observation": "全部算法、关键引理、LP与时间分析在七页正文，后两页为致谢/参考文献；本稿没有引用外部文本附录。",
+      "editorial_advice": "短理论推导可留正文；文献中的标准工具指针与本稿未提供科学附录要分清。",
+      "applicability": "未重新抓取网页；阅读范围为已锁定正式PDF与其显示证明，不审计全部引用文献。",
+      "confidence": {
+        "paper_specific": "high for checked textual/visual organization, not theorem correctness",
+        "venue_wide": "low;5/50 pilot samples cannot establish prevalence"
+      }
+    },
+    "actionable": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp2–7"
+      ],
+      "observation": "贡献的关键是参数依赖而非泛称“更快”或“更公平”；保证含随机近似和允许违反。",
+      "editorial_advice": "原创示例：The parameter dependence excludes the number of demographic labels; the stated approximation still allows an additive violation of one in group fairness.",
+      "applicability": "前提是材料确有此保证；对存在疑点的证明只描述作者报告的结果，不认证正确。",
+      "confidence": {
+        "paper_specific": "high for checked textual/visual organization, not theorem correctness",
+        "venue_wide": "low;5/50 pilot samples cannot establish prevalence"
+      }
+    }
+  },
+  "counterexamples": [
+    {
+      "position": "p4 Algorithm1 line2; p5 §4.1",
+      "finding": "视觉确认算法行2把d_min/d_max依次写为maximum/minimum，后文反向；不是单纯抽取错误。",
+      "editorial_action": "单独列作者核对项；不能在语言润色中隐改算法。"
+    },
+    {
+      "position": "p4 overview versus Algorithm1 line7; p5 §4.1",
+      "finding": "概览Ni用d(f,f_i*)，伪代码和后文用d(f,l_i)。",
+      "editorial_action": "标记技术对象不一致，交由作者确认。"
+    },
+    {
+      "position": "p5 final line; p6 Lemma7 proof",
+      "finding": "原PDF印Δ(H)≤1/2Δ(H*)，后续通过Φ(F′)−Δ(H)给出上界时需要相应下界；视觉确认原印符号。",
+      "editorial_action": "记录局部推导依赖冲突，不当作已完成完整证明审计。"
+    },
+    {
+      "position": "p6 Lemma7/9; p7 §4.3",
+      "finding": "误差写为O(ηδ)及运行时间的中间化简仍需独立数学核查；本轮不进行该正确性认证。",
+      "editorial_action": "保留参数与原式，不能为了压缩而删掉误差或指数依赖。"
+    }
+  ],
+  "visual_review": {
+    "pages": [
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "findings": [
+      "p3核对主定理延续、比较表和两个公平约束。",
+      "p4核对算法行2、7、14及概览Ni；p5核对颜色计数和子模不等式。",
+      "p6核对Lemma7成本链与误差项；p7核对LP、Lemma10的加性1与运行时间。"
+    ],
+    "temporary_render_manifest": "07-research/2026-10-21-顶会顶刊写作风格全文续研_证据/temporary-artifact-manifest.json",
+    "image_policy": "generated images remain in ignored skilltmp and are deleted after evidence notes saved; regenerate with manifest command and lockedPDF"
+  },
+  "official_requirements": [],
+  "holdout_validation": null,
+  "generalization_warning": "induction sample; no new official format rule or independent holdout validation; no frequency estimate",
+  "original_rewrite": "The parameter dependence excludes the number of demographic labels; the stated approximation still allows an additive violation of one in group fairness.",
+  "paper_type": "parameterized approximation theory for metric fair clustering; no empirical evaluation"
+}

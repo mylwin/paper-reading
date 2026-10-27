@@ -1,0 +1,32 @@
+{
+  "batch": "icml-007-008",
+  "date": "2026-10-21",
+  "papers": [
+    {
+      "id": "icml-2025-29ddd3f6",
+      "venue": "icml",
+      "year": 2025,
+      "split": "induction",
+      "full_and_appendix_complete": true,
+      "new_pdf_acquisition": false,
+      "review_record": "07-research/2026-10-10-顶会顶刊写作风格调研_证据/corpus/icml/semantic-reviews/icml-2025-29ddd3f6.json",
+      "pdf_sha256": "0efc1ecbb702ac011f48a39e5489a7b7121a7de78a896c8077c6a3f52808ed03"
+    },
+    {
+      "id": "icml-2024-a5ae56e8",
+      "venue": "icml",
+      "year": 2024,
+      "split": "induction",
+      "full_and_appendix_complete": true,
+      "new_pdf_acquisition": false,
+      "review_record": "07-research/2026-10-10-顶会顶刊写作风格调研_证据/corpus/icml/semantic-reviews/icml-2024-a5ae56e8.json",
+      "pdf_sha256": "f8348abcc56307cd6cd502c4786cb0dab9dc11feaa5bc2d012661bca2051373c"
+    }
+  ],
+  "before_full": 28,
+  "new_full": 2,
+  "after_full": 30,
+  "icml_before": 6,
+  "icml_after": 8,
+  "qualification": "writingorganizationandclaim/evidenceboundaryreview,notindependentprooforreplication"
+}

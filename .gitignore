@@ -5,3 +5,7 @@ __pycache__/
 
 # Skill development corpora remain local and never enter the paper knowledge base.
 /.claude/skills/*/tmp/
+
+# Keep the rendered PDF while excluding reproducible LaTeX build intermediates.
+/04-equation_problem/**/muon-sps-render/build/*
+!/04-equation_problem/**/muon-sps-render/build/main.pdf

@@ -1,0 +1,236 @@
+{
+  "id": "icml-2024-cea7b10d",
+  "venue": "icml",
+  "year": 2024,
+  "split": "induction",
+  "title": "GaussianPro: 3D Gaussian Splatting with Progressive Propagation",
+  "authors": "Kai Cheng, Xiaoxiao Long, Kaizhi Yang, Yao Yao, Wei Yin, Yuexin Ma, Wenping Wang, Xuejin Chen",
+  "pdf_path": ".claude/skills/paper-writing-shared/tmp/corpus/icml/pdf/GaussianPro- 3D Gaussian Splatting with Progressive Propagation.pdf",
+  "markdown_path": ".claude/skills/paper-writing-shared/tmp/corpus/icml/markdown/GaussianPro- 3D Gaussian Splatting with Progressive Propagation.md",
+  "pdf_sha256": "7f1810adca2d24a5930278b5bb5aae9d8a1d2377f5692d7bed2227cfe556090a",
+  "review_date": "2026-10-21",
+  "paper_type": "empirical 3D scene representation and novel-view-rendering method with geometric construction and resource/ablation studies",
+  "semantic_review_status": "complete_writing_focused_review",
+  "full_text_style_review_complete": true,
+  "external_appendix_review_complete": true,
+  "count_eligible_full_text_and_relevant_appendix": true,
+  "coverage": [
+    {
+      "asset": "lockedofficialPMLRPDF",
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18
+      ],
+      "sections": "Abstract;Introduction;RelatedWork2.1–2.3;Preliminaries3;Method4.1–4.4;Experiment5.1–5.3;Conclusion6;Acknowledgements;Impact;References;AppendicesA/B/C/DallTables8–15andFigs8–9",
+      "method": "continuousall18pagesincludingscientificappendices;13criticaloriginalpagesvisuallyinspected"
+    }
+  ],
+  "version_audit": {
+    "official_landing": "https://proceedings.mlr.press/v235/cheng24f.html",
+    "official_pdf": "https://raw.githubusercontent.com/mlresearch/v235/main/assets/cheng24f/cheng24f.pdf",
+    "version": "official proceedings PDF; exact bytes locked by SHA256",
+    "identity": "title/authors/PMLR235headerandyear/SHAverified",
+    "new_network_fetch": false
+  },
+  "supplement_audit": {
+    "status": "A–D allreadinsamePDF;noidentifiedexternaltextappendixpointer",
+    "code_artifacts": "code/data linknotexecuted/downloaded;notreplication",
+    "qualification": "no freshwebpageaudit;doesnotexcludeunlistedmaterial"
+  },
+  "ten_dimensions": {
+    "reader_argument": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp1–3/Fig1"
+      ],
+      "observation": "先用跨栏渲染/法向图说明SfM弱纹理初始化与松散增密的问题，再建立几何传播的技术对象。",
+      "editorial_advice": "将专业背景转成具体失败环节及可测渲染目标，不把示例图当普遍性能证明。",
+      "applicability": "有限九场景Waymo/MipNeRF360、静态几何与作者报告设置的写作审阅，不认证重建真值、理论正确性、代码复现、统计显著性或全部场景普适效果。",
+      "confidence": {
+        "paper_specific": "highforinspectedorganizationandtables;notindependentcorrectness",
+        "venue_wide": "low;pilot10/50"
+      }
+    },
+    "title_abstract": {
+      "category": "corpus_observation",
+      "positions": [
+        "p1 Abstract"
+      ],
+      "observation": "标题用系统名＋3DGS＋机制；摘要按依赖、失效、经典MVS启发、位置/方向传播、两尺度实验、Waymo1.15dB组织。",
+      "editorial_advice": "摘要关键数保留PSNR/dB及数据集。dB差不是百分比增益，所有任务SOTA措辞须回表核对。",
+      "applicability": "有限九场景Waymo/MipNeRF360、静态几何与作者报告设置的写作审阅，不认证重建真值、理论正确性、代码复现、统计显著性或全部场景普适效果。",
+      "confidence": {
+        "paper_specific": "highforinspectedorganizationandtables;notindependentcorrectness",
+        "venue_wide": "low;pilot10/50"
+      }
+    },
+    "introduction": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp1–2"
+      ],
+      "observation": "引言列初始化敏感与无约束增密两项限制，接完整机制描述、三点贡献。",
+      "editorial_advice": "贡献按传播、平面损失和实验分别回链；方法主张与新的理论保证不能混写。",
+      "applicability": "有限九场景Waymo/MipNeRF360、静态几何与作者报告设置的写作审阅，不认证重建真值、理论正确性、代码复现、统计显著性或全部场景普适效果。",
+      "confidence": {
+        "paper_specific": "highforinspectedorganizationandtables;notindependentcorrectness",
+        "venue_wide": "low;pilot10/50"
+      }
+    },
+    "related_work": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp2–3 §2.1–2.3"
+      ],
+      "observation": "独立相关工作依次MVS、NeRF、3DGS，并区分采样/场景参数化/压缩/动态建模等作用点。",
+      "editorial_advice": "按本稿接口组织比较，解释如何借用MVS；不要把所有相邻工作说成没有几何约束。",
+      "applicability": "有限九场景Waymo/MipNeRF360、静态几何与作者报告设置的写作审阅，不认证重建真值、理论正确性、代码复现、统计显著性或全部场景普适效果。",
+      "confidence": {
+        "paper_specific": "highforinspectedorganizationandtables;notindependentcorrectness",
+        "venue_wide": "low;pilot10/50"
+      }
+    },
+    "method_theory": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp3–6;AppendixA p13"
+      ],
+      "observation": "3DGS预备定义后按混合几何表示→局部平面候选/patch matching→几何过滤与回投影→平面损失→训练排布展开；没有新收敛定理。",
+      "editorial_advice": "保留原clone/split加每50步传播、u3、相对差阈值.8、β.001/γ100/λ.2。附录邻视图、扰动、天空mask参与协议，不删成无需外部模型。",
+      "applicability": "有限九场景Waymo/MipNeRF360、静态几何与作者报告设置的写作审阅，不认证重建真值、理论正确性、代码复现、统计显著性或全部场景普适效果。",
+      "confidence": {
+        "paper_specific": "highforinspectedorganizationandtables;notindependentcorrectness",
+        "venue_wide": "low;pilot10/50"
+      }
+    },
+    "evidence": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp6–9 Tables1–7;pp14–18 Tables8–15"
+      ],
+      "observation": "主表比较两数据集，再逐项检验传播/平面、点数、深度、room稀疏视角、训练/FPS、MVS输入和邻点数。附录给间隔/次数、完整图与逐场景表。",
+      "editorial_advice": "原SfM基线与更好SfM重训基线分开，Mip PSNR27.21→27.88是初始化差异，方法27.92；PSNR/SSIM/LPIPS、帧率和训练分钟不可合并成单一胜出。",
+      "applicability": "有限九场景Waymo/MipNeRF360、静态几何与作者报告设置的写作审阅，不认证重建真值、理论正确性、代码复现、统计显著性或全部场景普适效果。",
+      "confidence": {
+        "paper_specific": "highforinspectedorganizationandtables;notindependentcorrectness",
+        "venue_wide": "low;pilot10/50"
+      }
+    },
+    "discussion_limits": {
+      "category": "corpus_observation",
+      "positions": [
+        "p9 Conclusion;pp14,18 C/D"
+      ],
+      "observation": "结论明确不建模动态对象，未来动态Gaussian是补充方向；附录承认自然场景细结构法向难估、Mip收益有限、ZipNeRF渲染质量更高。",
+      "editorial_advice": "保留局限与质量/速度权衡；摘要或贡献SOTA不得覆盖ZipNeRF更优指标和未测动态能力。",
+      "applicability": "有限九场景Waymo/MipNeRF360、静态几何与作者报告设置的写作审阅，不认证重建真值、理论正确性、代码复现、统计显著性或全部场景普适效果。",
+      "confidence": {
+        "paper_specific": "highforinspectedorganizationandtables;notindependentcorrectness",
+        "venue_wide": "low;pilot10/50"
+      }
+    },
+    "paragraph_language": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp5–9;pp14–18"
+      ],
+      "observation": "段落按实验问题与因果解释组织，图表指标带方向；significantly并无本轮可复算统计检验。3DGS*在不同表表示不同基线。",
+      "editorial_advice": "局部符号释义随表保留；源论文自身不一致应单列作者核对，不把录用稿强措辞当官方风格规则。",
+      "applicability": "有限九场景Waymo/MipNeRF360、静态几何与作者报告设置的写作审阅，不认证重建真值、理论正确性、代码复现、统计显著性或全部场景普适效果。",
+      "confidence": {
+        "paper_specific": "highforinspectedorganizationandtables;notindependentcorrectness",
+        "venue_wide": "low;pilot10/50"
+      }
+    },
+    "main_appendix": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp1–18;AppendicesA–D"
+      ],
+      "observation": "主文到p9，文献pp10–12，A补实现/推导，B补超参数成本，C全图，D逐场景数值。",
+      "editorial_advice": "主文保留决定性的基线与比较口径，附录必须回链。图像附录要原页看，不能把只有标签的抽取当完整图证据。",
+      "applicability": "有限九场景Waymo/MipNeRF360、静态几何与作者报告设置的写作审阅，不认证重建真值、理论正确性、代码复现、统计显著性或全部场景普适效果。",
+      "confidence": {
+        "paper_specific": "highforinspectedorganizationandtables;notindependentcorrectness",
+        "venue_wide": "low;pilot10/50"
+      }
+    },
+    "actionable": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp7–9;pp17–18"
+      ],
+      "observation": "平均指标领先不等于每场景领先；Waymo的Gaussian比原3DGS更多，但比增密3DGS*少。Street训练56比40分钟、FPS108比119，Room则113比105。",
+      "editorial_advice": "原创示例：The method improves average Waymo rendering quality under the reported protocol. Gains on MipNeRF360 are smaller after matching the improved SfM initialization, and training cost increases in the two efficiency examples.",
+      "applicability": "有限九场景Waymo/MipNeRF360、静态几何与作者报告设置的写作审阅，不认证重建真值、理论正确性、代码复现、统计显著性或全部场景普适效果。",
+      "confidence": {
+        "paper_specific": "highforinspectedorganizationandtables;notindependentcorrectness",
+        "venue_wide": "low;pilot10/50"
+      }
+    }
+  },
+  "counterexamples": [
+    {
+      "position": "p7 Table1;p18 Tables13–15",
+      "finding": "Mip平均PSNR Ours27.92低于Zip28.54，更好SfM重训3DGS27.88；五个自然场景PSNR均低于重训3DGS，不能称每场景更好或全面SOTA。"
+    },
+    {
+      "position": "p8 Table3;p9 Tables5–6",
+      "finding": "Waymo点数1147k高于原3DGS992k；Street训练56对40min、FPS108对119并非更快；room100%LPIPS .192并列。"
+    },
+    {
+      "position": "p17 Tables10–12",
+      "finding": "Waymo平均领先不等于每场景全指标领先：Seg113792 PSNR34.87低于Zip35.76；Seg132384 SSIM .963低于Zip .964。Table12 3DGS平均LPIPS .223与主表.226不一致，待作者核对。"
+    },
+    {
+      "position": "p5 Eq5;p13 Eqs13/16",
+      "finding": "原页Eq5 d为正投影而Eq13平面写nᵀx+d=0；几何检查文字四target views但求和g0到4。记录符号/计数待作者核对，不静默修正或宣称证明有误。"
+    },
+    {
+      "position": "p8 Table3;p14 D;p18 Tables13–15",
+      "finding": "3DGS*在Table3指降低梯度阈值的密集基线，附录D指原论文3DGS；必须用表内定义，不能跨表同名合并。"
+    },
+    {
+      "position": "p6 datasets;p10 references",
+      "finding": "MipNeRF360旁引用Caesar2020而文献项为nuScenes，样本与文献关联待核查；未在本轮替作者静默改引用或跨源核验。"
+    }
+  ],
+  "visual_review": {
+    "pages": [
+      1,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18
+    ],
+    "source": "105dpiPopplerrendersdirectview_image",
+    "policy": "regenerablerenderstodeleteafterrecord"
+  },
+  "holdout_validation": null,
+  "official_requirements": [],
+  "review_limitations": "有限九场景Waymo/MipNeRF360、静态几何与作者报告设置的写作审阅，不认证重建真值、理论正确性、代码复现、统计显著性或全部场景普适效果。"
+}

@@ -1,0 +1,10 @@
+{
+  "path": "01-raw/.DS_Store",
+  "baseline_sha256": "a66d7a81dde12e12f29947eea43dff1bef41eb4dc6b9b415eb41b381cc827293",
+  "current_sha256": "99b49ad648144e826acd56dcf2ca21f27519e228af6d018507b0fb93065fc478",
+  "bytes": 10244,
+  "mtime_ns": 1792561783093869646,
+  "classification": "macOSfoldermetadata;notpaperorindexcontent",
+  "action": "preservedwithoutwrite;excludeonlythismetadatafromsemanticassetimmutabilitycheck",
+  "qualification": "writerunknown;hashchangecannotattributetothisreview;originalpaper/notes/lock/skillsallcheckedseparately"
+}

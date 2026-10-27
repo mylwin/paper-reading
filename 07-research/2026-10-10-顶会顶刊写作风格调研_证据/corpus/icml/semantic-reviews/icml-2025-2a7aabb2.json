@@ -1,0 +1,280 @@
+{
+  "id": "icml-2025-2a7aabb2",
+  "venue": "icml",
+  "year": 2025,
+  "split": "induction",
+  "title": "Geometric Representation Condition Improves Equivariant Molecule Generation",
+  "authors": "Zian Li, Cai Zhou, Xiyuan Wang, Xingang Peng, Muhan Zhang",
+  "pdf_path": ".claude/skills/paper-writing-shared/tmp/corpus/icml/pdf/Geometric Representation Condition Improves Equivariant Molecule Generation.pdf",
+  "markdown_path": ".claude/skills/paper-writing-shared/tmp/corpus/icml/markdown/Geometric Representation Condition Improves Equivariant Molecule Generation.md",
+  "pdf_sha256": "3718af321200509d5fd006439a9dd5df43165d5f34ec0295899fd5fca43b3476",
+  "review_date": "2026-10-23",
+  "paper_type": "two-stage pretrained invariant representation conditioning for equivariant molecular diffusion/flow, with conditional theoretical analysis and molecular proxy experiments",
+  "semantic_review_status": "complete_writing_focused_review",
+  "full_text_style_review_complete": true,
+  "external_appendix_review_complete": true,
+  "count_eligible_full_text_and_relevant_appendix": true,
+  "coverage": [
+    {
+      "asset": "locked official PMLR PDF",
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33
+      ],
+      "sections": "Abstract/Intro/Related2/Methods3.1–3.2/Experiments4.1–4.4/ConclusionsLimitations/Acknowledgement/Impact/References; A/B/C/D.1.1–D.1.2/D.2.1–D.2.3/E.1–E.2 including all12Figures/all12Tables/Algorithm1/Proposition3.1/Theorem3.2/D.1–D.18",
+      "method": "continuous33page text read plus28originalpageimages directlyinspected incl complete Dproofs, random40+40molecules and40conditional examples; finite Table3 ratios rechecked"
+    }
+  ],
+  "version_audit": {
+    "official_landing": "https://proceedings.mlr.press/v267/li25dz.html",
+    "official_pdf": "https://raw.githubusercontent.com/mlresearch/v267/main/assets/li25dz/li25dz.pdf",
+    "version": "official proceedings PDF; exact bytes locked by SHA256",
+    "identity": "title/authors/PMLR267/year and lockedSHA",
+    "new_network_fetch": false,
+    "qualification": "cached officialPDF, arithmetic of selected printedvalues only, no independent proof/experiment certification"
+  },
+  "supplement_audit": {
+    "status": "A–E all scientific algorithms/implementation/results/theory/visualizations in same33pagePDF fully read",
+    "external_scientific_appendix_referenced": false,
+    "code_artifacts": "external GitHub/pretrainingdata/checkpoints and citedpaperproofs not executed or independently audited"
+  },
+  "ten_dimensions": {
+    "reader_argument": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp1–3"
+      ],
+      "observation": "从单阶段几何分布/条件属性难建模切入，面向equivariant diffusion/flow分子生成；以外部预训练表示连接轻量表示分布和几何生成器，贡献含泛用框架、理论、质量/条件/少步实证。",
+      "editorial_advice": "数据流与作用对象明确：不变表示不是等变坐标latent；Drugdesign是动机，valency/SMILES/MMFF代理不等药效、合成可行性或湿实验。",
+      "applicability": "33页正文/文献及A–E全部相关科学附录连续读完，28原页核验含12图/12表、完整理论与末三页随机分子。写作组织与主张证据边界审阅，附少量表值算术复核；不执行作者代码、复现实验、认证全部证明、计算量子属性或核验全部参考文献。ICML32篇归纳先导，正式留出未用。",
+      "confidence": {
+        "paper_specific": "high for read setup/tables and reproduced scalar arithmetic; theory queries unresolved",
+        "venue_wide": "low;32/50 pilot"
+      }
+    },
+    "title_abstract": {
+      "category": "corpus_observation",
+      "positions": [
+        "p1"
+      ],
+      "observation": "判断式标题说明condition与改进对象；摘要问题→两阶段→两个底座/两数据→条件性能→少步，给50%/100vs1000等可核数字。",
+      "editorial_advice": "摘要数字需明确分母：表3相对EDM均值50.44%，各属性最佳已有方法均值36.70%，不能都写相对SOTA50%。理论、实证、迭代数与端到端时间分开，显著未作额外检验。",
+      "applicability": "33页正文/文献及A–E全部相关科学附录连续读完，28原页核验含12图/12表、完整理论与末三页随机分子。写作组织与主张证据边界审阅，附少量表值算术复核；不执行作者代码、复现实验、认证全部证明、计算量子属性或核验全部参考文献。ICML32篇归纳先导，正式留出未用。",
+      "confidence": {
+        "paper_specific": "high for read setup/tables and reproduced scalar arithmetic; theory queries unresolved",
+        "venue_wide": "low;32/50 pilot"
+      }
+    },
+    "introduction": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp1–2/Fig1"
+      ],
+      "observation": "先领域缺口/低维manifold直觉，解释与图像RCG/GraphRCG的对称性、噪声对齐与训练差异，再用四贡献分别连质量、条件、qualitydiversity和step。首图并行训练/顺序采样对应。",
+      "editorial_advice": "无需为了声称新架构抹去借用RCG、EDM/Semla/encoder归属；nongeometric latent更易学习是受条件解释，非所有预训练表示严格低维或必然简单。",
+      "applicability": "33页正文/文献及A–E全部相关科学附录连续读完，28原页核验含12图/12表、完整理论与末三页随机分子。写作组织与主张证据边界审阅，附少量表值算术复核；不执行作者代码、复现实验、认证全部证明、计算量子属性或核验全部参考文献。ICML32篇归纳先导，正式留出未用。",
+      "confidence": {
+        "paper_specific": "high for read setup/tables and reproduced scalar arithmetic; theory queries unresolved",
+        "venue_wide": "low;32/50 pilot"
+      }
+    },
+    "related_work": {
+      "category": "corpus_observation",
+      "positions": [
+        "p3 §2"
+      ],
+      "observation": "按moleculargenerators、geometricpretraining、latentgenerativemodels组织，细分3Donly和2D&3D、决定性decoder和生成decoder，并明确为何后续评测分组。",
+      "editorial_advice": "额外bond信息/预训练资源/重评协议要随比较保留；其他论文的filter问题是本作者观察，未独立复现，不能作为技能已认证的普遍事实。",
+      "applicability": "33页正文/文献及A–E全部相关科学附录连续读完，28原页核验含12图/12表、完整理论与末三页随机分子。写作组织与主张证据边界审阅，附少量表值算术复核；不执行作者代码、复现实验、认证全部证明、计算量子属性或核验全部参考文献。ICML32篇归纳先导，正式留出未用。",
+      "confidence": {
+        "paper_specific": "high for read setup/tables and reproduced scalar arithmetic; theory queries unresolved",
+        "venue_wide": "low;32/50 pilot"
+      }
+    },
+    "method_theory": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp4–6/13–14/19–29"
+      ],
+      "observation": "固定encoder E(M)、按N条件的表示diffusion、表示条件EDM/flow，两loss可并行、采样串行；训练加rep噪声/部分Semla额外rep-loss，采样temperature/CFG。定理分对称性、阶段TV界和线性噪声条件下score/reward，再附假设/证明。",
+      "editorial_advice": "O(3)/SO(3)条件化网络本身需保持对应对称性；normalization、N、支持和conditional score条件不能省。best-class可忽略r不等每个训练结果不劣；D.2线性奖励/高斯设计、lambda_min/t0/shift前提不能称任意QM9性质的无条件保证。TV、条件MAE、分子稳定和少步效果不是同一数学结论。",
+      "applicability": "33页正文/文献及A–E全部相关科学附录连续读完，28原页核验含12图/12表、完整理论与末三页随机分子。写作组织与主张证据边界审阅，附少量表值算术复核；不执行作者代码、复现实验、认证全部证明、计算量子属性或核验全部参考文献。ICML32篇归纳先导，正式留出未用。",
+      "confidence": {
+        "paper_specific": "high for read setup/tables and reproduced scalar arithmetic; theory queries unresolved",
+        "venue_wide": "low;32/50 pilot"
+      }
+    },
+    "evidence": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp6–9/15–19/29–33"
+      ],
+      "observation": "QM9与GEOM-DRUG、EDM/Semla分组，默认10k分子/三runs/SE；六属性classifier分半训练评价，补novelty、encoder随机/预训练、扰动dropout、低温CFG网格、时间和完整随机图。",
+      "editorial_advice": "代理classifier MAE与图caption MSE冲突需核；split细节和pretrain是否含test未完整说明。3runs SE不能改为STD/CI或默认独立重训。低温质量换多样性、分子数/步数/设备/两阶段成本逐项列，不以1000→100分子步数推出总10×快。",
+      "applicability": "33页正文/文献及A–E全部相关科学附录连续读完，28原页核验含12图/12表、完整理论与末三页随机分子。写作组织与主张证据边界审阅，附少量表值算术复核；不执行作者代码、复现实验、认证全部证明、计算量子属性或核验全部参考文献。ICML32篇归纳先导，正式留出未用。",
+      "confidence": {
+        "paper_specific": "high for read setup/tables and reproduced scalar arithmetic; theory queries unresolved",
+        "venue_wide": "low;32/50 pilot"
+      }
+    },
+    "discussion_limits": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp7–9/13–19"
+      ],
+      "observation": "结论紧接独立Limitation：encoder质量依赖，CFG约双资源；附录给train-rep与sample-rep偏移、UniMol/Frad差异与参数细节，说明实用收益依赖额外训练/正则。",
+      "editorial_advice": "主表默认92.32%与调参最佳93.9%不能混为同设置；低温/CFG降低unique，GEOM稳定与valid排名不一，Semla atomstab相等非严格提升。未来硬件降低开销不是已测事实。",
+      "applicability": "33页正文/文献及A–E全部相关科学附录连续读完，28原页核验含12图/12表、完整理论与末三页随机分子。写作组织与主张证据边界审阅，附少量表值算术复核；不执行作者代码、复现实验、认证全部证明、计算量子属性或核验全部参考文献。ICML32篇归纳先导，正式留出未用。",
+      "confidence": {
+        "paper_specific": "high for read setup/tables and reproduced scalar arithmetic; theory queries unresolved",
+        "venue_wide": "low;32/50 pilot"
+      }
+    },
+    "paragraph_language": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp4–9"
+      ],
+      "observation": "方法子标题定义对象、给loss、说明组合再理论；实验先setup/metric，再编号findings，图用矩阵显示tradeoff；理论underbrace标误差来源便于解释。",
+      "editorial_advice": "provable/can/arguably/expect层级保留，不将表示有用直觉写成训练必然最优。novelty与SE词义须解释，upper/lowerreference不是数学极限，不能为语气强删除coarse reference或differing criteria。",
+      "applicability": "33页正文/文献及A–E全部相关科学附录连续读完，28原页核验含12图/12表、完整理论与末三页随机分子。写作组织与主张证据边界审阅，附少量表值算术复核；不执行作者代码、复现实验、认证全部证明、计算量子属性或核验全部参考文献。ICML32篇归纳先导，正式留出未用。",
+      "confidence": {
+        "paper_specific": "high for read setup/tables and reproduced scalar arithmetic; theory queries unresolved",
+        "venue_wide": "low;32/50 pilot"
+      }
+    },
+    "main_appendix": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp1–33"
+      ],
+      "observation": "正文1–9、Impact9–10/文献10–12；A13–14算法/训练正则/采样，B14–16指标/资源/重评，C16–19比较/消融，D19–29完整unconditional/conditional理论，E29–33表示与随机分子图。",
+      "editorial_advice": "33页全部读完才计完整；末三页分子与带属性数图不能只读caption。外部相关科学全文附录未引用，作者代码/encoder/checkpoints未执行。数学查询与组织规则分开，不借发表地认证推导。",
+      "applicability": "33页正文/文献及A–E全部相关科学附录连续读完，28原页核验含12图/12表、完整理论与末三页随机分子。写作组织与主张证据边界审阅，附少量表值算术复核；不执行作者代码、复现实验、认证全部证明、计算量子属性或核验全部参考文献。ICML32篇归纳先导，正式留出未用。",
+      "confidence": {
+        "paper_specific": "high for read setup/tables and reproduced scalar arithmetic; theory queries unresolved",
+        "venue_wide": "low;32/50 pilot"
+      }
+    },
+    "actionable": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp5–9/13–33"
+      ],
+      "observation": "两阶段论文画清train/sampling与冻结组件，逐个界列支持/估计/离散/外部资源条件，实证用默认与调参tradeoff、对齐底座协议、全成本和反例约束摘要。",
+      "editorial_advice": "原创改写：GeoRCG improves several molecular quality metrics for the two evaluated base generators. In Table 3, the mean reduction in property error is 50.44% relative to EDM and 36.70% relative to the best listed prior result for each property. Fewer second-stage diffusion steps preserve much of the measured quality, while representation sampling and classifier-free guidance add costs.",
+      "applicability": "33页正文/文献及A–E全部相关科学附录连续读完，28原页核验含12图/12表、完整理论与末三页随机分子。写作组织与主张证据边界审阅，附少量表值算术复核；不执行作者代码、复现实验、认证全部证明、计算量子属性或核验全部参考文献。ICML32篇归纳先导，正式留出未用。",
+      "confidence": {
+        "paper_specific": "high for read setup/tables and reproduced scalar arithmetic; theory queries unresolved",
+        "venue_wide": "low;32/50 pilot"
+      }
+    }
+  },
+  "counterexamples": [
+    {
+      "position": "pp1–2/8–9 Table3",
+      "finding": "打印六个绿色百分比来自EDM，重新计算均值50.4389%；相对每属性最低已有生成模型(1.97,577,328,479,.844,.689)均值36.6962%，其中mu只有4.62%。不能写相对bestSOTA平均50%或多数属性误差减半；原始六scalar/脚本及两基准结果保留arithmetic-check.json，不是实验复现。Table3 caption MSE而B p15明确MAE，单位/指标名需作者统一。"
+    },
+    {
+      "position": "pp7–9/14/17–19 Tables1/2/4/5/8/9/12",
+      "finding": "主表QM9默认molstab92.32/valid96.52与网格最佳93.9/97.42不同参数，最佳V&U降86.82；表1 V&U92.45低于EquiFM93.5/GeoLDM92.7，GEOM atomstab84.3低于GCDM89/GeoLDM84.4，valid98.5低于99.3。Semla atomstab99.8持平；Frad84.4略高于UniMol84.3但valid低。Table12 conditional novelty联合比例50–52低于unconditional57–66且训练半/全不同，不能作已证同等新颖性或零记忆。"
+    },
+    {
+      "position": "pp8–9/14/16 Table6/Table9",
+      "finding": "1000→100主要是分子生成器步数，表示仍1000步并带corrector，CFG两次网络不能以step当NFE/总耗时。Table6同100步GeoRCG时间97+1481=1578秒对Semla610，约2.59倍成本；20步412对152约2.71倍。无CFG亦有表示成本，且质量设置不必相同。训练表示QM9约2.5天4090/DRUG4天A800，分子6天4090/10天双A800，encoder预训练另计；轻量/并行不等无成本。"
+    },
+    {
+      "position": "pp6/8/13–19 metrics/evaluation",
+      "finding": "valid/valency/MMFFstrain/bondW1是代理非药效或实测化学稳定；EGNN classifier lowerreference的平均误差不是所有生成分布的数学下界，Random也非最大可能误差。V&Unique文字分母与Table8Uniqueness需对齐；train/test参考分布在BondLength定义中两种说法并存。Table7 sampler valid89.12与Table11同baseline valid93.69/V&U89.12疑似指标标签冲突。LDM-3DG重新推断bond/不使用本身2D信息且N无法匹配，只作coarse参考，不能公平全流程排名。"
+    },
+    {
+      "position": "pp4–6/13–14/18/29–33 practicalscope",
+      "finding": "默认N条件及q(N,c)训练联合分布需保留，不代表任意属性外推/任意N成立。GEOM encoder额外包含GEOM预训练，需明确split避免暗称全独立外部知识；tSNE/小Silhouette(标值×100)不证高维TV小或表示充分，Fig12仍有71.5→64.27等大偏差。rep噪声std.3/.3–.5不能写variance.3；rep-loss仅Semla。temperature仅简化toy严格、一般分布近似，CFG w=-.9为弱权重而不是w0或正强guidance；pfake/dropout/rep-loss精确系数及测试调参/SE来自重训还是重复采样需查。"
+    },
+    {
+      "position": "pp5/20–24 Proposition3.1/D.4–D.14",
+      "finding": "invariant边缘本身不足保证任意附加condition网络不破坏对称性，须逐r的conditionalkernel equivariance。D.10忽略r是模型类包含性/存在性，不能保证所训练模型误差不高；D.12条件score更小是解释并未由定理推出严格epsilon大小。需要conditional/mixture的Lipschitz、moments、finiteKL和p_phi支持，只有unconditionalscore假设不能直接搬去每个q(x|r)；deterministicE和离散原子t0处密度正则也需澄清。dr低维不自动验证，T/Nd变化时L/epsilon非固定，未证每少步或flow同界。"
+    },
+    {
+      "position": "pp21–25 D.5/D.9/D.12/D.14",
+      "finding": "D.5 Eq19对r条件缺失，Eq20→21平方score的全期望替换需带常数，不能逐项恒等。D.9按抽取r的固定drift与unconditionalreverse过程耦合需补说明；D.12 q0phi对应moments/score条件及归一化A、完美p_phi时文字缺q0需核。D.13 xt/ht给定clean独立不推出只给r的联合score可换两个边缘score。D.14 alpha比值需明确群变换概率/TV0情形，ratio/data processing不自动证明equivariance达到minimum。只列作者核对，不以本次组织审阅认证全证明或宣告所有定理失效。"
+    },
+    {
+      "position": "pp25–29 D.15–D.18/conditionalextension",
+      "finding": "条件理论需linearreward+Gaussiannoise，具体式又用Gaussianr、lambda_min、earlystop和distribution-shift，不能统称mild适用于任意几何encoder/所有分子性质。D.16 fhat underqa=Ea[a]、r=rperp与平行支持及E3符号需核；D.17 E1分布qa→phat的近似不可省，Eq72条件高斯均值因子缺逆、nu²噪声与nu量纲、65/73范数平方不一需核。D.18 a乘因子对负/零target及t0/boundedreward条件、D.2.3条件充分性x独立y给r需说明。固定确定性r=E(x)时I(x,r;y)=I(x;y)，计算上更易提取不等额外Shannon信息；H(r)>H(y)或w稀疏也非更小scoreerror证明。"
+    }
+  ],
+  "arithmetic_check": {
+    "script": "07-research/2026-10-21-论文写作风格全量续研_证据/icml-032/check_arithmetic.py",
+    "result": "07-research/2026-10-21-论文写作风格全量续研_证据/icml-032/arithmetic-check.json",
+    "scope": "Table3 six reportednumbers andTable6 timingadditions/ratios only; no code/experimentreplication"
+  },
+  "visual_review": {
+    "pages": [
+      2,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33
+    ],
+    "source": "115dpi originalpagePopplerimages directlyviewed, all12Figures/12Tables, complete theoreticalquerypages and all120randomsample panels",
+    "policy": "delete28renders+duplicateextract after record; canonicalPDF/primaryMD only ignoredskilltmp"
+  },
+  "official_requirements": [],
+  "holdout_validation": null,
+  "review_limitations": "33页正文/文献及A–E全部相关科学附录连续读完，28原页核验含12图/12表、完整理论与末三页随机分子。写作组织与主张证据边界审阅，附少量表值算术复核；不执行作者代码、复现实验、认证全部证明、计算量子属性或核验全部参考文献。ICML32篇归纳先导，正式留出未用。"
+}

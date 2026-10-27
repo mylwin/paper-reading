@@ -1,0 +1,87 @@
+{
+  "source": "locked official PDF pp8/9 Tables3/6; rounded printed scalars only",
+  "property_names": [
+    "alpha",
+    "gap",
+    "HOMO",
+    "LUMO",
+    "mu",
+    "Cv"
+  ],
+  "ours": [
+    0.86,
+    325.2,
+    202.2,
+    257.9,
+    0.805,
+    0.475
+  ],
+  "edm": [
+    2.76,
+    655,
+    356,
+    584,
+    1.111,
+    1.101
+  ],
+  "best_listed_prior_per_property": [
+    1.97,
+    577,
+    328,
+    479,
+    0.844,
+    0.689
+  ],
+  "relative_to_edm": {
+    "property_reductions_percent": [
+      68.84057971014494,
+      50.35114503816794,
+      43.20224719101124,
+      55.839041095890416,
+      27.542754275427537,
+      56.857402361489555
+    ],
+    "unweighted_mean_percent": 50.43886161202193
+  },
+  "relative_to_per_property_best_listed_prior": {
+    "property_reductions_percent": [
+      56.345177664974614,
+      43.639514731369154,
+      38.35365853658537,
+      46.15866388308978,
+      4.620853080568711,
+      31.059506531204644
+    ],
+    "unweighted_mean_percent": 36.69622907129871
+  },
+  "timing_ratios": [
+    {
+      "steps": 100,
+      "baseline_seconds": 610,
+      "representation_seconds": 97,
+      "molecule_with_cfg_seconds": 1481,
+      "molecule_without_cfg_seconds": 770,
+      "total_with_cfg_over_baseline": 2.586885245901639,
+      "total_without_cfg_over_baseline": 1.4213114754098362
+    },
+    {
+      "steps": 50,
+      "baseline_seconds": 310,
+      "representation_seconds": 97,
+      "molecule_with_cfg_seconds": 690,
+      "molecule_without_cfg_seconds": 380,
+      "total_with_cfg_over_baseline": 2.5387096774193547,
+      "total_without_cfg_over_baseline": 1.538709677419355
+    },
+    {
+      "steps": 20,
+      "baseline_seconds": 152,
+      "representation_seconds": 97,
+      "molecule_with_cfg_seconds": 315,
+      "molecule_without_cfg_seconds": 189,
+      "total_with_cfg_over_baseline": 2.710526315789474,
+      "total_without_cfg_over_baseline": 1.881578947368421
+    }
+  ],
+  "limits": "Simple arithmetic, no inference of significance/MAE-vs-MSE resolution, no reproduction or parametermatched quality comparison. Prior-best excludes dataset/random/N-only references and ours; chooses each prior metric minimum."
+}

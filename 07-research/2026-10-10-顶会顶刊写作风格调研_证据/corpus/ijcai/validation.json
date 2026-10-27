@@ -1,25 +1,31 @@
 {
-  "updated": "2026-10-11",
+  "updated": "2026-10-21",
   "counts": {
     "locked": 50,
     "pdf_acquired": 50,
     "text_parsed": 50,
-    "main_text_style_reviewed": 2,
-    "full_text_and_relevant_appendix_reviewed": 2,
-    "induction_complete": 1,
+    "main_text_style_reviewed": 5,
+    "full_text_and_relevant_appendix_reviewed": 5,
+    "induction_complete": 4,
     "holdout_complete": 1
   },
-  "full_text_and_relevant_appendix_review_count": 2,
+  "full_text_and_relevant_appendix_review_count": 5,
   "complete_review_ids": [
+    "ijcai-2024-01",
     "ijcai-2024-23",
+    "ijcai-2025-01",
+    "ijcai-2025-02",
     "ijcai-2025-25"
   ],
   "main_text_review_ids": [
+    "ijcai-2024-01",
     "ijcai-2024-23",
+    "ijcai-2025-01",
+    "ijcai-2025-02",
     "ijcai-2025-25"
   ],
   "acceptance_status": "in_progress; 50 complete per venue not achieved",
-  "holdout_validation_status": "locked10; complete40induction+10holdoutvalidation notachieved",
+  "holdout_validation_status": "unchanged:1 pilot holdout read;40induction/10independentholdout acceptance notachieved",
   "holdout_progress": [
     {
       "id": "ijcai-2024-05",
@@ -71,5 +77,6 @@
       "review_status": "continuous published full-text semantic style review complete; referenced external appendix not applicable",
       "full_and_appendix_complete": true
     }
-  ]
+  ],
+  "current_batch": "07-research/2026-10-21-顶会顶刊写作风格全文续研_证据/batch-ledger.json"
 }

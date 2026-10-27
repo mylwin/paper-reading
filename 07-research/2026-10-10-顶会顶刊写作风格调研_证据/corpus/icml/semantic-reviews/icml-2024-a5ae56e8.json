@@ -1,0 +1,224 @@
+{
+  "id": "icml-2024-a5ae56e8",
+  "venue": "icml",
+  "year": 2024,
+  "split": "induction",
+  "title": "Learning Iterative Reasoning through Energy Diffusion",
+  "authors": "Yilun Du, Jiayuan Mao, Joshua B. Tenenbaum",
+  "review_date": "2026-10-21",
+  "paper_type": "empirical energy-based iterative reasoning across continuous/discrete tasks and one-step planning",
+  "semantic_review_status": "complete_writing_focused_review",
+  "full_text_style_review_complete": true,
+  "external_appendix_review_complete": true,
+  "count_eligible_full_text_and_relevant_appendix": true,
+  "pdf_path": ".claude/skills/paper-writing-shared/tmp/corpus/icml/pdf/Learning Iterative Reasoning through Energy Diffusion.pdf",
+  "markdown_path": ".claude/skills/paper-writing-shared/tmp/corpus/icml/markdown/Learning Iterative Reasoning through Energy Diffusion.md",
+  "pdf_sha256": "f8348abcc56307cd6cd502c4786cb0dab9dc11feaa5bc2d012661bca2051373c",
+  "coverage": [
+    {
+      "asset": "lockedofficialPMLRPDF",
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13
+      ],
+      "sections": "Abstract/Introduction;RelatedWorkoptimization,iterativecomputation,EBMdiffusion;Method3.1–3.4Eq1–5/Algorithms1–2;Experiments4.1continuous4.2discrete4.3planning;ConclusionandDiscussions/limitations;Acknowledgements/Impact;References;AppendixAexperimentalsettings;BarchitecturesTables8–12",
+      "method": "continuousallpageincludingreferencesandA/Bappendices"
+    }
+  ],
+  "version_audit": {
+    "official_landing": "https://proceedings.mlr.press/v235/du24f.html",
+    "official_pdf": "https://raw.githubusercontent.com/mlresearch/v235/main/assets/du24f/du24f.pdf",
+    "version": "official proceedings PDF; exact bytes locked by SHA256",
+    "identity": "title/authors/year/PMLRheaderandlockedSHAverified",
+    "new_network_fetch": false
+  },
+  "supplement_audit": {
+    "status": "A/B scientificappendicesallreadinsamePDF;noexternalmanuscriptappendixpointer",
+    "code_artifacts": "linked/attachedcodeisnotexecutedorreviewed;notcountedasomittedtextappendix",
+    "qualification": "no freshwebpageaudit;doesnotexcludeunlistedmaterial"
+  },
+  "ten_dimensions": {
+    "reader_argument": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp1–3"
+      ],
+      "observation": "用任务图展示统一能量求解框架，再解释退火景观和两类监督；读者需区分学习任务约束与直接使用手工精确求解器。",
+      "editorial_advice": "写清泛化轴：数值幅度、给定Sudoku数字、图规模，不概括成任意逻辑推理。",
+      "applicability": "有限合成/benchmark任务的作者报告结果；没有一般正确求解保证、独立证明或复现实验。",
+      "confidence": {
+        "paper_specific": "high for inspected organization/marks,not result correctness",
+        "venue_wide": "low;pilot8/50"
+      }
+    },
+    "title_abstract": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp1–2 Abstract"
+      ],
+      "observation": "标题突出迭代推理与energy diffusion，摘要以问题设定、增加计算、两种技巧、三类任务组织；不以单一SOTA数字叙述。",
+      "editorial_advice": "摘要保持三类任务的具体范围，理论最优或所有域能力不能由框架通用性推导。",
+      "applicability": "有限合成/benchmark任务的作者报告结果；没有一般正确求解保证、独立证明或复现实验。",
+      "confidence": {
+        "paper_specific": "high for inspected organization/marks,not result correctness",
+        "venue_wide": "low;pilot8/50"
+      }
+    },
+    "introduction": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp1–3"
+      ],
+      "observation": "先承认旧EBM框架来源，再将训练反传开销和景观难度对应到退火与局部梯度/对比监督；无固定编号贡献列表。",
+      "editorial_advice": "贡献明确继承与差异，不以energy-based这一总概念冒称首次。",
+      "applicability": "有限合成/benchmark任务的作者报告结果；没有一般正确求解保证、独立证明或复现实验。",
+      "confidence": {
+        "paper_specific": "high for inspected organization/marks,not result correctness",
+        "venue_wide": "low;pilot8/50"
+      }
+    },
+    "related_work": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp2–3 §2"
+      ],
+      "observation": "独立RelatedWork按优化求解、迭代神经计算、EBM/diffusion组织，说明domain-specific与通用学习约束的区别。",
+      "editorial_advice": "比较按任务规格与学习假设，不把不提供规格的模型与精确算法的性能直接并列。",
+      "applicability": "有限合成/benchmark任务的作者报告结果；没有一般正确求解保证、独立证明或复现实验。",
+      "confidence": {
+        "paper_specific": "high for inspected organization/marks,not result correctness",
+        "venue_wide": "low;pilot8/50"
+      }
+    },
+    "method_theory": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp3–5 Eq1–5/Algorithms1–2"
+      ],
+      "observation": "先能量argmin与梯度下降，再退火景观、score监督与contrastive shaping，训练/预测并列伪代码。",
+      "editorial_advice": "把训练梯度监督与推理多步优化分开；局部训练目标不自动保证全局正确能量最小值。",
+      "applicability": "有限合成/benchmark任务的作者报告结果；没有一般正确求解保证、独立证明或复现实验。",
+      "confidence": {
+        "paper_specific": "high for inspected organization/marks,not result correctness",
+        "venue_wide": "low;pilot8/50"
+      }
+    },
+    "evidence": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp5–9 Tables1–7,Figures3–7"
+      ],
+      "observation": "连续、离散、规划各自设置、结果、可视化、计算步数/模块消融；不同任务用MSE、解题准确率和下一步指标。",
+      "editorial_advice": "逐任务保留指标定义、同分布/更难分布，不能统一改成accuracy或完整规划成功。",
+      "applicability": "有限合成/benchmark任务的作者报告结果；没有一般正确求解保证、独立证明或复现实验。",
+      "confidence": {
+        "paper_specific": "high for inspected organization/marks,not result correctness",
+        "venue_wide": "low;pilot8/50"
+      }
+    },
+    "discussion_limits": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp7,9"
+      ],
+      "observation": "正文说明无效Sudoku可能比真解更低能；结论承认多步计算慢、可能不如专用算法、无额外记忆；其他推理/RL是未来扩展。",
+      "editorial_advice": "保留失败和推理开销；不能由低能量或更多步骤断言必定得到合法解。",
+      "applicability": "有限合成/benchmark任务的作者报告结果；没有一般正确求解保证、独立证明或复现实验。",
+      "confidence": {
+        "paper_specific": "high for inspected organization/marks,not result correctness",
+        "venue_wide": "low;pilot8/50"
+      }
+    },
+    "paragraph_language": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp2,7–9"
+      ],
+      "observation": "全局“outperforms all”与表中同分布RRN更好存在范围差别；maximizes与主文argmin不一致，伪代码变量也需核对。",
+      "editorial_advice": "以表和正式目标收紧量词；对max/min或变量修改单列实质性作者核对项。",
+      "applicability": "有限合成/benchmark任务的作者报告结果；没有一般正确求解保证、独立证明或复现实验。",
+      "confidence": {
+        "paper_specific": "high for inspected organization/marks,not result correctness",
+        "venue_wide": "low;pilot8/50"
+      }
+    },
+    "main_appendix": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp1–13"
+      ],
+      "observation": "主文到p9，文献pp10–11，A/B pp12–13分别设置和模型结构；列训练时长、batch、optimizer、graph generation和不同head。",
+      "editorial_advice": "附录保留任务特定设置和基线结构差异，代码另附不等于已经运行验证。",
+      "applicability": "有限合成/benchmark任务的作者报告结果；没有一般正确求解保证、独立证明或复现实验。",
+      "confidence": {
+        "paper_specific": "high for inspected organization/marks,not result correctness",
+        "venue_wide": "low;pilot8/50"
+      }
+    },
+    "actionable": {
+      "category": "corpus_observation",
+      "positions": [
+        "p7 Table4;p8 §4.3;p9 limitations"
+      ],
+      "observation": "同分布RRN99.8高于IRED99.4/98.3；规划测第一步缩短距离；硬测试集优势不能写成全设置领先。",
+      "editorial_advice": "原创示例：IRED improves the harder-distribution results, while a recurrent baseline remains stronger on the standard Sudoku tests. The planning metric evaluates the next action rather than full-path optimality.",
+      "applicability": "有限合成/benchmark任务的作者报告结果；没有一般正确求解保证、独立证明或复现实验。",
+      "confidence": {
+        "paper_specific": "high for inspected organization/marks,not result correctness",
+        "venue_wide": "low;pilot8/50"
+      }
+    }
+  },
+  "counterexamples": [
+    {
+      "position": "p7 Table4",
+      "finding": "普通/visual Sudoku的RRN为99.8%，IRED分别99.4%/98.3%；harder测试IRED更高。",
+      "action": "保留难度条件，删除“所有设置超过所有基线”的泛化。"
+    },
+    {
+      "position": "p8 §4.3",
+      "finding": "规划只评首个动作是否缩短到goal的距离，不评完整路径最优性或完整闭环到达率。"
+    },
+    {
+      "position": "p7 failurediscussion;p9 limitations",
+      "finding": "错误Sudoku有时得到更低能量；低能量与推理正确性并非等价。"
+    },
+    {
+      "position": "p8 Table7",
+      "finding": "仅改成gradient descent的一行比no/no/no在same/harder都略低；不能说每个模块单独在所有任务改善。"
+    },
+    {
+      "position": "p2 Introduction;p4 Eq1;p5 Algorithm2",
+      "finding": "引言maximizes与正式argmin冲突，算法接受步的yi变量与候选变量记号不一致；原版可见。",
+      "action": "保留作者核对，语言润色不静默改符号或伪代码。"
+    }
+  ],
+  "visual_review": {
+    "pages": [
+      2,
+      4,
+      5,
+      7,
+      8,
+      9,
+      12,
+      13
+    ],
+    "source": "115dpiPopplerrendersthen directview_image",
+    "policy": "regenerablerenderstodeleteafterrecordsaved"
+  },
+  "holdout_validation": null,
+  "official_requirements": [],
+  "review_limitations": "有限合成/benchmark任务的作者报告结果；没有一般正确求解保证、独立证明或复现实验。"
+}

@@ -1,0 +1,46 @@
+\documentclass{article}
+\usepackage[margin=22mm]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\pagestyle{empty}
+\begin{document}
+\noindent
+This is an experimental SPS-inspired candidate, not an algorithm
+or convergence theorem established by the MomSPS paper.
+It updates one matrix parameter with no weight decay or Nesterov term.
+Define $\langle A,B\rangle_F=\sum_{i,j}A_{ij}B_{ij}$.
+
+\begin{algorithm}[ht]
+\caption{SPS-inspired Muon candidate with a direction safeguard}
+\begin{algorithmic}[1]
+\Require $W_0$, $0\le\beta<1$, $c\ge1$, $\eta_{\max}>0$, $T$
+\Require Valid batch loss lower bounds $\ell_t$
+\Ensure $W_T$
+\State $B_{-1}\gets 0$
+\For{$t=0,\ldots,T-1$}
+  \State Sample a mini-batch $S_t$
+  \State $L_t\gets f_{S_t}(W_t)$
+  \State $G_t\gets\nabla_W f_{S_t}(W_t)$
+  \State $\Delta_t\gets L_t-\ell_t$
+  \State $B_t\gets\beta B_{t-1}+G_t$
+  \If{$\Vert G_t\Vert_F=0$}
+    \State $W_{t+1}\gets W_t$
+    \State \textbf{continue}
+  \EndIf
+  \If{$\Vert B_t\Vert_F=0$}
+    \State $D_t\gets G_t$
+  \Else
+    \State $D_t\gets\operatorname{NewtonSchulz5}(B_t)$
+  \EndIf
+  \State $a_t\gets\langle G_t,D_t\rangle_F$
+  \If{$a_t\le0$}
+    \State $D_t\gets G_t$ \Comment{Experimental gradient fallback}
+    \State $a_t\gets\Vert G_t\Vert_F^2$
+  \EndIf
+  \State $\eta_t\gets\min\{\Delta_t/(c a_t),\eta_{\max}\}$
+  \State $W_{t+1}\gets W_t-\eta_tD_t$
+\EndFor
+\end{algorithmic}
+\end{algorithm}
+\end{document}

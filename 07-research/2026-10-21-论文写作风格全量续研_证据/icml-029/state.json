@@ -1,0 +1,173 @@
+{
+  "date": "2026-10-22",
+  "batch": "icml-029",
+  "status": "registered",
+  "selection": "same locked sample;processingorderonly",
+  "before": {
+    "updated": "2026-10-22",
+    "status": "in_progress",
+    "venues": [
+      {
+        "venue": "aaai",
+        "locked": 50,
+        "pdf_acquired": 50,
+        "text_parsed": 50,
+        "main_text_style_reviewed": 5,
+        "full_text_and_relevant_appendix_reviewed": 4,
+        "induction_complete": 4,
+        "holdout_complete": 0
+      },
+      {
+        "venue": "colt",
+        "locked": 50,
+        "pdf_acquired": 50,
+        "text_parsed": 50,
+        "main_text_style_reviewed": 2,
+        "full_text_and_relevant_appendix_reviewed": 1,
+        "induction_complete": 0,
+        "holdout_complete": 1
+      },
+      {
+        "venue": "iclr",
+        "locked": 50,
+        "pdf_acquired": 50,
+        "text_parsed": 50,
+        "main_text_style_reviewed": 1,
+        "full_text_and_relevant_appendix_reviewed": 1,
+        "induction_complete": 1,
+        "holdout_complete": 0
+      },
+      {
+        "venue": "icml",
+        "locked": 50,
+        "pdf_acquired": 50,
+        "text_parsed": 50,
+        "main_text_style_reviewed": 28,
+        "full_text_and_relevant_appendix_reviewed": 28,
+        "induction_complete": 28,
+        "holdout_complete": 0
+      },
+      {
+        "venue": "ijcai",
+        "locked": 50,
+        "pdf_acquired": 50,
+        "text_parsed": 50,
+        "main_text_style_reviewed": 5,
+        "full_text_and_relevant_appendix_reviewed": 5,
+        "induction_complete": 4,
+        "holdout_complete": 1
+      },
+      {
+        "venue": "jmlr",
+        "locked": 50,
+        "pdf_acquired": 50,
+        "text_parsed": 50,
+        "main_text_style_reviewed": 4,
+        "full_text_and_relevant_appendix_reviewed": 4,
+        "induction_complete": 3,
+        "holdout_complete": 1
+      },
+      {
+        "venue": "neurips",
+        "locked": 50,
+        "pdf_acquired": 50,
+        "text_parsed": 50,
+        "main_text_style_reviewed": 2,
+        "full_text_and_relevant_appendix_reviewed": 2,
+        "induction_complete": 2,
+        "holdout_complete": 0
+      },
+      {
+        "venue": "tai",
+        "locked": 50,
+        "pdf_acquired": 24,
+        "text_parsed": 24,
+        "main_text_style_reviewed": 4,
+        "full_text_and_relevant_appendix_reviewed": 2,
+        "induction_complete": 2,
+        "holdout_complete": 0
+      },
+      {
+        "venue": "tmlr",
+        "locked": 50,
+        "pdf_acquired": 3,
+        "text_parsed": 3,
+        "main_text_style_reviewed": 2,
+        "full_text_and_relevant_appendix_reviewed": 1,
+        "induction_complete": 1,
+        "holdout_complete": 0
+      },
+      {
+        "venue": "tnnls",
+        "locked": 50,
+        "pdf_acquired": 26,
+        "text_parsed": 26,
+        "main_text_style_reviewed": 1,
+        "full_text_and_relevant_appendix_reviewed": 1,
+        "induction_complete": 0,
+        "holdout_complete": 1
+      },
+      {
+        "venue": "tpami",
+        "locked": 50,
+        "pdf_acquired": 26,
+        "text_parsed": 26,
+        "main_text_style_reviewed": 1,
+        "full_text_and_relevant_appendix_reviewed": 1,
+        "induction_complete": 1,
+        "holdout_complete": 0
+      }
+    ],
+    "totals": {
+      "locked": 550,
+      "pdf_acquired": 429,
+      "text_parsed": 429,
+      "main_text_style_reviewed": 55,
+      "full_text_and_relevant_appendix_reviewed": 50,
+      "induction_complete": 46,
+      "holdout_complete": 4
+    },
+    "remaining_full_review": 500,
+    "qualification": "Continuous PDF prose/style review is not proof/code audit or experiment replication. Accepted author/published-header deposits may support writing organization, not final typesetting. Referenced unreviewed external appendices excluded from full count.",
+    "known_ineligible_locked_slots": 0,
+    "eligibility_note": "550 active positions after one documented nonresearch slot repair; original lock/history preserved. This is not certification of every remaining candidate qualification.",
+    "excluded_historical_nonresearch_records": 1
+  },
+  "papers": [
+    {
+      "title": "Devil is in the Details: Density Guidance for Detail-Aware Generation with Flow Models",
+      "authors": "Rafal Karczewski, Markus Heinonen, Vikas K Garg",
+      "landing_url": "https://proceedings.mlr.press/v267/karczewski25a.html",
+      "pdf_url": "https://raw.githubusercontent.com/mlresearch/v267/main/assets/karczewski25a/karczewski25a.pdf",
+      "venue": "icml",
+      "year": 2025,
+      "track": "main conference research",
+      "official_listing_url": "https://proceedings.mlr.press/v267/",
+      "sampling_stratum": "generative",
+      "paper_type": "pending semantic classification",
+      "split": "induction",
+      "id": "icml-2025-70f7fda5",
+      "paper_stem": "Devil is in the Details- Density Guidance for Detail-Aware Generation with Flow Models",
+      "asset_reused": false,
+      "pdf_path": ".claude/skills/paper-writing-shared/tmp/corpus/icml/pdf/Devil is in the Details- Density Guidance for Detail-Aware Generation with Flow Models.pdf",
+      "pdf_sha256": "8ab7f4183ecda206e5616a81e28c952dac99c8416dd607da2a5e1af4876dbc86",
+      "pdf_version": "official proceedings PDF; exact bytes locked by SHA256",
+      "download_status": "available",
+      "markdown_path": ".claude/skills/paper-writing-shared/tmp/corpus/icml/markdown/Devil is in the Details- Density Guidance for Detail-Aware Generation with Flow Models.md",
+      "parse_status": "complete text extraction",
+      "semantic_review_status": "pending",
+      "reviewed_pages": [],
+      "appendix_review_status": "pending",
+      "structure": [],
+      "claims": [],
+      "counterexamples": [],
+      "semantic_review": null,
+      "transient_extraction": ".claude/skills/paper-writing-shared/tmp/full-review/icml-029/icml-2025-70f7fda5.txt",
+      "page_count": 30
+    }
+  ],
+  "cache": ".claude/skills/paper-writing-shared/tmp/full-review/icml-029",
+  "baseline_records_sha256": "38eda12a090fa39d9167e81daff204be7088e74050f90491591e8a0085615cb3",
+  "baseline_icml_profile_sha256": "ddf203d6031fb25d47775d5babba4a95bc45ac5eaf77827c48f02a5f9fc8a9eb",
+  "after_full": 51
+}

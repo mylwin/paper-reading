@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-12",
+  "updated": "2026-10-23",
   "status": "in_progress",
   "venues": [
     {
@@ -37,9 +37,9 @@
       "locked": 50,
       "pdf_acquired": 50,
       "text_parsed": 50,
-      "main_text_style_reviewed": 4,
-      "full_text_and_relevant_appendix_reviewed": 4,
-      "induction_complete": 4,
+      "main_text_style_reviewed": 36,
+      "full_text_and_relevant_appendix_reviewed": 36,
+      "induction_complete": 36,
       "holdout_complete": 0
     },
     {
@@ -47,9 +47,9 @@
       "locked": 50,
       "pdf_acquired": 50,
       "text_parsed": 50,
-      "main_text_style_reviewed": 2,
-      "full_text_and_relevant_appendix_reviewed": 2,
-      "induction_complete": 1,
+      "main_text_style_reviewed": 5,
+      "full_text_and_relevant_appendix_reviewed": 5,
+      "induction_complete": 4,
       "holdout_complete": 1
     },
     {
@@ -117,12 +117,12 @@
     "locked": 550,
     "pdf_acquired": 429,
     "text_parsed": 429,
-    "main_text_style_reviewed": 28,
-    "full_text_and_relevant_appendix_reviewed": 23,
-    "induction_complete": 19,
+    "main_text_style_reviewed": 63,
+    "full_text_and_relevant_appendix_reviewed": 58,
+    "induction_complete": 54,
     "holdout_complete": 4
   },
-  "remaining_full_review": 527,
+  "remaining_full_review": 492,
   "qualification": "Continuous PDF prose/style review is not proof/code audit or experiment replication. Accepted author/published-header deposits may support writing organization, not final typesetting. Referenced unreviewed external appendices excluded from full count.",
   "known_ineligible_locked_slots": 0,
   "eligibility_note": "550 active positions after one documented nonresearch slot repair; original lock/history preserved. This is not certification of every remaining candidate qualification.",

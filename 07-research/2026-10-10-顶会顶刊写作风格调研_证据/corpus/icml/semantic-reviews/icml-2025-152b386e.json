@@ -1,0 +1,262 @@
+{
+  "id": "icml-2025-152b386e",
+  "venue": "icml",
+  "year": 2025,
+  "split": "induction",
+  "title": "Sparse Spectral Training and Inference on Euclidean and Hyperbolic Neural Networks",
+  "authors": "Jialin Zhao, Yingtao Zhang, Xinghang Li, Huaping Liu, Carlo Vittorio Cannistraci",
+  "pdf_path": ".claude/skills/paper-writing-shared/tmp/corpus/icml/pdf/Sparse Spectral Training and Inference on Euclidean and Hyperbolic Neural Networks.pdf",
+  "markdown_path": ".claude/skills/paper-writing-shared/tmp/corpus/icml/markdown/Sparse Spectral Training and Inference on Euclidean and Hyperbolic Neural Networks.md",
+  "pdf_sha256": "fa8a0d61615efd362d297ec53caeabf07df201632d5bf83061d674336e52dfc8",
+  "review_date": "2026-10-22",
+  "paper_type": "spectral parameter-efficient pretraining method with Euclidean/hyperbolic neural experiments, ablations and resource trade-off/pruning analyses",
+  "semantic_review_status": "complete_writing_focused_review",
+  "full_text_style_review_complete": true,
+  "external_appendix_review_complete": true,
+  "count_eligible_full_text_and_relevant_appendix": true,
+  "coverage": [
+    {
+      "asset": "locked official PMLR PDF",
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27
+      ],
+      "sections": "Abstract; Introduction; RelatedWork; LoRA3.1/ReLoRA*3.2/GaLore3.3; SST4.1–4.6; Experiments5.1–5.4; Conclusion/Discussion/Acknowledgements/Impact/References; A/B/C/D/E.1–E.4/F/G/H/I/J/K/L; Tables1–25/Figures1–8; all pseudocode and gradient derivation",
+      "method": "continuous27page text read then21originalpage images inspected, including all eight figures and source discrepancies"
+    }
+  ],
+  "version_audit": {
+    "official_landing": "https://proceedings.mlr.press/v267/zhao25ah.html",
+    "official_pdf": "https://raw.githubusercontent.com/mlresearch/v267/main/assets/zhao25ah/zhao25ah.pdf",
+    "version": "official proceedings PDF; exact bytes locked by SHA256",
+    "identity": "title/authors/PMLR267/year and lockedSHA",
+    "new_network_fetch": false,
+    "qualification": "cached officialpaper; not latestmethod/sourcecode verification"
+  },
+  "supplement_audit": {
+    "status": "A–L related scientific appendices all in same27pagePDF fully read",
+    "external_scientific_appendix_referenced": false,
+    "code_artifacts": "external implementation/code references not executed or independently audited"
+  },
+  "ten_dimensions": {
+    "reader_argument": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp1–3"
+      ],
+      "observation": "由预训练显存瓶颈到固定低秩/周期merge限制，再以完整谱因子与稀疏激活更新解决；跨Euclidean/hyperbolic任务强调表示范围。",
+      "editorial_advice": "parameter-efficient指活跃梯度/优化器参数而非模型整体低秩或稀疏存储。任务与几何覆盖是有限实验范围，不写普遍架构保证。",
+      "applicability": "27页正文、文献与A–L全部连续读完，21原页核验含全部八幅科学图。写作组织/主张证据审阅，不执行代码、认证优化理论或复现时间/显存/评测。ICML23篇归纳先导，正式留出未用。",
+      "confidence": {
+        "paper_specific": "high for inspected printed scope/results; no independent optimization or resource guarantee",
+        "venue_wide": "low;23/50 pilot"
+      }
+    },
+    "title_abstract": {
+      "category": "corpus_observation",
+      "positions": [
+        "p1"
+      ],
+      "observation": "题名同时覆盖训练/推理与两类几何，摘要用挑战、SST机制和LLaMA1.3B的18.7%活跃参数/97.4%gap缩小落地。",
+      "editorial_advice": "97.4%是相对所选低秩对照缩小与Full的PPL差距，不是PPL下降97.4%、18.7%总显存或绝对节省。推理主要合并W或谱剪枝分析，不补未测吞吐。",
+      "applicability": "27页正文、文献与A–L全部连续读完，21原页核验含全部八幅科学图。写作组织/主张证据审阅，不执行代码、认证优化理论或复现时间/显存/评测。ICML23篇归纳先导，正式留出未用。",
+      "confidence": {
+        "paper_specific": "high for inspected printed scope/results; no independent optimization or resource guarantee",
+        "venue_wide": "low;23/50 pilot"
+      }
+    },
+    "introduction": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp1–2"
+      ],
+      "observation": "贡献由机制叙述转到LLM/translation/HGNN各自gap指标，代码入口给可追踪路径；没有单独Contribution小节。",
+      "editorial_advice": "不机械要求贡献bullet。每个平均gap写明基线、任务、rank及分母，整体avg好不允许所有场景更好；first hyperbolic为作者定位未独立穷尽文献。",
+      "applicability": "27页正文、文献与A–L全部连续读完，21原页核验含全部八幅科学图。写作组织/主张证据审阅，不执行代码、认证优化理论或复现时间/显存/评测。ICML23篇归纳先导，正式留出未用。",
+      "confidence": {
+        "paper_specific": "high for inspected printed scope/results; no independent optimization or resource guarantee",
+        "venue_wide": "low;23/50 pilot"
+      }
+    },
+    "related_work": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp2–3; p14 B; pp19/24 G/L"
+      ],
+      "observation": "独立Related Work按low-rank与hyperbolic分两类，随后专节Formalize LoRA/ReLoRA*/GaLore，其他PEFT及新增DoRA/VeRA放附录。",
+      "editorial_advice": "ReLoRA*删除warmstart、全reset不同原ReLoRA，不能用星号基线结果贬称原方法；低rankGaLore/α调参条件紧邻比较，非所有rank结论。",
+      "applicability": "27页正文、文献与A–L全部连续读完，21原页核验含全部八幅科学图。写作组织/主张证据审阅，不执行代码、认证优化理论或复现时间/显存/评测。ICML23篇归纳先导，正式留出未用。",
+      "confidence": {
+        "paper_specific": "high for inspected printed scope/results; no independent optimization or resource guarantee",
+        "venue_wide": "low;23/50 pilot"
+      }
+    },
+    "method_theory": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp2–6 Eq1–11; pp14–16 A/D/E.1"
+      ],
+      "observation": "完整UΣV替代W；Σ全更新clip非负，采样r方向、去Σ缩放的增强梯度、归一化、周期reSVD；active/frozen交换减少optimizer state。附录给链式梯度和hyperbolic层。",
+      "editorial_advice": "实际p(i)=0.5(1/m+Σi/sumΣ)，非正文纯权重；每iteration全state reset+warmup，T1/T2/T3分清。增强梯度不是原chain rule，也无收敛定理。U/V重SVD前可失正交，不一直称真实奇异向量；multinomial与无重复固定r需核对实现。",
+      "applicability": "27页正文、文献与A–L全部连续读完，21原页核验含全部八幅科学图。写作组织/主张证据审阅，不执行代码、认证优化理论或复现时间/显存/评测。ICML23篇归纳先导，正式留出未用。",
+      "confidence": {
+        "paper_specific": "high for inspected printed scope/results; no independent optimization or resource guarantee",
+        "venue_wide": "low;23/50 pilot"
+      }
+    },
+    "evidence": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp6–9 Tables1–6; pp15–25 Tables7–25"
+      ],
+      "observation": "translation三个集、OPT125M/350M/1.3B与LLaMA130M/1.3B从头OWT预训、C4补测、16zero-shot、四HGNN数据、三MLP数据，消融采样/Σ/初始化/间隔/rank/训练步，再报时间显存。",
+      "editorial_advice": "effective step=#trainable×step不是FLOPs/walltime。OPT19.7B/LLaMA2.6或13.1B tokens分开，低秩与Full LR不同、130M各自选优。HGNN/MLP3seed±未明确std/SE/CI不能补定义，translation/LLM不造显著性。",
+      "applicability": "27页正文、文献与A–L全部连续读完，21原页核验含全部八幅科学图。写作组织/主张证据审阅，不执行代码、认证优化理论或复现时间/显存/评测。ICML23篇归纳先导，正式留出未用。",
+      "confidence": {
+        "paper_specific": "high for inspected printed scope/results; no independent optimization or resource guarantee",
+        "venue_wide": "low;23/50 pilot"
+      }
+    },
+    "discussion_limits": {
+      "category": "corpus_observation",
+      "positions": [
+        "p9 §6; pp16/21–24 E/H/I/K"
+      ],
+      "observation": "结论把避免state reset及扩展embedding作为未来；附录主动列额外冻结因子、SVD峰值、训练时间与20%少步对照。",
+      "editorial_advice": "memoryefficiency不是速度无代价，20%少步不是所有模型精确等walltime。低精度只是潜在缓解未实测；没有单独Limitations不等于没有应披露边界。",
+      "applicability": "27页正文、文献与A–L全部连续读完，21原页核验含全部八幅科学图。写作组织/主张证据审阅，不执行代码、认证优化理论或复现时间/显存/评测。ICML23篇归纳先导，正式留出未用。",
+      "confidence": {
+        "paper_specific": "high for inspected printed scope/results; no independent optimization or resource guarantee",
+        "venue_wide": "low;23/50 pilot"
+      }
+    },
+    "paragraph_language": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp4–9; pp19–26"
+      ],
+      "observation": "机制→直觉→实证→消融/资源；段落常用Limitation/Impact标签，选择性黑体突出结果；部分saddle/unbiased/consistently措辞超出证据。",
+      "editorial_advice": "A梯度0不证明整个参数点是鞍点；梯度范数相关0.85vs0.58不证明梯度方向/轨迹相同；加权随机抽样不是均匀/无偏梯度证明，防过拟合是解释非因果认证。",
+      "applicability": "27页正文、文献与A–L全部连续读完，21原页核验含全部八幅科学图。写作组织/主张证据审阅，不执行代码、认证优化理论或复现时间/显存/评测。ICML23篇归纳先导，正式留出未用。",
+      "confidence": {
+        "paper_specific": "high for inspected printed scope/results; no independent optimization or resource guarantee",
+        "venue_wide": "low;23/50 pilot"
+      }
+    },
+    "main_appendix": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp1–27"
+      ],
+      "observation": "正文1–9，致谢/Impact10、refs10–13；A14算法/B14相关/C14–15C4/D15推导/E15–18实现配置/F19剪枝/G19–20GaLore/H19–22消融/I21–24成本/J22/25MLP/K22–26联合指标/L24–25新基线，Fig8p27谱。",
+      "editorial_advice": "附录改变正文采样/重置理解，不能只读正文就登记完整。所有科学附录在27页PDF已读，外部代码没执行；成本、失败与基线改写宜在正文可见。",
+      "applicability": "27页正文、文献与A–L全部连续读完，21原页核验含全部八幅科学图。写作组织/主张证据审阅，不执行代码、认证优化理论或复现时间/显存/评测。ICML23篇归纳先导，正式留出未用。",
+      "confidence": {
+        "paper_specific": "high for inspected printed scope/results; no independent optimization or resource guarantee",
+        "venue_wide": "low;23/50 pilot"
+      }
+    },
+    "actionable": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp7–9; pp19–27"
+      ],
+      "observation": "将活跃参数、冻结存储、梯度/optimizer、activation/peak、真实耗时、吞吐与质量分别呈现，表列全rank/数据预算和不领先项。",
+      "editorial_advice": "原创示例：SST narrows the reported perplexity gap to full training while using fewer active parameters. In the OPT-1.3B setting, its reported parameter, gradient and optimizer memory is lower than full training but higher than LoRA, and total training takes longer; effective-step curves therefore describe update efficiency rather than wall-clock speed.",
+      "applicability": "27页正文、文献与A–L全部连续读完，21原页核验含全部八幅科学图。写作组织/主张证据审阅，不执行代码、认证优化理论或复现时间/显存/评测。ICML23篇归纳先导，正式留出未用。",
+      "confidence": {
+        "paper_specific": "high for inspected printed scope/results; no independent optimization or resource guarantee",
+        "venue_wide": "low;23/50 pilot"
+      }
+    }
+  },
+  "counterexamples": [
+    {
+      "position": "p7 Table2; p23 K; p26 Fig7",
+      "finding": "LLaMA1.3B Full14.54/LoRA16.50/SST14.59，97.4%是(1−0.05/1.96)gap缩小；并非模型PPL下降97.4%。4434.3%为新效率比再比较，分母PPL增幅接近0会放大，不是显存降44倍或速度44倍。图C4写99.4%而文字99.7%需核对。"
+    },
+    {
+      "position": "pp21–24 Tables20–23",
+      "finding": "OPT1.3B SST9345.72MB>LoRA7133.24MB<Full20093.22MB；SST387.2h>LoRA324.8h>Full303.4h，4A100/19.7Btokens。SVD3h占0.8%不代表总额外耗时0.8%；20%少步未实测全pipelinewalltime。内存表标题含weights/grad/optimizer，activation等全峰值口径未明确，不声称已认证完整设备峰值。"
+    },
+    {
+      "position": "p9 Table5; p19 Table12; pp8/20 Tables4/14; p25 Table24",
+      "finding": "Airport node r2 SST87.92低于LoRA89.06；GaLore d256/r32 BLEU24.01高于SST23.97；16zero-shot多项不领先，Full常优，OPT350M/1.3B均值43.9/44.7低于Full44.5/47.6。MLP也低于Full。不照搬all settings/outperforms为普遍结论。"
+    },
+    {
+      "position": "pp4–5 Eq5/9/Fig2; pp15–16 E.1; p14 Alg2",
+      "finding": "实际uniform+Σ混合采样，Σ全0分母、multinomial重复样本/固定r无重复规则未写清。参数U/V链式梯度去Σ为算法修改，不能叫原梯度无偏估计。A零梯度不等于全部参数驻点或已证鞍点；norm相关不等于方向相似或最优收敛。"
+    },
+    {
+      "position": "p3 §3.2/3.3; pp17–19 E/G",
+      "finding": "ReLoRA*无Fullwarmstart且全state reset，原ReLoRA为99%prune；GaLore低r(<1/12)及α1不同原推荐范围，SST活跃参数也稍多。比较应指具体实现与budget，不称原ReLoRA/GaLore全设置失败。CoraLoRA/SST dropout0.5是配置偏离需保留。"
+    },
+    {
+      "position": "pp20–22 H/Tables16–19; p7 Table1",
+      "finding": "T3=200消融22.47而正文同d64r8为22.28，来源需对齐；400得23.64并非默认200最好。Full训练步增加24.85→24.72→24.71非单调，SST640k仍23.92低于Full25.05。随机初始化对照同时改为加性W+分解并Σ0，不能全归因单一SVD。"
+    },
+    {
+      "position": "p18 Fig5; p27 Fig8; p2 Eq2",
+      "finding": "剪枝阈值是奇异值累计和不是平方能量，SST在0剪枝PPL更差，曲线不支持所有ratio领先；谱分布像Full不证明函数等价。Eckart–Young权重逼近界不是任务loss下界或fine-tuning/pretraining难度普遍排序，无最优W观测认证。"
+    },
+    {
+      "position": "p7 Table1; pp9/22/25",
+      "finding": "hyperbolic基线0.0代表NaN训练失败，而非有效模型测得真0BLEU；不能当普通分数计算未说明鲁棒平均。HGNN/MLP明确3seed但±类型未明，其他小差异无统计保证。原页表格/图标注不能补成CI或显著性检验。"
+    }
+  ],
+  "visual_review": {
+    "pages": [
+      2,
+      3,
+      4,
+      5,
+      7,
+      8,
+      9,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27
+    ],
+    "source": "115dpi original-page Poppler images directly viewed",
+    "policy": "delete21renders+duplicateextract after record; retain PDF/primaryMD only in ignoredskilltmp"
+  },
+  "official_requirements": [],
+  "holdout_validation": null,
+  "review_limitations": "27页正文、文献与A–L全部连续读完，21原页核验含全部八幅科学图。写作组织/主张证据审阅，不执行代码、认证优化理论或复现时间/显存/评测。ICML23篇归纳先导，正式留出未用。"
+}

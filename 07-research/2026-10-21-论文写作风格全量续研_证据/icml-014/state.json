@@ -1,0 +1,179 @@
+{
+  "date": "2026-10-21",
+  "batch": "icml-014",
+  "status": "registered",
+  "selection": "same locked sample;processingorderonly",
+  "before": {
+    "updated": "2026-10-21",
+    "status": "in_progress",
+    "venues": [
+      {
+        "venue": "aaai",
+        "locked": 50,
+        "pdf_acquired": 50,
+        "text_parsed": 50,
+        "main_text_style_reviewed": 5,
+        "full_text_and_relevant_appendix_reviewed": 4,
+        "induction_complete": 4,
+        "holdout_complete": 0
+      },
+      {
+        "venue": "colt",
+        "locked": 50,
+        "pdf_acquired": 50,
+        "text_parsed": 50,
+        "main_text_style_reviewed": 2,
+        "full_text_and_relevant_appendix_reviewed": 1,
+        "induction_complete": 0,
+        "holdout_complete": 1
+      },
+      {
+        "venue": "iclr",
+        "locked": 50,
+        "pdf_acquired": 50,
+        "text_parsed": 50,
+        "main_text_style_reviewed": 1,
+        "full_text_and_relevant_appendix_reviewed": 1,
+        "induction_complete": 1,
+        "holdout_complete": 0
+      },
+      {
+        "venue": "icml",
+        "locked": 50,
+        "pdf_acquired": 50,
+        "text_parsed": 50,
+        "main_text_style_reviewed": 13,
+        "full_text_and_relevant_appendix_reviewed": 13,
+        "induction_complete": 13,
+        "holdout_complete": 0
+      },
+      {
+        "venue": "ijcai",
+        "locked": 50,
+        "pdf_acquired": 50,
+        "text_parsed": 50,
+        "main_text_style_reviewed": 5,
+        "full_text_and_relevant_appendix_reviewed": 5,
+        "induction_complete": 4,
+        "holdout_complete": 1
+      },
+      {
+        "venue": "jmlr",
+        "locked": 50,
+        "pdf_acquired": 50,
+        "text_parsed": 50,
+        "main_text_style_reviewed": 4,
+        "full_text_and_relevant_appendix_reviewed": 4,
+        "induction_complete": 3,
+        "holdout_complete": 1
+      },
+      {
+        "venue": "neurips",
+        "locked": 50,
+        "pdf_acquired": 50,
+        "text_parsed": 50,
+        "main_text_style_reviewed": 2,
+        "full_text_and_relevant_appendix_reviewed": 2,
+        "induction_complete": 2,
+        "holdout_complete": 0
+      },
+      {
+        "venue": "tai",
+        "locked": 50,
+        "pdf_acquired": 24,
+        "text_parsed": 24,
+        "main_text_style_reviewed": 4,
+        "full_text_and_relevant_appendix_reviewed": 2,
+        "induction_complete": 2,
+        "holdout_complete": 0
+      },
+      {
+        "venue": "tmlr",
+        "locked": 50,
+        "pdf_acquired": 3,
+        "text_parsed": 3,
+        "main_text_style_reviewed": 2,
+        "full_text_and_relevant_appendix_reviewed": 1,
+        "induction_complete": 1,
+        "holdout_complete": 0
+      },
+      {
+        "venue": "tnnls",
+        "locked": 50,
+        "pdf_acquired": 26,
+        "text_parsed": 26,
+        "main_text_style_reviewed": 1,
+        "full_text_and_relevant_appendix_reviewed": 1,
+        "induction_complete": 0,
+        "holdout_complete": 1
+      },
+      {
+        "venue": "tpami",
+        "locked": 50,
+        "pdf_acquired": 26,
+        "text_parsed": 26,
+        "main_text_style_reviewed": 1,
+        "full_text_and_relevant_appendix_reviewed": 1,
+        "induction_complete": 1,
+        "holdout_complete": 0
+      }
+    ],
+    "totals": {
+      "locked": 550,
+      "pdf_acquired": 429,
+      "text_parsed": 429,
+      "main_text_style_reviewed": 40,
+      "full_text_and_relevant_appendix_reviewed": 35,
+      "induction_complete": 31,
+      "holdout_complete": 4
+    },
+    "remaining_full_review": 515,
+    "qualification": "Continuous PDF prose/style review is not proof/code audit or experiment replication. Accepted author/published-header deposits may support writing organization, not final typesetting. Referenced unreviewed external appendices excluded from full count.",
+    "known_ineligible_locked_slots": 0,
+    "eligibility_note": "550 active positions after one documented nonresearch slot repair; original lock/history preserved. This is not certification of every remaining candidate qualification.",
+    "excluded_historical_nonresearch_records": 1
+  },
+  "papers": [
+    {
+      "title": "StableMask: Refining Causal Masking in Decoder-only Transformer",
+      "authors": "Qingyu Yin, Xuzheng He, Xiang Zhuang, Yu Zhao, Jianhua Yao, Xiaoyu Shen, Qiang Zhang",
+      "landing_url": "https://proceedings.mlr.press/v235/yin24a.html",
+      "pdf_url": "https://raw.githubusercontent.com/mlresearch/v235/main/assets/yin24a/yin24a.pdf",
+      "venue": "icml",
+      "year": 2024,
+      "track": "main conference research",
+      "official_listing_url": "https://proceedings.mlr.press/v235/",
+      "sampling_stratum": "trustworthy",
+      "paper_type": "pending semantic classification",
+      "split": "induction",
+      "id": "icml-2024-2ff98956",
+      "paper_stem": "StableMask- Refining Causal Masking in Decoder-only Transformer",
+      "asset_reused": false,
+      "pdf_path": ".claude/skills/paper-writing-shared/tmp/corpus/icml/pdf/StableMask- Refining Causal Masking in Decoder-only Transformer.pdf",
+      "pdf_sha256": "74b101bb951b80345c53828eaf6e500e27835396b4c5ea9d98ec95a251892a92",
+      "pdf_version": "official proceedings PDF; exact bytes locked by SHA256",
+      "download_status": "available",
+      "markdown_path": ".claude/skills/paper-writing-shared/tmp/corpus/icml/markdown/StableMask- Refining Causal Masking in Decoder-only Transformer.md",
+      "parse_status": "complete text extraction",
+      "semantic_review_status": "pending",
+      "reviewed_pages": [],
+      "appendix_review_status": "pending",
+      "structure": [],
+      "claims": [],
+      "counterexamples": [],
+      "semantic_review": null,
+      "transient_extraction": ".claude/skills/paper-writing-shared/tmp/full-review/icml-014/icml-2024-2ff98956.txt",
+      "page_count": 20
+    }
+  ],
+  "cache": ".claude/skills/paper-writing-shared/tmp/full-review/icml-014",
+  "baseline_records_sha256": "316962205d1e5632fd5356251221204d21a9be86e915c9080dfaeb5d5f5f7bd5",
+  "baseline_icml_profile_sha256": "37c30ea3eb09b0c0eabe59714d62dadc4b0c02e1c9447390f0fbad6a719c9ab5",
+  "completion_date": "2026-10-22",
+  "supplement_download_recovery": {
+    "former_session_id": 63250,
+    "session_result": "missing after interruption; validated complete file by pdfinfo/25pages, bytecount6128697andSHA",
+    "file_sha256": "dfb6a040b3adfe1caa27ec8837668ef18ffb2c73818e5021821a5e8086bfb33d"
+  },
+  "after_full": 36
+}

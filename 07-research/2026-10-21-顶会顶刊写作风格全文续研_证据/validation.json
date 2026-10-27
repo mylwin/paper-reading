@@ -1,0 +1,233 @@
+{
+  "date": "2026-10-21",
+  "scope": "review ledger and storage integrity, not theorem correctness, experiments or new template compilation",
+  "passed": 18,
+  "total": 18,
+  "checks": [
+    {
+      "check": "three unique locked induction papers, previously pending",
+      "passed": true
+    },
+    {
+      "check": "only the three reviewed records changed; previous status pending",
+      "passed": true
+    },
+    {
+      "check": "all eleven venue/year/induction/holdout allocations unchanged",
+      "passed": true,
+      "details": [
+        {
+          "venue": "colt",
+          "count": 50,
+          "counts": {
+            "2024:holdout": 5,
+            "2024:induction": 20,
+            "2025:holdout": 5,
+            "2025:induction": 20
+          },
+          "passed": true
+        },
+        {
+          "venue": "ijcai",
+          "count": 50,
+          "counts": {
+            "2024:holdout": 5,
+            "2024:induction": 20,
+            "2025:holdout": 5,
+            "2025:induction": 20
+          },
+          "passed": true
+        },
+        {
+          "venue": "tpami",
+          "count": 50,
+          "counts": {
+            "2024:holdout": 5,
+            "2024:induction": 20,
+            "2025:holdout": 5,
+            "2025:induction": 20
+          },
+          "passed": true
+        },
+        {
+          "venue": "jmlr",
+          "count": 50,
+          "counts": {
+            "2024:holdout": 5,
+            "2024:induction": 20,
+            "2025:holdout": 5,
+            "2025:induction": 20
+          },
+          "passed": true
+        },
+        {
+          "venue": "neurips",
+          "count": 50,
+          "counts": {
+            "2024:holdout": 5,
+            "2024:induction": 20,
+            "2025:holdout": 5,
+            "2025:induction": 20
+          },
+          "passed": true
+        },
+        {
+          "venue": "icml",
+          "count": 50,
+          "counts": {
+            "2024:holdout": 5,
+            "2024:induction": 20,
+            "2025:holdout": 5,
+            "2025:induction": 20
+          },
+          "passed": true
+        },
+        {
+          "venue": "aaai",
+          "count": 50,
+          "counts": {
+            "2024:holdout": 5,
+            "2024:induction": 20,
+            "2025:holdout": 5,
+            "2025:induction": 20
+          },
+          "passed": true
+        },
+        {
+          "venue": "iclr",
+          "count": 50,
+          "counts": {
+            "2024:holdout": 5,
+            "2024:induction": 20,
+            "2025:holdout": 5,
+            "2025:induction": 20
+          },
+          "passed": true
+        },
+        {
+          "venue": "tnnls",
+          "count": 50,
+          "counts": {
+            "2024:holdout": 5,
+            "2024:induction": 20,
+            "2025:holdout": 5,
+            "2025:induction": 20
+          },
+          "passed": true
+        },
+        {
+          "venue": "tai",
+          "count": 50,
+          "counts": {
+            "2024:holdout": 5,
+            "2024:induction": 20,
+            "2025:holdout": 5,
+            "2025:induction": 20
+          },
+          "passed": true
+        },
+        {
+          "venue": "tmlr",
+          "count": 50,
+          "counts": {
+            "2024:holdout": 5,
+            "2024:induction": 20,
+            "2025:holdout": 5,
+            "2025:induction": 20
+          },
+          "passed": true
+        }
+      ]
+    },
+    {
+      "check": "locked_manifests byte-for-byte preserved",
+      "passed": true,
+      "details": {
+        "files": 12,
+        "mismatches": []
+      }
+    },
+    {
+      "check": "knowledge_assets byte-for-byte preserved",
+      "passed": true,
+      "details": {
+        "files": 460,
+        "mismatches": []
+      }
+    },
+    {
+      "check": "six old skill entrypoints unchanged",
+      "passed": true
+    },
+    {
+      "check": "ijcai-2024-01 full coverage, ten dimensions, source SHA and scope",
+      "passed": true
+    },
+    {
+      "check": "ijcai-2025-01 full coverage, ten dimensions, source SHA and scope",
+      "passed": true
+    },
+    {
+      "check": "ijcai-2025-02 full coverage, ten dimensions, source SHA and scope",
+      "passed": true
+    },
+    {
+      "check": "total count26 and remaining524; acquisition remains429",
+      "passed": true
+    },
+    {
+      "check": "ten other venue progress rows unchanged",
+      "passed": true
+    },
+    {
+      "check": "IJCAI5complete IDs agree with progress and new ledger",
+      "passed": true
+    },
+    {
+      "check": "prior evaluation and research evidence archives preserved",
+      "passed": true,
+      "details": [
+        {
+          "archive": "2026-10-11-论文写作润色技能评测_证据",
+          "files": 654,
+          "mismatches": []
+        },
+        {
+          "archive": "2026-10-12-顶会顶刊写作风格调研_证据",
+          "files": 90,
+          "mismatches": []
+        }
+      ]
+    },
+    {
+      "check": "938 research source assets ignored and untracked",
+      "passed": true
+    },
+    {
+      "check": "nothing staged; no paper files committed by this batch",
+      "passed": true,
+      "details": {
+        "staged_paths": [],
+        "git_mutations_executed_by_this_batch": []
+      }
+    },
+    {
+      "check": "17 transient render/text files cleaned, original papers retained",
+      "passed": true,
+      "details": {
+        "deleted_this_run": 17,
+        "already_missing": 0,
+        "errors": []
+      }
+    },
+    {
+      "check": "official IJCAI policy section unchanged; no inferred format rule",
+      "passed": true
+    },
+    {
+      "check": "new report, profile and progress links resolve",
+      "passed": true,
+      "details": []
+    }
+  ]
+}

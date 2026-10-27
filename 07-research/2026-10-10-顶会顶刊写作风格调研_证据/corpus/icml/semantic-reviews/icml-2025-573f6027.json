@@ -1,0 +1,264 @@
+{
+  "id": "icml-2025-573f6027",
+  "venue": "icml",
+  "year": 2025,
+  "split": "induction",
+  "title": "Tight and Fast Bounds for Multi-Label Learning",
+  "authors": "Yi-Fan Zhang, Min-Ling Zhang",
+  "pdf_path": ".claude/skills/paper-writing-shared/tmp/corpus/icml/pdf/Tight and Fast Bounds for Multi-Label Learning.pdf",
+  "markdown_path": ".claude/skills/paper-writing-shared/tmp/corpus/icml/markdown/Tight and Fast Bounds for Multi-Label Learning.md",
+  "pdf_sha256": "69f2dea0b5c7f3a81e287a6339a5fb41bc3271c0883e7810aea61cb085703cdc",
+  "review_date": "2026-10-22",
+  "paper_type": "pure statistical learning theory: global/local vector contraction and surrogate risk bounds for multi-label learning including imbalanced pairwise Macro-AUC",
+  "semantic_review_status": "complete_writing_focused_review",
+  "full_text_style_review_complete": true,
+  "external_appendix_review_complete": true,
+  "count_eligible_full_text_and_relevant_appendix": true,
+  "coverage": [
+    {
+      "asset": "locked official PMLR PDF",
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30
+      ],
+      "sections": "Abstract/Introduction/RelatedWork/Preliminaries3.1–3.3/Tighter4/Faster5/MacroAUC6/Discussion7/Conclusion8/Acknowledgements/Impact/References; A.1/A.2/A.3.1–2/A.4.1–2/A.5.1–4; all scientific proofs read; no experimental figures/tables",
+      "method": "continuous30page text read and23originalpageimages inspected; one finitealgebra consistencyexample separate from proofcertification"
+    }
+  ],
+  "version_audit": {
+    "official_landing": "https://proceedings.mlr.press/v267/zhang25dd.html",
+    "official_pdf": "https://raw.githubusercontent.com/mlresearch/v267/main/assets/zhang25dd/zhang25dd.pdf",
+    "version": "official proceedings PDF; exact bytes locked by SHA256",
+    "identity": "title/authors/PMLR267/year and lockedSHA",
+    "new_network_fetch": false,
+    "qualification": "cachedofficialPDF; no external reference proof verification"
+  },
+  "supplement_audit": {
+    "status": "A.1–A.5.4 related scientific/proof appendices all same30pagePDF fully read",
+    "external_scientific_appendix_referenced": false,
+    "code_artifacts": "no authorcode or experiments; original finite projection check saved separately"
+  },
+  "ten_dimensions": {
+    "reader_argument": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp1–2/4–9"
+      ],
+      "observation": "以已有Lipschitz分析的标签数依赖与样本速率为缺口，分别提出smooth vector contraction、localized fast bound及MacroAUC pairwise扩展。",
+      "editorial_advice": "统计样本收敛率不是优化训练速度；stateoftheart理论不代表实证分类更好。函数类/独立性/损失条件和比较维度要一起写，不仅列O符号。",
+      "applicability": "30页正文/文献及A.1–A.5.4所有证明连续阅读，23原页核验；有限投影算例另存，不构成整篇独立证明认证。纯理论论文无实验/图/表/训练算法，不补实验或执行外部参考文献。ICML28篇归纳先导，正式留出未用。",
+      "confidence": {
+        "paper_specific": "high for inspected structure/assumptions/reportedstatements; no blanket correctness certification",
+        "venue_wide": "low;28/50 pilot"
+      }
+    },
+    "title_abstract": {
+      "category": "corpus_observation",
+      "positions": [
+        "p1"
+      ],
+      "observation": "短题名直接主张tight/fast bounds，摘要按三组理论产出和分析工具展开，没有数字实验。",
+      "editorial_advice": "tight不能改成已证minimax最优，结论明言lowerbound未来工作。no dependency on c始终保留up to logs，隐含B/M/γ/ρ与类别概率也可能依赖任务/标签数。",
+      "applicability": "30页正文/文献及A.1–A.5.4所有证明连续阅读，23原页核验；有限投影算例另存，不构成整篇独立证明认证。纯理论论文无实验/图/表/训练算法，不补实验或执行外部参考文献。ICML28篇归纳先导，正式留出未用。",
+      "confidence": {
+        "paper_specific": "high for inspected structure/assumptions/reportedstatements; no blanket correctness certification",
+        "venue_wide": "low;28/50 pilot"
+      }
+    },
+    "introduction": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp1–2"
+      ],
+      "observation": "从应用动机快速转理论两缺口，三条贡献对应§4/5/6，强调不同工具各解决哪个依赖。",
+      "editorial_advice": "不为理论文强行添加系统/实验贡献；说明缩小条件后改善哪些项，避免由smooth单独承诺任意模型都泛化好。",
+      "applicability": "30页正文/文献及A.1–A.5.4所有证明连续阅读，23原页核验；有限投影算例另存，不构成整篇独立证明认证。纯理论论文无实验/图/表/训练算法，不补实验或执行外部参考文献。ICML28篇归纳先导，正式留出未用。",
+      "confidence": {
+        "paper_specific": "high for inspected structure/assumptions/reportedstatements; no blanket correctness certification",
+        "venue_wide": "low;28/50 pilot"
+      }
+    },
+    "related_work": {
+      "category": "corpus_observation",
+      "positions": [
+        "p2; pp5–9 Remarks4.5/4.6/5.6/5.7/6.8"
+      ],
+      "observation": "独立RelatedWork集中多标签泛化理论，正文remark按范数、耦合、光滑/稀疏/margin/谱衰减和损失逐项比较。",
+      "editorial_advice": "前作公式修正是作者论证，未独立读前作不可当确定勘误。公开出处与对应条件要保留，不把各定理条件不同的速率排成无条件排行榜。",
+      "applicability": "30页正文/文献及A.1–A.5.4所有证明连续阅读，23原页核验；有限投影算例另存，不构成整篇独立证明认证。纯理论论文无实验/图/表/训练算法，不补实验或执行外部参考文献。ICML28篇归纳先导，正式留出未用。",
+      "confidence": {
+        "paper_specific": "high for inspected structure/assumptions/reportedstatements; no blanket correctness certification",
+        "venue_wide": "low;28/50 pilot"
+      }
+    },
+    "method_theory": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp2–8; pp13–30 A"
+      ],
+      "observation": "iid样本/vector f_j=<w_j,φ_j>，bounded score/loss与γsmooth；projection cover→fatshatter→Dudley→generalization，local empiricalrisk≤r及subroot fixedpoint导出作者所报fast bound；MacroAUC用disjointpairs/Uprocess和Chernoff引入r0=n min_j{p_j,1−p_j}。",
+      "editorial_advice": "Thm5.5形式R≤2Rhat+remainder，不是excessrisk或R−Rhat统一1/n；MacroAUC两类结论都~1/sqrt(r0)，未给fast1/r0。Projection上界/函数类处理有待澄清的关键问题，不当已证公理复用。",
+      "applicability": "30页正文/文献及A.1–A.5.4所有证明连续阅读，23原页核验；有限投影算例另存，不构成整篇独立证明认证。纯理论论文无实验/图/表/训练算法，不补实验或执行外部参考文献。ICML28篇归纳先导，正式留出未用。",
+      "confidence": {
+        "paper_specific": "high for inspected structure/assumptions/reportedstatements; no blanket correctness certification",
+        "venue_wide": "low;28/50 pilot"
+      }
+    },
+    "evidence": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp4–9/13–30"
+      ],
+      "observation": "证据是完整理论陈述、辅助lemma、proofsketch、分步证明和与既有界的条件比较；文章没有实测benchmark、图表或算法实验。",
+      "editorial_advice": "证明已阅读不等于已认证正确。有限算例只验证指定代数步骤与解耦类解释冲突，不能据此替代完整审稿或宣布其余定理有效/无效。常数大/损失上界/日志取值可能令数值界无用，不能称必然nonvacuous。",
+      "applicability": "30页正文/文献及A.1–A.5.4所有证明连续阅读，23原页核验；有限投影算例另存，不构成整篇独立证明认证。纯理论论文无实验/图/表/训练算法，不补实验或执行外部参考文献。ICML28篇归纳先导，正式留出未用。",
+      "confidence": {
+        "paper_specific": "high for inspected structure/assumptions/reportedstatements; no blanket correctness certification",
+        "venue_wide": "low;28/50 pilot"
+      }
+    },
+    "discussion_limits": {
+      "category": "corpus_observation",
+      "positions": [
+        "p9 §7/8; p10 Impact"
+      ],
+      "observation": "Discussion明确labelcorrelations、sparsity、extreme-label实际策略和unbounded crossentropy未覆盖；Conclusion把实验、regularization与lowerbounds列未来。",
+      "editorial_advice": "无独立Limitations章仍需保留边界。基损失对score的smooth与复合网络对parameter的二阶性质不同，不能混为一个假设。gradientclipping/初始化未在此证明函数全域梯度有界。",
+      "applicability": "30页正文/文献及A.1–A.5.4所有证明连续阅读，23原页核验；有限投影算例另存，不构成整篇独立证明认证。纯理论论文无实验/图/表/训练算法，不补实验或执行外部参考文献。ICML28篇归纳先导，正式留出未用。",
+      "confidence": {
+        "paper_specific": "high for inspected structure/assumptions/reportedstatements; no blanket correctness certification",
+        "venue_wide": "low;28/50 pilot"
+      }
+    },
+    "paragraph_language": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp4–9; pp13/19/24"
+      ],
+      "observation": "各节用assumption→lemma→theorem→remark解释，附录先outline再proofsketch和Step1–4，条件复用有编号，读者易回查。",
+      "editorial_advice": "strongest/mostadvanced/onlysmooth措辞需同时带boundedness/class/稀有标签条件；no dependency应加explicit up to logarithms，参数随c变化必须检验。不得用SOTA或录用身份代替正确性证据。",
+      "applicability": "30页正文/文献及A.1–A.5.4所有证明连续阅读，23原页核验；有限投影算例另存，不构成整篇独立证明认证。纯理论论文无实验/图/表/训练算法，不补实验或执行外部参考文献。ICML28篇归纳先导，正式留出未用。",
+      "confidence": {
+        "paper_specific": "high for inspected structure/assumptions/reportedstatements; no blanket correctness certification",
+        "venue_wide": "low;28/50 pilot"
+      }
+    },
+    "main_appendix": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp1–30"
+      ],
+      "observation": "正文1–9，ack/impact10及refs10–12，A13outline/prelim，A.3 pp13–18 global，A.4 pp19–23 local，A.5 pp23–30 MacroAUC。全科学证明在同PDF，无外部科学附录缺口。",
+      "editorial_advice": "本轮全页文字及23原页公式核验；无图/表不是缺失语料。公式长行跨页需维护标签/假设一致，发表版版式观察不是当前投稿要求。第三方参考证明未重新获取，官方规范本轮未复核。",
+      "applicability": "30页正文/文献及A.1–A.5.4所有证明连续阅读，23原页核验；有限投影算例另存，不构成整篇独立证明认证。纯理论论文无实验/图/表/训练算法，不补实验或执行外部参考文献。ICML28篇归纳先导，正式留出未用。",
+      "confidence": {
+        "paper_specific": "high for inspected structure/assumptions/reportedstatements; no blanket correctness certification",
+        "venue_wide": "low;28/50 pilot"
+      }
+    },
+    "actionable": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp5–9; pp15/18/23/27–30"
+      ],
+      "observation": "理论稿用对象/条件/目标量/显式依赖/常数/失效边界比较表，区分声明与完整证明核验状态；局部风险、配对有效样本数与总样本数分列。",
+      "editorial_advice": "原创示例：The paper studies surrogate-risk bounds under boundedness and smoothness assumptions using global and local complexity arguments. The local result controls risk by twice the empirical risk plus a stated remainder; the Macro-AUC results depend on minority-label probabilities. These statements neither demonstrate training speedups nor establish minimax optimality or empirical accuracy gains.",
+      "applicability": "30页正文/文献及A.1–A.5.4所有证明连续阅读，23原页核验；有限投影算例另存，不构成整篇独立证明认证。纯理论论文无实验/图/表/训练算法，不补实验或执行外部参考文献。ICML28篇归纳先导，正式留出未用。",
+      "confidence": {
+        "paper_specific": "high for inspected structure/assumptions/reportedstatements; no blanket correctness certification",
+        "venue_wide": "low;28/50 pilot"
+      }
+    }
+  },
+  "counterexamples": [
+    {
+      "position": "pp5/7 Remarks4.5/5.6; pp15/18 Eq7/8; p28 Eq19; projection-consistency.json",
+      "finding": "Eq8将sup独立w_j的和替换为一个向量范数，会需澄清是否原本有jointcouplednorm。按Eq1允许alpha=max_j|w_j|、固定phi_j=1、n1/c4/A=Lambda=B=1，jointproduct样本Rademacher枚举16sign×16weights得R=1>打印B/sqrt(nc)=.5。仅针对打印proof展开/解耦解释，不等于判全结论。可学习phi移到Eε外及任意F范数上界是否饱和的Eq7下界也需论证，不能从bound alone推非零复杂度下界。"
+    },
+    {
+      "position": "pp4/7/23 Theorem5.5/A.8",
+      "finding": "声明onlysmooth仍有Assumption4.1 boundedness、iid、函数类与projection控制；R≤2Rhat+~1/n不等于R−Rhat≤~1/n或excessriskminimax。r是经验风险子水平；给定算法实际处于小r尚未实验。a106、48²等大常数可能数值vacuous；tight/fast是所报order，作者lowerboundfuture未证最优。"
+    },
+    {
+      "position": "pp8–9/25–30 Theorem6.3/6.7, Eq11/17–19",
+      "finding": "r0是n乘最稀有正/负标签概率，不是n²对数；p_j=0或1时MacroAUC无定义，样本可能缺正/负而公式分母0。p28额外样本条件未完整呈于主定理，负类Chernoff仍写minp而应核min(1−p)；r0非整数而定义size r0集合，取整与事件概率需补。跨label构对不同的x_j+/-不能无解释当同一pair适于所有label；Eq11 j索引复用/平均及Eq18替换复杂度√2因子待核。"
+    },
+    {
+      "position": "pp5/14–16/20–21 LemmaA.3–5",
+      "finding": "cover/fat lemma要求尺度大于复杂度、fat<n，后续写任意ε需分区；Dudley用0∈F但lossclass不一定含0，需中心化或补说明。α可能超过积分上限，日志或N可能非正，n/B/γ/M条件及clip范围未全给；不能把打印对任意n参数式直接当数值可用上界。"
+    },
+    {
+      "position": "pp3/9/13–17/19–22 definitions and Discussion",
+      "finding": "Hamming/Subset/Ranking分析对象是surrogate，未给0/1校准转化，不能说0/1指标同速率已证；Ranking需每例Y+和Y−均非空。Assumption4.1 bound整体loss但某些步骤用basebounds，需按各metric确认。p9crossentropy关于score/parameter smooth的讨论混用，不能由初始化/裁剪认证全域模型一二阶有界。"
+    },
+    {
+      "position": "p7 Lemma5.4; pp15–18/23/29 notation",
+      "finding": "subroot r>ψ(r) iff r*≤r在相等点的严格/非严格需核；p23ranking结果标L_S而非L_R。Projection集合定义、下界类饱和、Eq19pairdifference类与原singlepoint类的区别须明确，不能静默修公式后称原proof有效。"
+    },
+    {
+      "position": "pp2/5–9 RelatedWork/Remarks/Conclusion",
+      "finding": "现有工作strongconvex、margin/sparse、spectraldecay/linear/coupling等设定各异；没有matching lowerbound或统一设定对照不能将作者最强主张写无条件SOTA。作者对2024前作漏sqrt(c)的说法未独立验证。无实验、未验证泛化改善/时间收益/某正则最好，future不可改已完成。"
+    }
+  ],
+  "visual_review": {
+    "pages": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      12,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30
+    ],
+    "source": "115dpi originalpage images directly viewed; formula conditions/proof chains, no scientificfigures/tables in source",
+    "policy": "delete23renders+duplicateextract after record; canonicalPDF/primaryMD only ignoredskilltmp"
+  },
+  "arithmetic_audit": "07-research/2026-10-21-论文写作风格全量续研_证据/icml-028/projection-consistency.json",
+  "official_requirements": [],
+  "holdout_validation": null,
+  "review_limitations": "30页正文/文献及A.1–A.5.4所有证明连续阅读，23原页核验；有限投影算例另存，不构成整篇独立证明认证。纯理论论文无实验/图/表/训练算法，不补实验或执行外部参考文献。ICML28篇归纳先导，正式留出未用。"
+}

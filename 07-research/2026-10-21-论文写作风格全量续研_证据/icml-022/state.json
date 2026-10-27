@@ -1,0 +1,173 @@
+{
+  "date": "2026-10-22",
+  "batch": "icml-022",
+  "status": "registered",
+  "selection": "same locked sample;processingorderonly",
+  "before": {
+    "updated": "2026-10-22",
+    "status": "in_progress",
+    "venues": [
+      {
+        "venue": "aaai",
+        "locked": 50,
+        "pdf_acquired": 50,
+        "text_parsed": 50,
+        "main_text_style_reviewed": 5,
+        "full_text_and_relevant_appendix_reviewed": 4,
+        "induction_complete": 4,
+        "holdout_complete": 0
+      },
+      {
+        "venue": "colt",
+        "locked": 50,
+        "pdf_acquired": 50,
+        "text_parsed": 50,
+        "main_text_style_reviewed": 2,
+        "full_text_and_relevant_appendix_reviewed": 1,
+        "induction_complete": 0,
+        "holdout_complete": 1
+      },
+      {
+        "venue": "iclr",
+        "locked": 50,
+        "pdf_acquired": 50,
+        "text_parsed": 50,
+        "main_text_style_reviewed": 1,
+        "full_text_and_relevant_appendix_reviewed": 1,
+        "induction_complete": 1,
+        "holdout_complete": 0
+      },
+      {
+        "venue": "icml",
+        "locked": 50,
+        "pdf_acquired": 50,
+        "text_parsed": 50,
+        "main_text_style_reviewed": 21,
+        "full_text_and_relevant_appendix_reviewed": 21,
+        "induction_complete": 21,
+        "holdout_complete": 0
+      },
+      {
+        "venue": "ijcai",
+        "locked": 50,
+        "pdf_acquired": 50,
+        "text_parsed": 50,
+        "main_text_style_reviewed": 5,
+        "full_text_and_relevant_appendix_reviewed": 5,
+        "induction_complete": 4,
+        "holdout_complete": 1
+      },
+      {
+        "venue": "jmlr",
+        "locked": 50,
+        "pdf_acquired": 50,
+        "text_parsed": 50,
+        "main_text_style_reviewed": 4,
+        "full_text_and_relevant_appendix_reviewed": 4,
+        "induction_complete": 3,
+        "holdout_complete": 1
+      },
+      {
+        "venue": "neurips",
+        "locked": 50,
+        "pdf_acquired": 50,
+        "text_parsed": 50,
+        "main_text_style_reviewed": 2,
+        "full_text_and_relevant_appendix_reviewed": 2,
+        "induction_complete": 2,
+        "holdout_complete": 0
+      },
+      {
+        "venue": "tai",
+        "locked": 50,
+        "pdf_acquired": 24,
+        "text_parsed": 24,
+        "main_text_style_reviewed": 4,
+        "full_text_and_relevant_appendix_reviewed": 2,
+        "induction_complete": 2,
+        "holdout_complete": 0
+      },
+      {
+        "venue": "tmlr",
+        "locked": 50,
+        "pdf_acquired": 3,
+        "text_parsed": 3,
+        "main_text_style_reviewed": 2,
+        "full_text_and_relevant_appendix_reviewed": 1,
+        "induction_complete": 1,
+        "holdout_complete": 0
+      },
+      {
+        "venue": "tnnls",
+        "locked": 50,
+        "pdf_acquired": 26,
+        "text_parsed": 26,
+        "main_text_style_reviewed": 1,
+        "full_text_and_relevant_appendix_reviewed": 1,
+        "induction_complete": 0,
+        "holdout_complete": 1
+      },
+      {
+        "venue": "tpami",
+        "locked": 50,
+        "pdf_acquired": 26,
+        "text_parsed": 26,
+        "main_text_style_reviewed": 1,
+        "full_text_and_relevant_appendix_reviewed": 1,
+        "induction_complete": 1,
+        "holdout_complete": 0
+      }
+    ],
+    "totals": {
+      "locked": 550,
+      "pdf_acquired": 429,
+      "text_parsed": 429,
+      "main_text_style_reviewed": 48,
+      "full_text_and_relevant_appendix_reviewed": 43,
+      "induction_complete": 39,
+      "holdout_complete": 4
+    },
+    "remaining_full_review": 507,
+    "qualification": "Continuous PDF prose/style review is not proof/code audit or experiment replication. Accepted author/published-header deposits may support writing organization, not final typesetting. Referenced unreviewed external appendices excluded from full count.",
+    "known_ineligible_locked_slots": 0,
+    "eligibility_note": "550 active positions after one documented nonresearch slot repair; original lock/history preserved. This is not certification of every remaining candidate qualification.",
+    "excluded_historical_nonresearch_records": 1
+  },
+  "papers": [
+    {
+      "title": "Neural Collapse meets Differential Privacy: Curious behaviors of NoisyGD with Near-Perfect Representation Learning",
+      "authors": "Chendi Wang, Yuqing Zhu, Weijie J Su, Yu-Xiang Wang",
+      "landing_url": "https://proceedings.mlr.press/v235/wang24cu.html",
+      "pdf_url": "https://raw.githubusercontent.com/mlresearch/v235/main/assets/wang24cu/wang24cu.pdf",
+      "venue": "icml",
+      "year": 2024,
+      "track": "main conference research",
+      "official_listing_url": "https://proceedings.mlr.press/v235/",
+      "sampling_stratum": "trustworthy",
+      "paper_type": "pending semantic classification",
+      "split": "induction",
+      "id": "icml-2024-c7f1dbe3",
+      "paper_stem": "Neural Collapse meets Differential Privacy- Curious behaviors of NoisyGD with Near-Perfect Representation Learning",
+      "asset_reused": false,
+      "pdf_path": ".claude/skills/paper-writing-shared/tmp/corpus/icml/pdf/Neural Collapse meets Differential Privacy- Curious behaviors of NoisyGD with Near-Perfect Representation Learning.pdf",
+      "pdf_sha256": "46633846de24279e6be7b20ba5df176a3e338e53a0763b0b6c2b84a19c1883a8",
+      "pdf_version": "official proceedings PDF; exact bytes locked by SHA256",
+      "download_status": "available",
+      "markdown_path": ".claude/skills/paper-writing-shared/tmp/corpus/icml/markdown/Neural Collapse meets Differential Privacy- Curious behaviors of NoisyGD with Near-Perfect Representation Learning.md",
+      "parse_status": "complete text extraction",
+      "semantic_review_status": "pending",
+      "reviewed_pages": [],
+      "appendix_review_status": "pending",
+      "structure": [],
+      "claims": [],
+      "counterexamples": [],
+      "semantic_review": null,
+      "transient_extraction": ".claude/skills/paper-writing-shared/tmp/full-review/icml-022/icml-2024-c7f1dbe3.txt",
+      "page_count": 27
+    }
+  ],
+  "cache": ".claude/skills/paper-writing-shared/tmp/full-review/icml-022",
+  "baseline_records_sha256": "772895222f0c22ff0d2485cee87d11818d6e9ba3eb61efa467f3dd753b78c0b7",
+  "baseline_icml_profile_sha256": "d315b4ee86dec2e135642dfb1961357686b293426aa4c957badebc97ca6fe1ed",
+  "after_full": 44
+}

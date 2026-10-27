@@ -1,0 +1,224 @@
+{
+  "id": "ijcai-2025-02",
+  "venue": "ijcai",
+  "year": 2025,
+  "split": "induction",
+  "title": "Strategies, Credences, and Shannon Entropy: Reasoning about Strategic Uncertainty in Stochastic Environments",
+  "authors": "Wojciech Jamroga, Michał Tomasz Godziszewski, Aniello Murano",
+  "review_date": "2026-10-21",
+  "mode": "continuous all-page semantic writing-style review plus targeted original-page visual verification; not independent proof or experiment audit",
+  "full_text_style_review_complete": true,
+  "external_appendix_review_complete": true,
+  "count_eligible_full_text_and_relevant_appendix": true,
+  "pdf_path": ".claude/skills/paper-writing-shared/tmp/corpus/ijcai/pdf/Strategies, Credences, and Shannon Entropy- Reasoning about Strategic Uncertainty in Stochastic Environments.pdf",
+  "markdown_path": ".claude/skills/paper-writing-shared/tmp/corpus/ijcai/markdown/Strategies, Credences, and Shannon Entropy- Reasoning about Strategic Uncertainty in Stochastic Environments.md",
+  "pdf_sha256": "1abc4b2fb701c9076c6cf8226bacb9a22c22dc889360a4bf78acdf97870f84e2",
+  "version_audit": {
+    "version": "IJCAI published main-track paper",
+    "official_landing": "https://www.ijcai.org/proceedings/2025/15",
+    "official_pdf": "https://www.ijcai.org/proceedings/2025/0015.pdf",
+    "printed_pages": "126–134",
+    "identity": "stored title/authors match fullPDF and IJCAI24/25 headers; lockedSHA checked",
+    "new_network_fetch": false
+  },
+  "coverage": [
+    {
+      "asset": "locked official published PDF",
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "sections": "Abstract; Introduction/Related Work; Preliminaries; Knowledge and Uncertainty semantics; Model Checking Theorems1–3; Expressiveness Theorems4–5; Formula Size Games Definition3/Theorem6 and Conjecture1; Case Studies; Summary/Future work; Acknowledgments; References",
+      "reading": "all9pages continuously, including displayed proofs/examples and references; first2papers text-read before user pause, final visual review after resume"
+    }
+  ],
+  "supplement_audit": {
+    "status": "not_applicable_no_referenced_external_scientific_appendix_in_consultedPDF",
+    "external_text_appendix_referenced": false,
+    "scope": "all nine pages including notes and references inspected; no separate manuscript supplement pointer detected",
+    "qualification": "does not establish that no unlisted material exists; standard prior-work citations are not counted as this paper appendix; no new landing-page/network audit"
+  },
+  "ten_dimensions": {
+    "reader_argument": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp1–4"
+      ],
+      "observation": "先区分“确信某命题为真”与“消除它真假的不确定性”，然后通过观察分布和投票例子解释为何需要entropy operators。",
+      "editorial_advice": "动机比较要指向可形式化差异，定义后用小例子解释语义而非只给符号。",
+      "applicability": "形式多智能体样本，未通过实际系统测试证明现实安全效果。",
+      "confidence": {
+        "paper_specific": "high for checked textual/visual organization, not theorem correctness",
+        "venue_wide": "low;5/50 pilot samples cannot establish prevalence"
+      }
+    },
+    "title_abstract": {
+      "category": "corpus_observation",
+      "positions": [
+        "p1 title/Abstract; p2 contributions"
+      ],
+      "observation": "标题串联策略、信念和Shannon熵；摘要以目标区别→新逻辑→表达力/简洁性/复杂性比较组织，不使用SOTA数字。",
+      "editorial_advice": "摘要的“比较”不等于每个方向都已有证明；对简洁性单独标conjecture。",
+      "applicability": "不能把标题术语密度或不报数字当作IJCAI全部论文的习惯。",
+      "confidence": {
+        "paper_specific": "high for checked textual/visual organization, not theorem correctness",
+        "venue_wide": "low;5/50 pilot samples cannot establish prevalence"
+      }
+    },
+    "introduction": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp1–2"
+      ],
+      "observation": "Introduction内部用Motivation、Logics、Contribution、Related Work组织；贡献区分已报告的复杂性/表达力结果与猜想。",
+      "editorial_advice": "贡献强度应与后文Theorem、Conjecture和Future work对应；跨节措辞冲突需检查。",
+      "applicability": "引言确有PATLH与自身比较的文字笔误，不能照抄或静默选取更强主张。",
+      "confidence": {
+        "paper_specific": "high for checked textual/visual organization, not theorem correctness",
+        "venue_wide": "low;5/50 pilot samples cannot establish prevalence"
+      }
+    },
+    "related_work": {
+      "category": "corpus_observation",
+      "positions": [
+        "p2 Related Work"
+      ],
+      "observation": "Related Work是引言中的小段落标题，按战略/认知逻辑、概率交互、信息度量及公式规模博弈来源组织。",
+      "editorial_advice": "用问题和工具来源串联文献，保留策略模型与语义的来源关系。",
+      "applicability": "不是独立编号章节；不能规定每稿都独立Related Work。",
+      "confidence": {
+        "paper_specific": "high for checked textual/visual organization, not theorem correctness",
+        "venue_wide": "low;5/50 pilot samples cannot establish prevalence"
+      }
+    },
+    "method_theory": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp2–6, Theorems1–6"
+      ],
+      "observation": "先有限状态模型、策略和观察概率，再给三种算子语义，随后依次比较model checking、expressiveness与succinctness；Theorem4用小模型、Theorem5给翻译、Theorem6关联FSG。",
+      "editorial_advice": "把策略类型、模型有限性、概率表示和证明状态置于可见位置；命题后用构造解释。",
+      "applicability": "联盟用uniform deterministic memoryless策略，对手允许更一般行为；这些范围不能在润色中对称化。未独立验证语义或全部证明。",
+      "confidence": {
+        "paper_specific": "high for checked textual/visual organization, not theorem correctness",
+        "venue_wide": "low;5/50 pilot samples cannot establish prevalence"
+      }
+    },
+    "evidence": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp4–7, §4–7"
+      ],
+      "observation": "证据为递归model-checking论证、模型对照、逻辑翻译、FSG和两个示例；没有经验benchmark、实现耗时或真实投票系统实验。",
+      "editorial_advice": "区分理论复杂性与实际运行时间，区分示例说明与大规模验证。",
+      "applicability": "作者报告Δ₂^P-complete有有限模型、有理概率和对数计算精度等范围；本轮不认证复杂性证明。",
+      "confidence": {
+        "paper_specific": "high for checked textual/visual organization, not theorem correctness",
+        "venue_wide": "low;5/50 pilot samples cannot establish prevalence"
+      }
+    },
+    "discussion_limits": {
+      "category": "corpus_observation",
+      "positions": [
+        "p6 Conjecture1; p7 Future work"
+      ],
+      "observation": "指数简洁性最后明确只给猜想和proof idea，最后一步规模下界尚未完成；Future work首先补该证明。",
+      "editorial_advice": "即便同文某处写we show，也以明确未完成的证明状态保留conjecture，不能润色成已证定理。",
+      "applicability": "没有未取得的附录可补齐此缺口；这是作者显式未完成的研究结果，不影响文本阅读完成但限制结论强度。",
+      "confidence": {
+        "paper_specific": "high for checked textual/visual organization, not theorem correctness",
+        "venue_wide": "low;5/50 pilot samples cannot establish prevalence"
+      }
+    },
+    "paragraph_language": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp5–7"
+      ],
+      "observation": "形式论证与应用说明并置，但“we show”及summary宣传措辞强于已完成的简洁性证据；术语和逻辑名的局部重复/笔误要与主结论分开处理。",
+      "editorial_advice": "润色中显式标记实质性修正建议，保留prove/conjecture/illustrate层级，不自动采纳groundbreaking等词。",
+      "applicability": "单篇发表稿的夸大或错误不是会议偏好，不能作为技能增强语气的依据。",
+      "confidence": {
+        "paper_specific": "high for checked textual/visual organization, not theorem correctness",
+        "venue_wide": "low;5/50 pilot samples cannot establish prevalence"
+      }
+    },
+    "main_appendix": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp1–9"
+      ],
+      "observation": "七页正文含语义、短证明、猜想、两示例和图表，p7致谢、pp8–9参考文献；本稿未指向另一个承载科学附录的版本。",
+      "editorial_advice": "正文容纳最小区分模型和猜想边界；论文自己的缺证明说明不能用未读文献或想象附录替代。",
+      "applicability": "本轮仅读锁定正式PDF，未抓取新网页，也未把参考文献中独立工作的证明计为本稿附录。",
+      "confidence": {
+        "paper_specific": "high for checked textual/visual organization, not theorem correctness",
+        "venue_wide": "low;5/50 pilot samples cannot establish prevalence"
+      }
+    },
+    "actionable": {
+      "category": "corpus_observation",
+      "positions": [
+        "p6 Conjecture1; p7 Summary"
+      ],
+      "observation": "有限投票和信号示例帮助解释表达差异，无法单独证明一般指数下界或部署收益。",
+      "editorial_advice": "原创示例：The examples illustrate the distinction between confidence and uncertainty. Exponential succinctness remains a conjecture whose final lower-bound argument is incomplete.",
+      "applicability": "仅演示保持证据层级；不是可移植到用户不同研究事实的结果。",
+      "confidence": {
+        "paper_specific": "high for checked textual/visual organization, not theorem correctness",
+        "venue_wide": "low;5/50 pilot samples cannot establish prevalence"
+      }
+    }
+  },
+  "counterexamples": [
+    {
+      "position": "p5 §6 opening versus p6 Conjecture1 and p7 Future work",
+      "finding": "同文有“show指数简洁性”的表述，但明确Conjecture1与未来补完整证明；不能把整稿总结为已经证明指数优势。",
+      "editorial_action": "保持猜想状态和未完成步骤；结构优化时调整实质性主张需单列。"
+    },
+    {
+      "position": "p2 contribution; p5 Corollary1",
+      "finding": "原版可见逻辑与自身比较的名称笔误，需作者确认 intended operand。",
+      "editorial_action": "不依据单个错误句推导逻辑结论，也不静默更换逻辑名。"
+    },
+    {
+      "position": "pp4–7, §4/7",
+      "finding": "相同最坏情况复杂性、公式更短的猜想、案例表达简洁、实际验证更快是不同主张。",
+      "editorial_action": "不得从案例或渐近公式长度直接推断已测运行时间收益。"
+    },
+    {
+      "position": "p5 Theorem4 proof continuation and p7 Fig2",
+      "finding": "观察概率的分数排版易被文本抽取错序；视觉核实两个模型是互换的1/4与3/4，不能因抽取文本误判两模型相同。",
+      "editorial_action": "涉及分数/上下标/逻辑名时对原页核对后再写语义总结。"
+    }
+  ],
+  "visual_review": {
+    "pages": [
+      2,
+      4,
+      5,
+      6,
+      7
+    ],
+    "findings": [
+      "p2核对贡献中的prove/conjecture边界与策略范围。",
+      "p4核对0.7/0.3投票例、0.88bit和三个复杂性定理的限定。",
+      "p5核对公式分数、Theorem5与Corollary1原字及§6开头较强表述。",
+      "p6核对Conjecture1及缺失最后一步；p7核对Fig2概率、Summary/Future work与未完证明。"
+    ],
+    "temporary_render_manifest": "07-research/2026-10-21-顶会顶刊写作风格全文续研_证据/temporary-artifact-manifest.json",
+    "image_policy": "generated images remain in ignored skilltmp and are deleted after evidence notes saved; regenerate with manifest command and lockedPDF"
+  },
+  "official_requirements": [],
+  "holdout_validation": null,
+  "generalization_warning": "induction sample; no new official format rule or independent holdout validation; no frequency estimate",
+  "original_rewrite": "The examples illustrate the distinction between confidence and uncertainty. Exponential succinctness remains a conjecture whose final lower-bound argument is incomplete.",
+  "paper_type": "formal multi-agent logic: semantics, complexity, expressiveness, conjecture and illustrative cases"
+}

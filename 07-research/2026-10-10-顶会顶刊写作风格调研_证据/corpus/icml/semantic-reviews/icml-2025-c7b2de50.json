@@ -1,0 +1,262 @@
+{
+  "id": "icml-2025-c7b2de50",
+  "venue": "icml",
+  "year": 2025,
+  "split": "induction",
+  "title": "A Likelihood Based Approach to Distribution Regression Using Conditional Deep Generative Models",
+  "authors": "Shivam Kumar, Yun Yang, Lizhen Lin",
+  "pdf_path": ".claude/skills/paper-writing-shared/tmp/corpus/icml/pdf/A Likelihood Based Approach to Distribution Regression Using Conditional Deep Generative Models.pdf",
+  "markdown_path": ".claude/skills/paper-writing-shared/tmp/corpus/icml/markdown/A Likelihood Based Approach to Distribution Regression Using Conditional Deep Generative Models.md",
+  "pdf_sha256": "affaf02904723c593710417856fe9ba826b6fae94ad8ebd17a204a02282411a7",
+  "review_date": "2026-10-22",
+  "paper_type": "statistical convergence theory for conditional deep generative sieve MLE with composite/anisotropic approximation and manifold deconvolution plus illustrative CVAE experiments",
+  "semantic_review_status": "complete_writing_focused_review",
+  "full_text_style_review_complete": true,
+  "external_appendix_review_complete": true,
+  "count_eligible_full_text_and_relevant_appendix": true,
+  "coverage": [
+    {
+      "asset": "locked official PMLR PDF",
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27
+      ],
+      "sections": "Abstract; Introduction1.1/1.2; Model2/2.1/2.2/2.3/2.4.1–2.4.3; Numerical3; Discussion4; Impact/References; A.1/A.2/B/C/D/E/F/G/H/I/J/K/L/L.1/L.2; Theorems1–5/Lemmas1–9/Corollaries1–2; all three figures and tables1–3",
+      "method": "continuous27page text read, including entire anisotropic approximation proof;21originalpage images directly inspected to confirm figures, metrics and sourceformulaqueries"
+    }
+  ],
+  "version_audit": {
+    "official_landing": "https://proceedings.mlr.press/v267/kumar25c.html",
+    "official_pdf": "https://raw.githubusercontent.com/mlresearch/v267/main/assets/kumar25c/kumar25c.pdf",
+    "version": "official proceedings PDF; exact bytes locked by SHA256",
+    "identity": "title/authors/PMLR267/year and lockedSHA",
+    "new_network_fetch": false,
+    "qualification": "cached published source; not latest rules, citedresult or code verification"
+  },
+  "supplement_audit": {
+    "status": "A–L incl A.1/A.2/L.1/L.2 all related scientific appendices in same27pagePDF fully read",
+    "external_scientific_appendix_referenced": false,
+    "code_artifacts": "no CVAE training, reference-code or external math source executed/audited"
+  },
+  "ten_dimensions": {
+    "reader_argument": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp1–3"
+      ],
+      "observation": "从conditional distribution比mean regression信息更丰富，转到高维response近流形加full-dimensional Gaussian噪声，再说明统计而非优化理论问题。",
+      "editorial_advice": "区分观测Y|X卷积密度P与无噪声G(Z,X)分布Q；因果/生物/预测为动机引用，不是本文已验证应用。",
+      "applicability": "27页正文、文献及A.1/A.2、B–K、L/L.1/L.2所有附录连续阅读全文，21原页核验。仅写作组织与主张证据边界审阅，不独立重证transport/逼近/统计率、执行代码、复现实验或认证最优率。ICML24篇归纳先导，正式留出未用。",
+      "confidence": {
+        "paper_specific": "high for printed organization/evidence and conditions, not independently validated proof",
+        "venue_wide": "low;24/50 pilot"
+      }
+    },
+    "title_abstract": {
+      "category": "corpus_observation",
+      "positions": [
+        "p1"
+      ],
+      "observation": "标题按likelihood目标、distribution regression任务和conditional generator载体；摘要以条件分布/Hellinger、deconvolution/Wasserstein及噪声注入组织，不靠数值排行榜。",
+      "editorial_advice": "intrinsic-only应限定率指数、固定结构与噪声条件，常数仍依赖D/K/σmax，不能改成维度完全无影响；devolved文案不照搬为技术术语。",
+      "applicability": "27页正文、文献及A.1/A.2、B–K、L/L.1/L.2所有附录连续阅读全文，21原页核验。仅写作组织与主张证据边界审阅，不独立重证transport/逼近/统计率、执行代码、复现实验或认证最优率。ICML24篇归纳先导，正式留出未用。",
+      "confidence": {
+        "paper_specific": "high for printed organization/evidence and conditions, not independently validated proof",
+        "venue_wide": "low;24/50 pilot"
+      }
+    },
+    "introduction": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp1–3 §1.1"
+      ],
+      "observation": "先likelihood/adversarial/score三路线，显示Y=V+ε任务式，四贡献拆general rate、具体网络、噪声策略与learnable class。",
+      "editorial_advice": "first/near-optimal为作者定位，特定α0/平滑模型才对照已有最优率，不能扩张任意条件分布、任意噪声/算法；新统计界不等于新CVAE架构。",
+      "applicability": "27页正文、文献及A.1/A.2、B–K、L/L.1/L.2所有附录连续阅读全文，21原页核验。仅写作组织与主张证据边界审阅，不独立重证transport/逼近/统计率、执行代码、复现实验或认证最优率。ICML24篇归纳先导，正式留出未用。",
+      "confidence": {
+        "paper_specific": "high for printed organization/evidence and conditions, not independently validated proof",
+        "venue_wide": "low;24/50 pilot"
+      }
+    },
+    "related_work": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp1–3 §1.2; pp14/18/21/26"
+      ],
+      "observation": "早期独立Other Relevant Literature按统计估计和conditional generator比较，明确与Chae无条件模型的关系；证明中归属entropy/逼近及重述lemmas。",
+      "editorial_advice": "借用Wong-Shen、transport regularity、Schmidt-Hieber子网络和现成CVAE要明确；不能将多个重述引理都声称原创，比较既有文章内容未独立外部查证。",
+      "applicability": "27页正文、文献及A.1/A.2、B–K、L/L.1/L.2所有附录连续阅读全文，21原页核验。仅写作组织与主张证据边界审阅，不独立重证transport/逼近/统计率、执行代码、复现实验或认证最优率。ICML24篇归纳先导，正式留出未用。",
+      "confidence": {
+        "paper_specific": "high for printed organization/evidence and conditions, not independently validated proof",
+        "venue_wide": "low;24/50 pilot"
+      }
+    },
+    "method_theory": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp3–7 Assumptions1–3/Thms1–3/Cor1–2; pp14–27 C–L"
+      ],
+      "observation": "有界composite Hölder generator与noise interval，entropy+approx bias给sieveMLE Hellinger，再稀疏/全连接特化；emptyinterior/positive reach给Q的W1；noise注入、anisotropic平滑和manifold生成类后续。",
+      "editorial_advice": "integrated over X不改成每x均匀保证。需σ≍n^-α、α阈值、优化误差η及固定结构；t*不等于几何d，p在anisotropic率中仍出现。可测NoiseOutsourcing存在不保证smoothness，multi-chart附录明确无gk regularity保证，不能去掉此限制。",
+      "applicability": "27页正文、文献及A.1/A.2、B–K、L/L.1/L.2所有附录连续阅读全文，21原页核验。仅写作组织与主张证据边界审阅，不独立重证transport/逼近/统计率、执行代码、复现实验或认证最优率。ICML24篇归纳先导，正式留出未用。",
+      "confidence": {
+        "paper_specific": "high for printed organization/evidence and conditions, not independently validated proof",
+        "venue_wide": "low;24/50 pilot"
+      }
+    },
+    "evidence": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp7–8 Table1/Figs1–2; pp12–13 A"
+      ],
+      "observation": "CVAE实现，FD1混合/FD2加性/FD3乘性，n5000/4:1split、moment MSE对CKDE/FlexCode；两月牙/椭圆d1D2、20repetitions empiricalW1；MNIST onehotlabel/latent2，稀疏与全连接图和50samples距离均值±SD；A2增n中位数。",
+      "editorial_advice": "ELBO式/变分族与理论sieveMLE近最优loglik条件不同；优化/变分误差未认证。mean/SD的MSE不是Hellinger或完整分布相等，Sinkhorn近似W1需要正则/样本/度量细节；有限n趋势不验证精确渐近率或最优性。",
+      "applicability": "27页正文、文献及A.1/A.2、B–K、L/L.1/L.2所有附录连续阅读全文，21原页核验。仅写作组织与主张证据边界审阅，不独立重证transport/逼近/统计率、执行代码、复现实验或认证最优率。ICML24篇归纳先导，正式留出未用。",
+      "confidence": {
+        "paper_specific": "high for printed organization/evidence and conditions, not independently validated proof",
+        "venue_wide": "low;24/50 pilot"
+      }
+    },
+    "discussion_limits": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp8–9; pp13/15 A/D"
+      ],
+      "observation": "Discussion回到理论，未来penalized控制生成、flowmatching、hypothesis test及时序分布；附录承认multiple-chart smoothness未保证。",
+      "editorial_advice": "不把未来方向变成已达能力；固定噪声的W1界有σ项，保证不自动消失。partial失配/估计σ/网络配置与真实数据几何未核实，不能说所有近流形分布都学习成功。",
+      "applicability": "27页正文、文献及A.1/A.2、B–K、L/L.1/L.2所有附录连续阅读全文，21原页核验。仅写作组织与主张证据边界审阅，不独立重证transport/逼近/统计率、执行代码、复现实验或认证最优率。ICML24篇归纳先导，正式留出未用。",
+      "confidence": {
+        "paper_specific": "high for printed organization/evidence and conditions, not independently validated proof",
+        "venue_wide": "low;24/50 pilot"
+      }
+    },
+    "paragraph_language": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp3–9; pp13–27"
+      ],
+      "observation": "按general theorem→network corollary→deconvolution→class characterization→数值补充组织，每个正式结果后解释variance/bias或噪声；证明前后有路标。",
+      "editorial_advice": "large sample statistical convergence与SGD convergence分开；can/under/suggest紧贴条件。observed trend不改成“已证实理论”，MNIST低距离不自动高保真/覆盖全部模式。",
+      "applicability": "27页正文、文献及A.1/A.2、B–K、L/L.1/L.2所有附录连续阅读全文，21原页核验。仅写作组织与主张证据边界审阅，不独立重证transport/逼近/统计率、执行代码、复现实验或认证最优率。ICML24篇归纳先导，正式留出未用。",
+      "confidence": {
+        "paper_specific": "high for printed organization/evidence and conditions, not independently validated proof",
+        "venue_wide": "low;24/50 pilot"
+      }
+    },
+    "main_appendix": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp1–27"
+      ],
+      "observation": "正文1–9、refs9–11；A12–13额外实证，B13–14记号，C14transport/outsourcing，D14–15多chart，E16–18entropy，F18generalMLE，G19Cor1，H19–20W1，I20noise，J20Thm3，K20–21已有逼近，L21–27新anisotropic逼近/子网。",
+      "editorial_advice": "所有相关科学附录都在同27页PDF已读。B–L证明依赖长且多重述，主文需留对象、假设和统计-算法断点；不把引用书目和代码当已独立核证。",
+      "applicability": "27页正文、文献及A.1/A.2、B–K、L/L.1/L.2所有附录连续阅读全文，21原页核验。仅写作组织与主张证据边界审阅，不独立重证transport/逼近/统计率、执行代码、复现实验或认证最优率。ICML24篇归纳先导，正式留出未用。",
+      "confidence": {
+        "paper_specific": "high for printed organization/evidence and conditions, not independently validated proof",
+        "venue_wide": "low;24/50 pilot"
+      }
+    },
+    "actionable": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp4–8; pp12–27"
+      ],
+      "observation": "准备P/Q目标—距离—条件—网络类—逼近/统计/优化误差对照，再列数值测试能直接支持的结论与反例，区分理论稀疏性与实际稀疏连接实现。",
+      "editorial_advice": "原创示例：The rates concern an approximate sieve MLE under the stated generator, geometry and noise assumptions. Conditional-VAE experiments illustrate finite-sample behavior, including an FD3 variance-estimation deficit and degradation at larger injected-noise levels; they do not certify the likelihood optimization condition or the asymptotic exponents.",
+      "applicability": "27页正文、文献及A.1/A.2、B–K、L/L.1/L.2所有附录连续阅读全文，21原页核验。仅写作组织与主张证据边界审阅，不独立重证transport/逼近/统计率、执行代码、复现实验或认证最优率。ICML24篇归纳先导，正式留出未用。",
+      "confidence": {
+        "paper_specific": "high for printed organization/evidence and conditions, not independently validated proof",
+        "venue_wide": "low;24/50 pilot"
+      }
+    }
+  },
+  "counterexamples": [
+    {
+      "position": "pp3–7 Eq4/Thm1/§3",
+      "finding": "理论ηn针对平均loglik近最大值，实验用CVAE Gaussian变分族，写出的LVAE式缺对q的期望且joint/conditional归属需对齐。没有优化误差/variationalgap核验，不能宣称经验模型已满足sieveMLE定理或SGD全局收敛；η≤nε²/6与平均loglik归一化也需核对。"
+    },
+    {
+      "position": "pp4–7 Thm1/2/3/Cor1/2",
+      "finding": "常数明确依赖D/K/reach/σmax，指数依赖结构t*/β*和α，anisotropic还有d/βZ+p/βX；integratedX非uniformpointwise，固定σ的W1界不自动趋0。不能将intrinsic-only泛化为任意D无代价、任意几何或所有σ一致性。"
+    },
+    {
+      "position": "p6 Eq13; p20 I",
+      "finding": "noise合成在I用标准差相加且称variance，第二分支n正指数疑漏负号；α小的分支把n^-α与密度率相加后所取主导项需核对（p6另把α小误述为近流形）。保留σ/方差定义，不自动修正定理或以噪声越大越好代替条件策略。"
+    },
+    {
+      "position": "p4一维例; pp6/14 Lemma2/Thm4; p15 D",
+      "finding": "G(u)=u^(1/β)与密度βx^(β−1)被均称β-Hölder需限定β/边界；transport定理同维/均匀凸、有界正密度与conditional joint map保持X的衔接及unique map vs potential须作者说明。NoiseOutsourcing只给可测存在；多chart最后明确无gk regularity保证，indicator拼接的统一smooth/L∞逼近条件不能省。"
+    },
+    {
+      "position": "p6 Wasserstein定义; pp19–20 H; p17 E",
+      "finding": "Kantorovich Lipschitz对偶不能直接任意r；Hellinger写EX距离与联立根积分需一致。H中只裁噪声并非对观测的共同确定映射，故TV缩减步骤需作者论证；E的Gaussian包络分母幂、δ²=体积与后文ε比例不一、F噪声平方幂应核对。审阅不提供独立transport/统计证明认证。"
+    },
+    {
+      "position": "p8 Table1; pp12–13 A.1/Table2",
+      "finding": "FD3 SD MSE1.6394劣于CKDE0.6334；其他moment胜出不证明整分布Hellinger更好。MNIST噪声0.005小幅降、0.02后超过无噪声，Sparse也非总优Dense；±为50samples SD而非重训CI，不补显著性。“低于test-test baseline”距离不能单独认证high-fidelity。"
+    },
+    {
+      "position": "p8 Fig2; p13 A.2/Table3",
+      "finding": "两流形20重复boxplot x轴σ而非α；不将其当n渐近斜率。Ellipse n8000中位0.253到9000为0.259变差，固定σ0.01有限n下降趋势非单调/精确率验证。Sinkhorn正则/groundcost、样本配对和MNIST像素如何形成W1分布未完整说明，不能与定理Q|X的W1无条件等同。"
+    },
+    {
+      "position": "p12 A.1; pp21–27 L",
+      "finding": "实际Sparse网络多隐藏层不同于Dense，但未给连接mask/非零数，图生成不验证理论architecture规模。βtilde/rtilde与M1/M2/N计数、网格非整数、hat缩放/多项式构造的记号要逐项对齐；借用乘法/monomial引理已有归属，不能称全部原创或静默修改率。"
+    }
+  ],
+  "visual_review": {
+    "pages": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      12,
+      13,
+      14,
+      15,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27
+    ],
+    "source": "115dpi original-page Poppler images directly viewed",
+    "policy": "delete21renders+duplicateextract after record; keep canonicalPDF/primaryMD only ignoredskilltmp"
+  },
+  "official_requirements": [],
+  "holdout_validation": null,
+  "review_limitations": "27页正文、文献及A.1/A.2、B–K、L/L.1/L.2所有附录连续阅读全文，21原页核验。仅写作组织与主张证据边界审阅，不独立重证transport/逼近/统计率、执行代码、复现实验或认证最优率。ICML24篇归纳先导，正式留出未用。"
+}

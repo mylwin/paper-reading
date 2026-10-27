@@ -1,0 +1,22 @@
+{
+  "batch": "icml-036",
+  "date": "2026-10-23",
+  "papers": [
+    {
+      "id": "icml-2024-c8c985f6",
+      "venue": "icml",
+      "year": 2024,
+      "split": "induction",
+      "full_and_appendix_complete": true,
+      "new_pdf_acquisition": false,
+      "review_record": "07-research/2026-10-10-顶会顶刊写作风格调研_证据/corpus/icml/semantic-reviews/icml-2024-c8c985f6.json",
+      "pdf_sha256": "bd9c462ee61e7ec04a85f1b14f6432b1cb6c4cd5ce3f66d10837d2afe42cbfa5"
+    }
+  ],
+  "before_full": 57,
+  "new_full": 1,
+  "after_full": 58,
+  "icml_before": 35,
+  "icml_after": 36,
+  "qualification": "writingorganizationandclaim/evidenceboundaryreview,notindependentprooforreplication"
+}

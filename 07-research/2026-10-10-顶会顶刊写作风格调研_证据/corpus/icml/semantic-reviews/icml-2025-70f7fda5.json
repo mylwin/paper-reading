@@ -1,0 +1,267 @@
+{
+  "id": "icml-2025-70f7fda5",
+  "venue": "icml",
+  "year": 2025,
+  "split": "induction",
+  "title": "Devil is in the Details: Density Guidance for Detail-Aware Generation with Flow Models",
+  "authors": "Rafal Karczewski, Markus Heinonen, Vikas K Garg",
+  "pdf_path": ".claude/skills/paper-writing-shared/tmp/corpus/icml/pdf/Devil is in the Details- Density Guidance for Detail-Aware Generation with Flow Models.pdf",
+  "markdown_path": ".claude/skills/paper-writing-shared/tmp/corpus/icml/markdown/Devil is in the Details- Density Guidance for Detail-Aware Generation with Flow Models.md",
+  "pdf_sha256": "8ab7f4183ecda206e5616a81e28c952dac99c8416dd607da2a5e1af4876dbc86",
+  "review_date": "2026-10-22",
+  "paper_type": "continuous-flow/diffusion density-control sampling: latent-guidance condition, constrained ODE/SDE derivations, asymptotic mixture analysis and pretrained-image diagnostics",
+  "semantic_review_status": "complete_writing_focused_review",
+  "full_text_style_review_complete": true,
+  "external_appendix_review_complete": true,
+  "count_eligible_full_text_and_relevant_appendix": true,
+  "coverage": [
+    {
+      "asset": "locked official PMLR PDF",
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30
+      ],
+      "sections": "Abstract/Intro/Background2.1–2.4/PriorScaling3/DensityGuidance4.1–4.2/Stochastic5/Related6/Conclusion7/Impact/Acknowledgements/References; A.1–3/B/C.1–3/D/E/F.1–4/G/H/I/J/K/L/M/N inclLemmaN1/N2/Theorem1; all22Figures andJAXListing1",
+      "method": "continuous30page text read plus27originalpageimages directlyinspected; scientific imagegrids/curves and terminalPGsamples all reviewed, not counted from captions alone"
+    }
+  ],
+  "version_audit": {
+    "official_landing": "https://proceedings.mlr.press/v267/karczewski25a.html",
+    "official_pdf": "https://raw.githubusercontent.com/mlresearch/v267/main/assets/karczewski25a/karczewski25a.pdf",
+    "version": "official proceedings PDF; exact bytes locked by SHA256",
+    "identity": "title/authors/PMLR267/year and lockedSHA",
+    "new_network_fetch": false,
+    "qualification": "cachedofficialPDF; no independent numericalreplication or codeaudit"
+  },
+  "supplement_audit": {
+    "status": "A–N all related scientific/proof/code/image appendices in same30pagePDF fully read",
+    "external_scientific_appendix_referenced": false,
+    "code_artifacts": "JAX listing inspected only; external repo/modelweights not executed"
+  },
+  "ten_dimensions": {
+    "reader_argument": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp1–4 Fig1–4"
+      ],
+      "observation": "从likelihood与细节/质量不一致切入，先解释已有latent scaling何时有效，再给可控ODE与stochastic扩展；读者需CNF、score和反向时间知识。",
+      "editorial_advice": "控制原模型p_t沿新轨迹的值，不是新sampler自身边缘密度；图像细节PNG代理不等于人类质量/semantic fidelity。typical区间外高/低密度都可能坏，不把低density一律好。",
+      "applicability": "30页正文/文献及A–N所有相关科学附录连续阅读，27原页核验含22幅图、伪码和JAX listing。写作组织/主张证据边界审阅，不复现实验、执行作者代码、独立认证证明或全部参考文献。ICML29篇归纳先导，正式留出未用。",
+      "confidence": {
+        "paper_specific": "high for inspected reported definitions/design/figures and limits; not proof or codecertification",
+        "venue_wide": "low;29/50 pilot"
+      }
+    },
+    "title_abstract": {
+      "category": "corpus_observation",
+      "positions": [
+        "p1"
+      ],
+      "observation": "引人注意短语+技术副标题，摘要按已有现象→scorealignment条件→densityODE→stochasticcontrol→图像效果组织，首图直接示意同条件同latent的可调细节。",
+      "editorial_advice": "exact需要真score、连续动力学和非零score条件；摘要without compromising quality应限定实测代理/范围，而非所有q/模型的质量保证。题名形式非venue固定规范。",
+      "applicability": "30页正文/文献及A–N所有相关科学附录连续阅读，27原页核验含22幅图、伪码和JAX listing。写作组织/主张证据边界审阅，不复现实验、执行作者代码、独立认证证明或全部参考文献。ICML29篇归纳先导，正式留出未用。",
+      "confidence": {
+        "paper_specific": "high for inspected reported definitions/design/figures and limits; not proof or codecertification",
+        "venue_wide": "low;29/50 pilot"
+      }
+    },
+    "introduction": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp1–2"
+      ],
+      "observation": "先列前作三限制，再三贡献各回指§3/4/5；贡献含解释已有heuristic、推导新规则、扩展采样，不强制新训练架构。",
+      "editorial_advice": "PriorGuidance机制受SA限制，不能由有限例子说全latent/全CNF始终成功；纯推导贡献与可视化、定量诊断各连明确证据。",
+      "applicability": "30页正文/文献及A–N所有相关科学附录连续阅读，27原页核验含22幅图、伪码和JAX listing。写作组织/主张证据边界审阅，不复现实验、执行作者代码、独立认证证明或全部参考文献。ICML29篇归纳先导，正式留出未用。",
+      "confidence": {
+        "paper_specific": "high for inspected reported definitions/design/figures and limits; not proof or codecertification",
+        "venue_wide": "low;29/50 pilot"
+      }
+    },
+    "related_work": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp7–8 §6"
+      ],
+      "observation": "RelatedWork在方法与穿插实验之后，对比lowdensitysampling/likelihoodtractability、latentrescaling、autoguidance、RiemannianLangevin和FLIPD的目标及数学对象。",
+      "editorial_advice": "不要求固定前置RelatedWork；投影P半正定且rankD−1不能直接当正定Riemannianmetric。其他论文定位未独立读，不借此证明方法全面优于autoguidance。",
+      "applicability": "30页正文/文献及A–N所有相关科学附录连续阅读，27原页核验含22幅图、伪码和JAX listing。写作组织/主张证据边界审阅，不复现实验、执行作者代码、独立认证证明或全部参考文献。ICML29篇归纳先导，正式留出未用。",
+      "confidence": {
+        "paper_specific": "high for inspected reported definitions/design/figures and limits; not proof or codecertification",
+        "venue_wide": "low;29/50 pilot"
+      }
+    },
+    "method_theory": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp2–7; pp11–23/27–29 A–H/N"
+      ],
+      "observation": "SA为decoded prior-score方向导数非负；sensitivity+JVP及无需中间score的omega估计。给定b用最近向量场约束最优解控制logp；quantile分显式估计与高维h统计隐式近似；SDE scoreorthogonalnoise消去logp的随机项并补Itocorrection。",
+      "editorial_advice": "SA局部/整曲线条件不同，采样通过率不证全曲线。score0时任意b不可达，最近瞬时drift不等于全轨迹最短。Eq120含Rayleigh、实际Eq123忽略；b若state-dependent，确定无martingale项也不意味着跨seed logp相同。高维CLT非任意神经模型有限误差界。",
+      "applicability": "30页正文/文献及A–N所有相关科学附录连续阅读，27原页核验含22幅图、伪码和JAX listing。写作组织/主张证据边界审阅，不复现实验、执行作者代码、独立认证证明或全部参考文献。ICML29篇归纳先导，正式留出未用。",
+      "confidence": {
+        "paper_specific": "high for inspected reported definitions/design/figures and limits; not proof or codecertification",
+        "venue_wide": "low;29/50 pilot"
+      }
+    },
+    "evidence": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp4–7 Figs3–9; pp16/18–19/23/25–26 E/F/H/J/K/L"
+      ],
+      "observation": "CIFAR10 VP与EDM2/ImageNet512的SA97%/100%，omega256latent相关.988；负logp与PNG最高.84 vsFLIPD.29。显式q K16–1024、128足以报告>.99相关；32–1024Euler步、1024步encoding作参考。GMM K128/N16384/D64–4096/σ.5,1,10；SD2.1/EDM2±CFG及随机early/late图和NIQE。",
+      "editorial_advice": "相关高不等绝对校准，reference本身数值估计。预训练模型+采样实验非训练seedreplication；errorbars/样本数多处未定义，不能补CI或significance。没有统一FID/人评/系统耗时测量，noextracost仅implicitODE重用score非全部推导/验证/SDE零成本。",
+      "applicability": "30页正文/文献及A–N所有相关科学附录连续阅读，27原页核验含22幅图、伪码和JAX listing。写作组织/主张证据边界审阅，不复现实验、执行作者代码、独立认证证明或全部参考文献。ICML29篇归纳先导，正式留出未用。",
+      "confidence": {
+        "paper_specific": "high for inspected reported definitions/design/figures and limits; not proof or codecertification",
+        "venue_wide": "low;29/50 pilot"
+      }
+    },
+    "discussion_limits": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp5–8; pp15/22–26"
+      ],
+      "observation": "非典型区不可靠、显式q按condition需估计分布、SA失败toy、SDE省略项和分辨率/模型限制分散在方法/附录。Impact谈syntheticmedia误用。",
+      "editorial_advice": "没有独立Limitations也要集中保留；NIQE偏低细节与图像更丰富不同。半径q与logdensityq方向相反，不直接统一超参。推广文本条件需conditional score，未证每prompt量化质量改善。",
+      "applicability": "30页正文/文献及A–N所有相关科学附录连续阅读，27原页核验含22幅图、伪码和JAX listing。写作组织/主张证据边界审阅，不复现实验、执行作者代码、独立认证证明或全部参考文献。ICML29篇归纳先导，正式留出未用。",
+      "confidence": {
+        "paper_specific": "high for inspected reported definitions/design/figures and limits; not proof or codecertification",
+        "venue_wide": "low;29/50 pilot"
+      }
+    },
+    "paragraph_language": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp3–8"
+      ],
+      "observation": "问题句推动三部分，定义框/图解释与理论穿插，技术主式后立即问如何选b，并分explicit/implicit两解；复杂精确式移附录。",
+      "editorial_advice": "控制/相关/近似/保证分别用词。costfree、exact、nearlyall要附模型/数学/数值条件；主文简化版与精确附录必须标明，不能为流畅删去approximate。",
+      "applicability": "30页正文/文献及A–N所有相关科学附录连续阅读，27原页核验含22幅图、伪码和JAX listing。写作组织/主张证据边界审阅，不复现实验、执行作者代码、独立认证证明或全部参考文献。ICML29篇归纳先导，正式留出未用。",
+      "confidence": {
+        "paper_specific": "high for inspected reported definitions/design/figures and limits; not proof or codecertification",
+        "venue_wide": "low;29/50 pilot"
+      }
+    },
+    "main_appendix": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp1–30"
+      ],
+      "observation": "正文1–9/refs9–10；A11–12基础优化/投影，B12–13连续密度，C13–15SA及反例，D15–16ODE，E16q实验，F17–19高维，G20–23SDE，H23数值，I24JAX，J24–25定量，K24/26随机，L26NIQE，M26–27/30PG图，N27–29混合渐近证明。",
+      "editorial_advice": "22科学图与listing全部核验；图21/22在末页、N在M图前不能漏读。源公式/代码疑点记录不静默修复，不将发表版图排布当当前模板要求。外部代码未执行、无全文科学补充缺口。",
+      "applicability": "30页正文/文献及A–N所有相关科学附录连续阅读，27原页核验含22幅图、伪码和JAX listing。写作组织/主张证据边界审阅，不复现实验、执行作者代码、独立认证证明或全部参考文献。ICML29篇归纳先导，正式留出未用。",
+      "confidence": {
+        "paper_specific": "high for inspected reported definitions/design/figures and limits; not proof or codecertification",
+        "venue_wide": "low;29/50 pilot"
+      }
+    },
+    "actionable": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp4–8; pp16–30"
+      ],
+      "observation": "写清理论对象/非零和正则条件→数值近似→实现成本→图像proxy→反例；同latent/condition/innerseed配对图配合目标vs实际与误差随steps曲线。",
+      "editorial_advice": "原创示例：The method adjusts the original flow-model density along generated trajectories and yields controllable texture in the reported models. Exact continuous-time statements assume the required score and correction terms, whereas practical quantile matching, trace estimates and discretization introduce approximations. PNG size and NIQE measure different properties and do not establish a universal improvement in perceptual quality.",
+      "applicability": "30页正文/文献及A–N所有相关科学附录连续阅读，27原页核验含22幅图、伪码和JAX listing。写作组织/主张证据边界审阅，不复现实验、执行作者代码、独立认证证明或全部参考文献。ICML29篇归纳先导，正式留出未用。",
+      "confidence": {
+        "paper_specific": "high for inspected reported definitions/design/figures and limits; not proof or codecertification",
+        "venue_wide": "low;29/50 pilot"
+      }
+    }
+  },
+  "counterexamples": [
+    {
+      "position": "pp3–4/13–15 SA/Fig11",
+      "finding": "SA在linearvectorfield成立，三分量二维GMM给失败例；CIFAR97%不是100%，EDM2有限样本100%不证全域/整scalingcurve。Fig11caption把z1重复且increase/decrease与C.3正文相反；C初始curve写pT(x0(c))而链式pT(c)、C.1 Jacobian分母x0 vsxT需核。不能把图selected例解释成allflow guarantee。"
+    },
+    {
+      "position": "pp5–6/15–16 Eq16/18/19 and E",
+      "finding": "非零score分母条件必需，score0只能b=−divu；任意目标c可达需动力学存在/典型区条件。取b=φ_t′(q)还需初始logpT(xT)=φ_T(q)或offset校正；随机xT未说明匹配初始化的实现细节需查询。>.99相关不等exact，有限32steps目标/实际明显offset，1024Euler参考也非解析groundtruth。"
+    },
+    {
+      "position": "pp6–7/17–19/22–23 F/G/H/N",
+      "finding": "implicitq依赖高维h近似正态，不等显式绝对logp校准；F.2非各向同性需spectral条件且改HessianFrobenius归一化，不能仍套σ²/sqrt2D。N证明固定有限K、正混合权重的1/πk尾界才收敛，不自动适用于K随D快速增大/π趋0。Gaussian mixture推导F.3 wk=pk/p缺混合权重，而N.129为posterior；F.4 Φ^{-1}(h)均匀说法/图标应核CDF与inverse方向。normality p>.05仅未拒绝不证明精确正态。"
+    },
+    {
+      "position": "pp7/20–23 Eq120/123/124",
+      "finding": "stochastic exact式含Rayleighcorrection，实际置0：CIFAR |R/Δ|~.0003±.00006与ImageNet64~.00006±.00003，仅两模型/典型sample报告，非所有轨迹统一界。φ=.9g时4096步仍有目标差，不以图注exact冒充有限steps精确。Projectednoise消martingale不保证state-dependentb的积分跨路径相同，亦不保持原sampler边缘分布。"
+    },
+    {
+      "position": "pp4/6/24–26 Figs4/16–20",
+      "finding": "PNG对细节代理不是semantic/humanquality；最大相关.84/.29不是准确率或效果提升84%。NIQE在q中间/偏平滑优、两端较差，PG最优NIQE与DG相近或更低，不能宣称DG普遍qualitybest。qPG是χ²norm分位越大更细，而qDG越大更平滑，两者方向不可互换。误差条、PNG/NIQE样本数、CFG权重/多数solversteps/硬件未完整列，不补CI、显著性或全面可复现性。"
+    },
+    {
+      "position": "pp3/6–8/22–24 computation andlisting",
+      "finding": "implicitODE可重用已有score，不表示SA二阶JVP/trace、explicitq校准、SDE额外Laplacian或模型评估全零成本；无walltime/GPUmemory对照。JAXListing1内def u重新遮蔽输入u，行9/19回调指向同名局部函数需核；v的flatten/shape与score_fn依赖未完整定义。未执行代码或查询当前JAX，不报运行复现通过。"
+    },
+    {
+      "position": "p12 A.2proof; p20 repeatedEq8/97; p28–29 N",
+      "finding": "投影proof对一般A用quadraticRayleigh表示spectralnorm需补限定/修正，P−I符号、−v被写+v，最终P确为候选但非全证明认证。p20重印Eq8多出嵌套φ²/2，与p3式不一致；Eq97缺dt。N Step3转0的distribution/probability措辞及Eq131缺绝对值只记录源文字问题，未静默修后当原文认证。"
+    }
+  ],
+  "visual_review": {
+    "pages": [
+      1,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30
+    ],
+    "source": "115dpi originalpagePopplerimages directlyviewed, all22Figures/algorithm/listing and questionedformula pages",
+    "policy": "delete27renders+duplicateextract after record; canonicalPDF/primaryMD only ignoredskilltmp"
+  },
+  "official_requirements": [],
+  "holdout_validation": null,
+  "review_limitations": "30页正文/文献及A–N所有相关科学附录连续阅读，27原页核验含22幅图、伪码和JAX listing。写作组织/主张证据边界审阅，不复现实验、执行作者代码、独立认证证明或全部参考文献。ICML29篇归纳先导，正式留出未用。"
+}

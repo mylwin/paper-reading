@@ -1,0 +1,241 @@
+{
+  "id": "icml-2024-d85e13c4",
+  "venue": "icml",
+  "year": 2024,
+  "split": "induction",
+  "title": "Generative Enzyme Design Guided by Functionally Important Sites and Small-Molecule Substrates",
+  "authors": "Zhenqiao Song, Yunlong Zhao, Wenxian Shi, Wengong Jin, Yang Yang, Lei Li",
+  "pdf_path": ".claude/skills/paper-writing-shared/tmp/corpus/icml/pdf/Generative Enzyme Design Guided by Functionally Important Sites and Small-Molecule Substrates.pdf",
+  "markdown_path": ".claude/skills/paper-writing-shared/tmp/corpus/icml/markdown/Generative Enzyme Design Guided by Functionally Important Sites and Small-Molecule Substrates.md",
+  "pdf_sha256": "803db355d6d2183a7e45f7bb74bd6ac3b1852f250afd1c2401932a6ca1e89c1b",
+  "review_date": "2026-10-22",
+  "paper_type": "cross-domain enzyme sequence/backbone co-design method with geometric equivariance argument, benchmark and computational proxy evaluation",
+  "semantic_review_status": "complete_writing_focused_review",
+  "full_text_style_review_complete": true,
+  "external_appendix_review_complete": true,
+  "count_eligible_full_text_and_relevant_appendix": true,
+  "coverage": [
+    {
+      "asset": "locked official PMLR PDF",
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21
+      ],
+      "sections": "Abstract; Introduction; RelatedWork; Method3.1–3.5; Experiments4.1–4.3; Analysis5.1–5.6; Discussion; Conclusion; Acknowledgements/Impact/References; A.1/A.2; B; C; D.1/D.2.1–D.2.3/D.3 and Tables6–19",
+      "method": "continuous all21page prose/equations/captions/tables read;14criticaloriginalpagevisuals; truncatedinitialp3retrievedagainfully"
+    }
+  ],
+  "version_audit": {
+    "official_landing": "https://proceedings.mlr.press/v235/song24k.html",
+    "official_pdf": "https://raw.githubusercontent.com/mlresearch/v235/main/assets/song24k/song24k.pdf",
+    "version": "official proceedings PDF; exact bytes locked by SHA256",
+    "identity": "title/authors/PMLR235/year and lockedSHA",
+    "new_network_fetch": false,
+    "qualification": "cached finalPDF not latest officialrule verification"
+  },
+  "supplement_audit": {
+    "status": "A–D all relevant scientific appendices in same21pagePDF fully reviewed",
+    "external_scientific_appendix_referenced": false,
+    "code_artifacts": "github link printed p1; no repository/code audit or execution"
+  },
+  "ten_dimensions": {
+    "reader_argument": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp1–3,7,9"
+      ],
+      "observation": "从酶/底物/位点的领域定义引入条件序列与Cα坐标联合生成；以计算指标降低湿实验前的候选筛选成本。",
+      "editorial_advice": "跨学科读者先知道任务对象和测量意义；结合、折叠置信与实际催化功能必须分开，不能补成已做湿实验。",
+      "applicability": "21页全文、文献和A–D科学附录已连续读完，14关键原页直接核验；写作/论证证据边界分析，不独立验证SE(3)证明、MSA/训练代码、完整泄漏审计、湿实验或每条引用。ICML16/50归纳先导，留出未用。",
+      "confidence": {
+        "paper_specific": "high for inspected printed organization/values; no independent scientific validation",
+        "venue_wide": "low; pilot16/50"
+      }
+    },
+    "title_abstract": {
+      "category": "corpus_observation",
+      "positions": [
+        "p1; p2 contributions"
+      ],
+      "observation": "标题按任务+位点/底物条件组织；摘要依次机制、三loss、数据集与一个亲和力相对变化。贡献含统一模型、基准、三量评价。",
+      "editorial_advice": "all families/all323 consistently best须对照逐类表，3157是PDB可得子集而非8422总类；10.79%是负docking分数幅度比较而非催化成功率。",
+      "applicability": "21页全文、文献和A–D科学附录已连续读完，14关键原页直接核验；写作/论证证据边界分析，不独立验证SE(3)证明、MSA/训练代码、完整泄漏审计、湿实验或每条引用。ICML16/50归纳先导，留出未用。",
+      "confidence": {
+        "paper_specific": "high for inspected printed organization/values; no independent scientific validation",
+        "venue_wide": "low; pilot16/50"
+      }
+    },
+    "introduction": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp1–2"
+      ],
+      "observation": "现有三类设计方案及四限制→保守位点和底物动机→全局/邻域交替模型→数据及实证贡献。",
+      "editorial_advice": "首次/统一覆盖等是作者历史定位，本轮未穷尽文献验证；保留覆盖集合、输入已有位点坐标和长度等条件。",
+      "applicability": "21页全文、文献和A–D科学附录已连续读完，14关键原页直接核验；写作/论证证据边界分析，不独立验证SE(3)证明、MSA/训练代码、完整泄漏审计、湿实验或每条引用。ICML16/50归纳先导，留出未用。",
+      "confidence": {
+        "paper_specific": "high for inspected printed organization/values; no independent scientific validation",
+        "venue_wide": "low; pilot16/50"
+      }
+    },
+    "related_work": {
+      "category": "corpus_observation",
+      "positions": [
+        "p2 §2"
+      ],
+      "observation": "功能蛋白设计与重要位点发现两条线，后者解释为何采用MSA；将跨语言tag类比放具体输入定义。",
+      "editorial_advice": "领域背景服务机制选择，不把MSA保守位点自动等同已实验验证的催化位点；同类任务的比较输入要说明。",
+      "applicability": "21页全文、文献和A–D科学附录已连续读完，14关键原页直接核验；写作/论证证据边界分析，不独立验证SE(3)证明、MSA/训练代码、完整泄漏审计、湿实验或每条引用。ICML16/50归纳先导，留出未用。",
+      "confidence": {
+        "paper_specific": "high for inspected printed organization/values; no independent scientific validation",
+        "venue_wide": "low; pilot16/50"
+      }
+    },
+    "method_theory": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp3–5 Eq1–13; p14 A"
+      ],
+      "observation": "先联合概率/三loss，然后全局注意力、KNN等变坐标消息、substrate分支和MSA。A以距离不变与坐标差向量归纳说明SE(3)性质。",
+      "editorial_advice": "理论是几何变换性质，不保证催化/全局最优。Eq1序列坐标条件不含V，V在binding分支及联合loss中；不得凭标题添加未实现的跨分支生成时底物融合。λ协方差与λ/2损失、距离范数和corollary编号疑点列核对，不静默改公式。",
+      "applicability": "21页全文、文献和A–D科学附录已连续读完，14关键原页直接核验；写作/论证证据边界分析，不独立验证SE(3)证明、MSA/训练代码、完整泄漏审计、湿实验或每条引用。ICML16/50归纳先导，留出未用。",
+      "confidence": {
+        "paper_specific": "high for inspected printed organization/values; no independent scientific validation",
+        "venue_wide": "low; pilot16/50"
+      }
+    },
+    "evidence": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp5–9 Tables1–5/Figs3–4; pp15–21 Tables6–19"
+      ],
+      "observation": "101974PDB、3157四级类，50%序列聚类隔离；30三级测试类/323四级子类，50case每三级。主表30组，附录逐323结果、top1/5/10与八案例序列。三量是ESP、Gnina对接kcal/mol和AF2 pLDDT。",
+      "editorial_advice": "0.65/-9.44/87.45是报告均值，不是全家族皆胜或湿实验。RFDiffusion直接用发布模型、其他模型重训；预训练714M与随机117M规模对比混合初始化。topk筛选/排序口径及均值权重须明确，不能自动认为相同候选或无偏比较。",
+      "applicability": "21页全文、文献和A–D科学附录已连续读完，14关键原页直接核验；写作/论证证据边界分析，不独立验证SE(3)证明、MSA/训练代码、完整泄漏审计、湿实验或每条引用。ICML16/50归纳先导，留出未用。",
+      "confidence": {
+        "paper_specific": "high for inspected printed organization/values; no independent scientific validation",
+        "venue_wide": "low; pilot16/50"
+      }
+    },
+    "discussion_limits": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp8–9 §5/6"
+      ],
+      "observation": "专设Discussion承认PDB覆盖子集、binding loss对催化约束弱；zero-shot仅两新底物和两新类，要求AlphaFold给结构/位点。",
+      "editorial_advice": "没有动力学参数、实验表达或催化活性证据；计算docking/氢键图像只是代理。微调有15改善8退步，不写进一步微调必定提升；下游迁移不是所有家族无条件通用。",
+      "applicability": "21页全文、文献和A–D科学附录已连续读完，14关键原页直接核验；写作/论证证据边界分析，不独立验证SE(3)证明、MSA/训练代码、完整泄漏审计、湿实验或每条引用。ICML16/50归纳先导，留出未用。",
+      "confidence": {
+        "paper_specific": "high for inspected printed organization/values; no independent scientific validation",
+        "venue_wide": "low; pilot16/50"
+      }
+    },
+    "paragraph_language": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp7–9 §4.3/5"
+      ],
+      "observation": "主结果段以加粗发现开头后接表数，分析用具体研究问题分节；存在significantly/confirm等强词和数据不完全一致的全称。",
+      "editorial_advice": "可借用问题驱动组织，但significant无统计检验不能翻成统计显著；比较平均而非全称，分别写相关/支持而非充分证明因果。",
+      "applicability": "21页全文、文献和A–D科学附录已连续读完，14关键原页直接核验；写作/论证证据边界分析，不独立验证SE(3)证明、MSA/训练代码、完整泄漏审计、湿实验或每条引用。ICML16/50归纳先导，留出未用。",
+      "confidence": {
+        "paper_specific": "high for inspected printed organization/values; no independent scientific validation",
+        "venue_wide": "low; pilot16/50"
+      }
+    },
+    "main_appendix": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp10–21"
+      ],
+      "observation": "主文1–9，10ack/impact与文献至13；A证明14，B树图14/16，C类信息14/15，D逐类/候选/案例14–21。附录序列支持精确案例追溯。",
+      "editorial_advice": "正文留数据split、基线重训差异和指标定义；附录表不能被平均图替代。p3/p16解析含隐藏旧图文字，原页无重叠，排版判断必须直接看PDF。",
+      "applicability": "21页全文、文献和A–D科学附录已连续读完，14关键原页直接核验；写作/论证证据边界分析，不独立验证SE(3)证明、MSA/训练代码、完整泄漏审计、湿实验或每条引用。ICML16/50归纳先导，留出未用。",
+      "confidence": {
+        "paper_specific": "high for inspected printed organization/values; no independent scientific validation",
+        "venue_wide": "low; pilot16/50"
+      }
+    },
+    "actionable": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp6–9; pp17–21"
+      ],
+      "observation": "同一应用结果需区分领域目标、代理测量、类级异质性与经验边界；用消融、案例及局限闭环。",
+      "editorial_advice": "原创示例：EnzyGen improves the reported mean computational scores on EnzyBench. These scores assess predicted interactions and structural confidence; they do not establish catalytic activity, and some enzyme categories favor a baseline.",
+      "applicability": "21页全文、文献和A–D科学附录已连续读完，14关键原页直接核验；写作/论证证据边界分析，不独立验证SE(3)证明、MSA/训练代码、完整泄漏审计、湿实验或每条引用。ICML16/50归纳先导，留出未用。",
+      "confidence": {
+        "paper_specific": "high for inspected printed organization/values; no independent scientific validation",
+        "venue_wide": "low; pilot16/50"
+      }
+    }
+  },
+  "counterexamples": [
+    {
+      "position": "p6 Tables2–4 vs pp1/8",
+      "finding": "EnzyGen 1.14.13 ESP0.38 vs RFDiffusion0.54；1.14.14 docking−10.34 vs−10.74；3.1.3 pLDDT85.40 vs ESM87.05。均值最佳不等于全部323或30类皆胜，逐类附表只列EnzyGen不能验证逐类对基线全胜。"
+    },
+    {
+      "position": "pp7–9; p20 Tables13–15",
+      "finding": "714M采用ESM2预训练，117M随机初始化，容量与预训练混淆；微调Table5含8退步。top1/5/10选择概率定义和逐指标候选一致性说明不足，不能补成独立随机重复或统计显著。"
+    },
+    {
+      "position": "p9 Discussion; p16 cases",
+      "finding": "binding约束被作者承认为对催化功能较弱；docking/ESP/pLDDT和氢键图不是湿实验活性/稳定性验证，58.5/49.4是与近邻序列identity不是实验成功率。"
+    },
+    {
+      "position": "pp5–6 split/MSA; p8 zero-shot",
+      "finding": "50%序列聚类隔离是作者说法，但位点MSA是否仅由训练集构建未明确；潜在信息流待核实，不能宣称已完成无泄漏审计。仅两个新类/两个底物的top32支持有限外推。"
+    },
+    {
+      "position": "pp3–4 Eq1/3; p14 A",
+      "finding": "λI协方差与log likelihood的λ/2系数需核对；A距离等式混用范数和平方、引corollary3.2未见对应正文编号。阅读组织不等于证明正确或静默更正。"
+    },
+    {
+      "position": "p17 Table8",
+      "finding": "RFDiffusion与ESM2+EGNN在后三15类别ESP整行一致，保留原值列核对，不推测伪造或擅改。p3/p16隐藏图文本由原页排除实际视觉重叠，不能当版式问题。"
+    }
+  ],
+  "visual_review": {
+    "pages": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      14,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21
+    ],
+    "source": "115dpi original-page Poppler PNG direct view",
+    "policy": "delete14renders+duplicateextract only after record; retain PDF/primaryMD in ignoredskilltmp"
+  },
+  "holdout_validation": null,
+  "official_requirements": [],
+  "review_limitations": "21页全文、文献和A–D科学附录已连续读完，14关键原页直接核验；写作/论证证据边界分析，不独立验证SE(3)证明、MSA/训练代码、完整泄漏审计、湿实验或每条引用。ICML16/50归纳先导，留出未用。"
+}

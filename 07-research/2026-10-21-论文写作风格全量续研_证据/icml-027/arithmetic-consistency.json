@@ -1,0 +1,55 @@
+{
+  "scope": "original tiny arithmetic consistency check only; not reproduction of author code, independent full theorem audit or external-reference verification",
+  "source_positions": [
+    "p4 Proposition3.2",
+    "pp16/18 entropy inequalities",
+    "p27 denseQ memory claim",
+    "p26 Table5 PR normalization"
+  ],
+  "d": 3,
+  "n": 4,
+  "constructed_design": [
+    [
+      0,
+      0,
+      0
+    ],
+    [
+      0,
+      1,
+      1
+    ],
+    [
+      1,
+      0,
+      1
+    ],
+    [
+      1,
+      1,
+      0
+    ]
+  ],
+  "PR_defined_with_half": 1.0,
+  "CR": 1,
+  "exhaustively_enumerated_4point_subsets": 70,
+  "optimal_PR_defined_with_half": 1.0,
+  "optimal_CR": 1,
+  "printed_Prop3_2_upper": 0.20751874963942196,
+  "conflicts_with_printed_upper_for_both": true,
+  "entropy_checks": [
+    {
+      "x": 0.25,
+      "H2": 0.8112781244591328,
+      "printed_upper_p16": 0.75
+    },
+    {
+      "x": 0.5,
+      "H2": 1.0,
+      "printed_upper_p18": 0.75
+    }
+  ],
+  "dense_int8_Q_at_d20_bytes": 1099511627776,
+  "declared_memory_GB": 16,
+  "qualification": "Report source inconsistencies for author clarification. Does not repair the printed bounds or certify the remaining theory; paper figures/empirical tables not reproduced."
+}

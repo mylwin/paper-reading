@@ -1,0 +1,71 @@
+{
+  "date": "2026-10-21",
+  "passed": 10,
+  "total": 10,
+  "checks": [
+    {
+      "check": "exact two newly read induction IDs and allpage coverage",
+      "passed": true
+    },
+    {
+      "check": "all50ICMLoriginalPDF hashes and Markdown paths intact",
+      "passed": true
+    },
+    {
+      "check": "ICML8full and28plus2equals30global",
+      "passed": true
+    },
+    {
+      "check": "no holdout or other venue progress increment",
+      "passed": true
+    },
+    {
+      "check": "priorpaperassets,lockmanifests,oldskillsandIJCAIevidencepreserved",
+      "passed": true,
+      "details": []
+    },
+    {
+      "check": "all769priorfrozen evidencefiles retained",
+      "passed": true,
+      "details": [
+        {
+          "archive": "2026-10-11-论文写作润色技能评测_证据",
+          "files": 654,
+          "mismatches": []
+        },
+        {
+          "archive": "2026-10-12-顶会顶刊写作风格调研_证据",
+          "files": 90,
+          "mismatches": []
+        },
+        {
+          "archive": "2026-10-21-顶会顶刊写作风格全文续研_证据",
+          "files": 12,
+          "mismatches": []
+        },
+        {
+          "archive": "2026-10-21-ICML论文风格验证_证据",
+          "files": 13,
+          "mismatches": []
+        }
+      ]
+    },
+    {
+      "check": "938rawresearchassets ignored,untrackedandnotstaged",
+      "passed": true
+    },
+    {
+      "check": "16regenerablefilesdeletedandno primarypapersremoved",
+      "passed": true
+    },
+    {
+      "check": "ICML202420induction5holdoutunchanged",
+      "passed": true
+    },
+    {
+      "check": "ICML202520induction5holdoutunchanged",
+      "passed": true
+    }
+  ],
+  "qualification": "originalindexchangesfromconcurrentdailyjobs excluded;no independenttheorem/replication/newcompileclaims"
+}

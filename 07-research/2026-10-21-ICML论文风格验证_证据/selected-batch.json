@@ -1,0 +1,34 @@
+[
+  {
+    "id": "icml-2025-1bf35893",
+    "title": "Breaking the $n^1.5$ Additive Error Barrier for Private and Efficient Graph Sparsification via Private Expander Decomposition",
+    "authors": "Anders Aamand, Justin Y. Chen, Mina Dalirrooyfard, Slobodan Mitrović, Yuriy Nevmyvaka, Sandeep Silwal, Yinzhan Xu",
+    "year": 2025,
+    "split": "induction",
+    "landing_url": "https://proceedings.mlr.press/v267/aamand25b.html",
+    "pdf_url": "https://raw.githubusercontent.com/mlresearch/v267/main/assets/aamand25b/aamand25b.pdf",
+    "pdf_path": ".claude/skills/paper-writing-shared/tmp/corpus/icml/pdf/Breaking the $n^1.5$ Additive Error Barrier for Private and Efficient Graph Sparsification via Private Expander Decomposition.pdf",
+    "pdf_sha256": "51d400d53b2ffd0a8b9223cd6ea197d70dc71137c6dff3295242fcfcb6a67e20",
+    "markdown_path": ".claude/skills/paper-writing-shared/tmp/corpus/icml/markdown/Breaking the $n^1.5$ Additive Error Barrier for Private and Efficient Graph Sparsification via Private Expander Decomposition.md",
+    "sampling_stratum": "trustworthy",
+    "pages": 14,
+    "transient_extraction": ".claude/skills/paper-writing-shared/tmp/icml-review-2026-10-21/icml-2025-1bf35893.txt",
+    "selection_note": "locked induction samples;2025 gap and theory/empirical contribution coverage; not selected by stylistic agreement"
+  },
+  {
+    "id": "icml-2025-94972568",
+    "title": "Critical Tokens Matter: Token-Level Contrastive Estimation Enhances LLM’s Reasoning Capability",
+    "authors": "Zicheng Lin, Tian Liang, Jiahao Xu, Qiuzhi Liu, Xing Wang, Ruilin Luo, Chufan Shi, Siheng Li, Yujiu Yang, Zhaopeng Tu",
+    "year": 2025,
+    "split": "induction",
+    "landing_url": "https://proceedings.mlr.press/v267/lin25j.html",
+    "pdf_url": "https://raw.githubusercontent.com/mlresearch/v267/main/assets/lin25j/lin25j.pdf",
+    "pdf_path": ".claude/skills/paper-writing-shared/tmp/corpus/icml/pdf/Critical Tokens Matter- Token-Level Contrastive Estimation Enhances LLM’s Reasoning Capability.pdf",
+    "pdf_sha256": "055600faacb30a94a7195665ceee3681fbc8c828aaf7b19a84ea3941b2344974",
+    "markdown_path": ".claude/skills/paper-writing-shared/tmp/corpus/icml/markdown/Critical Tokens Matter- Token-Level Contrastive Estimation Enhances LLM’s Reasoning Capability.md",
+    "sampling_stratum": "representation_application",
+    "pages": 13,
+    "transient_extraction": ".claude/skills/paper-writing-shared/tmp/icml-review-2026-10-21/icml-2025-94972568.txt",
+    "selection_note": "locked induction samples;2025 gap and theory/empirical contribution coverage; not selected by stylistic agreement"
+  }
+]

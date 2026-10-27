@@ -1,0 +1,266 @@
+{
+  "id": "icml-2025-c5f868c8",
+  "venue": "icml",
+  "year": 2025,
+  "split": "induction",
+  "title": "Overestimation in LLM Evaluation: A Controlled Large-Scale Study on Data Contamination’s Impact on Machine Translation",
+  "authors": "Muhammed Yusuf Kocyigit, Eleftheria Briakou, Daniel Deutsch, Jiaming Luo, Colin Cherry, Markus Freitag",
+  "pdf_path": ".claude/skills/paper-writing-shared/tmp/corpus/icml/pdf/Overestimation in LLM Evaluation- A Controlled Large-Scale Study on Data Contamination’s Impact on Machine Translation.pdf",
+  "markdown_path": ".claude/skills/paper-writing-shared/tmp/corpus/icml/markdown/Overestimation in LLM Evaluation- A Controlled Large-Scale Study on Data Contamination’s Impact on Machine Translation.md",
+  "pdf_sha256": "9d63fc0fd323062429f93535e2e0fe592ff3af887842c05f61c3cdf1ed16f6eb",
+  "review_date": "2026-10-22",
+  "paper_type": "controlled machine-translation evaluation contamination study using branched large-language-model pretraining and multilingual/timing/frequency/format interventions",
+  "semantic_review_status": "complete_writing_focused_review",
+  "full_text_style_review_complete": true,
+  "external_appendix_review_complete": true,
+  "count_eligible_full_text_and_relevant_appendix": true,
+  "coverage": [
+    {
+      "asset": "locked official PMLR PDF",
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28
+      ],
+      "sections": "Abstract/Introduction/RelatedWork/Analysis3.1–3.4/ExperimentalSetup4/Results5.1–5.6/Limitations6/Conclusion7/Impact/References; AppendicesA/B/C/D/E/F/G; all21Figures and18Tables incl every traintrajectory grid/histogram/example",
+      "method": "continuous28page text read plus24originalpage images directly inspected; imageonly scientific appendices visually reviewed, not counted from parsing or captions alone"
+    }
+  ],
+  "version_audit": {
+    "official_landing": "https://proceedings.mlr.press/v267/kocyigit25a.html",
+    "official_pdf": "https://raw.githubusercontent.com/mlresearch/v267/main/assets/kocyigit25a/kocyigit25a.pdf",
+    "version": "official proceedings PDF; exact bytes locked by SHA256",
+    "identity": "title/authors/PMLR267/year and lockedSHA",
+    "new_network_fetch": false,
+    "qualification": "cached officialsource; no remote trainingdata/code/metric audit"
+  },
+  "supplement_audit": {
+    "status": "A–G related scientific/text/visual appendices all in same28pagePDF fully read",
+    "external_scientific_appendix_referenced": false,
+    "code_artifacts": "no checkpoint training, overlap search or third-partybenchmark/tool execution"
+  },
+  "ten_dimensions": {
+    "reader_argument": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp1–4 Fig1"
+      ],
+      "observation": "将benchmark unseen前提失效设为问题，机器翻译是受控案例；先定义检测与干预，再用未注入测试组区分任务学习与测试集特异增益。",
+      "editorial_advice": "contamination detection与impact干预不同，受控注入支持本pipeline比较而不是诊断任意公开模型是否见过题。clean是指定token规则下的操作定义。",
+      "applicability": "28页正文、文献及A–G科学附录全部连续阅读，24原页视觉核验含全部21图和训练轨迹网格。写作组织/主张证据边界审阅，不重训、执行检测代码、认证无污染或独立审计统计结论。ICML25篇归纳先导，正式留出未用。",
+      "confidence": {
+        "paper_specific": "high for inspected reported design/results and limits, not independent reproduction or cleanliness certificate",
+        "venue_wide": "low;25/50 pilot"
+      }
+    },
+    "title_abstract": {
+      "category": "corpus_observation",
+      "positions": [
+        "p1"
+      ],
+      "observation": "题名给评测问题、controlled large-scale设计与MT范围；摘要交代1B/8B、mode/timing/copies三轴及up to30BLEU/平均2.5×。",
+      "editorial_advice": "30BLEU是点差不是30%质量，2.5×是两模型full干预平均差异，不当scale law；峰值/最终与绝对/百分比不能混用，题目large-scale不表示多seed。",
+      "applicability": "28页正文、文献及A–G科学附录全部连续阅读，24原页视觉核验含全部21图和训练轨迹网格。写作组织/主张证据边界审阅，不重训、执行检测代码、认证无污染或独立审计统计结论。ICML25篇归纳先导，正式留出未用。",
+      "confidence": {
+        "paper_specific": "high for inspected reported design/results and limits, not independent reproduction or cleanliness certificate",
+        "venue_wide": "low;25/50 pilot"
+      }
+    },
+    "introduction": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp1–2"
+      ],
+      "observation": "成本限制引出checkpoint branching，早给主图和四findings，各条回指§5.x；证据型研究以发现贡献，不需创造新架构或形式定理。",
+      "editorial_advice": "实验设置与结论一一回链；因果机制解释如learningrate/gradientclip为potential explanation，不能强写已识别记忆机制。",
+      "applicability": "28页正文、文献及A–G科学附录全部连续阅读，24原页视觉核验含全部21图和训练轨迹网格。写作组织/主张证据边界审阅，不重训、执行检测代码、认证无污染或独立审计统计结论。ICML25篇归纳先导，正式留出未用。",
+      "confidence": {
+        "paper_specific": "high for inspected reported design/results and limits, not independent reproduction or cleanliness certificate",
+        "venue_wide": "low;25/50 pilot"
+      }
+    },
+    "related_work": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp2–3 Table1"
+      ],
+      "observation": "区分posthoc检测与主动污染、pretraining与extended/fine-tuning，再用data control/modelsize/token/multilingual表定位。",
+      "editorial_advice": "表check反映本作者比较的定义，不独立认证其他工作未控制；first MT为作者定位，未穷尽源文献。NA不当没有训练数据或0成本。",
+      "applicability": "28页正文、文献及A–G科学附录全部连续阅读，24原页视觉核验含全部21图和训练轨迹网格。写作组织/主张证据边界审阅，不重训、执行检测代码、认证无污染或独立审计统计结论。ICML25篇归纳先导，正式留出未用。",
+      "confidence": {
+        "paper_specific": "high for inspected reported design/results and limits, not independent reproduction or cleanliness certificate",
+        "venue_wide": "low;25/50 pilot"
+      }
+    },
+    "method_theory": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp3–4 §3.1–3.4; pp11–12 A; pp25–28 G"
+      ],
+      "observation": "token8gram查找扩最长连续匹配，source/target分别>70%剔除测试例；同baselinecheckpoint分支、替换<5%batch、保持预训练超参，mode三/format二、30/60/90%/uniform30–90%与1/10/100copies。",
+      "editorial_advice": "未normalize/未semantic paraphrase检测，删除测试例不等于清洗训练全部污染；test-only删样本影响基准组成。分支相关不当独立重训证据，LR随time变为解释混杂。这里无理论保证，不补定理。",
+      "applicability": "28页正文、文献及A–G科学附录全部连续阅读，24原页视觉核验含全部21图和训练轨迹网格。写作组织/主张证据边界审阅，不重训、执行检测代码、认证无污染或独立审计统计结论。ICML25篇归纳先导，正式留出未用。",
+      "confidence": {
+        "paper_specific": "high for inspected reported design/results and limits, not independent reproduction or cleanliness certificate",
+        "venue_wide": "low;25/50 pilot"
+      }
+    },
+    "evidence": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp4–8 Figs2–7/Tables2–4; pp12–28 B–G"
+      ],
+      "observation": "325Btokens=60%Dolma/35%Madlad/5%parallel，1B/8B同data/context4096/batch512/155k；WMT23注入、WMT24比较、Flores近零资源。BLEU↑主文、MetricX↓附录，完整训练轨迹与源检测分布配合。",
+      "editorial_advice": "boxplot是语言对分布而非训练seedCI，WMT23/24不是同一测试分布，差分减轻generalization解释但不完美随机对照。未发布完整会计/硬件/模型层数/解码/metric签名，不把53.6%预算节省当实测所有硬件速度。",
+      "applicability": "28页正文、文献及A–G科学附录全部连续阅读，24原页视觉核验含全部21图和训练轨迹网格。写作组织/主张证据边界审阅，不重训、执行检测代码、认证无污染或独立审计统计结论。ICML25篇归纳先导，正式留出未用。",
+      "confidence": {
+        "paper_specific": "high for inspected reported design/results and limits, not independent reproduction or cleanliness certificate",
+        "venue_wide": "low;25/50 pilot"
+      }
+    },
+    "discussion_limits": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp8–9 §6/7; p15 C"
+      ],
+      "observation": "单初始化、单数据顺序/不同checkpoint波动、BLEU尺度不可直接比、decoder-only/≤8B范围明确；讨论真实任务收益与污染记忆并存，Impact写能耗。",
+      "editorial_advice": "nearzero语言没有大幅效果不等于完全无影响/污染安全；scale趋势不得外推>8B或所有任务，资源条件未排除不补significance。高质量数据后期学习更好只是实证解释，非证明过训练通用有益。",
+      "applicability": "28页正文、文献及A–G科学附录全部连续阅读，24原页视觉核验含全部21图和训练轨迹网格。写作组织/主张证据边界审阅，不重训、执行检测代码、认证无污染或独立审计统计结论。ICML25篇归纳先导，正式留出未用。",
+      "confidence": {
+        "paper_specific": "high for inspected reported design/results and limits, not independent reproduction or cleanliness certificate",
+        "venue_wide": "low;25/50 pilot"
+      }
+    },
+    "paragraph_language": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp5–8 §5.1–5.6"
+      ],
+      "observation": "六个问题标题组织结果，段落按疑问→对照→图→解释→限定；主文有Limitations独立列出边界，再结论回四发现。",
+      "editorial_advice": "consistent/always须检查有限行；more copies均值趋势与某语言Λ形反例同时留。非配对samebatch/batched和split不能混为完整prompt，局部负效应不可删。",
+      "applicability": "28页正文、文献及A–G科学附录全部连续阅读，24原页视觉核验含全部21图和训练轨迹网格。写作组织/主张证据边界审阅，不重训、执行检测代码、认证无污染或独立审计统计结论。ICML25篇归纳先导，正式留出未用。",
+      "confidence": {
+        "paper_specific": "high for inspected reported design/results and limits, not independent reproduction or cleanliness certificate",
+        "venue_wide": "low;25/50 pilot"
+      }
+    },
+    "main_appendix": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp1–28"
+      ],
+      "observation": "正文1–9/refs9–11，A11–12五format，B12–14MetricX，C15–17时间/最终散点，D18–21全WMT23/Flores曲线，E22–24WMT24表/曲线，F25绝对BLEU/MetricX，G25–28检测、hist/riverplot和例子。",
+      "editorial_advice": "附录全图必须看，单读caption不算科学图审阅；本轮全部图页已核验。布局多页空白/浮动可观察，不复制为官方格式规范；检测原样例不全文复制到记录。",
+      "applicability": "28页正文、文献及A–G科学附录全部连续阅读，24原页视觉核验含全部21图和训练轨迹网格。写作组织/主张证据边界审阅，不重训、执行检测代码、认证无污染或独立审计统计结论。ICML25篇归纳先导，正式留出未用。",
+      "confidence": {
+        "paper_specific": "high for inspected reported design/results and limits, not independent reproduction or cleanliness certificate",
+        "venue_wide": "low;25/50 pilot"
+      }
+    },
+    "actionable": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp3–9; pp12–28"
+      ],
+      "observation": "用mode/timing/frequency/language/model/metric/比较测试集七轴限定每个发现，提前登记检测阈值和实际删样本，再分最强结果、趋势、例外与未控制维度。",
+      "editorial_advice": "原创示例：Full source–target injection produces larger final BLEU gains on the contaminated test sets than on the comparison sets in the tested 1B/8B pretraining pipelines. The magnitude depends on timing, format and language; a single initialization and threshold-based filtering limit claims of universal effects or complete decontamination.",
+      "applicability": "28页正文、文献及A–G科学附录全部连续阅读，24原页视觉核验含全部21图和训练轨迹网格。写作组织/主张证据边界审阅，不重训、执行检测代码、认证无污染或独立审计统计结论。ICML25篇归纳先导，正式留出未用。",
+      "confidence": {
+        "paper_specific": "high for inspected reported design/results and limits, not independent reproduction or cleanliness certificate",
+        "venue_wide": "low;25/50 pilot"
+      }
+    }
+  },
+  "counterexamples": [
+    {
+      "position": "pp3/25–28 §3.1/G",
+      "finding": "通过8gram和最长连续token匹配>70%从test删例，未normalize、不是删train或查语义改写，不能认证彻底无污染。原本both字段高重叠含常见短句，去重阈值可能改变测试组成；未独立审计全训练语料。"
+    },
+    {
+      "position": "p1 vs p9; pp4/22/25/27",
+      "finding": "条件数42与结论46不一；主文WMT2310pairs/WMT245common与附表及曲线含Ja/Zh等范围不一，WMT24表未列主文声称的EnCs。需作者给各分析实际集合，不将所有图/统计口径拼接。G riverplot1463above与正文WMT23681+Flores900去除的计数关系需核对。"
+    },
+    {
+      "position": "pp5–6 Fig2/Fig4; pp16/19–21",
+      "finding": "30BLEU最终差、2.5×平均与瞬时约60点差/原分数70不同；峰值absolute score不是相对baseline提升。图2模型x轴不同，不按视觉长度比较。没有理论scale law，不把1B/8B两点推到更大模型。"
+    },
+    {
+      "position": "pp8–9 Limitations; p22 Tables6–11",
+      "finding": "明确single initialization/dataordering；boxplots跨语言并非独立seed分布。Tables6–11caption写with confidence intervals但单元格只有单值；热图±定义/水平未明确，不能补训练CI、显著性或多seed稳健。"
+    },
+    {
+      "position": "p7 Fig6; p8 Table4; p25 Table15",
+      "finding": "近零语言无大收益但AceEn0.095到0.722有小变化，不能字面无影响。Full晚1copy EnJa8B4.97→4.79下降，1B4.47→5.23仍低于target5.51；均值涨不表示每语言/时点full最好。Split相对target可能是减损而非正增益。"
+    },
+    {
+      "position": "pp6–8 Figs3/5/7; pp14–17 B/C",
+      "finding": "partial污染总体WMT23vs24差小不等于无memorizaton或任意语言不受影响；Fullcopy均值增加但部分语言Λ形，模型能力更强与inflation非单调关系。MetricX低为好，负差代表改善；百分比相对小baseline可放大，不当BLEU点或直接质量尺度。"
+    },
+    {
+      "position": "pp4/8/15/22–24",
+      "finding": "WMT24也有小幅真实任务增益，注入高质量parallel与污染记忆并存。不同年测试集差分/后期LR/gradientclip解释未完整随机隔离；uniform最佳不是任何现实混合都成立。53.6%是报告的复用预算，未给完整GPUh/能耗测量不能当性能实测。"
+    },
+    {
+      "position": "pp12–28 A–G",
+      "finding": "A对full写separateformatted文案与成对例、split/batched写prompted与unformatted定义需对齐；D/E图grid部分无统一legend、各自y范围不同，不能据线高跨语言比较。标点/图注疑点保留，原检测例只核验不大量复写原文。"
+    }
+  ],
+  "visual_review": {
+    "pages": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28
+    ],
+    "source": "115dpi original-page Poppler images directly viewed, incl allscientificplotpages",
+    "policy": "delete24renders+duplicateextract after record; canonicalPDF/primaryMD only ignoredskilltmp"
+  },
+  "official_requirements": [],
+  "holdout_validation": null,
+  "review_limitations": "28页正文、文献及A–G科学附录全部连续阅读，24原页视觉核验含全部21图和训练轨迹网格。写作组织/主张证据边界审阅，不重训、执行检测代码、认证无污染或独立审计统计结论。ICML25篇归纳先导，正式留出未用。"
+}

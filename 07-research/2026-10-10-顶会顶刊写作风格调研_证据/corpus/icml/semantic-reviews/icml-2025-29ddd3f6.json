@@ -1,0 +1,220 @@
+{
+  "id": "icml-2025-29ddd3f6",
+  "venue": "icml",
+  "year": 2025,
+  "split": "induction",
+  "title": "Test-time Adapted Reinforcement Learning with Action Entropy Regularization",
+  "authors": "Shoukai Xu, Zihao Lian, Mingkui Tan, Liu Liu, Zhong Zhang, Peilin Zhao",
+  "review_date": "2026-10-21",
+  "paper_type": "empirical offline-RL test-time policy adaptation across discrete and continuous controls",
+  "semantic_review_status": "complete_writing_focused_review",
+  "full_text_style_review_complete": true,
+  "external_appendix_review_complete": true,
+  "count_eligible_full_text_and_relevant_appendix": true,
+  "pdf_path": ".claude/skills/paper-writing-shared/tmp/corpus/icml/pdf/Test-time Adapted Reinforcement Learning with Action Entropy Regularization.pdf",
+  "markdown_path": ".claude/skills/paper-writing-shared/tmp/corpus/icml/markdown/Test-time Adapted Reinforcement Learning with Action Entropy Regularization.md",
+  "pdf_sha256": "0efc1ecbb702ac011f48a39e5489a7b7121a7de78a896c8077c6a3f52808ed03",
+  "coverage": [
+    {
+      "asset": "lockedofficialPMLRPDF",
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "sections": "Abstract;Introduction;RelatedWork2.1–2.2;MDP/Problemdefinition/Overview;3.1Significance;3.2discreteandcontinuousobjectives;3.3KLregularization;3.4Algorithm1;Experiments4.1–4.7;Conclusion;Acknowledgments;Impact;References;SupplementaryA/Table6;Bdiscussion",
+      "method": "continuousallpageincludingreferencesandA/Bappendices"
+    }
+  ],
+  "version_audit": {
+    "official_landing": "https://proceedings.mlr.press/v267/xu25ar.html",
+    "official_pdf": "https://raw.githubusercontent.com/mlresearch/v267/main/assets/xu25ar/xu25ar.pdf",
+    "version": "official proceedings PDF; exact bytes locked by SHA256",
+    "identity": "title/authors/year/PMLRheaderandlockedSHAverified",
+    "new_network_fetch": false
+  },
+  "supplement_audit": {
+    "status": "A/B scientificappendicesallreadinsamePDF;noexternalmanuscriptappendixpointer",
+    "code_artifacts": "linked/attachedcodeisnotexecutedorreviewed;notcountedasomittedtextappendix",
+    "qualification": "no freshwebpageaudit;doesnotexcludeunlistedmaterial"
+  },
+  "ten_dimensions": {
+    "reader_argument": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp1–3"
+      ],
+      "observation": "从offline数据与测试分布不匹配进入，不把无测试奖励与完全不观察环境混同；方法在测试时收集状态并更新策略。",
+      "editorial_advice": "先说明训练阶段、部署阶段和可用反馈，保留reward-free与state observations的区别。",
+      "applicability": "仅仿真控制benchmark与作者报告协议；无安全保证、收敛证明、代码审计或独立复现实验。",
+      "confidence": {
+        "paper_specific": "high for inspected organization/marks,not result correctness",
+        "venue_wide": "low;pilot8/50"
+      }
+    },
+    "title_abstract": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp1–2 Abstract/contributions"
+      ],
+      "observation": "标题点明test-time与action entropy；摘要依次给分布问题、离散/连续目标、KL、LN小参数更新与hopper结果。",
+      "editorial_advice": "关键数字须保留任务、基线和relative return口径；不能把13.62得分差直接写成百分比。",
+      "applicability": "仅仿真控制benchmark与作者报告协议；无安全保证、收敛证明、代码审计或独立复现实验。",
+      "confidence": {
+        "paper_specific": "high for inspected organization/marks,not result correctness",
+        "venue_wide": "low;pilot8/50"
+      }
+    },
+    "introduction": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp1–2"
+      ],
+      "observation": "引言两类基线局限对应测试时适应；三项贡献连接适应范式、两个目标与Atari/D4RL证据。",
+      "editorial_advice": "贡献保持各自验证依据，避免把应用动机写成真实道路安全验证。",
+      "applicability": "仅仿真控制benchmark与作者报告协议；无安全保证、收敛证明、代码审计或独立复现实验。",
+      "confidence": {
+        "paper_specific": "high for inspected organization/marks,not result correctness",
+        "venue_wide": "low;pilot8/50"
+      }
+    },
+    "related_work": {
+      "category": "corpus_observation",
+      "positions": [
+        "p3 §2.1–2.2"
+      ],
+      "observation": "独立RelatedWork分offlineRL与test-time adaptation，解释现有训练要求及奖励依赖。",
+      "editorial_advice": "按直接技术接口比较，不把训练期保守估计与无标签测试适应混称同一过程。",
+      "applicability": "仅仿真控制benchmark与作者报告协议；无安全保证、收敛证明、代码审计或独立复现实验。",
+      "confidence": {
+        "paper_specific": "high for inspected organization/marks,not result correctness",
+        "venue_wide": "low;pilot8/50"
+      }
+    },
+    "method_theory": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp3–6, Eq1–9/Algorithm1"
+      ],
+      "observation": "先MDP和overview，后分别给离散熵/连续Gaussian不确定性、过滤、KL与LN子参数；冻结原策略作为锚。",
+      "editorial_advice": "保留KL方向、仅更新LN、buffer和threshold，不能把完整网络更新当作等价简化。",
+      "applicability": "仅仿真控制benchmark与作者报告协议；无安全保证、收敛证明、代码审计或独立复现实验。",
+      "confidence": {
+        "paper_specific": "high for inspected organization/marks,not result correctness",
+        "venue_wide": "low;pilot8/50"
+      }
+    },
+    "evidence": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp7–9,p12 Tables1–6"
+      ],
+      "observation": "实验按数据、基线、指标、设置，再分离散/连续与过滤/KL消融；正文含五个Atari和部分D4RL，A补九个D4RL任务。",
+      "editorial_advice": "保存125000测试步/27000episode限制、重复10次与原文不确定性词；D4RL归一化锚点不是0到100截断范围。",
+      "applicability": "仅仿真控制benchmark与作者报告协议；无安全保证、收敛证明、代码审计或独立复现实验。",
+      "confidence": {
+        "paper_specific": "high for inspected organization/marks,not result correctness",
+        "venue_wide": "low;pilot8/50"
+      }
+    },
+    "discussion_limits": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp5–6,8–9,12"
+      ],
+      "observation": "文本承认自监督更新误差累积、熵阈值过高崩溃，KL过大也会下降；Impact和应用推测比评测范围更广。",
+      "editorial_advice": "把稳定性限定在已测超参数/任务；没有证明熵是可靠OOD或安全证书。",
+      "applicability": "仅仿真控制benchmark与作者报告协议；无安全保证、收敛证明、代码审计或独立复现实验。",
+      "confidence": {
+        "paper_specific": "high for inspected organization/marks,not result correctness",
+        "venue_wide": "low;pilot8/50"
+      }
+    },
+    "paragraph_language": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp4–9"
+      ],
+      "observation": "常以动机→目标→解释→实验连接，但“universal existence”等结论超出有限比较；方差/σ的命名及公式引用有不一致。",
+      "editorial_advice": "保留具体比较和统计口径，疑似σ或式号错误单列作者确认，不静默改数学或称所有设置显著。",
+      "applicability": "仅仿真控制benchmark与作者报告协议；无安全保证、收敛证明、代码审计或独立复现实验。",
+      "confidence": {
+        "paper_specific": "high for inspected organization/marks,not result correctness",
+        "venue_wide": "low;pilot8/50"
+      }
+    },
+    "main_appendix": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp1–12"
+      ],
+      "observation": "主文到p9，文献pp9–11，补充A/B均在p12；A是更多任务表，B说明与onlineRL的奖励依赖区别。",
+      "editorial_advice": "补充实验必须与正文一起读；保留有限任务范围，代码链接不等于代码已审计。",
+      "applicability": "仅仿真控制benchmark与作者报告协议；无安全保证、收敛证明、代码审计或独立复现实验。",
+      "confidence": {
+        "paper_specific": "high for inspected organization/marks,not result correctness",
+        "venue_wide": "low;pilot8/50"
+      }
+    },
+    "actionable": {
+      "category": "corpus_observation",
+      "positions": [
+        "p8 Table3,p9 Table5,p12 A/B"
+      ],
+      "observation": "极端熵阈值使Pong回报从正值降至接近失败，KL并非越大越好；无奖励目标仍使用测试状态。",
+      "editorial_advice": "原创示例：The policy adapts from test-time states without reward supervision. Its gains depend on the reported filtering and regularization settings.",
+      "applicability": "仅仿真控制benchmark与作者报告协议；无安全保证、收敛证明、代码审计或独立复现实验。",
+      "confidence": {
+        "paper_specific": "high for inspected organization/marks,not result correctness",
+        "venue_wide": "low;pilot8/50"
+      }
+    }
+  },
+  "counterexamples": [
+    {
+      "position": "p8 Table3",
+      "finding": "E0为0.3–0.9时TARL回报明显差于CQL，0.1时较好；不能称任意阈值均稳定提升。"
+    },
+    {
+      "position": "p9 Table5",
+      "finding": "λ0.5或2.0均值低于CQL，而1.5较高；无单调regularization收益。"
+    },
+    {
+      "position": "p8 Table2;p12 Table6",
+      "finding": "超过100的归一化分数在表中实际存在；随机/专家是锚点而非取值边界。13.62为score差，不是直接的相对百分比。"
+    },
+    {
+      "position": "p6 Algorithm1;p12 B",
+      "finding": "算法观察并保存测试状态；“without environment feedback”应按上下文限定为无需reward反馈。"
+    },
+    {
+      "position": "pp5–6",
+      "finding": "σ被文字称variance但Gaussian entropy写σ²；Algorithm1的KL引用Eq8而KL定义是Eq7。",
+      "action": "原页确认后记录待作者核对，不静默修正。"
+    }
+  ],
+  "visual_review": {
+    "pages": [
+      5,
+      6,
+      7,
+      8,
+      9,
+      12
+    ],
+    "source": "115dpiPopplerrendersthen directview_image",
+    "policy": "regenerablerenderstodeleteafterrecordsaved"
+  },
+  "holdout_validation": null,
+  "official_requirements": [],
+  "review_limitations": "仅仿真控制benchmark与作者报告协议；无安全保证、收敛证明、代码审计或独立复现实验。"
+}

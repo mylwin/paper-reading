@@ -1,0 +1,270 @@
+{
+  "id": "icml-2024-eb3f98b9",
+  "venue": "icml",
+  "year": 2024,
+  "split": "induction",
+  "title": "Measures of diversity and space-filling designs for categorical data",
+  "authors": "Cedric Malherbe, Emilio Domı́nguez-Sánchez, Merwan Barlier, Igor Colin, Haitham Bou Ammar, Tom Diethe",
+  "pdf_path": ".claude/skills/paper-writing-shared/tmp/corpus/icml/pdf/Measures of diversity and space-filling designs for categorical data.pdf",
+  "markdown_path": ".claude/skills/paper-writing-shared/tmp/corpus/icml/markdown/Measures of diversity and space-filling designs for categorical data.md",
+  "pdf_sha256": "157221ccf1368ddf86778e9d639fd6dc969deb774ad0637c5cee79d740f42065",
+  "review_date": "2026-10-22",
+  "paper_type": "categorical experimental-design theory and integer/greedy combinatorial algorithms with diversity/integration/GPdata/GNN-MILP hyperparameter benchmarks",
+  "semantic_review_status": "complete_writing_focused_review",
+  "full_text_style_review_complete": true,
+  "external_appendix_review_complete": true,
+  "count_eligible_full_text_and_relevant_appendix": true,
+  "coverage": [
+    {
+      "asset": "locked official PMLR PDF",
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30
+      ],
+      "sections": "Abstract/Introduction+continuous/discreteRelatedWork/Setup+Diversity/OptimalDesigns3.1–3.2/ApproximateAlgorithms4.1–4.2/Experiments/DiscussionConclusion/Impact/References; A.1–A.4/B.1–B.2/C.1–C.2/D.1–D.5; all7Figures/fiveTables/Algorithms1–7",
+      "method": "continuous30page text read plus25originalpageimages inspected; allscientificplotpages; tiny70subset arithmeticcheck distinct from authorcode replication"
+    }
+  ],
+  "version_audit": {
+    "official_landing": "https://proceedings.mlr.press/v235/malherbe24a.html",
+    "official_pdf": "https://raw.githubusercontent.com/mlresearch/v235/main/assets/malherbe24a/malherbe24a.pdf",
+    "version": "official proceedings PDF; exact bytes locked by SHA256",
+    "identity": "title/authors/PMLR235/year and lockedSHA",
+    "new_network_fetch": false,
+    "qualification": "cachedofficialPDF; source formula inconsistencies not silently repaired"
+  },
+  "supplement_audit": {
+    "status": "A–D/D.1–D.5 scientific/proof/algorithm/experiment appendices all same30pagePDF fully read",
+    "external_scientific_appendix_referenced": false,
+    "code_artifacts": "no authorcode/SCIP/DPP/GP/GNN executed; originaltinyarithmeticaudit saved separately"
+  },
+  "ten_dimensions": {
+    "reader_argument": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp1–3"
+      ],
+      "observation": "类别变量无自然次序且空间组合爆炸，先解释为何连续spacefilling直接离散化未保保证；以PR/CR/AC三目标统一问题，再分最优构造与实用近似。",
+      "editorial_advice": "核心理论域为完整均匀Boolean hypercube/Hamming距离；不等于任意真实目录、非均匀数据总体或语义相似度。binary不是连续有序，X^n与无重复subset的定义应统一。",
+      "applicability": "30页正文、文献及A–D/D.1–D.5全部连续阅读，25原页核验含全部7图、5表及算法；小算例检查另存。写作组织与主张/证据边界审阅，不复现作者源码/SCIP实验或全面认证证明。ICML27篇归纳先导，正式留出未用。",
+      "confidence": {
+        "paper_specific": "high for inspected structure/reporteddesign/positions; printed math inconsistencies explicitly queried rather than certified",
+        "venue_wide": "low;27/50 pilot"
+      }
+    },
+    "title_abstract": {
+      "category": "corpus_observation",
+      "positions": [
+        "p1"
+      ],
+      "observation": "题名给对象与两类产出，摘要按问题/三指标/界/昂贵精确解/有保证近似/数值验证组织，无硬性数字。",
+      "editorial_advice": "不必将理论论文强改成排行榜摘要；novel/first类作者定位未独立穷尽检索。理论、精确oracle与实际subsampling要分开，不把精确子步骤称整体最优。",
+      "applicability": "30页正文、文献及A–D/D.1–D.5全部连续阅读，25原页核验含全部7图、5表及算法；小算例检查另存。写作组织与主张/证据边界审阅，不复现作者源码/SCIP实验或全面认证证明。ICML27篇归纳先导，正式留出未用。",
+      "confidence": {
+        "paper_specific": "high for inspected structure/reporteddesign/positions; printed math inconsistencies explicitly queried rather than certified",
+        "venue_wide": "low;27/50 pilot"
+      }
+    },
+    "introduction": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp1–2"
+      ],
+      "observation": "四条贡献回指§2、Prop3.x、Thm4.x、§5，Related连续及discrete两块直接接引言，交代k-center/DPP/opt-design的目标差异。",
+      "editorial_advice": "不要求每文独立RelatedWork章。随机方案实测弱不是任意分布任务上普遍次优；continuous不能直接用是指定方法与保证的范围，不应泛称不存在离散设计先例。",
+      "applicability": "30页正文、文献及A–D/D.1–D.5全部连续阅读，25原页核验含全部7图、5表及算法；小算例检查另存。写作组织与主张/证据边界审阅，不复现作者源码/SCIP实验或全面认证证明。ICML27篇归纳先导，正式留出未用。",
+      "confidence": {
+        "paper_specific": "high for inspected structure/reporteddesign/positions; printed math inconsistencies explicitly queried rather than certified",
+        "venue_wide": "low;27/50 pilot"
+      }
+    },
+    "related_work": {
+      "category": "corpus_observation",
+      "positions": [
+        "p2"
+      ],
+      "observation": "先continuous低discrepancy/最优设计再离散kcenter、DPP、submodular；对照优化目标、空间假设和probabilistic/optimality视角。",
+      "editorial_advice": "GIPPR用farthestpoint/整数规划，GAC用负AC的submodularity；不能将已有greedy机制本身写为全新。DPP对照固定exp−Hammingkernel，未大规模tune不代表所有DPP能力。",
+      "applicability": "30页正文、文献及A–D/D.1–D.5全部连续阅读，25原页核验含全部7图、5表及算法；小算例检查另存。写作组织与主张/证据边界审阅，不复现作者源码/SCIP实验或全面认证证明。ICML27篇归纳先导，正式留出未用。",
+      "confidence": {
+        "paper_specific": "high for inspected structure/reporteddesign/positions; printed math inconsistencies explicitly queried rather than certified",
+        "venue_wide": "low;27/50 pilot"
+      }
+    },
+    "method_theory": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp3–7; pp12–24 A/B/C"
+      ],
+      "observation": "PR=minpairHamming/2最大化，CR=maxnearest最小化，AC=均匀期望nearest最小化；坐标置换/XOR等距。GIPPR每步用整数规划exact farthestpoint，报道CR≤2CR*、PR≥.5PR*；GAC精确oracle对基准d/2的改善至少最优改善一半。",
+      "editorial_advice": "GAC半近似是d/2−AC的改善，不是AC≤2AC*。LP字样实际integerprogram，worstcase非polynomial。打印Prop3.2界与小例冲突，不当已验证定理引用；A.2固定design/iid样本界不能自动保证自适应选点uniform界。",
+      "applicability": "30页正文、文献及A–D/D.1–D.5全部连续阅读，25原页核验含全部7图、5表及算法；小算例检查另存。写作组织与主张/证据边界审阅，不复现作者源码/SCIP实验或全面认证证明。ICML27篇归纳先导，正式留出未用。",
+      "confidence": {
+        "paper_specific": "high for inspected structure/reporteddesign/positions; printed math inconsistencies explicitly queried rather than certified",
+        "venue_wide": "low;27/50 pilot"
+      }
+    },
+    "evidence": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp7–9 Figs2–5; pp24–30 D"
+      ],
+      "observation": "d7/8三指标100随机重复±STD；d10/OneMax与i²weighted积分100次10/90分位；budget20回归Ising/MIS/LAB，用GP/ARD，Adam100步.001；GNN9二元choices50epoch及SCIP调参20config/10重跑，i7/16GB/SCIP耗时。",
+      "editorial_advice": "Fig3分位不是CI/STD，Fig4/5±STD非显著性；参数tuning直接按test error择优，未独立validation/test不补无偏泛化。Fig5为相对默认error/gap的收益，非accuracy百分点；SCIP收益符号需查询。data-collection100次未明确，不借邻段自动补。",
+      "applicability": "30页正文、文献及A–D/D.1–D.5全部连续阅读，25原页核验含全部7图、5表及算法；小算例检查另存。写作组织与主张/证据边界审阅，不复现作者源码/SCIP实验或全面认证证明。ICML27篇归纳先导，正式留出未用。",
+      "confidence": {
+        "paper_specific": "high for inspected structure/reporteddesign/positions; printed math inconsistencies explicitly queried rather than certified",
+        "venue_wide": "low;27/50 pilot"
+      }
+    },
+    "discussion_limits": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp8–9 §6/Impact; pp25–27 D"
+      ],
+      "observation": "结论强调计算限制，未来deep-learning解LP、混合指标/连续离散；非binary扩展/可线性化constraints在D示例给出。",
+      "editorial_advice": "50维是指定实现规模，GAC>20维以10d²子样本替代全域，不能套完整oracle保证。数学覆盖不证明社会公平、无遗漏、节能或恶意风险降低；Impact愿景与已测下游分开。",
+      "applicability": "30页正文、文献及A–D/D.1–D.5全部连续阅读，25原页核验含全部7图、5表及算法；小算例检查另存。写作组织与主张/证据边界审阅，不复现作者源码/SCIP实验或全面认证证明。ICML27篇归纳先导，正式留出未用。",
+      "confidence": {
+        "paper_specific": "high for inspected structure/reporteddesign/positions; printed math inconsistencies explicitly queried rather than certified",
+        "venue_wide": "low;27/50 pilot"
+      }
+    },
+    "paragraph_language": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp4–9"
+      ],
+      "observation": "问题定义→命题→解释→计算瓶颈→算法框→保证→复杂度→任务实验，图按目标组织；n/d/预算与误差方向紧邻。",
+      "editorial_advice": "主文max/min、PR与−PR及meanscore/分位要保持符号一致。always/overallbest要逐行保留反例，如GAC在Load不及Random/dHalton，在LAB不及GIPPR。置信表达不能靠accepted事实替代审计。",
+      "applicability": "30页正文、文献及A–D/D.1–D.5全部连续阅读，25原页核验含全部7图、5表及算法；小算例检查另存。写作组织与主张/证据边界审阅，不复现作者源码/SCIP实验或全面认证证明。ICML27篇归纳先导，正式留出未用。",
+      "confidence": {
+        "paper_specific": "high for inspected structure/reporteddesign/positions; printed math inconsistencies explicitly queried rather than certified",
+        "venue_wide": "low;27/50 pilot"
+      }
+    },
+    "main_appendix": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp1–30"
+      ],
+      "observation": "正文1–9/refs9–11；A12–14计算/随机估计及证明；B14–21最优指标性质、bounds、ILP构造；C21–24反例/近似证明；D24–30复杂度、时间表、nonbinary、constraints、小最优解、vectorGAC和全部task设置。",
+      "editorial_advice": "所有科学附录都在同PDF，文字和全图已核；无外部科学补充缺口。引文/第三方库未独立读/执行。官方发表版布局仅观察，不充当前投稿格式指南。",
+      "applicability": "30页正文、文献及A–D/D.1–D.5全部连续阅读，25原页核验含全部7图、5表及算法；小算例检查另存。写作组织与主张/证据边界审阅，不复现作者源码/SCIP实验或全面认证证明。ICML27篇归纳先导，正式留出未用。",
+      "confidence": {
+        "paper_specific": "high for inspected structure/reporteddesign/positions; printed math inconsistencies explicitly queried rather than certified",
+        "venue_wide": "low;27/50 pilot"
+      }
+    },
+    "actionable": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp4–9; pp24–30"
+      ],
+      "observation": "先列各metric方向/单位/基准、oracle假设及实现改动，再给cost表含timeout/不可行和全域矩阵内存；分指标改善与downstream实证，不宣称跨任务支配。",
+      "editorial_advice": "原创示例：The greedy designs target different notions of diversity and show task-dependent gains in the reported benchmarks. The full-space approximation statements assume exact selection oracles; the sampled implementation used at larger dimensions requires separate qualifications, and lower covering distance alone does not establish improved downstream accuracy or social inclusion.",
+      "applicability": "30页正文、文献及A–D/D.1–D.5全部连续阅读，25原页核验含全部7图、5表及算法；小算例检查另存。写作组织与主张/证据边界审阅，不复现作者源码/SCIP实验或全面认证证明。ICML27篇归纳先导，正式留出未用。",
+      "confidence": {
+        "paper_specific": "high for inspected structure/reporteddesign/positions; printed math inconsistencies explicitly queried rather than certified",
+        "venue_wide": "low;27/50 pilot"
+      }
+    }
+  },
+  "counterexamples": [
+    {
+      "position": "p4 Prop3.2; pp15–19 B bounds; arithmetic-consistency.json",
+      "finding": "打印上界d3/n4为1−log2(3)/2≈.2075；枚举Boolean3域70个四点subset得optimalCR=1、optimalPR按/2=1，构造000/011/101/110，两者均与该上界冲突。小算例不是全理论审计或修复公式，需作者澄清；log衰减不能直接变成所有n/d适用已认证结论。p16 H(.25)≤.75和p18 H(.5)≤.75亦与直接算.811278/1冲突。"
+    },
+    {
+      "position": "pp2–4/15/18–20/26 definitions/PropB.3/Table5",
+      "finding": "Eq1优化{CR,−PR,AC}而后命题含PR却回指minEq1；exhaustive段argmax也与CR/AC方向不一。B.3把CR*定义写成minPR，PR单调性及isometryproof漏/2；PR ILP目标为minpairHamming而非/2。Table5 d3 PR2*=3而正文/2定义应1.5，PR4*=2vs1。单位不一需作者对齐，不静默把表作半径数值。"
+    },
+    {
+      "position": "pp5–7; pp13–14 A.1; pp20–21 B.2",
+      "finding": "linearprogram实际binary/integer，n/d变量少不保证poly。A.1行系数+1与中间推导/矩阵及Prop4.1的−1相冲突。B.2 PR辅助变量/constraints计数、CR忽略nd、AC最后sum上标d而非n需核。打印错误未执行，不称sourceILP已复现。GAC近似保证改善d/2−AC，不能改成2approxAC本身。"
+    },
+    {
+      "position": "pp7–9 Figs2–5; p26 Fig6/Table5",
+      "finding": "GAC不是所有task最好：LABMS3.58>GIPPR3.47，LABLL1.08>1.03；Load GAC19.6<Random22.0<GIPPR25.0（higher为好）；Anon58.2<63.3。随机也不总差于任意baseline，MISMSRandom63.4<dHalton65.4/kDPP65.0。PRGIPPR在d3n4为1（表为min-distance单位）<optimal2，approx不是exact。"
+    },
+    {
+      "position": "pp8/27–30 §5/D.5",
+      "finding": "Fig5不是分类accuracy，Cora78.2是相对默认分类error改善百分比；SCIP定义gap低为好但SCORE写(fi(x)−fi(0))/fi(0)再max且Fig5标higherbetter，需作者确认符号。主文说7参数、D说9却列7；主文NeurIPS2011与D2021不一。GNN记录test error并据其max选20config，没有独立test协议说明，不能宣称无选择偏差。"
+    },
+    {
+      "position": "pp25/27–28 D.1/D.5 Algorithm7; arithmetic-consistency.json",
+      "finding": "声称完整int8全域pairQ跑d20，在16GB硬件会需2^40=1099511627776bytes约1TiB，仅矩阵已超；需作者说明分块/实际subsample/硬件。>20维M=10d²子样本同时限制候选和平均估计；A.2固定D高概率界不能直接给自适应全部候选/步骤统一保证。打印(1/2−exp(−nM/|X|))在高维可非正，非无条件有用1/2保证。"
+    },
+    {
+      "position": "p28 Algorithm7; pp28–30 objective/formulas",
+      "finding": "Algorithm7从D0空起循环n−1次却返Dn，C∈Rd与|X|不符，argmin1..n未枚举|X|，i*下标不一致。GP loglikelihood+quadratic项/正性约束/训练minvsmax矛盾需核，不拿伪码当可运行。Ising仿射表达与一般s_u s_v Hamiltonian不同、LABS n/d及merit归一化也需源实现确认，未执行外部库。"
+    },
+    {
+      "position": "p8/pp25–30 captions/methods/Impact",
+      "finding": "groundtruthmean印成sumX/n非/|X|；积分100次10/90quantile不是CI，不因图均值≈0就证明全函数无偏；Harmonic权重i²非通常递减harmonic称谓。时表−仅10分钟未终止非理论不可能，x为n>|X|非timeout；exact在n6/d50也有3.8064s，不能重复n<6的绝对限制。数学uniformHamming覆盖不是无人被遗漏/更公平或节能实测。"
+    }
+  ],
+  "visual_review": {
+    "pages": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30
+    ],
+    "source": "115dpi originalpagePoppler images directly inspected incl allsevenFigures/fiveTables and questioned equations",
+    "policy": "delete25renders+duplicateextract after record; canonicalPDF/primaryMD only ignoredskilltmp"
+  },
+  "arithmetic_audit": "07-research/2026-10-21-论文写作风格全量续研_证据/icml-027/arithmetic-consistency.json",
+  "official_requirements": [],
+  "holdout_validation": null,
+  "review_limitations": "30页正文、文献及A–D/D.1–D.5全部连续阅读，25原页核验含全部7图、5表及算法；小算例检查另存。写作组织与主张/证据边界审阅，不复现作者源码/SCIP实验或全面认证证明。ICML27篇归纳先导，正式留出未用。"
+}

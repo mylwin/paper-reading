@@ -1,0 +1,45 @@
+{
+  "date": "2026-10-21",
+  "status": "three_locked_induction_samples_completed",
+  "before_full": 23,
+  "new_full": 3,
+  "after_full": 26,
+  "papers": [
+    {
+      "id": "ijcai-2024-01",
+      "venue": "ijcai",
+      "year": 2024,
+      "split": "induction",
+      "full_and_appendix_complete": true,
+      "new_pdf_acquisition": false,
+      "pdf_path": ".claude/skills/paper-writing-shared/tmp/corpus/ijcai/pdf/Discriminative Feature Decoupling Enhancement for Speech Forgery Detection.pdf",
+      "pdf_sha256": "434e2cda7545440c52b0263aa65950ed93cc00d28856831dc576f0ffe8091614",
+      "review_record": "07-research/2026-10-10-顶会顶刊写作风格调研_证据/corpus/ijcai/semantic-reviews/ijcai-2024-01.json"
+    },
+    {
+      "id": "ijcai-2025-01",
+      "venue": "ijcai",
+      "year": 2025,
+      "split": "induction",
+      "full_and_appendix_complete": true,
+      "new_pdf_acquisition": false,
+      "pdf_path": ".claude/skills/paper-writing-shared/tmp/corpus/ijcai/pdf/Parameterized Approximation Algorithm for Doubly Constrained Fair Clustering.pdf",
+      "pdf_sha256": "ea13e00ca2c93191a66435c1ce36e2c16a5fafb98583175729a2b6c4876b5423",
+      "review_record": "07-research/2026-10-10-顶会顶刊写作风格调研_证据/corpus/ijcai/semantic-reviews/ijcai-2025-01.json"
+    },
+    {
+      "id": "ijcai-2025-02",
+      "venue": "ijcai",
+      "year": 2025,
+      "split": "induction",
+      "full_and_appendix_complete": true,
+      "new_pdf_acquisition": false,
+      "pdf_path": ".claude/skills/paper-writing-shared/tmp/corpus/ijcai/pdf/Strategies, Credences, and Shannon Entropy- Reasoning about Strategic Uncertainty in Stochastic Environments.pdf",
+      "pdf_sha256": "1abc4b2fb701c9076c6cf8226bacb9a22c22dc889360a4bf78acdf97870f84e2",
+      "review_record": "07-research/2026-10-10-顶会顶刊写作风格调研_证据/corpus/ijcai/semantic-reviews/ijcai-2025-02.json"
+    }
+  ],
+  "scope": "writing organization and evidence-boundary reading, not independent theorem correctness or experimental reproduction",
+  "holdout_selection_and_rules": "unchanged; no newly read holdout",
+  "resume_authorization": "user explicitly resumed2026-10-21; earlier pause snapshot retained as history"
+}

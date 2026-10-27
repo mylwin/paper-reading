@@ -1,0 +1,31 @@
+{
+  "date": "2026-10-21",
+  "official_landing": "https://proceedings.mlr.press/v235/yin24a.html",
+  "official_locked_pdf_pages": 20,
+  "missing_referenced_section": "p7 cites G; p20 G heading only, no image, confirmed original page",
+  "author_link_chain": [
+    "https://github.com/MikaStars39/StableMask",
+    "https://arxiv.org/abs/2402.04779",
+    "https://arxiv.org/html/2402.04779v1"
+  ],
+  "author_version": "2402.04779v1, 2024-02-07, title/authors match; not accepted template source",
+  "author_version_total_pdf_pages": 25,
+  "mapped_visualization": "authorv1 F (after p18) maps by identical heading to final G; actual figures need fullpage visual read",
+  "openreview": "officiallink GFfWzAReAc redirected browser challenge; no access/bypass attempted",
+  "network_workflow": "web-access;CDP preflight unavailable;public static WebFetch and curl used, no loginneeded",
+  "initial_download": "60s timeout after2730223of6128697bytes;resumeactive;notacceptedfullassetuntilPDFvalidated",
+  "count_eligible_now": true,
+  "completion_date": "2026-10-22",
+  "download_status": "complete;pdfinfo25pagesand6128697bytesverified",
+  "author_pdf_sha256": "dfb6a040b3adfe1caa27ec8837668ef18ffb2c73818e5021821a5e8086bfb33d",
+  "related_visualization_pages_reviewed": [
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25
+  ],
+  "qualification": "allfinal20pagesandrelatedauthor7imagepagesread;notall25authorpagesnewlyreviewed"
+}

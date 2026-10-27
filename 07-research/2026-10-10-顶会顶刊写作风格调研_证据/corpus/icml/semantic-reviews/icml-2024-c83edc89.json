@@ -1,0 +1,252 @@
+{
+  "id": "icml-2024-c83edc89",
+  "venue": "icml",
+  "year": 2024,
+  "split": "induction",
+  "title": "Overestimation, Overfitting, and Plasticity in Actor-Critic: the Bitter Lesson of Reinforcement Learning",
+  "authors": "Michal Nauman, Michał Bortkiewicz, Piotr Miłoś, Tomasz Trzcinski, Mateusz Ostaszewski, Marek Cygan",
+  "pdf_path": ".claude/skills/paper-writing-shared/tmp/corpus/icml/pdf/Overestimation, Overfitting, and Plasticity in Actor-Critic- the Bitter Lesson of Reinforcement Learning.pdf",
+  "markdown_path": ".claude/skills/paper-writing-shared/tmp/corpus/icml/markdown/Overestimation, Overfitting, and Plasticity in Actor-Critic- the Bitter Lesson of Reinforcement Learning.md",
+  "pdf_sha256": "49981594afdb55131164ebcc4ff79ef58a0edba63de62dd12afa5eb741e8b075",
+  "review_date": "2026-10-22",
+  "paper_type": "large empirical factorial study of SAC regularization and explanatory proxy correlations with image-control transfer checks",
+  "semantic_review_status": "complete_writing_focused_review",
+  "full_text_style_review_complete": true,
+  "external_appendix_review_complete": true,
+  "count_eligible_full_text_and_relevant_appendix": true,
+  "coverage": [
+    {
+      "asset": "locked official PMLR PDF",
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23
+      ],
+      "sections": "Abstract; Introduction; Background2.1–2.3; StudyDesign; Experiments4.1–4.4; RelatedWork; Limitations; Conclusions; Acknowledgements/Impact/References; A; B/B.1; C.1–C.8 and all26figures/tables",
+      "method": "continuous23pages including fullscientificappendix prose/captions/tables plus19directoriginalpageviews; no chart digitization or statistical replication"
+    }
+  ],
+  "version_audit": {
+    "official_landing": "https://proceedings.mlr.press/v235/nauman24a.html",
+    "official_pdf": "https://raw.githubusercontent.com/mlresearch/v235/main/assets/nauman24a/nauman24a.pdf",
+    "version": "official proceedings PDF; exact bytes locked by SHA256",
+    "identity": "title/authors/PMLR235/year and lockedSHA; Greek extraction glyphs checked on original pp2–4",
+    "new_network_fetch": false,
+    "qualification": "cachedfinalsource not currentofficialrule verification"
+  },
+  "supplement_audit": {
+    "status": "all A/B/C.1–C.8 relevant scientific appendices in same23pagePDF fully read",
+    "external_scientific_appendix_referenced": false,
+    "code_artifacts": "no training/code executed; cited package use is author report"
+  },
+  "ten_dimensions": {
+    "reader_argument": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp1–3"
+      ],
+      "observation": "把SAC高replay改进拆为过估计、过拟合、可塑性三种动机，先指出单benchmark/有限基线无法分辨机制，再跨任务/组合实证。",
+      "editorial_advice": "读者应先知道比较单位、环境和训练制度；“Bitter Lesson”是研究观点，不提升为所有RL通用定律。",
+      "applicability": "23页正文/文献及A–C.8全部连续读完，19关键原页核验。写作结构、统计叙述与证据边界分析，不是独立统计复算、因果验证、训练复现或代码审计。ICML19/50归纳先导，留出未用。",
+      "confidence": {
+        "paper_specific": "high for inspected organization/printedresults and conditions; no independent scientific/statistical validation",
+        "venue_wide": "low; pilot19/50"
+      }
+    },
+    "title_abstract": {
+      "category": "corpus_observation",
+      "positions": [
+        "p1"
+      ],
+      "observation": "题名列三现象与actor-critic范围，副标题给综合解释；摘要以现有证据不足→60余agent/14任务/两套件→异质结果与可复用组合组织。",
+      "editorial_advice": "64配置不是64新算法，也不是全部RL文献的覆盖；数字是研究范围而非效果百分比。主文领域论断需接适用条件和反例。",
+      "applicability": "23页正文/文献及A–C.8全部连续读完，19关键原页核验。写作结构、统计叙述与证据边界分析，不是独立统计复算、因果验证、训练复现或代码审计。ICML19/50归纳先导，留出未用。",
+      "confidence": {
+        "paper_specific": "high for inspected organization/printedresults and conditions; no independent scientific/statistical validation",
+        "venue_wide": "low; pilot19/50"
+      }
+    },
+    "introduction": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp1–2"
+      ],
+      "observation": "以两个研究问题引出设计选择，三项贡献为组合性实证、简单regularized SAC结果和代理指标的交叉关联。",
+      "editorial_advice": "“eliminating need”与“always superior”应收缩到所测SAC/任务/RR；相关发现和机制假设分开，不补成理论证明。",
+      "applicability": "23页正文/文献及A–C.8全部连续读完，19关键原页核验。写作结构、统计叙述与证据边界分析，不是独立统计复算、因果验证、训练复现或代码审计。ICML19/50归纳先导，留出未用。",
+      "confidence": {
+        "paper_specific": "high for inspected organization/printedresults and conditions; no independent scientific/statistical validation",
+        "venue_wide": "low; pilot19/50"
+      }
+    },
+    "related_work": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp2–3 Background; p8 §5"
+      ],
+      "observation": "背景定义SAC与三问题、借用CR/NR/PR工具，晚置相关工作补on-policy设计分析和并发工作。",
+      "editorial_advice": "不把所借损失/定理当本稿原创，研究假说解释对应实证而非推导所有问题根因。",
+      "applicability": "23页正文/文献及A–C.8全部连续读完，19关键原页核验。写作结构、统计叙述与证据边界分析，不是独立统计复算、因果验证、训练复现或代码审计。ICML19/50归纳先导，留出未用。",
+      "confidence": {
+        "paper_specific": "high for inspected organization/printedresults and conditions; no independent scientific/statistical validation",
+        "venue_wide": "low; pilot19/50"
+      }
+    },
+    "method_theory": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp3–4 §3; p12 A/B"
+      ],
+      "observation": "实证设计而非新模型定理：每类none或3干预、跨类组合而不同类内不叠加，64组合；一/二/三阶边缘化逐步保留交互。过估计MC5rollout，overfit验证/训练TD比，可塑性用rank/dormant/范数代理。",
+      "editorial_advice": "CR/NR/PR是动机分类，不是独立被识别的因果机制。NR只加critic，LN每hidden/SN最后hidden/WD全层，不静默扩至actor。代理不等于直接测得适应新目标的可塑性。",
+      "applicability": "23页正文/文献及A–C.8全部连续读完，19关键原页核验。写作结构、统计叙述与证据边界分析，不是独立统计复算、因果验证、训练复现或代码审计。ICML19/50归纳先导，留出未用。",
+      "confidence": {
+        "paper_specific": "high for inspected organization/printedresults and conditions; no independent scientific/statistical validation",
+        "venue_wide": "low; pilot19/50"
+      }
+    },
+    "evidence": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp4–8 §4.1–4.4; pp12–23 A–C"
+      ],
+      "observation": "7DMC+7MW，RR2/16，各配置10seed；主文Study description→Results→Takeaways，先边缘化再交互、Dog4M延长、相关。A说明IQM由rliable500bootstrap，终值最后10eval均值；附录完整排名、ReDO、回归和DrQ像素补测。",
+      "editorial_advice": "主析1M与Dog4M、10seed与DrQ3seed、mean/SE/IQM及不同分数尺度不互换。p5误差线为SE，不自行称std/95%CI。全组合平均不能当每个配置都胜；选出的top3延长不是全64配置独立比较。",
+      "applicability": "23页正文/文献及A–C.8全部连续读完，19关键原页核验。写作结构、统计叙述与证据边界分析，不是独立统计复算、因果验证、训练复现或代码审计。ICML19/50归纳先导，留出未用。",
+      "confidence": {
+        "paper_specific": "high for inspected organization/printedresults and conditions; no independent scientific/statistical validation",
+        "venue_wide": "low; pilot19/50"
+      }
+    },
+    "discussion_limits": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp5–9; pp14,17–19"
+      ],
+      "observation": "独立Limitations限定主要SAC/proprio基准；附录另有4DrQ变体像素补测并明确不能直接迁移。LN在MW差，WD需reset交互，TOP在DMC例外。",
+      "editorial_advice": "要同时报告像素补测，不能照搬主文“仅proprio”而遗漏附录失败。Acrobot172.9降88.8、Cheetah727.4降653.9；Hopper则提高。ReDO部分无LN/SN的Dog运行崩溃，取崩前10点不是统一完整训练终值。",
+      "applicability": "23页正文/文献及A–C.8全部连续读完，19关键原页核验。写作结构、统计叙述与证据边界分析，不是独立统计复算、因果验证、训练复现或代码审计。ICML19/50归纳先导，留出未用。",
+      "confidence": {
+        "paper_specific": "high for inspected organization/printedresults and conditions; no independent scientific/statistical validation",
+        "venue_wide": "low; pilot19/50"
+      }
+    },
+    "paragraph_language": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp4–8; pp15–23"
+      ],
+      "observation": "每实验动作明确，Takeaways框方便局部结论；Spearman解释单调非线性，OLS低R2及按环境反向关系附录展开。",
+      "editorial_advice": "框内“essential/trivialized”不当统一建议。相关非因果，梯度范数大不自动证明Hessian曲率；p>0.05留白不是零相关，未见多重比较校正不能自行补充。",
+      "applicability": "23页正文/文献及A–C.8全部连续读完，19关键原页核验。写作结构、统计叙述与证据边界分析，不是独立统计复算、因果验证、训练复现或代码审计。ICML19/50归纳先导，留出未用。",
+      "confidence": {
+        "paper_specific": "high for inspected organization/printedresults and conditions; no independent scientific/statistical validation",
+        "venue_wide": "low; pilot19/50"
+      }
+    },
+    "main_appendix": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp1–23"
+      ],
+      "observation": "主文1–9/文献9–11；A12统计、B12架构/超参、C12–23一阶完整/梯度/ReDO/CDQ/回归/像素/排名与相关图26，所有科学补充均在同PDF。",
+      "editorial_advice": "附录须与正文计数/设置一致；DrQ说明6任务但表只列4行，缺结果作为核对而非脑补。仅“原论文超参”不能代替未给出的WD/SAM/reset等具体复现参数。",
+      "applicability": "23页正文/文献及A–C.8全部连续读完，19关键原页核验。写作结构、统计叙述与证据边界分析，不是独立统计复算、因果验证、训练复现或代码审计。ICML19/50归纳先导，留出未用。",
+      "confidence": {
+        "paper_specific": "high for inspected organization/printedresults and conditions; no independent scientific/statistical validation",
+        "venue_wide": "low; pilot19/50"
+      }
+    },
+    "actionable": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp5–9; pp14–23"
+      ],
+      "observation": "将配置交互、benchmark差异、训练预算、失效run处理和代理关联纳入主张表，而不是按动机推断机制已被验证。",
+      "editorial_advice": "原创示例：Layer normalization and resets improve several tested state-based SAC settings, with task- and replay-dependent effects. The image-based DrQ results show that these gains do not transfer uniformly; proxy correlations motivate hypotheses rather than establish causal mechanisms.",
+      "applicability": "23页正文/文献及A–C.8全部连续读完，19关键原页核验。写作结构、统计叙述与证据边界分析，不是独立统计复算、因果验证、训练复现或代码审计。ICML19/50归纳先导，留出未用。",
+      "confidence": {
+        "paper_specific": "high for inspected organization/printedresults and conditions; no independent scientific/statistical validation",
+        "venue_wide": "low; pilot19/50"
+      }
+    }
+  },
+  "counterexamples": [
+    {
+      "position": "pp5–6,9; p13 Fig8",
+      "finding": "LN强于DMC而MW很差，SN也非普遍最佳，WD单独差但与reset交互强；TOP是CR例外。全类边缘化结果不能推断任意配置、任务或LR制度必胜。"
+    },
+    {
+      "position": "pp17–19 C.6/Table2",
+      "finding": "有4DrQ像素变体补测，并非所有实验都只有SAC/proprio。Acrobot DrQ172.9 vs LN+Res88.8，Cheetah727.4 vs653.9；Hopper74.6 vs167.3说明迁移异质。3seed±未在表清楚定义统计量，不补std或CI；文说6任务而表4行需核对。"
+    },
+    {
+      "position": "p14 C.3",
+      "finding": "Dog无SN/LN的ReDO有run崩溃，用崩前10点报告。该处理需与完成预算的终值区分，不能默称所有run训练完成或一般鲁棒性认证。"
+    },
+    {
+      "position": "pp7/15–20/23",
+      "finding": "Spearman混合RR分析、sym-log与逐变量OLS不识别因果。非Dog DMC梯度相关0.27与Dog−0.66反向；Reach dormant正相关。白格为p阈值未过，不能解释为无关系；高梯度不是曲率直接测量。"
+    },
+    {
+      "position": "p4 Fig1/§3; p12 A/B",
+      "finding": "Fig1边缘化标题写640seeds/task，但64配置总量与固定干预后的子集有效N需明确，不视为640独立同配置重复。表未列WD强度、SAM扰动/reset周期等关键值；“取自原文”未独立核实。"
+    },
+    {
+      "position": "p6 Dog4M; p12 A; pp20–22",
+      "finding": "Dog延长为先选top3的4M，主组合1M，比较模型/输入/预算非一律同等。结果终值是最后10次eval平均，非最后一点，也非全程best checkpoint。模型free接近但未全面胜modelbased。"
+    },
+    {
+      "position": "p4 metric prose; p8Limitations vs pp17–19",
+      "finding": "TD比描述误称extent of overestimation，应按定义区分overfitting与Q偏差；主文范围需和像素补测对齐，记录原文矛盾不静默更名或删除补充证据。"
+    }
+  ],
+  "visual_review": {
+    "pages": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23
+    ],
+    "source": "115dpi Poppler original-page images directly viewed",
+    "policy": "delete19renders and duplicate text only after record; preserve sourcePDF/primaryMD only in ignoredskilltmp"
+  },
+  "holdout_validation": null,
+  "official_requirements": [],
+  "review_limitations": "23页正文/文献及A–C.8全部连续读完，19关键原页核验。写作结构、统计叙述与证据边界分析，不是独立统计复算、因果验证、训练复现或代码审计。ICML19/50归纳先导，留出未用。"
+}

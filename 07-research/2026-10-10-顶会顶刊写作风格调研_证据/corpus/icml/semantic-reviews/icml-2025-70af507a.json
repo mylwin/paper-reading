@@ -1,0 +1,277 @@
+{
+  "id": "icml-2025-70af507a",
+  "venue": "icml",
+  "year": 2025,
+  "split": "induction",
+  "title": "Relative Error Fair Clustering in the Weak-Strong Oracle Model",
+  "authors": "Vladimir Braverman, Prathamesh Dharangutte, Shaofeng H.-C. Jiang, Hoai-An Nguyen, Chen Wang, Yubo Zhang, Samson Zhou",
+  "pdf_path": ".claude/skills/paper-writing-shared/tmp/corpus/icml/pdf/Relative Error Fair Clustering in the Weak-Strong Oracle Model.pdf",
+  "markdown_path": ".claude/skills/paper-writing-shared/tmp/corpus/icml/markdown/Relative Error Fair Clustering in the Weak-Strong Oracle Model.md",
+  "pdf_sha256": "a11049381eac74a9179e2f63d246870da0feea6c66ec94bc1a20354d5ea68466",
+  "review_date": "2026-10-23",
+  "paper_type": "theoretical oracle-efficient coreset construction for group-fair k-median and unconstrained constant-power clustering, with small subsampled real-data evaluation",
+  "semantic_review_status": "complete_writing_focused_review",
+  "full_text_style_review_complete": true,
+  "external_appendix_review_complete": true,
+  "count_eligible_full_text_and_relevant_appendix": true,
+  "coverage": [
+    {
+      "asset": "locked official PMLR PDF",
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36
+      ],
+      "sections": "Abstract/Introduction1.1–1.2/Preliminaries2/UnconstrainedCoreset3/FairCoreset4/Experiments5/Acknowledgements/Impact/References; AAdditionalRelated/B.1–B.17/C.1–C.7/D.1–D.10 and reusedBlemmas/Algorithms1–7/Fig1/Theorems1–4",
+      "method": "continuous36page text read plus27originalpageimages directlyinspected; all deferredcorrectness and assignmentproofs, exponentgeneralization and finalepsilonrescaling read, both experiment panels reviewed"
+    }
+  ],
+  "version_audit": {
+    "official_landing": "https://proceedings.mlr.press/v267/braverman25a.html",
+    "official_pdf": "https://raw.githubusercontent.com/mlresearch/v267/main/assets/braverman25a/braverman25a.pdf",
+    "version": "official proceedings PDF; exact bytes locked by SHA256",
+    "identity": "title/authors/PMLR267/year and lockedSHA",
+    "new_network_fetch": false,
+    "qualification": "cachedofficialPDF, writing-focused allpage review, not full independent proofcertification"
+  },
+  "supplement_audit": {
+    "status": "A–D all related literature/algorithm/proof appendices in same36pagePDF fully read",
+    "external_scientific_appendix_referenced": false,
+    "code_artifacts": "linked experimentcode and external referencedlemmas not executed/independently certified"
+  },
+  "ten_dimensions": {
+    "reader_argument": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp1–4"
+      ],
+      "observation": "从昂贵准确/便宜噪声距离的成本差异和group fairness切入，明确算法输出是小型加权coreset而非直接全局最优分配；定义模型后问可否相对误差与强查询效率兼得。",
+      "editorial_advice": "fairness仅指定(α,β)组比例范围，非individual/social/centerrepresentation或整体反歧视保证；真实embedding模型只是动机，实验仅合成噪声oracle。",
+      "applicability": "36页正文/文献和A–D全部相关科学附录连续读完，27原页核验含唯一两面板实验图、完整算法和长证明。写作组织与主张证据边界审阅，不执行作者代码、独立认证全部证明、复现实验或逐条核验参考文献。ICML33篇归纳先导，正式留出未用。",
+      "confidence": {
+        "paper_specific": "high for read organization, scope and reported experiments; mathematicalqueries unresolved",
+        "venue_wide": "low;33/50 pilot"
+      }
+    },
+    "title_abstract": {
+      "category": "corpus_observation",
+      "positions": [
+        "p1"
+      ],
+      "observation": "技术直陈标题包含误差类型、问题和访问模型；摘要定义两oracle、目标、coreset理论保证及较已有constantfactor的改进，不要求插入实验数字。",
+      "editorial_advice": "relativeerror是对所有允许中心/分配约束的cost保持，不是预测误差/分类公平分。标题fairclustering不能消去k-median vs一般(k,z)无公平的范围差别。first只为原文文献定位，未独立穷尽认证。",
+      "applicability": "36页正文/文献和A–D全部相关科学附录连续读完，27原页核验含唯一两面板实验图、完整算法和长证明。写作组织与主张证据边界审阅，不执行作者代码、独立认证全部证明、复现实验或逐条核验参考文献。ICML33篇归纳先导，正式留出未用。",
+      "confidence": {
+        "paper_specific": "high for read organization, scope and reported experiments; mathematicalqueries unresolved",
+        "venue_wide": "low;33/50 pilot"
+      }
+    },
+    "introduction": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp1–4 §1.1/1.2"
+      ],
+      "observation": "先定义公平和weak/strongoracle再列三主定理，集中展示query/size/time，technicaloverview解释ring sampling、heavyhitters和peeling；最后主动说明为了教学逆序介绍结果。",
+      "editorial_advice": "主结果优先展示与方法按技术依赖逆序兼容，不强制固定贡献/章节顺序。Ω(k)近最优只限特定强查询目标且忽略log因素，不能写总运行时间/任意z所有依赖最优。",
+      "applicability": "36页正文/文献和A–D全部相关科学附录连续读完，27原页核验含唯一两面板实验图、完整算法和长证明。写作组织与主张证据边界审阅，不执行作者代码、独立认证全部证明、复现实验或逐条核验参考文献。ICML33篇归纳先导，正式留出未用。",
+      "confidence": {
+        "paper_specific": "high for read organization, scope and reported experiments; mathematicalqueries unresolved",
+        "venue_wide": "low;33/50 pilot"
+      }
+    },
+    "related_work": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp1–4/14–15 A"
+      ],
+      "observation": "直接比较前作置引言/technicaloverview；额外相关工作附录按多种fairness、kclustering/coreset、两oracle/learningaugmented展开，并明确非研究对象。",
+      "editorial_advice": "正文保留关键缺口与保证对比，扩展综述可后置；不能让读者必须读附录才知道创新。Chen/Bateni等被借用的primitives与新proofadaptation分开，不把所有引理归为作者新贡献。",
+      "applicability": "36页正文/文献和A–D全部相关科学附录连续读完，27原页核验含唯一两面板实验图、完整算法和长证明。写作组织与主张证据边界审阅，不执行作者代码、独立认证全部证明、复现实验或逐条核验参考文献。ICML33篇归纳先导，正式留出未用。",
+      "confidence": {
+        "paper_specific": "high for read organization, scope and reported experiments; mathematicalqueries unresolved",
+        "venue_wide": "low;33/50 pilot"
+      }
+    },
+    "method_theory": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp2–8/15–36"
+      ],
+      "observation": "有限metric/center subset、整数距离/多项式aspectratio，WO固定一次腐败、SO点与边两接口；WC近似→ring→抽样辨重环→估权/充电忽略light→peel；公平版保留所有peeledmass再均匀带权抽样。先查询/size证明，B/C/D分正确性、assignmentpreserving和z扩展。",
+      "editorial_advice": "重复同pair不重新抽噪声，不能majority降错；噪声相关性需明确。coreset构造近线性与后续解聚类可指数分开，postprocess额外s/s²查询需计。z常数隐2^{O(z)}，fair结果kmedian、一般z含kmeans无fair保证，§4开头kmeans措辞不能扩大已证范围。",
+      "applicability": "36页正文/文献和A–D全部相关科学附录连续读完，27原页核验含唯一两面板实验图、完整算法和长证明。写作组织与主张证据边界审阅，不执行作者代码、独立认证全部证明、复现实验或逐条核验参考文献。ICML33篇归纳先导，正式留出未用。",
+      "confidence": {
+        "paper_specific": "high for read organization, scope and reported experiments; mathematicalqueries unresolved",
+        "venue_wide": "low;33/50 pilot"
+      }
+    },
+    "evidence": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp3/8–9 Fig1"
+      ],
+      "observation": "理论是主证据；实证Adult约50k8features、Credit约30k9features，性别组，先Meyerson约2000再coreset100，与uniform100+相同fairtree比较k5–10，p1/q10，10独立runs平均，MacbookAir。",
+      "editorial_advice": "图是两任务signed relative cost与fairtree参考，不是已知OPT或所有C验证；没有误差条、fairnessviolation/子群性能、真实LLMoracle、全n/epsilon/time扩展。约200SO占缩小后2000的10%，预处理/转换代价未计不能宣传原始50k端到端节省已证。",
+      "applicability": "36页正文/文献和A–D全部相关科学附录连续读完，27原页核验含唯一两面板实验图、完整算法和长证明。写作组织与主张证据边界审阅，不执行作者代码、独立认证全部证明、复现实验或逐条核验参考文献。ICML33篇归纳先导，正式留出未用。",
+      "confidence": {
+        "paper_specific": "high for read organization, scope and reported experiments; mathematicalqueries unresolved",
+        "venue_wide": "low;33/50 pilot"
+      }
+    },
+    "discussion_limits": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp3–4/8–9/14–15"
+      ],
+      "observation": "困难性与scope分散在引言/技术处，fair一般z与更优k依赖在§4作为openfuture；正文结束实验后ack/impact，无独立conclusion/limitations。",
+      "editorial_advice": "不补不存在结论章为venue强制。应聚合固定corruption、metric/aspectratio、group信息已知、fractionalassignment、后处理指数和小样本评测边界；Impact通用无特定风险陈述不是真实招聘/信贷公平部署认证。",
+      "applicability": "36页正文/文献和A–D全部相关科学附录连续读完，27原页核验含唯一两面板实验图、完整算法和长证明。写作组织与主张证据边界审阅，不执行作者代码、独立认证全部证明、复现实验或逐条核验参考文献。ICML33篇归纳先导，正式留出未用。",
+      "confidence": {
+        "paper_specific": "high for read organization, scope and reported experiments; mathematicalqueries unresolved",
+        "venue_wide": "low;33/50 pilot"
+      }
+    },
+    "paragraph_language": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp3–8/15–36"
+      ],
+      "observation": "定理先用Thereexists和概率量词给精确scope，算法拆成update/peeling，证明StepI结构/收敛、II重环、III轻环/组合；重复推广注明哪些引理无变化、哪些新charging。",
+      "editorial_advice": "量词allC/Γ、highprobability和tilde依赖保留，不由一个实验pair变成定理验证。Algorithm6/7明确thoughtprocess，仅证明工具不可当实际执行步骤或隐藏强query成本。",
+      "applicability": "36页正文/文献和A–D全部相关科学附录连续读完，27原页核验含唯一两面板实验图、完整算法和长证明。写作组织与主张证据边界审阅，不执行作者代码、独立认证全部证明、复现实验或逐条核验参考文献。ICML33篇归纳先导，正式留出未用。",
+      "confidence": {
+        "paper_specific": "high for read organization, scope and reported experiments; mathematicalqueries unresolved",
+        "venue_wide": "low;33/50 pilot"
+      }
+    },
+    "main_appendix": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp1–36"
+      ],
+      "observation": "正文1–9，文献9–13；A14–15额外相关，B15–23 Algorithm1正确性/估权/charging，C24–29公平assignmentpreserving全证明，D29–36一般z的完整推广含新chargingAlgorithm7与epsilonrescale。",
+      "editorial_advice": "所有36页已读含复用引理及最后rescale，不能读到正文query计数就宣称全证明读完。原页有7算法、1图，无实验表；外引标准proof未独立重证、代码链接未执行，未发现相关外部全文附录缺口。",
+      "applicability": "36页正文/文献和A–D全部相关科学附录连续读完，27原页核验含唯一两面板实验图、完整算法和长证明。写作组织与主张证据边界审阅，不执行作者代码、独立认证全部证明、复现实验或逐条核验参考文献。ICML33篇归纳先导，正式留出未用。",
+      "confidence": {
+        "paper_specific": "high for read organization, scope and reported experiments; mathematicalqueries unresolved",
+        "venue_wide": "low;33/50 pilot"
+      }
+    },
+    "actionable": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp3–9/15–36"
+      ],
+      "observation": "用结果表或紧邻定理列输出、oracle接口/数量、weak成本、postprocess和支持限制；方法按依赖教学排序，实验说明缩样/权重和度量参考，证明工具与算法严格分开。",
+      "editorial_advice": "原创改写：The construction uses few strong-oracle queries to obtain a relative-error coreset for the stated fair k-median setting. Obtaining a near-optimal clustering from the coreset may still require expensive post-processing. Experiments compare fixed-size coresets after substantial subsampling and do not establish end-to-end speedups or fairness outcomes on the full original datasets.",
+      "applicability": "36页正文/文献和A–D全部相关科学附录连续读完，27原页核验含唯一两面板实验图、完整算法和长证明。写作组织与主张证据边界审阅，不执行作者代码、独立认证全部证明、复现实验或逐条核验参考文献。ICML33篇归纳先导，正式留出未用。",
+      "confidence": {
+        "paper_specific": "high for read organization, scope and reported experiments; mathematicalqueries unresolved",
+        "venue_wide": "low;33/50 pilot"
+      }
+    }
+  },
+  "counterexamples": [
+    {
+      "position": "pp2–8/29–36 guarantees",
+      "finding": "fairkmedian coreset约tildeO(Λk²/epsilon²)、construction strong约tildeO(Λk)，不等用同量query得到整体(1+epsilon)聚类；postprocess另可s点或s²距离查询且求解可指数。一般(k,z)约tildeO(k²/epsilon³)、2^{O(z)}常数隐藏、无fair；§4开头kmeans/fair文案与结尾明确无fairz扩展需统一。已给下界仅支持kmedian强query维度，不证所有参数或总时间最优。"
+    },
+    {
+      "position": "pp2/4–6 oracleandfairdefinitions",
+      "finding": "WO corruption一次持久，同pair重复不会独立纠错；对不同pair的独立性/适应性及任意adversarial answers条件需明确，不能仅用各pair2/3边缘成功率推出所有concentration。SO点暴露已查两点间距离、SO边直接单pair，通用q²模拟与本算法同阶优化分开。metric/integer/aspectratio/centersinX、group标签准确可用前提不涵盖任意nonmetric相似度或错标签。"
+    },
+    {
+      "position": "pp1–5 Definition4–7/Proposition1/Lemma2.1",
+      "finding": "Λ在maxoverlap/disjointgroups与distinctgroup出现不同说法；重叠群体转不交membershippatterns可能需要更多类别，不能未澄清就承诺仅最大membership线性开销。Def4/6只打印columncapacity相容，未显式逐点sum_cσ(x,c)=w(x)，需要作者补供给约束/weight含义及fractional/integer、emptycluster分母可行性。原文重叠group称partition也需统一。"
+    },
+    {
+      "position": "pp8–9 Fig1",
+      "finding": "Adult/Credit先Meyerson下采样到约2000而非对50k/30k完整实验，coreset100、uniform100，200SO的10%是子样本分母。预处理需计算Euclidean真实距离，未计强oracle/计算成本；weak错误小值的比例/分布与numeric编码标准化、ε对应、采样weights细节不足。10run均值无SD/CI，不补显著性。signedrelativecost=(referencecost−coresetcost)/referencecost，非OPTgap或绝对uniformcoreset误差；单一fairtree解未检验allC/Γ，未报告组违规或真实embedding延时。"
+    },
+    {
+      "position": "pp6–8/15–18 algorithmsBproofs",
+      "finding": "Alg2把1/3用于估权、2/3用于weighted，但打印最终加所有Si,l并除全size，B.8却只加2/3并除2/3，需统一。Si,j是否每轮清空、withreplacement/不足样本如何处理、fraction截断需说明。Alg4选择任意Si0点不保证来自close子集，B.2按close半径且把radius/diameter混用；peeling reference S是否包含ci与Prop3逐s保证也需核。B.6 Chernoff指数用|P|未体现真实sample expectation，任意split不自动保uniform，尚待澄清。"
+    },
+    {
+      "position": "pp18–23 B.8–B.17",
+      "finding": "B.8最后用d(C,s)<=diam(ring)对任意C并不成立，估计总mass误差在farcenter时需要额外center-distance项；只记录关键代数缺口、不把该bound当已认证技能知识。B.12/13把相邻环真实点集diam视作几何固定比例，B.14跨环d(x,y)<=diam单环同样需补条件/改radiusproxy；其recursion exponent epsilon^{2(j*−l)}对l>j*方向、C0/50与2C0系数、εrescale多ε和k²末写k等需核。未执行或完整重证明，不宣称所有主定理已推翻。"
+    },
+    {
+      "position": "pp24–29 C.1–C.7",
+      "finding": "C.1 10log²n与证明100log²n、C.7多10logn迭代不一；C.2 Rd与通用metric/中心n^k计数、C.3 F大小Delta^{kd}与声明n^k、capacitygrid保质量/误差条件需对齐。T未必含原center，farcenter argument用diamT界d(x,c*)需说明。C.4/5cost和式漏d因子，C.5重分配项diamC(可60diamT/ε)在结论被换diamT的sample阈值需补；C.6 p28 McDiarmid打印≤事件概率小方向反、权重/期望界连用尚需核。"
+    },
+    {
+      "position": "pp29–36 Dgeneralization",
+      "finding": "D采用同算法/structurallemmas但新charging有diam^z和未乘z/平方来回、D.4/D.6自引用/Alg6vs7、D.8声明(2C0)^{2z}而证明4z、D.10声明4z与最后5z+1、末k²→k等打印不一。R对z次cost应使用平均cost的1/z半径，直接沿kmedianR的nR^z界需说明。保留z常数且主要条件，不能因相似证明措辞就将fairkmeans/generalz自动视为已证。"
+    }
+  ],
+  "visual_review": {
+    "pages": [
+      3,
+      5,
+      6,
+      7,
+      8,
+      9,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36
+    ],
+    "source": "115dpi originalpagePopplerimages directlyviewed; onlyFig1bothpanels, allalgorithm/proofquerypages inclfinalgeneralization",
+    "policy": "delete27renders+duplicateextract after registration; originalPDF/primaryMD retained only ignoredskilltmp"
+  },
+  "official_requirements": [],
+  "holdout_validation": null,
+  "review_limitations": "36页正文/文献和A–D全部相关科学附录连续读完，27原页核验含唯一两面板实验图、完整算法和长证明。写作组织与主张证据边界审阅，不执行作者代码、独立认证全部证明、复现实验或逐条核验参考文献。ICML33篇归纳先导，正式留出未用。"
+}

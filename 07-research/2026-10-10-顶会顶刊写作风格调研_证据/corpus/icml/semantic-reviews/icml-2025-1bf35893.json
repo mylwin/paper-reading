@@ -1,0 +1,244 @@
+{
+  "id": "icml-2025-1bf35893",
+  "venue": "icml",
+  "year": 2025,
+  "split": "induction",
+  "title": "Breaking the $n^1.5$ Additive Error Barrier for Private and Efficient Graph Sparsification via Private Expander Decomposition",
+  "authors": "Anders Aamand, Justin Y. Chen, Mina Dalirrooyfard, Slobodan Mitrović, Yuriy Nevmyvaka, Sandeep Silwal, Yinzhan Xu",
+  "review_date": "2026-10-21",
+  "mode": "continuous all-page prose/formula/appendix organization review plus original-page visual checks; not independent mathematical verification or experimental reproduction",
+  "semantic_review_status": "complete_writing_focused_review",
+  "paper_type": "original privacy-preserving graph algorithms and approximation theory, without empirical evaluation",
+  "full_text_style_review_complete": true,
+  "external_appendix_review_complete": true,
+  "count_eligible_full_text_and_relevant_appendix": true,
+  "reviewed_pages": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14
+  ],
+  "pdf_path": ".claude/skills/paper-writing-shared/tmp/corpus/icml/pdf/Breaking the $n^1.5$ Additive Error Barrier for Private and Efficient Graph Sparsification via Private Expander Decomposition.pdf",
+  "markdown_path": ".claude/skills/paper-writing-shared/tmp/corpus/icml/markdown/Breaking the $n^1.5$ Additive Error Barrier for Private and Efficient Graph Sparsification via Private Expander Decomposition.md",
+  "pdf_sha256": "51d400d53b2ffd0a8b9223cd6ea197d70dc71137c6dff3295242fcfcb6a67e20",
+  "version_audit": {
+    "version": "official proceedings PDF; exact bytes locked by SHA256",
+    "official_landing": "https://proceedings.mlr.press/v267/aamand25b.html",
+    "official_pdf": "https://raw.githubusercontent.com/mlresearch/v267/main/assets/aamand25b/aamand25b.pdf",
+    "identity": "PMLR267/ICML2025 header,title,authors and lockedSHA checked",
+    "new_network_fetch": false
+  },
+  "coverage": [
+    {
+      "asset": "locked PMLR officialPDF including its appendices",
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "sections": "Abstract; Introduction;1.1RelatedWork;1.2TechnicalContribution;Preliminaries;PrivateCutSparsifier and privacy/success/error analyses;PrivateExpanderDecomposition;Applications;Conclusion;Acknowledgements;ImpactStatement;References;AppendixA proof ofTheorem2.3;AppendixB omittedApplications/Corollaries5.1,B.1,B.2"
+    }
+  ],
+  "appendix_review_status": "all scientific appendixA/B in samePDF read; no external scientific appendix pointer detected",
+  "supplement_audit": {
+    "appendices": "A and B in samePDF",
+    "external_pointer_detected": false,
+    "limitation": "no new landing-page or code audit; does not exclude unlisted material; independent cited works are not counted as this paper appendix"
+  },
+  "ten_dimensions": {
+    "reader_argument": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp1–3"
+      ],
+      "observation": "应用动机是私人图的cut信息发布，随后正式区分无乘性误差下的下界、允许乘性误差时的计算差距、非负权和稀疏输出。",
+      "editorial_advice": "开篇固定对象与比较条件；“突破障碍”必须附模型、误差类型及效率要求。",
+      "applicability": "图算法理论稿；不能把edge-neighboring写成保护节点身份的node-DP。",
+      "confidence": {
+        "paper_specific": "high on read organization and visually checked marks; result correctness not rated",
+        "venue_wide": "low;6/50pilot, not frequency estimation"
+      }
+    },
+    "title_abstract": {
+      "category": "corpus_observation",
+      "positions": [
+        "p1 Abstract; p2 Theorem1.1; p3 Table1"
+      ],
+      "observation": "标题报告n^1.5障碍及技术工具；摘要直接给n^(1.25+o(1))但说明略去ε、δ、γ依赖，主定理补全误差、近线性边数与高概率。",
+      "editorial_advice": "允许理论摘要写关键指数，但链接完整主定理条件；不把省略参数后的简式当无参数保证。",
+      "applicability": "表中不同pure/approx DP、multiplicative error与runtime不可只按指数排名。",
+      "confidence": {
+        "paper_specific": "high on read organization and visually checked marks; result correctness not rated",
+        "venue_wide": "low;6/50pilot, not frequency estimation"
+      }
+    },
+    "introduction": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp2–4, Theorem1.1/Table1/TechnicalContribution"
+      ],
+      "observation": "贡献围绕主定理、比较表、两种已有方法、密/疏分解直觉和新private expander decomposition串联，没有统一三项贡献列表。",
+      "editorial_advice": "以技术路线与正式结果配合贡献表述，说明旧工具为何不能黑盒套用。",
+      "applicability": "“稠密”在分解中是满足扩展性的子图条件，不等于任意高边数图都能直接套第二方法。",
+      "confidence": {
+        "paper_specific": "high on read organization and visually checked marks; result correctness not rated",
+        "venue_wide": "low;6/50pilot, not frequency estimation"
+      }
+    },
+    "related_work": {
+      "category": "corpus_observation",
+      "positions": [
+        "p2 §1.1; pp3–4 technical overview"
+      ],
+      "observation": "RelatedWork作为Introduction中的编号子节，说明其他DP查询输出与本稿合成整图要求的差别；工具来源在推导前再次说明。",
+      "editorial_advice": "按输出对象和保证比较，明确继承工具和新隐私化步骤；不强制独立早期章。",
+      "applicability": "非负边权与稀疏性影响可比性，不能删掉Table1脚注。",
+      "confidence": {
+        "paper_specific": "high on read organization and visually checked marks; result correctness not rated",
+        "venue_wide": "low;6/50pilot, not frequency estimation"
+      }
+    },
+    "method_theory": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp4–8, Theorems2.2–4.2; Algorithms1–2; Lemmas4.3–4.4"
+      ],
+      "observation": "先列工具定义，再给总算法；分别分析privacy、success probability与additive error；子模块的递归深度再支撑组合隐私。",
+      "editorial_advice": "定理依赖显式回链；隐私预算、失败概率、误差界分别说明；后处理稀疏化与新私有分解不混同。",
+      "applicability": "已读显示证明及引用工具归属，未独立重证定理或审计引用论文全部前提。",
+      "confidence": {
+        "paper_specific": "high on read organization and visually checked marks; result correctness not rated",
+        "venue_wide": "low;6/50pilot, not frequency estimation"
+      }
+    },
+    "evidence": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp2–8, Table1/Fig1/§3–4"
+      ],
+      "observation": "核心证据是复杂性、误差与隐私分析，Table1比较理论保证而非跑分；没有实证实验章节。",
+      "editorial_advice": "理论稿可不补实验；“polynomial time”与近线性输出规模不是实测速度或内存曲线。",
+      "applicability": "不将从作者稿读出的结论认证为数学正确；n、ε、δ、γ依赖保持原样。",
+      "confidence": {
+        "paper_specific": "high on read organization and visually checked marks; result correctness not rated",
+        "venue_wide": "low;6/50pilot, not frequency estimation"
+      }
+    },
+    "discussion_limits": {
+      "category": "corpus_observation",
+      "positions": [
+        "p9 Conclusion/Impact; pp13–14 AppendixB"
+      ],
+      "observation": "结论指出进一步降低误差和新应用为开放问题，正文仅完整展示Max-Cut路线；附录其他应用带有各自乘性因子、平衡和k条件。",
+      "editorial_advice": "已有推论与开放问题分开；不能把主定理对cut的保证改成所有图任务的已验证最优算法。",
+      "applicability": "Max-Cut与最大二分不同常数，Max-k-Cut有额外k依赖；Impact原句不是外部无风险认证。",
+      "confidence": {
+        "paper_specific": "high on read organization and visually checked marks; result correctness not rated",
+        "venue_wide": "low;6/50pilot, not frequency estimation"
+      }
+    },
+    "paragraph_language": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp3–8"
+      ],
+      "observation": "先给技术直觉，再解释朴素做法失效和新接口，证明分小标题便于核查；with high probability、非负权、public nodes等限定贯穿。",
+      "editorial_advice": "压缩时保留决定比较含义的条件，删背景重复；图例中的分区颜色只辅助机制说明。",
+      "applicability": "文本抽取会丢绝对值和根号范围，先对原图核验再写公式。",
+      "confidence": {
+        "paper_specific": "high on read organization and visually checked marks; result correctness not rated",
+        "venue_wide": "low;6/50pilot, not frequency estimation"
+      }
+    },
+    "main_appendix": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp1–14"
+      ],
+      "observation": "主体pp1–9，文献pp9–11；AppendixA p12补主文工具的高概率版证明，AppendixB pp12–14给Max-Cut全证及其他应用。",
+      "editorial_advice": "附录按正文定理/推论名称回链；不能因A证明借用工具就删去正文依赖的成功概率论证。",
+      "applicability": "相关科学附录均在同一锁定PDF，未发现另指外部稿件附录；没有新网络核查。",
+      "confidence": {
+        "paper_specific": "high on read organization and visually checked marks; result correctness not rated",
+        "venue_wide": "low;6/50pilot, not frequency estimation"
+      }
+    },
+    "actionable": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp2–5; AppendixA/B"
+      ],
+      "observation": "模型边界、隐私类型、乘性与加性误差、运行时间和输出边数构成一组不可拆掉的比较坐标。",
+      "editorial_advice": "原创示例：Under edge adjacency, the stated guarantee combines multiplicative and additive cut errors with high probability. Its simplified exponent suppresses the reported privacy and approximation parameters.",
+      "applicability": "仅在用户材料有这些条件时适用；不把此例当作独立验证的研究结果。",
+      "confidence": {
+        "paper_specific": "high on read organization and visually checked marks; result correctness not rated",
+        "venue_wide": "low;6/50pilot, not frequency estimation"
+      }
+    }
+  },
+  "counterexamples": [
+    {
+      "position": "pp2–3, Theorem1.1/Table1",
+      "finding": "无乘性误差时仍有n^1.5下界，本稿允许乘性误差；pure-DP与approximate-DP不同。",
+      "editorial_action": "“突破”不可写成同模型下推翻旧下界；保持对照条件。"
+    },
+    {
+      "position": "pp3–4, technical overview/Fig1",
+      "finding": "先在私有合成图上直接跑非私有分解不能黑盒得到所需原图子块保证；需白盒隐私化。",
+      "editorial_action": "技术流程不缩成“任何DP图加任意分解即可”。"
+    },
+    {
+      "position": "pp4,12, Theorem2.3/AppendixA",
+      "finding": "原PDF的绝对值及ε位于根号内等符号在普通抽取中会错位或消失。",
+      "editorial_action": "视觉核实后记录，不把抽取误差当作作者公式错误。"
+    },
+    {
+      "position": "pp13–14, CorollariesB.1/B.2",
+      "finding": "各下游问题有不同近似因子、平衡约束及k依赖，且为理论推论，未报告实际任务实测。",
+      "editorial_action": "不将“有应用推论”改成“实测全面优越”。"
+    }
+  ],
+  "official_requirements": [],
+  "holdout_validation": null,
+  "visual_review": {
+    "pages": [
+      2,
+      3,
+      4,
+      5,
+      12,
+      13,
+      14
+    ],
+    "findings": [
+      "p2核对主定理误差项、高概率和近线性输出边数；p3核对比较表隐私类型及脚注。",
+      "p4核对分解图及Theorem2.2/2.3的绝对值、根号内参数；p5核对预算分配和三类分析。",
+      "p12核对A的cut norm与高概率增强路线；pp13–14核对B中各应用及不同常数/参数。"
+    ],
+    "manifest": "07-research/2026-10-21-ICML论文风格验证_证据/temporary-artifact-manifest.json",
+    "render_policy": "ignored skilltmp, delete regenerable images after notes saved"
+  },
+  "review_limitations": "no theorem correctness, statistical recomputation, experiment reproduction, independent behavior test, official-guideline revalidation or full40+10holdout validation"
+}

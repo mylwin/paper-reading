@@ -1,0 +1,239 @@
+{
+  "id": "icml-2025-cd2d22c4",
+  "venue": "icml",
+  "year": 2025,
+  "split": "induction",
+  "title": "ARS: Adaptive Reward Scaling for Multi-Task Reinforcement Learning",
+  "authors": "Myungsik Cho, Jongeui Park, Jeonghye Kim, Youngchul Sung",
+  "pdf_path": ".claude/skills/paper-writing-shared/tmp/corpus/icml/pdf/ARS- Adaptive Reward Scaling for Multi-Task Reinforcement Learning.pdf",
+  "markdown_path": ".claude/skills/paper-writing-shared/tmp/corpus/icml/markdown/ARS- Adaptive Reward Scaling for Multi-Task Reinforcement Learning.md",
+  "pdf_sha256": "9a1a25a82414c67fb7e82f5265fba943f0304043faa2b9e3e0c0947c54bf41a5",
+  "review_date": "2026-10-21",
+  "paper_type": "empirical off-policy multi-task reinforcement-learning reward-preprocessing and periodic-reset framework",
+  "semantic_review_status": "complete_writing_focused_review",
+  "full_text_style_review_complete": true,
+  "external_appendix_review_complete": true,
+  "count_eligible_full_text_and_relevant_appendix": true,
+  "coverage": [
+    {
+      "asset": "lockedofficialPMLRPDF",
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ],
+      "sections": "Abstract;Introduction;Preliminaries2.1–2.4;Motivation3.1–3.2.2;Method4.1–4.3/Algorithm1;Experiments5.1–5.4;RelatedWorks6;Conclusion7;Impact/Acknowledgement/References;A/B/C/D.1–D.3/E.1–E.4/F all appendices",
+      "method": "continuousall19pagesincludingA–F;15criticaloriginalpagesincludingfullfigures/tablesviewed;truncatedp3captionrecoveredvisually"
+    }
+  ],
+  "version_audit": {
+    "official_landing": "https://proceedings.mlr.press/v267/cho25d.html",
+    "official_pdf": "https://raw.githubusercontent.com/mlresearch/v267/main/assets/cho25d/cho25d.pdf",
+    "version": "official proceedings PDF; exact bytes locked by SHA256",
+    "identity": "title/authors/PMLR267header/yearandSHAchecked",
+    "new_network_fetch": false
+  },
+  "supplement_audit": {
+    "status": "A–F fullyreadinsamePDF;noidentifiedseparateexternaltextappendixpointer",
+    "code_artifacts": "notexecuted;notreplication",
+    "qualification": "no freshwebpageaudit;doesnotexcludeunlistedmaterial"
+  },
+  "ten_dimensions": {
+    "reader_argument": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp1–4"
+      ],
+      "observation": "先介绍多任务共享策略和negative transfer，再用单任务固定100倍缩放及多任务选择缩放的失效定位奖励量级问题。",
+      "editorial_advice": "动机诊断、机制假设、最终性能分开；正reward而Q负值是作者的诊断观察，不能据此声称已唯一定位全部失败原因。",
+      "applicability": "Meta-World-v2修改目标采样的MT10/MT50仿真实证写作审阅，未运行代码/独立复现、检验统计显著性或证明全off-policy兼容性；不代表真实机器人部署与未见任务泛化。",
+      "confidence": {
+        "paper_specific": "highforinspectedorganization/printedresults;notindependentvalidity",
+        "venue_wide": "low;pilot13/50"
+      }
+    },
+    "title_abstract": {
+      "category": "corpus_observation",
+      "positions": [
+        "p1 Abstract"
+      ],
+      "observation": "标题给缩写/方法/多任务RL，摘要按奖励差异、历史缩放与周期重置、Meta-World实证、应用潜力组织，无关键数。",
+      "editorial_advice": "可用双组件机制摘要；robust convergence在这里是经验措辞，没有新收敛定理，不能改写成数学保证或真实世界验证。",
+      "applicability": "Meta-World-v2修改目标采样的MT10/MT50仿真实证写作审阅，未运行代码/独立复现、检验统计显著性或证明全off-policy兼容性；不代表真实机器人部署与未见任务泛化。",
+      "confidence": {
+        "paper_specific": "highforinspectedorganization/printedresults;notindependentvalidity",
+        "venue_wide": "low;pilot13/50"
+      }
+    },
+    "introduction": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp1–2 contributions"
+      ],
+      "observation": "三贡献分别为奖励差异问题、缩放加reset框架、Meta-World验证；紧接预备定义而后独立Motivation章。",
+      "editorial_advice": "对需诊断失效的经验方法，可以先展示简单失效实验再引新算法，不强制通用问题→方法即跳过证据。",
+      "applicability": "Meta-World-v2修改目标采样的MT10/MT50仿真实证写作审阅，未运行代码/独立复现、检验统计显著性或证明全off-policy兼容性；不代表真实机器人部署与未见任务泛化。",
+      "confidence": {
+        "paper_specific": "highforinspectedorganization/printedresults;notindependentvalidity",
+        "venue_wide": "low;pilot13/50"
+      }
+    },
+    "related_work": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp8–9 §6"
+      ],
+      "observation": "结果之后组织多任务五类、重置primacy bias、reward scaling/PopArt，并以机制区别定位。",
+      "editorial_advice": "区分模块、梯度、调度与奖励接口；比较PopArt的结论绑定SAC-MT集成、MT10和已测频率，不外推所有PopArt任务。",
+      "applicability": "Meta-World-v2修改目标采样的MT10/MT50仿真实证写作审阅，未运行代码/独立复现、检验统计显著性或证明全off-policy兼容性；不代表真实机器人部署与未见任务泛化。",
+      "confidence": {
+        "paper_specific": "highforinspectedorganization/printedresults;notindependentvalidity",
+        "venue_wide": "low;pilot13/50"
+      }
+    },
+    "method_theory": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp2,4–5 Algorithm1/Eqs1–7;pp13–14 B/C;p19 F"
+      ],
+      "observation": "每任务独立buffer和one-hot标识；缩放=max平均奖励/当前平均奖励，更新scale与actor/critic重置绑定，buffer保留；LN/LoRA是显式增强变体。",
+      "editorial_advice": "历史均值规则只直接均衡buffer均值，不保证完整奖励分布相同；只在reset前重算，不改成逐步更新；负/零均值未给通用处理，any off-policy适用需限定为所测算法。",
+      "applicability": "Meta-World-v2修改目标采样的MT10/MT50仿真实证写作审阅，未运行代码/独立复现、检验统计显著性或证明全off-policy兼容性；不代表真实机器人部署与未见任务泛化。",
+      "confidence": {
+        "paper_specific": "highforinspectedorganization/printedresults;notindependentvalidity",
+        "venue_wide": "low;pilot13/50"
+      }
+    },
+    "evidence": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp5–8 Tables1–5;pp9,13–18 Tables6–11"
+      ],
+      "observation": "报告MT10/MT50 20M/100M样本，10目标episode、8seed均值±标准差；用平均、逐任务、bottom-k与ESTR阈值评价，另做组件、缩放、容量、reset、PopArt、horizon消融。",
+      "editorial_advice": "保留±是std不是CI；97.3/98.6/99.5与65.9/78.3/83.2分别绑定基础/LN/LoRA。至少20%相对提升不等于20百分点；组件27.5/27.0为百分点差。",
+      "applicability": "Meta-World-v2修改目标采样的MT10/MT50仿真实证写作审阅，未运行代码/独立复现、检验统计显著性或证明全off-policy兼容性；不代表真实机器人部署与未见任务泛化。",
+      "confidence": {
+        "paper_specific": "highforinspectedorganization/printedresults;notindependentvalidity",
+        "venue_wide": "low;pilot13/50"
+      }
+    },
+    "discussion_limits": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp7–9;pp17–18"
+      ],
+      "observation": "没有独立限制章，结论将更多领域/多agent/层级RL列未来；正文承认MOORE容量约4倍，48/50子集与完整50平均不同。",
+      "editorial_advice": "保留仿真、任务集、网络容量和horizon限制，不能用48任务92.3代替完整50任务88.9；临时reset性能下跌不应抹去。",
+      "applicability": "Meta-World-v2修改目标采样的MT10/MT50仿真实证写作审阅，未运行代码/独立复现、检验统计显著性或证明全off-policy兼容性；不代表真实机器人部署与未见任务泛化。",
+      "confidence": {
+        "paper_specific": "highforinspectedorganization/printedresults;notindependentvalidity",
+        "venue_wide": "low;pilot13/50"
+      }
+    },
+    "paragraph_language": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp6–9;pp13–18"
+      ],
+      "observation": "结果段主指标→困难任务→机制解释→消融回链，但使用first/any/breakthrough等扩张词；部分简单任务满分并列或基础ARS更低。",
+      "editorial_advice": "按结果收窄强断言，不将接受稿宣传措辞当ICML规范；对源LoRA初始化/冻结描述及baseline标签疑点列作者核对。",
+      "applicability": "Meta-World-v2修改目标采样的MT10/MT50仿真实证写作审阅，未运行代码/独立复现、检验统计显著性或证明全off-policy兼容性；不代表真实机器人部署与未见任务泛化。",
+      "confidence": {
+        "paper_specific": "highforinspectedorganization/printedresults;notindependentvalidity",
+        "venue_wide": "low;pilot13/50"
+      }
+    },
+    "main_appendix": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp1–19 A–F"
+      ],
+      "observation": "主文pp1–9，影响/致谢/文献pp10–12；A任务成功定义与目标采样，BLoRA，C超参数，D完整曲线，E四组消融，F完整流程图。",
+      "editorial_advice": "大流程图放F仍需正文算法解释核心；horizon150与500及重跑基线在E说明，投稿转写不能删除这些可比性条件。",
+      "applicability": "Meta-World-v2修改目标采样的MT10/MT50仿真实证写作审阅，未运行代码/独立复现、检验统计显著性或证明全off-policy兼容性；不代表真实机器人部署与未见任务泛化。",
+      "confidence": {
+        "paper_specific": "highforinspectedorganization/printedresults;notindependentvalidity",
+        "venue_wide": "low;pilot13/50"
+      }
+    },
+    "actionable": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp6–9 Tables1–6;pp17–18"
+      ],
+      "observation": "MT10优势集中于难任务，easy子集去缩放达到100而完整99.6；basicARS的MT50 bottom10仍仅9.1，不能称所有任务解决。",
+      "editorial_advice": "原创示例：Under the matched Meta-World protocol, reward scaling and periodic resets jointly improve the reported aggregate success rate. Layer normalization, adapters, network width and episode horizon define separate experimental configurations.",
+      "applicability": "Meta-World-v2修改目标采样的MT10/MT50仿真实证写作审阅，未运行代码/独立复现、检验统计显著性或证明全off-policy兼容性；不代表真实机器人部署与未见任务泛化。",
+      "confidence": {
+        "paper_specific": "highforinspectedorganization/printedresults;notindependentvalidity",
+        "venue_wide": "low;pilot13/50"
+      }
+    }
+  },
+  "counterexamples": [
+    {
+      "position": "p6 Tables1–2;p7 capacityandESTR",
+      "finding": "基础ARS在MT10 reach92.5低于多基线100，所有任务≥97只用于ARS-LoRA；MT50基础bottom10为9.1。48任务92.3不等于全部50任务88.9，不能混用。"
+    },
+    {
+      "position": "p8 Table4;p17 Fig11/Table9",
+      "finding": "easy子集无reward scaling为100高于完整99.6，reset4/6/9对pick-place有明显下降；reset不是越频繁越好。Table9 No reset69.4恰同SAC-MT而Table4无reset69.8，两处比较设置需作者确认。"
+    },
+    {
+      "position": "p5 Eq6;pp13–14 C",
+      "finding": "规则需非零正均值语境，源稿未给零/负均值防护；均值相等不等于完整分布相同，也没有一般兼容性或收敛证明。"
+    },
+    {
+      "position": "p13 B",
+      "finding": "LoRA写disabled时A=B=0并仅通过AB更新，启用时初始化方式未明确；双零乘积梯度如何启动需作者解释。W0 frozen throughout与前期训练的时间语义亦需澄清，未静默修正。"
+    },
+    {
+      "position": "p18 E.3/E.4",
+      "finding": "PopArt对照仅MT10频率1/10/100/500；horizon150的91.0来自1024宽ARS-LN，不能与400宽500步78.3当单一horizon效应。"
+    },
+    {
+      "position": "p2 taskIDs;p13 A;p19 F",
+      "finding": "正文0–9而A用1–10，任务对应要显式映射；F有重复buffer D2标签，原图可见，保留待作者核对不当作新的任务配置。"
+    }
+  ],
+  "visual_review": {
+    "pages": [
+      1,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19
+    ],
+    "source": "115dpiPopplerrendersdirectview_image",
+    "policy": "delete regenerable files after record"
+  },
+  "holdout_validation": null,
+  "official_requirements": [],
+  "review_limitations": "Meta-World-v2修改目标采样的MT10/MT50仿真实证写作审阅，未运行代码/独立复现、检验统计显著性或证明全off-policy兼容性；不代表真实机器人部署与未见任务泛化。"
+}

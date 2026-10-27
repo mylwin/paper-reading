@@ -1,0 +1,97 @@
+{
+  "date": "2026-10-21",
+  "scope": "only17manifested reproducible intermediate outputs; original PDFs and primary Markdown retained",
+  "deleted": [
+    {
+      "path": ".claude/skills/paper-writing-shared/tmp/review-2026-10-21/ijcai-2024-01.txt",
+      "bytes": 49726,
+      "sha256": "fb2e68d7cb28573fd1a85d7a9e85e6b1fb3deaf86309c2dcc556b3ea5b8db688"
+    },
+    {
+      "path": ".claude/skills/paper-writing-shared/tmp/review-2026-10-21/ijcai-2025-01.txt",
+      "bytes": 52404,
+      "sha256": "c3353def21a71e4103c6fd38e33cb27a232d7e1515598f95aab3d9af2e6b7985"
+    },
+    {
+      "path": ".claude/skills/paper-writing-shared/tmp/review-2026-10-21/ijcai-2025-02.txt",
+      "bytes": 48357,
+      "sha256": "28827bfec394424762f13e91bfd98323f6cd9f582729160ec03b73bc78a86e7f"
+    },
+    {
+      "path": ".claude/skills/paper-writing-shared/tmp/review-2026-10-21/renders/ijcai-2024-01-p3.png",
+      "bytes": 423480,
+      "sha256": "4013357048b84572247d9323b6f0914a362d1e6790f27f182419e9039773d8d2"
+    },
+    {
+      "path": ".claude/skills/paper-writing-shared/tmp/review-2026-10-21/renders/ijcai-2024-01-p5.png",
+      "bytes": 430817,
+      "sha256": "03dae8bf362a4ec3d49b82c5d6d804f9a076214cf3557b2b945ce3982fee2428"
+    },
+    {
+      "path": ".claude/skills/paper-writing-shared/tmp/review-2026-10-21/renders/ijcai-2024-01-p6.png",
+      "bytes": 474564,
+      "sha256": "0a039a97556cc72ce1104acd41b7fc5016c45a6422dff0b7082717532c833e78"
+    },
+    {
+      "path": ".claude/skills/paper-writing-shared/tmp/review-2026-10-21/renders/ijcai-2024-01-p7.png",
+      "bytes": 467064,
+      "sha256": "c42b24e84b3d309f63a7d28e72669c11b5d8bc99417acc903faae77de4fd3fdc"
+    },
+    {
+      "path": ".claude/skills/paper-writing-shared/tmp/review-2026-10-21/renders/ijcai-2025-01-p3.png",
+      "bytes": 459883,
+      "sha256": "d6bd84098d9a291f2c6944128ea72bb41086a6522900295b0f33df355d884dd7"
+    },
+    {
+      "path": ".claude/skills/paper-writing-shared/tmp/review-2026-10-21/renders/ijcai-2025-01-p4.png",
+      "bytes": 451371,
+      "sha256": "110fa5ef84e6d4919b9c48d1cae6602a6d29794b441e146a49cf4b51fb605de0"
+    },
+    {
+      "path": ".claude/skills/paper-writing-shared/tmp/review-2026-10-21/renders/ijcai-2025-01-p5.png",
+      "bytes": 464557,
+      "sha256": "023dee7a638ef276e0cf8367007d390b0162783b6a3066fc57e9ea423a65ca70"
+    },
+    {
+      "path": ".claude/skills/paper-writing-shared/tmp/review-2026-10-21/renders/ijcai-2025-01-p6.png",
+      "bytes": 488391,
+      "sha256": "40c8052eb054e8ab2d4c75b4ee0afa72c37d83cee02211753176c78f0486f985"
+    },
+    {
+      "path": ".claude/skills/paper-writing-shared/tmp/review-2026-10-21/renders/ijcai-2025-01-p7.png",
+      "bytes": 462159,
+      "sha256": "2365b218f986bf8ee336847db6480988eecdafe19db7c7de39ed719e435fa834"
+    },
+    {
+      "path": ".claude/skills/paper-writing-shared/tmp/review-2026-10-21/renders/ijcai-2025-02-p2.png",
+      "bytes": 515509,
+      "sha256": "0278c96b253029b3955b8355fec00a5769591382c6adfc786774c06db3f9f062"
+    },
+    {
+      "path": ".claude/skills/paper-writing-shared/tmp/review-2026-10-21/renders/ijcai-2025-02-p4.png",
+      "bytes": 484570,
+      "sha256": "024fe4f7f83ed2a36af5416e05a52dc40575d51afd9234a8fd32e469b7f5e4ae"
+    },
+    {
+      "path": ".claude/skills/paper-writing-shared/tmp/review-2026-10-21/renders/ijcai-2025-02-p5.png",
+      "bytes": 494368,
+      "sha256": "b144474443b4b94f178d5abc2fed11d0818144cd466613b720d0f6c52b12b7df"
+    },
+    {
+      "path": ".claude/skills/paper-writing-shared/tmp/review-2026-10-21/renders/ijcai-2025-02-p6.png",
+      "bytes": 448399,
+      "sha256": "2faa3425583941ce9e2e62eaeaadb36fca2c82dfbcedd8c273089911805835dd"
+    },
+    {
+      "path": ".claude/skills/paper-writing-shared/tmp/review-2026-10-21/renders/ijcai-2025-02-p7.png",
+      "bytes": 440553,
+      "sha256": "eb55bd828ba4e5888fb2f3b950987b9e148c6b60fb56fcc86a849cd99a512008"
+    }
+  ],
+  "already_missing": [],
+  "errors": [],
+  "deleted_count": 17,
+  "deleted_bytes": 6656172,
+  "paper_assets_deleted": 0,
+  "historical_evaluation_files_deleted": 0
+}

@@ -1,0 +1,252 @@
+{
+  "id": "icml-2025-94972568",
+  "venue": "icml",
+  "year": 2025,
+  "split": "induction",
+  "title": "Critical Tokens Matter: Token-Level Contrastive Estimation Enhances LLM’s Reasoning Capability",
+  "authors": "Zicheng Lin, Tian Liang, Jiahao Xu, Qiuzhi Liu, Xing Wang, Ruilin Luo, Chufan Shi, Siheng Li, Yujiu Yang, Zhaopeng Tu",
+  "review_date": "2026-10-21",
+  "mode": "continuous all-page prose/formula/appendix organization review plus original-page visual checks; not independent mathematical verification or experimental reproduction",
+  "semantic_review_status": "complete_writing_focused_review",
+  "paper_type": "empirical LLM mathematical-reasoning method with token-level diagnostics, preference optimization and a restricted distribution illustration",
+  "full_text_style_review_complete": true,
+  "external_appendix_review_complete": true,
+  "count_eligible_full_text_and_relevant_appendix": true,
+  "reviewed_pages": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13
+  ],
+  "pdf_path": ".claude/skills/paper-writing-shared/tmp/corpus/icml/pdf/Critical Tokens Matter- Token-Level Contrastive Estimation Enhances LLM’s Reasoning Capability.pdf",
+  "markdown_path": ".claude/skills/paper-writing-shared/tmp/corpus/icml/markdown/Critical Tokens Matter- Token-Level Contrastive Estimation Enhances LLM’s Reasoning Capability.md",
+  "pdf_sha256": "055600faacb30a94a7195665ceee3681fbc8c828aaf7b19a84ea3941b2344974",
+  "version_audit": {
+    "version": "official proceedings PDF; exact bytes locked by SHA256",
+    "official_landing": "https://proceedings.mlr.press/v267/lin25j.html",
+    "official_pdf": "https://raw.githubusercontent.com/mlresearch/v267/main/assets/lin25j/lin25j.pdf",
+    "identity": "PMLR267/ICML2025 header,title,authors and lockedSHA checked",
+    "new_network_fetch": false
+  },
+  "coverage": [
+    {
+      "asset": "locked PMLR officialPDF including its appendices",
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13
+      ],
+      "sections": "Abstract/Introduction/contributions;CriticalTokens definitions,64rollouts and100case diagnostics,word/positionanalysis andmasking;ContrastiveEstimation andcDPO equations;ExperimentalSetup/LearningCurves/MainResults;RelatedWork;Conclusion/FutureWork;ImpactStatement/Acknowledgments;References;AppendixA equal-varianceGaussiananalysis andbetaablation;AppendixB temperature/Qwenexperiments"
+    }
+  ],
+  "appendix_review_status": "all scientific appendixA/B in samePDF read; no external scientific appendix pointer detected",
+  "supplement_audit": {
+    "appendices": "A and B in samePDF",
+    "external_pointer_detected": false,
+    "limitation": "no new landing-page or code audit; does not exclude unlisted material; independent cited works are not counted as this paper appendix"
+  },
+  "ten_dimensions": {
+    "reader_argument": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp1–4"
+      ],
+      "observation": "先用owed/paid例子说明关键token与人工error token的不同，再操作化为rollout条件、错误样本诊断及替换试验。",
+      "editorial_advice": "定义应说明如何取得标签与分数，区分选中错误轨迹中的观察和整体基准测试准确率。",
+      "applicability": "数学推理任务样本；不把已选零成功prefix的结果推广成任意输入的因果规律。",
+      "confidence": {
+        "paper_specific": "high on read organization and visually checked marks; result correctness not rated",
+        "venue_wide": "low;6/50pilot, not frequency estimation"
+      }
+    },
+    "title_abstract": {
+      "category": "corpus_observation",
+      "positions": [
+        "p1 Abstract; p2 contributions"
+      ],
+      "observation": "标题将关键对象、对比估计与能力连接；摘要按诊断→高成本→近似识别→训练组织，没有报accuracy增幅；贡献段单列成本估计。",
+      "editorial_advice": "摘要说明对象、贡献层级与证据，不强制加排行榜数字；报告成本时说明计算口径。",
+      "applicability": "0.002%来自特定前向次数模型，不是墙钟、FLOPs或显存实测比。",
+      "confidence": {
+        "paper_specific": "high on read organization and visually checked marks; result correctness not rated",
+        "venue_wide": "low;6/50pilot, not frequency estimation"
+      }
+    },
+    "introduction": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp1–2; pp5–6"
+      ],
+      "observation": "三项贡献分别对应定义/诊断、廉价估计和训练用途；中间用DPO对相近正负例的困难连接新目标。",
+      "editorial_advice": "贡献项映射后文实验、近似方法与损失，避免把分析发现、识别器和训练算法当作同一结果。",
+      "applicability": "“关键token”不等于所有人工标注错误token；不更名合并术语。",
+      "confidence": {
+        "paper_specific": "high on read organization and visually checked marks; result correctness not rated",
+        "venue_wide": "low;6/50pilot, not frequency estimation"
+      }
+    },
+    "related_work": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp8–9, §4 RelatedWork"
+      ],
+      "observation": "RelatedWork置于结果之后，按ContrastiveEstimation与ReinforcementLearning区分方法来源及训练/推理用途。",
+      "editorial_advice": "允许相关工作晚置或就近比较；改章序要维护定义和引用依赖，不强制Nature式短背景。",
+      "applicability": "标题代理stratum是representation_application，真实类型为诊断加训练方法，不能按标题代理推断论文类型。",
+      "confidence": {
+        "paper_specific": "high on read organization and visually checked marks; result correctness not rated",
+        "venue_wide": "low;6/50pilot, not frequency estimation"
+      }
+    },
+    "method_theory": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp5–7, Eq1/cDPO/Fig3; p12 AppendixA.1"
+      ],
+      "observation": "先训练正/负分布模型，再对负例打分并在cDPO中加权；AppendixA.1的Gaussian同方差模型解释均值平移。",
+      "editorial_advice": "保留仅负例加权、低st与高关键性及正/负模型训练数据的对应；理论解释附假设。",
+      "applicability": "同方差Gaussian示意不是一般神经轨迹分布定理，也不是cDPO全局收敛/准确率保证。",
+      "confidence": {
+        "paper_specific": "high on read organization and visually checked marks; result correctness not rated",
+        "venue_wide": "low;6/50pilot, not frequency estimation"
+      }
+    },
+    "evidence": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp2–8; p13 Tables4–6"
+      ],
+      "observation": "证据依次为100例×两任务的rollout诊断、对比估计AUC、前向次数估算、训练曲线、主表及附录参数/温度/模型扩展。",
+      "editorial_advice": "分开报告诊断、识别近似、计算估计和最终训练收益；保留训练集采样与测试集、temperature和prompt差别。",
+      "applicability": "Table3有p<0.005标记，但未据此独立验证检验类型、比较对象或统计可靠性；cDPO学习率4e-5而基线2e-5。",
+      "confidence": {
+        "paper_specific": "high on read organization and visually checked marks; result correctness not rated",
+        "venue_wide": "low;6/50pilot, not frequency estimation"
+      }
+    },
+    "discussion_limits": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp7–9; p13 Tables4–6"
+      ],
+      "observation": "正文说明温度0对prompt敏感，附录补温度采样；未来扩展其他推理域；Impact声称数学任务几乎无风险，但不是经验证的普遍无害结论。",
+      "editorial_advice": "结论限定模型/任务/协议，保留敏感性与未知域；影响陈述按真实分析填写，不照搬保证性语气。",
+      "applicability": "不能从数学数据推导模型绝无隐私/偏差等问题；不需要因此新增无关的产品审批流程。",
+      "confidence": {
+        "paper_specific": "high on read organization and visually checked marks; result correctness not rated",
+        "venue_wide": "low;6/50pilot, not frequency estimation"
+      }
+    },
+    "paragraph_language": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp4–9"
+      ],
+      "observation": "按定义、诊断结果、方法直觉、公式和实验解释逐步推进；“large margin”“significant”力度随比较范围变化。",
+      "editorial_advice": "给提升的分母与比较对象，统计词保留作者提供的具体检验边界，不自动加强。",
+      "applicability": "Llama3-8B MATH500为19.6对19.4，不能称每个设置都大幅提升；相同数据不等于所有超参数相同。",
+      "confidence": {
+        "paper_specific": "high on read organization and visually checked marks; result correctness not rated",
+        "venue_wide": "low;6/50pilot, not frequency estimation"
+      }
+    },
+    "main_appendix": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp1–13"
+      ],
+      "observation": "主体和Impact/Acknowledgments到p9，文献pp9–11；A p12–13为受限Gaussian推导和beta消融，B p13为温度与新模型实验。",
+      "editorial_advice": "正文先给可理解的定义与关键结果，细分析和扩展测试在附录明确回链；不能只读主表。",
+      "applicability": "附录均在同一锁定PDF，未发现另指外部科学附录；没有新网页或代码核验。",
+      "confidence": {
+        "paper_specific": "high on read organization and visually checked marks; result correctness not rated",
+        "venue_wide": "low;6/50pilot, not frequency estimation"
+      }
+    },
+    "actionable": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp3–8; AppendixA/B"
+      ],
+      "observation": "需分清有限rollout的零成功、CE近似一致性、成本代理、主准确率和Gaussian分析的条件。",
+      "editorial_advice": "原创示例：The reported efficiency comparison counts estimated forward passes; it is not a wall-clock benchmark. The distributional illustration additionally assumes equal-variance Gaussian models.",
+      "applicability": "示例仅演示证据范围；不能将默认beta改成消融最优点或补造公平控制实验。",
+      "confidence": {
+        "paper_specific": "high on read organization and visually checked marks; result correctness not rated",
+        "venue_wide": "low;6/50pilot, not frequency estimation"
+      }
+    }
+  },
+  "counterexamples": [
+    {
+      "position": "pp3–4, criticaltokenconditions/Fig2",
+      "finding": "64次rollout下得到零成功，且样本选自错误轨迹；w/criticaltoken的零曲线受定义与选择影响。",
+      "editorial_action": "不写成真实成功概率严格为零或整体基准从0提高到90%。"
+    },
+    {
+      "position": "pp5–6, EfficiencyAnalysis",
+      "finding": "0.002%是(78393+2n)/(581425n)在n=7500下的估算，混合了训练和推理计数假设；不是测量的总训练/推理时间。",
+      "editorial_action": "明确前向次数代理、序列/生成token计数与未计成本，不能替换成实测倍速。"
+    },
+    {
+      "position": "p7 ExperimentalSetup; p8 Table3",
+      "finding": "cDPO与基线采用不同学习率；DPO也有不同初始化行，不能写“全部训练设置相同”。",
+      "editorial_action": "保留差异，不在润色时创造控制变量认证。"
+    },
+    {
+      "position": "p8 Table3",
+      "finding": "主表标p<0.005，但最低一个Llama3-8B/MATH500优势19.6对RPO19.4仅0.2百分点；检验流程未独立复算。",
+      "editorial_action": "禁止把所有设置写成大幅提升或补检验名称/多seed。"
+    },
+    {
+      "position": "p12 AppendixA.1; p13 Table4",
+      "finding": "均值平移依赖Gaussian同方差假设，beta消融不单调；主实验beta1.0，附录最高观察点1.75。",
+      "editorial_action": "不将受限解释写成普适保证，不静默用最优消融数改写主结果。"
+    },
+    {
+      "position": "p7 Fig4",
+      "finding": "文本抽取的legend乱码；原图显示chosen/rejected各方法曲线分离。",
+      "editorial_action": "原页核对图例；分离更大不直接等于所有chosen概率单调增加。"
+    }
+  ],
+  "official_requirements": [],
+  "holdout_validation": null,
+  "visual_review": {
+    "pages": [
+      3,
+      4,
+      6,
+      7,
+      8,
+      12,
+      13
+    ],
+    "findings": [
+      "p3核对Table1/2列、错误样本数与关键token条件；p4排除抽取中混入的不可见额外图对象，原页只有Fig2。",
+      "p6核对训练流程和仅负例的加权损失；p7修复抽取不可读的Fig4图例并核对学习率。",
+      "p8核对Table3两DPO行、各模型结果、p标记与最小收益；pp12–13核对同方差前提、beta及温度/Qwen补实验。"
+    ],
+    "manifest": "07-research/2026-10-21-ICML论文风格验证_证据/temporary-artifact-manifest.json",
+    "render_policy": "ignored skilltmp, delete regenerable images after notes saved"
+  },
+  "review_limitations": "no theorem correctness, statistical recomputation, experiment reproduction, independent behavior test, official-guideline revalidation or full40+10holdout validation"
+}

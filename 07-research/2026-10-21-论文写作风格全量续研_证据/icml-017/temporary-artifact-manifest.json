@@ -1,0 +1,96 @@
+{
+  "render_command": "pdftoppm -f PAGE -l PAGE -r115 -singlefile -png SOURCE_PDF PREFIX",
+  "extract_command": "pdftotext SOURCE_PDF OUTPUT_TXT",
+  "files": [
+    {
+      "path": ".claude/skills/paper-writing-shared/tmp/full-review/icml-017/icml-2025-515dbc4f.txt",
+      "bytes": 139922,
+      "sha256": "85a3c5043c444f0ed5aa59d4a63f2303b3e29fcb123b4f283af8587f3f5dcd8d"
+    },
+    {
+      "path": ".claude/skills/paper-writing-shared/tmp/full-review/icml-017/renders/p12.png",
+      "bytes": 293959,
+      "sha256": "b41aefb4ff0509e211d3e76153ad208693e983a05c9047bb087efb38973c842e"
+    },
+    {
+      "path": ".claude/skills/paper-writing-shared/tmp/full-review/icml-017/renders/p14.png",
+      "bytes": 229718,
+      "sha256": "7dfacf938f8ae5cccc3108f41492ef917c61946dc9e57714be93cf045f232088"
+    },
+    {
+      "path": ".claude/skills/paper-writing-shared/tmp/full-review/icml-017/renders/p15.png",
+      "bytes": 532193,
+      "sha256": "ad96292cfe96439dde87cfa245c3b667495e52c175521d40a9bc329310caf5c7"
+    },
+    {
+      "path": ".claude/skills/paper-writing-shared/tmp/full-review/icml-017/renders/p17.png",
+      "bytes": 370166,
+      "sha256": "3c7fdacd51e473ca7a5003490003701d8a419ecb1bf60c9d546d1422c77ed2fe"
+    },
+    {
+      "path": ".claude/skills/paper-writing-shared/tmp/full-review/icml-017/renders/p16.png",
+      "bytes": 380964,
+      "sha256": "ff1e4149d0d9a661d4ab23db30b0824d950331407f25df128f45ab6f9fb29837"
+    },
+    {
+      "path": ".claude/skills/paper-writing-shared/tmp/full-review/icml-017/renders/p8.png",
+      "bytes": 423693,
+      "sha256": "d1f75169cff7da9ac50cb5d2cfe8b50a64f6964799b6ead61810b55375451db1"
+    },
+    {
+      "path": ".claude/skills/paper-writing-shared/tmp/full-review/icml-017/renders/p3.png",
+      "bytes": 424698,
+      "sha256": "128ab00dd71ebdc1820fdd486b50cb4c7626f33406948f74fe84cb3768a448e0"
+    },
+    {
+      "path": ".claude/skills/paper-writing-shared/tmp/full-review/icml-017/renders/p2.png",
+      "bytes": 444160,
+      "sha256": "b049cd417849a086af39d457509a7206472b9ffa8ad0b6932f3e2d9337163fa5"
+    },
+    {
+      "path": ".claude/skills/paper-writing-shared/tmp/full-review/icml-017/renders/p5.png",
+      "bytes": 434024,
+      "sha256": "372a5a057c50209b80ce244ce12e3a1081a49dce1a12d834777a0d048931fbaf"
+    },
+    {
+      "path": ".claude/skills/paper-writing-shared/tmp/full-review/icml-017/renders/p4.png",
+      "bytes": 345084,
+      "sha256": "b2ee53be616aded879319316371fe6fb069d58ec40582d780621b6018855b458"
+    },
+    {
+      "path": ".claude/skills/paper-writing-shared/tmp/full-review/icml-017/renders/p6.png",
+      "bytes": 412086,
+      "sha256": "a459f965fa3a1bd3a8ee51792075617a57f2965f91218ceaedf53b87146dfcbd"
+    },
+    {
+      "path": ".claude/skills/paper-writing-shared/tmp/full-review/icml-017/renders/p7.png",
+      "bytes": 518225,
+      "sha256": "e712065b8ac299224cfb7134c50bbe55d6f7e7397d03ed36062289d992041c80"
+    },
+    {
+      "path": ".claude/skills/paper-writing-shared/tmp/full-review/icml-017/renders/p18.png",
+      "bytes": 246514,
+      "sha256": "be18caf92c788cb32ee150065b0ec8c5aa91bc1778960a36e14206b3a16ef35c"
+    },
+    {
+      "path": ".claude/skills/paper-writing-shared/tmp/full-review/icml-017/renders/p19.png",
+      "bytes": 263518,
+      "sha256": "e78a07ca9c15717f607d4759349131ff2e3e252757ce17aafe611542ba352db1"
+    },
+    {
+      "path": ".claude/skills/paper-writing-shared/tmp/full-review/icml-017/renders/p21.png",
+      "bytes": 214423,
+      "sha256": "2f01f06e13cdaf8eb0255518ea47e3937b02d8583acaa9733f6e3ad477247493"
+    },
+    {
+      "path": ".claude/skills/paper-writing-shared/tmp/full-review/icml-017/renders/p20.png",
+      "bytes": 266267,
+      "sha256": "3583c40640cd53bc966b69711f410ac0b3aec9b56fd3158d9bc5d0790a510ebb"
+    },
+    {
+      "path": ".claude/skills/paper-writing-shared/tmp/full-review/icml-017/renders/p22.png",
+      "bytes": 146182,
+      "sha256": "2eb9e48df6dbc0665646a605528c1cbeaf73e127439b1a6430d3734291ce5d33"
+    }
+  ]
+}

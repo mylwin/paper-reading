@@ -1,0 +1,14 @@
+{
+  "../2026-10-10-顶会顶刊写作风格调研_证据/corpus/ijcai/semantic-reviews/ijcai-2024-01.json": "5ea8e82fe98f15e3522581a29c6e07ecb06e50ef36580231b40626d135562fb9",
+  "../2026-10-10-顶会顶刊写作风格调研_证据/corpus/ijcai/semantic-reviews/ijcai-2025-01.json": "c084e9c937856d3328b05254272c2523bfae0e8692a010ea4c2da835daedf764",
+  "../2026-10-10-顶会顶刊写作风格调研_证据/corpus/ijcai/semantic-reviews/ijcai-2025-02.json": "70a0029f7e7b91d7ebf1fc39fae81b25306d87c17eb503b9fefa7ea2ad31ff70",
+  "README.md": "244cfb699131f60297882a0ef0b97270d8e89d52df108eb13438fa03c57c7850",
+  "batch-ledger.json": "715871cdfc8b001ac46a13e0b011310fb669023d8559299d2d922e15d8c4aed4",
+  "cleanup-result.json": "c95733917db1bc806d136106603c980b98ccb8bad2d4ba1e471d9eb00b9ca4c8",
+  "paused-review-notes.json": "c80757810158e60260e04139a31223d1bb8187cba6de1502a51942d310a5ccf7",
+  "progress-after.json": "2d8e9b2c6b3c55d991830928432e8420c811cf0b3c63bae36c936b46c800a232",
+  "progress-before.json": "614fecbb0850dc1ee123e8fe439bbdff06747f1043b63fc55cc179811c13fc59",
+  "selected-batch.json": "3c77f149461153c1170d6ca89fb067c1ff678b12a8fbf620423d415b88614fb8",
+  "temporary-artifact-manifest.json": "a386538eed324da4562b160ab20bceff39965394cd8199d04952a0b9109f58ea",
+  "validation.json": "97d912fc36c933add7b6836ca29f00b100945f4d242eef62f0e47dab54c01b59"
+}
