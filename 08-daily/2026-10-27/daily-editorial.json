@@ -1,0 +1,250 @@
+{
+  "assessment_scope": "metadata_and_abstract",
+  "confidence": "低；官方摘要初评，待全文核验",
+  "overview": {
+    "trend": "窗口为 2026-09-27 至 2026-10-27。arXiv 取得 200 条、OpenReview 有界逐关键词检索合并 40 条，评分去重后 204 条，130 条命中已有记录，74 条未命中。前十逐篇复查后，只有两篇直接命中大模型优化器设计：结构化噪声解释 Muon，以及 SOMA 的锐度感知更新；另选一篇 PINN 梯度冲突机制作条件性参考。其余七篇为能源规划或粒子物理误命中，明确排除，不凑满十篇阅读建议。本轮提示应区分噪声几何、扰动构造和预条件后的实际更新；这是候选层面的观察，不能概括整个领域趋势。年度高影响力补充因 429 不可用。",
+    "hotspots": [
+      {
+        "title": "噪声几何的条件性收益",
+        "text": "结构化噪声论文将各向同性下无额外加速与异质任务频率下的平衡收益分开，适合对照既有 Muon 噪声边界。"
+      },
+      {
+        "title": "过时噪声构造扰动",
+        "text": "SOMA 复用随机噪声构造 SAM 扰动；实际节省多少梯度计算、状态内存和端到端时间仍需核验。"
+      },
+      {
+        "title": "约束应检查真实更新",
+        "text": "Cautious ConFIG 提醒原始合成梯度的性质可能被 Adam 改写；是否能迁移到 LLM 需独立验证。"
+      }
+    ]
+  },
+  "domain_summaries": {
+    "大模型优化器设计": {
+      "summary": "自动主题命中数包含同名物理噪声，不等于领域有效论文数。今日前十审阅后保留 2 篇精读、1 篇条件性选读、7 篇排除；前两篇分别提供机制解释与新更新方案，第三篇仅借鉴更新约束审计。",
+      "subfields": {
+        "符号与范数几何优化": "优先核验 Muon 的各向同性与结构化噪声差异、SignSGD 旋转负迁移，以及 SOMA 扰动方向与正交化的交互；粒子物理的 muon 记录均不能当作该方向证据。",
+        "免调参与梯度裁剪": "本轮前三没有直接研究免调参或裁剪的新推荐，不借用噪声/动量结果冒充步长自适应结论。",
+        "自适应与状态内存": "Cautious ConFIG 关注 Adam 后处理对冲突约束的破坏，仅作机制选读；SOMA 的噪声存储和额外状态开销需查全文。",
+        "大模型训练与优化器设计": "SOMA 报告量化与微调遗忘场景，结构化噪声论文仅报告初步预训练；摘要均缺少模型规模、预算与量化收益，暂不作跨规模结论。",
+        "未细分": "宽泛分类及同名词命中保留在附录用于审计，不自动形成阅读建议。"
+      }
+    }
+  },
+  "top_papers": {
+    "When and How Does Muon Precondition? The Role of Structured Gradient Noise": {
+      "title_zh": "Muon 何时以及如何实现预条件？结构化梯度噪声的作用",
+      "abstract_zh": "Muon 已成为大语言模型训练中一种流行的优化器，但其理论基础仍未得到充分理解。在本工作中，我们研究梯度噪声的几何结构如何塑造 Muon 的预条件收益。我们首先从理论和实验上表明，在经典的各向同性噪声假设下，除重新缩放学习率之外，Muon 不会带来额外加速。这促使我们研究具有异质任务频率的联想记忆中，由小批量采样产生的结构化噪声。我们建立了两个任务情形下的精确平衡阈值，并将分析推广到多个任务，揭示任务覆盖程度与梯度可靠性如何共同塑造学习过程。我们的分析表明，Muon 可以将对任务频率的依赖从线性减弱为平方根，从而帮助平衡高频与低频任务的学习。我们还识别出 SignSGD 中由旋转引起、而 Muon 能够避免的负迁移，并解释动量如何在跟踪变化梯度的同时减少采样噪声。受控数值实验验证了这些机制，一项初步的 LLM 预训练研究则展示了快慢动量在实践中的应用前景。",
+      "summary": "以结构化采样噪声解释 Muon 的任务平衡收益，并给出各向同性噪声下仅等效于学习率重缩放的边界。",
+      "contributions": [
+        "作者区分各向同性噪声与异质任务采样噪声，提出 Muon 预条件收益的条件性解释。",
+        "摘要声称建立双任务精确平衡阈值、多任务推广，以及 Muon 与 SignSGD 对旋转负迁移的差异。",
+        "将动量的降噪与跟踪作用联系起来，并探索快慢动量的 LLM 预训练实现。"
+      ],
+      "method": "先在各向同性噪声中构造无额外加速的比较，再在异质频率联想记忆中分析任务覆盖与可靠性；用受控实验及初步 LLM 预训练检验机制。",
+      "result": "摘要报告任务频率依赖由线性减为平方根，并称受控实验支持机制；没有给出具体平衡阈值、模型大小、token 预算或验证损失数字。",
+      "selection_reason": "直接命中 Muon 的机制设计问题。相对库内“近最优点噪声限制”和“小批量噪声”文献，预期新增信息是噪声结构、任务频率与动量时间尺度的联合解释，可用于设计匹配噪声几何的消融。",
+      "evidence_limit": "初步判断，待全文核验；依据 arXiv 官方 API 题目与完整摘要，PDF 首页仅作身份核对。需核验噪声与任务模型假设、阈值和频率依赖中的隐藏常数、与学习率匹配基线的公平性、动量时间尺度，以及初步 LLM 实验能否外推。各向同性下的结论不能脱离论文模型推广到任意网络。",
+      "reading_decision": "精读",
+      "translation_check_anchors": [
+        "各向同性",
+        "两个任务",
+        "平方根",
+        "SignSGD",
+        "旋转",
+        "初步",
+        "快慢动量"
+      ]
+    },
+    "Sharpness-aware Orthogonalized Momentum Algorithms": {
+      "title_zh": "锐度感知的正交化动量算法",
+      "abstract_zh": "在基础优化器的每次迭代中施加对抗性锐度惩罚，即锐度感知最小化（sharpness-aware minimization，SAM），是一种公认的改善深度学习泛化的技术。近来，Muon 已成为训练大语言模型（LLM）的一种主流优化算法。它对重尾梯度更新具有更低的样本复杂度，而这类更新在 LLM 训练中很常见。然而，现有文献对结合 Muon 更新的锐度惩罚仍大体缺乏探索。此外，SAM 在重尾噪声下的行为，无论在理论上还是在实验上，都尚不清楚。造成这一空白的一个可能原因是：SAM 为构造惩罚扰动而在每次迭代中额外计算梯度所带来的开销，对 LLM 而言可能高得难以承受。本文提出锐度感知正交化动量算法（Sharpness-aware Orthogonalized Momentum Algorithm，SOMA），将一种计算高效且具有理论依据的扰动方案与 Muon 算法结合。其关键思想是使用过时的（纯）随机梯度噪声构造对抗扰动。在理论上，我们表明 SOMA 的样本复杂度不随扰动方向变化。我们对 SOMA 在重尾梯度噪声下的稳健性进行了探索并给出相关认识。我们广泛考察 SOMA 在以下两方面的效果：（a）缓解训练后量化引起的质量下降；（b）缓解 LLM 微调过程中的灾难性遗忘。",
+      "summary": "SOMA 用过时随机梯度噪声构造 SAM 扰动，并与 Muon 结合，探索量化与微调遗忘场景。",
+      "contributions": [
+        "作者提出将低开销噪声扰动与 Muon 结合的 SOMA 更新方案。",
+        "摘要声称样本复杂度对扰动方向不变，并研究重尾噪声稳健性。",
+        "报告训练后量化质量退化和 LLM 微调灾难性遗忘两类验证场景。"
+      ],
+      "method": "复用过时的随机梯度噪声产生对抗性扰动，降低常规 SAM 额外梯度计算的负担；优先核查噪声如何提取、保存和与动量方向交互。",
+      "result": "摘要报告样本复杂度不依赖扰动方向，并称探索了重尾稳健性、量化和遗忘；没有提供复杂度表达式、量化位宽、模型规模、精度差或端到端加速数字。",
+      "selection_reason": "直接提供可实现的 Muon 设计机制，与第一篇的噪声几何解释形成“理论边界—算法方案”的组合；可以检验过时噪声是否替代额外梯度、收益究竟来自扰动还是额外随机性。",
+      "evidence_limit": "初步判断，待全文核验；依据官方题目与完整摘要，未进行全文评审。“更低样本复杂度”和“方向不变”均为作者主张，需查重尾矩条件、扰动半径、噪声独立性与延迟假设、与 SAM/Muon 的计算预算、随机种子、量化位宽和遗忘协议。摘要未证明零额外开销或通用 LLM 收益。",
+      "reading_decision": "精读",
+      "translation_check_anchors": [
+        "SAM",
+        "Muon",
+        "SOMA",
+        "过时",
+        "样本复杂度",
+        "重尾",
+        "训练后量化",
+        "灾难性遗忘"
+      ]
+    },
+    "Cautious Conflict-Free Inverse Gradient Methods": {
+      "title_zh": "审慎的无冲突逆梯度方法",
+      "abstract_zh": "偏微分方程（PDE）是物理与工程中建模复杂现象不可或缺的工具。物理信息神经网络（Physics-Informed Neural Networks，PINN）通过将物理约束直接纳入神经网络损失函数，已成为传统数值求解器的一种有力替代方案。尽管具有这些优势，PINN 训练需要多目标优化，这往往导致边界、初始条件与残差损失项之间出现显著的梯度冲突。无冲突逆梯度（Conflict-Free Inverse Gradient，ConFIG）方法处理了这些冲突；然而，将 ConFIG 与 Adam 等自适应优化器结合会引入一个关键弱点：ConFIG 生成的无冲突方向会被优化器进一步处理，得到的权重更新相对于各任务梯度可能不再无冲突。为解决这一问题，本文提出 Cautious ConFIG，作为 ConFIG 算法一个简洁的三行扩展，在权重更新前通过实证恢复无冲突保证。该方法在三个 PINN 基准上进行评估：一维黏性 Burgers 方程、一维非线性 Schrödinger 方程，以及二维 Kovasznay 流。实验结果表明，相比标准 ConFIG 基线，其表现得到了一致改善。此外，作者使用一个简单的玩具系统，考察了审慎掩码的稳定作用，以及它对冲突严重程度、任务数量和优化器滞后的反应。",
+      "summary": "Cautious ConFIG 在 Adam 等优化器实际更新前加入掩码，处理“原始方向无冲突但预条件后冲突”的问题；证据限于 PINN。",
+      "contributions": [
+        "作者指出梯度合成方向的无冲突性质可能被 Adam 的后续处理破坏。",
+        "提出三行 Cautious ConFIG 扩展，并报告三个 PINN 基准与玩具系统实验。"
+      ],
+      "method": "在权重更新前加入 cautious masking；用 PDE 基准与控制任务数、冲突强度、优化器滞后的玩具系统检验作用。具体掩码、更新顺序与保证形式需查全文。",
+      "result": "摘要报告在一维黏性 Burgers、一维非线性 Schrödinger 和二维 Kovasznay 流上相对标准 ConFIG 一致改善；没有量化提升、LLM 结果或理论收敛保证。",
+      "selection_reason": "作为第三篇条件性选读：直接可迁移的问题是 Adam 预条件/动量之后的真实更新是否满足方向约束。其研究信息与前两篇 Muon 机制互补，但应用为 PINN，优先级低于两篇直接相关论文。",
+      "evidence_limit": "初步判断，待全文核验；只有题目与摘要，PDF 首页仅核对身份。需区分“经验恢复”与严格数学保证，检查掩码是否引入零更新或偏差、Adam 状态是否同步、基线调参公平性。尚无 LLM 或 Muon 证据，不能据此宣称大模型训练收益。",
+      "reading_decision": "选读",
+      "translation_check_anchors": [
+        "PDE",
+        "PINN",
+        "ConFIG",
+        "Adam",
+        "三行",
+        "Burgers",
+        "Schrödinger",
+        "Kovasznay",
+        "滞后"
+      ]
+    },
+    "G-ORACLE: A Fast Geometric Method To Explore All Near-Optimal Designs for Energy Systems": {
+      "summary": "语义排除：能源系统近优设计空间枚举，改善的是双层规划求解开销；没有神经网络优化器设计证据。",
+      "selection_reason": "语义排除：能源系统近优设计空间枚举，改善的是双层规划求解开销；没有神经网络优化器设计证据。",
+      "reading_decision": "跳过",
+      "evidence_limit": "按官方题目与摘要判断主题不匹配；不评价物理论文的学术质量。"
+    },
+    "An Operator Analysis of Radiative Muon Decay": {
+      "summary": "语义排除：研究粒子物理的缪子辐射衰变和高维算符，Muon 为同名误命中。",
+      "selection_reason": "语义排除：研究粒子物理的缪子辐射衰变和高维算符，Muon 为同名误命中。",
+      "reading_decision": "跳过",
+      "evidence_limit": "按官方题目与摘要判断主题不匹配；不评价物理论文的学术质量。"
+    },
+    "Real-time Track Reconstruction with FPGAs: an example from MUonE": {
+      "summary": "语义排除：MUonE 粒子实验的 FPGA 轨迹重建；时延指标不对应 LLM 优化器。",
+      "selection_reason": "语义排除：MUonE 粒子实验的 FPGA 轨迹重建；时延指标不对应 LLM 优化器。",
+      "reading_decision": "跳过",
+      "evidence_limit": "按官方题目与摘要判断主题不匹配；不评价物理论文的学术质量。"
+    },
+    "First measurement of the low-momentum negative-muon beam for the muon-to-electron conversion experiment at J-PARC": {
+      "summary": "语义排除：J-PARC 负缪子束测量，momentum 与 muon 均为物理术语。",
+      "selection_reason": "语义排除：J-PARC 负缪子束测量，momentum 与 muon 均为物理术语。",
+      "reading_decision": "跳过",
+      "evidence_limit": "按官方题目与摘要判断主题不匹配；不评价物理论文的学术质量。"
+    },
+    "Estimating High-Energy Neutrino Effective Areas from Muon Propagation": {
+      "summary": "语义排除：中微子探测器有效面积与缪子传播模型，与梯度优化无关。",
+      "selection_reason": "语义排除：中微子探测器有效面积与缪子传播模型，与梯度优化无关。",
+      "reading_decision": "跳过",
+      "evidence_limit": "按官方题目与摘要判断主题不匹配；不评价物理论文的学术质量。"
+    },
+    "Event Generation for Neutrino and Muon DIS at the LHC": {
+      "summary": "语义排除：LHC 中微子与缪子深度非弹性散射事件模拟，属于物理同名词误命中。",
+      "selection_reason": "语义排除：LHC 中微子与缪子深度非弹性散射事件模拟，属于物理同名词误命中。",
+      "reading_decision": "跳过",
+      "evidence_limit": "按官方题目与摘要判断主题不匹配；不评价物理论文的学术质量。"
+    },
+    "Neutrino trident process at a muon collider": {
+      "summary": "语义排除：缪子对撞机中微子三叉过程研究，未研究 Muon 优化器。",
+      "selection_reason": "语义排除：缪子对撞机中微子三叉过程研究，未研究 Muon 优化器。",
+      "reading_decision": "跳过",
+      "evidence_limit": "按官方题目与摘要判断主题不匹配；不评价物理论文的学术质量。"
+    }
+  },
+  "source_limitations": [
+    "arXiv 15 关键词 OR 检索按相关性取前 200 条，达到上限，存在截断；Muon 同名物理记录污染结果。原生检索未强制分类过滤，故保留全量并在语义层明确排除，不能把 204 条视为 204 篇优化器论文。",
+    "OpenReview 对全部 15 个配置关键词分别只取首 100 条，按记录日期窗口过滤，合并 40 条；并非全站穷尽检索，记录日期不等于首次发表日期。",
+    "Semantic Scholar 年度窗口 2025-10-27 至 2026-09-26 两次 HTTP 429；高影响力补充未获得结果，不代表没有相关论文。",
+    "前十按完整摘要逐篇复排，保留全部原始预筛分和 screening_rank；其中仅两篇直接相关、一篇机制迁移选读，另七篇明确语义排除。其余未入前十的候选未做逐篇研究判断。",
+    "所有推荐均为低置信度摘要初评；下载 PDF 和核对首页身份不等于完成全文阅读。"
+  ],
+  "semantic_reranking": [
+    {
+      "title": "When and How Does Muon Precondition? The Role of Structured Gradient Noise",
+      "screening_rank": 46,
+      "candidate_screening_rank": 2,
+      "semantic_rank": 1,
+      "formal_recommendation": true,
+      "reading_decision": "精读",
+      "reason": "直接命中 Muon 的机制设计问题。相对库内“近最优点噪声限制”和“小批量噪声”文献，预期新增信息是噪声结构、任务频率与动量时间尺度的联合解释，可用于设计匹配噪声几何的消融。"
+    },
+    {
+      "title": "Sharpness-aware Orthogonalized Momentum Algorithms",
+      "screening_rank": 34,
+      "candidate_screening_rank": 1,
+      "semantic_rank": 2,
+      "formal_recommendation": true,
+      "reading_decision": "精读",
+      "reason": "直接提供可实现的 Muon 设计机制，与第一篇的噪声几何解释形成“理论边界—算法方案”的组合；可以检验过时噪声是否替代额外梯度、收益究竟来自扰动还是额外随机性。"
+    },
+    {
+      "title": "Cautious Conflict-Free Inverse Gradient Methods",
+      "screening_rank": 108,
+      "candidate_screening_rank": 3,
+      "semantic_rank": 3,
+      "formal_recommendation": true,
+      "reading_decision": "选读",
+      "reason": "作为第三篇条件性选读：直接可迁移的问题是 Adam 预条件/动量之后的真实更新是否满足方向约束。其研究信息与前两篇 Muon 机制互补，但应用为 PINN，优先级低于两篇直接相关论文。"
+    },
+    {
+      "title": "G-ORACLE: A Fast Geometric Method To Explore All Near-Optimal Designs for Energy Systems",
+      "screening_rank": 118,
+      "candidate_screening_rank": 4,
+      "semantic_rank": 4,
+      "formal_recommendation": false,
+      "reading_decision": "跳过",
+      "reason": "语义排除：能源系统近优设计空间枚举，改善的是双层规划求解开销；没有神经网络优化器设计证据。"
+    },
+    {
+      "title": "An Operator Analysis of Radiative Muon Decay",
+      "screening_rank": 129,
+      "candidate_screening_rank": 5,
+      "semantic_rank": 5,
+      "formal_recommendation": false,
+      "reading_decision": "跳过",
+      "reason": "语义排除：研究粒子物理的缪子辐射衰变和高维算符，Muon 为同名误命中。"
+    },
+    {
+      "title": "Real-time Track Reconstruction with FPGAs: an example from MUonE",
+      "screening_rank": 130,
+      "candidate_screening_rank": 6,
+      "semantic_rank": 6,
+      "formal_recommendation": false,
+      "reading_decision": "跳过",
+      "reason": "语义排除：MUonE 粒子实验的 FPGA 轨迹重建；时延指标不对应 LLM 优化器。"
+    },
+    {
+      "title": "First measurement of the low-momentum negative-muon beam for the muon-to-electron conversion experiment at J-PARC",
+      "screening_rank": 131,
+      "candidate_screening_rank": 7,
+      "semantic_rank": 7,
+      "formal_recommendation": false,
+      "reading_decision": "跳过",
+      "reason": "语义排除：J-PARC 负缪子束测量，momentum 与 muon 均为物理术语。"
+    },
+    {
+      "title": "Estimating High-Energy Neutrino Effective Areas from Muon Propagation",
+      "screening_rank": 132,
+      "candidate_screening_rank": 8,
+      "semantic_rank": 8,
+      "formal_recommendation": false,
+      "reading_decision": "跳过",
+      "reason": "语义排除：中微子探测器有效面积与缪子传播模型，与梯度优化无关。"
+    },
+    {
+      "title": "Event Generation for Neutrino and Muon DIS at the LHC",
+      "screening_rank": 133,
+      "candidate_screening_rank": 9,
+      "semantic_rank": 9,
+      "formal_recommendation": false,
+      "reading_decision": "跳过",
+      "reason": "语义排除：LHC 中微子与缪子深度非弹性散射事件模拟，属于物理同名词误命中。"
+    },
+    {
+      "title": "Neutrino trident process at a muon collider",
+      "screening_rank": 136,
+      "candidate_screening_rank": 10,
+      "semantic_rank": 10,
+      "formal_recommendation": false,
+      "reading_decision": "跳过",
+      "reason": "语义排除：缪子对撞机中微子三叉过程研究，未研究 Muon 优化器。"
+    }
+  ]
+}

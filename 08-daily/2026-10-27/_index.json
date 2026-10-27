@@ -1,0 +1,150 @@
+{
+  "date": "2026-10-27",
+  "note_file": "今日检索.md",
+  "generated_at": "2026-10-27T08:34:33",
+  "skill": "paper-daily",
+  "sources_searched": [
+    "arxiv",
+    "openreview"
+  ],
+  "source_counts": {
+    "arxiv": 200,
+    "openreview": 40
+  },
+  "date_windows": {
+    "recent_30d": {
+      "start": "2026-09-27",
+      "end": "2026-10-27"
+    },
+    "past_year": {
+      "start": "2025-10-27",
+      "end": "2026-09-26"
+    }
+  },
+  "total_unique": 204,
+  "top_papers": [
+    {
+      "title": "When and How Does Muon Precondition? The Role of Structured Gradient Noise",
+      "source": "arxiv",
+      "arxiv_id": "2610.31728",
+      "url": "http://arxiv.org/abs/2610.31728v1",
+      "note_filename": "When_and_How_Does_Muon_Precondition_The_Role_of_Structured_Gradient_Noise",
+      "matched_domain": "大模型优化器设计",
+      "score": 7.73,
+      "semantic_rank": 1,
+      "formal_recommendation": true,
+      "semantic_status": "优先精读"
+    },
+    {
+      "title": "Sharpness-aware Orthogonalized Momentum Algorithms",
+      "source": "arxiv",
+      "arxiv_id": "2610.32465",
+      "url": "http://arxiv.org/abs/2610.32465v1",
+      "note_filename": "Sharpness_aware_Orthogonalized_Momentum_Algorithms",
+      "matched_domain": "大模型优化器设计",
+      "score": 7.93,
+      "semantic_rank": 2,
+      "formal_recommendation": true,
+      "semantic_status": "优先精读"
+    },
+    {
+      "title": "Cautious Conflict-Free Inverse Gradient Methods",
+      "source": "arxiv",
+      "arxiv_id": "2610.31855",
+      "url": "http://arxiv.org/abs/2610.31855v1",
+      "note_filename": "Cautious_Conflict_Free_Inverse_Gradient_Methods",
+      "matched_domain": "大模型优化器设计",
+      "score": 6.3,
+      "semantic_rank": 3,
+      "formal_recommendation": true,
+      "semantic_status": "条件性选读"
+    },
+    {
+      "title": "G-ORACLE: A Fast Geometric Method To Explore All Near-Optimal Designs for Energy Systems",
+      "source": "arxiv",
+      "arxiv_id": "2610.32759",
+      "url": "http://arxiv.org/abs/2610.32759v1",
+      "note_filename": "G_ORACLE_A_Fast_Geometric_Method_To_Explore_All_Near_Optimal_Designs_for_Energy_Systems",
+      "matched_domain": "大模型优化器设计",
+      "score": 5.37,
+      "semantic_rank": 4,
+      "formal_recommendation": false,
+      "semantic_status": "语义排除"
+    },
+    {
+      "title": "An Operator Analysis of Radiative Muon Decay",
+      "source": "arxiv",
+      "arxiv_id": "2609.36841",
+      "url": "http://arxiv.org/abs/2609.36841v1",
+      "note_filename": "An_Operator_Analysis_of_Radiative_Muon_Decay",
+      "matched_domain": "大模型优化器设计",
+      "score": 4.47,
+      "semantic_rank": 5,
+      "formal_recommendation": false,
+      "semantic_status": "语义排除"
+    },
+    {
+      "title": "Real-time Track Reconstruction with FPGAs: an example from MUonE",
+      "source": "arxiv",
+      "arxiv_id": "2610.15627",
+      "url": "http://arxiv.org/abs/2610.15627v1",
+      "note_filename": "Real_time_Track_Reconstruction_with_FPGAs_an_example_from_MUonE",
+      "matched_domain": "大模型优化器设计",
+      "score": 4.4,
+      "semantic_rank": 6,
+      "formal_recommendation": false,
+      "semantic_status": "语义排除"
+    },
+    {
+      "title": "First measurement of the low-momentum negative-muon beam for the muon-to-electron conversion experiment at J-PARC",
+      "source": "arxiv",
+      "arxiv_id": "2610.02855",
+      "url": "http://arxiv.org/abs/2610.02855v1",
+      "note_filename": "First_measurement_of_the_low_momentum_negative_muon_beam_for_the_muon_to_electron_conversion_experiment_at_J_PARC",
+      "matched_domain": "大模型优化器设计",
+      "score": 4.33,
+      "semantic_rank": 7,
+      "formal_recommendation": false,
+      "semantic_status": "语义排除"
+    },
+    {
+      "title": "Estimating High-Energy Neutrino Effective Areas from Muon Propagation",
+      "source": "arxiv",
+      "arxiv_id": "2609.40188",
+      "url": "http://arxiv.org/abs/2609.40188v1",
+      "note_filename": "Estimating_High_Energy_Neutrino_Effective_Areas_from_Muon_Propagation",
+      "matched_domain": "大模型优化器设计",
+      "score": 4.27,
+      "semantic_rank": 8,
+      "formal_recommendation": false,
+      "semantic_status": "语义排除"
+    },
+    {
+      "title": "Event Generation for Neutrino and Muon DIS at the LHC",
+      "source": "arxiv",
+      "arxiv_id": "2610.16836",
+      "url": "http://arxiv.org/abs/2610.16836v1",
+      "note_filename": "Event_Generation_for_Neutrino_and_Muon_DIS_at_the_LHC",
+      "matched_domain": "大模型优化器设计",
+      "score": 4.13,
+      "semantic_rank": 9,
+      "formal_recommendation": false,
+      "semantic_status": "语义排除"
+    },
+    {
+      "title": "Neutrino trident process at a muon collider",
+      "source": "arxiv",
+      "arxiv_id": "2610.00723",
+      "url": "http://arxiv.org/abs/2610.00723v1",
+      "note_filename": "Neutrino_trident_process_at_a_muon_collider",
+      "matched_domain": "大模型优化器设计",
+      "score": 4.07,
+      "semantic_rank": 10,
+      "formal_recommendation": false,
+      "semantic_status": "语义排除"
+    }
+  ],
+  "screening_top_n": 10,
+  "retained_recommendations": 3,
+  "semantic_exclusions": 7
+}

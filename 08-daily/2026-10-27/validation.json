@@ -1,0 +1,64 @@
+{
+  "date": "2026-10-27",
+  "status": "passed_with_preexisting_workspace_link_errors",
+  "unique_records": 204,
+  "known_records": 130,
+  "unseen_candidates": 74,
+  "screening_top_n": 10,
+  "retained_recommendations": 3,
+  "directly_relevant": 2,
+  "conditional_transfer_reading": 1,
+  "semantic_exclusions": 7,
+  "pdf_downloaded": 3,
+  "pdf_failed": 0,
+  "pdf_checks": [
+    {
+      "title": "When and How Does Muon Precondition? The Role of Structured Gradient Noise",
+      "arxiv_id": "2610.31728",
+      "pages": 62,
+      "bytes": 1128400,
+      "sha256": "eb817c0a942a2b2e73937902e985e1d6cd107a897649bdb09118c9312006f53b",
+      "identity": "首页标题与 arXiv 编号均匹配"
+    },
+    {
+      "title": "Sharpness-aware Orthogonalized Momentum Algorithms",
+      "arxiv_id": "2610.32465",
+      "pages": 43,
+      "bytes": 632614,
+      "sha256": "81acedaf3ace78e78cfa543334023fd3b6d2b1ca749dc609fccccb8cd60f50f1",
+      "identity": "首页标题与 arXiv 编号均匹配"
+    },
+    {
+      "title": "Cautious Conflict-Free Inverse Gradient Methods",
+      "arxiv_id": "2610.31855",
+      "pages": 16,
+      "bytes": 2404734,
+      "sha256": "d0b1c6276fcc43275b8f9bad9809769586db1bf100399824d8b881d0ca4057a5",
+      "identity": "首页标题与 arXiv 编号均匹配"
+    }
+  ],
+  "daily_local_links_checked": 52,
+  "new_link_errors": 0,
+  "workspace_check": {
+    "preexisting_link_errors": 9,
+    "remaining_link_errors": 9,
+    "new_link_errors": 0,
+    "missing_readme": 0,
+    "month_consistency_errors": 0
+  },
+  "checks": [
+    "前十逐篇审阅完整摘要，复排保留原始分数与 screening_rank",
+    "前三中文摘要逐句核对并检查方法、限定词和数字锚点",
+    "原始摘要与本轮 arXiv API 响应一致；PDF 格式、页数、首页标题与编号一致",
+    "附录每条唯一出现且编号连续；全部本地链接存在",
+    "八份索引各新增三行，原有表格行未改写；刷新幂等",
+    "全库检查仅有执行前相同的九处外部复现路径断链"
+  ],
+  "source_limitations": [
+    "arXiv 15 关键词 OR 检索按相关性取前 200 条，达到上限，存在截断；Muon 同名物理记录污染结果。原生检索未强制分类过滤，故保留全量并在语义层明确排除，不能把 204 条视为 204 篇优化器论文。",
+    "OpenReview 对全部 15 个配置关键词分别只取首 100 条，按记录日期窗口过滤，合并 40 条；并非全站穷尽检索，记录日期不等于首次发表日期。",
+    "Semantic Scholar 年度窗口 2025-10-27 至 2026-09-26 两次 HTTP 429；高影响力补充未获得结果，不代表没有相关论文。",
+    "前十按完整摘要逐篇复排，保留全部原始预筛分和 screening_rank；其中仅两篇直接相关、一篇机制迁移选读，另七篇明确语义排除。其余未入前十的候选未做逐篇研究判断。",
+    "所有推荐均为低置信度摘要初评；下载 PDF 和核对首页身份不等于完成全文阅读。"
+  ]
+}

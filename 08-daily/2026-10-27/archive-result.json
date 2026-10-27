@@ -1,0 +1,52 @@
+{
+  "papers_dir": "/Users/myl/Documents/paper/01-raw",
+  "month_dir": "/Users/myl/Documents/paper/01-raw/2026-10",
+  "month": "2026-10",
+  "date": "2026-10-27",
+  "requested": 3,
+  "downloaded": 3,
+  "skipped_existing": 0,
+  "failed": 0,
+  "index_updated": [
+    "/Users/myl/Documents/paper/01-raw/index.md",
+    "/Users/myl/Documents/paper/01-raw/2026-10/README.md",
+    "/Users/myl/Documents/paper/02-markdown/index.md",
+    "/Users/myl/Documents/paper/02-markdown/2026-10/README.md",
+    "/Users/myl/Documents/paper/03-notes/index.md",
+    "/Users/myl/Documents/paper/03-notes/2026-10/README.md",
+    "/Users/myl/Documents/paper/06-translation/index.md",
+    "/Users/myl/Documents/paper/06-translation/2026-10/README.md"
+  ],
+  "archived": [
+    {
+      "title": "When and How Does Muon Precondition? The Role of Structured Gradient Noise",
+      "paper_stem": "When_and_How_Does_Muon_Precondition_The_Role_of_Structured_Gradient_Noise",
+      "month": "2026-10",
+      "source": "arxiv",
+      "pdf_url": "https://arxiv.org/pdf/2610.31728v1",
+      "path": "/Users/myl/Documents/paper/01-raw/2026-10/When_and_How_Does_Muon_Precondition_The_Role_of_Structured_Gradient_Noise.pdf",
+      "status": "downloaded",
+      "detail": "1102.0 KB"
+    },
+    {
+      "title": "Sharpness-aware Orthogonalized Momentum Algorithms",
+      "paper_stem": "Sharpness_aware_Orthogonalized_Momentum_Algorithms",
+      "month": "2026-10",
+      "source": "arxiv",
+      "pdf_url": "https://arxiv.org/pdf/2610.32465v1",
+      "path": "/Users/myl/Documents/paper/01-raw/2026-10/Sharpness_aware_Orthogonalized_Momentum_Algorithms.pdf",
+      "status": "downloaded",
+      "detail": "617.8 KB"
+    },
+    {
+      "title": "Cautious Conflict-Free Inverse Gradient Methods",
+      "paper_stem": "Cautious_Conflict_Free_Inverse_Gradient_Methods",
+      "month": "2026-10",
+      "source": "arxiv",
+      "pdf_url": "https://arxiv.org/pdf/2610.31855v1",
+      "path": "/Users/myl/Documents/paper/01-raw/2026-10/Cautious_Conflict_Free_Inverse_Gradient_Methods.pdf",
+      "status": "downloaded",
+      "detail": "2348.4 KB"
+    }
+  ]
+}
