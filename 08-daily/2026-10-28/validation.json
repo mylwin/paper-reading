@@ -1,0 +1,65 @@
+{
+  "date": "2026-10-28",
+  "status": "passed_with_preexisting_workspace_link_errors",
+  "unique_records": 141,
+  "known_records": 126,
+  "unseen_candidates": 15,
+  "screening_top_n": 10,
+  "retained_recommendations": 8,
+  "priority_reading": 3,
+  "selective_reading": 4,
+  "tracking": 1,
+  "semantic_exclusions": 2,
+  "pdf_downloaded": 3,
+  "pdf_failed": 0,
+  "pdf_checks": [
+    {
+      "title": "MuonGS: Pretraining LLMs with Relaxed Weight-Norm Control",
+      "arxiv_id": "2610.37647",
+      "pages": 21,
+      "bytes": 2682396,
+      "sha256": "2c2895d7bab1c47341792208fe69d9994e70a89916d3599d536eef3fb3dc23d7",
+      "identity": "首页标题与 arXiv 编号均匹配"
+    },
+    {
+      "title": "EnergyCal: Taming Loss Spikes in Muon-Family Optimizers for Sparse MoE Training",
+      "arxiv_id": "2610.37062",
+      "pages": 14,
+      "bytes": 737296,
+      "sha256": "7954e41742e605a45b3f9cee50d480c482311419eee3fccc7abab01d65233ea6",
+      "identity": "首页标题与 arXiv 编号均匹配"
+    },
+    {
+      "title": "Last-Iterate Stationarity of Muon with Finitely Many Newton-Schulz Iterations",
+      "arxiv_id": "2610.34158",
+      "pages": 29,
+      "bytes": 576473,
+      "sha256": "e7459c6b8803001af82621413339a3ecf39424d30908d72dec6b0042b5b98d70",
+      "identity": "首页标题与 arXiv 编号均匹配"
+    }
+  ],
+  "daily_local_links_checked": 54,
+  "new_link_errors": 0,
+  "workspace_check": {
+    "preexisting_link_errors": 9,
+    "remaining_link_errors": 9,
+    "new_link_errors": 0,
+    "missing_readme": 0,
+    "month_consistency_errors": 0
+  },
+  "checks": [
+    "前十逐篇审阅完整摘要，复排保留原始分数与 screening_rank",
+    "前三中文摘要逐句核对并检查方法、限定词和数字锚点",
+    "原始摘要与本轮 arXiv API 响应一致；PDF 格式、页数、首页标题与编号一致",
+    "附录每条唯一出现且编号连续；全部本地链接存在",
+    "八份索引各新增三行，原有表格行未改写；刷新幂等",
+    "全库检查仅有执行前相同的九处外部复现路径断链"
+  ],
+  "source_limitations": [
+    "带配置分类约束的 arXiv 查询三次分别为 503、读取超时、503。恢复时用技能原始关键词查询得到前 200 条，再按共享配置的分类并集保留 124 条；原始查询达到上限，分类过滤后仍可能遗漏排在前 200 条之外的相关论文。",
+    "OpenReview 对配置中全部 15 个关键词各取首 100 条，按记录日期过滤后合并 40 条，并复用于恢复流程；部分关键词达到单页上限，记录日期不等于首次发表日期。",
+    "Semantic Scholar 年度窗口 2025-10-28 至 2026-09-27 已尝试两次，均 HTTP 429；恢复流程不重复请求，不把年度补充失败解释为没有高影响力论文。",
+    "评分去重后 141 条记录，126 条命中历史，15 条未命中。只对预筛前十逐篇作语义复排；保留 3 篇精读、4 篇选读和 1 篇跟踪，另 2 篇主题排除。其余 5 篇候选保留在附录，未作逐篇推荐判断。",
+    "所有研究判断仅依据官方题目、摘要与元数据；PDF 下载和首页核对用于文件身份验证，不等于全文评审。"
+  ]
+}

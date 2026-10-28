@@ -1,0 +1,157 @@
+{
+  "date": "2026-10-28",
+  "note_file": "今日检索.md",
+  "generated_at": "2026-10-28T10:09:03",
+  "skill": "paper-daily",
+  "sources_searched": [
+    "arxiv",
+    "openreview"
+  ],
+  "source_counts": {
+    "arxiv": 124,
+    "openreview": 40
+  },
+  "date_windows": {
+    "recent_30d": {
+      "start": "2026-09-28",
+      "end": "2026-10-28"
+    },
+    "past_year": {
+      "start": "2025-10-28",
+      "end": "2026-09-27"
+    }
+  },
+  "total_unique": 141,
+  "top_papers": [
+    {
+      "title": "MuonGS: Pretraining LLMs with Relaxed Weight-Norm Control",
+      "source": "arxiv",
+      "arxiv_id": "2610.37647",
+      "url": "http://arxiv.org/abs/2610.37647v1",
+      "note_filename": "MuonGS_Pretraining_LLMs_with_Relaxed_Weight_Norm_Control",
+      "matched_domain": "大模型优化器设计",
+      "score": 8.27,
+      "semantic_rank": 1,
+      "formal_recommendation": true,
+      "semantic_status": "精读"
+    },
+    {
+      "title": "EnergyCal: Taming Loss Spikes in Muon-Family Optimizers for Sparse MoE Training",
+      "source": "arxiv",
+      "arxiv_id": "2610.37062",
+      "url": "http://arxiv.org/abs/2610.37062v1",
+      "note_filename": "EnergyCal_Taming_Loss_Spikes_in_Muon_Family_Optimizers_for_Sparse_MoE_Training",
+      "matched_domain": "大模型优化器设计",
+      "score": 7.67,
+      "semantic_rank": 2,
+      "formal_recommendation": true,
+      "semantic_status": "精读"
+    },
+    {
+      "title": "Last-Iterate Stationarity of Muon with Finitely Many Newton-Schulz Iterations",
+      "source": "arxiv",
+      "arxiv_id": "2610.34158",
+      "url": "http://arxiv.org/abs/2610.34158v1",
+      "note_filename": "Last_Iterate_Stationarity_of_Muon_with_Finitely_Many_Newton_Schulz_Iterations",
+      "matched_domain": "大模型优化器设计",
+      "score": 8.27,
+      "semantic_rank": 3,
+      "formal_recommendation": true,
+      "semantic_status": "精读"
+    },
+    {
+      "title": "Sharpness-Aware Muon: Matrix-Aware Optimization with Momentum-Guided Perturbations",
+      "source": "arxiv",
+      "arxiv_id": "2610.37225",
+      "url": "http://arxiv.org/abs/2610.37225v1",
+      "note_filename": "Sharpness_Aware_Muon_Matrix_Aware_Optimization_with_Momentum_Guided_Perturbations",
+      "matched_domain": "大模型优化器设计",
+      "score": 7.93,
+      "semantic_rank": 4,
+      "formal_recommendation": true,
+      "semantic_status": "选读"
+    },
+    {
+      "title": "Understanding Practical Optimization in Machine Learning",
+      "source": "arxiv",
+      "arxiv_id": "2610.35209",
+      "url": "http://arxiv.org/abs/2610.35209v1",
+      "note_filename": "Understanding_Practical_Optimization_in_Machine_Learning",
+      "matched_domain": "大模型优化器设计",
+      "score": 8.27,
+      "semantic_rank": 5,
+      "formal_recommendation": true,
+      "semantic_status": "选读"
+    },
+    {
+      "title": "A Unified Analysis of Importance-Corrected Momentum Actor-Critic over a Markovian Trajectory",
+      "source": "arxiv",
+      "arxiv_id": "2610.33477",
+      "url": "http://arxiv.org/abs/2610.33477v1",
+      "note_filename": "A_Unified_Analysis_of_Importance_Corrected_Momentum_Actor_Critic_over_a_Markovian_Trajectory",
+      "matched_domain": "大模型优化器设计",
+      "score": 6.67,
+      "semantic_rank": 6,
+      "formal_recommendation": true,
+      "semantic_status": "选读"
+    },
+    {
+      "title": "Width and Depth Limits Commute During Training in Linear Residual Networks",
+      "source": "arxiv",
+      "arxiv_id": "2610.30729",
+      "url": "http://arxiv.org/abs/2610.30729v2",
+      "note_filename": "Width_and_Depth_Limits_Commute_During_Training_in_Linear_Residual_Networks",
+      "matched_domain": "大模型优化器设计",
+      "score": 7.53,
+      "semantic_rank": 7,
+      "formal_recommendation": true,
+      "semantic_status": "选读"
+    },
+    {
+      "title": "HobbyLM: A Sparse Mixture-of-Experts Model Family on a Hobby Budget",
+      "source": "arxiv",
+      "arxiv_id": "2610.34582",
+      "url": "http://arxiv.org/abs/2610.34582v1",
+      "note_filename": "HobbyLM_A_Sparse_Mixture_of_Experts_Model_Family_on_a_Hobby_Budget",
+      "matched_domain": "大模型优化器设计",
+      "score": 4.77,
+      "semantic_rank": 8,
+      "formal_recommendation": true,
+      "semantic_status": "跟踪"
+    },
+    {
+      "title": "From GPU to TPU with Coding Agents: What Works, What Fails, and What It Costs?",
+      "source": "arxiv",
+      "arxiv_id": "2610.34422",
+      "url": "http://arxiv.org/abs/2610.34422v1",
+      "note_filename": "From_GPU_to_TPU_with_Coding_Agents_What_Works_What_Fails_and_What_It_Costs",
+      "matched_domain": "大模型优化器设计",
+      "score": 6.93,
+      "semantic_rank": 9,
+      "formal_recommendation": false,
+      "semantic_status": "语义排除"
+    },
+    {
+      "title": "Homomorphic Advantage Operator: Stabilizing Reinforcement Learning Under Fully Homomorphic Encryption Constraints",
+      "source": "arxiv",
+      "arxiv_id": "2610.02074",
+      "url": "http://arxiv.org/abs/2610.02074v1",
+      "note_filename": "Homomorphic_Advantage_Operator_Stabilizing_Reinforcement_Learning_Under_Fully_Homomorphic_Encryption_Constraints",
+      "matched_domain": "大模型优化器设计",
+      "score": 3.67,
+      "semantic_rank": 10,
+      "formal_recommendation": false,
+      "semantic_status": "语义排除"
+    }
+  ],
+  "screening_top_n": 10,
+  "retained_recommendations": 8,
+  "semantic_exclusions": 2,
+  "hot_search_status": {
+    "attempted": true,
+    "source": "semantic_scholar",
+    "attempts": 2,
+    "result": "HTTP 429; no usable records",
+    "evidence_log": ".planning/daily-2026-10-28/search.log"
+  }
+}

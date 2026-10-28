@@ -1,0 +1,261 @@
+{
+  "assessment_scope": "metadata_and_abstract",
+  "confidence": "低；摘要初评，待全文核验",
+  "overview": {
+    "trend": "本轮窗口为 2026-09-28 至 2026-10-28。arXiv 分类查询失败后恢复关键词检索，200 条原始记录经配置分类过滤保留 124 条；与 OpenReview 的 40 条记录合并、评分去重后为 141 条，其中 126 条命中历史、15 条未命中。前十摘要复排后优先 MuonGS 的宽松范数控制、EnergyCal 的专家更新幅度校准，以及有限步 Muon 的末次迭代收敛边界。三篇形成“几何设计—训练稳定化—理论条件”组合。候选提示应分开审查方向、更新幅度和实际 NS 映射，而不是仅按 Muon 名称归因；这只是本轮候选观察，不能代表全领域趋势。年度高影响力补充两次 429，未获得结果。",
+    "hotspots": [
+      {
+        "title": "允许范数增长的几何控制",
+        "text": "MuonGS 用 GS 投影去除径向分量，并用累积有效学习率解释缓慢范数增长；需要区分位移界、驻点保证与实际 token 收益。"
+      },
+      {
+        "title": "不改变谱变换的稳定化",
+        "text": "EnergyCal 只校准专家更新幅度，摘要声称不新增持久状态；尖峰指标、困惑度与吞吐必须分别衡量。"
+      },
+      {
+        "title": "理论必须保留实际实现",
+        "text": "有限步 NS 的稳定化与噪声反例，以及学位论文对近似精度/学习率的联动讨论，提醒末次收敛和逐点速率是不同结论。"
+      }
+    ]
+  },
+  "domain_summaries": {
+    "大模型优化器设计": {
+      "summary": "前十复审保留八项分层阅读建议，其中三篇优先归档、四篇定点选读、一篇跟踪；编码代理迁移和加密 RL 两篇按主题排除。前三围绕方向投影、幅度稳定化和有限步理论形成互补，不将所有基准和模型配方视为新的优化器。",
+      "subfields": {
+        "符号与范数几何优化": "MuonGS 放宽固定范数控制；MoMuSAM 用动量构造扰动；有限步 NS 的末次迭代分析约束这些启发可以声称的理论范围。",
+        "免调参与梯度裁剪": "学位论文中的固定分位数裁剪偏差和调度，以及线性残差网络中的裁剪极限适合定点选读；不直接等同于 LLM 免调参方案。",
+        "自适应与状态内存": "EnergyCal 声称无需新增持久状态，但需要核算实际归约和吞吐；HobbyLM 的 aMuon/AdamW 分组只作实现配方线索。",
+        "大模型训练与优化器设计": "MuonGS 有 160M/400M 稠密和 1B 总参数 MoE，EnergyCal 有 4B MoE；规模和对照不同，不能直接比较百分比或外推跨规模收益。",
+        "未细分": "仅命中分类或宽泛关键词的记录仍留附录审计；是否进入阅读队列由语义理由单独说明。"
+      }
+    }
+  },
+  "top_papers": {
+    "MuonGS: Pretraining LLMs with Relaxed Weight-Norm Control": {
+      "title_zh": "MuonGS：通过放宽权重范数控制进行大语言模型预训练",
+      "abstract_zh": "权重衰减和显式权重范数约束能够改善语言模型预训练中的优化器表现，但对于这种控制为何有效、以及究竟需要多大程度的控制，仍缺少统一理解。我们利用累积有效学习率 $C_T=\\sum_{t<T}\\eta_t/\\|W_t\\|_F$，在整个训练轨迹上分析 Muon 的范数控制，其中 $\\eta_t$ 是名义学习率，$\\eta_t/\\|W_t\\|_F$ 是相对于权重范数的有效学习率。对于有界的更新方向，任意训练区间内的累积量都能给出相对权重位移的界。我们表明，原始 Muon 的累积增长可能仅为对数级，这可能限制探索，并有助于解释其在实验中较慢的进展；而在所述条件下，MuonW 和 MuonH 能保证至少线性增长的累积量。超越有界范数控制，我们进一步表明，足够缓慢的范数增长能够保证比最坏情况下的对数增长更快的累积，从而为限制更少的优化器设计打开空间。\n\n基于这一认识，我们提出 MuonGS，它利用 Gram–Schmidt（GS）投影去除每次 Muon 更新的径向分量，而不固定权重范数。在更新方向有界且名义学习率恒定时，我们证明，经过 $t$ 步后权重范数的增长至多与 $\\sqrt{t}$ 成正比。因此，MuonGS 保证 $C_T=\\Omega(\\sqrt{T})$，并且这种累积在训练后期仍能持续。此外，对于光滑的尺度不变目标，我们建立了其 $O(T^{-1/2})$ 驻点保证。在包含 160M 和 400M 参数稠密模型，以及一个活跃参数为 135M、总参数为 1B 的 MoE 模型的预训练实验中，MuonGS 在较长训练时域下取得了比 MuonH 更低的验证困惑度。特别地，对于稠密模型，在达到与 MuonH 相同验证损失时，其估算的 token 等效加速最高约为 $15\\%$。",
+      "summary": "以累积有效学习率解释范数控制，并用去除径向分量的 GS 投影允许权重缓慢增长，作为放宽固定范数约束的 Muon 方案。",
+      "contributions": [
+        "作者以整条训练轨迹的累积有效学习率连接权重范数增长与相对位移，而非只看单步名义学习率。",
+        "提出不固定权重范数的 MuonGS，摘要给出范数增长界、累积量下界及尺度不变目标下的驻点保证。",
+        "报告稠密与 MoE 预训练中对 MuonH 的长时域验证表现，并将加速限定为估算的 token 等效收益。"
+      ],
+      "method": "对 Muon 更新做 Gram–Schmidt 投影，去掉相对于当前权重的径向分量；用 C_T 分析有效步幅累积。优先核查投影是在正交化前还是后、零范数处理及与权重衰减的实际组合。",
+      "result": "摘要报告有界更新与恒定名义学习率下 $\\|W_t\\|_F=O(\\sqrt{t})$、$C_T=\\Omega(\\sqrt{T})$；光滑尺度不变目标下驻点保证为 $O(T^{-1/2})$。实验覆盖 160M/400M 稠密和 135M 活跃、1B 总参数 MoE；稠密模型相对 MuonH 的估算 token 等效加速最高约 15%，不等同于墙钟加速。",
+      "selection_reason": "直接命中范数几何与 Muon 更新设计。相对库内逐层缩放、权重几何及方向步长工作，预期新增信息是“容许增长而非固定范数”的设计空间；可与当前步长方案交叉检验名义学习率和有效学习率是否被混淆。",
+      "evidence_limit": "初步判断，待全文核验；依据官方 arXiv 题目与完整摘要，PDF 首页只核对身份。需检查线性累积的条件、尺度不变假设对 Transformer 参数组的适用性、驻点量定义、与 MuonH 的调参和 token 预算、长时域长度及种子。累积量更快不自动等于更快收敛；约 15% 仅是特定比较中的估算 token 等效指标。",
+      "reading_decision": "精读",
+      "translation_check_anchors": [
+        "C_T",
+        "MuonW",
+        "MuonH",
+        "Gram–Schmidt",
+        "\\sqrt{t}",
+        "\\Omega",
+        "160M",
+        "400M",
+        "135M",
+        "1B",
+        "15\\%",
+        "估算"
+      ]
+    },
+    "EnergyCal: Taming Loss Spikes in Muon-Family Optimizers for Sparse MoE Training": {
+      "title_zh": "EnergyCal：抑制稀疏 MoE 训练中 Muon 系列优化器的损失尖峰",
+      "abstract_zh": "使用 Muon 系列优化器训练稀疏混合专家（MoE）语言模型时，可能出现较大的损失尖峰。我们提出 EnergyCal，这是一条轻量规则，根据路由专家有限步 Newton–Schulz 方向的归一化 Frobenius 范数平方，对这些专家的更新进行衰减。EnergyCal 保持谱变换不变，也不增加持久优化器状态。我们在一个 4B 参数 MoE 模型上评估它。与通过开发阶段选择的较低学习率 MuonH 配方相比，EnergyCal-MuonH 将平均阈值化损失尖峰负担降低了 99.51%，将最终几何平均困惑度降低了 4.06%，代价是适度的吞吐损失。在名义学习率和权重衰减匹配的普通 Muon 比较中，跨两个被测试的指数设置，平均尖峰负担的降幅平均为 95.98%，同时伴有小幅的终点指标改善。这些发现支持：在所评估的设置中，无论是否结合 Hyperball，都能获得稳定化效果。",
+      "summary": "按有限步 NS 方向的归一化能量衰减路由专家更新，不改变谱变换、不新增持久状态；摘要报告 4B MoE 的尖峰减少与吞吐代价。",
+      "contributions": [
+        "作者把稳定化作用在专家更新幅度上，保留原谱变换，并声称无需新增持久优化器状态。",
+        "分别对比开发阶段选择的低学习率 MuonH 与名义学习率、衰减匹配的普通 Muon，限定了两类结果的比较口径。"
+      ],
+      "method": "从路由专家有限步 Newton–Schulz 更新方向计算归一化 Frobenius 范数平方，据此衰减更新；核查归一化基准、指数、层/专家粒度、激活稀疏性和额外归约成本。",
+      "result": "摘要报告在 4B MoE 上，相对所选低学习率 MuonH，平均阈值化尖峰负担下降 99.51%、最终几何平均困惑度下降 4.06%，并有吞吐损失；相对普通 Muon，两种指数下的平均尖峰负担降幅平均 95.98%，终点仅小幅改善。不同对照不能合并成统一收益。",
+      "selection_reason": "直接命中大模型优化器的稳定性、状态内存与训练实证。其幅度校准与第一篇的径向投影形成可分离的机制对照，可设计“方向保持/幅度衰减/范数控制”消融，而不是将所有稳定化归因于正交化。",
+      "evidence_limit": "初步判断，待全文核验；尚未阅读全文方法和表格。需查阈值化尖峰负担的定义、阈值敏感性、几何平均的聚合单位、训练长度、种子和误差条、调参预算及吞吐测量。99.51% 是特定尖峰指标的降幅，不是准确率或速度提升；单一 4B MoE 设置不足以支持跨规模结论。",
+      "reading_decision": "精读",
+      "translation_check_anchors": [
+        "Newton–Schulz",
+        "Frobenius",
+        "持久",
+        "4B",
+        "99.51%",
+        "4.06%",
+        "95.98%",
+        "两个",
+        "Hyperball",
+        "吞吐"
+      ]
+    },
+    "Last-Iterate Stationarity of Muon with Finitely Many Newton-Schulz Iterations": {
+      "title_zh": "有限次 Newton–Schulz 迭代下 Muon 的末次迭代驻点性",
+      "abstract_zh": "Muon 在大规模语言模型训练中取得了较强的实验表现，这促使人们更好地从理论上理解其实用实现。与理想化的极分解因子更新不同，实际 Muon 使用固定迭代次数的五次多项式 Newton–Schulz 迭代。现有分析主要建立平均迭代或最佳迭代的驻点保证，而对末次迭代收敛的理解仍较少。我们研究实用有限步 Muon 在光滑、有下界的非凸目标上的末次迭代梯度收敛。\n\n对于确定性梯度，我们表明，如果没有输入稳定化，Muon 即使在光滑凸二次函数上也可能循环。在采用正的稳定化参数时，对于任意固定的小于一的动量系数以及足够小的恒定学习率，我们建立了末次迭代梯度收敛，同时证明梯度平方可求和。对于随机梯度，我们首先表明，在固定学习率和动量下，即使采用正的稳定化参数，持续存在的有界、无偏噪声也可能阻止收敛。随后，在随机梯度方差有界的条件下，通过结合递减学习率与递增动量，我们建立了几乎必然和均方意义下的末次迭代梯度收敛。最后，我们构造一个光滑反例，表明上述两个收敛定理都不保证逐点的多项式速率。我们进一步建立了密度为一的收敛速率，保证除占比趋于零的一小部分迭代外，所有迭代的梯度都呈多项式衰减。",
+      "summary": "区分稳定化与噪声条件下的有限步 Muon 末次梯度收敛，并用反例说明收敛不意味着逐点多项式速率。",
+      "contributions": [
+        "作者将固定迭代次数的五次多项式 NS 实现纳入末次迭代分析，提出无稳定化时的循环反例。",
+        "区分确定性恒定学习率与随机递减学习率、递增动量的收敛条件，并报告持续无偏噪声下固定参数失效的情形。",
+        "以光滑反例区分逐点多项式速率与密度为一的速率。"
+      ],
+      "method": "在光滑有下界目标上直接分析有限步 NS 映射的稳定化、动量与学习率条件；分别构造循环、噪声与速率反例，再证明两类末次梯度收敛。",
+      "result": "摘要声称确定性正稳定化、固定动量小于 1、足够小恒定学习率下梯度平方可求和并末次收敛；随机有界方差下用递减学习率和递增动量得到几乎必然及均方收敛。两个定理都不保证逐点多项式速率，密度为一的结论允许零密度例外；摘要无 LLM 实验收益。",
+      "selection_reason": "与库内有限步 NS 收敛和训练损失保证直接对照，预期新增信息是末次迭代、稳定化与速率反例的边界。它为前两篇实现设计提供条件审计，避免将几何启发直接当作收敛保证。",
+      "evidence_limit": "初步判断，待全文核验；未检查证明、定理或附录。需查稳定化的确切定义、可用学习率是否依赖未知常数、随机调度及其先验、有限步数/维度依赖、动量接近 1 的条件和密度为一速率的指数。不能把该理论假设直接认定为 MuonGS 或 EnergyCal 的已证保证。",
+      "reading_decision": "精读",
+      "translation_check_anchors": [
+        "五次",
+        "平均迭代",
+        "最佳迭代",
+        "有下界",
+        "光滑凸二次",
+        "平方可求和",
+        "有界、无偏",
+        "递减学习率",
+        "递增动量",
+        "几乎必然",
+        "均方",
+        "逐点",
+        "密度为一"
+      ]
+    },
+    "Sharpness-Aware Muon: Matrix-Aware Optimization with Momentum-Guided Perturbations": {
+      "summary": "选读：MuSAM 将 SAM 扰动接入 Muon，MoMuSAM 用归一化动量替代单批梯度探针，摘要声称同阶驻点保证与更稳定线性化；需与昨日 SOMA 的过时噪声扰动比较，核算额外计算。",
+      "selection_reason": "直接相关，但与昨日 SOMA 同属锐度感知 Muon，优先作为竞争机制对照，避免前三篇全部集中在同一主题。",
+      "reading_decision": "选读",
+      "evidence_limit": "仅按官方题目与完整摘要初评，待全文核验；主题排除不代表学术质量评价。"
+    },
+    "Understanding Practical Optimization in Machine Learning": {
+      "summary": "选读相关章节：该学位论文汇总子网络训练、分位数裁剪、私有归一化、Gluon 与近似正交化；先查对应原始工作，不能把多项汇总主张视为一项全新算法。",
+      "selection_reason": "可作为假设与实际实现一致性的导航，但全文跨度和阅读成本高于两篇具体方案；优先读范数、裁剪和有限步正交化部分。",
+      "reading_decision": "选读",
+      "evidence_limit": "仅按官方题目与完整摘要初评，待全文核验；主题排除不代表学术质量评价。"
+    },
+    "A Unified Analysis of Importance-Corrected Momentum Actor-Critic over a Markovian Trajectory": {
+      "summary": "条件性选读：单马尔可夫轨迹下 ICM actor-critic 的归一化/非归一化平均梯度界含 1/T 偏差，并比较 Muon 的核范数条件；不是 LLM 实证结果。",
+      "selection_reason": "可借鉴 Muon 与归一化方向比较的曲率条件，但需同时核验轨迹混合、分布失配和 critic 误差，迁移成本较高。",
+      "reading_decision": "选读",
+      "evidence_limit": "仅按官方题目与完整摘要初评，待全文核验；主题排除不代表学术质量评价。"
+    },
+    "Width and Depth Limits Commute During Training in Linear Residual Networks": {
+      "summary": "条件性选读：线性残差网络在 Depth-μP 与 μP 下，固定有限步裁剪 GD 的宽深联合极限在 L² 中收敛；去掉裁剪通常只能得到概率收敛。",
+      "selection_reason": "为裁剪影响参数化极限提供理论边界，不能外推为任意非线性 Transformer 的训练或收敛保证。",
+      "reading_decision": "选读",
+      "evidence_limit": "仅按官方题目与完整摘要初评，待全文核验；主题排除不代表学术质量评价。"
+    },
+    "HobbyLM: A Sparse Mixture-of-Experts Model Family on a Hobby Budget": {
+      "summary": "跟踪：低预算 MoE 模型家族采用 aMuon/AdamW 分组，并报告 130M 单变量消融；架构、数据与训练组合不能直接归因于优化器创新。",
+      "selection_reason": "对低成本实验配方有参考价值，但摘要主要贡献是模型和实现组合，未隔离新的优化器机制。",
+      "reading_decision": "跟踪",
+      "evidence_limit": "仅按官方题目与完整摘要初评，待全文核验；主题排除不代表学术质量评价。"
+    },
+    "From GPU to TPU with Coding Agents: What Works, What Fails, and What It Costs?": {
+      "summary": "语义排除：研究编码代理迁移 ML 工作负载的正确性和成本；梯度裁剪改变是迁移失败案例，并非优化器设计贡献。",
+      "selection_reason": "与当前课题直接性弱；只有开展设备迁移和数值一致性验证时才需要另行参考。",
+      "reading_decision": "跳过",
+      "evidence_limit": "仅按官方题目与完整摘要初评，待全文核验；主题排除不代表学术质量评价。"
+    },
+    "Homomorphic Advantage Operator: Stabilizing Reinforcement Learning Under Fully Homomorphic Encryption Constraints": {
+      "summary": "语义排除：研究同态加密 RL 中 Bellman 漂移的中心化修正，裁剪和 DP 噪声只是对照条件；不属于 LLM 优化器设计。",
+      "selection_reason": "核心问题是加密计算的多项式近似稳定性，与当前优化器方向、步长和状态设计缺少直接连接。",
+      "reading_decision": "跳过",
+      "evidence_limit": "仅按官方题目与完整摘要初评，待全文核验；主题排除不代表学术质量评价。"
+    }
+  },
+  "source_limitations": [
+    "带配置分类约束的 arXiv 查询三次分别为 503、读取超时、503。恢复时用技能原始关键词查询得到前 200 条，再按共享配置的分类并集保留 124 条；原始查询达到上限，分类过滤后仍可能遗漏排在前 200 条之外的相关论文。",
+    "OpenReview 对配置中全部 15 个关键词各取首 100 条，按记录日期过滤后合并 40 条，并复用于恢复流程；部分关键词达到单页上限，记录日期不等于首次发表日期。",
+    "Semantic Scholar 年度窗口 2025-10-28 至 2026-09-27 已尝试两次，均 HTTP 429；恢复流程不重复请求，不把年度补充失败解释为没有高影响力论文。",
+    "评分去重后 141 条记录，126 条命中历史，15 条未命中。只对预筛前十逐篇作语义复排；保留 3 篇精读、4 篇选读和 1 篇跟踪，另 2 篇主题排除。其余 5 篇候选保留在附录，未作逐篇推荐判断。",
+    "所有研究判断仅依据官方题目、摘要与元数据；PDF 下载和首页核对用于文件身份验证，不等于全文评审。"
+  ],
+  "semantic_reranking": [
+    {
+      "title": "MuonGS: Pretraining LLMs with Relaxed Weight-Norm Control",
+      "screening_rank": 13,
+      "candidate_screening_rank": 2,
+      "semantic_rank": 1,
+      "formal_recommendation": true,
+      "reading_decision": "精读",
+      "reason": "直接命中范数几何与 Muon 更新设计。相对库内逐层缩放、权重几何及方向步长工作，预期新增信息是“容许增长而非固定范数”的设计空间；可与当前步长方案交叉检验名义学习率和有效学习率是否被混淆。"
+    },
+    {
+      "title": "EnergyCal: Taming Loss Spikes in Muon-Family Optimizers for Sparse MoE Training",
+      "screening_rank": 59,
+      "candidate_screening_rank": 5,
+      "semantic_rank": 2,
+      "formal_recommendation": true,
+      "reading_decision": "精读",
+      "reason": "直接命中大模型优化器的稳定性、状态内存与训练实证。其幅度校准与第一篇的径向投影形成可分离的机制对照，可设计“方向保持/幅度衰减/范数控制”消融，而不是将所有稳定化归因于正交化。"
+    },
+    {
+      "title": "Last-Iterate Stationarity of Muon with Finitely Many Newton-Schulz Iterations",
+      "screening_rank": 7,
+      "candidate_screening_rank": 1,
+      "semantic_rank": 3,
+      "formal_recommendation": true,
+      "reading_decision": "精读",
+      "reason": "与库内有限步 NS 收敛和训练损失保证直接对照，预期新增信息是末次迭代、稳定化与速率反例的边界。它为前两篇实现设计提供条件审计，避免将几何启发直接当作收敛保证。"
+    },
+    {
+      "title": "Sharpness-Aware Muon: Matrix-Aware Optimization with Momentum-Guided Perturbations",
+      "screening_rank": 30,
+      "candidate_screening_rank": 4,
+      "semantic_rank": 4,
+      "formal_recommendation": true,
+      "reading_decision": "选读",
+      "reason": "直接相关，但与昨日 SOMA 同属锐度感知 Muon，优先作为竞争机制对照，避免前三篇全部集中在同一主题。"
+    },
+    {
+      "title": "Understanding Practical Optimization in Machine Learning",
+      "screening_rank": 15,
+      "candidate_screening_rank": 3,
+      "semantic_rank": 5,
+      "formal_recommendation": true,
+      "reading_decision": "选读",
+      "reason": "可作为假设与实际实现一致性的导航，但全文跨度和阅读成本高于两篇具体方案；优先读范数、裁剪和有限步正交化部分。"
+    },
+    {
+      "title": "A Unified Analysis of Importance-Corrected Momentum Actor-Critic over a Markovian Trajectory",
+      "screening_rank": 104,
+      "candidate_screening_rank": 8,
+      "semantic_rank": 6,
+      "formal_recommendation": true,
+      "reading_decision": "选读",
+      "reason": "可借鉴 Muon 与归一化方向比较的曲率条件，但需同时核验轨迹混合、分布失配和 critic 误差，迁移成本较高。"
+    },
+    {
+      "title": "Width and Depth Limits Commute During Training in Linear Residual Networks",
+      "screening_rank": 63,
+      "candidate_screening_rank": 6,
+      "semantic_rank": 7,
+      "formal_recommendation": true,
+      "reading_decision": "选读",
+      "reason": "为裁剪影响参数化极限提供理论边界，不能外推为任意非线性 Transformer 的训练或收敛保证。"
+    },
+    {
+      "title": "HobbyLM: A Sparse Mixture-of-Experts Model Family on a Hobby Budget",
+      "screening_rank": 127,
+      "candidate_screening_rank": 9,
+      "semantic_rank": 8,
+      "formal_recommendation": true,
+      "reading_decision": "跟踪",
+      "reason": "对低成本实验配方有参考价值，但摘要主要贡献是模型和实现组合，未隔离新的优化器机制。"
+    },
+    {
+      "title": "From GPU to TPU with Coding Agents: What Works, What Fails, and What It Costs?",
+      "screening_rank": 93,
+      "candidate_screening_rank": 7,
+      "semantic_rank": 9,
+      "formal_recommendation": false,
+      "reading_decision": "跳过",
+      "reason": "与当前课题直接性弱；只有开展设备迁移和数值一致性验证时才需要另行参考。"
+    },
+    {
+      "title": "Homomorphic Advantage Operator: Stabilizing Reinforcement Learning Under Fully Homomorphic Encryption Constraints",
+      "screening_rank": 138,
+      "candidate_screening_rank": 10,
+      "semantic_rank": 10,
+      "formal_recommendation": false,
+      "reading_decision": "跳过",
+      "reason": "核心问题是加密计算的多项式近似稳定性，与当前优化器方向、步长和状态设计缺少直接连接。"
+    }
+  ]
+}

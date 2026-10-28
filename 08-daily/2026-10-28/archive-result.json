@@ -1,0 +1,52 @@
+{
+  "papers_dir": "/Users/myl/Documents/paper/01-raw",
+  "month_dir": "/Users/myl/Documents/paper/01-raw/2026-10",
+  "month": "2026-10",
+  "date": "2026-10-28",
+  "requested": 3,
+  "downloaded": 3,
+  "skipped_existing": 0,
+  "failed": 0,
+  "index_updated": [
+    "/Users/myl/Documents/paper/01-raw/index.md",
+    "/Users/myl/Documents/paper/01-raw/2026-10/README.md",
+    "/Users/myl/Documents/paper/02-markdown/index.md",
+    "/Users/myl/Documents/paper/02-markdown/2026-10/README.md",
+    "/Users/myl/Documents/paper/03-notes/index.md",
+    "/Users/myl/Documents/paper/03-notes/2026-10/README.md",
+    "/Users/myl/Documents/paper/06-translation/index.md",
+    "/Users/myl/Documents/paper/06-translation/2026-10/README.md"
+  ],
+  "archived": [
+    {
+      "title": "MuonGS: Pretraining LLMs with Relaxed Weight-Norm Control",
+      "paper_stem": "MuonGS_Pretraining_LLMs_with_Relaxed_Weight_Norm_Control",
+      "month": "2026-10",
+      "source": "arxiv",
+      "pdf_url": "https://arxiv.org/pdf/2610.37647v1",
+      "path": "/Users/myl/Documents/paper/01-raw/2026-10/MuonGS_Pretraining_LLMs_with_Relaxed_Weight_Norm_Control.pdf",
+      "status": "downloaded",
+      "detail": "2619.5 KB"
+    },
+    {
+      "title": "EnergyCal: Taming Loss Spikes in Muon-Family Optimizers for Sparse MoE Training",
+      "paper_stem": "EnergyCal_Taming_Loss_Spikes_in_Muon_Family_Optimizers_for_Sparse_MoE_Training",
+      "month": "2026-10",
+      "source": "arxiv",
+      "pdf_url": "https://arxiv.org/pdf/2610.37062v1",
+      "path": "/Users/myl/Documents/paper/01-raw/2026-10/EnergyCal_Taming_Loss_Spikes_in_Muon_Family_Optimizers_for_Sparse_MoE_Training.pdf",
+      "status": "downloaded",
+      "detail": "720.0 KB"
+    },
+    {
+      "title": "Last-Iterate Stationarity of Muon with Finitely Many Newton-Schulz Iterations",
+      "paper_stem": "Last_Iterate_Stationarity_of_Muon_with_Finitely_Many_Newton_Schulz_Iterations",
+      "month": "2026-10",
+      "source": "arxiv",
+      "pdf_url": "https://arxiv.org/pdf/2610.34158v1",
+      "path": "/Users/myl/Documents/paper/01-raw/2026-10/Last_Iterate_Stationarity_of_Muon_with_Finitely_Many_Newton_Schulz_Iterations.pdf",
+      "status": "downloaded",
+      "detail": "563.0 KB"
+    }
+  ]
+}

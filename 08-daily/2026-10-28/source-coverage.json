@@ -1,0 +1,195 @@
+{
+  "arxiv_initial_scoped_query": {
+    "query": "((ti:\"large language model optimizer\" OR abs:\"large language model optimizer\") OR (ti:\"LLM optimizer\" OR abs:\"LLM optimizer\") OR (ti:\"optimizer design\" OR abs:\"optimizer design\") OR (ti:\"memory-efficient optimizer\" OR abs:\"memory-efficient optimizer\") OR (ti:\"optimizer state memory\" OR abs:\"optimizer state memory\") OR (ti:\"adaptive optimization\" OR abs:\"adaptive optimization\") OR (ti:\"sign-based optimization\" OR abs:\"sign-based optimization\") OR (ti:\"SignSGD\" OR abs:\"SignSGD\") OR (ti:\"Muon\" OR abs:\"Muon\") OR (ti:\"PowerStep\" OR abs:\"PowerStep\") OR (ti:\"gradient clipping\" OR abs:\"gradient clipping\") OR (ti:\"parameter-free optimization\" OR abs:\"parameter-free optimization\") OR (ti:\"Polyak stepsize\" OR abs:\"Polyak stepsize\") OR (ti:\"lp-norm steepest descent\" OR abs:\"lp-norm steepest descent\") OR (ti:\"AdamW\" OR abs:\"AdamW\")) AND (cat:math.OC OR cat:stat.ML OR cat:cs.LG OR cat:cs.NA OR cat:cs.AI OR cat:cs.CL) AND submittedDate:[202609280000 TO 202610282359]",
+    "url": "https://export.arxiv.org/api/query?search_query=%28%28ti%3A%22large+language+model+optimizer%22+OR+abs%3A%22large+language+model+optimizer%22%29+OR+%28ti%3A%22LLM+optimizer%22+OR+abs%3A%22LLM+optimizer%22%29+OR+%28ti%3A%22optimizer+design%22+OR+abs%3A%22optimizer+design%22%29+OR+%28ti%3A%22memory-efficient+optimizer%22+OR+abs%3A%22memory-efficient+optimizer%22%29+OR+%28ti%3A%22optimizer+state+memory%22+OR+abs%3A%22optimizer+state+memory%22%29+OR+%28ti%3A%22adaptive+optimization%22+OR+abs%3A%22adaptive+optimization%22%29+OR+%28ti%3A%22sign-based+optimization%22+OR+abs%3A%22sign-based+optimization%22%29+OR+%28ti%3A%22SignSGD%22+OR+abs%3A%22SignSGD%22%29+OR+%28ti%3A%22Muon%22+OR+abs%3A%22Muon%22%29+OR+%28ti%3A%22PowerStep%22+OR+abs%3A%22PowerStep%22%29+OR+%28ti%3A%22gradient+clipping%22+OR+abs%3A%22gradient+clipping%22%29+OR+%28ti%3A%22parameter-free+optimization%22+OR+abs%3A%22parameter-free+optimization%22%29+OR+%28ti%3A%22Polyak+stepsize%22+OR+abs%3A%22Polyak+stepsize%22%29+OR+%28ti%3A%22lp-norm+steepest+descent%22+OR+abs%3A%22lp-norm+steepest+descent%22%29+OR+%28ti%3A%22AdamW%22+OR+abs%3A%22AdamW%22%29%29+AND+%28cat%3Amath.OC+OR+cat%3Astat.ML+OR+cat%3Acs.LG+OR+cat%3Acs.NA+OR+cat%3Acs.AI+OR+cat%3Acs.CL%29+AND+submittedDate%3A%5B202609280000+TO+202610282359%5D&max_results=200&sortBy=relevance&sortOrder=descending",
+    "categories": [
+      "math.OC",
+      "stat.ML",
+      "cs.LG",
+      "cs.NA",
+      "cs.AI",
+      "cs.CL"
+    ],
+    "max_results": 200,
+    "attempts": [
+      {
+        "status": "failed",
+        "detail": "HTTP Error 503: Service Unavailable"
+      },
+      {
+        "status": "failed",
+        "detail": "The read operation timed out"
+      },
+      {
+        "status": "failed",
+        "detail": "HTTP Error 503: Service Unavailable"
+      }
+    ],
+    "status": "failed"
+  },
+  "arxiv_recovery": {
+    "method": "native_keyword_query_with_local_config_category_filter",
+    "retrieved_unfiltered": 200,
+    "retained": 124,
+    "categories": [
+      "math.OC",
+      "stat.ML",
+      "cs.LG",
+      "cs.NA",
+      "cs.AI",
+      "cs.CL"
+    ],
+    "status": "ok",
+    "truncated": true
+  },
+  "openreview": [
+    {
+      "term": "large language model optimizer",
+      "page_limit": 1,
+      "page_size": 100,
+      "retrieved": 100,
+      "in_window": 4,
+      "truncated": true,
+      "status": "ok"
+    },
+    {
+      "term": "LLM optimizer",
+      "page_limit": 1,
+      "page_size": 100,
+      "retrieved": 100,
+      "in_window": 1,
+      "truncated": true,
+      "status": "ok"
+    },
+    {
+      "term": "optimizer design",
+      "page_limit": 1,
+      "page_size": 100,
+      "retrieved": 100,
+      "in_window": 3,
+      "truncated": true,
+      "status": "ok"
+    },
+    {
+      "term": "memory-efficient optimizer",
+      "page_limit": 1,
+      "page_size": 100,
+      "retrieved": 100,
+      "in_window": 2,
+      "truncated": true,
+      "status": "ok"
+    },
+    {
+      "term": "optimizer state memory",
+      "page_limit": 1,
+      "page_size": 100,
+      "retrieved": 100,
+      "in_window": 5,
+      "truncated": true,
+      "status": "ok"
+    },
+    {
+      "term": "adaptive optimization",
+      "page_limit": 1,
+      "page_size": 100,
+      "retrieved": 100,
+      "in_window": 3,
+      "truncated": true,
+      "status": "ok"
+    },
+    {
+      "term": "sign-based optimization",
+      "page_limit": 1,
+      "page_size": 100,
+      "retrieved": 100,
+      "in_window": 1,
+      "truncated": true,
+      "status": "ok"
+    },
+    {
+      "term": "SignSGD",
+      "page_limit": 1,
+      "page_size": 100,
+      "retrieved": 93,
+      "in_window": 3,
+      "truncated": false,
+      "status": "ok"
+    },
+    {
+      "term": "Muon",
+      "page_limit": 1,
+      "page_size": 100,
+      "retrieved": 100,
+      "in_window": 13,
+      "truncated": true,
+      "status": "ok"
+    },
+    {
+      "term": "PowerStep",
+      "page_limit": 1,
+      "page_size": 100,
+      "retrieved": 3,
+      "in_window": 0,
+      "truncated": false,
+      "status": "ok"
+    },
+    {
+      "term": "gradient clipping",
+      "page_limit": 1,
+      "page_size": 100,
+      "retrieved": 100,
+      "in_window": 4,
+      "truncated": true,
+      "status": "ok"
+    },
+    {
+      "term": "parameter-free optimization",
+      "page_limit": 1,
+      "page_size": 100,
+      "retrieved": 100,
+      "in_window": 1,
+      "truncated": true,
+      "status": "ok"
+    },
+    {
+      "term": "Polyak stepsize",
+      "page_limit": 1,
+      "page_size": 100,
+      "retrieved": 100,
+      "in_window": 3,
+      "truncated": true,
+      "status": "ok"
+    },
+    {
+      "term": "lp-norm steepest descent",
+      "page_limit": 1,
+      "page_size": 100,
+      "retrieved": 100,
+      "in_window": 4,
+      "truncated": true,
+      "status": "ok"
+    },
+    {
+      "term": "AdamW",
+      "page_limit": 1,
+      "page_size": 100,
+      "retrieved": 100,
+      "in_window": 10,
+      "truncated": true,
+      "status": "ok"
+    }
+  ],
+  "semantic_scholar": {
+    "status": "failed",
+    "attempts": 2,
+    "http_status": 429,
+    "attempted_in_first_pass": true
+  },
+  "limitations": [
+    "带配置分类约束的 arXiv 查询三次分别为 503、读取超时、503。恢复时用技能原始关键词查询得到前 200 条，再按共享配置的分类并集保留 124 条；原始查询达到上限，分类过滤后仍可能遗漏排在前 200 条之外的相关论文。",
+    "OpenReview 对配置中全部 15 个关键词各取首 100 条，按记录日期过滤后合并 40 条，并复用于恢复流程；部分关键词达到单页上限，记录日期不等于首次发表日期。",
+    "Semantic Scholar 年度窗口 2025-10-28 至 2026-09-27 已尝试两次，均 HTTP 429；恢复流程不重复请求，不把年度补充失败解释为没有高影响力论文。",
+    "评分去重后 141 条记录，126 条命中历史，15 条未命中。只对预筛前十逐篇作语义复排；保留 3 篇精读、4 篇选读和 1 篇跟踪，另 2 篇主题排除。其余 5 篇候选保留在附录，未作逐篇推荐判断。",
+    "所有研究判断仅依据官方题目、摘要与元数据；PDF 下载和首页核对用于文件身份验证，不等于全文评审。"
+  ]
+}
