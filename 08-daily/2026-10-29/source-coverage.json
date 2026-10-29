@@ -1,0 +1,165 @@
+{
+  "arxiv": {
+    "method": "native_keywords_with_local_config_category_filter",
+    "categories": [
+      "cs.AI",
+      "cs.CL",
+      "cs.LG",
+      "cs.NA",
+      "math.OC",
+      "stat.ML"
+    ],
+    "unfiltered": 200,
+    "retained": 119,
+    "truncated": true,
+    "status": "ok"
+  },
+  "openreview": [
+    {
+      "term": "large language model optimizer",
+      "page_limit": 1,
+      "page_size": 100,
+      "retrieved": 100,
+      "in_window": 4,
+      "truncated": true,
+      "status": "ok"
+    },
+    {
+      "term": "LLM optimizer",
+      "page_limit": 1,
+      "page_size": 100,
+      "retrieved": 100,
+      "in_window": 1,
+      "truncated": true,
+      "status": "ok"
+    },
+    {
+      "term": "optimizer design",
+      "page_limit": 1,
+      "page_size": 100,
+      "retrieved": 100,
+      "in_window": 3,
+      "truncated": true,
+      "status": "ok"
+    },
+    {
+      "term": "memory-efficient optimizer",
+      "page_limit": 1,
+      "page_size": 100,
+      "retrieved": 100,
+      "in_window": 2,
+      "truncated": true,
+      "status": "ok"
+    },
+    {
+      "term": "optimizer state memory",
+      "page_limit": 1,
+      "page_size": 100,
+      "retrieved": 100,
+      "in_window": 5,
+      "truncated": true,
+      "status": "ok"
+    },
+    {
+      "term": "adaptive optimization",
+      "page_limit": 1,
+      "page_size": 100,
+      "retrieved": 100,
+      "in_window": 3,
+      "truncated": true,
+      "status": "ok"
+    },
+    {
+      "term": "sign-based optimization",
+      "page_limit": 1,
+      "page_size": 100,
+      "retrieved": 100,
+      "in_window": 1,
+      "truncated": true,
+      "status": "ok"
+    },
+    {
+      "term": "SignSGD",
+      "page_limit": 1,
+      "page_size": 100,
+      "retrieved": 93,
+      "in_window": 3,
+      "truncated": false,
+      "status": "ok"
+    },
+    {
+      "term": "Muon",
+      "page_limit": 1,
+      "page_size": 100,
+      "retrieved": 100,
+      "in_window": 13,
+      "truncated": true,
+      "status": "ok"
+    },
+    {
+      "term": "PowerStep",
+      "page_limit": 1,
+      "page_size": 100,
+      "retrieved": 3,
+      "in_window": 0,
+      "truncated": false,
+      "status": "ok"
+    },
+    {
+      "term": "gradient clipping",
+      "page_limit": 1,
+      "page_size": 100,
+      "retrieved": 100,
+      "in_window": 4,
+      "truncated": true,
+      "status": "ok"
+    },
+    {
+      "term": "parameter-free optimization",
+      "page_limit": 1,
+      "page_size": 100,
+      "retrieved": 100,
+      "in_window": 1,
+      "truncated": true,
+      "status": "ok"
+    },
+    {
+      "term": "Polyak stepsize",
+      "page_limit": 1,
+      "page_size": 100,
+      "retrieved": 100,
+      "in_window": 3,
+      "truncated": true,
+      "status": "ok"
+    },
+    {
+      "term": "lp-norm steepest descent",
+      "page_limit": 1,
+      "page_size": 100,
+      "retrieved": 100,
+      "in_window": 4,
+      "truncated": true,
+      "status": "ok"
+    },
+    {
+      "term": "AdamW",
+      "page_limit": 1,
+      "page_size": 100,
+      "retrieved": 100,
+      "in_window": 10,
+      "truncated": true,
+      "status": "ok"
+    }
+  ],
+  "semantic_scholar": {
+    "attempts": 2,
+    "status": 429
+  },
+  "limitations": [
+    "arXiv 原始关键词查询取前 200 条，经配置分类过滤保留 119 条；达到上限，可能漏掉排名之外的相关文献。",
+    "OpenReview 对全部 15 关键词各取首 100 条，按记录日期过滤合并 40 条；有界检索且记录日期不等于首次发表日期。",
+    "Semantic Scholar 年度窗口 2025-10-29 至 2026-09-28 两次 HTTP 429，未获得年度高影响力补充。",
+    "评分去重后 137 条，131 条命中历史，6 条未命中；全部六篇均摘要复查，保留两篇精读、一篇条件性选读，三篇排除。没有凑足十篇或宣称全部为今日首发。",
+    "多模态梯度冲突论文 PDF HTTP 403；官方域名补充检索未找到可核验的同题 arXiv 备用版本，不拿相近题目替代。"
+  ]
+}

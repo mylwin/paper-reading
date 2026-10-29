@@ -1,0 +1,132 @@
+{
+  "assessment_scope": "metadata_and_abstract",
+  "overview": {
+    "trend": "窗口为 2026-09-29 至 2026-10-29。arXiv 分类过滤后 119 条，与 OpenReview 40 条合并评分去重为 137 条，131 条命中历史，仅 6 条新候选。优先 GDLoRA 的切向/法向梯度分解和多模态低秩优化的负面证据；关系模型速跑基准作为评测协议选读。其余三篇主题排除。本轮候选有限，不据此概括全领域趋势。年度高影响力补充两次 429；前三篇 PDF 两篇成功、一篇 403。",
+    "hotspots": [
+      {
+        "title": "子空间遗漏的信息",
+        "text": "将切空间外更新与低秩多模态训练暂态放在一起核验；不同任务设置不能直接比较数值。"
+      },
+      {
+        "title": "时间与内存口径",
+        "text": "优化器状态内存、峰值显存和组合配方墙钟收益应分别测量。"
+      }
+    ]
+  },
+  "domain_summaries": {
+    "大模型优化器设计": {
+      "summary": "六篇新候选中仅两篇直接相关，另一篇评测论文条件性选读；保留负面结果与主题排除，全部判断待全文核验。",
+      "subfields": {
+        "符号与范数几何优化": "GDLoRA 的切空间/法向分解是本轮主要几何设计线索；Muon 在速跑中只是配方组件。",
+        "自适应与状态内存": "GDLoRA 声称不增加适配器优化器状态；多模态低秩训练则报告更高最终损失。",
+        "免调参与梯度裁剪": "没有直接命中新候选；数据凝缩和装箱记录不作为该方向推荐。",
+        "大模型训练与优化器设计": "选读时间到目标的固定评测协议，避免将架构、算子和优化器组合收益归给单一组件。",
+        "未细分": "宽泛关键词误命中在附录保留并注明状态。"
+      }
+    }
+  },
+  "top_papers": {
+    "Beyond Low-Rank Parameterization: Narrowing the Gap Between LoRA and Full Fine-Tuning via Gradient Decomposition": {
+      "title_zh": "超越低秩参数化：通过梯度分解缩小 LoRA 与全量微调之间的差距",
+      "abstract_zh": "低秩适应（LoRA）是一种广泛使用的参数高效微调（PEFT）方法，但相对于全量微调（FFT），其表现仍可能存在差距。许多 LoRA 变体改进了低秩因子的初始化或优化。然而，在每个训练步骤中，它们在权重空间中的一阶方向受到当前参数化的约束。我们刻画了对应的 LoRA 可达梯度空间，并表明它与当前 LoRA 参数化诱导的切空间一致。这一刻画给出了当前模型参数处完整权重梯度的正交分解。我们把与该空间正交的分量称为法向梯度。基于这一分解，我们提出 GDLoRA（梯度分解低秩适应）。GDLoRA 从前向激活和反向信号中重建完整权重梯度，提取其法向分量，并用该分量直接更新基础权重，同时保留对 LoRA 因子的标准 AdamW 优化。在适配器和优化器配置匹配的条件下，GDLoRA 引入互补的法向梯度，而不增加标准 LoRA 的优化器状态内存预算。在自然语言理解、数学推理、常识推理和图像分类上的实验表明，GDLoRA 一致优于 LoRA，并缩小了与 FFT 的表现差距。代码见 https://anonymous.4open.science/r/GDLoRA。",
+      "summary": "GDLoRA 将完整梯度分为切向与法向分量，在保留适配器 AdamW 的同时直接更新基础权重的法向分量。",
+      "contributions": [
+        "GDLoRA 将完整梯度分为切向与法向分量，在保留适配器 AdamW 的同时直接更新基础权重的法向分量。"
+      ],
+      "method": "利用前向激活与反向信号重建完整梯度，投影到 LoRA 切空间的正交补，再直接更新基础权重。",
+      "result": "摘要报告四类任务上优于 LoRA、缩小 FFT 差距，但没有量化收益或峰值显存数字；状态内存不增加不等于总训练内存不增加。",
+      "selection_reason": "直接命中子空间几何和优化器状态内存；可检验绕过参数化约束是否比仅改适配器初始化更有效。",
+      "evidence_limit": "初步判断，待全文核验；依据官方题目与原始摘要。需核验完整梯度重建的激活/临时梯度开销、基础权重更新后的保存与部署方式、匹配预算及近邻基线；不能把优化器状态内存等同峰值显存。",
+      "reading_decision": "精读"
+    },
+    "Gradient Conflict in Multimodal Pretraining": {
+      "title_zh": "多模态预训练中的梯度冲突",
+      "abstract_zh": "早期融合多模态模型通过同一组权重训练文本和图像 token，因此两种模态会在每次参数更新中相互竞争。低秩优化器通过把更新限制在梯度的一个小子空间内来减少优化器内存，但其验证几乎完全局限于只有一种 token 分布的纯文本训练。我们考察这种限制是否会加剧模态梯度之间的冲突。我们在交错排列的图文文档上预训练一个 400M 参数的 Chameleon 模型，并在整个训练过程中测量文本与图像梯度的夹角及相对大小，比较完整秩 AdamW、通过奇异值分解（SVD）构造的子空间，以及随机抽取子空间的对照。冲突仅发生在最初几百步，并且在所有情形下都会消退，不过低秩训练在消退前经历的暂态比完整秩 AdamW 更剧烈、持续更久。相对大小则有所不同：SVD 分配给图像梯度的份额高于完整秩训练或相同大小的随机子空间，而随机投影与完整秩训练相当。暂态之后，将优化器限制在子空间内不会改变冲突模式，并显著减少优化器内存；两种低秩训练最终的验证损失都比采用其自身调优学习率的 AdamW 高 0.17–0.30。",
+      "summary": "低秩子空间使多模态梯度冲突暂态更剧烈、更长，但长期冲突模式不变，且验证损失高于调优 AdamW。",
+      "contributions": [
+        "低秩子空间使多模态梯度冲突暂态更剧烈、更长，但长期冲突模式不变，且验证损失高于调优 AdamW。"
+      ],
+      "method": "在 400M Chameleon 图文预训练中，对照完整秩 AdamW、SVD 子空间和同尺寸随机子空间，测量梯度角度与相对大小。",
+      "result": "摘要报告冲突集中于最初几百步；SVD 更偏向图像梯度，两种低秩训练最终验证损失均高 0.17–0.30。",
+      "selection_reason": "为低秩更新的低内存收益提供负面效果对照，可与第一篇比较子空间约束究竟遗漏了哪些梯度信息。",
+      "evidence_limit": "初步判断，待全文核验；依据官方题目与原始摘要。OpenReview PDF 返回 HTTP 403，仅可用官方搜索 API 摘要。需查子空间秩、刷新频率、种子、损失聚合、各方法学习率调参公平性和峰值内存；0.17–0.30 不能泛化到所有多模态模型。",
+      "reading_decision": "精读"
+    },
+    "Speedrunning Relational Foundation Model Pretraining": {
+      "title_zh": "关系型基础模型预训练速跑",
+      "abstract_zh": "基础模型预训练的进展受制于谁能负担一次试验，关系型预训练也不例外。训练配方在各个实验室内部开发，按私有协议报告，因而无法累积。速跑排行榜通过分散搜索过程而非单次训练运行来消除这一障碍。问题被固定下来，技术栈开放，提交项按照达到质量目标所需的墙钟时间排名，而一块 GPU 就足以保持纪录。我们推出 modded-nanoRT，这是首个面向 Relational Transformers 的此类排行榜。选择留出哪一个数据库，决定了基准究竟能否分辨性能改进；因此我们通过校准将其固定：按照一条 45 分钟学习曲线区分改进与随机种子噪声的清晰程度，对六个候选数据库排序。我们以带类型的三线性注意力作为排行榜的初始方案：这一关系算子根据所遍历的外键来条件化注意力分数和值，并结合 Muon 和 SIGReg。该配方在一块 NVIDIA H200 上用 305.63 秒达到目标，比参考实现快 8.11 倍，并在开发数据库之外的 15 对比较中赢得 13 对。我们将发布该基准、其冻结产物以及创纪录的运行记录。代码见 https://github.com/kunumi/nanoRT。",
+      "summary": "modded-nanoRT 将预训练比较固定为单 GPU 达到质量目标的墙钟时间；Muon 与架构、SIGReg 共同构成加速配方。",
+      "contributions": [
+        "modded-nanoRT 将预训练比较固定为单 GPU 达到质量目标的墙钟时间；Muon 与架构、SIGReg 共同构成加速配方。"
+      ],
+      "method": "以学习曲线校准留出数据库，冻结质量目标和栈，用 typed trilinear attention、Muon、SIGReg 的组合开榜。",
+      "result": "摘要报告单 H200 上 305.63 秒、相对参考实现 8.11 倍、开发数据库外 13/15 成对比较获胜；这些是组合配方结果。",
+      "selection_reason": "条件性选读：可借鉴优化器比较的时间预算、目标校准和随机种子控制；核心贡献是关系模型评测协议，不是新的 Muon 算法。",
+      "evidence_limit": "初步判断，待全文核验；依据官方题目与原始摘要。需核验目标校准是否与最终评估隔离、冻结基线与硬件、各组件消融和完整时间计费；8.11 倍不能归因于 Muon 单独作用。摘要说将发布的产物不能认定已经可用。",
+      "reading_decision": "选读"
+    },
+    "MAP4CS: A Multi-dimensional Data Pruning Framework for Efficient Code Retriever Fine-tuning": {
+      "summary": "语义排除：MAP4CS 研究代码检索训练数据剪枝，adaptive optimization 指数据机制，不是参数优化器设计。",
+      "selection_reason": "语义排除：MAP4CS 研究代码检索训练数据剪枝，adaptive optimization 指数据机制，不是参数优化器设计。",
+      "reading_decision": "跳过",
+      "evidence_limit": "按题目与可用摘要判断主题不匹配，不评价学术质量。"
+    },
+    "FALLNEST: Dual-Domain Dataset Condensation of Imbalanced IMU Data for Wearable Fall Detection": {
+      "summary": "语义排除：FALLNEST 研究 IMU 数据凝缩，梯度归一化和裁剪用于梯度匹配；不是 LLM 优化器。",
+      "selection_reason": "语义排除：FALLNEST 研究 IMU 数据凝缩，梯度归一化和裁剪用于梯度匹配；不是 LLM 优化器。",
+      "reading_decision": "跳过",
+      "evidence_limit": "按题目与可用摘要判断主题不匹配，不评价学术质量。"
+    },
+    "Spatial Heuristic Strategy based Diffusion Reinforcement Learning for Online 3D Bin Packing": {
+      "summary": "语义排除：空间启发式扩散 RL 研究在线装箱；优化指应用布局。官方检索摘要末尾截断，不能补写实验结论。",
+      "selection_reason": "语义排除：空间启发式扩散 RL 研究在线装箱；优化指应用布局。官方检索摘要末尾截断，不能补写实验结论。",
+      "reading_decision": "跳过",
+      "evidence_limit": "按题目与可用摘要判断主题不匹配，不评价学术质量。"
+    }
+  },
+  "source_limitations": [
+    "arXiv 原始关键词查询取前 200 条，经配置分类过滤保留 119 条；达到上限，可能漏掉排名之外的相关文献。",
+    "OpenReview 对全部 15 关键词各取首 100 条，按记录日期过滤合并 40 条；有界检索且记录日期不等于首次发表日期。",
+    "Semantic Scholar 年度窗口 2025-10-29 至 2026-09-28 两次 HTTP 429，未获得年度高影响力补充。",
+    "评分去重后 137 条，131 条命中历史，6 条未命中；全部六篇均摘要复查，保留两篇精读、一篇条件性选读，三篇排除。没有凑足十篇或宣称全部为今日首发。",
+    "多模态梯度冲突论文 PDF HTTP 403；官方域名补充检索未找到可核验的同题 arXiv 备用版本，不拿相近题目替代。"
+  ],
+  "semantic_reranking": [
+    {
+      "title": "Beyond Low-Rank Parameterization: Narrowing the Gap Between LoRA and Full Fine-Tuning via Gradient Decomposition",
+      "screening_rank": 142,
+      "semantic_rank": 1,
+      "reason": "直接命中子空间几何和优化器状态内存；可检验绕过参数化约束是否比仅改适配器初始化更有效。"
+    },
+    {
+      "title": "Gradient Conflict in Multimodal Pretraining",
+      "screening_rank": 144,
+      "semantic_rank": 2,
+      "reason": "为低秩更新的低内存收益提供负面效果对照，可与第一篇比较子空间约束究竟遗漏了哪些梯度信息。"
+    },
+    {
+      "title": "Speedrunning Relational Foundation Model Pretraining",
+      "screening_rank": 136,
+      "semantic_rank": 3,
+      "reason": "条件性选读：可借鉴优化器比较的时间预算、目标校准和随机种子控制；核心贡献是关系模型评测协议，不是新的 Muon 算法。"
+    },
+    {
+      "title": "MAP4CS: A Multi-dimensional Data Pruning Framework for Efficient Code Retriever Fine-tuning",
+      "screening_rank": 133,
+      "semantic_rank": 4,
+      "reason": "语义排除：MAP4CS 研究代码检索训练数据剪枝，adaptive optimization 指数据机制，不是参数优化器设计。"
+    },
+    {
+      "title": "FALLNEST: Dual-Domain Dataset Condensation of Imbalanced IMU Data for Wearable Fall Detection",
+      "screening_rank": 140,
+      "semantic_rank": 5,
+      "reason": "语义排除：FALLNEST 研究 IMU 数据凝缩，梯度归一化和裁剪用于梯度匹配；不是 LLM 优化器。"
+    },
+    {
+      "title": "Spatial Heuristic Strategy based Diffusion Reinforcement Learning for Online 3D Bin Packing",
+      "screening_rank": 134,
+      "semantic_rank": 6,
+      "reason": "语义排除：空间启发式扩散 RL 研究在线装箱；优化指应用布局。官方检索摘要末尾截断，不能补写实验结论。"
+    }
+  ]
+}

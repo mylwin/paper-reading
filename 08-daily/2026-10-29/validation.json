@@ -1,0 +1,36 @@
+{
+  "date": "2026-10-29",
+  "status": "passed_with_preexisting_workspace_link_errors",
+  "unique_records": 137,
+  "known_records": 131,
+  "new_candidates": 6,
+  "retained_recommendations": 3,
+  "semantic_exclusions": 3,
+  "pdf_downloaded": 2,
+  "pdf_failed": 1,
+  "pdf_checks": [
+    {
+      "title": "Beyond Low-Rank Parameterization: Narrowing the Gap Between LoRA and Full Fine-Tuning via Gradient Decomposition",
+      "pages": 24,
+      "bytes": 2295655,
+      "sha256": "5a1f3b34e96b9b35cd2c717f6465056e4dd85dd3b02b65e0b979cb0fd38e269e"
+    },
+    {
+      "title": "Speedrunning Relational Foundation Model Pretraining",
+      "pages": 9,
+      "bytes": 301039,
+      "sha256": "e1e925846cec62549c967ebe20b2b87148c242a847fb97edb3c656e9ddcbc50b"
+    }
+  ],
+  "daily_local_links_checked": 52,
+  "new_link_errors": 0,
+  "workspace_check": "与执行前相同的既有断链；无新增月份/README问题",
+  "source_limitations": [
+    "arXiv 原始关键词查询取前 200 条，经配置分类过滤保留 119 条；达到上限，可能漏掉排名之外的相关文献。",
+    "OpenReview 对全部 15 关键词各取首 100 条，按记录日期过滤合并 40 条；有界检索且记录日期不等于首次发表日期。",
+    "Semantic Scholar 年度窗口 2025-10-29 至 2026-09-28 两次 HTTP 429，未获得年度高影响力补充。",
+    "评分去重后 137 条，131 条命中历史，6 条未命中；全部六篇均摘要复查，保留两篇精读、一篇条件性选读，三篇排除。没有凑足十篇或宣称全部为今日首发。",
+    "多模态梯度冲突论文 PDF HTTP 403；官方域名补充检索未找到可核验的同题 arXiv 备用版本，不拿相近题目替代。"
+  ],
+  "translation_check": "前三篇逐句核对问题、方法、数字与限定词；原始英文摘要与本轮API响应一致"
+}

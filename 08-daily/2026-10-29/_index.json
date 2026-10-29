@@ -1,0 +1,102 @@
+{
+  "date": "2026-10-29",
+  "note_file": "今日检索.md",
+  "generated_at": "2026-10-29T10:04:05",
+  "skill": "paper-daily",
+  "sources_searched": [
+    "arxiv",
+    "openreview"
+  ],
+  "source_counts": {
+    "arxiv": 119,
+    "openreview": 40
+  },
+  "date_windows": {
+    "recent_30d": {
+      "start": "2026-09-29",
+      "end": "2026-10-29"
+    },
+    "past_year": {
+      "start": "2025-10-29",
+      "end": "2026-09-28"
+    }
+  },
+  "total_unique": 137,
+  "top_papers": [
+    {
+      "title": "Beyond Low-Rank Parameterization: Narrowing the Gap Between LoRA and Full Fine-Tuning via Gradient Decomposition",
+      "source": "arxiv",
+      "arxiv_id": "2609.37027",
+      "url": "http://arxiv.org/abs/2609.37027v1",
+      "note_filename": "Beyond_Low_Rank_Parameterization_Narrowing_the_Gap_Between_LoRA_and_Full_Fine_Tuning_via_Gradient_Decomposition",
+      "matched_domain": "大模型优化器设计",
+      "score": 3.2,
+      "semantic_rank": 1,
+      "formal_recommendation": true,
+      "semantic_status": "精读"
+    },
+    {
+      "title": "Gradient Conflict in Multimodal Pretraining",
+      "source": "openreview",
+      "arxiv_id": "",
+      "url": "https://openreview.net/forum?id=tfm2yVelk1",
+      "note_filename": "Gradient_Conflict_in_Multimodal_Pretraining",
+      "matched_domain": "大模型优化器设计",
+      "score": 3.0,
+      "semantic_rank": 2,
+      "formal_recommendation": true,
+      "semantic_status": "精读"
+    },
+    {
+      "title": "Speedrunning Relational Foundation Model Pretraining",
+      "source": "arxiv",
+      "arxiv_id": "2610.28855",
+      "url": "http://arxiv.org/abs/2610.28855v1",
+      "note_filename": "Speedrunning_Relational_Foundation_Model_Pretraining",
+      "matched_domain": "大模型优化器设计",
+      "score": 3.47,
+      "semantic_rank": 3,
+      "formal_recommendation": true,
+      "semantic_status": "选读"
+    },
+    {
+      "title": "MAP4CS: A Multi-dimensional Data Pruning Framework for Efficient Code Retriever Fine-tuning",
+      "source": "arxiv",
+      "arxiv_id": "2610.11727",
+      "url": "http://arxiv.org/abs/2610.11727v1",
+      "note_filename": "MAP4CS_A_Multi_dimensional_Data_Pruning_Framework_for_Efficient_Code_Retriever_Fine_tuning",
+      "matched_domain": "大模型优化器设计",
+      "score": 3.67,
+      "semantic_rank": 4,
+      "formal_recommendation": false,
+      "semantic_status": "语义排除"
+    },
+    {
+      "title": "FALLNEST: Dual-Domain Dataset Condensation of Imbalanced IMU Data for Wearable Fall Detection",
+      "source": "arxiv",
+      "arxiv_id": "2610.18260",
+      "url": "http://arxiv.org/abs/2610.18260v1",
+      "note_filename": "FALLNEST_Dual_Domain_Dataset_Condensation_of_Imbalanced_IMU_Data_for_Wearable_Fall_Detection",
+      "matched_domain": "大模型优化器设计",
+      "score": 3.27,
+      "semantic_rank": 5,
+      "formal_recommendation": false,
+      "semantic_status": "语义排除"
+    },
+    {
+      "title": "Spatial Heuristic Strategy based Diffusion Reinforcement Learning for Online 3D Bin Packing",
+      "source": "arxiv",
+      "arxiv_id": "2610.32241",
+      "url": "http://arxiv.org/abs/2610.32241v1",
+      "note_filename": "Spatial_Heuristic_Strategy_based_Diffusion_Reinforcement_Learning_for_Online_3D_Bin_Packing",
+      "matched_domain": "大模型优化器设计",
+      "score": 3.53,
+      "semantic_rank": 6,
+      "formal_recommendation": false,
+      "semantic_status": "语义排除"
+    }
+  ],
+  "screening_candidates": 6,
+  "retained_recommendations": 3,
+  "semantic_exclusions": 3
+}

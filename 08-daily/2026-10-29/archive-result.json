@@ -1,0 +1,52 @@
+{
+  "papers_dir": "/Users/myl/Documents/paper/01-raw",
+  "month_dir": "/Users/myl/Documents/paper/01-raw/2026-10",
+  "month": "2026-10",
+  "date": "2026-10-29",
+  "requested": 3,
+  "downloaded": 2,
+  "skipped_existing": 0,
+  "failed": 1,
+  "index_updated": [
+    "/Users/myl/Documents/paper/01-raw/index.md",
+    "/Users/myl/Documents/paper/01-raw/2026-10/README.md",
+    "/Users/myl/Documents/paper/02-markdown/index.md",
+    "/Users/myl/Documents/paper/02-markdown/2026-10/README.md",
+    "/Users/myl/Documents/paper/03-notes/index.md",
+    "/Users/myl/Documents/paper/03-notes/2026-10/README.md",
+    "/Users/myl/Documents/paper/06-translation/index.md",
+    "/Users/myl/Documents/paper/06-translation/2026-10/README.md"
+  ],
+  "archived": [
+    {
+      "title": "Beyond Low-Rank Parameterization: Narrowing the Gap Between LoRA and Full Fine-Tuning via Gradient Decomposition",
+      "paper_stem": "Beyond_Low_Rank_Parameterization_Narrowing_the_Gap_Between_LoRA_and_Full_Fine_Tuning_via_Gradient_Decomposition",
+      "month": "2026-10",
+      "source": "arxiv",
+      "pdf_url": "https://arxiv.org/pdf/2609.37027v1",
+      "path": "/Users/myl/Documents/paper/01-raw/2026-10/Beyond_Low_Rank_Parameterization_Narrowing_the_Gap_Between_LoRA_and_Full_Fine_Tuning_via_Gradient_Decomposition.pdf",
+      "status": "downloaded",
+      "detail": "2241.9 KB"
+    },
+    {
+      "title": "Gradient Conflict in Multimodal Pretraining",
+      "paper_stem": "Gradient_Conflict_in_Multimodal_Pretraining",
+      "month": "2026-10",
+      "source": "openreview",
+      "pdf_url": "https://openreview.net/pdf?id=tfm2yVelk1",
+      "path": "/Users/myl/Documents/paper/01-raw/2026-10/Gradient_Conflict_in_Multimodal_Pretraining.pdf",
+      "status": "failed",
+      "detail": "HTTP 403"
+    },
+    {
+      "title": "Speedrunning Relational Foundation Model Pretraining",
+      "paper_stem": "Speedrunning_Relational_Foundation_Model_Pretraining",
+      "month": "2026-10",
+      "source": "arxiv",
+      "pdf_url": "https://arxiv.org/pdf/2610.28855v1",
+      "path": "/Users/myl/Documents/paper/01-raw/2026-10/Speedrunning_Relational_Foundation_Model_Pretraining.pdf",
+      "status": "downloaded",
+      "detail": "294.0 KB"
+    }
+  ]
+}
