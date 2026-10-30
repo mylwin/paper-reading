@@ -1,0 +1,72 @@
+{
+  "date": "2026-10-30",
+  "note_file": "今日检索.md",
+  "generated_at": "2026-10-30T11:05:17",
+  "skill": "paper-daily",
+  "sources_searched": [
+    "arxiv",
+    "openreview"
+  ],
+  "source_counts": {
+    "arxiv": 119,
+    "openreview": 40
+  },
+  "date_windows": {
+    "recent_30d": {
+      "start": "2026-09-30",
+      "end": "2026-10-30"
+    },
+    "past_year": {
+      "start": "2025-10-30",
+      "end": "2026-09-29"
+    }
+  },
+  "total_unique": 136,
+  "top_papers": [
+    {
+      "title": "Muon Makes the First Mixture-of-Experts Layer Harder to Balance",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2610.37914v1",
+      "note_filename": "Muon_Makes_the_First_Mixture_of_Experts_Layer_Harder_to_Balance",
+      "matched_domain": "大模型优化器设计",
+      "score": 7.4
+    },
+    {
+      "title": "The Role of Quantization in Loss Spikes",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2610.38277v1",
+      "note_filename": "The_Role_of_Quantization_in_Loss_Spikes",
+      "matched_domain": "大模型优化器设计",
+      "score": 7.0
+    },
+    {
+      "title": "Moment-Guided Optimizers for Noisy Deep Learning: MGO-SC as a Simple Consistency Gate for Adam-Style Updates",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2610.37712v1",
+      "note_filename": "Moment_Guided_Optimizers_for_Noisy_Deep_Learning_MGO_SC_as_a_Simple_Consistency_Gate_for_Adam_Style_Updates",
+      "matched_domain": "大模型优化器设计",
+      "score": 8.27
+    },
+    {
+      "title": "Think Twice: The Metis-1.6 Technical Report",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2610.37903v1",
+      "note_filename": "Think_Twice_The_Metis_1.6_Technical_Report",
+      "matched_domain": "大模型优化器设计",
+      "score": 8.07
+    },
+    {
+      "title": "Robust Active Learning for More Efficient and Reliable Paths to Optimal Design",
+      "source": "arxiv",
+      "arxiv_id": "",
+      "url": "http://arxiv.org/abs/2610.38582v1",
+      "note_filename": "Robust_Active_Learning_for_More_Efficient_and_Reliable_Paths_to_Optimal_Design",
+      "matched_domain": "大模型优化器设计",
+      "score": 6.03
+    }
+  ]
+}

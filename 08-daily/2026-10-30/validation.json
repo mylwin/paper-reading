@@ -1,0 +1,38 @@
+{
+  "date": "2026-10-30",
+  "status": "passed_with_preexisting_workspace_link_errors",
+  "unique": 136,
+  "known": 131,
+  "new_candidates": 5,
+  "priority_papers": 3,
+  "conditional_reading": 1,
+  "semantic_exclusions": 1,
+  "local_links_checked": 55,
+  "new_link_errors": 0,
+  "preexisting_link_errors": 30,
+  "pdfs": [
+    {
+      "title": "Muon Makes the First Mixture-of-Experts Layer Harder to Balance",
+      "pages": 34,
+      "bytes": 920396,
+      "sha256": "5ea74b3bf79c105000707ec5ad4225cb339ea735589ce9208a5aa22ddebd2b0c",
+      "first_page_title_verified": true
+    },
+    {
+      "title": "The Role of Quantization in Loss Spikes",
+      "pages": 26,
+      "bytes": 2326888,
+      "sha256": "48cb4f0cdf03490e2f4e96527880abd63400d0a40f70e443a1944c1a60bfea66",
+      "first_page_title_verified": true
+    },
+    {
+      "title": "Moment-Guided Optimizers for Noisy Deep Learning: MGO-SC as a Simple Consistency Gate for Adam-Style Updates",
+      "pages": 8,
+      "bytes": 438588,
+      "sha256": "b53ab8625de918ce773991273c264e43289f5c6ec4239eae72b9eb522e68ef16",
+      "first_page_title_verified": true
+    }
+  ],
+  "abstract_translation": "three complete translations manually compared against source; numeric and method anchors verified",
+  "indexes": "eight index/README tables each add exactly three rows; no existing rows removed"
+}
