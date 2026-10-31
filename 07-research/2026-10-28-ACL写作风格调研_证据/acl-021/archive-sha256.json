@@ -1,0 +1,6 @@
+{
+  "../corpus/acl/semantic-reviews/acl-2024.acl-long.7.json": "5ccbf58f3aeb3e6efa3590b10170fa5dd69269a378b9c663e3784a9762261ae5",
+  "cleanup.json": "d57515dfa0619901d84b880f8b8975a4427f381ff3aa4191e18501aa5cbd1fd8",
+  "validation.json": "68e80f23be71d16ceb6896a32460b270897b808166301a72e6e18aa87fc5d657",
+  "review-notes.md": "7823814580124ed63218123644819f2e55a209cf65ebee7483085eb8a6bd6e88"
+}

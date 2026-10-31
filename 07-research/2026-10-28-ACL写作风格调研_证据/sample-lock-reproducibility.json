@@ -1,0 +1,9 @@
+{
+  "status": "passed_after_comparison_fix",
+  "initial_failure": "In-memory title-proxy pattern pairs were tuples while persisted JSON had arrays, causing a false inequality. No lock file was rewritten.",
+  "fix": "Normalize generated candidate manifest through JSON before equality comparison.",
+  "lock_sha256_before": "0c42ea637dddbccc5c81832ad005ea7a2cbede88001a72e0de647561ee81dba2",
+  "lock_sha256_after": "0c42ea637dddbccc5c81832ad005ea7a2cbede88001a72e0de647561ee81dba2",
+  "quotas_or_ids_changed": false,
+  "reproduction_exit": 0
+}

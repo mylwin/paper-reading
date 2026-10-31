@@ -1,0 +1,51 @@
+{
+  "id": "05-polish-overclaim",
+  "skill": "paper-polishing",
+  "venue": "ICML",
+  "request": "修正给定结果段的过强主张",
+  "provided_facts": {
+    "study": "synthetic fixture, not a real research result",
+    "method": "StepScale reduces stored optimizer state by sharing one scale per block",
+    "tasks": [
+      "Task A",
+      "Task B"
+    ],
+    "seeds": 5,
+    "state_memory_GB": {
+      "baseline": 8,
+      "StepScale": 6
+    },
+    "mean_accuracy_percent": {
+      "Task A": {
+        "baseline": 80,
+        "StepScale": 80
+      },
+      "Task B": {
+        "baseline": 78,
+        "StepScale": 78
+      }
+    },
+    "mean_training_seconds": {
+      "baseline": 100,
+      "StepScale": 105
+    },
+    "budget": "same training steps and hardware",
+    "uncertainty": "no confidence intervals or statistical test supplied",
+    "distributed_results": "not supplied"
+  },
+  "original": "StepScale universally outperforms all optimizers, achieves state-of-the-art accuracy, and accelerates training without tradeoffs.",
+  "actual_primary_agent_output": "Across the two evaluated tasks, StepScale reduces optimizer-state memory by 25% and matches the baseline mean accuracies, with a 5% increase in training time.",
+  "author_notes": "",
+  "manual_semantic_review": {
+    "reviewer": "same primary agent",
+    "assessment": "consistent_with_given_facts_and_requested_scope",
+    "reason": "移除无来源all/SOTA/加速，仍明确保留实测收益和真实交换；未将所有结果弱化成may。",
+    "criteria": [
+      "calibrate_overclaim",
+      "preserve_benefit",
+      "memory_vs_speed",
+      "comparison_scope"
+    ]
+  },
+  "independent_model_run": false
+}

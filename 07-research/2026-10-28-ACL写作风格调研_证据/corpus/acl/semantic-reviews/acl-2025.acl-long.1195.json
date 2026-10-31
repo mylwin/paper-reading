@@ -1,0 +1,312 @@
+{
+  "id": "acl-2025.acl-long.1195",
+  "anthology_id": "2025.acl-long.1195",
+  "venue": "acl",
+  "year": 2025,
+  "track": "main conference research",
+  "length_type": "long",
+  "title": "Improving Low-Resource Morphological Inflection via Self-Supervised Objectives",
+  "authors": [
+    "Adam Wiemerslage",
+    "Katharina von der Wense"
+  ],
+  "first_author": "Adam Wiemerslage",
+  "landing_url": "https://aclanthology.org/2025.acl-long.1195/",
+  "pdf_url": "https://aclanthology.org/2025.acl-long.1195.pdf",
+  "doi": "10.18653/v1/2025.acl-long.1195",
+  "official_listing_url": "https://aclanthology.org/volumes/2025.acl-long/",
+  "sampling_stratum": "multilingual_linguistics",
+  "paper_type": "multilingual morphological inflection empirical comparison of auxiliary self-supervised objectives, including negative results and copying analysis",
+  "anthology_pdf_revision_hash": "67b6e358",
+  "metadata_revisions": [],
+  "official_attachments": [],
+  "sort_hash": "077d79e04191b229abc7fdc3d6a953cf767bac875f6c947a3c75957711c7efe4",
+  "split": "induction",
+  "semantic_review_status": "complete_writing_focused_full_text_review",
+  "full_text_and_relevant_appendix_review_complete": true,
+  "review_date": "2026-10-29",
+  "reviewer": "acl_retriever_review subagent",
+  "full_text_style_review_complete": true,
+  "external_appendix_review_complete": true,
+  "count_eligible_full_text_and_relevant_appendix": true,
+  "pdf_path": ".claude/skills/paper-writing-shared/tmp/corpus/acl/pdf/2025.acl-long.1195.pdf",
+  "pdf_sha256": "284db2019d92d311e71aa7781605c22940b7cac806397b0395936e61f4a78207",
+  "markdown_path": ".claude/skills/paper-writing-shared/tmp/corpus/acl/markdown/2025.acl-long.1195.md",
+  "markdown_sha256": "d217810c5e75287fcfba6a41b55e5c68650c3fd13a94ce09ecccd66b50d82dbb",
+  "coverage": [
+    {
+      "source": "canonical official PDF",
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "main_science": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "references": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "scientific_appendix": {
+        "A UD data": [
+          13
+        ],
+        "B surface segmentation algorithm": [
+          13
+        ],
+        "C hyperparameters": [
+          13
+        ],
+        "unheaded full per-language Tables5–11": [
+          14,
+          15,
+          16,
+          17
+        ]
+      },
+      "reading_not_download_or_parse_only": true
+    }
+  ],
+  "version_audit": {
+    "published_year": 2025,
+    "xml_pdf_hash": "67b6e358",
+    "xml_revisions": [],
+    "official_xml_path": ".claude/skills/paper-writing-shared/tmp/corpus/acl/sources/2025-acl.xml",
+    "official_xml_sha256": "bd95ce2de89dbc2c001ca63c73585a2145b338df3b0ef48833a6e3d8ecb245fe",
+    "live_landing_rechecked": false
+  },
+  "supplement_audit": {
+    "method": "Inspected locked official XML entry1195 and all PDF scientific appendices and footnotes",
+    "official_xml_attachments": [],
+    "separate_scientific_appendix_link_found": false,
+    "scientific_appendix_in_pdf": "A–C plus Tables5–11 on PDF13–17; complete",
+    "external_resource": "https://github.com/CUNY-CL/yoyodyne",
+    "external_resource_role": "implementation framework, not a separately cited scientific appendix",
+    "code_executed": false,
+    "external_scientific_appendix_required": false
+  },
+  "ten_dimensions": {
+    "reader_argument": {
+      "pages": [
+        1,
+        2
+      ],
+      "observation": "大规模自监督进展与极低资源语言之间的缺口引出字符级小模型机会；以改进效果和理解辅助目标两个目标组织研究。",
+      "editorial_advice": "把问题尺度、应用动机与可进行的实验连接；同一论文可以同时有实证选择建议和解释性分析。",
+      "applicability_boundary": "19种语言是UD与共享任务可得交集，属于模拟低资源，不代表所有低资源语言或实际社群需求。"
+    },
+    "title_abstract": {
+      "pages": [
+        1,
+        6,
+        7
+      ],
+      "observation": "标题直接给任务、资源条件与技术途径；摘要用19语言/13目标交代规模，结果突出AE与CMLM的条件差异及强归纳偏置常无优势。",
+      "editorial_advice": "摘要可以把负结果与条件性推荐写成核心贡献，无需杜撰统一胜出方法。",
+      "applicability_boundary": "known morpheme boundaries为oracle条件；consistently improves不能扩大为所有目标或每种语言，T5分词变体有均值下降。"
+    },
+    "introduction": {
+      "pages": [
+        1,
+        2
+      ],
+      "observation": "引言讨论architecture bias与objective bias的替代选择，解释字符级小模型为何适合系统比较，末段自然叙述设计与发现，没有固定贡献列表。",
+      "editorial_advice": "写清改变哪个设计轴、为何比较可解释、研究会提供什么结论；贡献概览可直接叙述。",
+      "applicability_boundary": "作者对前作未探索原因的成本猜测应保留hypothesize语气，本次不认证first/novel。"
+    },
+    "related_work": {
+      "pages": [
+        2
+      ],
+      "observation": "按辅助目标归纳偏置与字符级辅助训练两主题定位；详细说明Purushothama2024证明任务本身价值，本稿进一步比较目标和数据性质。",
+      "editorial_advice": "最近邻对比应说明已知结论与新增问题，避免把前作同一设置重新称为全新发现。",
+      "applicability_boundary": "这里独立RelatedWork靠前，不等于ACL所有任务必须如此。"
+    },
+    "method_theory": {
+      "pages": [
+        2,
+        3,
+        4,
+        13
+      ],
+      "observation": "先定义lemma+feature→word，再把辅助目标拆成AE/CMLM/T5、iid/prefix/suffix、mask/delete和oracle segment；用try/baked/walking直观例子解释；附录给有限状态编辑对齐。",
+      "editorial_advice": "对组合设计拆轴、给可手工理解实例，说明使用名称与原始算法的差别。",
+      "applicability_boundary": "本稿T5保留完整输出而非原T5输出span，排除原输出设计是先导实验决策；morpheme oracle来自标注再启发式对齐，不是无标注自动切词成果。"
+    },
+    "evidence": {
+      "pages": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "observation": "六UD设置控制有标注规模、词长/POS及重复词，19语言均值配逐语言表；五语言seg独立对比；再对7286/2511个模型分歧预测分析trigram来源。",
+      "editorial_advice": "总体趋势、语言差异和假设检验式诊断各有功能，说明均值范围、标注样本、unique types与采样方式。",
+      "applicability_boundary": "NR增加独特词类型且英语/土耳其补新corpus，不能当成仅改变同一分布数据量的纯因果曲线；分歧预测的trigram重合不是全部预测的真实复制行为标签。"
+    },
+    "discussion_limits": {
+      "pages": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "observation": "Discussion直接承认多项新偏置策略对标准CMLM整体不占优，再用copying机制与语言个例解释；结论保留实测选择结论，Limitations和Ethics具体讨论typology、模拟数据与社群需求。",
+      "editorial_advice": "诚实负结果本身是有信息的研究结论；未证实原因集中写作hypothesis，实测推荐直接说。",
+      "applicability_boundary": "不把对语言社群的真实适用性限制删去，也不把每篇论文都扩写同样社会风险段落；本稿没有实际教育/文档应用效果测试。"
+    },
+    "paragraph_language": {
+      "pages": [
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "observation": "Results按mask/delete、数据不重复、objective、strategy、segmentation逐项回答问题；均值结果直接写，原因使用likely/hypothesize。",
+      "editorial_advice": "把观察与解释在相邻句分清；可直接写CMLM-seg-iid均值70.56及相对69.98的0.58百分点差值。",
+      "applicability_boundary": "强结论需以表格实际范围为准，避免把平均提升称每种语言提升或把实验假说改成因果证明。"
+    },
+    "main_appendix": {
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "observation": "正文含任务、目标设计、采样细节、主均值、语言分析、复制诊断与结论；A–C保留新增corpus/对齐/超参，末尾完整结果表方便复核。",
+      "editorial_advice": "主线正文自足，方法实现与逐语言数据放附录；必要的oracle信息必须在正文出现。",
+      "applicability_boundary": "历史录用长稿九页至结论并非当前投稿页数规则；超参表位置也不是固定要求。"
+    },
+    "actionable": {
+      "pages": [
+        5,
+        7,
+        8
+      ],
+      "observation": "混合正负结果可提炼为有条件选择建议和下一步机制问题。",
+      "editorial_advice": "原创例句：Autoencoding achieves the highest mean accuracy on the four UD settings sampled with replacement. On the five-language segmentation dataset, morpheme-level CMLM with uniform masking reaches70.56% mean accuracy, compared with69.98% for character-level masking.",
+      "applicability_boundary": "不把0.58百分点提升写成统计显著，论文未交代足以认证该结论的重复实验或显著性协议。"
+    }
+  },
+  "counterexamples": [
+    {
+      "pages": [
+        1,
+        6,
+        7
+      ],
+      "finding": "摘要sampling masks based on known morpheme boundaries consistently improves过宽：CMLM三个策略均值提高，但T5-prefix65.46→63.92、suffix66.36→64.18、iid69.04→67.12下降；CMLM-iid英语90.60→90.50也非逐语言全升。",
+      "scope": "精确限定CMLM均值，不削弱存在的提升，也不复用all语言/目标均有效措辞。"
+    },
+    {
+      "pages": [
+        6,
+        7
+      ],
+      "finding": "p6称For all strategies CMLM outperformsT5 on average，Figure3a中prefix T5条却更高；六UD的Table3 prefix均值T5为47.64、CMLM为48.83，表格支持正文方向但图形不同。",
+      "scope": "需要核对Figure3a绘图数据、标签或汇总范围；不把该差异误报为Table3也反驳正文，不静默改图表。"
+    },
+    {
+      "pages": [
+        4,
+        5,
+        6,
+        13
+      ],
+      "finding": "NR改变类型数/重复率并且引入额外UD语料，数据量、分布与多样性同时变动；AE更适合稀疏与denoising更适合多样数据是观察趋势。",
+      "scope": "可保留实用推荐，不宣称已隔离数据规模唯一因果效应。"
+    },
+    {
+      "pages": [
+        6,
+        7,
+        9
+      ],
+      "finding": "论文明确数据中无典型prefix-inflection语言，却用development样本前置代词/德语可分动词解释prefix策略个例；p7pervasive prefix inflection用词宽于实际描述。",
+      "scope": "不得将有限前置现象写成覆盖真实前缀语言类型学研究。"
+    },
+    {
+      "pages": [
+        8,
+        9
+      ],
+      "finding": "复制诊断只统计两模型分歧的预测，来源重叠不互斥；原lemma重合45.67vs44.89等不是全样本真实copy操作比例。",
+      "scope": "支持机制假设而非机制确证，不应声称新生成n-gram都不在lemma或源训练数据。"
+    },
+    {
+      "pages": [
+        5,
+        7,
+        13,
+        14
+      ],
+      "finding": "Figure2/3/5有误差条但文本/附录未给重复seed数或误差条计算定义；Table5 Hungarian cmlm-prefix3.40明显低于同表其他配置，原图确认并非解析丢字。",
+      "scope": "保留3.40并列核对项，不擅改成73.40；不将误差条默认为95%CI或声称0.58提升显著。"
+    }
+  ],
+  "visual_review": {
+    "pages": [
+      1,
+      5,
+      7,
+      8,
+      13,
+      14,
+      16,
+      17
+    ],
+    "reviewer": "same subagent",
+    "figures": "AllFigures1–5 viewed; principalTables3/4 and originalappendixTables5/6/9/10/11 viewed;Tables1/2/7/8 fullyread in extraction",
+    "original_table5_hungarian_cmlm_prefix": "3.40 visuallyconfirmed"
+  },
+  "official_requirements": {
+    "corpus_layout_observation": "acceptedlongpaper; author-year references; Limitations and Ethics Statement before acknowledgments/references; appendixA–C afterreferences",
+    "observed_layout_not_current_rule": true,
+    "source": "currentofficialACL/ARRtemplate rules maintained independently"
+  },
+  "holdout_validation": null,
+  "review_limitations": "All17pagesincludingcompleteappendixread; no code execution, benchmark rerun, external bibliography verification, or certification of statistical significance. Locked officialXMLchecked; no live landing freshness claim."
+}

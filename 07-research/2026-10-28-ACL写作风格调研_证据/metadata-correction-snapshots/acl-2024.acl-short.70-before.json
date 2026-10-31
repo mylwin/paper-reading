@@ -1,0 +1,274 @@
+{
+  "id": "acl-2024.acl-short.70",
+  "anthology_id": "2024.acl-short.70",
+  "venue": "acl",
+  "year": 2024,
+  "track": "main conference research",
+  "length_type": "short",
+  "title": "Estimating the Level of Dialectness Predicts Inter-annotator Agreement in Multi-dialect Arabic Datasets",
+  "authors": [
+    "Amr Keleg",
+    "Walid Magdy",
+    "Sharon Goldwater"
+  ],
+  "first_author": "Amr Keleg",
+  "landing_url": "https://aclanthology.org/2024.acl-short.70/",
+  "pdf_url": "https://aclanthology.org/2024.acl-short.70.pdf",
+  "doi": "10.18653/v1/2024.acl-short.70",
+  "official_listing_url": "https://aclanthology.org/volumes/2024.acl-short/",
+  "sampling_stratum": "multilingual_linguistics",
+  "paper_type": "observational linguistic/data-annotation analysis; short paper; no new algorithm",
+  "anthology_pdf_revision_hash": "82a30d81",
+  "metadata_revisions": [],
+  "official_attachments": [],
+  "sort_hash": "07caeb821ce0dca562636dbb3ec66c0b331fb0a08c2c58ca87081be1230156d7",
+  "split": "induction",
+  "semantic_review_status": "complete_writing_focused_full_text_review",
+  "full_text_and_relevant_appendix_review_complete": false,
+  "review_date": "2026-10-28",
+  "reviewer": "primary agent",
+  "pdf_path": ".claude/skills/paper-writing-shared/tmp/corpus/acl/pdf/2024.acl-short.70.pdf",
+  "pdf_sha256": "b7b3b58bc03eba248d5b98add77c4acc49ffddb9b5b3836b4822345188b4d903",
+  "markdown_path": ".claude/skills/paper-writing-shared/tmp/corpus/acl/markdown/2024.acl-short.70.md",
+  "markdown_sha256": "698506896250fd09da806ca7dcfdb170b85713bbbd919b23317149a70a4f8d8f",
+  "full_text_style_review_complete": true,
+  "external_appendix_review_complete": true,
+  "count_eligible_full_text_and_relevant_appendix": true,
+  "coverage": [
+    {
+      "source": "canonical official PDF",
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "main_science": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "references": [
+        5,
+        6,
+        7
+      ],
+      "scientific_appendix": {
+        "A dataset artifacts": [
+          7,
+          8
+        ],
+        "B MSA/DA code mixing": [
+          7
+        ],
+        "C metric choice/binning/logistic robustness": [
+          7,
+          8,
+          9,
+          10
+        ],
+        "D per-class trends": [
+          9,
+          11,
+          12
+        ],
+        "E ArSAS exception": [
+          9,
+          12
+        ]
+      }
+    }
+  ],
+  "version_audit": {
+    "official_published_year": 2024,
+    "canonical_url": "https://aclanthology.org/2024.acl-short.70.pdf",
+    "xml_revision_entries": [],
+    "later_revision_recorded": false
+  },
+  "supplement_audit": {
+    "official_landing": "https://aclanthology.org/2024.acl-short.70/",
+    "landing_read_date": "2026-10-28",
+    "official_xml_attachments": [],
+    "separate_scientific_appendix_link_found": false,
+    "scientific_appendix_in_pdf": "A–E and all C/D figures throughpage12",
+    "code_link": "https://github.com/AMR-KELEG/ALDi-and-IAA",
+    "code_executed": false
+  },
+  "ten_dimensions": {
+    "reader_argument": {
+      "pages": [
+        1,
+        2,
+        7
+      ],
+      "observation": "面向知道标注/NLP但未必熟悉阿拉伯变体的读者，先解释MSA/DA互通性与实际路由困难，再建立ALDi假说；附录B补code-mixing。",
+      "editorial_advice": "用语言现象和现有流程说明问题价值，定义可操作的分析对象。",
+      "applicability_boundary": "不是为了NLP背景强加无关新算法；该特定语言设置不代表全ACL必须多语言。"
+    },
+    "title_abstract": {
+      "pages": [
+        1
+      ],
+      "observation": "标题直接陈述方言程度与标注一致性的预测关系；摘要从现有路由建议的困难推进到ALDi假说、15任务数据对的观察及优先路由建议。",
+      "editorial_advice": "分析稿可以发现/关系为标题中心，摘要明确观察与建议各自角色。",
+      "applicability_boundary": "摘要的11/15需结合8个非DI支持与DI非线性例外解释；不是直接改善标注效率的实验。"
+    },
+    "introduction": {
+      "pages": [
+        1,
+        2
+      ],
+      "observation": "前人建议→识别方言/招募资源瓶颈→ALDi替代决策变量→可检验假说→结果及DI例外，没有单独贡献列表。",
+      "editorial_advice": "把实践瓶颈变成具体可检验问题，重要反向任务提前说明。",
+      "applicability_boundary": "无需固定三贡献/先新架构再实验的叙事。"
+    },
+    "related_work": {
+      "pages": [
+        1,
+        2,
+        7
+      ],
+      "observation": "最近标注研究和ALDi来源嵌入引言，附录B补变体连续谱；没有独立RelatedWork节。",
+      "editorial_advice": "围绕所用概念、近邻建议及区别就地定位来源。",
+      "applicability_boundary": "本稿已充分定位时可不设独立节，不代表其他稿件应删相关工作。"
+    },
+    "method_theory": {
+      "pages": [
+        2,
+        7,
+        8,
+        9
+      ],
+      "observation": "§2先列五项数据准入标准与151→28→15筛选链，再定义10等宽ALDi箱、full-agreement比例、相关与斜率；附录C解释无法统一用kappa及逐样本logistic替代。",
+      "editorial_advice": "分析方法写清样本粒度、筛选与指标选择理由，定义应足以判断结论含义。",
+      "applicability_boundary": "agreement不是accuracy或因果效应；15项是任务×数据对，底层语料存在复用。"
+    },
+    "evidence": {
+      "pages": [
+        3,
+        4,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "observation": "主图按任务排小多图，统一y跨度并显示各箱样本量；§4提供标签线索实例，附录C用logistic复核、D/E拆类别与ArSAS例外。",
+      "editorial_advice": "主证据回答总体关系，类条件与替代分析解释例外；图上给样本量有助判断稀疏高ALDi区。",
+      "applicability_boundary": "DI是U形或正向，非DI也有不支持项；逐箱均值的相关不等于逐样本同幅度关系。"
+    },
+    "discussion_limits": {
+      "pages": [
+        4,
+        5,
+        9
+      ],
+      "observation": "§4明确词汇线索可能造成一致而非理解，解释用one explanation/might；结论给路由建议，Limitations具体列缺人口信息、需受控重标注、token-level需新模型。",
+      "editorial_advice": "发现可以明确写；未执行的路由实验/机制解释以建议和假说陈述，局限围绕当前设计。",
+      "applicability_boundary": "无需每段重述缺受控实验，不能把建议升级为已证的质量/成本改善。"
+    },
+    "paragraph_language": {
+      "pages": [
+        3,
+        4,
+        5,
+        8,
+        9
+      ],
+      "observation": "结果段首直接给发现或例外，解释接在证据之后；统计结论与intuitive explanations的力度不同。",
+      "editorial_advice": "先陈述可观测模式，再给证据匹配的解释，不统一删除may/might或统一改成弱语气。",
+      "applicability_boundary": "Abstract中strong evidence和§5validate不能作为证明因果或人人适用的词模板。"
+    },
+    "main_appendix": {
+      "pages": [
+        2,
+        3,
+        4,
+        5,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "observation": "短稿正文仍保留数据准入、主图、重要例外与定性例子；5个附录承载数据版本差异、背景、稳健性和类别图。",
+      "editorial_advice": "短稿以一个焦点论证为中心，细节/分层图放附录并给清楚指针。",
+      "applicability_boundary": "Shortpaper总PDF有12页；不能用总PDF页数当4页正文上限，也不代表短稿只需几页简单分析。"
+    },
+    "actionable": {
+      "pages": [
+        2,
+        4,
+        5
+      ],
+      "observation": "组织可复用为瓶颈→假说→可比数据→任务分层证据→有范围的应用建议。",
+      "editorial_advice": "原创例句：Across eight non-dialect-identification task–dataset pairs, higher ALDi scores are associated with lower full annotator agreement. These results motivate prioritizing dialect-matched annotation for highly dialectal sentences.",
+      "applicability_boundary": "motivate不写成已验证提升；不要把本论文分层结论及数字作为新作者研究事实。"
+    }
+  },
+  "counterexamples": [
+    {
+      "pages": [
+        2,
+        3,
+        4,
+        9,
+        10
+      ],
+      "finding": "DI不能统一写为单调正相关：ArSarcasm-v1的分箱趋势U形、Pearson约−0.06，逐样本logistic系数约−0.91；解释需要label构成和非线性。",
+      "scope": "保留任务例外和统计对象，不把所有DI说成同一斜率。"
+    },
+    {
+      "pages": [
+        3,
+        4,
+        5,
+        8,
+        9
+      ],
+      "finding": "同一底层语料有多个任务，15项不是15个独立语料群；一致性与准确性不同，路由效率/质量建议没有受控路由实验。",
+      "scope": "写作直接报告关联和实用建议，不要求无关免责声明或凭空补实验。"
+    },
+    {
+      "pages": [
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "finding": "少数高ALDi标签箱样本稀疏；logistic和分箱分析对大范围8项结论互相补充，但并非所有局部方向一致。",
+      "scope": "按实际证据注明重要分层，不复述整套统计限制。"
+    }
+  ],
+  "visual_review": {
+    "pages": [
+      3,
+      4,
+      8,
+      10,
+      11,
+      12
+    ],
+    "figures": "Main15panels, qualitativeArabicexamplelayout, appendixdatasettable, allC1/D2–D6 plots and captions inspected. Arabic text extraction is corrupted; original rendered qualitative cues and supplied English glosses inspected, not an independent Arabic translation.",
+    "reviewer": "same primary agent"
+  },
+  "official_requirements": {
+    "source": "current officialACL/ARR policies maintained separately",
+    "corpus_layout_observation": "Shortpaperfiveactualmainpagesincludingfullwidthfloats,Limitationsbeforeacknowledgment/reference,author-yearcitationandletterappendices",
+    "observed_layout_not_current_rule": true
+  },
+  "holdout_validation": null,
+  "review_limitations": "Full scientific prose and appendicesA–E read, plots/table/captions inspected. No original-data analysis rerun, reannotation, Arabic-language translation certification, statistical proof certification or bibliography verification."
+}

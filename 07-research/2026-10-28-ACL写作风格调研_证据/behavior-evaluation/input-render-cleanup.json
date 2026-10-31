@@ -1,0 +1,13 @@
+{
+  "deleted_derivatives": [
+    {
+      "path": ".claude/skills/paper-writing-shared/tmp/acl-behavior-2026-10-29/input-render/page-1.png",
+      "sha256": "f993b5881f1a265e435cae6f1dc03da3c725b3829d9b52be032cf30d57e78605"
+    },
+    {
+      "path": ".claude/skills/paper-writing-shared/tmp/acl-behavior-2026-10-29/input-render/page-2.png",
+      "sha256": "d8132608744bd293a0d960fc05837ce0dc875948f85f84cc27aa3c9ee7dde60c"
+    }
+  ],
+  "original_pdf_or_primary_parse_deleted": 0
+}

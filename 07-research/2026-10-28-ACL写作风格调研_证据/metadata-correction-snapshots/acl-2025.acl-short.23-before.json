@@ -1,0 +1,224 @@
+{
+  "id": "acl-2025.acl-short.23",
+  "anthology_id": "2025.acl-short.23",
+  "venue": "acl",
+  "year": 2025,
+  "track": "main conference research",
+  "length_type": "short",
+  "title": "Can Uniform Meaning Representation Help GPT-4 Translate from Indigenous Languages?",
+  "authors": [
+    "Shira Wein"
+  ],
+  "first_author": "Shira Wein",
+  "landing_url": "https://aclanthology.org/2025.acl-short.23/",
+  "pdf_url": "https://aclanthology.org/2025.acl-short.23.pdf",
+  "doi": "10.18653/v1/2025.acl-short.23",
+  "official_listing_url": "https://aclanthology.org/volumes/2025.acl-short/",
+  "sampling_stratum": "multilingual_linguistics",
+  "paper_type": "focused empirical study of semantic representation utility for extremely-low-resource translation; shortpaper",
+  "anthology_pdf_revision_hash": "2eec1a70",
+  "metadata_revisions": [],
+  "official_attachments": [],
+  "sort_hash": "3bed67b0a8058bb34ee3983e4b6a8d82d8857bc9c34709c1738fb18a4d0a63f3",
+  "split": "induction",
+  "semantic_review_status": "complete_writing_focused_full_text_review",
+  "full_text_and_relevant_appendix_review_complete": false,
+  "review_date": "2026-10-28",
+  "reviewer": "primary agent",
+  "pdf_path": ".claude/skills/paper-writing-shared/tmp/corpus/acl/pdf/2025.acl-short.23.pdf",
+  "pdf_sha256": "aeb0928509de574267a230fa3ccee657eb962ed39d64e8f786610b0a82e02f7d",
+  "markdown_path": ".claude/skills/paper-writing-shared/tmp/corpus/acl/markdown/2025.acl-short.23.md",
+  "markdown_sha256": "fbdac159f8c06121b455317a34f626c908be9b3db0ca85431fb06a34826817fe",
+  "full_text_style_review_complete": true,
+  "external_appendix_review_complete": true,
+  "count_eligible_full_text_and_relevant_appendix": true,
+  "coverage": [
+    {
+      "source": "canonical official PDF",
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "main_science": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "references": [
+        5,
+        6,
+        7
+      ],
+      "scientific_appendix": {
+        "A all4userprompts and sharedsystemprompt": [
+          7,
+          8
+        ]
+      }
+    }
+  ],
+  "version_audit": {
+    "official_published_year": 2025,
+    "canonical_url": "https://aclanthology.org/2025.acl-short.23.pdf",
+    "xml_revision_entries": []
+  },
+  "supplement_audit": {
+    "official_landing": "https://aclanthology.org/2025.acl-short.23/",
+    "landing_read_date": "2026-10-28",
+    "official_xml_attachments": [],
+    "separate_scientific_appendix_link_found": false,
+    "scientific_appendix_in_pdf": "A complete throughpage8",
+    "experiments_or_model_API_called_by_reviewer": false
+  },
+  "ten_dimensions": {
+    "reader_argument": {
+      "pages": [
+        1,
+        2
+      ],
+      "observation": "以极低资源机器翻译困难引出UMR的跨语言注释灵活性，并用图/序列化例子解释表示给一般NLP读者。",
+      "editorial_advice": "读者需识别语言任务及为何该表示值得测试，再读实现。",
+      "applicability_boundary": "不把低资源NLP缩成通用LLM训练；UMR有额外语义注释输入。"
+    },
+    "title_abstract": {
+      "pages": [
+        1
+      ],
+      "observation": "标题以能否帮助翻译提出问题，摘要交代三语言、示例有无/UMR有无设计及多数设置显著改善，结尾以promising看未来。",
+      "editorial_advice": "聚焦问题的短稿可用问句标题；结果明确而外推语气留在未来应用。",
+      "applicability_boundary": "不是ACL统一要求问句或探索词；多数设置不等于全部语言/条件均提升。"
+    },
+    "introduction": {
+      "pages": [
+        1,
+        2
+      ],
+      "observation": "动机连接模型缺知识、UMR资源刚发布和实际比较；贡献列表三项分别对应protocol、1017source句实验和统计分析。",
+      "editorial_advice": "贡献可包含实验协议、研究量和发现分析，清楚对应后文。",
+      "applicability_boundary": "三条是本稿选择，不与无列表ALDi稿矛盾，也不要求声称新算法。"
+    },
+    "related_work": {
+      "pages": [
+        2,
+        3
+      ],
+      "observation": "§2把ChatGPT翻译研究与UMR/AMR背景分开，解释为什么选可多语言注释的UMR；不是逐条相关论文罗列。",
+      "editorial_advice": "按任务近邻与技术对象组织最需要的背景。",
+      "applicability_boundary": "对AMR可否注释的宽泛说法属于作者研究陈述，不能变成所有技能任务的先验断言。"
+    },
+    "method_theory": {
+      "pages": [
+        3,
+        8
+      ],
+      "observation": "给出三语言句数及英语reference筛选理由；4条件构成zero/five-shot×with/withoutUMR；用源语言chrF取最近5句，实际prompt全放附录。",
+      "editorial_advice": "用受控比较解释每个因素，正文写关键协议，附录补可执行文本。",
+      "applicability_boundary": "未提供完整GPT4快照/解码及重复运行信息，保留实际版本缺口为研究核对，不能据此否定已报告的条件比较。"
+    },
+    "evidence": {
+      "pages": [
+        3,
+        4,
+        5,
+        8
+      ],
+      "observation": "Table1报告两指标均值/标准差，Table2逐语言pairedt-test区分收益、无差异和负向；两例输出解释相似度改变，成本62.11美元脚注。",
+      "editorial_advice": "主结果同时给幅度、对照和必要不确定性，重要反例在结果段解释；定性例子补充自动指标。",
+      "applicability_boundary": "标准差不是重复API运行的置信区间；少量例子不是人类盲评；名义显著性不代替多重比较/独立复核。"
+    },
+    "discussion_limits": {
+      "pages": [
+        4,
+        5
+      ],
+      "observation": "显著负向Kukama结果与两项无差异在结果就地说明；Limitations集中列三语言、单向译英、人工UMR成本及模型随机性。",
+      "editorial_advice": "明确主发现同时说明最重要例外；成本和部署条件放具体局限，避免逐句自辩。",
+      "applicability_boundary": "不能删掉真实负例以追求强势，也不把所有可能风险写进每段。"
+    },
+    "paragraph_language": {
+      "pages": [
+        1,
+        4,
+        5
+      ],
+      "observation": "结果段用wefind及数字，潜在提供语言知识用may，未来应用用promising；定性解释紧接例子。",
+      "editorial_advice": "同一论文可并存直接测量陈述和试探性机制解释。",
+      "applicability_boundary": "optimal等个别措辞不提供最优性证明；不因出现may就判防御性写作。"
+    },
+    "main_appendix": {
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        7,
+        8
+      ],
+      "observation": "主文保留UMR图示、协议差异、数据及结果表，附录只放完整用户及系统prompt。",
+      "editorial_advice": "短稿保留能判断研究问题的材料，把精确复现文本放附录并明确指针。",
+      "applicability_boundary": "附录prompt不是需要在作者每段重复的方法条件；不能只读正文就算完整。"
+    },
+    "actionable": {
+      "pages": [
+        4,
+        5
+      ],
+      "observation": "4条件实验和显著负例提供可复用的正负结果共存组织。",
+      "editorial_advice": "原创例句：Adding UMR improves nine of the twelve reported language–metric comparisons at the stated significance threshold. Two comparisons show no significant difference, and one favors the prompt without UMR.",
+      "applicability_boundary": "用作写作示例非重新认证p-values；研究方向不变，例外不抹掉实际多数收益。"
+    }
+  },
+  "counterexamples": [
+    {
+      "pages": [
+        4
+      ],
+      "finding": "9/12指UMR有无比较；另有6项zero→five-shot比较，不能把18项全混成12或称全部UMR有效。Kukama零样本BERTScore加入UMR下降且p0.0146。",
+      "scope": "结果口径和反例必须保持。"
+    },
+    {
+      "pages": [
+        3,
+        4,
+        5
+      ],
+      "finding": "pairedt-test跨句显著性不消除GPT4重新生成随机性；mean±SD并非重复运行的均值置信区间。",
+      "scope": "清楚标注统计对象，无需在每句追加缺重跑说明。"
+    },
+    {
+      "pages": [
+        4,
+        5,
+        8
+      ],
+      "finding": "输入含已有人工UMR且仅测试译英；不能写成无额外注释的通用自动翻译突破，两个定性案例也不能证明optimal。",
+      "scope": "已有结果直接表述，部署成本集中在局限。"
+    }
+  ],
+  "visual_review": {
+    "pages": [
+      1,
+      4,
+      5,
+      8
+    ],
+    "figures": "Bothfigures includingUMRgraph/serialization and fullpromptlayout, Tables1/2including rednegativecell and boldpvalues, qualitativeexamples and actualmain/Limitationsboundary reviewed.",
+    "reviewer": "same primary agent"
+  },
+  "official_requirements": {
+    "source": "currentofficialACL/ARRpoliciesmaintainedseparately",
+    "corpus_layout_observation": "Questiontitle, author-yearcitation, standaloneLimitations and promptappendix",
+    "observed_layout_not_current_rule": true
+  },
+  "holdout_validation": null,
+  "review_limitations": "Fullscientifictextandappendixread;noGPTAPIcalls,experimentreruns,humantranslationverificationorstatisticalcorrectnesscertification."
+}

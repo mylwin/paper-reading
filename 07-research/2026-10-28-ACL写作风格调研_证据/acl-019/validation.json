@@ -1,0 +1,32 @@
+{
+  "paper_id": "acl-2024.acl-long.836",
+  "actual_pdf_pages": 20,
+  "covered_pages": 20,
+  "appendices": [
+    "A",
+    "B",
+    "C",
+    "D",
+    "E",
+    "F",
+    "G",
+    "H",
+    "I"
+  ],
+  "ten_dimensions": 10,
+  "visual_pages": [
+    6,
+    7,
+    8,
+    9,
+    15,
+    16,
+    17,
+    19,
+    20
+  ],
+  "full_flags_consistent": true,
+  "originals_retained": true,
+  "utility_call_reduction_factor": 122.5,
+  "code_executed": false
+}

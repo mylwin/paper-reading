@@ -1,0 +1,30 @@
+{
+  "paper_id": "acl-2025.acl-long.27",
+  "actual_pdf_pages": 23,
+  "covered_pages": 23,
+  "all_scientific_appendices": [
+    "A",
+    "B.1",
+    "B.2",
+    "C",
+    "D.1",
+    "D.2.1-D.2.6",
+    "E"
+  ],
+  "visual_pages": [
+    2,
+    5,
+    6,
+    7,
+    9,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23
+  ],
+  "four_complete_flags_true": true,
+  "new_full_reviews": 1,
+  "code_executed": false
+}

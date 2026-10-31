@@ -1,0 +1,249 @@
+{
+  "id": "acl-2025.acl-short.69",
+  "anthology_id": "2025.acl-short.69",
+  "venue": "acl",
+  "year": 2025,
+  "track": "main conference research",
+  "length_type": "short",
+  "title": "TigerLLM - A Family of Bangla Large Language Models",
+  "authors": [
+    "Nishat Raihan",
+    "Marcos Zampieri"
+  ],
+  "first_author": "Nishat Raihan",
+  "landing_url": "https://aclanthology.org/2025.acl-short.69/",
+  "pdf_url": "https://aclanthology.org/2025.acl-short.69.pdf",
+  "doi": "10.18653/v1/2025.acl-short.69",
+  "official_listing_url": "https://aclanthology.org/volumes/2025.acl-short/",
+  "sampling_stratum": "methods_models",
+  "paper_type": "Bangla language-specific corpus, instruction dataset and model family; resource/model development short paper",
+  "anthology_pdf_revision_hash": "a898234b",
+  "metadata_revisions": [],
+  "official_attachments": [],
+  "sort_hash": "04a325ba1b5954eacb072a4998055181c9fdf121ba351e151de63ab208c0736f",
+  "split": "induction",
+  "semantic_review_status": "complete_writing_focused_full_text_review",
+  "full_text_and_relevant_appendix_review_complete": true,
+  "review_date": "2026-10-29",
+  "reviewer": "primary agent",
+  "pdf_path": ".claude/skills/paper-writing-shared/tmp/corpus/acl/pdf/2025.acl-short.69.pdf",
+  "pdf_sha256": "a7f33fa3f1c933e1fa93266f2b16bad0685816abbc0d3e01a4b1f88d67e35b75",
+  "markdown_path": ".claude/skills/paper-writing-shared/tmp/corpus/acl/markdown/2025.acl-short.69.md",
+  "markdown_sha256": "35a853814fdf9afa44de16fb26c458efacbe28fb6351f78d9bb6f08221167b69",
+  "full_text_style_review_complete": true,
+  "external_appendix_review_complete": true,
+  "count_eligible_full_text_and_relevant_appendix": true,
+  "coverage": [
+    {
+      "source": "canonical official PDF",
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "main_science": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "limitations_ethics": [
+        6
+      ],
+      "references": [
+        6,
+        7
+      ],
+      "scientific_appendix": {
+        "A.1 volunteers": [
+          8
+        ],
+        "A.2 seed categories": [
+          8
+        ],
+        "A.3 four-part filtering": [
+          8,
+          9
+        ],
+        "B.1-B.2 training hyperparameters and Tables3-5": [
+          10
+        ]
+      }
+    }
+  ],
+  "version_audit": {
+    "published_year": 2025,
+    "canonical_url": "https://aclanthology.org/2025.acl-short.69.pdf",
+    "xml_revision_entries": []
+  },
+  "supplement_audit": {
+    "official_landing": "https://aclanthology.org/2025.acl-short.69/",
+    "landing_read_date": "2026-10-29",
+    "official_xml_attachments": [],
+    "separate_scientific_appendix_link_found": false,
+    "scientific_appendix_in_pdf": "A and B in full",
+    "code_link": "https://github.com/mraihan-gmu/TigerLLM/tree/main/",
+    "code_executed": false
+  },
+  "ten_dimensions": {
+    "reader_argument": {
+      "pages": [
+        1,
+        2
+      ],
+      "observation": "将语言资源/可复现性差距作为问题，先对比既有Bangla项目训练与数据可获得性，再引出两个数据集及模型。",
+      "editorial_advice": "语言资源稿可围绕语言特定需求、已有资源缺口和交付物组织论证。",
+      "applicability_boundary": "地域/语言特征应由构造和评测材料支撑，不把统计人数自动等同代表性或文化安全。"
+    },
+    "title_abstract": {
+      "pages": [
+        1
+      ],
+      "observation": "标题为模型家族名＋语言＋交付类型；摘要从语言覆盖不均、既有开源不足推进到模型和benchmark比较。",
+      "editorial_advice": "名称与目标对象明确；资源数量、用途和实测能力均可成为摘要中心。",
+      "applicability_boundary": "摘要all alternatives与正文Table2编码指标存在反例；不能因是录用稿就学习其全称优越措辞。"
+    },
+    "introduction": {
+      "pages": [
+        1,
+        2
+      ],
+      "observation": "§1.1先分Training和Data两条缺口，§1.2列三项产出：约10Mtoken教材、100K指令对、1B/9B模型。",
+      "editorial_advice": "贡献列表可以对应真实交付物，并让每一项与前文缺口相连。",
+      "applicability_boundary": "30–55% performance improvements未给清楚比较分母；不复用含糊提升百分比。"
+    },
+    "related_work": {
+      "pages": [
+        2
+      ],
+      "observation": "单独Related Work按encoder、multilingual decoder、Bangla decoder推进，Table1具体比较语料/训练/文档/复现状态。",
+      "editorial_advice": "描述最接近项目的可比较属性，可用表节省段落空间。",
+      "applicability_boundary": "可获得性和复现失败不是同义词；引用题名与所支撑事实需匹配，TikTokenizer对Corso2024 TikTokAPI引文疑点保留作者查询。"
+    },
+    "method_theory": {
+      "pages": [
+        2,
+        3,
+        4,
+        8,
+        9,
+        10
+      ],
+      "observation": "先分Corpus与Instruction两资源，再四步生成pipeline，随后模型选择、continued pretraining/fullfinetuning；A给志愿者类别与L/C/Q/N过滤，B给配置。",
+      "editorial_advice": "资源构造过程和模型使用过程可分节，用图解释操作顺序；明确来源、数量与筛选准则。",
+      "applicability_boundary": "过滤谓词符号化不等于证明文化适当/无偏；没有新理论无需补定理；定义缺失评分函数不能自行填。"
+    },
+    "evidence": {
+      "pages": [
+        4,
+        5,
+        10
+      ],
+      "observation": "训练loss图及六benchmark表支撑模型使用；对比闭源/多语/已有Bangla项目和两个Tiger规模，主结果集中一表。",
+      "editorial_advice": "用与贡献相关的任务评估数据/模型效用，训练曲线和下游结果各自解释。",
+      "applicability_boundary": "未见受控剥离教材/指令/teacher影响的消融、CI、完整evaluation prompt；不能从规模差异和主表推断quality胜过quantity的因果效应。"
+    },
+    "discussion_limits": {
+      "pages": [
+        5,
+        6
+      ],
+      "observation": "Conclusion/FutureWork回顾三资源并提出后续行为分析、领域与规模扩展；Limitations列教材域、指令覆盖和模型规模，Ethics列来源、志愿者和筛选。",
+      "editorial_advice": "将未来计划与已交付分清，局限和伦理写实际数据/使用过程。",
+      "applicability_boundary": "公众可访问不自动证明有再发布许可；筛选流程本身不等于完成安全评测，勿复制ensure/noharm等未验证保证。"
+    },
+    "paragraph_language": {
+      "pages": [
+        1,
+        3,
+        4,
+        5
+      ],
+      "observation": "小节与粗体标签快速转场，强调高质量和可复现；Results后另给Takeaways解释。",
+      "editorial_advice": "短稿可用功能明确的小段和紧凑结果表，支持的比较直接报告。",
+      "applicability_boundary": "保持力度不意味着照抄rigorous/ensures/new paradigm及all/only；真正例外需在对应比较处保留。"
+    },
+    "main_appendix": {
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        8,
+        9,
+        10
+      ],
+      "observation": "正文五页含构造、模型和结果；p6局限伦理，A补志愿者/种子/过滤，B补三套超参。",
+      "editorial_advice": "正文保留可判断的产出与结果，附录载完整构造细节与配置；正文引用与附录数值要一致。",
+      "applicability_boundary": "该录用短稿五页不等于投稿四页自动可用；附录不应掩盖缺少的评测协议。"
+    },
+    "actionable": {
+      "pages": [
+        2,
+        3,
+        5
+      ],
+      "observation": "以三项可用资源为中心，主表有五项最好和一项编码例外。",
+      "editorial_advice": "原创示例：TigerLLM combines a Bangla textbook corpus and a native-language instruction dataset to adapt 1B and 9B models. The reported 9B model leads five of the six benchmark columns; its coding score is0.63, compared with0.64 for the listed27B Gemma baseline.",
+      "applicability_boundary": "表值直接支持，不加未经报告的显著性。比较强度跟随实际单元格，而不是把全部贡献弱化。"
+    }
+  },
+  "counterexamples": [
+    {
+      "pages": [
+        1,
+        2,
+        5
+      ],
+      "finding": "Table2 Tiger9B coding.63<Gemma27B.64，Tiger1B多列低于GPT4o-mini/Gemini或Gemma，故all alternatives/1B falling short only9B不成立；本基模型LLaMA1B/Gemma9B未在表中对应出现，cannot establish own-base improvement。表注%但单元格0–1比例，正文five与实际six benchmark亦不一致。",
+      "scope": "逐表核验显示具体比较限制，不抹掉9B五列领先事实，不凭空算显著性。"
+    },
+    {
+      "pages": [
+        3,
+        4,
+        10
+      ],
+      "finding": "主文finetuning batch8/LR5e-5/10%warmup，与Table4 1B batch16/LR1e-5及Table5 9B batch32/LR1e-6/15%不同；图3/4未分两模型/缺标明selectedrun。统一实际运行配置需作者证据。",
+      "scope": "记录冲突而不静默选择某组数；未运行训练，不认证单卡9Bfullfinetune可行性。"
+    },
+    {
+      "pages": [
+        3,
+        8,
+        9
+      ],
+      "finding": "A.3所有字符BengaliUTF8的字面条件与编程/数学/translation任务的拉丁符号代码潜在不相容；c/g/r/sim和minimumlength未完整操作化；没有独立人类偏好/文化安全验证。",
+      "scope": "提出可复现性查询，不宣布数据必然无效；原Bangla图示已查看但未独立认证孟加拉语质量。"
+    }
+  ],
+  "visual_review": {
+    "pages": [
+      2,
+      3,
+      4,
+      5,
+      9,
+      10
+    ],
+    "figures": "Tables1-5, Figures1-4, filters; originals viewed",
+    "reviewer": "primary agent"
+  },
+  "official_requirements": {
+    "source": "current ACL/ARR rules maintained separately",
+    "corpus_layout_observation": "accepted short main5pages, Limitations/EthicalConsiderations p6, A/B p8-10",
+    "observed_layout_not_current_rule": true
+  },
+  "holdout_validation": null,
+  "review_limitations": "Full prose and all scientific appendices read; no training rerun, external artifact availability audit, license legal analysis or Bangla native-language quality certification."
+}

@@ -1,0 +1,332 @@
+{
+  "id": "acl-2024.acl-long.836",
+  "anthology_id": "2024.acl-long.836",
+  "venue": "acl",
+  "year": 2024,
+  "track": "main conference research",
+  "length_type": "long",
+  "title": "Quality-Aware Translation Models: Efficient Generation and Quality Estimation in a Single Model",
+  "authors": [
+    "Christian Tomani",
+    "David Vilar",
+    "Markus Freitag",
+    "Colin Cherry",
+    "Subhajit Naskar",
+    "Mara Finkelstein",
+    "Xavier Garcia",
+    "Daniel Cremers"
+  ],
+  "first_author": "Christian Tomani",
+  "landing_url": "https://aclanthology.org/2024.acl-long.836/",
+  "pdf_url": "https://aclanthology.org/2024.acl-long.836.pdf",
+  "doi": "10.18653/v1/2024.acl-long.836",
+  "official_listing_url": "https://aclanthology.org/volumes/2024.acl-long/",
+  "sampling_stratum": "efficiency_theory",
+  "paper_type": "quality-conditioned neural translation and internal quality prediction; controlled method study with automatic and selected human evaluation",
+  "anthology_pdf_revision_hash": "fbc8356f",
+  "metadata_revisions": [],
+  "official_attachments": [],
+  "sort_hash": "06f00d62168e63fe22cdcd70835024f905d5149609c601f467744301f4b497df",
+  "split": "induction",
+  "semantic_review_status": "complete_writing_focused_full_text_review",
+  "full_text_and_relevant_appendix_review_complete": true,
+  "review_date": "2026-10-29",
+  "reviewer": "delegated acl019_finish agent",
+  "pdf_path": ".claude/skills/paper-writing-shared/tmp/corpus/acl/pdf/2024.acl-long.836.pdf",
+  "pdf_sha256": "a7d4697c708b27aa43c10d6da9442829505c710a11184e2be84a231c077f08e2",
+  "markdown_path": ".claude/skills/paper-writing-shared/tmp/corpus/acl/markdown/2024.acl-long.836.md",
+  "markdown_sha256": "a6ecca9de7abb06f8b9df7a44d252db252c783a17dca4239c1d33142f7417c65",
+  "full_text_style_review_complete": true,
+  "external_appendix_review_complete": true,
+  "count_eligible_full_text_and_relevant_appendix": true,
+  "coverage": [
+    {
+      "source": "canonical official PDF",
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "main_science": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "limitations": [
+        10
+      ],
+      "references": [
+        10,
+        11,
+        12,
+        13
+      ],
+      "scientific_appendix": {
+        "A additional en-ja": [
+          14,
+          15,
+          16
+        ],
+        "B BLEU main result copies": [
+          14,
+          17
+        ],
+        "C quality-aware PaLM2": [
+          14,
+          18
+        ],
+        "D bin count sensitivity": [
+          14,
+          15
+        ],
+        "E bin identifier choice": [
+          14,
+          16,
+          19
+        ],
+        "F annotated translation examples": [
+          16,
+          20
+        ],
+        "G combined approach negative results": [
+          16,
+          20
+        ],
+        "H diagram and method restatement": [
+          18,
+          19
+        ],
+        "I MQM human evaluation": [
+          18
+        ]
+      }
+    }
+  ],
+  "version_audit": {
+    "canonical_url": "https://aclanthology.org/2024.acl-long.836.pdf",
+    "xml_revision_entries": [],
+    "published_year": 2024
+  },
+  "supplement_audit": {
+    "method": "read locked official2024 XML long836 entry; title/authors/pages15660-15679/pdf hashfbc8356f match; no attachment or revision element; no live landing freshness claim",
+    "official_xml_attachments": [],
+    "separate_scientific_appendix_link_found": false,
+    "scientific_appendix_in_pdf": "A-I read in full including final floating Tables8-10",
+    "external_scientific_appendix_required": false,
+    "code_executed": false
+  },
+  "ten_dimensions": {
+    "reader_argument": {
+      "pages": [
+        1,
+        2,
+        3
+      ],
+      "observation": "从模型概率与质量不完全一致切入，对比MAP、外部QE重排及二次复杂度MBR，再把质量信号移进NMT。",
+      "editorial_advice": "方法动机可围绕现有质量收益的成本瓶颈，先让读者理解三个基线的功能。",
+      "applicability_boundary": "两语言高资源翻译；内部QE是改善生成的工具，不以超越独立QE模型为目标。"
+    },
+    "title_abstract": {
+      "pages": [
+        1
+      ],
+      "observation": "标题把模型能力与效率目标并列，摘要用问题、既有替代代价、内部信号、MBR与MAP两用途展开。",
+      "editorial_advice": "摘要可把同一机制的两种实际用途讲清；效果和成本应各有明确定义。",
+      "applicability_boundary": "twoorders speedup需对应utility调用数，而不是未经报告的整条推理walltime。"
+    },
+    "introduction": {
+      "pages": [
+        1,
+        2
+      ],
+      "observation": "依次解释MAP、MBR、QE重排不足，再给source或target加质量token的统一机制；两条贡献对应重排/MAP与MBR预筛用途。",
+      "editorial_advice": "贡献列表对应后续验证模块，条数无需固定。",
+      "applicability_boundary": "QA Prompting单pass与QA Prediction采样1024再排序不可合并成全部方法单pass。"
+    },
+    "related_work": {
+      "pages": [
+        2,
+        3
+      ],
+      "observation": "独立RelatedWork先分reference-based/reference-free评测，再定位reranking、MBR及带标签可控生成，指出最近的QE重排和属性tagging。",
+      "editorial_advice": "用可比较功能和实际增量定位，不堆引文；复用的质量指标和控制tag有来源。",
+      "applicability_boundary": "first优先权未独立核验，不将作者新颖性宣称认证为事实。"
+    },
+    "method_theory": {
+      "pages": [
+        3,
+        4,
+        5,
+        19
+      ],
+      "observation": "Preliminaries给MAP/sampling/QE/MBR；Method先质量等频分桶，再source prompting与target prediction；Eq5按bin和tokenlogprob破同分，Figure6完整流程。",
+      "editorial_advice": "共享机制先写，再分别解释两种用法；符号应服务可执行过程，成本复杂度明确对象。",
+      "applicability_boundary": "MBR仍用外部BLEURT效用；训练标签来自外部MetricX-QE。无需新定理，但不能宣称完全没有外部度量。"
+    },
+    "evidence": {
+      "pages": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "observation": "§6.1三个控制问题检验质量估计、自评校准与可控生成，随后§6.2质量和§6.3MBR成本；full/filtered对照、COMET/MQM、en-ja及bin/组合消融后置。",
+      "editorial_advice": "先验证中间能力可用再检验主目标；主表注明检验对象、数据条件、指标方向及显著性。",
+      "applicability_boundary": "MetricX与训练信号相关故不测该项显著性；COMET亦共享WMT来源，selectedMQM细节有限；未提供实际端到端计时。"
+    },
+    "discussion_limits": {
+      "pages": [
+        6,
+        7,
+        9,
+        10,
+        16,
+        20
+      ],
+      "observation": "直接承认内部QE弱于专用模型、QA Prediction的MQM退步与filtered无效；Limitations集中语言范围、评价偏差、训练成本；G公开组合负结果。",
+      "editorial_advice": "将真实负结果放对应问题附近，已支持的QA Prompting贡献直接说；未来外推与已验证分开。",
+      "applicability_boundary": "避免防御写作不意味着删掉自评与质量指标不一致，组合效果也不能泛称全部劣于每个单独方案。"
+    },
+    "paragraph_language": {
+      "pages": [
+        6,
+        7,
+        8,
+        9,
+        16
+      ],
+      "observation": "结果小节用问题式标题；先描述检验再解释，degradation直接陈述；组合机制原因用hypothesize。",
+      "editorial_advice": "每段完成一个问题或推理环节，实测结果直接，机制推测保持相应力度。",
+      "applicability_boundary": "significant必须指表注的比较；onpar的分数相近不是经过等效性检验。"
+    },
+    "main_appendix": {
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "observation": "九页科学正文保留机制、三个控制、主质量与MBR证据；A-I提供另一语言、BLEU、LLM扩展、bin/identifier、案例、组合负结果、图与人评说明。",
+      "editorial_advice": "正文保留判断贡献必需内容，附录可承载复核和机制扩展；不能在第18页叙述结束时漏读末尾浮动表。",
+      "applicability_boundary": "录用九页不是当前投稿限页；附录I只引用指南并说明补偿/隐私，未给完整人数/样本/IAA，不能自补。"
+    },
+    "actionable": {
+      "pages": [
+        7,
+        8,
+        9,
+        16,
+        20
+      ],
+      "observation": "质量感知训练与使用方式分开，QA Prompting的单pass质量收益和候选减少的效用调用收益分别成立。",
+      "editorial_advice": "原创例句：QA Prompting raises the reported full-corpus COMET score from85.8 to87.1 using single-pass decoding. With MBR, reducing the candidate set from50 to5 lowers pairwise utility evaluations from2450 to20 per sentence.",
+      "applicability_boundary": "保持reported分数、特定fullcorpus和utilitycalls口径；不加真实时延、所有指标或全部方法的普遍保证。"
+    }
+  },
+  "counterexamples": [
+    {
+      "pages": [
+        1,
+        8,
+        9
+      ],
+      "finding": "2450/20=122.5是M(M-1)效用调用数之比，未见端到端计时；QA Prediction预先采N1024再取M，且MBR仍用BLEURT。因此摘要/结论inference time两数量级不可直接视为真实整流程测试。",
+      "scope": "保留明确计算节省和质量贡献，实际时延另需数据；不向作者正文机械增加多余警告。"
+    },
+    {
+      "pages": [
+        6,
+        7,
+        9,
+        17
+      ],
+      "finding": "内部QE低于独立QE，QA Prediction fullMQM2.07>baseline1.81且filteredCOMET86.7<87.0；Table2 caption泛称qualityaware优于baseline不能覆盖所有指标。Table3 MBRQA PredictionMQM1.45比MBRbaseline1.41更差，却标dagger significantdifference；不能把difference当improvement。p9说MQM1.81→1.36是对无MBR baseline，非1.41的MBRbaseline。",
+      "scope": "指标/比较对象一致，保留QA Prompting的真实提升。"
+    },
+    {
+      "pages": [
+        14,
+        15,
+        16,
+        20
+      ],
+      "finding": "Table4图注称四指标但表只两列；A称BLEURT过滤不同于主文MetricX-QE50%。Figure5非随bins全面单调，MetricX5→10下降，BLEURT5后略降。Table10组合fullCOMET86.7高于QA Prediction86.6，但低于Prompting87.1，不能说劣于每个单独方法。",
+      "scope": "分清语言、配置和指标；原图复核不静默统一。"
+    },
+    {
+      "pages": [
+        7,
+        17,
+        19,
+        20
+      ],
+      "finding": "Table10 Prediction COMETfull86.6/filter86.9与Table2/5 86.5/86.7不同；Table8baselineCOMET86.0与Table2 85.8不同，配置可能有别但未明述。Table9蓝色批注文本解析损坏，已看原页确认其含义。",
+      "scope": "保留实际表各值和作者查询，不把不同配置分数擅当同一实验。"
+    }
+  ],
+  "visual_review": {
+    "pages": [
+      6,
+      7,
+      8,
+      9,
+      15,
+      16,
+      17,
+      19,
+      20
+    ],
+    "figures": "All Figures1-6, main Tables1-3, en-ja Table4, copiesTables5-6, identifierTable8 and annotatedexamplesTable9/combinedTable10 viewed; Table7 p18 read in text",
+    "reviewer": "same acl019_finish agent"
+  },
+  "official_requirements": {
+    "source": "currentACL rules separately maintained",
+    "corpus_layout_observation": "accepted long main9pages, Limitations/Risks p10, A-I appendicesp14-20",
+    "observed_layout_not_current_rule": true
+  },
+  "holdout_validation": null,
+  "review_limitations": "All scientific prose and appendices A-I read; no model/training/metric execution, translation quality certification or independent bibliographic verification."
+}

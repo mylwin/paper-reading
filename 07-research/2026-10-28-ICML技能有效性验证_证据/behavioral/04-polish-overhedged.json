@@ -1,0 +1,50 @@
+{
+  "id": "04-polish-overhedged",
+  "skill": "paper-polishing",
+  "venue": "ICML",
+  "request": "仅润色一句，保留证据力度",
+  "provided_facts": {
+    "study": "synthetic fixture, not a real research result",
+    "method": "StepScale reduces stored optimizer state by sharing one scale per block",
+    "tasks": [
+      "Task A",
+      "Task B"
+    ],
+    "seeds": 5,
+    "state_memory_GB": {
+      "baseline": 8,
+      "StepScale": 6
+    },
+    "mean_accuracy_percent": {
+      "Task A": {
+        "baseline": 80,
+        "StepScale": 80
+      },
+      "Task B": {
+        "baseline": 78,
+        "StepScale": 78
+      }
+    },
+    "mean_training_seconds": {
+      "baseline": 100,
+      "StepScale": 105
+    },
+    "budget": "same training steps and hardware",
+    "uncertainty": "no confidence intervals or statistical test supplied",
+    "distributed_results": "not supplied"
+  },
+  "original": "Under the reported setup, it may perhaps be possible that StepScale could potentially reduce optimizer-state memory from 8 to 6 GB, although this should be interpreted cautiously.",
+  "actual_primary_agent_output": "StepScale reduces optimizer-state memory from 8 to 6 GB under the reported setup.",
+  "author_notes": "",
+  "manual_semantic_review": {
+    "reviewer": "same primary agent",
+    "assessment": "consistent_with_given_facts_and_requested_scope",
+    "reason": "数据确定时直接陈述；保留一次setup范围，删除叠加可能性和无具体缘由的谨慎语。不追加整篇待办。",
+    "criteria": [
+      "remove_redundant_hedges",
+      "preserve_numbers",
+      "local_edit"
+    ]
+  },
+  "independent_model_run": false
+}

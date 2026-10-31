@@ -1,0 +1,376 @@
+{
+  "id": "acl-2024.acl-long.224",
+  "anthology_id": "2024.acl-long.224",
+  "venue": "acl",
+  "year": 2024,
+  "track": "main conference research",
+  "length_type": "long",
+  "title": "MAVEN-ARG: Completing the Puzzle of All-in-One Event Understanding Dataset with Event Argument Annotation",
+  "authors": [
+    "Xiaozhi Wang",
+    "Hao Peng",
+    "Yong Guan",
+    "Kaisheng Zeng",
+    "Jianhui Chen",
+    "Lei Hou",
+    "Xu Han",
+    "Yankai Lin",
+    "Zhiyuan Liu",
+    "Ruobing Xie",
+    "Jie Zhou",
+    "Juanzi Li"
+  ],
+  "first_author": "Xiaozhi Wang",
+  "landing_url": "https://aclanthology.org/2024.acl-long.224/",
+  "pdf_url": "https://aclanthology.org/2024.acl-long.224.pdf",
+  "doi": "10.18653/v1/2024.acl-long.224",
+  "official_listing_url": "https://aclanthology.org/volumes/2024.acl-long/",
+  "sampling_stratum": "data_resources",
+  "paper_type": "dataset/resource construction and benchmark analysis; all-in-one event understanding through document-level event argument annotation",
+  "anthology_pdf_revision_hash": "d0a6afda",
+  "metadata_revisions": [],
+  "official_attachments": [],
+  "sort_hash": "04d670a734e7b1aea5d7c8151287137b0c7ab82506123e96574a938d69dbdb25",
+  "split": "induction",
+  "semantic_review_status": "complete_writing_focused_full_text_review",
+  "full_text_and_relevant_appendix_review_complete": true,
+  "review_date": "2026-10-28",
+  "reviewer": "acl-004 delegated full-text reviewer",
+  "pdf_path": ".claude/skills/paper-writing-shared/tmp/corpus/acl/pdf/2024.acl-long.224.pdf",
+  "pdf_sha256": "fa8a29a8f0f431c8ce629c1115fe97cd1781782ee17dc06ed6773b5223a9b0fa",
+  "markdown_path": ".claude/skills/paper-writing-shared/tmp/corpus/acl/markdown/2024.acl-long.224.md",
+  "markdown_sha256": "4bf282420dd6862ae101db44adda50691cc88d9816fa3a881201e15fcaf9d70e",
+  "full_text_style_review_complete": true,
+  "external_appendix_review_complete": true,
+  "count_eligible_full_text_and_relevant_appendix": true,
+  "coverage": [
+    {
+      "source": "canonical official PDF",
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "main_science": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "ethics": [
+        9,
+        10
+      ],
+      "references": [
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "scientific_appendix": {
+        "A.1 annotation instruction; A.2 annotation coordination": [
+          15,
+          16
+        ],
+        "B.1 split statistics; B.2 predecessor differences": [
+          15,
+          16,
+          17
+        ],
+        "C.1 fine-tuning; C.2 LLM details": [
+          15,
+          17,
+          18
+        ],
+        "D future event prediction details": [
+          17,
+          18
+        ],
+        "E.1 data-size analysis": [
+          17,
+          19
+        ],
+        "E.2 entity and non-entity full results": [
+          17,
+          20
+        ]
+      },
+      "page_coordinate": "PDF 1-based; printed pages 4072–4091"
+    }
+  ],
+  "version_audit": {
+    "official_published_year": 2024,
+    "canonical_url": "https://aclanthology.org/2024.acl-long.224.pdf",
+    "anthology_pdf_revision_hash": "d0a6afda",
+    "xml_source": ".claude/skills/paper-writing-shared/tmp/corpus/acl/sources/2024-acl.xml",
+    "xml_sha256": "38b52502716b0efc73620e2d6ecf310ba58e8491a55f11de78f3fa9764e23672",
+    "xml_revision_entries": [],
+    "later_revision_recorded": false,
+    "version_scope": "Official landing metadata and locked official XML paper node agree on title, DOI, year, and 4072–4091. No independent revision node in the XML; no assertion that author code is a versioned supplement."
+  },
+  "supplement_audit": {
+    "official_landing": "https://aclanthology.org/2024.acl-long.224/",
+    "landing_read_date": "2026-10-28",
+    "landing_snapshot": ".claude/skills/paper-writing-shared/tmp/review-cache/acl-004/landing.html",
+    "landing_sha256": "d75844ba6e1e86cd78c75daf8e880aa453832dbd7c7ee5012c62fff73af945a1",
+    "official_xml_attachments": [],
+    "separate_scientific_appendix_link_found": false,
+    "landing_evidence": "Read complete landing text and href inventory: PDF and code/data GitHub URL, no independent attachment or supplemental PDF link. XML node contains pdf hash but no attachment/supplement nodes.",
+    "scientific_appendix_in_pdf": "A–E through final page 20 fully read, including Tables 7–14 and Figures 5–6.",
+    "code_link": "https://github.com/THU-KEG/MAVEN-Argument",
+    "code_executed": false,
+    "external_scientific_appendix_required": false
+  },
+  "ten_dimensions": {
+    "reader_argument": {
+      "pages": [
+        1,
+        2,
+        4,
+        5,
+        7,
+        8
+      ],
+      "observation": "以图1向NLP读者说明事件检测、论元抽取和关系抽取三者构成，再把MAVEN-ARG定位为既有MAVEN/MAVEN-ERE的缺失论元层。数据特征随后引出距离、实体性、错误类型分析和事件预测应用。",
+      "editorial_advice": "资源稿可先用任务对象与组合关系给读者定位，再让新增标注层对应清楚的研究能力。",
+      "applicability_boundary": "这是基于既有资源的增量数据集稿；全新任务或理论稿应按自己的读者问题组织，不强行套all-in-one。"
+    },
+    "title_abstract": {
+      "pages": [
+        1
+      ],
+      "observation": "标题由资源名、完整事件理解目标和event argument annotation构成；摘要按任务缺口→新增资源层→三项资源优势及规模→模型挑战→应用示范→发布地址推进。",
+      "editorial_advice": "摘要把资源覆盖范围、规模与新用途分清，用可判断的具体对象承载贡献。",
+      "applicability_boundary": "Completing the Puzzle是本稿叙事选择，不是ACL标题模板；162类型、612角色定义和290613论元是本稿事实。"
+    },
+    "introduction": {
+      "pages": [
+        1,
+        2
+      ],
+      "observation": "引言由三项子任务及既有数据不兼容的后果，转到前作继承关系，再以Comprehensive Event Schema/Large Data Scale/Exhaustive Annotation三段解释新增价值，末段预告基线和应用。",
+      "editorial_advice": "把资源为何需要、继承什么、增加什么连续说明；每项贡献紧接其使用收益，实验预告说明将如何检验价值。",
+      "applicability_boundary": "三项优势源于该资源实际特点；不把列三条贡献或绝对第一的措辞设为普遍要求。"
+    },
+    "related_work": {
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        8,
+        9
+      ],
+      "observation": "引言先做必要任务定位，表1/2在构建和数据分析处按schema、数据量与任务覆盖做并列比较；正式相关工作后置，分数据集与模型方法，按任务约束逐步放宽说明近邻。",
+      "editorial_advice": "资源的关键区别可在读者需要它的位置用可比维度说明，后置相关工作再补历史与方法谱系。",
+      "applicability_boundary": "后置相关工作是可选结构；表中对比范围应与研究问题一致，GENEVA脚注还区分完整ontology与实际数据所用schema。"
+    },
+    "method_theory": {
+      "pages": [
+        2,
+        3,
+        4,
+        5,
+        15,
+        16
+      ],
+      "observation": "§2以schema、实体、论元三阶段给出可操作的构建流程：FrameNet简化、5W1H补充、层级继承；三人实体标注及高级复核；论元三阶段复核；给出kappa和返工条件。§4.1另解释非实体论元为何需要多答案QA评价及coreference层次。",
+      "editorial_advice": "数据论文的方法可以是任务定义、schema设计、工作流与评价协议；关键设计后说明它解决的标注或评价问题。",
+      "applicability_boundary": "没有算法定理不妨碍本稿的方法贡献；质量阈值和kappa值不能迁移成ACL官方门槛。"
+    },
+    "evidence": {
+      "pages": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "observation": "证据链覆盖schema/规模/覆盖比较、角色长尾和距离分布、六种微调范式、两种LLM及definition提示、距离/实体性分项、50触发词错误分析、事件预测人工评判。附录补切分、预算/设置、gold-trigger数据量曲线和完整分项表。",
+      "editorial_advice": "让资源特性生成实验问题，并分别报告资源质量、基线挑战和下游使用实例；评价层次用表头和协议直接注明。",
+      "applicability_boundary": "微调主表为pipeline、LLM为50文档gold-trigger，附录学习曲线也为gold-trigger；这些结果服务资源诊断，不直接证明所有范式的公平总排名。"
+    },
+    "discussion_limits": {
+      "pages": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        17
+      ],
+      "observation": "结果段先给观察，再用potentially/possibly解释机制；§5应用示范区分合理预测和匹配真实未来；Limitations集中写英语范围、未覆盖事件事实性/显著性、未深挖LLM方法；伦理说明许可、测试集服务和标注协调。",
+      "editorial_advice": "已观察结果直接写清，解释性原因保持相应力度；将局限写成具体未覆盖对象或后续研究问题，应用示范围绕它已验证的用途展开。",
+      "applicability_boundary": "不将self-evident importance、no additional risks等泛化断言视为范本，不要求每段重复自辩或增加与用户研究无关的免责声明。"
+    },
+    "paragraph_language": {
+      "pages": [
+        2,
+        3,
+        4,
+        6,
+        7,
+        8
+      ],
+      "observation": "段首与小标题以Schema Statistics、Models、Evaluation Metric、Experiment Setup、Experimental Results清楚标记论证动作；数据分析/结果段常以表图→编号观察→研究含义推进，解释假说使用可能性措辞。",
+      "editorial_advice": "用具体段首告诉读者接下来读的是定义、操作、结果还是解释；每段围绕一个可判断的观察发展，保留有证据的主张力度。",
+      "applicability_boundary": "significantly在本稿主要为描述用语，未给统计显著性检验，编辑时依真实检验表述；不要求所有段落编号或删尽专业名词。"
+    },
+    "main_appendix": {
+      "pages": [
+        2,
+        4,
+        5,
+        8,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "observation": "正文保留schema与标注质量、资源特征和主要基线/应用结果；A–E附录依次容纳指南示例/平台、切分与前作差异、模型设置/预算、提示输入输出、额外数据量及完整分项结果。正文多处显式指向附录。",
+      "editorial_advice": "正文维持可独立评估贡献的证据链，附录按读者查证动作组织，并在相关正文给出具体定位。",
+      "applicability_boundary": "数据量学习曲线虽在附录仍是科学证据；不能因位于附录就略读，也不能把该稿省略prompt demonstrations视为完整可复现模板。"
+    },
+    "actionable": {
+      "pages": [
+        2,
+        3,
+        4,
+        5,
+        7,
+        8,
+        15,
+        16,
+        17,
+        18
+      ],
+      "observation": "可直接迁移的单位是新增资源能力→构建选择→数据特征→对应诊断→使用示例，正面组织为主；数值/协议疑问另存研究查询。",
+      "editorial_advice": "可写成：We extend the event schema with role definitions and annotate entity and non-entity arguments across documents. The resulting resource supports analysis of argument span selection and long-distance dependencies, alongside a demonstration of structured event prediction.",
+      "applicability_boundary": "该原创例句示范组织而非摘录；作者新稿中的设计、规模、能力与结果须来自其自身证据。"
+    }
+  },
+  "counterexamples": [
+    {
+      "pages": [
+        7,
+        20
+      ],
+      "finding": "原页Table 5的BERT+CRF entity F1/EM为17.8/18.5、non-entity为19.4/24.0；Table 14对应F1/EM为18.5/17.8和24.0/19.4，疑似该行列值互换。已视觉交叉核对，不是抽取丢列。",
+      "scope": "保留为作者查询，未据此修改原文或变成所有稿件免责声明。"
+    },
+    {
+      "pages": [
+        2,
+        3,
+        9
+      ],
+      "finding": "612是有不同定义的argument roles，143是唯一名称数量；98,591是events/coreference clusters、107,507是trigger mentions。摘要与引言的规模表达涉及不同计数单位；all-in-one在限制中具体指ED/EAE/ERE，不含factuality或salience。",
+      "scope": "写作时统一对象名称与计数单位，用实际任务集合表达覆盖；不抹去其整合贡献。"
+    },
+    {
+      "pages": [
+        5,
+        6,
+        7,
+        15,
+        17,
+        19
+      ],
+      "finding": "微调主表为pipeline triggers，LLM使用gold triggers且仅50测试文档；数据量实验为gold triggers。主表约40 F1与附录约49 F1不能连成同条件模型结论；训练数据增加曲线也有局部平台/下降。",
+      "scope": "协议条件进入相应表头或结果句，机制解释仍可作为后续检验假说；不扩写成长串泛泛防御句。"
+    }
+  ],
+  "author_queries": [
+    {
+      "pages": [
+        7
+      ],
+      "query": "错误分析的52.2/12.5/35.3/0.02%总和100.02%，请核对最后一类的精度、计数与共同分母。",
+      "disposition": "研究记录待作者核对；不影响完整阅读状态。"
+    },
+    {
+      "pages": [
+        18
+      ],
+      "query": "Tables 11/12明确省略demonstrations；若目标为独立复现提示实验，可在实际投稿材料提供所用演示样本及采样方式。",
+      "disposition": "对可复现材料的编辑建议，不冒充官方要求或认定研究无效。"
+    }
+  ],
+  "original_rewrite_examples": [
+    {
+      "pages": [
+        3
+      ],
+      "purpose": "把schema计数口径直接说清",
+      "text": "The schema contains 612 role definitions across 162 event types. These definitions share 143 role names, allowing semantically related roles to use consistent labels."
+    },
+    {
+      "pages": [
+        8
+      ],
+      "purpose": "应用段保留结果力度与两种评价标准",
+      "text": "Across two evaluators and three prompts, GPT-4 produced event predictions judged reasonable in 95.2% of cases; 12.2% matched the held-out event. This demonstration shows how the resource can evaluate structured event prediction."
+    }
+  ],
+  "visual_review": {
+    "pages": [
+      1,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      16,
+      17,
+      18,
+      19,
+      20
+    ],
+    "original_page_count": 12,
+    "figures": "All Figures 1–6 inspected on rendered original pages. Figure 1 establishes task components; Figures 2–4 link distribution and model behavior; Figure 5 illustrates annotation UI; Figure 6 has gold-trigger protocol in caption.",
+    "tables": "All Tables 1–14 visually checked, including colored Table 7 role examples, Tables 11–12 prompts/input/output, multi-level Table 13 and final Table 14. Table 5/Table 14 BERT+CRF mismatch recorded as query.",
+    "reviewer": "acl-004 delegated full-text reviewer",
+    "render_scale": 1.45,
+    "render_files_disposition": "12 reconstructible original-page PNGs deleted after inspection; canonical PDF and Markdown retained."
+  },
+  "official_requirements": {
+    "source": "No current ACL submission-policy source audited in this per-paper task; main agent maintains official policy evidence separately.",
+    "corpus_layout_observation": "Two columns, author-year references, standalone Limitations/Ethical Considerations, lettered A–E appendices and colored annotation examples.",
+    "observed_layout_not_current_rule": true,
+    "distinction": "ten_dimensions.observation records this paper; editorial_advice is conditional advice; none of the observed counts, layout choices or headings is asserted as an official ACL requirement."
+  },
+  "holdout_validation": null,
+  "review_limitations": "All 20 official PDF pages read, including 6 appendix pages and relevant A–E science; 12 original pages visually inspected. No independently linked scientific supplement found on landing/XML. No model/code execution, experiment replication, annotation re-labeling or reference verification. Numerical and evaluation queries remain research notes rather than blanket prose requirements."
+}

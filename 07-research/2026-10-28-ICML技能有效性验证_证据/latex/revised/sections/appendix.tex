@@ -1,0 +1,22 @@
+\section{Supporting Details}\label{app:supporting}
+The example values give a fractional storage reduction of $r=(8-6)/8=0.25$ using Equation~\ref{eq:memory}.
+Algorithm~\ref{alg:summary} states the arithmetic used to report the reduction; it is not an optimizer update rule.
+Figure~\ref{fig:storage} and Table~\ref{tab:wide} report the same supplied state-memory values.
+
+\subsection{Mathematical Typesetting Check}
+The following identity provides a multiline-equation and theorem check.
+\begin{equation}\label{eq:identity}
+\begin{aligned}
+\sum_{i=1}^{n}(x_i-\bar{x})^2
+ &=\sum_{i=1}^{n}x_i^2-2\bar{x}\sum_{i=1}^{n}x_i+n\bar{x}^2\\
+ &=\sum_{i=1}^{n}x_i^2-n\bar{x}^2,
+\end{aligned}
+\end{equation}
+where $n\geq1$, $x_i\in\mathbb{R}$, and $\bar{x}=n^{-1}\sum_{i=1}^{n}x_i$.
+\begin{PWTheorem}[Nonnegative Centered Sum]
+For $n\geq1$ and real $x_1,\ldots,x_n$, the left-hand side of Equation~\ref{eq:identity} is nonnegative.
+\end{PWTheorem}
+\textit{Proof.} Each squared real term is nonnegative, so their sum is nonnegative.
+
+\subsection{Fixture Provenance}
+The official author guide~\cite{formatguide} is cited to check bibliography rendering, not to support the synthetic research values.

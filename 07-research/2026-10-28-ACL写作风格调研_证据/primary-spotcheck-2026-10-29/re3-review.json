@@ -1,0 +1,24 @@
+{
+  "date": "2026-10-29",
+  "purpose": "Targeted primary-agent semantic and visual check; no new paper count",
+  "paper": "acl-2024.acl-long.255",
+  "pages": [
+    20,
+    21
+  ],
+  "visual_checked": true,
+  "finding": "Tables13/15 classify adding a clause about needing more research as Claim. Table15 also includes modality under grammar conventions. The example supports distinguishing changes of claim meaning, not treating every hedge edit as substantive.",
+  "profile_correction": "Specify that the source example adds a condition about research sufficiency; judge changes by meaning rather than a caution-word rule.",
+  "reading_increment": 0,
+  "deleted_derivatives": [
+    {
+      "path": ".claude/skills/paper-writing-shared/tmp/acl-primary-spotcheck-20261029/re3-21.png",
+      "sha256": "8214e12c9953388ff4ad9861826b6460bcf7d337bbecc533c4da6737a6296424"
+    },
+    {
+      "path": ".claude/skills/paper-writing-shared/tmp/acl-primary-spotcheck-20261029/re3-20.png",
+      "sha256": "584873b48422309cf2cace04dd112ad84ff70649fe7675035d1126b132759515"
+    }
+  ],
+  "original_pdf_or_primary_parse_deleted": 0
+}

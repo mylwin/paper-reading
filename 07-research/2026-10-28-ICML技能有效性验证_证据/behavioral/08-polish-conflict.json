@@ -1,0 +1,25 @@
+{
+  "id": "08-polish-conflict",
+  "skill": "paper-polishing",
+  "venue": "ICML",
+  "request": "修正存在冲突的提升数字；没有权威源时不要静默选值",
+  "provided_facts": {
+    "abstract": "20.09 percentage-point improvement",
+    "table": "96.11 versus 79.02; difference17.09 points",
+    "authority": "not established"
+  },
+  "original": "The method improves Dice by 20.09 percentage points.",
+  "actual_primary_agent_output": "The method improves Dice over the baseline.",
+  "author_notes": "待作者确认：摘要20.09与表中96.11−79.02=17.09个百分点不一致；请确定正确来源后恢复具体提升量。",
+  "manual_semantic_review": {
+    "reviewer": "same primary agent",
+    "assessment": "consistent_with_given_facts_and_requested_scope",
+    "reason": "暂用两来源均支持的方向性结果，具体幅度不擅自定稿。作者核对项单独列出，不在正文插入审计过程。此案例数字定稿仍pending，不计为完整成稿。",
+    "criteria": [
+      "conflict_detected",
+      "no_silent_choice",
+      "notes_separate"
+    ]
+  },
+  "independent_model_run": false
+}

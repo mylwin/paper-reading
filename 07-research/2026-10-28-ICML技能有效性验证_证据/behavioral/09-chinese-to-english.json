@@ -1,0 +1,24 @@
+{
+  "id": "09-chinese-to-english",
+  "skill": "paper-polishing",
+  "venue": "ICML",
+  "request": "中文材料转两句英文；明确时间口径",
+  "provided_facts": {
+    "Chinese": "在同一硬件和两项指定任务上达到同一质量阈值，时间从100小时降到80小时。没有峰值显存数据。"
+  },
+  "original": "我们证明算法全面高效，节省20%的时间并降低显存。",
+  "actual_primary_agent_output": "On the two evaluated tasks using the same hardware, the method reaches the reference quality threshold in 80 hours, compared with 100 hours for the baseline. This corresponds to a 20% reduction in time to the threshold.",
+  "author_notes": "",
+  "manual_semantic_review": {
+    "reviewer": "same primary agent",
+    "assessment": "consistent_with_given_facts_and_requested_scope",
+    "reason": "证明改为实测结果陈述，20%用100为分母；不虚构显存改善，也不声称广泛全面高效。无需正文强调没有显存数据。",
+    "criteria": [
+      "translation",
+      "unit_and_denominator",
+      "measured_efficiency",
+      "no_missing_data_boilerplate"
+    ]
+  },
+  "independent_model_run": false
+}

@@ -1,0 +1,63 @@
+{
+  "date": "2026-10-29",
+  "evaluation_kind": "independent development smoke outputs; not formal holdout or final effectiveness evaluation",
+  "agent": "acl017_finish",
+  "skill": "paper-polishing",
+  "resources_read": [
+    {
+      "path": ".claude/skills/paper-polishing/SKILL.md",
+      "sha256": "f118bdb6cab0e7b7043a5477fef3ef0d2f8dc286b25818479c3e82908f8e11af"
+    },
+    {
+      "path": ".claude/skills/paper-writing-shared/core/evidence.md",
+      "sha256": "a1658d71071b60a8c7343ec12dd963df42cf19a1a6c75f222a48c294a71b7f51"
+    },
+    {
+      "path": ".claude/skills/paper-writing-shared/core/polishing.md",
+      "sha256": "a89f8569c1a12e723d0f4a14bc79c44b3e450f7858d333b3ff838beb03318374"
+    },
+    {
+      "path": ".claude/skills/paper-writing-shared/core/language.md",
+      "sha256": "491995bb30d875a8af0f26b251090f89c3499b2536200c7068c22017e22e7264"
+    },
+    {
+      "path": ".claude/skills/paper-writing-shared/core/latex.md",
+      "sha256": "ec469d81cf34e4cfee02baff3207a95bc755a78e43f6fa435a50d27e51745cdd"
+    },
+    {
+      "path": ".claude/skills/paper-writing-shared/registry.json",
+      "sha256": "81e651460aaf248455091fb9caacc198d1ae15652e7d8fc131262ef5e104e566"
+    },
+    {
+      "path": ".claude/skills/paper-writing-shared/venues/acl.md",
+      "sha256": "027be38ee0f38ecf21d714a110ff928856b5f35af58a75a6e211e8293890f1d2"
+    }
+  ],
+  "formal_holdout_papers_read": 0,
+  "tools_or_models_run_for_manuscript_facts": false,
+  "cases": [
+    {
+      "id": 1,
+      "request": "按ACL风格轻度润色，原数据已核准",
+      "input": "On an A100 GPU at batch size 8, Method A achieves a 1.94× wall-time speedup over greedy decoding. The method retains the full KV cache in GPU memory.",
+      "output": "On an A100 GPU with a batch size of 8, Method A achieves a 1.94× wall-time speedup over greedy decoding. It retains the full KV cache in GPU memory.",
+      "explanation_zh": "轻调搭配并减少重复主语；保留硬件、批大小、比较对象、1.94倍实测时间收益及完整KV缓存驻留事实。"
+    },
+    {
+      "id": 2,
+      "request": "润色并压缩",
+      "input": "Our experiments may perhaps suggest that Method B could potentially improve accuracy. On Dataset X, accuracy increases from 80.0% to 82.0% across the same 500 test examples. No significance test was conducted.",
+      "output": "On the same 500 test examples from Dataset X, accuracy increases from 80.0% to 82.0% with Method B. No significance test was conducted.",
+      "explanation_zh": "删去重复弱化的概括句，直接报告已给出的准确率变化；保留同一测试样本和未做显著性检验的信息。"
+    },
+    {
+      "id": 3,
+      "request": "只做语言润色，不改变数学含义或TeX",
+      "input": "Under Assumptions~\\ref{ass:smooth} and~\\ref{ass:noise}, Theorem~\\ref{thm:rate} guarantees $\\mathbb{E}\\|\\nabla f(x_R)\\|^2 \\le C/\\sqrt{T}$; the constant $C$ depends on $L$ and $\\sigma$. This bound concerns expected stationarity, rather than wall-clock time.",
+      "output": "Under Assumptions~\\ref{ass:smooth} and~\\ref{ass:noise}, Theorem~\\ref{thm:rate} guarantees $\\mathbb{E}\\|\\nabla f(x_R)\\|^2 \\le C/\\sqrt{T}$; the constant $C$ depends on $L$ and $\\sigma$. This bound concerns expected stationarity, rather than wall-clock time.",
+      "explanation_zh": "原句已准确清楚，保留原文；假设引用、公式、常数依赖及期望平稳性与实际运行时间的区别均保持。"
+    }
+  ],
+  "scores_assigned": false,
+  "qualification": "These are actual editing outputs for three synthetic user-supplied paragraphs; no automatic/manual pass rate assigned by the generating agent."
+}

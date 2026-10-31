@@ -1,0 +1,5 @@
+{
+  "changes": {},
+  "requires_semantic_review": true,
+  "limitations": "Static lexical audit; macro expansion, arbitrary TeX constructs and scientific meaning are not validated. Numeric changes may be harmless bibliography/format changes and need context."
+}

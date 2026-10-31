@@ -1,0 +1,47 @@
+{
+  "project": "/Users/myl/Documents/paper/.claude/skills/paper-writing-shared/tmp/acl-template-2026-10-28/validation-projects/short-submission",
+  "entrypoint": "main.tex",
+  "issues": [
+    {
+      "kind": "author-input-pending",
+      "note": "Skeleton is not a finished manuscript"
+    }
+  ],
+  "warnings": [
+    {
+      "kind": "source-word-count-estimate",
+      "note": "TeX macros may change rendered counts; manually verify"
+    },
+    {
+      "kind": "manual-anonymity-review-required",
+      "note": "Literal author check does not audit acknowledgments, funding, links, assets or PDF metadata"
+    }
+  ],
+  "main_pages": 2,
+  "total_pages": 3,
+  "word_count_estimates": {
+    "abstract": 18
+  },
+  "limits": {
+    "available": true,
+    "directory": "project/submission",
+    "anonymous": true,
+    "main_page_limit": 4,
+    "page_limit_status": "verified",
+    "counting": "Content including all main-text figures/tables; excludes post-conclusion Limitations, optional Ethical Considerations, references and appendices under ARR and ACL2027 CFP; manually check deferred floats.",
+    "engine": "pdflatex",
+    "article_type": "short-research-paper",
+    "full_manuscript_page_limit": null,
+    "max_pdf_megabytes": null,
+    "validation": {
+      "compile": "pending",
+      "visual_review": "pending",
+      "submission_compliance": "pending actual author content, disclosures and submission fields"
+    }
+  },
+  "static_check_passed": false,
+  "anonymity_check": "partial-literal-author-check; requires-full-review",
+  "visual_check": "not-performed-by-this-command",
+  "official_system_check": "not-performed",
+  "semantic_fidelity": "requires-review"
+}

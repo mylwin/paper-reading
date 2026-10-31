@@ -1,0 +1,40 @@
+{
+  "verified_on": "2026-10-28",
+  "sources": [
+    {
+      "url": "https://2027.aclweb.org/calls/main/",
+      "acquired": "2026-10-28",
+      "snapshot": ".claude/skills/paper-writing-shared/tmp/acl-template-2026-10-28/sources/acl2027-cfp.html",
+      "sha256": "693fb72169aa05351b533ed89c4ef15884c8a1e93caa732f3c7a2831c8659c8d"
+    },
+    {
+      "url": "https://aclrollingreview.org/cfp",
+      "acquired": "2026-10-28",
+      "snapshot": ".claude/skills/paper-writing-shared/tmp/acl-template-2026-10-28/sources/arr-cfp.html",
+      "sha256": "88b0978a94bd7456710a9ca4097164daf3cdeaa7981ec1eef8e0359e53ef8b0a"
+    },
+    {
+      "url": "https://acl-org.github.io/ACLPUB/formatting.html",
+      "acquired": "2026-10-28",
+      "snapshot": ".claude/skills/paper-writing-shared/tmp/acl-template-2026-10-28/sources/aclpub-formatting.html",
+      "sha256": "4a90de70bc6edc8bd05d2272612574edd27695ac72efe2a0ffaf2f5359b475b8"
+    },
+    {
+      "url": "https://api.github.com/repos/acl-org/acl-style-files/commits/master",
+      "acquired": "2026-10-28",
+      "snapshot": ".claude/skills/paper-writing-shared/tmp/acl-template-2026-10-28/sources/template-commit.json",
+      "sha256": "05081b35396fb3ac1f31306bebd5f1158f40ef77276a9744c98808c123926305"
+    }
+  ],
+  "template_revision": "d5adc823ff0f80f98c80405ca0ab66c68e684409",
+  "official_files": {
+    "acl.sty": "19dfeddc2c0e448f3926a0bef048a9db3f3611b46265b760caabd7ada4f361de",
+    "acl_natbib.bst": "6fbb306202290f4b68e74ac1460a8b27398500cb6dfeb4492e74c457eae7cd1e"
+  },
+  "rules": {
+    "ACL2027CFP": "Paper Submission Details:8/4review,9/5final; ARR requirements; doubleblind",
+    "ARRCFP": "LongPapers/ShortPapers; Limitations(required section); EthicsPolicy; AIWriting/CodingAssistancePolicy; OptionalSupplementaryMaterials",
+    "ACLPUB": "StyleFiles/PaperLength; A4 and embedded fonts; two columns including appendices; abstract <=200words; review line/page numbers, final neither"
+  },
+  "scope": "Official policies and current generic template fixed revision; corpusyears2024/25 managed separately."
+}

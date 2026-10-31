@@ -1,0 +1,57 @@
+{
+  "date": "2026-10-28",
+  "changes": [
+    "Completion metadata40→50; original40/10splitunchanged",
+    "Clarify theory-without-experiments, analysis-without-newalgorithm, maintextproof and optionalQ&A using heldout evidence",
+    "No universal hedge-word ban or required new manuscript disclaimer",
+    "After visual evaluation, core/latex.md clarifies deferred float pages may be beyond main-end label; verify actual rendered boundary.",
+    "Shared evidence intake asks only material untested gaps, not a missing-validation list for every claim."
+  ],
+  "runtime_rules": [
+    {
+      "source": ".claude/skills/paper-writing/SKILL.md",
+      "sha256": "52a847c21d7bb57cf397da3a6933c8e906b6a5c817269c48bd21450723e726fb",
+      "frozen_sha256": "52a847c21d7bb57cf397da3a6933c8e906b6a5c817269c48bd21450723e726fb"
+    },
+    {
+      "source": ".claude/skills/paper-polishing/SKILL.md",
+      "sha256": "262c962d77826998a04e109389583e76bc99f3067d013539f55329b6c7d5e9ec",
+      "frozen_sha256": "262c962d77826998a04e109389583e76bc99f3067d013539f55329b6c7d5e9ec"
+    },
+    {
+      "source": ".claude/skills/paper-writing-shared/venues/icml.md",
+      "sha256": "e68a17c3395c11d06deeab48714b52eda22c927d886bb1e72a76191478ba1003",
+      "frozen_sha256": "e2364d840d9c2ea90700931dab129bdaabea102c839e70a0f6c1dea03067a814"
+    },
+    {
+      "source": ".claude/skills/paper-writing-shared/core/evidence.md",
+      "sha256": "a1658d71071b60a8c7343ec12dd963df42cf19a1a6c75f222a48c294a71b7f51",
+      "frozen_sha256": "81867e353ab8b4fc5d6bc1aa94441f039a327f697b294cab17999bfdb0333933"
+    },
+    {
+      "source": ".claude/skills/paper-writing-shared/core/language.md",
+      "sha256": "491995bb30d875a8af0f26b251090f89c3499b2536200c7068c22017e22e7264",
+      "frozen_sha256": "491995bb30d875a8af0f26b251090f89c3499b2536200c7068c22017e22e7264"
+    },
+    {
+      "source": ".claude/skills/paper-writing-shared/core/latex.md",
+      "sha256": "ec469d81cf34e4cfee02baff3207a95bc755a78e43f6fa435a50d27e51745cdd",
+      "frozen_sha256": "9adefb8489ccf0cde8e67d903fcf200e27a1735802965d15e64495f95e28f31b"
+    },
+    {
+      "source": ".claude/skills/paper-writing-shared/core/paper-types.md",
+      "sha256": "a491c2a97608752d531cb27156568eed258e12ac91d6ab6153348ab9e33a8252",
+      "frozen_sha256": "a491c2a97608752d531cb27156568eed258e12ac91d6ab6153348ab9e33a8252"
+    },
+    {
+      "source": ".claude/skills/paper-writing-shared/core/polishing.md",
+      "sha256": "a89f8569c1a12e723d0f4a14bc79c44b3e450f7858d333b3ff838beb03318374",
+      "frozen_sha256": "a89f8569c1a12e723d0f4a14bc79c44b3e450f7858d333b3ff838beb03318374"
+    },
+    {
+      "source": ".claude/skills/paper-writing-shared/core/writing.md",
+      "sha256": "3da6dc30a221fe6c1766b0800d769c3fe5591505908054f1e8c29f257cf3521a",
+      "frozen_sha256": "3da6dc30a221fe6c1766b0800d769c3fe5591505908054f1e8c29f257cf3521a"
+    }
+  ]
+}

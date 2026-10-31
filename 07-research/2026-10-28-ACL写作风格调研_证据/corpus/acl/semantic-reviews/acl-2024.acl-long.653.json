@@ -1,0 +1,312 @@
+{
+  "id": "acl-2024.acl-long.653",
+  "anthology_id": "2024.acl-long.653",
+  "venue": "acl",
+  "year": 2024,
+  "track": "main conference research",
+  "length_type": "long",
+  "title": "Don’t Rank, Combine! Combining Machine Translation Hypotheses Using Quality Estimation",
+  "authors": [
+    "Giorgos Vernikos",
+    "Andrei Popescu-Belis"
+  ],
+  "first_author": "Giorgos Vernikos",
+  "landing_url": "https://aclanthology.org/2024.acl-long.653/",
+  "pdf_url": "https://aclanthology.org/2024.acl-long.653.pdf",
+  "doi": "10.18653/v1/2024.acl-long.653",
+  "official_listing_url": "https://aclanthology.org/volumes/2024.acl-long/",
+  "sampling_stratum": "multilingual_linguistics",
+  "paper_type": "quality-estimation-guided hypothesis span fusion algorithm for machine translation; empirical method long paper",
+  "anthology_pdf_revision_hash": "0a51fed0",
+  "metadata_revisions": [],
+  "official_attachments": [],
+  "sort_hash": "0c8fc74c59e48c3777228da9f2a8d7ad54046e4dc5ccd6f94731ce3182ee7179",
+  "split": "induction",
+  "semantic_review_status": "complete_writing_focused_full_text_review",
+  "full_text_and_relevant_appendix_review_complete": true,
+  "review_date": "2026-10-29",
+  "reviewer": "acl_induction_a delegated full-text reviewer",
+  "pdf_path": ".claude/skills/paper-writing-shared/tmp/corpus/acl/pdf/2024.acl-long.653.pdf",
+  "pdf_sha256": "76430b136d33c9f113532471f6da0c578196a8f415d2013495f8075733bc14e3",
+  "markdown_path": ".claude/skills/paper-writing-shared/tmp/corpus/acl/markdown/2024.acl-long.653.md",
+  "markdown_sha256": "94d915d8c1a3df02d9516fac7ad73c0d68b67d84b71f9c18adbd835a74105d9e",
+  "full_text_style_review_complete": true,
+  "external_appendix_review_complete": true,
+  "count_eligible_full_text_and_relevant_appendix": true,
+  "coverage": [
+    {
+      "source": "canonical official PDF",
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ],
+      "main_science": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "limitations": [
+        10
+      ],
+      "references": [
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "scientific_appendix": {
+        "A.1 batching/caching/early exit": [
+          15
+        ],
+        "A.2 dataset sizes/domains": [
+          15
+        ],
+        "A.3 surface metrics and Table6/7": [
+          15,
+          16,
+          18
+        ],
+        "A.4 13B results and Tables8/9": [
+          15,
+          18,
+          19
+        ],
+        "A.5 radar comparisons Figure6": [
+          15,
+          16,
+          17
+        ],
+        "A.6 temperature/diversity Eq1/Figure7": [
+          16,
+          19
+        ]
+      }
+    }
+  ],
+  "version_audit": {
+    "published_year": 2024,
+    "canonical_url": "https://aclanthology.org/2024.acl-long.653.pdf",
+    "xml_revision_entries": []
+  },
+  "supplement_audit": {
+    "method": "Read official locked2024XML long paper653; PDFhash0a51fed0; no attachment/revision; all scientific A.1-A.6 and floats read. No live landing freshness claim.",
+    "official_xml_attachments": [],
+    "separate_scientific_appendix_link_found": false,
+    "scientific_appendix_in_pdf": "A.1-A.6 all read",
+    "code": "https://github.com/GeorgeVern/qe-fusion",
+    "code_executed": false
+  },
+  "ten_dimensions": {
+    "reader_argument": {
+      "pages": [
+        1,
+        2,
+        3
+      ],
+      "observation": "从概率与质量错配推进到候选互补错误，以chemicalplant示例说明为何挑选不够、需要组合。",
+      "editorial_advice": "用可手工理解的失败例子直接引出方法增量，避免泛泛夸大需求。",
+      "applicability_boundary": "示例支撑动机，跨任务奖励模型扩展仍是未来。"
+    },
+    "title_abstract": {
+      "pages": [
+        1
+      ],
+      "observation": "醒目的Don’tRank,Combine接描述性后半；摘要明确pool/spans/QE、模型/五语言、质量、novelty和经验线性。",
+      "editorial_advice": "标题修辞后给具体操作对象，摘要覆盖贡献与证据而非强求固定字数槽。",
+      "applicability_boundary": "metrics改善不自动等人类偏好，经验runtime线性非全域复杂度定理。"
+    },
+    "introduction": {
+      "pages": [
+        1,
+        2
+      ],
+      "observation": "候选互补示例引出spanfusion，五条贡献分别是算法、效果、多样性解释、成本、低分缺陷减少。",
+      "editorial_advice": "贡献数随真实证据模块；每项在后文有对应分析。",
+      "applicability_boundary": "不强制三条，机制解释和hallucination指标需与实际测量层级对应。"
+    },
+    "related_work": {
+      "pages": [
+        2,
+        3
+      ],
+      "observation": "按evaluationmetrics、reranking、postediting、constructingcandidates分组；每条路径说明是否需训练/权重和候选质量约束。",
+      "editorial_advice": "用设计维度定位差异，清楚区分重排、后编辑和生成时搜索。",
+      "applicability_boundary": "原文对COMET同参数训练流程的fairness论述不代表全部训练成本相等。"
+    },
+    "method_theory": {
+      "pages": [
+        3,
+        4,
+        15,
+        16
+      ],
+      "observation": "先candidate generation，再Algorithm1 topQEbase→difflib差异→逐span扩展beam→QE评分保留；A.1给跨句batch/cache/earlyexit。",
+      "editorial_advice": "概念步骤留正文，可实现优化后置；符号和伪码服务明确输入输出。",
+      "applicability_boundary": "方法beam b执行值和反复span替换细节未充分说明，不能自行补；没有证明优化全局最优。"
+    },
+    "evidence": {
+      "pages": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        15,
+        16,
+        17,
+        18,
+        19
+      ],
+      "observation": "五语言多模型主表；分析按poolsize、novelty、temperature/diversity、runtime、低spBLEU缺陷、postedit比较推进；附录补BLEU/ChrF及13B与图。",
+      "editorial_advice": "先效果，再逐项回答方法为何有用、何时有用及成本，完整指标后置可交叉核对。",
+      "applicability_boundary": "NMT和LLM采用不同采样协议；未报告人评结果、CI或显著性检验；不能把COMET/BLEURT当人评已完成。"
+    },
+    "discussion_limits": {
+      "pages": [
+        8,
+        9,
+        10,
+        15
+      ],
+      "observation": "具体承认高温退步、对postedit的BLEU落后；Limitations集中人评进行中和同源指标，再以其他指标检验。",
+      "editorial_advice": "真实取舍直接写；局限聚焦决定结论可信度的信息，已测收益不逐句弱化。",
+      "applicability_boundary": "三其他指标并非每格优于全部方案，尤其NMTsurface列；不能以当前指标代替未完成humanvalidation。"
+    },
+    "paragraph_language": {
+      "pages": [
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "observation": "结果段按表读出强结论并明确5/56例外；分析标题用Role/Novelty/Impact/Time等问题功能，原因用likely/may。",
+      "editorial_advice": "实测质量和成本直接说，解释用对应力度；明确例外范围一次足够。",
+      "applicability_boundary": "语言中的consistently/always不得越过实表反例，significant不自动翻译统计显著。"
+    },
+    "main_appendix": {
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        15,
+        16,
+        17,
+        18,
+        19
+      ],
+      "observation": "主文保留动机图/伪码/神经主指标和关键机制成本分析，A补优化、数据、表面指标、13B和多样性扩充。",
+      "editorial_advice": "正文自足而附录完整复核，表面指标与附录反例应反馈主张范围。",
+      "applicability_boundary": "末尾浮动图表仍需阅读；历史长稿布局不等同当前投稿模板限额。"
+    },
+    "actionable": {
+      "pages": [
+        4,
+        6,
+        8,
+        10
+      ],
+      "observation": "可直接表达组合胜过选择的实际神经指标结果，经验线性与人评状态准确命名。",
+      "editorial_advice": "原创例句：QE-fusion uses a reference-free quality metric to combine divergent spans from sampled translation candidates. With five candidates, it improves COMET and BLEURT over QE-reranking for the reported LLM settings; runtime measurements on the en-to-de test set exhibit approximately linear growth over the evaluated pool sizes.",
+      "applicability_boundary": "不宣称所有指标/所有语言任务或理论最坏情形线性；正文无需再加入泛泛可靠性自辩。"
+    }
+  },
+  "counterexamples": [
+    {
+      "pages": [
+        5,
+        6,
+        7,
+        9,
+        16,
+        18,
+        19
+      ],
+      "finding": "正文已承认5/56 LLM主指标非最好，NLLB de-fr BLEURT beam67.69/69.24>fusion67.63/68.81；A.3 allsamplingmethods论断有Tower de-frBLEU fusion31.97<MBRCOMET32.92及NMT多列反例；Table3 NLLB3Bzh-en defect6.7>rerank6.5。",
+      "scope": "保留具体神经指标收益，量词限制在实际比较，不写全部指标普遍优。"
+    },
+    {
+      "pages": [
+        7,
+        8,
+        9,
+        10
+      ],
+      "finding": "novelty只检验有限候选pool中无exactmatch，不证明LLM永远不会生成；spBLEU<3为proxydefect未人类确认hallucination；humanassessment在写作时ongoing。",
+      "scope": "测量名准确即可，无需每句追加通用免责声明。"
+    },
+    {
+      "pages": [
+        4,
+        8,
+        15
+      ],
+      "finding": "linear来自单en-de2037句、A40batch400、pool5-200的实测，算法复杂度也依赖span数量/多样性；只方法阶段计时未明是否含候选生成。WMT21既供ICL又供is-en测试，重叠排除未详细报告。",
+      "scope": "经验规模趋势不是全域O(N)证明；保存协议问题，不补造执行保证。"
+    },
+    {
+      "pages": [
+        5,
+        6,
+        7,
+        17
+      ],
+      "finding": "greedy consistently lagsbeam有PolyLM en-deCOMET73.30>72.22等例外；A.5 prose说NMT excludeszh-en而Fig6原图确含zh-en标轴。",
+      "scope": "已看原图，属于来源叙述与实际数据不一致，待作者确认。"
+    }
+  ],
+  "visual_review": {
+    "pages": [
+      2,
+      4,
+      6,
+      7,
+      8,
+      9,
+      16,
+      17,
+      18,
+      19
+    ],
+    "figures": "All Figures1-7, Algorithm1, Tables1-4/6-9 and semantic-diversity Eq1 inspected on originals; datasetTable5 read aligned text",
+    "reviewer": "same delegated full-text reviewer"
+  },
+  "official_requirements": {
+    "source": "currentACL/ARR separately maintained",
+    "corpus_layout_observation": "accepted long19PDFpages with nine main science pages, Limitationsp10, A.1-A.6pp15-19",
+    "observed_layout_not_current_rule": true
+  },
+  "holdout_validation": null,
+  "review_limitations": "Full scientific text and A.1-A.6 read; no implementation execution, human MT evaluation or theoretical-complexity certification."
+}

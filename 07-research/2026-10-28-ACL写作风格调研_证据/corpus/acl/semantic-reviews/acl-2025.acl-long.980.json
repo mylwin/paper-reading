@@ -1,0 +1,312 @@
+{
+  "id": "acl-2025.acl-long.980",
+  "anthology_id": "2025.acl-long.980",
+  "venue": "acl",
+  "year": 2025,
+  "track": "main conference research",
+  "length_type": "long",
+  "title": "Generalized Attention Flow: Feature Attribution for Transformer Models via Maximum Flow",
+  "authors": [
+    "Behrooz Azarkhalili",
+    "Maxwell W. Libbrecht"
+  ],
+  "first_author": "Behrooz Azarkhalili",
+  "landing_url": "https://aclanthology.org/2025.acl-long.980/",
+  "pdf_url": "https://aclanthology.org/2025.acl-long.980.pdf",
+  "doi": "10.18653/v1/2025.acl-long.980",
+  "official_listing_url": "https://aclanthology.org/volumes/2025.acl-long/",
+  "sampling_stratum": "methods_models",
+  "paper_type": "flow-based attribution method with mathematical analysis and sequence-classification evaluation",
+  "anthology_pdf_revision_hash": "e40a42d9",
+  "metadata_revisions": [],
+  "official_attachments": [],
+  "sort_hash": "01e10d1f5b315b0f856bcc1b8e9b9bedb57cb9ac539d8152422a2802f3216b72",
+  "split": "induction",
+  "semantic_review_status": "complete_writing_focused_full_text_review",
+  "full_text_and_relevant_appendix_review_complete": true,
+  "download_status": "acquired",
+  "parse_status": "full_text_extracted_not_yet_reviewed",
+  "pdf_path": ".claude/skills/paper-writing-shared/tmp/corpus/acl/pdf/2025.acl-long.980.pdf",
+  "pdf_sha256": "0e5637c5a4ae8654fef0be92643d6f0d6833eba3f60a48fb62e06ac60c94a8d8",
+  "markdown_path": ".claude/skills/paper-writing-shared/tmp/corpus/acl/markdown/2025.acl-long.980.md",
+  "markdown_sha256": "99c69700043f09b26991dbeb488242cde88e13297978ecc7e64a4216b9c44aab",
+  "page_count": 21,
+  "acquired_date": "2026-10-28",
+  "recovery": "HTTP byte ranges; validatedsizePDFheaderandpdfinfo; per-pagepdftotext",
+  "prior_acquisition_error": "curl: (28) Operation timed out after 90001 milliseconds with 2752512 out of 12257166 bytes received\ncurl: (28) Operation timed out after 90005 milliseconds with 1376256 out of 12257166 bytes received",
+  "review_date": "2026-10-29",
+  "reviewer": "acl_finish_c",
+  "full_text_style_review_complete": true,
+  "external_appendix_review_complete": true,
+  "count_eligible_full_text_and_relevant_appendix": true,
+  "coverage": [
+    {
+      "source": "canonical official PDF",
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21
+      ],
+      "main_science": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "limitations_ethics": [
+        10
+      ],
+      "references": [
+        10,
+        11,
+        12
+      ],
+      "scientific_appendix": {
+        "A preliminaries": [
+          13,
+          14
+        ],
+        "B graph generation": [
+          14,
+          15
+        ],
+        "C nonuniqueness": [
+          14,
+          15,
+          16
+        ],
+        "D qualitative,fullresults,ASO": [
+          14,
+          16,
+          17,
+          18,
+          19
+        ],
+        "E proofs": [
+          17,
+          19,
+          20
+        ],
+        "F implementation and runtime": [
+          20,
+          21
+        ]
+      }
+    }
+  ],
+  "version_audit": {
+    "canonical_url": "https://aclanthology.org/2025.acl-long.980.pdf",
+    "xml_revision_entries": []
+  },
+  "supplement_audit": {
+    "method": "locked official metadata, no separate attachment listed",
+    "official_xml_attachments": [],
+    "separate_scientific_appendix_link_found": false,
+    "scientific_appendix_in_pdf": "A-F completely read",
+    "code_executed": false
+  },
+  "ten_dimensions": {
+    "reader_argument": {
+      "pages": [
+        1,
+        2
+      ],
+      "observation": "既有attention解释争议→图流不唯一的具体问题→正则修正和任务检验。",
+      "editorial_advice": "明确问题对应哪层：数学对象、算法选择或应用表现，各用相应证据。",
+      "applicability_boundary": "解释指标不直接证明人的理解或模型因果忠实性。"
+    },
+    "title_abstract": {
+      "pages": [
+        1
+      ],
+      "observation": "标题指明Transformer归因/maximumflow，摘要机制、理论、分类评测。",
+      "editorial_advice": "标题和摘要直接给技术对象与主要答案；摘要的mostsettings保留实际范围。",
+      "applicability_boundary": "不复用novel/comprehensive等修辞作为本稿事实。"
+    },
+    "introduction": {
+      "pages": [
+        1,
+        2
+      ],
+      "observation": "近邻方法按attention/gradient/LRP组织，四项贡献含方法、唯一性、实验、代码。",
+      "editorial_advice": "方法改进在最接近前作定义后介绍；贡献随实际产物列出。",
+      "applicability_boundary": "四条只是此稿选择，不是ACL固定数。"
+    },
+    "related_work": {
+      "pages": [
+        1,
+        2,
+        3
+      ],
+      "observation": "引言融合背景定位，正式预备知识解释flow/barrier/Shapley。",
+      "editorial_advice": "把读者理解新机制所需的定义前置，余下细节移附录。",
+      "applicability_boundary": "无独立RelatedWork不等于无文献比较。"
+    },
+    "method_theory": {
+      "pages": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        13,
+        17,
+        19,
+        20
+      ],
+      "observation": "信息张量三变体→图生成双算法→非唯一性→logbarrier→固定flow定义的additivegame理论。",
+      "editorial_advice": "以失败性质推动修正；正文留条件和定理，附录给反例与完整推导。",
+      "applicability_boundary": "Shapley是所定义固定flow payoff的值，不自动等于模型输出coalitiongame；strictfeasibility/有界性与有效边域需要明确。"
+    },
+    "evidence": {
+      "pages": [
+        7,
+        8,
+        9,
+        17,
+        18,
+        19,
+        20,
+        21
+      ],
+      "observation": "五分类集、top/bottom遮蔽、九个k、AOPC/LOdds、分类指标、500runs ASO、示例运行时间。",
+      "editorial_advice": "主表按指标方向清晰呈现，主结果后用全曲线/统计/成本解释稳健性。",
+      "applicability_boundary": "Yelp是实测反例；单句2.306秒不是大规模平均；500runs如何随机化未充分展开。"
+    },
+    "discussion_limits": {
+      "pages": [
+        8,
+        9,
+        10,
+        17,
+        21
+      ],
+      "observation": "Yelp失效在结果中出现，原因以likely/suggests表述；局限写序列长度成本并指向运行表。",
+      "editorial_advice": "将实测例外放在结果解释中，直接报告成功领域和例外；成本限制用实际测量。",
+      "applicability_boundary": "口语/typo解释未隔离验证；不能将optimizationscannotparallelize概括当通用事实。"
+    },
+    "paragraph_language": {
+      "pages": [
+        8,
+        9,
+        17,
+        21
+      ],
+      "observation": "结果段按top/bottom分组，结论回收机制和多数数据集收益。",
+      "editorial_advice": "数字支持的比较直陈；解释原因的句子再限定，无需每句may。",
+      "applicability_boundary": "proving/confirmrobustness偏强，不能从相关benchmark推广所有解释用途。"
+    },
+    "main_appendix": {
+      "pages": [
+        3,
+        5,
+        6,
+        9,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21
+      ],
+      "observation": "主文有算法、定理、两主表；附录包含反例图、所有证明、统计、全曲线、模型/成本。",
+      "editorial_advice": "核心数学与主要实证保留正文，附录承接复核，而非跳过。",
+      "applicability_boundary": "录用正文9页不是当前投稿限页依据。"
+    },
+    "actionable": {
+      "pages": [
+        8,
+        9,
+        19,
+        21
+      ],
+      "observation": "多数分类集优势和Yelp例外、单句成本共同界定方法价值。",
+      "editorial_advice": "原创例：AGF achieves the best reported top- and bottom-masking AOPC and LOdds on four of the five classification datasets. On Yelp, competing methods perform better.",
+      "applicability_boundary": "该比较只涵盖表1/2的平均k指标，不能扩展所有分类指标。"
+    }
+  },
+  "counterexamples": [
+    {
+      "pages": [
+        6,
+        13,
+        17,
+        19,
+        20
+      ],
+      "finding": "Eq14/19 omits1/n relative to Eq21 factorial formula. Fixedflow additive payoff makes marginalflow identity immediate; nonunique flow can define differentgames, so nonuniqueattribution alone does not refute Shapley for eachdistinctgame. Need mathematical clarification, no blanketinvalidclaim.",
+      "scope": "private research audit; retain stated conditional theorem without silently certifying model-causal meaning"
+    },
+    {
+      "pages": [
+        9,
+        19
+      ],
+      "finding": "AGF best4/5 top/bottom AOPC/LOdds, notYelp; table3 has KernelShap SSTF1.53vsAGF.54, AmazonTransAtt.62vsAGF.67. ASO tables differ hidden extraction layer from visiblePDF: visible table5 .049,.037 etc.",
+      "scope": "visualoriginal overrides hidden duplicated draft text; do not assert allmetricswin"
+    },
+    {
+      "pages": [
+        10,
+        20,
+        21
+      ],
+      "finding": "runtime only showcase sentence; 3090Ti described40GB, hardware specification needs authorconfirmation. Costbounds table not equivalent measuredsolver scaling; no same-length scaling study.",
+      "scope": "keep measured2.306s local; do not changeGPUmetadata byguess"
+    },
+    {
+      "pages": [
+        8,
+        17
+      ],
+      "finding": "Yelp noise explanation plausible but no controllednoiseablation; ASO500independent runs lacks clear variationunit.",
+      "scope": "measuredYelpperformance direct; explanation qualified once"
+    }
+  ],
+  "visual_review": {
+    "pages": [
+      6,
+      9,
+      15,
+      16,
+      18,
+      19,
+      20,
+      21
+    ],
+    "figures": "Figs1,3-10,Tables1-8 viewed; Figure2 prose mechanism read p7",
+    "reviewer": "acl_finish_c"
+  },
+  "official_requirements": {
+    "source": "current ACL/ARR separately maintained",
+    "observed_layout_not_current_rule": true
+  },
+  "holdout_validation": null,
+  "review_limitations": "Whole21PDFpages and A-F read; no model/code rerun or independent theorem certification; original rendered page19 resolves duplicated hidden draft text."
+}

@@ -1,0 +1,286 @@
+{
+  "id": "acl-2024.acl-long.7",
+  "anthology_id": "2024.acl-long.7",
+  "venue": "acl",
+  "year": 2024,
+  "track": "main conference research",
+  "length_type": "long",
+  "title": "BitDistiller: Unleashing the Potential of Sub-4-Bit LLMs via Self-Distillation",
+  "authors": [
+    "DaYou Du",
+    "Yijia Zhang",
+    "Shijie Cao",
+    "Jiaqi Guo",
+    "Ting Cao",
+    "Xiaowen Chu",
+    "Ningyi Xu"
+  ],
+  "first_author": "DaYou Du",
+  "landing_url": "https://aclanthology.org/2024.acl-long.7/",
+  "pdf_url": "https://aclanthology.org/2024.acl-long.7.pdf",
+  "doi": "10.18653/v1/2024.acl-long.7",
+  "official_listing_url": "https://aclanthology.org/volumes/2024.acl-long/",
+  "sampling_stratum": "efficiency_theory",
+  "paper_type": "low-bit quantization method combining asymmetric initialization and self-distillation; empirical systems/method long paper",
+  "anthology_pdf_revision_hash": "23198452",
+  "metadata_revisions": [],
+  "official_attachments": [],
+  "sort_hash": "05111a259bacdbd1a94bac62104489d3152e057ce6bcfba6a03cc60f87a7983f",
+  "split": "induction",
+  "semantic_review_status": "complete_writing_focused_full_text_review",
+  "full_text_and_relevant_appendix_review_complete": true,
+  "review_date": "2026-10-29",
+  "reviewer": "acl_induction_a delegated full-text reviewer",
+  "pdf_path": ".claude/skills/paper-writing-shared/tmp/corpus/acl/pdf/2024.acl-long.7.pdf",
+  "pdf_sha256": "7c3442ba994ea73a1501954c9b31a2cf356bc1687a97837c05472fd8bff709c1",
+  "markdown_path": ".claude/skills/paper-writing-shared/tmp/corpus/acl/markdown/2024.acl-long.7.md",
+  "markdown_sha256": "c48a36271d88868ff4745f8d5fc1de6e34ca1e2c51c7daca5ffc5eb4834a2fff",
+  "full_text_style_review_complete": true,
+  "external_appendix_review_complete": true,
+  "count_eligible_full_text_and_relevant_appendix": true,
+  "coverage": [
+    {
+      "source": "canonical official PDF",
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "main_science": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "references": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "scientific_appendix": {
+        "A.1 PTQ/QAT calibration and comparison settings": [
+          12
+        ],
+        "A.2 CAKLD implementation and token confidence": [
+          12
+        ],
+        "A.3 training data examples and counts": [
+          12,
+          14
+        ],
+        "A.4 larger general-language models and final floats": [
+          12,
+          14,
+          15
+        ],
+        "A.5 AWQ integration": [
+          12,
+          13
+        ]
+      }
+    }
+  ],
+  "version_audit": {
+    "published_year": 2024,
+    "canonical_url": "https://aclanthology.org/2024.acl-long.7.pdf",
+    "xml_revision_entries": []
+  },
+  "supplement_audit": {
+    "method": "Read locked official2024XML volume long paper7; pdfhash23198452; no attachments/revisions; canonical15page PDF contains A.1-A.5 including all late float tables. No live landing freshness claim.",
+    "official_xml_attachments": [],
+    "separate_scientific_appendix_link_found": false,
+    "scientific_appendix_in_pdf": "A.1-A.5 fully read",
+    "external_code": "https://github.com/DD-DuDa/BitDistiller",
+    "code_executed": false
+  },
+  "ten_dimensions": {
+    "reader_argument": {
+      "pages": [
+        1,
+        2
+      ],
+      "observation": "从部署的模型位宽需求收窄到两个低比特瓶颈：初始权重保真与训练低精度表示；两个模块分别回应。",
+      "editorial_advice": "让问题拆分与方法模块一一对应，先解释为什么需要两个设计。",
+      "applicability_boundary": "低位宽及训练pipeline成本不等于已测真实推理设备延迟/总内存收益。"
+    },
+    "title_abstract": {
+      "pages": [
+        1
+      ],
+      "observation": "名称＋sub4bit＋selfdistillation；摘要先对象和瓶颈，再两模块与任务覆盖，突出数据/训练成本，无硬塞数字。首页图以模型总bits与HumanEval联结质量/规模。",
+      "editorial_advice": "摘要可用机制、对象和贡献类型建立清晰中心；主图可先展示核心比较。",
+      "applicability_boundary": "unleashing/significantly/novel是作者修辞不是venue要求，无CI或检验不翻成统计显著。"
+    },
+    "introduction": {
+      "pages": [
+        1,
+        2
+      ],
+      "observation": "两项挑战引出非对称裁剪和CAKLD，末段用自然段概览多任务/低比特与成本，无固定贡献列表。",
+      "editorial_advice": "贡献概览直接关联后续表格和机制，不为模板强加固定三贡献。",
+      "applicability_boundary": "scaling law图是有限模型/bit组合的经验趋势，不视为理论普适规律。"
+    },
+    "related_work": {
+      "pages": [
+        2
+      ],
+      "observation": "Background and Related Work分quantization的PTQ/QAT、粒度格式，以及KD；每部分结尾定位本方法选择。",
+      "editorial_advice": "技术背景服务设计来源，明示复用先前非对称格式和本稿增量。",
+      "applicability_boundary": "对比方法有设置适配，不能把重实现结果自动当原论文最优配置结论。"
+    },
+    "method_theory": {
+      "pages": [
+        3,
+        4,
+        5,
+        12,
+        13
+      ],
+      "observation": "Algorithm1覆盖裁剪初始化→量化前向→全精度反传→输出；§3.1解释NF3/INT2选择；§3.2用固定预估gamma混合双KL并以toyGaussian说明mode取舍。",
+      "editorial_advice": "模块职责、执行顺序与目标函数分开，直观例子解释复杂符号；初始化成本与训练成本明确。",
+      "applicability_boundary": "gamma由十batch预先估计，不是每token在线自适应；toy分布是直觉演示不是收敛定理。"
+    },
+    "evidence": {
+      "pages": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        12,
+        13,
+        14,
+        15
+      ],
+      "observation": "先通用与代码/数学主结果，再初始化/数据/目标消融，最后SpQR/QuIP/TSLD/teacher规模/训练成本；A补协议、数据与13B/70B全表。",
+      "editorial_advice": "主结果→关键设计→近邻差异→资源成本形成论证链；平均分、单任务与不同指标各自解释。",
+      "applicability_boundary": "Table1/10 Avg含MMLU共5项，Table4 QAavg只4QA；Table7为WizardCoder7B整条量化pipeline而非解码速度。"
+    },
+    "discussion_limits": {
+      "pages": [
+        8,
+        9,
+        13
+      ],
+      "observation": "直接承认QuIP#数学更好、largerteacher未提高、AWQ预处理终点无额外收益；局限聚焦teacher现象解释与标量/1bit未来扩展。",
+      "editorial_advice": "负结果与未实现组合直接讲，边界集中于当前机制；无需对每个主结果都加保守前缀。",
+      "applicability_boundary": "1bit/vectorquantization为未来，不写成当前能力；无深入teacher因果隔离，原因用may。"
+    },
+    "paragraph_language": {
+      "pages": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "observation": "结果段先表格定位再具体比较；分项粗体小标题按实验问题组织；已测差值直接说，teacher机制用hinting/may。",
+      "editorial_advice": "保持贡献力度，使用具体数值和比较对象；仅机制推测保留假设语气。",
+      "applicability_boundary": "all/leading需匹配列内例外；百分比与百分点不能混用。"
+    },
+    "main_appendix": {
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        12,
+        13,
+        14,
+        15
+      ],
+      "observation": "9页主科学内容保留算法、全部核心模块与主要消融/比较/成本；A补复现选择、训练例子和放大模型表，最后p15仅Table11仍是科学内容。",
+      "editorial_advice": "正文让读者判断贡献，附录提供完整任务和规模复核；读到末尾浮动表。",
+      "applicability_boundary": "录用9页科学内容不是当前投稿8页规则；原版历史排版观察与官方规则分开。"
+    },
+    "actionable": {
+      "pages": [
+        7,
+        8,
+        9
+      ],
+      "observation": "贡献由成套机制及实测质量/训练资源建立，局部例外不要求全面弱化。",
+      "editorial_advice": "原创示例：BitDistiller combines asymmetric initialization with self-distillation using a confidence-weighted mixture of forward and reverse KL divergences. For the reported WizardCoder-7B setup, its quantization pipeline uses2000 examples and takes3.02 hours on one A10080GB GPU, compared with100000 examples and280.64 hours for the evaluated LLM-QAT setup.",
+      "applicability_boundary": "这是特定pipeline实测，不能改成解码加速93倍；保留数据生成/初始化/QAT三项成本。"
+    }
+  },
+  "counterexamples": [
+    {
+      "pages": [
+        6,
+        7,
+        8,
+        14,
+        15
+      ],
+      "finding": "Table1 3bitPIQA Bit76.99<Omni77.47/AWQ76.27，2bitWino61.09<LLMQAT61.64；Table5 QuIP# MMLU30.90>29.25且GSM60>51.02。Table11RTN PIQA94.96与Avg46.67不一致，四项均值54.1725；若64.96则46.6725，疑typo但不得静默修正。",
+      "scope": "保持平均性能优势，校正all/单任务推广，待作者核对异常单元格。"
+    },
+    {
+      "pages": [
+        6,
+        7,
+        9,
+        13
+      ],
+      "finding": "数学13B2bit61.33−36.64=24.69百分点，非相对24.69%。Table8正文称INTAsym无法完成但表给PPL340→16.94，与AWQ→Inf不同。",
+      "scope": "已看原页确认，数字/措辞冲突仅作为研究查询，不机械进入其他稿正文。"
+    },
+    {
+      "pages": [
+        5,
+        8,
+        9,
+        12
+      ],
+      "finding": "gamma预先十batch估计，不能写onlineper-token自适应。teacher7B优13B仅PPL8.08vs8.12、MMLU29.25vs28.27，缺CI/重复及架构隔离，解释未证实。成本表2Kvs100K同时改变训练/数据设置，无法单归CAKLD。",
+      "scope": "直接陈述观测和pipeline总收益，不补因果或统计显著保证。"
+    }
+  ],
+  "visual_review": {
+    "pages": [
+      1,
+      3,
+      4,
+      5,
+      7,
+      8,
+      9,
+      12,
+      13,
+      14,
+      15
+    ],
+    "figures": "All Figures1-9, Algorithm1, equations1-5 and Tables2-11 original pages inspected; Table1 fully read page-aligned text",
+    "reviewer": "same delegated full-text reviewer"
+  },
+  "official_requirements": {
+    "source": "current ACL/ARR separately maintained",
+    "corpus_layout_observation": "long accepted15PDFpages with A.1-A.5; main pp1-9 includes Limitations",
+    "observed_layout_not_current_rule": true
+  },
+  "holdout_validation": null,
+  "review_limitations": "Full prose and scientific appendices read; no code rerun, training reproduction or independent theorem/statistical certification."
+}

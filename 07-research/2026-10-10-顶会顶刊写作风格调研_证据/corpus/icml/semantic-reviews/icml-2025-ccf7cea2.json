@@ -1,0 +1,281 @@
+{
+  "id": "icml-2025-ccf7cea2",
+  "venue": "icml",
+  "year": 2025,
+  "split": "induction",
+  "title": "Subspace Optimization for Large Language Models with Convergence Guarantees",
+  "authors": "Yutong He, Pengrui Li, Yipeng Hu, Chuyan Chen, Kun Yuan",
+  "pdf_path": ".claude/skills/paper-writing-shared/tmp/corpus/icml/pdf/Subspace Optimization for Large Language Models with Convergence Guarantees.pdf",
+  "markdown_path": ".claude/skills/paper-writing-shared/tmp/corpus/icml/markdown/Subspace Optimization for Large Language Models with Convergence Guarantees.md",
+  "pdf_sha256": "26bddefc3f41a620e036e40df3e24b6043f8cc20fa4cd955881ba20b59ed5a09",
+  "review_date": "2026-10-28",
+  "paper_type": "counterexample-driven stochastic subspace optimization theory, randomized method, and LLM experiments",
+  "semantic_review_status": "complete_writing_focused_review",
+  "full_text_style_review_complete": true,
+  "external_appendix_review_complete": true,
+  "count_eligible_full_text_and_relevant_appendix": true,
+  "coverage": [
+    {
+      "asset": "locked official PMLR PDF",
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55
+      ],
+      "sections": "Abstract/1–8/Ack/Impact/refs;A/B.1–B.5/C/D.1–D.6/E/F and floatedAlgorithms4–6 complete",
+      "method": "continuousall55pagetext and25originalpageimages directlyviewed;14figures5tables6algorithms included"
+    }
+  ],
+  "version_audit": {
+    "official_landing": "https://proceedings.mlr.press/v267/he25i.html",
+    "official_pdf": "https://raw.githubusercontent.com/mlresearch/v267/main/assets/he25i/he25i.pdf",
+    "version": "official proceedings PDF; exact bytes locked by SHA256",
+    "identity": "title/authors/PMLR267/year/lockedSHA match",
+    "new_network_fetch": false
+  },
+  "supplement_audit": {
+    "status": "all A–F scientific appendices and end-floated algorithms in same55pagePDF fully read",
+    "external_scientific_appendix_referenced": false,
+    "code_artifacts": "code repository not executed; no external unread scientific supplement used"
+  },
+  "ten_dimensions": {
+    "reader_argument": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp1–4"
+      ],
+      "observation": "内存效率已知而随机收敛未知→Q1能否→Q2何种条件→Q3如何修改，技术挑战单列使问题链可辨。",
+      "editorial_advice": "用问题驱动组织确有逻辑依赖的结果；标题中的保证应在摘要明确对应的算法和解概念。",
+      "applicability": "55页及A–F全部科学附录连续阅读，25原页核验全部14图/5表/6算法、反例及关键条件。写作组织及主张证据范围审阅，不是独立证明认证或作者代码复现；39篇归纳先导，正式留出未用。",
+      "confidence": {
+        "paper_specific": "high for observed organization/settings",
+        "venue_wide": "low;39/50 pilot"
+      }
+    },
+    "title_abstract": {
+      "category": "corpus_observation",
+      "positions": [
+        "p1"
+      ],
+      "observation": "标题对象+保证；摘要缺口→非收敛反例→可收敛条件→GoLore→分析扩展→实验/代码。",
+      "editorial_advice": "摘要直接报告发现，反例存在性与普遍失败不同；stationarity比optimal solution更准确。",
+      "applicability": "55页及A–F全部科学附录连续阅读，25原页核验全部14图/5表/6算法、反例及关键条件。写作组织及主张证据范围审阅，不是独立证明认证或作者代码复现；39篇归纳先导，正式留出未用。",
+      "confidence": {
+        "paper_specific": "high for observed organization/settings",
+        "venue_wide": "low;39/50 pilot"
+      }
+    },
+    "introduction": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp1–3"
+      ],
+      "observation": "三个Q与贡献项逐一回应，机制直觉提前解释SVD选噪声，图1给toy曲线。",
+      "editorial_advice": "问题和贡献一一映射能减少读者回溯；不强制所有稿件写成问答列表。",
+      "applicability": "55页及A–F全部科学附录连续阅读，25原页核验全部14图/5表/6算法、反例及关键条件。写作组织及主张证据范围审阅，不是独立证明认证或作者代码复现；39篇归纳先导，正式留出未用。",
+      "confidence": {
+        "paper_specific": "high for observed organization/settings",
+        "venue_wide": "low;39/50 pilot"
+      }
+    },
+    "related_work": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp3–4/9"
+      ],
+      "observation": "1.2按内存训练及有损压缩，1.3指出reuse projection不具全域无偏/收缩与动量转移难题；7节专谈ReLoRA/Flora/SIFT/零阶/sketch关系。",
+      "editorial_advice": "概览定位与机制等价可分开，定量资源比较紧邻实现推导；不只以缺乏理论否定近邻。",
+      "applicability": "55页及A–F全部科学附录连续阅读，25原页核验全部14图/5表/6算法、反例及关键条件。写作组织及主张证据范围审阅，不是独立证明认证或作者代码复现；39篇归纳先导，正式留出未用。",
+      "confidence": {
+        "paper_specific": "high for observed organization/settings",
+        "venue_wide": "low;39/50 pilot"
+      }
+    },
+    "method_theory": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp4–9/13–50/53–55"
+      ],
+      "observation": "共用带variant标记算法→存在性反例→确定性/大batch/各向同性条件→Stiefel随机投影→主定理/remark；B依projection、动量收缩、累计误差、descent、超参率，C加16/17，D迁移稀疏版。",
+      "editorial_advice": "沿失败原因设计修改并解释为何消除它；主文讲定理意义，完整超参和证明进附录；把MSGD+MP与AdamW实验清楚映射。",
+      "applicability": "55页及A–F全部科学附录连续阅读，25原页核验全部14图/5表/6算法、反例及关键条件。写作组织及主张证据范围审阅，不是独立证明认证或作者代码复现；39篇归纳先导，正式留出未用。",
+      "confidence": {
+        "paper_specific": "high for observed organization/settings",
+        "venue_wide": "low;39/50 pilot"
+      }
+    },
+    "evidence": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp3/8–9/19/32–34/50–52"
+      ],
+      "observation": "toy反例→C4预训练60M及附录350M→GLUE/7B/13B微调→switch/frequency/sampling消融→梯度误差诊断；附录补硬件和超参。",
+      "editorial_advice": "实验分别服务反例、任务收益与机制解释；用可核的对比量直接陈述进展，数值图不声称证明全域定理。",
+      "applicability": "55页及A–F全部科学附录连续阅读，25原页核验全部14图/5表/6算法、反例及关键条件。写作组织及主张证据范围审阅，不是独立证明认证或作者代码复现；39篇归纳先导，正式留出未用。",
+      "confidence": {
+        "paper_specific": "high for observed organization/settings",
+        "venue_wide": "low;39/50 pilot"
+      }
+    },
+    "discussion_limits": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp8–10/50–52"
+      ],
+      "observation": "推荐前GaLore后GoLore混合；Conclusion and Limitations直接概括结果并指出Adam/Fira理论未覆盖；附录WinoGrande过拟合导致并列。",
+      "editorial_advice": "保留实际关键例外在结果/局限处，贡献句无需每次重述；明确混合实践与理论版本。",
+      "applicability": "55页及A–F全部科学附录连续阅读，25原页核验全部14图/5表/6算法、反例及关键条件。写作组织及主张证据范围审阅，不是独立证明认证或作者代码复现；39篇归纳先导，正式留出未用。",
+      "confidence": {
+        "paper_specific": "high for observed organization/settings",
+        "venue_wide": "low;39/50 pilot"
+      }
+    },
+    "paragraph_language": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp1–9/13–50"
+      ],
+      "observation": "Insight/Counter-example/Theorem/Remark标签让机制→保证→含义连贯，证明分情况与共用lemma复用。",
+      "editorial_advice": "保留show/establish等有证据动词；删去重复背景和多余自证，不机械复制NOT/first/consistently等强度。",
+      "applicability": "55页及A–F全部科学附录连续阅读，25原页核验全部14图/5表/6算法、反例及关键条件。写作组织及主张证据范围审阅，不是独立证明认证或作者代码复现；39篇归纳先导，正式留出未用。",
+      "confidence": {
+        "paper_specific": "high for observed organization/settings",
+        "venue_wide": "low;39/50 pilot"
+      }
+    },
+    "main_appendix": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp1–55"
+      ],
+      "observation": "主文1–9，ack/impact/refs10–12，A13–14实现，B13–32基本引理/反例/三组证明，C32–38附加噪声条件与图，D38–50稀疏完整迁移，E50–51实验设置，F50–52消融诊断，算法4–6浮至53–55。全部阅读。",
+      "editorial_advice": "主文算法框架与主定理齐全，附录给可执行具体版本及证据；按实际浮动页定位避免只读附录前半。",
+      "applicability": "55页及A–F全部科学附录连续阅读，25原页核验全部14图/5表/6算法、反例及关键条件。写作组织及主张证据范围审阅，不是独立证明认证或作者代码复现；39篇归纳先导，正式留出未用。",
+      "confidence": {
+        "paper_specific": "high for observed organization/settings",
+        "venue_wide": "low;39/50 pilot"
+      }
+    },
+    "actionable": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp1–9/13–55"
+      ],
+      "observation": "失败反例驱动新方法，三问结果地图与机制图支撑理论叙事，实验覆盖结果与原因。",
+      "editorial_advice": "原创示例：We construct a stochastic quadratic on which SVD-based subspace updates miss the descent direction. Replacing the SVD basis with a random orthonormal basis yields a stationarity guarantee for MSGD with momentum projection. A GaLore-to-GoLore schedule improves the reported pretraining results and several fine-tuning scores.",
+      "applicability": "55页及A–F全部科学附录连续阅读，25原页核验全部14图/5表/6算法、反例及关键条件。写作组织及主张证据范围审阅，不是独立证明认证或作者代码复现；39篇归纳先导，正式留出未用。",
+      "confidence": {
+        "paper_specific": "high for observed organization/settings",
+        "venue_wide": "low;39/50 pilot"
+      }
+    }
+  },
+  "counterexamples": [
+    {
+      "position": "pp5–7/17–32/9",
+      "finding": "Non-convergence theorem is existence of a smooth boundedbelow quadratic/oracle/initialpoint, not all GaLore runs fail. Positive rates are average expected squaredgradient stationarity, notglobalminimum/pointwisemonotonic. Convergence specificallyMSGD+MP withtunedbeta/tau/eta andrankfractiondependence;AdamW/Adamsecondmoment notcovered,explicitp9. Empiricalhybridneedsownmapping;donotweakenvalidMSGDtheoremorpretendAdamcovered."
+    },
+    {
+      "position": "pp6/32–38",
+      "finding": "Isotropic branch needs BOTH rotation-invariantnoiseAssumption16 andleadingproperty17. Gaussianleadingproperty is numericallyillustrated200000samples32x32 at3scales,notproved. Singleabstractshorthandcannotreplacecompleteconditions;stateactualbranch once alongside result."
+    },
+    {
+      "position": "pp8–9/50–52",
+      "finding": "GLUEaverageGoLore86.03 improvesGaLore85.77 butbelowfull86.15;CoLA61.66belowfull62.07. WinoGrandeTable4GaLore/GoLoreboth68.51,belowfull69.85;BoolQbelowfullthoughimprovesGaLore. p9consistentlyoutperformsnotalltaskstrictimprovement. OPT13Bmemory77.68GBsameasGaLore/fullOOM,notnewmemorysavingsclaimagainstGaLore. 60%and7Bon4090p1arepriorGaLorecitations,notnewGoLoremeasurement."
+    },
+    {
+      "position": "pp9/13–14/50–52",
+      "finding": "ReLoRA-like complexitysymbolicwithspecificlinearMSGDcaseandlittleextramemory,notmeasuredendtoendwallclock. Switchingpointtaskdependent/heuristic;MRPCsensitivityonecase,notuniversallytuningfree. Fig14truegradient uses32sequences,notfulltaskpopulationgradient;Fig12lateAdamcurvebetterthanGoLore. Trials/errorbarsnotreported;noindependentreplication."
+    },
+    {
+      "position": "pp7/14/15/19/34–36/50/53–55 research-only queries",
+      "finding": "Alg1Adamcorrectiont0zero/overwritesstates;Alg2/6differentbetaconvention;Alg3–5referencepreviousbasisatfirsttwithoutdefinition;Alg5gradientplacedbeforelayerloop;seekcodeclarificationbeforeimplementation. Lemma2p15lhsx0vsproofxt;B/Cprojectiondependentcrossnoise expectation andCleadingstepneedconditionaljustification (Lemma12statement16/17doesnotaloneprovealllaterMGF/crosssteps). Table4WinoGrande80epochsversusEtext30;p9rank4claimversusEOPT1024. Storequeriesinresearch,noruntimeblanketwarnings."
+    }
+  ],
+  "visual_review": {
+    "pages": [
+      1,
+      2,
+      3,
+      5,
+      6,
+      7,
+      8,
+      9,
+      14,
+      17,
+      18,
+      19,
+      20,
+      27,
+      31,
+      32,
+      33,
+      34,
+      37,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55
+    ],
+    "source": "105dpi Poppler originalimages directlyviewed",
+    "policy": "delete25renders+duplicateextraction onregistration;retaincanonicalPDF/MD onlyignoredskilltmp"
+  },
+  "official_requirements": [],
+  "holdout_validation": null,
+  "review_limitations": "55页及A–F全部科学附录连续阅读，25原页核验全部14图/5表/6算法、反例及关键条件。写作组织及主张证据范围审阅，不是独立证明认证或作者代码复现；39篇归纳先导，正式留出未用。"
+}

@@ -1,0 +1,283 @@
+{
+  "id": "acl-2024.acl-long.600",
+  "anthology_id": "2024.acl-long.600",
+  "venue": "acl",
+  "year": 2024,
+  "track": "main conference research",
+  "length_type": "long",
+  "title": "Measuring Political Bias in Large Language Models: What Is Said and How It Is Said",
+  "authors": [
+    "Yejin Bang",
+    "Delong Chen",
+    "Nayeon Lee",
+    "Pascale Fung"
+  ],
+  "first_author": "Yejin Bang",
+  "landing_url": "https://aclanthology.org/2024.acl-long.600/",
+  "pdf_url": "https://aclanthology.org/2024.acl-long.600.pdf",
+  "doi": "10.18653/v1/2024.acl-long.600",
+  "official_listing_url": "https://aclanthology.org/volumes/2024.acl-long/",
+  "sampling_stratum": "evaluation_analysis",
+  "paper_type": "topic-level political stance and framing measurement framework with diagnostic multi-model headline study",
+  "anthology_pdf_revision_hash": "1fad8957",
+  "metadata_revisions": [],
+  "official_attachments": [],
+  "sort_hash": "0254e183a21918aafb3226bc1e7eecb4984318cb57a4f89a9f88d9e08ea518b9",
+  "split": "induction",
+  "semantic_review_status": "complete_writing_focused_full_text_review",
+  "full_text_and_relevant_appendix_review_complete": true,
+  "review_date": "2026-10-29",
+  "reviewer": "acl_induction_b",
+  "pdf_path": ".claude/skills/paper-writing-shared/tmp/corpus/acl/pdf/2024.acl-long.600.pdf",
+  "pdf_sha256": "a3c8785063fc16fc1462ba4a759c8d5875d9923b6a4eba2e6ad642e810a34a2e",
+  "markdown_path": ".claude/skills/paper-writing-shared/tmp/corpus/acl/markdown/2024.acl-long.600.md",
+  "markdown_sha256": "c28c40ac08640d5de99d74f99d1b67f06a932688cfda0379030d9368a2e77ad3",
+  "full_text_style_review_complete": true,
+  "external_appendix_review_complete": true,
+  "count_eligible_full_text_and_relevant_appendix": true,
+  "coverage": [
+    {
+      "source": "canonical official PDF",
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18
+      ],
+      "main_science": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "references": [
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "scientific_appendix": {
+        "A implementation frames/anchor tags/extractors": [
+          15
+        ],
+        "B full stance matrix/dashboard": [
+          15,
+          16
+        ],
+        "C lexical/media bias analysis": [
+          15,
+          17
+        ],
+        "D all eleven model generation examples": [
+          18
+        ]
+      }
+    }
+  ],
+  "version_audit": {
+    "canonical_url": "https://aclanthology.org/2024.acl-long.600.pdf",
+    "xml_revision_entries": []
+  },
+  "supplement_audit": {
+    "method": "Read locked official2024XML long600 entry; no attachment or revision element. No live landing freshness claim.",
+    "official_xml_attachments": [],
+    "separate_scientific_appendix_link_found": false,
+    "scientific_appendix_in_pdf": "A-D complete",
+    "code_executed": false
+  },
+  "ten_dimensions": {
+    "reader_argument": {
+      "pages": [
+        1,
+        2,
+        3
+      ],
+      "observation": "从政治取向问卷的粗粒度局限推进到topic stance、content和style三个问题，社会科学framing定义支撑计算操作。",
+      "editorial_advice": "评测框架稿先明确要判读的构念和现有测量遗漏，再定义可操作指标。",
+      "applicability_boundary": "测量标题生成中的模型输出，而非模型人格、用户真实信念或已测社会极化效应。"
+    },
+    "title_abstract": {
+      "pages": [
+        1
+      ],
+      "observation": "标题双部分后半以what/how直接概括两种分解；摘要问题→框架→内容/风格口径→11模型。",
+      "editorial_advice": "以能让读者理解研究增量的概念对照命名，数字可用于界定覆盖而非必须性能领先。",
+      "applicability_boundary": "explainable/scalable为框架性质主张，不等于已有独立解释忠实性或跨场景部署验证。"
+    },
+    "introduction": {
+      "pages": [
+        1,
+        2
+      ],
+      "observation": "概述两层方法，结尾以七个具名发现而非固定贡献数组织，最后开放代码。",
+      "editorial_advice": "发现型贡献可以直接表述有据观察，同时把方法贡献与产生的诊断能力连接。",
+      "applicability_boundary": "更安全系统和去偏策略是目标，非本文完成的干预效果。"
+    },
+    "related_work": {
+      "pages": [
+        8,
+        9
+      ],
+      "observation": "后置独立Related Work分framing/political bias NLP与LM政治评测，纳入并行问卷可靠性研究。",
+      "editorial_advice": "按构念来源与最近测量方案组织，前文保留必要定义，完整对照可后置。",
+      "applicability_boundary": "后置不是所有ACL固定规则；不能把先前研究政治偏差误写为完全空白。"
+    },
+    "method_theory": {
+      "pages": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        15
+      ],
+      "observation": "先抽象stance空间与content/style潜变量，再FrameworkImplementation映射到自生成anchor、SBERT最近邻、15frame分类、NER及targetsentiment；附录完整prompt/tags。",
+      "editorial_advice": "概念框架和实现分节，让符号与可计算对象一一对应。",
+      "applicability_boundary": "潜变量分解/逆函数是概念模型而非可识别性证明；anchor等模长和距离保持是假设，未验证为真。"
+    },
+    "evidence": {
+      "pages": [
+        5,
+        6,
+        7,
+        8,
+        15,
+        16,
+        17,
+        18
+      ],
+      "observation": "11模型各14主题1000条，10议题stance/4事件framing；热图→实体频率/框架→词极性→问题式发现，附录给完整矩阵/分topic图/样例。",
+      "editorial_advice": "总览与具体案例互相解释，用问题标题组织规模、模型家族和语言关联观察。",
+      "applicability_boundary": "显著阈值.01用于stance分类，未交代检验类型/多重比较；非显著不能认证实质中立；classifier输出非人类gold。"
+    },
+    "discussion_limits": {
+      "pages": [
+        8,
+        9,
+        10
+      ],
+      "observation": "结论回收topic依赖与内容/风格分解；局限明确headline、anchor假设、二元立场简化和未处理幻觉；Ethics表达研究立场。",
+      "editorial_advice": "局限集中说明测量解释和迁移条件，已完成框架与观察照常直接报告。",
+      "applicability_boundary": "作者自述客观不是外部无偏认证，equidistance是该构造定义的neutral而非普遍政治规范。"
+    },
+    "paragraph_language": {
+      "pages": [
+        6,
+        7,
+        8
+      ],
+      "observation": "段首先给发现、图表再给示例，规模/多语问题以问句标题回答；多语解释用may/likely。",
+      "editorial_advice": "可直接说模型在议题间表现不同，把训练来源等未隔离归因保留为解释。",
+      "applicability_boundary": "模型规模不是受控干预；不用每句加限定，也不把correlation写成causation。"
+    },
+    "main_appendix": {
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        15,
+        16,
+        17,
+        18
+      ],
+      "observation": "正文保留概念框架、实现、主stance和framing分析，A-D补标签/模型、全矩阵、额外style指标和完整生成例。",
+      "editorial_advice": "正文应足以判断测量链，附录承载操作复核和案例细节。",
+      "applicability_boundary": "科学附录必须看全，p18例子会揭示事实错误对解释的潜在影响；历史9页布局不替代当前限页。"
+    },
+    "actionable": {
+      "pages": [
+        5,
+        6,
+        16
+      ],
+      "observation": "具体表述topic-level变化比笼统政治标签更清楚。",
+      "editorial_advice": "原创示例：Across eleven evaluated models, the framework compares topic-specific stance and decomposes generated headlines into selected frames and lexical polarity. The reported stance labels vary across topics, including within the same model family.",
+      "applicability_boundary": "不把headline检测分数写成真实社会影响或所有使用场景的政治属性。"
+    }
+  },
+  "counterexamples": [
+    {
+      "pages": [
+        3,
+        9
+      ],
+      "finding": "等模长/相反anchor和距离保持仅是假设，作者p9承认自生成anchor可能不满足；content/style提取也未有独立gold验证。",
+      "scope": "区分概念假设与估计量，保留框架诊断贡献，不强加通用警告。"
+    },
+    {
+      "pages": [
+        5,
+        6,
+        15,
+        16
+      ],
+      "finding": "Fig7白色neutral可数13格而正文称12/110=10.9%；Fig4同白格及数字对应，不静默改。无显著差异分类中立也不等于证明等价。",
+      "scope": "原版已看，为作者核对项，不将全部测量无效化。"
+    },
+    {
+      "pages": [
+        8,
+        16
+      ],
+      "finding": "Figure8声称immigration展示content，但实体/同婚相关对象与Figure5重叠，需核对仪表例子的topic标签；图8 overall30.4%+/-18/27含糊。",
+      "scope": "展示图完整性查询，不冒充数据重算。"
+    },
+    {
+      "pages": [
+        15,
+        17,
+        18
+      ],
+      "finding": "Figure9六主题图缺Jais而11模型主项目包括；Figure10与文字跨topic平均口径不完整。Table3 Jais产生UAE legalized same-sex marriage类句子，作者承认幻觉未纳入偏差测量。",
+      "scope": "仅作为源中生成样例及指标边界，未认证这些生成政治/法律事实，未将样例当真实新闻。"
+    }
+  ],
+  "visual_review": {
+    "pages": [
+      2,
+      3,
+      5,
+      6,
+      7,
+      15,
+      16,
+      17,
+      18
+    ],
+    "figures": "Original Figures2-10, anchor tags Table2, all model samples Table3 and equations1-2 viewed",
+    "reviewer": "same delegated reviewer"
+  },
+  "official_requirements": {
+    "source": "current ACL/ARR rules separately maintained",
+    "observed_layout_not_current_rule": true,
+    "corpus_layout_observation": "accepted long main9pages; references10-14; A-D15-18"
+  },
+  "holdout_validation": null,
+  "review_limitations": "All18pages and scientific appendices read; no experiment/code rerun, independent political construct validation, factual-news verification or theorem certification."
+}

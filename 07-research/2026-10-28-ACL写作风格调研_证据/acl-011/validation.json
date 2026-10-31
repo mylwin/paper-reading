@@ -1,0 +1,25 @@
+{
+  "paper_id": "acl-2025.acl-short.69",
+  "pdf_pages_read": 10,
+  "scientific_appendices": [
+    "A.1",
+    "A.2",
+    "A.3",
+    "B.1",
+    "B.2"
+  ],
+  "visual_pages": [
+    2,
+    3,
+    4,
+    5,
+    9,
+    10
+  ],
+  "new_full_reviews": 1,
+  "table2_counterexample": {
+    "Tiger9B_coding": 0.63,
+    "Gemma27B_coding": 0.64
+  },
+  "code_executed": false
+}

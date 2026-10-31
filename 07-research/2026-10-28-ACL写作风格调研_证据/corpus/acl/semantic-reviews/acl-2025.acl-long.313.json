@@ -1,0 +1,290 @@
+{
+  "id": "acl-2025.acl-long.313",
+  "anthology_id": "2025.acl-long.313",
+  "venue": "acl",
+  "year": 2025,
+  "track": "main conference research",
+  "length_type": "long",
+  "title": "F5-TTS: A Fairytaler that Fakes Fluent and Faithful Speech with Flow Matching",
+  "authors": [
+    "Yushen Chen",
+    "Zhikang Niu",
+    "Ziyang Ma",
+    "Keqi Deng",
+    "Chunhui Wang",
+    "Jian Zhao",
+    "Kai Yu",
+    "Xie Chen"
+  ],
+  "first_author": "Yushen Chen",
+  "landing_url": "https://aclanthology.org/2025.acl-long.313/",
+  "pdf_url": "https://aclanthology.org/2025.acl-long.313.pdf",
+  "doi": "10.18653/v1/2025.acl-long.313",
+  "official_listing_url": "https://aclanthology.org/volumes/2025.acl-long/",
+  "sampling_stratum": "evaluation_analysis",
+  "paper_type": "flow matching zero-shot TTS architecture and inference-time sampler; longpaper",
+  "anthology_pdf_revision_hash": "9061600d",
+  "metadata_revisions": [],
+  "official_attachments": [],
+  "sort_hash": "05664996e5737295bd9a2e5ccf1e2bdc76881fdd5845be5ac4b3f83bc72ba119",
+  "split": "induction",
+  "semantic_review_status": "complete_writing_focused_full_text_review",
+  "full_text_and_relevant_appendix_review_complete": true,
+  "review_date": "2026-10-29",
+  "reviewer": "delegated acl_induction_c",
+  "pdf_path": ".claude/skills/paper-writing-shared/tmp/corpus/acl/pdf/2025.acl-long.313.pdf",
+  "pdf_sha256": "8d71c965f569231e1c9a128bc7d2addcfe89d643a76ad7d165158d520df13834",
+  "markdown_path": ".claude/skills/paper-writing-shared/tmp/corpus/acl/markdown/2025.acl-long.313.md",
+  "markdown_sha256": "ea6fec3dbee297b252cc45dd31ff8cfb5cbfd4faf279a21b5542d5db0a07796f",
+  "full_text_style_review_complete": true,
+  "external_appendix_review_complete": true,
+  "count_eligible_full_text_and_relevant_appendix": true,
+  "coverage": [
+    {
+      "source": "canonical official PDF",
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "main_science": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "references": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "scientific_appendix": {
+        "A baseline details": [
+          13
+        ],
+        "B.1-B.4 configurations, conditions, sampling and solvers": [
+          13,
+          14,
+          15
+        ],
+        "B.5-B.7 hard cases, vocoders/PC, data scales": [
+          15,
+          16
+        ],
+        "C subjective protocol": [
+          16,
+          17
+        ]
+      }
+    }
+  ],
+  "version_audit": {
+    "published_year": 2025,
+    "canonical_url": "https://aclanthology.org/2025.acl-long.313.pdf",
+    "xml_revision_entries": []
+  },
+  "supplement_audit": {
+    "method": "locked official2025ACLXML longpaper313 entry read; pages6255-6271 and PDFhash9061600d match; no attachments/revisions; no live landing claim",
+    "official_xml_attachments": [],
+    "separate_scientific_appendix_link_found": false,
+    "scientific_appendix_in_pdf": "A/B.1-B.7/C fullread",
+    "code_link": "https://SWivid.github.io/F5-TTS/",
+    "code_executed": false,
+    "audio_demo_listened": false
+  },
+  "ten_dimensions": {
+    "reader_argument": {
+      "pages": [
+        1,
+        2,
+        3
+      ],
+      "observation": "从零样本TTS的对齐、延迟与简化pipeline切入，对已有E2的训练和鲁棒性缺口提出结构/采样两改动。",
+      "editorial_advice": "研究瓶颈与每个设计模块对应，相关技术背景直接服务动机。",
+      "applicability_boundary": "仅以该工作复现E2及数据设定为证据，不将局部失败认定所有NAR方法不可能。"
+    },
+    "title_abstract": {
+      "pages": [
+        1
+      ],
+      "observation": "押F音命名加具体flow matching方法；摘要问题→ConvNeXt→SwaySampling→RTF与训练规模/开放材料。",
+      "editorial_advice": "醒目命名后保留任务与机制，直接给有口径的效率结果。",
+      "applicability_boundary": "无textencoder指没有额外预训练encoder，实际仍有ConvNeXt文本表征；不照搬全面SOTA强修辞。"
+    },
+    "introduction": {
+      "pages": [
+        1,
+        2,
+        3
+      ],
+      "observation": "先AR/NAR与对齐路线，再逐一讲phoneme、crossattention及E2，最后自然段给两项设计和消融概览，无固定列表。",
+      "editorial_advice": "技术谱系可作为缺口说明，贡献自然段即可，不必硬凑三项。",
+      "applicability_boundary": "历史方法能力描述不等于本文对所有方法重跑认证。"
+    },
+    "related_work": {
+      "pages": [
+        1,
+        2,
+        13
+      ],
+      "observation": "相关工作主要融入引言，附录A逐一注明模型规模、训练集及结果来自论文还是重跑。",
+      "editorial_advice": "把定位与对照协议分开，表注和附录使异质基线可判读。",
+      "applicability_boundary": "不同LibriSpeech子集/未公开prompt不可直接精确排序；无需强制独立RelatedWork。"
+    },
+    "method_theory": {
+      "pages": [
+        3,
+        4,
+        5
+      ],
+      "observation": "Preliminaries解释FM/CFM/OT和CFG，再Pipeline/Model/Sampling；Eq7定义时间步映射，结构图同时展示训练推理。",
+      "editorial_advice": "先给共享符号再写增量，模型结构与推理调度分别说明。",
+      "applicability_boundary": "训练uniform、推理nonuniform；无durationpredictor仍用字符比估时长。更小NFE与solver阶数/CFG成本需分清。"
+    },
+    "evidence": {
+      "pages": [
+        6,
+        7,
+        8,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "observation": "主表零样本客观/主观评测，architecture与sampler分开消融；B补solver、hard sentences、vocoder/PC、数据规模，C给native评分协议。",
+      "editorial_advice": "主结果→组件→机制压力测试→边界场景，质量和速度并列，不互相代替。",
+      "applicability_boundary": "三seed是生成而非训练重复；RTF为RTX3090上10秒语音，训练A100与小数据H100不同；跨文献报告值有标注。"
+    },
+    "discussion_limits": {
+      "pages": [
+        8,
+        9,
+        15,
+        16
+      ],
+      "observation": "局限聚焦长mel表示与细粒度情感控制；伦理说明声音冒用与所需检测/水印；hardcase承认跳词。",
+      "editorial_advice": "保留已实现优势，局限具体到实际可控性与机制成本，未来措施用将来。",
+      "applicability_boundary": "水印/检测是建议而非已部署；低插入率不证明无无限重复或无所有幻觉。"
+    },
+    "paragraph_language": {
+      "pages": [
+        7,
+        8,
+        14,
+        15
+      ],
+      "observation": "实测结果直接陈述，结构归因用assume/speculate，结果后紧跟解释与对照。",
+      "editorial_advice": "有据RTF/质量直接表达，机制解释才保留假说语气。",
+      "applicability_boundary": "inherent/mandatory/universally/proving等强词超出局部消融，不能作为通用文风复制。"
+    },
+    "main_appendix": {
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "observation": "正文留定义、公式、主图和客观/主观结果；A-C负载基线来源、完整超参与多角度结果及人评说明。",
+      "editorial_advice": "附录可放完整复核，但重要质量速度折中仍主文可见。",
+      "applicability_boundary": "录用稿8页科学正文不是现年投稿页限；附录逐格结果包含不一致，不能只读caption。"
+    },
+    "actionable": {
+      "pages": [
+        6,
+        7,
+        15
+      ],
+      "observation": "同一模型用16/32步提供具体质量速度选项。",
+      "editorial_advice": "原创例句：On the reported RTX3090 setup for10-second speech, F5-TTS achieves an RTF of0.15 at16NFE and2.53% WER on LibriSpeech-PC test-clean. At32NFE, WER is2.42% with an RTF of0.31.",
+      "applicability_boundary": "不把速度约6.67倍real-time写成较某baseline6.67倍，亦不忽略说话人相似度取舍。"
+    }
+  },
+  "counterexamples": [
+    {
+      "pages": [
+        7,
+        14,
+        15
+      ],
+      "finding": "F5主表SIM英语.66/.67低于E2.69/.71；SeedDiT许多指标更好。Table5 midpoint非主表Euler，所以RTF.26/.53与.15/.31是solver差异；小NFE对质量不都好。",
+      "scope": "清楚说明模型/solver/评价口径，保留实测优势，不全盘弱化。"
+    },
+    {
+      "pages": [
+        14,
+        15,
+        16
+      ],
+      "finding": "B.3用E2一次迁移称universally适用，超出两结构实测；B.5低插入率.18非free of endless repetition证明；Table9 LJ训练100K→200K后WER升，非所有数据/步数单调改善。",
+      "scope": "适用性查询与已测贡献分开，不额外添加通用自辩。"
+    },
+    {
+      "pages": [
+        1,
+        5,
+        6,
+        7,
+        13
+      ],
+      "finding": "100K摘要/表格是约数，正文过滤后95K英中；code-switch与speedcontrol没有对应系统定量表；无durationmodel仍估全时长；noencoder实际有ConvNeXt。",
+      "scope": "保留准确实现范围；不补造demo听感、硬件测试或泛化结果。"
+    },
+    {
+      "pages": [
+        14,
+        16,
+        17
+      ],
+      "finding": "主观实验20natives/30rounds但未报置信区间/各评分分配细节；Table5对UTMOS/表注未声明统计检验，significantly不认证统计显著。",
+      "scope": "研究审计，不转为每句警告。"
+    }
+  ],
+  "visual_review": {
+    "pages": [
+      2,
+      7,
+      8,
+      14,
+      15,
+      16
+    ],
+    "figures": "All Figures1-3 and Tables1-9 originals viewed; all equations and remaining prose read page-aligned",
+    "reviewer": "same delegated agent"
+  },
+  "official_requirements": {
+    "source": "currentACL/ARR rules maintained separately",
+    "corpus_layout_observation": "long science pp1-8; Limitations/Ethics p9; A-C pp13-17",
+    "observed_layout_not_current_rule": true
+  },
+  "holdout_validation": null,
+  "review_limitations": "All17pages and scientific appendices read. No training/code rerun, audio listening, statistical certification or current artifact license audit."
+}

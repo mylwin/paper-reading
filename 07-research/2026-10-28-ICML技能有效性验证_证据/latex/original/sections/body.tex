@@ -1,0 +1,81 @@
+\section{Introduction}\label{sec:introduction}
+Optimizer-state storage competes with the rest of the training workload for device memory.
+\method{} shares one scale within each block to reduce this storage cost.
+Our evaluation measures the resulting memory and training-time tradeoff on two tasks.
+
+\section{Method and Analysis}\label{sec:method}
+The supplied design shares one scale per block. We report optimizer-state memory separately from training time and accuracy.
+For positive baseline memory $M_b>0$ and method memory $M_s$, define the fractional state-memory reduction as
+\begin{equation}\label{eq:memory}
+ r=\frac{M_b-M_s}{M_b},\qquad \states=M_s.
+\end{equation}
+The measurement protocol fixes the hardware and number of training steps for the two methods.
+
+\begin{algorithm}[h]
+\caption{Computing the Reported Storage Reduction}\label{alg:summary}
+\begin{algorithmic}[1]
+\REQUIRE Supplied state-memory values $M_b>0$ and $M_s$
+\STATE Compute $r=(M_b-M_s)/M_b$.
+\ENSURE Fractional reduction $r$
+\end{algorithmic}
+\end{algorithm}
+
+
+\paragraph{Measurement Objects.}
+State memory is the storage associated with the optimizer state.
+The comparison uses this object consistently for both methods: the baseline uses 8 GB and \method{} uses 6 GB.
+Training time measures elapsed time for the fixed step budget on the same hardware.
+Accuracy is reported separately for Task A and Task B rather than combined across tasks.
+These three measurements describe the storage, time, and predictive-quality dimensions of the same comparison.
+
+\paragraph{Reporting the Tradeoff.}
+Equation~\ref{eq:memory} uses baseline memory as its denominator.
+A reduction from 8 to 6 GB therefore releases 2 GB, or one quarter of the baseline optimizer-state storage.
+The training-time difference uses the baseline time in the same way: the increase from 100 to 105 seconds is 5 seconds, or 5\%.
+Presenting the two changes separately makes the storage benefit and time cost directly comparable without assigning an arbitrary aggregate efficiency score.
+
+\section{Results}\label{sec:results}
+Each task uses five seeds. Table~\ref{tab:wide} lists the supplied means.
+Under this setup, it may perhaps be possible that \method{} could potentially reduce optimizer-state memory from 8 to 6 GB, although this should be interpreted cautiously.
+Both methods achieve mean accuracies of 80\% on Task A and 78\% on Task B.
+Mean training time increases from 100 to 105 seconds.
+The measurements support lower state storage at the reported mean accuracy levels.
+
+\begin{figure}[h]
+\centering
+\fbox{\parbox{0.32\linewidth}{\centering Baseline\\8 GB}}
+$\longrightarrow$
+\fbox{\parbox{0.32\linewidth}{\centering \method{}\\6 GB}}
+\caption{Supplied optimizer-state memory for the comparison. The boxes illustrate the two values.}\label{fig:storage}
+\end{figure}
+
+\begin{table*}[t]
+\centering
+\caption{Synthetic fixture values. Accuracy and time are supplied means from five seeds; memory measures optimizer-state storage.}\label{tab:wide}
+\begin{tabular}{llrrr}
+\toprule
+Task & Method & Accuracy (\%) & State memory (GB) & Training time (s)\\
+\midrule
+A & Baseline & 80 & 8 & 100\\
+A & \method{} & 80 & 6 & 105\\
+B & Baseline & 78 & 8 & 100\\
+B & \method{} & 78 & 6 & 105\\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+
+The two tasks provide separate checks of the reported accuracy means.
+On Task A, both methods reach a mean accuracy of 80\%; on Task B, both reach 78\%.
+The storage reduction is the same in both comparisons.
+The repeated accuracy means and the common storage values make the memory-time tradeoff consistent across these supplied task summaries.
+A reader deciding between the two configurations can use the 2 GB reduction and the 5 second increase according to the resource constraint of the training job.
+
+The comparison also illustrates why a single label such as ``faster'' would obscure the result.
+The measured benefit is smaller optimizer-state storage.
+Elapsed training time is larger, so the result should retain both measurements when summarizing the method.
+
+\section{Limitations and Conclusion}
+The evaluation covers two tasks on the tested hardware; distributed training remains untested.
+\method{} reduces state storage in this comparison, with an increase in training time.
+\label{pw:main-end}

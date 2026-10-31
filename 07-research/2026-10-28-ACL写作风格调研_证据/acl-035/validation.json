@@ -1,0 +1,44 @@
+{
+  "pdf_pages_read": 22,
+  "appendices": {
+    "A.1-A.3 sampling/metrics/baseline": [
+      10,
+      11,
+      12,
+      13
+    ],
+    "A.4.1-A.4.4 intrinsic metrics/training/baselines/results": [
+      12,
+      13,
+      14,
+      15,
+      16
+    ],
+    "A.5-A.6 complete train/test model lists and setup": [
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22
+    ]
+  },
+  "visual_pages": [
+    2,
+    3,
+    4,
+    5,
+    8,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    22
+  ],
+  "all_completion_flags_true": true,
+  "formal_holdout_unused": true
+}

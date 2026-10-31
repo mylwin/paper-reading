@@ -1,0 +1,47 @@
+{
+  "pdf_pages_read": 24,
+  "appendices": {
+    "A.1 broader impacts/A.2 baseline models/A.3 quality control/A.4 cases": [
+      13,
+      22,
+      23,
+      24
+    ],
+    "A.5 bucket granularity": [
+      13,
+      14
+    ],
+    "A.6 all additional experiments,18-language taxonomy,6 cases": [
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24
+    ]
+  },
+  "visual_pages": [
+    2,
+    4,
+    5,
+    6,
+    7,
+    8,
+    14,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24
+  ],
+  "all_completion_flags_true": true,
+  "formal_holdout_unused": true
+}

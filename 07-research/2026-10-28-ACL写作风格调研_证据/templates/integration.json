@@ -1,0 +1,15 @@
+{
+  "registry_entry": {
+    "profile": "venues/acl.md",
+    "latest": "2027-long",
+    "versions": {
+      "2027-long": "assets/templates/acl/2027-long/spec.json",
+      "2027-short": "assets/templates/acl/2027-short/spec.json"
+    }
+  },
+  "commands": [
+    "project.py init --venue acl --version 2027-long --mode submission --output NEW_DIR",
+    "project.py init --venue acl --version 2027-short --mode final --output NEW_DIR"
+  ],
+  "reason": "Existing project CLI has version+mode but no paper-type option; separate version keys keep four verified combinations explicit without changing project.py. Official underlying style remains genericacl.sty."
+}

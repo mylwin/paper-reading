@@ -1,0 +1,309 @@
+{
+  "id": "icml-2024-cb55acae",
+  "venue": "icml",
+  "year": 2024,
+  "split": "holdout",
+  "title": "Dealing With Unbounded Gradients in Stochastic Saddle-point Optimization",
+  "authors": "Gergely Neu, Nneka Okolo",
+  "pdf_path": ".claude/skills/paper-writing-shared/tmp/corpus/icml/pdf/Dealing With Unbounded Gradients in Stochastic Saddle-point Optimization.pdf",
+  "markdown_path": ".claude/skills/paper-writing-shared/tmp/corpus/icml/markdown/Dealing With Unbounded Gradients in Stochastic Saddle-point Optimization.md",
+  "pdf_sha256": "744de81531189037fd5ab42c163636babe72660bd02c25eecf123c657d99113b",
+  "review_date": "2026-10-28",
+  "paper_type": "pure theoretical stochastic convex-concave saddle optimization with average-reward MDP planning application",
+  "semantic_review_status": "complete_writing_focused_review",
+  "full_text_style_review_complete": true,
+  "external_appendix_review_complete": true,
+  "count_eligible_full_text_and_relevant_appendix": true,
+  "coverage": [
+    {
+      "asset": "locked official PMLR PDF",
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23
+      ],
+      "sections": "1–5/Ack/Impact/refs/A–D complete",
+      "method": "continuous23page text plus14originalpageimages; no figures/tables;1appendix algorithm and main inline updates"
+    }
+  ],
+  "version_audit": {
+    "official_landing": "https://proceedings.mlr.press/v235/neu24a.html",
+    "official_pdf": "https://raw.githubusercontent.com/mlresearch/v235/main/assets/neu24a/neu24a.pdf",
+    "version": "official proceedings PDF; exact bytes locked by SHA256",
+    "identity": "title/authors/lockedSHA/PMLRheader verified",
+    "new_network_fetch": false
+  },
+  "supplement_audit": {
+    "status": "A12–15 proofs3.1/3.3,B16–18 MDP formulation/method/pseudocode,C18–20 policy-gap reduction/4.1proof,D21–23 COMID regret/adaptive ghost comparator lemmas; all read",
+    "external_scientific_appendix_referenced": false,
+    "code_artifacts": "linked code not executed; all relevant scientific appendices in this PDF"
+  },
+  "ten_dimensions": {
+    "reader_argument": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp1–3"
+      ],
+      "observation": "无界域投影半径未知的困境；双线性例子展示梯度与迭代互相放大，再给消去增长项的办法。",
+      "editorial_advice": "以可算的失败原因和目标界建立价值，读者无需先读完整证明。",
+      "applicability": "23页正文及全部相关科学附录连续阅读，14原页直接核验。冻结40归纳规则的正式留出；同一审阅者，非独立模型评测/证明认证/代码复现。",
+      "confidence": {
+        "paper_specific": "high",
+        "venue_wide": "locked formal holdout;notfrequencyestimate"
+      }
+    },
+    "title_abstract": {
+      "category": "corpus_observation",
+      "positions": [
+        "p1"
+      ],
+      "observation": "标题直接描述技术障碍，摘要设定/困难/正则化/噪声增长范围/MDP无先验bias span应用，无数字无缩写。",
+      "editorial_advice": "理论范围和算法解决的问题可构成充分摘要；不强制结果数字或经验提升。",
+      "applicability": "23页正文及全部相关科学附录连续阅读，14原页直接核验。冻结40归纳规则的正式留出；同一审阅者，非独立模型评测/证明认证/代码复现。",
+      "confidence": {
+        "paper_specific": "high",
+        "venue_wide": "locked formal holdout;notfrequencyestimate"
+      }
+    },
+    "introduction": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp1–3"
+      ],
+      "observation": "动机中就给baseline gap与新界，比较近邻和初始化适应，末段应用；无贡献项目列表。",
+      "editorial_advice": "主结论可用公式与解释前置，贡献列表可省略。",
+      "applicability": "23页正文及全部相关科学附录连续阅读，14原页直接核验。冻结40归纳规则的正式留出；同一审阅者，非独立模型评测/证明认证/代码复现。",
+      "confidence": {
+        "paper_specific": "high",
+        "venue_wide": "locked formal holdout;notfrequencyestimate"
+      }
+    },
+    "related_work": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp2–3/9"
+      ],
+      "observation": "按有界梯度/参数自由/几何/随机比较器定位，承认Jacobsen-Cutkosky近似同一正则化思想并共同归功。",
+      "editorial_advice": "新意用具体设定差别说明；诚实归功不等于反复弱化自身已完成的贡献。",
+      "applicability": "23页正文及全部相关科学附录连续阅读，14原页直接核验。冻结40归纳规则的正式留出；同一审阅者，非独立模型评测/证明认证/代码复现。",
+      "confidence": {
+        "paper_specific": "high",
+        "venue_wide": "locked formal holdout;notfrequencyestimate"
+      }
+    },
+    "method_theory": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp4–8/12–23"
+      ],
+      "observation": "欧氏双线性COGDA闭式更新→主定理与直觉证明→sub-bilinear/generalBregman COMIDA→MDP应用；全文证明附录分两步。",
+      "editorial_advice": "先特例教学再一般化，紧跟定理解释负正则抵消对方梯度项；无须固定方法/理论独立大节。",
+      "applicability": "23页正文及全部相关科学附录连续阅读，14原页直接核验。冻结40归纳规则的正式留出；同一审阅者，非独立模型评测/证明认证/代码复现。",
+      "confidence": {
+        "paper_specific": "high",
+        "venue_wide": "locked formal holdout;notfrequencyestimate"
+      }
+    },
+    "evidence": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp5–9/12–23"
+      ],
+      "observation": "无实验；比较同一初始化/噪声/几何下的gap保证，应用区分iteration与SA+1simulator查询开销。",
+      "editorial_advice": "证据是定理/推导及复杂度口径；不要要求虚构benchmark、消融或运行时间。",
+      "applicability": "23页正文及全部相关科学附录连续阅读，14原页直接核验。冻结40归纳规则的正式留出；同一审阅者，非独立模型评测/证明认证/代码复现。",
+      "confidence": {
+        "paper_specific": "high",
+        "venue_wide": "locked formal holdout;notfrequencyestimate"
+      }
+    },
+    "discussion_limits": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp6/8–9"
+      ],
+      "observation": "p6明确平均gap保证不等于迭代一致有界；MDP声明SA依赖次优，Discussion集中开放初始化范数改进。",
+      "editorial_advice": "决定含义的差别在解释定理时说清，其他开放问题集中讨论，非每段附免责声明。",
+      "applicability": "23页正文及全部相关科学附录连续阅读，14原页直接核验。冻结40归纳规则的正式留出；同一审阅者，非独立模型评测/证明认证/代码复现。",
+      "confidence": {
+        "paper_specific": "high",
+        "venue_wide": "locked formal holdout;notfrequencyestimate"
+      }
+    },
+    "paragraph_language": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp4–9"
+      ],
+      "observation": "gentle start/intuition/proof sketch/upgrade等路标；先写更新含义、再保证、再推导解释。",
+      "editorial_advice": "直接写算法与已证界；避免把stabilization翻成所有轨迹必有界，亦不必每句话可能/仅限。",
+      "applicability": "23页正文及全部相关科学附录连续阅读，14原页直接核验。冻结40归纳规则的正式留出；同一审阅者，非独立模型评测/证明认证/代码复现。",
+      "confidence": {
+        "paper_specific": "high",
+        "venue_wide": "locked formal holdout;notfrequencyestimate"
+      }
+    },
+    "main_appendix": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp1–23"
+      ],
+      "observation": "1–9主文，10–11文献，12–23A–D推导/MDP完整设置/辅助lemma；主文已有核心证明思想。",
+      "editorial_advice": "主文让读者判断新意，附录保证细节可追溯；唯一伪码可在附录。",
+      "applicability": "23页正文及全部相关科学附录连续阅读，14原页直接核验。冻结40归纳规则的正式留出；同一审阅者，非独立模型评测/证明认证/代码复现。",
+      "confidence": {
+        "paper_specific": "high",
+        "venue_wide": "locked formal holdout;notfrequencyestimate"
+      }
+    },
+    "actionable": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp5–8"
+      ],
+      "observation": "新增项锚定初值，并在两玩家regret之间抵消增长项，使用ghost-iterate处理数据依赖比较器。",
+      "editorial_advice": "原创示例：An initialization-centered regularizer cancels the iterate-dependent terms in the two players’ regret bounds. This yields an expected gap guarantee for averaged iterates without a prescribed projection radius, including stochastic gradients whose second moments grow with the iterates.",
+      "applicability": "23页正文及全部相关科学附录连续阅读，14原页直接核验。冻结40归纳规则的正式留出；同一审阅者，非独立模型评测/证明认证/代码复现。",
+      "confidence": {
+        "paper_specific": "high",
+        "venue_wide": "locked formal holdout;notfrequencyestimate"
+      }
+    }
+  },
+  "counterexamples": [
+    {
+      "position": "pp4–8/16–18",
+      "finding": "Unbounded gradients means structured linear growth/finite conditional second moments, not arbitrary noise/objectives. Gap for averaged iterates against finite adaptive comparators is not last-iterate convergence or almost-sure bounded paths. Algorithm knows growth constant/geometry/horizon for tuning but not comparator norm; MDP simulator access at any state-action with SA+1 samples/iteration differs from online trajectory RL. Bias bound remains in guarantee although not supplied to algorithm."
+    },
+    {
+      "position": "pp8–9/16–20",
+      "finding": "MDP policy bias/comparators require the stated stationary-distribution/bias existence setting, not all arbitrary multichain or periodic problems. B^4 S^2 A^2 log(SA)/eps² queries vs B^4 SA log(SA)/eps² iterations. No empirical training stability or wallclock data, no universal optimum over S/A. Related-work comparison is the authors’ positioning, not an independent audit of cited papers."
+    },
+    {
+      "position": "pp1/4–7/13/17/20/23; research-only queries",
+      "finding": "Intro baseline ascent sign and prox squared-norm factors inconsistent with later closed form; Eq4 prints square of expected norm while proof uses expected squared norm; A.2 regularized-objective half factors inconsistent. p17 mixing-time definition t≤1 missing intended contraction threshold; p20 sum dropsT then final averaging. p23 variance inequality for arbitrary norm needs justification/constant (unbiasedness alone gives Hilbert variance identity), and ghost comparator called independent though data-adaptive; deterministic pathwise regret may avoid independence. Clarifications retained, not proof certification/refutation or writing rules."
+    }
+  ],
+  "visual_review": {
+    "pages": [
+      1,
+      2,
+      5,
+      6,
+      7,
+      8,
+      9,
+      13,
+      17,
+      18,
+      20,
+      21,
+      22,
+      23
+    ],
+    "source": "105dpi original Poppler page images directly viewed",
+    "policy": "delete own renders and duplicate extraction; canonical PDF/MD remain ignored skill tmp"
+  },
+  "official_requirements": [],
+  "holdout_validation": {
+    "freeze_manifest": "07-research/2026-10-28-ICML技能有效性验证_证据/induction-freeze/freeze-manifest.json",
+    "freeze_manifest_sha256": "e5ec6a6ab1fa45b5fca1bb87cc82a52e7e6ace591dac06ffded5a8bf68e61692",
+    "dimensions": {
+      "reader_argument": {
+        "rating": "applicable",
+        "positions": [
+          "pp1–3"
+        ],
+        "reason": "以可算的失败原因和目标界建立价值，读者无需先读完整证明。"
+      },
+      "title_abstract": {
+        "rating": "applicable_with_scope",
+        "positions": [
+          "p1"
+        ],
+        "reason": "理论范围和算法解决的问题可构成充分摘要；不强制结果数字或经验提升。"
+      },
+      "introduction": {
+        "rating": "applicable_with_scope",
+        "positions": [
+          "pp1–3"
+        ],
+        "reason": "主结论可用公式与解释前置，贡献列表可省略。"
+      },
+      "related_work": {
+        "rating": "applicable",
+        "positions": [
+          "pp2–3/9"
+        ],
+        "reason": "新意用具体设定差别说明；诚实归功不等于反复弱化自身已完成的贡献。"
+      },
+      "method_theory": {
+        "rating": "applicable",
+        "positions": [
+          "pp4–8/12–23"
+        ],
+        "reason": "先特例教学再一般化，紧跟定理解释负正则抵消对方梯度项；无须固定方法/理论独立大节。"
+      },
+      "evidence": {
+        "rating": "applicable_with_scope",
+        "positions": [
+          "pp5–9/12–23"
+        ],
+        "reason": "证据是定理/推导及复杂度口径；不要要求虚构benchmark、消融或运行时间。"
+      },
+      "discussion_limits": {
+        "rating": "applicable",
+        "positions": [
+          "pp6/8–9"
+        ],
+        "reason": "决定含义的差别在解释定理时说清，其他开放问题集中讨论，非每段附免责声明。"
+      },
+      "paragraph_language": {
+        "rating": "applicable",
+        "positions": [
+          "pp4–9"
+        ],
+        "reason": "直接写算法与已证界；避免把stabilization翻成所有轨迹必有界，亦不必每句话可能/仅限。"
+      },
+      "main_appendix": {
+        "rating": "applicable",
+        "positions": [
+          "pp1–23"
+        ],
+        "reason": "主文让读者判断新意，附录保证细节可追溯；唯一伪码可在附录。"
+      },
+      "actionable": {
+        "rating": "applicable",
+        "positions": [
+          "pp5–8"
+        ],
+        "reason": "原创示例：An initialization-centered regularizer cancels the iterate-dependent terms in the two players’ regret bounds. This yields an expected gap guarantee for averaged iterates without a prescribed projection radius, including stochastic gradients whose second moments grow with the iterates."
+      }
+    },
+    "counterexample_to_universal_structure": "No empirical section, figure, comparison table, fixed contribution list or separate conclusion; didactic special-case to general-case to theoretical application is coherent. Accepted rhetorical stabilization does not justify a stronger pathwise boundedness claim.",
+    "proposed_revision": "Frozen profile already conditional. Include theory-only behavior test for averaged-iterate versus pathwise stability and iteration-versus-query cost; preserve clear positive mechanism and avoid invented empirical validation.",
+    "reviewer": "same primary agent; no independent judge",
+    "runtime_rules_changed_during_holdout": false
+  },
+  "review_limitations": "23页正文及全部相关科学附录连续阅读，14原页直接核验。冻结40归纳规则的正式留出；同一审阅者，非独立模型评测/证明认证/代码复现。"
+}

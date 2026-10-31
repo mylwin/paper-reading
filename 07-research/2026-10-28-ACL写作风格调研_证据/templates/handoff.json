@@ -1,0 +1,48 @@
+{
+  "status": "template_subtask_complete",
+  "date": "2026-10-28",
+  "registry_entry_file": "07-research/2026-10-28-ACL写作风格调研_证据/templates/integration.json",
+  "checks": [
+    {
+      "version": "2027-long",
+      "mode": "submission",
+      "official_match": true,
+      "main_source_exists": true,
+      "compile_record_exit": 0
+    },
+    {
+      "version": "2027-long",
+      "mode": "final",
+      "official_match": true,
+      "main_source_exists": true,
+      "compile_record_exit": 0
+    },
+    {
+      "version": "2027-short",
+      "mode": "submission",
+      "official_match": true,
+      "main_source_exists": true,
+      "compile_record_exit": 0
+    },
+    {
+      "version": "2027-short",
+      "mode": "final",
+      "official_match": true,
+      "main_source_exists": true,
+      "compile_record_exit": 0
+    }
+  ],
+  "visual_pages_viewed": 12,
+  "deleted_regenerable_files": 99,
+  "paper_corpus_reviewed_by_this_subagent": 0,
+  "pending_for_parent": [
+    "Register ACL as a supplementalvenue without replacing original11lockedvenues.",
+    "Apply registry entry and venue profile / entrypoint wording if appropriate.",
+    "Continue corpus review separately; template completion implies no corpus completion."
+  ],
+  "limits": [
+    "Author-input-pending is expected and deliberately prevents calling scaffolds submission-ready.",
+    "Maximum-length boundary stress and official submission-system checks not performed.",
+    "Review/final template anonymity confirms placeholder masking/appearance only; actual manuscript anonymity still needs full check."
+  ]
+}

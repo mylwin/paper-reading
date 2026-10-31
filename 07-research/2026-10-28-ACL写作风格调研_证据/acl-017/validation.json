@@ -1,0 +1,27 @@
+{
+  "actual_pdf_pages": 17,
+  "covered_pages": 17,
+  "all_appendices": [
+    "A",
+    "B",
+    "C",
+    "D",
+    "E",
+    "F"
+  ],
+  "ten_dimensions": 10,
+  "visual_pages": [
+    1,
+    4,
+    6,
+    7,
+    8,
+    14,
+    15,
+    16,
+    17
+  ],
+  "all_four_completion_flags_true": true,
+  "holdout_unused": true,
+  "code_executed": false
+}

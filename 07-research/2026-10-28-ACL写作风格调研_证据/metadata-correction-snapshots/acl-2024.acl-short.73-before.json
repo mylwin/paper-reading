@@ -1,0 +1,243 @@
+{
+  "id": "acl-2024.acl-short.73",
+  "anthology_id": "2024.acl-short.73",
+  "venue": "acl",
+  "year": 2024,
+  "track": "main conference research",
+  "length_type": "short",
+  "title": "Greed is All You Need: An Evaluation of Tokenizer Inference Methods",
+  "authors": [
+    "Omri Uzan",
+    "Craig W. Schmidt",
+    "Chris Tanner",
+    "Yuval Pinter"
+  ],
+  "first_author": "Omri Uzan",
+  "landing_url": "https://aclanthology.org/2024.acl-short.73/",
+  "pdf_url": "https://aclanthology.org/2024.acl-short.73.pdf",
+  "doi": "10.18653/v1/2024.acl-short.73",
+  "official_listing_url": "https://aclanthology.org/volumes/2024.acl-short/",
+  "sampling_stratum": "evaluation_analysis",
+  "paper_type": "controlled intrinsic evaluation and tokenizer benchmark; focused shortpaper",
+  "anthology_pdf_revision_hash": "5f2fb137",
+  "metadata_revisions": [],
+  "official_attachments": [],
+  "sort_hash": "42ad77aeb5c543604233e76630952cdc44adb02b3b7a20fb9da5ad75907d801e",
+  "split": "induction",
+  "semantic_review_status": "complete_writing_focused_full_text_review",
+  "full_text_and_relevant_appendix_review_complete": false,
+  "review_date": "2026-10-28",
+  "reviewer": "primary agent",
+  "pdf_path": ".claude/skills/paper-writing-shared/tmp/corpus/acl/pdf/2024.acl-short.73.pdf",
+  "pdf_sha256": "044cb3380f59a52c01c1380a72d7932e9ed0c54b8c5fee04e958800d3f23dba4",
+  "markdown_path": ".claude/skills/paper-writing-shared/tmp/corpus/acl/markdown/2024.acl-short.73.md",
+  "markdown_sha256": "6124a9b7c712b338fb09bafd4c12a60bffbbc9bec1635002ec7630d39a182810",
+  "full_text_style_review_complete": true,
+  "external_appendix_review_complete": true,
+  "count_eligible_full_text_and_relevant_appendix": true,
+  "coverage": [
+    {
+      "source": "canonicalofficialPDF",
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "main_science": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "references": [
+        6,
+        7,
+        8
+      ],
+      "scientific_appendix": {
+        "A32K/49Kresults": [
+          8,
+          9
+        ],
+        "Bindividualmorphologicalandcognitiveresources": [
+          8,
+          10
+        ],
+        "Cintermetriccorrelations": [
+          8,
+          10
+        ]
+      }
+    }
+  ],
+  "version_audit": {
+    "published_year": 2024,
+    "canonical_url": "https://aclanthology.org/2024.acl-short.73.pdf",
+    "xml_revision_entries": []
+  },
+  "supplement_audit": {
+    "official_landing": "https://aclanthology.org/2024.acl-short.73/",
+    "landing_read_date": "2026-10-28",
+    "official_xml_attachments": [],
+    "separate_scientific_appendix_link_found": false,
+    "scientific_appendix_in_pdf": "A-C alltables4-7throughpage10",
+    "code_link": "https://github.com/MeLeLBGU/tokenizers_intrinsic_benchmark",
+    "code_executed": false
+  },
+  "ten_dimensions": {
+    "reader_argument": {
+      "pages": [
+        1,
+        2
+      ],
+      "observation": "从一般NLP的子词预处理入手，区分词表构造和给定词表的推断解码；Table1以同词表不同切分解释研究问题。",
+      "editorial_advice": "用具体实例澄清容易混淆的技术对象，再定义受控比较。",
+      "applicability_boundary": "不能把推断改动直接写成现有预训练LM下游能力提升。"
+    },
+    "title_abstract": {
+      "pages": [
+        1
+      ],
+      "observation": "双部分标题前半用醒目借用语，后半明确tokenizer推断评测；摘要报告7推断方法、4构词算法、3词表大小及多维英语intrinsic评测。",
+      "editorial_advice": "标题需保留具体对象；摘要列控制维度和最重要发现，可靠非数字发现也可支撑贡献。",
+      "applicability_boundary": "Greed不是全指标全任务最优保证，修辞不是venue规范。"
+    },
+    "introduction": {
+      "pages": [
+        1,
+        2
+      ],
+      "observation": "先用分词例展示实现默认绑定的问题，再将词表研究与稀缺的推断研究分开，最后给受控比较和发现；没有贡献列表。",
+      "editorial_advice": "引言把术语区别变成可检验缺口，结果概览与后文指标对应。",
+      "applicability_boundary": "不要求提出新词表算法或固定三贡献。"
+    },
+    "related_work": {
+      "pages": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "observation": "相关词表、推断、认知、形态和信息论研究嵌入引言与各指标定义；已有Rényi/下游错配反例在选多指标理由旁解释。",
+      "editorial_advice": "按研究对象和指标依据定位来源，说明指标为何有用及不能承担什么。",
+      "applicability_boundary": "不需要另造独立RelatedWork，不能把引用的代理相关性写成本稿已证下游关系。"
+    },
+    "method_theory": {
+      "pages": [
+        2,
+        3,
+        4
+      ],
+      "observation": "形式化合法切分后按greedy、merge、likelihood三类介绍推断；说明可适用组合、7个形态资源、4认知子任务及信息分布统计。",
+      "editorial_advice": "把研究设计和评测对象当作方法，明确可比较组合、控制数据与不变预分词。",
+      "applicability_boundary": "无收敛定理或训练新LM；各家词表初始化仍不同，跨词表不等于完全同构控制。"
+    },
+    "evidence": {
+      "pages": [
+        3,
+        4,
+        5,
+        9,
+        10
+      ],
+      "observation": "40K总表在主文，32/49K在A，7形态资源和4认知指标在B，指标间相关在C；分析先词表内推断再跨词表。",
+      "editorial_advice": "先回答受控因素，再讨论跨系统差异；汇总与拆分应可互查。",
+      "applicability_boundary": "greedy形态/信息指标较好、leasttokens认知较强并不意味着同一方法所有指标第一；未运行下游任务。"
+    },
+    "discussion_limits": {
+      "pages": [
+        5
+      ],
+      "observation": "主结果解释English词形方向、指标取舍；结论提出intrinsic套件用于筛选，Limitations集中说明英语和代理效度；伦理节指向继承认知数据的源说明。",
+      "editorial_advice": "重要适用条件在结果附近简要交代，局限集中说明未覆盖对象；声明来自实际数据来源。",
+      "applicability_boundary": "英语范围在结果/局限重复出现可压缩但不移除；不添加与本研究无关的公平/部署空话。"
+    },
+    "paragraph_language": {
+      "pages": [
+        4,
+        5
+      ],
+      "observation": "Inference methods与Inter-tokenizer results段首先命名比较层次，再以表格解释发现；humanpreference用suggest、suffixing原因用possibly。",
+      "editorial_advice": "观察直接报告，认知机制解释保留假说力度，避免把推测统一强化或把所有结论统一弱化。",
+      "applicability_boundary": "state-of-the-art等原文词不是可移植证据；参数间相关不是认知因果证明。"
+    },
+    "main_appendix": {
+      "pages": [
+        3,
+        4,
+        8,
+        9,
+        10
+      ],
+      "observation": "正文保留资源来源/许可表及代表性结果，附录提供其他词表规模、单资源与指标相关矩阵；正文有A/B/C指针。",
+      "editorial_advice": "短稿仍保持完整评测论证，可将可核对的拆分细节放附录。",
+      "applicability_boundary": "附录3表不能只读caption，实际表中局部赢家不同于macro赢家。"
+    },
+    "actionable": {
+      "pages": [
+        4,
+        5,
+        10
+      ],
+      "observation": "把给定词表内推断变化与跨词表评价分别说明，比笼统宣称更好tokenizer有信息量。",
+      "editorial_advice": "原创例句：With the BPE vocabulary held fixed at40K, longest-token inference raises the reported morphological-alignment score from0.6309 to0.8738 relative to deterministic merges. The comparison isolates inference behavior on this intrinsic benchmark.",
+      "applicability_boundary": "不把该数值迁入新研究，也不宣称无重训练即可提升既有LM下游质量。"
+    }
+  },
+  "counterexamples": [
+    {
+      "pages": [
+        4,
+        5,
+        10
+      ],
+      "finding": "BPEdeterministicmerges认知0.3355高于leasttokens0.3321，而SaGe/Unigramleasttokens较高；标题不是统一单指标或下游最优论证。",
+      "scope": "按指标和比较层次陈述，保留实际优势。"
+    },
+    {
+      "pages": [
+        3,
+        4,
+        5,
+        10
+      ],
+      "finding": "认知分数平均绝对相关，Table7其与tokens/word为−0.9588；这不是人偏好少分词的因果检验，更不是新LM下游保证。",
+      "scope": "原文解释假说可保留，不能移植为已证机制。"
+    },
+    {
+      "pages": [
+        4,
+        5,
+        9,
+        10
+      ],
+      "finding": "SaGe词表最初来自262KUnigram，likelihood沿用ablation前分数；各方法并非所有构词算法可用，WordPiece缺merge顺序。",
+      "scope": "真实可比配置写清一次，无需每段免责声明。"
+    }
+  ],
+  "visual_review": {
+    "pages": [
+      4,
+      5,
+      9,
+      10
+    ],
+    "figures": "No plottedfigures;mainTable3andallappendixTables4-7readonoriginalrenderedpages;Table1/2examplesandresourcesreadinfulltext.",
+    "reviewer": "same primary agent"
+  },
+  "official_requirements": {
+    "source": "currentACL/ARRpolicymaintainedseparately",
+    "corpus_layout_observation": "StandaloneLimitations/EthicalConsiderations,author-yearreferences,letterappendices,actualmain5pages",
+    "observed_layout_not_current_rule": true
+  },
+  "holdout_validation": null,
+  "review_limitations": "AllscientificproseandappendixA-Ctablesread;noLMtraining,codeexecution,cognitiveexperimentreplicationorproofcertification."
+}

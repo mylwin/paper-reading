@@ -1,0 +1,24 @@
+{
+"all_pages_read":17,"visual_pages":[1,3,5,7,8,9,15,16,17],"paper_type":"empirical preference-trained residual energy reranker for retrosynthetic route candidates",
+"sections":"1–6/Ack/Impact/refs/A–E complete","method":"continuous17page text and9originalpageimages;4figures6tables1algorithm","appendix_status":"A15 reaction vs retrosynthesis,B15–16 related work,C16 route-depth statistics,D16–17 reproducibility/hyperparameters,E17 illustrative preference example; all read",
+"rows":[
+["reader_argument","pp1–3","跨化学与机器学习读者，先定义route化学用法，再解释概率生成与全路线评价的缺口。","必要术语给定义或示意图，非本领域读者仍可判断任务与价值。","applicable"],
+["title_abstract","p1","任务+conditional residual EBM；摘要问题→局部贪心/控制缺口→残差框架→跨策略收益→2.5%。","结果直接陈述，但本实验2.5为百分点且是exact starting-material match，范围随指标说明。","applicable"],
+["introduction","pp1–3","评价标准/LLM alignment类比→研究问题→残差分布Eq1→训练难点→四条贡献带节号。","可通过一条主问题串联多贡献；贡献数量和跨节形式不是统一要求。","applicable"],
+["related_work","pp9/15–16","正文末尾简述retrosynthesis/search，附录展开模型类别/评价/可控生成。","related work可置方法之后；主文保留差异判断，扩展综述进入附录。","applicable"],
+["method_theory","pp3–7","prelim逐项定义→条件生成/局部归一视角→残差分布→BT偏好损失/代理reward→候选重排算法。无新定理。","把概念视角、实现和适用候选空间讲清；不为统一结构制造收敛定理或新实验。","applicable_with_scope"],
+["evidence","pp7–9/16–17","RetroBench同口径多base多search、深度分层、energy加/减/单独消融和路线可视化。","将性能、长路线、残差项作用各配证据；wet-lab可行性与dataset exact match区分一次即可。","applicable"],
+["discussion_limits","pp6–9/17","Sec3.3.4四个Q&A解释设计取舍；缺产率/成本标签和忽略中间体在对应设置/实现处说明，结尾未来组合criteria。","说明影响判断的设计选择；Q&A是此文组织选择，不把四组预防性质疑答辩复制为必需栏目。","applicable_with_scope"],
+["paragraph_language","pp2/6–9","先propose框架，再用formula/algorithm/table支撑；Q&A有we believe/easier to make things work等作者判断。","保留可验证的增益与机制说明；作者主观论辩非顶会统一风格，不添加无依据更强判断也不强迫每段自我辩护。","applicable_with_scope"],
+["main_appendix","pp1–17","1–9主文核心定义与对比/消融；10–14声明文献；15–17A–E领域补充/架构超参/示例。","主文可独立理解方法与结果，附录提供设置细节；生成示例应标明性质。","applicable"],
+["actionable","pp5–9","一个训练好的adapter迁移不同base策略，联合base likelihood与energy的消融解释残差作用。","原创示例：CREBM reranks routes proposed by an existing planner using a preference-trained residual energy. With Neuralsym and Retro*-0, top-1 exact-match accuracy rises from 42.0% to 44.5%; the energy-only ablation drops to 34.1%, supporting the use of both scores.","applicable"]
+],
+"counterexamples":[
+{"position":"pp6–9","finding":"Implemented criterion is heuristic forward-model/product plus starting-material-reference Tanimoto; no chemist-preference study, wet-lab synthesis, costs/yields or environmental evaluation. Reranks sampled proposals, cannot generate an absent feasible route. Table1 gains cover tested adapters;Retrosim/G2Gs/Megan lack CREBM rows. General composition proposal exceeds tested single feasibility-proxy criterion; keep that distinction without negating measured gains."},
+{"position":"pp7–9/16–17","finding":"42.0→44.5 is2.5percentage points not2.5%relative. DepthTable2 only2–6, not arbitrary long routes; no reported run variance or significance, speed/training-cost comparison. Q&A RL failure lacks numerical protocol/results; cannot establish BT generally superior or infeasible NCE. Avoid copying rhetorical certainty as evidence standard."},
+{"position":"pp4–7/16; research-only queries","finding":"Eq7 equates reactant-set probability to a chosen-reactant marginal along a branch; clarify full branching route distribution. Eq11 normalization notation and Algorithm1 argmax rawE need reconciliation with preference loss. Main says reused baseline metrics vs appendix all baselines conducted locally. These are author clarification items, not venue conventions."},
+{"position":"p17","finding":"AppendixE explicitly ChatGPT-generated acetic-acid illustration, not a measured chemistry comparison or independently verified industrial/environmental evidence. Do not promote it into empirical dataset or factual writing rule."}
+],
+"structure_counterexample":"Four contributions including future-data inspiration; related work after experiments; optional Q&A design discussion; no theorem and no separate mandatory limitations section. These choices do not mandate defensive Q&A for new writing.",
+"proposed_revision":"Retain frozen conditional organization. In behavioral evaluation test a direct gain plus metric-scoped interpretation; do not add unsolicited rebuttal/Q&A or multiple feasibility disclaimers."
+}

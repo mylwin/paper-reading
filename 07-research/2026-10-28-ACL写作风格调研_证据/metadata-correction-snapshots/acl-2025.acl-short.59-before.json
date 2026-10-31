@@ -1,0 +1,242 @@
+{
+  "id": "acl-2025.acl-short.59",
+  "anthology_id": "2025.acl-short.59",
+  "venue": "acl",
+  "year": 2025,
+  "track": "main conference research",
+  "length_type": "short",
+  "title": "Sparse-to-Dense: A Free Lunch for Lossless Acceleration of Video Understanding in LLMs",
+  "authors": [
+    "Xuan Zhang",
+    "Cunxiao Du",
+    "Sicheng Yu",
+    "Jiawei Wu",
+    "Fengzhuo Zhang",
+    "Wei Gao",
+    "Qian Liu"
+  ],
+  "first_author": "Xuan Zhang",
+  "landing_url": "https://aclanthology.org/2025.acl-short.59/",
+  "pdf_url": "https://aclanthology.org/2025.acl-short.59.pdf",
+  "doi": "10.18653/v1/2025.acl-short.59",
+  "official_listing_url": "https://aclanthology.org/volumes/2025.acl-short/",
+  "sampling_stratum": "efficiency_theory",
+  "paper_type": "inference acceleration method using sparse self-drafting and dense verification forVideoLLMs;shortpaper",
+  "anthology_pdf_revision_hash": "15418d2a",
+  "metadata_revisions": [],
+  "official_attachments": [],
+  "sort_hash": "64e0ff2c3c3e1cd3dc790d896343b0eca976b092f37155b7a80474c558b5fc67",
+  "split": "induction",
+  "semantic_review_status": "complete_writing_focused_full_text_review",
+  "full_text_and_relevant_appendix_review_complete": false,
+  "review_date": "2026-10-28",
+  "reviewer": "primary agent",
+  "pdf_path": ".claude/skills/paper-writing-shared/tmp/corpus/acl/pdf/2025.acl-short.59.pdf",
+  "pdf_sha256": "9962979637b1a17423056d02d8e4138eaa6268d4acf8510b147521c12c230b22",
+  "markdown_path": ".claude/skills/paper-writing-shared/tmp/corpus/acl/markdown/2025.acl-short.59.md",
+  "markdown_sha256": "579e0e3d8462c3c202b62e46a7cc77ebf5f134c5d9d72225fbaabb5054ca3037",
+  "full_text_style_review_complete": true,
+  "external_appendix_review_complete": true,
+  "count_eligible_full_text_and_relevant_appendix": true,
+  "coverage": [
+    {
+      "source": "canonicalofficialPDF",
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "main_science": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "references": [
+        5,
+        6,
+        7
+      ],
+      "scientific_appendix": {
+        "Aautoregressiveandspeculativebackground": [
+          8
+        ],
+        "Bsparse/speculativerelatedwork": [
+          8,
+          9
+        ],
+        "Cgamma/Kablation": [
+          9
+        ]
+      }
+    }
+  ],
+  "version_audit": {
+    "published_year": 2025,
+    "canonical_url": "https://aclanthology.org/2025.acl-short.59.pdf",
+    "xml_revision_entries": []
+  },
+  "supplement_audit": {
+    "official_landing": "https://aclanthology.org/2025.acl-short.59/",
+    "landing_read_date": "2026-10-28",
+    "official_xml_attachments": [],
+    "separate_scientific_appendix_link_found": false,
+    "scientific_appendix_in_pdf": "A-Ccompleteincludingfigure1ablation",
+    "code_executed": false
+  },
+  "ten_dimensions": {
+    "reader_argument": {
+      "pages": [
+        1,
+        2
+      ],
+      "observation": "先说明长视频visualtokens带来的KV带宽负担，再把训练额外draftmodel的成本与已有稀疏注意力机会连接；95%token吻合的观察独立成§2。",
+      "editorial_advice": "从应用瓶颈推进到可利用机制，观察可先于方法。",
+      "applicability_boundary": "视频理解生成文本而非视频生成；稀疏KV读取不代表全KV存储量减少。"
+    },
+    "title_abstract": {
+      "pages": [
+        1
+      ],
+      "observation": "标题用Sparse-to-Dense命名和lossless/free-lunch价值主张，摘要给双模块职责及最高1.94倍walltime。",
+      "editorial_advice": "方法名、目标、关键机制及有口径的成本结果可直接突出。",
+      "applicability_boundary": "free lunch不能解释成零额外计算/存储；输出等价性依赖denseverifier与对应解码语义。"
+    },
+    "introduction": {
+      "pages": [
+        1,
+        2
+      ],
+      "observation": "从视频token数量、KV读取、现有压缩会改模型输出引出自草拟/密集验证；末段报告部署和实测，无固定贡献列表。",
+      "editorial_advice": "将关键需求与设计对应，贡献概览可以自然段给出。",
+      "applicability_boundary": "无需强加三贡献、算法伪码或单独理论节。"
+    },
+    "related_work": {
+      "pages": [
+        1,
+        8,
+        9
+      ],
+      "observation": "引言就地对比额外草稿模型，详细相关工作在附录B按视觉稀疏和speculativedecoding分两脉络。",
+      "editorial_advice": "正文需保留判断差异的关键定位，附录可补完整方法家族。",
+      "applicability_boundary": "不能仅因样本后置就一律把所有最近工作移走，或复制其first/video-generation夸张措辞。"
+    },
+    "method_theory": {
+      "pages": [
+        2,
+        3,
+        8
+      ],
+      "observation": "先写草拟γ个/验证前缀+bonus，后写prefill选各层/头KV、保留全部text，最后以K/mt/mv/γ/α给I/O阈值；A补基础符号。",
+      "editorial_advice": "协议、表示选择与成本分开阐释，复杂度要指明计算对象和参数。",
+      "applicability_boundary": "I/O近似不等于总时延定理；该文没有独立的全采样分布等价性证明，不补造。"
+    },
+    "evidence": {
+      "pages": [
+        3,
+        4,
+        9
+      ],
+      "observation": "2个7B模型×MLVU和VideoMME时长分区报告draftacceptancerate及walltimespeedup；A10080GB、batch8、γ9、K+mt1024、3seed均值；C分析γ/K折中。",
+      "editorial_advice": "资源与评测协议集中交代，表格列名要解释指标真实含义；消融回答关键设计取舍。",
+      "applicability_boundary": "TableAcc是草稿接受率而非视频问答准确率；表注说内容质量未另行评估，不能写成实测无损任务分数。"
+    },
+    "discussion_limits": {
+      "pages": [
+        4,
+        5,
+        9
+      ],
+      "observation": "结果解释LayerSkip接受率不足和稀疏草拟的交换；Limitation只聚焦全KV仍存HBM及未来offloading。",
+      "editorial_advice": "局限写与实际机制相关的资源瓶颈，不为空泛自辩扩栏。",
+      "applicability_boundary": "不因避免防御性写作删除真实HBM容量限制，也不把CPUoffload写成已实现。"
+    },
+    "paragraph_language": {
+      "pages": [
+        2,
+        3,
+        4
+      ],
+      "observation": "段首先表明观察/设计/结果角色，主结果有三项发现并紧接表；未来延伸用hope/promising。",
+      "editorial_advice": "实测1.94倍和平均1.74倍可直接写，解释与未实现设想用相应语气。",
+      "applicability_boundary": "高单token吻合不等于连续块95%接受率；实现声称与理论等价性应匹配，不靠强形容词替代。"
+    },
+    "main_appendix": {
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        8,
+        9
+      ],
+      "observation": "正文保留观察、全部核心设计、成本分析和主结果，A/B/C分别补基础、相关工作、超参图。",
+      "editorial_advice": "关键机制不能只放附录；附录可以承担复核和完整定位。",
+      "applicability_boundary": "有限消融只在一个模型/MLVU设置，不能代替全系统普适最优超参验证。"
+    },
+    "actionable": {
+      "pages": [
+        3,
+        4,
+        5
+      ],
+      "observation": "用带宽收益而非容量减少解释无额外draft参数的自投机设计。",
+      "editorial_advice": "原创例句：Sparse-to-Dense uses sparse attention to draft tokens and full attention to verify them. In the reported A100 experiments, it achieves up to1.94× wall-time speedup without introducing a separately trained draft model.",
+      "applicability_boundary": "不把draft接受率当问答准确率，不把无额外draft参数写成无全部额外开销。"
+    }
+  },
+  "counterexamples": [
+    {
+      "pages": [
+        3,
+        4,
+        5
+      ],
+      "finding": "Table1Acc表示acceptancerate，正文把62.2%称acceptancelength；均值62.2125%与speedup1.74125可复算。全KV仍存HBM。",
+      "scope": "保留已测速度优势，校正指标名和容量/读取口径。"
+    },
+    {
+      "pages": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "finding": "逐token95%吻合和前缀块接受率不同，.95^5是启发式例子；若宣称任意随机采样下完全同分布需具体接受/重采样协议，当前文主要写匹配前缀验证。",
+      "scope": "写作审阅不认证完整lossless理论或假定不存在的代码检查。"
+    },
+    {
+      "pages": [
+        3,
+        4,
+        9
+      ],
+      "finding": "LayerSkip基线被改成tuning-free版本，非原训练式设置；γ9/K+mt1024与C图标K1024的定义也需核对。附录末句video generation与主任务video understanding不一致。",
+      "scope": "这些是实际研究核对项，不机械写进所有效率稿的正文。"
+    }
+  ],
+  "visual_review": {
+    "pages": [
+      4,
+      5,
+      8,
+      9
+    ],
+    "figures": "MainTable1,metriccaption,HBMlimitation,appendixbackground/relatedworkandgamma-Kablationoriginalpagesviewed;nootherfigures.",
+    "reviewer": "same primary agent"
+  },
+  "official_requirements": {
+    "source": "currentACL/ARRrulesmaintainedseparately",
+    "corpus_layout_observation": "Acceptedshort5mainpages,author-yearreferences,LimitationheadingandappendicesA-C",
+    "observed_layout_not_current_rule": true
+  },
+  "holdout_validation": null,
+  "review_limitations": "Allscientificproseandappendicesread;noimplementationexecution,outputequivalenceproofcertificationorbenchmarkrerun."
+}

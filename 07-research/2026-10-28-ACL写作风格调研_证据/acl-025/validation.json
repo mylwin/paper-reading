@@ -1,0 +1,28 @@
+{
+  "pdf_pages_read": 23,
+  "appendices": [
+    "A.1",
+    "A.2",
+    "B",
+    "C",
+    "D",
+    "E",
+    "F",
+    "G"
+  ],
+  "visual_pages": [
+    5,
+    6,
+    7,
+    8,
+    9,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23
+  ],
+  "all_completion_flags_true": true,
+  "formal_holdout_unused": true
+}

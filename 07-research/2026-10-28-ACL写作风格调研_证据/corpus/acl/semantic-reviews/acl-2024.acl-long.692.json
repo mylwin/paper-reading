@@ -1,0 +1,282 @@
+{
+  "id": "acl-2024.acl-long.692",
+  "anthology_id": "2024.acl-long.692",
+  "venue": "acl",
+  "year": 2024,
+  "track": "main conference research",
+  "length_type": "long",
+  "title": "TaPERA: Enhancing Faithfulness and Interpretability in Long-Form Table QA by Content Planning and Execution-based Reasoning",
+  "authors": [
+    "Yilun Zhao",
+    "Lyuhao Chen",
+    "Arman Cohan",
+    "Chen Zhao"
+  ],
+  "first_author": "Yilun Zhao",
+  "landing_url": "https://aclanthology.org/2024.acl-long.692/",
+  "pdf_url": "https://aclanthology.org/2024.acl-long.692.pdf",
+  "doi": "10.18653/v1/2024.acl-long.692",
+  "official_listing_url": "https://aclanthology.org/volumes/2024.acl-long/",
+  "sampling_stratum": "methods_models",
+  "paper_type": "modular long-form table QA method with human evaluation and component-localized error intervention",
+  "anthology_pdf_revision_hash": "121ab2b1",
+  "metadata_revisions": [],
+  "official_attachments": [],
+  "sort_hash": "0123b798077713c52d5e054e18f658caf68fe71550320ceb06fe51a8197b9566",
+  "split": "induction",
+  "semantic_review_status": "complete_writing_focused_full_text_review",
+  "full_text_and_relevant_appendix_review_complete": true,
+  "pdf_path": ".claude/skills/paper-writing-shared/tmp/corpus/acl/pdf/2024.acl-long.692.pdf",
+  "pdf_sha256": "7a1b2a75c41bc31feb070ddad980211cb9e17c50b04f06f833a233457efc605e",
+  "markdown_path": ".claude/skills/paper-writing-shared/tmp/corpus/acl/markdown/2024.acl-long.692.md",
+  "markdown_sha256": "462ca8059f555a1012437a8ec5beea125d1e88d7c0db658e66aa36e1eb767a71",
+  "page_count": 17,
+  "download_status": "acquired",
+  "parse_status": "full_text_extracted_not_yet_reviewed",
+  "acquired_date": "2026-10-28",
+  "acquisition_seconds": 17.11,
+  "review_date": "2026-10-29",
+  "reviewer": "acl_finish_a",
+  "full_text_style_review_complete": true,
+  "external_appendix_review_complete": true,
+  "count_eligible_full_text_and_relevant_appendix": true,
+  "ten_dimensions": {
+    "reader_argument": {
+      "pages": [
+        1,
+        2,
+        3
+      ],
+      "observation": "长表格问答的幻觉实例→规划/推理/生成分工，以用户可检查中间产物连接忠实性和可解释性。",
+      "editorial_advice": "先给能看懂的失败及改进过程，再解释模块分工解决何种瓶颈。",
+      "applicability_boundary": "模块透明不自动证明所有答案正确；适用有可执行表格操作的任务。"
+    },
+    "title_abstract": {
+      "pages": [
+        1
+      ],
+      "observation": "标题点任务、两项目标和技术路径；摘要按任务问题、三模块、人评结果与交互功能展开。",
+      "editorial_advice": "摘要优先给具体方法与已测收益，读者可立即复述贡献。",
+      "applicability_boundary": "摘要always consistent强于文中人评与生成机制能保证的结论，不作范式。"
+    },
+    "introduction": {
+      "pages": [
+        1,
+        2
+      ],
+      "observation": "用表格利润问题贯穿新方法；贡献覆盖框架、两数据集人评、模块错误和用户计划修改。",
+      "editorial_advice": "贡献按方法、证据、能力三个层次直接陈述。",
+      "applicability_boundary": "可解释接口与测得的用户干预改善分开，不推广为普遍因果保证。"
+    },
+    "related_work": {
+      "pages": [
+        2,
+        3,
+        4
+      ],
+      "observation": "按表格QA、内容规划、自动评测三个设计问题定位，解释为何表格取证不同于叙事规划。",
+      "editorial_advice": "让相关工作的每组差异服务一个设计或评测选择。",
+      "applicability_boundary": "本文比较特定提示式基线；不据此宣布所有自动指标都无效。"
+    },
+    "method_theory": {
+      "pages": [
+        3,
+        4,
+        5,
+        14,
+        15,
+        16
+      ],
+      "observation": "Fig2框架/迭代示例→Algorithm1接口→内容规划、可执行Python、子答案转换和最终生成；附录完整提示。",
+      "editorial_advice": "在模块之间写清输入、输出和反馈，公式/伪码与运行例相互对照。",
+      "applicability_boundary": "执行成功不是语义正确；这里没有理论忠实性保证。"
+    },
+    "evidence": {
+      "pages": [
+        6,
+        7,
+        8,
+        9,
+        14
+      ],
+      "observation": "人工1–5分综合性/忠实性为主，自动指标并列；消融→234个低分输出模块归因→强模型替换→77例用户修改计划。",
+      "editorial_advice": "主结果先写清评分尺度与比较，再由模块定位组织诊断和定向干预。",
+      "applicability_boundary": "234/1078筛选错误非全样本；模块标记可重叠；77例和180例结果不当作总体成功率。"
+    },
+    "discussion_limits": {
+      "pages": [
+        7,
+        8,
+        9,
+        10,
+        17
+      ],
+      "observation": "正面主结果与自动指标分歧并陈，讨论错误类别和交互；局限列GPT系列与少样本其他模型探索。",
+      "editorial_advice": "用误差诊断引出下一步，而非让限定句淹没主结果。",
+      "applicability_boundary": "低分自动指标的100对分析经过反向分歧筛选，仅解释这类情况。"
+    },
+    "paragraph_language": {
+      "pages": [
+        7,
+        8,
+        9
+      ],
+      "observation": "小标题以效果、评测分歧、模块分析推进论点；结果数值后解释。",
+      "editorial_advice": "可直接写human ratings favor TaPERA，再给最相关结果，不给每句加可能。",
+      "applicability_boundary": "all removals degrade both不符合QTSumm综合性消融；不能照搬绝对表述。"
+    },
+    "main_appendix": {
+      "pages": [
+        1,
+        3,
+        4,
+        7,
+        8,
+        9,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "observation": "正文保留工作流、伪码、人评/自动比较、错误分类与干预；附录A给四模块完整prompt、FeTaQA自动评测、指标失败例。",
+      "editorial_advice": "核心模块和证据留正文，可复现提示及完整辅助指标后置。",
+      "applicability_boundary": "prompt也属于科学附录，必须核对示例列名和数据，不能只看正文。"
+    },
+    "actionable": {
+      "pages": [
+        7,
+        8,
+        9
+      ],
+      "observation": "保留人评优势与模块化贡献，以分层诊断支持交互，而不强行把每个消融方向都写一致。",
+      "editorial_advice": "原创示例：TaPERA combines iterative content planning with executable table reasoning. Human ratings favor the full system over the compared baselines on both datasets; component analyses identify table reasoning and planning as the main sources of the selected errors.",
+      "applicability_boundary": "审计发现放在修改记录；正文按所需范围一次写清，不新增与具体证据无关的免责句。"
+    }
+  },
+  "coverage": [
+    {
+      "source": "canonical official PDF",
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "main_science": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "limitations_ethics": [
+        9,
+        10
+      ],
+      "references": [
+        10,
+        11,
+        12,
+        13
+      ],
+      "scientific_appendix": {
+        "A full prompts, automatic evaluation and metric failure cases": [
+          13,
+          14,
+          15,
+          16,
+          17
+        ]
+      }
+    }
+  ],
+  "counterexamples": [
+    {
+      "pages": [
+        7,
+        14
+      ],
+      "finding": "QTSumm无迭代综合性4.04高于full3.99，不能写移除任意组件让两项指标均下降。TaPERA在人评领先，但QTSumm自动ACU37.7低于1-shot55.2，FeTaQA ACU55.2低于Dater56.8；Likert分数及文中5.4%/5.0%不能称准确率百分点。",
+      "scope": "保留人评主结果，精确限定消融及评分单位；不把反例扩展为笼统不可靠。"
+    },
+    {
+      "pages": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "finding": "8名评审每系统250例，TaPERA QTSumm例外全1078。234例低分筛选后归因180reasoner/77planner/12generator可重叠；GPT4修复82例基于180个已选错误；计划干预77例、自动指标案例100对均为选择子集。",
+      "scope": "报告正确分母和选择过程，不推出总体修复率或指标失效率。"
+    },
+    {
+      "pages": [
+        4,
+        15,
+        17
+      ],
+      "finding": "FeTaQA正文均长18.9与Table1的23.3不同；Fig4问Country但代码索引City，可执行不等于答对。Table8 Apple利润57501与Fig1的57511不一致；p8结尾Table4/5模块描述顺序反置。",
+      "scope": "复现/修订清单单列；提示示例核验，不宣称已运行代码或纠正作者版本。"
+    },
+    {
+      "pages": [
+        1,
+        5,
+        8,
+        9
+      ],
+      "finding": "摘要always consistent并非严格保证，全文有12个generator归因错误；LLM生成阶段没有形式一致性保证。",
+      "scope": "表达可检查中间产物和已测人评分数，去掉全称保证，不削弱全部实测结果。"
+    }
+  ],
+  "supplement_audit": {
+    "method": "Locked official2024 XML long692 read; title/pages12824-12840/pdfhash121ab2b1 match",
+    "official_xml_attachments": [],
+    "separate_scientific_appendix_link_found": false,
+    "scientific_appendix_in_pdf": "A pages13-17 fully read, including prompts Figure3-6 and Tables7-8",
+    "code_executed": false
+  },
+  "version_audit": {
+    "published_year": 2024,
+    "canonical_url": "https://aclanthology.org/2024.acl-long.692.pdf",
+    "xml_revision_entries": []
+  },
+  "visual_review": {
+    "pages": [
+      1,
+      3,
+      4,
+      7,
+      8,
+      14,
+      15,
+      17
+    ],
+    "figures": "Figures1-4, Algorithm1, Tables1-5,7-8; Figure5-6 complete text read",
+    "reviewer": "acl_finish_a"
+  },
+  "official_requirements": {
+    "observed_layout_not_current_rule": true,
+    "source": "current ACL official rules separate"
+  },
+  "holdout_validation": null,
+  "review_limitations": "All17pages and scientific Appendix A read; original argument-bearing figures/tables visually inspected. No code execution or external data validation."
+}

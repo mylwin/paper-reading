@@ -1,0 +1,55 @@
+{
+  "date": "2026-10-28",
+  "reason": "Five primary-agent records copied a pending-state field from the pre-reading locked manifest. Explicit full-style/appendix/eligible fields were already true after actual reading; synchronize the inherited completion flag.",
+  "scope": "Current ACL induction curation only. Original11records/frozenICMLarchives untouched.",
+  "count_change": 0,
+  "changes": [
+    {
+      "id": "acl-2024.acl-long.133",
+      "old_flag": false,
+      "new_flag": true,
+      "before_snapshot": "07-research/2026-10-28-ACL写作风格调研_证据/metadata-correction-snapshots/acl-2024.acl-long.133-before.json",
+      "before_sha256": "5be6869caa43b5963e4a1a8a79756c53b7971125e2e4632d945e8b381a7a6351",
+      "after_sha256": "633efba18fc03696bd24e57a734ef9552219d386441a214ed3f2b27913af593e",
+      "scientific_observations_changed": false
+    },
+    {
+      "id": "acl-2024.acl-short.70",
+      "old_flag": false,
+      "new_flag": true,
+      "before_snapshot": "07-research/2026-10-28-ACL写作风格调研_证据/metadata-correction-snapshots/acl-2024.acl-short.70-before.json",
+      "before_sha256": "f859888a2fececce752df97137ee00f13d328b929011d158520f65b02d6da801",
+      "after_sha256": "90f77f185f2f22d601700699c76a5bef95404106f8b0bae542492f1e79ad10d2",
+      "scientific_observations_changed": false
+    },
+    {
+      "id": "acl-2025.acl-short.23",
+      "old_flag": false,
+      "new_flag": true,
+      "before_snapshot": "07-research/2026-10-28-ACL写作风格调研_证据/metadata-correction-snapshots/acl-2025.acl-short.23-before.json",
+      "before_sha256": "504d2964244ce4e3afda0aa01faf5615ae17bf4b7aebaa10c956598aa4fd4d7b",
+      "after_sha256": "302b97b1464ea9299a78db46e17c6dacc444676ad82542ed41cf8d39167149c9",
+      "scientific_observations_changed": false
+    },
+    {
+      "id": "acl-2024.acl-short.73",
+      "old_flag": false,
+      "new_flag": true,
+      "before_snapshot": "07-research/2026-10-28-ACL写作风格调研_证据/metadata-correction-snapshots/acl-2024.acl-short.73-before.json",
+      "before_sha256": "7aba7ed02b7f6c523e77ad97801f68df4fe881c29bf2a50707a5c9635b9951ad",
+      "after_sha256": "5b2e7d677d86bfac2cc746e18f59a49529e45dd7923e4f12ac4c8fa119bb1548",
+      "scientific_observations_changed": false
+    },
+    {
+      "id": "acl-2025.acl-short.59",
+      "old_flag": false,
+      "new_flag": true,
+      "before_snapshot": "07-research/2026-10-28-ACL写作风格调研_证据/metadata-correction-snapshots/acl-2025.acl-short.59-before.json",
+      "before_sha256": "0178cdc08603ed3c8e3c66a54d4273819c55a4e360fc89187feb16fe8be99fc7",
+      "after_sha256": "3bc812d8091cb5f74965921fbb6ccf96f54ae6faba9aa1ee0fc328a04f3fcb10",
+      "scientific_observations_changed": false
+    }
+  ],
+  "current_batch_archive_checksums_refreshed": true,
+  "previous_record_bytes_and_archive_manifests_retained": true
+}

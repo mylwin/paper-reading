@@ -1,0 +1,75 @@
+{
+  "deleted_derivatives": [
+    {
+      "path": ".claude/skills/paper-writing-shared/tmp/corpus/acl/recovery-chunks/2024.acl-long.742/0002621440-0003145727.part",
+      "sha256": "8d89c7326c38ad9aa34754d3a47d8f031cd4aa509b15c16d139e103843276251",
+      "bytes": 524288
+    },
+    {
+      "path": ".claude/skills/paper-writing-shared/tmp/corpus/acl/recovery-chunks/2024.acl-long.742/0005767168-0006291455.part",
+      "sha256": "d0513053998cc4acb8e4cc0e1cdd8b87b73e7400c0b41801467a96b39547589e",
+      "bytes": 524288
+    },
+    {
+      "path": ".claude/skills/paper-writing-shared/tmp/corpus/acl/recovery-chunks/2024.acl-long.742/0000000000-0000524287.part",
+      "sha256": "be8949c997e5653e6d8c2ad47b9b910a09a7bbdc993d30d20115d07cf0bf867c",
+      "bytes": 524288
+    },
+    {
+      "path": ".claude/skills/paper-writing-shared/tmp/corpus/acl/recovery-chunks/2024.acl-long.742/0002097152-0002621439.part",
+      "sha256": "c9e0952e79be1ce957841547981d32474f14003f62fd7c95276e9ebb7fb2a2ed",
+      "bytes": 524288
+    },
+    {
+      "path": ".claude/skills/paper-writing-shared/tmp/corpus/acl/recovery-chunks/2024.acl-long.742/0003145728-0003670015.part",
+      "sha256": "a3e96bba4079a2d775eab5190d352b8b9c78712ce7d0af318e1f973a624ecf33",
+      "bytes": 524288
+    },
+    {
+      "path": ".claude/skills/paper-writing-shared/tmp/corpus/acl/recovery-chunks/2024.acl-long.742/0001572864-0002097151.part",
+      "sha256": "65c202391b0e0aafbb1c6796595136923cb790a67afda597644f5c37bfbb74fc",
+      "bytes": 524288
+    },
+    {
+      "path": ".claude/skills/paper-writing-shared/tmp/corpus/acl/recovery-chunks/2024.acl-long.742/headers.txt",
+      "sha256": "a8e9f32bc0da551cb9cb9b4ece68d7834654acadcf5ca40cf010d9f6dccc3d68",
+      "bytes": 242
+    },
+    {
+      "path": ".claude/skills/paper-writing-shared/tmp/corpus/acl/recovery-chunks/2024.acl-long.742/0004718592-0005242879.part",
+      "sha256": "69bf5ee86b6280907c271671552bc1b77c09b7dcdc74e99cec63962caac334f4",
+      "bytes": 524288
+    },
+    {
+      "path": ".claude/skills/paper-writing-shared/tmp/corpus/acl/recovery-chunks/2024.acl-long.742/0000524288-0001048575.part",
+      "sha256": "837642786920668af2047150b4e08819f8f60883bb4a994dab50ae47b4f32a67",
+      "bytes": 524288
+    },
+    {
+      "path": ".claude/skills/paper-writing-shared/tmp/corpus/acl/recovery-chunks/2024.acl-long.742/0004194304-0004718591.part",
+      "sha256": "d997161d1937733a9abbb32039d9ad602002991d1a5be438084ce5246f0789aa",
+      "bytes": 524288
+    },
+    {
+      "path": ".claude/skills/paper-writing-shared/tmp/corpus/acl/recovery-chunks/2024.acl-long.742/0003670016-0004194303.part",
+      "sha256": "9d96b99a1a9f972c314b1d2fae7c8ab02d250aecfc23e8d3f1b54f71e7c7d294",
+      "bytes": 524288
+    },
+    {
+      "path": ".claude/skills/paper-writing-shared/tmp/corpus/acl/recovery-chunks/2024.acl-long.742/0001048576-0001572863.part",
+      "sha256": "cf2e99fd6419285fba6b051f0302881b2a91062301bd13e1ed05292d2fdd3a2b",
+      "bytes": 524288
+    },
+    {
+      "path": ".claude/skills/paper-writing-shared/tmp/corpus/acl/recovery-chunks/2024.acl-long.742/0006291456-0006745677.part",
+      "sha256": "a2356bff3ab10f33797c150cf7a8e5448dd42646f2da92474ca4b5d6e0a643cf",
+      "bytes": 454222
+    },
+    {
+      "path": ".claude/skills/paper-writing-shared/tmp/corpus/acl/recovery-chunks/2024.acl-long.742/0005242880-0005767167.part",
+      "sha256": "738cc03b014aa32c417c8d85f68ce2f8c3f809432c9450acdf531c6579f820e4",
+      "bytes": 524288
+    }
+  ],
+  "source_pdf_or_primary_parse_deleted": 0
+}

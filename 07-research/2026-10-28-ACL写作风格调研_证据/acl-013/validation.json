@@ -1,0 +1,18 @@
+{
+  "actual_pdf_pages": 17,
+  "all17pages_read": true,
+  "all_scientific_appendices_read": true,
+  "all5figures_original_viewed": true,
+  "visualpages": 8,
+  "ten_dimensions": 10,
+  "holdout_unused": true,
+  "raw_only_skill_tmp": true,
+  "new_cache_removed": true,
+  "four_complete_flags": true,
+  "git_mutations": false,
+  "arithmetic": {
+    "prefix_T5_sixUDmean": 47.64000000000001,
+    "prefix_CMLM_sixUDmean": 48.83166666666667,
+    "seg_CMLM_iid_mean_improvement_pp": 0.58
+  }
+}

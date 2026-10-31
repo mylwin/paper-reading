@@ -1,0 +1,550 @@
+{
+  "id": "acl-2025.acl-long.1181",
+  "anthology_id": "2025.acl-long.1181",
+  "venue": "acl",
+  "year": 2025,
+  "track": "main conference research",
+  "length_type": "long",
+  "title": "Evaluating the Evaluation of Diversity in Commonsense Generation",
+  "authors": [
+    "Tianhui Zhang",
+    "Bei Peng",
+    "Danushka Bollegala"
+  ],
+  "first_author": "Tianhui Zhang",
+  "landing_url": "https://aclanthology.org/2025.acl-long.1181/",
+  "pdf_url": "https://aclanthology.org/2025.acl-long.1181.pdf",
+  "doi": "10.18653/v1/2025.acl-long.1181",
+  "official_listing_url": "https://aclanthology.org/volumes/2025.acl-long/",
+  "sampling_stratum": "evaluation_analysis",
+  "paper_type": "empirical meta-evaluation and annotated-resource study of diversity metrics for generative commonsense reasoning; no new generation algorithm or theorem",
+  "anthology_pdf_revision_hash": "904d6eed",
+  "metadata_revisions": [],
+  "official_attachments": [],
+  "sort_hash": "0177093da471039e867b16fa445f6be36dd8b8a70539ea0d9812921479b2cab7",
+  "split": "induction",
+  "semantic_review_status": "complete_writing_focused_full_text_review",
+  "full_text_and_relevant_appendix_review_complete": true,
+  "review_date": "2026-10-28",
+  "reviewer": "acl_fulltext_005 subagent",
+  "full_text_style_review_complete": true,
+  "external_appendix_review_complete": true,
+  "count_eligible_full_text_and_relevant_appendix": true,
+  "pdf_path": ".claude/skills/paper-writing-shared/tmp/corpus/acl/pdf/2025.acl-long.1181.pdf",
+  "pdf_sha256": "37f2212d8d54de3e89aa050fae0b41bae7598ae3ddfd648ac1e991dbfa648505",
+  "markdown_path": ".claude/skills/paper-writing-shared/tmp/corpus/acl/markdown/2025.acl-long.1181.md",
+  "markdown_sha256": "86c70ba597469ae0c32ab2ba3577d6f7d248f7a174cad800d2e62e661235cb59",
+  "coverage": [
+    {
+      "source": "canonical official 18-page PDF; complete page-delimited extraction read semantically, with selected original rendered pages visually checked",
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18
+      ],
+      "main_science": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "references": [
+        10,
+        11,
+        12
+      ],
+      "scientific_appendix": {
+        "A Vendi Score": [
+          12,
+          13
+        ],
+        "B Chamfer Distance": [
+          13
+        ],
+        "C Generating Candidate Sets and C.1 Quality Evaluation": [
+          13,
+          14,
+          15,
+          16,
+          17
+        ],
+        "D LLM-based Diversity Template": [
+          14,
+          15
+        ],
+        "E Temperature Tuning": [
+          14,
+          15
+        ],
+        "F LLM Reasons about the Diversity Score": [
+          15,
+          16,
+          17
+        ],
+        "G Confidence Intervals": [
+          15,
+          16,
+          17
+        ],
+        "H Further Experiments on ComVE": [
+          16,
+          17,
+          18
+        ]
+      },
+      "reading_not_download_or_parse_only": true
+    }
+  ],
+  "pagewise_coverage": [
+    {
+      "page": 1,
+      "read": true,
+      "content": "Title, abstract, Figure 1 counterexample, introduction and quality/diversity distinction"
+    },
+    {
+      "page": 2,
+      "read": true,
+      "content": "Research question, annotation/data contribution, two substantive findings, Related Work begins"
+    },
+    {
+      "page": 3,
+      "read": true,
+      "content": "Closest meta-evaluation comparison; form/content metric definitions and score direction footnote"
+    },
+    {
+      "page": 4,
+      "read": true,
+      "content": "Annotation construct, order-bias pilot, five-repeat score protocol, few-shot selection design"
+    },
+    {
+      "page": 5,
+      "read": true,
+      "content": "Candidate generation; Default/Para-1/2/3; Nonsensical/NounShuff/RndShuff; human validation sampling"
+    },
+    {
+      "page": 6,
+      "read": true,
+      "content": "Figure 2; 70-pair human evaluation, five annotators, 80.6% agreement and Fleiss kappa 0.45; settings, filtering and accuracy definition"
+    },
+    {
+      "page": 7,
+      "read": true,
+      "content": "Tables 1–3: overall, transfer datasets and high/low strata; findings and exceptions"
+    },
+    {
+      "page": 8,
+      "read": true,
+      "content": "Figure 3 metric/preference agreement heatmaps; Table 4 raw scores; quality-dependent interpretation"
+    },
+    {
+      "page": 9,
+      "read": true,
+      "content": "Figure 4 score distributions; Table 4 discussion; conclusion; Limitations begins"
+    },
+    {
+      "page": 10,
+      "read": true,
+      "content": "Limitations completed: English, generator coverage, sole LLM judge; ethical concerns; references begin"
+    },
+    {
+      "page": 11,
+      "read": true,
+      "content": "Reference list read for coverage, not bibliography verified"
+    },
+    {
+      "page": 12,
+      "read": true,
+      "content": "References completed; Supplementary Materials A: Vendi definitions and order formula"
+    },
+    {
+      "page": 13,
+      "read": true,
+      "content": "A completed; B Chamfer formula; C generation prompts Figures 5–7; C.1 quality metrics"
+    },
+    {
+      "page": 14,
+      "read": true,
+      "content": "Table 5 all candidate examples; quality interpretation; D template and E tuning setup"
+    },
+    {
+      "page": 15,
+      "read": true,
+      "content": "Figure 8 full judge template; Tables 6–7; F rationale extension; G confidence-interval setup"
+    },
+    {
+      "page": 16,
+      "read": true,
+      "content": "Figures 9–10 rationale examples; Table 8; G completed; H ComVE corruptions and annotation setup"
+    },
+    {
+      "page": 17,
+      "read": true,
+      "content": "Figure 11 rationale; Table 9; Figures 12–14 full/all-low-high CI panels; H sample count and result discussion"
+    },
+    {
+      "page": 18,
+      "read": true,
+      "content": "Table 10 and final H comparison/conclusion; end of document"
+    }
+  ],
+  "version_audit": {
+    "official_published_year": 2025,
+    "canonical_url": "https://aclanthology.org/2025.acl-long.1181.pdf",
+    "official_landing_read_date": "2026-10-28",
+    "official_landing_snapshot_path": ".claude/skills/paper-writing-shared/tmp/corpus/acl/review-cache/acl-005/landing.html",
+    "official_landing_sha256": "4ffb21d80863c5201550a499f9a138f6ccb64548774587388529a1f2f2f7423e",
+    "landing_site_build": "2026-10-27 09:50 UTC; commit c7e7c44f91fba03d84e9fd7c57d693c4d6523e86",
+    "official_xml_path": ".claude/skills/paper-writing-shared/tmp/corpus/acl/sources/2025-acl.xml",
+    "official_xml_sha256": "bd95ce2de89dbc2c001ca63c73585a2145b338df3b0ef48833a6e3d8ecb245fe",
+    "xml_pdf_revision_hash": "904d6eed",
+    "xml_revision_entries": [],
+    "later_revision_recorded": false,
+    "live_xml_refetch": "attempted; raw.githubusercontent.com connection reset; local official XML and live landing checked, not falsely reported as fresh XML fetch",
+    "pdf_byte_redownloaded": false
+  },
+  "supplement_audit": {
+    "official_landing": "https://aclanthology.org/2025.acl-long.1181/",
+    "landing_read_date": "2026-10-28",
+    "landing_links_extracted_and_inspected": true,
+    "official_xml_attachments": [],
+    "separate_scientific_appendix_link_found": false,
+    "scientific_appendix_in_pdf": "A–H, complete on PDF pages 12–18; all prose, prompts, examples, formulas and result tables read",
+    "code_link": "https://github.com/LivNLP/Evaluating-Diversity-Metrics",
+    "code_link_role": "code and data repository explicitly linked from p2; no separate scientific appendix linked by official landing or XML",
+    "code_executed": false,
+    "external_scientific_appendix_required": false
+  },
+  "ten_dimensions": {
+    "reader_argument": {
+      "pages": [
+        1,
+        2,
+        3
+      ],
+      "observation": "先定义GCR同时需要常识质量与不同观点，再区分对参考文本的质量评测和候选集内部的多样性评测。Figure 1用同一组概念与两组句子展示指标排序冲突。",
+      "editorial_advice": "从任务中真实要判断的差别提出研究问题；让一个可检视例子承担动机，再用系统实验回答。",
+      "applicability_boundary": "这是任务特定的元评测稿；例子用于解释问题，不替代总体证据，不能要求所有ACL稿件以失败例开篇。"
+    },
+    "title_abstract": {
+      "pages": [
+        1
+      ],
+      "observation": "标题直接命名元评测对象与任务；摘要按任务需要→指标选择不明→系统元评测→LLM标注资源→实测比较→指标选择建议组织，没有先宣称新模型或刷榜。",
+      "editorial_advice": "按实际贡献写清评测对象、数据/设计与主要发现；若贡献是分析和资源，就以分析和资源为主轴。",
+      "applicability_boundary": "本篇摘要未列效果数字，不应据此禁止或强制摘要数字；结论应保留其判断参照为LLM评分。"
+    },
+    "introduction": {
+      "pages": [
+        1,
+        2
+      ],
+      "observation": "引言先用具体问题引出form/content两类，再给12指标、三数据集、数据构建与人类核查，末尾两项列表列研究发现。",
+      "editorial_advice": "贡献列表可以由可检验发现组成；把规模、数据贡献和核心结果接入同一研究问题，避免把每项流程包装成创新。",
+      "applicability_boundary": "两项列表不是ACL统一模板；80.6%来自70对高质量集合的人类核查，不能扩大为全部低质量数据的人类认可。"
+    },
+    "related_work": {
+      "pages": [
+        2,
+        3
+      ],
+      "observation": "四个小主题覆盖NLG多样性、GCR多样化、质量评测及指标元评测；最接近工作按任务、生成变异和标注方法三个轴逐项比较。",
+      "editorial_advice": "以最接近工作的设计差别说明研究空间，背景文献的组织服务于为什么需要当前研究。",
+      "applicability_boundary": "不是每篇都需四主题或三差异；此稿贡献在评测而非多样化生成，比较对象须随稿件任务改变。"
+    },
+    "method_theory": {
+      "pages": [
+        3,
+        4,
+        5,
+        6,
+        12,
+        13,
+        15
+      ],
+      "observation": "正文介绍指标家族和LLM标注、八对示范、五次独立评分、候选构造、人类核查及同质量配对/0.5评分差过滤；已知VS与Chamfer公式置附录。",
+      "editorial_advice": "元评测方法按测量构念→候选变化→标注→有效性核查→比较规则组织；已知公式可简述并给附录指针。",
+      "applicability_boundary": "没有新理论保证；“随机打乱不应算有意义多样性”是任务构念，改写生成降低多样性是设计预期，均应与实际评分结果分开。"
+    },
+    "evidence": {
+      "pages": [
+        6,
+        7,
+        8,
+        9,
+        15,
+        16,
+        17,
+        18
+      ],
+      "observation": "Table 1总体现象、Table 2跨数据集、Table 3质量分层、Figure 3指标间偏好一致性、Table 4原始分数和Figure 4分布依次回答总体、迁移和原因诊断；A–H补提示、质量与CI及ComVE低质量压力实验。",
+      "editorial_advice": "让每组证据回答一个问题；把准确率定义和判断参照写在首次结果之前，用分层而非单一平均数支持选择建议。",
+      "applicability_boundary": "主要accuracy是与GPT-4o的成对偏好一致率；区间是各分数不确定性，不能仅凭区间宽窄认证显著性或所有人群适用。"
+    },
+    "discussion_limits": {
+      "pages": [
+        9,
+        10,
+        14,
+        18
+      ],
+      "observation": "正文直接提出多样性不能脱离质量评估，结论给内容指标建议；独立Limitations集中处理英语、三个生成模型及单一标注LLM，C.1对质量随改写下降使用suggests解释。",
+      "editorial_advice": "明确保留实际证据支持的评测建议；把语言、标注覆盖等边界集中一次说明，推断用相应力度表达。",
+      "applicability_boundary": "“难以囊括所有LLM”的自辩及其他套式表述不应复制到每稿；H中内容指标最高38.8%说明相对更好不等于该压力条件下可靠。"
+    },
+    "paragraph_language": {
+      "pages": [
+        4,
+        5,
+        6,
+        7,
+        9,
+        14
+      ],
+      "observation": "方法用Default、Paraphrasing等段首定位操作；结果段以表图指针→观察→解释推进；C.1把观测到的Win_Tie变化与评测器可能隐含考虑多样性的解释分开。",
+      "editorial_advice": "已测比较可以直接使用report、achieve或show，解释机制用suggest等；用对象、条件和方向代替连续形容词。",
+      "applicability_boundary": "原文consistently、all、robust有超出局部表格的情况，不是风格规范；不必把所有主张改成可能或附加普遍免责声明。"
+    },
+    "main_appendix": {
+      "pages": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18
+      ],
+      "observation": "正文保留构念、标注设计、人类核查、主要准确率与分层诊断；附录放已知指标公式、完整生成/评分模板、样例、温度、质量分数及CI；H增加低质量ComVE结果。",
+      "editorial_advice": "正文应足以判断贡献和证据口径，附录承担复现与边界诊断；当附录压力实验实质限制结论时，把必要边界反馈到结果或结论。",
+      "applicability_boundary": "这是评测稿的分配，非所有方法稿都把公式移附录；独立科学附录未在官方链接/XML出现，此稿A–H已整合于18页PDF。"
+    },
+    "actionable": {
+      "pages": [
+        2,
+        6,
+        7,
+        9,
+        15,
+        18
+      ],
+      "observation": "可迁移的编辑动作是把贡献写成“研究问题—评测设计/资源—主要发现—有条件建议”，尤其以准确的参照对象表达元评测发现。",
+      "editorial_advice": "原创建议：Across CommonGen outputs from three generators, the embedding-based metrics reach 71.9–81.1% agreement with GPT-4o’s pairwise preferences, supporting their use in this evaluation setting.",
+      "applicability_boundary": "例句仅展示本样本已报告结果的组织；区间来自Table 1内容指标各格，非置信区间。迁移写法时使用用户自己的已核验实验，勿迁移本篇数字或研究结论。"
+    }
+  },
+  "counterexamples": [
+    {
+      "pages": [
+        5,
+        6,
+        9,
+        10
+      ],
+      "finding": "人类核查仅70对高质量句集，五名受训标注者平均与GPT-4o一致80.6%，Fleiss kappa 0.45；正文后续准确率则与GPT-4o比较。结论将此压缩为始终与人类判断一致，证据层级被合并。",
+      "scope": "研究记录；编辑时正确命名判断参照与验证子集，保留规模化标注贡献，无须普遍贬低LLM评测。"
+    },
+    {
+      "pages": [
+        7,
+        8,
+        9
+      ],
+      "finding": "Table 4并非所有指标随Default→Para-3单调下降：Entropy-2 9.52/9.42/9.60/9.66；Chamfer 20.09/12.44/3.09/9.54；VS-Embed-0.5在Para-2/3同为2.08。Table 3 Qwen低质量Entropy-2 88.5高于部分内容指标，故all/consistently需限定。",
+      "scope": "原页已核；作为绝对化语言反例，不转化为用户稿件的固定免责句。"
+    },
+    {
+      "pages": [
+        13,
+        17
+      ],
+      "finding": "C.1定义Overall为Coverage×Win_Tie百分比乘积；Table 9 Llama Nonsensical印78.6、2.7、18.1，前两数乘积/100为2.1222，与18.1不符。",
+      "scope": "待作者核对的单项表格算术查询，不改用户实验、不认证论文错误来源。"
+    },
+    {
+      "pages": [
+        7,
+        15,
+        16,
+        17,
+        18
+      ],
+      "finding": "Table 1/2标95% bootstrap CI，G则写Clopper–Pearson binomial CI；H低质量ComVE内容指标38.4–38.8仍高于形式指标20.5–35.2，但绝对一致率偏低。不能把“相对更好”写成跨条件可靠或将区间展示自动当作成对显著性检验。",
+      "scope": "保留统计方法与强度核对项；写作归纳强调参照、口径和相对/绝对结果，不要求每段自我防御。"
+    }
+  ],
+  "original_rewrites": [
+    {
+      "pages": [
+        2,
+        6,
+        7
+      ],
+      "purpose": "contribution and measured result with exact reference",
+      "text": "We compare twelve diversity metrics on three commonsense-generation datasets using LLM annotations supported by a human check. Embedding-based metrics show the strongest overall agreement with the LLM preferences.",
+      "not_a_quote": true
+    },
+    {
+      "pages": [
+        13,
+        14
+      ],
+      "purpose": "separate observed change from explanatory inference",
+      "text": "The quality evaluator assigns lower Win_Tie scores as paraphrases replace original candidates. This pattern suggests that its quality judgments may also respond to diversity.",
+      "not_a_quote": true
+    }
+  ],
+  "visual_review": {
+    "pages": [
+      1,
+      6,
+      7,
+      8,
+      9,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18
+    ],
+    "count": 12,
+    "figures": "All 14 figures inspected on original rendered pages: 1 p1; 2 p6; 3 p8; 4 p9; 5–7 p13; 8 p15; 9–10 p16; 11–14 p17",
+    "tables": "All 10 tables visually inspected: 1–3 p7; 4 p8; 5 p14; 6–7 p15; 8 p16; 9 p17; 10 p18",
+    "equations": "A Eqs1–2 p12 and B Eq3 p13 checked on rendered originals",
+    "render_evidence": [
+      {
+        "pdf_page": 1,
+        "printed_page": 24258,
+        "sha256": "d438a6fff4b7093d6804d474980c7c383ca8100c1f5e5ef0665b5a5534fc27c9",
+        "render_scale_to_px": 1500,
+        "inspected": true,
+        "retention": "rebuildable page render removed after review"
+      },
+      {
+        "pdf_page": 6,
+        "printed_page": 24263,
+        "sha256": "a9fc290aed66f64555ba53681f6143d78711e09dd9a000a599a37bb20f73245c",
+        "render_scale_to_px": 1500,
+        "inspected": true,
+        "retention": "rebuildable page render removed after review"
+      },
+      {
+        "pdf_page": 7,
+        "printed_page": 24264,
+        "sha256": "1a35ac802dc23b15a8f11b503904250bdc8b43ff0fe40e20b442ebb2474d4521",
+        "render_scale_to_px": 1500,
+        "inspected": true,
+        "retention": "rebuildable page render removed after review"
+      },
+      {
+        "pdf_page": 8,
+        "printed_page": 24265,
+        "sha256": "b53178f2ab4a87a3bbae107c3bf945e1126ae79bcfd53dd5d1ec7a7f64930926",
+        "render_scale_to_px": 1500,
+        "inspected": true,
+        "retention": "rebuildable page render removed after review"
+      },
+      {
+        "pdf_page": 9,
+        "printed_page": 24266,
+        "sha256": "99e01f01d2962b00a69a03db329a6842364e67d3e743a8ae16f6d0e8b6393358",
+        "render_scale_to_px": 1500,
+        "inspected": true,
+        "retention": "rebuildable page render removed after review"
+      },
+      {
+        "pdf_page": 12,
+        "printed_page": 24269,
+        "sha256": "c9c0a25d9f56107a9f02e095ccbea01d5994c477158bc331d217ccb4c46fae85",
+        "render_scale_to_px": 1500,
+        "inspected": true,
+        "retention": "rebuildable page render removed after review"
+      },
+      {
+        "pdf_page": 13,
+        "printed_page": 24270,
+        "sha256": "313f65e9109aa703d7d668e7eea7fc79983628c96402c0e3d568b217897c79e8",
+        "render_scale_to_px": 1500,
+        "inspected": true,
+        "retention": "rebuildable page render removed after review"
+      },
+      {
+        "pdf_page": 14,
+        "printed_page": 24271,
+        "sha256": "b3ea9e085f91ba7fd7e7d3028a7f1a509b8fbe932cb5d2f88946482148ea379c",
+        "render_scale_to_px": 1500,
+        "inspected": true,
+        "retention": "rebuildable page render removed after review"
+      },
+      {
+        "pdf_page": 15,
+        "printed_page": 24272,
+        "sha256": "7fbfa5df0c040d227a5837659e862dd0ddc4aed9818e7d38e459e286dfafd84e",
+        "render_scale_to_px": 1500,
+        "inspected": true,
+        "retention": "rebuildable page render removed after review"
+      },
+      {
+        "pdf_page": 16,
+        "printed_page": 24273,
+        "sha256": "22c6f4be83b9bb179807a5e7e69dc45de685c459fef58b2ea79852a026ea7770",
+        "render_scale_to_px": 1500,
+        "inspected": true,
+        "retention": "rebuildable page render removed after review"
+      },
+      {
+        "pdf_page": 17,
+        "printed_page": 24274,
+        "sha256": "a23864e0871906c178f0189befae999509b09cb5fea383c674d75126f326a34b",
+        "render_scale_to_px": 1500,
+        "inspected": true,
+        "retention": "rebuildable page render removed after review"
+      },
+      {
+        "pdf_page": 18,
+        "printed_page": 24275,
+        "sha256": "6b31c2be5d1ccf5e2896b4e734a771ada63271515e0381ba8ef4006f32239e65",
+        "render_scale_to_px": 1500,
+        "inspected": true,
+        "retention": "rebuildable page render removed after review"
+      }
+    ],
+    "reviewer": "same acl_fulltext_005 subagent"
+  },
+  "official_requirements": {
+    "source": "official policy verification maintained separately by primary agent",
+    "corpus_layout_observation": "Two-column proceedings format, author-year references, separately numbered Limitations/Ethical Concerns, Supplementary Materials with A–H",
+    "observed_layout_not_current_rule": true
+  },
+  "holdout_validation": null,
+  "review_limitations": "Full scientific prose and all A–H appendices read; 12 original pages visually checked, covering every figure/table. No source-code execution, replication, proof certification or bibliography verification. Live official landing checked; live raw XML refetch failed, local official XML read. No holdout read."
+}

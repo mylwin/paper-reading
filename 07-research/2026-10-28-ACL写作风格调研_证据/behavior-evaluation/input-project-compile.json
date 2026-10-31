@@ -1,0 +1,12 @@
+{
+  "purpose": "Existing synthetic input fixture before forward editing; not a research manuscript",
+  "verified_date": "2026-10-29",
+  "compiler_evidence": "Existing latexmk/pdfTeX output main.log; prior tool exit not retained",
+  "pdf_path": ".claude/skills/paper-writing-shared/tmp/acl-behavior-2026-10-29/input-build/main.pdf",
+  "pdf_sha256": "1bfae1fdd9bc38e2a3298a5273e6cf9f0bce2289235ef36d821271eef34eb327",
+  "pages": 2,
+  "paper_size": "A4",
+  "fatal_compile_error": false,
+  "unresolved_references": false,
+  "warnings": []
+}

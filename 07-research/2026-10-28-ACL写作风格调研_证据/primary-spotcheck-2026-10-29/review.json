@@ -1,0 +1,14 @@
+{
+  "date": "2026-10-29",
+  "purpose": "Independent primary-agent targeted check of a delegated style observation; no extra full-review count",
+  "paper": "acl-2024.acl-long.89",
+  "pdf_sha256": "b0c9ac2e4b969ebb54f07e249e2adf6c27f79e406ebdcb2f09343ac252b126ac",
+  "checked_pages": [
+    5
+  ],
+  "visual_checked": true,
+  "finding": "Theorem1 states monotonic improvement of the named MI-regularized objective under the explicit Eq1/2/3 iteration. The same page separates practical neural implementation in Section4.3. Direct guarantees with their actual conditions are appropriate, without downgrading the result to a possibility.",
+  "boundary": "This spot check confirms wording/organization and theorem object, not proof correctness or empirical training guarantees. Full15page/A1-A4 review remains the delegated record.",
+  "writing_use": "Add a positive R5 example of theorem→proof roadmap→implementation; retain guarantee and exact objective rather than piling generic caveats into the manuscript.",
+  "reading_increment": 0
+}

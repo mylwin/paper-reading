@@ -1,0 +1,27 @@
+{
+  "id": "11-draft-analysis",
+  "skill": "paper-writing",
+  "venue": "ICML",
+  "request": "起草贡献段；这是理解现象的实证论文，不提出新算法",
+  "provided_facts": {
+    "study": "controlled analysis of parallel data collection",
+    "findings": "holding interactions fixed, larger parallel batches lower returns in three of four tasks; gradient kurtosis co-varies",
+    "algorithm": "no new algorithm",
+    "exceptions": "one task unchanged"
+  },
+  "original": null,
+  "actual_primary_agent_output": "We characterize how parallel data collection changes learning under a fixed interaction budget. Across four tasks, larger parallel batches reduce returns in three tasks and leave one task unchanged. Gradient-kurtosis measurements identify an accompanying change in the update distribution, motivating a hypothesis about the learning dynamics.",
+  "author_notes": "",
+  "manual_semantic_review": {
+    "reviewer": "same primary agent",
+    "assessment": "consistent_with_given_facts_and_requested_scope",
+    "reason": "贡献是受控理解，无需制造算法名称/理论保证。重要例外留在同句，更新分布测量只用于机制假说。",
+    "criteria": [
+      "analysis_contribution",
+      "counterexample_local",
+      "no_invented_algorithm",
+      "no_causal_overreach"
+    ]
+  },
+  "independent_model_run": false
+}

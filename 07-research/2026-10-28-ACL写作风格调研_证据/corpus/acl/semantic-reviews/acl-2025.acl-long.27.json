@@ -1,0 +1,333 @@
+{
+  "id": "acl-2025.acl-long.27",
+  "anthology_id": "2025.acl-long.27",
+  "venue": "acl",
+  "year": 2025,
+  "track": "main conference research",
+  "length_type": "long",
+  "title": "RuleArena: A Benchmark for Rule-Guided Reasoning with LLMs in Real-World Scenarios",
+  "authors": [
+    "Ruiwen Zhou",
+    "Wenyue Hua",
+    "Liangming Pan",
+    "Sitao Cheng",
+    "Xiaobao Wu",
+    "En Yu",
+    "William Yang Wang"
+  ],
+  "first_author": "Ruiwen Zhou",
+  "landing_url": "https://aclanthology.org/2025.acl-long.27/",
+  "pdf_url": "https://aclanthology.org/2025.acl-long.27.pdf",
+  "doi": "10.18653/v1/2025.acl-long.27",
+  "official_listing_url": "https://aclanthology.org/volumes/2025.acl-long/",
+  "sampling_stratum": "data_resources",
+  "paper_type": "realistic rule-guided reasoning benchmark, granular metrics and controlled diagnostic analysis; long paper",
+  "anthology_pdf_revision_hash": "a73b55be",
+  "metadata_revisions": [],
+  "official_attachments": [],
+  "sort_hash": "0447fcb3a2d1336a5fff5543bb953189b8ed236e31302c4dd4cc4cf575d2f005",
+  "split": "induction",
+  "semantic_review_status": "complete_writing_focused_full_text_review",
+  "full_text_and_relevant_appendix_review_complete": true,
+  "review_date": "2026-10-29",
+  "reviewer": "delegated acl020_finish agent",
+  "pdf_path": ".claude/skills/paper-writing-shared/tmp/corpus/acl/pdf/2025.acl-long.27.pdf",
+  "pdf_sha256": "768173c5f63dd8165e1da0442bcd1fc6070cac627edf7667d011831e3b62aa40",
+  "markdown_path": ".claude/skills/paper-writing-shared/tmp/corpus/acl/markdown/2025.acl-long.27.md",
+  "markdown_sha256": "d5c6eecf668e9f0ce879c5f157f23e84eeec81da69035d6fa8f7e945570f6f43",
+  "full_text_style_review_complete": true,
+  "external_appendix_review_complete": true,
+  "count_eligible_full_text_and_relevant_appendix": true,
+  "coverage": [
+    {
+      "source": "canonical official PDF",
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23
+      ],
+      "main_science": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "limitations": [
+        10
+      ],
+      "references": [
+        10,
+        11,
+        12,
+        13
+      ],
+      "scientific_appendix": {
+        "A terminology": [
+          14
+        ],
+        "B.1-B.2 collection and annotation": [
+          14,
+          15
+        ],
+        "C complete extraction schemas": [
+          15,
+          16,
+          17
+        ],
+        "D.1 rule-wise plots": [
+          17,
+          18,
+          19
+        ],
+        "D.2.1-D.2.6 analyses and tool results": [
+          20,
+          21,
+          22
+        ],
+        "E complete system/user prompts": [
+          23
+        ]
+      }
+    }
+  ],
+  "version_audit": {
+    "published_year": 2025,
+    "canonical_url": "https://aclanthology.org/2025.acl-long.27.pdf",
+    "xml_revision_entries": []
+  },
+  "supplement_audit": {
+    "method": "read locked official 2025 XML volume long paper27; title/authors/pages550-572/PDFhasha73b55be match; no attachment element, no live landing claim",
+    "official_xml_attachments": [],
+    "separate_scientific_appendix_link_found": false,
+    "scientific_appendix_in_pdf": "A-E entirely read including all code/schema blocks and prompttemplates",
+    "external_code": "https://github.com/skyriver-2000/rulearena",
+    "code_executed": false,
+    "external_676page_CBA_not_read": "referenced benchmark input source, not a separate scientific appendix; no current-policy or legal correctness certification"
+  },
+  "ten_dimensions": {
+    "reader_argument": {
+      "pages": [
+        1,
+        2,
+        3
+      ],
+      "observation": "从实际规则应用风险及格式指令评测不足，定义rule-guided reasoning，再用三个场景说明多规则交互。",
+      "editorial_advice": "评测稿先界定所测能力与已有评测遗漏，再以具体输入/规则/输出实例解释。",
+      "applicability_boundary": "真实来源的规则与部署真实流量不是同一分布；规则已经筛选/简化。"
+    },
+    "title_abstract": {
+      "pages": [
+        1
+      ],
+      "observation": "名称+能力+真实场景；摘要列三领域、两个区别、三类发现与工具对照，没有硬塞排行榜数字。",
+      "editorial_advice": "标题突出测量对象；摘要按资源特征、测量发现与验证安排即可形成贡献。",
+      "applicability_boundary": "novel/challenging/real-world不是官方要求；外部工具结果不能扩大为全领域全模型已验证。"
+    },
+    "introduction": {
+      "pages": [
+        1,
+        2
+      ],
+      "observation": "用现实失败动机转向现有style/logic评测缺口；三条贡献为95规则、816题与粒度指标、诊断分析。",
+      "editorial_advice": "资源和测量设计本身可构成贡献，将每项映射到后文证据。",
+      "applicability_boundary": "不要求新增训练模型；超越一阶逻辑的表述在文中未给形式表达能力证明。"
+    },
+    "related_work": {
+      "pages": [
+        2,
+        3
+      ],
+      "observation": "独立RelatedWork分complex instruction following与logical reasoning，两脉络都在末尾解释自然规则的增量。",
+      "editorial_advice": "围绕所测能力和输入表示比较近邻，避免只列模型历史。",
+      "applicability_boundary": "不能把前作全部概括成单步；本轮未全文核验所有被引前作。"
+    },
+    "method_theory": {
+      "pages": [
+        3,
+        4,
+        5,
+        14,
+        15,
+        16,
+        17,
+        23
+      ],
+      "observation": "按领域来源、题目生成、难度控制、problem/rule双粒度指标组织；附录公开标注结构、解析schema与完整prompt。",
+      "editorial_advice": "将benchmark构造和指标定义当作方法；写清单位、分母、适用领域和判断流程。",
+      "applicability_boundary": "NBA无逐步正确性标注，AC缺失不能填零；GPT4o抽取是估计测量而非自动gold；零分母处理未交代。"
+    },
+    "evidence": {
+      "pages": [
+        6,
+        7,
+        8,
+        9,
+        18,
+        19,
+        20,
+        21,
+        22
+      ],
+      "observation": "主表跨6模型×3领域×3难度×0/1shot；再problem→rule诊断及错误案例；D控制表示/干扰长度/工具，完整结果后置。",
+      "editorial_advice": "由总分拆到错误环节，再用控制实验检验可能原因，结果段以问题标题推进。",
+      "applicability_boundary": "分箱关联非因果；工具实验仅3模型airline levels1/2；无重复种子/统计检验说明，显著不认证为统计显著。"
+    },
+    "discussion_limits": {
+      "pages": [
+        9,
+        10,
+        20,
+        22
+      ],
+      "observation": "结论回到复杂规则挑战；Limitations讨论自动评价、训练和结构化推理方向；D明确NBA缺中间标注使下降原因难定。",
+      "editorial_advice": "聚焦影响解释的具体缺口，未来方案保持未来语态；实测错误率直接讲。",
+      "applicability_boundary": "限于给定规则/合成或人工任务，不能据此评定真实税务/交易服务合规性。"
+    },
+    "paragraph_language": {
+      "pages": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "observation": "LowAccuracy/HighPrecision/LowRecall等标签将每段固定到一个指标；分析小节用问句，解释使用suggest/plausible。",
+      "editorial_advice": "实测指标、解释和设想分别用恰当强度，段落推进一个判断。",
+      "applicability_boundary": "不把所有结论统一弱化；也不照抄cannot/always/100%到未测条件。"
+    },
+    "main_appendix": {
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23
+      ],
+      "observation": "正文保留完整资源定义/指标/主结果/核心机制分析，附录A-E补术语、标注、完整提取结构、大图、控制实验与prompt。",
+      "editorial_advice": "主文能判断贡献；附录让采集、解析、实验复核成为可能，末页prompt也纳入阅读。",
+      "applicability_boundary": "录用九页正文不是当前投稿页数规则；不把676页原始CBA当随文科学附录而伪称已阅读。"
+    },
+    "actionable": {
+      "pages": [
+        2,
+        5,
+        6,
+        22
+      ],
+      "observation": "资源规模与粒度诊断可直接表述；工具带来的具体收益不必夸大全部系统。",
+      "editorial_advice": "原创例句：RuleArena pairs95 selected rules with816 problems in three domains and evaluates both answer accuracy and rule-level behavior. In the reported airline Level2 experiment, tool augmentation raises GPT-4o answer accuracy from0.16 to0.33.",
+      "applicability_boundary": "17个百分点，不是17%相对；Python执行正确不保证生成程序选规则正确。"
+    }
+  },
+  "counterexamples": [
+    {
+      "pages": [
+        4,
+        15,
+        23
+      ],
+      "finding": "NBA主文legit→Yes/标注answer=True if allowed，但最终prompt规定False=no violation、True=violation，语义相反；需核对实际解析/标签转换而不能静默选一。",
+      "scope": "原页prompt确认；保存作者查询，不宣告全部分数必错。"
+    },
+    {
+      "pages": [
+        7,
+        18,
+        19
+      ],
+      "finding": "正确性图2/4/6 x轴印Precision而分图名Correctness；NBA共54规则，recall图52、precision图50且未明示排除/零分母规则；不能从显示数量自行补规则成绩。",
+      "scope": "保存图注与定义冲突，统计单位须可追溯。"
+    },
+    {
+      "pages": [
+        8,
+        21,
+        22
+      ],
+      "finding": "Table9并非所有Text提高Recall：Llama405B airline.604→.587，QwenTax.998→.996；Figure8 placeholder对Claude accuracy.32→约.54并非一概无差异；Table10 Qwenrecall反降.908→.899/.901→.899而accuracy都提高。",
+      "scope": "保留总体控制设计与真实提升，不用全称覆盖每格。"
+    },
+    {
+      "pages": [
+        6,
+        8,
+        20,
+        21
+      ],
+      "finding": "1-shot并非每项提升，o1TaxL1 accuracy.72→.68，NBA多单元退步；D明确原因难隔离。分箱accuracy-recall图没有回归/置信区间或相关系数。",
+      "scope": "关联作为诊断观察，不能等同必要充分或因果机制证明。"
+    },
+    {
+      "pages": [
+        5,
+        14,
+        15,
+        22
+      ],
+      "finding": "NBA统一salary口径简化真实规则；领域rule粒度不同（airline整表/NBA段分拆/tax行）。GPT4o解析未给独立抽取准确度；Pythonoracle仅算术执行不保证逻辑建模正确。",
+      "scope": "保留资源与诊断贡献，不写成现实政策法律意见或完美测量。"
+    }
+  ],
+  "visual_review": {
+    "pages": [
+      2,
+      5,
+      6,
+      7,
+      9,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23
+    ],
+    "figures": "All Figures1-8 original viewed; main Table3, equations2-7, Tables4/8-10 and complete prompts visually checked; other prose/tables/schema full read from aligned parse",
+    "reviewer": "same delegated reviewer"
+  },
+  "official_requirements": {
+    "source": "current ACL/ARR rules separately maintained",
+    "corpus_layout_observation": "accepted long sciencepp1-9; Limitationsp10; appendicesA-Epp14-23",
+    "observed_layout_not_current_rule": true
+  },
+  "holdout_validation": null,
+  "review_limitations": "All23PDFpages and fullA-Escientificappendices read. No originalbenchmark rerun, parser/code verification or real-world policy correctness audit."
+}

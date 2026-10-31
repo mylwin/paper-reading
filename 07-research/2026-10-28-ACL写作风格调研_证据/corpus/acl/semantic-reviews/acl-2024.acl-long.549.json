@@ -1,0 +1,313 @@
+{
+  "id": "acl-2024.acl-long.549",
+  "anthology_id": "2024.acl-long.549",
+  "venue": "acl",
+  "year": 2024,
+  "track": "main conference research",
+  "length_type": "long",
+  "title": "OWSM-CTC: An Open Encoder-Only Speech Foundation Model for Speech Recognition, Translation, and Language Identification",
+  "authors": [
+    "Yifan Peng",
+    "Yui Sudo",
+    "Muhammad Shakeel",
+    "Shinji Watanabe"
+  ],
+  "first_author": "Yifan Peng",
+  "landing_url": "https://aclanthology.org/2024.acl-long.549/",
+  "pdf_url": "https://aclanthology.org/2024.acl-long.549.pdf",
+  "doi": "10.18653/v1/2024.acl-long.549",
+  "official_listing_url": "https://aclanthology.org/volumes/2024.acl-long/",
+  "sampling_stratum": "multilingual_linguistics",
+  "paper_type": "empirical encoder-only multilingual multi-task speech foundation model with quality-speed trade-off; long paper",
+  "anthology_pdf_revision_hash": "03bc20b8",
+  "metadata_revisions": [],
+  "official_attachments": [],
+  "sort_hash": "0c3548b0ae3884925502ea7a46d1e2806f8f6e9ac42458debbfbba9a0e9edc88",
+  "split": "induction",
+  "semantic_review_status": "complete_writing_focused_full_text_review",
+  "full_text_and_relevant_appendix_review_complete": true,
+  "review_date": "2026-10-29",
+  "reviewer": "acl-012 delegated full-text reviewer",
+  "pdf_path": ".claude/skills/paper-writing-shared/tmp/corpus/acl/pdf/2024.acl-long.549.pdf",
+  "pdf_sha256": "a4a13652c0406d8361445c9c0566622dccab61aeca672d62013f157ee40e2ef8",
+  "markdown_path": ".claude/skills/paper-writing-shared/tmp/corpus/acl/markdown/2024.acl-long.549.md",
+  "markdown_sha256": "84b623fdf1517dc14039554a81151195341c189d4ddefce99c981776f3975b19",
+  "full_text_style_review_complete": true,
+  "external_appendix_review_complete": true,
+  "count_eligible_full_text_and_relevant_appendix": true,
+  "coverage": [
+    {
+      "source": "canonical official PDF",
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18
+      ],
+      "main_science": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "limitations_ethics_acknowledgements": [
+        9
+      ],
+      "references": [
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "scientific_appendix": {
+        "A experimental setups data/licenses architecture hyperparameters": [
+          14,
+          15,
+          16
+        ],
+        "B small-scale downsampling/task ablations": [
+          16,
+          17
+        ],
+        "C alternate ST normalization results": [
+          17
+        ],
+        "D text prompt effect and failed zero-shot biasing": [
+          17,
+          18
+        ],
+        "E robustness examples": [
+          18
+        ]
+      }
+    }
+  ],
+  "version_audit": {
+    "published_year": 2024,
+    "canonical_url": "https://aclanthology.org/2024.acl-long.549.pdf",
+    "xml_revision_entries": []
+  },
+  "supplement_audit": {
+    "official_landing": "https://aclanthology.org/2024.acl-long.549/",
+    "audit_date": "2026-10-29",
+    "method": "Read locked official 2024ACL XML volume long paper549: title/authors/pages10192-10209/PDFhash03bc20b8 match. No attachment or revision links in this entry. All PDF appendicesA-E read. Current live landing not fetched this pass.",
+    "official_xml_attachments": [],
+    "separate_scientific_appendix_link_found": false,
+    "scientific_appendix_in_pdf": "A-E complete",
+    "code_executed": false,
+    "external_code_and_data_not_reviewed": true
+  },
+  "ten_dimensions": {
+    "reader_argument": {
+      "pages": [
+        1,
+        2,
+        3
+      ],
+      "observation": "从多语言多任务语音模型的自回归时延/不稳定，及CTC只覆盖单任务或较小规模的缺口，引出能否用单个非自回归encoder覆盖ASR/ST/LID的问题。",
+      "editorial_advice": "方法稿可围绕功能覆盖与质量-速度折中提出具体研究问题，明确与已有训练体系的继承关系。",
+      "applicability_boundary": "LLM语音适配是动机而非本篇已做的语音LLM集成实验。"
+    },
+    "title_abstract": {
+      "pages": [
+        1
+      ],
+      "observation": "标题命名模型并列三项任务；摘要按常用架构→CTC扩展疑问→180k小时公开数据→质量/速度/长音频结果→开放材料组织；首页图直接画任务质量对速度。",
+      "editorial_advice": "以任务、规模和核心优势快速定位稿件；trade-off图可在首页概括多任务贡献。",
+      "applicability_boundary": "24%是BLEU相对变化，非24BLEU点；约20倍针对长音频并行块设置，不把不同评测路径合成同一加速口径。"
+    },
+    "introduction": {
+      "pages": [
+        1,
+        2
+      ],
+      "observation": "从Whisper/OWSM复现透明性转向架构效率，再用显式问句提出多语言多任务CTC目标；结尾自然段概览同数据1B模型比较及三项任务结果，无贡献条目列表。",
+      "editorial_advice": "核心问题和答案可以用自然段说清，主结果和资源交付形成可追踪概览。",
+      "applicability_boundary": "不强加固定三项贡献；novel/first或开放承诺不能替代实际差异和来源核验。"
+    },
+    "related_work": {
+      "pages": [
+        2,
+        3
+      ],
+      "observation": "独立相关工作分speech foundation models、efficient models、CTC-basedmodels；架构分encoder-decoder/decoder-only/CTC，压缩方法被定位为正交后续方向。",
+      "editorial_advice": "按决定方法差异的设计轴组织文献，说明哪些技术互补而非当作全面竞争基线。",
+      "applicability_boundary": "不把CTC先前单语种ST工作写成不存在，不能将所有效率技术归入已实验比较。"
+    },
+    "method_theory": {
+      "pages": [
+        3,
+        4,
+        5,
+        16,
+        17
+      ],
+      "observation": "图2连接语音encoder、可选promptencoder、ASR-only和task-specific中间CTC；公式1-11定义token、预测反馈及平均损失；先ASR后ST的层级设计由小规模收敛/折中支撑。",
+      "editorial_advice": "模块职责、数据流、目标函数和设计依据分别说明，核心机制留主文，选择试验可在附录复核。",
+      "applicability_boundary": "encoder-only不等于没有额外promptencoder或crossattention；小规模全taskdependent发散不是普遍不可能定理。"
+    },
+    "evidence": {
+      "pages": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        15,
+        16,
+        17,
+        18
+      ],
+      "observation": "先同数据和规模基线表，再逐任务LID/ASR/ST/长音频/prompt/robustness；表格同时列质量、速度、数据量，并用灰色标非同规模/解码可比项；主文配附录消融、许可证和超参。",
+      "editorial_advice": "多任务稿逐项给指标真实含义、资源和比较口径，主张允许不同任务有不同结论；可直接报告同设置中的速度收益。",
+      "applicability_boundary": "同训练混合不代表完全单变量控制：下采样、encoder深度、训练步数也变化；Whisper不同数据仅供参照。长音频20倍含batch32并行优势，非逐条低延迟20倍。"
+    },
+    "discussion_limits": {
+      "pages": [
+        7,
+        8,
+        9,
+        18
+      ],
+      "observation": "结果承认多语言ASR略差，提出训练量/tokenization等可能解释；Limitations聚焦近20kGPU小时、低资源错误和仅贪心解码；附录D报告零样本词汇biasing常失败。",
+      "editorial_advice": "将真正影响使用和外推的限制集中说明；对已测优势直接陈述，对机制解释和未来微调保留条件。",
+      "applicability_boundary": "真实失败不因避免防御性写作而删除；prompt改变大小写的样例不是可靠零样本定制词汇控制。"
+    },
+    "paragraph_language": {
+      "pages": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "observation": "分任务段以表格结果开头，量化速度与质量，再用likely/might解释差异；ST观察分三点，强调同数据架构比较。",
+      "editorial_advice": "事实用直接动词，猜测归因才用限定语；结果叙述可同时有明确优势与局部退步，语气不必全盘弱化。",
+      "applicability_boundary": "只有显式配对检验对应的比较才能说统计显著；小p值不自动表示改进，波斯语和日语BLEU实际更低。"
+    },
+    "main_appendix": {
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        14,
+        15,
+        16,
+        17,
+        18
+      ],
+      "observation": "主文保留完整架构公式和七部分实验；A列数据许可/结构/超参，B小规模设计验证，C给另一BLEU规范化，D/E给输出风格和失败样例。",
+      "editorial_advice": "主线保留多任务机制和关键比较，附录补复现参数和影响结论解释的定性例子；不能只读主文忽略D的负例。",
+      "applicability_boundary": "样本终稿9页含局限，非当前8页投稿上限证据；格式依据当前官方规范单独加载。"
+    },
+    "actionable": {
+      "pages": [
+        6,
+        7,
+        8,
+        9,
+        16,
+        18
+      ],
+      "observation": "质量速度折中可以直接突出，避免把兼容性或健壮性无限扩张。",
+      "editorial_advice": "原创例句：On the nine English ASR test sets, OWSM-CTC achieves an average WER of7.9%, compared with7.7% for OWSM v3.1 medium, while reducing average greedy-decoding time by a factor of3.63 on an A40 GPU.",
+      "applicability_boundary": "不将相近WER写成全部任务均优，不把重复检测failures当通用幻觉率；示例限本文设置。"
+    }
+  },
+  "counterexamples": [
+    {
+      "pages": [
+        6,
+        7,
+        8
+      ],
+      "finding": "英语平均WER7.9vs7.7，多语种平均错误16.2vs15.2；ST英文向外15方向有波斯语/日语下降、泰米尔语一位小数同为0.1。表6波斯语p=.001是下降的显著差异，土耳其语上升p=.145不是显著提升。",
+      "scope": "保留真实速度和多数ST优势，不能改写为所有任务/语言质量更好。"
+    },
+    {
+      "pages": [
+        7,
+        8
+      ],
+      "finding": "X-to-En均值20.2→25.1=4.9BLEU点、约24.26%相对；En-to-X14.1→16.0=1.9点、约13.48%。长音频表7为11段6–27分钟TEDLIUM，重叠30秒块batch32，速度随context2/4/6/8秒为22.40/19.35/16.07/12.09倍。",
+      "scope": "不把最高加速概括成任意输入的单请求延迟20倍，不混绝对点和相对百分比。"
+    },
+    {
+      "pages": [
+        8,
+        9,
+        18
+      ],
+      "finding": "表10的286kST重复字符检测仅1–3个failure，是指定theta/delta下的重复失败数；表9噪声输入仍有标点输出，表19翻译示例仍有错误。",
+      "scope": "robustness对指定失败模式成立，不保证无幻觉或语义全部正确。"
+    },
+    {
+      "pages": [
+        5,
+        15,
+        16,
+        17
+      ],
+      "finding": "8倍下采样在55M小模型把VRAM38→19GB，但WER8.3→8.8/BLEU22→21.5；大模型层数27、80ms、600ksteps，对照18encoder+decoder、40ms、675ksteps。19.2kvs24.6kGPU小时约省21.95%。",
+      "scope": "不把22%节省全部因果归于去decoder；小规模消融非1B全语言穷举。"
+    },
+    {
+      "pages": [
+        8,
+        17,
+        18
+      ],
+      "finding": "前一句prompt六测试集错误率都下降，但LS-clean p=.19；附录D多例biaswords如人名常无法输出正确词，拟未来微调。",
+      "scope": "可以写本条件平均/具体收益，不能保证任意prompt可靠控制。"
+    }
+  ],
+  "visual_review": {
+    "pages": [
+      1,
+      4,
+      6,
+      7,
+      8,
+      9,
+      15,
+      16,
+      17,
+      18
+    ],
+    "figures": "Both figures and original Tables2-19 (including dense multilingual metrics, significance, cost/ablation, alternative BLEU and final prompt/repetition examples) visually inspected on10pages; other science and Table1 read page-aligned parse.",
+    "reviewer": "same delegated full-text reviewer"
+  },
+  "official_requirements": {
+    "source": "Current ACL/ARR official requirements maintained separately",
+    "corpus_layout_observation": "9 pages including conclusion/Limitations/BroaderImpactsEthics; author-year citations; appendicesA-E",
+    "observed_layout_not_current_rule": true
+  },
+  "holdout_validation": null,
+  "review_limitations": "All18PDFpagesincludingappendicesA-Eread;10originalrenderingsinspected. LockedofficialXMLcheckedforattachments; no currentlivepageverification, codeexecution, dataauditor benchmarkrerun. Claimeddataethics statementsareauthorreports,notindependentlycertified."
+}

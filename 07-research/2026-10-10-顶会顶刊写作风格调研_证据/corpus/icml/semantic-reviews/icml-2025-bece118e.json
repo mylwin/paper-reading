@@ -1,0 +1,303 @@
+{
+  "id": "icml-2025-bece118e",
+  "venue": "icml",
+  "year": 2025,
+  "split": "holdout",
+  "title": "Towards Theoretical Understanding of Sequential Decision Making with Preference Feedback",
+  "authors": "Simone Drago, Marco Mussi, Alberto Maria Metelli",
+  "pdf_path": ".claude/skills/paper-writing-shared/tmp/corpus/icml/pdf/Towards Theoretical Understanding of Sequential Decision Making with Preference Feedback.pdf",
+  "markdown_path": ".claude/skills/paper-writing-shared/tmp/corpus/icml/markdown/Towards Theoretical Understanding of Sequential Decision Making with Preference Feedback.md",
+  "pdf_sha256": "22314e4a8e1fd4b826a0c584b197c6c54ac09a6366fa7636cbe678b6e1b7f171",
+  "review_date": "2026-10-28",
+  "paper_type": "foundational theoretical framework for preference orders, multiobjective utilities, policy dominance and Markov reward approximation",
+  "semantic_review_status": "complete_writing_focused_review",
+  "full_text_style_review_complete": true,
+  "external_appendix_review_complete": true,
+  "count_eligible_full_text_and_relevant_appendix": true,
+  "coverage": [
+    {
+      "asset": "locked official PMLR PDF",
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "sections": "1–8/Impact/Ack/refs/A omitted proofs complete",
+      "method": "continuous16page text and11originalpageimages;1figure/no tables/no pseudocode; two illustrative counterexamples and QP formulations"
+    }
+  ],
+  "version_audit": {
+    "official_landing": "https://proceedings.mlr.press/v267/drago25b.html",
+    "official_pdf": "https://raw.githubusercontent.com/mlresearch/v267/main/assets/drago25b/drago25b.pdf",
+    "version": "official proceedings PDF; exact bytes locked by SHA256",
+    "identity": "title/authors/lockedSHA/PMLRheader verified",
+    "new_network_fetch": false
+  },
+  "supplement_audit": {
+    "status": "A13–16 all proofs4.1/4.2/5.1/5.2/5.3/6.1 read; no external scientific appendix",
+    "external_scientific_appendix_referenced": false,
+    "code_artifacts": "linked code not executed; all relevant scientific appendices in this PDF"
+  },
+  "ten_dimensions": {
+    "reader_argument": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp1–4"
+      ],
+      "observation": "奖励工程困难与反馈自然性→偏好/效用/奖励表达力及可解性取舍→三种MDP扩展。",
+      "editorial_advice": "用关系图式论证串联定义，不必把每篇理论文章写成新算法benchmark稿。",
+      "applicability": "16页正文及全部相关科学附录连续阅读，11原页直接核验。冻结40归纳规则的正式留出；同一审阅者，非独立模型评测/证明认证/代码复现。",
+      "confidence": {
+        "paper_specific": "high",
+        "venue_wide": "locked formal holdout;notfrequencyestimate"
+      }
+    },
+    "title_abstract": {
+      "category": "corpus_observation",
+      "positions": [
+        "p1"
+      ],
+      "observation": "Towards标明理论奠基范围；长摘要First/Second/Third/Fourth逐项说明关系、NP-hardness、dominance、QP近似。",
+      "editorial_advice": "结构与信息密度可随概念贡献调整；towards/promising在未完成统计学习任务的奠基工作中有意义，不按禁词删除。",
+      "applicability": "16页正文及全部相关科学附录连续阅读，11原页直接核验。冻结40归纳规则的正式留出；同一审阅者，非独立模型评测/证明认证/代码复现。",
+      "confidence": {
+        "paper_specific": "high",
+        "venue_wide": "locked formal holdout;notfrequencyestimate"
+      }
+    },
+    "introduction": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp1–3"
+      ],
+      "observation": "三个研究问题与四项带节号贡献；目标是为后续统计学习奠基。",
+      "editorial_advice": "问题链能引出定义/性质贡献，贡献数量无固定上限三条。",
+      "applicability": "16页正文及全部相关科学附录连续阅读，11原页直接核验。冻结40归纳规则的正式留出；同一审阅者，非独立模型评测/证明认证/代码复现。",
+      "confidence": {
+        "paper_specific": "high",
+        "venue_wide": "locked formal holdout;notfrequencyestimate"
+      }
+    },
+    "related_work": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp1–2/8"
+      ],
+      "observation": "引言定位RLHF隐数值信号假设，Sec7按feedback/learning/bandit详细比较。",
+      "editorial_advice": "必要区别前置，完整综述后置可成立。",
+      "applicability": "16页正文及全部相关科学附录连续阅读，11原页直接核验。冻结40归纳规则的正式留出；同一审阅者，非独立模型评测/证明认证/代码复现。",
+      "confidence": {
+        "paper_specific": "high",
+        "venue_wide": "locked formal holdout;notfrequencyestimate"
+      }
+    },
+    "method_theory": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp3–8/13–16"
+      ],
+      "observation": "partial preorder背景→三设置→compatible utility及维度复杂度→反例引出全compatible utility dominance→全序累计和判别/偏序→QP奖励近似。",
+      "editorial_advice": "定义后紧接作用、例子或可计算判据；形式推导服务读者理解，不要求额外算法伪码。",
+      "applicability": "16页正文及全部相关科学附录连续阅读，11原页直接核验。冻结40归纳规则的正式留出；同一审阅者，非独立模型评测/证明认证/代码复现。",
+      "confidence": {
+        "paper_specific": "high",
+        "venue_wide": "locked formal holdout;notfrequencyestimate"
+      }
+    },
+    "evidence": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp5–8/13–16"
+      ],
+      "observation": "证据为复杂度归约、构造、两反例和定理证明；没有数据实验。",
+      "editorial_advice": "明确输入规模：对显式trajectory set多项式可能对horizon指数；偏序dominance难是conjecture非已证NP-hard。",
+      "applicability": "16页正文及全部相关科学附录连续阅读，11原页直接核验。冻结40归纳规则的正式留出；同一审阅者，非独立模型评测/证明认证/代码复现。",
+      "confidence": {
+        "paper_specific": "high",
+        "venue_wide": "locked formal holdout;notfrequencyestimate"
+      }
+    },
+    "discussion_limits": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp7–9"
+      ],
+      "observation": "偏序检验无已知多项式方法/复杂度猜想在对应段，FutureWorks集中统计复杂度、偏好采集与不确定性。",
+      "editorial_advice": "限制与解决范围清楚，主文仍可直接说引入定义/给出构造。",
+      "applicability": "16页正文及全部相关科学附录连续阅读，11原页直接核验。冻结40归纳规则的正式留出；同一审阅者，非独立模型评测/证明认证/代码复现。",
+      "confidence": {
+        "paper_specific": "high",
+        "venue_wide": "locked formal holdout;notfrequencyestimate"
+      }
+    },
+    "paragraph_language": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp4–8"
+      ],
+      "observation": "先较简单全序后偏序，每个定义后some comments/含义，反例解释为什么需要新dominance。",
+      "editorial_advice": "条件/概念说明是论证内容；减少重复空泛限制但不能把猜测加强为定理。",
+      "applicability": "16页正文及全部相关科学附录连续阅读，11原页直接核验。冻结40归纳规则的正式留出；同一审阅者，非独立模型评测/证明认证/代码复现。",
+      "confidence": {
+        "paper_specific": "high",
+        "venue_wide": "locked formal holdout;notfrequencyestimate"
+      }
+    },
+    "main_appendix": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp1–16"
+      ],
+      "observation": "1–9主文核心设置/定义/定理/heuristic/QP与讨论；9–12参考；A13–16完整证明。",
+      "editorial_advice": "主文给结果及直觉，证明末置仍保留可追溯路径。",
+      "applicability": "16页正文及全部相关科学附录连续阅读，11原页直接核验。冻结40归纳规则的正式留出；同一审阅者，非独立模型评测/证明认证/代码复现。",
+      "confidence": {
+        "paper_specific": "high",
+        "venue_wide": "locked formal holdout;notfrequencyestimate"
+      }
+    },
+    "actionable": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp4–8"
+      ],
+      "observation": "三个表达层级和两类序依次推进，不依赖经验性能宣称。",
+      "editorial_advice": "原创示例：We represent trajectory preferences as partial preorders, retaining both equivalence and incomparability. This formulation separates the construction of compatible utilities from the comparison of policies, and yields a cumulative-probability criterion for dominance under total orders.",
+      "applicability": "16页正文及全部相关科学附录连续阅读，11原页直接核验。冻结40归纳规则的正式留出；同一审阅者，非独立模型评测/证明认证/代码复现。",
+      "confidence": {
+        "paper_specific": "high",
+        "venue_wide": "locked formal holdout;notfrequencyestimate"
+      }
+    }
+  },
+  "counterexamples": [
+    {
+      "position": "pp2–9",
+      "finding": "No hidden reward/probabilistic preference model still assumes deterministic reflexive transitive preferences, finite explicitly available trajectory relation and distributions; cycles/statistical elicitation outside scope. Width-based compatible utility heuristic is exact compatibility but dimension not minimal, polynomial in |T| not necessarily SAH. Partial-order dominance hardness is conjectured; minimum utility dimension NP-hard is a different proved problem."
+    },
+    {
+      "position": "p7; research-only formulation queries",
+      "finding": "Fixed endpoint0/1 and epsilon gaps need epsilon≤1/(|T|-1) feasibility. B has stagewise column-sum dependencies for H≥2, so footnote claiming full column rank and (B^T B)^-1 needs pseudoinverse or gauge fixing. Do not silently change authors’ displayed expression or present it as general executable guarantee."
+    },
+    {
+      "position": "pp13–16; research-only proof queries",
+      "finding": "4.1(ii) coordinate utilities can tie without identical trajectories, so conversion to unique total orders needs tie handling. 5.1 step utility is only weakly monotone rather than strictly compatible, and tail sum need not be strictly negative; summation-by-parts argument requires care. 6.1 removes a sum of positive component-wise utility differences based on Pareto optimality; Pareto optimality alone does not make that sum nonpositive. Treat as unresolved proof-step questions, not certified theorem validity or venue guidance."
+    },
+    {
+      "position": "pp1–2/9",
+      "finding": "Potential RLHF applications are future relevance, not measured LLM improvement or statistical-efficient learning algorithm. No invented empirical section or removal of evidence-matched foundational language. Generic impact text is author choice, not automatically suitable for all applications."
+    }
+  ],
+  "visual_review": {
+    "pages": [
+      1,
+      2,
+      5,
+      6,
+      7,
+      8,
+      9,
+      13,
+      14,
+      15,
+      16
+    ],
+    "source": "105dpi original Poppler page images directly viewed",
+    "policy": "delete own renders and duplicate extraction; canonical PDF/MD remain ignored skill tmp"
+  },
+  "official_requirements": [],
+  "holdout_validation": {
+    "freeze_manifest": "07-research/2026-10-28-ICML技能有效性验证_证据/induction-freeze/freeze-manifest.json",
+    "freeze_manifest_sha256": "e5ec6a6ab1fa45b5fca1bb87cc82a52e7e6ace591dac06ffded5a8bf68e61692",
+    "dimensions": {
+      "reader_argument": {
+        "rating": "applicable",
+        "positions": [
+          "pp1–4"
+        ],
+        "reason": "用关系图式论证串联定义，不必把每篇理论文章写成新算法benchmark稿。"
+      },
+      "title_abstract": {
+        "rating": "applicable_with_scope",
+        "positions": [
+          "p1"
+        ],
+        "reason": "结构与信息密度可随概念贡献调整；towards/promising在未完成统计学习任务的奠基工作中有意义，不按禁词删除。"
+      },
+      "introduction": {
+        "rating": "applicable",
+        "positions": [
+          "pp1–3"
+        ],
+        "reason": "问题链能引出定义/性质贡献，贡献数量无固定上限三条。"
+      },
+      "related_work": {
+        "rating": "applicable",
+        "positions": [
+          "pp1–2/8"
+        ],
+        "reason": "必要区别前置，完整综述后置可成立。"
+      },
+      "method_theory": {
+        "rating": "applicable",
+        "positions": [
+          "pp3–8/13–16"
+        ],
+        "reason": "定义后紧接作用、例子或可计算判据；形式推导服务读者理解，不要求额外算法伪码。"
+      },
+      "evidence": {
+        "rating": "applicable_with_scope",
+        "positions": [
+          "pp5–8/13–16"
+        ],
+        "reason": "明确输入规模：对显式trajectory set多项式可能对horizon指数；偏序dominance难是conjecture非已证NP-hard。"
+      },
+      "discussion_limits": {
+        "rating": "applicable",
+        "positions": [
+          "pp7–9"
+        ],
+        "reason": "限制与解决范围清楚，主文仍可直接说引入定义/给出构造。"
+      },
+      "paragraph_language": {
+        "rating": "applicable",
+        "positions": [
+          "pp4–8"
+        ],
+        "reason": "条件/概念说明是论证内容；减少重复空泛限制但不能把猜测加强为定理。"
+      },
+      "main_appendix": {
+        "rating": "applicable",
+        "positions": [
+          "pp1–16"
+        ],
+        "reason": "主文给结果及直觉，证明末置仍保留可追溯路径。"
+      },
+      "actionable": {
+        "rating": "applicable",
+        "positions": [
+          "pp4–8"
+        ],
+        "reason": "原创示例：We represent trajectory preferences as partial preorders, retaining both equivalence and incomparability. This formulation separates the construction of compatible utilities from the comparison of policies, and yields a cumulative-probability criterion for dominance under total orders."
+      }
+    },
+    "counterexample_to_universal_structure": "Long four-part abstract, four contributions, no experiment/pseudocode, one conceptual illustration, related work late; foundational and tentative future relevance can be precise rather than defensive.",
+    "proposed_revision": "Keep conditional frozen profile. Add behavior case distinguishing conjecture from proved complexity and explicit trajectory-size complexity from horizon complexity. Do not strengthen Towards/potential automatically merely to reduce hedges.",
+    "reviewer": "same primary agent; no independent judge",
+    "runtime_rules_changed_during_holdout": false
+  },
+  "review_limitations": "16页正文及全部相关科学附录连续阅读，11原页直接核验。冻结40归纳规则的正式留出；同一审阅者，非独立模型评测/证明认证/代码复现。"
+}

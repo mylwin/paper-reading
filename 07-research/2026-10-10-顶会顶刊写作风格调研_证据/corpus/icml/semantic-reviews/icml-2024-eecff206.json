@@ -1,0 +1,328 @@
+{
+  "id": "icml-2024-eecff206",
+  "venue": "icml",
+  "year": 2024,
+  "split": "holdout",
+  "title": "Model-Free Robust $φ$-Divergence Reinforcement Learning Using Both Offline and Online Data",
+  "authors": "Kishan Panaganti, Adam Wierman, Eric Mazumdar",
+  "pdf_path": ".claude/skills/paper-writing-shared/tmp/corpus/icml/pdf/Model-Free Robust $φ$-Divergence Reinforcement Learning Using Both Offline and Online Data.pdf",
+  "markdown_path": ".claude/skills/paper-writing-shared/tmp/corpus/icml/markdown/Model-Free Robust $φ$-Divergence Reinforcement Learning Using Both Offline and Online Data.md",
+  "pdf_sha256": "359a8a1f4798a3025dc0f84bee695107ca1c91bf770ece27b64cd1685cee75d7",
+  "review_date": "2026-10-28",
+  "paper_type": "theoretical robust reinforcement learning; offline general-divergence and hybrid total-variation function approximation",
+  "semantic_review_status": "complete_writing_focused_review",
+  "full_text_style_review_complete": true,
+  "external_appendix_review_complete": true,
+  "count_eligible_full_text_and_relevant_appendix": true,
+  "coverage": [
+    {
+      "asset": "locked official PMLR PDF",
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40
+      ],
+      "sections": "1–5/Ack/Impact/refs/A–F complete",
+      "method": "continuous40pagetext+12originalpageimages;0figures1table2algorithms"
+    }
+  ],
+  "version_audit": {
+    "official_landing": "https://proceedings.mlr.press/v235/panaganti24a.html",
+    "official_pdf": "https://raw.githubusercontent.com/mlresearch/v235/main/assets/panaganti24a/panaganti24a.pdf",
+    "version": "official proceedings PDF; exact bytes locked by SHA256",
+    "identity": "lockedSHA/PMLR235/title/authors verified",
+    "new_network_fetch": false
+  },
+  "supplement_audit": {
+    "status": "A–F all scientific appendices in same40pagePDF fully read",
+    "external_scientific_appendix_referenced": false,
+    "code_artifacts": "no experiments or code executed; proofs read for organization/scope not certification"
+  },
+  "ten_dimensions": {
+    "reader_argument": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp1–3"
+      ],
+      "observation": "以sim-to-real和离线覆盖困难引出鲁棒RL，再分离offline与hybrid两个问题。",
+      "editorial_advice": "先交代对象与现有障碍，读者需要的DRO背景在各设置中定义。",
+      "applicability": "40页正文及A–F全部科学附录连续阅读，12原页核验唯一比较表及两个算法、关键公式。冻结40归纳规则的正式留出2/10，由同一审阅者判读，非证明认证/代码复现/独立模型评测。",
+      "confidence": {
+        "paper_specific": "high",
+        "venue_wide": "formalholdout2/10;notfrequencyestimate"
+      }
+    },
+    "title_abstract": {
+      "category": "corpus_observation",
+      "positions": [
+        "p1"
+      ],
+      "observation": "任务/方法属性/数据来源标题；摘要先问题后两算法与理论贡献，无实验数字。",
+      "editorial_advice": "理论稿可用保证范围而非实验收益建立价值；无须给摘要编造benchmark或数值。",
+      "applicability": "40页正文及A–F全部科学附录连续阅读，12原页核验唯一比较表及两个算法、关键公式。冻结40归纳规则的正式留出2/10，由同一审阅者判读，非证明认证/代码复现/独立模型评测。",
+      "confidence": {
+        "paper_specific": "high",
+        "venue_wide": "formalholdout2/10;notfrequencyestimate"
+      }
+    },
+    "introduction": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp1–3"
+      ],
+      "observation": "两研究问题、两贡献段连接RPQ和HyTQ，非固定三条贡献模板。",
+      "editorial_advice": "依研究问题组织贡献，列表是可选工具。",
+      "applicability": "40页正文及A–F全部科学附录连续阅读，12原页核验唯一比较表及两个算法、关键公式。冻结40归纳规则的正式留出2/10，由同一审阅者判读，非证明认证/代码复现/独立模型评测。",
+      "confidence": {
+        "paper_specific": "high",
+        "venue_wide": "formalholdout2/10;notfrequencyestimate"
+      }
+    },
+    "related_work": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp2–3/14–17"
+      ],
+      "observation": "主文近邻及比较表，A/B展开鲁棒RL/双线性模型/证明思路和复杂度比较。",
+      "editorial_advice": "主文给可判断差异，附录补深入定位；比较需保持覆盖/精度/模型假设一致。",
+      "applicability": "40页正文及A–F全部科学附录连续阅读，12原页核验唯一比较表及两个算法、关键公式。冻结40归纳规则的正式留出2/10，由同一审阅者判读，非证明认证/代码复现/独立模型评测。",
+      "confidence": {
+        "paper_specific": "high",
+        "venue_wide": "formalholdout2/10;notfrequencyestimate"
+      }
+    },
+    "method_theory": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp3–9/17–40"
+      ],
+      "observation": "offline与hybrid各自定义→Fenchel双对偶及分解→ERM/LS算法→假设→定理。附录C基础、D双对偶与ERM、E离线、F混合证明及实例。",
+      "editorial_advice": "先说明计算机制与关键新意；全条件放假设和定理，摘要保留改变意义的offline一般φ/hybrid TV范围。",
+      "applicability": "40页正文及A–F全部科学附录连续阅读，12原页核验唯一比较表及两个算法、关键公式。冻结40归纳规则的正式留出2/10，由同一审阅者判读，非证明认证/代码复现/独立模型评测。",
+      "confidence": {
+        "paper_specific": "high",
+        "venue_wide": "formalholdout2/10;notfrequencyestimate"
+      }
+    },
+    "evidence": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp3/5–9/24–40"
+      ],
+      "observation": "没有经验实验；Table1比较的是覆盖/数据/散度/次优界；理论误差传播和双线性椭圆势给证据链。",
+      "editorial_advice": "实验建议仅适用经验稿；理论稿的主张由条件明确的定理/证明与同口径复杂度比较支撑。",
+      "applicability": "40页正文及A–F全部科学附录连续阅读，12原页核验唯一比较表及两个算法、关键公式。冻结40归纳规则的正式留出2/10，由同一审阅者判读，非证明认证/代码复现/独立模型评测。",
+      "confidence": {
+        "paper_specific": "high",
+        "venue_wide": "formalholdout2/10;notfrequencyestimate"
+      }
+    },
+    "discussion_limits": {
+      "category": "corpus_observation",
+      "positions": [
+        "p9/15–17/33/40"
+      ],
+      "observation": "Sec4承认非minimax最优、hybrid一般φ有指数H问题及开放方向。",
+      "editorial_advice": "限制在影响结果适用处和讨论中交代，贡献段不反复泛称可能/有限/仍需验证。",
+      "applicability": "40页正文及A–F全部科学附录连续阅读，12原页核验唯一比较表及两个算法、关键公式。冻结40归纳规则的正式留出2/10，由同一审阅者判读，非证明认证/代码复现/独立模型评测。",
+      "confidence": {
+        "paper_specific": "high",
+        "venue_wide": "formalholdout2/10;notfrequencyestimate"
+      }
+    },
+    "paragraph_language": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp4–9"
+      ],
+      "observation": "概念化→算法→保证小标题；主动propose/establish，主要条件在假设中集中列明。",
+      "editorial_advice": "直接说完成的理论贡献，同时保留零逼近误差等决定速率的条件；避免把每条research query写入稿件。",
+      "applicability": "40页正文及A–F全部科学附录连续阅读，12原页核验唯一比较表及两个算法、关键公式。冻结40归纳规则的正式留出2/10，由同一审阅者判读，非证明认证/代码复现/独立模型评测。",
+      "confidence": {
+        "paper_specific": "high",
+        "venue_wide": "formalholdout2/10;notfrequencyestimate"
+      }
+    },
+    "main_appendix": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp1–40"
+      ],
+      "observation": "1–9主文/10–13声明文献；A14related，B14–17路线/比较，C17–18技术，D18–23基础，E24–30离线，F31–40混合与实例，全部阅读。",
+      "editorial_advice": "主文给判断贡献所需算法、假设与主界，附录给推导与特化。",
+      "applicability": "40页正文及A–F全部科学附录连续阅读，12原页核验唯一比较表及两个算法、关键公式。冻结40归纳规则的正式留出2/10，由同一审阅者判读，非证明认证/代码复现/独立模型评测。",
+      "confidence": {
+        "paper_specific": "high",
+        "venue_wide": "formalholdout2/10;notfrequencyestimate"
+      }
+    },
+    "actionable": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp1–9/33/40"
+      ],
+      "observation": "两设置分别组织，Table1长caption限定比较，Discussion清楚区分已证/未解。",
+      "editorial_advice": "原创示例：We derive a model-free offline algorithm for regularized robust reinforcement learning through a dual Bellman formulation. For total-variation uncertainty, a hybrid variant combines offline data with online interaction and admits a single-policy coverage analysis under the stated bilinear and realizability conditions.",
+      "applicability": "40页正文及A–F全部科学附录连续阅读，12原页核验唯一比较表及两个算法、关键公式。冻结40归纳规则的正式留出2/10，由同一审阅者判读，非证明认证/代码复现/独立模型评测。",
+      "confidence": {
+        "paper_specific": "high",
+        "venue_wide": "formalholdout2/10;notfrequencyestimate"
+      }
+    }
+  },
+  "counterexamples": [
+    {
+      "position": "pp5–9/24–40",
+      "finding": "General function approximation is conditional on bounded finite-complexity classes, realizability/completeness and coverage; offline robust all-policy concentrability vs hybrid single-policy transfer require different structural assumptions. TV branch uses fail state; hybrid requires bilinear model and nominal online/offline access. No benchmark or numerical theorem value is required for this theory-only paper."
+    },
+    {
+      "position": "pp8–9/33/40",
+      "finding": "Thm5 exposes approximation term O((sqrt epsF,r+epsG)K^2.5 H); sqrtK regret and eps^-2 mixture complexity need zero/suitably shrinking approximation error, not merely fixed small positive error and more samples. Mixture guarantee differs from last policy. Author notes horizon/dimension factors not minimax optimal. ERM/LS oracle tractability is not arbitrary neural-network polynomial runtime."
+    },
+    {
+      "position": "pp18–21/40; research-only queries",
+      "finding": "Prop3 KL generator printed quadratic vs proof t log t; CVaR indicator convention/differentiability needs checking. Prop4 bounded-loss general ERM proof asserts Bernstein variance control from symmetrization without a clear sufficient condition; generic boundedness alone does not justify fast O(1/N). Cor5 positive fixed approximation error grows with K after averaging, so cannot be ≤eps for all sufficiently large K without added error control. Treat as unresolved condition queries, not a certified refutation or a stylistic norm."
+    },
+    {
+      "position": "pp7–9/34; research-only queries",
+      "finding": "Stray gamma in finite-H equation; transfer definition numerator vs proof positive part; inverse lambda/radius mapping asserted for TV should not become universal penalty/constraint equivalence. Impact boilerplate is this author choice, not official template text."
+    }
+  ],
+  "visual_review": {
+    "pages": [
+      1,
+      3,
+      5,
+      6,
+      8,
+      9,
+      18,
+      20,
+      21,
+      33,
+      38,
+      40
+    ],
+    "source": "105dpi original Poppler page images directly viewed",
+    "policy": "delete12renders+duplicateextract;canonicalPDF/MDremainignoredskilltmp"
+  },
+  "official_requirements": [],
+  "holdout_validation": {
+    "freeze_manifest": "07-research/2026-10-28-ICML技能有效性验证_证据/induction-freeze/freeze-manifest.json",
+    "freeze_manifest_sha256": "e5ec6a6ab1fa45b5fca1bb87cc82a52e7e6ace591dac06ffded5a8bf68e61692",
+    "dimensions": {
+      "reader_argument": {
+        "rating": "applicable",
+        "positions": [
+          "pp1–3"
+        ],
+        "reason": "先交代对象与现有障碍，读者需要的DRO背景在各设置中定义。"
+      },
+      "title_abstract": {
+        "rating": "applicable_with_scope",
+        "positions": [
+          "p1"
+        ],
+        "reason": "理论稿可用保证范围而非实验收益建立价值；无须给摘要编造benchmark或数值。"
+      },
+      "introduction": {
+        "rating": "applicable",
+        "positions": [
+          "pp1–3"
+        ],
+        "reason": "依研究问题组织贡献，列表是可选工具。"
+      },
+      "related_work": {
+        "rating": "applicable",
+        "positions": [
+          "pp2–3/14–17"
+        ],
+        "reason": "主文给可判断差异，附录补深入定位；比较需保持覆盖/精度/模型假设一致。"
+      },
+      "method_theory": {
+        "rating": "applicable",
+        "positions": [
+          "pp3–9/17–40"
+        ],
+        "reason": "先说明计算机制与关键新意；全条件放假设和定理，摘要保留改变意义的offline一般φ/hybrid TV范围。"
+      },
+      "evidence": {
+        "rating": "applicable_with_scope",
+        "positions": [
+          "pp3/5–9/24–40"
+        ],
+        "reason": "实验建议仅适用经验稿；理论稿的主张由条件明确的定理/证明与同口径复杂度比较支撑。"
+      },
+      "discussion_limits": {
+        "rating": "applicable",
+        "positions": [
+          "p9/15–17/33/40"
+        ],
+        "reason": "限制在影响结果适用处和讨论中交代，贡献段不反复泛称可能/有限/仍需验证。"
+      },
+      "paragraph_language": {
+        "rating": "applicable",
+        "positions": [
+          "pp4–9"
+        ],
+        "reason": "直接说完成的理论贡献，同时保留零逼近误差等决定速率的条件；避免把每条research query写入稿件。"
+      },
+      "main_appendix": {
+        "rating": "applicable",
+        "positions": [
+          "pp1–40"
+        ],
+        "reason": "主文给判断贡献所需算法、假设与主界，附录给推导与特化。"
+      },
+      "actionable": {
+        "rating": "applicable",
+        "positions": [
+          "pp1–9/33/40"
+        ],
+        "reason": "原创示例：We derive a model-free offline algorithm for regularized robust reinforcement learning through a dual Bellman formulation. For total-variation uncertainty, a hybrid variant combines offline data with online interaction and admits a single-policy coverage analysis under the stated bilinear and realizability conditions."
+      }
+    },
+    "counterexample_to_universal_structure": "theory-only: no empirical experiment, ablation, statistical error bar, or new convergence benchmark; no fixed three-contribution outline",
+    "proposed_revision": "Keep frozen conditional experiment guidance; behavior evaluation must include theory-only drafting without invented empirical sections. Keep important approximation assumptions while removing repetitive generic caveats.",
+    "reviewer": "same primary agent; no independent judge",
+    "runtime_rules_changed_during_holdout": false
+  },
+  "review_limitations": "40页正文及A–F全部科学附录连续阅读，12原页核验唯一比较表及两个算法、关键公式。冻结40归纳规则的正式留出2/10，由同一审阅者判读，非证明认证/代码复现/独立模型评测。"
+}

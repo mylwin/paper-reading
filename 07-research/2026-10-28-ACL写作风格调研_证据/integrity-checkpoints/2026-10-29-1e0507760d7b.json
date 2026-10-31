@@ -1,0 +1,238 @@
+{
+  "date": "2026-10-29",
+  "passed": 20,
+  "total": 20,
+  "checks": [
+    {
+      "check": "50unique_main_conference_research_lock",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "2024_2025_each25_and_original40_10split",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "complete_sampling_frame_and_frozen_source_hash",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "explicit_full_reviews_main_and_appendices",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "completion_flags_consistent_in_manual_records",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "manual_page_coverage_matches_actual_PDF_page_count",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "reviewed_sources_and_primary_parses_unchanged",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "download_parse_read_counts_distinct",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "original_550_progress_and11locks_unchanged",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "original_venue_profiles_ICML_assets_and_old_analysis_skill_preserved",
+      "passed": true,
+      "details": {
+        "mismatches": []
+      }
+    },
+    {
+      "check": "ACLadditive_registry_other11entries_unchanged",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "four_official_template_assets_and_correct_stage_limits",
+      "passed": true,
+      "details": [
+        {
+          "version": "2027-long",
+          "mode": "submission",
+          "official_asset_mismatches": [],
+          "page_limit": 8,
+          "compile": "passed"
+        },
+        {
+          "version": "2027-long",
+          "mode": "final",
+          "official_asset_mismatches": [],
+          "page_limit": 9,
+          "compile": "passed"
+        },
+        {
+          "version": "2027-short",
+          "mode": "submission",
+          "official_asset_mismatches": [],
+          "page_limit": 4,
+          "compile": "passed"
+        },
+        {
+          "version": "2027-short",
+          "mode": "final",
+          "official_asset_mismatches": [],
+          "page_limit": 5,
+          "compile": "passed"
+        }
+      ]
+    },
+    {
+      "check": "4actual_template_compiles_and12page_visual_records",
+      "passed": true,
+      "details": {
+        "unique_renderings": 6,
+        "qualification": "Template subagent actual compile and manual visual report; skeleton still has author inputs pending. No claim of real manuscript compliance."
+      }
+    },
+    {
+      "check": "entrypoint_discovery_and_frontmatter",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "all_prior_frozen_research_archives_intact",
+      "passed": true,
+      "details": {
+        "files": 1159,
+        "mismatches": []
+      }
+    },
+    {
+      "check": "allskilltmp_raw_and_partial_downloads_ignored_untracked",
+      "passed": true,
+      "details": {
+        "local_files": 1186
+      }
+    },
+    {
+      "check": "no_skill_corpus_or_validation_PDFs_staged",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "research_and_profile_local_links",
+      "passed": true,
+      "details": []
+    },
+    {
+      "check": "read_page_renders_cleaned_without_raw_deletion",
+      "passed": true,
+      "details": {
+        "completed_review_batches": [
+          {
+            "paper": "acl-2024.acl-long.837",
+            "batch": "acl-010",
+            "derivatives_removed": 11
+          },
+          {
+            "paper": "acl-2025.acl-long.1453",
+            "batch": "acl-015",
+            "derivatives_removed": 8
+          },
+          {
+            "paper": "acl-2024.acl-short.70",
+            "batch": "acl-002",
+            "derivatives_removed": 7
+          },
+          {
+            "paper": "acl-2024.acl-long.549",
+            "batch": "acl-012",
+            "derivatives_removed": 10
+          },
+          {
+            "paper": "acl-2024.acl-long.482",
+            "batch": "acl-014",
+            "derivatives_removed": 14
+          },
+          {
+            "paper": "acl-2025.acl-long.447",
+            "batch": "acl-009",
+            "derivatives_removed": 13
+          },
+          {
+            "paper": "acl-2024.acl-long.133",
+            "batch": "acl-001",
+            "derivatives_removed": 7
+          },
+          {
+            "paper": "acl-2025.acl-short.94",
+            "batch": "acl-018",
+            "derivatives_removed": 8
+          },
+          {
+            "paper": "acl-2025.acl-long.1195",
+            "batch": "acl-013",
+            "derivatives_removed": 8
+          },
+          {
+            "paper": "acl-2024.acl-short.5",
+            "batch": "acl-016",
+            "derivatives_removed": 5
+          },
+          {
+            "paper": "acl-2025.acl-short.23",
+            "batch": "acl-003",
+            "derivatives_removed": 4
+          },
+          {
+            "paper": "acl-2024.acl-long.255",
+            "batch": "acl-008",
+            "derivatives_removed": 12
+          },
+          {
+            "paper": "acl-2025.acl-short.59",
+            "batch": "acl-007",
+            "derivatives_removed": 4
+          },
+          {
+            "paper": "acl-2025.acl-long.1181",
+            "batch": "acl-005",
+            "derivatives_removed": 12
+          },
+          {
+            "paper": "acl-2024.acl-short.73",
+            "batch": "acl-006",
+            "derivatives_removed": 4
+          },
+          {
+            "paper": "acl-2025.acl-short.69",
+            "batch": "acl-011",
+            "derivatives_removed": 6
+          },
+          {
+            "paper": "acl-2024.acl-long.224",
+            "batch": "acl-004",
+            "derivatives_removed": 12
+          }
+        ],
+        "errors": [],
+        "derivatives_removed": 145
+      }
+    },
+    {
+      "check": "whitespace",
+      "passed": true,
+      "details": null
+    }
+  ],
+  "completion": "ACL17/50,remaining33;formalholdoutnotstarted;original550goalnotcomplete",
+  "qualification": "Integrity/registration/template verification only. Partial manual full reviews are not an ACL-wide style or independent skill-performance validation."
+}

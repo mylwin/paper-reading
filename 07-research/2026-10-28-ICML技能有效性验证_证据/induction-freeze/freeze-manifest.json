@@ -1,0 +1,193 @@
+{
+  "date": "2026-10-28",
+  "status": "frozen_before_formal_holdout_full_text_review",
+  "induction_review_ids": [
+    "icml-2024-064d513a",
+    "icml-2024-09851122",
+    "icml-2024-10e608ae",
+    "icml-2024-1dd24fde",
+    "icml-2024-2ff98956",
+    "icml-2024-3158e5f0",
+    "icml-2024-3c86a8a5",
+    "icml-2024-4207e021",
+    "icml-2024-56926c9a",
+    "icml-2024-a5ae56e8",
+    "icml-2024-af0821a5",
+    "icml-2024-bb636262",
+    "icml-2024-c7f1dbe3",
+    "icml-2024-c83edc89",
+    "icml-2024-c8c985f6",
+    "icml-2024-ccca6fde",
+    "icml-2024-cea7b10d",
+    "icml-2024-d85e13c4",
+    "icml-2024-eb3f98b9",
+    "icml-2024-fc8aa210",
+    "icml-2025-152b386e",
+    "icml-2025-1bf35893",
+    "icml-2025-24d32f9f",
+    "icml-2025-29bd8228",
+    "icml-2025-29ddd3f6",
+    "icml-2025-2a7aabb2",
+    "icml-2025-32113bc2",
+    "icml-2025-515dbc4f",
+    "icml-2025-557f816a",
+    "icml-2025-56165d19",
+    "icml-2025-573f6027",
+    "icml-2025-70af507a",
+    "icml-2025-70f7fda5",
+    "icml-2025-94972568",
+    "icml-2025-c37cd014",
+    "icml-2025-c5f868c8",
+    "icml-2025-c7b2de50",
+    "icml-2025-ccf7cea2",
+    "icml-2025-cd2d22c4",
+    "icml-2025-e3193968"
+  ],
+  "holdout": [
+    {
+      "id": "icml-2024-f7c67196",
+      "year": 2024,
+      "split": "holdout",
+      "title": "Automated Statistical Model Discovery with Language Models",
+      "pdf_path": ".claude/skills/paper-writing-shared/tmp/corpus/icml/pdf/Automated Statistical Model Discovery with Language Models.pdf",
+      "pdf_sha256": "f8cdcb4f9c862bc536415081e729e5edec91b195046657c9ce981ee1c53d6c71"
+    },
+    {
+      "id": "icml-2024-eecff206",
+      "year": 2024,
+      "split": "holdout",
+      "title": "Model-Free Robust $φ$-Divergence Reinforcement Learning Using Both Offline and Online Data",
+      "pdf_path": ".claude/skills/paper-writing-shared/tmp/corpus/icml/pdf/Model-Free Robust $φ$-Divergence Reinforcement Learning Using Both Offline and Online Data.pdf",
+      "pdf_sha256": "359a8a1f4798a3025dc0f84bee695107ca1c91bf770ece27b64cd1685cee75d7"
+    },
+    {
+      "id": "icml-2024-352e2914",
+      "year": 2024,
+      "split": "holdout",
+      "title": "Learning Causal Domain-Invariant Temporal Dynamics for Few-Shot Action Recognition",
+      "pdf_path": ".claude/skills/paper-writing-shared/tmp/corpus/icml/pdf/Learning Causal Domain-Invariant Temporal Dynamics for Few-Shot Action Recognition.pdf",
+      "pdf_sha256": "7ba11bb984cf7c49536d6b7e17ac4fa5eed75627da872a4486f606866decb814"
+    },
+    {
+      "id": "icml-2024-59310425",
+      "year": 2024,
+      "split": "holdout",
+      "title": "Preference Optimization for Molecule Synthesis with Conditional Residual Energy-based Models",
+      "pdf_path": ".claude/skills/paper-writing-shared/tmp/corpus/icml/pdf/Preference Optimization for Molecule Synthesis with Conditional Residual Energy-based Models.pdf",
+      "pdf_sha256": "878997b5d5733e029455aad67a9969b031c6863de04af1cd1f71333b568a20b6"
+    },
+    {
+      "id": "icml-2024-cb55acae",
+      "year": 2024,
+      "split": "holdout",
+      "title": "Dealing With Unbounded Gradients in Stochastic Saddle-point Optimization",
+      "pdf_path": ".claude/skills/paper-writing-shared/tmp/corpus/icml/pdf/Dealing With Unbounded Gradients in Stochastic Saddle-point Optimization.pdf",
+      "pdf_sha256": "744de81531189037fd5ab42c163636babe72660bd02c25eecf123c657d99113b"
+    },
+    {
+      "id": "icml-2025-bece118e",
+      "year": 2025,
+      "split": "holdout",
+      "title": "Towards Theoretical Understanding of Sequential Decision Making with Preference Feedback",
+      "pdf_path": ".claude/skills/paper-writing-shared/tmp/corpus/icml/pdf/Towards Theoretical Understanding of Sequential Decision Making with Preference Feedback.pdf",
+      "pdf_sha256": "22314e4a8e1fd4b826a0c584b197c6c54ac09a6366fa7636cbe678b6e1b7f171"
+    },
+    {
+      "id": "icml-2025-72cb7861",
+      "year": 2025,
+      "split": "holdout",
+      "title": "The Impact of On-Policy Parallelized Data Collection on Deep Reinforcement Learning Networks",
+      "pdf_path": ".claude/skills/paper-writing-shared/tmp/corpus/icml/pdf/The Impact of On-Policy Parallelized Data Collection on Deep Reinforcement Learning Networks.pdf",
+      "pdf_sha256": "ccd7d9db6f07548b71f7500802ffb3d065cead8623992e9e3d8d58f41dd665d3"
+    },
+    {
+      "id": "icml-2025-faa9d83f",
+      "year": 2025,
+      "split": "holdout",
+      "title": "Optimal Fair Learning Robust to Adversarial Distribution Shift",
+      "pdf_path": ".claude/skills/paper-writing-shared/tmp/corpus/icml/pdf/Optimal Fair Learning Robust to Adversarial Distribution Shift.pdf",
+      "pdf_sha256": "455b1e4d6ce3c21d92fe4b2633b10a0856f628c81da796db042f8172fb4d340f"
+    },
+    {
+      "id": "icml-2025-c8be7b24",
+      "year": 2025,
+      "split": "holdout",
+      "title": "L-Diffusion: Laplace Diffusion for Efficient Pathology Image Segmentation",
+      "pdf_path": ".claude/skills/paper-writing-shared/tmp/corpus/icml/pdf/L-Diffusion- Laplace Diffusion for Efficient Pathology Image Segmentation.pdf",
+      "pdf_sha256": "7cca12dc6ecf55162e41a80bd3025ec146a078c013c8fd760937d90e5fc37ecc"
+    },
+    {
+      "id": "icml-2025-1ca14a2c",
+      "year": 2025,
+      "split": "holdout",
+      "title": "Global Optimization with a Power-Transformed Objective and Gaussian Smoothing",
+      "pdf_path": ".claude/skills/paper-writing-shared/tmp/corpus/icml/pdf/Global Optimization with a Power-Transformed Objective and Gaussian Smoothing.pdf",
+      "pdf_sha256": "36c1622d88948dabba6062ea589927ec0e3a6d90651121e6404f1094938e3e94"
+    }
+  ],
+  "rules": [
+    {
+      "source": ".claude/skills/paper-writing/SKILL.md",
+      "snapshot": "paper-writing/SKILL.md",
+      "sha256": "52a847c21d7bb57cf397da3a6933c8e906b6a5c817269c48bd21450723e726fb"
+    },
+    {
+      "source": ".claude/skills/paper-polishing/SKILL.md",
+      "snapshot": "paper-polishing/SKILL.md",
+      "sha256": "262c962d77826998a04e109389583e76bc99f3067d013539f55329b6c7d5e9ec"
+    },
+    {
+      "source": ".claude/skills/paper-writing-shared/venues/icml.md",
+      "snapshot": "paper-writing-shared/venues/icml.md",
+      "sha256": "e2364d840d9c2ea90700931dab129bdaabea102c839e70a0f6c1dea03067a814"
+    },
+    {
+      "source": ".claude/skills/paper-writing-shared/core/evidence.md",
+      "snapshot": "paper-writing-shared/core/evidence.md",
+      "sha256": "81867e353ab8b4fc5d6bc1aa94441f039a327f697b294cab17999bfdb0333933"
+    },
+    {
+      "source": ".claude/skills/paper-writing-shared/core/language.md",
+      "snapshot": "paper-writing-shared/core/language.md",
+      "sha256": "491995bb30d875a8af0f26b251090f89c3499b2536200c7068c22017e22e7264"
+    },
+    {
+      "source": ".claude/skills/paper-writing-shared/core/latex.md",
+      "snapshot": "paper-writing-shared/core/latex.md",
+      "sha256": "9adefb8489ccf0cde8e67d903fcf200e27a1735802965d15e64495f95e28f31b"
+    },
+    {
+      "source": ".claude/skills/paper-writing-shared/core/paper-types.md",
+      "snapshot": "paper-writing-shared/core/paper-types.md",
+      "sha256": "a491c2a97608752d531cb27156568eed258e12ac91d6ab6153348ab9e33a8252"
+    },
+    {
+      "source": ".claude/skills/paper-writing-shared/core/polishing.md",
+      "snapshot": "paper-writing-shared/core/polishing.md",
+      "sha256": "a89f8569c1a12e723d0f4a14bc79c44b3e450f7858d333b3ff838beb03318374"
+    },
+    {
+      "source": ".claude/skills/paper-writing-shared/core/writing.md",
+      "snapshot": "paper-writing-shared/core/writing.md",
+      "sha256": "3da6dc30a221fe6c1766b0800d769c3fe5591505908054f1e8c29f257cf3521a"
+    }
+  ],
+  "validation_protocol": {
+    "dimensions": [
+      "reader_argument",
+      "title_abstract",
+      "introduction",
+      "related_work",
+      "method_theory",
+      "evidence",
+      "discussion_limits",
+      "paragraph_language",
+      "main_appendix",
+      "actionable"
+    ],
+    "rating": "per dimension: applicable / applicable_with_scope / contradicted / not_applicable; cite original pages and explain decision; no automatic string pass",
+    "decision": "recommendations are optional organizational choices, not frequency claims or compulsory headings; record revisions separately until10complete",
+    "defensive_writing": "preserve supported strength and essential conditions; flag repeated hedging, disclaimer leakage and generic missing-data demands; no hedge-word quota",
+    "qualification": "same-agent manual holdout applicability validation; not independent model evaluation or proof certification"
+  }
+}

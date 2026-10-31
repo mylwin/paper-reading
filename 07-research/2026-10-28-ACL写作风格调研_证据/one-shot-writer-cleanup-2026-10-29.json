@@ -1,0 +1,33 @@
+{
+  "date": "2026-10-29",
+  "deleted": [
+    {
+      "path": ".planning/acl-style-2026-10-28/save_review_002.py",
+      "sha256": "0a172c5fd02e8023531a6c0a21a0a0e9d8b821381914ff6e9f85e0abe3bb8dd9",
+      "bytes": 8615
+    },
+    {
+      "path": ".planning/acl-style-2026-10-28/save_review_006.py",
+      "sha256": "6a0a422fd2b478e3d86e087fb70604a08051c0b116fca8eb8dd0bdba88ba9b27",
+      "bytes": 8048
+    },
+    {
+      "path": ".planning/acl-style-2026-10-28/save_review_007.py",
+      "sha256": "50ee7888ac3898f5ae2460b8ba330c39dc2459e89b6d2061aeeb219cdf30e945",
+      "bytes": 8078
+    },
+    {
+      "path": ".planning/acl-style-2026-10-28/save_review_003.py",
+      "sha256": "723917b09feeed77e12d73ff9f01a3d1af882bcf6cb9de8ca3caba778b1dcc3e",
+      "bytes": 7823
+    },
+    {
+      "path": ".planning/acl-style-2026-10-28/save_review_001.py",
+      "sha256": "3b506fbb21c7a746ed3f8dd11c31c04cd336f6ef4b3b347f2863c2309b3801b9",
+      "bytes": 8604
+    }
+  ],
+  "reason": "Executed one-shot manual-record writers duplicated durable semantic JSON; not required by acquisition, sync or validation scripts. All source records and existing archives retained.",
+  "source_papers_or_primary_parses_deleted": 0,
+  "other_tasks_touched": false
+}

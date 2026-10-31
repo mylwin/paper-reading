@@ -1,0 +1,77 @@
+{
+  "deleted_derivatives": [
+    {
+      "path": ".claude/skills/paper-writing-shared/tmp/corpus/acl/sources/2024-acl-long.html",
+      "sha256": "7a1751038bccfcf03cf567fca71c67f1c70d420da196f49ef3ce3fcbe0facb5d",
+      "bytes": 1015808
+    },
+    {
+      "path": ".claude/skills/paper-writing-shared/tmp/corpus/acl/sources/2024-acl-short.html",
+      "sha256": "5d384764852971e42438e0caa35286d8e5b15f38a8c19af7b92b1fe0e309316f",
+      "bytes": 196819
+    },
+    {
+      "path": ".claude/skills/paper-writing-shared/tmp/corpus/acl/sources/selection-preview.json",
+      "sha256": "baeb972c9efc7b8551a7cc8461a2dd3d2aebe8041ebd4beb95f2f668ae97ef0f",
+      "bytes": 15208
+    },
+    {
+      "path": ".claude/skills/paper-writing-shared/tmp/corpus/acl/sources/recovery-headers.txt",
+      "sha256": "35577a5897251a28f66d46fdf0e9dc40bf1d29e92a56c96fc5a2531b63e41540",
+      "bytes": 242
+    },
+    {
+      "path": ".claude/skills/paper-writing-shared/tmp/corpus/acl/integration-smoke/acl_natbib.bst",
+      "sha256": "6fbb306202290f4b68e74ac1460a8b27398500cb6dfeb4492e74c457eae7cd1e",
+      "bytes": 45442
+    },
+    {
+      "path": ".claude/skills/paper-writing-shared/tmp/corpus/acl/integration-smoke/project.json",
+      "sha256": "3d1964824e6deaf3fa443ef85eaf734e6fbe61405bdcbea18ace15a1f8ccb6ca",
+      "bytes": 1779
+    },
+    {
+      "path": ".claude/skills/paper-writing-shared/tmp/corpus/acl/integration-smoke/references.bib",
+      "sha256": "9017c2c4fba54146e2e939c2076a82d68c3e3e3e980c3db0ea41b58c530dc8c2",
+      "bytes": 281
+    },
+    {
+      "path": ".claude/skills/paper-writing-shared/tmp/corpus/acl/integration-smoke/main.tex",
+      "sha256": "4f06ec23c312e22c9ea1057da22c9db886ac1a032ee603eff7061c592bf5e0dc",
+      "bytes": 1369
+    },
+    {
+      "path": ".claude/skills/paper-writing-shared/tmp/corpus/acl/integration-smoke/acl.sty",
+      "sha256": "19dfeddc2c0e448f3926a0bef048a9db3f3611b46265b760caabd7ada4f361de",
+      "bytes": 11615
+    },
+    {
+      "path": ".claude/skills/paper-writing-shared/tmp/corpus/acl/integration-smoke/sections/body.tex",
+      "sha256": "1d2ff21e3c158e91110417e55947c8c5a26d5498c291e01131039d1e966109e1",
+      "bytes": 2405
+    },
+    {
+      "path": ".claude/skills/paper-writing-shared/tmp/corpus/acl/integration-smoke/sections/ethics.tex",
+      "sha256": "78558fb7b7bb253081792b644836064a6919825239ce599edc8ad3bcd530dbf9",
+      "bytes": 245
+    },
+    {
+      "path": ".claude/skills/paper-writing-shared/tmp/corpus/acl/integration-smoke/sections/appendix.tex",
+      "sha256": "afcb73d9f31d7004e8d836ce8dd7d5b2405c731c8eccd62690107f5a9f0b898f",
+      "bytes": 376
+    }
+  ],
+  "official_template_init_smoke": {
+    "venue": "acl",
+    "version": "2027-short",
+    "mode": "submission",
+    "succeeded": true,
+    "official_assets_match": [
+      "acl.sty",
+      "acl_natbib.bst"
+    ],
+    "fresh_compile": "not repeated;fouridenticalpackagedtemplatesalreadycompiledandvisuallyreviewed"
+  },
+  "original_paper_pdf_or_primary_parse_deleted": 0,
+  "incomplete_recovery_chunks": "kept for resumable ongoing download,cleanedperfileoncecomplete"
+}

@@ -1,0 +1,6 @@
+{
+  "source": ".claude/skills/paper-writing-shared/venues/icml.md",
+  "archive": "07-research/2026-10-28-ICML技能有效性验证_证据/icml-profile-before-calibration.md",
+  "sha256": "b6a9da5ed4796cbb352720a4095652f165ca6d57467f32e2397b47d1165e3045",
+  "reason": "用户要求降低过度防御性写作；保留逐篇调研历史，将运行时规则与开发审计分离"
+}

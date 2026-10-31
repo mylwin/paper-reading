@@ -1,0 +1,276 @@
+{
+  "id": "icml-2024-3158e5f0",
+  "venue": "icml",
+  "year": 2024,
+  "split": "induction",
+  "title": "SPABA: A Single-Loop and Probabilistic Stochastic Bilevel Algorithm Achieving Optimal Sample Complexity",
+  "authors": "Tianshu Chu, Dachuan Xu, Wei Yao, Jin Zhang",
+  "pdf_path": ".claude/skills/paper-writing-shared/tmp/corpus/icml/pdf/SPABA- A Single-Loop and Probabilistic Stochastic Bilevel Algorithm Achieving Optimal Sample Complexity.pdf",
+  "markdown_path": ".claude/skills/paper-writing-shared/tmp/corpus/icml/markdown/SPABA- A Single-Loop and Probabilistic Stochastic Bilevel Algorithm Achieving Optimal Sample Complexity.md",
+  "pdf_sha256": "efff0959e940de40af2b5c74a857a59362cd029d6fffa79774332faebe7571f3",
+  "review_date": "2026-10-28",
+  "paper_type": "single-loop stochastic bilevel variance-reduced algorithms, unified complexity analysis, hyperparameter selection/hypercleaning experiments",
+  "semantic_review_status": "complete_writing_focused_review",
+  "full_text_style_review_complete": true,
+  "external_appendix_review_complete": true,
+  "count_eligible_full_text_and_relevant_appendix": true,
+  "coverage": [
+    {
+      "asset": "locked official PMLR PDF",
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56
+      ],
+      "sections": "Abstract/1–5/Impact/Ack/refs/A–I includingallproofsandadditionalMA-SOBA-q",
+      "method": "continuous56pagetext and23originalpageimages directlyviewed;all7figures2tables5algorithms"
+    }
+  ],
+  "version_audit": {
+    "official_landing": "https://proceedings.mlr.press/v235/chu24a.html",
+    "official_pdf": "https://raw.githubusercontent.com/mlresearch/v235/main/assets/chu24a/chu24a.pdf",
+    "version": "official proceedings PDF; exact bytes locked by SHA256",
+    "identity": "title/authors/PMLR235/year/lockedSHA match",
+    "new_network_fetch": false
+  },
+  "supplement_audit": {
+    "status": "A–I complete scientific appendices in same56page officialPDF fullyread",
+    "external_scientific_appendix_referenced": false,
+    "code_artifacts": "repository notexecuted; citedexternalproofs notreproduced andnotusedasnewfullreviewcounts"
+  },
+  "ten_dimensions": {
+    "reader_argument": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp1–4"
+      ],
+      "observation": "单层与双层samplecomplexity是否有gap→按SGD/SAGA/PAGE/STORM说明已知缺口→singleloop新算法/统一分析。",
+      "editorial_advice": "先明确比较口径和具体开放问题，再给方法；贡献价值可以直接陈述。",
+      "applicability": "56页及A–I全部科学附录连续阅读，23原页核验全部7图/2表/5算法及关键条件和证明路线。写作组织和主张证据范围审阅，未认证全部证明或执行作者代码；40篇归纳完成，正式留出尚未使用。",
+      "confidence": {
+        "paper_specific": "high for observedorganization/settings",
+        "venue_wide": "40/40 induction completed;10holdoutvalidationpending"
+      }
+    },
+    "title_abstract": {
+      "category": "corpus_observation",
+      "positions": [
+        "p1"
+      ],
+      "observation": "算法名+singleloop/probabilistic+optimalcomplexity；摘要提出问题、给PAGE双层适配、最优性/统一分析、实证。",
+      "editorial_advice": "题目突出结构创新与理论结果；optimal的设定和解精度在摘要/主结果附近交代，勿扩展为全任务优越。",
+      "applicability": "56页及A–I全部科学附录连续阅读，23原页核验全部7图/2表/5算法及关键条件和证明路线。写作组织和主张证据范围审阅，未认证全部证明或执行作者代码；40篇归纳完成，正式留出尚未使用。",
+      "confidence": {
+        "paper_specific": "high for observedorganization/settings",
+        "venue_wide": "40/40 induction completed;10holdoutvalidationpending"
+      }
+    },
+    "introduction": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp1–3"
+      ],
+      "observation": "隐式超梯度形式与计算难点→3问题→4贡献，Table1按设定/估计器/复杂度/batch对齐近邻。",
+      "editorial_advice": "理论表用条件、oracle、精度定义帮助读者判读改进；无需每个段落重复完整假设。",
+      "applicability": "56页及A–I全部科学附录连续阅读，23原页核验全部7图/2表/5算法及关键条件和证明路线。写作组织和主张证据范围审阅，未认证全部证明或执行作者代码；40篇归纳完成，正式留出尚未使用。",
+      "confidence": {
+        "paper_specific": "high for observedorganization/settings",
+        "venue_wide": "40/40 induction completed;10holdoutvalidationpending"
+      }
+    },
+    "related_work": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp2–4/15"
+      ],
+      "observation": "主引言已按问题比较近邻，AdditionalRelatedWork补下界与强光滑情形；附录进一步解释过去分析瓶颈。",
+      "editorial_advice": "把相关工作与关键问题相连，区分算法创新和分析改进；下界引用与适用参数区间清楚。",
+      "applicability": "56页及A–I全部科学附录连续阅读，23原页核验全部7图/2表/5算法及关键条件和证明路线。写作组织和主张证据范围审阅，未认证全部证明或执行作者代码；40篇归纳完成，正式留出尚未使用。",
+      "confidence": {
+        "paper_specific": "high for observedorganization/settings",
+        "venue_wide": "40/40 induction completed;10holdoutvalidationpending"
+      }
+    },
+    "method_theory": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp4–7/12–16/19–56"
+      ],
+      "observation": "DecBO三方向框架→MA-SABA/PAGE-SPABA/STORM-SRMBA→结构/随机假设→四步Lyapunov路线→按设定定理与复杂度remark；附录按每定理完整证明，额外MA-SOBA-q。",
+      "editorial_advice": "正文给新估计器和分析关键一招；长证明用流程图/lemma映射表说明每项误差的控制关系。完整算法可在附录提供。",
+      "applicability": "56页及A–I全部科学附录连续阅读，23原页核验全部7图/2表/5算法及关键条件和证明路线。写作组织和主张证据范围审阅，未认证全部证明或执行作者代码；40篇归纳完成，正式留出尚未使用。",
+      "confidence": {
+        "paper_specific": "high for observedorganization/settings",
+        "venue_wide": "40/40 induction completed;10holdoutvalidationpending"
+      }
+    },
+    "evidence": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp7–8/17–19"
+      ],
+      "observation": "MNIST70%标签随机替换超清理、IJCNN1/covtype正则选择，时钟时间/iteration/测试误差/目标gap，硬件与超参在C。",
+      "editorial_advice": "实验服务sampleefficiency理论但wallclock独立衡量；每类结果解释指标和目标，图说明主差别。",
+      "applicability": "56页及A–I全部科学附录连续阅读，23原页核验全部7图/2表/5算法及关键条件和证明路线。写作组织和主张证据范围审阅，未认证全部证明或执行作者代码；40篇归纳完成，正式留出尚未使用。",
+      "confidence": {
+        "paper_specific": "high for observedorganization/settings",
+        "venue_wide": "40/40 induction completed;10holdoutvalidationpending"
+      }
+    },
+    "discussion_limits": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp8–9"
+      ],
+      "observation": "结论重述loopless/PAGE与统一框架，再提出Hessian-free未来方向；无独立局限标题，Impact单列。",
+      "editorial_advice": "集中讨论仍需二阶oracle这一实质限制，同时直接总结已有进展。",
+      "applicability": "56页及A–I全部科学附录连续阅读，23原页核验全部7图/2表/5算法及关键条件和证明路线。写作组织和主张证据范围审阅，未认证全部证明或执行作者代码；40篇归纳完成，正式留出尚未使用。",
+      "confidence": {
+        "paper_specific": "high for observedorganization/settings",
+        "venue_wide": "40/40 induction completed;10holdoutvalidationpending"
+      }
+    },
+    "paragraph_language": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp1–8/12–16"
+      ],
+      "observation": "问题→方案→主定理→复杂度解释，证明层层追踪目标下降、超梯度误差、跟踪误差、估计器方差。",
+      "editorial_advice": "一段承担一项推理任务；保留准确强动词，删冗余修辞如meticulously/superior，条件用具体对象表达。",
+      "applicability": "56页及A–I全部科学附录连续阅读，23原页核验全部7图/2表/5算法及关键条件和证明路线。写作组织和主张证据范围审阅，未认证全部证明或执行作者代码；40篇归纳完成，正式留出尚未使用。",
+      "confidence": {
+        "paper_specific": "high for observedorganization/settings",
+        "venue_wide": "40/40 induction completed;10holdoutvalidationpending"
+      }
+    },
+    "main_appendix": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp1–56"
+      ],
+      "observation": "主文1–8/结尾9，impact/ack/refs9–11；A目录12；B12–16框架/两路线图/lemma表；C17–19设置及额外实验；D19–22算法/通用引理；E22–33MA-SABA；F33–41有限和SPABA；G41–46期望SPABA；H46–53SRMBA；I53–56MA-SOBA-q。全部阅读。",
+      "editorial_advice": "正文保留机制/假设/主定理与对照，附录完整细节及额外算法按依赖可定位；不能读完B概览就算E–I全读。",
+      "applicability": "56页及A–I全部科学附录连续阅读，23原页核验全部7图/2表/5算法及关键条件和证明路线。写作组织和主张证据范围审阅，未认证全部证明或执行作者代码；40篇归纳完成，正式留出尚未使用。",
+      "confidence": {
+        "paper_specific": "high for observedorganization/settings",
+        "venue_wide": "40/40 induction completed;10holdoutvalidationpending"
+      }
+    },
+    "actionable": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp3–7/12–16"
+      ],
+      "observation": "比较表与四步证明地图把复杂度改进的原因显式化。",
+      "editorial_advice": "原创示例：We adapt PAGE to a decoupled bilevel update and control the tracking and estimator errors within one Lyapunov analysis. Under the stated smoothness assumptions, the finite-sum and expectation variants attain the reported stationarity complexities. A comparison table makes the oracle model and parameter regime explicit.",
+      "applicability": "56页及A–I全部科学附录连续阅读，23原页核验全部7图/2表/5算法及关键条件和证明路线。写作组织和主张证据范围审阅，未认证全部证明或执行作者代码；40篇归纳完成，正式留出尚未使用。",
+      "confidence": {
+        "paper_specific": "high for observedorganization/settings",
+        "venue_wide": "40/40 induction completed;10holdoutvalidationpending"
+      }
+    }
+  },
+  "counterexamples": [
+    {
+      "position": "pp1–7/19–56",
+      "finding": "NonconvexUL/stronglyconvexLL, gradient/HessianLipschitz andbounded∇yf aty*, boundedvarianceandmean-squaredstochastic smoothnesswhereinvoked. StationarityusesE||∇H||²≤epsilon,notnorm≤epsilon/globaloptimum. ComplexitycountsstochasticgradientsandHessian/Jacobian-vectorproducts,notHessianfreeortrainingtime. Finite-sumoptimalityp7specifiesm=O(n),epsilon=O(n^-1/2);includeinitialfullrefreshcostwhenapplicable."
+    },
+    {
+      "position": "pp3/5–7/20/41/45–46",
+      "finding": "Table1O(1)batchmeansaverageperiterationunderprobabilisticrefresh,notneverfullbatch. PAGEfullrefreshNvsb correction andexpectationtauprime=O(epsilon^-1) mustbeaccounted. MA-SABAusesgradientmemory;SRMBAlogfactor/tildedrate distinctfromSPABA. Stepboundwrittenalpha≤constant aloneisnotlicenseforarbitrarilyvanishingstepswithsameclaimedrate."
+    },
+    {
+      "position": "pp8/17–19",
+      "finding": "Threefinite-dataMLtasksdonotempiricallycertifystreamingoraclecomplexityorallarchitectures. Cr=.2selectedforhighestfinaltestaccuracyasC3states:potentialtestselectionleakageresearchquery,notcopiedasrecommendedprotocol. Curveshaveshadedbandsbutrepeatcount/dispersiondefinitionnotstated;donotcallCIs/significance. C2IJCNN1headingandFig6hypercleaningcaptionconflict;mainMA-SABAfinalhighvaluewordingvsminimizedgapneededitorialclarification."
+    },
+    {
+      "position": "pp19–20/31/33–41/53–56 research-only queries",
+      "finding": "Alg2omitsmemoryupdatefrommaintextandcurrent/previousDinitialization;STORMsamefreshsampleforbothiteratesneedsclarity;methodnamesSRMBA/MA-SOBA-qandcyanartifactneededit. E.6negative-tauinequalityusesupperboundinwrongdirection,constantsmayneedlowerbound. F.3zcontractiontowardz*(x)usesquadraticatykwhoseminimizergenerallydiffers;missingytrackingcouplingneedsproofclarification. Fproofcoefficientsrequirebothlargeandsmallbeta/alpha;checkjointfeasibilityratherthanassumeexistence. I.4betaboundcontainsitself,missinggammacondition. Theseareunresolvedsourcequeries,notanindependentwholepaperrefutation,norvenuewritingrules."
+    }
+  ],
+  "visual_review": {
+    "pages": [
+      1,
+      3,
+      4,
+      6,
+      7,
+      8,
+      13,
+      14,
+      15,
+      17,
+      18,
+      19,
+      20,
+      31,
+      33,
+      35,
+      39,
+      40,
+      41,
+      45,
+      53,
+      54,
+      56
+    ],
+    "source": "105dpi originalPopplerimages directlyviewed",
+    "policy": "delete23renders+duplicateextract afterregistration;canonicalPDF/MDretainedignoredskilltmp"
+  },
+  "official_requirements": [],
+  "holdout_validation": null,
+  "review_limitations": "56页及A–I全部科学附录连续阅读，23原页核验全部7图/2表/5算法及关键条件和证明路线。写作组织和主张证据范围审阅，未认证全部证明或执行作者代码；40篇归纳完成，正式留出尚未使用。"
+}

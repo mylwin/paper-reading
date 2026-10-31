@@ -1,0 +1,22 @@
+{
+  "paper_id": "acl-2024.acl-short.5",
+  "pdf_pages_read": 9,
+  "appendices": [
+    "A.1",
+    "A.2",
+    "A.3",
+    "B",
+    "C",
+    "D"
+  ],
+  "visual_pages": [
+    2,
+    3,
+    4,
+    8,
+    9
+  ],
+  "new_full_reviews": 1,
+  "expected_vs_measured_speedup_distinguished": true,
+  "code_executed": false
+}

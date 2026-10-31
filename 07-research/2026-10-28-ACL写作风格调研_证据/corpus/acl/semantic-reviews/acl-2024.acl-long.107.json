@@ -1,0 +1,322 @@
+{
+  "id": "acl-2024.acl-long.107",
+  "anthology_id": "2024.acl-long.107",
+  "venue": "acl",
+  "year": 2024,
+  "track": "main conference research",
+  "length_type": "long",
+  "title": "Self-Alignment for Factuality: Mitigating Hallucinations in LLMs via Self-Evaluation",
+  "authors": [
+    "Xiaoying Zhang",
+    "Baolin Peng",
+    "Ye Tian",
+    "Jingyan Zhou",
+    "Lifeng Jin",
+    "Linfeng Song",
+    "Haitao Mi",
+    "Helen Meng"
+  ],
+  "first_author": "Xiaoying Zhang",
+  "landing_url": "https://aclanthology.org/2024.acl-long.107/",
+  "pdf_url": "https://aclanthology.org/2024.acl-long.107.pdf",
+  "doi": "10.18653/v1/2024.acl-long.107",
+  "official_listing_url": "https://aclanthology.org/volumes/2024.acl-long/",
+  "sampling_stratum": "evaluation_analysis",
+  "paper_type": "self-evaluation calibration and preference alignment method",
+  "anthology_pdf_revision_hash": "1ca33576",
+  "metadata_revisions": [],
+  "official_attachments": [],
+  "sort_hash": "03b4b25691b8e1fd64cdbc841b1aadfec2cd537305a651a2b72010f56ba5d3e1",
+  "split": "induction",
+  "semantic_review_status": "complete_writing_focused_full_text_review",
+  "full_text_and_relevant_appendix_review_complete": true,
+  "pdf_path": ".claude/skills/paper-writing-shared/tmp/corpus/acl/pdf/2024.acl-long.107.pdf",
+  "pdf_sha256": "3a4d4ebc9efffefe1cf7f60377d753a034229671141cc611305b195da1027e7f",
+  "markdown_path": ".claude/skills/paper-writing-shared/tmp/corpus/acl/markdown/2024.acl-long.107.md",
+  "markdown_sha256": "549e817ebbaf9bfdf42efe4fc9543360ae8caa137a46045cd52905a20aae9d64",
+  "page_count": 20,
+  "download_status": "acquired",
+  "parse_status": "full_text_extracted_not_yet_reviewed",
+  "acquired_date": "2026-10-28",
+  "acquisition_seconds": 54.07,
+  "review_date": "2026-10-29",
+  "reviewer": "acl_finish_a",
+  "full_text_style_review_complete": true,
+  "external_appendix_review_complete": true,
+  "count_eligible_full_text_and_relevant_appendix": true,
+  "ten_dimensions": {
+    "reader_argument": {
+      "pages": [
+        1,
+        2
+      ],
+      "observation": "聚焦knowing-telling差距，不把全部幻觉统一成一种原因。",
+      "editorial_advice": "明确要改变的失败类型及何种能力可以提供训练信号。",
+      "applicability_boundary": "有知识但说错是研究动机，不是所有样本已验证内部知识。"
+    },
+    "title_abstract": {
+      "pages": [
+        1
+      ],
+      "observation": "标题串联目标与自评机制，摘要交代SelfEval/SKT/DPO及两数据三任务。",
+      "editorial_advice": "在摘要区分核心机制、改进部件和结果范围。",
+      "applicability_boundary": "Llama家族7B实验不推出全部LLM。"
+    },
+    "introduction": {
+      "pages": [
+        1,
+        2
+      ],
+      "observation": "直观纠错图→一致性信心不足→自评→校准→框架与三贡献。",
+      "editorial_advice": "用示例暴露瓶颈，再让增强部件回应瓶颈。",
+      "applicability_boundary": "三贡献列表是此文选择而非ACL必需格式。"
+    },
+    "related_work": {
+      "pages": [
+        2,
+        3,
+        13,
+        14
+      ],
+      "observation": "按posthoc/inference-time/alignment分类，重点区别HonestyTune和FactTune；附录表比较。",
+      "editorial_advice": "家族梳理服务于最邻近区别；避免逐篇罗列。",
+      "applicability_boundary": "内部自评不等于整个训练过程无需外部数据，SKT使用gold答案。"
+    },
+    "method_theory": {
+      "pages": [
+        3,
+        4,
+        5,
+        14,
+        15
+      ],
+      "observation": "先三步采样-自评-偏好训练，再详述True/False信心与保留重复采样的SKT，列两种目标。",
+      "editorial_advice": "先定义模块接口，再展开新组件；任务差异和参数进附录。",
+      "applicability_boundary": "GPT3.5原子claim/问题生成与gold entailment训练不可被solely internal口号掩盖。"
+    },
+    "evidence": {
+      "pages": [
+        6,
+        7,
+        8,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ],
+      "observation": "三任务主表→GPT4配对→替代信心源→五任务选择/区分→校准及去重分析。",
+      "editorial_advice": "端到端收益与关键中间能力各给证据，质量与信息量并报。",
+      "applicability_boundary": "FActScore比例提升不保证错误事实数量下降；GPT4评判非人评。"
+    },
+    "discussion_limits": {
+      "pages": [
+        9,
+        16,
+        17,
+        18
+      ],
+      "observation": "局限讨论规模/结合推断方法/校准，附录手工分类100残余错误并给例。",
+      "editorial_advice": "失败类型可以直接指导下一步，不用通篇称初步结果削弱实测收益。",
+      "applicability_boundary": "超出7B规模预期只是展望；伦理笼统保证不可当普适模板。"
+    },
+    "paragraph_language": {
+      "pages": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "observation": "结果小标题直接给答案，随后数字支撑；讨论将机制解释接到校准实验。",
+      "editorial_advice": "保留已测结果明确度，用具体指标替换significantly的空泛修饰。",
+      "applicability_boundary": "三run均值未给方差和显著性检验，不认证统计显著。"
+    },
+    "main_appendix": {
+      "pages": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "observation": "正文完整框架/目标/主证据；A-J含定位表、数据、实现、评估、案例、失败、去重、生成误差、GPT4样例。",
+      "editorial_advice": "正文完成从设计到效果的论证，附录承载核查和失败分析。",
+      "applicability_boundary": "全部末尾浮动图表需读，2024录用页数非现行限制。"
+    },
+    "actionable": {
+      "pages": [
+        7,
+        8
+      ],
+      "observation": "实测收益和残余错误共同支持方法贡献。",
+      "editorial_advice": "原创示例：Self-knowledge tuning improves the reported answer-selection and discrimination scores across five QA benchmarks. Combined with preference alignment, it also improves the reported factuality metrics on the evaluated Llama models.",
+      "applicability_boundary": "精确说指标提高，无须每句加may或声称幻觉已解决。"
+    }
+  },
+  "coverage": [
+    {
+      "source": "canonical official PDF",
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "main_science": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "limitations_ethics": [
+        9
+      ],
+      "references": [
+        10,
+        11,
+        12,
+        13
+      ],
+      "scientific_appendix": {
+        "A summary": [
+          13,
+          14
+        ],
+        "B datasets": [
+          13,
+          14
+        ],
+        "C implementation": [
+          13,
+          14,
+          15
+        ],
+        "D evaluator": [
+          15,
+          16
+        ],
+        "E pairwise": [
+          15,
+          16,
+          19
+        ],
+        "F case": [
+          15,
+          17
+        ],
+        "G remaining errors": [
+          15,
+          16,
+          17,
+          18
+        ],
+        "H no-duplicate calibration": [
+          17,
+          19
+        ],
+        "I extraction error audit": [
+          17,
+          18,
+          19
+        ],
+        "J GPT4 generated biographies": [
+          19,
+          20
+        ]
+      }
+    }
+  ],
+  "counterexamples": [
+    {
+      "pages": [
+        6,
+        7
+      ],
+      "finding": "表1Llama2 SKT FActScore46.50高于PTrue42.73，但错误数14.44高于11.17；Llama7B SKT13.49也高于PTrue13.19。不能把每项factuality收益都写成错误数量减少。",
+      "scope": "保留FActScore提升与正确事实增加，不把精度比例和数量混同。"
+    },
+    {
+      "pages": [
+        5,
+        6,
+        14,
+        15
+      ],
+      "finding": "SKT gold-answer entailment和GPT3.5外部辅助存在；仅下游偏好标注无需task-specific human factuality不能扩成全链条无监督无外部帮助。",
+      "scope": "说明训练阶段来源一次足够，不逐段重复辩解。"
+    },
+    {
+      "pages": [
+        8,
+        17,
+        18,
+        19
+      ],
+      "finding": "校准图以视觉改善支持，去重导致低置信区域欠置信但无统一量化ECE；208claims抽查10biographies不证明所有抽取完美；§5评估模型已额外训练，不能普遍证明评价必比生成容易。",
+      "scope": "校准与抽查证据各按实际设计陈述。"
+    }
+  ],
+  "supplement_audit": {
+    "method": "locked official2024 XML long107 read; title/pages1946-1965/pdfhash1ca33576 match",
+    "official_xml_attachments": [],
+    "separate_scientific_appendix_link_found": false,
+    "scientific_appendix_in_pdf": "A-J fully read throughp20",
+    "code_executed": false
+  },
+  "version_audit": {
+    "published_year": 2024,
+    "canonical_url": "https://aclanthology.org/2024.acl-long.107.pdf",
+    "xml_revision_entries": []
+  },
+  "visual_review": {
+    "pages": [
+      1,
+      3,
+      5,
+      7,
+      8,
+      14,
+      17,
+      19
+    ],
+    "figures": "Figures1-6 and mainTables1-4,comparisonTable5,colorederrorsTable9 original viewed",
+    "reviewer": "acl_finish_a"
+  },
+  "official_requirements": {
+    "observed_layout_not_current_rule": true,
+    "source": "current ACL official rules separately"
+  },
+  "holdout_validation": null,
+  "review_limitations": "All20pages A-J read; no training rerun, no independent biography factverification."
+}

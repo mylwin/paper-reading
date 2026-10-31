@@ -1,0 +1,15 @@
+{
+  "project": ".claude/skills/paper-writing-shared/tmp/acl-behavior-2026-10-29/input-project",
+  "files_sha256": {
+    "acl_natbib.bst": "6fbb306202290f4b68e74ac1460a8b27398500cb6dfeb4492e74c457eae7cd1e",
+    "project.json": "3d1964824e6deaf3fa443ef85eaf734e6fbe61405bdcbea18ace15a1f8ccb6ca",
+    "references.bib": "842d0970e33b10d89e5a35b84cf12ea7ae390d78eede70493fab8938fa95fc07",
+    "main.tex": "064d22c18ba22a74c79d7c42674ce803a959e7e8b50f3ec9721018d4bca78cb0",
+    "acl.sty": "19dfeddc2c0e448f3926a0bef048a9db3f3611b46265b760caabd7ada4f361de",
+    "sections/body.tex": "514c305764ac126390dc51793766fbc96bc125ef764536fadd7ff4acc886bf91",
+    "sections/ethics.tex": "78558fb7b7bb253081792b644836064a6919825239ce599edc8ad3bcd530dbf9",
+    "sections/appendix.tex": "46a920f1bc4e4493f4c0b9e8077e7b1ce3d04f8e1abd4eaad2cc6b9964999168"
+  },
+  "abstract_only_edit": true,
+  "fictional_fixture_citation_explicit": true
+}

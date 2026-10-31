@@ -1,0 +1,12 @@
+{
+  "table3_five_scores": [
+    42.4,
+    65.6,
+    54.1,
+    43.4,
+    52.7
+  ],
+  "computed_mean": 51.64,
+  "printed_mean": 66.2,
+  "kv_reduction": 0.7494646680942184
+}

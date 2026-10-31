@@ -1,0 +1,339 @@
+{
+  "id": "acl-2024.acl-long.482",
+  "anthology_id": "2024.acl-long.482",
+  "venue": "acl",
+  "year": 2024,
+  "track": "main conference research",
+  "length_type": "long",
+  "title": "I am a Strange Dataset: Metalinguistic Tests for Language Models",
+  "authors": [
+    "Tristan Thrush",
+    "Jared Moore",
+    "Miguel Monares",
+    "Christopher Potts",
+    "Douwe Kiela"
+  ],
+  "first_author": "Tristan Thrush",
+  "landing_url": "https://aclanthology.org/2024.acl-long.482/",
+  "pdf_url": "https://aclanthology.org/2024.acl-long.482.pdf",
+  "doi": "10.18653/v1/2024.acl-long.482",
+  "official_listing_url": "https://aclanthology.org/volumes/2024.acl-long/",
+  "sampling_stratum": "multilingual_linguistics",
+  "paper_type": "handcrafted metalinguistic challenge dataset, metric design, human validation and model diagnostic study; long paper",
+  "anthology_pdf_revision_hash": "4799befa",
+  "metadata_revisions": [],
+  "official_attachments": [],
+  "sort_hash": "0ca0832efa71ce12af535288c0369e70a6443105370cd3c5882c11ecf9580b8b",
+  "split": "induction",
+  "semantic_review_status": "complete_writing_focused_full_text_review",
+  "full_text_and_relevant_appendix_review_complete": true,
+  "review_date": "2026-10-29",
+  "reviewer": "acl-014 delegated full-text reviewer",
+  "pdf_path": ".claude/skills/paper-writing-shared/tmp/corpus/acl/pdf/2024.acl-long.482.pdf",
+  "pdf_sha256": "f8f8365751952436dc3a03a7a8a219e33e7b3d8ce17e36d914e422e5a2e0d6b9",
+  "markdown_path": ".claude/skills/paper-writing-shared/tmp/corpus/acl/markdown/2024.acl-long.482.md",
+  "markdown_sha256": "4207cfa19d6ec6e23a6f42829115e3c6f60a5e1a9416c99e91eabd3e0a35804d",
+  "full_text_style_review_complete": true,
+  "external_appendix_review_complete": true,
+  "count_eligible_full_text_and_relevant_appendix": true,
+  "coverage": [
+    {
+      "source": "canonical official PDF",
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "main_science": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "limitations_ethics": [
+        9
+      ],
+      "references": [
+        9,
+        10,
+        11
+      ],
+      "scientific_appendix": {
+        "A full prompts for self/non-self-reference ZS/FS/CoT": [
+          12,
+          13,
+          14,
+          15
+        ],
+        "B separate Impossible challenge and examples": [
+          15,
+          16
+        ],
+        "C human interface": [
+          16
+        ],
+        "D speculative tokenizer/training discussion": [
+          16
+        ],
+        "E all ten tagged-results tables": [
+          17,
+          18,
+          19,
+          20
+        ]
+      }
+    }
+  ],
+  "version_audit": {
+    "published_year": 2024,
+    "canonical_url": "https://aclanthology.org/2024.acl-long.482.pdf",
+    "xml_revision_entries": []
+  },
+  "supplement_audit": {
+    "official_landing": "https://aclanthology.org/2024.acl-long.482/",
+    "audit_date": "2026-10-29",
+    "method": "Read locked official2024ACL XML volume long paper482; title/authors/pages8888-8907/PDFhash4799befa match. No separate attachment or revision element; all in-PDF appendicesA-E read. No live landing fetch this pass.",
+    "official_xml_attachments": [],
+    "separate_scientific_appendix_link_found": false,
+    "scientific_appendix_in_pdf": "A-E complete, prompts and ten tagtables included",
+    "code_executed": false,
+    "external_dataset_and_toolkit_not_inspected": true
+  },
+  "ten_dimensions": {
+    "reader_argument": {
+      "pages": [
+        1,
+        2,
+        3,
+        5
+      ],
+      "observation": "用读者可立即理解的自指句子说明模型能力缺口，先把metalinguistic self-reference与通常self-correction区分，再给成对真假续写、验证以及最小变化非自指控制。",
+      "editorial_advice": "诊断论文先给具体现象和可操作定义，再设计控制分解可能解释；贡献可以是揭示能力缺口而非改善排行榜。",
+      "applicability_boundary": "不把某类语言难题直接当意识或一般智能的充分测量；非自指也难说明失败归因尚未隔离。"
+    },
+    "title_abstract": {
+      "pages": [
+        1
+      ],
+      "observation": "标题借Hofstadter书名形成数据集名，副标题明确metalinguistic测试；摘要用例子定义generation/verification、介绍控制及人类验证，再给接近chance和GPT4例外、人类89–93。",
+      "editorial_advice": "可以用准确、易记的任务命名和具体例句传达新任务；摘要同时给主要发现与决定其含义的例外。",
+      "applicability_boundary": "幽默标题是个案，不是ACL硬规则；abstract的all near chance需结合CoT解析失败及GPT4显著超过chance理解。"
+    },
+    "introduction": {
+      "pages": [
+        1,
+        2
+      ],
+      "observation": "先连到数学、计算机和日常语言应用，用本文自引用作为示例，随后收窄到定义、问题、任务、控制和主要发现；无固定贡献项目列表。",
+      "editorial_advice": "兴趣点可以由真实例子建立，迅速收窄到本文能测的能力与结果；自然段概览足够时无需硬列三贡献。",
+      "applicability_boundary": "开头广泛领域并非逐项做过实验；不要将metalinguistic测试价值写成解决所有提及的领域。"
+    },
+    "related_work": {
+      "pages": [
+        2,
+        3
+      ],
+      "observation": "独立§2按AIchallenge/schema与self-reference分脉络，定位到先前syntax/reasoning评测以及模型自改进/自校验，说明研究对象互补。",
+      "editorial_advice": "按研究对象和测量能力解释差异，明确同名self-reference在不同文献中的含义。",
+      "applicability_boundary": "first以asfarasweknow限定范围；不能把所有metalinguistic语料或selfverification研究说成没有。"
+    },
+    "method_theory": {
+      "pages": [
+        3,
+        4,
+        5,
+        12,
+        13,
+        14,
+        15
+      ],
+      "observation": "§3从真/假候选随续写改变真值的schema讲到10个可重叠tag；公式1-4明确定义概率比较、相对验证及文本解析CoT分数，A给完整提示。",
+      "editorial_advice": "新评测需把计分对象、判断规则与不可得logprobs导致的替代协议明确写清；正文应足以解释分数。",
+      "applicability_boundary": "generation是两个候选loss比较而非自由生成成功率；CoT字符串评分不检验推理正确性，formula不是认知机制证明。"
+    },
+    "evidence": {
+      "pages": [
+        3,
+        5,
+        6,
+        7,
+        8,
+        12,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "observation": "四专家手写208对：200评测、3提示、5人工资格；95非自指对与原95对控制；人工最多10判定/句，与模型FS指标对照；表2主分数/CI，表4配对差，E按tag展开。",
+      "editorial_advice": "用可追踪数量、人工可解性、最小控制和分层结果支持新任务有效性；接口限制及API日期随协议说明。",
+      "applicability_boundary": "人类为USmasterannotators、>=1000HIT、>=95%通过率及5题资格，允许查资料；不等于无筛选全人群。bootstrap95%CI不是跨seed或多次API随机采样SD。"
+    },
+    "discussion_limits": {
+      "pages": [
+        6,
+        7,
+        8,
+        9,
+        16
+      ],
+      "observation": "正文主动展示答案对但理由错、金标准歧义和CoT格式不遵循；Limitations只聚焦自指与metalinguistic因果归因未隔离；D将tokenizer解释明标speculative。",
+      "editorial_advice": "把会改变读者解释结果的限制放结果附近；集中交代机制未知，已测模型表现可以直接陈述。",
+      "applicability_boundary": "不是每段都加可能；也不能删去控制同样难和标签歧义以夸大特定能力失效。"
+    },
+    "paragraph_language": {
+      "pages": [
+        2,
+        6,
+        7,
+        8,
+        9,
+        16
+      ],
+      "observation": "结果主句直陈测得挑战，具体例子解释统计分数；解释用limitedevidence/may/speculative，扩展趋势用问句引导。",
+      "editorial_advice": "实测结果直接写；从分数推到机制、规模外推时说明证据层级；真正争议处用具体例子代替泛泛免责声明。",
+      "applicability_boundary": "结论scale>70Bmaybeneeded仅为所测组趋势推测，不能写成已证明必要规模；present-day指2024收集时点而非现在。"
+    },
+    "main_appendix": {
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "observation": "主文保留schema/所有计分公式、人工协议、主结果与控制解释，另有结论后datasetrelease节；A-E给完整提示、更难独立集、人类UI、推测讨论、细粒度完整表。",
+      "editorial_advice": "主文可因贡献需要加入资源发布策略；附录保存可复核提示和细分结果，解释性负例可留主文。",
+      "applicability_boundary": "录用样本节标题/位置是观察，不把编号Limitations等复制为当前官方格式规则；10个Impossible例不属于200主评测。"
+    },
+    "actionable": {
+      "pages": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "observation": "用具体任务表现说明诊断价值，对方法归因不抢跑，明确loss评测与文本生成评测差异。",
+      "editorial_advice": "原创例句：The benchmark contains200 paired evaluation examples and a matched non-self-referential control set of95 examples. The tested models struggle with both forms, so these results do not isolate self-reference as the sole source of error.",
+      "applicability_boundary": "真实控制结论是必要信息，不是多余防御；无需把已观察分数改成mayperform。"
+    }
+  },
+  "counterexamples": [
+    {
+      "pages": [
+        4,
+        5,
+        6,
+        7
+      ],
+      "finding": "Generation比较候选续写loss；GPT/Claude缺generation结果因为API多tokenlogprobs不可得，Claude仅CoT。许多base模型CoT近0与不输出true/false有关，而不是能力比随机必然更差；答案对也可理由错(Fig5)。",
+      "scope": "不把所有表列都视作同一自由推理准确率，不把missing写成零。"
+    },
+    {
+      "pages": [
+        5,
+        7,
+        8,
+        9
+      ],
+      "finding": "非自指控制95对也难；GPT4各差分正但只有ValZS的12.11±6.84明确排除0，其他CI跨或触0。Figure6truth歧义显示非相对验证可能惩罚合理解释。",
+      "scope": "支持难题与可能自指额外困难，不能断言已干净隔离自指机制或所有控制差异显著。"
+    },
+    {
+      "pages": [
+        3,
+        5,
+        6,
+        15,
+        16
+      ],
+      "finding": "208总对不等于200评测；95配对控制不等于200；另外10个Impossible专家也需解释，不属于人类89–93%基线。人类为经过资格筛选且允许查询的非领域专家。",
+      "scope": "不扩大人类可解性到Impossible集或无筛选人口，不把最多10票当每个都固定10。"
+    },
+    {
+      "pages": [
+        6,
+        7,
+        8,
+        16
+      ],
+      "finding": "主体API结果2024-01-07，Impossible例2023-12-26；4个参数组均值单调对应p=1/24启发式排列，模型家族和精度并非受控变量，Dtokenizer/训练解释未实证。",
+      "scope": "不把相关规模趋势写成因果定律或70B以上足够的证明，不推成当前模型评测结论。"
+    },
+    {
+      "pages": [
+        7,
+        17,
+        18,
+        19,
+        20
+      ],
+      "finding": "主表3行标签Count其实列分数，图表说明是63个model×logprobmetric分数均值；tag可重叠、样本小，GPT4在Hypothetical等组仍近chance。",
+      "scope": "不能把63当独立训练重复，不能由整体GPT4超过chance推到每tag都超过chance；表头语义应润色明确。"
+    }
+  ],
+  "visual_review": {
+    "pages": [
+      1,
+      2,
+      4,
+      5,
+      6,
+      7,
+      8,
+      12,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20
+    ],
+    "figures": "All10figures, metalinguistic layout/emoji/color examples, metricformula1-4, main tables1-4 and all10tagtables5-14 inspected as original page images; full prompt prose and remaining pages read from page-aligned parse.",
+    "reviewer": "same delegated full-text reviewer"
+  },
+  "official_requirements": {
+    "source": "Current ACL/ARR requirements separate from accepted-paper observations",
+    "corpus_layout_observation": "Conclusion followed byDatasetReleaseStrategy, numberedLimitations/EthicalConsiderations; author-year references; appendicesA-E",
+    "observed_layout_not_current_rule": true
+  },
+  "holdout_validation": null,
+  "review_limitations": "All20PDFpagesandscientificappendicesA-Eread;14originalrenderingsinspected. LockedofficialXMLattachmentaudit; currentlivepage, releasedencrypteddataand evaluationtoolkit notinspected; no benchmarkrerun. CorpusstyleobservationnotvenuewideorcurrentLLMcapabilityclaim."
+}

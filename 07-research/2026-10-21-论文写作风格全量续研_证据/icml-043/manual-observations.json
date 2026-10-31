@@ -1,0 +1,24 @@
+{
+"all_pages_read":16,"visual_pages":[1,3,4,7,8,9,13,14,15,16],"paper_type":"empirical causal-representation-inspired few-shot action recognition framework",
+"sections":"1–5/Ack/Impact/refs/A–E complete","method":"continuous16page text; remove only hidden latexit base64 metadata and excessive horizontal whitespace from display;10originalpageimages cover all8figures/9tables and prior derivation",
+"appendix_status":"A13 likelihood derivation,B13–14 multi-dataset visualizations,C14 success/failure clips,D15–16 extra/augmented model comparisons,E16 full architecture; all read",
+"rows":[
+["reader_argument","pp1–3","冻结哪些模块/适配哪些模块两个问题，由移动/掉落示意图解释物理动机。","用具体例子解释可迁移知识，再给研究假设和机制。","applicable"],
+["title_abstract","p1","标题概念+任务；摘要目标/困难/CDTD/两阶段机制/显式估计与可迁移假设/定性效果，无数字。","摘要直接说明方法；核心建模假设影响方法含义，应保留一次，不额外叠加通用免责声明。","applicable"],
+["introduction","pp1–2","最小变化原则→物理例子→模块选择→两条贡献。","贡献数量服务论证；两条可成立，不强加第三条。","applicable"],
+["related_work","pp2–3","few-shot与domain-invariant两主题，将已知域索引与估计域信息的差别定位。","按问题和关键区别组织近邻。","applicable"],
+["method_theory","pp3–5/13/16","两阶段/represent-predict概览→生成分解/四模块→ELBO和CE/NCE→训练适配推理，A给change-of-variable推导。","先总览再模块及优化过程；没有新因果可识别性/泛化定理，不要求凭空加理论。","applicable_with_scope"],
+["evidence","pp5–9/14–16","匹配backbone/loss的all-way和5-way对比、组件/冻结/超参消融、UMAP/pairplots、额外同域及+u比较。","主结果/机制诊断/反例各有位置；参数更新量是效率证据而非已测训练墙钟；视觉一致性不等于因果可识别性证明。","applicable"],
+["discussion_limits","pp8–9/14","先总结效果，再Limitations承认经验支持/缺泛化界/瞬时因果未覆盖；具体失败视频在附录。","结果局部指出异常，重要理论缺口集中解释；无需每段重复没有理论保证。","applicable"],
+["paragraph_language","pp6–9","Sth-Else/All-way/5-way/Components/Hyperparameter/Validation路标，各段问题→结果→解释。","直接报告已测提升，对假说用支持/一致而非确认所有域不变；不把所有主动动词换成可能。","applicable"],
+["main_appendix","pp1–16","1–9主文/9–12文献；A–E13–16推导、图、扩展对比及架构；无外置未读科学附录。","主文保留决策依据，附录给补充设置与支持。","applicable"],
+["actionable","pp1–9/13–16","模块冻结图与训练阶段对应，匹配设置表格和局部失败例支持主要结果。","原创示例：CDTD adapts the image encoder and domain estimator while keeping the learned dynamics modules fixed. On Sth-Else, this strategy improves five-shot accuracy from 44.9% to 48.5% with the matched NCE setup. The ablations support the benefit of selective adaptation.","applicable"]
+],
+"counterexamples":[
+{"position":"pp6–8/16","finding":"Table2 shows 10/12 all-way wins, not prose 11/12: SSv2 8-shot14.8<15.1; UCF2-shot90.6<91.0. Table3 7/8 wins, UCF5-shot79.7<79.8. Table8 NCE10-shot59.9 conflicts Table1/4 63.9;CE44.0 ties augmentedSViT not strictly all best. Report disputed exact counts as query, keep genuine measured benefits."},
+{"position":"pp3–5/8–9/13–14","finding":"UMAP overlap/separate-model latent pairplots and classification gains provide empirical consistency, not causal identification or universal invariance. Latent coordinate alignment/permutation and observation invertibility assumptions not proved. Paper explicitly lacks generalization bound and instantaneous causal modeling; absence belongs limits not repetitive contribution hedges."},
+{"position":"pp2/4–5/13; research-only version queries","finding":"Fig3 caption duplicated and says freeze image encoder despite diagram/method updating it; module count four lists five with classifier; Top-1 described as max any class; Eq9 ELBO KL sign/optimization direction unclear, Eq5 density notation and Eq16 absolute derivative require checking; captions/consistency issues should not be copied as venue conventions. No source code or significance test verified;1000/200 episode averages not formal significance without uncertainty."}
+],
+"structure_counterexample":"Empirical paper with two contributions and explanatory causal model/likelihood derivation, no new identifiability theorem; abstract includes central assumptions and no numeric result. Accepted prose can contain numerical/caption errors and is not an authority to copy them.",
+"proposed_revision":"No frozen rule change. Add behavioral test for empirical mechanism evidence: retain direct observed gains, express empirical support for an unproved causal explanation, resolve table/prose conflicts in author notes rather than invent a value or insert repeated caveats."
+}

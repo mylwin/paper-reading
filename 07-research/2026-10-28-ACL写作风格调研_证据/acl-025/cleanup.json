@@ -1,0 +1,61 @@
+{
+  "deleted_count": 11,
+  "deleted_derivatives": [
+    {
+      "path": ".claude/skills/paper-writing-shared/tmp/corpus/acl/review-cache/acl-025/page-07.png",
+      "sha256": "6f9ad783cd95771a27eba2baef56d3283c23deafe261f60880ce44f8de62f290",
+      "bytes": 446599
+    },
+    {
+      "path": ".claude/skills/paper-writing-shared/tmp/corpus/acl/review-cache/acl-025/page-06.png",
+      "sha256": "0220e346954ffc9a1cb7ea85616b1552c6135958cbae977475a6d63e6e75b10c",
+      "bytes": 461567
+    },
+    {
+      "path": ".claude/skills/paper-writing-shared/tmp/corpus/acl/review-cache/acl-025/page-05.png",
+      "sha256": "60ae6d8c399a1b454b0a83642d66bca7f91f1009571f5dcc4ae1c9fa104e01f0",
+      "bytes": 469279
+    },
+    {
+      "path": ".claude/skills/paper-writing-shared/tmp/corpus/acl/review-cache/acl-025/page-08.png",
+      "sha256": "c3457dc28626e23ccde2af540cdf0ca2ca69051a17bd55ac0d8d41b58b3f9beb",
+      "bytes": 364589
+    },
+    {
+      "path": ".claude/skills/paper-writing-shared/tmp/corpus/acl/review-cache/acl-025/page-20.png",
+      "sha256": "188e5b4de03451805a0e1888c179976deff5c744b5a2540fd2a398e50364845f",
+      "bytes": 402957
+    },
+    {
+      "path": ".claude/skills/paper-writing-shared/tmp/corpus/acl/review-cache/acl-025/page-21.png",
+      "sha256": "a4f9db00c36097b823391089c90c917328ac2de478c5b182e166358a04907a0e",
+      "bytes": 405360
+    },
+    {
+      "path": ".claude/skills/paper-writing-shared/tmp/corpus/acl/review-cache/acl-025/page-09.png",
+      "sha256": "8278c9573a452fb3d998efef79d3a515a2284423cbe3514fc370e3c2c3735f31",
+      "bytes": 532937
+    },
+    {
+      "path": ".claude/skills/paper-writing-shared/tmp/corpus/acl/review-cache/acl-025/page-23.png",
+      "sha256": "a5e6797906b55f174d6de4e48e8471b0442a16bc84f258bdf295d69c6317c4e6",
+      "bytes": 168748
+    },
+    {
+      "path": ".claude/skills/paper-writing-shared/tmp/corpus/acl/review-cache/acl-025/page-22.png",
+      "sha256": "bf8f9f02d8a213eb95490223011da973b29b275a4c8e38e3173fd7d2d8059a00",
+      "bytes": 368828
+    },
+    {
+      "path": ".claude/skills/paper-writing-shared/tmp/corpus/acl/review-cache/acl-025/page-19.png",
+      "sha256": "fa907f1472dce72e04c6a7269cc17058c94a129903379c7292cf1d22fe9ec396",
+      "bytes": 390631
+    },
+    {
+      "path": ".claude/skills/paper-writing-shared/tmp/corpus/acl/review-cache/acl-025/page-18.png",
+      "sha256": "31d87ccff9206230cb7f56a7e5e97bd4900b4f11935981e079eb1da7a9f5c23d",
+      "bytes": 409217
+    }
+  ],
+  "original_pdf_or_primary_parse_deleted": 0
+}

@@ -1,0 +1,439 @@
+{
+  "id": "acl-2025.acl-long.1496",
+  "anthology_id": "2025.acl-long.1496",
+  "venue": "acl",
+  "year": 2025,
+  "track": "main conference research",
+  "length_type": "long",
+  "title": "SocialEval: Evaluating Social Intelligence of Large Language Models",
+  "authors": [
+    "Jinfeng Zhou",
+    "Yuxuan Chen",
+    "Yihan Shi",
+    "Xuanming Zhang",
+    "Leqi Lei",
+    "Yi Feng",
+    "Zexuan Xiong",
+    "Miao Yan",
+    "Xunzhi Wang",
+    "Yaru Cao",
+    "Jianing Yin",
+    "Shuai Wang",
+    "Quanyu Dai",
+    "Zhenhua Dong",
+    "Hongning Wang",
+    "Minlie Huang"
+  ],
+  "first_author": "Jinfeng Zhou",
+  "landing_url": "https://aclanthology.org/2025.acl-long.1496/",
+  "pdf_url": "https://aclanthology.org/2025.acl-long.1496.pdf",
+  "doi": "10.18653/v1/2025.acl-long.1496",
+  "official_listing_url": "https://aclanthology.org/volumes/2025.acl-long/",
+  "sampling_stratum": "evaluation_analysis",
+  "paper_type": "bilingual script-based social-intelligence benchmark with human,behavioral,representation analyses",
+  "anthology_pdf_revision_hash": "58a51ca7",
+  "metadata_revisions": [],
+  "official_attachments": [],
+  "sort_hash": "010fc7c1d97c9f3bb150661360b97ee3dc00b43713c4943552a8f10a8b2d5897",
+  "split": "induction",
+  "semantic_review_status": "complete_writing_focused_full_text_review",
+  "full_text_and_relevant_appendix_review_complete": true,
+  "download_status": "acquired",
+  "parse_status": "full_text_extracted_not_yet_reviewed",
+  "pdf_path": ".claude/skills/paper-writing-shared/tmp/corpus/acl/pdf/2025.acl-long.1496.pdf",
+  "pdf_sha256": "274e126fabc7bc77753a28231368a7050bea2d4690ca22b37e18faa937bdd21c",
+  "markdown_path": ".claude/skills/paper-writing-shared/tmp/corpus/acl/markdown/2025.acl-long.1496.md",
+  "markdown_sha256": "5ae08d915acff379e7218080566febaa4ec88ffb27440fdf9a46117dd6424f2e",
+  "page_count": 55,
+  "acquired_date": "2026-10-28",
+  "recovery": "HTTP byte ranges; validatedsizePDFheaderandpdfinfo; per-pagepdftotext",
+  "prior_acquisition_error": "curl: (28) Operation timed out after 90000 milliseconds with 3227648 out of 18731051 bytes received\ncurl: (28) Operation timed out after 90005 milliseconds with 2375680 out of 18731051 bytes received",
+  "review_date": "2026-10-29",
+  "reviewer": "acl_finish_c",
+  "full_text_style_review_complete": true,
+  "external_appendix_review_complete": true,
+  "count_eligible_full_text_and_relevant_appendix": true,
+  "coverage": [
+    {
+      "source": "canonical official PDF",
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55
+      ],
+      "main_science": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "limitations_ethics": [
+        9
+      ],
+      "references": [
+        9,
+        10,
+        11,
+        12,
+        13
+      ],
+      "scientific_appendix": {
+        "A taxonomy and32definitions": [
+          13,
+          14
+        ],
+        "B translationprompt": [
+          13,
+          15
+        ],
+        "C.1 bilingualGAE/IAEprompts": [
+          13,
+          16,
+          17
+        ],
+        "C.2-C.3 nineadditionalmodels andall32abilityresults": [
+          13,
+          18,
+          19,
+          22
+        ],
+        "C.4 behavior/attention": [
+          13,
+          14,
+          15,
+          16,
+          18
+        ],
+        "C.5 allnineadditionalneuronpairvisuals": [
+          14,
+          15,
+          19,
+          20,
+          21
+        ],
+        "C.6 generationprompt": [
+          15,
+          23
+        ],
+        "D completeWandaderivation": [
+          15,
+          16,
+          17
+        ],
+        "E all32completeexampletables18-49": [
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54,
+          55
+        ]
+      }
+    }
+  ],
+  "version_audit": {
+    "canonical_url": "https://aclanthology.org/2025.acl-long.1496.pdf",
+    "xml_revision_entries": []
+  },
+  "supplement_audit": {
+    "method": "locked official metadata noattachments; A-E scientificappendicesincluding32examplesread",
+    "official_xml_attachments": [],
+    "separate_scientific_appendix_link_found": false,
+    "code_executed": false
+  },
+  "ten_dimensions": {
+    "reader_argument": {
+      "pages": [
+        1,
+        2,
+        3
+      ],
+      "observation": "社会心理学脚本定义SI→结果/过程双评价→worldtree将技能选择连接后续结局。",
+      "editorial_advice": "跨学科构念先给操作化，再说明新增设计如何测到它。",
+      "applicability_boundary": "脚本目标达成与现实全部社交智慧不同，构念适用范围需准确。"
+    },
+    "title_abstract": {
+      "pages": [
+        1
+      ],
+      "observation": "标题对象清晰，摘要定义SI、双范式、脚本资源、行为差异及表征发现。",
+      "editorial_advice": "先让读者知道测什么，再给资源与关键答案；分析稿不必以新方法分数冠军为唯一价值。",
+      "applicability_boundary": "akinbrain是类比，不能因tSNE/Wanda图直接确证脑同源机制。"
+    },
+    "introduction": {
+      "pages": [
+        1,
+        2
+      ],
+      "observation": "两项现有缺口→worldtree例子→三种评测内容→观察概览，未硬列固定贡献三条。",
+      "editorial_advice": "用一张跨全过程例图说明构念、单元与两任务，贡献以所回答问题组织。",
+      "applicability_boundary": "comprehensive/first来源需验证，不照搬排他辞。"
+    },
+    "related_work": {
+      "pages": [
+        1,
+        2,
+        8,
+        9
+      ],
+      "observation": "动机引用社会心理学，后置相关工作分仿真/三类SIbenchmarks。",
+      "editorial_advice": "概念来源服务任务设计，最近评测差异前置；全谱比较可后置。",
+      "applicability_boundary": "心理学引用不自动验证所设计题目的测量效度。"
+    },
+    "method_theory": {
+      "pages": [
+        2,
+        3,
+        4,
+        14,
+        15,
+        16,
+        17,
+        23
+      ],
+      "observation": "7orientations/32abilities→MDP任务→五构成worldtree→质控三轮/翻译；给任务映射与Wanda推导。",
+      "editorial_advice": "用符号明确状态、选项、奖励，再按实际构建对象说明人工操作。",
+      "applicability_boundary": "无策略学习定理；binarygoalreward/固定转移是人工设定，Wanda不是干预因果。"
+    },
+    "evidence": {
+      "pages": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        18,
+        19,
+        22,
+        23,
+        24,
+        55
+      ],
+      "observation": "153trees/2493samples，19+9models，20graduates，每人GAE14/IAE160，三shuffle多数；行为失败子集与全树、生成相似度、表征/神经热图。",
+      "editorial_advice": "结果分总体差距、行为机制、表征探查三层；为选择式评测补独立生成比较。",
+      "applicability_boundary": "人类不同子集、similarityconditional选择率、失败子集筛选和32技能不均需保留。"
+    },
+    "discussion_limits": {
+      "pages": [
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "observation": "LLM更正向却可能目标失败；人类合作子能力也被模型超越；局限给12h/$40/tree、四月成本、中文源翻译与分布不均。",
+      "editorial_advice": "明确发现价值并以具体构建成本/语言来源解释范围，少写空泛防御。",
+      "applicability_boundary": "prosocialprefer≠普遍SI低，真实行动/文化背景未完全覆盖。"
+    },
+    "paragraph_language": {
+      "pages": [
+        5,
+        6,
+        7,
+        8
+      ],
+      "observation": "发现加粗主题句，先总体→行为→representation，段内FirstSecond结构；结果直陈。",
+      "editorial_advice": "先说主要差异并用表证据落地；原因未隔离才限定解释。",
+      "applicability_boundary": "revealsbrainlikefunctionalpartitions和MCQeffectivelyreflectgeneration过强，不能照搬。"
+    },
+    "main_appendix": {
+      "pages": [
+        1,
+        3,
+        4,
+        6,
+        7,
+        8,
+        14,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        55
+      ],
+      "observation": "正文任务/构建/主表/行为与表征；附录完整taxonomy、模板、额外模型、all32abilitytable、神经对照、全部32实例。",
+      "editorial_advice": "正文保留可解释设计与核心证据，附录提供完整实例而非只选成功例。",
+      "applicability_boundary": "55页中科学附录不能当参考文献跳过；录用布局不等当前投稿规则。"
+    },
+    "actionable": {
+      "pages": [
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "observation": "社会目标选择、能力选择、人类比较和表征诊断是不同观察层级。",
+      "editorial_advice": "原创例：SocialEval evaluates goal achievement and interpersonal-ability selection in scripted social worlds. The tested models score below the reported human average overall, while behavioral analyses identify a preference for positive responses, including responses that lead to unsuccessful scripted endings.",
+      "applicability_boundary": "保留总体overall与脚本条件即可直接陈述，不能把brainanalogy写实证神经同源。"
+    }
+  },
+  "counterexamples": [
+    {
+      "pages": [
+        5,
+        6
+      ],
+      "finding": "GAE Human61.84vsR147.11 gap14.73百分点即23.82%relative；en55.16vs47.04gap8.12,14.72%relative，而文17.2不直接对应最佳R145.68，需核准所选baseline。IAEzhClaude77.57vsR177.62差.05，enR175.44低o175.49，文R1全面超越不成立。",
+      "scope": "整体未达到人类平均成立；精确差异与排名用表数据，不凭四舍五入强化。"
+    },
+    {
+      "pages": [
+        4,
+        5,
+        6,
+        7,
+        23
+      ],
+      "finding": "人类每人14/160样本而模型153/2493，采样/聚合可比性需说明；positivebehavior主图只取人成功/模型失败且唯一成功ending/不同极性的条件子集。生成prompt提供32能力与参考长度，selectionratio~.8条件在相似选项存在，仅.67/.60样本有相似选项。",
+      "scope": "可报告有限一致性验证，不认证MCQ与自由交互全面等价"
+    },
+    {
+      "pages": [
+        7,
+        8,
+        14,
+        15,
+        16,
+        18,
+        19,
+        20,
+        21
+      ],
+      "finding": "tSNE只8B/70B与问题+正确答案，Wanda分块top权重setdifference构造互异区域，不提供消融/损伤恢复；attentionhuman是两人标关键词交集不是眼动，同模型attention非同测量。Eq5对单hT写L2norm标量而称逐神经权重，阈值/层细节不足。",
+      "scope": "保留可视分布探查，功能因果及脑相似类比不能实证认证"
+    },
+    {
+      "pages": [
+        3,
+        14,
+        27,
+        32,
+        45,
+        50,
+        51,
+        55
+      ],
+      "finding": "Table5caption误排除(0,-1)却收Induction，应与正文(-1,0)核对；命名Aisha/Elsa等不一；p50问题称party最佳搜集身份信息，红B却放弃探索，存在构念/答案歧义；p45伦理与角色自利goal分离；p51abstractmetaphysics并不直接等一般抽象推理。",
+      "scope": "研究级样本边界与任务对齐问题，非自动否定整资源；写作档案不学习这些错配。"
+    }
+  ],
+  "visual_review": {
+    "pages": [
+      1,
+      5,
+      6,
+      7,
+      8,
+      14,
+      15,
+      16,
+      18,
+      19,
+      20,
+      21,
+      22,
+      24,
+      32,
+      45,
+      50,
+      55
+    ],
+    "figures": "All18figures viewed; allscientificresulttables; selectedredanswerexamplepages24,32,45,50,55. All32exampletexts24-55read, notall32visualrendered.",
+    "reviewer": "acl_finish_c"
+  },
+  "official_requirements": {
+    "source": "current ACL/ARR maintained separately",
+    "observed_layout_not_current_rule": true
+  },
+  "holdout_validation": null,
+  "review_limitations": "All55PDFpages includingevery32example/A-E read; all18scientificfigures visuallychecked. No model/humanrerun, causalneuronvalidation or psychometriccertification."
+}

@@ -1,0 +1,314 @@
+{
+  "id": "acl-2025.acl-long.857",
+  "anthology_id": "2025.acl-long.857",
+  "venue": "acl",
+  "year": 2025,
+  "track": "main conference research",
+  "length_type": "long",
+  "title": "Agent-RewardBench: Towards a Unified Benchmark for Reward Modeling across Perception, Planning, and Safety in Real-World Multimodal Agents",
+  "authors": [
+    "Tianyi Men",
+    "Zhuoran Jin",
+    "Pengfei Cao",
+    "Yubo Chen",
+    "Kang Liu",
+    "Jun Zhao"
+  ],
+  "first_author": "Tianyi Men",
+  "landing_url": "https://aclanthology.org/2025.acl-long.857/",
+  "pdf_url": "https://aclanthology.org/2025.acl-long.857.pdf",
+  "doi": "10.18653/v1/2025.acl-long.857",
+  "official_listing_url": "https://aclanthology.org/volumes/2025.acl-long/",
+  "sampling_stratum": "data_resources",
+  "paper_type": "multimodal step-level reward evaluation resource with downstream validation",
+  "anthology_pdf_revision_hash": "c02fd1ee",
+  "metadata_revisions": [],
+  "official_attachments": [],
+  "sort_hash": "046643ff958212e086cfe13ff7d04cf965267f2f9e87f1ffcc8358cefb008d5a",
+  "split": "induction",
+  "semantic_review_status": "complete_writing_focused_full_text_review",
+  "full_text_and_relevant_appendix_review_complete": true,
+  "download_status": "acquired",
+  "parse_status": "full_text_extracted_not_yet_reviewed",
+  "pdf_path": ".claude/skills/paper-writing-shared/tmp/corpus/acl/pdf/2025.acl-long.857.pdf",
+  "pdf_sha256": "7b8afc48e8afddc5c993c9c0b118ac2f1374e27363a075307832a008182dab8c",
+  "markdown_path": ".claude/skills/paper-writing-shared/tmp/corpus/acl/markdown/2025.acl-long.857.md",
+  "markdown_sha256": "966c99cf1896ba78538be4b88496e3aed377b3e89c7227da7b8cf6f76d82eb70",
+  "page_count": 21,
+  "acquired_date": "2026-10-28",
+  "recovery": "HTTP byte ranges; validatedsizePDFheaderandpdfinfo; per-pagepdftotext",
+  "prior_acquisition_error": "curl: (28) Operation timed out after 90006 milliseconds with 1015808 out of 4695813 bytes received\ncurl: (28) Operation timed out after 90003 milliseconds with 507904 out of 4695813 bytes received",
+  "review_date": "2026-10-29",
+  "reviewer": "acl_finish_c",
+  "full_text_style_review_complete": true,
+  "external_appendix_review_complete": true,
+  "count_eligible_full_text_and_relevant_appendix": true,
+  "coverage": [
+    {
+      "source": "canonical official PDF",
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21
+      ],
+      "main_science": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "limitations_ethics": [
+        9
+      ],
+      "references": [
+        9,
+        10,
+        11
+      ],
+      "scientific_appendix": {
+        "A models": [
+          12
+        ],
+        "B libraries": [
+          12
+        ],
+        "C generationprompt": [
+          12
+        ],
+        "D judgingprompt": [
+          12
+        ],
+        "E all7scenarioexamples": [
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "F manualplatform": [
+          21
+        ]
+      }
+    }
+  ],
+  "version_audit": {
+    "canonical_url": "https://aclanthology.org/2025.acl-long.857.pdf",
+    "xml_revision_entries": []
+  },
+  "supplement_audit": {
+    "method": "locked official metadata, attachments empty; included A-F all read",
+    "official_xml_attachments": [],
+    "separate_scientific_appendix_link_found": false,
+    "code_executed": false
+  },
+  "ten_dimensions": {
+    "reader_argument": {
+      "pages": [
+        1,
+        2,
+        3
+      ],
+      "observation": "从SFT难自纠错与reward训练/search用途引出选择rewardmodel的评测需求。",
+      "editorial_advice": "先说明资源将支持哪项决策，再定义测什么。",
+      "applicability_boundary": "训练和搜索动机不是本稿训练效果实证。"
+    },
+    "title_abstract": {
+      "pages": [
+        1
+      ],
+      "observation": "任务对象、三维度七场景、step-level和质量/难度过滤集中摘要。",
+      "editorial_advice": "资源摘要用设计特色接主要模型发现，数字只选有助判断者。",
+      "applicability_boundary": "realworld包括模拟环境与筛选样本，不代表自然部署分布。"
+    },
+    "introduction": {
+      "pages": [
+        2,
+        3
+      ],
+      "observation": "三个设计原则逐条对应资源特征，随后数值结论与三贡献。",
+      "editorial_advice": "原则与实现建立对应，使后文构建步骤有理由。",
+      "applicability_boundary": "三条非固定模板；first需独立查重才能写自己稿。"
+    },
+    "related_work": {
+      "pages": [
+        3
+      ],
+      "observation": "agentmethods/tasks/rewardbenchmarks三族围绕评测空缺比较。",
+      "editorial_advice": "按与本文任务关系组织邻近工作而非逐篇罗列。",
+      "applicability_boundary": "不能从benchmark空缺推所有agent无反馈。"
+    },
+    "method_theory": {
+      "pages": [
+        4,
+        5,
+        12
+      ],
+      "observation": "来源→响应生成→正确错误配对→小模型难度→三研究生人工过滤；无定理。",
+      "editorial_advice": "资源方法按数据流写，并给筛选前后量、标注对象和评测单位。",
+      "applicability_boundary": "1443原任务/10pairs与1136最终entries的单位需澄清；无一致性统计不能补造。"
+    },
+    "evidence": {
+      "pages": [
+        5,
+        6,
+        7,
+        8,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21
+      ],
+      "observation": "按三维度等权平均主表，交换顺序两次、温度0；五rewardmodel/100VWA任务下游关联；难度迁移与50例错误型。",
+      "editorial_advice": "除排行榜，还检验资源难度及下游用途，分维度报告防止总分掩盖。",
+      "applicability_boundary": "Pearson.981,p.003是五模型关联；不等于跨环境因果。"
+    },
+    "discussion_limits": {
+      "pages": [
+        7,
+        8,
+        9
+      ],
+      "observation": "较强模型不保证安全reward分数，结果组织为结论；局限单段来源污染与标签继承。",
+      "editorial_advice": "实测不足本身可为主要发现，局限集中真正影响解释的来源范围。",
+      "applicability_boundary": "lacktargettraining作为原因未隔离；无需对每模型分数加保守套话。"
+    },
+    "paragraph_language": {
+      "pages": [
+        3,
+        6,
+        7,
+        8
+      ],
+      "observation": "四个加粗观察标题后给具体分数，结论回收资源与用途。",
+      "editorial_advice": "每结果段以发现开头，随后比较并解释，保持语气与证据对象一致。",
+      "applicability_boundary": "blackbox统一优于openweight被Phi安全51.9等反例约束。"
+    },
+    "main_appendix": {
+      "pages": [
+        1,
+        2,
+        4,
+        5,
+        6,
+        7,
+        8,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21
+      ],
+      "observation": "正文构建/主表/三分析，附录模型表、完整模板、所有场景图例、人工平台。",
+      "editorial_advice": "正文留定义及判分，附录给可复核实例和工具界面。",
+      "applicability_boundary": "录用八页正文非当前模板限页；仅图例不构成完整可复现协议。"
+    },
+    "actionable": {
+      "pages": [
+        6,
+        7,
+        8
+      ],
+      "observation": "能力排序和安全排序不同、资源分数与搜索成绩同向。",
+      "editorial_advice": "原创例：Agent-RewardBench separates perception, planning, and safety, revealing that strong planning scores do not ensure strong safety judgments. Across five tested reward models, benchmark accuracy correlates with search performance on the sampled VisualWebArena tasks.",
+      "applicability_boundary": "不写保证训练成功或已证实际部署安全。"
+    }
+  },
+  "counterexamples": [
+    {
+      "pages": [
+        5,
+        8
+      ],
+      "finding": "difficulty定义p5较难pair低accuracy；p8文字easy低分hard高分反向，Fig6easy表现高于hard；须按实规则核对。原始来源计数1682与称1443不同，采样配对单位需澄清。",
+      "scope": "研究审计，不替作者补造筛选阈值"
+    },
+    {
+      "pages": [
+        6,
+        7
+      ],
+      "finding": "总分三维等权非1136样本microaccuracy；Phi安全51.9高于较强模型；图5只有五模型且固定policy/100任务，无训练结果。",
+      "scope": "保留直接数值及实测下游改善，不泛化全局因果"
+    },
+    {
+      "pages": [
+        18,
+        19,
+        20
+      ],
+      "finding": "p19WebSafety问题误贴Minecraft而答案与截图网页；p18正确最终动作伴随幻觉理由，p20安全选项仍给放金属微波炉动作但追加提醒。",
+      "scope": "图例模板/评价目标需澄清；不能称全面安全或所有人工标签完美"
+    },
+    {
+      "pages": [
+        5,
+        12,
+        21
+      ],
+      "finding": "人工三AI研究生无充分agreement/分歧仲裁/成本说明；C/D与平台显示prompt细节不完全一致。",
+      "scope": "不把manualverified自动等同独立金标准一致性认证"
+    }
+  ],
+  "visual_review": {
+    "pages": [
+      2,
+      4,
+      6,
+      7,
+      8,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21
+    ],
+    "figures": "all Figs1-8, main Table2 and all multimodal example screens viewed",
+    "reviewer": "acl_finish_c"
+  },
+  "official_requirements": {
+    "source": "current ACL/ARR separately maintained",
+    "observed_layout_not_current_rule": true
+  },
+  "holdout_validation": null,
+  "review_limitations": "All21pages/A-F read, all scientific example images inspected. No environment/code/model rerun or newannotation."
+}

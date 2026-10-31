@@ -1,0 +1,34 @@
+% Synthetic evaluation fixture, not a research submission.
+\documentclass{article}
+\usepackage{microtype,graphicx,booktabs,hyperref}
+\usepackage[accepted]{icml2026}
+\usepackage{algorithm,algorithmic,amsmath,amssymb}
+\newtheorem{PWTheorem}{Theorem}
+\newcommand{\method}{StepScale}
+\newcommand{\states}{M_{\mathrm{state}}}
+\providecommand{\theHalgorithm}{\arabic{algorithm}}
+\icmltitlerunning{StepScale: Optimizer-State Storage}
+\begin{document}
+\twocolumn[
+\icmltitle{StepScale: An Optimizer-State Storage Evaluation}
+\begin{icmlauthorlist}
+\icmlauthor{Example Researcher}{example}
+\end{icmlauthorlist}
+\icmlaffiliation{example}{Synthetic Evaluation Lab, Example City, Example Country}
+\icmlcorrespondingauthor{Example Researcher}{fixture@example.org}
+\icmlkeywords{optimizer state, storage, evaluation fixture}
+\vskip 0.3in]
+\printAffiliationsAndNotice{}
+\begin{abstract}
+Optimizer state can limit the memory available for model training.
+We introduce \method{}, which shares one scale per block to reduce stored optimizer state.
+Across two tasks with matched training steps and hardware, \method{} reduces optimizer-state memory from 8 to 6 GB while matching the reported mean accuracies.
+Mean training time increases from 100 to 105 seconds.
+\end{abstract}
+\input{sections/body.tex}
+\section*{Impact Statement}
+This synthetic fixture tests writing and typesetting behavior; the values are supplied examples rather than measurements from a deployed system.
+\bibliographystyle{icml2026}\bibliography{references}
+\clearpage\appendix
+\input{sections/appendix.tex}
+\end{document}

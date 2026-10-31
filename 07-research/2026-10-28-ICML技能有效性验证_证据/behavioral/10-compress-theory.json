@@ -1,0 +1,26 @@
+{
+  "id": "10-compress-theory",
+  "skill": "paper-polishing",
+  "venue": "ICML",
+  "request": "压缩重复叙述，保留公式与条件",
+  "provided_facts": {
+    "assumption": "0<gamma<1/2 fixed",
+    "rate": "O(epsilon^(-2/(1-2gamma)))",
+    "criterion": "expected stationarity of smoothed objective, not original minimizer distance"
+  },
+  "original": "For a fixed gamma satisfying 0<gamma<1/2, the method achieves the expected stationarity criterion for the smoothed objective in O(epsilon^(-2/(1-2gamma))) iterations. It is important to note that gamma is fixed and gamma must be between zero and one half. The guarantee is on expected stationarity for the smoothed objective.",
+  "actual_primary_agent_output": "For fixed 0<gamma<1/2, the method reaches the expected stationarity criterion for the smoothed objective in O(epsilon^(-2/(1-2gamma))) iterations.",
+  "author_notes": "",
+  "manual_semantic_review": {
+    "reviewer": "same primary agent",
+    "assessment": "consistent_with_given_facts_and_requested_scope",
+    "reason": "删除重复而保留严格开区间、固定参数、同一复杂度指数及smoothed对象。不改成epsilon^-2或全局最优点距离。",
+    "criteria": [
+      "compression",
+      "rate_exact",
+      "assumptions_once",
+      "criterion_exact"
+    ]
+  },
+  "independent_model_run": false
+}

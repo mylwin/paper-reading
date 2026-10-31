@@ -1,7 +1,7 @@
 {
   "date": "2026-10-23",
   "batch": "icml-037",
-  "status": "reading",
+  "status": "registered",
   "selection": "same locked sample;processingorderonly",
   "before": {
     "updated": "2026-10-23",
@@ -168,5 +168,7 @@
   ],
   "cache": ".claude/skills/paper-writing-shared/tmp/full-review/icml-037",
   "baseline_records_sha256": "b33209f3a6180f4831be73475f8b65b52a1d775fe75b11d42b8365e402c6ec50",
-  "baseline_icml_profile_sha256": "265ccb1efa78480889ced377477a7d7d3a1c20051ffc88586f810d9fb498d4ca"
+  "baseline_icml_profile_sha256": "265ccb1efa78480889ced377477a7d7d3a1c20051ffc88586f810d9fb498d4ca",
+  "completion_date": "2026-10-28",
+  "after_full": 59
 }

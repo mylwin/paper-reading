@@ -1,0 +1,870 @@
+{
+  "date": "2026-10-28",
+  "status": "full_text_holdout_applicability_complete",
+  "completed": 10,
+  "target": 10,
+  "induction_frozen": 40,
+  "qualification": "same-reviewer semantic applicability,notindependentmodelbenchmark;runtimecontentfrozenuntil10complete",
+  "reviews": [
+    {
+      "id": "icml-2024-f7c67196",
+      "year": 2024,
+      "title": "Automated Statistical Model Discovery with Language Models",
+      "record": "07-research/2026-10-10-顶会顶刊写作风格调研_证据/corpus/icml/semantic-reviews/icml-2024-f7c67196.json",
+      "validation": {
+        "freeze_manifest": "07-research/2026-10-28-ICML技能有效性验证_证据/induction-freeze/freeze-manifest.json",
+        "freeze_manifest_sha256": "e5ec6a6ab1fa45b5fca1bb87cc82a52e7e6ace591dac06ffded5a8bf68e61692",
+        "dimensions": {
+          "reader_argument": {
+            "rating": "applicable",
+            "positions": [
+              "pp1–3"
+            ],
+            "reason": "问题/对象/贡献先清楚、必要专业背景按需交代这一规则适用。"
+          },
+          "title_abstract": {
+            "rating": "applicable_with_scope",
+            "positions": [
+              "p1"
+            ],
+            "reason": "数值不是必需，探索性promise符合小规模证据；不应为直接性强改成普遍已证能力。"
+          },
+          "introduction": {
+            "rating": "applicable_with_scope",
+            "positions": [
+              "pp1–3"
+            ],
+            "reason": "冻结规则允许列表数量/形式服务论证，故不强加三贡献或理论问答结构。"
+          },
+          "related_work": {
+            "rating": "applicable",
+            "positions": [
+              "pp1–4"
+            ],
+            "reason": "按读者需要定位最近工作适用；不要增加空洞RelatedWork节。"
+          },
+          "method_theory": {
+            "rating": "applicable_with_scope",
+            "positions": [
+              "pp2–4/13–17"
+            ],
+            "reason": "输入输出/机制/新意规则适用，定理与证明建议在此不适用，不要求补理论。"
+          },
+          "evidence": {
+            "rating": "applicable",
+            "positions": [
+              "pp5–9/13–17"
+            ],
+            "reason": "一组实验一问题适用；定量可与程序片段/定性解释共同支撑价值。"
+          },
+          "discussion_limits": {
+            "rating": "applicable",
+            "positions": [
+              "p9/15"
+            ],
+            "reason": "集中重要限制适用，不要求每结果段重复小样本和潜在泄漏。"
+          },
+          "paragraph_language": {
+            "rating": "applicable_with_scope",
+            "positions": [
+              "pp4–9"
+            ],
+            "reason": "已测结果直接、假说适度保留；promise/suggest是证据匹配而非待删除词，原稿语气不统一加强。"
+          },
+          "main_appendix": {
+            "rating": "applicable",
+            "positions": [
+              "pp1–17"
+            ],
+            "reason": "主文判断贡献、附录设置/扩展核对路径适用；无需理论稿式长证明。"
+          },
+          "actionable": {
+            "rating": "applicable",
+            "positions": [
+              "pp1–9/13–17"
+            ],
+            "reason": "原创示例：BoxLM alternates between proposing probabilistic programs and critiquing their fit. Experiments in three modeling settings show that language-guided search can recover competitive models and produce interpretable extensions of established dynamics."
+          }
+        },
+        "counterexample_to_universal_structure": "no contribution bullets, no independentrelatedwork, no convergence theorem, no numericabstract; optionalfrozenruleshandlethis",
+        "proposed_revision": "No normative rule change from firstholdout. In behavioraltestincludeexploratoryevidencecase:removeunnecessaryhedgesbutpreserveevidence-matchedpromise.",
+        "reviewer": "same primary agent; no independentjudge",
+        "runtime_rules_changed_during_holdout": false
+      }
+    },
+    {
+      "id": "icml-2024-eecff206",
+      "year": 2024,
+      "title": "Model-Free Robust $φ$-Divergence Reinforcement Learning Using Both Offline and Online Data",
+      "record": "07-research/2026-10-10-顶会顶刊写作风格调研_证据/corpus/icml/semantic-reviews/icml-2024-eecff206.json",
+      "validation": {
+        "freeze_manifest": "07-research/2026-10-28-ICML技能有效性验证_证据/induction-freeze/freeze-manifest.json",
+        "freeze_manifest_sha256": "e5ec6a6ab1fa45b5fca1bb87cc82a52e7e6ace591dac06ffded5a8bf68e61692",
+        "dimensions": {
+          "reader_argument": {
+            "rating": "applicable",
+            "positions": [
+              "pp1–3"
+            ],
+            "reason": "先交代对象与现有障碍，读者需要的DRO背景在各设置中定义。"
+          },
+          "title_abstract": {
+            "rating": "applicable_with_scope",
+            "positions": [
+              "p1"
+            ],
+            "reason": "理论稿可用保证范围而非实验收益建立价值；无须给摘要编造benchmark或数值。"
+          },
+          "introduction": {
+            "rating": "applicable",
+            "positions": [
+              "pp1–3"
+            ],
+            "reason": "依研究问题组织贡献，列表是可选工具。"
+          },
+          "related_work": {
+            "rating": "applicable",
+            "positions": [
+              "pp2–3/14–17"
+            ],
+            "reason": "主文给可判断差异，附录补深入定位；比较需保持覆盖/精度/模型假设一致。"
+          },
+          "method_theory": {
+            "rating": "applicable",
+            "positions": [
+              "pp3–9/17–40"
+            ],
+            "reason": "先说明计算机制与关键新意；全条件放假设和定理，摘要保留改变意义的offline一般φ/hybrid TV范围。"
+          },
+          "evidence": {
+            "rating": "applicable_with_scope",
+            "positions": [
+              "pp3/5–9/24–40"
+            ],
+            "reason": "实验建议仅适用经验稿；理论稿的主张由条件明确的定理/证明与同口径复杂度比较支撑。"
+          },
+          "discussion_limits": {
+            "rating": "applicable",
+            "positions": [
+              "p9/15–17/33/40"
+            ],
+            "reason": "限制在影响结果适用处和讨论中交代，贡献段不反复泛称可能/有限/仍需验证。"
+          },
+          "paragraph_language": {
+            "rating": "applicable",
+            "positions": [
+              "pp4–9"
+            ],
+            "reason": "直接说完成的理论贡献，同时保留零逼近误差等决定速率的条件；避免把每条research query写入稿件。"
+          },
+          "main_appendix": {
+            "rating": "applicable",
+            "positions": [
+              "pp1–40"
+            ],
+            "reason": "主文给判断贡献所需算法、假设与主界，附录给推导与特化。"
+          },
+          "actionable": {
+            "rating": "applicable",
+            "positions": [
+              "pp1–9/33/40"
+            ],
+            "reason": "原创示例：We derive a model-free offline algorithm for regularized robust reinforcement learning through a dual Bellman formulation. For total-variation uncertainty, a hybrid variant combines offline data with online interaction and admits a single-policy coverage analysis under the stated bilinear and realizability conditions."
+          }
+        },
+        "counterexample_to_universal_structure": "theory-only: no empirical experiment, ablation, statistical error bar, or new convergence benchmark; no fixed three-contribution outline",
+        "proposed_revision": "Keep frozen conditional experiment guidance; behavior evaluation must include theory-only drafting without invented empirical sections. Keep important approximation assumptions while removing repetitive generic caveats.",
+        "reviewer": "same primary agent; no independent judge",
+        "runtime_rules_changed_during_holdout": false
+      }
+    },
+    {
+      "id": "icml-2024-352e2914",
+      "year": 2024,
+      "title": "Learning Causal Domain-Invariant Temporal Dynamics for Few-Shot Action Recognition",
+      "record": "07-research/2026-10-10-顶会顶刊写作风格调研_证据/corpus/icml/semantic-reviews/icml-2024-352e2914.json",
+      "validation": {
+        "freeze_manifest": "07-research/2026-10-28-ICML技能有效性验证_证据/induction-freeze/freeze-manifest.json",
+        "freeze_manifest_sha256": "e5ec6a6ab1fa45b5fca1bb87cc82a52e7e6ace591dac06ffded5a8bf68e61692",
+        "dimensions": {
+          "reader_argument": {
+            "rating": "applicable",
+            "positions": [
+              "pp1–3"
+            ],
+            "reason": "用具体例子解释可迁移知识，再给研究假设和机制。"
+          },
+          "title_abstract": {
+            "rating": "applicable",
+            "positions": [
+              "p1"
+            ],
+            "reason": "摘要直接说明方法；核心建模假设影响方法含义，应保留一次，不额外叠加通用免责声明。"
+          },
+          "introduction": {
+            "rating": "applicable",
+            "positions": [
+              "pp1–2"
+            ],
+            "reason": "贡献数量服务论证；两条可成立，不强加第三条。"
+          },
+          "related_work": {
+            "rating": "applicable",
+            "positions": [
+              "pp2–3"
+            ],
+            "reason": "按问题和关键区别组织近邻。"
+          },
+          "method_theory": {
+            "rating": "applicable_with_scope",
+            "positions": [
+              "pp3–5/13/16"
+            ],
+            "reason": "先总览再模块及优化过程；没有新因果可识别性/泛化定理，不要求凭空加理论。"
+          },
+          "evidence": {
+            "rating": "applicable",
+            "positions": [
+              "pp5–9/14–16"
+            ],
+            "reason": "主结果/机制诊断/反例各有位置；参数更新量是效率证据而非已测训练墙钟；视觉一致性不等于因果可识别性证明。"
+          },
+          "discussion_limits": {
+            "rating": "applicable",
+            "positions": [
+              "pp8–9/14"
+            ],
+            "reason": "结果局部指出异常，重要理论缺口集中解释；无需每段重复没有理论保证。"
+          },
+          "paragraph_language": {
+            "rating": "applicable",
+            "positions": [
+              "pp6–9"
+            ],
+            "reason": "直接报告已测提升，对假说用支持/一致而非确认所有域不变；不把所有主动动词换成可能。"
+          },
+          "main_appendix": {
+            "rating": "applicable",
+            "positions": [
+              "pp1–16"
+            ],
+            "reason": "主文保留决策依据，附录给补充设置与支持。"
+          },
+          "actionable": {
+            "rating": "applicable",
+            "positions": [
+              "pp1–9/13–16"
+            ],
+            "reason": "原创示例：CDTD adapts the image encoder and domain estimator while keeping the learned dynamics modules fixed. On Sth-Else, this strategy improves five-shot accuracy from 44.9% to 48.5% with the matched NCE setup. The ablations support the benefit of selective adaptation."
+          }
+        },
+        "counterexample_to_universal_structure": "Empirical paper with two contributions and explanatory causal model/likelihood derivation, no new identifiability theorem; abstract includes central assumptions and no numeric result. Accepted prose can contain numerical/caption errors and is not an authority to copy them.",
+        "proposed_revision": "No frozen rule change. Add behavioral test for empirical mechanism evidence: retain direct observed gains, express empirical support for an unproved causal explanation, resolve table/prose conflicts in author notes rather than invent a value or insert repeated caveats.",
+        "reviewer": "same primary agent; no independent judge",
+        "runtime_rules_changed_during_holdout": false
+      }
+    },
+    {
+      "id": "icml-2024-59310425",
+      "year": 2024,
+      "title": "Preference Optimization for Molecule Synthesis with Conditional Residual Energy-based Models",
+      "record": "07-research/2026-10-10-顶会顶刊写作风格调研_证据/corpus/icml/semantic-reviews/icml-2024-59310425.json",
+      "validation": {
+        "freeze_manifest": "07-research/2026-10-28-ICML技能有效性验证_证据/induction-freeze/freeze-manifest.json",
+        "freeze_manifest_sha256": "e5ec6a6ab1fa45b5fca1bb87cc82a52e7e6ace591dac06ffded5a8bf68e61692",
+        "dimensions": {
+          "reader_argument": {
+            "rating": "applicable",
+            "positions": [
+              "pp1–3"
+            ],
+            "reason": "必要术语给定义或示意图，非本领域读者仍可判断任务与价值。"
+          },
+          "title_abstract": {
+            "rating": "applicable",
+            "positions": [
+              "p1"
+            ],
+            "reason": "结果直接陈述，但本实验2.5为百分点且是exact starting-material match，范围随指标说明。"
+          },
+          "introduction": {
+            "rating": "applicable",
+            "positions": [
+              "pp1–3"
+            ],
+            "reason": "可通过一条主问题串联多贡献；贡献数量和跨节形式不是统一要求。"
+          },
+          "related_work": {
+            "rating": "applicable",
+            "positions": [
+              "pp9/15–16"
+            ],
+            "reason": "related work可置方法之后；主文保留差异判断，扩展综述进入附录。"
+          },
+          "method_theory": {
+            "rating": "applicable_with_scope",
+            "positions": [
+              "pp3–7"
+            ],
+            "reason": "把概念视角、实现和适用候选空间讲清；不为统一结构制造收敛定理或新实验。"
+          },
+          "evidence": {
+            "rating": "applicable",
+            "positions": [
+              "pp7–9/16–17"
+            ],
+            "reason": "将性能、长路线、残差项作用各配证据；wet-lab可行性与dataset exact match区分一次即可。"
+          },
+          "discussion_limits": {
+            "rating": "applicable_with_scope",
+            "positions": [
+              "pp6–9/17"
+            ],
+            "reason": "说明影响判断的设计选择；Q&A是此文组织选择，不把四组预防性质疑答辩复制为必需栏目。"
+          },
+          "paragraph_language": {
+            "rating": "applicable_with_scope",
+            "positions": [
+              "pp2/6–9"
+            ],
+            "reason": "保留可验证的增益与机制说明；作者主观论辩非顶会统一风格，不添加无依据更强判断也不强迫每段自我辩护。"
+          },
+          "main_appendix": {
+            "rating": "applicable",
+            "positions": [
+              "pp1–17"
+            ],
+            "reason": "主文可独立理解方法与结果，附录提供设置细节；生成示例应标明性质。"
+          },
+          "actionable": {
+            "rating": "applicable",
+            "positions": [
+              "pp5–9"
+            ],
+            "reason": "原创示例：CREBM reranks routes proposed by an existing planner using a preference-trained residual energy. With Neuralsym and Retro*-0, top-1 exact-match accuracy rises from 42.0% to 44.5%; the energy-only ablation drops to 34.1%, supporting the use of both scores."
+          }
+        },
+        "counterexample_to_universal_structure": "Four contributions including future-data inspiration; related work after experiments; optional Q&A design discussion; no theorem and no separate mandatory limitations section. These choices do not mandate defensive Q&A for new writing.",
+        "proposed_revision": "Retain frozen conditional organization. In behavioral evaluation test a direct gain plus metric-scoped interpretation; do not add unsolicited rebuttal/Q&A or multiple feasibility disclaimers.",
+        "reviewer": "same primary agent; no independent judge",
+        "runtime_rules_changed_during_holdout": false
+      }
+    },
+    {
+      "id": "icml-2024-cb55acae",
+      "year": 2024,
+      "title": "Dealing With Unbounded Gradients in Stochastic Saddle-point Optimization",
+      "record": "07-research/2026-10-10-顶会顶刊写作风格调研_证据/corpus/icml/semantic-reviews/icml-2024-cb55acae.json",
+      "validation": {
+        "freeze_manifest": "07-research/2026-10-28-ICML技能有效性验证_证据/induction-freeze/freeze-manifest.json",
+        "freeze_manifest_sha256": "e5ec6a6ab1fa45b5fca1bb87cc82a52e7e6ace591dac06ffded5a8bf68e61692",
+        "dimensions": {
+          "reader_argument": {
+            "rating": "applicable",
+            "positions": [
+              "pp1–3"
+            ],
+            "reason": "以可算的失败原因和目标界建立价值，读者无需先读完整证明。"
+          },
+          "title_abstract": {
+            "rating": "applicable_with_scope",
+            "positions": [
+              "p1"
+            ],
+            "reason": "理论范围和算法解决的问题可构成充分摘要；不强制结果数字或经验提升。"
+          },
+          "introduction": {
+            "rating": "applicable_with_scope",
+            "positions": [
+              "pp1–3"
+            ],
+            "reason": "主结论可用公式与解释前置，贡献列表可省略。"
+          },
+          "related_work": {
+            "rating": "applicable",
+            "positions": [
+              "pp2–3/9"
+            ],
+            "reason": "新意用具体设定差别说明；诚实归功不等于反复弱化自身已完成的贡献。"
+          },
+          "method_theory": {
+            "rating": "applicable",
+            "positions": [
+              "pp4–8/12–23"
+            ],
+            "reason": "先特例教学再一般化，紧跟定理解释负正则抵消对方梯度项；无须固定方法/理论独立大节。"
+          },
+          "evidence": {
+            "rating": "applicable_with_scope",
+            "positions": [
+              "pp5–9/12–23"
+            ],
+            "reason": "证据是定理/推导及复杂度口径；不要要求虚构benchmark、消融或运行时间。"
+          },
+          "discussion_limits": {
+            "rating": "applicable",
+            "positions": [
+              "pp6/8–9"
+            ],
+            "reason": "决定含义的差别在解释定理时说清，其他开放问题集中讨论，非每段附免责声明。"
+          },
+          "paragraph_language": {
+            "rating": "applicable",
+            "positions": [
+              "pp4–9"
+            ],
+            "reason": "直接写算法与已证界；避免把stabilization翻成所有轨迹必有界，亦不必每句话可能/仅限。"
+          },
+          "main_appendix": {
+            "rating": "applicable",
+            "positions": [
+              "pp1–23"
+            ],
+            "reason": "主文让读者判断新意，附录保证细节可追溯；唯一伪码可在附录。"
+          },
+          "actionable": {
+            "rating": "applicable",
+            "positions": [
+              "pp5–8"
+            ],
+            "reason": "原创示例：An initialization-centered regularizer cancels the iterate-dependent terms in the two players’ regret bounds. This yields an expected gap guarantee for averaged iterates without a prescribed projection radius, including stochastic gradients whose second moments grow with the iterates."
+          }
+        },
+        "counterexample_to_universal_structure": "No empirical section, figure, comparison table, fixed contribution list or separate conclusion; didactic special-case to general-case to theoretical application is coherent. Accepted rhetorical stabilization does not justify a stronger pathwise boundedness claim.",
+        "proposed_revision": "Frozen profile already conditional. Include theory-only behavior test for averaged-iterate versus pathwise stability and iteration-versus-query cost; preserve clear positive mechanism and avoid invented empirical validation.",
+        "reviewer": "same primary agent; no independent judge",
+        "runtime_rules_changed_during_holdout": false
+      }
+    },
+    {
+      "id": "icml-2025-bece118e",
+      "year": 2025,
+      "title": "Towards Theoretical Understanding of Sequential Decision Making with Preference Feedback",
+      "record": "07-research/2026-10-10-顶会顶刊写作风格调研_证据/corpus/icml/semantic-reviews/icml-2025-bece118e.json",
+      "validation": {
+        "freeze_manifest": "07-research/2026-10-28-ICML技能有效性验证_证据/induction-freeze/freeze-manifest.json",
+        "freeze_manifest_sha256": "e5ec6a6ab1fa45b5fca1bb87cc82a52e7e6ace591dac06ffded5a8bf68e61692",
+        "dimensions": {
+          "reader_argument": {
+            "rating": "applicable",
+            "positions": [
+              "pp1–4"
+            ],
+            "reason": "用关系图式论证串联定义，不必把每篇理论文章写成新算法benchmark稿。"
+          },
+          "title_abstract": {
+            "rating": "applicable_with_scope",
+            "positions": [
+              "p1"
+            ],
+            "reason": "结构与信息密度可随概念贡献调整；towards/promising在未完成统计学习任务的奠基工作中有意义，不按禁词删除。"
+          },
+          "introduction": {
+            "rating": "applicable",
+            "positions": [
+              "pp1–3"
+            ],
+            "reason": "问题链能引出定义/性质贡献，贡献数量无固定上限三条。"
+          },
+          "related_work": {
+            "rating": "applicable",
+            "positions": [
+              "pp1–2/8"
+            ],
+            "reason": "必要区别前置，完整综述后置可成立。"
+          },
+          "method_theory": {
+            "rating": "applicable",
+            "positions": [
+              "pp3–8/13–16"
+            ],
+            "reason": "定义后紧接作用、例子或可计算判据；形式推导服务读者理解，不要求额外算法伪码。"
+          },
+          "evidence": {
+            "rating": "applicable_with_scope",
+            "positions": [
+              "pp5–8/13–16"
+            ],
+            "reason": "明确输入规模：对显式trajectory set多项式可能对horizon指数；偏序dominance难是conjecture非已证NP-hard。"
+          },
+          "discussion_limits": {
+            "rating": "applicable",
+            "positions": [
+              "pp7–9"
+            ],
+            "reason": "限制与解决范围清楚，主文仍可直接说引入定义/给出构造。"
+          },
+          "paragraph_language": {
+            "rating": "applicable",
+            "positions": [
+              "pp4–8"
+            ],
+            "reason": "条件/概念说明是论证内容；减少重复空泛限制但不能把猜测加强为定理。"
+          },
+          "main_appendix": {
+            "rating": "applicable",
+            "positions": [
+              "pp1–16"
+            ],
+            "reason": "主文给结果及直觉，证明末置仍保留可追溯路径。"
+          },
+          "actionable": {
+            "rating": "applicable",
+            "positions": [
+              "pp4–8"
+            ],
+            "reason": "原创示例：We represent trajectory preferences as partial preorders, retaining both equivalence and incomparability. This formulation separates the construction of compatible utilities from the comparison of policies, and yields a cumulative-probability criterion for dominance under total orders."
+          }
+        },
+        "counterexample_to_universal_structure": "Long four-part abstract, four contributions, no experiment/pseudocode, one conceptual illustration, related work late; foundational and tentative future relevance can be precise rather than defensive.",
+        "proposed_revision": "Keep conditional frozen profile. Add behavior case distinguishing conjecture from proved complexity and explicit trajectory-size complexity from horizon complexity. Do not strengthen Towards/potential automatically merely to reduce hedges.",
+        "reviewer": "same primary agent; no independent judge",
+        "runtime_rules_changed_during_holdout": false
+      }
+    },
+    {
+      "id": "icml-2025-72cb7861",
+      "year": 2025,
+      "title": "The Impact of On-Policy Parallelized Data Collection on Deep Reinforcement Learning Networks",
+      "record": "07-research/2026-10-10-顶会顶刊写作风格调研_证据/corpus/icml/semantic-reviews/icml-2025-72cb7861.json",
+      "validation": {
+        "freeze_manifest": "07-research/2026-10-28-ICML技能有效性验证_证据/induction-freeze/freeze-manifest.json",
+        "freeze_manifest_sha256": "e5ec6a6ab1fa45b5fca1bb87cc82a52e7e6ace591dac06ffded5a8bf68e61692",
+        "dimensions": {
+          "reader_argument": {
+            "rating": "applicable",
+            "positions": [
+              "pp1–3"
+            ],
+            "reason": "经验分析贡献可以是认识与建议，不必伪造一个新算法。"
+          },
+          "title_abstract": {
+            "rating": "applicable_with_scope",
+            "positions": [
+              "p1"
+            ],
+            "reason": "直接说分析所得发现，标题/摘要不需算法缩写或必胜数字。"
+          },
+          "introduction": {
+            "rating": "applicable",
+            "positions": [
+              "pp1–2"
+            ],
+            "reason": "贡献可写成结果和解释段，不强制三点列表。"
+          },
+          "related_work": {
+            "rating": "applicable",
+            "positions": [
+              "p2"
+            ],
+            "reason": "围绕实验变量和已有争议组织工作。"
+          },
+          "method_theory": {
+            "rating": "applicable_with_scope",
+            "positions": [
+              "pp2–4/14–16"
+            ],
+            "reason": "分析论文应交代干预/控制变量/指标定义，技术方法可以是研究设计。"
+          },
+          "evidence": {
+            "rating": "applicable",
+            "positions": [
+              "pp3–9/14–22"
+            ],
+            "reason": "每轮实验回答一个问题，先性能再机制再适用范围；条件一致的趋势可直接说，proxy机制解释用关联语气。"
+          },
+          "discussion_limits": {
+            "rating": "applicable",
+            "positions": [
+              "pp8–9"
+            ],
+            "reason": "把例外放对应比较，集中写未解决的问题，不需在每个正向结果后重复所有限制。"
+          },
+          "paragraph_language": {
+            "rating": "applicable",
+            "positions": [
+              "pp4–9"
+            ],
+            "reason": "正向takeaway可以清晰；may/suggest适合未干预机制，不机械删词，也不让框内claims超出图中一致程度。"
+          },
+          "main_appendix": {
+            "rating": "applicable",
+            "positions": [
+              "pp1–22"
+            ],
+            "reason": "主文压缩为关键趋势与代表图，同时明确完整数据在哪。"
+          },
+          "actionable": {
+            "rating": "applicable",
+            "positions": [
+              "pp3–9/17–22"
+            ],
+            "reason": "原创示例：At a fixed interaction budget, reallocating PPO’s collection batch from longer rollouts to more parallel environments improves the aggregate Atari score. The learning-dynamics measurements associate this gain with richer representations and lower weight norms; PQN shows smaller gains under the tested settings."
+          }
+        },
+        "counterexample_to_universal_structure": "Empirical understanding paper, no new algorithm/theorem/contribution list, result-first analyses plus boxed takeaways. No separate limitations section; PQN exception handled locally, future directions concentrated.",
+        "proposed_revision": "Frozen rules accommodate this case. Behavior tests should accept analysis-only contributions and direct main findings with a single local exception; avoid invented algorithms, blanket causal claims, mandatory Q&A or repeated caution paragraphs.",
+        "reviewer": "same primary agent; no independent judge",
+        "runtime_rules_changed_during_holdout": false
+      }
+    },
+    {
+      "id": "icml-2025-faa9d83f",
+      "year": 2025,
+      "title": "Optimal Fair Learning Robust to Adversarial Distribution Shift",
+      "record": "07-research/2026-10-10-顶会顶刊写作风格调研_证据/corpus/icml/semantic-reviews/icml-2025-faa9d83f.json",
+      "validation": {
+        "freeze_manifest": "07-research/2026-10-28-ICML技能有效性验证_证据/induction-freeze/freeze-manifest.json",
+        "freeze_manifest_sha256": "e5ec6a6ab1fa45b5fca1bb87cc82a52e7e6ace591dac06ffded5a8bf68e61692",
+        "dimensions": {
+          "reader_argument": {
+            "rating": "applicable",
+            "positions": [
+              "pp1–3"
+            ],
+            "reason": "实际动机连接形式问题，勿把应用动机当作已运行任务或经验效果。"
+          },
+          "title_abstract": {
+            "rating": "applicable",
+            "positions": [
+              "p1"
+            ],
+            "reason": "可以直接说明理论发现，无需引入未测数值收益。"
+          },
+          "introduction": {
+            "rating": "applicable",
+            "positions": [
+              "pp1–3"
+            ],
+            "reason": "贡献与结果引用明确；按逻辑分组而非固定三贡献。"
+          },
+          "related_work": {
+            "rating": "applicable",
+            "positions": [
+              "pp1–2/9"
+            ],
+            "reason": "最接近结果的区别可集中晚置，明确比较口径。"
+          },
+          "method_theory": {
+            "rating": "applicable",
+            "positions": [
+              "pp3–9/12–18"
+            ],
+            "reason": "读者可沿反例/构造/定理理解贡献，不需另造方法节/伪码。"
+          },
+          "evidence": {
+            "rating": "applicable_with_scope",
+            "positions": [
+              "pp4–9/12–18"
+            ],
+            "reason": "数值例子与归约是理论支撑，不计入数据实验；完整证明可主文保留较长关键部分。"
+          },
+          "discussion_limits": {
+            "rating": "applicable",
+            "positions": [
+              "pp4/8–9"
+            ],
+            "reason": "关键条件在定理旁，开放方向末尾；不要用通用无风险声明替代具体impact。"
+          },
+          "paragraph_language": {
+            "rating": "applicable",
+            "positions": [
+              "pp5–9"
+            ],
+            "reason": "直接写已证鲁棒值，不把最优值稳定、固定模型公平稳定、分类器逐点稳定混淆；具体条件说一次即可。"
+          },
+          "main_appendix": {
+            "rating": "applicable",
+            "positions": [
+              "pp1–18"
+            ],
+            "reason": "关键证明可占正文，不强制所有证明移附录；类比扩展末置并说明。"
+          },
+          "actionable": {
+            "rating": "applicable",
+            "positions": [
+              "pp4–9"
+            ],
+            "reason": "原创示例：Randomization restores local robustness of the optimal demographic-parity accuracy on discrete distributions. The bound makes the role of group mass explicit, while an optimal classifier can be chosen to randomize at no more than one domain point in the two-group setting."
+          }
+        },
+        "counterexample_to_universal_structure": "Theory-only with one conceptual geometry figure and substantial main-text proof, related-work comparison inDiscussion and no separateConclusion/empirical section; a domain-specific ImpactStatement adds substance.",
+        "proposed_revision": "Keep frozen conditional guidance. Behavior cases should distinguish optimal-value robustness from classifier stability and retain group-mass dependence locally while clearly asserting the proved core contribution.",
+        "reviewer": "same primary agent; no independent judge",
+        "runtime_rules_changed_during_holdout": false
+      }
+    },
+    {
+      "id": "icml-2025-c8be7b24",
+      "year": 2025,
+      "title": "L-Diffusion: Laplace Diffusion for Efficient Pathology Image Segmentation",
+      "record": "07-research/2026-10-10-顶会顶刊写作风格调研_证据/corpus/icml/semantic-reviews/icml-2025-c8be7b24.json",
+      "validation": {
+        "freeze_manifest": "07-research/2026-10-28-ICML技能有效性验证_证据/induction-freeze/freeze-manifest.json",
+        "freeze_manifest_sha256": "e5ec6a6ab1fa45b5fca1bb87cc82a52e7e6ace591dac06ffded5a8bf68e61692",
+        "dimensions": {
+          "reader_argument": {
+            "rating": "applicable",
+            "positions": [
+              "pp1–4"
+            ],
+            "reason": "从任务困难解释模型选择和新表示，别用通用宏大背景代替具体作用。"
+          },
+          "title_abstract": {
+            "rating": "applicable_with_scope",
+            "positions": [
+              "p1"
+            ],
+            "reason": "可给代表性指标，避免堆八个最大值遮蔽主要贡献；用可核实数值替代remarkable/harmonious等宣传词。"
+          },
+          "introduction": {
+            "rating": "applicable",
+            "positions": [
+              "pp1–2"
+            ],
+            "reason": "机制路线可形成贡献叙事，无须固定三贡献或先理论后实验模板。"
+          },
+          "related_work": {
+            "rating": "applicable",
+            "positions": [
+              "pp8–9"
+            ],
+            "reason": "按所需技术来源定位，相关工作位置可灵活。"
+          },
+          "method_theory": {
+            "rating": "applicable_with_scope",
+            "positions": [
+              "pp2–4/13–15"
+            ],
+            "reason": "区分分布选择的动机、已实现流程与证明；数学推导不自动等于严格性能定理。"
+          },
+          "evidence": {
+            "rating": "applicable",
+            "positions": [
+              "pp5–8/15–20"
+            ],
+            "reason": "结果/消融/外域扩展各回答问题；主指标收益直接报告，标注与计算效率分别用对应证据。"
+          },
+          "discussion_limits": {
+            "rating": "applicable_with_scope",
+            "positions": [
+              "pp6/9"
+            ],
+            "reason": "未做临床验证只在相关声明/适用范围说明，不在每个分割收益后重复；此领域声明不强加所有ICML论文。"
+          },
+          "paragraph_language": {
+            "rating": "applicable_with_scope",
+            "positions": [
+              "pp1–9"
+            ],
+            "reason": "保留直接有据的动作和结果，改掉空泛自夸；不能把过度宣传当会议惯例，也不能反向弱化所有结果。"
+          },
+          "main_appendix": {
+            "rating": "applicable",
+            "positions": [
+              "pp1–20"
+            ],
+            "reason": "主文展示核心流程与主结果，附录收纳完整可视化和类别说明。"
+          },
+          "actionable": {
+            "rating": "applicable",
+            "positions": [
+              "pp4–8"
+            ],
+            "reason": "原创示例：L-Diffusion constructs pixel descriptors from intermediate diffusion maps and trains them with a contrastive objective before segmentation. On PUMA tissue segmentation, it reports a DICE score of 92.11%, compared with 84.95% for the strongest listed baseline."
+          }
+        },
+        "counterexample_to_universal_structure": "Single contribution paragraph; mathematical motivation without formal theorem; extensive image evidence; optional task-specific ethical/clinical statement. Published enthusiastic rhetoric and apparent calculation errors are counterexamples to copying accepted prose indiscriminately.",
+        "proposed_revision": "Frozen rules already support fact-preserving directness. Add behavior test for a clean metric-scoped result without hype, plus a conflicting-number case that sends the query to author notes and does not silently choose or invent a corrected experiment.",
+        "reviewer": "same primary agent; no independent judge",
+        "runtime_rules_changed_during_holdout": false
+      }
+    },
+    {
+      "id": "icml-2025-1ca14a2c",
+      "year": 2025,
+      "title": "Global Optimization with a Power-Transformed Objective and Gaussian Smoothing",
+      "record": "07-research/2026-10-10-顶会顶刊写作风格调研_证据/corpus/icml/semantic-reviews/icml-2025-1ca14a2c.json",
+      "validation": {
+        "freeze_manifest": "07-research/2026-10-28-ICML技能有效性验证_证据/induction-freeze/freeze-manifest.json",
+        "freeze_manifest_sha256": "e5ec6a6ab1fa45b5fca1bb87cc82a52e7e6ace591dac06ffded5a8bf68e61692",
+        "dimensions": {
+          "reader_argument": {
+            "rating": "applicable",
+            "positions": [
+              "pp1–4"
+            ],
+            "reason": "目标、旧方法障碍和新机制先清楚，复杂证明不应遮蔽核心想法。"
+          },
+          "title_abstract": {
+            "rating": "applicable",
+            "positions": [
+              "p1"
+            ],
+            "reason": "复杂度摘要必须与正文保证量及条件对应；不能仅用mild条件掩盖关键设定或以免责声明替代准确结论。"
+          },
+          "introduction": {
+            "rating": "applicable",
+            "positions": [
+              "pp1–3"
+            ],
+            "reason": "可以独立Contribution+RoadMap，但数量/位置可选，最近工作比较需同口径。"
+          },
+          "related_work": {
+            "rating": "applicable",
+            "positions": [
+              "pp2–3/22–26"
+            ],
+            "reason": "对已有相似机制承认联系，再说本设置差异；不要把未经外部核验的first当写作规范。"
+          },
+          "method_theory": {
+            "rating": "applicable",
+            "positions": [
+              "pp3–6/12–22"
+            ],
+            "reason": "理论预览和lemma依赖路标有助理解，算法实践变体与证明对象须分清。"
+          },
+          "evidence": {
+            "rating": "applicable",
+            "positions": [
+              "pp6–9/23–28"
+            ],
+            "reason": "一组实验一问题并报告比较例外；迭代、查询、墙钟和成功条件指标不可混用。"
+          },
+          "discussion_limits": {
+            "rating": "applicable",
+            "positions": [
+              "p9/24–26"
+            ],
+            "reason": "具体tradeoff放结果总结/调参节，无需每段反复提醒未普适最优。"
+          },
+          "paragraph_language": {
+            "rating": "applicable",
+            "positions": [
+              "pp3–9"
+            ],
+            "reason": "直接陈述方法和实测优点，严格区分渐近/近似复杂度与有限精度保证、观察与理论。"
+          },
+          "main_appendix": {
+            "rating": "applicable",
+            "positions": [
+              "pp1–28"
+            ],
+            "reason": "主文有理论预览和核心界，附录保留完整依赖和参数选择信息。"
+          },
+          "actionable": {
+            "rating": "applicable",
+            "positions": [
+              "pp3–9"
+            ],
+            "reason": "原创示例：GS-PowerOpt applies a power transformation before Gaussian smoothing, increasing the relative weight of high-value regions. The analysis characterizes the surrogate’s stationary points, while experiments compare the resulting updates on benchmark functions and targeted image-attack tasks."
+          }
+        },
+        "counterexample_to_universal_structure": "Four contributions plus RoadMap, earlytheorem before theorysection, separate complexitynormalization and hyperparameterguidance, mixedtheory/experiments; no mandatorylimitations heading. Direct published global-complexity rhetoric still requires careful guarantee matching.",
+        "proposed_revision": "Frozen conditional rules survive this final holdout. Behavior test should keep a direct algorithmic contribution but not strengthen stationarity into global-distance convergence, and preserve a local empirical loss/tradeoff without blanket defensive writing.",
+        "reviewer": "same primary agent; no independent judge",
+        "runtime_rules_changed_during_holdout": false
+      }
+    }
+  ]
+}

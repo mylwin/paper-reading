@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "required_before_reading": "40 induction full reviews completed, profile distilled, immutable freeze.json saved; no holdout full review before freeze.",
+  "per_paper": "Read all main and scientific appendix pages, inspect material figures, save ordinary ten_dimensions and holdout_validation with frozen_profile_sha256 and dimensions keyed exactly as ten_dimensions.",
+  "allowed_status": [
+    "applies",
+    "conditional",
+    "not_applicable",
+    "contradicts"
+  ],
+  "dimension_schema": {
+    "status": "one allowed status",
+    "pages": "relevant PDF page integers",
+    "reason": "Evidence-based applicability or exception; not a style-quality score"
+  },
+  "interpretation": "These are conditional organizational suggestions, not obligatory checklist. A source omitting a theorem, using later related work, no fixed contributions, or including legitimate qualified inference is not a failure. Mark nonapplicability for a truly irrelevant choice, contradiction only if frozen advice would require an unsupported/worse rewrite for that evidence.",
+  "correction_timing": "Save all10 validation records against the same immutable profile before revising runtime advice. Preserve original frozen profile and all exceptions.",
+  "remaining_scope": "Read-only style assessment, no reproduction of original experiments or formal proof certification; no sample proportions generalized to conference population."
+}

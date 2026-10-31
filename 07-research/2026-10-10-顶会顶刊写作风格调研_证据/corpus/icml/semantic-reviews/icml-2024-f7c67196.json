@@ -1,0 +1,300 @@
+{
+  "id": "icml-2024-f7c67196",
+  "venue": "icml",
+  "year": 2024,
+  "split": "holdout",
+  "title": "Automated Statistical Model Discovery with Language Models",
+  "authors": "Michael Y. Li, Emily Fox, Noah Goodman",
+  "pdf_path": ".claude/skills/paper-writing-shared/tmp/corpus/icml/pdf/Automated Statistical Model Discovery with Language Models.pdf",
+  "markdown_path": ".claude/skills/paper-writing-shared/tmp/corpus/icml/markdown/Automated Statistical Model Discovery with Language Models.md",
+  "pdf_sha256": "f8cdcb4f9c862bc536415081e729e5edec91b195046657c9ce981ee1c53d6c71",
+  "review_date": "2026-10-28",
+  "paper_type": "exploratory LM-driven probabilistic model discovery framework and multi-scenario empirical evaluation",
+  "semantic_review_status": "complete_writing_focused_review",
+  "full_text_style_review_complete": true,
+  "external_appendix_review_complete": true,
+  "count_eligible_full_text_and_relevant_appendix": true,
+  "coverage": [
+    {
+      "asset": "locked official PMLR PDF",
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "sections": "Abstract/1–4/Ack/Impact/refs;A–G complete",
+      "method": "continuous17pagetext plus11originalpageimages directlyviewed;all10figures4tables1algorithm"
+    }
+  ],
+  "version_audit": {
+    "official_landing": "https://proceedings.mlr.press/v235/li24v.html",
+    "official_pdf": "https://raw.githubusercontent.com/mlresearch/v235/main/assets/li24v/li24v.pdf",
+    "version": "official proceedings PDF; exact bytes locked by SHA256",
+    "identity": "title/PMLR235/lockedSHA;PDFauthorEmilyB.FoxvsfrozenEmilyFoxretainedvariant",
+    "new_network_fetch": false
+  },
+  "supplement_audit": {
+    "status": "A–G all scientific appendices in same17pagePDF fully read",
+    "external_scientific_appendix_referenced": false,
+    "code_artifacts": "linkedcode/librariesnotexecuted;noexternalunreadscientificsupplementused"
+  },
+  "ten_dimensions": {
+    "reader_argument": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp1–3"
+      ],
+      "observation": "临床建模例子解释专家/模型师两角色与DSL限制，随后以概率程序和Box循环连接需求与方案。",
+      "editorial_advice": "问题/对象/贡献先清楚、必要专业背景按需交代这一规则适用。",
+      "applicability": "17页正文及A–G全部相关科学附录连续阅读，11原页核验全部10图/4表/1算法。基于冻结40归纳档案的首篇正式留出适用性检查，由同一审阅者完成，非独立模型评测或代码复现。",
+      "confidence": {
+        "paper_specific": "high",
+        "venue_wide": "formalholdout1/10;notfrequencyestimate"
+      }
+    },
+    "title_abstract": {
+      "category": "corpus_observation",
+      "positions": [
+        "p1"
+      ],
+      "observation": "标题任务+LM方法，无算法缩写；摘要挑战→动机→propose/critic循环→3使用情景→定性发现/前景。",
+      "editorial_advice": "数值不是必需，探索性promise符合小规模证据；不应为直接性强改成普遍已证能力。",
+      "applicability": "17页正文及A–G全部相关科学附录连续阅读，11原页核验全部10图/4表/1算法。基于冻结40归纳档案的首篇正式留出适用性检查，由同一审阅者完成，非独立模型评测或代码复现。",
+      "confidence": {
+        "paper_specific": "high",
+        "venue_wide": "formalholdout1/10;notfrequencyestimate"
+      }
+    },
+    "introduction": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp1–3"
+      ],
+      "observation": "无Contributions条目，以三能力假说、两设计需求、三个评估场景自然过渡。",
+      "editorial_advice": "冻结规则允许列表数量/形式服务论证，故不强加三贡献或理论问答结构。",
+      "applicability": "17页正文及A–G全部相关科学附录连续阅读，11原页核验全部10图/4表/1算法。基于冻结40归纳档案的首篇正式留出适用性检查，由同一审阅者完成，非独立模型评测或代码复现。",
+      "confidence": {
+        "paper_specific": "high",
+        "venue_wide": "formalholdout1/10;notfrequencyestimate"
+      }
+    },
+    "related_work": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp1–4"
+      ],
+      "observation": "DSL/AutomaticStatistician及LM工具/反馈工作嵌入动机与设计，无独立RelatedWork节。",
+      "editorial_advice": "按读者需要定位最近工作适用；不要增加空洞RelatedWork节。",
+      "applicability": "17页正文及A–G全部相关科学附录连续阅读，11原页核验全部10图/4表/1算法。基于冻结40归纳档案的首篇正式留出适用性检查，由同一审阅者完成，非独立模型评测或代码复现。",
+      "confidence": {
+        "paper_specific": "high",
+        "venue_wide": "formalholdout1/10;notfrequencyestimate"
+      }
+    },
+    "method_theory": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp2–4/13–17"
+      ],
+      "observation": "系统图、算法、三步建模/拟合/批评，数学定义程序搜索和评分，无新收敛定理；概率编程把推断交PyMC。",
+      "editorial_advice": "输入输出/机制/新意规则适用，定理与证明建议在此不适用，不要求补理论。",
+      "applicability": "17页正文及A–G全部相关科学附录连续阅读，11原页核验全部10图/4表/1算法。基于冻结40归纳档案的首篇正式留出适用性检查，由同一审阅者完成，非独立模型评测或代码复现。",
+      "confidence": {
+        "paper_specific": "high",
+        "venue_wide": "formalholdout1/10;notfrequencyestimate"
+      }
+    },
+    "evidence": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp5–9/13–17"
+      ],
+      "observation": "受限GP、开放Stan和受软约束ODE三使用场景；metadata/simulated/vision/model/stateupdate多消融；数量/图/代码解释互补。",
+      "editorial_advice": "一组实验一问题适用；定量可与程序片段/定性解释共同支撑价值。",
+      "applicability": "17页正文及A–G全部相关科学附录连续阅读，11原页核验全部10图/4表/1算法。基于冻结40归纳档案的首篇正式留出适用性检查，由同一审阅者完成，非独立模型评测或代码复现。",
+      "confidence": {
+        "paper_specific": "high",
+        "venue_wide": "formalholdout1/10;notfrequencyestimate"
+      }
+    },
+    "discussion_limits": {
+      "category": "corpus_observation",
+      "positions": [
+        "p9/15"
+      ],
+      "observation": "结论先贡献再集中讨论静态数据/一维任务/预定批评统计/未来finetune；D列可成功评分比例。",
+      "editorial_advice": "集中重要限制适用，不要求每结果段重复小样本和潜在泄漏。",
+      "applicability": "17页正文及A–G全部相关科学附录连续阅读，11原页核验全部10图/4表/1算法。基于冻结40归纳档案的首篇正式留出适用性检查，由同一审阅者完成，非独立模型评测或代码复现。",
+      "confidence": {
+        "paper_specific": "high",
+        "venue_wide": "formalholdout1/10;notfrequencyestimate"
+      }
+    },
+    "paragraph_language": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp4–9"
+      ],
+      "observation": "Dataset/Setup/Results/Ablations/QualitativeAnalysis路标，先发现再解释；Table1旁直接分析surgical/peregrine失败或逆向收益。",
+      "editorial_advice": "已测结果直接、假说适度保留；promise/suggest是证据匹配而非待删除词，原稿语气不统一加强。",
+      "applicability": "17页正文及A–G全部相关科学附录连续阅读，11原页核验全部10图/4表/1算法。基于冻结40归纳档案的首篇正式留出适用性检查，由同一审阅者完成，非独立模型评测或代码复现。",
+      "confidence": {
+        "paper_specific": "high",
+        "venue_wide": "formalholdout1/10;notfrequencyestimate"
+      }
+    },
+    "main_appendix": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp1–17"
+      ],
+      "observation": "主文1–9含图1–6/算法及主表；refs10–12；A13GP，B13Stan/诊断，C13–15ODE设置，D15失败率，E15扩展ODE，F15–16接口/model消融，G15–17状态更新。全部读。",
+      "editorial_advice": "主文判断贡献、附录设置/扩展核对路径适用；无需理论稿式长证明。",
+      "applicability": "17页正文及A–G全部相关科学附录连续阅读，11原页核验全部10图/4表/1算法。基于冻结40归纳档案的首篇正式留出适用性检查，由同一审阅者完成，非独立模型评测或代码复现。",
+      "confidence": {
+        "paper_specific": "high",
+        "venue_wide": "formalholdout1/10;notfrequencyestimate"
+      }
+    },
+    "actionable": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp1–9/13–17"
+      ],
+      "observation": "前部系统图和任务场景依次解释能力范围，反例和失败率有明确位置。",
+      "editorial_advice": "原创示例：BoxLM alternates between proposing probabilistic programs and critiquing their fit. Experiments in three modeling settings show that language-guided search can recover competitive models and produce interpretable extensions of established dynamics.",
+      "applicability": "17页正文及A–G全部相关科学附录连续阅读，11原页核验全部10图/4表/1算法。基于冻结40归纳档案的首篇正式留出适用性检查，由同一审阅者完成，非独立模型评测或代码复现。",
+      "confidence": {
+        "paper_specific": "high",
+        "venue_wide": "formalholdout1/10;notfrequencyestimate"
+      }
+    }
+  },
+  "counterexamples": [
+    {
+      "position": "pp5–6/15–17",
+      "finding": "GPBoxLMnotuniformlybest;strongN-BEATSoutsideboldGPcomparison. Stan9/12onpar meansnonsignificantLOOdifference by4SEcriterion,notidentity/equivalenceproof;surgicalnometa/peregrinesimworse. StateupdateDugongsnometa26.68vs50.04worse. Keepreportedpositivefindingsandlocalexceptionswithoutgenericdisclaimers."
+    },
+    {
+      "position": "pp6–9/13/15",
+      "finding": "Simulateddataandremovingmetadata mitigatepretrainingleakageconcerns,notcertifyabsence. Small1D/staticdatasetsandhandchosencriticismstatistics scopedbyconclusion;MCMCRhat≤1.01andESS≥400perchainmeasureposteriorfitdiagnostics,notsearchoptimality. Successfullyscoredprograms78/70/76%notguaranteedallvalid. Three-runaveragesinGP/LV distinctfromELPDstandarderror."
+    },
+    {
+      "position": "pp7–8/14 research-only versionqueries",
+      "finding": "LVdeltaprintednegativeandgamma/preywordingdoesnotmatchoscillatingexampleintuitively;warmstarttextpredatorvsappendixprey,Fig7headerPeregrinebutdugongscode. Clarifyforreplication,notadaptasvenueguidance. Noauthorcodeexecuted. Relatedwork/inferenceclaims areauthorstatements,notnewindependentsourceverification."
+    }
+  ],
+  "visual_review": {
+    "pages": [
+      1,
+      2,
+      5,
+      6,
+      7,
+      8,
+      9,
+      14,
+      15,
+      16,
+      17
+    ],
+    "source": "110dpi originalPopplerimages directlyviewed",
+    "policy": "delete11renders+duplicateextract;canonicalPDF/MDremainignoredskilltmp"
+  },
+  "official_requirements": [],
+  "holdout_validation": {
+    "freeze_manifest": "07-research/2026-10-28-ICML技能有效性验证_证据/induction-freeze/freeze-manifest.json",
+    "freeze_manifest_sha256": "e5ec6a6ab1fa45b5fca1bb87cc82a52e7e6ace591dac06ffded5a8bf68e61692",
+    "dimensions": {
+      "reader_argument": {
+        "rating": "applicable",
+        "positions": [
+          "pp1–3"
+        ],
+        "reason": "问题/对象/贡献先清楚、必要专业背景按需交代这一规则适用。"
+      },
+      "title_abstract": {
+        "rating": "applicable_with_scope",
+        "positions": [
+          "p1"
+        ],
+        "reason": "数值不是必需，探索性promise符合小规模证据；不应为直接性强改成普遍已证能力。"
+      },
+      "introduction": {
+        "rating": "applicable_with_scope",
+        "positions": [
+          "pp1–3"
+        ],
+        "reason": "冻结规则允许列表数量/形式服务论证，故不强加三贡献或理论问答结构。"
+      },
+      "related_work": {
+        "rating": "applicable",
+        "positions": [
+          "pp1–4"
+        ],
+        "reason": "按读者需要定位最近工作适用；不要增加空洞RelatedWork节。"
+      },
+      "method_theory": {
+        "rating": "applicable_with_scope",
+        "positions": [
+          "pp2–4/13–17"
+        ],
+        "reason": "输入输出/机制/新意规则适用，定理与证明建议在此不适用，不要求补理论。"
+      },
+      "evidence": {
+        "rating": "applicable",
+        "positions": [
+          "pp5–9/13–17"
+        ],
+        "reason": "一组实验一问题适用；定量可与程序片段/定性解释共同支撑价值。"
+      },
+      "discussion_limits": {
+        "rating": "applicable",
+        "positions": [
+          "p9/15"
+        ],
+        "reason": "集中重要限制适用，不要求每结果段重复小样本和潜在泄漏。"
+      },
+      "paragraph_language": {
+        "rating": "applicable_with_scope",
+        "positions": [
+          "pp4–9"
+        ],
+        "reason": "已测结果直接、假说适度保留；promise/suggest是证据匹配而非待删除词，原稿语气不统一加强。"
+      },
+      "main_appendix": {
+        "rating": "applicable",
+        "positions": [
+          "pp1–17"
+        ],
+        "reason": "主文判断贡献、附录设置/扩展核对路径适用；无需理论稿式长证明。"
+      },
+      "actionable": {
+        "rating": "applicable",
+        "positions": [
+          "pp1–9/13–17"
+        ],
+        "reason": "原创示例：BoxLM alternates between proposing probabilistic programs and critiquing their fit. Experiments in three modeling settings show that language-guided search can recover competitive models and produce interpretable extensions of established dynamics."
+      }
+    },
+    "counterexample_to_universal_structure": "no contribution bullets, no independentrelatedwork, no convergence theorem, no numericabstract; optionalfrozenruleshandlethis",
+    "proposed_revision": "No normative rule change from firstholdout. In behavioraltestincludeexploratoryevidencecase:removeunnecessaryhedgesbutpreserveevidence-matchedpromise.",
+    "reviewer": "same primary agent; no independentjudge",
+    "runtime_rules_changed_during_holdout": false
+  },
+  "review_limitations": "17页正文及A–G全部相关科学附录连续阅读，11原页核验全部10图/4表/1算法。基于冻结40归纳档案的首篇正式留出适用性检查，由同一审阅者完成，非独立模型评测或代码复现。"
+}

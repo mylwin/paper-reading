@@ -1,0 +1,15 @@
+{
+  "pdf_pages_read": 7,
+  "appendices": "A.1-A.3",
+  "visual_pages": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    7
+  ],
+  "all_completion_flags_true": true,
+  "formal_holdout_unused": false,
+  "frozen_profile_sha256": "7b5c7cb918605d018fbd342b1ec5ecfb24a5eb405dac4ae3e36547d8871b6d2f"
+}

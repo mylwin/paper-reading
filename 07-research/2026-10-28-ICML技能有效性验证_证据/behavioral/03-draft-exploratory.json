@@ -1,0 +1,25 @@
+{
+  "id": "03-draft-exploratory",
+  "skill": "paper-writing",
+  "venue": "ICML",
+  "request": "用两句总结探索性研究，不扩大证据",
+  "provided_facts": {
+    "study": "language-guided program search",
+    "evidence": "three runs on each of two toy modeling problems; recovered competitive models",
+    "scope": "feasibility exploration, no broad benchmark"
+  },
+  "original": null,
+  "actual_primary_agent_output": "Language-guided program search recovered competitive models in three runs on each of two toy modeling problems. These results suggest that language feedback is a promising search signal for this setting.",
+  "author_notes": "",
+  "manual_semantic_review": {
+    "reviewer": "same primary agent",
+    "assessment": "consistent_with_given_facts_and_requested_scope",
+    "reason": "首句明确观测，次句suggest/promising匹配探索性判断；不把它当弱词强删，也不升格为普遍建模能力。",
+    "criteria": [
+      "exploratory_tone",
+      "no_hedge_word_ban",
+      "local_scope"
+    ]
+  },
+  "independent_model_run": false
+}

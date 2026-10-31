@@ -1,0 +1,348 @@
+{
+  "id": "acl-2025.acl-long.150",
+  "anthology_id": "2025.acl-long.150",
+  "venue": "acl",
+  "year": 2025,
+  "track": "main conference research",
+  "length_type": "long",
+  "title": "ToolHop: A Query-Driven Benchmark for Evaluating Large Language Models in Multi-Hop Tool Use",
+  "authors": [
+    "Junjie Ye",
+    "Zhengyin Du",
+    "Xuesong Yao",
+    "Weijian Lin",
+    "Yufei Xu",
+    "Zehui Chen",
+    "Zaiyuan Wang",
+    "Sining Zhu",
+    "Zhiheng Xi",
+    "Siyu Yuan",
+    "Tao Gui",
+    "Qi Zhang",
+    "Xuanjing Huang",
+    "Jiecao Chen"
+  ],
+  "first_author": "Junjie Ye",
+  "landing_url": "https://aclanthology.org/2025.acl-long.150/",
+  "pdf_url": "https://aclanthology.org/2025.acl-long.150.pdf",
+  "doi": "10.18653/v1/2025.acl-long.150",
+  "official_listing_url": "https://aclanthology.org/volumes/2025.acl-long/",
+  "sampling_stratum": "data_resources",
+  "paper_type": "query-driven synthetic multi-hop tool-use benchmark with feedback intervention",
+  "anthology_pdf_revision_hash": "98cf8679",
+  "metadata_revisions": [],
+  "official_attachments": [],
+  "sort_hash": "07c3d3b2ac760e119f598a8c33d3842eb88e968c0d0e6589e3f550c744c420fa",
+  "split": "induction",
+  "semantic_review_status": "complete_writing_focused_full_text_review",
+  "full_text_and_relevant_appendix_review_complete": true,
+  "pdf_path": ".claude/skills/paper-writing-shared/tmp/corpus/acl/pdf/2025.acl-long.150.pdf",
+  "pdf_sha256": "217b87a265324be75905ca1e96308700f088b1c00f8445278217e80e078f8e53",
+  "markdown_path": ".claude/skills/paper-writing-shared/tmp/corpus/acl/markdown/2025.acl-long.150.md",
+  "markdown_sha256": "0c6c32c24cad87a0d9cb79d890de607f0f10afd2a97d94ca514634298f8d196b",
+  "page_count": 27,
+  "download_status": "acquired",
+  "parse_status": "full_text_extracted_not_yet_reviewed",
+  "acquired_date": "2026-10-28",
+  "acquisition_seconds": 17.15,
+  "review_date": "2026-10-29",
+  "reviewer": "acl_finish_c",
+  "full_text_style_review_complete": true,
+  "external_appendix_review_complete": true,
+  "count_eligible_full_text_and_relevant_appendix": true,
+  "coverage": [
+    {
+      "source": "canonical official PDF",
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27
+      ],
+      "main_science": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "limitations_ethics": [
+        9
+      ],
+      "references": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "scientific_appendix": {
+        "A benchmarkcomparison": [
+          13
+        ],
+        "B threeconstructionprompts": [
+          14,
+          15,
+          16
+        ],
+        "C classificationprompt": [
+          17
+        ],
+        "D models": [
+          18
+        ],
+        "E frameworkevaluation": [
+          19
+        ],
+        "F allfourcases": [
+          20,
+          21,
+          22,
+          23
+        ],
+        "G completeschemas": [
+          24,
+          25
+        ],
+        "H completecode": [
+          26,
+          27
+        ]
+      }
+    }
+  ],
+  "version_audit": {
+    "canonical_url": "https://aclanthology.org/2025.acl-long.150.pdf",
+    "xml_revision_entries": []
+  },
+  "supplement_audit": {
+    "method": "locked official metadata with no attachment; A-H complete",
+    "official_xml_attachments": [],
+    "separate_scientific_appendix_link_found": false,
+    "code_executed": false
+  },
+  "ten_dimensions": {
+    "reader_argument": {
+      "pages": [
+        1,
+        2
+      ],
+      "observation": "区分真正多跳依赖与工具集合模拟，querydriven构建解决可检验需求。",
+      "editorial_advice": "用任务的必要依赖来界定资源价值，再说明构建方法。",
+      "applicability_boundary": "合成封闭工具不代表任意在线API。"
+    },
+    "title_abstract": {
+      "pages": [
+        1
+      ],
+      "observation": "标题构建原则+任务，摘要995queries/3912tools、三阶段、14模型与49.04%主要发现。",
+      "editorial_advice": "资源规模与核心设计后接可回答的结果，摘要挑关键观察。",
+      "applicability_boundary": "49.04%是内置mandatory场景，不是全推理框架最高。"
+    },
+    "introduction": {
+      "pages": [
+        1,
+        2
+      ],
+      "observation": "依赖缺口、可验证答案、方法概览、主要结果、三贡献，图例连接抽象术语。",
+      "editorial_advice": "用一个完整例子解释依赖与数据生成，贡献分资源/流程/发现。",
+      "applicability_boundary": "三条不是强制结构；GPT4/GPT4o称谓不一致待核。"
+    },
+    "related_work": {
+      "pages": [
+        1,
+        8,
+        9,
+        13
+      ],
+      "observation": "引言给最近缺口，独立相关工作后置，附录用属性表比较。",
+      "editorial_advice": "近邻前置以支持方法选择，详尽家族比较可后置。",
+      "applicability_boundary": "全新唯一/过期1–2月等排他结论不能仅由属性表保证。"
+    },
+    "method_theory": {
+      "pages": [
+        3,
+        4,
+        5,
+        14,
+        15,
+        16,
+        24,
+        25,
+        26,
+        27
+      ],
+      "observation": "任务符号→creation/refinement/code→属性统计，每阶段完整prompt与示例代码。",
+      "editorial_advice": "资源构建按输入输出可执行步骤写，复杂可选参数与必需参数分开。",
+      "applicability_boundary": "代码实例硬编码一个album；形式化串行链与真实依赖图并非同义；无理论则不补定理。"
+    },
+    "evidence": {
+      "pages": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        19,
+        20,
+        21,
+        22,
+        23
+      ],
+      "observation": "数据五维分析、Direct/Mandatory/Free三场景、query/instance两分母错误、详细反馈干预和框架扩展。",
+      "editorial_advice": "主结果说明评测单位，再用针对性干预支持解释；示例用于展示机制。",
+      "applicability_boundary": "反馈表只含原调用错误子集；appendixReAct改变排序；并行调用和CoT原因仍含相关观察。"
+    },
+    "discussion_limits": {
+      "pages": [
+        7,
+        8,
+        9,
+        19
+      ],
+      "observation": "结果→家族差异→行为案例与干预→未来建议；局限写未给即时增强方法。",
+      "editorial_advice": "正面报告工具带来的收益，也保留接口/设置差异作为发现。",
+      "applicability_boundary": "不能从accuracy反推未公开GPT参数量，不能把所有原因写成证实。"
+    },
+    "paragraph_language": {
+      "pages": [
+        7,
+        8
+      ],
+      "observation": "粗体长主题句先给发现，随后数值与案例，段末给开发建议。",
+      "editorial_advice": "以一个可验证发现统领一段，避免空泛背景和重复风险句。",
+      "applicability_boundary": "significantly缺统计不强化；百分比差需写百分点。"
+    },
+    "main_appendix": {
+      "pages": [
+        1,
+        2,
+        6,
+        8,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27
+      ],
+      "observation": "主文资源逻辑/主表/反馈实验，附录完整prompt、代码、四案例、框架结果。",
+      "editorial_advice": "把支持主结论所需条件保留正文，附录解释具体行为和复现。",
+      "applicability_boundary": "推理框架会改领先者，摘要应限定主场景；录用限页不等当前规则。"
+    },
+    "actionable": {
+      "pages": [
+        6,
+        8,
+        19
+      ],
+      "observation": "主场景工具有收益但低正确率，详细反馈比Error更有帮助，跨框架结果不同。",
+      "editorial_advice": "原创例：With built-in function calling, GPT-4o reaches49.04%accuracy in the mandatory-tool setting. Detailed feedback improves accuracy on the evaluated GPT queries with invocation errors. Framework choice changes model rankings in the additional experiments.",
+      "applicability_boundary": "这些独立发现不需要每句may；只报告对应条件。"
+    }
+  },
+  "counterexamples": [
+    {
+      "pages": [
+        6,
+        7,
+        8
+      ],
+      "finding": "平均Direct19.83→Mandatory32.12=12.29百分点，Free32.84差.72非文中.62。Table5条件错误子集，36.75vs21.37等平均差20.655百分点非全995提升。",
+      "scope": "守住分母与百分点单位，保留改善力度"
+    },
+    {
+      "pages": [
+        7,
+        8,
+        19
+      ],
+      "finding": "Qwen32B Mandatory25.03低14B26.38，Llama70B Free12.76低8B13.47；ReAct Llama70B57.79高GPT4o54.17，GPT3.5ReAct28.14低FC36.58，不能全称largermodel/allGPTbestReAct。",
+      "scope": "真实排序按场景直陈，勿从未公开模型表现推参数量"
+    },
+    {
+      "pages": [
+        4,
+        5,
+        24,
+        25,
+        26,
+        27
+      ],
+      "finding": "参数3.49→5.91和required统计是结构复杂度；示例代码单album模拟，region覆盖version日期，unknownformat默认输出，不能证明全部扩展功能真实API。",
+      "scope": "locallyexecutable成立不等全面真实环境验证"
+    },
+    {
+      "pages": [
+        8,
+        13,
+        20,
+        21,
+        22,
+        23
+      ],
+      "finding": "parallel调用与家族性能、CoT采用率是观察/案例，未给完整隔离干预；详细vs简单反馈才是显式条件对照。source寿命1–2月等论断无对应纵向结果。",
+      "scope": "例子解释统计，不能代替因果或排他性证明"
+    }
+  ],
+  "visual_review": {
+    "pages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      8,
+      13,
+      19,
+      20,
+      22,
+      23
+    ],
+    "figures": "Figs1-7,9-10 and main/fullframework/benchmark/feedback tables viewed; Fig8 text complete p21",
+    "reviewer": "acl_finish_c"
+  },
+  "official_requirements": {
+    "source": "ACL/ARR current rules maintained separately",
+    "observed_layout_not_current_rule": true
+  },
+  "holdout_validation": null,
+  "review_limitations": "27PDFpages and A-H completely read; fullcode inspected as text, not executed; no historical/API benchmarks rerun."
+}

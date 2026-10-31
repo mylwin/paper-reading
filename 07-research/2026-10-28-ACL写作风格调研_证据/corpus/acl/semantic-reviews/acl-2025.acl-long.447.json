@@ -1,0 +1,321 @@
+{
+  "id": "acl-2025.acl-long.447",
+  "anthology_id": "2025.acl-long.447",
+  "venue": "acl",
+  "year": 2025,
+  "track": "main conference research",
+  "length_type": "long",
+  "title": "Collapse of Dense Retrievers: Short, Early, and Literal Biases Outranking Factual Evidence",
+  "authors": [
+    "Mohsen Fayyaz",
+    "Ali Modarressi",
+    "Hinrich Schuetze",
+    "Nanyun Peng"
+  ],
+  "first_author": "Mohsen Fayyaz",
+  "landing_url": "https://aclanthology.org/2025.acl-long.447/",
+  "pdf_url": "https://aclanthology.org/2025.acl-long.447.pdf",
+  "doi": "10.18653/v1/2025.acl-long.447",
+  "official_listing_url": "https://aclanthology.org/volumes/2025.acl-long/",
+  "sampling_stratum": "evaluation_analysis",
+  "paper_type": "controlled empirical retriever-bias analysis and adversarial evaluation framework; no proposed training algorithm",
+  "anthology_pdf_revision_hash": "c823b8e6",
+  "metadata_revisions": [],
+  "official_attachments": [],
+  "sort_hash": "0240571e7ce176d0084da7887d13255255560dfe61a372e48ac49f7cd443cd0e",
+  "split": "induction",
+  "semantic_review_status": "complete_writing_focused_full_text_review",
+  "full_text_and_relevant_appendix_review_complete": true,
+  "review_date": "2026-10-29",
+  "reviewer": "acl_retriever_review subagent",
+  "full_text_style_review_complete": true,
+  "external_appendix_review_complete": true,
+  "count_eligible_full_text_and_relevant_appendix": true,
+  "pdf_path": ".claude/skills/paper-writing-shared/tmp/corpus/acl/pdf/2025.acl-long.447.pdf",
+  "pdf_sha256": "931c852cea8c4085fb0ef6138c8d3606a5e3f8123236572b609e41835be442b8",
+  "markdown_path": ".claude/skills/paper-writing-shared/tmp/corpus/acl/markdown/2025.acl-long.447.md",
+  "markdown_sha256": "84518bb0a1259eff949da1c5c56bc7da2b28ca21b220576a5d4cd9c2d1fd843d",
+  "coverage": [
+    {
+      "source": "canonical official PDF; all prose read; visually reviewed all scientific figures and principal tables",
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "main_science": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "references": [
+        9,
+        10,
+        11
+      ],
+      "scientific_appendix": {
+        "A.1 additional models": [
+          12
+        ],
+        "A.2 model performance and metadata": [
+          12,
+          13
+        ],
+        "A.3 first-versus-last and remaining appendix figures/tables": [
+          13,
+          14,
+          15,
+          16,
+          17
+        ]
+      },
+      "reading_not_download_or_parse_only": true
+    }
+  ],
+  "version_audit": {
+    "published_year": 2025,
+    "canonical_url": "https://aclanthology.org/2025.acl-long.447.pdf",
+    "xml_pdf_hash": "c823b8e6",
+    "xml_revision_entries": [],
+    "official_xml_path": ".claude/skills/paper-writing-shared/tmp/corpus/acl/sources/2025-acl.xml",
+    "official_xml_sha256": "bd95ce2de89dbc2c001ca63c73585a2145b338df3b0ef48833a6e3d8ecb245fe",
+    "live_landing_rechecked": false
+  },
+  "supplement_audit": {
+    "method": "Inspected locked official 2025 ACL XML paper 447 entry and all PDF footnotes/references to appendices",
+    "official_xml_attachments": [],
+    "separate_scientific_appendix_link_found": false,
+    "scientific_appendix_in_pdf": "A.1–A.3 plus all remaining unheaded supplemental figures/tables, PDF12–17",
+    "external_resource": "https://huggingface.co/datasets/mohsenfayyaz/ColDeR",
+    "external_resource_role": "code/dataset and leaderboard, not a separately cited scientific appendix",
+    "code_executed": false,
+    "external_scientific_appendix_required": false
+  },
+  "ten_dimensions": {
+    "reader_argument": {
+      "pages": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "observation": "从RAG依赖检索出发，指出任务分数不能解释表示偏差；重用关系抽取的事实粒度建立可控文档对，再检验下游后果。",
+      "editorial_advice": "分析论文可以以问题诊断、可复核实验设计与发现为主线，不必虚构一个新优化算法。",
+      "applicability_boundary": "这是英文实体关系问答与合成对照文档的鲁棒性研究，不能直接等同自然检索流量中的故障发生率。"
+    },
+    "title_abstract": {
+      "pages": [
+        1,
+        5,
+        8,
+        16
+      ],
+      "observation": "标题以Collapse和三项短语命名强发现；摘要按依赖场景→可控设计→单项偏差→叠加低于10%→RAG下降推进，首图给多维总览。",
+      "editorial_advice": "保留实验支持的鲜明结论和具名偏差，摘要数字注明比较对象和单位。",
+      "applicability_boundary": "Collapse限于该构造压力测试；34%未标明是百分点，100%毒文偏好存在Contriever例外；不照抄强修辞或无范围的ignoring answers。"
+    },
+    "introduction": {
+      "pages": [
+        1,
+        2
+      ],
+      "observation": "相关问题与已有单偏差分析引出组合分析空缺；末尾连续自然段以粗体强调核心发现，没有固定三贡献列表。",
+      "editorial_advice": "让贡献概览解释实验设计新增的判别能力及下游意义，发现可充当贡献。",
+      "applicability_boundary": "first/comprehensive需单独文献核验，本次不把作者新颖性宣称认证为事实。"
+    },
+    "related_work": {
+      "pages": [
+        2,
+        3
+      ],
+      "observation": "独立Related Work按benchmark、模型分析、攻击分组，组末回到多维交互与事实控制的定位。",
+      "editorial_advice": "按本工作解决的比较维度组织近邻，让已有同类发现和本稿增加的维度同时可见。",
+      "applicability_boundary": "不能把前作说成完全未研究偏差，也不能因该篇有独立章节强制所有ACL稿相同次序。"
+    },
+    "method_theory": {
+      "pages": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        13
+      ],
+      "observation": "没有独立Method章，Experiments内先定义head/tail/evidence和250查询，再为每种偏差给D1/D2构造与有方向的配对统计。",
+      "editorial_advice": "诊断稿把操作定义放进实验本身，用符号和配对实例说明究竟改变了什么；正负方向随任务解释。",
+      "applicability_boundary": "t统计量不是平均效果量；相同样本数仍不能消除方差差异，不能直接解释成跨偏差因果强度排名。训练或pooling导致偏差的解释未做隔离干预。"
+    },
+    "evidence": {
+      "pages": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "observation": "NQ常规基准→60错误DecompX发现→五类受控测试→八模型foil比较→两GPT4o的四条件RAG；附录给模型ID、51关系模板、prompt、全模型图及分箱数。",
+      "editorial_advice": "分析由探索走向系统验证再到应用影响，图表定义分母、文档构造和判断者；把局部实例与汇总统计分开。",
+      "applicability_boundary": "Table4是250对文档中证据文档得分更高的比例，不是全库Recall；Table5为GPT4o判断的回答准确率；没有重跑或验证代码。"
+    },
+    "discussion_limits": {
+      "pages": [
+        7,
+        8,
+        9
+      ],
+      "observation": "实验结果后即解释相互作用，结论回到语义相关性；Limitations单列关系标注质量和LLM构造/判分局限。",
+      "editorial_advice": "局限聚焦实际证据来源和适用条件，机制解释保持假设语气，已测结果直接陈述。",
+      "applicability_boundary": "统计检验和p值不能自动消除系统性标注误差；勿把作者相信趋势有效写成已经独立验证。"
+    },
+    "paragraph_language": {
+      "pages": [
+        2,
+        5,
+        6,
+        7,
+        8
+      ],
+      "observation": "实验小节以偏差定义→设计→结果→解释组织，关键句加粗；实测结果直接写，原因用likely/appears。",
+      "editorial_advice": "同一段完成一个推理环节，主动准确陈述0.4–8.0%的配对成功率，机制推测才保留限定词。",
+      "applicability_boundary": "不用每句加入may或in this limited setting；一次交代测试范围即可，真实异常在相关论断处纠正。"
+    },
+    "main_appendix": {
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "observation": "正文有框架、全部偏差定义、关键方程、主结果与RAG；附录补模型列表、更多图和模板prompt，扩展模型结果也在正文Table4可见。",
+      "editorial_advice": "正文必须能判断关键结论，附录承担复核细节与完整覆盖，不把关键负例藏到附录。",
+      "applicability_boundary": "这是已录用长稿九页科学/结论内容的观察，当前投稿页数按官方目标版本另查，不能由历史排版推导。"
+    },
+    "actionable": {
+      "pages": [
+        5,
+        8,
+        16
+      ],
+      "observation": "可用直接定量发现替代夸张标题的无范围推论，同时将实际不一致列入研究审计。",
+      "editorial_advice": "原创例句：Across eight evaluated retrievers, the evidence-containing document outranks the constructed foil in only 0.4–8.0% of 250 paired cases. For GPT-4o, poisoned references reduce answer accuracy from64.8% without documents to30.8%, a34.0-percentage-point drop.",
+      "applicability_boundary": "这些改写只表达原表数据，不暗示自然分布概率、全体检索器、全部用户场景或代码复现已通过。"
+    }
+  },
+  "counterexamples": [
+    {
+      "pages": [
+        1,
+        8
+      ],
+      "finding": "摘要34%对应GPT4o NoDoc64.8%→Poison30.8%，为34.0个百分点，相对下降约52.47%；GPT4omini52→32为20个百分点。",
+      "scope": "保留下降结果，澄清模型和百分点，不能把34写成所有模型相对下降。"
+    },
+    {
+      "pages": [
+        8,
+        16
+      ],
+      "finding": "Table5标题与脚注9称毒文100%被偏好，但TableA9 Contriever证据文档仍胜1.2%，对应毒文98.8%；其余五个模型0%证据胜率。",
+      "scope": "真实例外应纠正，非泛化免责声明；需要原始分数/脚本确认，不静默改原论文数值。"
+    },
+    {
+      "pages": [
+        1,
+        5
+      ],
+      "finding": "摘要all while ignoring answer presence过强，Figure3中五个监督模型对答案存在的t为9.59–12.69，vanillaContriever为−5.92；正文也称answerimportanceacceptable。",
+      "scope": "说明偏差可压过答案信号，而非所有模型完全不利用答案。"
+    },
+    {
+      "pages": [
+        6,
+        13,
+        16
+      ],
+      "finding": "Table3与全量TableA8同一名变体配对的数值不一致，如ContrieverMSMARCO short-short vs short-long14.37与14.32，Dragon+16.62与16.58；Table3/其他单元也有细小差值。",
+      "scope": "保留来源各自数值，记录待核对版本或采样差异，不擅自统一。"
+    },
+    {
+      "pages": [
+        7,
+        14
+      ],
+      "finding": "均值热图趋势并非每格单调，如Dragon+短文档1–2mentions387.82→2–3mentions388.50→3–10mentions388.37；分箱样本不平衡，图A6给数量。",
+      "scope": "支持总体偏好观察，不写成对每篇文档每次重复都必然增分。"
+    },
+    {
+      "pages": [
+        1,
+        7,
+        9
+      ],
+      "finding": "p1Fig1图例含ColBERT但个体偏差图/表主要为六个单向量检索器，扩展模型重点foil测试；t大小比较和标注噪声由显著性消除的论述需谨慎。",
+      "scope": "不补造ColBERT每项原始分数或因果效应，不复制这些表述作为技能规范。"
+    }
+  ],
+  "visual_review": {
+    "pages": [
+      1,
+      2,
+      4,
+      5,
+      7,
+      8,
+      12,
+      13,
+      14,
+      16,
+      17
+    ],
+    "reviewer": "same subagent",
+    "figures": "Figures1–5 andA1–A9 all viewed in original raster; Table1,3-context,4,5,A1–A4,A6–A9 checked; TableA5 full51 templates read in extraction",
+    "pdf_page17_extraction_issue": "rotated dense heatmaps produce noisy extraction; originalpage17 viewed for complete threefigure interpretation"
+  },
+  "official_requirements": {
+    "corpus_layout_observation": "accepted longpaper; two-column author-year references; Limitations following Conclusions; appendix after references",
+    "observed_layout_not_current_rule": true,
+    "source": "current ACL/ARR official requirements maintained separately, no requirement inferred solely from this sample"
+  },
+  "holdout_validation": null,
+  "review_limitations": "Complete seventeen-page manuscript including all scientific appendices read; no code execution, benchmark rerun, reference verification, or independent statistical reanalysis from underlying scores. Official locked XML checked for attachments; no fresh landing fetch claimed."
+}

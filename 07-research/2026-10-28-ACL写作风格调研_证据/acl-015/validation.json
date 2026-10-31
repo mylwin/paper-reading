@@ -1,0 +1,15 @@
+{
+  "actual_pdf_pages": 21,
+  "all21pages_read": true,
+  "all_scientific_appendices_read": true,
+  "all6figures_original_viewed": true,
+  "visual_pages": 8,
+  "ten_dimensions": 10,
+  "locked_induction": true,
+  "holdout_unused": true,
+  "four_complete_flags": true,
+  "new_cache_removed": true,
+  "git_mutations": false,
+  "raw_only_skilltmp": true,
+  "render_warning": "Fontconfig no writable cache warning; outputs generated and all inspected; no cache config modified"
+}

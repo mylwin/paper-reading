@@ -1,0 +1,75 @@
+{
+  "date": "2026-10-28",
+  "projects": [
+    {
+      "project": "revised",
+      "rendered_pages": [
+        {
+          "page": 1,
+          "sha256": "f1d1ae4cea94d753352fd9ba3996b986cf4d142d4d80edb9ba2d26aa0f74a7b7"
+        },
+        {
+          "page": 2,
+          "sha256": "f53b0977b31f5e5c97ed751e689cba46cbaf180c531e2a804b45b3008223cb77"
+        },
+        {
+          "page": 3,
+          "sha256": "c71c15e664d61c95fca18c38dcfd288228ce8780c009ca16ef94705a2b8b1df7"
+        }
+      ],
+      "manually_viewed_all_pages": true,
+      "reviewer": "same primary agent",
+      "page_observations": {
+        "1": "Title/abstract first; method formula and algorithm stay with their content; single-column schematic readable; no clipping or overlap. Anonymous author block in submission, explicit example author in final.",
+        "2": "Wide result table at top followed by continued results, limitations, impact statement and resolved bibliography. Main-text visual boundary ispage2.",
+        "3": "Appendix cross-references, multiline identity, real-domain conditions, theorem and short proof readable and resolved."
+      },
+      "pdf_sha256": "e49703ec60ebf88ea61d14a2386696002cc24b489af18b1ed0fed4c320264b8a",
+      "total_pages": 3,
+      "actual_main_pages_including_deferred_floats": 2,
+      "submission_author_identifiers_absent_from_rendered_text": true,
+      "final_example_author_visible": null,
+      "author_metadata_matches_stage": true,
+      "metadata_fields": "Title:           StepScale: An Optimizer-State Storage Evaluation\nSubject:         Proceedings of the International Conference on Machine Learning 2026\nKeywords:        optimizer state, storage, evaluation fixture\nAuthor:          Anonymous Authors\nCreator:         LaTeX with hyperref\nProducer:        pdfTeX-1.40.29\nCreationDate:    Wed Oct 28 14:28:53 2026 CST\nModDate:         Wed Oct 28 14:28:53 2026 CST\nCustom Metadata: yes\nMetadata Stream: no\nTagged:          no\nUserProperties:  no\nSuspects:        no\nForm:            none\nJavaScript:      no\nPages:           3\nEncrypted:       no\nPage size:       612 x 792 pts (letter)\nPage rot:        0\nFile size:       138755 bytes\nOptimized:       no\nPDF version:     1.7\n",
+      "format_scope": "Short synthetic test only, not a submission-ready research manuscript; no official submission-system check."
+    },
+    {
+      "project": "final",
+      "rendered_pages": [
+        {
+          "page": 1,
+          "sha256": "96019e85eb1386ae3e21281fc8e1296e765cd9a9f09d3f59802c57359751b063"
+        },
+        {
+          "page": 2,
+          "sha256": "a1055a8f1ddcc54a7b8f6dea64ee5e45bb753a251fbb095a3e6f3c1677d72854"
+        },
+        {
+          "page": 3,
+          "sha256": "92fdd184d358a5776ad3a2f628d16ea1360fdfbd261871977aaa84db37195415"
+        }
+      ],
+      "manually_viewed_all_pages": true,
+      "reviewer": "same primary agent",
+      "page_observations": {
+        "1": "Title/abstract first; method formula and algorithm stay with their content; single-column schematic readable; no clipping or overlap. Anonymous author block in submission, explicit example author in final.",
+        "2": "Wide result table at top followed by continued results, limitations, impact statement and resolved bibliography. Main-text visual boundary ispage2.",
+        "3": "Appendix cross-references, multiline identity, real-domain conditions, theorem and short proof readable and resolved."
+      },
+      "pdf_sha256": "e250d362112a153a477fdcc67f52da5a395a278d9bcb2bfb8f316e2ae06ba756",
+      "total_pages": 3,
+      "actual_main_pages_including_deferred_floats": 2,
+      "submission_author_identifiers_absent_from_rendered_text": null,
+      "final_example_author_visible": true,
+      "author_metadata_matches_stage": true,
+      "metadata_fields": "Title:           StepScale: An Optimizer-State Storage Evaluation\nSubject:         Proceedings of the International Conference on Machine Learning 2026\nKeywords:        optimizer state, storage, evaluation fixture\nAuthor:          Example Researcher\nCreator:         LaTeX with hyperref\nProducer:        pdfTeX-1.40.29\nCreationDate:    Wed Oct 28 14:28:53 2026 CST\nModDate:         Wed Oct 28 14:28:53 2026 CST\nCustom Metadata: yes\nMetadata Stream: no\nTagged:          no\nUserProperties:  no\nSuspects:        no\nForm:            none\nJavaScript:      no\nPages:           3\nEncrypted:       no\nPage size:       612 x 792 pts (letter)\nPage rot:        0\nFile size:       155249 bytes\nOptimized:       no\nPDF version:     1.7\n",
+      "format_scope": "Short synthetic test only, not a submission-ready research manuscript; no official submission-system check."
+    }
+  ],
+  "semantic_protection": {
+    "original_to_revised": "Only one over-hedged result sentence differs. Macros method/states/theHalgorithm, bibliography source, all citation/label/ref keys, math expressions, numeric tokens, real-number and positivity conditions, and file tree preserved. Both fresh lexical comparisons returned no protected changes.",
+    "revised_to_final": "Fresh accepted template has identical scientific content; only official stage option changes. Submission retained.",
+    "proof_status": "Appendix theorem is an elementary identity-based formatting check, not a claimed research result."
+  },
+  "initial_failure_and_fix": "Initial top-float/isolated-wide-table issue retained in initial-visual-findings.json. Corrected fixture uses ordinary local float placement and common supplied-fact exposition. core/latex.md now explicitly checks deferred main-text floats beyond the label; project.py itself remains unchanged."
+}

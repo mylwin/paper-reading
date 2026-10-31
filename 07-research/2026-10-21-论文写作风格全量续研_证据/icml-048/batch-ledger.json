@@ -1,0 +1,22 @@
+{
+  "batch": "icml-048",
+  "date": "2026-10-28",
+  "papers": [
+    {
+      "id": "icml-2025-faa9d83f",
+      "venue": "icml",
+      "year": 2025,
+      "split": "holdout",
+      "full_and_appendix_complete": true,
+      "new_pdf_acquisition": false,
+      "review_record": "07-research/2026-10-10-顶会顶刊写作风格调研_证据/corpus/icml/semantic-reviews/icml-2025-faa9d83f.json",
+      "pdf_sha256": "455b1e4d6ce3c21d92fe4b2633b10a0856f628c81da796db042f8172fb4d340f"
+    }
+  ],
+  "before_full": 69,
+  "new_full": 1,
+  "after_full": 70,
+  "icml_before": 47,
+  "icml_after": 48,
+  "qualification": "writingorganizationandclaim/evidenceboundaryreview,notindependentprooforreplication"
+}

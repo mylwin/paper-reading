@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-23",
+  "updated": "2026-10-28",
   "status": "in_progress",
   "venues": [
     {
@@ -37,10 +37,10 @@
       "locked": 50,
       "pdf_acquired": 50,
       "text_parsed": 50,
-      "main_text_style_reviewed": 36,
-      "full_text_and_relevant_appendix_reviewed": 36,
-      "induction_complete": 36,
-      "holdout_complete": 0
+      "main_text_style_reviewed": 50,
+      "full_text_and_relevant_appendix_reviewed": 50,
+      "induction_complete": 40,
+      "holdout_complete": 10
     },
     {
       "venue": "ijcai",
@@ -117,12 +117,12 @@
     "locked": 550,
     "pdf_acquired": 429,
     "text_parsed": 429,
-    "main_text_style_reviewed": 63,
-    "full_text_and_relevant_appendix_reviewed": 58,
-    "induction_complete": 54,
-    "holdout_complete": 4
+    "main_text_style_reviewed": 77,
+    "full_text_and_relevant_appendix_reviewed": 72,
+    "induction_complete": 58,
+    "holdout_complete": 14
   },
-  "remaining_full_review": 492,
+  "remaining_full_review": 478,
   "qualification": "Continuous PDF prose/style review is not proof/code audit or experiment replication. Accepted author/published-header deposits may support writing organization, not final typesetting. Referenced unreviewed external appendices excluded from full count.",
   "known_ineligible_locked_slots": 0,
   "eligibility_note": "550 active positions after one documented nonresearch slot repair; original lock/history preserved. This is not certification of every remaining candidate qualification.",

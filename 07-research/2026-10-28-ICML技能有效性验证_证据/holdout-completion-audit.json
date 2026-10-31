@@ -1,0 +1,111 @@
+{
+  "date": "2026-10-28",
+  "full_text_reviews": 50,
+  "year_counts": {
+    "2024": 25,
+    "2025": 25
+  },
+  "induction": 40,
+  "holdout": 10,
+  "dimension_judgments": 100,
+  "ratings_by_dimension": {
+    "reader_argument": {
+      "applicable": 10
+    },
+    "title_abstract": {
+      "applicable_with_scope": 6,
+      "applicable": 4
+    },
+    "introduction": {
+      "applicable_with_scope": 2,
+      "applicable": 8
+    },
+    "related_work": {
+      "applicable": 10
+    },
+    "method_theory": {
+      "applicable_with_scope": 5,
+      "applicable": 5
+    },
+    "evidence": {
+      "applicable": 6,
+      "applicable_with_scope": 4
+    },
+    "discussion_limits": {
+      "applicable": 8,
+      "applicable_with_scope": 2
+    },
+    "paragraph_language": {
+      "applicable_with_scope": 3,
+      "applicable": 7
+    },
+    "main_appendix": {
+      "applicable": 10
+    },
+    "actionable": {
+      "applicable": 10
+    }
+  },
+  "pre_final_calibration_freeze_checks": [
+    {
+      "source": ".claude/skills/paper-writing/SKILL.md",
+      "frozen_sha256": "52a847c21d7bb57cf397da3a6933c8e906b6a5c817269c48bd21450723e726fb",
+      "current_sha256_before_final_calibration": "52a847c21d7bb57cf397da3a6933c8e906b6a5c817269c48bd21450723e726fb",
+      "snapshot_intact": true
+    },
+    {
+      "source": ".claude/skills/paper-polishing/SKILL.md",
+      "frozen_sha256": "262c962d77826998a04e109389583e76bc99f3067d013539f55329b6c7d5e9ec",
+      "current_sha256_before_final_calibration": "262c962d77826998a04e109389583e76bc99f3067d013539f55329b6c7d5e9ec",
+      "snapshot_intact": true
+    },
+    {
+      "source": ".claude/skills/paper-writing-shared/venues/icml.md",
+      "frozen_sha256": "e2364d840d9c2ea90700931dab129bdaabea102c839e70a0f6c1dea03067a814",
+      "current_sha256_before_final_calibration": "e2364d840d9c2ea90700931dab129bdaabea102c839e70a0f6c1dea03067a814",
+      "snapshot_intact": true
+    },
+    {
+      "source": ".claude/skills/paper-writing-shared/core/evidence.md",
+      "frozen_sha256": "81867e353ab8b4fc5d6bc1aa94441f039a327f697b294cab17999bfdb0333933",
+      "current_sha256_before_final_calibration": "81867e353ab8b4fc5d6bc1aa94441f039a327f697b294cab17999bfdb0333933",
+      "snapshot_intact": true
+    },
+    {
+      "source": ".claude/skills/paper-writing-shared/core/language.md",
+      "frozen_sha256": "491995bb30d875a8af0f26b251090f89c3499b2536200c7068c22017e22e7264",
+      "current_sha256_before_final_calibration": "491995bb30d875a8af0f26b251090f89c3499b2536200c7068c22017e22e7264",
+      "snapshot_intact": true
+    },
+    {
+      "source": ".claude/skills/paper-writing-shared/core/latex.md",
+      "frozen_sha256": "9adefb8489ccf0cde8e67d903fcf200e27a1735802965d15e64495f95e28f31b",
+      "current_sha256_before_final_calibration": "9adefb8489ccf0cde8e67d903fcf200e27a1735802965d15e64495f95e28f31b",
+      "snapshot_intact": true
+    },
+    {
+      "source": ".claude/skills/paper-writing-shared/core/paper-types.md",
+      "frozen_sha256": "a491c2a97608752d531cb27156568eed258e12ac91d6ab6153348ab9e33a8252",
+      "current_sha256_before_final_calibration": "a491c2a97608752d531cb27156568eed258e12ac91d6ab6153348ab9e33a8252",
+      "snapshot_intact": true
+    },
+    {
+      "source": ".claude/skills/paper-writing-shared/core/polishing.md",
+      "frozen_sha256": "a89f8569c1a12e723d0f4a14bc79c44b3e450f7858d333b3ff838beb03318374",
+      "current_sha256_before_final_calibration": "a89f8569c1a12e723d0f4a14bc79c44b3e450f7858d333b3ff838beb03318374",
+      "snapshot_intact": true
+    },
+    {
+      "source": ".claude/skills/paper-writing-shared/core/writing.md",
+      "frozen_sha256": "3da6dc30a221fe6c1766b0800d769c3fe5591505908054f1e8c29f257cf3521a",
+      "current_sha256_before_final_calibration": "3da6dc30a221fe6c1766b0800d769c3fe5591505908054f1e8c29f257cf3521a",
+      "snapshot_intact": true
+    }
+  ],
+  "last_registration_checks": {
+    "passed": 12,
+    "total": 12,
+    "record": "07-research/2026-10-21-论文写作风格全量续研_证据/icml-050/validation.json"
+  },
+  "qualification": "Same-primary-agent manual applicability audit. No independent judge, causal effectiveness estimate, proof certification or replication. Final profile edits below occur only after all ten holdouts completed."
+}

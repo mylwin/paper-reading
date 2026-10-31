@@ -1,0 +1,68 @@
+{
+  "date": "2026-10-28",
+  "execution": "same primary agent applied loaded skill instructions to each saved fixture and manually assessed outputs",
+  "cases": 12,
+  "generation_and_judge_independent": false,
+  "baseline_or_repeated_runs": false,
+  "statistical_quality_estimate": false,
+  "number_conflict_case": "08 has unresolved author fact; only qualitative interim text delivered",
+  "test_dimensions": [
+    "factual fidelity",
+    "argument organization",
+    "ICML/type fit",
+    "directness",
+    "condition placement",
+    "requested scope"
+  ],
+  "runtime_profile_sha256": "e68a17c3395c11d06deeab48714b52eda22c927d886bb1e72a76191478ba1003",
+  "fixtures": [
+    {
+      "file": "01-draft-empirical.json",
+      "sha256": "3fe6659c35afd72f31e58bacd0c5c3d076de63b294e9531a0ea05826c605b852"
+    },
+    {
+      "file": "02-draft-theory.json",
+      "sha256": "149165061e775b6566f3b7ef3009df34e774219c1cb0fed4bbdf371ccc8b0287"
+    },
+    {
+      "file": "03-draft-exploratory.json",
+      "sha256": "fdae52fbacbb165237d5146183e21195a12713021b4e4b71b19bbaf14b5b2373"
+    },
+    {
+      "file": "04-polish-overhedged.json",
+      "sha256": "41f57295d69a1c987688dbdeab498d84c13a66389fbe98473524773defab8520"
+    },
+    {
+      "file": "05-polish-overclaim.json",
+      "sha256": "66de2ddc636de2a42061bf147365b170ba6e7fe0ed847e5b85fbba3dd08fd239"
+    },
+    {
+      "file": "06-polish-accurate.json",
+      "sha256": "5c90670d835d51b348a463259540b993884a5e878fdcbbe4207f2040da3694b3"
+    },
+    {
+      "file": "07-polish-hypothesis.json",
+      "sha256": "33385140ecc0acb52924da7b752370846ed6d81473f62f4f07c25e484e951486"
+    },
+    {
+      "file": "08-polish-conflict.json",
+      "sha256": "dc2c746609f55ec395d998cdf557af471b7f3ccd8af2ba05bd99c3af735f78fd"
+    },
+    {
+      "file": "09-chinese-to-english.json",
+      "sha256": "bb16fb1c6f208721fcab6b5fece76c231b87d6f7472cbff410d853f27c99da40"
+    },
+    {
+      "file": "10-compress-theory.json",
+      "sha256": "050f361da18b8bf819f362f0bd81b05cff6307fb5a4af259f0ac64e28cea87cf"
+    },
+    {
+      "file": "11-draft-analysis.json",
+      "sha256": "d4551fd900630ad9d6df7ad3a509280739cf2d4e5ffaf75178dfd3b11e61d5d2"
+    },
+    {
+      "file": "12-polish-no-material.json",
+      "sha256": "a8b7f35fe32a7fd6aa870ab9066568a4267adc8de3c36ef75ecc0378bf9ff412"
+    }
+  ]
+}

@@ -1,0 +1,322 @@
+{
+  "id": "acl-2024.acl-long.255",
+  "anthology_id": "2024.acl-long.255",
+  "venue": "acl",
+  "year": 2024,
+  "track": "main conference research",
+  "length_type": "long",
+  "title": "Re3: A Holistic Framework and Dataset for Modeling Collaborative Document Revision",
+  "authors": [
+    "Qian Ruan",
+    "Ilia Kuznetsov",
+    "Iryna Gurevych"
+  ],
+  "first_author": "Qian Ruan",
+  "landing_url": "https://aclanthology.org/2024.acl-long.255/",
+  "pdf_url": "https://aclanthology.org/2024.acl-long.255.pdf",
+  "doi": "10.18653/v1/2024.acl-long.255",
+  "official_listing_url": "https://aclanthology.org/volumes/2024.acl-long/",
+  "sampling_stratum": "data_resources",
+  "paper_type": "joint document-revision framework, annotated corpus, observational analysis and four feasibility tasks; scholarly English long paper",
+  "anthology_pdf_revision_hash": "a2dceae3",
+  "metadata_revisions": [],
+  "official_attachments": [],
+  "sort_hash": "050bfea29e2a4bc825095cf0a1406adce91a30f2a9471502ee6ebc4b7a7b962a",
+  "split": "induction",
+  "semantic_review_status": "complete_writing_focused_full_text_review",
+  "full_text_and_relevant_appendix_review_complete": true,
+  "review_date": "2026-10-29",
+  "reviewer": "acl-008 delegated full-text reviewer",
+  "pdf_path": ".claude/skills/paper-writing-shared/tmp/corpus/acl/pdf/2024.acl-long.255.pdf",
+  "pdf_sha256": "81b14569e835eff1c6ba6073cd15073d50a3d62523d9a25de898a886d10ba8b0",
+  "markdown_path": ".claude/skills/paper-writing-shared/tmp/corpus/acl/markdown/2024.acl-long.255.md",
+  "markdown_sha256": "3bf4ea5dee641d6b527ed9a93e48e4545b7a57f21f8c85aed44122892506f8a3",
+  "full_text_style_review_complete": true,
+  "external_appendix_review_complete": true,
+  "count_eligible_full_text_and_relevant_appendix": true,
+  "coverage": [
+    {
+      "source": "canonical official PDF",
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21
+      ],
+      "main_science": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "limitations_ethics_acknowledgements": [
+        10
+      ],
+      "references": [
+        10,
+        11,
+        12
+      ],
+      "scientific_appendix": {
+        "A label taxonomy and examples": [
+          12,
+          20,
+          21
+        ],
+        "B annotation methodology and survey": [
+          12,
+          13,
+          14,
+          15,
+          16
+        ],
+        "C corpus distributions": [
+          15,
+          16
+        ],
+        "D automation prompts/results/compute": [
+          17,
+          18,
+          19
+        ]
+      }
+    }
+  ],
+  "version_audit": {
+    "published_year": 2024,
+    "canonical_url": "https://aclanthology.org/2024.acl-long.255.pdf",
+    "xml_revision_entries": []
+  },
+  "supplement_audit": {
+    "official_landing": "https://aclanthology.org/2024.acl-long.255/",
+    "audit_date": "2026-10-29",
+    "method": "Read locked official 2024 ACL XML volume long paper255 entry; title/authors/pages4635-4655/PDFhash match lock; no attachment element. All in-PDF appendix A-D and float tables13-15 at end read. Live landing not fetched this pass.",
+    "official_xml_attachments": [],
+    "separate_scientific_appendix_link_found": false,
+    "scientific_appendix_in_pdf": "A-D complete, including final taxonomy tables",
+    "code_executed": false,
+    "external_implementation_or_online_annotation_guidelines_not_reviewed": true
+  },
+  "ten_dimensions": {
+    "reader_argument": {
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "observation": "面向NLP读者，从review/revision/response三者未联合建模及句子孤立分析缺陷，给出结构化框架、实例语料、行为发现和自动化任务。",
+      "editorial_advice": "先说明研究对象缺少什么可操作的表示，再交代资源如何支撑新问题；资源价值可以是分析能力而非单一分数领先。",
+      "applicability_boundary": "实际实例为英语学术文档；框架可迁移是设想，不是已验证跨语言泛化。"
+    },
+    "title_abstract": {
+      "pages": [
+        1
+      ],
+      "observation": "Re3命名加Framework and Dataset明确双产物；摘要依次写协作重要性、缺口、联合框架、语料实例、经验分析、LLM任务和开放材料，没有硬塞摘要性能数值。",
+      "editorial_advice": "摘要优先说清研究对象、产物和新增分析能力，数字只在帮助界定贡献时加入。",
+      "applicability_boundary": "这不是ACL禁止数字或必须框架命名的规则；holistic/first需有定义和先前工作支持，不能机械复制。"
+    },
+    "introduction": {
+      "pages": [
+        1,
+        2
+      ],
+      "observation": "问题的重要性与现有二元关系覆盖引出full-scope定义，再将§3框架、§4语料、§5分析、§6自动化分别映射成四条贡献。",
+      "editorial_advice": "多产物论文的贡献项应与正文证据模块对应，使用章节指引帮助读者追踪。",
+      "applicability_boundary": "本篇四项贡献是实例；不要求每篇固定三或四项，不能把first措辞视为venue习惯性必需。"
+    },
+    "related_work": {
+      "pages": [
+        2,
+        3
+      ],
+      "observation": "独立§2分document revision datasets与collaborative revision两脉络；Table1按长度、全范围、标注与三类关系比较，区别子句编辑和句编辑。",
+      "editorial_advice": "将声称缺口转成可核查的覆盖维度；表注说明单位和非同口径项目。",
+      "applicability_boundary": "数据规模跨单位不能直接排大小；本文资源比较不能替代对方法精度的统一评测。"
+    },
+    "method_theory": {
+      "pages": [
+        3,
+        4,
+        12,
+        13,
+        14,
+        20,
+        21
+      ],
+      "observation": "主文用图结构、g/action/intent、null插删定义联合对象；附录给预对齐算法、位置距离式、阈值40/85及多粒度实例，属于定义和方法而非定理证明。",
+      "editorial_advice": "概念框架先给对象、关系和标签语义，以原版图与例子解释粒度，工程细节可后置。",
+      "applicability_boundary": "表13/15清楚把额外caution作为Claim修改；不能将语气削弱静默归为无语义变化的润色。"
+    },
+    "evidence": {
+      "pages": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        14,
+        15,
+        17,
+        18,
+        19
+      ],
+      "observation": "314文档对、11648句级编辑，42文档含review及人工摘要；质量以逐轮IAA与问卷交叉说明；§5按RQ1-5组织发现，§6每任务重复任务/数据、模型/方法、结果/讨论。",
+      "editorial_advice": "资源稿先交代来源和标注可信度，再展示其支持的发现与任务；异构任务各自明确样本和评价口径。",
+      "applicability_boundary": "不能把42摘要文档写成314；表3/8/9提示调参用20%测试子集而基线用全测试集，不把不同子集分数当无条件可比或独立留出结果。"
+    },
+    "discussion_limits": {
+      "pages": [
+        9,
+        10,
+        15
+      ],
+      "observation": "结论回到框架/语料/发现/任务；独立Limitations说明英语学术材料、摘要为标注者写而非作者真实回复、LLM实验为任务可行性而非全面SOTA；Ethics具体到同意、薪资、匿名和CC-BY-NC4.0。",
+      "editorial_advice": "局限说明哪些外推/任务用途尚未验证；已交付框架和语料可直接陈述，集中交代边界即可。",
+      "applicability_boundary": "不能删除真实回复缺失这一影响解释的条件；单一首作者做摘要人工评价在B.5披露，不能写成多独立评审一致结论。"
+    },
+    "paragraph_language": {
+      "pages": [
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "observation": "结果段用RQ/任务标题、指标与图表组织，观察后给suggests/may解释；可量化主结果直接陈述，未实现任务放future。部分significant未伴统计检验说明。",
+      "editorial_advice": "区分实测事实、相关性解释、未来功能；将机制解释的语气与证据相配，避免在每句已测事实加may。",
+      "applicability_boundary": "这里的significant不能自动翻为统计显著；显式审稿意见更常落实是观察关联，非明确建议导致修改的随机因果证据。"
+    },
+    "main_appendix": {
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21
+      ],
+      "observation": "9页主科学内容保留核心联合框架、构建可信度、行为发现及四任务；附录A-D给标签例子、完整流程/问卷、分布、分类消融、提示和算力/成本；最终浮动表13-15在20-21页。",
+      "editorial_advice": "主文保留判断贡献成立必需的框架和核心结果，附录承担可复核细节；阅读全文要追到末尾浮动表。",
+      "applicability_boundary": "录用终稿的9页主文不等于当前投稿版限额；当前规范单独由官方模板档案管理。"
+    },
+    "actionable": {
+      "pages": [
+        3,
+        4,
+        7,
+        8,
+        10,
+        18,
+        20,
+        21
+      ],
+      "observation": "框架与语料直接声明，准确把解释/未来与事实分开，编辑动作与编辑意图区分。",
+      "editorial_advice": "原创例句：Re3 represents document revisions, reviewer requests, and edit summaries within a common graph framework. Re3-Sci instantiates this framework with 314 scholarly document pairs and 11,648 annotated sentence edits.",
+      "applicability_boundary": "勿把人工编辑摘要说成作者回复；勿为避免防御性写作抹去英语学术域及任务可行性范围。"
+    }
+  },
+  "counterexamples": [
+    {
+      "pages": [
+        7,
+        17,
+        18
+      ],
+      "finding": "主文p7记5045修订对及3891插删，共8936；表10为5046+3891=8937，类别数也合计8937。不能把排版/计数差异自动修成无疑义事实。另表8的0.83是20%验证子集，表10插删0.78为全测试集。",
+      "scope": "保留原文精确口径并列待作者核对；不静默统一或当显著退化。"
+    },
+    {
+      "pages": [
+        8,
+        15,
+        19
+      ],
+      "finding": "GPT4摘要factuality95.96%、comprehensiveness79.09%来自42文档，人工评价由首作者完成；gold人工摘要并非原作者回复。",
+      "scope": "可直接报告本实验结果；不能称盲测多评审证明全协作场景可靠。"
+    },
+    {
+      "pages": [
+        3,
+        20,
+        21
+      ],
+      "finding": "附录将加入more data/research caution明确定为Claim变化，而不是Grammar/Clarity。",
+      "scope": "支持润色技能将主张强度改变与语言修改区分；不意味着必须给每段增加caution。"
+    },
+    {
+      "pages": [
+        5,
+        6,
+        7,
+        8
+      ],
+      "finding": "许多suggests解释基于语料分布；全测试集意图精度0.70也不意味着所有标签都可靠，Table10修订对Claim F1仅0.01。",
+      "scope": "总分与长尾任务难度同时保留，不能只用平均分宣传完整自动化。"
+    }
+  ],
+  "visual_review": {
+    "pages": [
+      2,
+      3,
+      5,
+      6,
+      7,
+      8,
+      14,
+      15,
+      18,
+      19,
+      20,
+      21
+    ],
+    "figures": "Viewed original pages for dataset comparison, framework/taxonomy, dataset counts, RQ plots, prompt ablation table, summary evaluation/confusion matrix, annotation interface/IAA, distributions, joint classification and all final color-coded examples; complete scientific prose and other tables read from page-aligned parse.",
+    "reviewer": "same delegated full-text reviewer"
+  },
+  "official_requirements": {
+    "source": "Current ACL/ARR official requirements live in venue/template resources, not inferred from this accepted paper",
+    "corpus_layout_observation": "9 main science pages, separate Limitations/Ethics, author-year citations, appendixA-D with end floats",
+    "observed_layout_not_current_rule": true
+  },
+  "holdout_validation": null,
+  "review_limitations": "All21PDFpages including scientificappendicesA-D read;12originalrenderings inspected. LockedofficialXML checked for attachment links; currentlivepage, implementation, externalannotationguidelinesand benchmark reruns not reviewed. Writing-style review is not replication or proof of venue-wide generality."
+}

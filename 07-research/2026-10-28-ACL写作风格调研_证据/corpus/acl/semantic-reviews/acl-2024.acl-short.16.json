@@ -1,0 +1,329 @@
+{
+  "id": "acl-2024.acl-short.16",
+  "anthology_id": "2024.acl-short.16",
+  "venue": "acl",
+  "year": 2024,
+  "track": "main conference research",
+  "length_type": "short",
+  "title": "AFLoRA: Adaptive Freezing of Low Rank Adaptation in Parameter Efficient Fine-Tuning of Large Models",
+  "authors": [
+    "Zeyu Liu",
+    "Souvik Kundu",
+    "Anni Li",
+    "Junrui Wan",
+    "Lianghao Jiang",
+    "Peter Beerel"
+  ],
+  "first_author": "Zeyu Liu",
+  "landing_url": "https://aclanthology.org/2024.acl-short.16/",
+  "pdf_url": "https://aclanthology.org/2024.acl-short.16.pdf",
+  "doi": "10.18653/v1/2024.acl-short.16",
+  "official_listing_url": "https://aclanthology.org/volumes/2024.acl-short/",
+  "sampling_stratum": "efficiency_theory",
+  "paper_type": "short empirical PEFT method with adaptive freezing and systems measurements",
+  "anthology_pdf_revision_hash": "de2bf327",
+  "metadata_revisions": [],
+  "official_attachments": [],
+  "sort_hash": "00c5552d0621732f40ce6db60d55eecb1ccf72cf1ec49939d51e5091eb957a1e",
+  "split": "holdout",
+  "semantic_review_status": "complete_writing_focused_full_text_review",
+  "full_text_and_relevant_appendix_review_complete": true,
+  "pdf_path": ".claude/skills/paper-writing-shared/tmp/corpus/acl/pdf/2024.acl-short.16.pdf",
+  "pdf_sha256": "a0bdc5894f0de3d802ecf679dd2138a8ad33fe2433beb2568bfffc0ed69aeb40",
+  "markdown_path": ".claude/skills/paper-writing-shared/tmp/corpus/acl/markdown/2024.acl-short.16.md",
+  "markdown_sha256": "b80e2f9a25f9e1ad26fa98e171cc2c6a5f7023fcb536eb5bac29b65b95a6c8be",
+  "page_count": 7,
+  "download_status": "acquired",
+  "parse_status": "full_text_extracted_not_yet_reviewed",
+  "acquired_date": "2026-10-28",
+  "acquisition_seconds": 35.94,
+  "review_date": "2026-10-29",
+  "reviewer": "acl_finish_a",
+  "full_text_style_review_complete": true,
+  "external_appendix_review_complete": true,
+  "count_eligible_full_text_and_relevant_appendix": true,
+  "ten_dimensions": {
+    "reader_argument": {
+      "pages": [
+        1,
+        2
+      ],
+      "observation": "ELoRA低训练参数但高rank计算，LoRA低rank但训练参数多；以两者取舍定位。",
+      "editorial_advice": "用比较图和小实验指明具体瓶颈，再引入冻结。",
+      "applicability_boundary": "两任务动机实验不推出任意模型高rank必要。"
+    },
+    "title_abstract": {
+      "pages": [
+        1,
+        3,
+        4
+      ],
+      "observation": "题名给自适应冻结，摘要给模块、冻结分数、性能/参数/时间。",
+      "editorial_advice": "数字各配比较对象，平均训练参数与runtime分开。",
+      "applicability_boundary": "9.5倍对LoRA，1.86倍对ELoRA；1.09是GSM8k准确率绝对点差。"
+    },
+    "introduction": {
+      "pages": [
+        1,
+        2
+      ],
+      "observation": "贡献自然段承接相关方法取舍，先动机再方法和评测。",
+      "editorial_advice": "按新操作与相应收益叙述，不强制条列三贡献。",
+      "applicability_boundary": "这是经验方法，不要求额外理论贡献。"
+    },
+    "related_work": {
+      "pages": [
+        2
+      ],
+      "observation": "prefix/adapter/LoRA/rank/sparsity到ELoRA，最近依赖在方法之前。",
+      "editorial_advice": "按可调对象定位前作，澄清freeze与rank不同。",
+      "applicability_boundary": "不将作者未调研过的全部新颖性当已核实。"
+    },
+    "method_theory": {
+      "pages": [
+        2,
+        3,
+        7
+      ],
+      "observation": "模块前向式、梯度EMA/偏差分数、cubic冻结比例定义；附录超参。",
+      "editorial_advice": "定义操作量、冻结单位、时间表，符号服务算法。",
+      "applicability_boundary": "无理论保证，不需补定理；冻结阈值和代码细节未复现。"
+    },
+    "evidence": {
+      "pages": [
+        2,
+        3,
+        4,
+        5,
+        7
+      ],
+      "observation": "动机两任务→GLUE主表→6任务runtime/FLOPs→GSM8k/摘要→冻结状态、层类型、score消融与层趋势。",
+      "editorial_advice": "结果按性能、成本和设计问题展开，各给正确比较单位。",
+      "applicability_boundary": "五seed均值未给SD；系统测6任务与GLUE8任务范围不同。"
+    },
+    "discussion_limits": {
+      "pages": [
+        4,
+        5
+      ],
+      "observation": "问句消融接机制讨论，Limitations承认其他score某些任务更好，rank联动留未来。",
+      "editorial_advice": "结果直接报告，过拟合/层表达解释保持potentially/may。",
+      "applicability_boundary": "near-optimal未提供最优性证明；不继承。"
+    },
+    "paragraph_language": {
+      "pages": [
+        3,
+        4,
+        5
+      ],
+      "observation": "performance/runtime/LLM小标题，问句讨论，每段一个判断；层趋势推测明确。",
+      "editorial_advice": "保持实测优势原有力度，对未隔离机制作解释而非事实。",
+      "applicability_boundary": "consistently只可指平均或表8具体六任务，非所有score所有任务。"
+    },
+    "main_appendix": {
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        7
+      ],
+      "observation": "短稿5页主体含Limitations后参考；附录1页数据split、超参、同层同时冻结实验。",
+      "editorial_advice": "正文保留新分数和关键对照，附录交代可复核细节。",
+      "applicability_boundary": "历史终稿5页不用于当前投稿限页；关键主张不能藏附录。"
+    },
+    "actionable": {
+      "pages": [
+        3,
+        4,
+        5,
+        7
+      ],
+      "observation": "比率和均值需要核查，不把局部数据疑点变成笼统防御。",
+      "editorial_advice": "原创：AFLoRA adaptively freezes low-rank projection matrices while retaining trainable feature vectors. In the six-task comparison, it reduces training time relative to ELoRA while using fewer average trainable parameters than LoRA.",
+      "applicability_boundary": "Table4 AFLoRA Avg89.23与同六任务Table5/8的89.02不同，作者查询单列。"
+    }
+  },
+  "coverage": [
+    {
+      "source": "canonical official PDF",
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "main_science": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "limitations_ethics": [
+        5
+      ],
+      "references": [
+        5,
+        6
+      ],
+      "scientific_appendix": {
+        "A.1 datasets, A.2 hyperparameters, A.3 joint freezing": [
+          7
+        ]
+      }
+    }
+  ],
+  "counterexamples": [
+    {
+      "pages": [
+        1,
+        3,
+        4,
+        5,
+        7
+      ],
+      "finding": "PDF摘要1.09含GSM8k；官方XML摘要0.85仅GLUE。Table4六任务Avg89.23与相同任务Table5/8均值89.02不同。GLUE主表89.23-88.38=0.85为混合任务分数点差，非统一准确率或相对百分比。",
+      "scope": "正确命名数字和比较，版本差异保留；不静默改数。"
+    },
+    {
+      "pages": [
+        3,
+        4,
+        5
+      ],
+      "finding": "主表非每项最好，MNLI/QQP/STS-B有其他方法更高；score某些任务更差已在局限承认。过拟合缓解和层近似能力是解释；near-optimal无保证。",
+      "scope": "保留平均收益，不追加理论或因果断言。"
+    }
+  ],
+  "supplement_audit": {
+    "method": "Locked official2024 XML short16 read; pages161-167 pdfhashde2bf327; abstract discrepancy retained",
+    "official_xml_attachments": [],
+    "separate_scientific_appendix_link_found": false,
+    "scientific_appendix_in_pdf": "A.1-A.3 page7 fully read",
+    "code_executed": false
+  },
+  "version_audit": {
+    "published_year": 2024,
+    "canonical_url": "https://aclanthology.org/2024.acl-short.16.pdf",
+    "xml_revision_entries": []
+  },
+  "visual_review": {
+    "pages": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      7
+    ],
+    "figures": "Figures1-5, Tables1-8, equations1-5",
+    "reviewer": "acl_finish_a"
+  },
+  "official_requirements": {
+    "observed_layout_not_current_rule": true,
+    "source": "frozen official rules separate"
+  },
+  "holdout_validation": {
+    "frozen_profile_sha256": "7b5c7cb918605d018fbd342b1ec5ecfb24a5eb405dac4ae3e36547d8871b6d2f",
+    "evaluated_at": "2026-10-29T23:40:39.116322+08:00",
+    "dimensions": {
+      "reader_argument": {
+        "status": "applies",
+        "pages": [
+          1,
+          2
+        ],
+        "reason": "ELoRA低训练参数但高rank计算，LoRA低rank但训练参数多；以两者取舍定位。 冻结建议适配：用比较图和小实验指明具体瓶颈，再引入冻结。 边界：两任务动机实验不推出任意模型高rank必要。"
+      },
+      "title_abstract": {
+        "status": "conditional",
+        "pages": [
+          1,
+          3,
+          4
+        ],
+        "reason": "题名给自适应冻结，摘要给模块、冻结分数、性能/参数/时间。 冻结建议适配：数字各配比较对象，平均训练参数与runtime分开。 边界：9.5倍对LoRA，1.86倍对ELoRA；1.09是GSM8k准确率绝对点差。"
+      },
+      "introduction": {
+        "status": "applies",
+        "pages": [
+          1,
+          2
+        ],
+        "reason": "贡献自然段承接相关方法取舍，先动机再方法和评测。 冻结建议适配：按新操作与相应收益叙述，不强制条列三贡献。 边界：这是经验方法，不要求额外理论贡献。"
+      },
+      "related_work": {
+        "status": "applies",
+        "pages": [
+          2
+        ],
+        "reason": "prefix/adapter/LoRA/rank/sparsity到ELoRA，最近依赖在方法之前。 冻结建议适配：按可调对象定位前作，澄清freeze与rank不同。 边界：不将作者未调研过的全部新颖性当已核实。"
+      },
+      "method_theory": {
+        "status": "applies",
+        "pages": [
+          2,
+          3,
+          7
+        ],
+        "reason": "模块前向式、梯度EMA/偏差分数、cubic冻结比例定义；附录超参。 冻结建议适配：定义操作量、冻结单位、时间表，符号服务算法。 边界：无理论保证，不需补定理；冻结阈值和代码细节未复现。"
+      },
+      "evidence": {
+        "status": "conditional",
+        "pages": [
+          2,
+          3,
+          4,
+          5,
+          7
+        ],
+        "reason": "动机两任务→GLUE主表→6任务runtime/FLOPs→GSM8k/摘要→冻结状态、层类型、score消融与层趋势。 冻结建议适配：结果按性能、成本和设计问题展开，各给正确比较单位。 边界：五seed均值未给SD；系统测6任务与GLUE8任务范围不同。"
+      },
+      "discussion_limits": {
+        "status": "applies",
+        "pages": [
+          4,
+          5
+        ],
+        "reason": "问句消融接机制讨论，Limitations承认其他score某些任务更好，rank联动留未来。 冻结建议适配：结果直接报告，过拟合/层表达解释保持potentially/may。 边界：near-optimal未提供最优性证明；不继承。"
+      },
+      "paragraph_language": {
+        "status": "applies",
+        "pages": [
+          3,
+          4,
+          5
+        ],
+        "reason": "performance/runtime/LLM小标题，问句讨论，每段一个判断；层趋势推测明确。 冻结建议适配：保持实测优势原有力度，对未隔离机制作解释而非事实。 边界：consistently只可指平均或表8具体六任务，非所有score所有任务。"
+      },
+      "main_appendix": {
+        "status": "applies",
+        "pages": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          7
+        ],
+        "reason": "短稿5页主体含Limitations后参考；附录1页数据split、超参、同层同时冻结实验。 冻结建议适配：正文保留新分数和关键对照，附录交代可复核细节。 边界：历史终稿5页不用于当前投稿限页；关键主张不能藏附录。"
+      },
+      "actionable": {
+        "status": "applies",
+        "pages": [
+          3,
+          4,
+          5,
+          7
+        ],
+        "reason": "比率和均值需要核查，不把局部数据疑点变成笼统防御。 冻结建议适配：原创：AFLoRA adaptively freezes low-rank projection matrices while retaining trainable feature vectors. In the six-task comparison, it reduces training time relative to ELoRA while using fewer average trainable parameters than LoRA. 边界：Table4 AFLoRA Avg89.23与同六任务Table5/8的89.02不同，作者查询单列。"
+      }
+    }
+  },
+  "review_limitations": "All7pages and A.1-A.3 fully read; six pages of figures/tables inspected. No code reproduction, no claims of statistical significance."
+}

@@ -1,0 +1,31 @@
+{
+  "id": "02-draft-theory",
+  "skill": "paper-writing",
+  "venue": "ICML",
+  "request": "起草理论结果及含义；材料只有给定定理，不补证明或实验",
+  "provided_facts": {
+    "assumptions": [
+      "L-smooth objective bounded below",
+      "unbiased stochastic gradients",
+      "gradient variance bounded by sigma^2"
+    ],
+    "given_result": "min_{0<=t<T} E||grad f(x_t)||^2 <= C/sqrt(T), with C depending on L, sigma, initial gap",
+    "proof": "not supplied",
+    "task": "statement and interpretation only"
+  },
+  "original": null,
+  "actual_primary_agent_output": "Under L-smoothness, a lower bound on the objective, and unbiased stochastic gradients with variance at most sigma^2, the iterates satisfy min_{0<=t<T} E||grad f(x_t)||^2 <= C/sqrt(T), where C depends on L, sigma, and the initial objective gap. This bound controls the smallest expected squared gradient norm among the first T iterates and quantifies progress toward stationarity.",
+  "author_notes": "",
+  "manual_semantic_review": {
+    "reviewer": "same primary agent",
+    "assessment": "consistent_with_given_facts_and_requested_scope",
+    "reason": "完整保留三个前提、min与期望平方梯度及C依赖。没有把最小平稳性界改成最后迭代点或全局最优点距离。用户只要结果解释，输出无需实验节或缺证明免责声明。",
+    "criteria": [
+      "theorem_conditions",
+      "criterion_preserved",
+      "pure_theory_allowed",
+      "directness"
+    ]
+  },
+  "independent_model_run": false
+}

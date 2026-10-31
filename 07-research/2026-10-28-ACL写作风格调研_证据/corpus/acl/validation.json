@@ -1,0 +1,17 @@
+{
+  "updated": "2026-10-29T23:37:25.916475+08:00",
+  "counts": {
+    "locked": 50,
+    "pdf_acquired": 50,
+    "text_parsed": 50,
+    "full_text_and_relevant_appendix_reviewed": 40,
+    "induction_complete": 40,
+    "holdout_complete": 0
+  },
+  "full_review_complete": false,
+  "induction_frozen": true,
+  "holdout_validation_status": "0/10 against frozen profile",
+  "behavioral_skill_evaluation": "see behavior-evaluation; not inferred from review counts",
+  "authoritative_review_records": "semantic-reviews/*.json",
+  "original11_project_untouched": true
+}

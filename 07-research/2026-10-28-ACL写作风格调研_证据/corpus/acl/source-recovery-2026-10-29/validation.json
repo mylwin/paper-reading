@@ -1,0 +1,35 @@
+{
+  "date": "2026-10-29",
+  "status": "passed",
+  "newly_acquired": 2,
+  "expected_acquisition_count_after_parent_merge": 50,
+  "prior_ledger_records_preserved_unchanged": 13,
+  "prior_failed953_preserved_in_before_snapshot_and_prior_recovery_error": true,
+  "ledger_count": 15,
+  "review_increment": 0,
+  "results": [
+    {
+      "id": "acl-2025.acl-long.953",
+      "page_count": 17,
+      "pdf_bytes": 44880958,
+      "pdf_sha256": "791a7c4dc5766ae493c00fb778e17562840be7ea7a50ee5356d1bc1f9c547441",
+      "markdown_sha256": "f2aef4f754b030d12f25f25fc48e309d48b83d6235826880aeac4fea2e584f12",
+      "range_count": 86,
+      "validated": true,
+      "deleted_derivatives": 173
+    },
+    {
+      "id": "acl-2025.acl-long.673",
+      "page_count": 17,
+      "pdf_bytes": 4159696,
+      "pdf_sha256": "335b821ebed5d5702ea4a0793ba35a77cf6357c59d34811861501b28b2682aaf",
+      "markdown_sha256": "361ae64b95c16b4b46e12df0833e9d5f981a52338885c4cd294e8f3ccd10b163",
+      "range_count": 8,
+      "validated": true,
+      "deleted_derivatives": 17
+    }
+  ],
+  "canonical_pdf_or_parse_deleted": 0,
+  "raw_and_parse_storage": "skill tmp only",
+  "parent_merge_required": true
+}

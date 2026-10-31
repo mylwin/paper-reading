@@ -1,0 +1,249 @@
+{
+  "id": "acl-2024.acl-short.5",
+  "anthology_id": "2024.acl-short.5",
+  "venue": "acl",
+  "year": 2024,
+  "track": "main conference research",
+  "length_type": "short",
+  "title": "Speculative Contrastive Decoding",
+  "authors": [
+    "Hongyi Yuan",
+    "Keming Lu",
+    "Fei Huang",
+    "Zheng Yuan",
+    "Chang Zhou"
+  ],
+  "first_author": "Hongyi Yuan",
+  "landing_url": "https://aclanthology.org/2024.acl-short.5/",
+  "pdf_url": "https://aclanthology.org/2024.acl-short.5.pdf",
+  "doi": "10.18653/v1/2024.acl-short.5",
+  "official_listing_url": "https://aclanthology.org/volumes/2024.acl-short/",
+  "sampling_stratum": "methods_models",
+  "paper_type": "speculative/contrastive decoding synthesis, cost-model theorem and four-task quality evaluation; short paper",
+  "anthology_pdf_revision_hash": "d93e4b83",
+  "metadata_revisions": [],
+  "official_attachments": [],
+  "sort_hash": "015e670ce5b9f7a3724c5c317d86b22ae8af207e8ca75c6e623a28f62aae85e0",
+  "split": "induction",
+  "semantic_review_status": "complete_writing_focused_full_text_review",
+  "full_text_and_relevant_appendix_review_complete": true,
+  "review_date": "2026-10-29",
+  "reviewer": "primary agent",
+  "pdf_path": ".claude/skills/paper-writing-shared/tmp/corpus/acl/pdf/2024.acl-short.5.pdf",
+  "pdf_sha256": "770ecdffa0aa9fbb09d8899da62ffb990fdaed65ebd2b8c41925413059e6d6f3",
+  "markdown_path": ".claude/skills/paper-writing-shared/tmp/corpus/acl/markdown/2024.acl-short.5.md",
+  "markdown_sha256": "dd0ebd8ea7eae37fe1f3128b1194f02ea7cc136629b36e39c4112faa9ac1e7b6",
+  "full_text_style_review_complete": true,
+  "external_appendix_review_complete": true,
+  "count_eligible_full_text_and_relevant_appendix": true,
+  "coverage": [
+    {
+      "source": "canonical official PDF",
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "main_science": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "references": [
+        5,
+        6,
+        7
+      ],
+      "scientific_appendix": {
+        "A.1-A.3 benchmarks, model/configuration and selectedhyperparameters": [
+          7,
+          8
+        ],
+        "B proof of expectedacceleration": [
+          7,
+          8
+        ],
+        "C colored arithmetic case study": [
+          8
+        ],
+        "D additional acceleration and sensitivity results": [
+          8,
+          9
+        ]
+      }
+    }
+  ],
+  "version_audit": {
+    "published_year": 2024,
+    "canonical_url": "https://aclanthology.org/2024.acl-short.5.pdf",
+    "xml_revision_entries": []
+  },
+  "supplement_audit": {
+    "method": "locked official 2024 ACL XML volume short paper5 read in full; title authors pages56-64 pdfhashd93e4b83 match; no attachment or revision element; no live landing freshness claim",
+    "official_xml_attachments": [],
+    "separate_scientific_appendix_link_found": false,
+    "scientific_appendix_in_pdf": "A-D read in full including complete proof and colored case",
+    "code_executed": false
+  },
+  "ten_dimensions": {
+    "reader_argument": {
+      "pages": [
+        1,
+        2
+      ],
+      "observation": "先把小模型在SD中的速度作用与CD中的质量作用并置，问同一小模型能否兼任两者。",
+      "editorial_advice": "组合方法稿可围绕两种已有能力的兼容问题组织贡献。",
+      "applicability_boundary": "原目标是contrastive分布而非保持expert原分布；不能把SCD质量变化说成原模型无损加速。"
+    },
+    "title_abstract": {
+      "pages": [
+        1
+      ],
+      "observation": "短标题就是合成方法名；摘要问题→两先前技术→单小模型兼任→四任务评价，没有塞性能数字。",
+      "editorial_advice": "命名和摘要直接表达机制及已验证目标，数字并非硬性要求。",
+      "applicability_boundary": "straightforward/powerful/extensive不是官方风格模板，不能替代证据。"
+    },
+    "introduction": {
+      "pages": [
+        1
+      ],
+      "observation": "分别介绍速度/质量路线，再说明组合机会，最后两条贡献对应方法与兼容性分析。",
+      "editorial_advice": "以实际已有技术的功能差异建立动机，贡献条数由证据决定。",
+      "applicability_boundary": "不需虚构第三贡献或新训练算法；exposurebias问题动机不代表本稿已隔离其因果来源。"
+    },
+    "related_work": {
+      "pages": [
+        1,
+        2
+      ],
+      "observation": "独立RelatedWorks按inference acceleration与quality组织，后接Preliminaries分别定义两个CD版本和SD。",
+      "editorial_advice": "把近邻技术与需要复用的符号分开，让新方法的增量容易看到。",
+      "applicability_boundary": "并列CD/SD不等于比较所有新服务系统；版本与引用需对应。"
+    },
+    "method_theory": {
+      "pages": [
+        2,
+        3,
+        4,
+        7,
+        8
+      ],
+      "observation": "Algorithm1蓝色标出与SD不同的分布和bonus步骤；正文说明额外一次amateur前向；Theorem5.1给依赖lambda/gamma/c的期望加速，附录B逐项算时间与token期望。",
+      "editorial_advice": "算法可突出相对前作的具体变化；成本模型明确假设、参数与额外工作，完整推导后置。",
+      "applicability_boundary": "抽象单前向T和固定平均接受率模型不等于真实硬件时延；拒绝概率应按接受检验的有效概率口径理解，勿照抄未截断1-r作为全域概率。"
+    },
+    "evidence": {
+      "pages": [
+        3,
+        4,
+        7,
+        8,
+        9
+      ],
+      "observation": "四任务含pretrained/chat/finetuned三套Llama2 7B/70B；Table1报三次SE和expectedspeedup c.05，熵分析、超参敏感性及案例解释兼容性。",
+      "editorial_advice": "质量表与成本模型结果分开说明，配置和任务评价口径随表可查，分析围绕组合是否互相妨碍。",
+      "applicability_boundary": "没有实测walltime加速表；GSM小幅涨分与HumanEval明显涨分不应合并为所有任务显著，未见正式检验，Alpaca为GPT4胜率非人类偏好。"
+    },
+    "discussion_limits": {
+      "pages": [
+        3,
+        4,
+        5
+      ],
+      "observation": "正文承认coherence无改善及Alpaca高方差；Limitation集中在c与基础设施/模型切换成本可能导致减速。",
+      "editorial_advice": "结果附近保留真实取舍，局限写影响效率主张的具体实现条件。",
+      "applicability_boundary": "不能因避免防御写作删除model-cost设定；但无需对每个数重复同一硬件免责声明。"
+    },
+    "paragraph_language": {
+      "pages": [
+        3,
+        4
+      ],
+      "observation": "实验用Setting/Quality/Acceleration，分析用Compatibility/Sensitivity，每段一个角色；机制解释用suggests/possibly。",
+      "editorial_advice": "已测质量和已推成本直接陈述，机制推测保留适当力度。",
+      "applicability_boundary": "不能把expected替换成measured，亦不把全部结果统一弱化成may。"
+    },
+    "main_appendix": {
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        7,
+        8,
+        9
+      ],
+      "observation": "正文约四页加结论末尾，保留方法/算法/定理/主表和分析；A-D补设置、证明、彩色案例与额外图。",
+      "editorial_advice": "短稿可有完整理论/实验链，附录提供推导和复核；追读正文后的跨页结论和科学浮动图。",
+      "applicability_boundary": "录用稿布局不是当前投稿限页规范；证明引用前作不等于本轮审阅已认证先前全部理论。"
+    },
+    "actionable": {
+      "pages": [
+        3,
+        4,
+        5,
+        7,
+        8
+      ],
+      "observation": "质量收益来自目标contrastive分布，速度比较来自成本模型。",
+      "editorial_advice": "原创示例：SCD uses the same amateur model to draft tokens and construct a contrastive target distribution. Under the reported cost model with c=0.05, the improved variant has an expected3.18× acceleration on HumanEval; its reported Pass@1 is33.54, matching improved contrastive decoding.",
+      "applicability_boundary": "准确保留expected和表中口径，不加实测延迟、统计显著或expert分布不变保证。"
+    }
+  },
+  "counterexamples": [
+    {
+      "pages": [
+        3,
+        4,
+        7,
+        8
+      ],
+      "finding": "Table1 E.A.为theoretical expected c.05，不是A100实测walltime；2A10080G是质量实验硬件信息。Theorem使用固定lambda与T、cT，实际batch验证/切换成本不能从表反推。",
+      "scope": "保留完整成本模型贡献，不夸大真实服务速度。"
+    },
+    {
+      "pages": [
+        4,
+        8
+      ],
+      "finding": "p4文字称accepted entropy higher，紧接解释及Fig2显示rejected高/accepted低；p8彩色案例支持非因果机制解释。原图确认文字冲突而非OCR。Table2后两行仍标ori但有beta，疑imp标签。",
+      "scope": "作者核对点；不静默改来源、不作为所有稿件额外防御要求。"
+    },
+    {
+      "pages": [
+        3,
+        7,
+        8
+      ],
+      "finding": "三次SE未见正式统计检验；GSM原CD64.42/原SCD64.44相对expert64.19小；coherence.75→.72/.74，无全指标改善。A.3按benchmark gridsearch未说明独立调参集，不能写作测试未触碰认证。B证明把一次验证误写Ma而上下文是Me。",
+      "scope": "保留HumanEval等具体收益，纠正全称/显著性/验证对象，不补造新实验。"
+    }
+  ],
+  "visual_review": {
+    "pages": [
+      2,
+      3,
+      4,
+      8,
+      9
+    ],
+    "figures": "Original Algorithm1, formulas, theorem, Table1/2, Figures1-5 and color-coded case viewed",
+    "reviewer": "primary agent"
+  },
+  "official_requirements": {
+    "source": "current ACL/ARR rules maintained separately",
+    "corpus_layout_observation": "short accepted paper9PDFpages, mainpp1-4 plus conclusionp5; Limitation/BroaderImpact p5; A-Dpp7-9",
+    "observed_layout_not_current_rule": true
+  },
+  "holdout_validation": null,
+  "review_limitations": "All scientific prose and A-D read; no code/hardware rerun, theorem correctness certification or bibliography-wide verification."
+}

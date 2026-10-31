@@ -1,0 +1,32 @@
+{
+  "date": "2026-10-28",
+  "checks": [
+    {
+      "skill": "paper-writing",
+      "official_quick_validate_exit": 1,
+      "official_quick_validate_output": "Traceback (most recent call last):\n  File \"/Users/myl/.codex/skills/.system/skill-creator/scripts/quick_validate.py\", line 10, in <module>\n    import yaml\nModuleNotFoundError: No module named 'yaml'\n",
+      "dependency_status": "PyYAML unavailable",
+      "entrypoint_sha256": "52a847c21d7bb57cf397da3a6933c8e906b6a5c817269c48bd21450723e726fb",
+      "ruby_yaml_exit": 0,
+      "ruby_yaml_output": "{\"description\":\"按 AAAI、IJCAI、ICML、NeurIPS、ICLR、COLT、JMLR、TMLR、TPAMI、TNNLS 或 TAI 的投稿规范与有来源的写作档案起草论文、重组论证、撰写章节，生成可编译 LaTeX 工程。用于新内容起草；已有稿件润色使用 paper-polishing。\",\"metadata\":{\"targets\":[\"codex\"]},\"name\":\"paper-writing\"}\n",
+      "required_metadata_valid": true,
+      "local_discovery_entry": "/Users/myl/Documents/paper/.agents/skills/paper-writing",
+      "local_discovery_resolves": true,
+      "broken_literal_local_links": []
+    },
+    {
+      "skill": "paper-polishing",
+      "official_quick_validate_exit": 1,
+      "official_quick_validate_output": "Traceback (most recent call last):\n  File \"/Users/myl/.codex/skills/.system/skill-creator/scripts/quick_validate.py\", line 10, in <module>\n    import yaml\nModuleNotFoundError: No module named 'yaml'\n",
+      "dependency_status": "PyYAML unavailable",
+      "entrypoint_sha256": "262c962d77826998a04e109389583e76bc99f3067d013539f55329b6c7d5e9ec",
+      "ruby_yaml_exit": 0,
+      "ruby_yaml_output": "{\"description\":\"按具体顶会顶刊的写作档案与官方 LaTeX 规范润色、翻译、压缩或优化已有论文，支持全文结构调整、投稿 venue 转换和排版维护，同时保留事实、公式、引用与工程结构。新章节起草使用 paper-writing。\",\"metadata\":{\"targets\":[\"codex\"]},\"name\":\"paper-polishing\"}\n",
+      "required_metadata_valid": true,
+      "local_discovery_entry": "/Users/myl/Documents/paper/.agents/skills/paper-polishing",
+      "local_discovery_resolves": true,
+      "broken_literal_local_links": []
+    }
+  ],
+  "qualification": "Original Python quick_validate blocked by missing PyYAML; Ruby YAML parsing and bounded link/metadata/discovery checks are separate checks, not a claim that the original validator passed."
+}

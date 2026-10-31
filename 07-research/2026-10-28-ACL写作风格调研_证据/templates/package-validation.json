@@ -1,0 +1,82 @@
+{
+  "verified_on": "2026-10-28",
+  "packages": [
+    {
+      "version": "2027-long",
+      "mode": "submission",
+      "main_page_limit": 8,
+      "official_files_match": true,
+      "source_files": {
+        "acl_natbib.bst": "6fbb306202290f4b68e74ac1460a8b27398500cb6dfeb4492e74c457eae7cd1e",
+        "references.bib": "9017c2c4fba54146e2e939c2076a82d68c3e3e3e980c3db0ea41b58c530dc8c2",
+        "main.tex": "4f06ec23c312e22c9ea1057da22c9db886ac1a032ee603eff7061c592bf5e0dc",
+        "acl.sty": "19dfeddc2c0e448f3926a0bef048a9db3f3611b46265b760caabd7ada4f361de",
+        "sections/body.tex": "1d2ff21e3c158e91110417e55947c8c5a26d5498c291e01131039d1e966109e1",
+        "sections/ethics.tex": "78558fb7b7bb253081792b644836064a6919825239ce599edc8ad3bcd530dbf9",
+        "sections/appendix.tex": "afcb73d9f31d7004e8d836ce8dd7d5b2405c731c8eccd62690107f5a9f0b898f"
+      }
+    },
+    {
+      "version": "2027-long",
+      "mode": "final",
+      "main_page_limit": 9,
+      "official_files_match": true,
+      "source_files": {
+        "acl_natbib.bst": "6fbb306202290f4b68e74ac1460a8b27398500cb6dfeb4492e74c457eae7cd1e",
+        "references.bib": "9017c2c4fba54146e2e939c2076a82d68c3e3e3e980c3db0ea41b58c530dc8c2",
+        "main.tex": "c76680cc7e7082165a237e20326198f6f9e5df5888a09d111f5d41aa363d48b0",
+        "acl.sty": "19dfeddc2c0e448f3926a0bef048a9db3f3611b46265b760caabd7ada4f361de",
+        "sections/body.tex": "1d2ff21e3c158e91110417e55947c8c5a26d5498c291e01131039d1e966109e1",
+        "sections/ethics.tex": "78558fb7b7bb253081792b644836064a6919825239ce599edc8ad3bcd530dbf9",
+        "sections/appendix.tex": "afcb73d9f31d7004e8d836ce8dd7d5b2405c731c8eccd62690107f5a9f0b898f"
+      }
+    },
+    {
+      "version": "2027-short",
+      "mode": "submission",
+      "main_page_limit": 4,
+      "official_files_match": true,
+      "source_files": {
+        "acl_natbib.bst": "6fbb306202290f4b68e74ac1460a8b27398500cb6dfeb4492e74c457eae7cd1e",
+        "references.bib": "9017c2c4fba54146e2e939c2076a82d68c3e3e3e980c3db0ea41b58c530dc8c2",
+        "main.tex": "4f06ec23c312e22c9ea1057da22c9db886ac1a032ee603eff7061c592bf5e0dc",
+        "acl.sty": "19dfeddc2c0e448f3926a0bef048a9db3f3611b46265b760caabd7ada4f361de",
+        "sections/body.tex": "1d2ff21e3c158e91110417e55947c8c5a26d5498c291e01131039d1e966109e1",
+        "sections/ethics.tex": "78558fb7b7bb253081792b644836064a6919825239ce599edc8ad3bcd530dbf9",
+        "sections/appendix.tex": "afcb73d9f31d7004e8d836ce8dd7d5b2405c731c8eccd62690107f5a9f0b898f"
+      }
+    },
+    {
+      "version": "2027-short",
+      "mode": "final",
+      "main_page_limit": 5,
+      "official_files_match": true,
+      "source_files": {
+        "acl_natbib.bst": "6fbb306202290f4b68e74ac1460a8b27398500cb6dfeb4492e74c457eae7cd1e",
+        "references.bib": "9017c2c4fba54146e2e939c2076a82d68c3e3e3e980c3db0ea41b58c530dc8c2",
+        "main.tex": "c76680cc7e7082165a237e20326198f6f9e5df5888a09d111f5d41aa363d48b0",
+        "acl.sty": "19dfeddc2c0e448f3926a0bef048a9db3f3611b46265b760caabd7ada4f361de",
+        "sections/body.tex": "1d2ff21e3c158e91110417e55947c8c5a26d5498c291e01131039d1e966109e1",
+        "sections/ethics.tex": "78558fb7b7bb253081792b644836064a6919825239ce599edc8ad3bcd530dbf9",
+        "sections/appendix.tex": "afcb73d9f31d7004e8d836ce8dd7d5b2405c731c8eccd62690107f5a9f0b898f"
+      }
+    }
+  ],
+  "all_official_assets_match": true,
+  "registry_or_project_script_modified_by_subagent": false,
+  "formats": {
+    "long": {
+      "review": 8,
+      "final": 9
+    },
+    "short": {
+      "review": 4,
+      "final": 5
+    }
+  },
+  "unknowns": [
+    "No PDF-size ceiling verified from consulted official sources.",
+    "No standalone upstream LICENSE in this fixed archive; official author-use directions and original headers preserved.",
+    "Actual author facts, disclosures, responsible NLP checklist and full anonymity remain manuscript-specific."
+  ]
+}

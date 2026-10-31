@@ -1,0 +1,8 @@
+{
+  "synthetic": true,
+  "source": "behavioral/01-draft-empirical.json",
+  "original_to_revised": "Only the over-hedged result sentence is rewritten. Protected macros, conditions, math, citation keys, labels, bibliography and source tree retained.",
+  "final_migration": "A fresh final template received the revised content, replacing anonymous style with official accepted style. Original submission retained.",
+  "official_assets": "Copied by verified project.py init, never edited.",
+  "project_root": "/Users/myl/Documents/paper/.claude/skills/paper-writing-shared/tmp/evaluation/icml-2026-10-28"
+}

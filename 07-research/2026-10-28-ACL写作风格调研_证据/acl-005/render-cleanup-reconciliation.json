@@ -1,0 +1,107 @@
+{
+  "date": "2026-10-29",
+  "kind": "reconciliation of prior reviewer cleanup, not a new reading or deletion",
+  "source_result_sha256": "e46ea39c8965bee70d7d2d2a07478dd7d66b3e1a9e81001c9b1e4c4dc962779d",
+  "render_directory": ".claude/skills/paper-writing-shared/tmp/corpus/acl/review-cache/acl-005",
+  "declared_deleted_render_count": 12,
+  "render_evidence": [
+    {
+      "pdf_page": 1,
+      "printed_page": 24258,
+      "sha256": "d438a6fff4b7093d6804d474980c7c383ca8100c1f5e5ef0665b5a5534fc27c9",
+      "render_scale_to_px": 1500,
+      "inspected": true,
+      "retention": "rebuildable page render removed after review"
+    },
+    {
+      "pdf_page": 6,
+      "printed_page": 24263,
+      "sha256": "a9fc290aed66f64555ba53681f6143d78711e09dd9a000a599a37bb20f73245c",
+      "render_scale_to_px": 1500,
+      "inspected": true,
+      "retention": "rebuildable page render removed after review"
+    },
+    {
+      "pdf_page": 7,
+      "printed_page": 24264,
+      "sha256": "1a35ac802dc23b15a8f11b503904250bdc8b43ff0fe40e20b442ebb2474d4521",
+      "render_scale_to_px": 1500,
+      "inspected": true,
+      "retention": "rebuildable page render removed after review"
+    },
+    {
+      "pdf_page": 8,
+      "printed_page": 24265,
+      "sha256": "b53178f2ab4a87a3bbae107c3bf945e1126ae79bcfd53dd5d1ec7a7f64930926",
+      "render_scale_to_px": 1500,
+      "inspected": true,
+      "retention": "rebuildable page render removed after review"
+    },
+    {
+      "pdf_page": 9,
+      "printed_page": 24266,
+      "sha256": "99e01f01d2962b00a69a03db329a6842364e67d3e743a8ae16f6d0e8b6393358",
+      "render_scale_to_px": 1500,
+      "inspected": true,
+      "retention": "rebuildable page render removed after review"
+    },
+    {
+      "pdf_page": 12,
+      "printed_page": 24269,
+      "sha256": "c9c0a25d9f56107a9f02e095ccbea01d5994c477158bc331d217ccb4c46fae85",
+      "render_scale_to_px": 1500,
+      "inspected": true,
+      "retention": "rebuildable page render removed after review"
+    },
+    {
+      "pdf_page": 13,
+      "printed_page": 24270,
+      "sha256": "313f65e9109aa703d7d668e7eea7fc79983628c96402c0e3d568b217897c79e8",
+      "render_scale_to_px": 1500,
+      "inspected": true,
+      "retention": "rebuildable page render removed after review"
+    },
+    {
+      "pdf_page": 14,
+      "printed_page": 24271,
+      "sha256": "b3ea9e085f91ba7fd7e7d3028a7f1a509b8fbe932cb5d2f88946482148ea379c",
+      "render_scale_to_px": 1500,
+      "inspected": true,
+      "retention": "rebuildable page render removed after review"
+    },
+    {
+      "pdf_page": 15,
+      "printed_page": 24272,
+      "sha256": "7fbfa5df0c040d227a5837659e862dd0ddc4aed9818e7d38e459e286dfafd84e",
+      "render_scale_to_px": 1500,
+      "inspected": true,
+      "retention": "rebuildable page render removed after review"
+    },
+    {
+      "pdf_page": 16,
+      "printed_page": 24273,
+      "sha256": "22c6f4be83b9bb179807a5e7e69dc45de685c459fef58b2ea79852a026ea7770",
+      "render_scale_to_px": 1500,
+      "inspected": true,
+      "retention": "rebuildable page render removed after review"
+    },
+    {
+      "pdf_page": 17,
+      "printed_page": 24274,
+      "sha256": "a23864e0871906c178f0189befae999509b09cb5fea383c674d75126f326a34b",
+      "render_scale_to_px": 1500,
+      "inspected": true,
+      "retention": "rebuildable page render removed after review"
+    },
+    {
+      "pdf_page": 18,
+      "printed_page": 24275,
+      "sha256": "6b31c2be5d1ccf5e2896b4e734a771ada63271515e0381ba8ef4006f32239e65",
+      "render_scale_to_px": 1500,
+      "inspected": true,
+      "retention": "rebuildable page render removed after review"
+    }
+  ],
+  "remaining_png_files": [],
+  "original_pdf_or_primary_parse_deleted": 0
+}

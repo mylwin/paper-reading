@@ -1,0 +1,9 @@
+{
+  "rubric-before-execution.json": "47aa36c3bdf68e969a57541e9e1f88819c042de08de6d2c22fd4fc39de05bf80",
+  "input-render-cleanup.json": "654208fc7fdd46a9c90c697db87eddfa948c2d665fd83e91e89c58cce651a09b",
+  "input-project-visual.json": "377cb420d9f37acc79aed3835a34af854c9de002bc657df6c8843779e201413e",
+  "inputs.json": "3f4c7d4b67c90f6958ecfeba5e5536887fbfb1b7e7856d4f863451efb612b03b",
+  "rubric-sha256.json": "7b4cf7032014249088a968325895d7bc997967da9466fcde28368b22db4e3154",
+  "input-project-manifest.json": "f49834943ff4a3e549eebe3653048ab160a9e52355c43696755fd64eada3ede7",
+  "input-project-compile.json": "9d1f5320e5919bef44bf89182c51c81dd3de0f7e6bdc75e6a4283419fc549091"
+}

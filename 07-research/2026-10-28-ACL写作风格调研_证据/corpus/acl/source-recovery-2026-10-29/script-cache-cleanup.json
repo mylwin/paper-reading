@@ -1,0 +1,10 @@
+{
+  "deleted_derivatives": [
+    {
+      "path": ".planning/acl-style-2026-10-28/__pycache__/recover_sources.cpython-314.pyc",
+      "sha256": "a3b7f6d96ff007c158bd5c834e8f2ef4fa0b75b8532dae96abc4e6583fca0b0f",
+      "bytes": 13441
+    }
+  ],
+  "source_deleted": 0
+}

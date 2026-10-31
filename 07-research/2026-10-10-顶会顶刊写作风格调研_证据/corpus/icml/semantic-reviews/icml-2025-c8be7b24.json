@@ -1,0 +1,307 @@
+{
+  "id": "icml-2025-c8be7b24",
+  "venue": "icml",
+  "year": 2025,
+  "split": "holdout",
+  "title": "L-Diffusion: Laplace Diffusion for Efficient Pathology Image Segmentation",
+  "authors": "Weihan Li, Linyun Zhou, Jian Yang, Shengxuming Zhang, Xiangtong Du, Xiuming Zhang, Jing Zhang, Chaoqing Xu, Mingli Song, Zunlei Feng",
+  "pdf_path": ".claude/skills/paper-writing-shared/tmp/corpus/icml/pdf/L-Diffusion- Laplace Diffusion for Efficient Pathology Image Segmentation.pdf",
+  "markdown_path": ".claude/skills/paper-writing-shared/tmp/corpus/icml/markdown/L-Diffusion- Laplace Diffusion for Efficient Pathology Image Segmentation.md",
+  "pdf_sha256": "7cca12dc6ecf55162e41a80bd3025ec146a078c013c8fd760937d90e5fc37ecc",
+  "review_date": "2026-10-28",
+  "paper_type": "empirical diffusion feature/contrastive-learning pathology segmentation framework with mathematical motivation and remote-sensing extension",
+  "semantic_review_status": "complete_writing_focused_review",
+  "full_text_style_review_complete": true,
+  "external_appendix_review_complete": true,
+  "count_eligible_full_text_and_relevant_appendix": true,
+  "coverage": [
+    {
+      "asset": "locked official PMLR PDF",
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "sections": "1–7/EthicalClinical/Impact/Ack/refs/A–G complete",
+      "method": "continuous20physicalpage text plus15originalpageimages cover all11figures8tables; no formal theorem/pseudocode"
+    }
+  ],
+  "version_audit": {
+    "official_landing": "https://proceedings.mlr.press/v267/li25ea.html",
+    "official_pdf": "https://raw.githubusercontent.com/mlresearch/v267/main/assets/li25ea/li25ea.pdf",
+    "version": "official proceedings PDF; exact bytes locked by SHA256",
+    "identity": "title/authors/lockedSHA/PMLRheader verified",
+    "new_network_fetch": false
+  },
+  "supplement_audit": {
+    "status": "A13–15 diffusion derivation/distribution illustration,B15 dataset/categorytable,C16 trainingtSNE,D17 tissue,E18 cell,F19 WSI,G20 remote-sensing visualizations all read",
+    "external_scientific_appendix_referenced": false,
+    "code_artifacts": "linked code not executed; all relevant scientific appendices in this PDF"
+  },
+  "ten_dimensions": {
+    "reader_argument": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp1–4"
+      ],
+      "observation": "gigapixel多尺度/标注成本/long-tail三困难→Laplace组件分离及跨diffusionstep像素向量。",
+      "editorial_advice": "从任务困难解释模型选择和新表示，别用通用宏大背景代替具体作用。",
+      "applicability": "20页正文及全部相关科学附录连续阅读，15原页直接核验。冻结40归纳规则的正式留出；同一审阅者，非独立模型评测/证明认证/代码复现。",
+      "confidence": {
+        "paper_specific": "high",
+        "venue_wide": "locked formal holdout;notfrequencyestimate"
+      }
+    },
+    "title_abstract": {
+      "category": "corpus_observation",
+      "positions": [
+        "p1"
+      ],
+      "observation": "模型名+Laplace机制+应用；摘要困难/整体流程/多指标最大收益，配第一页latent violin直观图。",
+      "editorial_advice": "可给代表性指标，避免堆八个最大值遮蔽主要贡献；用可核实数值替代remarkable/harmonious等宣传词。",
+      "applicability": "20页正文及全部相关科学附录连续阅读，15原页直接核验。冻结40归纳规则的正式留出；同一审阅者，非独立模型评测/证明认证/代码复现。",
+      "confidence": {
+        "paper_specific": "high",
+        "venue_wide": "locked formal holdout;notfrequencyestimate"
+      }
+    },
+    "introduction": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp1–2"
+      ],
+      "observation": "三问题→噪声选择→灰度step序列像素vector→contrastive→分割；贡献以段落表达非列表。",
+      "editorial_advice": "机制路线可形成贡献叙事，无须固定三贡献或先理论后实验模板。",
+      "applicability": "20页正文及全部相关科学附录连续阅读，15原页直接核验。冻结40归纳规则的正式留出；同一审阅者，非独立模型评测/证明认证/代码复现。",
+      "confidence": {
+        "paper_specific": "high",
+        "venue_wide": "locked formal holdout;notfrequencyestimate"
+      }
+    },
+    "related_work": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp8–9"
+      ],
+      "observation": "pathology/contrastive/medicaldiffusion/segmentation/noisedistribution五方向后置，区别生成质量与分割表示。",
+      "editorial_advice": "按所需技术来源定位，相关工作位置可灵活。",
+      "applicability": "20页正文及全部相关科学附录连续阅读，15原页直接核验。冻结40归纳规则的正式留出；同一审阅者，非独立模型评测/证明认证/代码复现。",
+      "confidence": {
+        "paper_specific": "high",
+        "venue_wide": "locked formal holdout;notfrequencyestimate"
+      }
+    },
+    "method_theory": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp2–4/13–15"
+      ],
+      "observation": "Gaussianprelim→Laplace分布梯度直觉与图→step-vector/contrastive/Dice两阶段；A给附加推导。",
+      "editorial_advice": "区分分布选择的动机、已实现流程与证明；数学推导不自动等于严格性能定理。",
+      "applicability": "20页正文及全部相关科学附录连续阅读，15原页直接核验。冻结40归纳规则的正式留出；同一审阅者，非独立模型评测/证明认证/代码复现。",
+      "confidence": {
+        "paper_specific": "high",
+        "venue_wide": "locked formal holdout;notfrequencyestimate"
+      }
+    },
+    "evidence": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp5–8/15–20"
+      ],
+      "observation": "多数据/组织与细胞任务、逐类radar、标注比例、Laplace×contrastive消融、噪声/耗时、遥感与WSI扩展。",
+      "editorial_advice": "结果/消融/外域扩展各回答问题；主指标收益直接报告，标注与计算效率分别用对应证据。",
+      "applicability": "20页正文及全部相关科学附录连续阅读，15原页直接核验。冻结40归纳规则的正式留出；同一审阅者，非独立模型评测/证明认证/代码复现。",
+      "confidence": {
+        "paper_specific": "high",
+        "venue_wide": "locked formal holdout;notfrequencyestimate"
+      }
+    },
+    "discussion_limits": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp6/9"
+      ],
+      "observation": "低标注仍需足够分割标签在对应实验讨论；未来unsupervised，临床与伦理声明单独集中。",
+      "editorial_advice": "未做临床验证只在相关声明/适用范围说明，不在每个分割收益后重复；此领域声明不强加所有ICML论文。",
+      "applicability": "20页正文及全部相关科学附录连续阅读，15原页直接核验。冻结40归纳规则的正式留出；同一审阅者，非独立模型评测/证明认证/代码复现。",
+      "confidence": {
+        "paper_specific": "high",
+        "venue_wide": "locked formal holdout;notfrequencyestimate"
+      }
+    },
+    "paragraph_language": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp1–9"
+      ],
+      "observation": "问题→具体机制→量化与可视化；有大量innovative/groundbreaking/superiority等作者修辞。",
+      "editorial_advice": "保留直接有据的动作和结果，改掉空泛自夸；不能把过度宣传当会议惯例，也不能反向弱化所有结果。",
+      "applicability": "20页正文及全部相关科学附录连续阅读，15原页直接核验。冻结40归纳规则的正式留出；同一审阅者，非独立模型评测/证明认证/代码复现。",
+      "confidence": {
+        "paper_specific": "high",
+        "venue_wide": "locked formal holdout;notfrequencyestimate"
+      }
+    },
+    "main_appendix": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp1–20"
+      ],
+      "observation": "1–9正文与声明/9–12文献；A–G13–20推导、设置、像素过程、patch/WSI/遥感图。",
+      "editorial_advice": "主文展示核心流程与主结果，附录收纳完整可视化和类别说明。",
+      "applicability": "20页正文及全部相关科学附录连续阅读，15原页直接核验。冻结40归纳规则的正式留出；同一审阅者，非独立模型评测/证明认证/代码复现。",
+      "confidence": {
+        "paper_specific": "high",
+        "venue_wide": "locked formal holdout;notfrequencyestimate"
+      }
+    },
+    "actionable": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp4–8"
+      ],
+      "observation": "Laplace跨step表示与contrastive联合消融支持经验性能，显式展示标注曲线。",
+      "editorial_advice": "原创示例：L-Diffusion constructs pixel descriptors from intermediate diffusion maps and trains them with a contrastive objective before segmentation. On PUMA tissue segmentation, it reports a DICE score of 92.11%, compared with 84.95% for the strongest listed baseline.",
+      "applicability": "20页正文及全部相关科学附录连续阅读，15原页直接核验。冻结40归纳规则的正式留出；同一审阅者，非独立模型评测/证明认证/代码复现。",
+      "confidence": {
+        "paper_specific": "high",
+        "venue_wide": "locked formal holdout;notfrequencyestimate"
+      }
+    }
+  },
+  "counterexamples": [
+    {
+      "position": "pp1/5–8",
+      "finding": "CRCDcellDICE96.11−79.02=17.09points, not printed20.09; abstract repeats20.09. PUMAtissue30%annotation83.51vs100%92.11DICE is8.60point gap, not equivalentwithoutcriterion. Four pathology datasets yield six tissue/cell evaluation tasks, not six independent datasets. Foreground-onlycell metric and uncertain aggregate definitions should remain explicit. No seed variance/split/patient-level protocol or full baseline training budgets verified."
+    },
+    {
+      "position": "pp3–4/13–15; research-only mathematical queries",
+      "finding": "Laplace density normalizer printed1/(sqrt2 b) vs standard1/(2b) inFig6; tails described faster than Gaussian despite heavier Laplace tail. A assumes Gaussian-style closure of independent Laplace sums, unweighted mixture densitysum, and signed Laplace noise alwaysnonnegative to remove absolute values; these require correction/justification. Fig6scales not variance-matched, cannot establish universal separation or segmentation superiority. Keep unresolved derivation issues separate from empirical scores; no theorem certification."
+    },
+    {
+      "position": "pp5–9/15–20",
+      "finding": "Student-tvsLaplace runtime comparison lacks a stated equal hardware/training/inference scope and no general Gaussianbaseline wallclock. Noise steps5–15 andtemperature0.05–0.1dependonhardware. Biomedical segmentation scores/WSIexamples do not prove diagnosis benefit or deployment readiness;clinicalstatementexplicitlyresearchonly. PanNukeTable7cell19categories/radarorganlabels andmetricDicevsIoUaveraging need dataset-specific reconciliation. Do not propagate every issue into manuscript prose or blanket invalidity."
+    }
+  ],
+  "visual_review": {
+    "pages": [
+      1,
+      3,
+      5,
+      6,
+      7,
+      8,
+      9,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20
+    ],
+    "source": "105dpi original Poppler page images directly viewed",
+    "policy": "delete own renders and duplicate extraction; canonical PDF/MD remain ignored skill tmp"
+  },
+  "official_requirements": [],
+  "holdout_validation": {
+    "freeze_manifest": "07-research/2026-10-28-ICML技能有效性验证_证据/induction-freeze/freeze-manifest.json",
+    "freeze_manifest_sha256": "e5ec6a6ab1fa45b5fca1bb87cc82a52e7e6ace591dac06ffded5a8bf68e61692",
+    "dimensions": {
+      "reader_argument": {
+        "rating": "applicable",
+        "positions": [
+          "pp1–4"
+        ],
+        "reason": "从任务困难解释模型选择和新表示，别用通用宏大背景代替具体作用。"
+      },
+      "title_abstract": {
+        "rating": "applicable_with_scope",
+        "positions": [
+          "p1"
+        ],
+        "reason": "可给代表性指标，避免堆八个最大值遮蔽主要贡献；用可核实数值替代remarkable/harmonious等宣传词。"
+      },
+      "introduction": {
+        "rating": "applicable",
+        "positions": [
+          "pp1–2"
+        ],
+        "reason": "机制路线可形成贡献叙事，无须固定三贡献或先理论后实验模板。"
+      },
+      "related_work": {
+        "rating": "applicable",
+        "positions": [
+          "pp8–9"
+        ],
+        "reason": "按所需技术来源定位，相关工作位置可灵活。"
+      },
+      "method_theory": {
+        "rating": "applicable_with_scope",
+        "positions": [
+          "pp2–4/13–15"
+        ],
+        "reason": "区分分布选择的动机、已实现流程与证明；数学推导不自动等于严格性能定理。"
+      },
+      "evidence": {
+        "rating": "applicable",
+        "positions": [
+          "pp5–8/15–20"
+        ],
+        "reason": "结果/消融/外域扩展各回答问题；主指标收益直接报告，标注与计算效率分别用对应证据。"
+      },
+      "discussion_limits": {
+        "rating": "applicable_with_scope",
+        "positions": [
+          "pp6/9"
+        ],
+        "reason": "未做临床验证只在相关声明/适用范围说明，不在每个分割收益后重复；此领域声明不强加所有ICML论文。"
+      },
+      "paragraph_language": {
+        "rating": "applicable_with_scope",
+        "positions": [
+          "pp1–9"
+        ],
+        "reason": "保留直接有据的动作和结果，改掉空泛自夸；不能把过度宣传当会议惯例，也不能反向弱化所有结果。"
+      },
+      "main_appendix": {
+        "rating": "applicable",
+        "positions": [
+          "pp1–20"
+        ],
+        "reason": "主文展示核心流程与主结果，附录收纳完整可视化和类别说明。"
+      },
+      "actionable": {
+        "rating": "applicable",
+        "positions": [
+          "pp4–8"
+        ],
+        "reason": "原创示例：L-Diffusion constructs pixel descriptors from intermediate diffusion maps and trains them with a contrastive objective before segmentation. On PUMA tissue segmentation, it reports a DICE score of 92.11%, compared with 84.95% for the strongest listed baseline."
+      }
+    },
+    "counterexample_to_universal_structure": "Single contribution paragraph; mathematical motivation without formal theorem; extensive image evidence; optional task-specific ethical/clinical statement. Published enthusiastic rhetoric and apparent calculation errors are counterexamples to copying accepted prose indiscriminately.",
+    "proposed_revision": "Frozen rules already support fact-preserving directness. Add behavior test for a clean metric-scoped result without hype, plus a conflicting-number case that sends the query to author notes and does not silently choose or invent a corrected experiment.",
+    "reviewer": "same primary agent; no independent judge",
+    "runtime_rules_changed_during_holdout": false
+  },
+  "review_limitations": "20页正文及全部相关科学附录连续阅读，15原页直接核验。冻结40归纳规则的正式留出；同一审阅者，非独立模型评测/证明认证/代码复现。"
+}

@@ -1,0 +1,293 @@
+{
+  "id": "acl-2025.acl-long.953",
+  "anthology_id": "2025.acl-long.953",
+  "venue": "acl",
+  "year": 2025,
+  "track": "main conference research",
+  "length_type": "long",
+  "title": "Computation Mechanism Behind LLM Position Generalization",
+  "authors": [
+    "Chi Han",
+    "Heng Ji"
+  ],
+  "first_author": "Chi Han",
+  "landing_url": "https://aclanthology.org/2025.acl-long.953/",
+  "pdf_url": "https://aclanthology.org/2025.acl-long.953.pdf",
+  "doi": "10.18653/v1/2025.acl-long.953",
+  "official_listing_url": "https://aclanthology.org/volumes/2025.acl-long/",
+  "sampling_stratum": "methods_models",
+  "paper_type": "mechanistic attention analysis with empirical decomposition, conditional asymptotic theory and positional interventions",
+  "anthology_pdf_revision_hash": "c01bfd1b",
+  "metadata_revisions": [],
+  "official_attachments": [],
+  "sort_hash": "00f6dd03bc4026b0a3f7845cb6ab9d6da46b02c585a8708a1abfece8a8e53a32",
+  "split": "induction",
+  "semantic_review_status": "complete_writing_focused_full_text_review",
+  "full_text_and_relevant_appendix_review_complete": true,
+  "review_date": "2026-10-29",
+  "reviewer": "delegated acl_induction_c",
+  "pdf_path": ".claude/skills/paper-writing-shared/tmp/corpus/acl/pdf/2025.acl-long.953.pdf",
+  "pdf_sha256": "791a7c4dc5766ae493c00fb778e17562840be7ea7a50ee5356d1bc1f9c547441",
+  "markdown_path": ".claude/skills/paper-writing-shared/tmp/corpus/acl/markdown/2025.acl-long.953.md",
+  "markdown_sha256": "f2aef4f754b030d12f25f25fc48e309d48b83d6235826880aeac4fea2e584f12",
+  "full_text_style_review_complete": true,
+  "external_appendix_review_complete": true,
+  "count_eligible_full_text_and_relevant_appendix": true,
+  "coverage": [
+    {
+      "source": "canonical officialPDF",
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "main_science": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "references": [
+        10,
+        11
+      ],
+      "scientific_appendix": {
+        "A/B regression derivations": [
+          12
+        ],
+        "C conditional theorem/proof": [
+          12,
+          13
+        ],
+        "D other model figures7-9": [
+          14,
+          15,
+          16,
+          17
+        ],
+        "E proof of Theorem1": [
+          14
+        ]
+      }
+    }
+  ],
+  "version_audit": {
+    "published_year": 2025,
+    "canonical_url": "https://aclanthology.org/2025.acl-long.953.pdf",
+    "xml_revision_entries": []
+  },
+  "supplement_audit": {
+    "method": "locked official2025XML longpaper953 inspected, PDFhashc01bfd1b; no attachment/revision; no live page claim",
+    "official_xml_attachments": [],
+    "separate_scientific_appendix_link_found": false,
+    "scientific_appendix_in_pdf": "A-E and all final figures fully read",
+    "code_executed": false
+  },
+  "ten_dimensions": {
+    "reader_argument": {
+      "pages": [
+        1,
+        2,
+        3
+      ],
+      "observation": "人类/LLM位置容忍现象引出attention内部机制，分解观察、隐藏向量模式与干预相连接。",
+      "editorial_advice": "机制稿可由具体行为现象推进到可测内部对象，再回到行为解释。",
+      "applicability_boundary": "人类类比是动机，不等同共享认知机制证据。"
+    },
+    "title_abstract": {
+      "pages": [
+        1
+      ],
+      "observation": "题名直接命名机制问题；摘要给现象、知识缺口、.959相关、模式/理论和解释。",
+      "editorial_advice": "发现与解释可作为贡献中心，数字需指明对应拟合与证据。",
+      "applicability_boundary": "相关是拟合logits不是95.9%任务准确率，非对全部模型行为的因果证明。"
+    },
+    "introduction": {
+      "pages": [
+        1,
+        2
+      ],
+      "observation": "自然段先预告分解、模式/定理、扰动与长度应用，没有固定贡献列表。",
+      "editorial_advice": "贡献概览与后文章节映射，发现型论文不必补新方法。",
+      "applicability_boundary": "长度200M引用前作，本文表只到8192，不变为本文实测规模。"
+    },
+    "related_work": {
+      "pages": [
+        2,
+        3
+      ],
+      "observation": "分SelfAttention/PositionEncoding及语言学/人类PositionGeneralization两脉络。",
+      "editorial_advice": "跨学科背景要服务对象定义与可检验问题，说明哪部分是已有现象。",
+      "applicability_boundary": "不把人类行为文献与模型内部实证混为同类证据。"
+    },
+    "method_theory": {
+      "pages": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        12,
+        13,
+        14
+      ],
+      "observation": "粗三轴回归→固定query假距离两轴分解→随机初始化控制→slowdominant特征→条件渐近定理与显式公式。",
+      "editorial_advice": "以由粗到细的分析顺序解释控制变量，理论假设放在正式结果附近，完整证明在附录。",
+      "applicability_boundary": "Theorem2主文省条件而C才详述，不应照抄为无条件定理；证明存在量词/代数问题需作者查证。"
+    },
+    "evidence": {
+      "pages": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        15,
+        16,
+        17
+      ],
+      "observation": "拟合.865/.947/显式.959分开，模型随机初始化对照、ArXiv扰动PPL、Qasper任务、GaussianKL与PCA，D给其他模型例图。",
+      "editorial_advice": "从内部拟合到外部干预逐层支撑解释，多个测量对象各自定义。",
+      "applicability_boundary": "PCA落在二维点云不是完整分布相等；Gaussian近似KL是估计，多head例图不是随机总体频率证明。"
+    },
+    "discussion_limits": {
+      "pages": [
+        9,
+        10
+      ],
+      "observation": "结论回收分解与表示机制，未来列加速/KV压缩/位置偏差；局限说明复杂依赖与机制如何学得仍未知。",
+      "editorial_advice": "把潜在应用明确写成未来工作，已测分解可直接陈述。",
+      "applicability_boundary": "未实现更快attention或KV压缩，不在改写中补成现有成果。"
+    },
+    "paragraph_language": {
+      "pages": [
+        3,
+        4,
+        5,
+        7,
+        8,
+        9
+      ],
+      "observation": "小节用StartingPoint/Disentanglement/Mechanism清楚推进；实测相关直接报，训练习得说suggests。",
+      "editorial_advice": "有据数字直接表达，解释和外推用匹配语气，一段推进一个推理层次。",
+      "applicability_boundary": "correlation不等variance百分比，all/general/ensuring需受实测和假设限制，不每句机械加may。"
+    },
+    "main_appendix": {
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "observation": "正文留关键观察、定理与干预，附录给回归/假设/完整证明和跨模型大图。",
+      "editorial_advice": "核心假设的可见性和主实验可判读性优先；附录供逐步复核。",
+      "applicability_boundary": "正文九页录用范围不是当前投稿限页；末尾大图和证明均需实际阅读。"
+    },
+    "actionable": {
+      "pages": [
+        4,
+        5,
+        7
+      ],
+      "observation": "三种拟合数字各对应不同对象与公式，不宜合并一句整体高相关。",
+      "editorial_advice": "原创例句：The fixed-query, fake-distance decomposition yields a reported mean logit correlation of0.947 across layers. The explicit approximation derived from the observed feature pattern yields a separate correlation of0.959.",
+      "applicability_boundary": "不宣称强因果、已修复泛化或全部attention信息独立。"
+    }
+  },
+  "counterexamples": [
+    {
+      "pages": [
+        2,
+        3,
+        5,
+        7,
+        8
+      ],
+      "finding": "Eq1分子漏exp而文字/脚注用softmax；主模型写Llama3.2-7B，随机/任务写3B，Lpretrain4096及Llama2/3图混需精确checkpoint；Table1 feature γ.1=41.15 vs42.53下降1.38百分点而文字<.1%，γ.05text42.34下降.19非.6%。",
+      "scope": "原版核实的作者查询，不擅自统一模型或数值。"
+    },
+    {
+      "pages": [
+        12
+      ],
+      "finding": "A未正则目标有常量移位gauge，不能严格凸唯一；脚注才有1e-6正则。B对任意正则权重只选LS gauge未包含ridge对非gauge方向收缩，应核对实际解。",
+      "scope": "阅读完整推导后的证明查询，不认证正确，也不因有定理而全盘否定实证。"
+    },
+    {
+      "pages": [
+        5,
+        12,
+        13,
+        14
+      ],
+      "finding": "Theorem1 smoothnessproperties[6]未正式定义；E用F(x,y)/q(y)定义k(x)仍可能依赖y，缺可分离量词论证。C从不等式转等式、norm和角度依赖、f/g最终负号及o(norm)→o(range)需额外控制，不能称已认证定理。",
+      "scope": "保留完整假设与证明来源；不会静默修复或把渐近声明写有限模型确定保证。"
+    },
+    {
+      "pages": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "finding": "扰动比例和距离决定效果；高γ远距离PPL明显爆炸，Fig5 captionlimited不能无范围使用；PCA与GaussianKL不能推出所有上层特征必在完整训练分布。",
+      "scope": "明确压力测试条件，保留实际低扰动鲁棒结果，不加泛泛防御段。"
+    }
+  ],
+  "visual_review": {
+    "pages": [
+      1,
+      2,
+      4,
+      5,
+      6,
+      9,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17
+    ],
+    "figures": "All Figures1-9 originals viewed; original equations and proof pp12-14 viewed; Tables1/2 read in pagealigned fullparse",
+    "reviewer": "same delegated agent"
+  },
+  "official_requirements": {
+    "source": "currentACL/ARR separately maintained",
+    "corpus_layout_observation": "long mainpp1-9; Limitations p10; A-Epp12-17",
+    "observed_layout_not_current_rule": true
+  },
+  "holdout_validation": null,
+  "review_limitations": "Full17pages and all scientific appendices read; not proof certification or code rerun; theoretical gaps retained as queries."
+}

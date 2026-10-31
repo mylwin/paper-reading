@@ -1,0 +1,27 @@
+{
+  "date": "2026-10-29",
+  "kind": "development smoke; generating subagent outputs reviewed semantically by primary agent",
+  "cases_reviewed": 3,
+  "cases_accepted": 3,
+  "checks": [
+    {
+      "case": 1,
+      "passed": true,
+      "semantic_review": "实测时间收益与容量驻留分别保留，未把achieves弱化为might，无新增宣称。"
+    },
+    {
+      "case": 2,
+      "passed": true,
+      "semantic_review": "删除连环弱化，直接报告既有观测；未扩大为统计显著或无条件因果，检验状态保留。"
+    },
+    {
+      "case": 3,
+      "passed": true,
+      "semantic_review": "原文已准确，零改动；假设/标签/公式/常数依赖与期望平稳性含义全保留。"
+    }
+  ],
+  "formal_holdout_used": 0,
+  "baseline_comparison": false,
+  "blind_evaluation": false,
+  "limitations": "仅三个人工构造局部润色案例。未评估全文起草、长程事实一致性、venue迁移或真实稿件LaTeX合规，不证明ACL整体有效性；40归纳冻结和10正式留出仍未进行。"
+}

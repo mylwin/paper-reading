@@ -1,0 +1,305 @@
+{
+  "id": "acl-2025.acl-long.1401",
+  "anthology_id": "2025.acl-long.1401",
+  "venue": "acl",
+  "year": 2025,
+  "track": "main conference research",
+  "length_type": "long",
+  "title": "Divide-Then-Aggregate: An Efficient Tool Learning Method via Parallel Tool Invocation",
+  "authors": [
+    "Dongsheng Zhu",
+    "Weixian Shi",
+    "Zhengliang Shi",
+    "Zhaochun Ren",
+    "Shuaiqiang Wang",
+    "Lingyong Yan",
+    "Dawei Yin"
+  ],
+  "first_author": "Dongsheng Zhu",
+  "landing_url": "https://aclanthology.org/2025.acl-long.1401/",
+  "pdf_url": "https://aclanthology.org/2025.acl-long.1401.pdf",
+  "doi": "10.18653/v1/2025.acl-long.1401",
+  "official_listing_url": "https://aclanthology.org/volumes/2025.acl-long/",
+  "sampling_stratum": "efficiency_theory",
+  "paper_type": "training-data transformation and parallel tool-invocation framework with effectiveness/cost/backbone evaluation;longpaper",
+  "anthology_pdf_revision_hash": "194df377",
+  "metadata_revisions": [],
+  "official_attachments": [],
+  "sort_hash": "067130420e49f0095af0a699572a076a0f3acc3fcf408ebdf284ba6cbf1cd987",
+  "split": "induction",
+  "semantic_review_status": "complete_writing_focused_full_text_review",
+  "full_text_and_relevant_appendix_review_complete": true,
+  "review_date": "2026-10-29",
+  "reviewer": "delegated acl017_finish agent",
+  "pdf_path": ".claude/skills/paper-writing-shared/tmp/corpus/acl/pdf/2025.acl-long.1401.pdf",
+  "pdf_sha256": "5446a6fdba78a4b71bd3ec4771f236b7741237b82b46961d53dedf179c1b05ec",
+  "markdown_path": ".claude/skills/paper-writing-shared/tmp/corpus/acl/markdown/2025.acl-long.1401.md",
+  "markdown_sha256": "85402598ed28c438b6299732c182c5ef82b5b4da12b3bcb29ad8a4335a898757",
+  "full_text_style_review_complete": true,
+  "external_appendix_review_complete": true,
+  "count_eligible_full_text_and_relevant_appendix": true,
+  "coverage": [
+    {
+      "source": "canonical official PDF, all17pages read",
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "main_science": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "references": [
+        9,
+        10,
+        11
+      ],
+      "scientific_appendix": {
+        "A full transformation and system prompts": [
+          12,
+          13
+        ],
+        "B pre/post transformation filtering": [
+          12,
+          14
+        ],
+        "C full DTA-Tool instance": [
+          12,
+          15
+        ],
+        "D full training configuration": [
+          12
+        ],
+        "E complete comparison and practical cases": [
+          12,
+          16,
+          17
+        ],
+        "F maximumtoken and backbone fulltables": [
+          12,
+          14
+        ]
+      }
+    }
+  ],
+  "version_audit": {
+    "canonical_url": "https://aclanthology.org/2025.acl-long.1401.pdf",
+    "xml_revision_entries": [],
+    "published_year": 2025
+  },
+  "supplement_audit": {
+    "method": "Read locked official2025ACLXML longpaper1401 entry: title/authors/pages28859-28875/PDFhash194df377 match; no separate attachment or revision element. No live page freshness claim.",
+    "official_xml_attachments": [],
+    "separate_scientific_appendix_link_found": false,
+    "scientific_appendix_in_pdf": "A-F read in full, including complete prompts, examples and tables",
+    "code_link": "https://corn0205.github.io/",
+    "code_executed": false
+  },
+  "ten_dimensions": {
+    "reader_argument": {
+      "pages": [
+        1,
+        2,
+        3
+      ],
+      "observation": "从工具调用串行依赖与搜索回溯成本入手，以并行数据、Process/Threads推理解决同一效率瓶颈。",
+      "editorial_advice": "将应用瓶颈与设计模块逐一对应，展示为什么需要数据和执行系统共同改变。",
+      "applicability_boundary": "StableToolBench是缓存/API模拟下的工具学习基准，不等于真实生产服务可靠性或无过载保证。"
+    },
+    "title_abstract": {
+      "pages": [
+        1
+      ],
+      "observation": "标题给策略名、效率目标和并行工具机制；摘要先对比串行/搜索，再两模块设计、质量成本结论及开放材料。首页图同时可视化路径与四指标。",
+      "editorial_advice": "方法名和具体机制帮助定位贡献，首页图可承载研究问题与关键证据。",
+      "applicability_boundary": "Llama2-7B与GPT3.5 comparable应限定benchmark和指标，不能转成所有任务/闭源整体等价。"
+    },
+    "introduction": {
+      "pages": [
+        1,
+        2
+      ],
+      "observation": "两类既有范式及各自瓶颈之后，解释树路径到DAG与Process/Threads，再概览效果、成本、泛化及三条贡献。",
+      "editorial_advice": "贡献与后文数据、系统、验证模块对应；设计与证据路线相互可追踪。",
+      "applicability_boundary": "三贡献为该工作实际组成，不推广为固定ACL模版。"
+    },
+    "related_work": {
+      "pages": [
+        2,
+        3
+      ],
+      "observation": "独立RelatedWork按ToolLearning与TaskPlanning组织，讨论搜索、compiler和分解规划。",
+      "editorial_advice": "按设计所依赖的能力和最接近路线定位，显式交代已存在的并行方案。",
+      "applicability_boundary": "不能把所有前作都写成仅串行；LLMCompiler本就是并行baseline，机制差异应具体。"
+    },
+    "method_theory": {
+      "pages": [
+        3,
+        4,
+        5,
+        12,
+        13,
+        14,
+        15
+      ],
+      "observation": "先数据成功路径剪枝、GPT4-DAG、前后规则过滤，再SFT与Process/Threads/状态锁；附录给完整prompt、配置及JSON实例。",
+      "editorial_advice": "分开训练数据构造与推理执行，说明每一输入/输出及同步点；完整操作细节可后置。",
+      "applicability_boundary": "Eq1印负log的概率求和，非标准逐项负log求和，须作者确认实现；无理论证明不补造全局最优或语义等价保证。"
+    },
+    "evidence": {
+      "pages": [
+        5,
+        6,
+        7,
+        8,
+        12,
+        14,
+        16,
+        17
+      ],
+      "observation": "六子集SoPR/SoWR，三次平均，基线按2024Sep-Oct复跑；prompt/completion平均token、步数、实测开源时延；跨13B/8B泛化和案例。",
+      "editorial_advice": "按效果→成本→跨backbone三问题组织，指标和时间窗口集中说明，均值/最大值分别报告。",
+      "applicability_boundary": "三次均值未给CI/显著检验；API时效/cache、工具候选预给、A100评测配置限定解释；无闭源时延测量。"
+    },
+    "discussion_limits": {
+      "pages": [
+        8,
+        9,
+        12
+      ],
+      "observation": "结论回到数据与系统两贡献；Limitations说明更大模型未验证和真实复杂任务仍不稳定，F承认最大token常是ReAct更低。",
+      "editorial_advice": "局限针对实际未覆盖对象，正文支持的平均收益直接陈述，尾部开销亦按原口径保留。",
+      "applicability_boundary": "资源不足泛句不必照抄扩展成所有稿件自辩；不删最大成本反例或实际可靠性条件。"
+    },
+    "paragraph_language": {
+      "pages": [
+        3,
+        6,
+        7,
+        8
+      ],
+      "observation": "章节先说明目标，小段用DataFiltering/Fine-tuning/Process/Threads及SoPR/TokenConsumption分工；解释用suggest/may，结果直接报。",
+      "editorial_advice": "一段一个操作或评测问题；先给结果，再解释可能机制。",
+      "applicability_boundary": "原文significantly不自动代表统计显著，expandedperception等因果解释未被独立模块消融认证。"
+    },
+    "main_appendix": {
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "observation": "正文保留全pipeline、训练式、推理机制和主表；附录A-F集中prompt、规则、数据实例、训练、完整案例与长尾token/泛化表。",
+      "editorial_advice": "正文足以判断贡献成立，附录提供复核与实际操作细节；浮动实例不能只读caption。",
+      "applicability_boundary": "录用正文布局不可替代当前投稿页数规范；样例成功标记不能替代逐项需求满足核对。"
+    },
+    "actionable": {
+      "pages": [
+        2,
+        4,
+        6,
+        8
+      ],
+      "observation": "数据变换+执行机制共同对齐效果成本验证，支持清楚但有单位的主结果。",
+      "editorial_advice": "原创示例：DTA converts successful tool trajectories into DAG-structured training examples and executes independent calls in parallel. On the reported StableToolBench evaluation, DTA-Llama achieves mean SoPR66.1 and SoWR59.1; the latency comparison reports31s versus39s for ToolLLaMA-ReAct.",
+      "applicability_boundary": "数字来自原表，平均结果不等于每个子集或最大token都胜出；时延比表有内在数值差异需作者核对。"
+    }
+  },
+  "counterexamples": [
+    {
+      "pages": [
+        4
+      ],
+      "finding": "Eq1清晰印L=-log(sum_i pθ(...))，应与实现核对，不是OCR误差；不静默改成sumnegative-log。",
+      "scope": "保留作者查询，不能认证论文训练目标正确性。"
+    },
+    {
+      "pages": [
+        6,
+        7,
+        8,
+        14
+      ],
+      "finding": "Ours平均优于所列开源，不是所有子集领先：QwenI1Inst SoPR65.7>63.5、I3Inst68.3>67.5。最大token表ReAct多数更小，平均省不等尾部全省。",
+      "scope": "直接保留实际平均增益，不抹掉具体反例。"
+    },
+    {
+      "pages": [
+        8
+      ],
+      "finding": "Table4 I2Cat时延38/30=1.2667而speedup印1.35；其他行40/33=1.2121与1.20、35/28=1.25与1.20、39/29=1.3448与1.27等也不严格对应，可能均值比/比均值口径或版本问题，未说明。",
+      "scope": "不能只凭表反算认证统一速度；保留原值及查询。"
+    },
+    {
+      "pages": [
+        6,
+        7
+      ],
+      "finding": "SoWR段误称SolvablePassRate；I2Inst70.8相对Qwen55.6为27.34%接近27.32，但未清楚指baseline。因果归于perception及datafiltering非主因仅一个原serial数据控制，未模块隔离。",
+      "scope": "指标名及比较对象需清楚，不把近似相等当证明。"
+    },
+    {
+      "pages": [
+        16,
+        17
+      ],
+      "finding": "Fig9ours仅comedy推荐，averagevoteN/A、overview未返回，不满足多genre及完整详情，仍称准确结局。Fig10DNS案例把example.com.mx等注册日期写成example.com DNS记录，忽略已返回A/AAAA等；绿色勾不证明任务正确。",
+      "scope": "原图/完整文本已核，案例仅说明执行流，不认证整任务成功；不添加普遍防御段。"
+    }
+  ],
+  "visual_review": {
+    "pages": [
+      1,
+      4,
+      6,
+      7,
+      8,
+      14,
+      15,
+      16,
+      17
+    ],
+    "figures": "Viewed original pipeline1/2, mean-tokenFigure3, crossbackboneFigure4, filterFigure7, fullJSONFigure8, fullcasesFigures9/10 and principal/allresulttables; fullpromptsFigures5/6 read in pagealigned text",
+    "reviewer": "delegated acl017_finish agent"
+  },
+  "official_requirements": {
+    "source": "currentACL/ARR rules separately maintained",
+    "corpus_layout_observation": "acceptedlong main sciencepp1-9 includingConclusion; Limitationsp9, referencesp9-11, A-Fpp12-17",
+    "observed_layout_not_current_rule": true
+  },
+  "holdout_validation": null,
+  "review_limitations": "Read complete scientific prose and A-F; no benchmark/model/API execution, implementation inspection, causal or theorem certification."
+}

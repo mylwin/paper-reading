@@ -1,0 +1,24 @@
+{
+"all_pages_read":16,"visual_pages":[1,2,5,6,7,8,9,13,14,15,16],"paper_type":"foundational theoretical framework for preference orders, multiobjective utilities, policy dominance and Markov reward approximation",
+"sections":"1–8/Impact/Ack/refs/A omitted proofs complete","method":"continuous16page text and11originalpageimages;1figure/no tables/no pseudocode; two illustrative counterexamples and QP formulations","appendix_status":"A13–16 all proofs4.1/4.2/5.1/5.2/5.3/6.1 read; no external scientific appendix",
+"rows":[
+["reader_argument","pp1–4","奖励工程困难与反馈自然性→偏好/效用/奖励表达力及可解性取舍→三种MDP扩展。","用关系图式论证串联定义，不必把每篇理论文章写成新算法benchmark稿。","applicable"],
+["title_abstract","p1","Towards标明理论奠基范围；长摘要First/Second/Third/Fourth逐项说明关系、NP-hardness、dominance、QP近似。","结构与信息密度可随概念贡献调整；towards/promising在未完成统计学习任务的奠基工作中有意义，不按禁词删除。","applicable_with_scope"],
+["introduction","pp1–3","三个研究问题与四项带节号贡献；目标是为后续统计学习奠基。","问题链能引出定义/性质贡献，贡献数量无固定上限三条。","applicable"],
+["related_work","pp1–2/8","引言定位RLHF隐数值信号假设，Sec7按feedback/learning/bandit详细比较。","必要区别前置，完整综述后置可成立。","applicable"],
+["method_theory","pp3–8/13–16","partial preorder背景→三设置→compatible utility及维度复杂度→反例引出全compatible utility dominance→全序累计和判别/偏序→QP奖励近似。","定义后紧接作用、例子或可计算判据；形式推导服务读者理解，不要求额外算法伪码。","applicable"],
+["evidence","pp5–8/13–16","证据为复杂度归约、构造、两反例和定理证明；没有数据实验。","明确输入规模：对显式trajectory set多项式可能对horizon指数；偏序dominance难是conjecture非已证NP-hard。","applicable_with_scope"],
+["discussion_limits","pp7–9","偏序检验无已知多项式方法/复杂度猜想在对应段，FutureWorks集中统计复杂度、偏好采集与不确定性。","限制与解决范围清楚，主文仍可直接说引入定义/给出构造。","applicable"],
+["paragraph_language","pp4–8","先较简单全序后偏序，每个定义后some comments/含义，反例解释为什么需要新dominance。","条件/概念说明是论证内容；减少重复空泛限制但不能把猜测加强为定理。","applicable"],
+["main_appendix","pp1–16","1–9主文核心设置/定义/定理/heuristic/QP与讨论；9–12参考；A13–16完整证明。","主文给结果及直觉，证明末置仍保留可追溯路径。","applicable"],
+["actionable","pp4–8","三个表达层级和两类序依次推进，不依赖经验性能宣称。","原创示例：We represent trajectory preferences as partial preorders, retaining both equivalence and incomparability. This formulation separates the construction of compatible utilities from the comparison of policies, and yields a cumulative-probability criterion for dominance under total orders.","applicable"]
+],
+"counterexamples":[
+{"position":"pp2–9","finding":"No hidden reward/probabilistic preference model still assumes deterministic reflexive transitive preferences, finite explicitly available trajectory relation and distributions; cycles/statistical elicitation outside scope. Width-based compatible utility heuristic is exact compatibility but dimension not minimal, polynomial in |T| not necessarily SAH. Partial-order dominance hardness is conjectured; minimum utility dimension NP-hard is a different proved problem."},
+{"position":"p7; research-only formulation queries","finding":"Fixed endpoint0/1 and epsilon gaps need epsilon≤1/(|T|-1) feasibility. B has stagewise column-sum dependencies for H≥2, so footnote claiming full column rank and (B^T B)^-1 needs pseudoinverse or gauge fixing. Do not silently change authors’ displayed expression or present it as general executable guarantee."},
+{"position":"pp13–16; research-only proof queries","finding":"4.1(ii) coordinate utilities can tie without identical trajectories, so conversion to unique total orders needs tie handling. 5.1 step utility is only weakly monotone rather than strictly compatible, and tail sum need not be strictly negative; summation-by-parts argument requires care. 6.1 removes a sum of positive component-wise utility differences based on Pareto optimality; Pareto optimality alone does not make that sum nonpositive. Treat as unresolved proof-step questions, not certified theorem validity or venue guidance."},
+{"position":"pp1–2/9","finding":"Potential RLHF applications are future relevance, not measured LLM improvement or statistical-efficient learning algorithm. No invented empirical section or removal of evidence-matched foundational language. Generic impact text is author choice, not automatically suitable for all applications."}
+],
+"structure_counterexample":"Long four-part abstract, four contributions, no experiment/pseudocode, one conceptual illustration, related work late; foundational and tentative future relevance can be precise rather than defensive.",
+"proposed_revision":"Keep conditional frozen profile. Add behavior case distinguishing conjecture from proved complexity and explicit trajectory-size complexity from horizon complexity. Do not strengthen Towards/potential automatically merely to reduce hedges."
+}

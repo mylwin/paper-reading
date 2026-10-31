@@ -1,0 +1,40 @@
+{
+  "date": "2026-10-28",
+  "paper_id": "icml-2025-29bd8228",
+  "checks": {
+    "D1_one_step": {
+      "setup": "f(x)=x²/2, P=identity, m0=0, beta=.9, eta=.001, T=1, exact gradient/no noise",
+      "actual_change": "-19999/200000000",
+      "printed_upper_bound": "-1979/2000000",
+      "violates_printed_D1": true,
+      "interpretation": "Query initialization/boundary terms of Lemma D.1 pp28–30; the printed recurrence drops finite geometric boundary factors."
+    },
+    "C2_count_vs_size": [
+      {
+        "beta": "0",
+        "noisy_group_count_exponent": "-3/5",
+        "subset_size_exponent_from_d_beta_over_k": "3/5",
+        "count_exponent_nonnegative": false
+      },
+      {
+        "beta": "1/2",
+        "noisy_group_count_exponent": "1/10",
+        "subset_size_exponent_from_d_beta_over_k": "2/5",
+        "count_exponent_nonnegative": true
+      },
+      {
+        "beta": "9/10",
+        "noisy_group_count_exponent": "33/50",
+        "subset_size_exponent_from_d_beta_over_k": "6/25",
+        "count_exponent_nonnegative": true
+      },
+      {
+        "beta": "1",
+        "noisy_group_count_exponent": "4/5",
+        "subset_size_exponent_from_d_beta_over_k": "1/5",
+        "count_exponent_nonnegative": true
+      }
+    ]
+  },
+  "qualification": "Exact local examples to document author queries. No author code/data executed, no independent certification/refutation of every theorem or empirical finding. Keep queries in research records, not as repetitive warnings in generated manuscript prose."
+}

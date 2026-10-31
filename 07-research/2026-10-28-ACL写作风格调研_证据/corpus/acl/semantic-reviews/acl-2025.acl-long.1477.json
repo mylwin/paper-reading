@@ -1,0 +1,327 @@
+{
+  "id": "acl-2025.acl-long.1477",
+  "anthology_id": "2025.acl-long.1477",
+  "venue": "acl",
+  "year": 2025,
+  "track": "main conference research",
+  "length_type": "long",
+  "title": "SubLIME: Subset Selection via Rank Correlation Prediction for Data-Efficient LLM Evaluation",
+  "authors": [
+    "Gayathri Saranathan",
+    "Cong Xu",
+    "Mahammad Parwez Alam",
+    "Tarun Kumar",
+    "Martin Foltin",
+    "Soon Yee Wong",
+    "Suparna Bhattacharya"
+  ],
+  "first_author": "Gayathri Saranathan",
+  "landing_url": "https://aclanthology.org/2025.acl-long.1477/",
+  "pdf_url": "https://aclanthology.org/2025.acl-long.1477.pdf",
+  "doi": "10.18653/v1/2025.acl-long.1477",
+  "official_listing_url": "https://aclanthology.org/volumes/2025.acl-long/",
+  "sampling_stratum": "efficiency_theory",
+  "paper_type": "subset-based model evaluation with cross-benchmark rank-correlation prediction",
+  "anthology_pdf_revision_hash": "609899f0",
+  "metadata_revisions": [],
+  "official_attachments": [],
+  "sort_hash": "07fb9aa301a8dcca1fdf94b406753e2e8d4e7757757a137ada3ce95b082c8903",
+  "split": "induction",
+  "semantic_review_status": "complete_writing_focused_full_text_review",
+  "full_text_and_relevant_appendix_review_complete": true,
+  "pdf_path": ".claude/skills/paper-writing-shared/tmp/corpus/acl/pdf/2025.acl-long.1477.pdf",
+  "pdf_sha256": "6071cef030b67a043219361e22c6fb496dd1c607d472ea4b30693fa807d8dcf0",
+  "markdown_path": ".claude/skills/paper-writing-shared/tmp/corpus/acl/markdown/2025.acl-long.1477.md",
+  "markdown_sha256": "c8ca91d0faec1e266ee3c7071b339b3512e0214cbeb28feb6c0fdf6256dfa30c",
+  "page_count": 22,
+  "review_date": "2026-10-29",
+  "reviewer": "acl_finish_b agent",
+  "full_text_style_review_complete": true,
+  "external_appendix_review_complete": true,
+  "count_eligible_full_text_and_relevant_appendix": true,
+  "coverage": [
+    {
+      "source": "canonical official PDF",
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22
+      ],
+      "main_science": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "limitations_ethics": [
+        9
+      ],
+      "references": [
+        9,
+        10
+      ],
+      "scientific_appendix": {
+        "A.1-A.3 sampling/metrics/baseline": [
+          10,
+          11,
+          12,
+          13
+        ],
+        "A.4.1-A.4.4 intrinsic metrics/training/baselines/results": [
+          12,
+          13,
+          14,
+          15,
+          16
+        ],
+        "A.5-A.6 complete train/test model lists and setup": [
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22
+        ]
+      }
+    }
+  ],
+  "version_audit": {
+    "canonical_url": "https://aclanthology.org/2025.acl-long.1477.pdf",
+    "xml_revision_entries": []
+  },
+  "supplement_audit": {
+    "method": "locked official XML metadata and manifest attachment entries inspected; canonical PDF scientific appendices read; no live freshness assertion",
+    "official_xml_attachments": [],
+    "scientific_appendix_in_pdf": {
+      "A.1-A.3 sampling/metrics/baseline": [
+        10,
+        11,
+        12,
+        13
+      ],
+      "A.4.1-A.4.4 intrinsic metrics/training/baselines/results": [
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "A.5-A.6 complete train/test model lists and setup": [
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22
+      ]
+    },
+    "code_executed": false
+  },
+  "ten_dimensions": {
+    "reader_argument": {
+      "pages": [
+        1,
+        2
+      ],
+      "observation": "以评测成本与新benchmark冷启动缺历史结果定位，目标是排名保真而非新模型准确率。",
+      "editorial_advice": "先定义要保持的决策结果，再说明减少哪种评测投入。",
+      "applicability_boundary": "少样本评测不是免除anchor全量评测。"
+    },
+    "title_abstract": {
+      "pages": [
+        1
+      ],
+      "observation": "标题明确subset/rank prediction/data-efficient；摘要动机、信号来源、选子集与跨benchmark结果。",
+      "editorial_advice": "摘要交代输入预算、保真目标与作用对象。",
+      "applicability_boundary": "80–99%缩样本率不能直接当含预处理/anchor的总成本节省。"
+    },
+    "introduction": {
+      "pages": [
+        1,
+        2,
+        3
+      ],
+      "observation": "规模成本→warm-up缺口→RCP→两个贡献；另设IMO类比章节。",
+      "editorial_advice": "类比用于解释选取原则，尽快落到可计算指标。",
+      "applicability_boundary": "类比不提供排序稳定性的理论保证。"
+    },
+    "related_work": {
+      "pages": [
+        2
+      ],
+      "observation": "分训练数据选择和高效评测，后者按需要历史数据/初始化条件定位。",
+      "editorial_advice": "同任务前作按可用信息与评测预算比较。",
+      "applicability_boundary": "source自称其他方法一概需100+不能未经核实照搬。"
+    },
+    "method_theory": {
+      "pages": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "observation": "SubMS、特征矩阵、RCP训练与新benchmark推断；图2/3与三算法，模型划分和benchmark五折分开。",
+      "editorial_advice": "多个学习/选择环节明确各环节能访问的数据。",
+      "applicability_boundary": "GunningFog/Flesch为代理，不等于任务真难度/标注质量。"
+    },
+    "evidence": {
+      "pages": [
+        7,
+        8,
+        12,
+        13,
+        16,
+        20
+      ],
+      "observation": "100未见模型上比较RC/SDC，分别看anchor5/10/20；附录给弱组件SubMS、分布与模型列表。",
+      "editorial_advice": "核心表展示每benchmark结果，重复采样检查预算稳定性。",
+      "applicability_boundary": "RCP回归R²、Spearman排名、Pearson分数相关三者不可混称accuracy。"
+    },
+    "discussion_limits": {
+      "pages": [
+        7,
+        8,
+        9
+      ],
+      "observation": "低收益/高难benchmark与随机baseline强的情形明确提及；局限anchor成本/代理稳健性/代表性/新域。",
+      "editorial_advice": "正面突出低anchor条件下的用途，边界放在影响应用的条件。",
+      "applicability_boundary": "原文冗长为无优势辩护与over98%全称结论不应学成风格要求。"
+    },
+    "paragraph_language": {
+      "pages": [
+        3,
+        7,
+        8
+      ],
+      "observation": "主题句解释指标/结果，粗体关键词便于浏览；部分段落将相关放大为确保。",
+      "editorial_advice": "报告实测比较直接简洁，原因解释留为解释而非保证。",
+      "applicability_boundary": "避免把数据集冗余作为输给随机baseline的已证机制。"
+    },
+    "main_appendix": {
+      "pages": [
+        4,
+        5,
+        8,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        20,
+        22
+      ],
+      "observation": "正文流程及主表，A附录给采样、分布、弱组件对照、313模型列表。",
+      "editorial_advice": "核心评测划分与预算在正文，完整实例/清单移附录。",
+      "applicability_boundary": "附录A.4.3/4标题下内容依赖跨页浮动表，须追到16/22页。"
+    },
+    "actionable": {
+      "pages": [
+        7,
+        8
+      ],
+      "observation": "GPQA低anchor仍非高相关，方法优势应定位比较和设置。",
+      "editorial_advice": "原创例：With five anchor models and a 20% subset, SubLIME reaches a Spearman correlation of 0.620 on GPQA, compared with 0.560 for TinyBenchmarks.",
+      "applicability_boundary": "同设置主表提供真实比较；不把模型回归R².8996写最终模型排名.8996。"
+    }
+  },
+  "counterexamples": [
+    {
+      "pages": [
+        7,
+        8,
+        16
+      ],
+      "finding": "结论across ten over98%不符Table2 GPQA.620/MUSR.746；p7称C5random76.9低于SubLIME74.55与表不符；C20 MUSR77.89低于C10 82.75，anchor增加非单调。",
+      "scope": "保留局部优势，撤销全benchmark/单调保证。"
+    },
+    {
+      "pages": [
+        5,
+        6,
+        12,
+        13,
+        16
+      ],
+      "finding": "Algorithm3 accuracy公式是R²，正文与表有ranking/score accuracy混用；A.2 Pearson称rank而正文Spearman；Fig13标题loss但轴trainingaccuracy，末层sigmoid允许非负rho；6层与所列5层宽待核对。",
+      "scope": "写作指南要求指标名称准确，不拿源文混用当惯例。"
+    },
+    {
+      "pages": [
+        1,
+        5,
+        8,
+        9,
+        20
+      ],
+      "finding": "摘要1–20%/99%与主试验固定20%和80%节省口径不同；anchor需要全评测、Flesch/BERT预处理和训练成本未给同一end-to-end时间表。",
+      "scope": "分清子集样本预算与系统成本，避免memory/runtime无测量宣称。"
+    },
+    {
+      "pages": [
+        3,
+        5,
+        6,
+        13,
+        14,
+        15,
+        16,
+        22
+      ],
+      "finding": "特征图/算法输入rho、I跨benchmark索引和selectmaxE_s[L_s]未定义，代码未跑；Figure10 GPQA与oracle弱相关不能证明普遍机制，训练/测试同基础家族不等于独立模型分布。",
+      "scope": "这些是作者核查事项，不强制每段补免责声明或否认其设计贡献。"
+    }
+  ],
+  "visual_review": {
+    "pages": [
+      2,
+      3,
+      4,
+      5,
+      8,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      22
+    ],
+    "reviewer": "acl_finish_b agent",
+    "figures": "Original diagrams, equations and result figures/tables inspected on indicated pages"
+  },
+  "official_requirements": {
+    "source": "current ACL/ARR rules maintained separately",
+    "observed_layout_not_current_rule": true
+  },
+  "holdout_validation": null,
+  "review_limitations": "Writing-focused full PDF and all scientific appendices read, original visual pages inspected; no model/code rerun or significance certification."
+}

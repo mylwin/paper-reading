@@ -1,0 +1,7 @@
+{
+  "../corpus/acl/semantic-reviews/acl-2025.acl-short.59.json": "3bc812d8091cb5f74965921fbb6ccf96f54ae6faba9aa1ee0fc328a04f3fcb10",
+  "cleanup.json": "20a233ed7054afe4ee2abdc8de09689f2cdded530276bbdca7967658ca9bc886",
+  "arithmetic.json": "f3d5979b49b5da491fa26993d73b0558563b15afa414275598b6f4cbc9f24785",
+  "../metadata-correction-snapshots/acl-2025.acl-short.59-before.json": "0178cdc08603ed3c8e3c66a54d4273819c55a4e360fc89187feb16fe8be99fc7",
+  "../metadata-correction-snapshots/acl-007-archive-before.json": "61a8ecef10f042fe4c0549c222cf0c113ef50965c2f2828556c4896a2220ce9d"
+}

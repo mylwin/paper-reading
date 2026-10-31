@@ -1,0 +1,303 @@
+{
+  "id": "icml-2025-29bd8228",
+  "venue": "icml",
+  "year": 2025,
+  "split": "induction",
+  "title": "Lean and Mean Adaptive Optimization via Subset-Norm and Subspace-Momentum with Convergence Guarantees",
+  "authors": "Thien Hang Nguyen, Huy Nguyen",
+  "pdf_path": ".claude/skills/paper-writing-shared/tmp/corpus/icml/pdf/Lean and Mean Adaptive Optimization via Subset-Norm and Subspace-Momentum with Convergence Guarantees.pdf",
+  "markdown_path": ".claude/skills/paper-writing-shared/tmp/corpus/icml/markdown/Lean and Mean Adaptive Optimization via Subset-Norm and Subspace-Momentum with Convergence Guarantees.md",
+  "pdf_sha256": "db7a21f3122dc5b3a23cf7dc36ee17596daaceb9516fe85a404677855eba776b",
+  "review_date": "2026-10-28",
+  "paper_type": "modular memory-efficient optimizer design with separate stochastic nonconvex theory and multi-scale language/vision experiments",
+  "semantic_review_status": "complete_writing_focused_review",
+  "full_text_style_review_complete": true,
+  "external_appendix_review_complete": true,
+  "count_eligible_full_text_and_relevant_appendix": true,
+  "coverage": [
+    {
+      "asset": "locked official PMLR PDF",
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46
+      ],
+      "sections": "Abstract/Introduction/Prelim2.1–2.2/SN3.1–3.2/SM4.1–4.2/Exp5.1–5.3/Related6/Conclusion7/Ack/Impact/refs; A.1–A.6/B.1–B.11/C.1–C.3/D.1–D.2.1/E.1 complete, all18figures18tables6algorithms/listing1",
+      "method": "continuous46page text read and39originalpageimages directlyviewed; proofandexperimentappendices fully included"
+    }
+  ],
+  "version_audit": {
+    "official_landing": "https://proceedings.mlr.press/v267/nguyen25f.html",
+    "official_pdf": "https://raw.githubusercontent.com/mlresearch/v267/main/assets/nguyen25f/nguyen25f.pdf",
+    "version": "official proceedings PDF; exact bytes locked by SHA256",
+    "identity": "title/PMLR267/year/lockedSHA; header names secondauthor Huy Le Nguyen whereas frozenmetadata Huy Nguyen, retain lock and note variant",
+    "new_network_fetch": false,
+    "qualification": "cachedofficialPDF, sourcequeries separate"
+  },
+  "supplement_audit": {
+    "status": "A–E all full implementation/extraexperiments/noisediagnostics/derivations/proofs in same46pagePDF fully read",
+    "external_scientific_appendix_referenced": false,
+    "code_artifacts": "repository/dataset/model links not independently executed or audited; no unread external scientificsupplement used"
+  },
+  "ten_dimensions": {
+    "reader_argument": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp1–2"
+      ],
+      "observation": "从optimizerstates两类成本引入两互补模块，读者先获得机制/内存/主结果关系，再进入随机非凸分析。",
+      "editorial_advice": "按贡献讲清解决的资源瓶颈，直接陈述实验进展；理论子算法和实际组合分别标明。",
+      "applicability": "46页及A–E全部相关科学附录读完，39原页核验全部18图/18表/6算法及完整证明。写作组织和证据边界审阅，另存两项局部解析检查；未运行作者代码/复现实验/独立认证全部证明。37篇ICML归纳先导，正式留出未用。源问题放研究记录，避免向生成正文注入无关防御性措辞。",
+      "confidence": {
+        "paper_specific": "high for observed organization/settings; unresolved mathematics separate",
+        "venue_wide": "low;37/50 pilot"
+      }
+    },
+    "title_abstract": {
+      "category": "corpus_observation",
+      "positions": [
+        "p1/Fig1"
+      ],
+      "observation": "描述机制加ConvergenceGuarantees；摘要分别交代SN/SM、假设、理论结果，再给LLaMA1B token及状态内存量化亮点，首页图提前传达主结果。",
+      "editorial_advice": "可用一组可靠数字支撑亮点；紧邻贡献注明哪个算法有保证，完整条件放理论节，不逐句附免责声明。",
+      "applicability": "46页及A–E全部相关科学附录读完，39原页核验全部18图/18表/6算法及完整证明。写作组织和证据边界审阅，另存两项局部解析检查；未运行作者代码/复现实验/独立认证全部证明。37篇ICML归纳先导，正式留出未用。源问题放研究记录，避免向生成正文注入无关防御性措辞。",
+      "confidence": {
+        "paper_specific": "high for observed organization/settings; unresolved mathematics separate",
+        "venue_wide": "low;37/50 pilot"
+      }
+    },
+    "introduction": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp1–2"
+      ],
+      "observation": "瓶颈→既有方法tradeoff→两个模块贡献列表→规模实验及代码，贡献形式对应理论/实践两条线。",
+      "editorial_advice": "模块化稿可按瓶颈/机制组织，不强制每篇三贡献。minimal tuning结合实际搜索与默认说明。",
+      "applicability": "46页及A–E全部相关科学附录读完，39原页核验全部18图/18表/6算法及完整证明。写作组织和证据边界审阅，另存两项局部解析检查；未运行作者代码/复现实验/独立认证全部证明。37篇ICML归纳先导，正式留出未用。源问题放研究记录，避免向生成正文注入无关防御性措辞。",
+      "confidence": {
+        "paper_specific": "high for observed organization/settings; unresolved mathematics separate",
+        "venue_wide": "low;37/50 pilot"
+      }
+    },
+    "related_work": {
+      "category": "corpus_observation",
+      "positions": [
+        "p9"
+      ],
+      "observation": "放实验后，按内存训练方法、正交方向、收敛理论、Adam-mini近邻对比，兼顾经验与保证差异。",
+      "editorial_advice": "允许后置RelatedWork；对直接近邻给实质差别，不只写缺理论。Adam-mini比较证据来自何处应说明，非本表已重跑。",
+      "applicability": "46页及A–E全部相关科学附录读完，39原页核验全部18图/18表/6算法及完整证明。写作组织和证据边界审阅，另存两项局部解析检查；未运行作者代码/复现实验/独立认证全部证明。37篇ICML归纳先导，正式留出未用。源问题放研究记录，避免向生成正文注入无关防御性措辞。",
+      "confidence": {
+        "paper_specific": "high for observed organization/settings; unresolved mathematics separate",
+        "venue_wide": "low;37/50 pilot"
+      }
+    },
+    "method_theory": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp2–6/22–46"
+      ],
+      "observation": "SN任意partition累计组norm、coordinate-subgaussian、高概率界→噪声密度理想分组/形状heuristic；SM固定orthogonalprojector内动量外SGD、概率界→实际SVD换子空间。D先分解误差再martingale；E拆A/B/C与事件交集。",
+      "editorial_advice": "SN累计无动量及固定P的SGD-SM保证与AdamEMA/切换/组合SNSM区分。结论明说SNSM收敛未知；公式疑点另列研究查询，不能抄为已认证规则。",
+      "applicability": "46页及A–E全部相关科学附录读完，39原页核验全部18图/18表/6算法及完整证明。写作组织和证据边界审阅，另存两项局部解析检查；未运行作者代码/复现实验/独立认证全部证明。37篇ICML归纳先导，正式留出未用。源问题放研究记录，避免向生成正文注入无关防御性措辞。",
+      "confidence": {
+        "paper_specific": "high for observed organization/settings; unresolved mathematics separate",
+        "venue_wide": "low;37/50 pilot"
+      }
+    },
+    "evidence": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp1/6–8/14–26"
+      ],
+      "observation": "预训练60M–1B四尺度C4、7BSFT、vision/GLUE、rank/gap/partition/投影/组合/clipping/batch/seed与噪声测量逐层回答；状态bytes、峰值显存、每步及达阈值耗时分列。",
+      "editorial_advice": "对主张选对应成本量；单seed主表与3seed附表区分。吞吐更慢仍可能达目标更快，用表量化而非笼统高效。",
+      "applicability": "46页及A–E全部相关科学附录读完，39原页核验全部18图/18表/6算法及完整证明。写作组织和证据边界审阅，另存两项局部解析检查；未运行作者代码/复现实验/独立认证全部证明。37篇ICML归纳先导，正式留出未用。源问题放研究记录，避免向生成正文注入无关防御性措辞。",
+      "confidence": {
+        "paper_specific": "high for observed organization/settings; unresolved mathematics separate",
+        "venue_wide": "low;37/50 pilot"
+      }
+    },
+    "discussion_limits": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp6–9/14–26"
+      ],
+      "observation": "正文解释SMsubspacechoice、SVD开销/大gap、theory-practice差异，future列EMA/组合收敛和其它架构；无独立Limitations标题。",
+      "editorial_advice": "保留实际关键边界在相关位置，结尾聚焦贡献与具体开放问题；无须每段声明尚未普遍证明。",
+      "applicability": "46页及A–E全部相关科学附录读完，39原页核验全部18图/18表/6算法及完整证明。写作组织和证据边界审阅，另存两项局部解析检查；未运行作者代码/复现实验/独立认证全部证明。37篇ICML归纳先导，正式留出未用。源问题放研究记录，避免向生成正文注入无关防御性措辞。",
+      "confidence": {
+        "paper_specific": "high for observed organization/settings; unresolved mathematics separate",
+        "venue_wide": "low;37/50 pilot"
+      }
+    },
+    "paragraph_language": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp3–9"
+      ],
+      "observation": "每模块定义/算法→主定理→依赖解读→实现选择，再结果/讨论/消融；用有量化支撑的积极主张推进论证。",
+      "editorial_advice": "show/prove对应不同证据对象，目标是准确有力而非一律弱化为may/suggest。省略无关否定句，关键例外放对比或局限段。",
+      "applicability": "46页及A–E全部相关科学附录读完，39原页核验全部18图/18表/6算法及完整证明。写作组织和证据边界审阅，另存两项局部解析检查；未运行作者代码/复现实验/独立认证全部证明。37篇ICML归纳先导，正式留出未用。源问题放研究记录，避免向生成正文注入无关防御性措辞。",
+      "confidence": {
+        "paper_specific": "high for observed organization/settings; unresolved mathematics separate",
+        "venue_wide": "low;37/50 pilot"
+      }
+    },
+    "main_appendix": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp1–46"
+      ],
+      "observation": "正文1–9，ack/impact/refs10–13；A14–16实验/算法/内存，B16–21完整18表/更多任务与seed，C21–26噪声分布/密度推导，D26–33SM证明，E33–46SN全定理证明；全部科学附录读完。",
+      "editorial_advice": "正文展示主机制和主证据，附录承载完整推导/超参/扩展任务；一处sourcequery不升级为整稿固定告警。",
+      "applicability": "46页及A–E全部相关科学附录读完，39原页核验全部18图/18表/6算法及完整证明。写作组织和证据边界审阅，另存两项局部解析检查；未运行作者代码/复现实验/独立认证全部证明。37篇ICML归纳先导，正式留出未用。源问题放研究记录，避免向生成正文注入无关防御性措辞。",
+      "confidence": {
+        "paper_specific": "high for observed organization/settings; unresolved mathematics separate",
+        "venue_wide": "low;37/50 pilot"
+      }
+    },
+    "actionable": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp1–9/14–46"
+      ],
+      "observation": "多模块稿围绕资源瓶颈建立机制—保证—实证映射；首页图和数字摘要直接表达主收益，理论/实测成本精确命名。",
+      "editorial_advice": "原创改写：We reduce optimizer-state memory by sharing adaptive scales across parameter subsets and storing momentum in a subspace. On the reported 1B pretraining task, the combined implementation reaches the reference perplexity in fewer steps with a smaller optimizer state. Separate analyses characterize cumulative SN and fixed-projection SGD-SM; the combination is evaluated empirically.",
+      "applicability": "46页及A–E全部相关科学附录读完，39原页核验全部18图/18表/6算法及完整证明。写作组织和证据边界审阅，另存两项局部解析检查；未运行作者代码/复现实验/独立认证全部证明。37篇ICML归纳先导，正式留出未用。源问题放研究记录，避免向生成正文注入无关防御性措辞。",
+      "confidence": {
+        "paper_specific": "high for observed organization/settings; unresolved mathematics separate",
+        "venue_wide": "low;37/50 pilot"
+      }
+    }
+  },
+  "counterexamples": [
+    {
+      "position": "pp3–6/9/26–46 theorem applicability",
+      "finding": "Thm3.1/E.1 cumulativeSN noEMA/noSM，Thm4.1固定P的SGD-SM且eta依L/Δ/σ/T；实际AdamSNSM有EMA、shapeheuristic、clipping、scheduler、SVD切换及重置。作者p9明确SNSM convergence unknown，不称组合有已证收敛或LLM满足smooth/subGaussian。highprob1−6cδ需δ按组数预算。理论保证与实践结果可以各自有力表达，不逐句重复未证。"
+    },
+    {
+      "position": "pp4–5/22–25 densityderivation",
+      "finding": "C.2中k先为含噪组数、组size=d^β/k，后称k=d^(1.4β−.6)最优subsetsize，计数与大小混用；β<3/7时k<1不可实现，β=.9时kcount exponent .66但subset exponent .24。Table2称β任意非零SN优于Norm不符合小β显示率。理想已知噪声聚集分组与按矩阵轴启发式不能直接等同最优；精确指数检查见本批local-boundary-checks.json。"
+    },
+    {
+      "position": "pp21–26 noise evidence",
+      "finding": "200mini-batch、bs128方差估计不等subgaussian尾参数上界或坐标独立证明；Fig11<1e−10阈值nearzero和Fig18<1e−12 groupedvariance不是真σi=0。不同layer/训练stepβ大变，未给真实最优分组验证。不可把图当定理假设已认证；也不因假设未实测否认报告的经验收益。"
+    },
+    {
+      "position": "pp27–33 SMproofqueries",
+      "finding": "LemmaD.1 finiteT边界查询：f=x²/2、P=I、m0=0、β.9、η.001、T1时实际函数差大于印刷上界，精确有理数脚本/结果保留；p29有限几何求和替换及带符号内积需保terminalterms。Eq6投影norm平方=原norm且≤Lnorm应核平方/不等号，p31展开||ξ+∇||²交叉系数2丢失、p32乘4后12/3系数需核；局部检查不当作整篇理论和实验已否证。"
+    },
+    {
+      "position": "pp33–46 SNproofqueries",
+      "finding": "E.1 α未在定理定义；E p36内积MGF与p39分解期望用坐标独立而主假设仅逐坐标subgaussian；需补conditional/joint条件或用一般界。p39exp(1)=1应e，MT定义maxnorm/平方混用；p42把sum ξ²/累计ξ²与1+累计ξ²的分母视相等，缺初始正项/小量常数处理；p45log(4ηL/b0)可负需正部/空τ，2Δ/4Δ系数及p43eventunion预算需统一。原页E.1系数为4乘sum norm，抽取曾误像norm4已由视觉排除，不登记成源错误。"
+    },
+    {
+      "position": "pp14–15 implementationqueries",
+      "finding": "Alg4/6印刷为加梯度方向，应核代码；weightdecay p−ηwd漏p乘子，Alg6s=sumg再square非normsumg²、输出维n/m，P初始化t%G不含首步、未列正文所说换P重置momentum等不一致；分组ψ写(j/c)modk与zeroindex范围不合。Listing1统计numel不检查dtype且跳singleton，不自动真实bytes。仅阅读伪码未执行作者代码，不将这些疑点作为skill正文固定防御句。"
+    },
+    {
+      "position": "pp1/7/14–21 reporting",
+      "finding": "状态内存1B4.99→.84GB约83%降幅与端到端峰值21.554→16.642GB约23%不同；SFT42.89GB低于Adam77.11但高于LoRA20.75，301/303min慢于Adam266。B2达perpl16快但每步7.62s慢于7.43，比较机器bs/seq明确。摘要6.8Btokens与Fig1/T9~48k×512×256约6.29B口径需对齐。主表AdamSNSM1B14.05，T8标13.96似AdaGradSNSM；GaLore350M18.95/20.51、Table14与3LR/results不一致留查询。"
+    },
+    {
+      "position": "pp7–8/17–21 counterexamples and statistics",
+      "finding": "主表固定单seed，3seedSD只B11小尺度，非全表CI/显著性。GLUEAdamSN avg85.4低于Adam86.3；RMSPropSN86.5低于RMSProp86.7。DiT早200/300kFID更差而400k后更好；小bs256/128AdamSN差于Adam、bs1024SNSM28.02差于Adam27.94，constantLRSM/SGD也差，不能全域无损或始终best。T17AdamwSN标签/说明对象、STSB accuracy口径、vision文字nogap而T11g1000需核。LR跨scale若不收敛才降、额外AdaGradgrid含1/2/5，minimal额外tuning不等zero tuning。"
+    },
+    {
+      "position": "pp2/4–8/14–19 costs and implementation",
+      "finding": "O(sqrt d)是形状近方/指定partition的第二矩状态，模型所有参数不保证同阶，nonlinear/non2D保留。理论SM k标量态不含denseP，实践rank矩阵r(m+n)与basis、未压embedding等都需算，Table4含projection但Table3symbol有省略。genericSN易flatten/FSDP与具体SVD-SM依矩阵形状不同，文中未测分布式不能称已验证FSDPscaling。OPCA29.63优于SVD29.74但需额外memory/compute，fixedP Gaussian40.15差于SVD30.65，不能说任意投影等价；basis刷新影响真实时间/效果。"
+    }
+  ],
+  "visual_review": {
+    "pages": [
+      1,
+      3,
+      4,
+      5,
+      7,
+      8,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46
+    ],
+    "source": "115dpi originalpagePopplerimages directlyviewed all18figures18tables and all scientificproof/algorithmquerypages",
+    "policy": "delete39renders+duplicateextract after registration; retain sourcePDF/primaryMD only ignoredskilltmp"
+  },
+  "official_requirements": [],
+  "holdout_validation": null,
+  "review_limitations": "46页及A–E全部相关科学附录读完，39原页核验全部18图/18表/6算法及完整证明。写作组织和证据边界审阅，另存两项局部解析检查；未运行作者代码/复现实验/独立认证全部证明。37篇ICML归纳先导，正式留出未用。源问题放研究记录，避免向生成正文注入无关防御性措辞。"
+}

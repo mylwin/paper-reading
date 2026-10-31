@@ -1,0 +1,49 @@
+{
+  "purpose": "Synthetic development/forward execution cases after induction freeze; not corpus holdout papers or real research results.",
+  "cases": [
+    {
+      "id": "writing-abstract",
+      "skill": "paper-writing",
+      "request": "根据给定研究材料，为ACL2027短稿写英文LaTeX摘要，不超过200词。请接入指定的已有测试工程，仅替换摘要，编译验证并给简短中文说明。",
+      "facts": [
+        "These are synthetic evaluation facts, not real research results.",
+        "Method C caches representations in a fixed sentence classifier; it recomputes a representation when cosine similarity is below0.9.",
+        "On synthetic dataset S-A with500 fixed test examples, baseline accuracy is80.0% and MethodC accuracy is82.0%. On S-B with500 test examples, the scores are74.0% and75.0%.",
+        "On the same A100 with batch8, measured wall-time speedups are1.20x and1.15x on S-A/S-B, respectively. GPU memory is2GB for both systems.",
+        "No formal significance test or mechanism-isolating experiment was performed.",
+        "The contributed method is a caching decision rule and its two-dataset evaluation. No theorem or larger deployment study is provided."
+      ],
+      "existing_project": ".claude/skills/paper-writing-shared/tmp/acl-behavior-2026-10-29/input-project"
+    },
+    {
+      "id": "writing-finding",
+      "skill": "paper-writing",
+      "request": "根据研究材料写ACL分析短稿引言的末段，英文120词以内。只输出段落及简短中文说明。",
+      "facts": [
+        "In a synthetic controlled study, six retrievers each compare250 pairs consisting of one evidence-containing document and one constructed distractor.",
+        "Evidence-containing documents win30%,35%,42%,50%,55%,60% of the pairs, respectively.",
+        "The experiment varies lexical overlap and document length. It evaluates no downstream answering models.",
+        "The study contributes the paired diagnostic design and the observed sensitivity; it does not propose a new retriever or establish the prevalence of errors in natural search traffic."
+      ]
+    },
+    {
+      "id": "polishing-table",
+      "skill": "paper-polishing",
+      "request": "按ACL风格润色下列结果段，可按给定核准数据修正论断，保持简洁；无需生成工程。",
+      "input": "Method D consistently outperforms every baseline on all tasks and therefore solves generalization. It is dramatically more memory-efficient.",
+      "verified_facts": [
+        "TaskA:MethodD82.0,BaselineB80.0,BaselineC81.0. TaskB:MethodD75.0,BaselineB74.0,BaselineC76.0.",
+        "Measured A100 batch8 wall-time speedup overBaselineB is1.20x; fullKVstorage remains unchanged. No other generalization experiments or significance tests were conducted."
+      ]
+    },
+    {
+      "id": "polishing-qualified",
+      "skill": "paper-polishing",
+      "request": "轻度润色，保留事实和理论力度：Under Assumptions A1–A3, Theorem1 guarantees convergence to an epsilon-stationary point in O(epsilon^{-4}) stochastic gradient evaluations. The theorem does not bound elapsed time.",
+      "verified_facts": [
+        "The stated theorem and assumptions are supplied and verified for this synthetic case.",
+        "User requests language editing only; no need to reassess the theorem or invent conditions."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,360 @@
+{
+  "id": "acl-2024.acl-long.522",
+  "anthology_id": "2024.acl-long.522",
+  "venue": "acl",
+  "year": 2024,
+  "track": "main conference research",
+  "length_type": "long",
+  "title": "CofiPara: A Coarse-to-fine Paradigm for Multimodal Sarcasm Target Identification with Large Multimodal Models",
+  "authors": [
+    "Zixin Chen",
+    "Hongzhan Lin",
+    "Ziyang Luo",
+    "Mingfei Cheng",
+    "Jing Ma",
+    "Guang Chen"
+  ],
+  "first_author": "Zixin Chen",
+  "landing_url": "https://aclanthology.org/2024.acl-long.522/",
+  "pdf_url": "https://aclanthology.org/2024.acl-long.522.pdf",
+  "doi": "10.18653/v1/2024.acl-long.522",
+  "official_listing_url": "https://aclanthology.org/volumes/2024.acl-long/",
+  "sampling_stratum": "methods_models",
+  "paper_type": "coarse-to-fine multimodal sarcasm target method with LMM-generated rationales and dataset reannotation",
+  "anthology_pdf_revision_hash": "865bdf96",
+  "metadata_revisions": [],
+  "official_attachments": [],
+  "sort_hash": "01bc165566ba7e5f59b50ffb98a4d7f891e6272211c517706c863a18add84673",
+  "split": "induction",
+  "semantic_review_status": "complete_writing_focused_full_text_review",
+  "full_text_and_relevant_appendix_review_complete": true,
+  "review_date": "2026-10-29",
+  "reviewer": "acl_induction_b",
+  "pdf_path": ".claude/skills/paper-writing-shared/tmp/corpus/acl/pdf/2024.acl-long.522.pdf",
+  "pdf_sha256": "fbcc19d4b765031eac7c230585de4873d6a45b37332a152ae7b8d82c0a215855",
+  "markdown_path": ".claude/skills/paper-writing-shared/tmp/corpus/acl/markdown/2024.acl-long.522.md",
+  "markdown_sha256": "ae39dee206467d9e30ba8eb8e1d632e12152ce59b1e09ec7d398545e18b5208b",
+  "full_text_style_review_complete": true,
+  "external_appendix_review_complete": true,
+  "count_eligible_full_text_and_relevant_appendix": true,
+  "coverage": [
+    {
+      "source": "canonical official PDF",
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25
+      ],
+      "main_science": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "references": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "scientific_appendix": {
+        "A datasets/OCR reannotation": [
+          13,
+          14
+        ],
+        "B baselines": [
+          13,
+          14
+        ],
+        "C implementation": [
+          14,
+          15
+        ],
+        "D algorithm": [
+          15,
+          16
+        ],
+        "E MSD results": [
+          15,
+          16
+        ],
+        "F-G LMM comparisons": [
+          16,
+          17,
+          18
+        ],
+        "H-I rationale ablations": [
+          17,
+          18,
+          19,
+          20
+        ],
+        "J components": [
+          19,
+          20,
+          21
+        ],
+        "K rationale evaluations": [
+          20,
+          21
+        ],
+        "L error analysis": [
+          21,
+          22
+        ],
+        "M examples": [
+          22,
+          23,
+          24
+        ],
+        "N-O discussion": [
+          22,
+          25
+        ],
+        "P futurework": [
+          25
+        ]
+      }
+    }
+  ],
+  "version_audit": {
+    "canonical_url": "https://aclanthology.org/2024.acl-long.522.pdf",
+    "xml_revision_entries": []
+  },
+  "supplement_audit": {
+    "method": "Locked official2024XML long522 entry examined; no separate attachment or revision; no live landing freshness claim",
+    "official_xml_attachments": [],
+    "separate_scientific_appendix_link_found": false,
+    "scientific_appendix_in_pdf": "A-P complete including last discussion continuation after float examples",
+    "code_executed": false
+  },
+  "ten_dimensions": {
+    "reader_argument": {
+      "pages": [
+        1,
+        2
+      ],
+      "observation": "两个具体推文图例解释隐含目标难点，提出LMMreasoning与MSDpretraining两设计原则，映射粗到细流程。",
+      "editorial_advice": "先把任务难点具体化，再让设计选择对应瓶颈。",
+      "applicability_boundary": "主目标为已知sarcastic输入的targetidentification，不是任意输入端到端真实审核。"
+    },
+    "title_abstract": {
+      "pages": [
+        1
+      ],
+      "observation": "名称+coarse-to-fine+任务+LMM；摘要从困难、已有局限、两训练阶段到结果与解释能力。",
+      "editorial_advice": "机制和目标可在题名明示，摘要用过程解释增量。",
+      "applicability_boundary": "faroutperforms/versatile等用具体表结果替代无范围修辞；explainability不等内部神经机制忠实解释。"
+    },
+    "introduction": {
+      "pages": [
+        1,
+        2
+      ],
+      "observation": "图例→两设计原则→两phase→三条贡献，方法概览为后文设置阅读路径。",
+      "editorial_advice": "多阶段方法稿可把需求、原则和训练流程逐一对应。",
+      "applicability_boundary": "三条是该篇选择而非venue固定格式；前作surfacelevel论断需具体证据。"
+    },
+    "related_work": {
+      "pages": [
+        2,
+        3
+      ],
+      "observation": "独立三脉络MSD/MSTI/LLM-LMM，每组末句回到本稿的任务或训练增量。",
+      "editorial_advice": "按方法依赖和最近任务组织相关工作，段末具体定位。",
+      "applicability_boundary": "不可由模型性能差直接推断前作不理解语义。"
+    },
+    "method_theory": {
+      "pages": [
+        3,
+        4,
+        5,
+        6,
+        15,
+        16
+      ],
+      "observation": "problemstatement区分classification/文本target/box；对立rationale→多模态融合→文本decoder→检测decoder，两阶段loss，附录algorithm与实现。",
+      "editorial_advice": "输入输出、模块职责、训练目标分开解释，图和公式一一映射。",
+      "applicability_boundary": "潜在类别prompt非训练label泄漏但MSTI已预设sarcastic；无定理无需虚构理论，不能把ablation当robustness机制证明。"
+    },
+    "evidence": {
+      "pages": [
+        6,
+        7,
+        8,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24
+      ],
+      "observation": "MMSD2.0与MSTI2.0分任务指标，整体→核心消融→LMM/组件/阶段→50样本10人和GPT4V解释质量→错误例。",
+      "editorial_advice": "主结果回答任务，消融回答设计，案例与人评回答解释用途；数据修订应明确旧/新协议。",
+      "applicability_boundary": "10随机run均值未给误差；人评偏好非因果忠实性，50样本不代表全部数据；ap50与EM不同指标不可混。"
+    },
+    "discussion_limits": {
+      "pages": [
+        9,
+        20,
+        21,
+        22,
+        25
+      ],
+      "observation": "局限明确解释仅targets/rationales而非内部机制；错误例展示过度解释误导；附录另讨论可复现、质量、泄漏及未来。",
+      "editorial_advice": "真实失败能具体说明下一步，局限聚焦解释范围和输入噪声。",
+      "applicability_boundary": "不学习附录definitelyreproducible/no leakage等防御性全称：开放权重、低zero-shot成绩不能认证无训练重叠。"
+    },
+    "paragraph_language": {
+      "pages": [
+        7,
+        8,
+        19,
+        20,
+        21
+      ],
+      "observation": "结果分编号观察，先表分数再机制解释；附录有we speculate及人评/自动偏好差别。",
+      "editorial_advice": "已测优势直接说，保留具体tradeoff，机制猜测不写为proves。",
+      "applicability_boundary": "提升常是百分点而非相对%，所有组件所有指标均优不成立。"
+    },
+    "main_appendix": {
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25
+      ],
+      "observation": "正文核心机制和实验完整，A-P为大规模扩展复核，讨论在22页起并跨23/24浮图续至25页。",
+      "editorial_advice": "追踪末尾浮图与续文；正文保留数据变更和主评估，附录提供细节。",
+      "applicability_boundary": "附录远长正文不许可用大量通用自辩填充；当前模板限页另维护。"
+    },
+    "actionable": {
+      "pages": [
+        7,
+        8,
+        21
+      ],
+      "observation": "设计收益按指标准确表达，允许局部模块tradeoff。",
+      "editorial_advice": "原创例句：On the MSTI2.0 test set, CofiPara reaches32.49 AP50, compared with17.57 for the strongest listed visual baseline. Removing query selection increases textual F1 from50.27 to50.91 while reducing AP50 to31.29.",
+      "applicability_boundary": "数据说明已测tradeoff，不补造显著性或全部质量更好。"
+    }
+  },
+  "counterexamples": [
+    {
+      "pages": [
+        7,
+        8,
+        18,
+        19,
+        20,
+        21
+      ],
+      "finding": "核心fullF1 50.27低于w/oMSD&LMM50.72、w/oRP50.69，去CTD51.87，去CID51.84；AP75去MSD12.15>12.01。QSMdevAP75主表15.57/后表13.39，表16w/oQSM整行又与表11LLaVA整行相同需核对。",
+      "scope": "保留AP优势与模块取舍，不能复制allbest/proves。"
+    },
+    {
+      "pages": [
+        7,
+        8,
+        14
+      ],
+      "finding": "EM提升3.26是dev/test对MSTI-VB差值均值(3.77+2.75)/2；AP50均值14.875是dev对DINO19.77与test对YOLO17.57分别best，不是同一baseline相对%。原MSTI上AP50仅9.62，须区分重注数据任务。",
+      "scope": "定义比较分母与数据版本，避免迁移不兼容值。"
+    },
+    {
+      "pages": [
+        9,
+        13,
+        20,
+        21,
+        22,
+        25
+      ],
+      "finding": "Ethics称重注自动，但A明示manualvalidation。rationale更长不自动证更多正确证据；50样本人评/GPT评分不是内部忠实性。零温度开放权重非跨环境确定性认证，低zero-shot不排除预训练污染，多任务显然不适用无直接比较。",
+      "scope": "这些是实质作者查询，不是应移入其他论文的防御话术。"
+    },
+    {
+      "pages": [
+        13
+      ],
+      "finding": "MMSD2.0train19816与positive9572+negative10240=19812不符。",
+      "scope": "保留表中值待作者核对，不静默修正。"
+    }
+  ],
+  "visual_review": {
+    "pages": [
+      1,
+      4,
+      8,
+      13,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25
+    ],
+    "figures": "All Figures1-7 original viewed, rationale images and colored target boxes; principal and supplemental ablation/evaluation tables viewed",
+    "reviewer": "same delegated reviewer"
+  },
+  "official_requirements": {
+    "source": "currentACL/ARR rules separately maintained",
+    "observed_layout_not_current_rule": true,
+    "corpus_layout_observation": "main1-9; A-P13-25; source layout not current submission limit"
+  },
+  "holdout_validation": null,
+  "review_limitations": "All25PDFpages and A-P read; no code/model rerun, data contamination audit, identity verification of pictured people or explanation-faithfulness certification."
+}

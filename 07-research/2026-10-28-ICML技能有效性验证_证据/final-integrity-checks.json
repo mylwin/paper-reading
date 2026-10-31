@@ -1,0 +1,355 @@
+{
+  "date": "2026-10-28",
+  "passed": 16,
+  "total": 16,
+  "checks": [
+    {
+      "check": "locked50_original_sources_and_parses",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "original_year_and_split_quotas",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "central50fullreview_ids_and_global72",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "legacy_vs_new_review_schemas_explicit",
+      "passed": true,
+      "details": {
+        "legacy_four_ids": [
+          "icml-2024-af0821a5",
+          "icml-2024-4207e021",
+          "icml-2024-09851122",
+          "icml-2024-fc8aa210"
+        ],
+        "note": "Do not rewrite archived legacy records to make schemas uniform; complete-review registry already tracks scientific appendix coverage."
+      }
+    },
+    {
+      "check": "all10manualholdouts_with_ten_page_located_judgments",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "frozen_snapshots_unchanged",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "runtime_changes_only_after_holdout_recorded",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "prior_user_assets_oldskills_and_locks_intact",
+      "passed": true,
+      "details": {
+        "protected_baseline_files": 491,
+        "excluded_preexisting_concurrent_indices_and_osmetadata": [
+          "01-raw/index.md",
+          "01-raw/2026-10/README.md",
+          "02-markdown/index.md",
+          "02-markdown/2026-10/README.md",
+          "03-notes/index.md",
+          "03-notes/2026-10/README.md",
+          "06-translation/index.md",
+          "06-translation/2026-10/README.md",
+          "01-raw/.DS_Store",
+          "02-markdown/.DS_Store",
+          "03-notes/2026-09/.DS_Store"
+        ],
+        "mismatches": []
+      }
+    },
+    {
+      "check": "prior_archived_research_unchanged",
+      "passed": true,
+      "details": {
+        "files": 1093,
+        "archives": [
+          {
+            "manifest": "07-research/2026-10-21-ICML论文风格验证_证据/archive-sha256.json",
+            "files": 13,
+            "mismatches": []
+          },
+          {
+            "manifest": "07-research/2026-10-12-顶会顶刊写作风格调研_证据/archive-sha256.json",
+            "files": 90,
+            "mismatches": []
+          },
+          {
+            "manifest": "07-research/2026-10-11-论文写作润色技能评测_证据/archive-sha256.json",
+            "files": 654,
+            "mismatches": []
+          },
+          {
+            "manifest": "07-research/2026-10-21-顶会顶刊写作风格全文续研_证据/archive-sha256.json",
+            "files": 12,
+            "mismatches": []
+          },
+          {
+            "manifest": "07-research/2026-10-21-论文写作风格全量续研_证据/icml-030/archive-sha256.json",
+            "files": 7,
+            "mismatches": []
+          },
+          {
+            "manifest": "07-research/2026-10-21-论文写作风格全量续研_证据/icml-037/archive-sha256.json",
+            "files": 9,
+            "mismatches": []
+          },
+          {
+            "manifest": "07-research/2026-10-21-论文写作风格全量续研_证据/icml-039/archive-sha256.json",
+            "files": 7,
+            "mismatches": []
+          },
+          {
+            "manifest": "07-research/2026-10-21-论文写作风格全量续研_证据/icml-038/archive-sha256.json",
+            "files": 7,
+            "mismatches": []
+          },
+          {
+            "manifest": "07-research/2026-10-21-论文写作风格全量续研_证据/icml-036/archive-sha256.json",
+            "files": 9,
+            "mismatches": []
+          },
+          {
+            "manifest": "07-research/2026-10-21-论文写作风格全量续研_证据/icml-009/archive-sha256.json",
+            "files": 8,
+            "mismatches": []
+          },
+          {
+            "manifest": "07-research/2026-10-21-论文写作风格全量续研_证据/icml-031/archive-sha256.json",
+            "files": 7,
+            "mismatches": []
+          },
+          {
+            "manifest": "07-research/2026-10-21-论文写作风格全量续研_证据/icml-049/archive-sha256.json",
+            "files": 8,
+            "mismatches": []
+          },
+          {
+            "manifest": "07-research/2026-10-21-论文写作风格全量续研_证据/icml-040/archive-sha256.json",
+            "files": 7,
+            "mismatches": []
+          },
+          {
+            "manifest": "07-research/2026-10-21-论文写作风格全量续研_证据/icml-047/archive-sha256.json",
+            "files": 8,
+            "mismatches": []
+          },
+          {
+            "manifest": "07-research/2026-10-21-论文写作风格全量续研_证据/icml-013/archive-sha256.json",
+            "files": 9,
+            "mismatches": []
+          },
+          {
+            "manifest": "07-research/2026-10-21-论文写作风格全量续研_证据/icml-014/archive-sha256.json",
+            "files": 8,
+            "mismatches": []
+          },
+          {
+            "manifest": "07-research/2026-10-21-论文写作风格全量续研_证据/icml-022/archive-sha256.json",
+            "files": 7,
+            "mismatches": []
+          },
+          {
+            "manifest": "07-research/2026-10-21-论文写作风格全量续研_证据/icml-025/archive-sha256.json",
+            "files": 7,
+            "mismatches": []
+          },
+          {
+            "manifest": "07-research/2026-10-21-论文写作风格全量续研_证据/icml-046/archive-sha256.json",
+            "files": 8,
+            "mismatches": []
+          },
+          {
+            "manifest": "07-research/2026-10-21-论文写作风格全量续研_证据/icml-041/archive-sha256.json",
+            "files": 7,
+            "mismatches": []
+          },
+          {
+            "manifest": "07-research/2026-10-21-论文写作风格全量续研_证据/icml-048/archive-sha256.json",
+            "files": 8,
+            "mismatches": []
+          },
+          {
+            "manifest": "07-research/2026-10-21-论文写作风格全量续研_证据/icml-024/archive-sha256.json",
+            "files": 7,
+            "mismatches": []
+          },
+          {
+            "manifest": "07-research/2026-10-21-论文写作风格全量续研_证据/icml-023/archive-sha256.json",
+            "files": 7,
+            "mismatches": []
+          },
+          {
+            "manifest": "07-research/2026-10-21-论文写作风格全量续研_证据/icml-015/archive-sha256.json",
+            "files": 7,
+            "mismatches": []
+          },
+          {
+            "manifest": "07-research/2026-10-21-论文写作风格全量续研_证据/icml-012/archive-sha256.json",
+            "files": 7,
+            "mismatches": []
+          },
+          {
+            "manifest": "07-research/2026-10-21-论文写作风格全量续研_证据/icml-034/archive-sha256.json",
+            "files": 7,
+            "mismatches": []
+          },
+          {
+            "manifest": "07-research/2026-10-21-论文写作风格全量续研_证据/icml-007-008/archive-sha256.json",
+            "files": 8,
+            "mismatches": []
+          },
+          {
+            "manifest": "07-research/2026-10-21-论文写作风格全量续研_证据/icml-033/archive-sha256.json",
+            "files": 7,
+            "mismatches": []
+          },
+          {
+            "manifest": "07-research/2026-10-21-论文写作风格全量续研_证据/icml-050/archive-sha256.json",
+            "files": 8,
+            "mismatches": []
+          },
+          {
+            "manifest": "07-research/2026-10-21-论文写作风格全量续研_证据/icml-032/archive-sha256.json",
+            "files": 9,
+            "mismatches": []
+          },
+          {
+            "manifest": "07-research/2026-10-21-论文写作风格全量续研_证据/icml-035/archive-sha256.json",
+            "files": 7,
+            "mismatches": []
+          },
+          {
+            "manifest": "07-research/2026-10-21-论文写作风格全量续研_证据/icml-028/archive-sha256.json",
+            "files": 9,
+            "mismatches": []
+          },
+          {
+            "manifest": "07-research/2026-10-21-论文写作风格全量续研_证据/icml-017/archive-sha256.json",
+            "files": 7,
+            "mismatches": []
+          },
+          {
+            "manifest": "07-research/2026-10-21-论文写作风格全量续研_证据/icml-010/archive-sha256.json",
+            "files": 7,
+            "mismatches": []
+          },
+          {
+            "manifest": "07-research/2026-10-21-论文写作风格全量续研_证据/icml-019/archive-sha256.json",
+            "files": 7,
+            "mismatches": []
+          },
+          {
+            "manifest": "07-research/2026-10-21-论文写作风格全量续研_证据/icml-026/archive-sha256.json",
+            "files": 7,
+            "mismatches": []
+          },
+          {
+            "manifest": "07-research/2026-10-21-论文写作风格全量续研_证据/icml-021/archive-sha256.json",
+            "files": 7,
+            "mismatches": []
+          },
+          {
+            "manifest": "07-research/2026-10-21-论文写作风格全量续研_证据/icml-044/archive-sha256.json",
+            "files": 8,
+            "mismatches": []
+          },
+          {
+            "manifest": "07-research/2026-10-21-论文写作风格全量续研_证据/icml-043/archive-sha256.json",
+            "files": 8,
+            "mismatches": []
+          },
+          {
+            "manifest": "07-research/2026-10-21-论文写作风格全量续研_证据/icml-020/archive-sha256.json",
+            "files": 7,
+            "mismatches": []
+          },
+          {
+            "manifest": "07-research/2026-10-21-论文写作风格全量续研_证据/icml-018/archive-sha256.json",
+            "files": 7,
+            "mismatches": []
+          },
+          {
+            "manifest": "07-research/2026-10-21-论文写作风格全量续研_证据/icml-027/archive-sha256.json",
+            "files": 9,
+            "mismatches": []
+          },
+          {
+            "manifest": "07-research/2026-10-21-论文写作风格全量续研_证据/icml-011/archive-sha256.json",
+            "files": 7,
+            "mismatches": []
+          },
+          {
+            "manifest": "07-research/2026-10-21-论文写作风格全量续研_证据/icml-029/archive-sha256.json",
+            "files": 7,
+            "mismatches": []
+          },
+          {
+            "manifest": "07-research/2026-10-21-论文写作风格全量续研_证据/icml-016/archive-sha256.json",
+            "files": 7,
+            "mismatches": []
+          },
+          {
+            "manifest": "07-research/2026-10-21-论文写作风格全量续研_证据/icml-042/archive-sha256.json",
+            "files": 7,
+            "mismatches": []
+          },
+          {
+            "manifest": "07-research/2026-10-21-论文写作风格全量续研_证据/icml-045/archive-sha256.json",
+            "files": 8,
+            "mismatches": []
+          }
+        ]
+      }
+    },
+    {
+      "check": "all938migrated_raw_files_ignored_untracked",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "entire_skill_tmp_ignored_and_untracked",
+      "passed": true,
+      "details": {
+        "local_ignored_files": 1041
+      }
+    },
+    {
+      "check": "no_task_papers_staged",
+      "passed": true,
+      "details": {
+        "staged_files": []
+      }
+    },
+    {
+      "check": "old_ten_venues_counts_preserved",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "fresh_latex_compile_and_protected_content",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "only_owned_derivatives_removed",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "whitespace",
+      "passed": true,
+      "details": null
+    }
+  ],
+  "qualification": "Artifact integrity and explicit completion registry audit; behavioral quality is separately manually evaluated. No Git writes or network policy reverification in this final evaluation."
+}

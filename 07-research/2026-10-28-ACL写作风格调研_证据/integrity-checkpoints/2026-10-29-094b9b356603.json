@@ -1,0 +1,369 @@
+{
+  "date": "2026-10-29",
+  "passed": 22,
+  "total": 22,
+  "checks": [
+    {
+      "check": "50unique_main_conference_research_lock",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "2024_2025_each25_and_original40_10split",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "complete_sampling_frame_and_frozen_source_hash",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "explicit_full_reviews_main_and_appendices",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "completion_flags_consistent_in_manual_records",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "manual_page_coverage_matches_actual_PDF_page_count",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "reviewed_sources_and_primary_parses_unchanged",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "download_parse_read_counts_distinct",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "all_acquired_PDF_and_per_page_parse_hashes_valid",
+      "passed": true,
+      "details": {
+        "acquired": 50,
+        "mismatches": [],
+        "reading_increment": 0
+      }
+    },
+    {
+      "check": "locked_holdouts_only_used_against_immutable40_induction_freeze",
+      "passed": true,
+      "details": {
+        "reviewed_holdouts": 0
+      }
+    },
+    {
+      "check": "original_550_progress_and11locks_unchanged",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "original_venue_profiles_ICML_assets_and_old_analysis_skill_preserved",
+      "passed": true,
+      "details": {
+        "mismatches": []
+      }
+    },
+    {
+      "check": "ACLadditive_registry_other11entries_unchanged",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "four_official_template_assets_and_correct_stage_limits",
+      "passed": true,
+      "details": [
+        {
+          "version": "2027-long",
+          "mode": "submission",
+          "official_asset_mismatches": [],
+          "page_limit": 8,
+          "compile": "passed"
+        },
+        {
+          "version": "2027-long",
+          "mode": "final",
+          "official_asset_mismatches": [],
+          "page_limit": 9,
+          "compile": "passed"
+        },
+        {
+          "version": "2027-short",
+          "mode": "submission",
+          "official_asset_mismatches": [],
+          "page_limit": 4,
+          "compile": "passed"
+        },
+        {
+          "version": "2027-short",
+          "mode": "final",
+          "official_asset_mismatches": [],
+          "page_limit": 5,
+          "compile": "passed"
+        }
+      ]
+    },
+    {
+      "check": "4actual_template_compiles_and12page_visual_records",
+      "passed": true,
+      "details": {
+        "unique_renderings": 6,
+        "qualification": "Template subagent actual compile and manual visual report; skeleton still has author inputs pending. No claim of real manuscript compliance."
+      }
+    },
+    {
+      "check": "entrypoint_discovery_and_frontmatter",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "all_prior_frozen_research_archives_intact",
+      "passed": true,
+      "details": {
+        "files": 1271,
+        "mismatches": []
+      }
+    },
+    {
+      "check": "allskilltmp_raw_and_partial_downloads_ignored_untracked",
+      "passed": true,
+      "details": {
+        "local_files": 1220
+      }
+    },
+    {
+      "check": "no_skill_corpus_or_validation_PDFs_staged",
+      "passed": true,
+      "details": null
+    },
+    {
+      "check": "research_and_profile_local_links",
+      "passed": true,
+      "details": []
+    },
+    {
+      "check": "read_page_renders_cleaned_without_raw_deletion",
+      "passed": true,
+      "details": {
+        "completed_review_batches": [
+          {
+            "paper": "acl-2024.acl-long.600",
+            "batch": "acl-022",
+            "derivatives_removed": 9
+          },
+          {
+            "paper": "acl-2024.acl-long.509",
+            "batch": "acl-025",
+            "derivatives_removed": 11
+          },
+          {
+            "paper": "acl-2025.acl-long.857",
+            "batch": "acl-036",
+            "derivatives_removed": 14
+          },
+          {
+            "paper": "acl-2024.acl-long.837",
+            "batch": "acl-010",
+            "derivatives_removed": 11
+          },
+          {
+            "paper": "acl-2025.acl-long.953",
+            "batch": "acl-030",
+            "derivatives_removed": 12
+          },
+          {
+            "paper": "acl-2024.acl-long.836",
+            "batch": "acl-019",
+            "derivatives_removed": 9
+          },
+          {
+            "paper": "acl-2025.acl-long.1453",
+            "batch": "acl-015",
+            "derivatives_removed": 8
+          },
+          {
+            "paper": "acl-2024.acl-short.70",
+            "batch": "acl-002",
+            "derivatives_removed": 7
+          },
+          {
+            "paper": "acl-2024.acl-long.549",
+            "batch": "acl-012",
+            "derivatives_removed": 10
+          },
+          {
+            "paper": "acl-2024.acl-long.482",
+            "batch": "acl-014",
+            "derivatives_removed": 14
+          },
+          {
+            "paper": "acl-2025.acl-long.980",
+            "batch": "acl-033",
+            "derivatives_removed": 8
+          },
+          {
+            "paper": "acl-2025.acl-long.447",
+            "batch": "acl-009",
+            "derivatives_removed": 13
+          },
+          {
+            "paper": "acl-2024.acl-long.692",
+            "batch": "acl-037",
+            "derivatives_removed": 8
+          },
+          {
+            "paper": "acl-2025.acl-long.763",
+            "batch": "acl-038",
+            "derivatives_removed": 16
+          },
+          {
+            "paper": "acl-2024.acl-long.847",
+            "batch": "acl-028",
+            "derivatives_removed": 9
+          },
+          {
+            "paper": "acl-2024.acl-long.133",
+            "batch": "acl-001",
+            "derivatives_removed": 7
+          },
+          {
+            "paper": "acl-2024.acl-long.522",
+            "batch": "acl-029",
+            "derivatives_removed": 12
+          },
+          {
+            "paper": "acl-2025.acl-short.94",
+            "batch": "acl-018",
+            "derivatives_removed": 8
+          },
+          {
+            "paper": "acl-2025.acl-long.313",
+            "batch": "acl-023",
+            "derivatives_removed": 6
+          },
+          {
+            "paper": "acl-2025.acl-long.1496",
+            "batch": "acl-040",
+            "derivatives_removed": 18
+          },
+          {
+            "paper": "acl-2025.acl-long.1195",
+            "batch": "acl-013",
+            "derivatives_removed": 8
+          },
+          {
+            "paper": "acl-2024.acl-short.63",
+            "batch": "acl-027",
+            "derivatives_removed": 8
+          },
+          {
+            "paper": "acl-2025.acl-long.1401",
+            "batch": "acl-017",
+            "derivatives_removed": 9
+          },
+          {
+            "paper": "acl-2025.acl-long.150",
+            "batch": "acl-039",
+            "derivatives_removed": 12
+          },
+          {
+            "paper": "acl-2024.acl-long.7",
+            "batch": "acl-021",
+            "derivatives_removed": 11
+          },
+          {
+            "paper": "acl-2024.acl-short.5",
+            "batch": "acl-016",
+            "derivatives_removed": 5
+          },
+          {
+            "paper": "acl-2025.acl-long.1231",
+            "batch": "acl-032",
+            "derivatives_removed": 10
+          },
+          {
+            "paper": "acl-2024.acl-long.653",
+            "batch": "acl-024",
+            "derivatives_removed": 10
+          },
+          {
+            "paper": "acl-2025.acl-short.23",
+            "batch": "acl-003",
+            "derivatives_removed": 4
+          },
+          {
+            "paper": "acl-2024.acl-long.89",
+            "batch": "acl-034",
+            "derivatives_removed": 7
+          },
+          {
+            "paper": "acl-2025.acl-long.1477",
+            "batch": "acl-035",
+            "derivatives_removed": 12
+          },
+          {
+            "paper": "acl-2024.acl-long.107",
+            "batch": "acl-031",
+            "derivatives_removed": 8
+          },
+          {
+            "paper": "acl-2025.acl-long.673",
+            "batch": "acl-026",
+            "derivatives_removed": 8
+          },
+          {
+            "paper": "acl-2024.acl-long.255",
+            "batch": "acl-008",
+            "derivatives_removed": 12
+          },
+          {
+            "paper": "acl-2025.acl-short.59",
+            "batch": "acl-007",
+            "derivatives_removed": 4
+          },
+          {
+            "paper": "acl-2025.acl-long.1181",
+            "batch": "acl-005",
+            "derivatives_removed": 12
+          },
+          {
+            "paper": "acl-2025.acl-long.27",
+            "batch": "acl-020",
+            "derivatives_removed": 11
+          },
+          {
+            "paper": "acl-2024.acl-short.73",
+            "batch": "acl-006",
+            "derivatives_removed": 4
+          },
+          {
+            "paper": "acl-2025.acl-short.69",
+            "batch": "acl-011",
+            "derivatives_removed": 6
+          },
+          {
+            "paper": "acl-2024.acl-long.224",
+            "batch": "acl-004",
+            "derivatives_removed": 12
+          }
+        ],
+        "errors": [],
+        "derivatives_removed": 383
+      }
+    },
+    {
+      "check": "whitespace",
+      "passed": true,
+      "details": null
+    }
+  ],
+  "completion": "ACL40/50,remaining10;holdout0/10;original550goalnotcomplete",
+  "qualification": "Integrity/registration/template verification only. Partial manual full reviews are not an ACL-wide style or independent skill-performance validation."
+}

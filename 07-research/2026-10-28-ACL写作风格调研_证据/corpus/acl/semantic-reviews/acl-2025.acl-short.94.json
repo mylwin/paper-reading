@@ -1,0 +1,264 @@
+{
+  "id": "acl-2025.acl-short.94",
+  "anthology_id": "2025.acl-short.94",
+  "venue": "acl",
+  "year": 2025,
+  "track": "main conference research",
+  "length_type": "short",
+  "title": "WiCkeD: A Simple Method to Make Multiple Choice Benchmarks More Challenging",
+  "authors": [
+    "Ahmed Elhady",
+    "Eneko Agirre",
+    "Mikel Artetxe"
+  ],
+  "first_author": "Ahmed Elhady",
+  "landing_url": "https://aclanthology.org/2025.acl-short.94/",
+  "pdf_url": "https://aclanthology.org/2025.acl-short.94.pdf",
+  "doi": "10.18653/v1/2025.acl-short.94",
+  "official_listing_url": "https://aclanthology.org/volumes/2025.acl-short/",
+  "sampling_stratum": "data_resources",
+  "paper_type": "automatic multiple-choice benchmark transformation with coherence filtering and diagnostic evaluation; short paper",
+  "anthology_pdf_revision_hash": "ecfc5640",
+  "metadata_revisions": [],
+  "official_attachments": [],
+  "sort_hash": "3734083588c74756a566e597994b02d23fed85087fb4365c86b6b795266c11b0",
+  "split": "induction",
+  "semantic_review_status": "complete_writing_focused_full_text_review",
+  "full_text_and_relevant_appendix_review_complete": true,
+  "review_date": "2026-10-29",
+  "reviewer": "primary agent",
+  "pdf_path": ".claude/skills/paper-writing-shared/tmp/corpus/acl/pdf/2025.acl-short.94.pdf",
+  "pdf_sha256": "1822b3704d0d40cea93ca9d21249fa3dc914beaa0a27aa21aa7cef31dfe87016",
+  "markdown_path": ".claude/skills/paper-writing-shared/tmp/corpus/acl/markdown/2025.acl-short.94.md",
+  "markdown_sha256": "6e965cf31c330eeac8500f247efbb646f58f03af5833743dce1c37e04cc13c18",
+  "full_text_style_review_complete": true,
+  "external_appendix_review_complete": true,
+  "count_eligible_full_text_and_relevant_appendix": true,
+  "coverage": [
+    {
+      "source": "canonical official PDF",
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "main_science": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "references": [
+        5,
+        6,
+        7
+      ],
+      "scientific_appendix": {
+        "A SBA detector methodology and Tables5-7": [
+          7,
+          8
+        ],
+        "B answer-change analysis Figure3": [
+          7
+        ],
+        "C probability scoring and prompts Figures4-7": [
+          7,
+          8,
+          10
+        ],
+        "D detailed results Tables8-10": [
+          8,
+          9
+        ]
+      }
+    }
+  ],
+  "version_audit": {
+    "published_year": 2025,
+    "canonical_url": "https://aclanthology.org/2025.acl-short.94.pdf",
+    "xml_revision_entries": [],
+    "metadata_pdf_abstract_difference": "lockedXML says6benchmarks/anonymizedcode, canonicalPDF says7/publiccode; PDF governs reading"
+  },
+  "supplement_audit": {
+    "method": "read locked official2025XML volume short paper94; title/authors/pages1183-1192/PDFhashecfc5640 match; no attachments; no live landing freshness claim",
+    "official_xml_attachments": [],
+    "separate_scientific_appendix_link_found": false,
+    "scientific_appendix_in_pdf": "A-D complete including all prompts and tables",
+    "code_link": "https://github.com/ahmedselhady/wicked-benchmarks",
+    "code_executed": false
+  },
+  "ten_dimensions": {
+    "reader_argument": {
+      "pages": [
+        1,
+        2,
+        3
+      ],
+      "observation": "从新benchmark昂贵及旧题饱和，提出复用原题的简单变换，再处理多可接受答案的有效性问题。",
+      "editorial_advice": "评测方法稿先讲评测需求和操作，再证明改造后的任务仍可判定。",
+      "applicability_boundary": "难度增加不自动证明纯推理能力测量或去污染。"
+    },
+    "title_abstract": {
+      "pages": [
+        1
+      ],
+      "observation": "名称+简单方法+目标；摘要给具体None-of-the-above操作、模型覆盖、分数下降、CoT和排序信息。",
+      "editorial_advice": "贡献可由低成本变换和诊断能力建立，摘要突出实际操作与发现。",
+      "applicability_boundary": "12.1点等数字与主表/附录不完全一致，正文与官方XML版本差异另存查询，不静默选值。"
+    },
+    "introduction": {
+      "pages": [
+        1
+      ],
+      "observation": "从现有MCQ用途和困难改造引出随机替换，结尾自然段说明多模型/CoT/差异，无固定贡献列表。",
+      "editorial_advice": "将新增判别能力与旧评测瓶颈对应，贡献概览可用自然段。",
+      "applicability_boundary": "不强制新模型、固定三贡献或算法复杂度定理。"
+    },
+    "related_work": {
+      "pages": [
+        2
+      ],
+      "observation": "独立两脉络：LLM多选偏差/污染与教育测验None-of-the-above；同时引用该选项可能改变信心的相反发现。",
+      "editorial_advice": "用近邻研究解释设计依据及其已知取舍。",
+      "applicability_boundary": "教育测试现象是动机，不是本稿LLM机制因果证据。"
+    },
+    "method_theory": {
+      "pages": [
+        2,
+        3,
+        7,
+        8
+      ],
+      "observation": "先随机删一个选项并附None，再区分single-correct与single-best；SBA保持原样，GPT合成标签训练BERT筛查。",
+      "editorial_advice": "简单方法仍要定义适用单位、例外与标签合法性；方法图显示如何保持可判定。",
+      "applicability_boundary": "人工标注/筛查有成本，自动变换不能写成整个开发无人工；C概率公式符号需核对不自行补。"
+    },
+    "evidence": {
+      "pages": [
+        3,
+        4,
+        5,
+        7,
+        8,
+        9,
+        10
+      ],
+      "observation": "主结果按总体下降、规模/指令、CoT和闭源结果展开；A给分类器precision/recall，B给答案变化，C完整示例，D拆分结果。",
+      "editorial_advice": "先验证改造数据，再呈现模型差异；分清随机变体SD与模型采样/统计显著。",
+      "applicability_boundary": "直接主表六数据集，CoT附录四含GPQA、正文表三；不可混分母，18open不含3closed。"
+    },
+    "discussion_limits": {
+      "pages": [
+        4,
+        5
+      ],
+      "observation": "结果承认instruction-tuning无一致优势；局限简短集中其他benchmark需确认SBA/SCA适用性；结论提出更深机制分析。",
+      "editorial_advice": "已测下降直接报告，未测解释放假说与后续研究，局限围绕设计边界。",
+      "applicability_boundary": "变化也可能含选项位置/格式及模型不熟悉None等因素；不将下降全归为推理失败。"
+    },
+    "paragraph_language": {
+      "pages": [
+        3,
+        4,
+        5,
+        7
+      ],
+      "observation": "方法段用定义→为什么会失效→保留SBA的修正；结果用suggest/hypothesize解释不同模型。",
+      "editorial_advice": "段落按判断推进，实测事实与解释力度分别处理。",
+      "applicability_boundary": "显著/ensure等不自动是统计或全场景保证；不为避免防御而删除有效性条件。"
+    },
+    "main_appendix": {
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        7,
+        8,
+        9,
+        10
+      ],
+      "observation": "五页录用正文包含核心操作、筛查与主结果，附录补标注、答案迁移、prompt和详细矩阵。",
+      "editorial_advice": "正文必须能判断任务定义和核心证据；完整提示和各项结果适合附录复核。",
+      "applicability_boundary": "官方当前页数单独管理；图示3shot而实际5shot已说明，不能把示意当执行配置。"
+    },
+    "actionable": {
+      "pages": [
+        2,
+        3,
+        4
+      ],
+      "observation": "单一变换加合法性修正就能构成方法；测量单位与分层必须清楚。",
+      "editorial_advice": "原创示例：WiCkeD replaces one option with None of the above and leaves detected single-best-answer items unchanged. The evaluation compares original and transformed questions across model families and prompting strategies.",
+      "applicability_boundary": "不自动宣称消除污染、所有题都变化或纯粹测出推理能力。"
+    }
+  },
+  "counterexamples": [
+    {
+      "pages": [
+        1,
+        3,
+        4,
+        5,
+        8,
+        9
+      ],
+      "finding": "摘要7/正文列7但direct主表及Table8实际6；CoT主表3与附录Table9含4不等；Table1均值70.8→58.5与delta-12.2、摘要12.1、Table8单seed71.6→60.1各异；正文5variants均值SD，D明确单seed5331，差异需按版本/聚合口径说明。",
+      "scope": "保留分数下降发现，不混算范围，不静默统一。"
+    },
+    {
+      "pages": [
+        5,
+        9
+      ],
+      "finding": "Table4 GPT4o81.4/-3.9、mini74.6/-8.2与Table10 GPT4o66.5、mini77.5及原值74.6/81.5呈行/口径冲突；GPQA纳入差异不能未经证据解释全部冲突。",
+      "scope": "作者核对，不任选一表作为认证后结果。"
+    },
+    {
+      "pages": [
+        3,
+        7,
+        8
+      ],
+      "finding": "98.9% SBA recall的补数1.1%不是整个benchmark噪声率；还受SBA prevalence及正确选项被替换概率影响。1K手标还用于GPTprompt调优，不能当完全独立prompt验证。Arc SBA5.2%反例于rest<5%，MMLU20.3%使atleast80%不严格。",
+      "scope": "保留筛查设计及实际recall，不补造总体噪声测量。"
+    },
+    {
+      "pages": [
+        7
+      ],
+      "finding": "Figure3 Base reversedcorrect18.0%、instruct21.7%，与文字less prone方向相反；newcorrect7.0/7.2，图中基数/类别定义不够，不能由饼图认证因果。",
+      "scope": "已看原页，并非解析错误；保留研究查询，不加入通用免责声明。"
+    }
+  ],
+  "visual_review": {
+    "pages": [
+      2,
+      3,
+      4,
+      5,
+      7,
+      8,
+      9,
+      10
+    ],
+    "figures": "Original Figures1-7, Tables1-10 and C probability equations viewed",
+    "reviewer": "primary agent"
+  },
+  "official_requirements": {
+    "source": "current ACL/ARR rules separately maintained",
+    "corpus_layout_observation": "accepted short main5pages; Limitations p5; appendicesA-D p7-10",
+    "observed_layout_not_current_rule": true
+  },
+  "holdout_validation": null,
+  "review_limitations": "All scientific prose, tables and prompt examples read. No benchmark/code rerun, source-artifact audit or independent construct validation."
+}

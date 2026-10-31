@@ -1,0 +1,56 @@
+{
+  "deleted_count": 10,
+  "deleted_derivatives": [
+    {
+      "path": ".claude/skills/paper-writing-shared/tmp/acl-032-render/p13.png",
+      "sha256": "ca015b588e1774a31756acf4700cdb13d97423248082d8e584b11bab0e860999",
+      "bytes": 363372
+    },
+    {
+      "path": ".claude/skills/paper-writing-shared/tmp/acl-032-render/p14.png",
+      "sha256": "23c99f67a81ecb7ed1395dc3c43b66e382fdb54c861b8de805aef41f41782253",
+      "bytes": 421914
+    },
+    {
+      "path": ".claude/skills/paper-writing-shared/tmp/acl-032-render/p16.png",
+      "sha256": "09b0b54e6b7eea8dc712e97236b0e77dc61d3bb0e8c29cf31d8695252a3cd2a6",
+      "bytes": 390804
+    },
+    {
+      "path": ".claude/skills/paper-writing-shared/tmp/acl-032-render/p8.png",
+      "sha256": "4aad3612fec16783cf8cec4477bf0f2879ff1131d69b02fc5db2cac4f28cd275",
+      "bytes": 435070
+    },
+    {
+      "path": ".claude/skills/paper-writing-shared/tmp/acl-032-render/p2.png",
+      "sha256": "116481f71d5d183f49fb963e1e68d74a747a6a63431c2f2a274c2b5cf1d8d826",
+      "bytes": 453720
+    },
+    {
+      "path": ".claude/skills/paper-writing-shared/tmp/acl-032-render/p5.png",
+      "sha256": "892226af8c7084cb9f8847382a0d459a11fcc0f5cba435e4f7a3cb123b7a4737",
+      "bytes": 426988
+    },
+    {
+      "path": ".claude/skills/paper-writing-shared/tmp/acl-032-render/p4.png",
+      "sha256": "7f173e4bf471a70982571819617863e5d87e6ab708d1e0abbe3f166f8bd71616",
+      "bytes": 438312
+    },
+    {
+      "path": ".claude/skills/paper-writing-shared/tmp/acl-032-render/p6.png",
+      "sha256": "1b150aa8c0a0c5c29b03a7a6043de3377a8d92b8e24168ca1246af35264f0123",
+      "bytes": 468447
+    },
+    {
+      "path": ".claude/skills/paper-writing-shared/tmp/acl-032-render/p7.png",
+      "sha256": "7e6876d6c0ca4fbd56ec04649980781239964fe4ec0230957c6f5253c211973a",
+      "bytes": 465241
+    },
+    {
+      "path": ".claude/skills/paper-writing-shared/tmp/acl-032-render/p18.png",
+      "sha256": "6fc9474d151fbf6faa269b7a8ab6d32b7c3c2eddd5e14094257d4d87d17e1a21",
+      "bytes": 128417
+    }
+  ],
+  "original_pdf_or_primary_parse_deleted": 0
+}

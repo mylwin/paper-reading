@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-23",
+  "updated": "2026-10-28",
   "template_and_resource_checks": [
     {
       "venue": "aaai",
@@ -95,8 +95,19 @@
     "new_task_links": "no dangling links detected",
     "preexisting_unrelated_links": 9
   },
-  "full_corpus_completed_count": 58,
+  "full_corpus_completed_count": 72,
   "iclr2027_policy": "current AuthorGuidelines and AI policy verified; authoritative media kit compiled/reviewed",
-  "full_corpus_count_as_of": "2026-10-23;manualallpageandappendixreviews;oldbatchsnapshotsremainhistorical",
-  "current_research_report": "07-research/2026-10-21-论文写作风格全量续研.md"
+  "full_corpus_count_as_of": "2026-10-28;manualallpageandappendixreviews;oldbatchsnapshotsremainhistorical",
+  "current_research_report": "07-research/2026-10-21-论文写作风格全量续研.md",
+  "icml_priority_acceptance_2026_10_28": {
+    "full_text": 50,
+    "induction": 40,
+    "holdout": 10,
+    "same_agent_behavioral_scenarios": 12,
+    "latex_compiles": 3,
+    "rendered_pages_visually_checked": 6,
+    "independent_model_benchmark": false,
+    "official_rules_reverified": false,
+    "report": "07-research/2026-10-28-ICML技能有效性验证.md"
+  }
 }

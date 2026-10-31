@@ -1,0 +1,13 @@
+{
+  "x_to_en_relative_BLEU_improvement": 0.24257425742574268,
+  "x_to_en_BLEU_points": 4.900000000000002,
+  "en_to_x_relative_BLEU_improvement": 0.13475177304964542,
+  "training_GPUhours_reduction": 0.2195121951219513,
+  "full_recording_speedup_context_seconds": {
+    "2": 22.4,
+    "4": 19.35,
+    "6": 16.07,
+    "8": 12.09
+  },
+  "qualification": "Printed rounded tablevalues; arithmetic audit not rerun."
+}

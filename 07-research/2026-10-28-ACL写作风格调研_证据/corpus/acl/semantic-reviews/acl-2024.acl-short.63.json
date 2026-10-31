@@ -1,0 +1,291 @@
+{
+  "id": "acl-2024.acl-short.63",
+  "anthology_id": "2024.acl-short.63",
+  "venue": "acl",
+  "year": 2024,
+  "track": "main conference research",
+  "length_type": "short",
+  "title": "Annotating FrameNet via Structure-Conditioned Language Generation",
+  "authors": [
+    "Xinyue Cui",
+    "Swabha Swayamdipta"
+  ],
+  "first_author": "Xinyue Cui",
+  "landing_url": "https://aclanthology.org/2024.acl-short.63/",
+  "pdf_url": "https://aclanthology.org/2024.acl-short.63.pdf",
+  "doi": "10.18653/v1/2024.acl-short.63",
+  "official_listing_url": "https://aclanthology.org/volumes/2024.acl-short/",
+  "sampling_stratum": "data_resources",
+  "paper_type": "linguistically conditioned annotation generation and intrinsic/extrinsic utility study; short paper",
+  "anthology_pdf_revision_hash": "b4cd6f0c",
+  "metadata_revisions": [],
+  "official_attachments": [],
+  "sort_hash": "19ec9b568baae30628aa16ce75ca1474b7bb9b5b2c0274cf07696e2a19976ce3",
+  "split": "induction",
+  "semantic_review_status": "complete_writing_focused_full_text_review",
+  "full_text_and_relevant_appendix_review_complete": true,
+  "review_date": "2026-10-29",
+  "reviewer": "primary agent",
+  "pdf_path": ".claude/skills/paper-writing-shared/tmp/corpus/acl/pdf/2024.acl-short.63.pdf",
+  "pdf_sha256": "1f0e5128b82fe7a6b1d43a88e9e29b038c92106dec8e229527584af85e872fd3",
+  "markdown_path": ".claude/skills/paper-writing-shared/tmp/corpus/acl/markdown/2024.acl-short.63.md",
+  "markdown_sha256": "89f3b4bb8c33373b811474e85729910de7d100cd073633cd231931a5bf20e6af",
+  "full_text_style_review_complete": true,
+  "external_appendix_review_complete": true,
+  "count_eligible_full_text_and_relevant_appendix": true,
+  "coverage": [
+    {
+      "source": "canonical official PDF",
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "main_science": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "limitations_ethics": [
+        6
+      ],
+      "references": [
+        6,
+        7
+      ],
+      "scientific_appendix": {
+        "A corpus statistics": [
+          8
+        ],
+        "B candidate selection": [
+          8,
+          9
+        ],
+        "C span generation training and complete prompting": [
+          9,
+          10
+        ],
+        "D classifier training": [
+          9
+        ],
+        "E manual examples and criteria": [
+          9,
+          11
+        ],
+        "F reference-based and free evaluation": [
+          9,
+          10,
+          12
+        ],
+        "G.1-G.3 nonoracle,verbsubset,multiplecandidate experiments": [
+          10,
+          12
+        ],
+        "H filtering/diversity": [
+          12
+        ]
+      }
+    }
+  ],
+  "version_audit": {
+    "published_year": 2024,
+    "canonical_url": "https://aclanthology.org/2024.acl-short.63.pdf",
+    "xml_revision_entries": []
+  },
+  "supplement_audit": {
+    "method": "locked official2024 XML short paper63 read; title/authors/pages681-692/PDFhashb4cd6f0c match; no attachment or revision; no live landing freshness claim",
+    "official_xml_attachments": [],
+    "separate_scientific_appendix_link_found": false,
+    "scientific_appendix_in_pdf": "A-H complete, including all final Tables9-13",
+    "code_link": "https://github.com/X-F-Cui/FrameNet-Conditional-Generation",
+    "code_executed": false
+  },
+  "ten_dimensions": {
+    "reader_argument": {
+      "pages": [
+        1,
+        2
+      ],
+      "observation": "从隐含语言能力与显式结构操作区别，提出生成结构一致、人可接受、下游有用三个目标。",
+      "editorial_advice": "用可操作目标拆开大问题，每个目标各自对应证据。",
+      "applicability_boundary": "生成质量与下游收益不是同一指标；本稿英语动词LU，不是全语言结构操作评测。"
+    },
+    "title_abstract": {
+      "pages": [
+        1
+      ],
+      "observation": "标题说明标注对象与结构条件生成；摘要同时报告生成质量及低/高资源用途差异。",
+      "editorial_advice": "正负结果可以共同构成摘要的主答案，不必把负结果藏进局限。",
+      "applicability_boundary": "低资源结果没有给摘要中的泛化全任务保证；might等在未来用途/研究问题上的限定有实际作用。"
+    },
+    "introduction": {
+      "pages": [
+        1,
+        2
+      ],
+      "observation": "图1用替换discipline→reward说明原FE语义冲突；引言自然段概括pipeline及intrinsic/extrinsic结论，无固定贡献列表。",
+      "editorial_advice": "概念易混时先用例子，随后说明本文能改变什么、如何判断；贡献概览不限定条数。",
+      "applicability_boundary": "不将implicitunderstand修辞当成理解能力实证。"
+    },
+    "related_work": {
+      "pages": [
+        2,
+        5
+      ],
+      "observation": "先背景定义Frame/FE/LU与最接近sisterreplacement的局限，后§5分FrameNetaugmentation与controlledgeneration。",
+      "editorial_advice": "关键前作在方法前就定位，完整家族比较可后置，减少读者回跳。",
+      "applicability_boundary": "不能因后置章节而在介绍核心机制时省略前作来源。"
+    },
+    "method_theory": {
+      "pages": [
+        2,
+        3,
+        8,
+        9,
+        10
+      ],
+      "observation": "按候选FE选择、T5/GPT4条件生成、SpanBERT过滤三步；Frame+FE与FE条件分别实验，附录给选择依据和prompt/训练细节。",
+      "editorial_advice": "方法先说明每步输入输出和设计来源，核心语义定义先于模型参数。",
+      "applicability_boundary": "过滤仅按分类器的FE标签一致，不等于原义/人类接受完美；无理论成果不补造定理。"
+    },
+    "evidence": {
+      "pages": [
+        3,
+        4,
+        5,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "observation": "1K新LU生成/200人工评测，intrinsic表给过滤前后样本数；随后goldframe/LU下SRL、学习曲线、低资源、非oracle/verbsubset/多候选与SelfBLEU补查。",
+      "editorial_advice": "先验证中间产物，再验证用途；结果不足时用针对性实验检查原因，保持负结果可见。",
+      "applicability_boundary": "oracle按测试F1选LU，非盲真实部署；人评主要首作者，额外志愿者只验证一个模型条件；三seed均值不能凭未定义±认证CI。"
+    },
+    "discussion_limits": {
+      "pages": [
+        4,
+        5,
+        6,
+        10,
+        12
+      ],
+      "observation": "主文直接写高资源收益小/目标LU可能退步，随后探索饱和/多样性；局限集中英语、goldframe/LU与oracle；伦理仅200例未发现有害内容。",
+      "editorial_advice": "实测限制可参与论证并引导后续实验；结论回收成功与失败，不添加空泛自辩。",
+      "applicability_boundary": "学习曲线并非全任务极限；200例未发现风险不是全数据安全证明。"
+    },
+    "paragraph_language": {
+      "pages": [
+        3,
+        4,
+        5,
+        10,
+        12
+      ],
+      "observation": "按目标分段，结果直陈，diminishingreturns/limiteddiversity原因用hypothesize/speculate；新实验接前述问题。",
+      "editorial_advice": "把事实、解释和未来行动放在各自语气层级；可直接说高资源改进有限。",
+      "applicability_boundary": "不把suggest统一强化为已证机制，也不逐句追加may。"
+    },
+    "main_appendix": {
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "observation": "正文完整pipeline/主要内外在评价/学习曲线；A-H放资源统计、选择规则、完整提示、训练、人工例、更多对照与多样性。",
+      "editorial_advice": "附录用于复核和检验解释，正文保留判断三目标所需证据，读到末尾浮动表。",
+      "applicability_boundary": "录用短稿五页正文+第6页声明不是当前投稿限页规范；附录不是可跳过的科学内容。"
+    },
+    "actionable": {
+      "pages": [
+        3,
+        4,
+        5
+      ],
+      "observation": "生成可接受性和实际任务收益分开陈述，就能保留方法价值与负结果。",
+      "editorial_advice": "原创示例：Structure-conditioned generation improves the reported human acceptance of generated FrameNet annotations. The augmentation experiments show limited gains with the full training set, while the reported low-resource setting benefits from targeted generated annotations.",
+      "applicability_boundary": "不把过滤后的FEfidelity1.0称人评100%，不把有限高资源收益写成所有生成数据无用。"
+    }
+  },
+  "counterexamples": [
+    {
+      "pages": [
+        3,
+        4,
+        9,
+        11
+      ],
+      "finding": "FEfidelity1.0来自按该分类器选出样本，本身非独立质量证据；人评过滤后子集不同，GPT4FE164/.826、FrameFE165/.821，不能把数值差称显著。95%classifieraccuracy与human1.000/FE.979也说明指标区别。",
+      "scope": "保留实际人评改善，不将classifier筛选循环认证为完美语义。"
+    },
+    {
+      "pages": [
+        4,
+        10,
+        12
+      ],
+      "finding": "p3称过滤改善其他两指标但human/perplexity对照Pancholy127.8→146.0、人类78.1→97.0为ppl变差；Table2所有LU .677→.683/.684，但目标LU GPT .681→.677。Table12一/三候选.688/.673低于.693，负结果是实际发现。",
+      "scope": "按表中对象与分母报告，避免全指标改善和生成数多即更有效。"
+    },
+    {
+      "pages": [
+        4,
+        5,
+        10,
+        12
+      ],
+      "finding": "oracle按测试LU的F1<.75挑选；G.1非oracle .689→.690仍收益有限。Fig2低资源生成星点与相同新增人类数据比较需从曲线近似读，不能编出精确差值。SelfBLEU过滤降低不等同新增训练信号足够。",
+      "scope": "既保留低资源用途，也保留oracle、代理指标与饱和归因的真实范围。"
+    },
+    {
+      "pages": [
+        1,
+        3,
+        9,
+        11
+      ],
+      "finding": "正文图1和Table9有source/targetLU方向与模板句子混用，开头及§2replacement文字称谓不完全一致；图示reward版本与附录例子部分未直接替换动词。",
+      "scope": "以逐条例子/实际生成管线向作者核对，不静默改源码或据此否定整项方法。"
+    }
+  ],
+  "visual_review": {
+    "pages": [
+      1,
+      4,
+      5,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "figures": "Both Figures1-2 and all Tables1-13 including color labels, full prompt and final experimental tables viewed",
+    "reviewer": "primary agent"
+  },
+  "official_requirements": {
+    "source": "current ACL/ARR rules maintained separately",
+    "corpus_layout_observation": "accepted short main5pages; Limitations/Ethics p6; A-Hpp8-12",
+    "observed_layout_not_current_rule": true
+  },
+  "holdout_validation": null,
+  "review_limitations": "All prose and A-H scientific appendices read; no code/model rerun, no formal significance certification or frame-semantic expert reannotation."
+}

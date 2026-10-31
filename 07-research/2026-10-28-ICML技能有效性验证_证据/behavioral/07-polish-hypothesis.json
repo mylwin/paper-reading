@@ -1,0 +1,25 @@
+{
+  "id": "07-polish-hypothesis",
+  "skill": "paper-polishing",
+  "venue": "ICML",
+  "request": "改顺句子，不能把相关性写成机制证明",
+  "provided_facts": {
+    "observation": "lower gradient kurtosis co-occurs with better returns in four tested configurations",
+    "intervention": "none",
+    "mechanism": "hypothesis"
+  },
+  "original": "We prove that reducing gradient kurtosis causes the return increase in all reinforcement learning systems.",
+  "actual_primary_agent_output": "Across four tested configurations, lower gradient kurtosis accompanies higher returns. This association suggests a possible mechanism for the observed gains.",
+  "author_notes": "",
+  "manual_semantic_review": {
+    "reviewer": "same primary agent",
+    "assessment": "consistent_with_given_facts_and_requested_scope",
+    "reason": "保留观测的确定性、解释的假说语气；possible不冗余，不能从相关观察生成因果证明。",
+    "criteria": [
+      "association_vs_causality",
+      "appropriate_qualifier",
+      "direct_observation"
+    ]
+  },
+  "independent_model_run": false
+}

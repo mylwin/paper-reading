@@ -1,0 +1,362 @@
+{
+  "id": "acl-2025.acl-long.763",
+  "anthology_id": "2025.acl-long.763",
+  "venue": "acl",
+  "year": 2025,
+  "track": "main conference research",
+  "length_type": "long",
+  "title": "M2RC-EVAL: Massively Multilingual Repository-level Code Completion Evaluation",
+  "authors": [
+    "Jiaheng Liu",
+    "Ken Deng",
+    "Congnan Liu",
+    "Jian Yang",
+    "Shukai Liu",
+    "He Zhu",
+    "Peng Zhao",
+    "Linzheng Chai",
+    "Yanan Wu",
+    "Jin Ke",
+    "Ge Zhang",
+    "Zekun Moore Wang",
+    "Guoan Zhang",
+    "Yingshui Tan",
+    "Bangyu Xiang",
+    "Zhaoxiang Zhang",
+    "Wenbo Su",
+    "Bo Zheng"
+  ],
+  "first_author": "Jiaheng Liu",
+  "landing_url": "https://aclanthology.org/2025.acl-long.763/",
+  "pdf_url": "https://aclanthology.org/2025.acl-long.763.pdf",
+  "doi": "10.18653/v1/2025.acl-long.763",
+  "official_listing_url": "https://aclanthology.org/volumes/2025.acl-long/",
+  "sampling_stratum": "multilingual_linguistics",
+  "paper_type": "multilingual repository-level code completion benchmark and instruction corpus with AST diagnostic annotations",
+  "anthology_pdf_revision_hash": "c24f6666",
+  "metadata_revisions": [],
+  "official_attachments": [],
+  "sort_hash": "0c6348ba308509fb80b29b3400fd0cc1f4e7d2dae199c3b02341a778252122c8",
+  "split": "induction",
+  "semantic_review_status": "complete_writing_focused_full_text_review",
+  "full_text_and_relevant_appendix_review_complete": true,
+  "pdf_path": ".claude/skills/paper-writing-shared/tmp/corpus/acl/pdf/2025.acl-long.763.pdf",
+  "pdf_sha256": "7d9805ebea576fe3489e32c73db4a61cb8ce4fb79116c0aa2739ec8302243699",
+  "markdown_path": ".claude/skills/paper-writing-shared/tmp/corpus/acl/markdown/2025.acl-long.763.md",
+  "markdown_sha256": "eb4c0f13fbdbf82f45910e573be46eb16fed1395f23566fa862fa798947186c6",
+  "page_count": 24,
+  "review_date": "2026-10-29",
+  "reviewer": "acl_finish_b agent",
+  "full_text_style_review_complete": true,
+  "external_appendix_review_complete": true,
+  "count_eligible_full_text_and_relevant_appendix": true,
+  "coverage": [
+    {
+      "source": "canonical official PDF",
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24
+      ],
+      "main_science": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "limitations_ethics": [
+        9,
+        13
+      ],
+      "references": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "scientific_appendix": {
+        "A.1 broader impacts/A.2 baseline models/A.3 quality control/A.4 cases": [
+          13,
+          22,
+          23,
+          24
+        ],
+        "A.5 bucket granularity": [
+          13,
+          14
+        ],
+        "A.6 all additional experiments,18-language taxonomy,6 cases": [
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24
+        ]
+      }
+    }
+  ],
+  "version_audit": {
+    "canonical_url": "https://aclanthology.org/2025.acl-long.763.pdf",
+    "xml_revision_entries": []
+  },
+  "supplement_audit": {
+    "method": "locked official XML metadata and manifest attachment entries inspected; canonical PDF scientific appendices read; no live freshness assertion",
+    "official_xml_attachments": [],
+    "scientific_appendix_in_pdf": {
+      "A.1 broader impacts/A.2 baseline models/A.3 quality control/A.4 cases": [
+        13,
+        22,
+        23,
+        24
+      ],
+      "A.5 bucket granularity": [
+        13,
+        14
+      ],
+      "A.6 all additional experiments,18-language taxonomy,6 cases": [
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24
+      ]
+    },
+    "code_executed": false
+  },
+  "ten_dimensions": {
+    "reader_argument": {
+      "pages": [
+        1,
+        2,
+        3
+      ],
+      "observation": "问题是现有repo补全覆盖语言少且平均数遮蔽细粒度能力，资源与诊断双目标。",
+      "editorial_advice": "benchmark引言先说现有评测无法回答什么，再解释新增标注怎样回答。",
+      "applicability_boundary": "multilingual指18编程语言，非18自然语言。"
+    },
+    "title_abstract": {
+      "pages": [
+        1
+      ],
+      "observation": "标题命名repo补全评测范围，摘要两个缺口对应18语言/两类标注并引出训练集。",
+      "editorial_advice": "资源、任务与评测用途都可作为贡献，不必杜撰算法创新。",
+      "applicability_boundary": "comprehensive/effectiveness泛称应在新摘要用可核实发现替代。"
+    },
+    "introduction": {
+      "pages": [
+        1,
+        2
+      ],
+      "observation": "图1展示3语言实例、输入上下文、cursor、答案及两种标签，随后3贡献。",
+      "editorial_advice": "新任务用一个完整输入输出样例对齐术语，再列资源及分析贡献。",
+      "applicability_boundary": "源码标注示例不等同人类语义准确性验证。"
+    },
+    "related_work": {
+      "pages": [
+        3
+      ],
+      "observation": "CodeLLM与repo补全两组，Table1按语言/细粒度/训练/仓库数比较。",
+      "editorial_advice": "资源对比表选择直接对应缺口的维度。",
+      "applicability_boundary": "first massively multilingual自称需独立查新，不从本稿推出所有前作能力受限。"
+    },
+    "method_theory": {
+      "pages": [
+        3,
+        4,
+        5,
+        13,
+        14,
+        19,
+        20,
+        21
+      ],
+      "observation": "来源许可/星数文件数筛选→AST节点选cursor→质量筛→分割统计→深度bucket与语义映射。",
+      "editorial_advice": "明确样本单位和筛选再报告数量，标注定义配实例。",
+      "applicability_boundary": "Tree-sitter解析与人工定义映射不同于全量人工标注，AST深度是代理难度。"
+    },
+    "evidence": {
+      "pages": [
+        5,
+        6,
+        7,
+        8,
+        13,
+        14,
+        16,
+        17,
+        18,
+        22,
+        23,
+        24
+      ],
+      "observation": "baseline/retrieval/retrieval+tuning对照，随后数据/模型规模、bucket、语义、长度、CodeBLEU、syntax与案例。",
+      "editorial_advice": "先资源用途主结果，再用新增标注给出读者原来得不到的诊断。",
+      "applicability_boundary": "syntax静态解析非execution；长度趋势不是已拟合普适scaling law。"
+    },
+    "discussion_limits": {
+      "pages": [
+        7,
+        8,
+        9,
+        13
+      ],
+      "observation": "模型在浅层/特殊语言结构/多行有弱项；局限超参成本、任务范围与真实工程复杂性。",
+      "editorial_advice": "负结果可作为benchmark价值；限制聚焦部署解释条件。",
+      "applicability_boundary": "not seen any risks不是安全保证，不复制为技术稿免审条款。"
+    },
+    "paragraph_language": {
+      "pages": [
+        5,
+        6,
+        7,
+        8
+      ],
+      "observation": "Analysis on作重复路标，观察→读数→解释→用途；HTML规则简单用assume。",
+      "editorial_advice": "段落对应诊断问题，直接写训练集改善与失败类，不累积模糊修饰。",
+      "applicability_boundary": "原文significant没有检验支撑不可自动当统计显著。"
+    },
+    "main_appendix": {
+      "pages": [
+        4,
+        5,
+        6,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24
+      ],
+      "observation": "正文主表/总体诊断，附录细语种曲线、18taxonomy、六完整案例和分桶理由。",
+      "editorial_advice": "主文保留标签定义与总体验证，完整清单及成功失败案例放附录。",
+      "applicability_boundary": "附录大量科学图并非参考文献后可跳过内容，必须看到24末图。"
+    },
+    "actionable": {
+      "pages": [
+        5,
+        6,
+        7,
+        8
+      ],
+      "observation": "细粒度诊断补足总分，retrieval和tuning效果应按指标拆开。",
+      "editorial_advice": "原创例：Retrieval increases StarCoder’s reported average exact match from 21.0% to 24.1%, while edit similarity falls from 52.0% to 50.0%. Retrieval with tuning raises both metrics to 44.5% and 72.2%.",
+      "applicability_boundary": "平均列和18逐语种数值有不一致待核；明确reported，非自算已认证均值。"
+    }
+  },
+  "counterexamples": [
+    {
+      "pages": [
+        5,
+        6,
+        7,
+        8
+      ],
+      "finding": "称retrieval显著整体改善但3模型平均ES均下降，CodeLlamaGo/HTML等EM下降；Table3平均列与逐语种算术均值不一致，表内多行重复局部数字待核。",
+      "scope": "保留tuning各表明确改善，不写所有模块全指标有益。"
+    },
+    {
+      "pages": [
+        3,
+        4,
+        13,
+        14,
+        16,
+        17
+      ],
+      "finding": "主文bucket ceil(i/(N/M))与图0–9索引范围待核；0–9浅→深并非逐语言单调，Python第0ES高，Haskell第9骤降；图8重复Rust而18语种图中没有清晰独立Lua?Lua在图7，末尾重复Rust。",
+      "scope": "报告总体趋势/变异，不把无条件难度顺序写成定义。"
+    },
+    {
+      "pages": [
+        7,
+        8,
+        13,
+        22,
+        23,
+        24
+      ],
+      "finding": "正文称execution分析但Table7仅静态syntax；71%三模型infile失败不逻辑推出必须crossfile，过滤依赖DeepSeek1.3偏向难例；日志warn/error及Scala引用/调用是例示非频率估计。",
+      "scope": "可以直接写诊断案例揭示的错误类型，不宣称全面语义正确性。"
+    },
+    {
+      "pages": [
+        4,
+        8,
+        13,
+        14
+      ],
+      "finding": "5范式/9应用是按语言固定映射，非真实仓库用途逐例分类；AST11类中一些语言缺项；Fig19将不同难度比率堆叠>1不是整体准确率。",
+      "scope": "标清代理分类和分母，避免编码语言比较泛化为全部真实应用。"
+    }
+  ],
+  "visual_review": {
+    "pages": [
+      2,
+      4,
+      5,
+      6,
+      7,
+      8,
+      14,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24
+    ],
+    "reviewer": "acl_finish_b agent",
+    "figures": "Original diagrams, equations and result figures/tables inspected on indicated pages"
+  },
+  "official_requirements": {
+    "source": "current ACL/ARR rules maintained separately",
+    "observed_layout_not_current_rule": true
+  },
+  "holdout_validation": null,
+  "review_limitations": "Writing-focused full PDF and all scientific appendices read, original visual pages inspected; no model/code rerun or significance certification."
+}

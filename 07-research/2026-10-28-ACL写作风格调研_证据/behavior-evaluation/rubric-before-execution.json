@@ -1,0 +1,39 @@
+{
+  "created": "2026-10-29",
+  "scope": "Four synthetic forward execution cases; evaluator gets requests and raw inputs, not this rubric. No causal no-skill baseline or claim of global skill effectiveness.",
+  "criteria": {
+    "fact_fidelity": "Numbers, units, comparison targets, assumptions, symbols and provided references remain accurate. Inventing results, significance, citations or theorems fails.",
+    "claim_strength": "Supported improvements stated directly. Full quantified theorem preserved. Remove unsupported universal or causal claims; distinguish observed findings and explanations.",
+    "necessary_scope": "Retain conditions that change interpretation without repeating irrelevant universal disclaimers. Evaluate meaning, not counts of may/could. An abstract or short paragraph need not enumerate every absent test, unchanged resource, or unstudied application when it makes no corresponding claim.",
+    "task_completion": "Provide requested finished text, respect word budget and editing scope; avoid substituting advice/checklists for the manuscript.",
+    "latex_preservation": "For existing project edit only abstract, preserve all other source bytes including official styles, formula/labels/citation; compile and visually inspect final PDF."
+  },
+  "cases": {
+    "writing-abstract": [
+      "English abstract <=200 words",
+      "Describes caching decision and two-dataset results accurately",
+      "Any reported gains use correct units and scope; a memory claim, if included, matches the supplied unchanged memory. No requirement to recite every supplied fact.",
+      "No invented causal mechanism or significance",
+      "Only abstract differs from baseline project; full compile successful"
+    ],
+    "writing-finding": [
+      "English intro closing <=120 words",
+      "Contributes paired diagnostic and observed differences",
+      "Does not invent retriever algorithm or downstream results",
+      "Does not turn synthetic stress-test outcomes into natural traffic prevalence"
+    ],
+    "polishing-table": [
+      "Preserves real TaskA improvement and TaskB comparator differences",
+      "Drops unsupported all-task superiority and solves-generalization",
+      "Accurately describes speed and unchanged KV storage",
+      "Keeps the result paragraph concise and does not add a wall of disclaimers"
+    ],
+    "polishing-qualified": [
+      "Preserves A1-A3 and O(epsilon^-4) stochastic gradient evaluations",
+      "Preserves theorem guarantee rather than weakening it into conjecture",
+      "Retains distinction from elapsed time",
+      "Light edit or unchanged sentence acceptable"
+    ]
+  },
+  "decision": "Each case passes only if all relevant substantive criteria pass; report individual observations and failures, no aggregate score implying statistical validity."
+}

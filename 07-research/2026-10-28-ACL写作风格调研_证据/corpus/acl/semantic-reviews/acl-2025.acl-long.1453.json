@@ -1,0 +1,371 @@
+{
+  "id": "acl-2025.acl-long.1453",
+  "anthology_id": "2025.acl-long.1453",
+  "venue": "acl",
+  "year": 2025,
+  "track": "main conference research",
+  "length_type": "long",
+  "title": "ConLoan: A Contrastive Multilingual Dataset for Evaluating Loanwords",
+  "authors": [
+    "Sina Ahmadi",
+    "Micha David Hess",
+    "Elena Álvarez-Mellado",
+    "Alessia Battisti",
+    "Cui Ding",
+    "Anne Göhring",
+    "Yingqiang Gao",
+    "Zifan Jiang",
+    "Andrianos Michail",
+    "Peshmerge Morad",
+    "Joel Niklaus",
+    "Maria Christina Panagiotopoulou",
+    "Stefano Perrella",
+    "Juri Opitz",
+    "Anastassia Shaitarova",
+    "Rico Sennrich"
+  ],
+  "first_author": "Sina Ahmadi",
+  "landing_url": "https://aclanthology.org/2025.acl-long.1453/",
+  "pdf_url": "https://aclanthology.org/2025.acl-long.1453.pdf",
+  "doi": "10.18653/v1/2025.acl-long.1453",
+  "official_listing_url": "https://aclanthology.org/volumes/2025.acl-long/",
+  "sampling_stratum": "multilingual_linguistics",
+  "paper_type": "multilingual contrastive loanword annotation resource and empirical language-model/translation/metric evaluation; no new model architecture",
+  "anthology_pdf_revision_hash": "3de40c9e",
+  "metadata_revisions": [],
+  "official_attachments": [],
+  "sort_hash": "05a935d05af3719adecb0738031cabb0d996051758467522376b5c1bc0c87fe5",
+  "split": "induction",
+  "semantic_review_status": "complete_writing_focused_full_text_review",
+  "full_text_and_relevant_appendix_review_complete": true,
+  "review_date": "2026-10-29",
+  "reviewer": "acl_retriever_review subagent",
+  "full_text_style_review_complete": true,
+  "external_appendix_review_complete": true,
+  "count_eligible_full_text_and_relevant_appendix": true,
+  "pdf_path": ".claude/skills/paper-writing-shared/tmp/corpus/acl/pdf/2025.acl-long.1453.pdf",
+  "pdf_sha256": "d149b122b606804ebdb004e7a096a10a7145d208c151f42bf99360d6f3d79d62",
+  "markdown_path": ".claude/skills/paper-writing-shared/tmp/corpus/acl/markdown/2025.acl-long.1453.md",
+  "markdown_sha256": "7c2b649a66d8a4fe71d4b11a3b1848ffa929691ce76f2a21f7255e01397270ce",
+  "coverage": [
+    {
+      "source": "canonicalofficialPDF",
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21
+      ],
+      "main_science": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "references": [
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "scientific_appendix": {
+        "A resources and spreadsheet": [
+          15
+        ],
+        "B.1 Chinese/B.2 French/B.3 German": [
+          16,
+          17
+        ],
+        "B.4 Greek/B.5 Icelandic/B.6 Italian": [
+          17,
+          18
+        ],
+        "B.7 Kurdish/B.8 Portuguese/B.9 Russian/B.10 Spanish": [
+          18,
+          19
+        ],
+        "C donor distribution": [
+          19,
+          20
+        ],
+        "D full supplementary results": [
+          20,
+          21
+        ]
+      },
+      "reading_not_download_or_parse_only": true
+    }
+  ],
+  "version_audit": {
+    "published_year": 2025,
+    "canonical_url": "https://aclanthology.org/2025.acl-long.1453.pdf",
+    "xml_pdf_hash": "3de40c9e",
+    "xml_revisions": [],
+    "official_xml_path": ".claude/skills/paper-writing-shared/tmp/corpus/acl/sources/2025-acl.xml",
+    "official_xml_sha256": "bd95ce2de89dbc2c001ca63c73585a2145b338df3b0ef48833a6e3d8ecb245fe",
+    "live_landing_rechecked": false
+  },
+  "supplement_audit": {
+    "method": "Inspected locked officialXML paper1453 and completePDF appendixreferences",
+    "official_xml_attachments": [],
+    "separate_scientific_appendix_link_found": false,
+    "scientific_appendix_in_pdf": "A–Dcomplete,PDF15–21",
+    "external_resource": "ZurichNLP/ConLoan (resource pointer on title page)",
+    "external_resource_role": "dataset repository, not a separately cited scientific appendix",
+    "code_executed": false,
+    "external_scientific_appendix_required": false
+  },
+  "ten_dimensions": {
+    "reader_argument": {
+      "pages": [
+        1,
+        2,
+        3
+      ],
+      "observation": "先把借词置于接触语言学与语言保存背景，再收窄到NLP缺少语境化跨语言对照资源；Background界定loanword/loanblend/calque/meaning extension并限定materialloanwords。",
+      "editorial_advice": "资源论文可先交代概念和标注对象，解释为什么现有词表不足以回答问题。",
+      "applicability_boundary": "关于native的操作定义依赖历史知识与当代说话者感受，不能写成绝对客观且所有语言完全同标准。"
+    },
+    "title_abstract": {
+      "pages": [
+        1
+      ],
+      "observation": "标题以资源名+contrastive/multilingual+评测对象直接表达贡献；摘要按现象→十语言资源→模型评测→主要偏好组织，无强制效果数字。",
+      "editorial_advice": "按资源实际用途写核心主张，不必引入新算法，也不必给每个摘要凑提升百分数。",
+      "applicability_boundary": "systematicpreference是模型/指标和该数据集的观察，不证明语言纯化或借词替换本身优劣。"
+    },
+    "introduction": {
+      "pages": [
+        1,
+        2
+      ],
+      "observation": "较充分跨学科动机连接词汇借用、社会历史和保存教育，再说明十语言句对、翻译和surprisal研究；没有固定贡献列表。",
+      "editorial_advice": "对语言资源工作，概念与问题的重要性可以先于计算方法；末段说明具体可回答的问题。",
+      "applicability_boundary": "一般社会价值不能写成已经测试教育保存效果；篇幅比例随读者背景决定，不机械要求长历史叙述。"
+    },
+    "related_work": {
+      "pages": [
+        2,
+        3
+      ],
+      "observation": "先给Background，再RelatedWork；从相关任务到借词检测、数据短缺、词表资源、有限语言/任务覆盖，最后定位语境对照与LLM/MT。",
+      "editorial_advice": "把概念澄清与近邻定位分开，明确现有数据缺什么单元或对照条件。",
+      "applicability_boundary": "scarce/firstnovel需独立文献查核，本审阅不认证作者新颖性宣称。"
+    },
+    "method_theory": {
+      "pages": [
+        3,
+        4,
+        7,
+        8,
+        15,
+        16,
+        17,
+        18,
+        19
+      ],
+      "observation": "数据构建按平行语料→过滤→标签/替换/验证→挑战组织；举GreekL/N对齐标注，后用完整NLL式及MT符号明确比较对象。",
+      "editorial_advice": "用实际标注界面与可检查句对展示资源定义，公式只用于说明评测口径，不必添加定理。",
+      "applicability_boundary": "替换允许语法重写、语域或长度变化，因此对比不仅改变借词身份；无独立IAA；不同语言排除深度同化词的标准不完全一致。"
+    },
+    "evidence": {
+      "pages": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        15,
+        20,
+        21
+      ],
+      "observation": "资源数量/替换率、频率与定性改写分析先说明数据，再以三LM、NLLB600M英译和四QE指标评测；附录给全语言结果和标注经验。",
+      "editorial_advice": "将资源质量描述与模型用途验证区分，报告候选句、验证句、annotation和替换事件各自分母。",
+      "applicability_boundary": "56.9%是预筛候选验证比例，不是全检测准确率；55.78%替换事件也不等于55.78%句子发生改变；QE反向评的是已有人工句对而非又训练/生成一轮NMT。"
+    },
+    "discussion_limits": {
+      "pages": [
+        5,
+        7,
+        8,
+        9,
+        10,
+        19,
+        20
+      ],
+      "observation": "结论与讨论合并，提新任务/口语资源方向，明确donor分布仅代表数据；Limitations承认语言覆盖和未做自身IAA，Ethics说明公开数据、隐私措施、补偿。",
+      "editorial_advice": "把真实限制放在影响解释的位置；未来用途与已执行实验分开，实测趋势不必逐句弱化。",
+      "applicability_boundary": "引用前作kappa>0.91不能当ConLoan质量证明；公开可得不自动证明所有许可/隐私风险已消除，本次未审计数据仓库。"
+    },
+    "paragraph_language": {
+      "pages": [
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "observation": "Analysis按quantitative/qualitative分层；实验以对象、公式/指标、图、趋势、可能解释组织。机制原因使用believe/likely/hypothesize。",
+      "editorial_advice": "直接陈述十语言NMT评分降低和三模型平均surprisal增加，解释训练语料成因时保留假设语气。",
+      "applicability_boundary": "Spanish三模型surprisal均降低是局部反例；不能把平均趋势改为全语言必然，也不能把质量分数写成推理效率。"
+    },
+    "main_appendix": {
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21
+      ],
+      "observation": "正文涵盖概念、采集/标注设计、资源分析及关键实验；附录A界面/来源、B十语言经验、Cdonor分布、D全评测。",
+      "editorial_advice": "多语言资源的详细差异可放附录，但正文保留决定结果含义的标注规则与筛选。",
+      "applicability_boundary": "历史终稿科学至第九页/声明第十页是布局观察，不能据此推导当前ACL页数规范。"
+    },
+    "actionable": {
+      "pages": [
+        5,
+        8,
+        20,
+        21
+      ],
+      "observation": "资源价值由可追溯对照和多用途评测体现，正面结果与分语言差异并存。",
+      "editorial_advice": "原创例句：ConLoan contains9599 validated loanword-bearing sentences across ten languages. In the reported NLLB experiment, translations of the original sentences receive higher BLEU andCOMET scores than their edited counterparts in every evaluated language.",
+      "applicability_boundary": "这表明该任务设置的评分差异，不宣称人类翻译偏好、零混杂因果结论或全球语言总体规律。"
+    }
+  },
+  "counterexamples": [
+    {
+      "pages": [
+        7,
+        21
+      ],
+      "finding": "未按token归一化的sumnegativeLL随token数和tokenization变化；p7称这样确保长句不影响比较缺乏数学支持，允许多词替换正会改变长度。",
+      "scope": "保留已报告句级surprisal结果，但不能把未归一化解释成长度控制已完成；需额外长度/分词匹配分析。"
+    },
+    {
+      "pages": [
+        7,
+        20,
+        21
+      ],
+      "finding": "三LM均有Spanish反例：Llama3.1original160.98→native160.55，Llama2.7 169.20→168.78，EuroLLM157.54→155.95；三模型跨语言平均升高属实。",
+      "scope": "直接表达平均主结论，按相关处保留Spanish，无需每句加限制。"
+    },
+    {
+      "pages": [
+        8,
+        9,
+        20,
+        21
+      ],
+      "finding": "MetricX在D2明确越低越好，中文10.38original/10.71native；按文中公式original−native应为−0.33，但D3写+0.33，实际似已反向统一偏好符号却未更新公式；同理均值原始差约−0.27而Table2+0.27。",
+      "scope": "需修正定义/注明方向归一化，不能将高分写成MetricX更好，也不能跨不同指标量纲比较偏好强弱。"
+    },
+    {
+      "pages": [
+        5,
+        6,
+        9,
+        15,
+        16,
+        17,
+        18,
+        19
+      ],
+      "finding": "Table1 56.9%是候选句通过率，不含未检出句，非完整检测accuracy；6348/11380为事件替换率，不可直接推出约半数句子原样。没有本研究IAA，前作高kappa不能代替。",
+      "scope": "资源审计具体指出分母和可靠性来源，不添加假造一致率。"
+    },
+    {
+      "pages": [
+        5,
+        20
+      ],
+      "finding": "FigureC1 German总1188而Table1annotations1282，Chinese778而表779；图标注称totalloanwordannotations但未解释差额。",
+      "scope": "保留两处原数值，向数据版本或donor缺失核对，不擅改总量。"
+    },
+    {
+      "pages": [
+        3,
+        4,
+        6,
+        8,
+        9,
+        15,
+        16,
+        17,
+        18,
+        19
+      ],
+      "finding": "native对照允许语法重写和语域改变，某些定性例子替换方向为native→loan；Kurdish参考Google银标；NMT原句来自模型可能训练语料。BLEU/COMET为质量评分不是运行效率。",
+      "scope": "不把评分差异唯一归因borrowedstatus，也不推断人类偏好或translationlatency。"
+    },
+    {
+      "pages": [
+        8,
+        9,
+        20,
+        21
+      ],
+      "finding": "XCOMET统一正偏好不等于最大可比效应，指标量纲不同；D2四舍五入值与D3细差有相同显示值而非零差的情况。",
+      "scope": "按指标方向与汇总精度解释，不从roundedtable假造精确原始值。"
+    }
+  ],
+  "visual_review": {
+    "pages": [
+      2,
+      5,
+      6,
+      7,
+      8,
+      15,
+      20,
+      21
+    ],
+    "reviewer": "same subagent",
+    "figures": "All6figures:1–4,A1,C1originalviewed;Table1,A1,D1–D4originalviewed;Table2readinextraction",
+    "language_boundary": "B十语言scientificproseandEnglishglossesread;notclaimindependentetymologycertificationorArabic/Kurdishtranslationaudit"
+  },
+  "official_requirements": {
+    "corpus_layout_observation": "acceptedlongpaper; author-year references; ConclusionandDiscussion; Limitations/Ethics/acknowledgments; AppendixA–D",
+    "observed_layout_not_current_rule": true,
+    "source": "currentACL/ARRrequirementsmaintainedseparately"
+  },
+  "holdout_validation": null,
+  "review_limitations": "Complete21pagesincludingallscientificappendicesread;code/datasetnotexecuted;noexternaletymologyverification,re-run,humantranslationstudy,orindependentIAA.OfficiallockedXMLchecked,nofreshlandingclaim."
+}

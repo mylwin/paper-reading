@@ -1,0 +1,270 @@
+{
+  "id": "acl-2024.acl-long.89",
+  "anthology_id": "2024.acl-long.89",
+  "venue": "acl",
+  "year": 2024,
+  "track": "main conference research",
+  "length_type": "long",
+  "title": "Language Model Adaption for Reinforcement Learning with Natural Language Action Space",
+  "authors": [
+    "Jiangxing Wang",
+    "Jiachen Li",
+    "Xiao Han",
+    "Deheng Ye",
+    "Zongqing Lu"
+  ],
+  "first_author": "Jiangxing Wang",
+  "landing_url": "https://aclanthology.org/2024.acl-long.89/",
+  "pdf_url": "https://aclanthology.org/2024.acl-long.89.pdf",
+  "doi": "10.18653/v1/2024.acl-long.89",
+  "official_listing_url": "https://aclanthology.org/volumes/2024.acl-long/",
+  "sampling_stratum": "methods_models",
+  "paper_type": "MI regularized RL method with theoretical monotonicity and text-game experiments",
+  "anthology_pdf_revision_hash": "408a021a",
+  "metadata_revisions": [],
+  "official_attachments": [],
+  "sort_hash": "011b055e88c208937c0fc3a3f5977fb010890e0f5a2f6fbac131b94ace9dd0d6",
+  "split": "induction",
+  "semantic_review_status": "complete_writing_focused_full_text_review",
+  "full_text_and_relevant_appendix_review_complete": true,
+  "pdf_path": ".claude/skills/paper-writing-shared/tmp/corpus/acl/pdf/2024.acl-long.89.pdf",
+  "pdf_sha256": "b0c9ac2e4b969ebb54f07e249e2adf6c27f79e406ebdcb2f09343ac252b126ac",
+  "markdown_path": ".claude/skills/paper-writing-shared/tmp/corpus/acl/markdown/2024.acl-long.89.md",
+  "markdown_sha256": "6791331bb3d6c66c6a14625bab08b8d703af0560bbd229e3a06748afe3acb744",
+  "page_count": 15,
+  "download_status": "acquired",
+  "parse_status": "full_text_extracted_not_yet_reviewed",
+  "acquired_date": "2026-10-28",
+  "acquisition_seconds": 80.29,
+  "review_date": "2026-10-29",
+  "reviewer": "acl_finish_a",
+  "full_text_style_review_complete": true,
+  "external_appendix_review_complete": true,
+  "count_eligible_full_text_and_relevant_appendix": true,
+  "ten_dimensions": {
+    "reader_argument": {
+      "pages": [
+        1,
+        2
+      ],
+      "observation": "动作组合爆炸→固定语言先验不匹配→动态先验。",
+      "editorial_advice": "把技术问题收束到可改变的瓶颈，给匹配的目标。",
+      "applicability_boundary": "适用语言动作/可分解状态的RL，不是所有大模型优化。"
+    },
+    "title_abstract": {
+      "pages": [
+        1
+      ],
+      "observation": "标题任务/方法对象，摘要问题→旧法失配→MI新法→理论与实证。",
+      "editorial_advice": "理论结果说明保证的是哪个目标，实验说明在哪些环境。",
+      "applicability_boundary": "单调性对象是正则目标，非原始回报或神经实现必单调。"
+    },
+    "introduction": {
+      "pages": [
+        1,
+        2
+      ],
+      "observation": "先解释先验及现实额外标注不可得，再方法、定理、实验，贡献自然段。",
+      "editorial_advice": "方法、理论、证据三个层次各说一句即可。",
+      "applicability_boundary": "无额外域数据不表示数学无假设。"
+    },
+    "related_work": {
+      "pages": [
+        2,
+        3
+      ],
+      "observation": "按游戏RL、动作缩减、RL正则、基础模型四家族定位。",
+      "editorial_advice": "按关键设计轴比前作，并说明所用GATA组件。",
+      "applicability_boundary": "本文仍用groundtruth图与规则去无关物，不能概括成完全无域设定。"
+    },
+    "method_theory": {
+      "pages": [
+        3,
+        4,
+        5,
+        6,
+        13,
+        14
+      ],
+      "observation": "背景定义分解状态；固定prior KL策略迭代→按访问分布边缘化prior→交替改进定理→神经TD/actor/prior实现。",
+      "editorial_advice": "先由简到难推出新步骤，正文给定理和证明路线，附录给完整代数。",
+      "applicability_boundary": "A.1 epsilon-soft、精确迭代及分布条件真实保留；近期buffer只是近似访问分布。"
+    },
+    "evidence": {
+      "pages": [
+        6,
+        7,
+        8,
+        9,
+        14,
+        15
+      ],
+      "observation": "四难度train/test、固定prior消融、第二环境、GPT2替代；三种子均值SD，曲线半SD。",
+      "editorial_advice": "主要性能→关键模块→另一场景→替代实现组成实验链。",
+      "applicability_boundary": "训练快来自episode曲线；硬件总预算不是实测每步/部署加速比较。"
+    },
+    "discussion_limits": {
+      "pages": [
+        8,
+        9
+      ],
+      "observation": "明确test较高可能是train更好，不推出泛化机制；局限区分目标单调和策略可振荡。",
+      "editorial_advice": "一次解释边界即可，保留test结果直陈，不需要防御性否认自身价值。",
+      "applicability_boundary": "无明显风险一句不宜成为所有论文固定声明。"
+    },
+    "paragraph_language": {
+      "pages": [
+        7,
+        8,
+        9
+      ],
+      "observation": "主结果和消融按事实数值先行，offpolicy解释用potential reason。",
+      "editorial_advice": "已测优越性直接写，未隔离归因写为解释。",
+      "applicability_boundary": "不把1种替代模型与1个难度实验升级为任意模型无条件结论。"
+    },
+    "main_appendix": {
+      "pages": [
+        4,
+        5,
+        6,
+        13,
+        14,
+        15
+      ],
+      "observation": "正文定义/核心方程/定理/证明思路/结果，附录A.1完整证明、A.2伪码、A.3参数预算、A.4模型替换。",
+      "editorial_advice": "证明可后置但定理对象/关键直觉留正文，复现实验详情附录完整。",
+      "applicability_boundary": "证明阅读不等于对引用SuLu theorem外部审计。"
+    },
+    "actionable": {
+      "pages": [
+        5,
+        8,
+        9,
+        13,
+        15
+      ],
+      "observation": "理论和实践按各自结论对象表达，test结果与泛化解释拆开。",
+      "editorial_advice": "原创示例：The exact alternating updates monotonically improve the stated regularized objective under the proof conditions. In the evaluated games, the neural implementation achieves higher final scores than the compared baselines.",
+      "applicability_boundary": "不补造速率、最优性或神经训练保证，也不把定理降格成might。"
+    }
+  },
+  "coverage": [
+    {
+      "source": "canonical official PDF",
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "main_science": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "limitations_ethics": [
+        9
+      ],
+      "references": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "scientific_appendix": {
+        "A.1 full proof": [
+          13,
+          14
+        ],
+        "A.2 full pseudocode": [
+          14
+        ],
+        "A.3 experiment details": [
+          14,
+          15
+        ],
+        "A.4 GPT2 experiment": [
+          15
+        ]
+      }
+    }
+  ],
+  "counterexamples": [
+    {
+      "pages": [
+        5,
+        6,
+        13,
+        14
+      ],
+      "finding": "定理精确策略迭代epsilon-soft和精确边缘prior；神经网络targetbuffer近似未获同样保证。式6写正log却称minimizing，MLE通常应maxlog或min负log，需核代码/作者；未自行更改。",
+      "scope": "保留定理与实证，数学/实现核查单列。"
+    },
+    {
+      "pages": [
+        6,
+        8,
+        9,
+        15
+      ],
+      "finding": "episode曲线不等于walltime加速；test收益未隔离泛化机制；GPT2仅D3实验不证所有model agnostic；VirtualHome有task-object规则筛选。",
+      "scope": "限定已观测设置，无需每段重复不能泛化。"
+    },
+    {
+      "pages": [
+        8,
+        15
+      ],
+      "finding": "D1相对提升3.53/3.29-1约7.29%，D3相对best1.99约29.15%；均值SD三seed非显著性，曲线阴影半SD非CI。",
+      "scope": "数字与不确定性定义保留，不追加无依据显著性。"
+    }
+  ],
+  "supplement_audit": {
+    "method": "locked official2024 XML long89 read; title/pages1620-1634/pdfhash408a021a match",
+    "official_xml_attachments": [],
+    "separate_scientific_appendix_link_found": false,
+    "scientific_appendix_in_pdf": "A.1-A.4 all15pages read",
+    "code_executed": false
+  },
+  "version_audit": {
+    "published_year": 2024,
+    "canonical_url": "https://aclanthology.org/2024.acl-long.89.pdf",
+    "xml_revision_entries": []
+  },
+  "visual_review": {
+    "pages": [
+      4,
+      5,
+      6,
+      7,
+      13,
+      14,
+      15
+    ],
+    "figures": "core equations,theorem,Figures1-3,full proof,pseudocode,GPT2Table4",
+    "reviewer": "acl_finish_a"
+  },
+  "official_requirements": {
+    "observed_layout_not_current_rule": true,
+    "source": "current ACL official rules separate"
+  },
+  "holdout_validation": null,
+  "review_limitations": "All15pages proof/pseudocode/scientificappendix read; no code rerun or external cited theorem verification."
+}

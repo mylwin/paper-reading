@@ -1,0 +1,25 @@
+{
+  "id": "12-polish-no-material",
+  "skill": "paper-polishing",
+  "venue": "ICML",
+  "request": "只润色已有背景一句，不要求全文材料或强加venue",
+  "provided_facts": {
+    "target": "local sentence, no venue selected",
+    "topic": "optimizer state storage"
+  },
+  "original": "The storage of the state of the optimizer is a source of memory usage in the training of models.",
+  "actual_primary_agent_output": "Optimizer states consume memory during model training.",
+  "author_notes": "",
+  "manual_semantic_review": {
+    "reviewer": "same primary agent",
+    "assessment": "consistent_with_given_facts_and_requested_scope",
+    "reason": "轻量任务直接完成通用润色，不追问实验/目标会议，不生成LaTeX工程或整篇诊断清单。",
+    "criteria": [
+      "scope_preserved",
+      "generic_local_polish",
+      "no_unnecessary_questions",
+      "concise"
+    ]
+  },
+  "independent_model_run": false
+}

@@ -1,0 +1,154 @@
+{
+  "verified_on": "2026-10-28",
+  "configurations": 4,
+  "compile_passed": 4,
+  "rendered_pages_manually_viewed": 12,
+  "unique_renderings": 6,
+  "records": [
+    {
+      "project": "long-submission",
+      "pdf_sha256": "24a1357c27dc5a6ab4d90d0be9841b5838f8d20e7529ebc62f9a1aaba66edf78",
+      "page_count": 3,
+      "main_pages_label": 2,
+      "main_pages_visual_including_wide_float": 2,
+      "compile_exit": 0,
+      "expected_placeholder_check_only": true,
+      "text_has_anonymous_ACL_submission": true,
+      "pdfinfo": "Title:           \nSubject:         \nKeywords:        \nAuthor:          \nCreator:         LaTeX with hyperref\nProducer:        pdfTeX-1.40.29\nCreationDate:    Wed Oct 28 14:46:55 2026 CST\nModDate:         Wed Oct 28 14:46:55 2026 CST\nCustom Metadata: yes\nMetadata Stream: no\nTagged:          no\nUserProperties:  no\nSuspects:        no\nForm:            none\nJavaScript:      no\nPages:           3\nEncrypted:       no\nPage size:       595.276 x 841.89 pts (A4)\nPage rot:        0\nFile size:       114318 bytes\nOptimized:       no\nPDF version:     1.7\n",
+      "pdffonts": "name                                 type              encoding         emb sub uni object ID\n------------------------------------ ----------------- ---------------- --- --- --- ---------\nPIRNDJ+NimbusRomNo9L-Medi            Type 1            Custom           yes yes yes     33  0\nALVSVR+NimbusSanL-Bold               Type 1            Custom           yes yes yes     35  0\nWQNQGZ+NimbusRomNo9L-Regu            Type 1            Custom           yes yes yes     36  0\nXZYAQR+CMMI10                        Type 1            Builtin          yes yes yes     37  0\nPQWCSI+CMMI8                         Type 1            Builtin          yes yes yes     38  0\nEILUJF+CMSY10                        Type 1            Builtin          yes yes yes     39  0\nYACPIR+CMR10                         Type 1            Builtin          yes yes yes     40  0\nTMCDBM+CMSY8                         Type 1            Builtin          yes yes yes     41  0\nMUHKKG+CMR8                          Type 1            Builtin          yes yes yes     42  0\nIXNPPI+CMEX10                        Type 1            Builtin          yes yes yes     43  0\nUDPOWQ+NimbusRomNo9L-ReguItal        Type 1            Custom           yes yes yes     46  0\n",
+      "rendered_pages": [
+        {
+          "page": 1,
+          "sha256": "100ee816e7118116256a04e4fb5014b0a25768130b5b5d99705bbde3a23ae6d3"
+        },
+        {
+          "page": 2,
+          "sha256": "8997df3992b5f8f5c409e6b668136355ab071393c35e2ae78e731c19a641f9d4"
+        },
+        {
+          "page": 3,
+          "sha256": "ce771ab8d3f11c3435dba26fe6cfba6f0edef809b2e2f316b933439a6a1c8091"
+        }
+      ],
+      "visual_review": "all three rendered pages manually viewed after final compile",
+      "reviewer": "acl_official_template subagent",
+      "visual_observations": {
+        "page1": "Official A4 two-column body; title and abstract, multiline equation, theorem, algorithm, single-column figure, conclusion, required Limitations and bibliography readable; review is anonymous with line/page numbers, final shows author placeholders without line/page numbers.",
+        "page2": "Deferred wide-table example is readable; sparse float-only page reflects the short placeholder scaffold. Its actual main-text page2 is included in the boundary label.",
+        "page3": "Appendix remains in two-column format with resolved equation/algorithm references; substantial whitespace is expected from unfilled scaffold."
+      },
+      "visual_quality_scope": "Readability and official scaffold/stage behavior, not a finished paper layout or content-quality claim.",
+      "submission_compliance": "not_submission_ready_author_inputs_pending",
+      "official_submission_system_checked": false
+    },
+    {
+      "project": "long-final",
+      "pdf_sha256": "e67ac0fe8d83cf336dde1a8ed17b0576ef98517d6837ff63c48db49937b27c8c",
+      "page_count": 3,
+      "main_pages_label": 2,
+      "main_pages_visual_including_wide_float": 2,
+      "compile_exit": 0,
+      "expected_placeholder_check_only": true,
+      "text_has_anonymous_ACL_submission": false,
+      "pdfinfo": "Title:           \nSubject:         \nKeywords:        \nAuthor:          \nCreator:         LaTeX with hyperref\nProducer:        pdfTeX-1.40.29\nCreationDate:    Wed Oct 28 14:46:55 2026 CST\nModDate:         Wed Oct 28 14:46:55 2026 CST\nCustom Metadata: yes\nMetadata Stream: no\nTagged:          no\nUserProperties:  no\nSuspects:        no\nForm:            none\nJavaScript:      no\nPages:           3\nEncrypted:       no\nPage size:       595.276 x 841.89 pts (A4)\nPage rot:        0\nFile size:       116991 bytes\nOptimized:       no\nPDF version:     1.7\n",
+      "pdffonts": "name                                 type              encoding         emb sub uni object ID\n------------------------------------ ----------------- ---------------- --- --- --- ---------\nPIRNDJ+NimbusRomNo9L-Medi            Type 1            Custom           yes yes yes     33  0\nDNFWFC+NimbusRomNo9L-Regu            Type 1            Custom           yes yes yes     34  0\nCOSIJV+Inconsolatazi4-Regular        Type 1            Custom           yes yes yes     35  0\nXZYAQR+CMMI10                        Type 1            Builtin          yes yes yes     37  0\nPQWCSI+CMMI8                         Type 1            Builtin          yes yes yes     38  0\nEILUJF+CMSY10                        Type 1            Builtin          yes yes yes     39  0\nYACPIR+CMR10                         Type 1            Builtin          yes yes yes     40  0\nTMCDBM+CMSY8                         Type 1            Builtin          yes yes yes     41  0\nMUHKKG+CMR8                          Type 1            Builtin          yes yes yes     42  0\nIXNPPI+CMEX10                        Type 1            Builtin          yes yes yes     43  0\nUDPOWQ+NimbusRomNo9L-ReguItal        Type 1            Custom           yes yes yes     46  0\n",
+      "rendered_pages": [
+        {
+          "page": 1,
+          "sha256": "1abff93199fd86ad3d6fff894cdc0e740cb6ba501d15d0ad9c8c81ba908a6a41"
+        },
+        {
+          "page": 2,
+          "sha256": "2e3a8e02feb2894ad38d60b846e9da9f7a30f716ad4bf2224cf92037ce5ec9cb"
+        },
+        {
+          "page": 3,
+          "sha256": "92b5125aed515330f48ed2274701efc839fe9e2e1752c4c9aa24255e43cc3c2f"
+        }
+      ],
+      "visual_review": "all three rendered pages manually viewed after final compile",
+      "reviewer": "acl_official_template subagent",
+      "visual_observations": {
+        "page1": "Official A4 two-column body; title and abstract, multiline equation, theorem, algorithm, single-column figure, conclusion, required Limitations and bibliography readable; review is anonymous with line/page numbers, final shows author placeholders without line/page numbers.",
+        "page2": "Deferred wide-table example is readable; sparse float-only page reflects the short placeholder scaffold. Its actual main-text page2 is included in the boundary label.",
+        "page3": "Appendix remains in two-column format with resolved equation/algorithm references; substantial whitespace is expected from unfilled scaffold."
+      },
+      "visual_quality_scope": "Readability and official scaffold/stage behavior, not a finished paper layout or content-quality claim.",
+      "submission_compliance": "not_submission_ready_author_inputs_pending",
+      "official_submission_system_checked": false
+    },
+    {
+      "project": "short-submission",
+      "pdf_sha256": "24a1357c27dc5a6ab4d90d0be9841b5838f8d20e7529ebc62f9a1aaba66edf78",
+      "page_count": 3,
+      "main_pages_label": 2,
+      "main_pages_visual_including_wide_float": 2,
+      "compile_exit": 0,
+      "expected_placeholder_check_only": true,
+      "text_has_anonymous_ACL_submission": true,
+      "pdfinfo": "Title:           \nSubject:         \nKeywords:        \nAuthor:          \nCreator:         LaTeX with hyperref\nProducer:        pdfTeX-1.40.29\nCreationDate:    Wed Oct 28 14:46:55 2026 CST\nModDate:         Wed Oct 28 14:46:55 2026 CST\nCustom Metadata: yes\nMetadata Stream: no\nTagged:          no\nUserProperties:  no\nSuspects:        no\nForm:            none\nJavaScript:      no\nPages:           3\nEncrypted:       no\nPage size:       595.276 x 841.89 pts (A4)\nPage rot:        0\nFile size:       114318 bytes\nOptimized:       no\nPDF version:     1.7\n",
+      "pdffonts": "name                                 type              encoding         emb sub uni object ID\n------------------------------------ ----------------- ---------------- --- --- --- ---------\nPIRNDJ+NimbusRomNo9L-Medi            Type 1            Custom           yes yes yes     33  0\nALVSVR+NimbusSanL-Bold               Type 1            Custom           yes yes yes     35  0\nWQNQGZ+NimbusRomNo9L-Regu            Type 1            Custom           yes yes yes     36  0\nXZYAQR+CMMI10                        Type 1            Builtin          yes yes yes     37  0\nPQWCSI+CMMI8                         Type 1            Builtin          yes yes yes     38  0\nEILUJF+CMSY10                        Type 1            Builtin          yes yes yes     39  0\nYACPIR+CMR10                         Type 1            Builtin          yes yes yes     40  0\nTMCDBM+CMSY8                         Type 1            Builtin          yes yes yes     41  0\nMUHKKG+CMR8                          Type 1            Builtin          yes yes yes     42  0\nIXNPPI+CMEX10                        Type 1            Builtin          yes yes yes     43  0\nUDPOWQ+NimbusRomNo9L-ReguItal        Type 1            Custom           yes yes yes     46  0\n",
+      "rendered_pages": [
+        {
+          "page": 1,
+          "sha256": "100ee816e7118116256a04e4fb5014b0a25768130b5b5d99705bbde3a23ae6d3"
+        },
+        {
+          "page": 2,
+          "sha256": "8997df3992b5f8f5c409e6b668136355ab071393c35e2ae78e731c19a641f9d4"
+        },
+        {
+          "page": 3,
+          "sha256": "ce771ab8d3f11c3435dba26fe6cfba6f0edef809b2e2f316b933439a6a1c8091"
+        }
+      ],
+      "visual_review": "all three rendered pages manually viewed after final compile",
+      "reviewer": "acl_official_template subagent",
+      "visual_observations": {
+        "page1": "Official A4 two-column body; title and abstract, multiline equation, theorem, algorithm, single-column figure, conclusion, required Limitations and bibliography readable; review is anonymous with line/page numbers, final shows author placeholders without line/page numbers.",
+        "page2": "Deferred wide-table example is readable; sparse float-only page reflects the short placeholder scaffold. Its actual main-text page2 is included in the boundary label.",
+        "page3": "Appendix remains in two-column format with resolved equation/algorithm references; substantial whitespace is expected from unfilled scaffold."
+      },
+      "visual_quality_scope": "Readability and official scaffold/stage behavior, not a finished paper layout or content-quality claim.",
+      "submission_compliance": "not_submission_ready_author_inputs_pending",
+      "official_submission_system_checked": false
+    },
+    {
+      "project": "short-final",
+      "pdf_sha256": "e67ac0fe8d83cf336dde1a8ed17b0576ef98517d6837ff63c48db49937b27c8c",
+      "page_count": 3,
+      "main_pages_label": 2,
+      "main_pages_visual_including_wide_float": 2,
+      "compile_exit": 0,
+      "expected_placeholder_check_only": true,
+      "text_has_anonymous_ACL_submission": false,
+      "pdfinfo": "Title:           \nSubject:         \nKeywords:        \nAuthor:          \nCreator:         LaTeX with hyperref\nProducer:        pdfTeX-1.40.29\nCreationDate:    Wed Oct 28 14:46:55 2026 CST\nModDate:         Wed Oct 28 14:46:55 2026 CST\nCustom Metadata: yes\nMetadata Stream: no\nTagged:          no\nUserProperties:  no\nSuspects:        no\nForm:            none\nJavaScript:      no\nPages:           3\nEncrypted:       no\nPage size:       595.276 x 841.89 pts (A4)\nPage rot:        0\nFile size:       116991 bytes\nOptimized:       no\nPDF version:     1.7\n",
+      "pdffonts": "name                                 type              encoding         emb sub uni object ID\n------------------------------------ ----------------- ---------------- --- --- --- ---------\nPIRNDJ+NimbusRomNo9L-Medi            Type 1            Custom           yes yes yes     33  0\nDNFWFC+NimbusRomNo9L-Regu            Type 1            Custom           yes yes yes     34  0\nCOSIJV+Inconsolatazi4-Regular        Type 1            Custom           yes yes yes     35  0\nXZYAQR+CMMI10                        Type 1            Builtin          yes yes yes     37  0\nPQWCSI+CMMI8                         Type 1            Builtin          yes yes yes     38  0\nEILUJF+CMSY10                        Type 1            Builtin          yes yes yes     39  0\nYACPIR+CMR10                         Type 1            Builtin          yes yes yes     40  0\nTMCDBM+CMSY8                         Type 1            Builtin          yes yes yes     41  0\nMUHKKG+CMR8                          Type 1            Builtin          yes yes yes     42  0\nIXNPPI+CMEX10                        Type 1            Builtin          yes yes yes     43  0\nUDPOWQ+NimbusRomNo9L-ReguItal        Type 1            Custom           yes yes yes     46  0\n",
+      "rendered_pages": [
+        {
+          "page": 1,
+          "sha256": "1abff93199fd86ad3d6fff894cdc0e740cb6ba501d15d0ad9c8c81ba908a6a41"
+        },
+        {
+          "page": 2,
+          "sha256": "2e3a8e02feb2894ad38d60b846e9da9f7a30f716ad4bf2224cf92037ce5ec9cb"
+        },
+        {
+          "page": 3,
+          "sha256": "92b5125aed515330f48ed2274701efc839fe9e2e1752c4c9aa24255e43cc3c2f"
+        }
+      ],
+      "visual_review": "all three rendered pages manually viewed after final compile",
+      "reviewer": "acl_official_template subagent",
+      "visual_observations": {
+        "page1": "Official A4 two-column body; title and abstract, multiline equation, theorem, algorithm, single-column figure, conclusion, required Limitations and bibliography readable; review is anonymous with line/page numbers, final shows author placeholders without line/page numbers.",
+        "page2": "Deferred wide-table example is readable; sparse float-only page reflects the short placeholder scaffold. Its actual main-text page2 is included in the boundary label.",
+        "page3": "Appendix remains in two-column format with resolved equation/algorithm references; substantial whitespace is expected from unfilled scaffold."
+      },
+      "visual_quality_scope": "Readability and official scaffold/stage behavior, not a finished paper layout or content-quality claim.",
+      "submission_compliance": "not_submission_ready_author_inputs_pending",
+      "official_submission_system_checked": false
+    }
+  ],
+  "qualification": "Long and short scaffolds share the same placeholder content and underlying official generic style, but have separate verified policy page limits. No actual manuscript claims or maximum-length boundary stress tests are implied."
+}

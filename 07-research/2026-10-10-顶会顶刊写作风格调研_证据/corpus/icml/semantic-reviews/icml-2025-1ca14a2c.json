@@ -1,0 +1,325 @@
+{
+  "id": "icml-2025-1ca14a2c",
+  "venue": "icml",
+  "year": 2025,
+  "split": "holdout",
+  "title": "Global Optimization with a Power-Transformed Objective and Gaussian Smoothing",
+  "authors": "Chen Xu",
+  "pdf_path": ".claude/skills/paper-writing-shared/tmp/corpus/icml/pdf/Global Optimization with a Power-Transformed Objective and Gaussian Smoothing.pdf",
+  "markdown_path": ".claude/skills/paper-writing-shared/tmp/corpus/icml/markdown/Global Optimization with a Power-Transformed Objective and Gaussian Smoothing.md",
+  "pdf_sha256": "36c1622d88948dabba6062ea589927ec0e3a6d90651121e6404f1094938e3e94",
+  "review_date": "2026-10-28",
+  "paper_type": "zeroth-order power-transformed Gaussian smoothing optimization with theoretical analysis, benchmark functions and black-box adversarial-attack experiments",
+  "semantic_review_status": "complete_writing_focused_review",
+  "full_text_style_review_complete": true,
+  "external_appendix_review_complete": true,
+  "count_eligible_full_text_and_relevant_appendix": true,
+  "coverage": [
+    {
+      "asset": "locked official PMLR PDF",
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28
+      ],
+      "sections": "1–7/Ack/Impact/refs/A–G complete",
+      "method": "continuous28page text plus21originalpageimages;4figures/3algorithms/10numberedtables plus unnumberednotationtable (Table5absent)"
+    }
+  ],
+  "version_audit": {
+    "official_landing": "https://proceedings.mlr.press/v267/xu25g.html",
+    "official_pdf": "https://raw.githubusercontent.com/mlresearch/v267/main/assets/xu25g/xu25g.pdf",
+    "version": "official proceedings PDF; exact bytes locked by SHA256",
+    "identity": "title/authors/lockedSHA/PMLRheader verified",
+    "new_network_fetch": false
+  },
+  "supplement_audit": {
+    "status": "A12 notation,B12 baseline overflow handling,C12–22 all10proof sections,D22–23 baselines,E24 Fig4details,F24–26 candidate/selectedhyperparameters,G24/27–28 adversarialimages all read",
+    "external_scientific_appendix_referenced": false,
+    "code_artifacts": "linked code not executed; all relevant scientific appendices in this PDF"
+  },
+  "ten_dimensions": {
+    "reader_argument": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp1–4"
+      ],
+      "observation": "先给globalmax问题与homotopy计算开销，power加重尖峰后高斯平滑，再用toygraph/flowchart解释。",
+      "editorial_advice": "目标、旧方法障碍和新机制先清楚，复杂证明不应遮蔽核心想法。",
+      "applicability": "28页正文及全部相关科学附录连续阅读，21原页直接核验。冻结40归纳规则的正式留出；同一审阅者，非独立模型评测/证明认证/代码复现。",
+      "confidence": {
+        "paper_specific": "high",
+        "venue_wide": "locked formal holdout;notfrequencyestimate"
+      }
+    },
+    "title_abstract": {
+      "category": "corpus_observation",
+      "positions": [
+        "p1"
+      ],
+      "observation": "机制+任务标题；摘要两步、一般/光滑复杂度、经验相对结果。",
+      "editorial_advice": "复杂度摘要必须与正文保证量及条件对应；不能仅用mild条件掩盖关键设定或以免责声明替代准确结论。",
+      "applicability": "28页正文及全部相关科学附录连续阅读，21原页直接核验。冻结40归纳规则的正式留出；同一审阅者，非独立模型评测/证明认证/代码复现。",
+      "confidence": {
+        "paper_specific": "high",
+        "venue_wide": "locked formal holdout;notfrequencyestimate"
+      }
+    },
+    "introduction": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp1–3"
+      ],
+      "observation": "背景中有公式，RelatedWork后四贡献和RoadMap，明确近邻exptransform不同。",
+      "editorial_advice": "可以独立Contribution+RoadMap，但数量/位置可选，最近工作比较需同口径。",
+      "applicability": "28页正文及全部相关科学附录连续阅读，21原页直接核验。冻结40归纳规则的正式留出；同一审阅者，非独立模型评测/证明认证/代码复现。",
+      "confidence": {
+        "paper_specific": "high",
+        "venue_wide": "locked formal holdout;notfrequencyestimate"
+      }
+    },
+    "related_work": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp2–3/22–26"
+      ],
+      "observation": "homotopy/风险敏感exp目标/进化算法分组；附录给baseline具体变体与超参。",
+      "editorial_advice": "对已有相似机制承认联系，再说本设置差异；不要把未经外部核验的first当写作规范。",
+      "applicability": "28页正文及全部相关科学附录连续阅读，21原页直接核验。冻结40归纳规则的正式留出；同一审阅者，非独立模型评测/证明认证/代码复现。",
+      "confidence": {
+        "paper_specific": "high",
+        "venue_wide": "locked formal holdout;notfrequencyestimate"
+      }
+    },
+    "method_theory": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp3–6/12–22"
+      ],
+      "observation": "动机图→Theorem2.1驻点定位→更新式/算法→Preview→假设lemma→收敛→Lipschitz改进→归一缩放去N依赖。",
+      "editorial_advice": "理论预览和lemma依赖路标有助理解，算法实践变体与证明对象须分清。",
+      "applicability": "28页正文及全部相关科学附录连续阅读，21原页直接核验。冻结40归纳规则的正式留出；同一审阅者，非独立模型评测/证明认证/代码复现。",
+      "confidence": {
+        "paper_specific": "high",
+        "venue_wide": "locked formal holdout;notfrequencyestimate"
+      }
+    },
+    "evidence": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp6–9/23–28"
+      ],
+      "observation": "N扫描2D/5D；Ackley/Rosenbrock100重复；MNIST/CIFAR各100图，成功率/R²/范数/到最佳迭代及部分SD；四图可视化。",
+      "editorial_advice": "一组实验一问题并报告比较例外；迭代、查询、墙钟和成功条件指标不可混用。",
+      "applicability": "28页正文及全部相关科学附录连续阅读，21原页直接核验。冻结40归纳规则的正式留出；同一审阅者，非独立模型评测/证明认证/代码复现。",
+      "confidence": {
+        "paper_specific": "high",
+        "venue_wide": "locked formal holdout;notfrequencyestimate"
+      }
+    },
+    "discussion_limits": {
+      "category": "corpus_observation",
+      "positions": [
+        "p9/24–26"
+      ],
+      "observation": "实验总结承认CMA-ES在三任务更优；多最优点单例仅经验；超参N增加方差和sigma探索代价集中指导。",
+      "editorial_advice": "具体tradeoff放结果总结/调参节，无需每段反复提醒未普适最优。",
+      "applicability": "28页正文及全部相关科学附录连续阅读，21原页直接核验。冻结40归纳规则的正式留出；同一审阅者，非独立模型评测/证明认证/代码复现。",
+      "confidence": {
+        "paper_specific": "high",
+        "venue_wide": "locked formal holdout;notfrequencyestimate"
+      }
+    },
+    "paragraph_language": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp3–9"
+      ],
+      "observation": "Motivation/TheoreticalJustification/Preview/Assumptions/Complexity等分层；主张后引定理/表。",
+      "editorial_advice": "直接陈述方法和实测优点，严格区分渐近/近似复杂度与有限精度保证、观察与理论。",
+      "applicability": "28页正文及全部相关科学附录连续阅读，21原页直接核验。冻结40归纳规则的正式留出；同一审阅者，非独立模型评测/证明认证/代码复现。",
+      "confidence": {
+        "paper_specific": "high",
+        "venue_wide": "locked formal holdout;notfrequencyestimate"
+      }
+    },
+    "main_appendix": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp1–28"
+      ],
+      "observation": "1–9正文，10–11文献，12–22全部证明/notation/overflow，22–26baseline与参数，27–28攻击可视化。",
+      "editorial_advice": "主文有理论预览和核心界，附录保留完整依赖和参数选择信息。",
+      "applicability": "28页正文及全部相关科学附录连续阅读，21原页直接核验。冻结40归纳规则的正式留出；同一审阅者，非独立模型评测/证明认证/代码复现。",
+      "confidence": {
+        "paper_specific": "high",
+        "venue_wide": "locked formal holdout;notfrequencyestimate"
+      }
+    },
+    "actionable": {
+      "category": "corpus_observation",
+      "positions": [
+        "pp3–9"
+      ],
+      "observation": "power调整平滑后局部结构，分开解释定位结果、随机优化界和经验tradeoff。",
+      "editorial_advice": "原创示例：GS-PowerOpt applies a power transformation before Gaussian smoothing, increasing the relative weight of high-value regions. The analysis characterizes the surrogate’s stationary points, while experiments compare the resulting updates on benchmark functions and targeted image-attack tasks.",
+      "applicability": "28页正文及全部相关科学附录连续阅读，21原页直接核验。冻结40归纳规则的正式留出；同一审阅者，非独立模型评测/证明认证/代码复现。",
+      "confidence": {
+        "paper_specific": "high",
+        "venue_wide": "locked formal holdout;notfrequencyestimate"
+      }
+    }
+  },
+  "counterexamples": [
+    {
+      "position": "pp3–6/12–22",
+      "finding": "Theorem2.1requires compact domain, continuous objective with unique separated interior maximum and sufficiently large parameter depending on delta/sigma/domain;PGSnonnegative. Cor3.9bounds min expected squared gradient of transformed surrogate, not directly distance to original optimum. Approximate stationarity can occur far away as Gaussian convolution gradient vanishes at infinity; global distance/last-iterate convergence needs additional argument. TheoryEq5 unnormalized vs Algorithm1normalized/samplebaseline practical updates differ. Record these as unresolved bridge questions rather than certify global polynomial optimization."
+    },
+    {
+      "position": "pp5–6/20–22; research-only proof queries",
+      "finding": "Fixed gamma>0 gives exponent2/(1−2gamma), only approaches2 asgamma→0 with constants depending ongamma; cannot silently replace by exactO(eps^-2). Ass4.1can shrinkFandgradient magnitude asNincreases; removingNfromabsolute stationarity bound does not remove delta/sample/global-search dependence. C9extends f=0 outsideS but exp(f)=1outside conflicts fNcutoff0 and may introduce boundary derivative terms; zero boundaryf alone not smooth zeroextension. Generalpositive-realN conflicts PGS polynomialidentity/negative derivative-coefficient regimes. No independent proof certification."
+    },
+    {
+      "position": "pp7–9/24–28",
+      "finding": "CMA-ESstrongestAckley/Rosenbrock/MNIST, EPGS98%R²vsZOSLGHd99%onCIFAR despite summary sayingequal. EPGS R²98%with98%success vsZO-SGD99%conditionalon62%success is different tradeoff. Iteration-to-best not equalquery/wallclock;CMApopulationcostdiffers. Hyperparametersselectedon100trials or10attackimages, noheldoutoverlapdetail. TargetCNNs/datasets2only, notgeneral modernrobustness/securityclaim."
+    },
+    {
+      "position": "pp6–9/23–26; research-only version queries",
+      "finding": "Fig4sigma1.0vappendix0.5, RosenbrockN3vselectedN1, CNNtestaccuracies97.4/86.2vs97.8/86.0. Two-logclaimedexactpeakat−0.5shiftedslightlybysecondlog; fRosenbrock+20000notgloballypositiveonunboundedGaussiansearch. STD-HomotopytextGaussianvAlgorithm2uniformsphere; samplingcovarianceσvsσ² inconsistent. Reconcile in author notes, do not quietly mutate numbers/formulas or copy mistakes as style."
+    }
+  ],
+  "visual_review": {
+    "pages": [
+      1,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      12,
+      14,
+      16,
+      18,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28
+    ],
+    "source": "105dpi original Poppler page images directly viewed",
+    "policy": "delete own renders and duplicate extraction; canonical PDF/MD remain ignored skill tmp"
+  },
+  "official_requirements": [],
+  "holdout_validation": {
+    "freeze_manifest": "07-research/2026-10-28-ICML技能有效性验证_证据/induction-freeze/freeze-manifest.json",
+    "freeze_manifest_sha256": "e5ec6a6ab1fa45b5fca1bb87cc82a52e7e6ace591dac06ffded5a8bf68e61692",
+    "dimensions": {
+      "reader_argument": {
+        "rating": "applicable",
+        "positions": [
+          "pp1–4"
+        ],
+        "reason": "目标、旧方法障碍和新机制先清楚，复杂证明不应遮蔽核心想法。"
+      },
+      "title_abstract": {
+        "rating": "applicable",
+        "positions": [
+          "p1"
+        ],
+        "reason": "复杂度摘要必须与正文保证量及条件对应；不能仅用mild条件掩盖关键设定或以免责声明替代准确结论。"
+      },
+      "introduction": {
+        "rating": "applicable",
+        "positions": [
+          "pp1–3"
+        ],
+        "reason": "可以独立Contribution+RoadMap，但数量/位置可选，最近工作比较需同口径。"
+      },
+      "related_work": {
+        "rating": "applicable",
+        "positions": [
+          "pp2–3/22–26"
+        ],
+        "reason": "对已有相似机制承认联系，再说本设置差异；不要把未经外部核验的first当写作规范。"
+      },
+      "method_theory": {
+        "rating": "applicable",
+        "positions": [
+          "pp3–6/12–22"
+        ],
+        "reason": "理论预览和lemma依赖路标有助理解，算法实践变体与证明对象须分清。"
+      },
+      "evidence": {
+        "rating": "applicable",
+        "positions": [
+          "pp6–9/23–28"
+        ],
+        "reason": "一组实验一问题并报告比较例外；迭代、查询、墙钟和成功条件指标不可混用。"
+      },
+      "discussion_limits": {
+        "rating": "applicable",
+        "positions": [
+          "p9/24–26"
+        ],
+        "reason": "具体tradeoff放结果总结/调参节，无需每段反复提醒未普适最优。"
+      },
+      "paragraph_language": {
+        "rating": "applicable",
+        "positions": [
+          "pp3–9"
+        ],
+        "reason": "直接陈述方法和实测优点，严格区分渐近/近似复杂度与有限精度保证、观察与理论。"
+      },
+      "main_appendix": {
+        "rating": "applicable",
+        "positions": [
+          "pp1–28"
+        ],
+        "reason": "主文有理论预览和核心界，附录保留完整依赖和参数选择信息。"
+      },
+      "actionable": {
+        "rating": "applicable",
+        "positions": [
+          "pp3–9"
+        ],
+        "reason": "原创示例：GS-PowerOpt applies a power transformation before Gaussian smoothing, increasing the relative weight of high-value regions. The analysis characterizes the surrogate’s stationary points, while experiments compare the resulting updates on benchmark functions and targeted image-attack tasks."
+      }
+    },
+    "counterexample_to_universal_structure": "Four contributions plus RoadMap, earlytheorem before theorysection, separate complexitynormalization and hyperparameterguidance, mixedtheory/experiments; no mandatorylimitations heading. Direct published global-complexity rhetoric still requires careful guarantee matching.",
+    "proposed_revision": "Frozen conditional rules survive this final holdout. Behavior test should keep a direct algorithmic contribution but not strengthen stationarity into global-distance convergence, and preserve a local empirical loss/tradeoff without blanket defensive writing.",
+    "reviewer": "same primary agent; no independent judge",
+    "runtime_rules_changed_during_holdout": false
+  },
+  "review_limitations": "28页正文及全部相关科学附录连续阅读，21原页直接核验。冻结40归纳规则的正式留出；同一审阅者，非独立模型评测/证明认证/代码复现。"
+}

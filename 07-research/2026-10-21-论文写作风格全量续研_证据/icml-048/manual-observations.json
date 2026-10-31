@@ -1,0 +1,23 @@
+{
+"all_pages_read":18,"visual_pages":[1,4,7,8,9,12,13,14,16,17,18],"paper_type":"theoretical robustness and near-deterministic structure of fair Bayes-optimal binary classifiers on discrete distributions",
+"sections":"1–5/Impact/refs/A.1–A.5/B.1–B.3 complete","method":"continuous18page text plus11originalpageimages;1conceptualfigure/no table/empirical algorithm","appendix_status":"A12–14 approximate-fairness example/Partition hardness/accuracy-gain tightness/missingDPbound/lemma2;B14–18 EOcharacterization/proofs/PE analogues all read",
+"rows":[
+["reader_argument","pp1–3","公平约束与分布污染交叉问题，由hate-speech实际动机引出Bayes最优理论对象。","实际动机连接形式问题，勿把应用动机当作已运行任务或经验效果。","applicable"],
+["title_abstract","p1","标题任务+robust shift；摘要旧保证失效→随机化主结果→三公平标准→准确/效率/少量随机性。","可以直接说明理论发现，无需引入未测数值收益。","applicable"],
+["introduction","pp1–3","Overview先失效/主结果/辅助结果，再随机化好处及近确定性；贡献附claim/theorem位置。","贡献与结果引用明确；按逻辑分组而非固定三贡献。","applicable"],
+["related_work","pp1–2/9","主文动机定位缺口，Discussion5.1按假设类/扰动/连续离散域/单向双向界详细比较。","最接近结果的区别可集中晚置，明确比较口径。","applicable"],
+["method_theory","pp3–9/12–18","分布/公平/score/cell定义→已知BOC刻画→确定性反例→随机化定理→分解lemma/固定分类器shift→主证明→EO/PE扩展。","读者可沿反例/构造/定理理解贡献，不需另造方法节/伪码。","applicable"],
+["evidence","pp4–9/12–18","理论证据包括不连续构造、TVLipschitz定理、Partition归约、0.5gain紧性、分段质量转移证明。无经验验证。","数值例子与归约是理论支撑，不计入数据实验；完整证明可主文保留较长关键部分。","applicable_with_scope"],
+["discussion_limits","pp4/8–9","定理后remark指出小群体质量导致常数膨胀；FutureWork集中多类/回归/多个公平约束/实验。Impact连接随机决策社会后果。","关键条件在定理旁，开放方向末尾；不要用通用无风险声明替代具体impact。","applicable"],
+["paragraph_language","pp5–9","lemma先解释用途，再elementary→arbitrary/accuracy/fairness分段；定理与corollary连接部署含义。","直接写已证鲁棒值，不把最优值稳定、固定模型公平稳定、分类器逐点稳定混淆；具体条件说一次即可。","applicable"],
+["main_appendix","pp1–18","1–9主文含DP长证明，10–11文献；A12–14辅助/紧性，B14–18EO/PE。","关键证明可占正文，不强制所有证明移附录；类比扩展末置并说明。","applicable"],
+["actionable","pp4–9","单个公平约束下随机化恢复最优准确率的局部TV连续性，用质量转移结构说明原因。","原创示例：Randomization restores local robustness of the optimal demographic-parity accuracy on discrete distributions. The bound makes the role of group mass explicit, while an optimal classifier can be chosen to randomize at no more than one domain point in the two-group setting.","applicable"]
+],
+"counterexamples":[
+{"position":"pp3–4/8–9/14–18","finding":"Robustness concerns optimal fair accuracy value under known distributions; not identity/stability of a selected classifier or arbitrary finite-sample learner. DP constant depends on nonzero group masses;EO/PE require nonzero group-label masses. Results treat each criterion separately, not simultaneous equalized odds/predictive parity/general fairness. At-most-one randomized point is supported for two-group single-linear-constraint setting; multigroup footnote does not justify the same one-point bound universally."},
+{"position":"pp9/12–13","finding":"0.5gain is extremal construction/supremum, not empirical gain. NP-completeness formally concerns a rational finite-input decision problem, optimization should be called NP-hard. FutureWork explicitly requests empirical validation; hate-speech example not a new experiment or deployment study. Generalized cost-sensitive/multigroup remarks are not separately fully proved here."},
+{"position":"pp4–7/12/14–18; research-only version queries","finding":"Claim1constant-label loss/accuracy signs and best label inconsistent;Lemma1mass-addition minimum sign needs correction. Some displayed unfairness differences omit absolute value though PDF has it in several places. Claim4uses fixed0.05 and inconsistent delta rather than explicit arbitrarily small-eps family; generalize only after checking. EO f0 accepts score1 but zeroTPR should concern score0; duplicatedA/Ddenominators/corollaryPElabels need cleanup. The event proof excludes changes to already-score0/1 cells by a claim of unchangedscore, requiring clarification for arbitrary label perturbation. These are research questions, not adopted style rules or proof certification."}
+],
+"structure_counterexample":"Theory-only with one conceptual geometry figure and substantial main-text proof, related-work comparison inDiscussion and no separateConclusion/empirical section; a domain-specific ImpactStatement adds substance.",
+"proposed_revision":"Keep frozen conditional guidance. Behavior cases should distinguish optimal-value robustness from classifier stability and retain group-mass dependence locally while clearly asserting the proved core contribution."
+}

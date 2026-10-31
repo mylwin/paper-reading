@@ -1,0 +1,253 @@
+{
+  "id": "acl-2024.acl-long.133",
+  "anthology_id": "2024.acl-long.133",
+  "venue": "acl",
+  "year": 2024,
+  "track": "main conference research",
+  "length_type": "long",
+  "title": "Unlocking Data-free Low-bit Quantization with Matrix Decomposition for KV Cache Compression",
+  "authors": [
+    "Peiyu Liu",
+    "Ze-Feng Gao",
+    "Wayne Xin Zhao",
+    "Yipeng Ma",
+    "Tao Wang",
+    "Ji-Rong Wen"
+  ],
+  "first_author": "Peiyu Liu",
+  "landing_url": "https://aclanthology.org/2024.acl-long.133/",
+  "pdf_url": "https://aclanthology.org/2024.acl-long.133.pdf",
+  "doi": "10.18653/v1/2024.acl-long.133",
+  "official_listing_url": "https://aclanthology.org/volumes/2024.acl-long/",
+  "sampling_stratum": "efficiency_theory",
+  "paper_type": "empirical method and efficiency study; data-free KV-cache quantization with matrix-product-operator decomposition",
+  "anthology_pdf_revision_hash": "0450a8fc",
+  "metadata_revisions": [],
+  "official_attachments": [],
+  "sort_hash": "03fffa88951bf2a0683b906cd538578e91e94c1bf31c6c928dbfd3dfaedf342a",
+  "split": "induction",
+  "semantic_review_status": "complete_writing_focused_full_text_review",
+  "full_text_and_relevant_appendix_review_complete": true,
+  "review_date": "2026-10-28",
+  "reviewer": "primary agent",
+  "pdf_path": ".claude/skills/paper-writing-shared/tmp/corpus/acl/pdf/2024.acl-long.133.pdf",
+  "pdf_sha256": "978733dd77089c3c6d7322fc029590eac4813b0b4306b2935c9d708eb5283974",
+  "markdown_path": ".claude/skills/paper-writing-shared/tmp/corpus/acl/markdown/2024.acl-long.133.md",
+  "markdown_sha256": "2b0789d850fff023790f3da1243516610693e84367f374f0ac402e6e3a097b60",
+  "full_text_style_review_complete": true,
+  "external_appendix_review_complete": true,
+  "count_eligible_full_text_and_relevant_appendix": true,
+  "coverage": [
+    {
+      "source": "canonical official PDF",
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "main_science": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "references": [
+        9,
+        10
+      ],
+      "scientific_appendix": {
+        "A.1 outlier analysis": [
+          10,
+          11
+        ],
+        "A.2 context-length details": [
+          11
+        ]
+      }
+    }
+  ],
+  "version_audit": {
+    "official_published_year": 2024,
+    "canonical_url": "https://aclanthology.org/2024.acl-long.133.pdf",
+    "xml_revision_entries": [],
+    "later_revision_recorded": false
+  },
+  "supplement_audit": {
+    "official_landing": "https://aclanthology.org/2024.acl-long.133/",
+    "landing_read_date": "2026-10-28",
+    "official_xml_attachments": [],
+    "separate_scientific_appendix_link_found": false,
+    "scientific_appendix_in_pdf": "A.1/A.2 complete through final page11",
+    "code_link": "https://github.com/lpyhdzx/DecoQuant_code",
+    "code_executed": false
+  },
+  "ten_dimensions": {
+    "reader_argument": {
+      "pages": [
+        1,
+        2,
+        3
+      ],
+      "observation": "先从KV缓存的内存/通信成本说明部署问题，再向NLP读者补预填充、解码、对称量化及MPO基础。",
+      "editorial_advice": "从读者需要的专业对象推进到机制，必要背景集中解释。",
+      "applicability_boundary": "这是效率方法稿，不代表ACL所有任务都需要量化或硬件背景。"
+    },
+    "title_abstract": {
+      "pages": [
+        1
+      ],
+      "observation": "标题交代数据无关低比特量化、矩阵分解及KV缓存对象；摘要按成本→现有局限→分解/混合精度机制→核融合→质量/存储结果组织。",
+      "editorial_advice": "摘要用技术对象和关键动作承载贡献，可突出可靠且有口径的数字。",
+      "applicability_boundary": "75%主要对应KV状态存储，不能写成整机总显存下降75%；样本长摘要不是强制句数。"
+    },
+    "introduction": {
+      "pages": [
+        1,
+        2
+      ],
+      "observation": "从token裁剪/低比特校准问题推到与SmoothQuant的机制差异，末段用两项merits串起data-free与多量化配置，没有固定三条贡献列表。",
+      "editorial_advice": "引言的区别点紧接相近方法，贡献形式服务实际论证。",
+      "applicability_boundary": "两项merits是该稿选择，不能要求全venue两贡献或新算法。"
+    },
+    "related_work": {
+      "pages": [
+        2,
+        5,
+        8
+      ],
+      "observation": "必要背景在§2，§3.3用支持配置/校准要求作表格定位；正式相关工作在实验之后，按张量分解、量化、KV压缩分三主题。",
+      "editorial_advice": "已在方法附近讲清区别时，独立相关工作可后置以免打断机制。",
+      "applicability_boundary": "该后置结构是可选写法；不同稿件仍可能需要前置最近工作。"
+    },
+    "method_theory": {
+      "pages": [
+        3,
+        4,
+        5
+      ],
+      "observation": "以大/小局部张量的分布观察引出只量化大张量，接预填充/解码处理、核融合及存储比例式；图2/3分别表示表示变换与算子实现。",
+      "editorial_advice": "先说明为什么该操作可能有效，再写表示、实现、开销。",
+      "applicability_boundary": "没有数学普遍保证；不能把经验分布收窄写成任意张量必然成立的定理。"
+    },
+    "evidence": {
+      "pages": [
+        5,
+        6,
+        7,
+        8,
+        10,
+        11
+      ],
+      "observation": "主结果分LAMBADA质量、不同shot的ICL、分解组件/长度/分解器诊断、KV存储与IO延迟；A.1补不同层与key/value分布，A.2补每demonstration长度。",
+      "editorial_advice": "把质量、组件解释和资源测量分别命名，效率结论指向实际测量对象。",
+      "applicability_boundary": "IO latency不是完整端到端token吞吐保证；2-bit激活与2/2联合量化结果差异很大。"
+    },
+    "discussion_limits": {
+      "pages": [
+        4,
+        5,
+        8,
+        9
+      ],
+      "observation": "开销和对比在§3.3，结论重述机制与核融合并留跨节点Splitwise为未来；独立Limitations涉及硬件/软件和偏差公平。",
+      "editorial_advice": "保留方法特定交换、适用设备和未测部署情形；局限集中陈述。",
+      "applicability_boundary": "样本的通用社会关注/套式开场不应成为所有稿件的固定自辩正文。"
+    },
+    "paragraph_language": {
+      "pages": [
+        3,
+        4,
+        6,
+        7,
+        8
+      ],
+      "observation": "用Outlier Distributions、Local Tensor Quantization、Kernel Fusion等段首承载不同论证动作；实测结果直接给出，对分布解释用suspect。",
+      "editorial_advice": "已测结果可直接写，解释假说按证据力度保留；具体条件比连串副词更清楚。",
+      "applicability_boundary": "novel/remarkable等原文修饰词不是规范；观察中的universally不应未经核验复制。"
+    },
+    "main_appendix": {
+      "pages": [
+        3,
+        5,
+        6,
+        7,
+        8,
+        10,
+        11
+      ],
+      "observation": "机制、主要表格、误差诊断及资源结果都在正文；附录仅扩展分布与数据长度且正文有A.1指针。",
+      "editorial_advice": "正文提供判断贡献所需证据，附录补边界和设置，不因有附录就转移主证据。",
+      "applicability_boundary": "该论文附录很短，不能推断ACL普遍只需短附录或不需实现细节。"
+    },
+    "actionable": {
+      "pages": [
+        1,
+        6,
+        7,
+        8,
+        11
+      ],
+      "observation": "可复用的组织单位是压缩对象→表示机制→质量与成本证据，重要表格查询单独保存。",
+      "editorial_advice": "原创建议：DecoQuant applies mixed-precision quantization to decomposed KV-cache tensors. At4-bit activation precision, the reported LAMBADA mean is82.9, compared with83.4 forFP16, while cache storage decreases from46.7 to11.7MB.",
+      "applicability_boundary": "例句是写作组织示范，不认证实验；实际作者稿的数字取作者已核对材料，不能把该样本结果迁移为新研究结果。"
+    }
+  },
+  "counterexamples": [
+    {
+      "pages": [
+        7
+      ],
+      "finding": "表3 OPT1.3B、2-bit、10-shot最后一列印66.2，但五任务42.4/65.6/54.1/43.4/52.7算术均值51.64；需要作者核对。",
+      "scope": "研究审计，不自动写入用户稿件。"
+    },
+    {
+      "pages": [
+        10,
+        11
+      ],
+      "finding": "A.1称TL IQR普遍最窄且分解后比原矩阵更小，但首层Value原矩阵IQR0.026小于TL0.111/TS0.449。有限层样本也不足以支持全张量普遍结论。",
+      "scope": "区分局部经验与普遍保证，保留已实际观察的机制和收益。"
+    },
+    {
+      "pages": [
+        5,
+        6,
+        8
+      ],
+      "finding": "4-bit KV约75%存储下降和IO延迟变化有明确口径；联合2/2量化表2均值2.0，并非所有2-bit设置均优于其他方法。",
+      "scope": "保留有证据的强主张，同时按量化配置限定。"
+    }
+  ],
+  "visual_review": {
+    "pages": [
+      3,
+      4,
+      6,
+      7,
+      8,
+      11
+    ],
+    "figures": "All6 main figures inspected on original rendered pages; Tables2/3/4/5 visually checked; Table1 read in full text.",
+    "reviewer": "same primary agent"
+  },
+  "official_requirements": {
+    "source": "current ACL2027 official policies maintained separately",
+    "corpus_layout_observation": "Two columns, author-year citations, standaloneLimitations, acknowledgment, appendixletterA",
+    "observed_layout_not_current_rule": true
+  },
+  "holdout_validation": null,
+  "review_limitations": "Full scientific prose, related appendices and source pages read for writing/evidence organization; no proof certification, source-code execution, experiment replication or reference-list verification."
+}

@@ -1,0 +1,285 @@
+{
+  "id": "acl-2024.acl-long.837",
+  "anthology_id": "2024.acl-long.837",
+  "venue": "acl",
+  "year": 2024,
+  "track": "main conference research",
+  "length_type": "long",
+  "title": "On Efficient and Statistical Quality Estimation for Data Annotation",
+  "authors": [
+    "Jan-Christoph Klie",
+    "Juan Haladjian",
+    "Marc Kirchner",
+    "Rahul Nair"
+  ],
+  "first_author": "Jan-Christoph Klie",
+  "landing_url": "https://aclanthology.org/2024.acl-long.837/",
+  "pdf_url": "https://aclanthology.org/2024.acl-long.837.pdf",
+  "doi": "10.18653/v1/2024.acl-long.837",
+  "official_listing_url": "https://aclanthology.org/volumes/2024.acl-long/",
+  "sampling_stratum": "efficiency_theory",
+  "paper_type": "statistical annotation quality-control methodology and software; analytical sample-size study plus simulations; long paper",
+  "anthology_pdf_revision_hash": "2f8b77e2",
+  "metadata_revisions": [],
+  "official_attachments": [],
+  "sort_hash": "0d9aa057f56c595328607c70d957bd2172d3ea7928533bdabf829219e8f7d82d",
+  "split": "induction",
+  "semantic_review_status": "complete_writing_focused_full_text_review",
+  "full_text_and_relevant_appendix_review_complete": true,
+  "review_date": "2026-10-29",
+  "reviewer": "primary agent",
+  "pdf_path": ".claude/skills/paper-writing-shared/tmp/corpus/acl/pdf/2024.acl-long.837.pdf",
+  "pdf_sha256": "73f56024ccf8826a80d8aece38995991998d7d91378eaa3daa1542678bc5725f",
+  "markdown_path": ".claude/skills/paper-writing-shared/tmp/corpus/acl/markdown/2024.acl-long.837.md",
+  "markdown_sha256": "170e2c0c072038a6ff1750877e489983416c058b0d9202ac0057bb7cfc9cb0f2",
+  "full_text_style_review_complete": true,
+  "external_appendix_review_complete": true,
+  "count_eligible_full_text_and_relevant_appendix": true,
+  "coverage": [
+    {
+      "source": "canonical official PDF",
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "main_science": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "references": [
+        10,
+        11
+      ],
+      "scientific_appendix": {
+        "A real-dataset simulation sample sizes": [
+          12
+        ],
+        "B implementation validation OC curves and simulated versus analytic ASN": [
+          13,
+          14,
+          15
+        ],
+        "C hypergeometric versus binomial comparison": [
+          16,
+          17
+        ]
+      }
+    }
+  ],
+  "version_audit": {
+    "published_year": 2024,
+    "canonical_url": "https://aclanthology.org/2024.acl-long.837.pdf",
+    "xml_revision_entries": []
+  },
+  "supplement_audit": {
+    "official_landing": "https://aclanthology.org/2024.acl-long.837/",
+    "landing_read_date": "2026-10-29",
+    "official_xml_attachments": [],
+    "separate_scientific_appendix_link_found": false,
+    "scientific_appendix_in_pdf": "A-C read in full, including original graphs and Table3",
+    "code_link": "https://github.com/apple/ml-sampleplan",
+    "code_executed": false
+  },
+  "ten_dimensions": {
+    "reader_argument": {
+      "pages": [
+        1,
+        2,
+        3
+      ],
+      "observation": "从语料创建的质量反馈环节切入，解释随机人工检查的成本与小样本误差；将数据质量评估而非模型榜单作为核心问题。",
+      "editorial_advice": "先交代使用场景和要作出的决策，再说明统计工具为何必要。",
+      "applicability_boundary": "研究主要是固定有限批次随机检查；模型分数、标注者一致率与人工判定正确率不可互换。"
+    },
+    "title_abstract": {
+      "pages": [
+        1,
+        2
+      ],
+      "observation": "标题直接命名效率、统计与标注质量；摘要按实践需求、现有抽样问题、CI样本量和acceptance sampling替代决策排列，最后给最高50%样本节省。",
+      "editorial_advice": "突出问题与可用贡献，保留作者实际完成的分析、应用和工具，不强改成新模型。",
+      "applicability_boundary": "最高50%是特定质量设定下的检查样本比较，不能写成真实标注项目总体预算普遍减半或与CI估计完全同一任务。"
+    },
+    "introduction": {
+      "pages": [
+        1,
+        2
+      ],
+      "observation": "引言从标注错误影响推进到错误率区间与接受/拒绝决策，列四项贡献：小样本诊断、CI、工业抽样迁移、Python包。",
+      "editorial_advice": "贡献数按实际工作选择；已知统计方法的有用迁移与系统验证也可以直接陈述。",
+      "applicability_boundary": "未独立核验first优先权；不把历史方法包装为该文原创统计定理。"
+    },
+    "related_work": {
+      "pages": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "observation": "Background按annotation process/agreement/error estimation/automatic detection分解，方法中就地引用CI与三种sampling来源，没有独立Related Work。",
+      "editorial_advice": "相关工作可承担术语、决策背景与设计来源说明，位置服从理解需求。",
+      "applicability_boundary": "引文解释抽样方法来源，不能由此删除具体最接近方案的比较。"
+    },
+    "method_theory": {
+      "pages": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "observation": "先用不放回抽样建hypergeometric模型，再介绍CI反演与single/double/sequential计划；Eq1给生产者/消费者风险约束，图2解释决策流程。",
+      "editorial_advice": "先定义样本单位、目标量和决策风险，再写算法、方程和截停近似；已知解法标清来源。",
+      "applicability_boundary": "CI估计错误率，acceptance sampling判断批次，两者目标不同；区间置信度和alpha记号及截停近似需准确。"
+    },
+    "evidence": {
+      "pages": [
+        7,
+        8,
+        9,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "observation": "分析N1000严格/宽松两配置的ASN，真实CoNLL/IMDB错误统计做1000次模拟；A补全样本数，B比较OC与解析/模拟，C比较有限总体与二项近似。",
+      "editorial_advice": "区分解析结果、模拟与真实部署；把关键风险/阈值配置和证据作用写清，附录承担独立实现核验。",
+      "applicability_boundary": "未在实时标注项目部署；Table3含不同ASN走势，不是任意方法或所有真实错误率均减半。"
+    },
+    "discussion_limits": {
+      "pages": [
+        8,
+        9,
+        12
+      ],
+      "observation": "结论回到统计质控用途；局限集中真实项目可用性、无差别区的效率、独立性与额外检查成本。",
+      "editorial_advice": "说明真实决定使用条件的局限，保持统计分析贡献直接，避免泛泛自我否定。",
+      "applicability_boundary": "独立采样单位及标注依赖会影响假设；无差别区可能使sequential收益缩小，不能为减少防御写作而删掉。"
+    },
+    "paragraph_language": {
+      "pages": [
+        3,
+        4,
+        7,
+        8,
+        9
+      ],
+      "observation": "段首先说明目标和接下来分析对象；analytic versus simulated、estimate versus accept/reject等区分反复支撑论证，建议应用用can/viable。",
+      "editorial_advice": "对已算出的样本量和已完成的比较直接报告，对迁移可用性用条件性解释。",
+      "applicability_boundary": "不要把每个发现都降为might，也不要复制该文未被Eq1支持的后验概率表述。"
+    },
+    "main_appendix": {
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "observation": "正文保留模型、三类方案与关键比较；A放完整真实数据样本量，B放实现校验大图，C放总体大小/分布选择敏感性。",
+      "editorial_advice": "正文让读者能判断主贡献，附录供复核复杂实现与适用边界；长稿也不必塞满证明模板。",
+      "applicability_boundary": "正文科学至p9，Limitations在p9；该录用稿布局不能替代当前投稿限页规则。"
+    },
+    "actionable": {
+      "pages": [
+        2,
+        5,
+        7,
+        8,
+        9
+      ],
+      "observation": "区分错误率估计任务与风险受控的批次决策，可避免把不同任务写成同一保证。",
+      "editorial_advice": "原创示例：We formulate annotation inspection as sampling without replacement. Acceptance sampling provides a batch-level accept/reject decision, whereas confidence intervals estimate the error rate; we compare their inspection requirements under the reported quality-control settings.",
+      "applicability_boundary": "非原文引用；仅在作者有同等事实时使用，不自动加入新实验、全局最优性或部署承诺。"
+    }
+  },
+  "counterexamples": [
+    {
+      "pages": [
+        4,
+        5
+      ],
+      "finding": "CI段把alpha同时写为confidence level与1-alpha尾部风险；显示方程将alpha1/2与alpha1+alpha2<=alpha结合，随后又用alpha/2反演。p5称accepted batch latent error below pa with chance beta，Eq1实际是P(accept|p=pr)<=beta，不是后验错误率。",
+      "scope": "已查看原页确认不是解析伪影，保留统计作者核对项；不擅自静默改公式，不形成所有稿件固定警告。"
+    },
+    {
+      "pages": [
+        5,
+        6,
+        8,
+        12
+      ],
+      "finding": "图2 double sampling第二阶段accept条件印d1+d2<=c1，正文p6用c2；图4 relaxed SSP图注425,c8而曲线约247，需作者核对。Table3 CoNLL relaxed uncurtailed91.833<curtailed98.299、IMDB relaxed double-curtailed347.572>single305，overall/always不能逐单元照搬。",
+      "scope": "真实研究查询，与所有统计方法失效的结论不同；保留实践适配贡献。"
+    },
+    {
+      "pages": [
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "finding": "B.1 prose重复写with replacement用于hypergeom，图6 caption正确without；图9 caption也重复；B.2引用Fig7而实际Fig8，图8 e/f均写Hypergeometric但曲线组应核实分布标签，阈值线称horizontal实际vertical。",
+      "scope": "原版图页已看，属于来源内部文本/标签不一致，不照抄进技能规则。"
+    }
+  ],
+  "visual_review": {
+    "pages": [
+      4,
+      5,
+      7,
+      8,
+      9,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17
+    ],
+    "figures": "Read original CI/equations, flowchart2, Figures3-6/8/9 and Tables1-3; all appendix graphs viewed",
+    "reviewer": "primary agent"
+  },
+  "official_requirements": {
+    "source": "current ACL/ARR rules maintained separately",
+    "corpus_layout_observation": "accepted long paper p1-9 main science including numbered Limitations; references p10-11; A-C p12-17",
+    "observed_layout_not_current_rule": true
+  },
+  "holdout_validation": null,
+  "review_limitations": "Full scientific prose and appendices read; no code execution, theorem verification certification, or live annotation deployment. Numerical/textual inconsistencies retained as author queries."
+}

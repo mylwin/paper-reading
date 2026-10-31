@@ -1,0 +1,298 @@
+{
+  "id": "acl-2025.acl-long.673",
+  "anthology_id": "2025.acl-long.673",
+  "venue": "acl",
+  "year": 2025,
+  "track": "main conference research",
+  "length_type": "long",
+  "title": "FlashAudio: Rectified Flow for Fast and High-Fidelity Text-to-Audio Generation",
+  "authors": [
+    "Huadai Liu",
+    "Jialei Wang",
+    "Rongjie Huang",
+    "Yang Liu",
+    "Heng Lu",
+    "Zhou Zhao",
+    "Wei Xue"
+  ],
+  "first_author": "Huadai Liu",
+  "landing_url": "https://aclanthology.org/2025.acl-long.673/",
+  "pdf_url": "https://aclanthology.org/2025.acl-long.673.pdf",
+  "doi": "10.18653/v1/2025.acl-long.673",
+  "official_listing_url": "https://aclanthology.org/volumes/2025.acl-long/",
+  "sampling_stratum": "methods_models",
+  "paper_type": "rectified-flow text-to-sound/music generation with reflow, training samplers, coupling assignment and guidance optimization",
+  "anthology_pdf_revision_hash": "11809d56",
+  "metadata_revisions": [],
+  "official_attachments": [],
+  "sort_hash": "02121a1b1b10de477cd163009ef827ddce39351c088de724454b84cc04159677",
+  "split": "induction",
+  "semantic_review_status": "complete_writing_focused_full_text_review",
+  "full_text_and_relevant_appendix_review_complete": true,
+  "review_date": "2026-10-29",
+  "reviewer": "delegated acl_induction_c",
+  "pdf_path": ".claude/skills/paper-writing-shared/tmp/corpus/acl/pdf/2025.acl-long.673.pdf",
+  "pdf_sha256": "335b821ebed5d5702ea4a0793ba35a77cf6357c59d34811861501b28b2682aaf",
+  "markdown_path": ".claude/skills/paper-writing-shared/tmp/corpus/acl/markdown/2025.acl-long.673.md",
+  "markdown_sha256": "361ae64b95c16b4b46e12df0833e9d5f981a52338885c4cd294e8f3ccd10b163",
+  "full_text_style_review_complete": true,
+  "external_appendix_review_complete": true,
+  "count_eligible_full_text_and_relevant_appendix": true,
+  "coverage": [
+    {
+      "source": "canonical official PDF",
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "main_science": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "references": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "scientific_appendix": {
+        "A relatedwork and B architecture": [
+          13,
+          14
+        ],
+        "C music/scaling/sampler ablations": [
+          14,
+          15
+        ],
+        "D subjective/objective evaluation and E distributions": [
+          15,
+          16
+        ],
+        "F qualitative spectrograms and evaluation screenshots": [
+          16,
+          17
+        ]
+      }
+    }
+  ],
+  "version_audit": {
+    "published_year": 2025,
+    "canonical_url": "https://aclanthology.org/2025.acl-long.673.pdf",
+    "xml_revision_entries": []
+  },
+  "supplement_audit": {
+    "method": "locked official2025ACLXML longpaper673 inspected; PDFhash11809d56 and no attachment/revision elements; no live page claim",
+    "official_xml_attachments": [],
+    "separate_scientific_appendix_link_found": false,
+    "scientific_appendix_in_pdf": "A-F fully read",
+    "code_link": "https://github.com/liuhuadai/FlashAudio",
+    "audio_demo": "https://FlashAudio-TTA.github.io/",
+    "code_executed": false,
+    "audio_listened": false
+  },
+  "ten_dimensions": {
+    "reader_argument": {
+      "pages": [
+        1,
+        2,
+        3
+      ],
+      "observation": "从迭代生成时延与少步质量下降提出trajectorystraightening问题，多个模块对应训练分配、耦合与CFG误差。",
+      "editorial_advice": "由瓶颈到设计动机的对应关系建立贡献，不以模块数量代替必要性。",
+      "applicability_boundary": "速度与质量是两轴，不把低NFE直接等同无额外训练成本。"
+    },
+    "title_abstract": {
+      "pages": [
+        1
+      ],
+      "observation": "方法名＋rectifiedflows＋速度质量双目标；摘要点名三项模块与一step400×real-time。",
+      "editorial_advice": "具体机制和带单位主结果比泛化形容词更有信息。",
+      "applicability_boundary": "400×是实时率倒数不是相对某baseline400倍；原文硬件型号4090Ti需作者核对，不认证该硬件配置。"
+    },
+    "introduction": {
+      "pages": [
+        1,
+        2
+      ],
+      "observation": "现有diffusion/consistency不足→RF机会→三个设计→结果，列四条贡献。",
+      "editorial_advice": "先解释为何已有加速仍不足，贡献项映射到机制与评测。",
+      "applicability_boundary": "first需独立文献证据，本审阅不认证优先权；四条不是ACL固定格式。"
+    },
+    "related_work": {
+      "pages": [
+        1,
+        2,
+        13
+      ],
+      "observation": "主文就地定位，完整RelatedWork后置A，分TTA和flowbased路线。",
+      "editorial_advice": "正文保留关键差异，附录补完整方法脉络。",
+      "applicability_boundary": "引文source有重复/误年等不作为风格要求复制；不推成所有相关工作都应后置。"
+    },
+    "method_theory": {
+      "pages": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        13,
+        14
+      ],
+      "observation": "FM/CFM/RF/reflow预备后依次初始模型、samplers/assignment、anchoredoptimization、distillation，Algorithm1总结三阶段，Euler推理单列。",
+      "editorial_advice": "多模块先界定共享对象，再分训练、coupling生成和实际推理；图/算法辅助流程。",
+      "applicability_boundary": "直线路径训练目标不等实际学到向量场必然直；式/图分布与索引冲突保留查询，不静默改。"
+    },
+    "evidence": {
+      "pages": [
+        6,
+        7,
+        8,
+        14,
+        15,
+        17
+      ],
+      "observation": "先验证trajectory/fewstep/CFG假设，再质量速度主表与模块消融；C拓展音乐、规模、sampler参数，D给量表/报酬，F原频谱例子。",
+      "editorial_advice": "机制诊断与主任务分开，主表同时给NFE、质量、alignment、时间与主观评分。",
+      "applicability_boundary": "无重复seed/CI、抽样人数规模未清楚给出；频谱一例不能代替听感全局验证，未播放demo。"
+    },
+    "discussion_limits": {
+      "pages": [
+        9,
+        14,
+        15
+      ],
+      "observation": "固定时长及未探索更大规模单列，C实际报告429M不及197M并推测收敛/过拟合；风险提数据偏差。",
+      "editorial_advice": "真实部署限制与已测收益分别写；负规模结果有信息量，不必掩盖。",
+      "applicability_boundary": "未实现变长；过拟合原因只是推测，风险未做定量偏差测试。"
+    },
+    "paragraph_language": {
+      "pages": [
+        7,
+        8,
+        14,
+        15
+      ],
+      "observation": "小节先说明比较问题，再列观察与表格，原因用speculate，主分数直接报。",
+      "editorial_advice": "已测RTF/FAD有据直接陈述，机制与规模解释才用限定语。",
+      "applicability_boundary": "all metrics/optimal/leading等应跟表格逐项结果一致，不机械强化或弱化所有句。"
+    },
+    "main_appendix": {
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "observation": "正文留公式、三阶段算法和主结果；附录给架构图、完整超参、音乐/规模和主观界面。",
+      "editorial_advice": "正文能判读机制与核心证据，附录承担扩展任务和复核；末页图像也读。",
+      "applicability_boundary": "正文缺少关键coupling数量/优化迭代细节不能由附录标题推断补齐；录用布局不替代官方当前规则。"
+    },
+    "actionable": {
+      "pages": [
+        8,
+        14
+      ],
+      "observation": "一步与四步分别报告不同质量速度点。",
+      "editorial_advice": "原创例句：With one-step distillation, FlashAudio reports an RTF of0.0025 at batch size1 and a FAD of1.49 on AudioCaps. The four-step variant reports an RTF of0.014 and a FAD of1.26.",
+      "applicability_boundary": "准确区分实时倍速、baseline加速与质量轴，不额外暗示所有指标最好或训练无成本。"
+    }
+  },
+  "counterexamples": [
+    {
+      "pages": [
+        4,
+        15
+      ],
+      "finding": "Eq8 exp(at)+exp(-at)在[0,1],a>0为单调递增，非Figure6双端对称峰；E段对两图峰位置叙述亦顺序反转。",
+      "scope": "原图/公式均读，保留作者查询而不静默替换为对称公式。"
+    },
+    {
+      "pages": [
+        6,
+        7
+      ],
+      "finding": "原图2真实logS为−.59/−3.21，提取丢负号；已按原图确认2RF偏差更低。",
+      "scope": "修复阅读理解，不把解析错误当论文错误。"
+    },
+    {
+      "pages": [
+        8,
+        14,
+        15
+      ],
+      "finding": "one-step FAD1.49劣于自建CFM1.22、KL1.32劣Tango1.20、CLAP.648劣多个baseline；音乐one-step MOS-F85.06劣AudioLCM85.71。Table2 LN使FAD1.08→1.12是变差但文字称decrease；2RF KL1.28=1.28非all严格提升。",
+      "scope": "保留速度和实际FAD优势范围，不混one/fewstep或全指标。"
+    },
+    {
+      "pages": [
+        5,
+        6,
+        8,
+        15
+      ],
+      "finding": "CFG公式及Eq11用zt-1但t按1/T到1，前向Euler方向需核对；正文40k仅1RF，reflow/teacher配对量和总体训练成本不全；RTF硬件原文标4090Ti，需实际配置证据。",
+      "scope": "研究查询，不宣称原实验无法运行；无代码复现。"
+    },
+    {
+      "pages": [
+        15,
+        17
+      ],
+      "finding": "人评文段说3个选项，实际Fig8界面5档20/40/60/80/100；没清楚给人数/样本数/CI，不能自行认证统计显著或把MOS写1-5量表。",
+      "scope": "保留真实报告分数，不补造流程。"
+    }
+  ],
+  "visual_review": {
+    "pages": [
+      1,
+      6,
+      7,
+      8,
+      13,
+      14,
+      15,
+      17
+    ],
+    "figures": "All Figures1-8 and Tables1-6 originals viewed; algorithm/equations/prose read page-aligned",
+    "reviewer": "same delegated agent"
+  },
+  "official_requirements": {
+    "source": "currentACL/ARR separately maintained",
+    "corpus_layout_observation": "long main sciencepp1-9, Limitations p9, A-F pp13-17",
+    "observed_layout_not_current_rule": true
+  },
+  "holdout_validation": null,
+  "review_limitations": "All17pages and A-F read. No code/training rerun, audio listening, hardware-model verification or statistical correctness certification."
+}

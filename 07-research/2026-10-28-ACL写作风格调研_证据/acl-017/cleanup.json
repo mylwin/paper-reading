@@ -1,0 +1,52 @@
+{
+  "deleted_count": 9,
+  "deleted_derivatives": [
+    {
+      "path": ".claude/skills/paper-writing-shared/tmp/corpus/acl/review-cache/acl-017-current/page-15.png",
+      "sha256": "b91153c66f1a221992a164d3da7d8ca651516072a91df5d06c57beb665502d01",
+      "bytes": 387018
+    },
+    {
+      "path": ".claude/skills/paper-writing-shared/tmp/corpus/acl/review-cache/acl-017-current/page-01.png",
+      "sha256": "a1c43ce2686b3a0732cfdbf7542ee46c97699afbe6731da581a17a78afaf3a92",
+      "bytes": 503422
+    },
+    {
+      "path": ".claude/skills/paper-writing-shared/tmp/corpus/acl/review-cache/acl-017-current/page-14.png",
+      "sha256": "257018581e40a2442e0639a5cc182ce5b35c574b39a40e8e6d3637a538af5b62",
+      "bytes": 244941
+    },
+    {
+      "path": ".claude/skills/paper-writing-shared/tmp/corpus/acl/review-cache/acl-017-current/page-16.png",
+      "sha256": "db510e853b7d7865f04621d071252a05657c5edede17073a6cdb55d607ce172b",
+      "bytes": 479289
+    },
+    {
+      "path": ".claude/skills/paper-writing-shared/tmp/corpus/acl/review-cache/acl-017-current/page-17.png",
+      "sha256": "135d2615a18b3453c376e457f10b9c0601a8a30f22c34ce6255b9170e7cbe4ea",
+      "bytes": 412970
+    },
+    {
+      "path": ".claude/skills/paper-writing-shared/tmp/corpus/acl/review-cache/acl-017-current/page-07.png",
+      "sha256": "eaa1fec20e80c4ab178189aaad989f9dc1f234afdaa71516833e98b4ad23cb06",
+      "bytes": 302085
+    },
+    {
+      "path": ".claude/skills/paper-writing-shared/tmp/corpus/acl/review-cache/acl-017-current/page-06.png",
+      "sha256": "ba7b2345d38a68551c2db5e866616bd08ae633b8bec994e2aef2cba3cd0f4014",
+      "bytes": 500872
+    },
+    {
+      "path": ".claude/skills/paper-writing-shared/tmp/corpus/acl/review-cache/acl-017-current/page-04.png",
+      "sha256": "6557794128c86f76b4cbdfe4614ecb2a2e8e2938210a74a6708be008c05bc2ff",
+      "bytes": 471397
+    },
+    {
+      "path": ".claude/skills/paper-writing-shared/tmp/corpus/acl/review-cache/acl-017-current/page-08.png",
+      "sha256": "1f0a20a6b1a2e7bc877e9b9d5f9f9f666bfe54785b3d96190c29554462d642fd",
+      "bytes": 478595
+    }
+  ],
+  "original_pdf_or_primary_parse_deleted": 0,
+  "only_current_agent_cache_removed": true
+}

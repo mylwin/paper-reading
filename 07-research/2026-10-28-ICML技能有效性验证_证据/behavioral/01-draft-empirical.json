@@ -1,0 +1,52 @@
+{
+  "id": "01-draft-empirical",
+  "skill": "paper-writing",
+  "venue": "ICML",
+  "request": "从给定事实起草摘要、引言、结果和一句局限；不用新增实验或引用",
+  "provided_facts": {
+    "study": "synthetic fixture, not a real research result",
+    "method": "StepScale reduces stored optimizer state by sharing one scale per block",
+    "tasks": [
+      "Task A",
+      "Task B"
+    ],
+    "seeds": 5,
+    "state_memory_GB": {
+      "baseline": 8,
+      "StepScale": 6
+    },
+    "mean_accuracy_percent": {
+      "Task A": {
+        "baseline": 80,
+        "StepScale": 80
+      },
+      "Task B": {
+        "baseline": 78,
+        "StepScale": 78
+      }
+    },
+    "mean_training_seconds": {
+      "baseline": 100,
+      "StepScale": 105
+    },
+    "budget": "same training steps and hardware",
+    "uncertainty": "no confidence intervals or statistical test supplied",
+    "distributed_results": "not supplied"
+  },
+  "original": null,
+  "actual_primary_agent_output": "Abstract. Optimizer state can limit the memory available for model training. We introduce StepScale, which shares one scale per block to reduce stored optimizer state. Across two tasks with matched training steps and hardware, StepScale reduces optimizer-state memory from 8 to 6 GB while matching the reported mean accuracies. Mean training time increases from 100 to 105 seconds.\n\nIntroduction. Optimizer-state storage competes with the rest of the training workload for device memory. StepScale addresses this storage cost by sharing a scale within each block. This design targets state memory, and its evaluation measures the resulting memory and training-time tradeoff.\n\nResults. The comparison uses five seeds for each task. StepScale reduces optimizer-state memory by 25%. Both methods achieve mean accuracies of 80% on Task A and 78% on Task B; StepScale takes 5% longer to train. The measurements support a reduction in state storage at the reported mean accuracy levels.\n\nLimitations. The evaluation covers two tasks on the tested hardware; distributed training remains untested.",
+  "author_notes": "",
+  "manual_semantic_review": {
+    "reviewer": "same primary agent",
+    "assessment": "consistent_with_given_facts_and_requested_scope",
+    "reason": "贡献、机制与内存/耗时交换直接可辨。8→6是25%下降，100→105是5%增加；只称均值相同，不虚构等效检验。不同章节各完成自身论证，不逐句重复未复现/无显著性。",
+    "criteria": [
+      "claim_evidence",
+      "structure",
+      "directness",
+      "conditions_placement",
+      "no_invented_citations"
+    ]
+  },
+  "independent_model_run": false
+}

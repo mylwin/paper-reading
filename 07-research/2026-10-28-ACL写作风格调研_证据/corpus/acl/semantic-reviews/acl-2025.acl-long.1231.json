@@ -1,0 +1,300 @@
+{
+  "id": "acl-2025.acl-long.1231",
+  "anthology_id": "2025.acl-long.1231",
+  "venue": "acl",
+  "year": 2025,
+  "track": "main conference research",
+  "length_type": "long",
+  "title": "Efficient Ensemble for Fine-tuning Language Models on Multiple Datasets",
+  "authors": [
+    "Dongyue Li",
+    "Ziniu Zhang",
+    "Lu Wang",
+    "Hongyang R. Zhang"
+  ],
+  "first_author": "Dongyue Li",
+  "landing_url": "https://aclanthology.org/2025.acl-long.1231/",
+  "pdf_url": "https://aclanthology.org/2025.acl-long.1231.pdf",
+  "doi": "10.18653/v1/2025.acl-long.1231",
+  "official_listing_url": "https://aclanthology.org/volumes/2025.acl-long/",
+  "sampling_stratum": "efficiency_theory",
+  "paper_type": "empirical efficient adapter ensemble with linearization-based task grouping",
+  "anthology_pdf_revision_hash": "dbc2ece3",
+  "metadata_revisions": [],
+  "official_attachments": [],
+  "sort_hash": "0562863b2535d62a6dc184038d111196339f70d8daf0fe255ac8be7ae4faba64",
+  "split": "induction",
+  "semantic_review_status": "complete_writing_focused_full_text_review",
+  "full_text_and_relevant_appendix_review_complete": true,
+  "pdf_path": ".claude/skills/paper-writing-shared/tmp/corpus/acl/pdf/2025.acl-long.1231.pdf",
+  "pdf_sha256": "aeba9293cccc9e438a2ed262a8b065e7c872e404d01f550e35f72afe933f5b5c",
+  "markdown_path": ".claude/skills/paper-writing-shared/tmp/corpus/acl/markdown/2025.acl-long.1231.md",
+  "markdown_sha256": "bff2511ffeb640ef6269a5653e0e60f6172f97914d7534f86465b8375b46658e",
+  "page_count": 18,
+  "review_date": "2026-10-29",
+  "reviewer": "acl_finish_b agent",
+  "full_text_style_review_complete": true,
+  "external_appendix_review_complete": true,
+  "count_eligible_full_text_and_relevant_appendix": true,
+  "coverage": [
+    {
+      "source": "canonical official PDF",
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18
+      ],
+      "main_science": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "limitations_ethics": [
+        10
+      ],
+      "references": [
+        10,
+        11,
+        12
+      ],
+      "scientific_appendix": {
+        "A.1 SDP clustering": [
+          13
+        ],
+        "A.2 boosting and AdaBoost": [
+          14
+        ],
+        "A.3 costs": [
+          14
+        ],
+        "B.1-B.6 models, approximation, adapter, gradients, sharpness, transfer": [
+          14,
+          15,
+          16,
+          17,
+          18
+        ]
+      }
+    }
+  ],
+  "version_audit": {
+    "canonical_url": "https://aclanthology.org/2025.acl-long.1231.pdf",
+    "xml_revision_entries": []
+  },
+  "supplement_audit": {
+    "method": "locked official XML metadata and manifest attachment entries inspected; canonical PDF scientific appendices read; no live freshness assertion",
+    "official_xml_attachments": [],
+    "scientific_appendix_in_pdf": {
+      "A.1 SDP clustering": [
+        13
+      ],
+      "A.2 boosting and AdaBoost": [
+        14
+      ],
+      "A.3 costs": [
+        14
+      ],
+      "B.1-B.6 models, approximation, adapter, gradients, sharpness, transfer": [
+        14,
+        15,
+        16,
+        17,
+        18
+      ]
+    },
+    "code_executed": false
+  },
+  "ten_dimensions": {
+    "reader_argument": {
+      "pages": [
+        1,
+        3
+      ],
+      "observation": "多数据集适配中的负迁移与多adapter成本共同构成问题。",
+      "editorial_advice": "以读者实际权衡组织论证，同时交代性能与资源。",
+      "applicability_boundary": "分类任务、多固定数据集；非生成任务通用最优结论。"
+    },
+    "title_abstract": {
+      "pages": [
+        1
+      ],
+      "observation": "标题方法与使用场景明确，摘要串联估计器误差、估计成本和最终收益。",
+      "editorial_advice": "摘要按方法依赖顺序报告最有辨识度的量化证据。",
+      "applicability_boundary": "105×仅估计步骤FLOPs比，不能写最终训练或推理105倍加速。"
+    },
+    "introduction": {
+      "pages": [
+        1,
+        2,
+        3
+      ],
+      "observation": "应用→常见方案成本→近初始化观察→任务分组→ensemble→多项验证；图1分输入、分组、组合。",
+      "editorial_advice": "复杂方法用流程图与层级概览降低后文负担。",
+      "applicability_boundary": "不强制三条贡献；本文是自然段总结。"
+    },
+    "related_work": {
+      "pages": [
+        8,
+        9,
+        15,
+        16
+      ],
+      "observation": "完整相关工作后置，关键技术来源在引言和方法及时引用；附录对梯度相似作专门比较。",
+      "editorial_advice": "近邻差异围绕实际设计轴展开。",
+      "applicability_boundary": "first comprehensive自称不可复制为新稿未经核实的首创性。"
+    },
+    "method_theory": {
+      "pages": [
+        3,
+        4,
+        5,
+        13,
+        14
+      ],
+      "observation": "先用负迁移案例，再给affinity定义、局部线性估计、SDP与boosting；两个算法配套。",
+      "editorial_advice": "先说明中间量怎样产生、用于何决策，再给实现；复杂推导可附录。",
+      "applicability_boundary": "近初始化小距离是经验观察；JL保距不证明整个预测近似或泛化。"
+    },
+    "evidence": {
+      "pages": [
+        5,
+        6,
+        7,
+        8,
+        14,
+        15,
+        16,
+        17,
+        18
+      ],
+      "observation": "估计精度→端到端性能/FLOPs/内存→规模扩展→sharpness→梯度相似/transfer。",
+      "editorial_advice": "按方法依赖安排验证，每个中间组件和最终用途各有证据。",
+      "applicability_boundary": "3seed均值SD并非显著性；用官方dev作test且训练另划validation。"
+    },
+    "discussion_limits": {
+      "pages": [
+        8,
+        9,
+        10
+      ],
+      "observation": "结论回收方法与经验分析，局限明确权重梯度访问、固定任务、OOD未验证。",
+      "editorial_advice": "局限集中于会改变使用方式的条件，正文先报告真实收益。",
+      "applicability_boundary": "无直接社会影响的自述不是技术稿自动免除伦理讨论依据。"
+    },
+    "paragraph_language": {
+      "pages": [
+        4,
+        6,
+        7,
+        8
+      ],
+      "observation": "结果段直接陈述数值，sharpness相关用suggest，经验观察与机制解释层级有别。",
+      "editorial_advice": "保留实测改善力度，对解释采用适当语气，不逐句may。",
+      "applicability_boundary": "微小归一化距离本身不构成泰勒余项上界。"
+    },
+    "main_appendix": {
+      "pages": [
+        1,
+        5,
+        7,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18
+      ],
+      "observation": "正文提供两个算法和主结果，附录A推导/成本、B完整模型与扩展实验。",
+      "editorial_advice": "主文保留能判断权衡的信息，附录补可复核细节和对照。",
+      "applicability_boundary": "附录含新科学分析必须一起审阅，录用版布局不替代当前投稿页限。"
+    },
+    "actionable": {
+      "pages": [
+        6,
+        7
+      ],
+      "observation": "性能与资源三轴呈现，可保留方法收益也可显示相对baseline不同成本。",
+      "editorial_advice": "原创例：The ensemble raises average accuracy from 78.6% to 88.6% in the reported setting, with FLOPs increasing from 4.3×10^18 to 4.7×10^18 and GPU memory from 12.6 to 21.4 GB.",
+      "applicability_boundary": "+10是百分点；不可称内存无代价或所有任务最佳。"
+    }
+  },
+  "counterexamples": [
+    {
+      "pages": [
+        1,
+        4,
+        6,
+        7
+      ],
+      "finding": "摘要称所有近似<1%，正文quantizedadapter可<3%；Table3 d200误差7–8.2%，d400<5%。105×是FLOPs估计而段落又称runtime。",
+      "scope": "输出近似、performance近似、CPU时间/总FLOPs分开核对。"
+    },
+    {
+      "pages": [
+        7,
+        16
+      ],
+      "finding": "Table4正文说10任务但表仅7列且平均不是7列均值；Table6十任务平均也与可见十数算术均值不一致；34B文称8%FLOPs与表1.8→1.9e19/内存66→28和表47.8GB不一致。",
+      "scope": "核查任务与平均口径，不静默修数，不据此取消所有实测优势。"
+    },
+    {
+      "pages": [
+        13
+      ],
+      "finding": "SDP目标+lambdaTr与促少簇需明确符号，lambda同时用于阈值；trace正则不是完整统计泛化证明。",
+      "scope": "保留算法构造，推导疑问给作者核实。"
+    },
+    {
+      "pages": [
+        8,
+        15,
+        17
+      ],
+      "finding": "50随机subset均值不能ensure statistical significance；sharpness相关未隔离因果，positive-transfer公式分母Sj应核对是否cardinality，图7轴有error/transfer混用。",
+      "scope": "研究审计独立保存，不将每个疑问写成正文防御段。"
+    }
+  ],
+  "visual_review": {
+    "pages": [
+      2,
+      4,
+      5,
+      6,
+      7,
+      8,
+      13,
+      14,
+      16,
+      18
+    ],
+    "reviewer": "acl_finish_b agent",
+    "figures": "Original diagrams, equations and result figures/tables inspected on indicated pages"
+  },
+  "official_requirements": {
+    "source": "current ACL/ARR rules maintained separately",
+    "observed_layout_not_current_rule": true
+  },
+  "holdout_validation": null,
+  "review_limitations": "Writing-focused full PDF and all scientific appendices read, original visual pages inspected; no model/code rerun or significance certification."
+}

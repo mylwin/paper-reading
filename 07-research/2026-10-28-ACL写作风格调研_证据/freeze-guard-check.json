@@ -1,0 +1,8 @@
+{
+  "date": "2026-10-29",
+  "case": "attempt freeze with24/40 induction full reviews",
+  "expected": "reject without writing freeze artifacts",
+  "passed": true,
+  "reading_increment": 0,
+  "formal_holdout_used": 0
+}

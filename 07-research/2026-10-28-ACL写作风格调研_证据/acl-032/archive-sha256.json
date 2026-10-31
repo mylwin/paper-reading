@@ -1,0 +1,6 @@
+{
+  "../corpus/acl/semantic-reviews/acl-2025.acl-long.1231.json": "8d3f49b7a9412b140b95b53d0d1e4c334c068f49f22728be23bbbf9a616fc7c7",
+  "validation.json": "64ed00c1d861a876b9714d08a12b606209db13cc0e63e3114edb62fd335a725a",
+  "cleanup.json": "d990724536cd146d3877f0e5da0bd820bbe7fea9544419ced9b843e2bcaf0b83",
+  "review-notes.md": "a90047651d5d90c9b751c5191ac0f37a185a3609a34361fa8f30734ef7651d0a"
+}
